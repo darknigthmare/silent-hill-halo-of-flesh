@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "initialTargets": [
+    {
+      "fighterId": "arcade_numb_body_arcade",
+      "status": "deferred",
+      "category": "historical-refusal",
+      "reason": "Référence entière 113/114 retrouvée, puis génération de sélection refusée à la sortie (sexual).",
+      "generationAttemptedWave22": false,
+      "historicalEvidence": "docs/production/vague19/missing-triage.json",
+      "requestId": "69e384e1-616d-4d50-90f8-23ec8263d6c0",
+      "refusalKind": "direct",
+      "runtimeChanged": false,
+      "freshResearch": "Historical refusal checked locally; not retried, no reformulation used to bypass it.",
+      "nextAction": "Preserve historical blocked status; do not retry unchanged content."
+    },
+    {
+      "fighterId": "arcade_nurse_arcade",
+      "status": "deferred",
+      "category": "historical-refusal",
+      "reason": "Modèle associé au design SH3 Nurse Pipe déjà refusé ; arrêt explicite de la variante Arcade.",
+      "generationAttemptedWave22": false,
+      "historicalEvidence": "docs/production/vague19/missing-triage.json",
+      "requestId": null,
+      "refusalKind": "related-variant",
+      "runtimeChanged": false,
+      "freshResearch": "Historical refusal checked locally; not retried, no reformulation used to bypass it.",
+      "nextAction": "Preserve historical blocked status; do not retry unchanged content."
+    },
+    {
+      "fighterId": "film_dark_nurse_171",
+      "status": "deferred",
+      "category": "historical-refusal",
+      "reason": "Refus après inspection du costume 2006 entier ; confirmé encore dans le cadrage vague18.",
+      "generationAttemptedWave22": false,
+      "historicalEvidence": "docs/production/vague19/missing-triage.json",
+      "requestId": "3904324b-a515-4299-82b9-b9cfbdf04f5d",
+      "refusalKind": "direct",
+      "runtimeChanged": false,
+      "freshResearch": "Historical refusal checked locally; not retried, no reformulation used to bypass it.",
+      "nextAction": "Preserve historical blocked status; do not retry unchanged content."
+    },
+    {
+      "fighterId": "shf_hinako_s_mother_165",
+      "status": "deferred",
+      "category": "historical-refusal",
+      "reason": "Refus individuel à la sortie, catégorie violence.",
+      "generationAttemptedWave22": false,
+      "historicalEvidence": "docs/production/vague19/missing-triage.json",
+      "requestId": "13cb56a1-c05c-45b6-a193-987153da6fca",
+      "refusalKind": "direct",
+      "runtimeChanged": false,
+      "freshResearch": "Historical refusal checked locally; not retried, no reformulation used to bypass it.",
+      "nextAction": "Preserve historical blocked status; do not retry unchanged content."
+    },
+    {
+      "fighterId": "film_missionary_revelation_177",
+      "status": "deferred",
+      "category": "insufficient-visual-source",
+      "reason": "Masque et costume final documentés ; pieds masqués dans les photogrammes. Plusieurs chaussures concurrentes dans les concepts, aucune version finale établie.",
+      "generationAttemptedWave22": false,
+      "historicalEvidence": "docs/production/vague19/missing-triage.json",
+      "requestId": null,
+      "refusalKind": null,
+      "runtimeChanged": false,
+      "freshResearch": "Limited web lookup of the Revelation costume/FX production notes; no newly inspected native full-body final-costume image resolved the shoes/supports. No generation.",
+      "consultedURLs": [
+        "https://metrofilms.com/media/SILENT%2BHILL%2BREVELATION%2B_DP.2f567193-6530-47a3-8d88-0812d7e85589.pdf",
+        "https://www.comingsoon.net/horror/news/724338-excl-talking-silent-hill-revelations-monster-fx-with-paul-jones/xwp_curated_content"
+      ],
+      "sourceReadScope": "Search result excerpts only for these new URLs; full PDF not visually inspected in this wave.",
+      "nextAction": "Inspect a final-costume native full-body frame or production photo showing the actual footwear before generating a full-body sprite."
+    },
+    {
+      "fighterId": "arcade_robbie_the_rabbit_shotgun",
+      "status": "deferred",
+      "category": "other",
+      "reason": "Modèle retrouvé nommé Robbie_Rifle.obj, mais fiche Shotgun ; la capture d’arme longue ne tranche pas sa configuration. Ne pas affecter un rifle à ce profil sans correction sourcée.",
+      "generationAttemptedWave22": false,
+      "historicalEvidence": "docs/production/vague19/missing-triage.json",
+      "requestId": null,
+      "refusalKind": null,
+      "runtimeChanged": false,
+      "freshResearch": "Limited web lookup found native-model and bestiary entry points, but no inspected evidence resolving Robbie_Rifle.obj versus the Shotgun profile; no gun or variant inferred.",
+      "consultedURLs": [
+        "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340933/page-1/",
+        "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm"
+      ],
+      "sourceReadScope": "Search result discovery; no model download or weapon render inspected in wave22.",
+      "nextAction": "Verify the complete weapon carried by the exact Arcade Robbie variant; any catalogue correction requires source evidence and separate integration."
+    }
+  ],
+  "historicalRefusalsRetried": 0,
+  "imageGenerationRefusalsWave22": 0
+}

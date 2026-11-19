@@ -1,0 +1,548 @@
+{
+  "schema": 1,
+  "label": "wave22-native-art-and-inputs",
+  "generatedAt": "2026-11-19T15:43:20.106Z",
+  "root": "/workspace/scratch/silent-hill-wave22",
+  "browserTest": false,
+  "httpTest": false,
+  "browserLaunches": 0,
+  "httpServersStarted": 0,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "Historical portrait preserved and separated: shattered_raw_shock_feminine_100",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    },
+    {
+      "name": "Native historical selection decodes: shattered_raw_shock_feminine_100",
+      "passed": true
+    },
+    {
+      "name": "shattered_raw_shock_feminine_100: documented role remains outside combat",
+      "passed": true
+    },
+    {
+      "name": "shattered_raw_shock_feminine_100: workshop reference frames decode",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": []
+      }
+    },
+    {
+      "name": "shattered_raw_shock_feminine_100: reference renderer selects dedicated view 1",
+      "passed": true
+    },
+    {
+      "name": "shattered_raw_shock_feminine_100: full reference silhouette fits workshop 1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          332.2264932730601,
+          235.37687082739416,
+          413.25261052958604,
+          431.6044775694362
+        ],
+        "visible": [
+          333.1891798147218,
+          236.50000512599948,
+          412.93171501569884,
+          430
+        ],
+        "pixelScale": 0.1604477569436157,
+        "anchor": [
+          0.435,
+          0.9157681940700808
+        ],
+        "bodyHeight": 0.8126684636118598,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "shattered_raw_shock_feminine_100: workshop facing matrix 1",
+      "passed": true
+    },
+    {
+      "name": "shattered_raw_shock_feminine_100: reference renderer selects dedicated view -1",
+      "passed": true
+    },
+    {
+      "name": "shattered_raw_shock_feminine_100: full reference silhouette fits workshop -1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          306.74738947041396,
+          235.37687082739416,
+          387.7735067269399,
+          431.6044775694362
+        ],
+        "visible": [
+          307.06828498430116,
+          236.50000512599948,
+          386.8108201852782,
+          430
+        ],
+        "pixelScale": 0.1604477569436157,
+        "anchor": [
+          0.435,
+          0.9157681940700808
+        ],
+        "bodyHeight": 0.8126684636118598,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "shattered_raw_shock_feminine_100: workshop facing matrix -1",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "cases": [],
+  "captures": [
+    {
+      "file": "selection-shattered_raw_shock_feminine_100.png",
+      "sha256": "d67abeca5730aa780c790f8a645c6cfb6a1734b95ab7645f6b7864e07aa26698",
+      "bytes": 138910,
+      "width": 500,
+      "height": 500,
+      "purpose": "preserved-selection",
+      "fighterId": "shattered_raw_shock_feminine_100",
+      "path": "assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png"
+    },
+    {
+      "file": "shattered_raw_shock_feminine_100-reference-right.png",
+      "sha256": "18f6ed3468cb421a03493daa5076d06bac27206d110d14dd3b1e79d27df0883c",
+      "bytes": 21131,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "shattered_raw_shock_feminine_100",
+      "combatEnabled": false,
+      "facing": 1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          332.2264932730601,
+          235.37687082739416,
+          413.25261052958604,
+          431.6044775694362
+        ],
+        "visible": [
+          333.1891798147218,
+          236.50000512599948,
+          412.93171501569884,
+          430
+        ],
+        "pixelScale": 0.1604477569436157,
+        "anchor": [
+          0.435,
+          0.9157681940700808
+        ],
+        "bodyHeight": 0.8126684636118598,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+        "args": [
+          -82.20273631840796,
+          -242.27611940298505,
+          188.97180762852403,
+          264.56053067993366
+        ],
+        "matrix": [
+          0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "shattered_raw_shock_feminine_100-reference-left.png",
+      "sha256": "cdfa7c1c9a321f9e8d418e8b6c58f8060c5b7e45107c9855c2cab5e91c05d98b",
+      "bytes": 21150,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "shattered_raw_shock_feminine_100",
+      "combatEnabled": false,
+      "facing": -1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          306.74738947041396,
+          235.37687082739416,
+          387.7735067269399,
+          431.6044775694362
+        ],
+        "visible": [
+          307.06828498430116,
+          236.50000512599948,
+          386.8108201852782,
+          430
+        ],
+        "pixelScale": 0.1604477569436157,
+        "anchor": [
+          0.435,
+          0.9157681940700808
+        ],
+        "bodyHeight": 0.8126684636118598,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+        "args": [
+          -82.20273631840796,
+          -242.27611940298505,
+          188.97180762852403,
+          264.56053067993366
+        ],
+        "matrix": [
+          -0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "sha256": "1eb3ca286521381835cc2efb442a6be7ce4117b1bbcc622878cf26d8e9e3c433",
+      "bytes": 491173,
+      "width": 1060,
+      "height": 1484,
+      "rawRGBAHash": "428d55a010b093128df5c81527a0657a1817a0dfcf0aae47d7e3f2bcdffd53e7",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
+      "sha256": "1226cc9a34196d764e02863f1556ef5a29ad003b63a6d9b7fbd15c7fa1124c9f",
+      "bytes": 657894,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "58ff3235bacdb6d660bd1bb1ff7ec82f4375b73c5a6dbb66e66652cc2cb90cd4",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "bytes": 1181785,
+      "width": 2172,
+      "height": 724,
+      "rawRGBAHash": "28b59b2a1bb4f2e01c42a53ce514d38088004343a42db9d7658d97fbe9a05d81",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "sha256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
+      "bytes": 633182,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "06040a0bb0a2553bb69d76447f823b29d7f8d4a71906f379fef759fcbf23946f",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "sha256": "4d537af9a1485e2e384396327b8a60c35c923552f8318e92021fff76e75c40c3",
+      "bytes": 2203973,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "bd8555c4af22d190ae05f426ffbb9b47f03ca33e15f3832f3c5474ad07a871f1",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "sha256": "98e4c72a83083b2f1dcabd1417e687c20d31daaac96ece679ffedd266584b884",
+      "bytes": 200941,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "fee02ddf118c0f63b586bfa290dd7d136e1f8e57f1581dfc7c865017e1ec7580",
+      "adapterLossless": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "shattered_raw_shock_feminine_100",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "role": "scripted-encounter",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": false,
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "referenceIds": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024"
+      ],
+      "observedBasis": "Poursuite collective : Des groupes de Raw Shocks poursuivent Harry dans les séquences cauchemardesques du monde gelé. Ils sont invulnérables et impossibles à tuer ; Harry, sans armes, doit fuir. Agrippement : Agrippement Recul devant fusée : Les fusées effraient temporairement les Raw Shocks pendant la fuite ; elles ne les blessent ni ne les tuent. Durée et commandes de l’édition Wii encore à mesurer.",
+      "superEnabled": false,
+      "superReason": "Le rôle documenté ne permet pas un kit de combat autonome.",
+      "superName": "Raw Shock — Feminine — séquence de pression",
+      "superDescription": "Approche collective resserrée, agrippement bref puis séparation à la reprise de manche; cette séquence de versus adapte la poursuite existante.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    },
+    {
+      "id": "sh2_creeper_025",
+      "source": "sh2",
+      "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+      "role": "combatant",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": true,
+      "canMove": true,
+      "canJump": false,
+      "canDodge": true,
+      "referenceIds": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "observedBasis": "Morsure : Court vers le pied et mord.",
+      "superEnabled": true,
+      "superReason": "",
+      "superName": "Super proposé — Creeper",
+      "superDescription": "Variante à réaliser avec son apparence propre. Angle de cheville : deux changements de direction puis morsure ; pas de bond humain.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "af9f1daa1ac3de6f2eead0e5a08dc5aeacde731802181b143499ae434739b28e",
+      "after": "af9f1daa1ac3de6f2eead0e5a08dc5aeacde731802181b143499ae434739b28e"
+    },
+    "src/sprite-manifest.js": {
+      "before": "47bb3c098c5bd575993e0a7ab82a007637049c3540e12d094fdddefd8a5cb2cc",
+      "after": "47bb3c098c5bd575993e0a7ab82a007637049c3540e12d094fdddefd8a5cb2cc"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "de7a5a805178a7f7b3a8a85d682db36772efca241d520522fe6faa46ded43c24",
+      "after": "de7a5a805178a7f7b3a8a85d682db36772efca241d520522fe6faa46ded43c24"
+    },
+    "src/fight.js": {
+      "before": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "after": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a"
+    },
+    "src/sprite-system.js": {
+      "before": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+      "after": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "rendererPreviews": [
+    {
+      "id": "shattered_raw_shock_feminine_100",
+      "facing": 1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -82.20273631840796,
+        "y": -242.27611940298505,
+        "width": 188.97180762852403,
+        "height": 264.56053067993366,
+        "flip": 1,
+        "localX": -82.20273631840796,
+        "localY": -242.27611940298505,
+        "scale": 0.17827529021558872
+      },
+      "capture": "shattered_raw_shock_feminine_100-reference-right.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "shattered_raw_shock_feminine_100",
+      "facing": -1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -106.76907131011608,
+        "y": -242.27611940298505,
+        "width": 188.97180762852403,
+        "height": 264.56053067993366,
+        "flip": -1,
+        "localX": -82.20273631840796,
+        "localY": -242.27611940298505,
+        "scale": 0.17827529021558872
+      },
+      "capture": "shattered_raw_shock_feminine_100-reference-left.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    }
+  ],
+  "method": {
+    "engine": "Actual FightEngine.update/render; native Canvas drawImage observed after executing its real draw.",
+    "inputs": "Only original InputState keydown/keyup callbacks receive synthetic events. No held/pressed sets or actor positions, facing, health, phase, clocks or attack objects are assigned.",
+    "oppositeSides": "Separate ordinary local duels put each controlled fighter in the real player1 or player2 spawn. No teleport, actor swap or pose injection.",
+    "decoder": "Exact source bytes verified. Sharp normalizes PNG encoding only in memory for native decoding; all decoded RGBA bytes compared.",
+    "rolePolicy": "Only existing combat-enabled profiles enter duels. Other roles receive native workshop-renderer views only; no role or permission is changed."
+  },
+  "limits": [
+    "Native Canvas is not Chromium; DOM/CSS, actual browser keyboard delivery, HTTP, service worker and CI browser behavior are not tested.",
+    "Timing and mirrored left views are authored versus presentation; no original film/game animation timing or 1:1 fidelity is certified.",
+    "These wave22 candidates are exercised through idle, permitted static-frame movement or stationary-input rejection, and release-to-idle; no attack/contact/guard/finisher matrix is exercised.",
+    "Skull/torso size, foot contacts and limb identity still require visual review of the native captures."
+  ],
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "shattered_raw_shock_feminine_100": "33db18c3081b4a5f958efd156beff38d1b9c24601465419d1638567f73dfd715",
+    "sh2_creeper_025": "c406619e7c5636e3c5e7b9a8df6bae2657010793de09126704e368cb01feb47a"
+  },
+  "testedStageEntryHashes": {
+    "hazel_subway": "c95e04fa47ff52810f388d336e0c2e6fcaacce9d5f145ee420bc021f333a737a"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "combatIds": [],
+  "referenceOnlyIds": [
+    "shattered_raw_shock_feminine_100"
+  ],
+  "passed": true,
+  "completedAt": "2026-11-19T15:43:21.325Z"
+}

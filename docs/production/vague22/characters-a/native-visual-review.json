@@ -1,0 +1,190 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "group": "fighters-a",
+  "reviewedAt": "2026-11-19T15:39:42.962967+00:00",
+  "status": "five-combat-profiles-reviewed",
+  "method": "Read-only visual inspection via view_image of existing native FightEngine Canvas captures. No tests rerun and no asset pixels changed.",
+  "browserTest": false,
+  "certifiedOneToOne": false,
+  "reviewedProfiles": 5,
+  "reviewedCaptures": 10,
+  "referencedCheckExecutions": 340,
+  "records": [
+    {
+      "id": "sh1_grey_child_005",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh1_grey_child_005/sh1_grey_child_005-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/sh1_grey_child_005/sh1_grey_child_005-left-idle.png",
+          "sha256": "d3774bc3cb2e2b32be8248ea3f77bcb75930efc328756b1127aa827fa11e56a2",
+          "bytes": 1170792,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh1_grey_child_005/sh1_grey_child_005-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/sh1_grey_child_005/sh1_grey_child_005-right-idle.png",
+          "sha256": "8db92c80cf2e75aed299a249b9301b2692c3215e5acd2c2021e6a64ce400f2e4",
+          "bytes": 1170209,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "Profil orienté vers l’adversaire dans les deux sens, tête et couteau distincts.",
+        "Les deux pieds restent dans la zone de sol ; aucune lame ou extrémité coupée.",
+        "Petit gabarit cohérent avec la calibration existante ; aucun rectangle ou halo de fond, HUD dégagé."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh1_grey_child_005/report.json",
+        "sha256": "515d119502471f2f9d4c7192564df110b351eed9da4805f47bbc9683b6045679",
+        "passed": true,
+        "checkCount": 64,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "homecoming_sepulcher_093",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/homecoming_sepulcher_093-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/homecoming_sepulcher_093-left-idle.png",
+          "sha256": "488efd6b4a7a6ddba066a1eb10295da4cdb475f42fb8dcb0e226c747fe93c57d",
+          "bytes": 1186070,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/homecoming_sepulcher_093-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/homecoming_sepulcher_093-right-idle.png",
+          "sha256": "bff527c852a7a20a6afc39adea805fb5e1b8ccedd766cc341c5a488e587a6087",
+          "bytes": 1187645,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "Configuration verticale suspendue cohérente, sans marche ni pieds ajoutés.",
+        "Les deux longs bras, les mains et la racine inférieure sont intégralement visibles dans les deux sens.",
+        "Aucun halo ou obstruction du HUD. La capture ne certifie pas les attaches à un plafond commercial ; cette limite demeure."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/report.json",
+        "sha256": "c0245ee8ee2a5cd1da1ea8f286d42159def95d43f9dc1b815b87bbbacfa62808",
+        "passed": true,
+        "checkCount": 74,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "origins_memory_of_helen_grady_082",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/origins_memory_of_helen_grady_082-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/origins_memory_of_helen_grady_082-left-idle.png",
+          "sha256": "f5498fcc2510d6f93ae252a689b4c61dcad07ab2a37a43c2418b6637f9443900",
+          "bytes": 1184977,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/origins_memory_of_helen_grady_082-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/origins_memory_of_helen_grady_082-right-idle.png",
+          "sha256": "a8706fe7f13086e39a70085c55c2635eca22d1106f0eb49ff493e32ca52e121e",
+          "bytes": 1185934,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "La cage flotte avec son corps enveloppé et son support court, sans appui bipède inventé.",
+        "Le mur et les machines restent visibles à travers le voile et la cloche ; reflets contenus, aucun fond gris opaque.",
+        "Cage, bas du corps et matériel supérieur entiers dans les deux sens ; HUD dégagé. Le point de fixation complet à un plafond n’est pas documenté par cette image isolée."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/report.json",
+        "sha256": "a135b4decedf4e17e890357c9b683c67c4614351fbed7253ad6eac6d116b5505",
+        "passed": true,
+        "checkCount": 74,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "sh4_bottom_065",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh4_bottom_065/sh4_bottom_065-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/sh4_bottom_065/sh4_bottom_065-left-idle.png",
+          "sha256": "efdfa7593173add6dd7470da4b354e9aeca77a34008e374c0769879476c36a74",
+          "bytes": 1207961,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh4_bottom_065/sh4_bottom_065-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/sh4_bottom_065/sh4_bottom_065-right-idle.png",
+          "sha256": "29821ab6351ad9aed49ea22139f2d4e0044e0dba80a8d81703082758c1dbed4d",
+          "bytes": 1206704,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "Les deux grandes mains et les trois masses de tête restent lisibles lors du miroir.",
+        "La main proche constitue l’appui le plus bas ; la main lointaine est plus haute dans la perspective sans être coupée.",
+        "Aucune jambe ou manteau ajouté, aucun halo de fond, aucun contact avec le HUD."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh4_bottom_065/report.json",
+        "sha256": "55821681462de2fd98606da8414ca9d0128865792530c5a314d1f3f9704120c3",
+        "passed": true,
+        "checkCount": 64,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "homecoming_asphyxia_096",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/homecoming_asphyxia_096-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/homecoming_asphyxia_096-left-idle.png",
+          "sha256": "e3f3546651101bcc217c23e368d543565e36892679b68e5cb8db6ba2b9ef6a68",
+          "bytes": 1176018,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/homecoming_asphyxia_096-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/homecoming_asphyxia_096-right-idle.png",
+          "sha256": "08456120194af5f5ef520db83dcb6cb6d584405844c72997852000c34c3a9924",
+          "bytes": 1176566,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "Le corps composé regarde vers l’adversaire et toute la longue partie arrière demeure visible des deux côtés.",
+        "Les supports avant et les extrémités arrière restent dans la zone basse de l’arène, sans coupure latérale.",
+        "Le halo brun visible dans les RGB bruts n’apparaît pas dans le rendu composé. Les mains hautes, le corps et le HUD restent séparés ; attaches arrière reconstruites non certifiées1:1."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/report.json",
+        "sha256": "0ef49499cb4b617a801ea694921414d3675399160f7e54bd5aba84f6913bf43f",
+        "passed": true,
+        "checkCount": 64,
+        "browserTest": false
+      }
+    }
+  ],
+  "remaining": "Noncombat Raw Shock renderer captures to review once available.",
+  "limits": [
+    "Opposite-facing presentation is a runtime horizontal mirror, not an independently sourced left model.",
+    "Static capture review does not validate source animation, timings, unseen anatomy or pixel-for-pixel fidelity."
+  ]
+}

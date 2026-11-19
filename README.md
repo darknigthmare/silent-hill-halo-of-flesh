@@ -1,5 +1,18 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Personnages et stages manquants — 19 novembre 2026, vague 22
+
+**16 vues latérales dédiées et 10 stages sont ajoutés : 151 vues candidates et
+65 arènes bitmap sur 123.** La [vague 22](docs/production/vague22/README.md)
+complète 12 profils déjà admissibles au combat et quatre références d’atelier
+hors duel. Les 204 portraits et six clips animés sont préservés.
+
+Les 58 stages sans bitmap, 42 anciennes vues à revoir, 26 portraits absents
+et 37 images de combat absentes restent suivis dans [l’audit courant](docs/production/vague22/final-audit.json).
+Les images sont des reconstructions candidates ; aucune fidélité 1:1 n’est certifiée.
+La bible conserve ses 66 notices, dont Transmission ; le [classeur Corpus / Stages](docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx)
+est actualisé sur cette passe.
+
 ## Bible et stages manquants — 19 novembre 2026, vague 21
 
 **66 entrées de franchise documentées et 55 arènes bitmap sur 123.** La

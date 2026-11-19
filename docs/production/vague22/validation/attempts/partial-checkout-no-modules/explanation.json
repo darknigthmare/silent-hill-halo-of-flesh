@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "reason": "The sparse checkout omitted modules/; npm test stopped at required-file verification before Node tests. Further read-only inspection found historical test fixtures under docs/production/batches/ also omitted. Both directories are restored from the exact HEAD version by git sparse-checkout add; no source or test is modified.",
+  "failedCommand": [
+    "npm",
+    "test"
+  ],
+  "exitCode": 1,
+  "nodeTestsExecuted": 0,
+  "protectedSourcesUnchanged": true,
+  "includedInSuccessTotals": false,
+  "runnerSHA256": "876fedfcba6534dc12bd94b2da642e9bbcc28de246353edf72689f4127b18058"
+}

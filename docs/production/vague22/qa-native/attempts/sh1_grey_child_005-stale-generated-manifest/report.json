@@ -1,0 +1,152 @@
+{
+  "schema": 1,
+  "label": "wave22-native-art-and-inputs",
+  "generatedAt": "2026-11-19T15:25:17.827Z",
+  "root": "/workspace/scratch/silent-hill-wave22",
+  "browserTest": false,
+  "httpTest": false,
+  "browserLaunches": 0,
+  "httpServersStarted": 0,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "Historical portrait preserved and separated: sh1_grey_child_005",
+      "passed": false
+    }
+  ],
+  "errors": [
+    "Historical portrait preserved and separated: sh1_grey_child_005"
+  ],
+  "cases": [],
+  "captures": [],
+  "assets": [],
+  "roles": [
+    {
+      "id": "sh1_grey_child_005",
+      "source": "sh1",
+      "edition": "SH1 original 1999, région à fixer",
+      "role": "combatant",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": true,
+      "canMove": true,
+      "canJump": true,
+      "canDodge": true,
+      "standingStruggles": {
+        "slots": [
+          "neutralSpecial",
+          "forwardSpecial",
+          "throw",
+          "super",
+          "desperation"
+        ],
+        "escapeTransitions": 6,
+        "sourceTimingMeasured": false
+      },
+      "referenceIds": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "observedBasis": "Entaille : Coup du couteau tenu en main ; le guide décrit aussi des entailles pendant qu’un autre Grey Child retient Harry. Ni projectile ni rayon ne découlent de ce geste. Prise basse : Se jette vers les pieds de Harry et le retient en le poignardant ; les commandes directionnelles et d’épaule accélèrent la libération dans SH1. Les durées d’entrave du versus ne sont pas des mesures originales.",
+      "superEnabled": true,
+      "superReason": "",
+      "superName": "Super proposé — Grey Child",
+      "superDescription": "Encerclé : détour bas puis prise des jambes et courte série de tailles ; aucune apparition de clones.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": [
+          "bind"
+        ]
+      }
+    },
+    {
+      "id": "sh2_creeper_025",
+      "source": "sh2",
+      "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+      "role": "combatant",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": true,
+      "canMove": true,
+      "canJump": false,
+      "canDodge": true,
+      "referenceIds": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "observedBasis": "Morsure : Court vers le pied et mord.",
+      "superEnabled": true,
+      "superReason": "",
+      "superName": "Super proposé — Creeper",
+      "superDescription": "Variante à réaliser avec son apparence propre. Angle de cheville : deux changements de direction puis morsure ; pas de bond humain.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "b09c83d6dadea36a1a454d4decb82a7b60127d00d1d21c4662e40ba69e413544"
+    },
+    "src/sprite-manifest.js": {
+      "before": "88b97b945b6748ded112b4a2fd18b9063f241474d78b0809c9962cf29e7a7d3c"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "2d22fcb69990f14743b20be235a72571abe6b9ac4fc793e98239d9b27726f533"
+    },
+    "src/fight.js": {
+      "before": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a"
+    },
+    "src/sprite-system.js": {
+      "before": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "rendererPreviews": [],
+  "method": {
+    "engine": "Actual FightEngine.update/render; native Canvas drawImage observed after executing its real draw.",
+    "inputs": "Only original InputState keydown/keyup callbacks receive synthetic events. No held/pressed sets or actor positions, facing, health, phase, clocks or attack objects are assigned.",
+    "oppositeSides": "Separate ordinary local duels put each controlled fighter in the real player1 or player2 spawn. No teleport, actor swap or pose injection.",
+    "decoder": "Exact source bytes verified. Sharp normalizes PNG encoding only in memory for native decoding; all decoded RGBA bytes compared.",
+    "rolePolicy": "Only existing combat-enabled profiles enter duels. Other roles receive native workshop-renderer views only; no role or permission is changed."
+  },
+  "limits": [
+    "Native Canvas is not Chromium; DOM/CSS, actual browser keyboard delivery, HTTP, service worker and CI browser behavior are not tested.",
+    "Timing and mirrored left views are authored versus presentation; no original film/game animation timing or 1:1 fidelity is certified.",
+    "These wave22 candidates are exercised through idle, permitted static-frame movement or stationary-input rejection, and release-to-idle; no attack/contact/guard/finisher matrix is exercised.",
+    "Skull/torso size, foot contacts and limb identity still require visual review of the native captures."
+  ],
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "sh1_grey_child_005": "5bd77f5b4b4588bb1c72cacc125b55df781ef21728fa2b3e6c44b62e74f3e416",
+    "sh2_creeper_025": "c406619e7c5636e3c5e7b9a8df6bae2657010793de09126704e368cb01feb47a"
+  },
+  "testedStageEntryHashes": {
+    "hazel_subway": "c95e04fa47ff52810f388d336e0c2e6fcaacce9d5f145ee420bc021f333a737a"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "failure": "Error: Historical portrait preserved and separated: sh1_grey_child_005\n    at check (file:///workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs:41:158)\n    at file:///workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs:70:52",
+  "passed": false,
+  "completedAt": "2026-11-19T15:25:18.496Z"
+}

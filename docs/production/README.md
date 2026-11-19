@@ -4,7 +4,21 @@ Ce dossier suit la réalisation des movesets, supers, finishers, introductions, 
 
 Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les recherches JSON alimentent désormais `src/production-reference.js` et les règles du moteur par un générateur vérifié. Le fichier Excel n’est pas chargé par le jeu et ses annotations ne sont pas appliquées automatiquement. Le [rapport d’intégration](../EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) décrit les réalisations et leurs limites ; le [relevé initial](QA_2026-10-17.md) conserve l’historique de la première phase.
 
-## État actuel — vague 21 du 19 novembre 2026
+## État actuel — vague 22 du 19 novembre 2026
+
+La [vague 22](vague22/README.md) ajoute **16 vues latérales dédiées et 10 stages**,
+soit 36 nouveaux PNG actifs. Le catalogue atteint **151 vues candidates et
+65 arènes bitmap sur 123**. Douze vues servent des profils déjà admissibles
+au combat ; quatre restent des références hors duel. Les 204 portraits et six
+clips animés sont conservés. Aucun nouveau profil moteur ou certificat 1:1.
+
+Il reste 58 stages sans bitmap (43 ouverts, 15 bloqués), 42 vues anciennes
+à revoir, 26 portraits absents et 37 images de combat absentes. Le [rapport complet](vague22/RAPPORT_VAGUE22_PERSONNAGES_STAGES.md)
+distingue les vrais manquants des nouvelles vues de profils déjà illustrés.
+Le [classeur Corpus / Stages](SILENT_HILL_CORPUS_BIBLE.xlsx) reflète les 65 lieux actifs ;
+les 66 notices du corpus et le classeur historique des animations sont préservés.
+
+## État précédent — vague 21 du 19 novembre 2026
 
 **55 arènes bitmap sur 123 ; 68 restent sans bitmap**, dont 53 fiches non
 bloquées et 15 références bloquées. La [vague 21](vague21/README.md) ajoute

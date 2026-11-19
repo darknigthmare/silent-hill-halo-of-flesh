@@ -1,0 +1,1163 @@
+{
+  "schemaVersion": 1,
+  "group": "wave22-stages",
+  "scope": "missing stages only",
+  "createdAt": "2026-11-19T15:15:01.912845+00:00",
+  "baseCommit": "80db2a9fdda7032bcaf110df79915be598290f08",
+  "deliveryState": "candidate-ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "hazel_subway",
+      "source": "sh3",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "concourse-ticket-alcove",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH3_04_SUBWAY_STATION"
+      ],
+      "worldState": "fixed-normal",
+      "locationScope": "SH3 original, Hazel Street normal : alcôve du hall avec quatre distributeurs, avant les quais ; aucune rame ni voie SH4.",
+      "selectedSubLocation": "SH3 original, Hazel Street normal : alcôve du hall avec quatre distributeurs, avant les quais ; aucune rame ni voie SH4.",
+      "supports": {
+        "description": "Carrelage gris continu élargi devant les distributeurs en fond ; aucun rail ajouté.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "ticket-alcove",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+              "sha256": "4d537af9a1485e2e384396327b8a60c35c923552f8318e92021fff76e75c40c3",
+              "bytes": 2203973,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-wall-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+              "sha256": "98e4c72a83083b2f1dcabd1417e687c20d31daaac96ece679ffedd266584b884",
+              "bytes": 200941,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh3_04_ticket_machine_newspaper_a.jpg"
+      ],
+      "notes": [
+        "Un changeur gris et trois distributeurs verts, journal replié, carrelage crème à bandes vertes et porte de service d'après la vue native.",
+        "Les inscriptions de distributeurs reproduites appartiennent à la texture attestée ; aucun HUD, texte ajouté ou signalétique de gare inventée.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    },
+    {
+      "stageId": "underpass_sh3",
+      "source": "sh3",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "upper-map-room",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH3_05_UNDERPASS"
+      ],
+      "worldState": "fixed-normal",
+      "locationScope": "SH3 original, Underpass normal : salle supérieure de la carte et du casier renversé, avant le canal de Sewers.",
+      "selectedSubLocation": "SH3 original, Underpass normal : salle supérieure de la carte et du casier renversé, avant le canal de Sewers.",
+      "supports": {
+        "description": "Dalle de béton continue devant le mur de la carte ; casier et tonneau reculés hors appuis.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "map-room",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/underpass_sh3.map-room.da4cf2791272.png",
+              "sha256": "da4cf2791272392c8e54a54009dd9f9f1db636cf669687f5a8fb7bf43909a366",
+              "bytes": 2137101,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-wall-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/underpass_sh3.near-wall-edges.a65261780188.png",
+              "sha256": "a6526178018839d6009a259e7bdd5fa5e3c2f0ed72bd416ef361a5da82651565",
+              "bytes": 216890,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh3_05_underpass_map_location.jpg",
+        "sh3_05_maul_a.jpg"
+      ],
+      "notes": [
+        "Carte murale, peinture vert-bleu usée, casier renversé et tonneau attestés ; Heather et la masse collectible retirées.",
+        "Aucun mélange avec canal, salle du chauffage, variante sanglante Extra New Game ou chantier.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    },
+    {
+      "stageId": "nightmare_hilltop",
+      "source": "sh3",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "gallery-before-painting-burn",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER"
+      ],
+      "worldState": "fixed-altered",
+      "locationScope": "SH3 original, Hilltop Center Otherworld : galerie d'art 5F, mur Flame Purifies All avant combustion du tableau.",
+      "selectedSubLocation": "SH3 original, Hilltop Center Otherworld : galerie d'art 5F, mur Flame Purifies All avant combustion du tableau.",
+      "supports": {
+        "description": "Caillebotis continu élargi devant le mur, petit seau en arrière à y≈0,73, appuis y=0,825 libres.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "gallery-painting",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/nightmare_hilltop.gallery-painting.2a9fc04c0043.png",
+              "sha256": "2a9fc04c004376adb2ea2ee5acb6e13247d23c6a5f2b77329178e1b58247e856",
+              "bytes": 2475526,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-wall-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/nightmare_hilltop.near-wall-edges.cfcaac8fc270.png",
+              "sha256": "cfcaac8fc270606dad7c4177774b7edff77e17bb8d6ef468ebab075cd4251cf3",
+              "bytes": 262629,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh3_08_flame_purifies_all_a.jpg"
+      ],
+      "notes": [
+        "Cadre, deux lampes grillagées, corrosion ivoire/rouille et seau repris de la capture native.",
+        "Les figures restent uniquement peintes dans le tableau attesté ; aucun acteur, cadavre, monstre ou personnage tridimensionnel ajouté.",
+        "La peinture n'est pas brûlée ; aucune transformation ni scène de Glutton inventée.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "promptKey": "hazel_subway_bg",
+      "filename": "hazel_subway.ticket-alcove.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-b3c4c0ef-1641-4e28-82e0-5930ed41ecea.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/hazel_subway.ticket-alcove.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2203973,
+      "sha256": "4d537af9a1485e2e384396327b8a60c35c923552f8318e92021fff76e75c40c3",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "hardlinkVerified": true,
+      "stageId": "hazel_subway",
+      "role": "opaque-background",
+      "path": "assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch",
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "hazel_subway_fg",
+      "filename": "hazel_subway.near-wall-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-44b6588a-cf2e-483e-8bc8-4d8ced14ec30.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/hazel_subway.near-wall-edges.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 200941,
+      "sha256": "98e4c72a83083b2f1dcabd1417e687c20d31daaac96ece679ffedd266584b884",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "transparentFraction": 0.9488105649593988,
+        "semiTransparentPixels": 80361,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlinkVerified": true,
+      "stageId": "hazel_subway",
+      "role": "transparent-foreground",
+      "path": "assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "underpass_sh3_bg",
+      "filename": "underpass_sh3.map-room.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-8783f6eb-8ffb-4c0d-9c29-8a9034594c56.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/underpass_sh3.map-room.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2137101,
+      "sha256": "da4cf2791272392c8e54a54009dd9f9f1db636cf669687f5a8fb7bf43909a366",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "hardlinkVerified": true,
+      "stageId": "underpass_sh3",
+      "role": "opaque-background",
+      "path": "assets/stages/underpass_sh3.map-room.da4cf2791272.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch",
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "underpass_sh3_fg",
+      "filename": "underpass_sh3.near-wall-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-a027825a-bea5-49fd-90bc-c868ed4d0371.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/underpass_sh3.near-wall-edges.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 216890,
+      "sha256": "a6526178018839d6009a259e7bdd5fa5e3c2f0ed72bd416ef361a5da82651565",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "transparentFraction": 0.940905150277878,
+        "semiTransparentPixels": 92427,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlinkVerified": true,
+      "stageId": "underpass_sh3",
+      "role": "transparent-foreground",
+      "path": "assets/stages/underpass_sh3.near-wall-edges.a65261780188.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "nightmare_hilltop_bg",
+      "filename": "nightmare_hilltop.gallery-painting.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-55f5e20b-cdf7-4648-b118-227f8a09d37c.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hilltop.gallery-painting.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2475526,
+      "sha256": "2a9fc04c004376adb2ea2ee5acb6e13247d23c6a5f2b77329178e1b58247e856",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "hardlinkVerified": true,
+      "stageId": "nightmare_hilltop",
+      "role": "opaque-background",
+      "path": "assets/stages/nightmare_hilltop.gallery-painting.2a9fc04c0043.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch",
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "nightmare_hilltop_fg",
+      "filename": "nightmare_hilltop.near-wall-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-b6b2ee45-d0c6-4bd6-99f7-69253d3dab84.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hilltop.near-wall-edges.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 262629,
+      "sha256": "cfcaac8fc270606dad7c4177774b7edff77e17bb8d6ef468ebab075cd4251cf3",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "transparentFraction": 0.9354302152347345,
+        "semiTransparentPixels": 101361,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlinkVerified": true,
+      "stageId": "nightmare_hilltop",
+      "role": "transparent-foreground",
+      "path": "assets/stages/nightmare_hilltop.near-wall-edges.cfcaac8fc270.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_ticket_machine_newspaper_a.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh3_04_ticket_machine_newspaper_a.jpg",
+      "sha256": "959f095746335bb361c39f8e589fef7ad3e22cdc6aa94244909726d016d94ca3",
+      "bytes": 399007,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_map_location.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh3_05_underpass_map_location.jpg",
+      "sha256": "862b033ebff2c4fb3221219482645320385d075439ab1a28ce32e67e95e5ee80",
+      "bytes": 330347,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_maul_a.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh3_05_maul_a.jpg",
+      "sha256": "00712ebbaf4008b618e8cdb84f51f7fe9ab9ae6e01760f054928118cc59ed244",
+      "bytes": 357274,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_flame_purifies_all_a.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh3_08_flame_purifies_all_a.jpg",
+      "sha256": "9149978705cf42ee5d2a3a1168c48faffae6e58a9bfa89da6e21917aec827595",
+      "bytes": 615608,
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "prompts": [
+    {
+      "key": "hazel_subway_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/sh3_04_ticket_machine_newspaper_a.jpg"
+      ],
+      "prompt": "Create ONE full-frame opaque 16:9 environment plate, ideally 1672×941 pixels, for a side-view 2D fighting stage. Exact source: Silent Hill 3 (2003), NORMAL Hazel Street subway station CONCOURSE, the four ticket/change vending machines alcove visible in the attached native game screenshot. This is not a train platform or SH4 subway. Study the reference: four tall old vending cabinets side by side, one gray cabinet at left then three muted dark-green cabinets with silver fronts; black sloping tops, one folded newspaper draped over one green cabinet; white small square ceramic wall tiles, narrow vertical dark green tile strips, dark green skirting, gray square floor tiles, small orange-brown service door at far right. Preserve these evidenced objects/material relationships; add no benches, tracks, trains, rails, new furniture or speculative corridors. Remove Heather and every weapon/actor. Reconstruct this same wall as a wide nearly straight-on side-facing room plate: rear wall/floor junction around 63% image height, objects against rear wall at modest scale, clear continuous floor across the lower 37%, horizontal fighting-foot line at y=82.5% with no props there. Keep a slight coherent floor perspective, not top-down, not deep vanishing corridor. Dim green-gray fluorescent/flashlight-like ambient illumination, enough texture and visibility for gameplay, faithful early-2000s survival horror materials, no cinematic hyperreal embellishment. No people, monsters, human silhouettes, HUD, UI, captions, logos, readable lettering or decorative borders. Machine labels remain indistinct painted strips. Fill every pixel including corners with the environment; no transparency and no vignette matte. One scene only. The output is a source-guided versus reconstruction, not a screenshot or certified exact replica."
+    },
+    {
+      "key": "underpass_sh3_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/sh3_05_underpass_map_location.jpg",
+        "/workspace/scratch/halo-wave22-stages/references/sh3_05_maul_a.jpg"
+      ],
+      "prompt": "Create ONE full-frame opaque wide 16:9 environment plate, ideally 1672×941 pixels, for a side-view 2D fighting stage. Exact source is Silent Hill 3 (2003) NORMAL Underpass UPPER LEVEL MAP ROOM, before the sewer canal; both attached native game screenshots show this SAME room. Preserve the observed distressed teal-green wall with dark horizontal lower trim and pale rectangular paper route map, rusty metal locker cabinet fallen diagonally along the wall at the right, gray metal drum at far left, dark gritty concrete floor and bare industrial wall planes. These exact restricted room details define this plate. Remove Heather, the handheld weapon, and the collectible spiked maul; no actors or monsters. Do not mix in the canal, water monster, kerosene heater room, bloody Extra New Game walls or later construction site. Reorient only this map-wall bay into a nearly straight-on side-facing composition suitable for a 2D duel. Rear wall meets floor at y=62%; the fallen locker and drum are entirely at the rear, their lowest pixels above y=69%; lower 31% is unobstructed continuous concrete floor with horizontal foot contact line y=82.5%. Broaden the visible floor conservatively; do not invent another room or machinery. Dark subdued cold green-gray illumination, rusty brown metal, quiet readable floor, original early-2000s game material mood rather than dramatic modern redesign. No people, creatures, bodies, HUD, text overlays, logos, readable map lettering or borders. No foreground bars. Opaque to all edges, one scene, no collage. Source-guided camera/floor adaptation is acceptable; identity and world state must match the references."
+    },
+    {
+      "key": "nightmare_hilltop_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/sh3_08_flame_purifies_all_a.jpg"
+      ],
+      "prompt": "Create ONE full-frame opaque 16:9 environment plate, ideally 1672×941, for a side-view 2D fighting stage. Exact source: Silent Hill 3 (2003), NIGHTMARE / Otherworld Hilltop Center, FIFTH FLOOR GALLERY OF FINE ARTS, the specific 'Flame Purifies All' painting wall BEFORE the painting is burned. Use the attached native gameplay capture as the strict identity reference. Keep the large aged rectangular gilt picture frame in the central back wall with its dim reddish historical religious painting; preserve the art as a small indistinct painted image, never a living figure. Keep the two narrow caged vertical fluorescent fixtures flanking it, mottled ivory/rust wall panels with heavy dark-red corrosion, dark metal base trim, and the continuous rusty rectangular grated floor. Keep the small metal bucket under the painting at the BACK wall, not in the fighting lane. Remove Heather and all weapons/actors; there are no real people, monsters or bodies in this room plate. Reframe this exact shallow bay wider and straighter, rear wall/floor junction y=60%, bucket base above y=65%, lower40% continuous level grating, horizontal clear combat-foot line y=82.5%. Restrained original-game lighting, warm rusty dark brown/ivory palette, no additional decorative furniture, sculpture, extra painting, bones, hanging bodies, huge pipes or invented doorways. The two tiny wall lamps light the wall, not a theatrical spotlight. No HUD, captions, readable letters, logo, border, montage or transparent pixels. One coherent source-guided environment; original material and room identity matter more than cinematic realism. This is a versus camera reconstruction, not certified1:1."
+    },
+    {
+      "key": "hazel_subway_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/hazel_subway.ticket-alcove.png"
+      ],
+      "prompt": "Create ONE separate foreground PARALLAX OVERLAY PNG with genuine alpha transparency, exactly the same wide16:9 canvas as the attached stage plate, ideally1672×941. The attached image establishes scale, material and lighting only; DO NOT copy its background. Almost the entire canvas must be fully transparent RGBA: middle region x=5%..95% and all its y coordinates alpha0, especially combat feet y=75%..90%. Only narrow peripheral architectural slices at the extreme outer edges, each at most4% canvas width, are visible. No opaque floor, background, haze, checkerboard, ground shadow, horizontal crossbar or border across the center. Cropped architecture may continue past image edges. Matched camera and texture, crisp natural antialiased alpha, no bright fringe. No actors, monsters, text or logos. These are static edge details of the same room, no invented new prop. Room: Silent Hill3 NORMAL Hazel Street ticket-machine alcove. Show ONLY a thin near-left and near-right return edge of the existing cream square tiled wall, using its grime, subdued green band and dark skirting. Left slice no wider than3.5%, right slice no wider than2.5%. Do not show machines, newspaper, service door, foreground pillars or a second wall spanning the picture. Fully transparent huge center. Return wall fragments are a modest near-camera framing adaptation of the observed wall material."
+    },
+    {
+      "key": "underpass_sh3_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/underpass_sh3.map-room.png"
+      ],
+      "prompt": "Create ONE separate foreground PARALLAX OVERLAY PNG with genuine alpha transparency, exactly the same wide16:9 canvas as the attached stage plate, ideally1672×941. The attached image establishes scale, material and lighting only; DO NOT copy its background. Almost the entire canvas must be fully transparent RGBA: middle region x=5%..95% and all its y coordinates alpha0, especially combat feet y=75%..90%. Only narrow peripheral architectural slices at the extreme outer edges, each at most4% canvas width, are visible. No opaque floor, background, haze, checkerboard, ground shadow, horizontal crossbar or border across the center. Cropped architecture may continue past image edges. Matched camera and texture, crisp natural antialiased alpha, no bright fringe. No actors, monsters, text or logos. These are static edge details of the same room, no invented new prop. Room: Silent Hill3 NORMAL Underpass upper-level map room, not canal. Show ONLY two very thin rough concrete/teal-painted near-wall return slivers matching the attached weathered room, left3% and right2% of the canvas maximum. Keep the same dull green-gray grime and low rusty undertone. No maps, drums, lockers, pipes, railings, furniture or sharp spikes in the foreground. Transparent central95% all the way from top to bottom. The existing architecture itself forms the modest near-camera layer."
+    },
+    {
+      "key": "nightmare_hilltop_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/nightmare_hilltop.gallery-painting.png"
+      ],
+      "prompt": "Create ONE separate FOREGROUND PARALLAX OVERLAY PNG with TRUE ALPHA TRANSPARENCY, ideally1672×941 wide16:9, exactly aligned to the attached room plate. The scene is Silent Hill3 Otherworld Hilltop Center, fifth-floor Gallery of Fine Arts at the Flame Purifies All painting wall before burning. This overlay contains ONLY a very narrow close crop of the rust-stained ivory wall return at the extreme LEFT x0..3%, and another at the extreme RIGHT x97..100%. Use the same dark corroded wall material, vertical near-camera edge, and original-game lighting from the attached room. These are restrained enlarged edges of the existing architecture; do not invent props. The entire central94% must be fully transparent from top through bottom: no painting, lamps, bucket, floor, ceiling, crossbar, background or haze. Keep transparent fight footing at y75..90%. The slivers may be irregular with tiny natural chipped edges but no projecting spikes. No people, monsters, text, logos, checkerboard texture or opaque black matte. Clean antialiased alpha, no pale fringe. One full canvas, no montage and no border around the center."
+    }
+  ],
+  "provenance": {
+    "generator": "integrated image_gen.imagegen",
+    "callsPerAsset": 1,
+    "sourceGuides": [
+      {
+        "stageId": "hazel_subway",
+        "url": "https://www.silenthillmemories.net/sh3/walkthrough_04_subway_station_en.htm",
+        "sha256": "ca260b77d36f158cdd6d656aa582728724f39301f3002a893d4b3bd9c7899e6d",
+        "bytes": 30281,
+        "images": [
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_ticket_machine_newspaper_a.jpg",
+            "heading": "To the Concourse",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_ticket_machine_newspaper_a.jpg",
+            "heading": "To the Concourse",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_ticket_machine_newspaper_b.jpg",
+            "heading": "To the Concourse",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_ticket_machine_newspaper_b.jpg",
+            "heading": "To the Concourse",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_subway_station_map_location.jpg",
+            "heading": "To the Concourse",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_subway_station_map_location.jpg",
+            "heading": "To the Concourse",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_occult_magazine_a.jpg",
+            "heading": "Platform 4",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_occult_magazine_a.jpg",
+            "heading": "Platform 4",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_occult_magazine_b.jpg",
+            "heading": "Platform 4",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_occult_magazine_b.jpg",
+            "heading": "Platform 4",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_subway_station_save_point_a.jpg",
+            "heading": "Connecting Hallways",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_subway_station_save_point_a.jpg",
+            "heading": "Connecting Hallways",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_subway_station_save_point_b.jpg",
+            "heading": "Connecting Hallways",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_subway_station_save_point_b.jpg",
+            "heading": "Connecting Hallways",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_platform_2_locked_gate.jpg",
+            "heading": "Connecting Hallways",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_platform_2_locked_gate.jpg",
+            "heading": "Connecting Hallways",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_nutcracker_a.jpg",
+            "heading": "Platform 1/2 North",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_nutcracker_a.jpg",
+            "heading": "Platform 1/2 North",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_nutcracker_b.jpg",
+            "heading": "Platform 1/2 North",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_nutcracker_b.jpg",
+            "heading": "Platform 1/2 North",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_shotgun_a.jpg",
+            "heading": "Platform 2 South",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_shotgun_a.jpg",
+            "heading": "Platform 2 South",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_shotgun_b.jpg",
+            "heading": "Platform 2 South",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_shotgun_b.jpg",
+            "heading": "Platform 2 South",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_platform_3_red_glowing_door.jpg",
+            "heading": "Platform 3 East",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_platform_3_red_glowing_door.jpg",
+            "heading": "Platform 3 East",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_moving_subway_train_save_point.jpg",
+            "heading": "Moving Subway Train",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_moving_subway_train_save_point.jpg",
+            "heading": "Moving Subway Train",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_unknown_platform_save_point.jpg",
+            "heading": "Unknown Platform",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_unknown_platform_save_point.jpg",
+            "heading": "Unknown Platform",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "stageId": "underpass_sh3",
+        "url": "https://www.silenthillmemories.net/sh3/walkthrough_05_underpass_en.htm",
+        "sha256": "f8373c0438dfb58430552e2ce56c4838c8be188e34c65134d3e4608ce3e42ca0",
+        "bytes": 30277,
+        "images": [
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_map_location.jpg",
+            "heading": "Map Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_underpass_map_location.jpg",
+            "heading": "Map Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_maul_a.jpg",
+            "heading": "Map Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_maul_a.jpg",
+            "heading": "Map Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_maul_b.jpg",
+            "heading": "Map Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_maul_b.jpg",
+            "heading": "Map Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_wine_bottle_a.jpg",
+            "heading": "Southwest Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_wine_bottle_a.jpg",
+            "heading": "Southwest Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_wine_bottle_b.jpg",
+            "heading": "Southwest Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_wine_bottle_b.jpg",
+            "heading": "Southwest Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_oil-filled_bottle_a.jpg",
+            "heading": "Eastern Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_oil-filled_bottle_a.jpg",
+            "heading": "Eastern Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_oil-filled_bottle_b.jpg",
+            "heading": "Eastern Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_oil-filled_bottle_b.jpg",
+            "heading": "Eastern Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_01.jpg",
+            "heading": "Eastern Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_underpass_01.jpg",
+            "heading": "Eastern Corridor",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_dryer_a.jpg",
+            "heading": "Garbage Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_dryer_a.jpg",
+            "heading": "Garbage Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_dryer_b.jpg",
+            "heading": "Garbage Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_dryer_b.jpg",
+            "heading": "Garbage Room",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_about_the_monster_in_the_water_a.jpg",
+            "heading": "Lower Level East",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_about_the_monster_in_the_water_a.jpg",
+            "heading": "Lower Level East",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_about_the_monster_in_the_water_b.jpg",
+            "heading": "Lower Level East",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_about_the_monster_in_the_water_b.jpg",
+            "heading": "Lower Level East",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_02.jpg",
+            "heading": "Bloody Walkway: Monster or Myth?",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_underpass_02.jpg",
+            "heading": "Bloody Walkway: Monster or Myth?",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_extra_weapon_gold_silver_pipes.jpg",
+            "heading": "Extra New Game Weapons: Gold Pipe and Silver Pipe",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_extra_weapon_gold_silver_pipes.jpg",
+            "heading": "Extra New Game Weapons: Gold Pipe and Silver Pipe",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_extra_weapon_gold_silver_pipes_lady.jpg",
+            "heading": "Extra New Game Weapons: Gold Pipe and Silver Pipe",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_construction_site_save_point.jpg",
+            "heading": "Outside",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_construction_site_save_point.jpg",
+            "heading": "Outside",
+            "alt": ""
+          }
+        ]
+      },
+      {
+        "stageId": "nightmare_hilltop",
+        "url": "https://www.silenthillmemories.net/sh3/walkthrough_08_nightmare_hilltop_center_en.htm",
+        "sha256": "674e25a1a68769c526300bfe449cd76e0a1e78d412d5d4aea8a6e0050de8c3f9",
+        "bytes": 31537,
+        "images": [
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_photo_on_chair_a.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_photo_on_chair_a.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_photo_on_chair_b.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_photo_on_chair_b.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_oxydol_a.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_oxydol_a.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_oxydol_b.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_oxydol_b.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_junior_high_school_chemistry_book_a.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_junior_high_school_chemistry_book_a.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_junior_high_school_chemistry_book_b.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_junior_high_school_chemistry_book_b.jpg",
+            "heading": "Second Floor: Green Ridge Mental Health Clinic",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_glutton.jpg",
+            "heading": "First Floor Hallway",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_glutton.jpg",
+            "heading": "First Floor Hallway",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_pork_liver_a.jpg",
+            "heading": "First Floor: Last Drop Cafe",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_pork_liver_a.jpg",
+            "heading": "First Floor: Last Drop Cafe",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_pork_liver_b.jpg",
+            "heading": "First Floor: Last Drop Cafe",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_pork_liver_b.jpg",
+            "heading": "First Floor: Last Drop Cafe",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_matchbook_a.jpg",
+            "heading": "Fifth Floor: KMN Auto Parts",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_matchbook_a.jpg",
+            "heading": "Fifth Floor: KMN Auto Parts",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_matchbook_b.jpg",
+            "heading": "Fifth Floor: KMN Auto Parts",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_matchbook_b.jpg",
+            "heading": "Fifth Floor: KMN Auto Parts",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_wheelchair_behind_glass.jpg",
+            "heading": "Fifth Floor: KMN Auto Parts",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_wheelchair_behind_glass.jpg",
+            "heading": "Fifth Floor: KMN Auto Parts",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_flame_purifies_all_a.jpg",
+            "heading": "Fifth Floor: Gallery of Fine Arts",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_flame_purifies_all_a.jpg",
+            "heading": "Fifth Floor: Gallery of Fine Arts",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_fairy_tale_continued_a.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_fairy_tale_continued_a.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_fairy_tale_continued_b.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_fairy_tale_continued_b.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_silver_coin_a.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_silver_coin_a.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_silver_coin_b.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_silver_coin_b.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_life_insurance_key_a.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_life_insurance_key_a.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_life_insurance_key_b.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_life_insurance_key_b.jpg",
+            "heading": "Fourth Floor: Onestop Imports",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_fairy_tale_last_part_a.jpg",
+            "heading": "First Floor: Elberton Life Insurance",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_fairy_tale_last_part_a.jpg",
+            "heading": "First Floor: Elberton Life Insurance",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_fairy_tale_last_part_b.jpg",
+            "heading": "First Floor: Elberton Life Insurance",
+            "alt": ""
+          },
+          {
+            "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_fairy_tale_last_part_b.jpg",
+            "heading": "First Floor: Elberton Life Insurance",
+            "alt": ""
+          }
+        ]
+      }
+    ],
+    "imageEditing": false,
+    "nativePixelsPreserved": true,
+    "noRuntimeChanges": true,
+    "noCharactersOrPortraitsChanged": true
+  },
+  "qa": {
+    "visualOutputsInspected": 6,
+    "nativePNGMetadataMeasured": 6,
+    "opaqueBackgrounds": 3,
+    "genuineAlphaForegrounds": 3,
+    "browserTest": false,
+    "runtimeTest": "pending root integration",
+    "candidateFidelity": "unverified"
+  },
+  "totals": {
+    "stages": 3,
+    "png": 6,
+    "bytes": 7497060
+  },
+  "deferredPrevious": [
+    "nightmare_mall",
+    "apartment_roof",
+    "shimizu_residence",
+    "police_station_hc"
+  ]
+}

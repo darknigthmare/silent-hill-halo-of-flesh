@@ -1,0 +1,175 @@
+[
+  {
+    "key": "light",
+    "taskKey": "wave22_gen_light_v2_task",
+    "resultKey": "wave22_gen_light_v2_result",
+    "filename": "bom_light_guardian_140.side-right.v2.png",
+    "source": "bom",
+    "anchorX": 0.34,
+    "approved": true,
+    "referenceIds": [
+      "EXT20"
+    ],
+    "referenceNames": [
+      "bom-light-bestiary"
+    ],
+    "review": "Profil droit entier après correction de la première vue frontale. Carapace claire sans visage humain, cœur lumineux latéral, bras-masse complet et deux petits appuis. Posture de présentation adaptée au versus.",
+    "limits": "Le seul portrait natif du bestiaire est de faible résolution (127×127) ; dos, rotation latérale, découpe fine des plaques et microtextures sont reconstruits. Aucun timing ni fidélité 1:1 certifié.",
+    "task": {
+      "id": "bom_light_guardian_140",
+      "role": "combat-idle",
+      "references": [
+        "/workspace/scratch/halo-wave22-fighters-b/variants/bom_light_guardian_140.front-variant.v1.png",
+        "/workspace/scratch/halo-wave22-fighters-b/references/bom-light-bestiary.jpg"
+      ],
+      "prompt": "Edit image 1 to ROTATE THE SAME LIGHT GUARDIAN 90 degrees into a strict SIDE PROFILE FACING SCREEN RIGHT for a 2D fighting game. The first result is too frontal. Image 2 is the original Book of Memories native reference for identity. Keep the same pale broad cracked shell, luminous chest core, small red hanging cloth, very narrow legs, one thin claw arm and one huge segmented mace arm. Turn the entire torso and shell so the chest points to the RIGHT edge; the luminous core should be barely seen on the right edge of the chest rather than centered toward camera. The two shoulders overlap in profile; the near huge arm partly overlaps the torso and extends forward to the right, the far slim arm is mostly behind. Both knees and toes point right. Keep the complete silhouette, shell top, both feet and whole mace with 8% clear margin. Do not simply turn the feet while retaining a frontal chest. Do not add human head, face, armor ornaments, limbs or weapons. One single complete full body static idle, no scene, no floor, no text. Preserve transparent background and native alpha. No frontal presentation, no three-quarter front. Camera side-on at chest height, orthographic game sprite."
+    },
+    "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-6aea4085-aee0-412d-a13b-a4801436b98a.png"
+  },
+  {
+    "key": "sakura",
+    "taskKey": "wave22_gen_sakura_task",
+    "resultKey": "wave22_gen_sakura_result",
+    "filename": "shortmessage_sakura_head_150.side-right.v1.png",
+    "source": "shortmessage",
+    "anchorX": 0.47,
+    "approved": true,
+    "referenceIds": [
+      "EXT30"
+    ],
+    "referenceNames": [
+      "sakura-native",
+      "sakura-screen-02",
+      "sakura-statue-03",
+      "sakura-statue-05"
+    ],
+    "review": "Corps latéral orienté à droite, couronne florale entière, veste et cordons sombres, deux extrémités de manches et deux appuis liés à des montants de bois entièrement visibles. Aucun visage humain ni accessoire ajouté.",
+    "limits": "Vues natives frontales corroborées par les photos de la figurine officielle supervisée par Ito pour le revers et les montants. La figurine n'est pas un mesh extrait du jeu ; pose et détails floraux restent reconstruits. Le concept à baskets a été consulté puis exclu car il diffère de la version finale. Marges demandées 10% non acquises ; conserver les bornes mesurées.",
+    "task": {
+      "id": "shortmessage_sakura_head_150",
+      "role": "combat-idle",
+      "references": [
+        "/workspace/scratch/halo-wave22-fighters-b/references/sakura-native.webp",
+        "/workspace/scratch/halo-wave22-fighters-b/references/sakura-screen-02.jpg",
+        "/workspace/scratch/halo-wave22-fighters-b/references/sakura-statue-03.webp",
+        "/workspace/scratch/halo-wave22-fighters-b/references/sakura-statue-05.webp"
+      ],
+      "prompt": "One full-body transparent game sprite of SAKURA HEAD from SILENT HILL: The Short Message (2024). Images 1 and 2 are the final creature in the game, authoritative for appearance and proportions. Images 3 and 4 are the officially licensed Masahiro Ito-supervised statue, supplemental evidence for the back, twig bindings and complete lower leg/wooden post details; do NOT reproduce the display base, fence, labels, logo or scenic support. Faithfully retain the final design: a tall extended faceless head entirely covered in dense pale pink-white cherry blossoms around a dark forked wooden framework; off-white oversized jacket with puffed sleeves and black cord bindings around head, torso, forearms; a continuous blossom fringe down the front and around the lower hem; slim pale bare knees and long lower legs wrapped with dark cords and attached narrow wooden slats/posts, clustered flowers around the feet; short dark twig tips at the sleeve ends. No human face, eyes, mouth or added weapon. Repose the complete creature in a TRUE STRICT SIDE PROFILE FACING SCREEN RIGHT, shoulders and hips side-on, head tilted slightly toward an unseen opponent on the right. Arms hang down slightly forward in a quiet stalking idle, both bound leg/foot ends fully shown and slightly staggered. Keep source stature, not chibi, not a new outfit. Do not use the unused short flower-head concept with sneakers. Every flower crown tip, both sleeve/twig ends and both leg posts must fit with 10% empty transparent margin on all sides. One character, realistic clean detailed 2D combat sprite, neutral lighting, true transparent alpha background, no environment, ground, shadow cloud, floating petals or UI. One static full-body image, no animation sheet."
+    },
+    "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-ad45560e-931e-4e49-86c1-3209529d6486.png"
+  },
+  {
+    "key": "water",
+    "taskKey": "wave22_gen_water_v3_task",
+    "resultKey": "wave22_gen_water_v3_result",
+    "filename": "bom_water_guardian_141.side-right.v3.png",
+    "source": "bom",
+    "anchorX": 0.32,
+    "approved": true,
+    "referenceIds": [
+      "EXT20"
+    ],
+    "referenceNames": [
+      "bom-water-bestiary",
+      "bom-water-50"
+    ],
+    "review": "Profil droit entier, deux bras et base arrondie fermée sans jambes. Halo éliminé et crête crochue non attestée des versions1–2 supprimée ; couronne raccourcie et raccordée au tronc.",
+    "limits": "Le bestiaire de faible résolution et la capture native50 attestent la couronne compacte, deux bras et base fermée. Profondeur dorsale, raccords fins et pose latérale reconstruits. La main détachée visible sur le sol n'est pas ajoutée à cette pose idle, qui ne représente pas toutes les phases de l'affrontement.",
+    "task": {
+      "id": "bom_water_guardian_141",
+      "role": "combat-idle",
+      "references": [
+        "/workspace/scratch/halo-wave22-fighters-b/references/bom-water-bestiary.jpg",
+        "/workspace/scratch/halo-wave22-fighters-b/references/bom-water-50.jpg",
+        "/workspace/scratch/halo-wave22-fighters-b/variants/bom_water_guardian_141.side-right.v2.png"
+      ],
+      "prompt": "Correct the HEAD IDENTITY of the sprite in image 3 using the actual Water Guardian from Silent Hill: Book of Memories in images 1 and 2. Image 1 is the native bestiary; image 2 is native PS Vita gameplay. The previous sprite wrongly made a long curved backward hooked crest like an Alien monster. Remove that unsupported giant hooked crescent entirely. The source head is a much shorter broad heavy rounded/wedge-shaped blue-grey crown smoothly merging into the bloated torso, with a shallow central ridge, deep furrows and a relatively small hungry opening in the front. Keep the creature's exact monolithic body: two heavy long arms with claw hands, ridged neck/trunk, swollen rounded closed lower base and no legs. Match the short compact head outline in image 1 rather than improvising an alien, dragon or fish; no dorsal horn, no tail, no extra fins, no humanoid face or eyes. Retain a strict lateral whole-body side profile facing RIGHT, with both arms complete and staggered, source bluish-green purple wet material. One character only. True transparent alpha outside the silhouette including all inner gaps, no atmospheric halo, no scenery, no UI. Whole crown, both hands and entire closed base fit with 8 percent clear transparent padding. One static sprite, no animation."
+    },
+    "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-7de665cc-5d3c-4f0e-90c1-dc9064b9cbdf.png"
+  },
+  {
+    "key": "earth",
+    "taskKey": "wave22_gen_earth_v2_task",
+    "resultKey": "wave22_gen_earth_v2_result",
+    "filename": "bom_earth_guardian_142.side-right.v2.png",
+    "source": "bom",
+    "anchorX": 0.5,
+    "approved": true,
+    "referenceIds": [
+      "EXT20"
+    ],
+    "referenceNames": [
+      "bom-earth-bestiary",
+      "bom-earth-48",
+      "bom-earth-49"
+    ],
+    "review": "Profil droit corrigé : mâchoire projetée vers la droite, paroi rocheuse latérale visible ; tête fermée naturellement en pointe et deux bras segmentés flottants complets. Aucun tronc ni jambes ajoutés.",
+    "limits": "Les trois vues natives attestent la composition rocheuse, bouche et membres flottants ; disposition exacte des segments, proportions de la face latérale et microtextures restent reconstruites. Ancre au point inférieur du bloc central, représentation flottante adaptée au versus ; aucun appui humain ni déplacement natif certifié.",
+    "task": {
+      "id": "bom_earth_guardian_142",
+      "role": "combat-idle",
+      "references": [
+        "/workspace/scratch/halo-wave22-fighters-b/variants/bom_earth_guardian_142.side-right.v1.png",
+        "/workspace/scratch/halo-wave22-fighters-b/references/bom-earth-48.jpg"
+      ],
+      "prompt": "Edit IMAGE 1 only to rotate this exact Earth Guardian from Book of Memories into a STRICT RIGHT-FACING 90-DEGREE SIDE PROFILE. The current view is still three-quarter front. Image 2 is the native-game identity reference. The pointed stone upper jaw and open mouth must project entirely toward screen RIGHT; show the side wall of the rocky head, not the broad front mouth cavity. Both floating stone arms should align front/back in the side view, with the near fist in front of the head toward screen right and the far fist partially behind. Preserve the complete heavy irregular rock head, its natural closed pointed bottom and exactly two segmented floating stone arms with their complete fists. No torso or legs. Keep source color, materials and shape, no new ornaments or parts. One clean complete static sprite with true transparent alpha and at least 8 percent clear margin. No scenery, no ground, no aura, no text. Do not change into a standing humanoid golem."
+    },
+    "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-a2106bcf-4fc6-43fc-8062-0e2c205fbbe6.png"
+  },
+  {
+    "key": "air",
+    "taskKey": "wave22_gen_air_task",
+    "resultKey": "wave22_gen_air_result",
+    "filename": "bom_air_screamer_121.side-right.v1.png",
+    "source": "bom",
+    "anchorX": 0.6,
+    "approved": true,
+    "referenceIds": [
+      "EXT20"
+    ],
+    "referenceNames": [
+      "bom-air-native-09",
+      "bom-air-bestiary"
+    ],
+    "review": "Vol statique orienté à droite : tête et torse de profil, deux ailes entières déployées, deux pattes/serres visibles, pas de queue ni membres supplémentaires. L'aile éloignée est abrégée par la perspective de la pose.",
+    "limits": "Capture native PS Vita de 640×363 et portrait bestiaire ; rotation 2D, profondeur des ailes et microtextures reconstruites. L'envergure domine la pose ; l'ancre est un axe de vol, pas un contact plantaire natif. Aucun battement animé fourni.",
+    "task": {
+      "id": "bom_air_screamer_121",
+      "role": "combat-idle",
+      "references": [
+        "/workspace/scratch/halo-wave22-fighters-b/references/bom-air-native-09.jpg",
+        "/workspace/scratch/halo-wave22-fighters-b/references/bom-air-bestiary.jpg"
+      ],
+      "prompt": "Create exactly one transparent full-body AIR SCREAMER combat presentation sprite from Silent Hill: Book of Memories (PS Vita, 2012), matching the attached native gameplay screenshot and bestiary portrait. Image 1 establishes its entire body and complete wings; image 2 clarifies the small skull-like pale head and wing membrane material. Use this specific BoM version, not the SH1 model or a generic dragon. The creature is a thin skeletal winged monster with a small narrow pale skull/beak-like head, elongated thin neck and body, two enormous leathery muted pink-grey/brown batlike wings with dark bony spars, and two thin dangling legs with grasping talons. No tail, horns, feathers, clothing or added limbs. Pose it hovering in a calm flight idle, entire body in STRICT SIDE PROFILE FACING RIGHT; head and beak point to the right, shoulders and torso side-on. Wings are spread up and back as in an arrested wingbeat, one near wing and the partly visible far wing; all membrane tips remain fully in frame and separately readable. Show both complete talon feet below the body. Reconstruct a clear 2D versus presentation while preserving its native wingspan/body ratio, spare anatomy and muted materials. One creature only, no player, HUD, room or floor, no dust or motion trails. True transparent alpha PNG, clean isolated silhouette, 10% clear margin on every side. Detailed game sprite with restrained realistic surface detail, no invented ornate textures. One static full-body image, not a sprite sheet."
+    },
+    "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-3f13e686-faeb-43fe-9691-e744b21fa971.png"
+  },
+  {
+    "key": "insane",
+    "taskKey": "wave22_gen_insane_v2_task",
+    "resultKey": "wave22_gen_insane_v2_result",
+    "filename": "bom_insane_cancer_126.side-right.v2.png",
+    "source": "bom",
+    "anchorX": 0.43,
+    "approved": true,
+    "referenceIds": [
+      "EXT20"
+    ],
+    "referenceNames": [
+      "bom-insane-native-10",
+      "bom-insane-bestiary"
+    ],
+    "review": "Profil droit entier corrigé et fond transparent sans halo. Petite tête enfouie dans les plis, grande masse ventrale, bras proche pendant, bras éloigné masqué par le corps ; deux pieds courts distincts entièrement visibles.",
+    "limits": "Capture native PS Vita de 640×363 et petit portrait bestiaire ; plis, profondeur du dos et angle latéral reconstruits. Le corps occulte naturellement le bras éloigné. Posture de présentation statique ; aucune animation d'attaque, d'explosion ni timing source certifié.",
+    "task": {
+      "id": "bom_insane_cancer_126",
+      "role": "combat-idle",
+      "references": [
+        "/workspace/scratch/halo-wave22-fighters-b/variants/bom_insane_cancer_126.side-right.v1.png",
+        "/workspace/scratch/halo-wave22-fighters-b/references/bom-insane-native-10.jpg"
+      ],
+      "prompt": "Edit the supplied Insane Cancer BoM sprite (image 1) into a clean TRUE SIDE PROFILE FACING RIGHT with fully transparent background. Image 2 is the native Book of Memories design reference. Keep the existing exact creature design, huge swollen belly, pale grey-pink skin folds, tiny sunken nearly featureless head, heavy hanging arms and small complete feet. Rotate the torso a little farther to the right so its chest faces the right edge, not the camera; the near shoulder/arm overlap the far shoulder/arm in profile, face/belly and all toes point right. Keep both whole feet visible in a small stagger. Remove ALL surrounding grey/pink fog, halo and soft background glow: every pixel outside the crisp creature silhouette, including space between legs, must be transparent alpha. Do not paint a floor or a shadow. Fit the complete subject on a portrait transparent canvas with at least 8% clear border around head, hands, belly and feet. Do not change anatomy, add clothes, text, wounds, eyes, weapons, human facial features or extra details. One complete static game sprite; actual transparent PNG, no scene, no UI."
+    },
+    "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-7bb92678-ed9d-486d-af70-15beeb0e285c.png"
+  }
+]

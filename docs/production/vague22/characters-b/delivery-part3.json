@@ -1,0 +1,577 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "group": "fighters-b",
+  "generatedAt": "2026-11-19T15:30:00.147738+00:00",
+  "basePublishedCommit": "80db2a9fdda7032bcaf110df79915be598290f08",
+  "selected": [
+    {
+      "fighterId": "bom_air_screamer_121",
+      "source": "bom",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012)",
+      "file": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_air_screamer_121.side-right.v1.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_air_screamer_121.side-right.v1.png",
+      "candidate": "bom_air_screamer_121.side-right.v1.png",
+      "path": "assets/sprites/bom_air_screamer_121.4bca97ffaaac.png",
+      "status": "side-view-candidate",
+      "fidelity": "unverified",
+      "facing": 1,
+      "pose": "idle",
+      "animated": false,
+      "dimensions": [
+        1774,
+        887
+      ],
+      "width": 1774,
+      "height": 887,
+      "bytes": 773207,
+      "sha256": "4bca97ffaaac0761edb2c268925ebfd69b9e5627ef218f545047dbeafab15871",
+      "sourceSHA256": "4bca97ffaaac0761edb2c268925ebfd69b9e5627ef218f545047dbeafab15871",
+      "pixelSHA256": "67458ccb9b601032738255137d72a48e7f48b81ceb3368c62a1d8129681c65d0",
+      "alphaBounds": {
+        "1": [
+          0,
+          29,
+          1673,
+          855
+        ],
+        "8": [
+          143,
+          43,
+          1503,
+          847
+        ],
+        "32": [
+          143,
+          44,
+          1502,
+          847
+        ],
+        "128": [
+          144,
+          44,
+          1502,
+          846
+        ]
+      },
+      "visibleBounds": [
+        143,
+        44,
+        1502,
+        847
+      ],
+      "framingBounds": [
+        143,
+        43,
+        1503,
+        847
+      ],
+      "transparentFraction": 0.79023386,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "minimumReadablePaddingFraction": 0.04509583,
+      "calibrationProposal": {
+        "anchor": [
+          0.6,
+          0.95490417
+        ],
+        "bodyHeight": 0.90529876,
+        "definition": "Approximate authored support axis; alpha32 exclusive lower baseline. Includes head/crown and complete supports. Native Canvas review required; not a measured source scale."
+      },
+      "anchor": [
+        0.6,
+        0.95490417
+      ],
+      "bodyHeight": 0.90529876,
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/bom_air_screamer_121.98ef307e67f8.png",
+        "sha256": "98ef307e67f83407b96dd4ffd502a46e0e3200f37d46c0779877aa7097ed97ed",
+        "bytes": 513919,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "existingAnimatedClipCount": 0,
+      "portraitAction": "preserve-existing",
+      "clipAction": "preserve-existing-clips",
+      "roleAction": "preserve-existing-runtime-role",
+      "purpose": "combat",
+      "view": "side-view",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Vol statique orienté à droite : tête et torse de profil, deux ailes entières déployées, deux pattes/serres visibles, pas de queue ni membres supplémentaires. L'aile éloignée est abrégée par la perspective de la pose.",
+      "limits": "Capture native PS Vita de 640×363 et portrait bestiaire ; rotation 2D, profondeur des ailes et microtextures reconstruites. L'envergure domine la pose ; l'ancre est un axe de vol, pas un contact plantaire natif. Aucun battement animé fourni. One static drawing. Native generated pixels unchanged; no resize, crop, alpha painting or other pixel processing. Very low alpha noise can extend beyond readable bounds.",
+      "referenceIds": [
+        "EXT20",
+        "EXT9_REF_BOM_AIR_SCREAMER_20261026"
+      ],
+      "references": [
+        {
+          "id": "bom-air-native-09",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120126_09.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-air-native-09.jpg",
+          "sha256": "e985e14e4003c949a10ec9fbb56ac5c6b152be1f82d2a92c9d30db3560234019",
+          "bytes": 216510
+        },
+        {
+          "id": "bom-air-bestiary",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/air_screamer.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-air-bestiary.jpg",
+          "sha256": "6b0fd29405689b59c7f0c7a2f3c076b1412c45fc08449933148b14d4dc25dcf2",
+          "bytes": 11907
+        }
+      ],
+      "runtimeRole": "combatant",
+      "usageRestriction": "Preserve existing role and rules; this image adds no new attacks or movement.",
+      "prompt": "Create exactly one transparent full-body AIR SCREAMER combat presentation sprite from Silent Hill: Book of Memories (PS Vita, 2012), matching the attached native gameplay screenshot and bestiary portrait. Image 1 establishes its entire body and complete wings; image 2 clarifies the small skull-like pale head and wing membrane material. Use this specific BoM version, not the SH1 model or a generic dragon. The creature is a thin skeletal winged monster with a small narrow pale skull/beak-like head, elongated thin neck and body, two enormous leathery muted pink-grey/brown batlike wings with dark bony spars, and two thin dangling legs with grasping talons. No tail, horns, feathers, clothing or added limbs. Pose it hovering in a calm flight idle, entire body in STRICT SIDE PROFILE FACING RIGHT; head and beak point to the right, shoulders and torso side-on. Wings are spread up and back as in an arrested wingbeat, one near wing and the partly visible far wing; all membrane tips remain fully in frame and separately readable. Show both complete talon feet below the body. Reconstruct a clear 2D versus presentation while preserving its native wingspan/body ratio, spare anatomy and muted materials. One creature only, no player, HUD, room or floor, no dust or motion trails. True transparent alpha PNG, clean isolated silhouette, 10% clear margin on every side. Detailed game sprite with restrained realistic surface detail, no invented ornate textures. One static full-body image, not a sprite sheet.",
+      "tool": "image_gen__imagegen",
+      "rawPixelsUnchanged": true,
+      "nativeRuntimeQA": "pending-parent-integration",
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "bom_insane_cancer_126",
+      "source": "bom",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012)",
+      "file": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_insane_cancer_126.side-right.v2.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_insane_cancer_126.side-right.v2.png",
+      "candidate": "bom_insane_cancer_126.side-right.v2.png",
+      "path": "assets/sprites/bom_insane_cancer_126.01b8c9868ff7.png",
+      "status": "side-view-candidate",
+      "fidelity": "unverified",
+      "facing": 1,
+      "pose": "idle",
+      "animated": false,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 1543968,
+      "sha256": "01b8c9868ff7d10b8751b1f5a373bed3e7347e826660338c1979c17c17628d9d",
+      "sourceSHA256": "01b8c9868ff7d10b8751b1f5a373bed3e7347e826660338c1979c17c17628d9d",
+      "pixelSHA256": "e77b650b0d6699580f19e7d7451823bbea7fb703ffcf6ec74cb4e2890490d75e",
+      "alphaBounds": {
+        "1": [
+          0,
+          39,
+          1072,
+          1426
+        ],
+        "8": [
+          127,
+          84,
+          958,
+          1420
+        ],
+        "32": [
+          127,
+          84,
+          958,
+          1420
+        ],
+        "128": [
+          128,
+          85,
+          957,
+          1419
+        ]
+      },
+      "visibleBounds": [
+        127,
+        84,
+        958,
+        1420
+      ],
+      "framingBounds": [
+        127,
+        84,
+        958,
+        1420
+      ],
+      "transparentFraction": 0.51725502,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "minimumReadablePaddingFraction": 0.01933702,
+      "calibrationProposal": {
+        "anchor": [
+          0.43,
+          0.98066298
+        ],
+        "bodyHeight": 0.92265193,
+        "definition": "Approximate authored support axis; alpha32 exclusive lower baseline. Includes head/crown and complete supports. Native Canvas review required; not a measured source scale."
+      },
+      "anchor": [
+        0.43,
+        0.98066298
+      ],
+      "bodyHeight": 0.92265193,
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
+        "sha256": "c2e9933d0d6f3f9e39f5b1ea1c3cdd4ca6e62d08e0696fc8fd00b9fecf7fcb40",
+        "bytes": 686664,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "existingAnimatedClipCount": 0,
+      "portraitAction": "preserve-existing",
+      "clipAction": "preserve-existing-clips",
+      "roleAction": "preserve-existing-runtime-role",
+      "purpose": "combat",
+      "view": "side-view",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit entier corrigé et fond transparent sans halo. Petite tête enfouie dans les plis, grande masse ventrale, bras proche pendant, bras éloigné masqué par le corps ; deux pieds courts distincts entièrement visibles.",
+      "limits": "Capture native PS Vita de 640×363 et petit portrait bestiaire ; plis, profondeur du dos et angle latéral reconstruits. Le corps occulte naturellement le bras éloigné. Posture de présentation statique ; aucune animation d'attaque, d'explosion ni timing source certifié. One static drawing. Native generated pixels unchanged; no resize, crop, alpha painting or other pixel processing. Very low alpha noise can extend beyond readable bounds.",
+      "referenceIds": [
+        "EXT20",
+        "EXT9_REF_BOM_INSANE_CANCER_20261026"
+      ],
+      "references": [
+        {
+          "id": "bom-insane-native-10",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120126_10.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-insane-native-10.jpg",
+          "sha256": "12a055c8561b55f1164e81c681418344f2a5cd6a0e42d869e1b202a4f9d37ada",
+          "bytes": 237278
+        },
+        {
+          "id": "bom-insane-bestiary",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/insane_cancer.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-insane-bestiary.jpg",
+          "sha256": "dfdc14669b3d9ef35252f1fee74d5920e11d9040cd7c471f88f942e00f352233",
+          "bytes": 13665
+        }
+      ],
+      "runtimeRole": "combatant",
+      "usageRestriction": "Preserve existing role and rules; this image adds no new attacks or movement.",
+      "prompt": "Edit the supplied Insane Cancer BoM sprite (image 1) into a clean TRUE SIDE PROFILE FACING RIGHT with fully transparent background. Image 2 is the native Book of Memories design reference. Keep the existing exact creature design, huge swollen belly, pale grey-pink skin folds, tiny sunken nearly featureless head, heavy hanging arms and small complete feet. Rotate the torso a little farther to the right so its chest faces the right edge, not the camera; the near shoulder/arm overlap the far shoulder/arm in profile, face/belly and all toes point right. Keep both whole feet visible in a small stagger. Remove ALL surrounding grey/pink fog, halo and soft background glow: every pixel outside the crisp creature silhouette, including space between legs, must be transparent alpha. Do not paint a floor or a shadow. Fit the complete subject on a portrait transparent canvas with at least 8% clear border around head, hands, belly and feet. Do not change anatomy, add clothes, text, wounds, eyes, weapons, human facial features or extra details. One complete static game sprite; actual transparent PNG, no scene, no UI.",
+      "tool": "image_gen__imagegen",
+      "rawPixelsUnchanged": true,
+      "nativeRuntimeQA": "pending-parent-integration",
+      "certifiedOneToOne": false
+    }
+  ],
+  "fighters": [
+    {
+      "fighterId": "bom_air_screamer_121",
+      "source": "bom",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012)",
+      "file": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_air_screamer_121.side-right.v1.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_air_screamer_121.side-right.v1.png",
+      "candidate": "bom_air_screamer_121.side-right.v1.png",
+      "path": "assets/sprites/bom_air_screamer_121.4bca97ffaaac.png",
+      "status": "side-view-candidate",
+      "fidelity": "unverified",
+      "facing": 1,
+      "pose": "idle",
+      "animated": false,
+      "dimensions": [
+        1774,
+        887
+      ],
+      "width": 1774,
+      "height": 887,
+      "bytes": 773207,
+      "sha256": "4bca97ffaaac0761edb2c268925ebfd69b9e5627ef218f545047dbeafab15871",
+      "sourceSHA256": "4bca97ffaaac0761edb2c268925ebfd69b9e5627ef218f545047dbeafab15871",
+      "pixelSHA256": "67458ccb9b601032738255137d72a48e7f48b81ceb3368c62a1d8129681c65d0",
+      "alphaBounds": {
+        "1": [
+          0,
+          29,
+          1673,
+          855
+        ],
+        "8": [
+          143,
+          43,
+          1503,
+          847
+        ],
+        "32": [
+          143,
+          44,
+          1502,
+          847
+        ],
+        "128": [
+          144,
+          44,
+          1502,
+          846
+        ]
+      },
+      "visibleBounds": [
+        143,
+        44,
+        1502,
+        847
+      ],
+      "framingBounds": [
+        143,
+        43,
+        1503,
+        847
+      ],
+      "transparentFraction": 0.79023386,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "minimumReadablePaddingFraction": 0.04509583,
+      "calibrationProposal": {
+        "anchor": [
+          0.6,
+          0.95490417
+        ],
+        "bodyHeight": 0.90529876,
+        "definition": "Approximate authored support axis; alpha32 exclusive lower baseline. Includes head/crown and complete supports. Native Canvas review required; not a measured source scale."
+      },
+      "anchor": [
+        0.6,
+        0.95490417
+      ],
+      "bodyHeight": 0.90529876,
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/bom_air_screamer_121.98ef307e67f8.png",
+        "sha256": "98ef307e67f83407b96dd4ffd502a46e0e3200f37d46c0779877aa7097ed97ed",
+        "bytes": 513919,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "existingAnimatedClipCount": 0,
+      "portraitAction": "preserve-existing",
+      "clipAction": "preserve-existing-clips",
+      "roleAction": "preserve-existing-runtime-role",
+      "purpose": "combat",
+      "view": "side-view",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Vol statique orienté à droite : tête et torse de profil, deux ailes entières déployées, deux pattes/serres visibles, pas de queue ni membres supplémentaires. L'aile éloignée est abrégée par la perspective de la pose.",
+      "limits": "Capture native PS Vita de 640×363 et portrait bestiaire ; rotation 2D, profondeur des ailes et microtextures reconstruites. L'envergure domine la pose ; l'ancre est un axe de vol, pas un contact plantaire natif. Aucun battement animé fourni. One static drawing. Native generated pixels unchanged; no resize, crop, alpha painting or other pixel processing. Very low alpha noise can extend beyond readable bounds.",
+      "referenceIds": [
+        "EXT20",
+        "EXT9_REF_BOM_AIR_SCREAMER_20261026"
+      ],
+      "references": [
+        {
+          "id": "bom-air-native-09",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120126_09.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-air-native-09.jpg",
+          "sha256": "e985e14e4003c949a10ec9fbb56ac5c6b152be1f82d2a92c9d30db3560234019",
+          "bytes": 216510
+        },
+        {
+          "id": "bom-air-bestiary",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/air_screamer.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-air-bestiary.jpg",
+          "sha256": "6b0fd29405689b59c7f0c7a2f3c076b1412c45fc08449933148b14d4dc25dcf2",
+          "bytes": 11907
+        }
+      ],
+      "runtimeRole": "combatant",
+      "usageRestriction": "Preserve existing role and rules; this image adds no new attacks or movement.",
+      "prompt": "Create exactly one transparent full-body AIR SCREAMER combat presentation sprite from Silent Hill: Book of Memories (PS Vita, 2012), matching the attached native gameplay screenshot and bestiary portrait. Image 1 establishes its entire body and complete wings; image 2 clarifies the small skull-like pale head and wing membrane material. Use this specific BoM version, not the SH1 model or a generic dragon. The creature is a thin skeletal winged monster with a small narrow pale skull/beak-like head, elongated thin neck and body, two enormous leathery muted pink-grey/brown batlike wings with dark bony spars, and two thin dangling legs with grasping talons. No tail, horns, feathers, clothing or added limbs. Pose it hovering in a calm flight idle, entire body in STRICT SIDE PROFILE FACING RIGHT; head and beak point to the right, shoulders and torso side-on. Wings are spread up and back as in an arrested wingbeat, one near wing and the partly visible far wing; all membrane tips remain fully in frame and separately readable. Show both complete talon feet below the body. Reconstruct a clear 2D versus presentation while preserving its native wingspan/body ratio, spare anatomy and muted materials. One creature only, no player, HUD, room or floor, no dust or motion trails. True transparent alpha PNG, clean isolated silhouette, 10% clear margin on every side. Detailed game sprite with restrained realistic surface detail, no invented ornate textures. One static full-body image, not a sprite sheet.",
+      "tool": "image_gen__imagegen",
+      "rawPixelsUnchanged": true,
+      "nativeRuntimeQA": "pending-parent-integration",
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "bom_insane_cancer_126",
+      "source": "bom",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012)",
+      "file": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_insane_cancer_126.side-right.v2.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_insane_cancer_126.side-right.v2.png",
+      "candidate": "bom_insane_cancer_126.side-right.v2.png",
+      "path": "assets/sprites/bom_insane_cancer_126.01b8c9868ff7.png",
+      "status": "side-view-candidate",
+      "fidelity": "unverified",
+      "facing": 1,
+      "pose": "idle",
+      "animated": false,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 1543968,
+      "sha256": "01b8c9868ff7d10b8751b1f5a373bed3e7347e826660338c1979c17c17628d9d",
+      "sourceSHA256": "01b8c9868ff7d10b8751b1f5a373bed3e7347e826660338c1979c17c17628d9d",
+      "pixelSHA256": "e77b650b0d6699580f19e7d7451823bbea7fb703ffcf6ec74cb4e2890490d75e",
+      "alphaBounds": {
+        "1": [
+          0,
+          39,
+          1072,
+          1426
+        ],
+        "8": [
+          127,
+          84,
+          958,
+          1420
+        ],
+        "32": [
+          127,
+          84,
+          958,
+          1420
+        ],
+        "128": [
+          128,
+          85,
+          957,
+          1419
+        ]
+      },
+      "visibleBounds": [
+        127,
+        84,
+        958,
+        1420
+      ],
+      "framingBounds": [
+        127,
+        84,
+        958,
+        1420
+      ],
+      "transparentFraction": 0.51725502,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "minimumReadablePaddingFraction": 0.01933702,
+      "calibrationProposal": {
+        "anchor": [
+          0.43,
+          0.98066298
+        ],
+        "bodyHeight": 0.92265193,
+        "definition": "Approximate authored support axis; alpha32 exclusive lower baseline. Includes head/crown and complete supports. Native Canvas review required; not a measured source scale."
+      },
+      "anchor": [
+        0.43,
+        0.98066298
+      ],
+      "bodyHeight": 0.92265193,
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
+        "sha256": "c2e9933d0d6f3f9e39f5b1ea1c3cdd4ca6e62d08e0696fc8fd00b9fecf7fcb40",
+        "bytes": 686664,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "existingAnimatedClipCount": 0,
+      "portraitAction": "preserve-existing",
+      "clipAction": "preserve-existing-clips",
+      "roleAction": "preserve-existing-runtime-role",
+      "purpose": "combat",
+      "view": "side-view",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit entier corrigé et fond transparent sans halo. Petite tête enfouie dans les plis, grande masse ventrale, bras proche pendant, bras éloigné masqué par le corps ; deux pieds courts distincts entièrement visibles.",
+      "limits": "Capture native PS Vita de 640×363 et petit portrait bestiaire ; plis, profondeur du dos et angle latéral reconstruits. Le corps occulte naturellement le bras éloigné. Posture de présentation statique ; aucune animation d'attaque, d'explosion ni timing source certifié. One static drawing. Native generated pixels unchanged; no resize, crop, alpha painting or other pixel processing. Very low alpha noise can extend beyond readable bounds.",
+      "referenceIds": [
+        "EXT20",
+        "EXT9_REF_BOM_INSANE_CANCER_20261026"
+      ],
+      "references": [
+        {
+          "id": "bom-insane-native-10",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120126_10.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-insane-native-10.jpg",
+          "sha256": "12a055c8561b55f1164e81c681418344f2a5cd6a0e42d869e1b202a4f9d37ada",
+          "bytes": 237278
+        },
+        {
+          "id": "bom-insane-bestiary",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/insane_cancer.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-insane-bestiary.jpg",
+          "sha256": "dfdc14669b3d9ef35252f1fee74d5920e11d9040cd7c471f88f942e00f352233",
+          "bytes": 13665
+        }
+      ],
+      "runtimeRole": "combatant",
+      "usageRestriction": "Preserve existing role and rules; this image adds no new attacks or movement.",
+      "prompt": "Edit the supplied Insane Cancer BoM sprite (image 1) into a clean TRUE SIDE PROFILE FACING RIGHT with fully transparent background. Image 2 is the native Book of Memories design reference. Keep the existing exact creature design, huge swollen belly, pale grey-pink skin folds, tiny sunken nearly featureless head, heavy hanging arms and small complete feet. Rotate the torso a little farther to the right so its chest faces the right edge, not the camera; the near shoulder/arm overlap the far shoulder/arm in profile, face/belly and all toes point right. Keep both whole feet visible in a small stagger. Remove ALL surrounding grey/pink fog, halo and soft background glow: every pixel outside the crisp creature silhouette, including space between legs, must be transparent alpha. Do not paint a floor or a shadow. Fit the complete subject on a portrait transparent canvas with at least 8% clear border around head, hands, belly and feet. Do not change anatomy, add clothes, text, wounds, eyes, weapons, human facial features or extra details. One complete static game sprite; actual transparent PNG, no scene, no UI.",
+      "tool": "image_gen__imagegen",
+      "rawPixelsUnchanged": true,
+      "nativeRuntimeQA": "pending-parent-integration",
+      "certifiedOneToOne": false
+    }
+  ],
+  "assets": [
+    {
+      "fighterId": "bom_air_screamer_121",
+      "source": "bom",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_air_screamer_121.side-right.v1.png",
+      "path": "assets/sprites/bom_air_screamer_121.4bca97ffaaac.png",
+      "sha256": "4bca97ffaaac0761edb2c268925ebfd69b9e5627ef218f545047dbeafab15871",
+      "bytes": 773207,
+      "width": 1774,
+      "height": 887,
+      "facing": 1,
+      "anchor": [
+        0.6,
+        0.95490417
+      ],
+      "bodyHeight": 0.90529876,
+      "visibleBounds": [
+        143,
+        44,
+        1502,
+        847
+      ],
+      "purpose": "combat",
+      "view": "side-view"
+    },
+    {
+      "fighterId": "bom_insane_cancer_126",
+      "source": "bom",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_insane_cancer_126.side-right.v2.png",
+      "path": "assets/sprites/bom_insane_cancer_126.01b8c9868ff7.png",
+      "sha256": "01b8c9868ff7d10b8751b1f5a373bed3e7347e826660338c1979c17c17628d9d",
+      "bytes": 1543968,
+      "width": 1086,
+      "height": 1448,
+      "facing": 1,
+      "anchor": [
+        0.43,
+        0.98066298
+      ],
+      "bodyHeight": 0.92265193,
+      "visibleBounds": [
+        127,
+        84,
+        958,
+        1420
+      ],
+      "purpose": "combat",
+      "view": "side-view"
+    }
+  ],
+  "pending": [],
+  "rawPixelsUnchanged": true,
+  "newAnimatedClips": 0,
+  "newPortraits": 0,
+  "certifiedOneToOne": 0,
+  "repoModified": false,
+  "scope": "Distinct static combat presentation views. Existing portraits, runtime roles and animated clips are preserved. No new fighter IDs or behavior changes.",
+  "notes": [
+    "Pending variants must not be integrated. Native Canvas verification is performed by the parent after import.",
+    "Portrait concept/model and licensed sculpture are differentiated in per-asset provenance. No 1:1 fidelity certification."
+  ],
+  "subLot": 3
+}

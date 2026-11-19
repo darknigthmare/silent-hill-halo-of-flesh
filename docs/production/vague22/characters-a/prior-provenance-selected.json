@@ -1,0 +1,267 @@
+[
+  {
+    "source": "art/provenance-art144-b.json",
+    "record": {
+      "fighterId": "origins_remnant_077",
+      "source": "origins",
+      "status": "blocked",
+      "blocker": "incomplete-exterior-reference",
+      "reason": "La vue native de 200 px ne résout qu’une petite cage flottante et une ombre au sol. Aucune nouvelle vue complète et lisible des deux composantes ; ne pas inventer un fantôme charnel.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/creatures/remnant.jpg",
+        "https://www.silenthillmemories.net/sh0/creatures_en.htm"
+      ],
+      "generationAttempted": false
+    }
+  },
+  {
+    "source": "art/provenance-art144-b.json",
+    "record": {
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "source": "origins",
+      "edition": "SILENT HILL: ORIGINS (2007)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Memory of Helen Grady / Momma from Silent Hill Origins2007. Reproduce ONE exact complete creature from first provided native3D reference. Wrapped covered full adult body vertically suspended INSIDE the exact bulb-shaped transparent shell and rust iron cage, narrow circular neck ribs and broad rounded lower ring from FIRST image; arms lowered beside body, bound tapered legs. Head wrapped with its source metal restraint, preserve draped transparent fabric and original material details. Second image identifies same design only; follow first3D model for exact apparatus silhouette, do not borrow different flat skirt ring from concept. Present natural static suspended source pose slightly angled right, no new combat guard, no chains beyond short visible top suspension hardware, no attack scene. Whole cage/shell and complete body both visible; no free-standing human legs, no additional apparatus or wounds. One isolated complete static subject on true transparent RGBA canvas. At least20percent empty margin on all4sides, complete exterior with all natural appendage and apparatus ends visible. Match the supplied source materials and proportions, readable uniform light, no floor, no shadow, no scene, no text or interface, no additional injuries or graphic emphasis. Source-constrained authored still, fidelity unverified, no new motion or 1:1 certificate.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/origins-creature9.jpg",
+          "sha256": "cf8a2f0db7cb9695d4eeb82ec5c02b9325e2429d9801ffa75a1bec1ad268277a",
+          "url": "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_09_momma.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/origins-marchese6.jpg",
+          "sha256": "e7a5049678e1cf1e007078663865e227a83baeb56f99c119a2b2b700470fb913",
+          "url": "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_saul_marchese_06_momma.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-4ee513ac-02d3-4871-8c59-5ac771a6335a.png",
+      "publishedPath": "assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
+      "technical": {
+        "pixelSHA256": "89d4ae75580df921708580d78e3268f5811b55b97aebd533ec3a34f00634bc68",
+        "sha256": "0be64df8f39b77810c26f50869ba3194e268f719722376377476ddcf5296822d",
+        "bytes": 733764,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          351,
+          92,
+          859,
+          1128
+        ],
+        "transparentFraction": 0.80055
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Rendu natif complet et concept Momma comparés ; terminaison courte du support supérieur interprétée lors de la correction de cadrage, à comparer à une vue commerciale complète.",
+      "rolePreserved": "stationary-boss",
+      "combatEnabledPreserved": true,
+      "compositionCorrection": {
+        "reason": "Generated first image cuts top suspension, fails complete-exterior/margin audit.",
+        "prompt": "Correct the COMPOSITION of first image only. Keep this exact same Silent Hill Origins Momma model and source cage shape, covered wrapped body, materials, drape, proportions, pose and all details. Expand the transparent canvas greatly and reduce subject scale to center complete cage and suspension inside middle60percent of a SQUARE1024x1024canvas with at least20percent empty margin on every edge. The body and bulb cage are already complete; top suspension is clipped, so show only its SHORT natural rig segment with a clean visible termination ABOVE the curved crossbar as in existing source structure, no invented chain hanging out of canvas. Whole complete model including all top apparatus ends, cage bottom and every finger entirely visible inside margins. TRUE transparent RGBA. No scene, shadow, floor, caption, duplicate, additional wounds or other changes.",
+        "inputPaths": [
+          "/workspace/generated_images/exec-f4a57601-dbda-4a1c-9273-04e069ddb981.png",
+          "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/origins-creature9.jpg"
+        ],
+        "result": "accepted-complete-exterior"
+      },
+      "rejectedOutput": "/workspace/generated_images/exec-f4a57601-dbda-4a1c-9273-04e069ddb981.png"
+    }
+  },
+  {
+    "source": "art/provenance-art144-b.json",
+    "record": {
+      "fighterId": "shattered_raw_shock_feminine_100",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Feminine Raw Shock from Silent Hill Shattered Memories, 2009 Wii-era creature design. Match this exact full-body design and its face: pale sealed eyes under smooth taut skin, closed thick lips, narrow non-human body with two very long slender arms, two bent legs, the source folds and openings. Preserve the low asymmetric four-limb stalking/crawling ready posture with hands and feet visible, facing RIGHT in a slight side three-quarter view. Do not turn it into a human woman, nurse, humanoid boxer, or add sexualized anatomy. No extra wounds or attack victim.\nOne isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside the middle60percent of BOTH width and height, leaving at least20percent EMPTY transparent margin every edge. Every head tip, hand, foot and appendage fully inside canvas. Detailed game-inspired material faithful to the reference, subdued evenly readable light. No floor, cast shadow, environment, text, logo, UI, sheet, panels or duplicate. This is a source-constrained authored still for a dossier whose pursuit-only role remains unchanged; no new combat capability, source animation or1:1 certification.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_feminine_art_05.jpg",
+          "sha256": "b592eeadeed8c37b568c87cfee1838ac32df5391f92aef9539d95380483027da",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/pics/raw_shock_feminine_art_05.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_feminine.jpg",
+          "sha256": "9bb0d82c9d52bb83d9fc71e0d6437c8b31de9f63dbf98dbb71ee576a7c7a4153",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/raw_shock_feminine.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-f4dd61e1-bc92-4826-8493-dc35e94fa33f.png",
+      "publishedPath": "assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
+      "technical": {
+        "pixelSHA256": "75b50dd044b656f90cb4caf1b3dce4a4de485d547d8aed13d8c116fb58d3f763",
+        "sha256": "1226cc9a34196d764e02863f1556ef5a29ad003b63a6d9b7fbd15c7fa1124c9f",
+        "bytes": 657894,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          118,
+          358,
+          1149,
+          940
+        ],
+        "transparentFraction": 0.87816
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+      "rolePreserved": "scripted-encounter",
+      "combatEnabledPreserved": false
+    }
+  },
+  {
+    "source": "art/provenance-art144-b.json",
+    "record": {
+      "fighterId": "shattered_raw_shock_abstract_102",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Abstract Raw Shock from Silent Hill Shattered Memories, 2009 Wii-era creature design. Match this exact full-body image and portrait: broad pale geometric stepped slab-head with its single round central hollow, matching stepped blocks along its back; very long forearms with slender spread fingers and two bent rear legs. Preserve the natural low four-limb stalking ready stance, whole slab crown and every hand and foot tip visible, facing RIGHT in slight side three-quarter view. Do not make a robot, change the stepped head into Pyramid Head, add a human face, weapons, boxing guard, extra limbs, or new injuries.\nOne isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside the middle60percent of BOTH width and height, leaving at least20percent EMPTY transparent margin every edge. Every head tip, hand, foot and appendage fully inside canvas. Detailed game-inspired material faithful to the reference, subdued evenly readable light. No floor, cast shadow, environment, text, logo, UI, sheet, panels or duplicate. This is a source-constrained authored still for a dossier whose pursuit-only role remains unchanged; no new combat capability, source animation or1:1 certification.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_abstract_art_04.jpg",
+          "sha256": "49e44e4560e23c913e3b11d22b5464a633064affeba63cbf9463c362097aab6c",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/pics/raw_shock_abstract_art_04.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_abstract.jpg",
+          "sha256": "d781dd2048b974df31ea0c1d5c5126110765e5c2258ec5f030e2027e3288a71d",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/raw_shock_abstract.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-b46bd9bc-fad0-4806-a947-3b04e4d38ee5.png",
+      "publishedPath": "assets/sprites/shattered_raw_shock_abstract_102.1ff0846e3fc4.png",
+      "technical": {
+        "pixelSHA256": "0f28e3905fdb47a4f2a8dc14a5f3f32270a86a3e2bb4c4f10ca733f2a6b4429f",
+        "sha256": "1ff0846e3fc4a77c4c2b68038864fdcc485c0d65649017014ce5a0ab24ee0f79",
+        "bytes": 838584,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          171,
+          324,
+          1094,
+          983
+        ],
+        "transparentFraction": 0.83086
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+      "rolePreserved": "scripted-encounter",
+      "combatEnabledPreserved": false
+    }
+  },
+  {
+    "source": "art/provenance-art144-b.json",
+    "record": {
+      "fighterId": "shattered_raw_shock_atrophied_103",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "status": "implemented-candidate",
+      "fidelity": "unverified",
+      "generationAttempted": true,
+      "tool": "image_gen.imagegen",
+      "prompt": "Atrophied Raw Shock from Silent Hill Shattered Memories, 2009 Wii-era non-human creature design. Match ONLY the exact complete reference silhouette: a thin skeletal arched body with large open spaces in torso/hips/back, very long bony bent arms and legs, and the rounded upward open split hollow head shown by the second full-body design and portrait. Keep its source low four-limb crawling ready stance, all limb tips and head rim visible, facing RIGHT in slight side three-quarter view. No human child or adult substitution, no invented clothing, boxing guard, weapon, additional limbs, flesh filling the holes, or graphic violence.\nOne isolated complete single-subject static sprite candidate, TRUE transparent RGBA square canvas. Keep whole subject small and centered inside the middle60percent of BOTH width and height, leaving at least20percent EMPTY transparent margin every edge. Every head tip, hand, foot and appendage fully inside canvas. Detailed game-inspired material faithful to the reference, subdued evenly readable light. No floor, cast shadow, environment, text, logo, UI, sheet, panels or duplicate. This is a source-constrained authored still for a dossier whose pursuit-only role remains unchanged; no new combat capability, source animation or1:1 certification.",
+      "references": [
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_atrophied_art_02.jpg",
+          "sha256": "9053671e2268273ad4a549e9b6712aef045b42260a92aa062a40ea965c7f11ac",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/pics/raw_shock_atrophied_art_02.jpg",
+          "viewedAtNativeResolution": true
+        },
+        {
+          "path": "/workspace/shared/halo-of-flesh/references/art144-b-2026-11-01/sm-raw_shock_atrophied.jpg",
+          "sha256": "fc562a8595c317cc6262605428d0f829f982c6f633e1aca2ff78744ca29d8a79",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/raw_shocks/raw_shock_atrophied.jpg",
+          "viewedAtNativeResolution": true
+        }
+      ],
+      "selectedOutput": "/workspace/generated_images/exec-af2cf8a2-7b58-4293-b308-a3cefe3be726.png",
+      "publishedPath": "assets/sprites/shattered_raw_shock_atrophied_103.d37aa45dec34.png",
+      "technical": {
+        "pixelSHA256": "a4f48c35ba0fc5cfde0f9a46467c24f576e4a89640b46849ccc6f8be2a387242",
+        "sha256": "d37aa45dec3443a7b1e8465dca4741830dd13bdaca012141f910e98febe10e40",
+        "bytes": 764069,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          221,
+          332,
+          1061,
+          1035
+        ],
+        "transparentFraction": 0.85217
+      },
+      "singleSubjectReviewed": true,
+      "fullExteriorReviewed": true,
+      "loop": false,
+      "uniqueFrames": 1,
+      "nativeTimingMeasured": false,
+      "oneToOneValidated": false,
+      "sourceLimit": "Modèles conceptuels et portrait du variant comparés ; correspondance de chaque détail au modèle commercial non certifiée.",
+      "rolePreserved": "scripted-encounter",
+      "combatEnabledPreserved": false
+    }
+  },
+  {
+    "source": "art/reference-provenance-batch12.json",
+    "record": {
+      "fighterId": "homecoming_sepulcher_093",
+      "png": "assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",
+      "sha256": "0c93c08d540b680f9af2c2ca9d1806497b59df7f81b0368b1ea37422ae7d5aac",
+      "source": "homecoming",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "sourceReferenceUrls": [
+        "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_20_sepulcher.png",
+        "https://www.silenthillmemories.net/sh5/arts/pics/shh_art_baudoin_03_sepulcher.jpg",
+        "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+      ],
+      "calibration": {
+        "anchor": [
+          0.5350877192982456,
+          0.9433811802232854
+        ],
+        "bodyHeight": 0.854066985645933,
+        "facing": 1,
+        "limits": "Readable alpha envelope aligned to versus body. Original size and contacts not measured."
+      },
+      "singleSubjectVisuallyReviewed": true,
+      "wholeVisibleExterior": true,
+      "limits": "Sepulcher Homecoming : tête, deux grands bras/mains, masse frontale et racine inférieure entières depuis rendu identifié. Aucune jambe humaine ni accessoire meatsack inventé. Configuration suspendue transposée en idle 2D ; la chute au sol de seconde phase et ses contacts ne sont pas animés ou mesurés."
+    }
+  }
+]

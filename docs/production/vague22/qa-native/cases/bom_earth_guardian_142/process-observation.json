@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "bom_earth_guardian_142",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_earth_guardian_142",
+    "--ids=bom_earth_guardian_142",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:28:39.916441+00:00",
+  "completedAt": "2026-11-19T15:28:50.860404+00:00",
+  "durationSeconds": 10.944,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "6d9bc8a8c7660c641233d56e1cfc84c72df3d722132b2afe6998354a35106e7e",
+  "log": "process.txt",
+  "logSHA256": "833595a409de8ea150f1f39c11a7301d2b43d31c890b7a2e0d05b896b6b4f02c",
+  "passed": true
+}

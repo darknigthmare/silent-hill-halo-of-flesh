@@ -1,0 +1,681 @@
+{
+  "schemaVersion": 1,
+  "group": "wave22-stages",
+  "scope": "missing stages only",
+  "createdAt": "2026-11-19T15:50:17.084440+00:00",
+  "baseCommit": "80db2a9fdda7032bcaf110df79915be598290f08",
+  "deliveryState": "candidate-ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "villa",
+      "source": "shortmessage",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "normal-corridor-apartment214",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT30",
+        "EXT31"
+      ],
+      "worldState": "fixed-normal",
+      "locationScope": "The Short Message PS5, chapitre1 normal : couloir devant la porte214 de Maya, avant entrée dans son atelier et avant la deuxième poursuite.",
+      "selectedSubLocation": "The Short Message PS5, chapitre1 normal : couloir devant la porte214 de Maya, avant entrée dans son atelier et avant la deuxième poursuite.",
+      "supports": {
+        "description": "Sol béton continu devant la porte214, appuis y=0,825 ; rares débris plaqués au mur arrière.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "apartment214-door",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/villa.apartment214-door.263d6a61f2f4.png",
+              "sha256": "263d6a61f2f44d7baf21e2b8ca7792601205004b4881887e92dfeb81b3f8f65d",
+              "bytes": 2247109,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-wall-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/villa.near-wall-edges.4d500efc075f.png",
+              "sha256": "4d500efc075fb1f14c489a6c0aa865210f26dc289fef13f3c2b6c3e6ff2dadbe",
+              "bytes": 208154,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "shtsm_chapter_1_06.jpg"
+      ],
+      "notes": [
+        "Porte sombre C.B., grand graffiti ocre, grille gauche, enduit et conduites attestés par la capture native800×450.",
+        "Aucun intérieur de studio, dessin humain, chaîne de poursuite, post-it Otherworld ou acteur ajouté.",
+        "Le drapeau moteur interior:false existant est conservé ; le périmètre visuel exact est ce couloir couvert, sans nouvelle logique météo ni animation.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    },
+    {
+      "stageId": "nowhere",
+      "source": "sh1",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "bethor-generator-room-before-power-off",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH1_15_NOWHERE"
+      ],
+      "worldState": "fixed-altered",
+      "locationScope": "SH1 original1999, Nowhere : Generator Room derrière la porte Bethor, courant encore présent avant la coupure nécessaire à la clé électrifiée.",
+      "selectedSubLocation": "SH1 original1999, Nowhere : Generator Room derrière la porte Bethor, courant encore présent avant la coupure nécessaire à la clé électrifiée.",
+      "supports": {
+        "description": "Dalles métalliques rouillées continues devant les deux armoires du générateur ; aucune grille ouverte ou collision ajoutée.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "bethor-generator-room",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/nowhere.bethor-generator-room.6c753fcbaa0a.png",
+              "sha256": "6c753fcbaa0afb827734973cfb66a27e62df7958a75274a70826074b87c5b1c9",
+              "bytes": 1808666,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-wall-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/nowhere.near-wall-edges.70fd5fb39aff.png",
+              "sha256": "70fd5fb39afff30d8938646e6f53f60d28dc6bed7f914713fed259a4bcaf9768",
+              "bytes": 196477,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh1_15_generator_room.jpg"
+      ],
+      "notes": [
+        "Deux armoires olive, panneau de cadrans éclairé, parois rouillées et montant droit guidés par la capture native600×450.",
+        "Harry, arme et ombre humaine retirés ; aucune autre pièce de Nowhere assemblée ici.",
+        "Une petite trappe gauche non attestée dans la première génération a été retirée par une correction imagegen ciblée ; seul le PNG corrigé est livré.",
+        "La géométrie de la salle est élargie pour le duel ; les petits cadrans et textures de la capture restent des reconstructions non certifiées1:1.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    },
+    {
+      "stageId": "central_nightmare",
+      "source": "sh1",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "floatstinger-rooftop-altered-phase",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "CL_SH1_09_NIGHTMARE_CENTRAL_SILENT_HILL"
+      ],
+      "worldState": "fixed-altered",
+      "locationScope": "SH1 original1999, Central Silent Hill Otherworld : toit du combat Floatstinger, sans la galerie/sablière de Twinfeeler.",
+      "selectedSubLocation": "SH1 original1999, Central Silent Hill Otherworld : toit du combat Floatstinger, sans la galerie/sablière de Twinfeeler.",
+      "supports": {
+        "description": "Dallage gris-rose continu du toit devant le parapet arrière, appuis y=0,825 dégagés.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "floatstinger-roof",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/central_nightmare.floatstinger-roof.a166c86064f4.png",
+              "sha256": "a166c86064f447441dfc3006b71dff73c734c5c466cc0f66722d3871d3c4fc14",
+              "bytes": 1499491,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-roof-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/central_nightmare.near-roof-edges.d6d18810f03e.png",
+              "sha256": "d6d18810f03ef335e814402ef2d4d90abf7ab227fc1c3b22778f856f3114ff72",
+              "bytes": 82839,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh1_boss_floatstinger_moth.jpg"
+      ],
+      "notes": [
+        "Capture native1048×789 : dallage, parapet bas, retour rouge gauche, volume bas gauche et grand volume droit conservés.",
+        "Harry et Floatstinger sont retirés. Aucun réservoir, antenne, décor urbain voisin ou phase Twinfeeler ajouté.",
+        "Avant-plan limité à deux très petits retours de maçonnerie aux coins bas extrêmes, adaptation de caméra déclarée ; aucune chute ni nouvelle collision.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "promptKey": "villa_bg",
+      "filename": "villa.apartment214-door.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/villa.apartment214-door.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-36617732-52b5-42b7-9957-b5430ea5f2c5.png",
+      "sha256": "263d6a61f2f44d7baf21e2b8ca7792601205004b4881887e92dfeb81b3f8f65d",
+      "bytes": 2247109,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "zeroFraction": 0.0,
+        "opaqueFraction": 1.0
+      },
+      "qa": {
+        "noCharacters": true,
+        "noHUD": true,
+        "visualInspection": "accepted",
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlink": true,
+      "stageId": "villa",
+      "role": "opaque-background",
+      "path": "assets/stages/villa.apartment214-door.263d6a61f2f4.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "villa_fg",
+      "filename": "villa.near-wall-edges.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/villa.near-wall-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-0547ee71-31d6-4205-a5c5-1e1e60e54040.png",
+      "sha256": "4d500efc075fb1f14c489a6c0aa865210f26dc289fef13f3c2b6c3e6ff2dadbe",
+      "bytes": 208154,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroFraction": 0.9491245442850678,
+        "opaqueFraction": 7.055001042360514e-05
+      },
+      "qa": {
+        "footBandAlphaMax": 1,
+        "centerAlphaMax": 1,
+        "noCharacters": true,
+        "noHUD": true,
+        "visualInspection": "accepted",
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlink": true,
+      "stageId": "villa",
+      "role": "transparent-foreground",
+      "path": "assets/stages/villa.near-wall-edges.4d500efc075f.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "nowhere_bg",
+      "filename": "nowhere.bethor-generator-room.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nowhere.bethor-generator-room.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-2d538d31-7c02-418d-a345-449f4ca900c3.png",
+      "sha256": "6c753fcbaa0afb827734973cfb66a27e62df7958a75274a70826074b87c5b1c9",
+      "bytes": 1808666,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "zeroFraction": 0.0,
+        "opaqueFraction": 1.0
+      },
+      "qa": {
+        "noCharacters": true,
+        "noHUD": true,
+        "visualInspection": "accepted",
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlink": true,
+      "generation": {
+        "retainedRevision": 2,
+        "imagegenCalls": 2,
+        "promptKeys": [
+          "nowhere_bg",
+          "nowhere_bg_correction"
+        ],
+        "reason": "Unattested left-wall hatch removed in imagegen; first draft excluded from delivery.",
+        "priorDraft": "nowhere.generator-room-draft.png",
+        "postGenerationPixelEditing": false
+      },
+      "stageId": "nowhere",
+      "role": "opaque-background",
+      "path": "assets/stages/nowhere.bethor-generator-room.6c753fcbaa0a.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "nowhere_fg",
+      "filename": "nowhere.near-wall-edges.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nowhere.near-wall-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-368c25e4-74e7-42e0-991b-10885468233b.png",
+      "sha256": "70fd5fb39afff30d8938646e6f53f60d28dc6bed7f914713fed259a4bcaf9768",
+      "bytes": 196477,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroFraction": 0.9413850174658944,
+        "opaqueFraction": 0.00037435996522075163
+      },
+      "qa": {
+        "noCharacters": true,
+        "noHUD": true,
+        "visualInspection": "accepted",
+        "footBandAlphaMax": 1,
+        "centerAlphaMax": 1,
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlink": true,
+      "stageId": "nowhere",
+      "role": "transparent-foreground",
+      "path": "assets/stages/nowhere.near-wall-edges.70fd5fb39aff.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "central_nightmare_bg",
+      "filename": "central_nightmare.floatstinger-roof.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/central_nightmare.floatstinger-roof.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-4e1ac72c-7b32-4546-916e-849e05e74dca.png",
+      "sha256": "a166c86064f447441dfc3006b71dff73c734c5c466cc0f66722d3871d3c4fc14",
+      "bytes": 1499491,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "zeroFraction": 0.0,
+        "opaqueFraction": 1.0
+      },
+      "qa": {
+        "noCharacters": true,
+        "noHUD": true,
+        "visualInspection": "accepted",
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlink": true,
+      "stageId": "central_nightmare",
+      "role": "opaque-background",
+      "path": "assets/stages/central_nightmare.floatstinger-roof.a166c86064f4.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "central_nightmare_fg",
+      "filename": "central_nightmare.near-roof-edges.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/central_nightmare.near-roof-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-8d59a95a-8a2c-4b6b-bbca-aa6c349f1960.png",
+      "sha256": "d6d18810f03ef335e814402ef2d4d90abf7ab227fc1c3b22778f856f3114ff72",
+      "bytes": 82839,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroFraction": 0.9909041333407909,
+        "opaqueFraction": 5.402478275681475e-05
+      },
+      "qa": {
+        "noCharacters": true,
+        "noHUD": true,
+        "visualInspection": "accepted",
+        "footBandAlphaMax": 1,
+        "centerAlphaMax": 1,
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlink": true,
+      "stageId": "central_nightmare",
+      "role": "transparent-foreground",
+      "path": "assets/stages/central_nightmare.near-roof-edges.d6d18810f03e.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/pics/sh1_boss_floatstinger_moth.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh1_boss_floatstinger_moth.jpg",
+      "bytes": 102262,
+      "sha256": "ba4f7b2dee3f032716c9a4c30b695a974438a79f5a7ef2d3f6c59783f13aa407",
+      "width": 1048,
+      "height": 789
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/sh1_15_generator_room.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh1_15_generator_room.jpg",
+      "bytes": 59356,
+      "sha256": "8c0231483c1c5ed90dd6d415296946f812d97f5e93cfc39ba0bde0e7c61fb3d1",
+      "width": 600,
+      "height": 450
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh_the_short_message/walkthrough/shtsm_chapter_1_06.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/shtsm_chapter_1_06.jpg",
+      "sha256": "d215634c7db07e55ee69e76cb4665f168b2ed446aee2fbf9c50096a9101539f4",
+      "bytes": 73954,
+      "width": 800,
+      "height": 450
+    }
+  ],
+  "prompts": [
+    {
+      "key": "villa_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/shtsm_chapter_1_06.jpg"
+      ],
+      "prompt": "Create one full-frame 1672x941 opaque environment bitmap for a lateral 2D versus game, faithfully source-guided by this native Silent Hill: The Short Message (PS5, 2024) screenshot. Exact scene: normal Chapter 1 corridor immediately outside Maya's Apartment 214 in The Villa, BEFORE entering the studio and BEFORE the second chase. Reframe this observed wall almost straight-on, widen only its existing wall materials for a horizontal duel. Preserve the distinctive dark blue-black flat apartment door, thin pale damaged door frame, small metal lever, the original pink C.B. spraypaint on the door; large ochre/orange bubble graffiti immediately to its left, gray-green damp flaking plaster with small subdued graffiti; at far left the observed square wire-mesh security gate with diagonal framing. Concrete ceiling and thin surface conduits follow the screenshot. Cold subdued gray-green light, diffuse readable central wall, no theatrical new lighting. The lower 30% is a continuous dark gray concrete floor extending toward the viewer with only subtle stains; place any tiny native paper fragments against the rear wall, never across the fighting lane. The character foot line at y=82.5% must stay completely level, unobstructed and legible across x=6%-94%. No phone, hands, Anita, Maya, monster, silhouette, person, face, UI, subtitle, watermark, logo, added labels, new furniture, murals from inside the apartment, pink flower growth, distorted chase maze or Otherworld treatment. Preserve only attested door graffiti as scene texture. No collage, no multiview, no frame. Deliver exactly one full-bleed opaque background plate. This is a restrained perspective adaptation of the photographed scene, not a new room."
+    },
+    {
+      "key": "villa_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/villa.apartment214-door.png",
+        "/workspace/scratch/halo-wave22-stages/references/shtsm_chapter_1_06.jpg"
+      ],
+      "prompt": "Create the separate FOREGROUND PARALLAX layer for the first supplied 1672x941 background plate (The Villa, normal corridor outside Apartment 214, Silent Hill: The Short Message). One full-frame 1672x941 RGBA PNG, transparent background TRUE. Use exactly the same view, dim gray-green lighting and damp chipped concrete material. Keep ONLY two very narrow near-camera plaster wall-return slivers, one touching the extreme left edge x=0%-3%, one touching the extreme right edge x=97%-100%, running vertically and cropped by the frame. Their modest rough inner edge must stop before x=4% and after x=96%, respectively. They are camera-near continuations of the room's existing walls, no new objects. Do not reproduce the rear wall, door, graffiti, gate, ceiling, floor, lights, papers or shadows. The entire central x=4%-96%, y=0%-100% must be fully transparent, including the whole ground-footing zone at y=82.5%. Nothing along the top or bottom edge between the side slivers. Transparent pixels everywhere except those two narrow edge strips, no black fill, checkerboard, matte, haze, glow, cast shadow or vignette. Native PNG alpha with opaque material edges and short antialiasing only. No person, character, monster, text, logo or interface. This must be a sparse independent layer ready to overlay the background at a very small different horizontal parallax, with all combat action and both feet unobscured."
+    },
+    {
+      "key": "nowhere_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/sh1_15_generator_room.jpg"
+      ],
+      "prompt": "Generate one full-frame opaque 1672x941 background plate for a lateral 2D fighting game, closely guided by the supplied original Silent Hill 1 native screenshot. EXACT room and phase: Nowhere, the familiar Generator Room behind the Bethor door, power still on before Harry switches it off to retrieve the electrified key. This is one specific room, not a collage of Nowhere locations. Reframe its observed back wall almost straight-on and slightly widen the existing rusty walls for a side-view duel. Preserve the TWO adjacent bulky pale olive-gray industrial generator/control cabinets: left tall closed plain panel with narrow dark latches and lower vent strips, right matching cabinet with its recessed exposed yellowish instrument panel of circular gauges and dark switches. Cabinets stand on short black plinths; control panel illumination softly lights the nearby steel. Preserve dark corroded red-brown walls, low blackened metal ceiling and the plain vertical structural metal return at the right. No extra machine, pipe bank, chains, fans, surgical furniture, cage, new labels or symbolic decoration. The lower 30%-34% is a continuous level rust-stained dark steel floor with low-contrast seams, widened only to provide a clean duel strip; foot line y=82.5% completely free across x=6%-94%. Cabinets and all hardware remain behind this strip with bottoms at or above y=70%. Use the source's warm dirty bronze/olive palette, modest visible detail and restrained survival-horror lighting, no theatrical red spotlights. Remove Harry, his gun and human shadow entirely. No people, creature, silhouette, HUD, subtitle, logo, caption or watermark. No new readable text. No composition panels or frame. One faithful source-guided reconstruction for versus; retain the cabinet shapes and state rather than inventing a new industrial room."
+    },
+    {
+      "key": "nowhere_bg_correction",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/nowhere.generator-room-draft.png",
+        "/workspace/scratch/halo-wave22-stages/references/sh1_15_generator_room.jpg"
+      ],
+      "prompt": "Apply one precise documentary correction to the FIRST image, preserving the entire composition, lighting, full-frame 1672x941 dimensions, two generator cabinets, instrument gauges, right structural column and floor. Remove ONLY the small rectangular riveted hatch on the FAR LEFT WALL (around x=3%-10%, y=27%-48%): it is not attested in the original game screenshot. Replace that left-wall hatch with seamless continuation of the surrounding flat rust-stained wall, same low-contrast mottled red-brown material. Do not add a new object or fixture in its place. The second image is the native Nowhere Generator Room reference, used only to confirm this correction. Keep all other elements in their original positions. No people, monster, words, HUD, border, new light or furniture. The clean foot line at y=82.5% remains unchanged. Full opaque background PNG."
+    },
+    {
+      "key": "nowhere_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/nowhere.bethor-generator-room.png"
+      ],
+      "prompt": "Produce the separate FOREGROUND layer for this Nowhere Bethor Generator Room background, 1672x941 RGBA PNG on genuine transparency. Retain the same warm dim corroded red-brown material and perspective. Paint ONLY two narrow near-camera rust-stained wall return slivers at the extreme left x=0%-3% and extreme right x=97%-100%; their irregular inner boundaries must remain outside x=4%-96%. These slivers are plain extensions of the observed rusty walls, no hatch, panel, door, bolt assembly, pipe, rail, cable, machine or new object. Everything else is fully transparent. Do not repeat the two cabinets, control panel, back wall, ceiling, ground, glow, shadow or whole scene. No strip at top or bottom. The entire central92% of the canvas including the fight floor at y=82.5% must have zero alpha. Clean short antialiasing, no opaque black, white matte, checkerboard, haze, colored fringe or vignette. Same full-canvas alignment as reference. No actor, creature, text, logo, watermark or HUD. One sparse independent near-wall parallax layer."
+    },
+    {
+      "key": "central_nightmare_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/sh1_boss_floatstinger_moth.jpg"
+      ],
+      "prompt": "Create a single full-frame 1672x941 opaque background for a lateral 2D fighting game, sourced precisely from this original Silent Hill1 (1999) native screenshot. EXACT scene: Nightmare Central Silent Hill, the outdoor rooftop arena where Harry encounters Floatstinger, during the rooftop altered-world phase. Do not show the Town Center sandpit or Twinfeeler stage. Remove Harry, his weapon and the giant moth entirely; no shadows or traces shaped like them. Remove the screenshot's black letterbox bands. Keep the observed roof architecture: broad dusty reddish gray square concrete paving slabs with dark seams in front, a low stained off-white concrete parapet across the rear-middle with a narrow dark metal coping, a flat lower dark roof surface behind, a squat plain block at far left, a tall simple gray rooftop structure on the right. At the extreme rear-left the visible short red handrail/ladder return can be retained, small and behind the duel. No door, window, ladder system, water tower, antenna, duct, billboard or extra furniture unless visibly present in this screenshot. Open near-black charcoal night sky, diffuse dull survival-horror light, no sunset, foggy forest or city panorama. Reframe almost straight-on for a horizontal duel, widen only the observed simple surfaces, keep the rear parapet near y=56%-63% and provide a clean continuous level paved floor through the lower third. Foot line y=82.5% must remain uninterrupted across x=6%-94%, with no raised curb, hole, props, silhouettes or ledge crossing it. Match the original muted burgundy-gray palette and restrained industrial geometry; retain subtle worn texture without turning the scene into a photorealistic modern roof. No characters, monsters, HUD, texts, logos, captions, collage, borders or symbols. One exact-room source-guided versus adaptation; no invented neighboring buildings."
+    },
+    {
+      "key": "central_nightmare_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/central_nightmare.floatstinger-roof.png"
+      ],
+      "prompt": "Make one separate 1672x941 transparent RGBA FOREGROUND plane to overlay this exact original-SH1 Floatstinger rooftop background. Keep the same canvas, camera alignment and muted gray-burgundy dim light. Paint only two tiny near-camera concrete roof coping ends at the far bottom left and far bottom right corners. Each consists of a narrow weathered gray stone/concrete return of the existing roof material, touching its respective outer image edge, occupying no more than x=0%-3.5% or x=96.5%-100% and only y=72%-100%. Keep them low and unobtrusive; these are camera-adapted ends of the observed roof masonry, not railings, posts, decorative pillars or new architecture. The entire rest of the image is fully transparent. Do not reproduce roof slabs, sky, rear parapet, rooftop structures or the red handrail. The central x=4%-96% is alpha zero from top to bottom; absolutely no opaque object or shading across the ground line y=82.5%. No bottom strip between the corners, no ceiling or top strip. No haze, black backdrop, checkerboard, matte, halo, cast shadow, glow or vignette. No character, monster, text, logo or UI. A sparse independently scrolling parallax foreground PNG, not a complete scene."
+    }
+  ],
+  "provenance": {
+    "generator": "integrated image_gen.imagegen",
+    "callsPerGeneratedPNG": 1,
+    "retainedRevisionHistory": "See assets[].generation when a targeted imagegen correction was required",
+    "sourceGuides": [
+      {
+        "id": "shortmessage",
+        "url": "https://www.silenthillmemories.net/sh_the_short_message/walkthrough_en.htm",
+        "sha256": "3c3c360a415f0459f5099b4bac3231a0a329bcf5c25072b708acc56a92771ef6",
+        "bytes": 38327
+      },
+      {
+        "id": "sh1_nowhere",
+        "url": "https://www.silenthillmemories.net/sh1/walkthrough_15_nowhere_en.htm",
+        "sha256": "b3ce089e5126a80fc09991565f343af17bb5c32fce36e6bf5b0875a620c0d594",
+        "bytes": 61026
+      },
+      {
+        "id": "sh1_central_nightmare",
+        "url": "https://www.silenthillmemories.net/sh1/walkthrough_09_nightmare_central_silent_hill_en.htm",
+        "sha256": "715b76c62ec683b42723b2f365b8e0ebf68a24c1bb86423579bd8bf52681ec6d",
+        "bytes": 31713
+      }
+    ],
+    "postGenerationPixelEditing": false,
+    "nativePixelsPreserved": true,
+    "noRuntimeChanges": true,
+    "noCharactersOrPortraitsChanged": true
+  },
+  "qa": {
+    "visualOutputsInspected": 6,
+    "nativePNGMetadataMeasured": 6,
+    "opaqueBackgrounds": 3,
+    "genuineAlphaForegrounds": 3,
+    "browserTest": false,
+    "runtimeTest": "pending root integration",
+    "candidateFidelity": "unverified"
+  },
+  "totals": {
+    "stages": 3,
+    "png": 6,
+    "bytes": 6042736
+  },
+  "deferredPrevious": [
+    "nightmare_mall",
+    "apartment_roof",
+    "shimizu_residence",
+    "police_station_hc"
+  ]
+}

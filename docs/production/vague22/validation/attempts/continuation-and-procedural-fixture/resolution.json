@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "rootCauses": [
+    "A new dedicated idle must have an exact-source continuation journal before historical ART92 progress can recognize it.",
+    "The former procedural Alchemilla test now encounters a replace-mode bitmap; its loading placeholder made the 0/1 traces equal."
+  ],
+  "changes": [
+    {
+      "path": "docs/production/sprite-wave22-imports-2026-11-19.json",
+      "sha256": "3f7932c1275b5fe7525df17b37345768e6a14b6252a740ddf61398f4802a3f45",
+      "purpose": "Bind16nativeidleimports to their exact sources and preservedportraits, using existingacceptedjournalcontract."
+    },
+    {
+      "path": "tests/stage-reference-policy.test.mjs",
+      "sha256": "9d28d134f3b52dabcf570ce6c7248818b9876cf66851087dfb1ceb964458290e",
+      "purpose": "Restore meaningful procedural policycoverage and add explicitloadednormalbitmap coverage."
+    }
+  ],
+  "targetedEvidence": [
+    "../../continuation-fix/results.json",
+    "../../stage-fixture-fix/verification.json"
+  ],
+  "finalGateEvidence": "../../gates.json",
+  "noEngineOrValidatorChanges": true,
+  "historicalFailureTotalsPreserved": true
+}

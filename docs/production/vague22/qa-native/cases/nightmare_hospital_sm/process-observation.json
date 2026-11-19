@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "stages",
+  "id": "nightmare_hospital_sm",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-stages-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hospital_sm",
+    "--stages=nightmare_hospital_sm"
+  ],
+  "startedAt": "2026-11-19T16:05:07.735681+00:00",
+  "completedAt": "2026-11-19T16:05:09.727604+00:00",
+  "durationSeconds": 1.992,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "786e1c10f3801b0fa5ed4b79d9c0b8d64685fcd7ae0233c37a955a9e58179dd3",
+  "executedHarness": "executed/qa-stages-native-786e1c10f380.mjs",
+  "reportSHA256": "20a3a8ef467eb97ba551a4f2694b1849b72a7b0860e1de329070c0c5f1690575",
+  "log": "process.txt",
+  "logSHA256": "23659497120dc03cc66c15566dc53d2f97d500f854923317a5907d27abb6d95d",
+  "passed": true
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "bom_insane_cancer_126",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_insane_cancer_126",
+    "--ids=bom_insane_cancer_126",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:35:43.285426+00:00",
+  "completedAt": "2026-11-19T15:35:47.352202+00:00",
+  "durationSeconds": 4.067,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "8717bfcea51da9868cd84b7a7f5d17df1263fdde489061c443ad5ff0ae9a4dcd",
+  "log": "process.txt",
+  "logSHA256": "7708017ff6002a51f0d0750d8949a19c115371a5d5da967dec5d0abf5bea239e",
+  "passed": true
+}

@@ -7,6 +7,7 @@ import { STAGE_REFERENCES } from '../src/production-reference.js';
 import { applyStageReferencePolicy, stageReferenceEventAllowed, stageReferenceHazardAllowed, STAGE_REFERENCE_TRACKS } from '../src/stage-reference-policy.js';
 import { drawStageReferenceTracks, drawStageCinematics } from '../src/stage-cinematics.js';
 import { drawStage } from '../src/renderers.js';
+import { stageBitmapCache, stageBitmapFor } from '../src/stage-bitmaps.js';
 import { hazardVolumes } from '../src/combat-geometry.js';
 
 const stage = id => {const value=STAGES.find(s=>s.id===id);assert.ok(value,id);return value;};
@@ -152,11 +153,38 @@ test('complete reference-bound stage rendering freezes when motion is reduced or
 });
 
 test('fixed narrative states survive a caller supplying a different Otherworld amount',()=>{
-  for(const id of ['room_302','old_silent_hill','hotel_otherworld','nightmare_school','film_midwich']){
-    const s=stage(id);assert.deepEqual(render(s,2400,{otherworld:0}),render(s,2400,{otherworld:1}),id);
+  const registry=stageBitmapCache.registry;
+  try{
+    // Exercise policy-controlled procedural rendering even after these arenas gain rasters.
+    stageBitmapCache.registry={};
+    for(const id of ['room_302','old_silent_hill','hotel_otherworld','nightmare_school','film_midwich']){
+      const s=stage(id);assert.deepEqual(render(s,2400,{otherworld:0}),render(s,2400,{otherworld:1}),id);
+    }
+    const transition=stage('alchemilla_origins');assert.equal(transition.shift.enabled,true);
+    assert.equal(transition.referencePolicy.worldState,'versus-transition');
+    assert.ok(!isDeepStrictEqual(render(transition,2400,{otherworld:0}),render(transition,2400,{otherworld:1})));
+  }finally{stageBitmapCache.registry=registry;}
+});
+
+test('Alchemilla normal landing bitmaps stay in their documented phase while the versus-transition rule remains enabled',()=>{
+  const s=stage('alchemilla_origins'),art=stageBitmapFor(s);
+  assert.equal(s.referencePolicy.worldState,'versus-transition');assert.equal(s.shift.enabled,true);
+  assert.equal(art.scene,'normal-first-floor-elevator-landing');assert.equal(art.mode,'replace');
+  assert.deepEqual(art.layers.map(layer=>layer.id),['elevator-landing','near-wall-edges']);
+  const frames=art.layers.flatMap(layer=>layer.frames);assert.equal(frames.length,2);
+  const previous=new Map(frames.map(frame=>[frame.path,stageBitmapCache.entries.get(frame.path)])),clock=stageBitmapCache.clock;
+  try{
+    for(const frame of frames)stageBitmapCache.entries.set(frame.path,{status:'ready',image:{path:frame.path},used:0,frame});
+    const normal=render(s,2400,{otherworld:0}),altered=render(s,2400,{otherworld:1});
+    for(const calls of [normal,altered]){
+      assert.deepEqual(calls.filter(call=>call[0]==='drawImage').map(call=>call[1].path),frames.map(frame=>frame.path));
+      assert.ok(!calls.some(call=>call[0]==='fillText'&&['CHARGEMENT DU DÉCOR','DÉCOR INDISPONIBLE'].includes(call[1])));
+    }
+    assert.deepEqual(normal,altered,'the normal source raster must not acquire an invented Otherworld overlay');
+  }finally{
+    for(const [path,entry] of previous){if(entry)stageBitmapCache.entries.set(path,entry);else stageBitmapCache.entries.delete(path);}
+    stageBitmapCache.clock=clock;
   }
-  const transition=stage('alchemilla_origins');assert.equal(transition.shift.enabled,true);
-  assert.ok(!isDeepStrictEqual(render(transition,2400,{otherworld:0}),render(transition,2400,{otherworld:1})));
 });
 
 test('reactive reference tracks require a local heavy impact and cannot run as an ambient loop',()=>{

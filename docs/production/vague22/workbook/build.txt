@@ -1,0 +1,93 @@
+{"step":"loading-artifact-tool","memoryMiB":36}
+{"step":"artifact-tool-loaded","memoryMiB":179}
+{"step":"workbook-created","memoryMiB":180}
+{"step":"format-base-Corpus","memoryMiB":180}
+{"step":"base-format-set-Corpus","memoryMiB":187}
+{"step":"column-widths-set-Corpus","memoryMiB":187}
+{"step":"format-base-Stages","memoryMiB":187}
+{"step":"base-format-set-Stages","memoryMiB":188}
+{"step":"column-widths-set-Stages","memoryMiB":188}
+{"step":"values-written","memoryMiB":191}
+{"step":"formatted-and-recalculated","memoryMiB":195}
+{"step":"formula-checks-passed","memoryMiB":196}
+Inspect result written to file: /workspace/scratch/silent-hill-wave22/docs/production/vague22/workbook/SILENT_HILL_CORPUS_BIBLE.xlsx.inspect.ndjson
+{"step":"xlsx-exported","memoryMiB":403}
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-19",
+  "createdAt": "2026-11-19T16:14:46.164Z",
+  "authoring": "@oai/artifact-tool JavaScript",
+  "builderSHA256": "b6ec9d74ffabe222c15f340a51e903bdc71d17840b0ca89514722ba489be8bd9",
+  "sourceHashes": {
+    "docs/production/franchise-corpus.json": "9df5b1b7d228b82559a2295b33b2ed47dabe812bc1b29f11a9ec841eaaa1ee86",
+    "src/data.js": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+    "src/production-reference.js": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889",
+    "src/stage-bitmap-manifest.js": "12f6ea793dc9a5acd7f1efe081046d6c97f575ef24783c2f59e1024f742f1f18",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871"
+  },
+  "preparedInputSHA256": "af3b6d452bf859251dd28577b387ca83236ef6fa06759337e3ddc28c43bb13bd",
+  "preparerSHA256": "9ed7724de3912f5753cd55cb9a12ae2b7d49559be8eaef953e6b510119196977",
+  "historicalWorkbookUnmodified": true,
+  "corpusRecords": 66,
+  "previousCoverage": {
+    "covered": 15,
+    "covered-within-aggregate": 3,
+    "partially-covered": 4,
+    "absent": 40,
+    "mentioned-only": 1,
+    "edition-not-indexed": 2,
+    "absent-as-programme": 1
+  },
+  "categories": {
+    "game": 14,
+    "playable_teaser": 1,
+    "interactive_series": 1,
+    "film": 3,
+    "remake": 1,
+    "additional_scenario": 1,
+    "compilation_remaster": 1,
+    "announced_remake": 1,
+    "cancelled_game": 1,
+    "mobile_game": 5,
+    "multimedia_collection": 1,
+    "game_dlc": 1,
+    "licensed_comic": 9,
+    "digital_comic": 1,
+    "mobile_manga": 2,
+    "bonus_comic": 1,
+    "unreleased_comic": 1,
+    "novelization": 7,
+    "promotional_broadcast": 1,
+    "publisher_broadcast": 1,
+    "licensed_crossover": 3,
+    "licensed_machine": 3,
+    "game_compilation": 1,
+    "documentary_multimedia": 2,
+    "official_guide": 1,
+    "making_of_documentary": 1,
+    "promotional_crossover_game": 1
+  },
+  "runtimeSourceCount": 16,
+  "stages": {
+    "total": 123,
+    "bitmapActive": 65,
+    "missing": 58,
+    "missingUnblocked": 43,
+    "referenceBlocked": 15
+  },
+  "worksheets": [
+    "Corpus",
+    "Stages"
+  ],
+  "nativeTables": 2,
+  "formulaChecks": "passed",
+  "representativeEditRecalculation": "passed-and-restored",
+  "exportReadback": "pending-separate-process",
+  "formulaErrors": 0,
+  "visualReview": "pending",
+  "xlsx": {
+    "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/workbook/SILENT_HILL_CORPUS_BIBLE.xlsx",
+    "bytes": 47816,
+    "sha256": "a7928d7350d35bcd61745b886110b1c007525b41644ff30001e1c981ace49649"
+  }
+}

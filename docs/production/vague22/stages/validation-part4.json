@@ -1,0 +1,118 @@
+{
+  "generatedAt": "2026-11-19T16:04:13.108Z",
+  "delivery": "delivery-part4.json",
+  "deliverySHA256": "33d75a6015166802cef98969f3d0963ec19ea336df10afa0482ad625db139b8b",
+  "checks": [
+    {
+      "stageId": "nightmare_hospital_sm",
+      "validateStageBitmap": {
+        "stageId": "nightmare_hospital_sm",
+        "source": "shattered",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "origin": "conversation-image-generation",
+        "mode": "replace",
+        "scene": "psp-er-radio-room-iced-exit",
+        "runtimeSceneId": null,
+        "geometry": {
+          "ceiling": true
+        },
+        "referenceIds": [
+          "EXT09",
+          "EXT10_SM_HOSPITAL_GUIDE_20261026",
+          "EXT10_SM_HOSPITAL_ROOM_20261026"
+        ],
+        "worldState": "fixed-altered",
+        "locationScope": "Silent Hill: Shattered Memories, version PSP US 2010 uniquement : chambre ER d’Alchemilla, Nightmare 4, pendant le puzzle radio et avant le dégel de la porte de sortie.",
+        "selectedSubLocation": "Silent Hill: Shattered Memories, version PSP US 2010 uniquement : chambre ER d’Alchemilla, Nightmare 4, pendant le puzzle radio et avant le dégel de la porte de sortie.",
+        "supports": {
+          "description": "Sol continu de la chambre devant le mur de sortie ; appuis y=0,825 libres, lit et chevet retirés vers le bord arrière gauche.",
+          "groundLineY": 0.825,
+          "runtimeChange": false
+        },
+        "safeAreas": {
+          "normalizedCoordinates": true,
+          "combatFooting": [
+            0.06,
+            0.75,
+            0.88,
+            0.15
+          ],
+          "centerClear": [
+            0.06,
+            0,
+            0.88,
+            1
+          ],
+          "foregroundMaximumAlphaInFootBand": 1,
+          "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+        },
+        "layers": [
+          {
+            "id": "psp-er-iced-exit",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "fit": "cover",
+            "ticksPerFrame": 1,
+            "loop": false,
+            "parallaxX": 0,
+            "frames": [
+              {
+                "path": "assets/stages/nightmare_hospital_sm.psp-er-iced-exit.52b62d0305f9.png",
+                "sha256": "52b62d0305f9d115edf0503904dbc4e987cc8cc8cf18bbdbe7dc72df68837d65",
+                "bytes": 2477450,
+                "width": 1672,
+                "height": 941
+              }
+            ]
+          },
+          {
+            "id": "near-wall-edges",
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "fit": "cover",
+            "ticksPerFrame": 1,
+            "loop": false,
+            "parallaxX": 0.006,
+            "frames": [
+              {
+                "path": "assets/stages/nightmare_hospital_sm.near-wall-edges.e3eb42c05e84.png",
+                "sha256": "e3eb42c05e8497b59c3ea7178597334ad5f245f67d90ebd72ca6e9c18b54c62b",
+                "bytes": 166438,
+                "width": 1672,
+                "height": 941
+              }
+            ]
+          }
+        ],
+        "referenceFiles": [
+          "shsm-psp-er-iced-exit.png",
+          "shsm-psp-er-exit-close.png",
+          "shsm-psp-er-bed.png"
+        ],
+        "notes": [
+          "Trois vues natives PSP 318×180 du longplay 2Ekz2eUCIbU : porte bleue bouchée de glace, colonne fixe de pavés de verre immédiatement à gauche, lit et meuble bas attestés. Les feuilles sources M60/M61 ont été inspectées avant génération ; seules les cellules pertinentes sont livrées.",
+          "La nouvelle preuve PSP précise une colonne maçonnée de pavés de verre ; elle ne justifie aucune cloison vitrée, rideau animé, autre salle ou mélange avec la version Wii. Les anciennes annotations de propositions Wii ne sont pas transformées en preuve visuelle PSP.",
+          "Harry, père/enfant gelés, téléphone, radio jouable, sous-titres et interface sont exclus. La glace reste fixe ; aucune fonte, chanson, transformation ou règle de terrain ajoutée.",
+          "La faible résolution, la caméra mobile et l’occlusion par le joueur limitent les détails visibles. Le volume hors cadre, l’échelle, la largeur pour le duel et l’éclairage uniforme sont reconstruits ; aucune identité pixel à pixel ni fidélité 1:1 certifiée.",
+          "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+          "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+          "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+        ]
+      },
+      "stageBitmapFor": true
+    }
+  ],
+  "assetSHA256Verified": 2,
+  "passed": true,
+  "browserTest": false,
+  "engineTest": false
+}

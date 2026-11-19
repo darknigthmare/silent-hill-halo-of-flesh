@@ -1,0 +1,343 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "group": "fighters-b",
+  "reviewedAt": "2026-11-19T15:40:11.769942+00:00",
+  "scope": "Read-only visual review of actual parent-produced native Canvas captures, right and left for each delivered profile. Native report metadata and image SHA256 are cross-checked; no new harness execution by this reviewer.",
+  "result": "complete-no-blocking-visual-defect-observed",
+  "reviewedProfiles": 6,
+  "reviewedCaptureCount": 12,
+  "entries": [
+    {
+      "fighterId": "bom_light_guardian_140",
+      "result": "passed-with-fidelity-limitations",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_light_guardian_140/bom_light_guardian_140-right-idle.png",
+          "file": "bom_light_guardian_140-right-idle.png",
+          "sha256": "0f5a71d27f393b1dbd926e8da952d0be3e72eefe61cecc5d5e33b49df745b9c6",
+          "bytes": 1217052,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": 1,
+          "drawnPath": "assets/sprites/bom_light_guardian_140.cc4f62ec752e.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_light_guardian_140/bom_light_guardian_140-left-idle.png",
+          "file": "bom_light_guardian_140-left-idle.png",
+          "sha256": "fbcba04304c921c01f8b05e0cb629380797c288ebf60ce3d30649b8b29458216",
+          "bytes": 1215683,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": -1,
+          "drawnPath": "assets/sprites/bom_light_guardian_140.cc4f62ec752e.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        }
+      ],
+      "observations": {
+        "silhouette": "Carapace, bras-masse, bras fin et deux pieds restent lisibles dans les deux sens ; cœur lumineux conservé sur le bord du torse.",
+        "supports": "Deux pieds au sol avec une ombre de moteur ; aucun appui coupé.",
+        "sourceComparison": "Les invariants du bestiaire BoM sont conservés. La rotation et les plaques fines ne sont pas attestées par un modèle source latéral."
+      },
+      "croppingIssueObserved": false,
+      "opaqueHaloObserved": false,
+      "hudObstructionObserved": false,
+      "referenceOnly": false,
+      "sourceRolePreserved": true,
+      "nativeReport": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_light_guardian_140/report.json",
+        "sha256": "0a4f61ab6d533564bf7fe64c4b0fa47432750ae7631f9ea5cd3a26e8f38b4e05",
+        "passed": true,
+        "checkCount": 64,
+        "actorStateInjected": false
+      },
+      "fidelity": "unverified"
+    },
+    {
+      "fighterId": "shortmessage_sakura_head_150",
+      "result": "passed-with-fidelity-limitations",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shortmessage_sakura_head_150/shortmessage_sakura_head_150-reference-right.png",
+          "file": "shortmessage_sakura_head_150-reference-right.png",
+          "sha256": "e83523df5f396cbd3dcbeadd7b61c11f13ae28a03b999c543a01e108cfe3f2d3",
+          "bytes": 28820,
+          "width": 720,
+          "height": 500,
+          "purpose": "native-workshop-renderer-reference-only",
+          "facing": 1,
+          "drawnPath": "assets/sprites/shortmessage_sakura_head_150.ab2505f26e95.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shortmessage_sakura_head_150/shortmessage_sakura_head_150-reference-left.png",
+          "file": "shortmessage_sakura_head_150-reference-left.png",
+          "sha256": "ba8b82add5b38b0176fdcface3b231c547f972a154cd0cc5b3225806a5f6c6cf",
+          "bytes": 28850,
+          "width": 720,
+          "height": 500,
+          "purpose": "native-workshop-renderer-reference-only",
+          "facing": -1,
+          "drawnPath": "assets/sprites/shortmessage_sakura_head_150.ab2505f26e95.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        }
+      ],
+      "observations": {
+        "silhouette": "Dans le renderer d’atelier, la tête fleurie, les manches, cordons et deux montants inférieurs tiennent dans le cadre, sans halo visible.",
+        "supports": "Les deux montants atteignent le repère horizontal de l’atelier ; la capture ne représente pas un duel ni une marche.",
+        "sourceComparison": "Costume final recoupé avec captures natives et figurine officielle. Le concept à baskets est exclu. La vue gauche est un miroir de présentation, pas une seconde vue source."
+      },
+      "croppingIssueObserved": false,
+      "opaqueHaloObserved": false,
+      "hudObstructionObserved": null,
+      "referenceOnly": true,
+      "sourceRolePreserved": true,
+      "nativeReport": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shortmessage_sakura_head_150/report.json",
+        "sha256": "efb34d256fde18e866ef42e5be25c98e38b701974f7f0a3e6119235cd29853d0",
+        "passed": true,
+        "checkCount": 36,
+        "actorStateInjected": false
+      },
+      "fidelity": "unverified"
+    },
+    {
+      "fighterId": "bom_water_guardian_141",
+      "result": "passed-with-fidelity-limitations",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_water_guardian_141/bom_water_guardian_141-right-idle.png",
+          "file": "bom_water_guardian_141-right-idle.png",
+          "sha256": "6b492ca297162ae22402764a11a3bfe4ca94df29c593500cc150f72cbdd59dcc",
+          "bytes": 1242222,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": 1,
+          "drawnPath": "assets/sprites/bom_water_guardian_141.3f0998b9283e.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_water_guardian_141/bom_water_guardian_141-left-idle.png",
+          "file": "bom_water_guardian_141-left-idle.png",
+          "sha256": "4f12ef6939eb10a386caec9dcc2ceeee0ffe1a504bbdba94f318da532dcdeb0f",
+          "bytes": 1240782,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": -1,
+          "drawnPath": "assets/sprites/bom_water_guardian_141.3f0998b9283e.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        }
+      ],
+      "observations": {
+        "silhouette": "Couronne compacte, deux bras, mains et base fermée sont visibles. Le halo des variantes intermédiaires est absent sur le décor de jeu.",
+        "supports": "Base aquatique arrondie, sans jambe humaine ajoutée ; son placement sur le sol du versus est une adaptation de présentation.",
+        "sourceComparison": "La masse, les deux bras et la base sont corroborés par le bestiaire et la capture50 ; reflets, profondeur du dos et détails de bouche restent reconstruits."
+      },
+      "croppingIssueObserved": false,
+      "opaqueHaloObserved": false,
+      "hudObstructionObserved": false,
+      "referenceOnly": false,
+      "sourceRolePreserved": true,
+      "nativeReport": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_water_guardian_141/report.json",
+        "sha256": "a1bacae4bf40a16db054dd54de646beb09645a4017b7b44ed98b22991b8476ea",
+        "passed": true,
+        "checkCount": 64,
+        "actorStateInjected": false
+      },
+      "fidelity": "unverified"
+    },
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "result": "passed-with-fidelity-limitations",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_earth_guardian_142/bom_earth_guardian_142-right-idle.png",
+          "file": "bom_earth_guardian_142-right-idle.png",
+          "sha256": "3d2b341eb4f356bca5606c68a60aa9893c5403c8cc089b3578ef1aabcba654b6",
+          "bytes": 1268962,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": 1,
+          "drawnPath": "assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_earth_guardian_142/bom_earth_guardian_142-left-idle.png",
+          "file": "bom_earth_guardian_142-left-idle.png",
+          "sha256": "7e81727b0e555564adc9f6f8c40bc78a7ac41222802c3d5b8258ebd3047ee9dc",
+          "bytes": 1267137,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": -1,
+          "drawnPath": "assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        }
+      ],
+      "observations": {
+        "silhouette": "Tête rocheuse, mâchoire et deux ensembles de segments/poings entiers dans les deux sens. Le poing arrière approche le bord mais demeure dans la capture.",
+        "supports": "Assemblage flottant : pointe inférieure et ombre, aucune jambe ni pied humain. Ne pas lire le repère inférieur comme un contact plantaire canonique.",
+        "sourceComparison": "La structure rocheuse et les blocs détachés correspondent aux captures48/49 ; angle latéral, nombre/découpe fine des segments et échelle de présentation ne sont pas certifiés."
+      },
+      "croppingIssueObserved": false,
+      "opaqueHaloObserved": false,
+      "hudObstructionObserved": false,
+      "referenceOnly": false,
+      "sourceRolePreserved": true,
+      "nativeReport": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_earth_guardian_142/report.json",
+        "sha256": "6d9bc8a8c7660c641233d56e1cfc84c72df3d722132b2afe6998354a35106e7e",
+        "passed": true,
+        "checkCount": 64,
+        "actorStateInjected": false
+      },
+      "fidelity": "unverified"
+    },
+    {
+      "fighterId": "bom_air_screamer_121",
+      "result": "passed-with-fidelity-limitations",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_air_screamer_121/bom_air_screamer_121-right-idle.png",
+          "file": "bom_air_screamer_121-right-idle.png",
+          "sha256": "92e391f2b6751143c48b08c1b0523844a65bd561c6ac972e7a200c0b9cd9d72f",
+          "bytes": 1182220,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": 1,
+          "drawnPath": "assets/sprites/bom_air_screamer_121.4bca97ffaaac.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_air_screamer_121/bom_air_screamer_121-left-idle.png",
+          "file": "bom_air_screamer_121-left-idle.png",
+          "sha256": "cdfdf6f63ef6a1a974f8e854493e6e2a2f2fd9b1cae7dd420341f8b948700dcc",
+          "bytes": 1182257,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": -1,
+          "drawnPath": "assets/sprites/bom_air_screamer_121.4bca97ffaaac.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        }
+      ],
+      "observations": {
+        "silhouette": "Les deux ailes membraneuses, le cou, la tête et les deux serres restent entiers et lisibles dans les deux sens. Aucun halo opaque visible et aucun empiétement sur le HUD.",
+        "supports": "Pose de vol statique : les deux serres pendent au-dessus du sol et de l’ombre du moteur ; aucun contact plantaire ni battement animé n’est représenté.",
+        "sourceComparison": "Deux ailes et deux pattes attestées par la capture PS Vita20120126_09. L’angle d’aile, les textures fines et le profil sont reconstruits ; aucune phase animée n’est livrée."
+      },
+      "croppingIssueObserved": false,
+      "opaqueHaloObserved": false,
+      "hudObstructionObserved": false,
+      "referenceOnly": false,
+      "sourceRolePreserved": true,
+      "nativeReport": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_air_screamer_121/report.json",
+        "sha256": "ece5ac9be73c8a7978c6e12285593d9d8055352200b500e7f049d850fb882aa0",
+        "passed": true,
+        "checkCount": 64,
+        "actorStateInjected": false
+      },
+      "fidelity": "unverified"
+    },
+    {
+      "fighterId": "bom_insane_cancer_126",
+      "result": "passed-with-fidelity-limitations",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_insane_cancer_126/bom_insane_cancer_126-right-idle.png",
+          "file": "bom_insane_cancer_126-right-idle.png",
+          "sha256": "44c8cc4d5423698f974e983dd33b7dc05f3124319980c7dd1763b1c03a3a1045",
+          "bytes": 1201508,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": 1,
+          "drawnPath": "assets/sprites/bom_insane_cancer_126.01b8c9868ff7.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_insane_cancer_126/bom_insane_cancer_126-left-idle.png",
+          "file": "bom_insane_cancer_126-left-idle.png",
+          "sha256": "315bbbd2f0813faf694b69f711c371204e865cb13808758a4d9b2a2b7093eaee",
+          "bytes": 1200380,
+          "width": 1280,
+          "height": 720,
+          "purpose": "actual-native-FightEngine",
+          "facing": -1,
+          "drawnPath": "assets/sprites/bom_insane_cancer_126.01b8c9868ff7.png",
+          "drawMatchesNewSprite": true,
+          "selectionPortraitDrawn": false,
+          "geometryCompleteReported": true,
+          "visuallyInspected": true
+        }
+      ],
+      "observations": {
+        "silhouette": "La masse ventrale, la petite tête enfouie dans les plis, la main proche et les deux pieds tiennent intégralement dans chaque capture. Le contour clair reste fin, sans halo opaque visible ; le HUD demeure libre.",
+        "supports": "Deux petits pieds visibles au niveau du sol, avec l’ombre du moteur. Le bras éloigné est naturellement occulté par la masse en profil ; aucune extrémité visible n’est coupée.",
+        "sourceComparison": "Masse, tête enfouie et petits appuis recoupés avec la capture PS Vita20120126_10 et le bestiaire. Profondeur/plis fins non certifiés."
+      },
+      "croppingIssueObserved": false,
+      "opaqueHaloObserved": false,
+      "hudObstructionObserved": false,
+      "referenceOnly": false,
+      "sourceRolePreserved": true,
+      "nativeReport": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_insane_cancer_126/report.json",
+        "sha256": "8717bfcea51da9868cd84b7a7f5d17df1263fdde489061c443ad5ff0ae9a4dcd",
+        "passed": true,
+        "checkCount": 64,
+        "actorStateInjected": false
+      },
+      "fidelity": "unverified"
+    }
+  ],
+  "pendingProfiles": [],
+  "issues": [],
+  "limits": [
+    "Static native Canvas captures do not prove animated clips, timing fidelity, browser/HTTP execution, or 1:1 source fidelity.",
+    "Mirroring the right-facing asset does not supply an independently sourced opposite-side drawing.",
+    "Sakura Head is reviewed only in the workshop reference renderer and remains outside autonomous duels."
+  ]
+}

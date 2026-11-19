@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "stages",
+  "id": "outside_room_302",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-stages-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/outside_room_302",
+    "--stages=outside_room_302"
+  ],
+  "startedAt": "2026-11-19T15:30:20.314265+00:00",
+  "completedAt": "2026-11-19T15:30:21.985487+00:00",
+  "durationSeconds": 1.671,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "786e1c10f3801b0fa5ed4b79d9c0b8d64685fcd7ae0233c37a955a9e58179dd3",
+  "executedHarness": "executed/qa-stages-native-786e1c10f380.mjs",
+  "reportSHA256": "497956f2c0c8f00147a22463a4184a975a3a138b7d35a175fe2cccaaa852c0c5",
+  "log": "process.txt",
+  "logSHA256": "ecf43ff5fb9373e5bb2ffb91f49bd9d0320cd1c897cb44e36908876d0ec3c97e",
+  "passed": true
+}

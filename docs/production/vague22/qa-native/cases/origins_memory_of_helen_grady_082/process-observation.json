@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "origins_memory_of_helen_grady_082",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082",
+    "--ids=origins_memory_of_helen_grady_082",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:35:47.353485+00:00",
+  "completedAt": "2026-11-19T15:35:51.850552+00:00",
+  "durationSeconds": 4.497,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "a135b4decedf4e17e890357c9b683c67c4614351fbed7253ad6eac6d116b5505",
+  "log": "process.txt",
+  "logSHA256": "d8942f4f3d77ad60170d4e7b535f6c50e783d8c9af9895d1beddd93b2a0b75d3",
+  "passed": true
+}

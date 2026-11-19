@@ -1,0 +1,453 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "group": "fighters-a",
+  "reviewedAt": "2026-11-19T15:51:08.277685+00:00",
+  "status": "eight-profiles-reviewed",
+  "method": "Read-only view_image inspection: ten native FightEngine Canvas duel captures for five combat profiles and six drawRasterMonster workshop captures for three reference-only Raw Shock profiles. No tests rerun; no asset pixels changed.",
+  "browserTest": false,
+  "certifiedOneToOne": false,
+  "reviewedProfiles": 8,
+  "reviewedCaptures": 16,
+  "referencedCheckExecutions": 448,
+  "records": [
+    {
+      "id": "sh1_grey_child_005",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh1_grey_child_005/sh1_grey_child_005-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/sh1_grey_child_005/sh1_grey_child_005-left-idle.png",
+          "sha256": "d3774bc3cb2e2b32be8248ea3f77bcb75930efc328756b1127aa827fa11e56a2",
+          "bytes": 1170792,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh1_grey_child_005/sh1_grey_child_005-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/sh1_grey_child_005/sh1_grey_child_005-right-idle.png",
+          "sha256": "8db92c80cf2e75aed299a249b9301b2692c3215e5acd2c2021e6a64ce400f2e4",
+          "bytes": 1170209,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "Profil orienté vers l’adversaire dans les deux sens, tête et couteau distincts.",
+        "Les deux pieds restent dans la zone de sol ; aucune lame ou extrémité coupée.",
+        "Petit gabarit cohérent avec la calibration existante ; aucun rectangle ou halo de fond, HUD dégagé."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh1_grey_child_005/report.json",
+        "sha256": "515d119502471f2f9d4c7192564df110b351eed9da4805f47bbc9683b6045679",
+        "passed": true,
+        "checkCount": 64,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "homecoming_sepulcher_093",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/homecoming_sepulcher_093-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/homecoming_sepulcher_093-left-idle.png",
+          "sha256": "488efd6b4a7a6ddba066a1eb10295da4cdb475f42fb8dcb0e226c747fe93c57d",
+          "bytes": 1186070,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/homecoming_sepulcher_093-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/homecoming_sepulcher_093-right-idle.png",
+          "sha256": "bff527c852a7a20a6afc39adea805fb5e1b8ccedd766cc341c5a488e587a6087",
+          "bytes": 1187645,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "Configuration verticale suspendue cohérente, sans marche ni pieds ajoutés.",
+        "Les deux longs bras, les mains et la racine inférieure sont intégralement visibles dans les deux sens.",
+        "Aucun halo ou obstruction du HUD. La capture ne certifie pas les attaches à un plafond commercial ; cette limite demeure."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_sepulcher_093/report.json",
+        "sha256": "c0245ee8ee2a5cd1da1ea8f286d42159def95d43f9dc1b815b87bbbacfa62808",
+        "passed": true,
+        "checkCount": 74,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "origins_memory_of_helen_grady_082",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/origins_memory_of_helen_grady_082-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/origins_memory_of_helen_grady_082-left-idle.png",
+          "sha256": "f5498fcc2510d6f93ae252a689b4c61dcad07ab2a37a43c2418b6637f9443900",
+          "bytes": 1184977,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/origins_memory_of_helen_grady_082-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/origins_memory_of_helen_grady_082-right-idle.png",
+          "sha256": "a8706fe7f13086e39a70085c55c2635eca22d1106f0eb49ff493e32ca52e121e",
+          "bytes": 1185934,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "La cage flotte avec son corps enveloppé et son support court, sans appui bipède inventé.",
+        "Le mur et les machines restent visibles à travers le voile et la cloche ; reflets contenus, aucun fond gris opaque.",
+        "Cage, bas du corps et matériel supérieur entiers dans les deux sens ; HUD dégagé. Le point de fixation complet à un plafond n’est pas documenté par cette image isolée."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/origins_memory_of_helen_grady_082/report.json",
+        "sha256": "a135b4decedf4e17e890357c9b683c67c4614351fbed7253ad6eac6d116b5505",
+        "passed": true,
+        "checkCount": 74,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "sh4_bottom_065",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh4_bottom_065/sh4_bottom_065-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/sh4_bottom_065/sh4_bottom_065-left-idle.png",
+          "sha256": "efdfa7593173add6dd7470da4b354e9aeca77a34008e374c0769879476c36a74",
+          "bytes": 1207961,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh4_bottom_065/sh4_bottom_065-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/sh4_bottom_065/sh4_bottom_065-right-idle.png",
+          "sha256": "29821ab6351ad9aed49ea22139f2d4e0044e0dba80a8d81703082758c1dbed4d",
+          "bytes": 1206704,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "Les deux grandes mains et les trois masses de tête restent lisibles lors du miroir.",
+        "La main proche constitue l’appui le plus bas ; la main lointaine est plus haute dans la perspective sans être coupée.",
+        "Aucune jambe ou manteau ajouté, aucun halo de fond, aucun contact avec le HUD."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh4_bottom_065/report.json",
+        "sha256": "55821681462de2fd98606da8414ca9d0128865792530c5a314d1f3f9704120c3",
+        "passed": true,
+        "checkCount": 64,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "homecoming_asphyxia_096",
+      "status": "reviewed-no-concrete-visual-defect",
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/homecoming_asphyxia_096-left-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/homecoming_asphyxia_096-left-idle.png",
+          "sha256": "e3f3546651101bcc217c23e368d543565e36892679b68e5cb8db6ba2b9ef6a68",
+          "bytes": 1176018,
+          "facing": -1,
+          "inspectedWith": "view_image"
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/homecoming_asphyxia_096-right-idle.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/homecoming_asphyxia_096-right-idle.png",
+          "sha256": "08456120194af5f5ef520db83dcb6cb6d584405844c72997852000c34c3a9924",
+          "bytes": 1176566,
+          "facing": 1,
+          "inspectedWith": "view_image"
+        }
+      ],
+      "observations": [
+        "Le corps composé regarde vers l’adversaire et toute la longue partie arrière demeure visible des deux côtés.",
+        "Les supports avant et les extrémités arrière restent dans la zone basse de l’arène, sans coupure latérale.",
+        "Le halo brun visible dans les RGB bruts n’apparaît pas dans le rendu composé. Les mains hautes, le corps et le HUD restent séparés ; attaches arrière reconstruites non certifiées1:1."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_asphyxia_096/report.json",
+        "sha256": "0ef49499cb4b617a801ea694921414d3675399160f7e54bd5aba84f6913bf43f",
+        "passed": true,
+        "checkCount": 64,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "shattered_raw_shock_feminine_100",
+      "status": "reviewed-no-concrete-visual-defect",
+      "combatEligible": false,
+      "combatEnabled": false,
+      "duels": 0,
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_feminine_100/shattered_raw_shock_feminine_100-reference-left.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/shattered_raw_shock_feminine_100/shattered_raw_shock_feminine_100-reference-left.png",
+          "sha256": "cdfa7c1c9a321f9e8d418e8b6c58f8060c5b7e45107c9855c2cab5e91c05d98b",
+          "bytes": 21150,
+          "facing": -1,
+          "inspectedWith": "view_image",
+          "purpose": "native-workshop-renderer-reference-only",
+          "combatEnabled": false,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              306.74738947041396,
+              235.37687082739416,
+              387.7735067269399,
+              431.6044775694362
+            ],
+            "visible": [
+              307.06828498430116,
+              236.50000512599948,
+              386.8108201852782,
+              430
+            ],
+            "pixelScale": 0.1604477569436157,
+            "anchor": [
+              0.435,
+              0.9157681940700808
+            ],
+            "bodyHeight": 0.8126684636118598,
+            "soleOffsetFromActor": null
+          }
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_feminine_100/shattered_raw_shock_feminine_100-reference-right.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/shattered_raw_shock_feminine_100/shattered_raw_shock_feminine_100-reference-right.png",
+          "sha256": "18f6ed3468cb421a03493daa5076d06bac27206d110d14dd3b1e79d27df0883c",
+          "bytes": 21131,
+          "facing": 1,
+          "inspectedWith": "view_image",
+          "purpose": "native-workshop-renderer-reference-only",
+          "combatEnabled": false,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              332.2264932730601,
+              235.37687082739416,
+              413.25261052958604,
+              431.6044775694362
+            ],
+            "visible": [
+              333.1891798147218,
+              236.50000512599948,
+              412.93171501569884,
+              430
+            ],
+            "pixelScale": 0.1604477569436157,
+            "anchor": [
+              0.435,
+              0.9157681940700808
+            ],
+            "bodyHeight": 0.8126684636118598,
+            "soleOffsetFromActor": null
+          }
+        }
+      ],
+      "observations": [
+        "Profil neutre entier dans les deux sens : tête ovale, bouche fermée, deux mains et deux pieds arqués lisibles.",
+        "Le pied le plus bas rejoint la ligne de référence ; aucune main, tête ou extrémité coupée et aucun rectangle ou halo visible.",
+        "Vue d’atelier sans HUD de duel ni adversaire : le rôle de poursuite et combatEnabled=false demeurent. Ce rendu ne valide pas une interaction de combat."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_feminine_100/report.json",
+        "sha256": "7fd26694fcee7f6f52f3b0f761d29253930590f971f01f8ffd26c57303a093ff",
+        "passed": true,
+        "checkCount": 36,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "shattered_raw_shock_abstract_102",
+      "status": "reviewed-no-concrete-visual-defect",
+      "combatEligible": false,
+      "combatEnabled": false,
+      "duels": 0,
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_abstract_102/shattered_raw_shock_abstract_102-reference-left.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/shattered_raw_shock_abstract_102/shattered_raw_shock_abstract_102-reference-left.png",
+          "sha256": "8a13052d78dde9b4ae0cb2ddd05ce31e93e7324141af1ab3dac001644d0acbc2",
+          "bytes": 24559,
+          "facing": -1,
+          "inspectedWith": "view_image",
+          "purpose": "native-workshop-renderer-reference-only",
+          "combatEnabled": false,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              323.2998409722222,
+              208.18585202991454,
+              388.36322386401577,
+              430.31507691473024
+            ],
+            "visible": [
+              323.77245634431756,
+              208.816005859375,
+              387.41799311982504,
+              430
+            ],
+            "pixelScale": 0.1575384573651175,
+            "anchor": [
+              0.46,
+              0.9596354166666666
+            ],
+            "bodyHeight": 0.9140625,
+            "soleOffsetFromActor": null
+          }
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_abstract_102/shattered_raw_shock_abstract_102-reference-right.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/shattered_raw_shock_abstract_102/shattered_raw_shock_abstract_102-reference-right.png",
+          "sha256": "0b37e50cdc1fdb49da3c4731088dcf12ba1c5e0103ed3eb9f84bc9c40d876f01",
+          "bytes": 24801,
+          "facing": 1,
+          "inspectedWith": "view_image",
+          "purpose": "native-workshop-renderer-reference-only",
+          "combatEnabled": false,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              331.63677613598423,
+              208.18585202991454,
+              396.7001590277778,
+              430.31507691473024
+            ],
+            "visible": [
+              332.58200688017496,
+              208.816005859375,
+              396.22754365568244,
+              430
+            ],
+            "pixelScale": 0.1575384573651175,
+            "anchor": [
+              0.46,
+              0.9596354166666666
+            ],
+            "bodyHeight": 0.9140625,
+            "soleOffsetFromActor": null
+          }
+        }
+      ],
+      "observations": [
+        "Tête géométrique à ouverture centrale, bras, mains et pieds complets à gauche comme à droite.",
+        "Les espaces entre les segments du torse restent ouverts et laissent voir le fond ; la correction alpha ne produit pas de plaque noire distincte ni de halo.",
+        "Un pied constitue l’appui le plus bas sur la ligne ; l’autre est relevé par la pose. Référence statique d’atelier, aucun duel ni HUD de combat."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_abstract_102/report.json",
+        "sha256": "031994902ccbde2a7095562e2e529844e4d0612cf27d1a4b2d2f2704016ab04f",
+        "passed": true,
+        "checkCount": 36,
+        "browserTest": false
+      }
+    },
+    {
+      "id": "shattered_raw_shock_atrophied_103",
+      "status": "reviewed-no-concrete-visual-defect",
+      "combatEligible": false,
+      "combatEnabled": false,
+      "duels": 0,
+      "captures": [
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_atrophied_103/shattered_raw_shock_atrophied_103-reference-left.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/shattered_raw_shock_atrophied_103/shattered_raw_shock_atrophied_103-reference-left.png",
+          "sha256": "ad1aad11afe5fa8feadbdfe3c91e533a7dfd48baf1b1ffbf003bda3f2f96cebc",
+          "bytes": 9947,
+          "facing": -1,
+          "inspectedWith": "view_image",
+          "purpose": "native-workshop-renderer-reference-only",
+          "combatEnabled": false,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              341.4334573645727,
+              290.27470915600173,
+              376.6940818850306,
+              430.40529453471794
+            ],
+            "visible": [
+              341.94007553297007,
+              290.6800036907196,
+              376.0861400829537,
+              430
+            ],
+            "pixelScale": 0.10132363367947664,
+            "anchor": [
+              0.49,
+              0.9459635416666666
+            ],
+            "bodyHeight": 0.8951822916666666,
+            "soleOffsetFromActor": null
+          }
+        },
+        {
+          "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_atrophied_103/shattered_raw_shock_atrophied_103-reference-right.png",
+          "repositoryPath": "docs/production/vague22/qa-native/cases/shattered_raw_shock_atrophied_103/shattered_raw_shock_atrophied_103-reference-right.png",
+          "sha256": "842649f018741b78b0bf76676b634188c723fcbab6465ef2c3a7ba4b01b43232",
+          "bytes": 9960,
+          "facing": 1,
+          "inspectedWith": "view_image",
+          "purpose": "native-workshop-renderer-reference-only",
+          "combatEnabled": false,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              343.3059181149694,
+              290.27470915600173,
+              378.5665426354273,
+              430.40529453471794
+            ],
+            "visible": [
+              343.9138599170463,
+              290.6800036907196,
+              378.05992446702993,
+              430
+            ],
+            "pixelScale": 0.10132363367947664,
+            "anchor": [
+              0.49,
+              0.9459635416666666
+            ],
+            "bodyHeight": 0.8951822916666666,
+            "soleOffsetFromActor": null
+          }
+        }
+      ],
+      "observations": [
+        "La tête évidée en U et les ouvertures du torse restent lisibles malgré le gabarit mince et petit de l’atelier.",
+        "Les deux mains et deux pieds restent complets lors du miroir ; le pied le plus bas rejoint la ligne et aucun contour ne heurte le bord.",
+        "Hauteur visible rapportée par le cadrage natif : environ 139,32 px. Ce gabarit de présentation ne mesure pas la taille canonique relative aux autres morphologies. Aucun duel ni HUD de combat ; combatEnabled=false conservé."
+      ],
+      "report": {
+        "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_atrophied_103/report.json",
+        "sha256": "3a4645c2adfe726602b235fce3760c56286b2e9817b7dc8ae42aeba611d313de",
+        "passed": true,
+        "checkCount": 36,
+        "browserTest": false
+      }
+    }
+  ],
+  "remaining": "Part4 extension native captures to review after root import.",
+  "limits": [
+    "Opposite-facing presentation is a runtime horizontal mirror, not an independently sourced left model.",
+    "Static capture review does not validate source animation, timings, unseen anatomy or pixel-for-pixel fidelity.",
+    "Raw Shock captures use the native workshop renderer only; no FightEngine duel, damage, input combat, DOM/CSS or browser claim is made for these three profiles."
+  ],
+  "previousReview": {
+    "path": "/workspace/scratch/halo-wave22-fighters-a/native-visual-review.json",
+    "sha256": "9391ad8ec175489156324de054b7c31cfb2bb07718457bd38c228406dbb4a280"
+  },
+  "combatProfilesReviewed": 5,
+  "noncombatReferenceProfilesReviewed": 3,
+  "noncombatDuels": 0
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "sh1_grey_child_005",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh1_grey_child_005",
+    "--ids=sh1_grey_child_005",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:28:07.772257+00:00",
+  "completedAt": "2026-11-19T15:28:18.466188+00:00",
+  "durationSeconds": 10.694,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "515d119502471f2f9d4c7192564df110b351eed9da4805f47bbc9683b6045679",
+  "log": "process.txt",
+  "logSHA256": "2d615e306fce35d31fde2d9597552b50d4dfcfa58a97003306c41645e40fc3ea",
+  "passed": true
+}

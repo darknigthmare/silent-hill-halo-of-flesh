@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "shortmessage_sakura_head_150",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shortmessage_sakura_head_150",
+    "--ids=shortmessage_sakura_head_150",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:25:16.048346+00:00",
+  "completedAt": "2026-11-19T15:25:17.737688+00:00",
+  "durationSeconds": 1.689,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "efb34d256fde18e866ef42e5be25c98e38b701974f7f0a3e6119235cd29853d0",
+  "log": "process.txt",
+  "logSHA256": "bbe9774ab0e99440fbe10e1a94a7178f5fa490cfbc0c9aa4fc4efb3470eb6c88",
+  "passed": true
+}

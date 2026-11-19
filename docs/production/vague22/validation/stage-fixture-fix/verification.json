@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "scope": "Only tests/stage-reference-policy.test.mjs and this evidence directory changed by this fix. No runtime, source policy, registry or image edit.",
+  "baselineCommit": "80db2a9fdda7032bcaf110df79915be598290f08",
+  "beforeTestSHA256": "a0b02d343ce10ae2a785bc44b59070b9d832208e8aa1cc5e3ad7ee74808e5b17",
+  "afterTestSHA256": "9d28d134f3b52dabcf570ce6c7248818b9876cf66851087dfb1ceb964458290e",
+  "afterTestGitBlob": "42efdecccd89e8e8c96518081f5ef41e0fb01bbc",
+  "reproduction": {
+    "command": "node --test --test-name-pattern='^fixed narrative states survive a caller supplying a different Otherworld amount$' tests/stage-reference-policy.test.mjs",
+    "exitCode": 1,
+    "tests": 1,
+    "pass": 0,
+    "fail": 1,
+    "evidence": "before.txt"
+  },
+  "after": {
+    "command": [
+      "node",
+      "--test",
+      "--test-reporter=tap",
+      "tests/stage-reference-policy.test.mjs"
+    ],
+    "exitCode": 0,
+    "tests": 15,
+    "suites": 0,
+    "pass": 15,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "evidence": "after.tap"
+  },
+  "diff": {
+    "numstat": "32\t4\ttests/stage-reference-policy.test.mjs",
+    "checkExitCode": 0,
+    "patchSHA256": "639a583758931f1c689c4fbd66dece9a86cbddd42a234156e7e8a289bec3636a"
+  },
+  "protectedFilesUnchanged": true,
+  "protected": {
+    "src/renderers.js": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+    "src/stage-bitmaps.js": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+    "src/stage-reference-policy.js": "635b4c3a08ecc7256f13194c3734f1f013fea2f36440421510a83c8af5c56ec6",
+    "assets/stages/alchemilla_origins.elevator-landing.d7a48880728c.png": "d7a48880728c021669239f9c9e0a3d178a48c67d2c6ed3de9cabc8e59e006531",
+    "assets/stages/alchemilla_origins.near-wall-edges.88e0d0800459.png": "88e0d0800459a36b5c4b5b834b59b31565ba5c97134a09ee6868e004983d3587"
+  },
+  "fullSuiteRun": false,
+  "commitCreated": false,
+  "publicationPerformed": false,
+  "limits": [
+    "The positive test checks Canvas draw calls with deterministic ready-image fixtures, not native pixel fidelity or an Otherworld animation.",
+    "The runtime versus-transition rule remains enabled; the two supplied bitmap planes represent the normal landing only."
+  ]
+}

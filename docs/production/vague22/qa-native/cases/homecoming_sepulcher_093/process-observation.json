@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "homecoming_sepulcher_093",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_sepulcher_093",
+    "--ids=homecoming_sepulcher_093",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:28:18.476637+00:00",
+  "completedAt": "2026-11-19T15:28:29.935210+00:00",
+  "durationSeconds": 11.459,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "c0245ee8ee2a5cd1da1ea8f286d42159def95d43f9dc1b815b87bbbacfa62808",
+  "log": "process.txt",
+  "logSHA256": "974f18885549ca1c0eadcf543c6f1ef7355b260e219dd654d3939489af02ccb5",
+  "passed": true
+}

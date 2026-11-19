@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "createdAt": "2026-11-19T15:20:20.308Z",
+  "input": {
+    "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/characters-b/delivery-part1.json",
+    "sha256": "c5d060f336e6a27c5f7aa8912d4fa0527d2d8890c6483b161cb48305eb9a2739"
+  },
+  "entries": [
+    {
+      "fighterId": "bom_light_guardian_140",
+      "source": "bom",
+      "path": "assets/sprites/bom_light_guardian_140.cc4f62ec752e.png",
+      "pose": "idle",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "combatView": "side-view-candidate",
+      "portraitPath": "assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
+      "technical": {
+        "pixelSHA256": "802af0d8a4dc23294455e10785547ef3dcf99757ba8fa2c7730c2a75a4e4baf6",
+        "sha256": "cc4f62ec752e14868c4117ee5d4857e1f7e5dd29babd64ac5587efb2f1b4850c",
+        "bytes": 1008129,
+        "width": 1207,
+        "height": 1303,
+        "extension": "png",
+        "visibleBounds": [
+          230,
+          99,
+          1106,
+          1155
+        ],
+        "transparentFraction": 0.7821
+      },
+      "dryRun": false,
+      "nextStep": "npm run sprites:check && npm test && npm run build",
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "sourceLocalPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_light_guardian_140.side-right.v2.png",
+      "nativePixelsPreserved": true,
+      "portraitPreserved": true,
+      "clipSemanticsPreserved": true,
+      "roleUnchanged": true
+    },
+    {
+      "fighterId": "shortmessage_sakura_head_150",
+      "source": "shortmessage",
+      "path": "assets/sprites/shortmessage_sakura_head_150.ab2505f26e95.png",
+      "pose": "idle",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "combatView": "side-view-candidate",
+      "portraitPath": "assets/sprites/shortmessage_sakura_head_150.19576d20cace.png",
+      "technical": {
+        "pixelSHA256": "084760885a346fcbcb12c733aa7827adc1ce112f390314a91a76f70b1a912e4d",
+        "sha256": "ab2505f26e959a457e44712a0ed16116bd654b7afffbfea6cbba7ebef3f7f55a",
+        "bytes": 759649,
+        "width": 1002,
+        "height": 1569,
+        "extension": "png",
+        "visibleBounds": [
+          267,
+          27,
+          693,
+          1544
+        ],
+        "transparentFraction": 0.82685
+      },
+      "dryRun": false,
+      "nextStep": "npm run sprites:check && npm test && npm run build",
+      "combatEnabled": false,
+      "usage": "reference-only-lateral-candidate",
+      "sourceLocalPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/shortmessage_sakura_head_150.side-right.v1.png",
+      "nativePixelsPreserved": true,
+      "portraitPreserved": true,
+      "clipSemanticsPreserved": true,
+      "roleUnchanged": true
+    }
+  ],
+  "complete": true,
+  "completedAt": "2026-11-19T15:20:33.979Z"
+}

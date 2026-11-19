@@ -1,0 +1,595 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "group": "fighters-b",
+  "generatedAt": "2026-11-19T15:24:16.983316+00:00",
+  "basePublishedCommit": "80db2a9fdda7032bcaf110df79915be598290f08",
+  "selected": [
+    {
+      "fighterId": "bom_water_guardian_141",
+      "source": "bom",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012)",
+      "file": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_water_guardian_141.side-right.v3.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_water_guardian_141.side-right.v3.png",
+      "candidate": "bom_water_guardian_141.side-right.v3.png",
+      "path": "assets/sprites/bom_water_guardian_141.3f0998b9283e.png",
+      "status": "side-view-candidate",
+      "fidelity": "unverified",
+      "facing": 1,
+      "pose": "idle",
+      "animated": false,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 1427842,
+      "sha256": "3f0998b9283e39665dab9b5a25f519fb96b2e257ab6e61e76c4f2b4fcf0349be",
+      "sourceSHA256": "3f0998b9283e39665dab9b5a25f519fb96b2e257ab6e61e76c4f2b4fcf0349be",
+      "pixelSHA256": "a65988b5cd5f55560f441b97fcafd7aff664f59eb5a23adb909131edf4158b7a",
+      "alphaBounds": {
+        "1": [
+          0,
+          19,
+          1060,
+          1448
+        ],
+        "8": [
+          78,
+          230,
+          970,
+          1341
+        ],
+        "32": [
+          78,
+          232,
+          970,
+          1341
+        ],
+        "128": [
+          79,
+          233,
+          969,
+          1340
+        ]
+      },
+      "visibleBounds": [
+        78,
+        232,
+        970,
+        1341
+      ],
+      "framingBounds": [
+        78,
+        230,
+        970,
+        1341
+      ],
+      "transparentFraction": 0.60027166,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "minimumReadablePaddingFraction": 0.0718232,
+      "calibrationProposal": {
+        "anchor": [
+          0.32,
+          0.92610497
+        ],
+        "bodyHeight": 0.76588398,
+        "definition": "Approximate authored support axis; alpha32 exclusive lower baseline. Includes head/crown and complete supports. Native Canvas review required; not a measured source scale."
+      },
+      "anchor": [
+        0.32,
+        0.92610497
+      ],
+      "bodyHeight": 0.76588398,
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+        "sha256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+        "bytes": 1220038,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "existingAnimatedClipCount": 0,
+      "portraitAction": "preserve-existing",
+      "clipAction": "preserve-existing-clips",
+      "roleAction": "preserve-existing-runtime-role",
+      "purpose": "combat",
+      "view": "side-view",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit entier, deux bras et base arrondie fermée sans jambes. Halo éliminé et crête crochue non attestée des versions1–2 supprimée ; couronne raccourcie et raccordée au tronc.",
+      "limits": "Le bestiaire de faible résolution et la capture native50 attestent la couronne compacte, deux bras et base fermée. Profondeur dorsale, raccords fins et pose latérale reconstruits. La main détachée visible sur le sol n'est pas ajoutée à cette pose idle, qui ne représente pas toutes les phases de l'affrontement. One static drawing. Native generated pixels unchanged; no resize, crop, alpha painting or other pixel processing. Very low alpha noise can extend beyond readable bounds.",
+      "referenceIds": [
+        "EXT20",
+        "EXT26"
+      ],
+      "references": [
+        {
+          "id": "bom-water-bestiary",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/water_guardian.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-water-bestiary.jpg",
+          "sha256": "e2d0890413f937fc55af63467349bbd6a43bca39ec23425588b236982b90b0e7",
+          "bytes": 15725
+        },
+        {
+          "id": "bom-water-50",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-water-50.jpg",
+          "sha256": "92143fe2c8def2311cd8317671e3d8c3317c390d6ebebf5f0f21eb026ae95b44",
+          "bytes": 162926
+        }
+      ],
+      "runtimeRole": "combatant",
+      "usageRestriction": "Preserve existing role and rules; this image adds no new attacks or movement.",
+      "prompt": "Correct the HEAD IDENTITY of the sprite in image 3 using the actual Water Guardian from Silent Hill: Book of Memories in images 1 and 2. Image 1 is the native bestiary; image 2 is native PS Vita gameplay. The previous sprite wrongly made a long curved backward hooked crest like an Alien monster. Remove that unsupported giant hooked crescent entirely. The source head is a much shorter broad heavy rounded/wedge-shaped blue-grey crown smoothly merging into the bloated torso, with a shallow central ridge, deep furrows and a relatively small hungry opening in the front. Keep the creature's exact monolithic body: two heavy long arms with claw hands, ridged neck/trunk, swollen rounded closed lower base and no legs. Match the short compact head outline in image 1 rather than improvising an alien, dragon or fish; no dorsal horn, no tail, no extra fins, no humanoid face or eyes. Retain a strict lateral whole-body side profile facing RIGHT, with both arms complete and staggered, source bluish-green purple wet material. One character only. True transparent alpha outside the silhouette including all inner gaps, no atmospheric halo, no scenery, no UI. Whole crown, both hands and entire closed base fit with 8 percent clear transparent padding. One static sprite, no animation.",
+      "tool": "image_gen__imagegen",
+      "rawPixelsUnchanged": true,
+      "nativeRuntimeQA": "pending-parent-integration",
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "source": "bom",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012)",
+      "file": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_earth_guardian_142.side-right.v2.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_earth_guardian_142.side-right.v2.png",
+      "candidate": "bom_earth_guardian_142.side-right.v2.png",
+      "path": "assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+      "status": "side-view-candidate",
+      "fidelity": "unverified",
+      "facing": 1,
+      "pose": "idle",
+      "animated": false,
+      "dimensions": [
+        1774,
+        887
+      ],
+      "width": 1774,
+      "height": 887,
+      "bytes": 1349165,
+      "sha256": "8ab48e12d5690e041c54e154106fe29cf291cda0f76cd8bd5f855dc522c6d201",
+      "sourceSHA256": "8ab48e12d5690e041c54e154106fe29cf291cda0f76cd8bd5f855dc522c6d201",
+      "pixelSHA256": "7252e8fa4c50fc195721bedd5e8dc92f2120251b7a8cb0c1554324837f195ea3",
+      "alphaBounds": {
+        "1": [
+          0,
+          17,
+          1764,
+          887
+        ],
+        "8": [
+          116,
+          51,
+          1673,
+          834
+        ],
+        "32": [
+          117,
+          53,
+          1673,
+          834
+        ],
+        "128": [
+          117,
+          53,
+          1672,
+          833
+        ]
+      },
+      "visibleBounds": [
+        117,
+        53,
+        1673,
+        834
+      ],
+      "framingBounds": [
+        116,
+        51,
+        1673,
+        834
+      ],
+      "transparentFraction": 0.61357018,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "minimumReadablePaddingFraction": 0.05693348,
+      "calibrationProposal": {
+        "anchor": [
+          0.5,
+          0.94024803
+        ],
+        "bodyHeight": 0.88049605,
+        "definition": "Approximate authored support axis; alpha32 exclusive lower baseline. Includes head/crown and complete supports. Native Canvas review required; not a measured source scale."
+      },
+      "anchor": [
+        0.5,
+        0.94024803
+      ],
+      "bodyHeight": 0.88049605,
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/bom_earth_guardian_142.99401861091a.png",
+        "sha256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+        "bytes": 912883,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "existingAnimatedClipCount": 0,
+      "portraitAction": "preserve-existing",
+      "clipAction": "preserve-existing-clips",
+      "roleAction": "preserve-existing-runtime-role",
+      "purpose": "combat",
+      "view": "side-view",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit corrigé : mâchoire projetée vers la droite, paroi rocheuse latérale visible ; tête fermée naturellement en pointe et deux bras segmentés flottants complets. Aucun tronc ni jambes ajoutés.",
+      "limits": "Les trois vues natives attestent la composition rocheuse, bouche et membres flottants ; disposition exacte des segments, proportions de la face latérale et microtextures restent reconstruites. Ancre au point inférieur du bloc central, représentation flottante adaptée au versus ; aucun appui humain ni déplacement natif certifié. One static drawing. Native generated pixels unchanged; no resize, crop, alpha painting or other pixel processing. Very low alpha noise can extend beyond readable bounds.",
+      "referenceIds": [
+        "EXT24",
+        "EXT20",
+        "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+        "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
+      ],
+      "references": [
+        {
+          "id": "bom-earth-bestiary",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/earth_guardian.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-earth-bestiary.jpg",
+          "sha256": "35b540a197e219be014350daca9129b2faf9c70b74c5938d0e0f6a44064c4ad3",
+          "bytes": 14434
+        },
+        {
+          "id": "bom-earth-48",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_48_earth_boss.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-earth-48.jpg",
+          "sha256": "d909e485a7861f121b1d1e52b1e7efcf3d0b9bb3a64ced1a64bd05d99433affd",
+          "bytes": 169136
+        },
+        {
+          "id": "bom-earth-49",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_49_earth_boss.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-earth-49.jpg",
+          "sha256": "27b013e4c4eb1a28dfcae8af1663c0e1d53fc0e7bd90c07a088fa81febe95d5c",
+          "bytes": 182943
+        }
+      ],
+      "runtimeRole": "combatant",
+      "usageRestriction": "Preserve existing role and rules; this image adds no new attacks or movement.",
+      "prompt": "Edit IMAGE 1 only to rotate this exact Earth Guardian from Book of Memories into a STRICT RIGHT-FACING 90-DEGREE SIDE PROFILE. The current view is still three-quarter front. Image 2 is the native-game identity reference. The pointed stone upper jaw and open mouth must project entirely toward screen RIGHT; show the side wall of the rocky head, not the broad front mouth cavity. Both floating stone arms should align front/back in the side view, with the near fist in front of the head toward screen right and the far fist partially behind. Preserve the complete heavy irregular rock head, its natural closed pointed bottom and exactly two segmented floating stone arms with their complete fists. No torso or legs. Keep source color, materials and shape, no new ornaments or parts. One clean complete static sprite with true transparent alpha and at least 8 percent clear margin. No scenery, no ground, no aura, no text. Do not change into a standing humanoid golem.",
+      "tool": "image_gen__imagegen",
+      "rawPixelsUnchanged": true,
+      "nativeRuntimeQA": "pending-parent-integration",
+      "certifiedOneToOne": false
+    }
+  ],
+  "fighters": [
+    {
+      "fighterId": "bom_water_guardian_141",
+      "source": "bom",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012)",
+      "file": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_water_guardian_141.side-right.v3.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_water_guardian_141.side-right.v3.png",
+      "candidate": "bom_water_guardian_141.side-right.v3.png",
+      "path": "assets/sprites/bom_water_guardian_141.3f0998b9283e.png",
+      "status": "side-view-candidate",
+      "fidelity": "unverified",
+      "facing": 1,
+      "pose": "idle",
+      "animated": false,
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "width": 1086,
+      "height": 1448,
+      "bytes": 1427842,
+      "sha256": "3f0998b9283e39665dab9b5a25f519fb96b2e257ab6e61e76c4f2b4fcf0349be",
+      "sourceSHA256": "3f0998b9283e39665dab9b5a25f519fb96b2e257ab6e61e76c4f2b4fcf0349be",
+      "pixelSHA256": "a65988b5cd5f55560f441b97fcafd7aff664f59eb5a23adb909131edf4158b7a",
+      "alphaBounds": {
+        "1": [
+          0,
+          19,
+          1060,
+          1448
+        ],
+        "8": [
+          78,
+          230,
+          970,
+          1341
+        ],
+        "32": [
+          78,
+          232,
+          970,
+          1341
+        ],
+        "128": [
+          79,
+          233,
+          969,
+          1340
+        ]
+      },
+      "visibleBounds": [
+        78,
+        232,
+        970,
+        1341
+      ],
+      "framingBounds": [
+        78,
+        230,
+        970,
+        1341
+      ],
+      "transparentFraction": 0.60027166,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "minimumReadablePaddingFraction": 0.0718232,
+      "calibrationProposal": {
+        "anchor": [
+          0.32,
+          0.92610497
+        ],
+        "bodyHeight": 0.76588398,
+        "definition": "Approximate authored support axis; alpha32 exclusive lower baseline. Includes head/crown and complete supports. Native Canvas review required; not a measured source scale."
+      },
+      "anchor": [
+        0.32,
+        0.92610497
+      ],
+      "bodyHeight": 0.76588398,
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+        "sha256": "bbcd702cc4f9b8c9843aed1cd6fb031155d7b15438cffe242538dd36218a461a",
+        "bytes": 1220038,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "existingAnimatedClipCount": 0,
+      "portraitAction": "preserve-existing",
+      "clipAction": "preserve-existing-clips",
+      "roleAction": "preserve-existing-runtime-role",
+      "purpose": "combat",
+      "view": "side-view",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit entier, deux bras et base arrondie fermée sans jambes. Halo éliminé et crête crochue non attestée des versions1–2 supprimée ; couronne raccourcie et raccordée au tronc.",
+      "limits": "Le bestiaire de faible résolution et la capture native50 attestent la couronne compacte, deux bras et base fermée. Profondeur dorsale, raccords fins et pose latérale reconstruits. La main détachée visible sur le sol n'est pas ajoutée à cette pose idle, qui ne représente pas toutes les phases de l'affrontement. One static drawing. Native generated pixels unchanged; no resize, crop, alpha painting or other pixel processing. Very low alpha noise can extend beyond readable bounds.",
+      "referenceIds": [
+        "EXT20",
+        "EXT26"
+      ],
+      "references": [
+        {
+          "id": "bom-water-bestiary",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/water_guardian.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-water-bestiary.jpg",
+          "sha256": "e2d0890413f937fc55af63467349bbd6a43bca39ec23425588b236982b90b0e7",
+          "bytes": 15725
+        },
+        {
+          "id": "bom-water-50",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-water-50.jpg",
+          "sha256": "92143fe2c8def2311cd8317671e3d8c3317c390d6ebebf5f0f21eb026ae95b44",
+          "bytes": 162926
+        }
+      ],
+      "runtimeRole": "combatant",
+      "usageRestriction": "Preserve existing role and rules; this image adds no new attacks or movement.",
+      "prompt": "Correct the HEAD IDENTITY of the sprite in image 3 using the actual Water Guardian from Silent Hill: Book of Memories in images 1 and 2. Image 1 is the native bestiary; image 2 is native PS Vita gameplay. The previous sprite wrongly made a long curved backward hooked crest like an Alien monster. Remove that unsupported giant hooked crescent entirely. The source head is a much shorter broad heavy rounded/wedge-shaped blue-grey crown smoothly merging into the bloated torso, with a shallow central ridge, deep furrows and a relatively small hungry opening in the front. Keep the creature's exact monolithic body: two heavy long arms with claw hands, ridged neck/trunk, swollen rounded closed lower base and no legs. Match the short compact head outline in image 1 rather than improvising an alien, dragon or fish; no dorsal horn, no tail, no extra fins, no humanoid face or eyes. Retain a strict lateral whole-body side profile facing RIGHT, with both arms complete and staggered, source bluish-green purple wet material. One character only. True transparent alpha outside the silhouette including all inner gaps, no atmospheric halo, no scenery, no UI. Whole crown, both hands and entire closed base fit with 8 percent clear transparent padding. One static sprite, no animation.",
+      "tool": "image_gen__imagegen",
+      "rawPixelsUnchanged": true,
+      "nativeRuntimeQA": "pending-parent-integration",
+      "certifiedOneToOne": false
+    },
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "source": "bom",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012)",
+      "file": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_earth_guardian_142.side-right.v2.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_earth_guardian_142.side-right.v2.png",
+      "candidate": "bom_earth_guardian_142.side-right.v2.png",
+      "path": "assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+      "status": "side-view-candidate",
+      "fidelity": "unverified",
+      "facing": 1,
+      "pose": "idle",
+      "animated": false,
+      "dimensions": [
+        1774,
+        887
+      ],
+      "width": 1774,
+      "height": 887,
+      "bytes": 1349165,
+      "sha256": "8ab48e12d5690e041c54e154106fe29cf291cda0f76cd8bd5f855dc522c6d201",
+      "sourceSHA256": "8ab48e12d5690e041c54e154106fe29cf291cda0f76cd8bd5f855dc522c6d201",
+      "pixelSHA256": "7252e8fa4c50fc195721bedd5e8dc92f2120251b7a8cb0c1554324837f195ea3",
+      "alphaBounds": {
+        "1": [
+          0,
+          17,
+          1764,
+          887
+        ],
+        "8": [
+          116,
+          51,
+          1673,
+          834
+        ],
+        "32": [
+          117,
+          53,
+          1673,
+          834
+        ],
+        "128": [
+          117,
+          53,
+          1672,
+          833
+        ]
+      },
+      "visibleBounds": [
+        117,
+        53,
+        1673,
+        834
+      ],
+      "framingBounds": [
+        116,
+        51,
+        1673,
+        834
+      ],
+      "transparentFraction": 0.61357018,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "minimumReadablePaddingFraction": 0.05693348,
+      "calibrationProposal": {
+        "anchor": [
+          0.5,
+          0.94024803
+        ],
+        "bodyHeight": 0.88049605,
+        "definition": "Approximate authored support axis; alpha32 exclusive lower baseline. Includes head/crown and complete supports. Native Canvas review required; not a measured source scale."
+      },
+      "anchor": [
+        0.5,
+        0.94024803
+      ],
+      "bodyHeight": 0.88049605,
+      "selectionPortraitPreserved": {
+        "path": "assets/sprites/bom_earth_guardian_142.99401861091a.png",
+        "sha256": "99401861091adabb96fd2418a873984028e59e7f5c04f33e6b0ebff8733e4408",
+        "bytes": 912883,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "existingAnimatedClipCount": 0,
+      "portraitAction": "preserve-existing",
+      "clipAction": "preserve-existing-clips",
+      "roleAction": "preserve-existing-runtime-role",
+      "purpose": "combat",
+      "view": "side-view",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit corrigé : mâchoire projetée vers la droite, paroi rocheuse latérale visible ; tête fermée naturellement en pointe et deux bras segmentés flottants complets. Aucun tronc ni jambes ajoutés.",
+      "limits": "Les trois vues natives attestent la composition rocheuse, bouche et membres flottants ; disposition exacte des segments, proportions de la face latérale et microtextures restent reconstruites. Ancre au point inférieur du bloc central, représentation flottante adaptée au versus ; aucun appui humain ni déplacement natif certifié. One static drawing. Native generated pixels unchanged; no resize, crop, alpha painting or other pixel processing. Very low alpha noise can extend beyond readable bounds.",
+      "referenceIds": [
+        "EXT24",
+        "EXT20",
+        "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+        "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
+      ],
+      "references": [
+        {
+          "id": "bom-earth-bestiary",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/earth_guardian.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-earth-bestiary.jpg",
+          "sha256": "35b540a197e219be014350daca9129b2faf9c70b74c5938d0e0f6a44064c4ad3",
+          "bytes": 14434
+        },
+        {
+          "id": "bom-earth-48",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_48_earth_boss.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-earth-48.jpg",
+          "sha256": "d909e485a7861f121b1d1e52b1e7efcf3d0b9bb3a64ced1a64bd05d99433affd",
+          "bytes": 169136
+        },
+        {
+          "id": "bom-earth-49",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_49_earth_boss.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-b/references/bom-earth-49.jpg",
+          "sha256": "27b013e4c4eb1a28dfcae8af1663c0e1d53fc0e7bd90c07a088fa81febe95d5c",
+          "bytes": 182943
+        }
+      ],
+      "runtimeRole": "combatant",
+      "usageRestriction": "Preserve existing role and rules; this image adds no new attacks or movement.",
+      "prompt": "Edit IMAGE 1 only to rotate this exact Earth Guardian from Book of Memories into a STRICT RIGHT-FACING 90-DEGREE SIDE PROFILE. The current view is still three-quarter front. Image 2 is the native-game identity reference. The pointed stone upper jaw and open mouth must project entirely toward screen RIGHT; show the side wall of the rocky head, not the broad front mouth cavity. Both floating stone arms should align front/back in the side view, with the near fist in front of the head toward screen right and the far fist partially behind. Preserve the complete heavy irregular rock head, its natural closed pointed bottom and exactly two segmented floating stone arms with their complete fists. No torso or legs. Keep source color, materials and shape, no new ornaments or parts. One clean complete static sprite with true transparent alpha and at least 8 percent clear margin. No scenery, no ground, no aura, no text. Do not change into a standing humanoid golem.",
+      "tool": "image_gen__imagegen",
+      "rawPixelsUnchanged": true,
+      "nativeRuntimeQA": "pending-parent-integration",
+      "certifiedOneToOne": false
+    }
+  ],
+  "assets": [
+    {
+      "fighterId": "bom_water_guardian_141",
+      "source": "bom",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_water_guardian_141.side-right.v3.png",
+      "path": "assets/sprites/bom_water_guardian_141.3f0998b9283e.png",
+      "sha256": "3f0998b9283e39665dab9b5a25f519fb96b2e257ab6e61e76c4f2b4fcf0349be",
+      "bytes": 1427842,
+      "width": 1086,
+      "height": 1448,
+      "facing": 1,
+      "anchor": [
+        0.32,
+        0.92610497
+      ],
+      "bodyHeight": 0.76588398,
+      "visibleBounds": [
+        78,
+        232,
+        970,
+        1341
+      ],
+      "purpose": "combat",
+      "view": "side-view"
+    },
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "source": "bom",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-b/sprites/bom_earth_guardian_142.side-right.v2.png",
+      "path": "assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+      "sha256": "8ab48e12d5690e041c54e154106fe29cf291cda0f76cd8bd5f855dc522c6d201",
+      "bytes": 1349165,
+      "width": 1774,
+      "height": 887,
+      "facing": 1,
+      "anchor": [
+        0.5,
+        0.94024803
+      ],
+      "bodyHeight": 0.88049605,
+      "visibleBounds": [
+        117,
+        53,
+        1673,
+        834
+      ],
+      "purpose": "combat",
+      "view": "side-view"
+    }
+  ],
+  "pending": [],
+  "rawPixelsUnchanged": true,
+  "newAnimatedClips": 0,
+  "newPortraits": 0,
+  "certifiedOneToOne": 0,
+  "repoModified": false,
+  "scope": "Distinct static combat presentation views. Existing portraits, runtime roles and animated clips are preserved. No new fighter IDs or behavior changes.",
+  "notes": [
+    "Pending variants must not be integrated. Native Canvas verification is performed by the parent after import.",
+    "Portrait concept/model and licensed sculpture are differentiated in per-asset provenance. No 1:1 fidelity certification."
+  ],
+  "subLot": 2
+}

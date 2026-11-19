@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "stages",
+  "id": "nightmare_hilltop",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-stages-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hilltop",
+    "--stages=nightmare_hilltop"
+  ],
+  "startedAt": "2026-11-19T15:28:59.995177+00:00",
+  "completedAt": "2026-11-19T15:29:02.252976+00:00",
+  "durationSeconds": 2.258,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "786e1c10f3801b0fa5ed4b79d9c0b8d64685fcd7ae0233c37a955a9e58179dd3",
+  "executedHarness": "executed/qa-stages-native-786e1c10f380.mjs",
+  "reportSHA256": "bff5d96e2f67569d7cab1a0af9a82d4cbbb656393b5cc8991e8b697824c95fe2",
+  "log": "process.txt",
+  "logSHA256": "a55d068dc781919ffb4945f7336b8e32966814d312d939e9b6b0ef0621a6e507",
+  "passed": true
+}

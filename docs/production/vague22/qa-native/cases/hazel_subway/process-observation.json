@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "stages",
+  "id": "hazel_subway",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-stages-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/hazel_subway",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:28:50.964647+00:00",
+  "completedAt": "2026-11-19T15:28:55.681871+00:00",
+  "durationSeconds": 4.717,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "786e1c10f3801b0fa5ed4b79d9c0b8d64685fcd7ae0233c37a955a9e58179dd3",
+  "executedHarness": "executed/qa-stages-native-786e1c10f380.mjs",
+  "reportSHA256": "c436f3cff423730511509660b1b03de7c5e99f5ea77fc68e5f1e7437e1784ab9",
+  "log": "process.txt",
+  "logSHA256": "38f14c51940e0f1366b993265a79d77006c9fc7192311cd9e066b490592b00d9",
+  "passed": true
+}

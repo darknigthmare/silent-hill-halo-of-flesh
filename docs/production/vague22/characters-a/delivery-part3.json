@@ -1,0 +1,569 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "group": "fighters-a",
+  "baseCommit": "80db2a9",
+  "generatedAt": "2026-11-19T15:37:42.533838+00:00",
+  "deliveryStatus": "closed-subset-3-noncombat-references",
+  "rawPixelsUnchanged": true,
+  "activePngs": 3,
+  "newPortraits": 0,
+  "newAnimatedClips": 0,
+  "certifiedOneToOne": 0,
+  "repoModified": false,
+  "nativeEngineQARequired": true,
+  "historicallyBlockedNotRetried": [
+    "sh1_incubus_019",
+    "sh2_mannequin_ambusher_023",
+    "sh2_spider_mannequin",
+    "sh2_mary_final_manifestation_034",
+    "homecoming_amnion_hanging_form_097",
+    "homecoming_amnion_exposed_form_098"
+  ],
+  "selected": [
+    {
+      "fighterId": "shattered_raw_shock_feminine_100",
+      "id": "shattered_raw_shock_feminine_100",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "file": "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "candidate": "shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "path": "assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "selectionPortraitPreserved": "assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
+      "previousFramePreservedAsPortrait": true,
+      "classification": "noncombat-lateral-reference-view",
+      "status": "lateral-reference-candidate",
+      "combatEligible": false,
+      "combatEnabled": false,
+      "combatRole": "scripted-encounter",
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "runtimePolicyUnchanged": true,
+      "usage": "Archive / pursuit encounter visual reference only; do not enable playable combat",
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "facing": 1,
+      "pose": "neutral-reference",
+      "phase": "commercial Wii feminine morphology, closed horizontal lip ridge and arched feet",
+      "animated": false,
+      "existingAnimatedClips": 0,
+      "clipsProposal": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "dimensions": [
+        1060,
+        1484
+      ],
+      "width": 1060,
+      "height": 1484,
+      "bytes": 491173,
+      "sha256": "1eb3ca286521381835cc2efb442a6be7ce4117b1bbcc622878cf26d8e9e3c433",
+      "pixelSHA256": "428d55a010b093128df5c81527a0657a1817a0dfcf0aae47d7e3f2bcdffd53e7",
+      "alphaBounds": {
+        "1": [
+          0,
+          0,
+          899,
+          1444
+        ],
+        "8": [
+          294,
+          152,
+          791,
+          1359
+        ],
+        "32": [
+          294,
+          153,
+          791,
+          1359
+        ],
+        "128": [
+          295,
+          153,
+          790,
+          1358
+        ],
+        "250": [
+          296,
+          155,
+          789,
+          1357
+        ]
+      },
+      "visibleBounds": [
+        294,
+        153,
+        791,
+        1359
+      ],
+      "framingBounds": [
+        294,
+        152,
+        791,
+        1359
+      ],
+      "alphaThreshold": 32,
+      "transparentFraction": 0.8558803,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "edgeAlphaMax": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "calibrationProposal": {
+        "anchor": [
+          0.435,
+          0.9157681940700808
+        ],
+        "bodyHeight": 0.8126684636118598,
+        "definition": "Presentation only: pelvis axis and lowest own foot; head-to-foot height, not a hitbox or source measurement. Preserve combatEnabled=false."
+      },
+      "anchor": [
+        0.435,
+        0.9157681940700808
+      ],
+      "bodyHeight": 0.8126684636118598,
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit neutre entier, silhouette féminine non humaine, tête ovale à bouche fermée et pieds arqués. Deux mains et deux pieds visibles. Composition sur damier inspectée, aucune toile de fond.",
+      "limits": "Les captures commerciales montrent plusieurs états de transformation. Ce profil fixe la morphologie illustrée par le modèle de gauche du montage fem2 et le personnage isolé à droite de raw_shock_1b. Le côté caché et les textures sont reconstruits ; le portrait existant issu d’un concept quadrupède est conservé comme historique distinct, pas présenté comme même pose commerciale. Marge alpha32 minimale125 px (8,42 % de hauteur). Native pixels unchanged. Static reference only; no source timing, autonomous duel kit or 1:1 fidelity certified.",
+      "prompt": "Create ONE isolated full-body RIGHT-FACING LATERAL REFERENCE PROFILE of the feminine Raw Shock morph from the commercial Wii edition of Silent Hill: Shattered Memories (2009). The supplied in-game images are the authoritative design reference; retain the nonhuman pale pink-grey smooth game-creature surface, oval feature-poor head with the distinctive closed thick horizontal mouth/lip ridge and sealed eyes, narrow hunched shoulders, long arms, the native feminine torso/hip morphology, thin bent legs and unusually elongated pointed/high-arched feet. Use the consistent morphology on the left figure of image 1 and the standing separate figure to the right of image 2, not a mix of different transformation states. The last image helps the side silhouette. Exactly one creature with two arms and two legs, complete hands and feet, no extra limb. Turn its whole head, thorax and hips toward the right edge in a quiet neutral slightly hunched waiting stance; keep the same proportions and character identity. Slight separation of far limbs is permitted for readability. This is a static archive/pursuit-encounter reference, not a fighting stance or a new playable fighter. Preserve the commercial upright morphology, not a quadrupedal concept-art pose. Do not turn the creature into an ordinary human woman, do not add clothes, weapons, nipples or explicit anatomical detail, seductive posing, wounds or blood. One subject only, no Harry, other Raw Shocks, interaction, environment, HUD, reticle, grain lines, floor, shadow, text, labels or multiple views. Render a detailed native game-model-style raster under neutral diffuse light with actual transparent alpha outside the creature. Entire body and all extremities fit with at least 8 percent clear margins on every edge, about 75–80 percent of canvas height.",
+      "referenceFiles": [
+        "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_feminine_100__fem2.jpg",
+        "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_feminine_100__raw_shock_1b.jpg",
+        "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_feminine_100__raw_shock_1d.jpg"
+      ],
+      "referenceUrls": [
+        "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_1b.jpg",
+        "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_1d.jpg",
+        "https://shshatteredmemories.com/images/monsters/fem2.jpg"
+      ],
+      "references": [
+        {
+          "id": "shattered_raw_shock_feminine_100",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_1b.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_feminine_100__raw_shock_1b.jpg",
+          "status": 200,
+          "finalUrl": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_1b.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "a8e9d0945c802d68e6f7ce499773055d7a36b38b5ef2e9e114e7b84bef9725f2",
+          "bytes": 83224,
+          "width": 640,
+          "height": 480,
+          "mode": "RGB"
+        },
+        {
+          "id": "shattered_raw_shock_feminine_100",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_1d.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_feminine_100__raw_shock_1d.jpg",
+          "status": 200,
+          "finalUrl": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_1d.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "9abe3c2a85d04f87dd4a79197a7ac21227d510045b07f2eaf8b2b80a163da5af",
+          "bytes": 49658,
+          "width": 640,
+          "height": 480,
+          "mode": "RGB"
+        },
+        {
+          "id": "shattered_raw_shock_feminine_100",
+          "url": "https://shshatteredmemories.com/images/monsters/fem2.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_feminine_100__fem2.jpg",
+          "status": 200,
+          "finalUrl": "https://shshatteredmemories.com/images/monsters/fem2.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "26b87b442fc1fd56dda543a8c1e957bba85eddfb2c80145c607eb0262a888ad1",
+          "bytes": 54512,
+          "width": 254,
+          "height": 207,
+          "mode": "RGB"
+        }
+      ],
+      "tool": "image_gen__imagegen",
+      "generationPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-e954cf53-9132-4890-a72c-62de4697e916.png",
+      "alphaCompositionPreview": "/workspace/scratch/halo-wave22-fighters-a/qa/shattered_raw_shock_feminine_100-composite.png"
+    },
+    {
+      "fighterId": "shattered_raw_shock_abstract_102",
+      "id": "shattered_raw_shock_abstract_102",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "file": "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_abstract_102.5d6dde89f1b5.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_abstract_102.5d6dde89f1b5.png",
+      "candidate": "shattered_raw_shock_abstract_102.5d6dde89f1b5.png",
+      "path": "assets/sprites/shattered_raw_shock_abstract_102.5d6dde89f1b5.png",
+      "selectionPortraitPreserved": "assets/sprites/shattered_raw_shock_abstract_102.1ff0846e3fc4.png",
+      "previousFramePreservedAsPortrait": true,
+      "classification": "noncombat-lateral-reference-view",
+      "status": "lateral-reference-candidate",
+      "combatEligible": false,
+      "combatEnabled": false,
+      "combatRole": "scripted-encounter",
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "runtimePolicyUnchanged": true,
+      "usage": "Archive / pursuit encounter visual reference only; do not enable playable combat",
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "facing": 1,
+      "pose": "neutral-reference",
+      "phase": "commercial Wii geometric cross/ring head state, segmented body",
+      "animated": false,
+      "existingAnimatedClips": 0,
+      "clipsProposal": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1445061,
+      "sha256": "5d6dde89f1b534e8de0539b117e5b870b84a690c7ea59260135fddcb0b82a4c8",
+      "pixelSHA256": "dfdc508df5d62e6f11f6cbbad94e2a6524b899ecb182995c5a2320f897945a7d",
+      "alphaBounds": {
+        "1": [
+          241,
+          53,
+          922,
+          1482
+        ],
+        "8": [
+          296,
+          70,
+          702,
+          1474
+        ],
+        "32": [
+          297,
+          70,
+          701,
+          1474
+        ],
+        "128": [
+          297,
+          71,
+          701,
+          1473
+        ],
+        "250": [
+          300,
+          72,
+          700,
+          1472
+        ]
+      },
+      "visibleBounds": [
+        297,
+        70,
+        701,
+        1474
+      ],
+      "framingBounds": [
+        296,
+        70,
+        702,
+        1474
+      ],
+      "alphaThreshold": 32,
+      "transparentFraction": 0.8360087,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "edgeAlphaMax": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "calibrationProposal": {
+        "anchor": [
+          0.46,
+          0.9596354166666666
+        ],
+        "bodyHeight": 0.9140625,
+        "definition": "Presentation only: pelvis axis and lowest own foot; head-to-foot height, not a hitbox or source measurement. Preserve combatEnabled=false."
+      },
+      "anchor": [
+        0.46,
+        0.9596354166666666
+      ],
+      "bodyHeight": 0.9140625,
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit avec tête géométrique annulaire et torse segmenté. Correction v2 : les intervalles du torse/bassin sont réellement transparents ; trou de tête, mains et pieds complets vérifiés sur damier.",
+      "limits": "Choisit l’état de tête à traversée circulaire des captures raw_shock_3b/3c, sans mélanger la variante en U voisine. Détail de tranche des segments et géométrie latérale reconstruits à partir des captures 640×480 ; aucun pouvoir géométrique déduit. Portrait conceptuel quadrupède antérieur conservé sans prétendre qu’il est ce même état commercial. Marge alpha32 minimale62 px (4,04 % de hauteur). Native pixels unchanged. Static reference only; no source timing, autonomous duel kit or 1:1 fidelity certified.",
+      "prompt": "Targeted morphology correction to image 1, the right-facing geometric Abstract Raw Shock reference profile from Silent Hill: Shattered Memories Wii (2009). Preserve the exact whole-body pose, proportions, right-facing orientation, chosen stepped ring/cross head with circular opening, limbs, hands, feet and muted pink-grey material. Compare the commercial segmented Raw Shock in images 2 and 3. Correct only the dark connecting material filling the gaps BETWEEN the separated torso/pelvis bands: the clearly separated bands should have narrow genuine open alpha gaps, as in the commercial segmented morphology, rather than an opaque black undersuit or continuous black torso joining them. Keep every solid segment and all limbs in their current relative positions; do not add new bands or alter the silhouette. Preserve the true transparent circular head opening. Do not add machinery, rig rods or new anatomy. Keep the one complete creature on a genuinely transparent background with generous margins. This is a neutral archive/pursuit reference, not a fighting stance. No backdrop, halo, glow, floor, shadow, text, HUD, other figure or extra view. Native transparent PNG, no cropping.",
+      "referenceFiles": [
+        "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_abstract_102.1bfb46052464.png",
+        "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_abstract_102__raw_shock_3b.jpg",
+        "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_abstract_102__raw_shock_3c.jpg"
+      ],
+      "referenceUrls": [
+        "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_3b.jpg",
+        "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_3c.jpg"
+      ],
+      "references": [
+        {
+          "id": "shattered_raw_shock_abstract_102",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_3b.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_abstract_102__raw_shock_3b.jpg",
+          "status": 200,
+          "finalUrl": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_3b.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "d92854713cd6ffe4c8066d16511028865bf198bbf0dda65ba9060743092acb19",
+          "bytes": 64424,
+          "width": 640,
+          "height": 480,
+          "mode": "RGB"
+        },
+        {
+          "id": "shattered_raw_shock_abstract_102",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_3c.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_abstract_102__raw_shock_3c.jpg",
+          "status": 200,
+          "finalUrl": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_3c.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "c5470c0cc9a578a95ba704b9b5b796523a3d9695519bcf7f88542a43e6b44d62",
+          "bytes": 78731,
+          "width": 640,
+          "height": 480,
+          "mode": "RGB"
+        }
+      ],
+      "tool": "image_gen__imagegen",
+      "generationPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-8d7a789e-6e0b-4f4e-83fc-96bf505d5cc1.png",
+      "alphaCompositionPreview": "/workspace/scratch/halo-wave22-fighters-a/qa/shattered_raw_shock_abstract_102-composite.png",
+      "originalPrompt": "Create ONE isolated complete transparent-background reference-profile raster of the ABSTRACT / geometric Raw Shock variant as actually seen in the commercial Wii version of Silent Hill: Shattered Memories (2009), using the three supplied in-game captures as the authoritative morphology. Select the geometric stepped ring/cross-shaped head with the central circular opening seen on the separate creature at the upper-left of image 1 and the left Raw Shock beside Harry in image 2. Keep this chosen head state consistent; do not mix it with the tall U-shaped head variant in the same captures. The body has segmented horizontal fleshy bands with dark open gaps, thin articulated arms and legs, long hands and small stretched feet, in the muted pale pink-grey native game material. The whole body remains one Raw Shock entity. Show a RIGHT-FACING LATERAL PROFILE in a neutral slightly hunched upright waiting stance consistent with the commercial capture, with two complete arms, two complete legs and all fingers/toes in frame. The creature faces the right edge; a tiny camera offset may reveal the central head opening and far limbs without returning to a front portrait. Do not use the quadrupedal concept-art posture, do not invent a giant block carapace, metal robot parts, weapon, ordinary human face or new anatomical growths. This is a neutral morphology reference for an invulnerable pursuit encounter, not a fighting stance and not a playable combatant. Render only this ONE creature, without Harry, other creatures, grasping action, corridor, grain/noise overlay, HUD, reticle, captions, floor or shadow. Preserve the observed complete silhouette in a clean native-resolution game-model-style raster; true transparent alpha outside and in open gaps. Diffuse neutral light, generous at least 8 percent margins around all extremities. No added blood or injury."
+    },
+    {
+      "fighterId": "shattered_raw_shock_atrophied_103",
+      "id": "shattered_raw_shock_atrophied_103",
+      "source": "shattered",
+      "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+      "file": "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_atrophied_103.a9a6071c0992.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_atrophied_103.a9a6071c0992.png",
+      "candidate": "shattered_raw_shock_atrophied_103.a9a6071c0992.png",
+      "path": "assets/sprites/shattered_raw_shock_atrophied_103.a9a6071c0992.png",
+      "selectionPortraitPreserved": "assets/sprites/shattered_raw_shock_atrophied_103.d37aa45dec34.png",
+      "previousFramePreservedAsPortrait": true,
+      "classification": "noncombat-lateral-reference-view",
+      "status": "lateral-reference-candidate",
+      "combatEligible": false,
+      "combatEnabled": false,
+      "combatRole": "scripted-encounter",
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "runtimePolicyUnchanged": true,
+      "usage": "Archive / pursuit encounter visual reference only; do not enable playable combat",
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "facing": 1,
+      "pose": "neutral-reference",
+      "phase": "commercial Wii fully hollow/open-head atrophied state",
+      "animated": false,
+      "existingAnimatedClips": 0,
+      "clipsProposal": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1184168,
+      "sha256": "a9a6071c0992eba75eb7977e0a0eddba83a1ea766044ac9764dd4de4c09ca6e8",
+      "pixelSHA256": "30849034b12d6ffed35c7e9ba3c83f2b8ebf26d13d8557eb55594559ca6850a5",
+      "alphaBounds": {
+        "1": [
+          33,
+          39,
+          978,
+          1526
+        ],
+        "8": [
+          343,
+          78,
+          680,
+          1453
+        ],
+        "32": [
+          343,
+          78,
+          680,
+          1453
+        ],
+        "128": [
+          344,
+          78,
+          680,
+          1453
+        ],
+        "250": [
+          346,
+          80,
+          679,
+          1451
+        ]
+      },
+      "visibleBounds": [
+        343,
+        78,
+        680,
+        1453
+      ],
+      "framingBounds": [
+        343,
+        78,
+        680,
+        1453
+      ],
+      "alphaThreshold": 32,
+      "transparentFraction": 0.8877939,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "edgeAlphaMax": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "calibrationProposal": {
+        "anchor": [
+          0.49,
+          0.9459635416666666
+        ],
+        "bodyHeight": 0.8951822916666666,
+        "definition": "Presentation only: pelvis axis and lowest own foot; head-to-foot height, not a hitbox or source measurement. Preserve combatEnabled=false."
+      },
+      "anchor": [
+        0.49,
+        0.9459635416666666
+      ],
+      "bodyHeight": 0.8951822916666666,
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit mince entier avec tête ouverte en U, thorax et abdomen évidés ; mains et pieds complets. La composition sur damier montre les ouvertures réelles et l’absence de halo.",
+      "limits": "Choisit l’état de tête creuse très évolué vu dans hole2 et raw_shock_4b/4c ; les variantes intermédiaires à tête fermée ne sont pas fusionnées. Épaisseur de la structure et textures latérales reconstruites, pas de fidélité commerciale 1:1 attestée. Le portrait issu du concept quadrupède reste conservé séparément. Marge alpha32 minimale78 px (5,08 % de hauteur). Native pixels unchanged. Static reference only; no source timing, autonomous duel kit or 1:1 fidelity certified.",
+      "prompt": "Create ONE isolated full-body RIGHT-FACING LATERAL REFERENCE PROFILE of the atrophied Raw Shock morph from the commercial Wii edition of Silent Hill: Shattered Memories (2009), using the supplied in-game images as the authoritative morphology. Select the fully open hollow-head state shown by the second and rightmost creatures in image 1 and the central hollow figure in image 3. Preserve that one commercial state: a rounded deeply hollow/open head with a tall U-like rim, an extremely thin connected framework torso with large open spaces through the chest/abdomen, narrow long arms and legs with the native joint openings and long hand/foot extremities, pale pink-grey game material. All open spaces genuinely show the transparent background; do not fill them with an opaque black interior or add solid flesh. Keep two arms and two legs, connected as in the source, complete hands and feet inside the canvas. Turn the head and body to the right edge in a quiet neutral slightly hunched upright waiting posture consistent with the commercial game captures. A slight camera offset may reveal the hollow head and far limbs; do not return to a frontal portrait. This is a neutral morphology reference for an invulnerable pursuit encounter and remains outside playable combat. Do not adopt the quadrupedal concept-art design, do not add a weapon, clothing, new powers, normal human features, extra limbs or new wounds. One fictional creature only, no Harry, other Raw Shocks, grab action, corridor, frozen background, reticle, HUD, scan lines, labels, floor or cast shadow. Detailed clean game-model-style native raster, diffuse neutral light; true alpha transparency outside the body and through source openings. Entire silhouette about 75–80 percent of canvas height, generous clear margins around every extremity.",
+      "referenceFiles": [
+        "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_atrophied_103__hole2.jpg",
+        "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_atrophied_103__raw_shock_4b.jpg",
+        "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_atrophied_103__raw_shock_4c.jpg"
+      ],
+      "referenceUrls": [
+        "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_4b.jpg",
+        "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_4c.jpg",
+        "https://shshatteredmemories.com/images/monsters/hole2.jpg"
+      ],
+      "references": [
+        {
+          "id": "shattered_raw_shock_atrophied_103",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_4b.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_atrophied_103__raw_shock_4b.jpg",
+          "status": 200,
+          "finalUrl": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_4b.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "43b9c1a9402bbed07a3d6b48e247ba456c8d17a6c1adfc360c9ed5ad39e9388d",
+          "bytes": 83449,
+          "width": 640,
+          "height": 480,
+          "mode": "RGB"
+        },
+        {
+          "id": "shattered_raw_shock_atrophied_103",
+          "url": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_4c.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_atrophied_103__raw_shock_4c.jpg",
+          "status": 200,
+          "finalUrl": "https://www.silenthillmemories.net/sh_shattered_memories/variations/creatures/pics/raw_shock_4c.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "fa3dff66b805bb8a578035eeb429cfe464fe8a24f11250bb33c17aef6ff298aa",
+          "bytes": 92333,
+          "width": 640,
+          "height": 480,
+          "mode": "RGB"
+        },
+        {
+          "id": "shattered_raw_shock_atrophied_103",
+          "url": "https://shshatteredmemories.com/images/monsters/hole2.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/shattered_raw_shock_atrophied_103__hole2.jpg",
+          "status": 200,
+          "finalUrl": "https://shshatteredmemories.com/images/monsters/hole2.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "e8b6413f38f41095e32cb4be188117e2cc772e15f00a91d8a382d505e7b7a234",
+          "bytes": 62092,
+          "width": 254,
+          "height": 207,
+          "mode": "RGB"
+        }
+      ],
+      "tool": "image_gen__imagegen",
+      "generationPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-b4b12213-1889-4e87-8f95-500d3033655b.png",
+      "alphaCompositionPreview": "/workspace/scratch/halo-wave22-fighters-a/qa/shattered_raw_shock_atrophied_103-composite.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "shattered_raw_shock_feminine_100",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "path": "assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "sha256": "1eb3ca286521381835cc2efb442a6be7ce4117b1bbcc622878cf26d8e9e3c433",
+      "bytes": 491173,
+      "width": 1060,
+      "height": 1484,
+      "role": "noncombat-lateral-reference"
+    },
+    {
+      "id": "shattered_raw_shock_abstract_102",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_abstract_102.5d6dde89f1b5.png",
+      "path": "assets/sprites/shattered_raw_shock_abstract_102.5d6dde89f1b5.png",
+      "sha256": "5d6dde89f1b534e8de0539b117e5b870b84a690c7ea59260135fddcb0b82a4c8",
+      "bytes": 1445061,
+      "width": 1024,
+      "height": 1536,
+      "role": "noncombat-lateral-reference"
+    },
+    {
+      "id": "shattered_raw_shock_atrophied_103",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/shattered_raw_shock_atrophied_103.a9a6071c0992.png",
+      "path": "assets/sprites/shattered_raw_shock_atrophied_103.a9a6071c0992.png",
+      "sha256": "a9a6071c0992eba75eb7977e0a0eddba83a1ea766044ac9764dd4de4c09ca6e8",
+      "bytes": 1184168,
+      "width": 1024,
+      "height": 1536,
+      "role": "noncombat-lateral-reference"
+    }
+  ]
+}

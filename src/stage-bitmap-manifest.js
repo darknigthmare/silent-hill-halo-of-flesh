@@ -3446,5 +3446,700 @@ export const STAGE_BITMAPS = {
       }
     ],
     "notes": "Trottoir de la rencontre Elle : panneau de disparus et sa petite lampe propre, chaise vide, clôture et brume distante. Le grand lampadaire est un plan alpha indépendant à gauche ; aucune personne. Deux PNG statiques générés à partir de captures documentées et adaptés au duel. Caméra, topologie, proportions et détails occultés non certifiés 1:1 ; aucun clip animé créé."
+  },
+  "hazel_subway": {
+    "stageId": "hazel_subway",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "concourse-ticket-alcove",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH3_04_SUBWAY_STATION"
+    ],
+    "layers": [
+      {
+        "id": "ticket-alcove",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+            "sha256": "4d537af9a1485e2e384396327b8a60c35c923552f8318e92021fff76e75c40c3",
+            "bytes": 2203973,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-wall-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+            "sha256": "98e4c72a83083b2f1dcabd1417e687c20d31daaac96ece679ffedd266584b884",
+            "bytes": 200941,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Un changeur gris et trois distributeurs verts, journal replié, carrelage crème à bandes vertes et porte de service d'après la vue native.",
+      "Les inscriptions de distributeurs reproduites appartiennent à la texture attestée ; aucun HUD, texte ajouté ou signalétique de gare inventée.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
+  },
+  "underpass_sh3": {
+    "stageId": "underpass_sh3",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "upper-map-room",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH3_05_UNDERPASS"
+    ],
+    "layers": [
+      {
+        "id": "map-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/underpass_sh3.map-room.da4cf2791272.png",
+            "sha256": "da4cf2791272392c8e54a54009dd9f9f1db636cf669687f5a8fb7bf43909a366",
+            "bytes": 2137101,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-wall-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/underpass_sh3.near-wall-edges.a65261780188.png",
+            "sha256": "a6526178018839d6009a259e7bdd5fa5e3c2f0ed72bd416ef361a5da82651565",
+            "bytes": 216890,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Carte murale, peinture vert-bleu usée, casier renversé et tonneau attestés ; Heather et la masse collectible retirées.",
+      "Aucun mélange avec canal, salle du chauffage, variante sanglante Extra New Game ou chantier.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
+  },
+  "nightmare_hilltop": {
+    "stageId": "nightmare_hilltop",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "gallery-before-painting-burn",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER"
+    ],
+    "layers": [
+      {
+        "id": "gallery-painting",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/nightmare_hilltop.gallery-painting.2a9fc04c0043.png",
+            "sha256": "2a9fc04c004376adb2ea2ee5acb6e13247d23c6a5f2b77329178e1b58247e856",
+            "bytes": 2475526,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-wall-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/nightmare_hilltop.near-wall-edges.cfcaac8fc270.png",
+            "sha256": "cfcaac8fc270606dad7c4177774b7edff77e17bb8d6ef468ebab075cd4251cf3",
+            "bytes": 262629,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Cadre, deux lampes grillagées, corrosion ivoire/rouille et seau repris de la capture native.",
+      "Les figures restent uniquement peintes dans le tableau attesté ; aucun acteur, cadavre, monstre ou personnage tridimensionnel ajouté.",
+      "La peinture n'est pas brûlée ; aucune transformation ni scène de Glutton inventée.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
+  },
+  "outside_room_302": {
+    "stageId": "outside_room_302",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "final-hallway-chained-room105",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH4_13_OUTSIDE_ROOM_302"
+    ],
+    "layers": [
+      {
+        "id": "door105",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/outside_room_302.door105.1a96e575d9fd.png",
+            "sha256": "1a96e575d9fdbfca1a67143b3c82946826b997c6404e342c83d9cb6e26644143",
+            "bytes": 2425527,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-wall-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/outside_room_302.near-wall-edges.0fafe322dcde.png",
+            "sha256": "0fafe322dcde13854f14a966dd680ac663a32fec3d964eacf517a51d095f4cae",
+            "bytes": 264338,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Porte105 élancée, grille haute, chaînes obliques et mur rouge tirés de la capture native1920×1080.",
+      "Aucune statue humaine suspendue ni acteur de la zone voisine104 utilisé ; cadrage limité à la baie105.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
+  },
+  "alchemilla_origins": {
+    "stageId": "alchemilla_origins",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "normal-first-floor-elevator-landing",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT03",
+      "EXT01"
+    ],
+    "layers": [
+      {
+        "id": "elevator-landing",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/alchemilla_origins.elevator-landing.d7a48880728c.png",
+            "sha256": "d7a48880728c021669239f9c9e0a3d178a48c67d2c6ed3de9cabc8e59e006531",
+            "bytes": 2275547,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-wall-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/alchemilla_origins.near-wall-edges.88e0d0800459.png",
+            "sha256": "88e0d0800459a36b5c4b5b834b59b31565ba5c97134a09ee6868e004983d3587",
+            "bytes": 195761,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Capture native du guide officiel BradyGames page imprimée20/PDF21 : portes, panneaux carrés, peinture verte basse et bouton à droite.",
+      "PDF original conservé et hashé ; JPEG natif de page extrait sans retouche, vues de Kaufmann et du palier inspectées.",
+      "La politique moteur versus-transition reste inchangée ; ce lot fournit uniquement un fond normal statique, aucune phase Otherworld ni transition bitmap.",
+      "Résolution des vues de guide limitée : proportions et textures fines reconstruites, pas de fidélité1:1 prétendue.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
+  },
+  "nightmare_hospital_hc": {
+    "stageId": "nightmare_hospital_hc",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "initial-clinical-dream-gate2a",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT06"
+    ],
+    "layers": [
+      {
+        "id": "gate2a",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/nightmare_hospital_hc.gate2a.faf8d083f23c.png",
+            "sha256": "faf8d083f23c60b6ab83cea558412faf3f9d7c0077bd7240b098c43c58b9b01c",
+            "bytes": 2463170,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-wall-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/nightmare_hospital_hc.near-wall-edges.e7c5e101d745.png",
+            "sha256": "e7c5e101d745d272eadbcc199e13228a429da7e2ff39a36620dfd24bee9de132",
+            "bytes": 185326,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La phase fixed-normal et le libellé RÊVE CLINIQUE AVANT LE MIROIR sont respectés ; aucune rouille Otherworld ajoutée.",
+      "Capture native officielle page imprimée29/PDF8, raster240×135 décodé du PDF Pearson/BradyGames ; limites de détail explicites.",
+      "Grille, plaque2A, clavier/lumière droite, plâtre bleuté écaillé, carrelage bas et trolley gauche visibles sur la preuve.",
+      "Alex et Joshua retirés ; aucun personnage ou monstre ajouté.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
+  },
+  "villa": {
+    "stageId": "villa",
+    "source": "shortmessage",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "normal-corridor-apartment214",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT30",
+      "EXT31"
+    ],
+    "layers": [
+      {
+        "id": "apartment214-door",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/villa.apartment214-door.263d6a61f2f4.png",
+            "sha256": "263d6a61f2f44d7baf21e2b8ca7792601205004b4881887e92dfeb81b3f8f65d",
+            "bytes": 2247109,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-wall-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/villa.near-wall-edges.4d500efc075f.png",
+            "sha256": "4d500efc075fb1f14c489a6c0aa865210f26dc289fef13f3c2b6c3e6ff2dadbe",
+            "bytes": 208154,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Porte sombre C.B., grand graffiti ocre, grille gauche, enduit et conduites attestés par la capture native800×450.",
+      "Aucun intérieur de studio, dessin humain, chaîne de poursuite, post-it Otherworld ou acteur ajouté.",
+      "Le drapeau moteur interior:false existant est conservé ; le périmètre visuel exact est ce couloir couvert, sans nouvelle logique météo ni animation.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
+  },
+  "nowhere": {
+    "stageId": "nowhere",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "bethor-generator-room-before-power-off",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH1_15_NOWHERE"
+    ],
+    "layers": [
+      {
+        "id": "bethor-generator-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/nowhere.bethor-generator-room.6c753fcbaa0a.png",
+            "sha256": "6c753fcbaa0afb827734973cfb66a27e62df7958a75274a70826074b87c5b1c9",
+            "bytes": 1808666,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-wall-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/nowhere.near-wall-edges.70fd5fb39aff.png",
+            "sha256": "70fd5fb39afff30d8938646e6f53f60d28dc6bed7f914713fed259a4bcaf9768",
+            "bytes": 196477,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Deux armoires olive, panneau de cadrans éclairé, parois rouillées et montant droit guidés par la capture native600×450.",
+      "Harry, arme et ombre humaine retirés ; aucune autre pièce de Nowhere assemblée ici.",
+      "Une petite trappe gauche non attestée dans la première génération a été retirée par une correction imagegen ciblée ; seul le PNG corrigé est livré.",
+      "La géométrie de la salle est élargie pour le duel ; les petits cadrans et textures de la capture restent des reconstructions non certifiées1:1.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
+  },
+  "central_nightmare": {
+    "stageId": "central_nightmare",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "floatstinger-rooftop-altered-phase",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH1_09_NIGHTMARE_CENTRAL_SILENT_HILL"
+    ],
+    "layers": [
+      {
+        "id": "floatstinger-roof",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/central_nightmare.floatstinger-roof.a166c86064f4.png",
+            "sha256": "a166c86064f447441dfc3006b71dff73c734c5c466cc0f66722d3871d3c4fc14",
+            "bytes": 1499491,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-roof-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/central_nightmare.near-roof-edges.d6d18810f03e.png",
+            "sha256": "d6d18810f03ef335e814402ef2d4d90abf7ab227fc1c3b22778f856f3114ff72",
+            "bytes": 82839,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Capture native1048×789 : dallage, parapet bas, retour rouge gauche, volume bas gauche et grand volume droit conservés.",
+      "Harry et Floatstinger sont retirés. Aucun réservoir, antenne, décor urbain voisin ou phase Twinfeeler ajouté.",
+      "Avant-plan limité à deux très petits retours de maçonnerie aux coins bas extrêmes, adaptation de caméra déclarée ; aucune chute ni nouvelle collision.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
+  },
+  "nightmare_hospital_sm": {
+    "stageId": "nightmare_hospital_sm",
+    "source": "shattered",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "psp-er-radio-room-iced-exit",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT09",
+      "EXT10_SM_HOSPITAL_GUIDE_20261026",
+      "EXT10_SM_HOSPITAL_ROOM_20261026"
+    ],
+    "layers": [
+      {
+        "id": "psp-er-iced-exit",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/nightmare_hospital_sm.psp-er-iced-exit.52b62d0305f9.png",
+            "sha256": "52b62d0305f9d115edf0503904dbc4e987cc8cc8cf18bbdbe7dc72df68837d65",
+            "bytes": 2477450,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-wall-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/nightmare_hospital_sm.near-wall-edges.e3eb42c05e84.png",
+            "sha256": "e3eb42c05e8497b59c3ea7178597334ad5f245f67d90ebd72ca6e9c18b54c62b",
+            "bytes": 166438,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Trois vues natives PSP 318×180 du longplay 2Ekz2eUCIbU : porte bleue bouchée de glace, colonne fixe de pavés de verre immédiatement à gauche, lit et meuble bas attestés. Les feuilles sources M60/M61 ont été inspectées avant génération ; seules les cellules pertinentes sont livrées.",
+      "La nouvelle preuve PSP précise une colonne maçonnée de pavés de verre ; elle ne justifie aucune cloison vitrée, rideau animé, autre salle ou mélange avec la version Wii. Les anciennes annotations de propositions Wii ne sont pas transformées en preuve visuelle PSP.",
+      "Harry, père/enfant gelés, téléphone, radio jouable, sous-titres et interface sont exclus. La glace reste fixe ; aucune fonte, chanson, transformation ou règle de terrain ajoutée.",
+      "La faible résolution, la caméra mobile et l’occlusion par le joueur limitent les détails visibles. Le volume hors cadre, l’échelle, la largeur pour le duel et l’éclairage uniforme sont reconstruits ; aucune identité pixel à pixel ni fidélité 1:1 certifiée.",
+      "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+      "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+      "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+    ]
   }
 };

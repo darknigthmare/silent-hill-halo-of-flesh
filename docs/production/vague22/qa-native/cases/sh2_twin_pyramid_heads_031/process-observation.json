@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "sh2_twin_pyramid_heads_031",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/sh2_twin_pyramid_heads_031",
+    "--ids=sh2_twin_pyramid_heads_031",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:57:22.838093+00:00",
+  "completedAt": "2026-11-19T15:57:26.959796+00:00",
+  "durationSeconds": 4.122,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "68236209c1163794db4236a336e25c4e480264e1c7a786af0e30103c54b54fdc",
+  "log": "process.txt",
+  "logSHA256": "054e553b3635e21f54754e8d53faedfa9711006313c84935ad19c01c57c4157f",
+  "passed": true
+}

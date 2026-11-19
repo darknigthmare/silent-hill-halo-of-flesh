@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "homecoming_asphyxia_096",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/homecoming_asphyxia_096",
+    "--ids=homecoming_asphyxia_096",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:35:55.876096+00:00",
+  "completedAt": "2026-11-19T15:35:59.822403+00:00",
+  "durationSeconds": 3.946,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "0ef49499cb4b617a801ea694921414d3675399160f7e54bd5aba84f6913bf43f",
+  "log": "process.txt",
+  "logSHA256": "5722a3b868d196c25c43efe5bee9e7506a76c87bfce52eea54482aa5def696f9",
+  "passed": true
+}

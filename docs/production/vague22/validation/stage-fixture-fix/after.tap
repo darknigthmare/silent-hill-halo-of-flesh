@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: all 123 arena references preserve the exact work, note, constraints and unproduced proposals
+ok 1 - all 123 arena references preserve the exact work, note, constraints and unproduced proposals
+  ---
+  duration_ms: 4.603137
+  type: 'test'
+  ...
+# Subtest: a mismatched or missing reference cannot borrow a source, a weather cue or a physical event
+ok 2 - a mismatched or missing reference cannot borrow a source, a weather cue or a physical event
+  ---
+  duration_ms: 2.066684
+  type: 'test'
+  ...
+# Subtest: snow belongs to SH1 streets; film ash cannot propagate to unrelated games or interiors
+ok 3 - snow belongs to SH1 streets; film ash cannot propagate to unrelated games or interiors
+  ---
+  duration_ms: 0.362416
+  type: 'test'
+  ...
+# Subtest: the ruined SH2 hotel keeps wet tiles and burnt plaster without a new fire or mirror
+ok 4 - the ruined SH2 hotel keeps wet tiles and burnt plaster without a new fire or mirror
+  ---
+  duration_ms: 0.156276
+  type: 'test'
+  ...
+# Subtest: geographic corrections change the actual displayed name and retain the former catalogue label
+ok 5 - geographic corrections change the actual displayed name and retain the former catalogue label
+  ---
+  duration_ms: 0.122845
+  type: 'test'
+  ...
+# Subtest: the first Room 302 and distinct SH4 subway cannot inherit later hauntings or the SH3 train hazard
+ok 6 - the first Room 302 and distinct SH4 subway cannot inherit later hauntings or the SH3 train hazard
+  ---
+  duration_ms: 0.130477
+  type: 'test'
+  ...
+# Subtest: unresolved scene identity or phase has a stable neutral backdrop, no damage and no automatic finisher
+ok 7 - unresolved scene identity or phase has a stable neutral backdrop, no damage and no automatic finisher
+  ---
+  duration_ms: 1.6126
+  type: 'test'
+  ...
+# Subtest: events and hazards come from their exact allowlists, never from a similar family or a forced cue
+ok 8 - events and hazards come from their exact allowlists, never from a similar family or a forced cue
+  ---
+  duration_ms: 7.809449
+  type: 'test'
+  ...
+# Subtest: a small explicit catalogue implements precise visual parts instead of labelling every proposal complete
+ok 9 - a small explicit catalogue implements precise visual parts instead of labelling every proposal complete
+  ---
+  duration_ms: 1.870819
+  type: 'test'
+  ...
+# Subtest: all selected background motions animate normally and freeze in reduced motion without leaking paint state
+ok 10 - all selected background motions animate normally and freeze in reduced motion without leaking paint state
+  ---
+  duration_ms: 24.04679
+  type: 'test'
+  ...
+# Subtest: complete reference-bound stage rendering freezes when motion is reduced or ambience is disabled
+ok 11 - complete reference-bound stage rendering freezes when motion is reduced or ambience is disabled
+  ---
+  duration_ms: 52.466762
+  type: 'test'
+  ...
+# Subtest: fixed narrative states survive a caller supplying a different Otherworld amount
+ok 12 - fixed narrative states survive a caller supplying a different Otherworld amount
+  ---
+  duration_ms: 2.749724
+  type: 'test'
+  ...
+# Subtest: Alchemilla normal landing bitmaps stay in their documented phase while the versus-transition rule remains enabled
+ok 13 - Alchemilla normal landing bitmaps stay in their documented phase while the versus-transition rule remains enabled
+  ---
+  duration_ms: 0.540174
+  type: 'test'
+  ...
+# Subtest: reactive reference tracks require a local heavy impact and cannot run as an ambient loop
+ok 14 - reactive reference tracks require a local heavy impact and cannot run as an ambient loop
+  ---
+  duration_ms: 0.985415
+  type: 'test'
+  ...
+# Subtest: two simultaneous physical dangers suppress both competing scenery motions without moving collision geometry
+ok 15 - two simultaneous physical dangers suppress both competing scenery motions without moving collision geometry
+  ---
+  duration_ms: 1.893673
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 690.51269
