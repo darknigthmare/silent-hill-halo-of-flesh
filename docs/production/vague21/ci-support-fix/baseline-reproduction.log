@@ -1,0 +1,38 @@
+Command: node --test --test-name-pattern=ceiling, floor grate tests/cinematic-supports.test.mjs
+Commit: 151c6acf0092044068f6362651c6208aa69ffd35
+Started: 2026-11-19T14:36:59.743701+00:00
+Exit code: 1
+
+STDOUT
+✖ ceiling, floor grate, water, wall and furniture are real requirements, including source and blocked-place checks (5.462362ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 597.879327
+
+✖ failing tests:
+
+test at tests/cinematic-supports.test.mjs:63:1
+✖ ceiling, floor grate, water, wall and furniture are real requirements, including source and blocked-place checks (5.462362ms)
+  AssertionError [ERR_ASSERTION]: sh1_hanged_scratcher_011
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///tmp/halo-wave21-ci-checkout/tests/cinematic-supports.test.mjs:71:14)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+STDERR

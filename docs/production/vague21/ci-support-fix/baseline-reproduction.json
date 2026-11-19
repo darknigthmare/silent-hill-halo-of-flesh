@@ -1,0 +1,15 @@
+{
+  "commit": "151c6acf0092044068f6362651c6208aa69ffd35",
+  "gitStatusBefore": "",
+  "originalTestGitBlob": "096f2fdbeac54587c83528c353dea0f9510ec2ae",
+  "nodeVersion": "v24.22.3",
+  "command": [
+    "node",
+    "--test",
+    "--test-name-pattern=ceiling, floor grate",
+    "tests/cinematic-supports.test.mjs"
+  ],
+  "exitCode": 1,
+  "firstFailureReproduced": true,
+  "log": "baseline-reproduction.log"
+}
