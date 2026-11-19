@@ -151,6 +151,7 @@ try{
     const exactSource=id.split('_')[0],exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004,origins:2007,homecoming:2008,downpour:2012,arcade:2007,bom:2012}[exactSource];
     const isTwin=id===twinId;
     const laterClips = {
+      origins_faceless_nurse: {guard: [1]},
       sh3_nurse_revolver_044: {guard: [1]},
       homecoming_nurse: {hurt: [1]},
       homecoming_scarlet_spider_form_095: {walk: [0,1,2,1]}

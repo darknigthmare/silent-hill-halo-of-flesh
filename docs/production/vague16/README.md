@@ -8,13 +8,13 @@ Base vérifiée : `67d8df2cff2132387ee39b590420145204729a44`, branche `art/missi
 
 | Sujet | Image ajoutée | Usage |
 | --- | --- | --- |
-| Faceless Nurse — Origins | Profil droit avec seringue | Attente en combat |
-| Faceless Nurse — Origins | Avant-bras relevé, seringue près du corps | Garde, puis retour à l’attente |
-| Scarlet — Homecoming | Forme verticale à coque de porcelaine | Attente latérale, distincte de la forme arachnide |
-| Incubator — Silent Hill (1999) | Robe blanche, profil droit | Présentation latérale dans les limites de son rôle existant |
-| Scraper — The Arcade | Voile, tunique et deux lames de l’édition Arcade | Attente latérale |
-| Brookhaven — Silent Hill 2 (2001) | Terminus du couloir Otherworld devant l’ascenseur | Fond avec sol dégagé |
-| Brookhaven — Silent Hill 2 (2001) | Huisserie gauche transparente | Plan proche défilant séparément |
+| [Faceless Nurse — Origins](../../../assets/sprites/origins_faceless_nurse.7875b7b8cc53.png) | Profil droit avec seringue | Attente en combat |
+| [Faceless Nurse — garde](../../../assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png) | Avant-bras relevé, seringue près du corps | Garde, puis retour à l’attente |
+| [Scarlet — Homecoming](../../../assets/sprites/homecoming_scarlet_doll_form_094.a60a4f6fb41b.png) | Forme verticale à coque de porcelaine | Attente latérale, distincte de la forme arachnide |
+| [Incubator — Silent Hill (1999)](../../../assets/sprites/sh1_incubator_018.45c7c84b1960.png) | Robe blanche, profil droit | Présentation latérale dans les limites de son rôle existant |
+| [Scraper — The Arcade](../../../assets/sprites/arcade_scraper_arcade.6d399af81f98.png) | Voile, tunique et deux lames de l’édition Arcade | Attente latérale |
+| [Brookhaven — fond](../../../assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png) | Terminus du couloir Otherworld devant l’ascenseur | Fond avec sol dégagé |
+| [Brookhaven — plan proche](../../../assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png) | Huisserie gauche transparente | Plan proche défilant séparément |
 
 Les poses restent statiques : cette vague n’ajoute aucun clip animé. Les détails de profil sont reconstruits à partir des portraits candidats existants. La conformité exacte aux modèles des œuvres n’est pas certifiée.
 
@@ -47,10 +47,13 @@ Les 48 illustrations couvrent 15 introductions, 15 fins, 12 rivaux, 3 observatio
 
 - [Prompts, références et métadonnées des personnages](fighter-generation.json).
 - [Plans de Brookhaven, sources et placement](brookhaven-sh2.json).
+- [Journal des quatre imports de profil](../sprite-wave16-imports-2026-11-19.json).
 - [Registre actif des personnages](../../../art/registry.json).
 - [Couverture calculée](../../../data/sprite-coverage.json).
 
 Les sept PNG actifs sont inspectés visuellement et décodés avant publication. Les CRC, dimensions, empreintes de fichier et de pixels, transparence et limites des sujets sont contrôlés. Les 204 portraits conservent leurs descriptions exactes ; les scènes et les anciens sprites restent disponibles. Le service worker reçoit les nouveaux fichiers et une nouvelle révision bitmap.
+
+Le contrôle ciblé `npm run qa:wave16` observe les quatre sprites en atelier, leurs portraits historiques, les duels autorisés, la garde par maintien de Space puis retour à idle et la parallaxe par déplacement réel. Les captures sont collectées sous `tests/http-stage-bitmaps/wave16/` dans l’artefact navigateur de la PR.
 
 La validation complète Node/Python et les captures du navigateur sont exécutées par les workflows de cette PR après publication. Leur résultat est consultable dans [Checks](https://github.com/darknigthmare/silent-hill-halo-of-flesh/pull/6/checks) ; aucun succès futur n’est présumé ici.
 
