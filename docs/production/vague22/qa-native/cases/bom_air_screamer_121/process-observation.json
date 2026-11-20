@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "bom_air_screamer_121",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/bom_air_screamer_121",
+    "--ids=bom_air_screamer_121",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:35:38.961109+00:00",
+  "completedAt": "2026-11-19T15:35:43.284329+00:00",
+  "durationSeconds": 4.323,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "ece5ac9be73c8a7978c6e12285593d9d8055352200b500e7f049d850fb882aa0",
+  "log": "process.txt",
+  "logSHA256": "367e95402ef434bbec438c53dd9a11799f8ded6ad7980e771083856eaa253052",
+  "passed": true
+}

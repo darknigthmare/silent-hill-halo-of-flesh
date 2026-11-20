@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "reviewer": "root",
+  "reviewedAt": "2026-11-20T12:51:07.614212+00:00",
+  "entries": [
+    {
+      "fighterId": "film_creeper_swarm_film_173",
+      "decision": "accepted-as-candidate",
+      "automatedReport": "docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/report.json",
+      "automatedReportSHA256": "ebd9189889ebfb886f21cffe5b80d1e64a4517d0a178e0b41a4a8a6f4ca9bff3",
+      "assetSHA256": "1eb188e475c8240c3c1debf87cf12e323fefb68481468a889187b527af531c91",
+      "evidence": [
+        {
+          "path": "docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-right-idle.png",
+          "sha256": "27f0757af2a71e5ee87cba520f15af315929caba5e8bb87648e28206b8e8a490",
+          "facing": 1
+        },
+        {
+          "path": "docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-left-idle.png",
+          "sha256": "4fab2d29ab223f78881ff7e3e144507af6ff95cbac99d5f535442a107a4005cd",
+          "facing": -1
+        }
+      ],
+      "findings": [
+        "Three separate complete lateral insects are visible on the shared ground plane in both orientations.",
+        "Native visible bounds end exactly at y594; the faint fringe is0.225renderpixels below.",
+        "The three-body prototype representation is explicit, with no claimed canonical count or independent actors.",
+        "Static idle is translated during permitted movement; no walking animation is introduced."
+      ],
+      "limits": [
+        "At normal game scale the group is approximately158\u00d719pixels. Fine ventral-face details require the source PNG or workshop zoom; the brown group has low contrast on the cave floor.",
+        "One static candidate; scale and mirrored opposite side remain unverified against source measurements."
+      ]
+    }
+  ],
+  "capturesActuallyViewed": 2
+}

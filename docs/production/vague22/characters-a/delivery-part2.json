@@ -1,0 +1,510 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "group": "fighters-a",
+  "baseCommit": "80db2a9",
+  "generatedAt": "2026-11-19T15:33:07.503953+00:00",
+  "deliveryStatus": "closed-subset-2",
+  "rawPixelsUnchanged": true,
+  "activePngs": 3,
+  "newPortraits": 0,
+  "newAnimatedClips": 0,
+  "certifiedOneToOne": 0,
+  "repoModified": false,
+  "nativeEngineQARequired": true,
+  "historicallyBlockedNotRetried": [
+    "sh1_incubus_019",
+    "sh2_mannequin_ambusher_023",
+    "sh2_spider_mannequin",
+    "sh2_mary_final_manifestation_034",
+    "homecoming_amnion_hanging_form_097",
+    "homecoming_amnion_exposed_form_098"
+  ],
+  "selected": [
+    {
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "id": "origins_memory_of_helen_grady_082",
+      "source": "origins",
+      "edition": "Silent Hill: Origins 2007",
+      "file": "/workspace/scratch/halo-wave22-fighters-a/candidates/origins_memory_of_helen_grady_082.d6d90c5b456d.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/origins_memory_of_helen_grady_082.d6d90c5b456d.png",
+      "candidate": "origins_memory_of_helen_grady_082.d6d90c5b456d.png",
+      "path": "assets/sprites/origins_memory_of_helen_grady_082.d6d90c5b456d.png",
+      "selectionPortraitPreserved": "assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
+      "previousFramePreservedAsPortrait": true,
+      "classification": "dedicated-lateral-view-replaces-legacy-usage",
+      "status": "side-view-candidate",
+      "combatEligible": true,
+      "combatEnabled": true,
+      "combatRole": "stationary-boss",
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "facing": 1,
+      "pose": "idle",
+      "phase": "stationary suspended cage",
+      "animated": false,
+      "existingAnimatedClips": 0,
+      "clipsProposal": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "width": 1254,
+      "height": 1254,
+      "bytes": 746874,
+      "sha256": "d6d90c5b456dcac2a1d4e7511741cf98f6419e9c9f29a993f82dc21b1d836144",
+      "pixelSHA256": "02f7f20c443ff80fbb3bad075667c707960bfa84f557b731ea5e9e436223356a",
+      "alphaBounds": {
+        "1": [
+          17,
+          23,
+          1232,
+          1254
+        ],
+        "8": [
+          367,
+          98,
+          887,
+          1128
+        ],
+        "32": [
+          367,
+          98,
+          886,
+          1128
+        ],
+        "128": [
+          368,
+          98,
+          886,
+          1127
+        ],
+        "250": [
+          369,
+          99,
+          885,
+          1126
+        ]
+      },
+      "visibleBounds": [
+        367,
+        98,
+        886,
+        1128
+      ],
+      "framingBounds": [
+        367,
+        98,
+        887,
+        1128
+      ],
+      "alphaThreshold": 32,
+      "transparentFraction": 0.8016071,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "edgeAlphaMax": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "calibrationProposal": {
+        "anchor": [
+          0.5,
+          0.8995215311004785
+        ],
+        "bodyHeight": 0.8213716108452951,
+        "definition": "Authored presentation calibration. X follows torso/pelvis or stationary support axis, Y lowest own support. Stationary cage uses whole assembly height to preserve prior apparent size. Requires native engine review."
+      },
+      "anchor": [
+        0.5,
+        0.8995215311004785
+      ],
+      "bodyHeight": 0.8213716108452951,
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil droit entier, corps enveloppé suspendu et cage arrondie conservés. Correction v2 : marges dégagées et voile transparent. Composition native Canvas inspectée : le damier traverse la cloche, les reflets restent discrets, aucun fond ajouté.",
+      "limits": "Rotation reconstruite à partir du rendu natif de face. Les extrémités courtes du connecteur supérieur reprennent la terminaison de cadrage du candidat ; aucun plan complet commercial du point de fixation au plafond ne certifie cette terminaison. Ne prouve aucune animation de roue/suspension. Ancrage bas sur la cage ; bodyHeight mesure toute son assemblée suspendue pour conserver sa taille apparente existante, et non une hypothétique station debout. Marge alpha32 minimale 98 px (7,81 %). Native pixels unchanged. One static drawing; no source timing or 1:1 fidelity certified.",
+      "prompt": "Make a targeted correction to image 1, the right-facing side profile of Memory of Helen Grady from Silent Hill: Origins. Preserve this same suspended body, pose, scale relationships, rusted cage, circular ribs, curved upper crosspiece, bound tapered legs and hardware. Image 2 is the original game model and controls the material correction. Correct TWO issues only: (1) make the thin bulb-shaped shroud optically transparent with restrained semi-transparent highlights, as in image 2. The broad regions of currently opaque silver-grey material must become genuinely low-alpha so a game background shows through; keep only narrow fold/reflection highlights. Body, cloth bindings, metal bars and rim remain opaque. Do not leave a solid pale filled bell behind the body. (2) recompose the entire unchanged assembly smaller inside the same square canvas, with at least 8 percent completely clear canvas margin at top and bottom, and generous left/right margins. Keep the top connector ends and entire lower metal rim visible without cropping. Do not extend or redesign the suspension or add any new part. One complete right-facing stationary suspended boss only, no standing pose, no background, shadow, floor, text, HUD, attack or extra figure. Real transparent alpha outside and inside open spaces; preserve the right-facing profile and the original source colors and textures. Return a single native-resolution transparent PNG.",
+      "referenceFiles": [
+        "/workspace/scratch/halo-wave22-fighters-a/candidates/origins_memory_of_helen_grady_082.31c445128e8c.png",
+        "/workspace/scratch/halo-wave22-fighters-a/references/origins_memory_of_helen_grady_082__sh0_art_creature_09_momma.jpg"
+      ],
+      "referenceUrls": [
+        "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_09_momma.jpg"
+      ],
+      "references": [
+        {
+          "id": "origins_memory_of_helen_grady_082",
+          "priorSha256": "cf8a2f0db7cb9695d4eeb82ec5c02b9325e2429d9801ffa75a1bec1ad268277a",
+          "url": "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_09_momma.jpg",
+          "finalUrl": "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_09_momma.jpg",
+          "status": 200,
+          "contentType": "image/jpeg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/origins_memory_of_helen_grady_082__sh0_art_creature_09_momma.jpg",
+          "bytes": 88227,
+          "sha256": "cf8a2f0db7cb9695d4eeb82ec5c02b9325e2429d9801ffa75a1bec1ad268277a",
+          "width": 520,
+          "height": 715,
+          "mode": "RGB",
+          "format": "JPEG",
+          "matchesPriorSha256": true
+        }
+      ],
+      "tool": "image_gen__imagegen",
+      "generationPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-875c5fd5-97e6-49bd-aa60-a6931addc718.png",
+      "variant": "v2 selected; v1 archived for excessive opaque veil and tight frame",
+      "alphaCompositionPreview": "/workspace/scratch/halo-wave22-fighters-a/qa/origins_memory_of_helen_grady_082-composite.png",
+      "originalPrompt": "Create ONE isolated full-body transparent-background raster sprite of Memory of Helen Grady / Momma, the suspended boss from Silent Hill: Origins (2007), based precisely on the supplied ORIGINAL game-model render. Dedicated RIGHT-FACING LATERAL VIEW: rotate the whole suspended body and cage so the wrapped head and torso face the right edge; show the native cage in consistent side perspective, with just enough separation of its near and far rods to read its structure. Preserve the exact identity of this design: covered adult body held vertically within the transparent bulb-shaped shroud and rusted iron cage; circular narrow neck ribs, vertical rods around the upper body, a broad rounded lower cage extending below the bound tapered legs, lowered arms at the sides, wrapped head and metal restraint. Retain the transparent drape, internal empty space and the real suspension mechanism, including the paired upper braces and curved crosspiece visible in the reference. The figure remains suspended, not a standing or walking human. Keep the complete cage bottom and visible attached suspension hardware within generous clear margins; represent only a short visible upper connection segment as in the source, do not invent a ceiling, frame, platform, wheels or long chains. The outer assembly must be fully readable, with no metal rod or body part cut by the image border. True transparent alpha outside the assembly and through open areas; the transparent shroud remains slightly visible, with restrained highlights, not an opaque grey bell. One stationary subject, no target, no attack effects, no smoke, no floor or shadow, no background, no text, no HUD, no extra views. Preserve original muted material colors and aged fabric/metal surface without adding injury or blood. Native detailed game-model-style raster, diffuse neutral illumination, square canvas preferred, assembly about 75–80% of image height."
+    },
+    {
+      "fighterId": "sh4_bottom_065",
+      "id": "sh4_bottom_065",
+      "source": "sh4",
+      "edition": "Silent Hill 4: The Room 2004",
+      "file": "/workspace/scratch/halo-wave22-fighters-a/candidates/sh4_bottom_065.accb56843104.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/sh4_bottom_065.accb56843104.png",
+      "candidate": "sh4_bottom_065.accb56843104.png",
+      "path": "assets/sprites/sh4_bottom_065.accb56843104.png",
+      "selectionPortraitPreserved": "assets/sprites/sh4_bottom_065.b0daf4900078.png",
+      "previousFramePreservedAsPortrait": true,
+      "classification": "dedicated-lateral-view-replaces-legacy-usage",
+      "status": "side-view-candidate",
+      "combatEligible": true,
+      "combatEnabled": true,
+      "combatRole": "combatant",
+      "canMove": true,
+      "canJump": true,
+      "canDodge": true,
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "facing": 1,
+      "pose": "idle",
+      "phase": "neutral supported stance",
+      "animated": false,
+      "existingAnimatedClips": 0,
+      "clipsProposal": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "width": 1254,
+      "height": 1254,
+      "bytes": 848466,
+      "sha256": "accb5684310406eac285970a57498ccbffc9659a392de2d34fb80e7663858cad",
+      "pixelSHA256": "d5a5e37d2b5fe8a2afdd3136198b5fbdc0da8f86fffcb0d6b3b5c2e28c062a41",
+      "alphaBounds": {
+        "1": [
+          0,
+          23,
+          1234,
+          1254
+        ],
+        "8": [
+          277,
+          62,
+          1031,
+          1196
+        ],
+        "32": [
+          277,
+          63,
+          1030,
+          1196
+        ],
+        "128": [
+          278,
+          63,
+          1030,
+          1195
+        ],
+        "250": [
+          279,
+          65,
+          1028,
+          1194
+        ]
+      },
+      "visibleBounds": [
+        277,
+        63,
+        1030,
+        1196
+      ],
+      "framingBounds": [
+        277,
+        62,
+        1031,
+        1196
+      ],
+      "alphaThreshold": 32,
+      "transparentFraction": 0.7857268,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "edgeAlphaMax": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "calibrationProposal": {
+        "anchor": [
+          0.49,
+          0.9537480063795853
+        ],
+        "bodyHeight": 0.9035087719298246,
+        "definition": "Authored presentation calibration. X follows torso/pelvis or stationary support axis, Y lowest own support. Stationary cage uses whole assembly height to preserve prior apparent size. Requires native engine review."
+      },
+      "anchor": [
+        0.49,
+        0.9537480063795853
+      ],
+      "bodyHeight": 0.9035087719298246,
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Vue vers la droite, deux longs bras et deux mains locomotrices entières. Deux masses de tête supérieures et troisième inversée sous le torse visibles, sans manteau ni jambe ajoutés. Composition sur damier inspectée, aucun halo visible.",
+      "limits": "Les deux références sont le même angle du modèle, pas une seconde pose indépendante. Profil, côté caché et détail de texture reconstruits ; exactitude des têtes non certifiée. La main lointaine est plus haute dans la perspective : ancrage sur la main proche la plus basse, axe du torse indépendant de la largeur des doigts. Marge alpha32 minimale 58 px (4,63 %). Native pixels unchanged. One static drawing; no source timing or 1:1 fidelity certified.",
+      "prompt": "Generate ONE complete isolated transparent-background raster of Bottom from Silent Hill 4: The Room (2004 original), using the two supplied views of the ORIGINAL game model as the design authority; the second is a duplicate angle, not another creature. Create a new dedicated RIGHT-FACING LATERAL PROFILE for a side-view game. Rotate the creature so the front of its distinctive upper body and upper heads point toward the right edge. Preserve its exact locomotor structure: a compact hanging torso carried by exactly TWO extraordinarily long arms ending in two huge spread hands on the same invisible support line. It has TWO indistinct deformed upper head masses, and a THIRD inverted head under the torso. Keep that lower inverted head visible in profile; do not replace it with a leg or pelvis. No walking legs or feet, no added limb, no Twin Victim overcoat and no pointing pose. A slight offset of the far arm is allowed to make both complete giant hands and all fingertips readable. Keep the hunched asymmetrical upper mass, thin long arms and original mottled pale-grey/brown opaque monster texture. Do not clean it into a human or substitute a Twin Victim design. One static supported neutral stance, no attack, victim or added blood/injury. Whole subject including every fingertip entirely inside generous margins, about 75–80% of canvas height, portrait or square composition. Real transparent alpha background, no floor or shadow, no text, no HUD, no second view. Detailed game-model-style raster with neutral lighting; source-specific anatomy takes priority over decorative detail.",
+      "referenceFiles": [
+        "/workspace/scratch/halo-wave22-fighters-a/references/sh4_bottom_065__bottom.png",
+        "/workspace/scratch/halo-wave22-fighters-a/references/sh4_bottom_065__sh4_art_cre_23_bottom.jpg"
+      ],
+      "referenceUrls": [
+        "https://www.silenthillmemories.net/sh4/monsters/bottom.png",
+        "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_23_bottom.jpg"
+      ],
+      "references": [
+        {
+          "id": "sh4_bottom_065",
+          "url": "https://www.silenthillmemories.net/sh4/monsters/bottom.png",
+          "finalUrl": "https://www.silenthillmemories.net/sh4/monsters/bottom.png",
+          "status": 200,
+          "contentType": "image/png",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/sh4_bottom_065__bottom.png",
+          "bytes": 91495,
+          "sha256": "63058a311c297b6599c3fae0ff522ad5dcc9c2c9046a8ffe8ccbadda121d40b9",
+          "width": 300,
+          "height": 350,
+          "mode": "RGBA",
+          "format": "PNG"
+        },
+        {
+          "id": "sh4_bottom_065",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_23_bottom.jpg",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/sh4_bottom_065__sh4_art_cre_23_bottom.jpg",
+          "status": 200,
+          "finalUrl": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_23_bottom.jpg",
+          "contentType": "image/jpeg",
+          "sha256": "229206dbd5016b4aa9d592275ea85aa64e6a6ba81c71c55fc041acbf596c3bbc",
+          "bytes": 15443,
+          "width": 184,
+          "height": 271,
+          "mode": "RGB"
+        }
+      ],
+      "tool": "image_gen__imagegen",
+      "generationPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-02f184ee-cccf-4eab-8ad8-557bec0e98aa.png",
+      "variant": "v1",
+      "alphaCompositionPreview": "/workspace/scratch/halo-wave22-fighters-a/qa/sh4_bottom_065-composite.png"
+    },
+    {
+      "fighterId": "homecoming_asphyxia_096",
+      "id": "homecoming_asphyxia_096",
+      "source": "homecoming",
+      "edition": "Silent Hill: Homecoming 2008",
+      "file": "/workspace/scratch/halo-wave22-fighters-a/candidates/homecoming_asphyxia_096.e4070a8aa132.png",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/homecoming_asphyxia_096.e4070a8aa132.png",
+      "candidate": "homecoming_asphyxia_096.e4070a8aa132.png",
+      "path": "assets/sprites/homecoming_asphyxia_096.e4070a8aa132.png",
+      "selectionPortraitPreserved": "assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
+      "previousFramePreservedAsPortrait": true,
+      "classification": "dedicated-lateral-view-replaces-legacy-usage",
+      "status": "side-view-candidate",
+      "combatEligible": true,
+      "combatEnabled": true,
+      "combatRole": "multi-body",
+      "canMove": true,
+      "canJump": true,
+      "canDodge": true,
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "facing": 1,
+      "pose": "idle",
+      "phase": "neutral compound-body stance",
+      "animated": false,
+      "existingAnimatedClips": 0,
+      "clipsProposal": {
+        "idle": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        }
+      },
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1406816,
+      "sha256": "e4070a8aa13239d5ad97ddf5c60af99e74540bc7519243bcfd344b145fd9e5e7",
+      "pixelSHA256": "a6a7c3ad849839174cb11b228e6a39d56649bd5b19c29e816e4427a8642fa3e5",
+      "alphaBounds": {
+        "1": [
+          39,
+          21,
+          1504,
+          1006
+        ],
+        "8": [
+          109,
+          29,
+          1428,
+          998
+        ],
+        "32": [
+          109,
+          29,
+          1427,
+          998
+        ],
+        "128": [
+          110,
+          30,
+          1427,
+          997
+        ],
+        "250": [
+          127,
+          39,
+          1421,
+          992
+        ]
+      },
+      "visibleBounds": [
+        109,
+        29,
+        1427,
+        998
+      ],
+      "framingBounds": [
+        109,
+        29,
+        1428,
+        998
+      ],
+      "alphaThreshold": 32,
+      "transparentFraction": 0.8339189,
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "edgeAlphaMax": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "calibrationProposal": {
+        "anchor": [
+          0.76,
+          0.974609375
+        ],
+        "bodyHeight": 0.9365234375,
+        "definition": "Authored presentation calibration. X follows torso/pelvis or stationary support axis, Y lowest own support. Stationary cage uses whole assembly height to preserve prior apparent size. Requires native engine review."
+      },
+      "anchor": [
+        0.76,
+        0.974609375
+      ],
+      "bodyHeight": 0.9365234375,
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "review": "Profil vers la droite avec corps composé vertical, mains hautes, bras avant et longue masse arrière reliée. Extrémités de tout le contour présentes. Composition native inspectée : le halo RGB de l’aperçu n’apparaît pas, aucune ombre de fond ajoutée.",
+      "limits": "Le rendu original cache certaines attaches arrière ; leur profondeur et disposition dans la transposition latérale ne sont pas certifiées 1:1. Le dessin étale le corps arrière pour rendre le contour complet ; aucune cinématique de queue ou mesure de mouvement n’est revendiquée. Pieds avant partiellement superposés en profil. Ancrage sur le bassin et le support avant, pas sur le centre du large cadre ; bodyHeight tête principale vers appui. Marge alpha32 minimale 26 px (2,54 %). Native pixels unchanged. One static drawing; no source timing or 1:1 fidelity certified.",
+      "prompt": "Generate ONE complete isolated transparent-background raster of Asphyxia from Silent Hill: Homecoming (2008), using the supplied ORIGINAL final model render as the authoritative anatomy and material reference. Create a dedicated RIGHT-FACING LATERAL PROFILE of the same creature for a side-view game, with the upright front head and connected upper torso facing the right edge and the long attached rear body extending toward the left. This is ONE connected compound fictional creature, not separate people. Preserve its unusual vertically joined upper/lower torsos and source arm pairs, the pair of raised hands behind the main head, the very long connected trailing lower body and its own limb extremities. Every hand must remain connected to the corresponding source body segment. Preserve the placements and count of the arms and supports in the original; do not invent extra hands or turn the rear into an ordinary snake tail. Retain the open-mouthed elongated head, opaque mottled muted brown game-monster surface and complete lower supporting extremities. Quiet neutral side-on pose with visible near/far limb separation where needed, entire source anatomy and entire long rear silhouette inside the frame. Keep all fingertips and support ends, no cropping. Do not add clothing, weapons, new injury, blood, sexual posing, another character or any Scarlet/Sepulcher features. One native detailed game-model-style raster on real alpha transparency, neutral diffuse light; no background, ground, contact shadow, HUD, labels or multiple views. Use a wide or square composition as needed so the full long body fits naturally; reserve at least 8 percent clear margin on every side and avoid filling the canvas to its edge.",
+      "referenceFiles": [
+        "/workspace/scratch/halo-wave22-fighters-a/references/homecoming_asphyxia_096__shh_render_22_asphyxia.png"
+      ],
+      "referenceUrls": [
+        "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_22_asphyxia.png"
+      ],
+      "references": [
+        {
+          "id": "homecoming_asphyxia_096",
+          "url": "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_22_asphyxia.png",
+          "localPath": "/workspace/scratch/halo-wave22-fighters-a/references/homecoming_asphyxia_096__shh_render_22_asphyxia.png",
+          "status": 200,
+          "finalUrl": "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_22_asphyxia.png",
+          "contentType": "image/png",
+          "sha256": "6e67b8eda283c579fd31fa4c0a7cc5691d4189d25071ffb717325345fabe1707",
+          "bytes": 539417,
+          "width": 763,
+          "height": 1109,
+          "mode": "RGBA"
+        }
+      ],
+      "tool": "image_gen__imagegen",
+      "generationPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-381cd48d-59a2-443e-a1a6-5f70ee67a16b.png",
+      "variant": "v1",
+      "alphaCompositionPreview": "/workspace/scratch/halo-wave22-fighters-a/qa/homecoming_asphyxia_096-composite.png"
+    }
+  ],
+  "assets": [
+    {
+      "id": "origins_memory_of_helen_grady_082",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/origins_memory_of_helen_grady_082.d6d90c5b456d.png",
+      "path": "assets/sprites/origins_memory_of_helen_grady_082.d6d90c5b456d.png",
+      "sha256": "d6d90c5b456dcac2a1d4e7511741cf98f6419e9c9f29a993f82dc21b1d836144",
+      "bytes": 746874,
+      "width": 1254,
+      "height": 1254,
+      "role": "fighter-side-view"
+    },
+    {
+      "id": "sh4_bottom_065",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/sh4_bottom_065.accb56843104.png",
+      "path": "assets/sprites/sh4_bottom_065.accb56843104.png",
+      "sha256": "accb5684310406eac285970a57498ccbffc9659a392de2d34fb80e7663858cad",
+      "bytes": 848466,
+      "width": 1254,
+      "height": 1254,
+      "role": "fighter-side-view"
+    },
+    {
+      "id": "homecoming_asphyxia_096",
+      "localPath": "/workspace/scratch/halo-wave22-fighters-a/candidates/homecoming_asphyxia_096.e4070a8aa132.png",
+      "path": "assets/sprites/homecoming_asphyxia_096.e4070a8aa132.png",
+      "sha256": "e4070a8aa13239d5ad97ddf5c60af99e74540bc7519243bcfd344b145fd9e5e7",
+      "bytes": 1406816,
+      "width": 1536,
+      "height": 1024,
+      "role": "fighter-side-view"
+    }
+  ]
+}

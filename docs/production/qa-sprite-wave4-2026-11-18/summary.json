@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "baselineCommit": "0da04c7d608aa491e4b0fe6c14d15f56adfaa4f9",
+  "mode": "FightEngine and native Canvas; three quality checkpoints",
+  "totalDistinctFighters": 16,
+  "newCombatFightersTested": 13,
+  "selectionOnlyFightersTested": 3,
+  "mainChecks": 280,
+  "mainFailures": 0,
+  "distinctOrderedDuelTests": 14,
+  "distinctSelectionRenders": 32,
+  "finalDuelCapturesVisuallyReviewed": 14,
+  "initialDuelCapturesAvailable": 14,
+  "sourceHashesStableWithinEachRun": true,
+  "coreSourceHashes": {
+    "art/registry.json": "a5449cbfba917526569147f32c07d76f1d3dbbdb383a1abe6e27b4e52e168f7d",
+    "src/sprite-manifest.js": "044570509678c2fccbb0605c05c3e3c86d266f2a6f5c75d0926ff7cad8a6968f"
+  },
+  "additionalSourceHashes": {
+    "art/registry.json": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+    "src/sprite-manifest.js": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8"
+  },
+  "coreReport": "core-summary.json",
+  "secondReports": [
+    "additional/report.json",
+    "additional/visual-review.json",
+    "selection-additional/report.json",
+    "selection-additional/visual-review.json"
+  ],
+  "auxiliaryRepeat": {
+    "checks": 39,
+    "failures": 0,
+    "orderedDuelsRepeated": 2,
+    "CreeperSelectionRepaintsMatchingCore": 2,
+    "source": "creeper-recheck/visual-review.json"
+  },
+  "featuredCapture": "additional/duel-sh3_numb_body_large_038--bom_wood_guardian_138-tick120.png",
+  "collectorSourceHashes": {
+    "art/registry.json": "cf52ac5da858740c1af40ec56ec127c391607df253ee68b4c6898b54d0264ca0",
+    "src/sprite-manifest.js": "99c8f22a91f6cd3da2154b67edd9c3eb3493e09cb3f448f859aa01533f296421"
+  },
+  "thirdReports": [
+    "selection-collector/report.json",
+    "selection-collector/visual-review.json"
+  ]
+}

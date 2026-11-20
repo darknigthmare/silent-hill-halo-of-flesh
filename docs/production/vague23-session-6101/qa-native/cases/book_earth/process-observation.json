@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "stages",
+  "id": "book_earth",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-stages-native.mjs",
+    "--out=/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_earth",
+    "--stages=book_earth"
+  ],
+  "startedAt": "2026-11-19T17:46:21.763685+00:00",
+  "completedAt": "2026-11-19T17:46:23.698799+00:00",
+  "durationSeconds": 1.935,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "5e4cee0ced1cb66ce3ab5b7ceb1d46e82057bfad275ccd973f0cb10b39b047d2",
+  "executedHarness": "executed/qa-stages-native-5e4cee0ced1c.mjs",
+  "reportSHA256": "baf7a54c9018a5c4018b349385527ed29c460fba6118d64f469f9b3833aba438",
+  "log": "process.txt",
+  "logSHA256": "ea1a4cc703231e11fd6a3cdfee063eba5befc03630d8b16790c1ecd71ae787a5",
+  "passed": true
+}

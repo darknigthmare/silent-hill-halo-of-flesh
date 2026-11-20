@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "baseRemoteCommit": "8c2b56320ceb9fd5490660cb8e20a2dbf62c57bb",
+  "selectedDeliveries": [
+    {
+      "fighterId": "ascension_the_collector_183",
+      "delivery": "docs/production/vague26/characters/collector/delivery.json",
+      "newEvidence": "Retained first-version sculpt by Rodion Vlasov, cross-checked with released Chapter21 captures already recovered in wave4. Rejected later WIP version excluded.",
+      "nativeImageProducingCalls": 2,
+      "selectedNativeImages": 1,
+      "archivedNativeImages": 1,
+      "rolePreserved": "noncombatant"
+    },
+    {
+      "fighterId": "sh1_stalker_008",
+      "delivery": "docs/production/vague26/characters/stalker/delivery.json",
+      "newEvidence": "Original CLD2 ILM/TIM/ANM from Silent Hill Museum; independent explicit Stalker mapping in shdecompilations CHARA_FILE_INFOS. Complete original geometry inspected in documentary renders; no CLD1/CLD3/CLD4 proxy used.",
+      "nativeImageProducingCalls": 2,
+      "selectedNativeImages": 1,
+      "archivedNativeImages": 1,
+      "rolePreserved": "combatant"
+    }
+  ],
+  "retainedHolds": [
+    {
+      "fighterId": "sh4_eileen_head_073",
+      "generationAttempted": false,
+      "reasonCodes": ["source-insufficient"],
+      "reason": "The wave4 portrait already resolves lower face and chin, so those are not a new blocker. The released manifestation is an architectural hospital head; independent complete crown, rear attachment and lateral silhouette remain unestablished. A human Eileen model or fan 360 view cannot establish this manifestation.",
+      "evidence": "docs/production/wave4-references/manifestations/research.json",
+      "nextEvidence": "Original SH4 hospital manifestation mesh with its attachment geometry, or a released complete lateral camera view. Silent Hill Museum currently covers SH1–3 and does not supply this SH4 source."
+    },
+    {
+      "fighterId": "sh4_sacrificed_walter_071",
+      "generationAttempted": false,
+      "reasonCodes": ["source-insufficient"],
+      "reason": "Available arena captures show the central body and hands but not the complete upper suspension and lateral fixtures. Preserve this fixed manifestation independently from mobile Walter.",
+      "evidence": "docs/production/wave4-references/manifestations/conjurer-research.json",
+      "nextEvidence": "Original Conjurer arena mesh or complete released view of body, support strands and fixtures."
+    }
+  ],
+  "constraints": {
+    "historicalRefusalsRetried": false,
+    "corpusChanged": false,
+    "portraitsRegenerated": false,
+    "rolesChanged": false,
+    "newAnimationClips": 0,
+    "oneToOneCertified": false,
+    "remoteMutationsByThisAgent": false,
+    "generatedNativePixelsEditedByCode": false
+  }
+}

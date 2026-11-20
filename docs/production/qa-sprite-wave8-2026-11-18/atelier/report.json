@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "mode": "real Chromium workshop and blocked preparation",
+  "ids": [
+    "sh4_wheelchair_068"
+  ],
+  "checks": [
+    {
+      "name": "sh4_wheelchair_068 uses the approved dedicated workshop-only frame",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sh4_wheelchair_068 is a documented non-duel role",
+      "passed": true,
+      "detail": {
+        "role": "environmental-obstacle",
+        "duelEnabled": false
+      }
+    },
+    {
+      "name": "sh4_wheelchair_068 preserves source portrait",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sh4_wheelchair_068 keeps the normal duel link unavailable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sh4_wheelchair_068 exact workshop frame bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sh4_wheelchair_068 right complete idle is visible",
+      "passed": true,
+      "detail": {
+        "nativeSize": [
+          720,
+          500
+        ],
+        "corners": [
+          [
+            513.2073894244899,
+            181.83339796097016
+          ],
+          [
+            218.78488227167628,
+            428.2868183291191
+          ]
+        ],
+        "path": "/assets/sprites/sh4_wheelchair_068.2976f1648fec.png",
+        "sign": -1,
+        "pose": "idle"
+      }
+    },
+    {
+      "name": "sh4_wheelchair_068 left complete idle is visible",
+      "passed": true,
+      "detail": {
+        "nativeSize": [
+          720,
+          500
+        ],
+        "corners": [
+          [
+            206.79261057551017,
+            181.83339796097016
+          ],
+          [
+            501.2151177283237,
+            428.2868183291191
+          ]
+        ],
+        "path": "/assets/sprites/sh4_wheelchair_068.2976f1648fec.png",
+        "sign": 1,
+        "pose": "idle"
+      }
+    },
+    {
+      "name": "sh4_wheelchair_068 rejects duel launch in normal mode",
+      "passed": true,
+      "detail": "Wheelchair : rôle non combattant ou identité à confirmer. Consulter le dossier."
+    },
+    {
+      "name": "sh4_wheelchair_068 rejects duel launch in diagnostic mode",
+      "passed": true,
+      "detail": "Wheelchair : rôle non combattant ou identité à confirmer. Consulter le dossier."
+    },
+    {
+      "name": "No browser exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "inspectors": [
+    {
+      "id": "sh4_wheelchair_068",
+      "side": "right",
+      "file": "workshop-sh4_wheelchair_068-right.png",
+      "frame": "assets/sprites/sh4_wheelchair_068.2976f1648fec.png",
+      "policy": {
+        "role": "environmental-obstacle",
+        "duelEnabled": false
+      }
+    },
+    {
+      "id": "sh4_wheelchair_068",
+      "side": "left",
+      "file": "workshop-sh4_wheelchair_068-left.png",
+      "frame": "assets/sprites/sh4_wheelchair_068.2976f1648fec.png",
+      "policy": {
+        "role": "environmental-obstacle",
+        "duelEnabled": false
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "153.0.8010.0",
+  "passed": true
+}

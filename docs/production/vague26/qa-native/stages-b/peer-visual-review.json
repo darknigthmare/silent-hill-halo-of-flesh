@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "label": "wave26-stages-b-peer-visual-review",
+  "reviewer": "/root/generate_stages_wave26",
+  "reviewedAt": "2026-11-20T12:46:58.055471+00:00",
+  "status": "accepted-for-candidate-integration",
+  "passed": true,
+  "scope": "Separate integration review from the native harness author and root primary reviewer. This reviewer authored the native stage plates; authorship is disclosed and this is not independent validation of source fidelity.",
+  "method": "Actually opened the original 1280x720 native FightEngine PNG with view_image. Recomputed its SHA256 and matched the exact capture record in the individually hashed native report. No contact sheet, thumbnail or regenerated image substituted for the viewed PNG.",
+  "delivery": {
+    "path": "docs/production/vague26/stages/integration-delivery-b.json",
+    "sha256": "b18bc01ea265c6f35ba3a8f8060c96c0e1cc04aea504a09d2b8cdaf99a6b814a"
+  },
+  "capturesActuallyViewed": 1,
+  "entries": [
+    {
+      "stageId": "frozen_streets",
+      "status": "accepted-for-candidate-integration",
+      "accepted": true,
+      "viewed": true,
+      "viewedWithViewImage": true,
+      "reportPath": "docs/production/vague26/qa-native/stages-b/frozen_streets/report.json",
+      "reportSHA256": "cadd604c225b0849eedcbc13f6a9af280db451108de964c9acbe12eec6eece96",
+      "capturePath": "docs/production/vague26/qa-native/stages-b/frozen_streets/frozen_streets.png",
+      "captureSHA256": "045a3f72069a43cd53f9384a99b90e99ed1ec835884076d3da2b18f0f8357f09",
+      "viewedSHA256": "045a3f72069a43cd53f9384a99b90e99ed1ec835884076d3da2b18f0f8357f09",
+      "captureMatchesReport": true,
+      "capturePurpose": "actual-native-FightEngine",
+      "captureFrame": 229,
+      "width": 1280,
+      "height": 720,
+      "reportedAssertions": {
+        "passed": 46,
+        "total": 46
+      },
+      "reportedHarnessSHA256": "02dc030a8051c909f7f4e017d113eb5c8d9e27f72a866b1f4247cc3ad092e8bc",
+      "testedStageEntryHashes": {
+        "frozen_streets": "78f52aff0979b36849e71ffa39f3a2dfa76bb64707bd657dec0884d104ff2bda"
+      },
+      "sourceReference": {
+        "path": "docs/production/vague26/stages/references/shsm-frozen-exterior-press-20090731-38.jpg",
+        "url": "https://www.silenthillmemories.net/sh_shattered_memories/screenshots/pics/sh_shm_screen_38.jpg",
+        "sourcePage": "https://www.silenthillmemories.net/sh_shattered_memories/screens_en.htm",
+        "galleryDate": "2009-07-31",
+        "sha256": "194d85befaf97fae19ed53e7c022293bb1db40851b1bc0889e9a0be28cb95fa0",
+        "width": 794,
+        "height": 480
+      },
+      "findings": [
+        "Viewed original 1280x720 native FightEngine capture: gray-blue ice banks, embedded broken brickwork, dark upper gap and thin bent pole remain legible.",
+        "Both existing test fighters are wholly visible with feet on the broad level frozen floor. Their weapons and silhouettes clear the scene geometry and the small outer-edge foreground ice.",
+        "HUD names, health bars and center stage information remain visible. No embedded player, Raw Shock, reticle, weather effect or puzzle actor is visible."
+      ],
+      "sourceLimits": [
+        "The source is Wii promotional gameplay screenshot 38 in the gallery section dated 2009-07-31, before release. The exact street, route chapter and final-build match are unverified.",
+        "The source slope, depth and obstructions have been adapted into a flat side-on versus floor. The broad wall span, pole placement, unseen surfaces and ice geometry are authored reconstruction.",
+        "The dark upper gap and exposed fragments are artwork features, not independently reconstructed geographic continuity. No source chase, weather behavior, collision, hazard, timing or 1:1 fidelity is certified."
+      ]
+    }
+  ],
+  "limits": [
+    "This visual review is limited to the stated still capture at frame 229. Native harness assertions are quoted from the bound report, not independently rerun by this reviewer.",
+    "The bound report declares browserTest=false, httpTest=false and actorStateInjected=false. This review does not certify Chromium, DOM/CSS, HTTP, real browser keyboard delivery or service workers.",
+    "Two static image planes plus runtime parallax do not constitute a new source animation. No new fighter pose, attack, contact, guard, finisher, hazard, weather, collision or gameplay behavior is certified.",
+    "The native foreground retains tiny alpha 1/255 traces, as recorded by the plate analysis; visual clearance does not assert that every central alpha byte is zero.",
+    "Source fidelity remains unverified. Acceptance covers the observed framing, floor readability, HUD visibility and absence of foreground obstruction in this exact capture."
+  ]
+}

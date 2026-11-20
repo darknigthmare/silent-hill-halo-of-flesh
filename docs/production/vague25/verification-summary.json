@@ -1,0 +1,320 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "createdAt": "2026-11-20T09:56:52.475089+00:00",
+  "publicationTarget": {
+    "repository": "darknigthmare/silent-hill-halo-of-flesh",
+    "pullRequest": 6,
+    "branch": "art/missing-fullbody-20261117",
+    "baseRemoteCommit": "ebca8aa25d943692ae78837ea81b07cc229eeea5",
+    "baseTree": "12bb301c51be56fccd8a2ffd9834468f2f56a9b8",
+    "note": "Commit/ref publication is verified separately after freezing this content; no unobserved remote success is asserted here."
+  },
+  "coverage": {
+    "sprites": {
+      "schema": 1,
+      "version": "0.9.6",
+      "total": 230,
+      "integrated": 204,
+      "missing": 26,
+      "selectionAvailable": 204,
+      "selectionMissing": 26,
+      "combatSideViewCandidates": 187,
+      "combatLegacyUnreviewed": 6,
+      "combatMissing": 37,
+      "separateSelectionAndCombat": 187,
+      "certified": 0,
+      "animatedClips": 6,
+      "presentationClips": 1,
+      "animatedPresentationClips": 0
+    },
+    "upgradedProfiles": {
+      "total": 12,
+      "staticProfiles": 11,
+      "existingAnimatedProfilesReoriented": 1,
+      "existingAnimatedFrameReplacements": 3,
+      "animatedIds": [
+        "sh1_air_screamer_001"
+      ],
+      "combatCandidates": 8,
+      "referenceOnly": 4,
+      "ids": [
+        "sh1_larval_stalker_007",
+        "downpour_tormented_soul_111",
+        "downpour_wall_corpse_112",
+        "shf_rinko_like_entity_163",
+        "shf_hinako_s_father_164",
+        "bom_blood_baby_144",
+        "townfall_lunger",
+        "townfall_sorrowful",
+        "townfall_fallen",
+        "townfall_widow",
+        "townfall_the_weight",
+        "sh1_air_screamer_001"
+      ],
+      "combatIds": [
+        "shf_rinko_like_entity_163",
+        "shf_hinako_s_father_164",
+        "bom_blood_baby_144",
+        "townfall_lunger",
+        "townfall_sorrowful",
+        "townfall_fallen",
+        "townfall_the_weight",
+        "sh1_air_screamer_001"
+      ],
+      "referenceOnlyIds": [
+        "sh1_larval_stalker_007",
+        "downpour_tormented_soul_111",
+        "downpour_wall_corpse_112",
+        "townfall_widow"
+      ],
+      "newPortraits": 0,
+      "newAnimatedClips": 0
+    },
+    "stages": {
+      "total": 123,
+      "active": 75,
+      "missing": 48,
+      "missingUnblocked": 33,
+      "blocked": 15,
+      "added": 4,
+      "ids": [
+        "apartment_roof",
+        "nightmare_mall",
+        "prison_hc",
+        "downpour_streets"
+      ],
+      "storedCompositions": 77,
+      "activePNG": 146
+    }
+  },
+  "generation": {
+    "schema": 1,
+    "wave": 25,
+    "createdAt": "2026-11-20T09:49:22.081909+00:00",
+    "newNativeOutputs": 26,
+    "selectedActiveOutputs": 22,
+    "archivedSupersededOutputs": 4,
+    "activeStaticCharacterOutputs": 11,
+    "activeExistingAnimationFrameReplacements": 3,
+    "activeStagePlanes": 8,
+    "newPortraits": 0,
+    "newAnimatedClips": 0
+  },
+  "validation": {
+    "targetedNodeTests": {
+      "total": 211,
+      "characterTests": {
+        "tests": 159,
+        "pass": 159,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "characterProcessExitCode": 0,
+      "stageTests": {
+        "tests": 52,
+        "pass": 52,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "stageLog": "docs/production/vague25/targeted-stage-tests.tap",
+      "stageLogSHA256": "dd066202d516013cfaff51e13a5eba7fdc83c33b54e88cf41b869591ddb710a6",
+      "stageReporter": "Node spec; historical .tap filename retained",
+      "repeatedTestExecutionsNotAddedToTotals": true
+    },
+    "exactPreservationAudit": {
+      "passed": true,
+      "checks": 384,
+      "protectedFiles": 59,
+      "priorReferencedPNGsUnchanged": 572
+    },
+    "nativeQA": {
+      "processes": 16,
+      "successfulProcesses": 16,
+      "nativeAssertions": 1085,
+      "characterCombatCases": 16,
+      "stageCases": 4,
+      "referencePreviews": 8,
+      "generatedCaptures": 74,
+      "capturesActuallyViewed": 34,
+      "charactersReviewed": 12,
+      "stagesReviewed": 4
+    },
+    "nativeEvidenceIntegrityChecks": 639,
+    "nativeEvidenceIntegrityPassed": true,
+    "memory": {
+      "fighterBudgetBytes": 67108864,
+      "changedPairsChecked": 1324,
+      "maximumDecodedBytes": 62919680,
+      "rejections": 0,
+      "scope": "Changed combat views paired with every currently illustrated, combat-enabled opponent. Other registry frames are verified unchanged; the earlier full pair matrix is not recounted as a new run.",
+      "stages": {
+        "budgetBytes": 67108864,
+        "changedStageRoomPairsChecked": 308,
+        "maximumDecodedBytes": 25174376,
+        "rejections": 0,
+        "scope": "Each newly authored stage paired with every stored room composition, including historical room variants. No full unchanged pair matrix is recounted."
+      }
+    },
+    "finalCheckCommands": [
+      {
+        "name": "build-verification",
+        "command": [
+          "node",
+          "scripts/build.mjs",
+          "--verify-only"
+        ],
+        "exitCode": 0,
+        "durationSeconds": 4.138,
+        "log": "docs/production/vague25/final-checks.build.log",
+        "logSHA256": "7e74bc3ed972bbbc042d225b65fd00fad45ee96744fe75592af7b6d2e7536376",
+        "bytes": 152,
+        "passed": true
+      },
+      {
+        "name": "character-tests",
+        "command": [
+          "node",
+          "--test",
+          "--test-reporter=tap",
+          "--test-concurrency=1",
+          "tests/sprites.test.mjs",
+          "tests/sprite-usage.test.mjs",
+          "tests/art-campaign-review.test.mjs",
+          "tests/gamedev-sprite-backlog.test.mjs",
+          "tests/gamedev-sprite-regression.test.mjs",
+          "tests/sprite-clips.test.mjs"
+        ],
+        "exitCode": 0,
+        "durationSeconds": 3.303,
+        "log": "docs/production/vague25/final-checks.tests.tap",
+        "logSHA256": "9cf7f306b71df1a0d2a0034a10443dc12f6f036a56b059b0666b917cb7c596cf",
+        "bytes": 32816,
+        "passed": true,
+        "tap": {
+          "tests": 159,
+          "pass": 159,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        }
+      }
+    ],
+    "protectedAfterFinalChecks": 64
+  },
+  "remaining": {
+    "legacyViews": 6,
+    "missingCombatViews": 37,
+    "missingPortraits": 26,
+    "missingStages": 48,
+    "unblockedMissingStages": 33,
+    "blockedMissingStages": 15,
+    "evidenceRegister": {
+      "remainingRows": 43,
+      "legacyUnreviewed": 6,
+      "missingCombatView": 37,
+      "selectionMissingWithinRemaining": 26,
+      "productionInProgress": 0,
+      "resolvedLegacyThisWave": 12,
+      "byPrimaryReason": {
+        "source-insufficient": 16,
+        "historical-refusal": 11,
+        "related-refusal-hold": 9,
+        "corpus-divergence": 7
+      }
+    }
+  },
+  "preservation": {
+    "selectionPortraits": true,
+    "sourceIdsAndRoles": true,
+    "existingClipSequencesAndDurations": true,
+    "airGlideFrame3": true,
+    "sourceCorpusAndWorkbooks": true,
+    "staticImporter": true,
+    "newAnimatedClips": 0,
+    "newRosterProfiles": 0,
+    "newPortraits": 0
+  },
+  "airCorrection": {
+    "supersededTechnicalRun": "qa-native/air-screamer-final",
+    "retainedRun": "qa-native/air-screamer-corrected",
+    "replacedIndices": [
+      0,
+      1,
+      2
+    ],
+    "preservedIndices": [
+      3
+    ],
+    "commonAnchor": [
+      0.51,
+      0.745
+    ],
+    "commonBodyHeight": 0.42,
+    "idleSequence": [
+      0,
+      1,
+      0,
+      2
+    ],
+    "idleFrameTicks": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "groundScreenY": 594,
+    "lowestVisibleScreenY": 592.6384414127248,
+    "lowestFramingScreenY": 592.9928585153967,
+    "maximumBodyLandmarkDriftWorldPixels": 0.9754100131970875,
+    "groundGateTolerancePixels": 2,
+    "toleranceChanged": false,
+    "newNativeCorrectionCalls": 1,
+    "oldOutputsRetained": true
+  },
+  "limits": [
+    "Source fidelity remains unverified; no 1:1 or original timing certification.",
+    "Only the selected successful native processes contribute to final totals.",
+    "Native Canvas is not a Chromium/HTTP/DOM/CSS/service-worker campaign.",
+    "The full repository Node/Python suites were not rerun locally in this wave; new remote workflows are tracked separately."
+  ],
+  "evidence": [
+    {
+      "path": "docs/production/vague25/RAPPORT_VAGUE25_PERSONNAGES_ET_ARENES.md",
+      "sha256": "2a6b8b8227801704012ed11d4a7e98a5e490f8bd2bbf13ad18147ed872ae19af"
+    },
+    {
+      "path": "docs/production/vague25/final-audit.json",
+      "sha256": "b893ae8721ce9f1be9d8aa10c605833f1299f79fe64510d1e8b0ecdecabbe621"
+    },
+    {
+      "path": "docs/production/vague25/final-checks.json",
+      "sha256": "d9adfaf54be51a15a30248fc17db483478e0c692b23cb0d5c46ec50612787619"
+    },
+    {
+      "path": "docs/production/vague25/native-evidence-final.json",
+      "sha256": "c5ada5754af003264a348ef312406c5373019c9f3dacca4b719fddfcd2b168b3"
+    },
+    {
+      "path": "docs/production/vague25/native-dispositions.json",
+      "sha256": "9a3377ee312d35dd32183b2a93faa1ae31d9139b37dfe7924637d2106923c788"
+    },
+    {
+      "path": "docs/production/vague25/remaining-evidence.json",
+      "sha256": "b60a4b63eda89ead64a6f5371bcaa5fd60606079e32c6821698edc863d761605"
+    },
+    {
+      "path": "docs/production/vague25/qa-native/air-screamer-corrected/visual-review.json",
+      "sha256": "ed86b6c6fc2e3991713c9e1f76ef36ecf62c63bf45198fd8329e22afdc27f36e"
+    },
+    {
+      "path": "docs/production/vague25/qa-native/air-screamer-corrected/peer-visual-review.json",
+      "sha256": "2e4679729b932fb9e87a698f0b3649ef43dc0181b4bb5583028a29aaa17b07ed"
+    }
+  ]
+}

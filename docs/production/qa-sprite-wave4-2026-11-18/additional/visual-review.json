@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "reviewedAtUtc": "2026-11-18T08:42:36.013505+00:00",
+  "nativeCanvas": true,
+  "browserTest": false,
+  "checks": 75,
+  "failures": 0,
+  "finalDuelCapturesReviewed": [
+    "duel-sh1_twinfeeler_015--sh2_red_pyramid_thing_spear_030-tick120.png",
+    "duel-sh2_red_pyramid_thing_spear_030--sh1_twinfeeler_015-tick120.png",
+    "duel-sh3_numb_body_large_038--bom_wood_guardian_138-tick120.png",
+    "duel-bom_wood_guardian_138--sh3_numb_body_large_038-tick120.png"
+  ],
+  "selectionCapturesReviewed": [
+    "portrait-sh1_twinfeeler_015-right.png",
+    "portrait-sh1_twinfeeler_015-left.png",
+    "portrait-sh2_red_pyramid_thing_spear_030-right.png",
+    "portrait-sh2_red_pyramid_thing_spear_030-left.png",
+    "portrait-sh3_numb_body_large_038-right.png",
+    "portrait-sh3_numb_body_large_038-left.png",
+    "portrait-bom_wood_guardian_138-right.png",
+    "portrait-bom_wood_guardian_138-left.png"
+  ],
+  "sourceHashes": {
+    "art/registry.json": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+    "src/sprite-manifest.js": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8"
+  },
+  "findings": [
+    {
+      "id": "sh1_twinfeeler_015",
+      "observedSlots": [
+        1,
+        2
+      ],
+      "visibleHeightsPx": [
+        34.6759
+      ],
+      "bottomRelativeToGroundPx": [
+        -0.0
+      ],
+      "allFramingComplete": true,
+      "observation": "Les segments et les deux extrémités de la larve se lisent dans les deux sens. La hauteur visible est de 34,7 px en duel, d’où la faible visibilité des pattes les plus fines."
+    },
+    {
+      "id": "sh2_red_pyramid_thing_spear_030",
+      "observedSlots": [
+        1,
+        2
+      ],
+      "visibleHeightsPx": [
+        261.572
+      ],
+      "bottomRelativeToGroundPx": [
+        -0.2609
+      ],
+      "allFramingComplete": true,
+      "observation": "Le casque, les deux bottes et les deux extrémités de la lance horizontale tiennent dans le champ. Le portrait conserve la lance verticale."
+    },
+    {
+      "id": "sh3_numb_body_large_038",
+      "observedSlots": [
+        1,
+        2
+      ],
+      "visibleHeightsPx": [
+        222.1119
+      ],
+      "bottomRelativeToGroundPx": [
+        -0.0001
+      ],
+      "allFramingComplete": true,
+      "observation": "Les deux pieds, la tête émoussée et la pointe caudale restent entiers."
+    },
+    {
+      "id": "bom_wood_guardian_138",
+      "observedSlots": [
+        1,
+        2
+      ],
+      "visibleHeightsPx": [
+        294.3693
+      ],
+      "bottomRelativeToGroundPx": [
+        -0.2956
+      ],
+      "allFramingComplete": true,
+      "observation": "Le houppier, les branches fines, les longues griffes et les racines d’appui restent dans le cadre. Les extrémités sombres se lisent plus facilement dans le portrait que sur le sol du décor."
+    }
+  ],
+  "calibrationAdjustmentSuggested": false,
+  "featuredCapture": "additional/duel-sh3_numb_body_large_038--bom_wood_guardian_138-tick120.png"
+}

@@ -1,0 +1,249 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-19T12:22:37.106Z",
+  "scope": "Missing stage bitmap candidates only",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/8edddaaaab76/stage-pass20-a/delivery.json",
+      "sha256": "035362e6905b2cab6b27866d95a43c603c06298b09403187dc6f8d68f711ab70"
+    }
+  ],
+  "stages": [
+    {
+      "stageId": "lakeside_sh3",
+      "source": "sh3",
+      "scene": "happy-carousel-before-transition",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK"
+      ],
+      "paths": [
+        "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+        "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png"
+      ]
+    },
+    {
+      "stageId": "nightmare_hospital_sh3",
+      "source": "sh3",
+      "scene": "brookhaven-3f-storeroom-mirror",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH3_12_NIGHTMARE_HOSPITAL"
+      ],
+      "paths": [
+        "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+        "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png"
+      ]
+    },
+    {
+      "stageId": "sewers",
+      "source": "sh3",
+      "scene": "underpass-bridge-after-hair-dryer",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH3_05_UNDERPASS"
+      ],
+      "paths": [
+        "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+        "assets/stages/sewers.near-basin-edges.5698b0266f8c.png"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+      "sha256": "bdd844f50ec7c6d96d60502aa5e23afdb0f8c0aa9ac33529e0154c7763ac2949",
+      "bytes": 2284992,
+      "width": 1672,
+      "height": 941,
+      "stageId": "lakeside_sh3",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-a/lakeside_sh3.happy-carousel-before-transition.png",
+      "sourcePixelSHA256": "ff6c90dcaf4b64529e974bb6415c1adbaac5972e4bda0330053c2746b06afeca",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+      "sha256": "4249d9b871856257e242050e0da77d741e61e0e16f8a501992c6e8f98f151ce2",
+      "bytes": 214606,
+      "width": 1672,
+      "height": 941,
+      "stageId": "lakeside_sh3",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-a/lakeside_sh3.near-canopy-poles.png",
+      "sourcePixelSHA256": "f1519af7da09a5a9b73f0d0110cfe299eb99ee0e6335fac6117ef6c1ab2c38cb",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+      "sha256": "a60fa6d89fbf8f0d0854453a45597724a1a44e783e2cdf5dd4deeb91f460d51a",
+      "bytes": 2501782,
+      "width": 1672,
+      "height": 941,
+      "stageId": "nightmare_hospital_sh3",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-a/nightmare_hospital_sh3.mirror-storeroom.png",
+      "sourcePixelSHA256": "2a16c2982f9f1da52c0d60eb7c792e891a69ba8980df562b8106b9b4171b49b9",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+      "sha256": "1d8e55fb19ab4cfba5b3a830489b87aa561e3077bc984d8a1efd8750139c1fe0",
+      "bytes": 391266,
+      "width": 1672,
+      "height": 941,
+      "stageId": "nightmare_hospital_sh3",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-a/nightmare_hospital_sh3.near-doorjambs.png",
+      "sourcePixelSHA256": "24a911a2fa9bdb44a20c6713dd05adcdbc8f4948aeb83524ab62625b9e9f9040",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+      "sha256": "9572d9592225a1014a0d9cf914a5834ddad5e2795887ac35b058eaad4999db10",
+      "bytes": 2499871,
+      "width": 1671,
+      "height": 941,
+      "stageId": "sewers",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-a/sewers.channel-after-dryer.png",
+      "sourcePixelSHA256": "b753d364ed06fc1e125116ad3d93971deb3c2dabd7ab7ee8b593e1eaef1b935d",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+      "sha256": "5698b0266f8c9ea3bbfe2097e6feec0f10cbcc5aaefc998c1b548f08a01bab32",
+      "bytes": 316219,
+      "width": 1672,
+      "height": 941,
+      "stageId": "sewers",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-a/sewers.near-basin-edges.png",
+      "sourcePixelSHA256": "f4c52aabf8a09dffc0b08376efc7e01cff1d4a8fa7e089760f9099fdab63f5dc",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    }
+  ],
+  "protectedFiles": [
+    "art/registry.json",
+    "data/sprite-coverage.json",
+    "src/sprite-manifest.js",
+    "data/roster.json",
+    "data/movesets.json",
+    "src/fight.js",
+    "src/sprite-system.js",
+    "src/sprite-animation.js",
+    "src/versus.js",
+    "data/stages.json",
+    "src/renderers.js",
+    "src/stage-bitmaps.js",
+    "src/stage-bitmap-compositions.js",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+    "docs/production/workbook-verification.json"
+  ],
+  "existingCompositionsPreserved": true,
+  "build": {
+    "stages": 43,
+    "files": 84,
+    "paths": [
+      "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+      "/assets/stages/apartment_world.office.6001d447c296.png",
+      "/assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
+      "/assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "/assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "/assets/stages/baldwin_mansion.closed-lounge-landing.5fa7f85bcd25.png",
+      "/assets/stages/baldwin_mansion.near-timber-jambs.de3ae2125a5e.png",
+      "/assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
+      "/assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
+      "/assets/stages/book_wood.bare-bough.58fbcd47b401.png",
+      "/assets/stages/book_wood.wood-clearing.badc47213490.png",
+      "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+      "/assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+      "/assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "/assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png",
+      "/assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
+      "/assets/stages/building_world.fan-stairwell.15995c474e24.png",
+      "/assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png",
+      "/assets/stages/church.candle-stand.53fb59eeefa2.png",
+      "/assets/stages/church.initial-chapel.1b637d5146cd.png",
+      "/assets/stages/church_hc.candle-stand.31cb771411d7.png",
+      "/assets/stages/church_hc.holy-way-nave.03a8aefbef40.png",
+      "/assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "/assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "/assets/stages/curtis_shop.sales-counter.003f99674bac.png",
+      "/assets/stages/curtis_shop.workshop.910767824f6e.png",
+      "/assets/stages/dark_shrine.background.2664d35ea297.png",
+      "/assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "/assets/stages/dark_shrine_corridors.inari-altar.c91ff918e575.png",
+      "/assets/stages/dark_shrine_corridors.lacquer-shelf.fb67e770ed74.png",
+      "/assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
+      "/assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
+      "/assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "/assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "/assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+      "/assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+      "/assets/stages/forest_world.first-visit-clearing.76588be774de.png",
+      "/assets/stages/forest_world.near-bark-and-grass.5df8c21ae5bc.png",
+      "/assets/stages/hilltop_center.monica-reception.8153762e19e6.png",
+      "/assets/stages/hilltop_center.near-cabinet-edges.e64c163eeca2.png",
+      "/assets/stages/hinako_home.background.90570edd1d72.png",
+      "/assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "/assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
+      "/assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
+      "/assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "/assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "/assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
+      "/assets/stages/labyrinth.control-chamber.60453a15467d.png",
+      "/assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
+      "/assets/stages/lakeside_amusement.platform.e002db685c30.png",
+      "/assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+      "/assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+      "/assets/stages/lakeview.lobby.7bc2120c786c.png",
+      "/assets/stages/looping_hall.hallway.b48a0819aed4.png",
+      "/assets/stages/looping_hall.radio-cabinet.b16069870543.png",
+      "/assets/stages/midwich.courtyard.c9728428d63d.png",
+      "/assets/stages/midwich_nightmare.hearth.862c9df53e36.png",
+      "/assets/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
+      "/assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+      "/assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+      "/assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "/assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "/assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
+      "/assets/stages/riverside_motel.gate.270f1cbab7c5.png",
+      "/assets/stages/room_302.chair.739650b60353.png",
+      "/assets/stages/room_302.entrance.6535cc934c6c.png",
+      "/assets/stages/school_shf.background.360ffba8283b.png",
+      "/assets/stages/school_shf.foreground.a50d69a51274.png",
+      "/assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+      "/assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+      "/assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
+      "/assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
+      "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
+      "/assets/stages/subway_world.lynch-platform.db4c6baf4c38.png",
+      "/assets/stages/subway_world.near-platform-uprights.6fac368c5db5.png",
+      "/assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
+      "/assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
+      "/assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+      "/assets/stages/underground_hc.near-jambs.a49721844afa.png",
+      "/assets/stages/water_prison.surveillance-room.5f3849f04407.png",
+      "/assets/stages/water_prison.valve-pedestal.7711109d1342.png",
+      "/assets/stages/woodside.clock-room.da94acd4e920.png",
+      "/assets/stages/woodside.corridor.c6ac083599d0.png",
+      "/assets/stages/woodside.grandfather-clock.bc7fec047ff5.png"
+    ],
+    "revision": "ab2ce55718479edc5b7b32f6445e23de7bde94a66f0489d8551bd845edf9e2c1"
+  },
+  "protectedScopeUnchanged": true,
+  "coverage": {
+    "total": 123,
+    "beforeActive": 40,
+    "afterActive": 43,
+    "remaining": 80
+  },
+  "activePNGBytes": 8208736
+}

@@ -1,0 +1,609 @@
+{
+  "schema": 1,
+  "wave": 24,
+  "date": "2026-11-20",
+  "localBaseCommit": "54404d2280f6feee9530e95c42ffcb711a597e19",
+  "remoteRecoveryCommit": "4b36a85bd63b5b15c0ead61784ae0194f51ba02f",
+  "newGeneration": {
+    "successfulNativeOutputs": 9,
+    "selectedNewOrCorrected": 7,
+    "supersededNativeOutputs": 2,
+    "transportFailureProducedNoOutput": 1,
+    "recoveredNativeOutputs": 12,
+    "recoveredSelected": 7,
+    "recoveredArchivedOrSuperseded": 5
+  },
+  "integration": {
+    "total": 14,
+    "combatCandidates": 13,
+    "referenceOnly": 1,
+    "ids": [
+      "shf_kashimashi_151",
+      "shf_irohihi_154",
+      "shf_kamugara_157",
+      "shf_harai_katashiro_158",
+      "shf_drum_monster_161",
+      "shf_shiromuku_166",
+      "sh1_bloodsucker",
+      "shf_ara_abare_153",
+      "shf_tsukumogami_167",
+      "ascension_stinger_181",
+      "ascension_the_immolator_182",
+      "shf_shichibi_168",
+      "shf_kyubi_169",
+      "shf_oi_omoi_159"
+    ],
+    "combatIds": [
+      "shf_kashimashi_151",
+      "shf_irohihi_154",
+      "shf_kamugara_157",
+      "shf_harai_katashiro_158",
+      "shf_drum_monster_161",
+      "shf_shiromuku_166",
+      "shf_ara_abare_153",
+      "shf_tsukumogami_167",
+      "ascension_stinger_181",
+      "ascension_the_immolator_182",
+      "shf_shichibi_168",
+      "shf_kyubi_169",
+      "shf_oi_omoi_159"
+    ],
+    "referenceOnlyIds": [
+      "sh1_bloodsucker"
+    ],
+    "newPortraits": 0,
+    "newAnimatedClips": 0
+  },
+  "coverage": {
+    "sprites": {
+      "schema": 1,
+      "version": "0.9.6",
+      "total": 230,
+      "integrated": 204,
+      "missing": 26,
+      "selectionAvailable": 204,
+      "selectionMissing": 26,
+      "combatSideViewCandidates": 175,
+      "combatLegacyUnreviewed": 18,
+      "combatMissing": 37,
+      "separateSelectionAndCombat": 176,
+      "certified": 0,
+      "animatedClips": 6,
+      "presentationClips": 1,
+      "animatedPresentationClips": 0
+    },
+    "upgradedProfiles": {
+      "total": 14,
+      "combatCandidates": 13,
+      "referenceOnly": 1,
+      "ids": [
+        "shf_kashimashi_151",
+        "shf_irohihi_154",
+        "shf_kamugara_157",
+        "shf_harai_katashiro_158",
+        "shf_drum_monster_161",
+        "shf_shiromuku_166",
+        "sh1_bloodsucker",
+        "shf_ara_abare_153",
+        "shf_tsukumogami_167",
+        "ascension_stinger_181",
+        "ascension_the_immolator_182",
+        "shf_shichibi_168",
+        "shf_kyubi_169",
+        "shf_oi_omoi_159"
+      ],
+      "combatIds": [
+        "shf_kashimashi_151",
+        "shf_irohihi_154",
+        "shf_kamugara_157",
+        "shf_harai_katashiro_158",
+        "shf_drum_monster_161",
+        "shf_shiromuku_166",
+        "shf_ara_abare_153",
+        "shf_tsukumogami_167",
+        "ascension_stinger_181",
+        "ascension_the_immolator_182",
+        "shf_shichibi_168",
+        "shf_kyubi_169",
+        "shf_oi_omoi_159"
+      ],
+      "referenceOnlyIds": [
+        "sh1_bloodsucker"
+      ],
+      "newPortraits": 0,
+      "newAnimatedClips": 0
+    },
+    "stages": {
+      "total": 123,
+      "active": 71,
+      "missing": 52,
+      "missingUnblocked": 37,
+      "blocked": 15,
+      "storedCompositions": 73,
+      "activePNG": 138
+    }
+  },
+  "verification": {
+    "targetedNodeTests": {
+      "passed": 159,
+      "failed": 0,
+      "skipped": 0,
+      "files": [
+        "tests/sprites.test.mjs",
+        "tests/sprite-usage.test.mjs",
+        "tests/art-campaign-review.test.mjs",
+        "tests/gamedev-sprite-backlog.test.mjs",
+        "tests/gamedev-sprite-regression.test.mjs",
+        "tests/sprite-clips.test.mjs"
+      ],
+      "log": "docs/production/vague24/targeted-tests.tap"
+    },
+    "build": {
+      "passed": true,
+      "commands": [
+        "node scripts/build-sprites.mjs",
+        "node scripts/build.mjs --verify-only"
+      ],
+      "logs": [
+        "docs/production/vague24/build-sprites-final.log",
+        "docs/production/vague24/build-verify.log"
+      ]
+    },
+    "preservationAudit": {
+      "passed": true,
+      "checks": 368,
+      "file": "docs/production/vague24/final-audit.json"
+    },
+    "nativeQA": {
+      "passed": true,
+      "successfulProcesses": 14,
+      "checksInSuccessfulProcesses": 868,
+      "combatCasesInSuccessfulProcesses": 26,
+      "referencePreviewsInSuccessfulProcesses": 2,
+      "capturesInSuccessfulProcesses": 94
+    },
+    "memoryAdmission": {
+      "fighterBudgetBytes": 67108864,
+      "changedPairsChecked": 2119,
+      "maximumDecodedBytes": 44049456,
+      "rejections": 0,
+      "scope": "Changed combat views paired with every currently illustrated, combat-enabled opponent. Other registry frames are verified unchanged; the earlier full pair matrix is not recounted as a new run."
+    },
+    "browserTest": false,
+    "fullNodeSuiteThisTurn": false,
+    "fullPythonSuiteThisTurn": false,
+    "visualReview": {
+      "nativeImagesIndependentlyReviewed": 9,
+      "runtimeCapturesReviewed": 28,
+      "runtimeCapturesRetained": 94,
+      "candidateProfilesAccepted": 14,
+      "holds": 0,
+      "calibrationChangesRequired": 0,
+      "files": [
+        "docs/production/vague24/peer-visual-review.json",
+        "docs/production/vague24/qa-native/final/visual-review.json"
+      ]
+    }
+  },
+  "fidelity": "unverified",
+  "certifiedOneToOne": false,
+  "newAnimatedClips": 0,
+  "executionNotes": [
+    "One early snapshot build reported 174 side views while the last import was completing. It is excluded from final validation. The final build and immutable manifest audit report exactly 175.",
+    "A temporary execution-environment outage interrupted one image edit before output; the identical edit was retried after recovery. No output is counted for the interrupted call.",
+    "All active native image bytes are retained exactly; transparent RGB-preview halos were checked against real alpha and runtime captures."
+  ],
+  "remaining": {
+    "legacyViews": [
+      {
+        "id": "sh1_air_screamer_001",
+        "name": "Air Screamer",
+        "source": "sh1"
+      },
+      {
+        "id": "sh1_larval_stalker_007",
+        "name": "Larval Stalker",
+        "source": "sh1"
+      },
+      {
+        "id": "sh1_stalker_008",
+        "name": "Stalker",
+        "source": "sh1"
+      },
+      {
+        "id": "sh2_maria_final_manifestation_033",
+        "name": "Maria \u2014 Final Manifestation",
+        "source": "sh2"
+      },
+      {
+        "id": "downpour_tormented_soul_111",
+        "name": "Tormented Soul",
+        "source": "downpour"
+      },
+      {
+        "id": "downpour_wall_corpse_112",
+        "name": "Wall Corpse",
+        "source": "downpour"
+      },
+      {
+        "id": "arcade_red_pyramid_thing_arcade",
+        "name": "Red Pyramid Thing \u2014 Arcade",
+        "source": "arcade"
+      },
+      {
+        "id": "bom_swarm_132",
+        "name": "Swarm",
+        "source": "bom"
+      },
+      {
+        "id": "bom_blood_baby_144",
+        "name": "Blood Baby",
+        "source": "bom"
+      },
+      {
+        "id": "shf_rinko_like_entity_163",
+        "name": "Rinko-Like Entity",
+        "source": "shf"
+      },
+      {
+        "id": "shf_hinako_s_father_164",
+        "name": "Hinako\u2019s Father",
+        "source": "shf"
+      },
+      {
+        "id": "film_creeper_swarm_film_173",
+        "name": "Creeper Swarm \u2014 Film",
+        "source": "film"
+      },
+      {
+        "id": "film_red_pyramid_film_175",
+        "name": "Red Pyramid \u2014 Film",
+        "source": "film"
+      },
+      {
+        "id": "townfall_lunger",
+        "name": "Lunger",
+        "source": "townfall"
+      },
+      {
+        "id": "townfall_sorrowful",
+        "name": "Sorrowful",
+        "source": "townfall"
+      },
+      {
+        "id": "townfall_fallen",
+        "name": "Fallen",
+        "source": "townfall"
+      },
+      {
+        "id": "townfall_widow",
+        "name": "Widow",
+        "source": "townfall"
+      },
+      {
+        "id": "townfall_the_weight",
+        "name": "The Weight",
+        "source": "townfall"
+      }
+    ],
+    "missingPortraits": [
+      {
+        "id": "sh1_incubus_019",
+        "name": "Incubus",
+        "source": "sh1"
+      },
+      {
+        "id": "sh2_mannequin_ambusher_023",
+        "name": "Mannequin \u2014 Ambusher",
+        "source": "sh2"
+      },
+      {
+        "id": "sh2_mary_final_manifestation_034",
+        "name": "Mary \u2014 Final Manifestation",
+        "source": "sh2"
+      },
+      {
+        "id": "sh2_prisoner_035",
+        "name": "Prisoner",
+        "source": "sh2"
+      },
+      {
+        "id": "sh2_spider_mannequin",
+        "name": "Spider Mannequin",
+        "source": "sh2"
+      },
+      {
+        "id": "sh2_mandarin_floor_form",
+        "name": "Mandarin \u2014 Floor Form",
+        "source": "sh2"
+      },
+      {
+        "id": "sh3_valtiel_051",
+        "name": "Valtiel",
+        "source": "sh3"
+      },
+      {
+        "id": "sh4_ghost_victim_066",
+        "name": "Ghost \u2014 Victim",
+        "source": "sh4"
+      },
+      {
+        "id": "sh4_sacrificed_walter_071",
+        "name": "Sacrificed Walter",
+        "source": "sh4"
+      },
+      {
+        "id": "homecoming_amnion_hanging_form_097",
+        "name": "Amnion \u2014 Hanging Form",
+        "source": "homecoming"
+      },
+      {
+        "id": "homecoming_amnion_exposed_form_098",
+        "name": "Amnion \u2014 Exposed Form",
+        "source": "homecoming"
+      },
+      {
+        "id": "arcade_numb_body_arcade",
+        "name": "Numb Body \u2014 Arcade",
+        "source": "arcade"
+      },
+      {
+        "id": "arcade_nurse_arcade",
+        "name": "Nurse \u2014 Arcade",
+        "source": "arcade"
+      },
+      {
+        "id": "arcade_robbie_the_rabbit_shotgun",
+        "name": "Robbie the Rabbit \u2014 Shotgun",
+        "source": "arcade"
+      },
+      {
+        "id": "bom_mother_135",
+        "name": "Mother",
+        "source": "bom"
+      },
+      {
+        "id": "bom_valtiel_136",
+        "name": "Valtiel",
+        "source": "bom"
+      },
+      {
+        "id": "bom_blood_guardian_143",
+        "name": "Blood Guardian",
+        "source": "bom"
+      },
+      {
+        "id": "bom_blood_mama_145",
+        "name": "Blood Mama",
+        "source": "bom"
+      },
+      {
+        "id": "shf_corruptor_155",
+        "name": "Corruptor",
+        "source": "shf"
+      },
+      {
+        "id": "shf_hatcher_156",
+        "name": "Hatcher",
+        "source": "shf"
+      },
+      {
+        "id": "shf_dark_hatcher_160",
+        "name": "Dark Hatcher",
+        "source": "shf"
+      },
+      {
+        "id": "shf_hinako_s_mother_165",
+        "name": "Hinako\u2019s Mother",
+        "source": "shf"
+      },
+      {
+        "id": "film_dark_nurse_171",
+        "name": "Dark Nurse",
+        "source": "film"
+      },
+      {
+        "id": "film_grey_child_film_172",
+        "name": "Grey Child \u2014 Film",
+        "source": "film"
+      },
+      {
+        "id": "film_missionary_revelation_177",
+        "name": "Missionary \u2014 Revelation",
+        "source": "film"
+      },
+      {
+        "id": "film_fused_mattress_manifestation_return",
+        "name": "Fused Mattress Manifestation \u2014 Return",
+        "source": "film"
+      }
+    ],
+    "missingCombat": [
+      {
+        "id": "sh1_incubus_019",
+        "name": "Incubus",
+        "source": "sh1"
+      },
+      {
+        "id": "sh2_mannequin_ambusher_023",
+        "name": "Mannequin \u2014 Ambusher",
+        "source": "sh2"
+      },
+      {
+        "id": "sh2_mary_final_manifestation_034",
+        "name": "Mary \u2014 Final Manifestation",
+        "source": "sh2"
+      },
+      {
+        "id": "sh2_prisoner_035",
+        "name": "Prisoner",
+        "source": "sh2"
+      },
+      {
+        "id": "sh2_spider_mannequin",
+        "name": "Spider Mannequin",
+        "source": "sh2"
+      },
+      {
+        "id": "sh2_mandarin_floor_form",
+        "name": "Mandarin \u2014 Floor Form",
+        "source": "sh2"
+      },
+      {
+        "id": "sh3_valtiel_051",
+        "name": "Valtiel",
+        "source": "sh3"
+      },
+      {
+        "id": "sh3_sewer_creature_052",
+        "name": "Sewer Creature",
+        "source": "sh3"
+      },
+      {
+        "id": "sh4_ghost_victim_066",
+        "name": "Ghost \u2014 Victim",
+        "source": "sh4"
+      },
+      {
+        "id": "sh4_sacrificed_walter_071",
+        "name": "Sacrificed Walter",
+        "source": "sh4"
+      },
+      {
+        "id": "sh4_eileen_head_073",
+        "name": "Eileen Head",
+        "source": "sh4"
+      },
+      {
+        "id": "homecoming_amnion_hanging_form_097",
+        "name": "Amnion \u2014 Hanging Form",
+        "source": "homecoming"
+      },
+      {
+        "id": "homecoming_amnion_exposed_form_098",
+        "name": "Amnion \u2014 Exposed Form",
+        "source": "homecoming"
+      },
+      {
+        "id": "downpour_void_113",
+        "name": "Void",
+        "source": "downpour"
+      },
+      {
+        "id": "downpour_monocle_man_114",
+        "name": "Monocle Man",
+        "source": "downpour"
+      },
+      {
+        "id": "arcade_greedy_worm_arcade_119",
+        "name": "Greedy Worm \u2014 Arcade",
+        "source": "arcade"
+      },
+      {
+        "id": "arcade_numb_body_arcade",
+        "name": "Numb Body \u2014 Arcade",
+        "source": "arcade"
+      },
+      {
+        "id": "arcade_nurse_arcade",
+        "name": "Nurse \u2014 Arcade",
+        "source": "arcade"
+      },
+      {
+        "id": "arcade_toadstool_arcade",
+        "name": "Toadstool \u2014 Arcade",
+        "source": "arcade"
+      },
+      {
+        "id": "arcade_robbie_the_rabbit_shotgun",
+        "name": "Robbie the Rabbit \u2014 Shotgun",
+        "source": "arcade"
+      },
+      {
+        "id": "bom_mother_135",
+        "name": "Mother",
+        "source": "bom"
+      },
+      {
+        "id": "bom_valtiel_136",
+        "name": "Valtiel",
+        "source": "bom"
+      },
+      {
+        "id": "bom_blood_guardian_143",
+        "name": "Blood Guardian",
+        "source": "bom"
+      },
+      {
+        "id": "bom_blood_mama_145",
+        "name": "Blood Mama",
+        "source": "bom"
+      },
+      {
+        "id": "shf_corruptor_155",
+        "name": "Corruptor",
+        "source": "shf"
+      },
+      {
+        "id": "shf_hatcher_156",
+        "name": "Hatcher",
+        "source": "shf"
+      },
+      {
+        "id": "shf_dark_hatcher_160",
+        "name": "Dark Hatcher",
+        "source": "shf"
+      },
+      {
+        "id": "shf_hinako_s_mother_165",
+        "name": "Hinako\u2019s Mother",
+        "source": "shf"
+      },
+      {
+        "id": "film_dark_nurse_171",
+        "name": "Dark Nurse",
+        "source": "film"
+      },
+      {
+        "id": "film_grey_child_film_172",
+        "name": "Grey Child \u2014 Film",
+        "source": "film"
+      },
+      {
+        "id": "film_colin_the_janitor_174",
+        "name": "Colin the Janitor",
+        "source": "film"
+      },
+      {
+        "id": "film_missionary_revelation_177",
+        "name": "Missionary \u2014 Revelation",
+        "source": "film"
+      },
+      {
+        "id": "film_bubble_head_nurse_return_to_silent_hill",
+        "name": "Bubble Head Nurse \u2014 Return to Silent Hill",
+        "source": "film"
+      },
+      {
+        "id": "film_creeper_return_to_silent_hill",
+        "name": "Creeper \u2014 Return to Silent Hill",
+        "source": "film"
+      },
+      {
+        "id": "film_fused_mattress_manifestation_return",
+        "name": "Fused Mattress Manifestation \u2014 Return",
+        "source": "film"
+      },
+      {
+        "id": "ascension_the_collector_183",
+        "name": "The Collector",
+        "source": "ascension"
+      },
+      {
+        "id": "ascension_stilledalen_stinger_184",
+        "name": "Stilledalen Stinger",
+        "source": "ascension"
+      }
+    ]
+  }
+}

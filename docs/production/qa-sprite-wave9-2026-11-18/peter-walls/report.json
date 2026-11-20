@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-18",
+  "role": "Duel local par le menu Versus, diagnostic inactif",
+  "fighterId": "sh4_peter_walls_victim_12",
+  "selection": "assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
+  "combat": "assets/sprites/sh4_peter_walls_victim_12.977b306a917b.png",
+  "draws": [
+    {
+      "slot": 1,
+      "stage": "room_302",
+      "actors": [
+        "sh4_peter_walls_victim_12",
+        "sh4_sharon_blake_victim_13"
+      ],
+      "facing": 1,
+      "rasterDrawCalls": 1,
+      "diagnostic": false,
+      "phase": "fight",
+      "selectionCanvas": {
+        "spriteId": "sh4_peter_walls_victim_12",
+        "artStatus": "raster",
+        "artPurpose": "selection"
+      },
+      "capture": "peter-slot-1.jpg"
+    },
+    {
+      "slot": 2,
+      "stage": "room_302",
+      "actors": [
+        "sh4_sharon_blake_victim_13",
+        "sh4_peter_walls_victim_12"
+      ],
+      "facing": -1,
+      "rasterDrawCalls": 1,
+      "diagnostic": false,
+      "phase": "fight",
+      "selectionCanvas": {
+        "spriteId": "sh4_peter_walls_victim_12",
+        "artStatus": "raster",
+        "artPurpose": "selection"
+      },
+      "capture": "peter-slot-2.jpg"
+    }
+  ],
+  "browser": "153.0.8010.0",
+  "passed": true,
+  "pageErrors": []
+}

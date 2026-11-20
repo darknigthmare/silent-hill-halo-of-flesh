@@ -1,0 +1,1495 @@
+{
+  "schema": 2,
+  "label": "new",
+  "generatedAt": "2026-11-17T21:46:25.503Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserConstraintEvidence": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh/docs/production/qa-sprite-continuation-2026-11-17/report.json",
+  "browserBlocker": "Prior session observed system Chromium abort before page creation: process_singleton_posix.cc socket() failed: Operation not permitted. This harness does not retry Chromium.",
+  "limits": [
+    "Native Canvas renders execute the real FightEngine; these are not browser screenshots. DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "PNG files are read unchanged through the source HTTP server and verified by SHA-256. Sharp normalizes PNG encoding only in memory for native Canvas compatibility; complete decoded pixel equality is checked. Original files remain unchanged.",
+    "Minimal adapters provide storage/events and absence of gamepads. Real engine intros, updates, render and pause are used; actor positions, facing, health and poses are never manually overridden.",
+    "Left-facing display is the engine mirror, not independently established opposite-side source anatomy. Static idle candidates do not certify source animation or 1:1 fidelity.",
+    "This harness writes only QA reports and rendered screenshots; it does not rebuild manifests or modify registry, artwork, rules or engine code."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": [
+        "HALO OF FLESH — http://127.0.0.1:4237\n"
+      ]
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1826878,
+        "sha256": "31e07d7ed87116791b320ab18c3cae822e721be710c4ae833d2ef61a2ef9348f"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1849328,
+        "sha256": "a6b898f61d404162f78286a6d7c6f18c196eb691c12b0abc293366e8f85cbe1b"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_missionary_047.820d3acca65f.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 976021,
+        "sha256": "820d3acca65f8abc0347a6474945dbdc2fb1e5e1147c99bc5105319d09464e31"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_missionary_047.820d3acca65f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 925845,
+        "sha256": "83ad51e81ec47a3e99ea6bcfceae0157dade92b5750db439062e930a8a564ce2"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1166349,
+        "sha256": "43246b06e70890c967fcc08f0d0c07591243b4fd91755da33c3ea3db30a1c36b"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1794374,
+        "sha256": "ec8280e04d4fb383f19fa836724e2d5ece040c1819eb5d28a7f77de8cbb3936e"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          60,
+          27,
+          930,
+          1515
+        ],
+        "expected": [
+          60,
+          27,
+          930,
+          1515
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          213,
+          19,
+          860,
+          1515
+        ],
+        "expected": [
+          213,
+          19,
+          860,
+          1515
+        ]
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png"
+        ],
+        "portrait": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png"
+        ],
+        "expected": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png"
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png"
+        ],
+        "expected": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_missionary_047.820d3acca65f.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_missionary_047.820d3acca65f.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          110,
+          43,
+          1285,
+          1052
+        ],
+        "expected": [
+          110,
+          43,
+          1285,
+          1052
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          71,
+          36,
+          1376,
+          1068
+        ],
+        "expected": [
+          71,
+          36,
+          1376,
+          1068
+        ]
+      }
+    },
+    {
+      "name": "sh3_missionary_047 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_missionary_047.820d3acca65f.png"
+        ],
+        "portrait": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_missionary_047 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_missionary_047.83ad51e81ec4.png"
+        ],
+        "expected": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png"
+      }
+    },
+    {
+      "name": "sh3_missionary_047 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_missionary_047.83ad51e81ec4.png"
+        ],
+        "expected": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          95,
+          141,
+          1694,
+          814
+        ],
+        "expected": [
+          95,
+          141,
+          1694,
+          814
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          164,
+          54,
+          1334,
+          982
+        ],
+        "expected": [
+          164,
+          54,
+          1334,
+          982
+        ]
+      }
+    },
+    {
+      "name": "arcade_double_head_arcade idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/arcade_double_head_arcade.43246b06e708.png"
+        ],
+        "portrait": "assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "arcade_double_head_arcade portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png"
+        ],
+        "expected": "assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png"
+      }
+    },
+    {
+      "name": "arcade_double_head_arcade portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png"
+        ],
+        "expected": "assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png"
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/sh3_missionary_047 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/sh3_missionary_047 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/sh3_missionary_047 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh2_eddie_dombrowski_032",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_missionary_047",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/sh3_missionary_047 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+          "assets/sprites/sh3_missionary_047.820d3acca65f.png"
+        ],
+        "expected": [
+          "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+          "assets/sprites/sh3_missionary_047.820d3acca65f.png"
+        ]
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 268.09192283306214,
+          "top": 389.8285102156732,
+          "right": 389.5434639955658,
+          "bottom": 597.0430986683274
+        },
+        "visible": {
+          "left": 268.78356031120853,
+          "top": 390.24349270256096,
+          "right": 389.12848150867796,
+          "bottom": 596.0748061989225
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_missionary_047 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 804.8271782517857,
+          "top": 394.8319719679371,
+          "right": 1035.916725664797,
+          "bottom": 595.958213657058
+        },
+        "visible": {
+          "left": 805.4146940502933,
+          "top": 396.7903579629626,
+          "right": 1035.525048465792,
+          "bottom": 594.3915048610376
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/sh3_missionary_047 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_missionary_047/sh2_eddie_dombrowski_032 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_missionary_047/sh2_eddie_dombrowski_032 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_missionary_047/sh2_eddie_dombrowski_032 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_missionary_047",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh2_eddie_dombrowski_032",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_missionary_047/sh2_eddie_dombrowski_032 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_missionary_047.820d3acca65f.png",
+          "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_missionary_047.820d3acca65f.png",
+          "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_missionary_047 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 244.08330485278108,
+          "top": 394.8319719679371,
+          "right": 475.1728522657924,
+          "bottom": 595.958213657058
+        },
+        "visible": {
+          "left": 244.47498205178618,
+          "top": 396.7903579629626,
+          "right": 474.5853364672848,
+          "bottom": 594.3915048610376
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 890.4565665220124,
+          "top": 389.8285102156732,
+          "right": 1011.908107684516,
+          "bottom": 597.0430986683274
+        },
+        "visible": {
+          "left": 890.8715490089002,
+          "top": 390.24349270256096,
+          "right": 1011.2164702063696,
+          "bottom": 596.0748061989225
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_missionary_047/sh2_eddie_dombrowski_032 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "arcade_double_head_arcade/sh2_eddie_dombrowski_032 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "arcade_double_head_arcade/sh2_eddie_dombrowski_032 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "arcade_double_head_arcade/sh2_eddie_dombrowski_032 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "arcade_double_head_arcade",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh2_eddie_dombrowski_032",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "arcade_double_head_arcade/sh2_eddie_dombrowski_032 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+          "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png"
+        ],
+        "expected": [
+          "assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+          "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png"
+        ]
+      }
+    },
+    {
+      "name": "arcade_double_head_arcade full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 213.39389502532708,
+          "top": 492.84392569797694,
+          "right": 452.1520172761494,
+          "bottom": 595.3388454679562
+        },
+        "visible": {
+          "left": 213.84017188934735,
+          "top": 493.88523838069085,
+          "right": 451.7057404121292,
+          "bottom": 594.0000148758954
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 890.4565665220124,
+          "top": 389.8285102156732,
+          "right": 1011.908107684516,
+          "bottom": 597.0430986683274
+        },
+        "visible": {
+          "left": 890.8715490089002,
+          "top": 390.24349270256096,
+          "right": 1011.2164702063696,
+          "bottom": 596.0748061989225
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_double_head_arcade/sh2_eddie_dombrowski_032 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/arcade_double_head_arcade asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/arcade_double_head_arcade real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/arcade_double_head_arcade actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh2_eddie_dombrowski_032",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "arcade_double_head_arcade",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/arcade_double_head_arcade fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+          "assets/sprites/arcade_double_head_arcade.43246b06e708.png"
+        ],
+        "expected": [
+          "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+          "assets/sprites/arcade_double_head_arcade.43246b06e708.png"
+        ]
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 268.09192283306214,
+          "top": 389.8285102156732,
+          "right": 389.5434639955658,
+          "bottom": 597.0430986683274
+        },
+        "visible": {
+          "left": 268.78356031120853,
+          "top": 390.24349270256096,
+          "right": 389.12848150867796,
+          "bottom": 596.0748061989225
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "arcade_double_head_arcade full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 827.8480132414287,
+          "top": 492.84392569797694,
+          "right": 1066.606135492251,
+          "bottom": 595.3388454679562
+        },
+        "visible": {
+          "left": 828.2942901054489,
+          "top": 493.88523838069085,
+          "right": 1066.1598586282307,
+          "bottom": 594.0000148758954
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032/arcade_double_head_arcade pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "fc70d9698882a5ada13aa2ffb330b3e5192227c02f2e805cb278e568e098e860",
+        "after": "fc70d9698882a5ada13aa2ffb330b3e5192227c02f2e805cb278e568e098e860"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "1d7c0b85832bf4f34e57ec953c4c91f6c0dd4977ecdbfec93f4428b7847490ae",
+        "after": "1d7c0b85832bf4f34e57ec953c4c91f6c0dd4977ecdbfec93f4428b7847490ae"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "sh2_eddie_dombrowski_032",
+      "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.6812076568603516,
+      "visibleBounds": [
+        60,
+        27,
+        930,
+        1515
+      ]
+    },
+    {
+      "id": "sh2_eddie_dombrowski_032",
+      "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.6541996002197266,
+      "visibleBounds": [
+        213,
+        19,
+        860,
+        1515
+      ]
+    },
+    {
+      "id": "sh3_missionary_047",
+      "path": "assets/sprites/sh3_missionary_047.820d3acca65f.png",
+      "width": 1436,
+      "height": 1096,
+      "transparentFraction": 0.7514499420531484,
+      "visibleBounds": [
+        110,
+        43,
+        1285,
+        1052
+      ]
+    },
+    {
+      "id": "sh3_missionary_047",
+      "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "width": 1436,
+      "height": 1096,
+      "transparentFraction": 0.7383756836711872,
+      "visibleBounds": [
+        71,
+        36,
+        1376,
+        1068
+      ]
+    },
+    {
+      "id": "arcade_double_head_arcade",
+      "path": "assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.707932061380151,
+      "visibleBounds": [
+        95,
+        141,
+        1694,
+        814
+      ]
+    },
+    {
+      "id": "arcade_double_head_arcade",
+      "path": "assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.7298933664957682,
+      "visibleBounds": [
+        164,
+        54,
+        1334,
+        982
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh2_eddie_dombrowski_032",
+      "facing": 1,
+      "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "file": "portrait-sh2_eddie_dombrowski_032-right.png"
+    },
+    {
+      "id": "sh2_eddie_dombrowski_032",
+      "facing": -1,
+      "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "file": "portrait-sh2_eddie_dombrowski_032-left.png"
+    },
+    {
+      "id": "sh3_missionary_047",
+      "facing": 1,
+      "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "file": "portrait-sh3_missionary_047-right.png"
+    },
+    {
+      "id": "sh3_missionary_047",
+      "facing": -1,
+      "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "file": "portrait-sh3_missionary_047-left.png"
+    },
+    {
+      "id": "arcade_double_head_arcade",
+      "facing": 1,
+      "path": "assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+      "file": "portrait-arcade_double_head_arcade-right.png"
+    },
+    {
+      "id": "arcade_double_head_arcade",
+      "facing": -1,
+      "path": "assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+      "file": "portrait-arcade_double_head_arcade-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "sh2_eddie_dombrowski_032",
+        "sh3_missionary_047"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 615.1104238215488
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh2_eddie_dombrowski_032",
+          "slot": 1,
+          "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+          "exterior": {
+            "left": 268.09192283306214,
+            "top": 389.8285102156732,
+            "right": 389.5434639955658,
+            "bottom": 597.0430986683274
+          },
+          "visible": {
+            "left": 268.78356031120853,
+            "top": 390.24349270256096,
+            "right": 389.12848150867796,
+            "bottom": 596.0748061989225
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 2.074806198922488,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+            "args": [
+              -57.912457912457924,
+              -212.08186363636366,
+              144.7811447811448,
+              217.1717171717172
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "sh3_missionary_047",
+          "slot": 2,
+          "path": "assets/sprites/sh3_missionary_047.820d3acca65f.png",
+          "exterior": {
+            "left": 804.8271782517857,
+            "top": 394.8319719679371,
+            "right": 1035.916725664797,
+            "bottom": 595.958213657058
+          },
+          "visible": {
+            "left": 805.4146940502933,
+            "top": 396.7903579629626,
+            "right": 1035.525048465792,
+            "bottom": 594.3915048610376
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.39150486103756066,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_missionary_047.820d3acca65f.png",
+            "args": [
+              -96.29441009980636,
+              -210.18005102040817,
+              287.4460002979294,
+              219.3877551020408
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1436,
+            "height": 1096
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+        "assets/sprites/sh3_missionary_047.820d3acca65f.png"
+      ],
+      "snapshots": [
+        "duel-sh2_eddie_dombrowski_032--sh3_missionary_047-tick0.png",
+        "duel-sh2_eddie_dombrowski_032--sh3_missionary_047-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_missionary_047",
+        "sh2_eddie_dombrowski_032"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 615.1104238215488
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_missionary_047",
+          "slot": 1,
+          "path": "assets/sprites/sh3_missionary_047.820d3acca65f.png",
+          "exterior": {
+            "left": 244.08330485278108,
+            "top": 394.8319719679371,
+            "right": 475.1728522657924,
+            "bottom": 595.958213657058
+          },
+          "visible": {
+            "left": 244.47498205178618,
+            "top": 396.7903579629626,
+            "right": 474.5853364672848,
+            "bottom": 594.3915048610376
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.39150486103756066,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_missionary_047.820d3acca65f.png",
+            "args": [
+              -96.29441009980636,
+              -210.18005102040817,
+              287.4460002979294,
+              219.3877551020408
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1436,
+            "height": 1096
+          }
+        },
+        {
+          "id": "sh2_eddie_dombrowski_032",
+          "slot": 2,
+          "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+          "exterior": {
+            "left": 890.4565665220124,
+            "top": 389.8285102156732,
+            "right": 1011.908107684516,
+            "bottom": 597.0430986683274
+          },
+          "visible": {
+            "left": 890.8715490089002,
+            "top": 390.24349270256096,
+            "right": 1011.2164702063696,
+            "bottom": 596.0748061989225
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 2.074806198922488,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+            "args": [
+              -57.912457912457924,
+              -212.08186363636366,
+              144.7811447811448,
+              217.1717171717172
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_missionary_047.820d3acca65f.png",
+        "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png"
+      ],
+      "snapshots": [
+        "duel-sh3_missionary_047--sh2_eddie_dombrowski_032-tick0.png",
+        "duel-sh3_missionary_047--sh2_eddie_dombrowski_032-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "arcade_double_head_arcade",
+        "sh2_eddie_dombrowski_032"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 615.1104238215488
+        }
+      },
+      "geometries": [
+        {
+          "id": "arcade_double_head_arcade",
+          "slot": 1,
+          "path": "assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+          "exterior": {
+            "left": 213.39389502532708,
+            "top": 492.84392569797694,
+            "right": 452.1520172761494,
+            "bottom": 595.3388454679562
+          },
+          "visible": {
+            "left": 213.84017188934735,
+            "top": 493.88523838069085,
+            "right": 451.7057404121292,
+            "bottom": 594.0000148758954
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 1.4875895431032404e-05,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+            "args": [
+              -120.0328947368421,
+              -123.76874999999998,
+              269.7368421052631,
+              134.86842105263156
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "sh2_eddie_dombrowski_032",
+          "slot": 2,
+          "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+          "exterior": {
+            "left": 890.4565665220124,
+            "top": 389.8285102156732,
+            "right": 1011.908107684516,
+            "bottom": 597.0430986683274
+          },
+          "visible": {
+            "left": 890.8715490089002,
+            "top": 390.24349270256096,
+            "right": 1011.2164702063696,
+            "bottom": 596.0748061989225
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 2.074806198922488,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+            "args": [
+              -57.912457912457924,
+              -212.08186363636366,
+              144.7811447811448,
+              217.1717171717172
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+        "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png"
+      ],
+      "snapshots": [
+        "duel-arcade_double_head_arcade--sh2_eddie_dombrowski_032-tick0.png",
+        "duel-arcade_double_head_arcade--sh2_eddie_dombrowski_032-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh2_eddie_dombrowski_032",
+        "arcade_double_head_arcade"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 615.1104238215488
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh2_eddie_dombrowski_032",
+          "slot": 1,
+          "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+          "exterior": {
+            "left": 268.09192283306214,
+            "top": 389.8285102156732,
+            "right": 389.5434639955658,
+            "bottom": 597.0430986683274
+          },
+          "visible": {
+            "left": 268.78356031120853,
+            "top": 390.24349270256096,
+            "right": 389.12848150867796,
+            "bottom": 596.0748061989225
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 2.074806198922488,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+            "args": [
+              -57.912457912457924,
+              -212.08186363636366,
+              144.7811447811448,
+              217.1717171717172
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "arcade_double_head_arcade",
+          "slot": 2,
+          "path": "assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+          "exterior": {
+            "left": 827.8480132414287,
+            "top": 492.84392569797694,
+            "right": 1066.606135492251,
+            "bottom": 595.3388454679562
+          },
+          "visible": {
+            "left": 828.2942901054489,
+            "top": 493.88523838069085,
+            "right": 1066.1598586282307,
+            "bottom": 594.0000148758954
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 1.4875895431032404e-05,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+            "args": [
+              -120.0328947368421,
+              -123.76874999999998,
+              269.7368421052631,
+              134.86842105263156
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+        "assets/sprites/arcade_double_head_arcade.43246b06e708.png"
+      ],
+      "snapshots": [
+        "duel-sh2_eddie_dombrowski_032--arcade_double_head_arcade-tick0.png",
+        "duel-sh2_eddie_dombrowski_032--arcade_double_head_arcade-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "art/registry.jsonSHA256": "fc70d9698882a5ada13aa2ffb330b3e5192227c02f2e805cb278e568e098e860",
+  "src/sprite-manifest.jsSHA256": "1d7c0b85832bf4f34e57ec953c4c91f6c0dd4977ecdbfec93f4428b7847490ae",
+  "version": "0.9.6",
+  "ids": [
+    "sh2_eddie_dombrowski_032",
+    "sh3_missionary_047",
+    "arcade_double_head_arcade"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true,
+  "visualReview": {
+    "performed": true,
+    "method": "All four tick120 images opened through view_image at native 1280x720.",
+    "reviewedFiles": [
+      "duel-sh2_eddie_dombrowski_032--sh3_missionary_047-tick120.png",
+      "duel-sh3_missionary_047--sh2_eddie_dombrowski_032-tick120.png",
+      "duel-arcade_double_head_arcade--sh2_eddie_dombrowski_032-tick120.png",
+      "duel-sh2_eddie_dombrowski_032--arcade_double_head_arcade-tick120.png"
+    ],
+    "result": "pass-with-documented-limits",
+    "calibrationChangeRequired": false,
+    "observations": [
+      "Eddie and Missionary face each other in both slot orders. Eddie cap, shoes and complete revolver fit in view; both Missionary blades, covered head and shoes fit in view.",
+      "Double Head Arcade and Eddie face each other in both slot orders. The complete canine silhouette, muzzle, four paws and thin tail remain inside the viewport.",
+      "No opaque bitmap blocks or conspicuous edge halos are visible against the actual dark stage at gameplay scale.",
+      "Foot baseline measurements are consistent in both orientations: Eddie lowest visible pixel is about 2.07 screen px below nominal ground; Missionary about 0.39 px; Double Head approximately 0.00 px. These small differences do not require a new anchor calibration.",
+      "Selection images remain reserved for portraits. During all four actual engine idles, only the three newly imported combat image paths are drawn."
+    ],
+    "limits": [
+      "These scenes cover static idle rendering, complete framing and orientation, not attack/collision correctness or new animated cycles.",
+      "Source proportions, source scale, opposite-side anatomy and fidelity 1:1 are not certified.",
+      "No browser or service worker test was run."
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "fighterId": "sh1_stalker_008",
+  "kind": "quality-correction-internal-alpha",
+  "inputSHA256": "4f070d500712c64d46f41edb6213cff1b418e7b92998614da2988b5856d8d575",
+  "transparent_background": true,
+  "prompt": "Edit only transparency of this exact Stalker sprite. Preserve its complete right-facing profile, exact head and body shape, pose, both feet, hands, knife, colors, pixel dimensions, placement, top margin and horizontal sole baseline. Do not redraw or reposition any feature.\n\nRequired correction: The existing image has a genuinely transparent background, but nearly all pixels inside the figure have alpha253/255, making the shadow itself opaque. Make the ENTIRE FIGURE AND KNIFE visibly and actually semi-transparent in the output PNG alpha channel, like a ghost seen through: use true internal alpha predominantly between approximately 130 and 175 out of255 (about50–70% opacity), with gradual softer alpha on the contour. Preserve the dark brown/charcoal RGB surface colors. A game background must show through the head, torso, arms, hands, legs, feet and blade. Merely lightening or darkening their RGB colors does not make them transparent. Do not simulate translucency by putting a gray, white or black background behind the sprite. Keep every pixel outside its bounded body/knife silhouette at alpha0; remove tiny nearly invisible isolated alpha speckles near the canvas edges. No outer glow, haze, cast shadow or floor. Deliver one full-body sprite on genuine transparent RGBA with actual semi-transparent subject pixels, same1024x1536canvas."
+}

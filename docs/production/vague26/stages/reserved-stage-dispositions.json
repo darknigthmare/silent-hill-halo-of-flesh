@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "createdAt": "2026-11-20T12:42:24.054822+00:00",
+  "requestedCandidateCount": 6,
+  "generatedStageCount": 4,
+  "nativeGeneratedCount": 8,
+  "allGeneratedSelected": true,
+  "rows": [
+    {
+      "stageId": "nightmare_theater",
+      "disposition": "delivered-static-candidate",
+      "generationAttempted": true,
+      "delivery": "integration-delivery-a.json",
+      "fidelity": "unverified"
+    },
+    {
+      "stageId": "nightmare_school",
+      "disposition": "delivered-static-candidate",
+      "generationAttempted": true,
+      "delivery": "integration-delivery-a.json",
+      "fidelity": "unverified"
+    },
+    {
+      "stageId": "nightmare_mall_sm",
+      "disposition": "delivered-static-candidate",
+      "generationAttempted": true,
+      "delivery": "integration-delivery-a.json",
+      "fidelity": "unverified"
+    },
+    {
+      "stageId": "frozen_streets",
+      "disposition": "delivered-static-candidate",
+      "generationAttempted": true,
+      "delivery": "integration-delivery-b.json",
+      "fidelity": "unverified"
+    },
+    {
+      "stageId": "cedar_grove",
+      "disposition": "held-for-exact-phase-reference",
+      "generationAttempted": false,
+      "reason": "Existing scope requires Female Treatment before the mirror, fixed-normal. Official guide PDFpage48, printed47, locates mirror over the sink but its treatment screenshot illustrates the Otherworld bed/ammo step. The hydrotherapy pictures on that page show another room. Neither was treated as proof of the complete normal treatment room.",
+      "evidence": [
+        "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf#page=48",
+        "https://www.youtube.com/watch?v=bPFHA7qshe0",
+        "https://www.youtube.com/watch?v=0UdmtT6EKAs"
+      ],
+      "nextAction": "Inspect native whole-room before-mirror gameplay at the opening of bPFHA7qshe0 or before45:14 in0UdmtT6EKAs; record correct edition/phase and mirror surroundings before generation."
+    },
+    {
+      "stageId": "antique_shop",
+      "disposition": "held-for-exact-sub-location-reference",
+      "generationAttempted": false,
+      "reason": "Existing scope is the inner passage after the hole before the final confrontation. Stephen Cooper’s two available renders depict the Green Lion exterior and cult room. Official guide PDFpage122, printed121, confirms the tunnel and shows shop/hole, antichamber and ritual. No complete native tunnel/passage view was retrieved, so no facade, boss chamber or SH1shop was substituted.",
+      "evidence": [
+        "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_stephen_cooper_01_green_lion_antiques.jpg",
+        "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_stephen_cooper_02_cult_room.jpg",
+        "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf#page=122",
+        "https://silenthill.fandom.com/wiki/Green_Lion_Antiques"
+      ],
+      "nextAction": "Retrieve a native view of Travis’s Origins tunnel after the Green Lion hole and verify which passage part is in scope; do not infer1:1 geometry from Flauros inventory or the final chamber."
+    }
+  ],
+  "retrievalLimit": "YouTube watch metadata was readable but the executor could not retrieve i.ytimg.com storyboard images (HTTP CONNECT403); these inaccessible panels were never claimed as inspected. No renderer or proxy bypass was attempted.",
+  "runtimeSourcePolicyChanged": false,
+  "note": "These are production holds for this batch, not changes to the existing source-blocked stage flags."
+}

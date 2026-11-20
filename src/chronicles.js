@@ -1,5 +1,8 @@
 import { CHRONICLES, ROSTER, SOURCE_META, createCombatProfile, getFighter, getStage } from './data.js';
+import { combatSpriteFor } from './sprite-system.js';
+import { chronicleEncounterPlan } from './run-progress.js';
 import { drawStage, renderPortrait } from './renderers.js';
+import { chronicleArtwork, setChronicleImage } from './chronicle-art.js';
 import { attachGlobalAudioUnlock, audio, escapeHTML, loadJSON, writeJSON, CHRONICLES_KEY, returnToCommand } from './shared.js';
 
 attachGlobalAudioUnlock();
@@ -33,8 +36,38 @@ function fillPlayerFighters(){
   recommended.forEach(f=>{const option=document.createElement('option');option.value=f.id;option.textContent=`${f.name} · ${SOURCE_META[f.source].short}`;els.playerFighter.append(option);});
   const preferred=previous&&ROSTER.some(f=>f.id===previous)?previous:(sameSource.find(f=>!f.boss)?.id||ROSTER[0].id);els.playerFighter.value=preferred;
 }
+const dossierObservation = $('#dossierObservation');
+const observationImage = dossierObservation.querySelector('img');
+let displayedObservation = null;
+dossierObservation.addEventListener('toggle', () => {
+  if (dossierObservation.open && !dossierObservation.hidden) {
+    setChronicleImage(observationImage, displayedObservation);
+  }
+});
+const dossierEnding = $('#dossierEnding');
+const dossierImage = $('#dossierEndingImage');
+dossierEnding.addEventListener('toggle', () => {
+  if (dossierEnding.open && !dossierEnding.hidden) setChronicleImage(dossierImage, chronicleArtwork(selected.id)?.ending);
+});
 function renderSelected(){
   const firstStage=getStage(selected.stages[0]);drawStage(els.routeCanvas.getContext('2d'),firstStage,performance.now(),{width:els.routeCanvas.width,height:els.routeCanvas.height,cinematic:true,otherworld:completed(selected.id)?.72:.18,radio:.2});
+  const art = chronicleArtwork(selected.id);
+  setChronicleImage($('#routeIllustration'), art?.intro);
+  dossierEnding.open = false;
+  const { queue: encounters } = chronicleEncounterPlan(selected.id);
+  const waitingForArt = encounters.some(fighterId => !combatSpriteFor(fighterId));
+  const observation = art?.observation || (waitingForArt ? art?.rival : null);
+  displayedObservation = observation && selected.fighters.includes(observation.fighterId) ? observation : null;
+  dossierObservation.open = false;
+  dossierObservation.hidden = !displayedObservation;
+  dossierObservation.querySelector('summary').textContent = observation?.title || '';
+  dossierObservation.querySelector('p').textContent = observation?.caption || '';
+  setChronicleImage(observationImage, null);
+  dossierEnding.hidden = !art?.ending || (encounters.length > 0 && !waitingForArt);
+  dossierEnding.querySelector('summary').textContent = waitingForArt
+    ? 'Voir le dénouement illustré · parcours en attente de sprites'
+    : 'Voir le dénouement illustré';
+  setChronicleImage(dossierImage, null);
   els.routeSource.textContent=`${SOURCE_META[selected.source].label} · DOSSIER ${String(CHRONICLES.indexOf(selected)+1).padStart(2,'0')}`;
   els.routeTitle.textContent=selected.title;els.routeSubtitle.textContent=selected.subtitle;els.routeIntro.textContent=selected.intro;els.routeOutro.textContent=selected.outro;
   const attempts=progress.attempts?.[selected.id]||0;const best=grade(selected.id);els.routeState.textContent=best?`RANG ${best} · ${attempts} TENTATIVE${attempts>1?'S':''}`:completed(selected.id)?'CHRONIQUE ARCHIVÉE':`${attempts} TENTATIVE${attempts>1?'S':''}`;
@@ -51,6 +84,17 @@ function renderEncounterPath(){
 }
 function openRoster(){
   els.modalRouteTitle.textContent=selected.title;els.modalRoster.textContent='';
+  const sighting = chronicleArtwork(selected.id)?.sighting;
+  if (sighting && selected.fighters.includes(sighting.fighterId)) {
+    const figure = document.createElement('figure');
+    figure.className = 'manifestation-scene';
+    const image = document.createElement('img');
+    const caption = document.createElement('figcaption');
+    caption.textContent = sighting.caption;
+    figure.append(image, caption);
+    els.modalRoster.append(figure);
+    setChronicleImage(image, sighting);
+  }
   selected.fighters.forEach(id=>{const f=getFighter(id),card=document.createElement('article');card.className='modal-fighter';const canvas=document.createElement('canvas');canvas.width=300;canvas.height=230;card.append(canvas);const copy=document.createElement('div');copy.innerHTML=`<b>${escapeHTML(f.name)}</b><small>${escapeHTML(f.game)} · ${escapeHTML(f.signature)}</small>`;card.append(copy);els.modalRoster.append(card);renderPortrait(canvas,f,{time:performance.now()});});
   els.rosterModal.classList.remove('hidden');
 }

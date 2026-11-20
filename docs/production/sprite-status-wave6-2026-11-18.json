@@ -1,0 +1,1629 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "baselineCommit": "318b8856ab8f0c8e18d2e25a066bc8dbad505748",
+  "currentReport": "SPRITE_WAVE6_2026-11-18.md",
+  "counts": {
+    "rosterProfiles": 230,
+    "illustratedProfiles": 187,
+    "missingProfiles": 43,
+    "sideViewCombatCandidates": 70,
+    "legacyCombatViewsUnreviewed": 108,
+    "selectionOnlyProfiles": 9,
+    "missingCombatSprites": 52,
+    "spritePNGs": 296,
+    "newPNGsThisContinuation": 14,
+    "newProfilesThisGeneration": 3,
+    "newStaticCombatIdles": 11,
+    "newAnimatedClips": 0,
+    "animatedClipsTotal": 1,
+    "certifiedFidelity": 0,
+    "newLateralWorkshopOnly": 3,
+    "newDuelEnabledCombatIdles": 8
+  },
+  "missingProfiles": [
+    {
+      "id": "sh1_monster_cybil_017",
+      "name": "Monster Cybil",
+      "source": "sh1",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh1_incubus_019",
+      "name": "Incubus",
+      "source": "sh1",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_mannequin_022",
+      "name": "Mannequin",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_mannequin_ambusher_023",
+      "name": "Mannequin — Ambusher",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_flesh_lip_027",
+      "name": "Flesh Lip",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_mary_final_manifestation_034",
+      "name": "Mary — Final Manifestation",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_prisoner_035",
+      "name": "Prisoner",
+      "source": "sh2",
+      "inheritedBlocker": "immaterial-form",
+      "freshSourceSearchThisContinuation": true,
+      "currentResearchRecords": [
+        "wave6-references/downpour/prisoner-source-audit.json"
+      ]
+    },
+    {
+      "id": "sh2_spider_mannequin",
+      "name": "Spider Mannequin",
+      "source": "sh2",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh2_mandarin_floor_form",
+      "name": "Mandarin — Floor Form",
+      "source": "sh2",
+      "inheritedBlocker": "identity-or-variant-unresolved",
+      "freshSourceSearchThisContinuation": false,
+      "currentResearchRecord": "wave5-references/joseph-grady/research.json",
+      "currentResearchRecords": [
+        "wave5-references/joseph-grady/research.json"
+      ]
+    },
+    {
+      "id": "sh3_nurse_pipe_043",
+      "name": "Nurse — Pipe",
+      "source": "sh3",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "source": "sh3",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh3_sewer_creature_052",
+      "name": "Sewer Creature",
+      "source": "sh3",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": false,
+      "currentResearchRecord": "wave5-references/sewer/source-audit.json",
+      "currentResearchRecords": [
+        "wave5-references/sewer/source-audit.json"
+      ]
+    },
+    {
+      "id": "sh4_ghost_victim_066",
+      "name": "Ghost — Victim",
+      "source": "sh4",
+      "inheritedBlocker": "identity-or-variant-unresolved",
+      "freshSourceSearchThisContinuation": true,
+      "currentResearchRecords": [
+        "wave6-references/sh4-ghost/source-audit.json"
+      ]
+    },
+    {
+      "id": "sh4_toby_archbolt_victim_14",
+      "name": "Toby Archbolt — Victim 14",
+      "source": "sh4",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh4_jasper_gein_victim_17",
+      "name": "Jasper Gein — Victim 17",
+      "source": "sh4",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh4_andrew_desalvo_victim_18",
+      "name": "Andrew DeSalvo — Victim 18",
+      "source": "sh4",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "sh4_sacrificed_walter_071",
+      "name": "Sacrificed Walter",
+      "source": "sh4",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": false,
+      "currentResearchRecord": "wave5-references/sacrificed-walter/source-audit.json",
+      "currentResearchRecords": [
+        "wave5-references/sacrificed-walter/source-audit.json"
+      ]
+    },
+    {
+      "id": "origins_memory_of_richard_grady_083",
+      "name": "Memory of Richard Grady",
+      "source": "origins",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": false,
+      "lastResearchRecord": "sprite-resume-reference-research-2026-11-18.json",
+      "currentResearchRecord": "wave5-references/joseph-grady/research.json",
+      "currentResearchRecords": [
+        "wave5-references/joseph-grady/research.json"
+      ]
+    },
+    {
+      "id": "homecoming_curtis_ackers",
+      "name": "Curtis Ackers",
+      "source": "homecoming",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "homecoming_amnion_hanging_form_097",
+      "name": "Amnion — Hanging Form",
+      "source": "homecoming",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "homecoming_amnion_exposed_form_098",
+      "name": "Amnion — Exposed Form",
+      "source": "homecoming",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "downpour_monocle_man_114",
+      "name": "Monocle Man",
+      "source": "downpour",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": true,
+      "currentResearchRecords": [
+        "wave6-references/downpour/monocle-source-audit.json"
+      ]
+    },
+    {
+      "id": "downpour_wheelman_116",
+      "name": "Wheelman",
+      "source": "downpour",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": false,
+      "currentResearchRecord": "wave5-references/downpour/sources.json",
+      "currentResearchRecords": [
+        "wave5-references/downpour/sources.json"
+      ]
+    },
+    {
+      "id": "arcade_phantom_118",
+      "name": "Phantom",
+      "source": "arcade",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": true,
+      "currentResearchRecords": [
+        "wave6-references/arcade/research.json"
+      ]
+    },
+    {
+      "id": "arcade_numb_body_arcade",
+      "name": "Numb Body — Arcade",
+      "source": "arcade",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "arcade_nurse_arcade",
+      "name": "Nurse — Arcade",
+      "source": "arcade",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "name": "Robbie the Rabbit — Shotgun",
+      "source": "arcade",
+      "inheritedBlocker": "identity-or-variant-unresolved",
+      "freshSourceSearchThisContinuation": false,
+      "currentResearchRecord": "wave5-references/arcade-ascension/source-audit.json",
+      "currentResearchRecords": [
+        "wave5-references/arcade-ascension/source-audit.json"
+      ]
+    },
+    {
+      "id": "bom_flesh_lips_134",
+      "name": "Flesh Lips",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "bom_mother_135",
+      "name": "Mother",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "bom_valtiel_136",
+      "name": "Valtiel",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "bom_blood_guardian_143",
+      "name": "Blood Guardian",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "bom_blood_mama_145",
+      "name": "Blood Mama",
+      "source": "bom",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "pt_lisa_149",
+      "name": "Lisa",
+      "source": "pt",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_ayakakashi_152",
+      "name": "Ayakakashi",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_corruptor_155",
+      "name": "Corruptor",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_hatcher_156",
+      "name": "Hatcher",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_dark_hatcher_160",
+      "name": "Dark Hatcher",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "shf_hinako_s_mother_165",
+      "name": "Hinako’s Mother",
+      "source": "shf",
+      "inheritedBlocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "film_dark_nurse_171",
+      "name": "Dark Nurse",
+      "source": "film",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "film_grey_child_film_172",
+      "name": "Grey Child — Film",
+      "source": "film",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false,
+      "lastResearchRecord": "sprite-wave4-generation-2026-11-18.json",
+      "currentResearchRecord": "wave4-references/film/source-audit.json",
+      "currentResearchRecords": [
+        "wave4-references/film/grey-child-attempt.json",
+        "wave4-references/film/source-audit.json"
+      ]
+    },
+    {
+      "id": "film_colin_the_janitor_174",
+      "name": "Colin the Janitor",
+      "source": "film",
+      "inheritedBlocker": "new-generation-refusal",
+      "freshSourceSearchThisContinuation": false
+    },
+    {
+      "id": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "source": "film",
+      "inheritedBlocker": "incomplete-source",
+      "freshSourceSearchThisContinuation": false,
+      "lastResearchRecord": "sprite-resume-reference-research-2026-11-18.json",
+      "currentResearchRecord": "wave5-references/film-missionary/source-audit.json",
+      "currentResearchRecords": [
+        "wave5-references/film-missionary/source-audit.json"
+      ]
+    },
+    {
+      "id": "film_fused_mattress_manifestation_return",
+      "name": "Fused Mattress Manifestation — Return",
+      "source": "film",
+      "inheritedBlocker": "identity-or-variant-unresolved",
+      "freshSourceSearchThisContinuation": false,
+      "currentResearchRecord": "wave5-references/film-mattress/sources.json",
+      "currentResearchRecords": [
+        "wave5-references/film-mattress/sources.json"
+      ]
+    }
+  ],
+  "missingProfilesByInheritedBlocker": {
+    "historical-refusal-or-related-stop": 26,
+    "immaterial-form": 1,
+    "identity-or-variant-unresolved": 4,
+    "incomplete-source": 7,
+    "new-generation-refusal": 5
+  },
+  "newOutputs": [
+    {
+      "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "bytes": 1181785,
+      "width": 2172,
+      "height": 724,
+      "visibleBounds": [
+        127,
+        71,
+        2107,
+        675
+      ],
+      "pixelSHA256": "01dd3c155bfa698987788e22b698f0b98d7b75b3507cdca45d70020972cd6bb4",
+      "transparentFraction": 0.72556,
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "facing": 1,
+      "anchor": [
+        0.435,
+        0.93232
+      ],
+      "bodyHeight": 0.985,
+      "sourceFile": "exec-7e084907-f7bd-4660-8a32-bd19caee89c9.png",
+      "sourceSHA256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh2_creeper_025",
+      "source": "sh2",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_06_creeper.jpg",
+          "sha256": "dd4a185c2bdf2cac89a72440ca56ed01426152a728e74c384a0ac5cab9717e58",
+          "provenance": "art/reference-provenance-parallel.json",
+          "nativeDimensions": [
+            1200,
+            1200
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Creeper de Silent Hill 2 (2001), profil rasant orienté vers la droite. Les antennes et les pattes restent distinctes. L’appui suit les pattes basses. Pose fixe candidate, fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+        "sha256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
+        "bytes": 633182,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      }
+    },
+    {
+      "sha256": "e3ffa353215ffef85ddda2f5dc595b9a1774b0e2898c4ddbc2ca38d8dfd22261",
+      "bytes": 1802669,
+      "width": 1024,
+      "height": 1536,
+      "visibleBounds": [
+        153,
+        46,
+        848,
+        1436
+      ],
+      "pixelSHA256": "a9b6d9799e7d101d1406e24651ed574265f7ccbaec5bd58dad35e680e2dac62e",
+      "transparentFraction": 0.80765,
+      "path": "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+      "facing": -1,
+      "anchor": [
+        0.5,
+        0.934896
+      ],
+      "bodyHeight": 0.915,
+      "sourceFile": "exec-00fb5106-115a-4669-917a-2d5f86de8ed7.png",
+      "sourceSHA256": "e3ffa353215ffef85ddda2f5dc595b9a1774b0e2898c4ddbc2ca38d8dfd22261",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "origins_ariel_078",
+      "source": "origins",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh0/creatures/ariel.jpg",
+          "sha256": "977a0a7e8f46fca9a86b9a39ff8a0bcbfae9a1196eb4e9bec4eab9d0ecfb411a",
+          "provenance": "art/reference-provenance-batch11.json",
+          "nativeDimensions": [
+            200,
+            283
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_20_ariel.png",
+          "sha256": "4faf6676b79062921c27aeca87586696bb3cd51875d79707bfb80e3c7e9ba7a5",
+          "provenance": "art/reference-provenance-batch11.json",
+          "nativeDimensions": [
+            281,
+            476
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Ariel de Silent Hill: Origins sur PSP. Le visage suspendu regarde vers la gauche entre les bras, et les deux mains supportent la posture renversée. Pose fixe candidate, fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "existingSelectionReference": {
+        "path": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
+        "sha256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567",
+        "bytes": 321708,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      }
+    },
+    {
+      "sha256": "5f63afd9befbd853da8bfe62d9cfede4384982bb3410aea827a3e3dffe1d2775",
+      "bytes": 1082304,
+      "width": 1199,
+      "height": 1312,
+      "visibleBounds": [
+        93,
+        65,
+        1097,
+        1284
+      ],
+      "pixelSHA256": "afa70761ac4600a9c60a73ed2427821364d70211068f40765f0287de58847d37",
+      "transparentFraction": 0.67021,
+      "path": "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+      "facing": -1,
+      "anchor": [
+        0.607,
+        0.900915
+      ],
+      "bodyHeight": 0.9,
+      "sourceFile": "exec-fc80eec9-af5a-47a2-840d-ce555592cc5a.png",
+      "sourceSHA256": "5f63afd9befbd853da8bfe62d9cfede4384982bb3410aea827a3e3dffe1d2775",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh1_mumbler_006",
+      "source": "sh1",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_02.jpg",
+          "sha256": "47c52816c9963a78f5d946c58cc2c1525aa1aa0423907baca14496df545a4f60",
+          "provenance": "art/reference-provenance-batch9.json",
+          "nativeDimensions": [
+            1600,
+            1200
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Mumbler de Silent Hill (1999), profil gauche, les deux pieds posés à des profondeurs différentes. Le pied le plus bas détermine l’appui ; deux griffes en avant-plan descendent sous cet appui dans la perspective de l’image. Pose fixe candidate, fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+        "sha256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87",
+        "bytes": 1089509,
+        "width": 1102,
+        "height": 1428,
+        "facing": 1
+      }
+    },
+    {
+      "path": "assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png",
+      "sha256": "9ce02fc3c41e494d907dcfeaf1e7dd42ebf512d78ce7fda1fc46e6abcefa9696",
+      "bytes": 1306134,
+      "width": 1261,
+      "height": 1247,
+      "facing": 1,
+      "visibleBounds": [
+        167,
+        96,
+        1094,
+        1161
+      ],
+      "pixelSHA256": "f50d9f9cfe083dba480cf7b878b89a547e675ce6cc4bc550365c926cf3b32524",
+      "sourceFile": "exec-c80b5031-50d9-4c5b-89aa-40a9c5c0b50b.png",
+      "sourceSHA256": "9ce02fc3c41e494d907dcfeaf1e7dd42ebf512d78ce7fda1fc46e6abcefa9696",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "fighterId": "arcade_greedy_worm_arcade_119",
+      "source": "arcade",
+      "references": [
+        {
+          "sha256": "2dc0431c624442ffb34799039582aa63430387255281f44b5af2ab313e58b980",
+          "dimensions": [
+            640,
+            480
+          ],
+          "url": "https://archive.org/details/Arcade_Longplay_Silent_Hill_the_Arcade",
+          "mediaUrl": "https://archive.org/download/Arcade_Longplay_Silent_Hill_the_Arcade/Arcade_Longplay_Silent_Hill_the_Arcade.ia.mp4",
+          "timeSeconds": 1521,
+          "nativeFrame": [
+            640,
+            480
+          ],
+          "cropXYXYExclusive": null,
+          "sourceType": "Unmodified decoded released arcade gameplay from player Spazbo4; public H.264 Archive.org longplay.",
+          "note": "Native gameplay frame; the complete projected silhouette is surrounded by corridor backdrop. The near-end mouth is open, and the extended body is occluded by the front section along the viewing axis.",
+          "path": "docs/production/wave6-references/arcade/greedy-worm-full-25m21s.png",
+          "nativeDimensions": [
+            640,
+            480
+          ]
+        },
+        {
+          "sha256": "2485cc0add3b4f8229e8ae409312a7d8105ce44ab7816bd1b121c4fa366d8a42",
+          "dimensions": [
+            236,
+            238
+          ],
+          "url": "https://archive.org/details/Arcade_Longplay_Silent_Hill_the_Arcade",
+          "mediaUrl": "https://archive.org/download/Arcade_Longplay_Silent_Hill_the_Arcade/Arcade_Longplay_Silent_Hill_the_Arcade.ia.mp4",
+          "timeSeconds": 1527,
+          "nativeFrame": [
+            640,
+            480
+          ],
+          "cropXYXYExclusive": [
+            204,
+            91,
+            440,
+            329
+          ],
+          "sourceType": "Unmodified decoded released arcade gameplay from player Spazbo4; public H.264 Archive.org longplay.",
+          "note": "Foreshortened near-frontal silhouette with paired dorsal folds, a median groove and rounded lower perimeter. Marks from gameplay effects across the mouth do not belong to its anatomy.",
+          "path": "docs/production/wave6-references/arcade/greedy-worm-frontal-25m27s.png",
+          "nativeDimensions": [
+            236,
+            238
+          ]
+        },
+        {
+          "sha256": "2542913aebf2e9317ed08332bab27f83d538eb88c98e11ccf2ded33c1c7fffd4",
+          "dimensions": [
+            204,
+            203
+          ],
+          "url": "https://archive.org/details/Arcade_Longplay_Silent_Hill_the_Arcade",
+          "mediaUrl": "https://archive.org/download/Arcade_Longplay_Silent_Hill_the_Arcade/Arcade_Longplay_Silent_Hill_the_Arcade.ia.mp4",
+          "timeSeconds": 1530,
+          "nativeFrame": [
+            640,
+            480
+          ],
+          "cropXYXYExclusive": [
+            196,
+            101,
+            400,
+            304
+          ],
+          "sourceType": "Unmodified decoded released arcade gameplay from player Spazbo4; public H.264 Archive.org longplay.",
+          "note": "Fresh adjacent banked turn; halo of corridor visible on all sides of the complete projected mass. Slight leading turn shows ridged flank.",
+          "path": "docs/production/wave6-references/arcade/greedy-worm-turn-25m30s.png",
+          "nativeDimensions": [
+            204,
+            203
+          ]
+        }
+      ],
+      "kind": "selection-base",
+      "notes": "Greedy Worm de la borne, vue frontale en raccourci à la prison de Toluca. La tête masque l’arrière du corps dans cet angle de jeu. La longueur, les teintes et la dentition restent interprétées. Sélection seule, rencontre scénarisée, fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true
+    },
+    {
+      "sha256": "0a6c15a7fc9a4c9f09aced99db20f28805d578162c146641a5092c8cbda085e7",
+      "bytes": 1634840,
+      "width": 2172,
+      "height": 724,
+      "visibleBounds": [
+        34,
+        91,
+        2129,
+        648
+      ],
+      "pixelSHA256": "e39b1478c3781a84ea0bc8127da8c594bb702d88239d4b10cb12ed29b3062e5f",
+      "transparentFraction": 0.50603,
+      "path": "assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
+      "facing": 1,
+      "anchor": [
+        0.46,
+        0.895028
+      ],
+      "bodyHeight": 0.98,
+      "sourceFile": "exec-17572fa0-0855-48cf-aab6-81a2def68b63.png",
+      "sourceSHA256": "0a6c15a7fc9a4c9f09aced99db20f28805d578162c146641a5092c8cbda085e7",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh4_tremer_blue_063",
+      "source": "sh4",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_11_tremer.jpg",
+          "sha256": "0507da787ff8dcbba58490065d23a49be2a537904b77dae5404921985f9b44e0",
+          "provenance": "art/reference-provenance-batch9.json",
+          "nativeDimensions": [
+            195,
+            182
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Tremer bleu de Silent Hill 4. Le corps sombre et luisant repose sur sa face ventrale, avec un appendice relevé vers la droite. Vue latérale fixe de dossier dans l’atelier. Son rôle d’obstacle environnemental exclut le duel. Fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "usage": "workshop-lateral-only",
+      "sourceRole": "environmental-obstacle",
+      "duelEnabled": false,
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+        "sha256": "5bcfad8047d2530b85f07eb4b122abc24d97120e80309ce42c9f9c60bd4cc6ff",
+        "bytes": 1554591,
+        "width": 1298,
+        "height": 1212,
+        "facing": 1
+      }
+    },
+    {
+      "sha256": "bf777171674909a8e9ede653d6dc748e8242c9dabce39f35cd68513c424094e7",
+      "bytes": 2021696,
+      "width": 1024,
+      "height": 1536,
+      "visibleBounds": [
+        65,
+        43,
+        982,
+        1452
+      ],
+      "pixelSHA256": "4aca223328bfdab2de85e3bf4a997465873add801546ad09b36a82c0a2aef108",
+      "transparentFraction": 0.68194,
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+      "facing": 1,
+      "anchor": [
+        0.47,
+        1.0
+      ],
+      "bodyHeight": 0.94,
+      "sourceFile": "exec-1d873ce2-e370-414f-871a-007d3c87b853.png",
+      "sourceSHA256": "bf777171674909a8e9ede653d6dc748e8242c9dabce39f35cd68513c424094e7",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh4_jimmy_stone_victim_1",
+      "source": "sh4",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_25_victim_01.jpg",
+          "sha256": "618947bfc63f2b22dcdf02f179eef24a2052e68fcf2866a17acc61f0dba22882",
+          "provenance": "art/reference-provenance-batch9.json",
+          "nativeDimensions": [
+            176,
+            285
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh4/monsters/victim_01.png",
+          "sha256": "df309f0818dd41bf76b85f615bf7a547d341f01a350f38bfcc26cc845d0fc0fa",
+          "provenance": "art/reference-provenance-batch9.json",
+          "nativeDimensions": [
+            300,
+            350
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Jimmy Stone, Victim 01 de Silent Hill 4. Le visage chauve, les vêtements sombres et les deux pieds nus sont visibles. La tête et la main avancent vers la droite. La marge sous le pied abaissé conserve la suspension du fantôme. Pose fixe candidate, fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+        "sha256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071",
+        "bytes": 1103151,
+        "width": 1161,
+        "height": 1355,
+        "facing": -1
+      }
+    },
+    {
+      "path": "assets/sprites/downpour_void_113.aaad63ad6961.png",
+      "sha256": "aaad63ad69611014c787e5f623a0a406d92116d392c7278cf411cb63628b2bf1",
+      "bytes": 1561784,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "visibleBounds": [
+        149,
+        67,
+        1061,
+        1102
+      ],
+      "pixelSHA256": "41ecbb33ad7b41d47c0a82bcd6a6df8dfe9150982d5a275467cd16f42a3d6b8b",
+      "sourceFile": "void-selection.png",
+      "sourceSHA256": "aaad63ad69611014c787e5f623a0a406d92116d392c7278cf411cb63628b2bf1",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "fighterId": "downpour_void_113",
+      "source": "downpour",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh8/walkthrough/sh8_walkthrough_2.3.jpg",
+          "sha256": "b147113fb305f3d887f9d7e7c81a5ab5e8c643eaf14441a0732398c84ebbd50a",
+          "path": "docs/production/wave6-references/downpour/void-retail-diner.png",
+          "nativeDimensions": [
+            125,
+            88
+          ]
+        },
+        {
+          "url": "https://shshatteredmemories.com/wp-content/gallery/dp_screens_konamivisit/downpour-image4.jpg",
+          "sha256": "c2fd3d88979098df6b20158aa020f5618a696f4a64f1cc9f7382f9d4b2eb4a4a",
+          "path": "docs/production/wave6-references/downpour/void-konami-demo-rays.png",
+          "nativeDimensions": [
+            420,
+            275
+          ]
+        },
+        {
+          "url": "https://shshatteredmemories.com/wp-content/gallery/dp_screens_konamivisit/downpour-image5.jpg",
+          "sha256": "7500028cdde9c6ba9ddf03eeca11ccd5123ca8a4b0561f5e31d74e0ca315688b",
+          "path": "docs/production/wave6-references/downpour/void-konami-demo-core.png",
+          "nativeDimensions": [
+            405,
+            266
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh8/creatures/void.png",
+          "sha256": "27373ad80a54e4d74ab6f73807cb4510b23d47aa83141a0fa835e849dee7ff10",
+          "path": "docs/production/wave6-references/downpour/void-bestiary-core.png",
+          "nativeDimensions": [
+            224,
+            194
+          ]
+        }
+      ],
+      "kind": "selection-base",
+      "notes": "Le Void de Downpour dans le restaurant Devil’s Pitstop : point noir et rais cramoisis de la distorsion. Le cadrage limite le rayonnement visible, sans lui donner de corps ni de limite canonique. Danger environnemental, sélection seule. La réfraction animée du décor et son étendue variable ne sont pas reproduites par cette image fixe.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true
+    },
+    {
+      "sha256": "2a35fe388a6bd2d01b62c188acfc8ab0e0b56e92a3263a25da7e25ad00d5d1df",
+      "bytes": 1113904,
+      "width": 2172,
+      "height": 724,
+      "visibleBounds": [
+        113,
+        109,
+        2092,
+        611
+      ],
+      "pixelSHA256": "5a00cb8fe8dae2d4b0d17b6c089bdec34879879c437c602cb7507c322389b46a",
+      "transparentFraction": 0.68542,
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+      "facing": -1,
+      "anchor": [
+        0.5,
+        0.843923
+      ],
+      "bodyHeight": 0.98,
+      "sourceFile": "exec-bdf7056b-da0c-46a9-8f4c-aa7b96073e4e.png",
+      "sourceSHA256": "2a35fe388a6bd2d01b62c188acfc8ab0e0b56e92a3263a25da7e25ad00d5d1df",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh2_lying_figure_crawling_021",
+      "source": "sh2",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh2/creatures/lying_figure.png",
+          "sha256": "6ec8d10e387f0e9fdab0603ea411087f230b01355eb7fab8af139ec5910ff2af",
+          "provenance": "art/reference-provenance-batch11.json",
+          "nativeDimensions": [
+            300,
+            350
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_05_lying_figure.jpg",
+          "sha256": "c8e773bd0fcc15ec726b0a429fb349b3d2a28039fa57de76c449c80a7d27ae70",
+          "provenance": "art/reference-provenance-batch11.json",
+          "nativeDimensions": [
+            483,
+            600
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Lying Figure en posture rampante dans Silent Hill 2 (2001), buste bas tourné à gauche. La jambe repliée porte l’appui et l’autre s’étend derrière. Pose fixe candidate, fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+        "sha256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528",
+        "bytes": 459361,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      }
+    },
+    {
+      "sha256": "50aee55d75d4e4a8c27444f0071e4dd8cc6540c5cff8428313725a531fb20f80",
+      "bytes": 1874226,
+      "width": 2172,
+      "height": 724,
+      "visibleBounds": [
+        73,
+        113,
+        2088,
+        658
+      ],
+      "pixelSHA256": "f6671de8662440fa0ba47ae997ddf036dea0acff00636ac9583249e1cb1c09a1",
+      "transparentFraction": 0.52616,
+      "path": "assets/sprites/sh4_tremer_red_064.50aee55d75d4.png",
+      "facing": -1,
+      "anchor": [
+        0.52,
+        0.90884
+      ],
+      "bodyHeight": 0.98,
+      "sourceFile": "exec-624962d5-5550-4252-9629-cf2c6ba4a4e0.png",
+      "sourceSHA256": "50aee55d75d4e4a8c27444f0071e4dd8cc6540c5cff8428313725a531fb20f80",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh4_tremer_red_064",
+      "source": "sh4",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_12_tremer.jpg",
+          "sha256": "ed5a0a84ba42718f1081aeb076e92c05af32aa59b99d2e9cf9ffe4281669ca1c",
+          "provenance": "art/reference-provenance-batch9.json",
+          "nativeDimensions": [
+            288,
+            226
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Forme rouge du Tremer de Silent Hill 4, corps aplati irrégulier et extrémité amincie orientée à gauche. Vue latérale fixe présentée dans l’atelier. Le rôle d’obstacle environnemental exclut le duel. Fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "usage": "workshop-lateral-only",
+      "sourceRole": "environmental-obstacle",
+      "duelEnabled": false,
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh4_tremer_red_064.19432685fd21.png",
+        "sha256": "19432685fd216fc309cd88c7973177c94a8f9cfba0572b7247817b14a068c182",
+        "bytes": 2031661,
+        "width": 1416,
+        "height": 1111,
+        "facing": 1
+      }
+    },
+    {
+      "sha256": "fe3495981694af330a90ceace555e5bb5d9a1f887edee87fe5f835a01607773b",
+      "bytes": 1655886,
+      "width": 1536,
+      "height": 1024,
+      "visibleBounds": [
+        85,
+        22,
+        1411,
+        998
+      ],
+      "pixelSHA256": "ec8fb5e050a723eb956953da09259aa04adfb2ed1540c22f37c2b6ab3822fdd1",
+      "transparentFraction": 0.77248,
+      "path": "assets/sprites/homecoming_bogeyman_092.fe3495981694.png",
+      "facing": 1,
+      "anchor": [
+        0.744,
+        0.974609
+      ],
+      "bodyHeight": 0.974,
+      "sourceFile": "exec-f1b3f218-f914-4041-8178-831c4c3f0984.png",
+      "sourceSHA256": "fe3495981694af330a90ceace555e5bb5d9a1f887edee87fe5f835a01607773b",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "homecoming_bogeyman_092",
+      "source": "homecoming",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh5/arts/pics/shh_art_escalante_01_pyramid_head.jpg",
+          "sha256": "06b5d6c74916c6e13e275beaee3c7d4daf16ce5b04d02b5fa24c4c9931952ebb",
+          "provenance": "art/provenance-art144-b.json",
+          "nativeDimensions": [
+            1600,
+            1200
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh5/arts/pics/shh_art_escalante_02_pyramid_head.jpg",
+          "sha256": "2309515d79ddf210b530c273d5c988fd5ad02cc0c8b6654f329d143a1cd15ce2",
+          "provenance": "art/provenance-art144-b.json",
+          "nativeDimensions": [
+            2400,
+            1200
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh5/creatures/bogeyman.jpg",
+          "sha256": "edc897387b166807c7a43d2dc687b9e22dd9cc244e65f7f17edb16260b3cd902",
+          "provenance": "art/provenance-art144-b.json",
+          "nativeDimensions": [
+            200,
+            200
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Bogeyman de Homecoming, casque et lame de la rencontre scénarisée. La pose latérale déploie les jambes sous la tunique, avec la lame abaissée derrière vers la gauche. Vue consultable dans l’atelier, duel désactivé pour cette édition. Fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "usage": "workshop-lateral-only",
+      "sourceRole": "scripted-encounter",
+      "duelEnabled": false,
+      "existingSelectionReference": {
+        "path": "assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
+        "sha256": "0799468c197ebf3d46e6bc82895a38e57cd20ada4123c334fd9a4a20efb17226",
+        "bytes": 773338,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      }
+    },
+    {
+      "sha256": "2230de7fb2f98cc2e0a49fcd19222dd56b8a105d608b17c2533253e73a74d0b2",
+      "bytes": 1575569,
+      "width": 1199,
+      "height": 1312,
+      "visibleBounds": [
+        85,
+        84,
+        1115,
+        1241
+      ],
+      "pixelSHA256": "550ebe2f5a076aa3d84246b26ef1c0d569af3da358f66df81aed6e9aa010f190",
+      "transparentFraction": 0.59909,
+      "path": "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+      "facing": -1,
+      "anchor": [
+        0.5,
+        0.945884
+      ],
+      "bodyHeight": 1.0,
+      "sourceFile": "exec-7f3eb064-9be9-4d7a-9da8-2e17675a9f0f.png",
+      "sourceSHA256": "2230de7fb2f98cc2e0a49fcd19222dd56b8a105d608b17c2533253e73a74d0b2",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "homecoming_order_soldier_091",
+      "source": "homecoming",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_24_order_soldier.jpg",
+          "sha256": "17990d84873a690caba2fbed1d7e0c33c1c470fad7cc8bfad860d12ce0d98998",
+          "provenance": "art/reference-provenance-batch11.json",
+          "nativeDimensions": [
+            1100,
+            662
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Soldat de l’Ordre de Silent Hill: Homecoming, en garde accroupie vers la gauche. Les deux mains tiennent le tuyau vertical devant la tête. L’écart des deux appuis et le dos fléchi raccourcissent la silhouette visible. Pose fixe candidate, fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "existingSelectionReference": {
+        "path": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+        "sha256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e",
+        "bytes": 380212,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      }
+    },
+    {
+      "path": "assets/sprites/ascension_stilledalen_stinger_184.214630045589.png",
+      "sha256": "21463004558953b5cfdd0299720f69629d1f99238cd90817b6c06a8ce7f38384",
+      "bytes": 948712,
+      "width": 978,
+      "height": 1609,
+      "facing": 1,
+      "visibleBounds": [
+        221,
+        37,
+        734,
+        1579
+      ],
+      "pixelSHA256": "6d5f23ae2d2df1664ec8923f508e3f09df0168bd8f7094e7e956f3ca1e8c5913",
+      "sourceFile": "exec-0721bee3-5366-4c99-b3ec-203ff49b7c67.png",
+      "sourceSHA256": "21463004558953b5cfdd0299720f69629d1f99238cd90817b6c06a8ce7f38384",
+      "origin": "conversation-image-generation",
+      "purpose": "selection",
+      "fighterId": "ascension_stilledalen_stinger_184",
+      "source": "ascension",
+      "references": [
+        {
+          "url": "https://www.youtube.com/watch?v=82R-jdKpeaU&t=52s",
+          "sha256": "b72826e7508ef8d98715b8f8252ed4ba812214ada301fe15f98000275e77f8b1",
+          "snapshotSecond": 52,
+          "source": "Genvid Entertainment, published episode",
+          "sheetSHA256": "47cc073244ad6d0598263662b0274400c015ee25c3295eb2bf0fae542e3a7e0b",
+          "crop": [
+            126,
+            36,
+            174,
+            115
+          ],
+          "path": "docs/production/wave6-references/stinger/breadcrumbs-52-folded-detail.png",
+          "nativeDimensions": [
+            48,
+            79
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=82R-jdKpeaU&t=54s",
+          "sha256": "69afd33f9fe57a3fb1d34e09d709f00919ff5045c9249a97852717bd99fff3d7",
+          "snapshotSecond": 54,
+          "source": "Genvid Entertainment, published episode",
+          "sheetSHA256": "c319237706dc8215f630746d78d7aa942e798854f096d77ac0378aff02f5130c",
+          "crop": null,
+          "path": "docs/production/wave6-references/stinger/breadcrumbs-54-fully-visible.png",
+          "nativeDimensions": [
+            320,
+            180
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=MtmP544KG_E&t=48s",
+          "sha256": "b8924d833e1183bb39253ba14b4d7335e3850aad24f378e73726749b52fce3bc",
+          "snapshotSecond": 48,
+          "source": "Genvid Entertainment, published episode",
+          "sheetSHA256": "f4b738e28a48be873affabf9e564ffb7813c40a7ca29aa0ed8a512852b4d4f96",
+          "crop": null,
+          "path": "docs/production/wave6-references/stinger/aasta-48-fingertips.png",
+          "nativeDimensions": [
+            320,
+            180
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=MtmP544KG_E&t=54s",
+          "sha256": "68e2f850bfc31bf134abc7a1d01627c842b878cbcf6e590cbda03a090d455fb3",
+          "snapshotSecond": 54,
+          "source": "Genvid Entertainment, published episode",
+          "sheetSHA256": "99e3259677ff9f7351725e9636825991e5ed6784d07d0cab68a15b8c1de5212a",
+          "crop": null,
+          "path": "docs/production/wave6-references/stinger/aasta-54-wings.png",
+          "nativeDimensions": [
+            320,
+            180
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh_ascension/art/pics/sh_ascension_art_monster_04.jpg",
+          "sha256": "1fb6160af193ba2f4159825fb0229fb1cabe696912f1249f4630e6ac9e0b659e",
+          "source": "Ascension production concept art, supporting materials",
+          "nativeDimensions": [
+            2560,
+            1440
+          ]
+        }
+      ],
+      "kind": "selection-base",
+      "notes": "Apparition du Stinger à Stilledalen en Norvège dans Silent Hill: Ascension. Les grandes ailes restent repliées comme dans BREADCRUMBS à 52 secondes. La silhouette documente cette rencontre régionale, dont le statut de variante indépendante reste incertain. Sélection seule, rôle non vérifié et fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true
+    },
+    {
+      "sha256": "19e033cd6a51e9d663b912dffe35c955f4a5b9e53bfce49809585459b5f55d26",
+      "bytes": 1271818,
+      "width": 1143,
+      "height": 1376,
+      "visibleBounds": [
+        142,
+        51,
+        1029,
+        1321
+      ],
+      "pixelSHA256": "1629a15ff4efbd30ff222c7c7ae96dc01813def5c529b9cb287519f3d0694f5a",
+      "transparentFraction": 0.66465,
+      "path": "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+      "facing": -1,
+      "anchor": [
+        0.51,
+        0.960029
+      ],
+      "bodyHeight": 0.94,
+      "sourceFile": "exec-92f50978-a54d-4f84-8530-8466193d2255.png",
+      "sourceSHA256": "19e033cd6a51e9d663b912dffe35c955f4a5b9e53bfce49809585459b5f55d26",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh3_closer_036",
+      "source": "sh3",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_01_closer.jpg",
+          "sha256": "570f9cbc93f5c2dbe96783a85fa3600be21ae64297284126d961215e2267af73",
+          "dimensions": [
+            3200,
+            2400
+          ],
+          "sourcePage": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm",
+          "sourceLedger": "art/reference-provenance-batch5.json",
+          "role": "supplemental_surface_ambiguous_perspective",
+          "note": "Strongly foreshortened ambiguous model render. A long mass at image lower left is an arm column, not a flesh-coloured booted leg. Dark thin central limbs are partially hidden. Use gameplay captures for limb topology; model only for surface bands, texture and pose context.",
+          "sourceType": "Original Silent Hill 3 (2003) model render or gameplay screenshot, archived by Silent Hill Memories.",
+          "path": "docs/production/wave6-references/sh3/sh3_closer_model.jpg",
+          "nativeDimensions": [
+            3200,
+            2400
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_05.jpg",
+          "sha256": "a745c5150d849a30967b302fa4793111a6c08ef27cddaf3e45ee1a52c8cd72ef",
+          "dimensions": [
+            1024,
+            768
+          ],
+          "sourcePage": "https://www.silenthillmemories.net/sh3/screens_en.htm",
+          "sourceLedger": "art/reference-provenance-batch5.json",
+          "role": "secondary_gameplay_rear",
+          "note": "Genuine independent rear/three-quarter in-game pose beside Heather in normal mall. Lower arms/feet extend to or beyond frame bottom, so incomplete full-body silhouette and no measured scale.",
+          "sourceType": "Original Silent Hill 3 (2003) model render or gameplay screenshot, archived by Silent Hill Memories.",
+          "path": "docs/production/wave6-references/sh3/sh3_closer_game_a.jpg",
+          "nativeDimensions": [
+            1024,
+            768
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_09.jpg",
+          "sha256": "7101056bf624214ecc74c4fbb38ece85fd6d5764c13f62ab9d83033aa92daf2c",
+          "dimensions": [
+            1024,
+            768
+          ],
+          "sourcePage": "https://www.silenthillmemories.net/sh3/screens_en.htm",
+          "sourceLedger": "art/reference-provenance-batch5.json",
+          "role": "primary_limb_topology_game_front",
+          "note": "Genuine front game view clearly shows TWO massive lateral hanging arm columns, a small elongated head and TWO narrow dark central legs under apron. Heather/muzzle flash obscure feet and portions of legs. Do not turn an arm column into a flesh-coloured booted leg. Still image, no timing measurement.",
+          "sourceType": "Original Silent Hill 3 (2003) model render or gameplay screenshot, archived by Silent Hill Memories.",
+          "path": "docs/production/wave6-references/sh3/sh3_closer_game_b.jpg",
+          "nativeDimensions": [
+            1024,
+            768
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Closer de base de Silent Hill 3, profil gauche. Les bras-colonnes dégagent la vue sur les jambes fines et sombres qui portent le corps. Pose latérale fixe ; marche, blessure et KO hérités conservent leurs propres PNG, calibrations et rendu. Fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "retainedMotionFrames": [
+        {
+          "index": 1,
+          "path": "assets/sprites/sh3_closer_036.83102a051acb.png",
+          "sha256": "83102a051acb47688d8f0a5fde7452b2d1ccc226fe3b8b21cb490b295a64c9b5"
+        },
+        {
+          "index": 2,
+          "path": "assets/sprites/sh3_closer_036.f18918ff7e87.png",
+          "sha256": "f18918ff7e87e7445254583f1603e794269f6569984698d4a6ba87a553ce0715"
+        },
+        {
+          "index": 3,
+          "path": "assets/sprites/sh3_closer_036.a571dd362666.png",
+          "sha256": "a571dd362666d9d003949203fed33d34c6a77002af2f0f9a051d38b80aa7d910"
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh3_closer_036.e00beefd711f.png",
+        "sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb",
+        "bytes": 1504645,
+        "width": 1192,
+        "height": 1320,
+        "facing": 1
+      }
+    },
+    {
+      "sha256": "8c3f9985c31e57bd4d85678702b7aa23c207ea7dffa686a9ceda8a2a80dd4df9",
+      "bytes": 1419103,
+      "width": 1774,
+      "height": 887,
+      "visibleBounds": [
+        79,
+        55,
+        1667,
+        824
+      ],
+      "pixelSHA256": "f7e2649d36d35c7ce0f8cf350b6474a3a67e3714ff2ae0b1621283e4270db97d",
+      "transparentFraction": 0.60847,
+      "path": "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+      "facing": 1,
+      "anchor": [
+        0.44,
+        0.928974
+      ],
+      "bodyHeight": 0.955,
+      "sourceFile": "exec-1bb5c7b6-0d7b-459e-9ba0-091fd139fab2.png",
+      "sourceSHA256": "8c3f9985c31e57bd4d85678702b7aa23c207ea7dffa686a9ceda8a2a80dd4df9",
+      "origin": "conversation-image-generation",
+      "purpose": "combat",
+      "view": "side-view",
+      "fighterId": "sh3_double_head_040",
+      "source": "sh3",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_03_double_head.jpg",
+          "sha256": "c73b760fb02bb99555a90edbc8638eaab474657326be518c021da9ea98c76bd6",
+          "dimensions": [
+            3200,
+            2400
+          ],
+          "sourcePage": "https://www.silenthillmemories.net/sh3/arts_creatures_en.htm",
+          "sourceLedger": "art/reference-provenance-batch7.json",
+          "role": "primary_model_anatomy",
+          "note": "Canine quadruped, bandaged arched body, single cleft head/two jaw structures on one neck. Four limbs, far front paw lifted. Not two separately necked dog heads.",
+          "sourceType": "Original Silent Hill 3 (2003) model render or gameplay screenshot, archived by Silent Hill Memories.",
+          "path": "docs/production/wave6-references/sh3/sh3_double_head_model.jpg",
+          "nativeDimensions": [
+            3200,
+            2400
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_030515_08.jpg",
+          "sha256": "803ce51b67fefdbd0b8d6914a24f5e9db4b83df76179ac9cc28b87365f73e33e",
+          "dimensions": [
+            1506,
+            1147
+          ],
+          "sourcePage": "https://www.silenthillmemories.net/sh3/screens_en.htm",
+          "sourceLedger": "art/reference-provenance-batch7.json",
+          "role": "independent_original_game_angle",
+          "note": "15 May2003 dated original promotional game screenshot. Live bandaged cleft-head dog approaches Heather from upper left, a genuine top-down view distinct from render. Closer in near foreground must not be merged. Dog body in partial darkness; no timing/scale measurement.",
+          "sourceType": "Original Silent Hill 3 (2003) model render or gameplay screenshot, archived by Silent Hill Memories.",
+          "path": "docs/production/wave6-references/sh3/sh3_game_030515_08_candidate.jpg",
+          "nativeDimensions": [
+            1506,
+            1147
+          ]
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_030515_08.jpg",
+          "sha256": "65a2d5f1a9f615918f8b82ee3d1ef9e547d5a47f1336308323915306b8868125",
+          "sourceSHA256": "803ce51b67fefdbd0b8d6914a24f5e9db4b83df76179ac9cc28b87365f73e33e",
+          "dimensions": [
+            286,
+            402
+          ],
+          "cropXYXYExclusive": [
+            113,
+            252,
+            399,
+            654
+          ],
+          "sourceLedger": "art/reference-provenance-batch7.json",
+          "sourceType": "Unscaled crop from the SH3 PS2 gameplay screenshot.",
+          "role": "Distinct overhead approaching dog only; the adjacent human is outside the principal subject.",
+          "path": "docs/production/wave6-references/sh3/double-head-retail-detail.png",
+          "nativeDimensions": [
+            286,
+            402
+          ]
+        }
+      ],
+      "kind": "distinct-combat-idle",
+      "notes": "Double Head de Silent Hill 3, profil droit sur ses quatre pattes, avant-train bas et museau fendu fermé. La pose de garde se distingue de la silhouette en course du portrait. Marche, blessure et KO hérités restent disponibles avec leurs PNG et calibrations d’origine. Fidélité non certifiée.",
+      "animated": false,
+      "nativeUHD": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true,
+      "retainedMotionFrames": [
+        {
+          "index": 1,
+          "path": "assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+          "sha256": "a0885231d6ff688cbe59b1c619e455146a8d0721a0ba9ccfa64706b33c175f90"
+        },
+        {
+          "index": 2,
+          "path": "assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+          "sha256": "6d8c0b112533fc149871a120df9b24b413c09794c6ab4b3274aaaed437cae8cd"
+        },
+        {
+          "index": 3,
+          "path": "assets/sprites/sh3_double_head_040.0ef012666f82.png",
+          "sha256": "0ef012666f825977bda04d26aeea0733c106065d8b7529b71381a186b0ac5683"
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+        "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd",
+        "bytes": 1433387,
+        "width": 1448,
+        "height": 1086,
+        "facing": -1
+      }
+    }
+  ],
+  "blockedThisGeneration": [
+    {
+      "fighterId": "downpour_doll_106",
+      "purpose": "combat",
+      "source": "downpour",
+      "reason": "image-generation-refused",
+      "requestId": "82a5a7de-b3fa-4d32-9582-2b163ecc56e1",
+      "categories": [
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "retriedInThisContinuation": false,
+      "stage": "output",
+      "usage": "workshop-lateral-only",
+      "duelEnabled": false
+    }
+  ],
+  "historicalBlockersRetained": true,
+  "allMissingStatusesReconciled": true,
+  "allMissingProfilesIndependentlyResearchedAgain": false,
+  "previousStatus": "sprite-status-wave5-2026-11-18.json",
+  "inheritedBlockerAudit": "sprite-suite-reference-audit-2026-11-17.json",
+  "retainedCombatGenerationStops": [
+    {
+      "fighterId": "arcade_robbie_the_rabbit_chainsaw",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "333364f3-aefb-4947-a66d-2c18ed7ca72d",
+      "stage": "output",
+      "categories": [
+        "other"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "sourceRecord": "sprite-status-next-2026-11-17.json",
+      "retriedInThisContinuation": false,
+      "newInThisContinuation": false
+    },
+    {
+      "fighterId": "origins_the_butcher_081",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "ea87a46c-f8bb-4109-b400-474ab1ba8190",
+      "stage": "output",
+      "categories": [
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "sourceRecord": "sprite-suite-imports-2026-11-17.json",
+      "retriedInThisContinuation": false,
+      "newInThisContinuation": false
+    },
+    {
+      "fighterId": "sh4_patient_060",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "088656ba-b3e7-4fec-807e-5cd3fa086065",
+      "stage": "output",
+      "categories": [
+        "sexual",
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "sourceRecord": "sprite-following-imports-2026-11-17.json",
+      "newInThisContinuation": false,
+      "retriedAfterRefusal": false,
+      "retriedInThisContinuation": false
+    },
+    {
+      "fighterId": "downpour_doll_106",
+      "purpose": "combat",
+      "source": "downpour",
+      "reason": "image-generation-refused",
+      "requestId": "82a5a7de-b3fa-4d32-9582-2b163ecc56e1",
+      "categories": [
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "retriedInThisContinuation": false,
+      "stage": "output",
+      "usage": "workshop-lateral-only",
+      "duelEnabled": false,
+      "newInThisContinuation": true,
+      "sourceRecord": "sprite-wave6-imports-2026-11-18.json"
+    }
+  ],
+  "freshlyResearchedIds": [
+    "arcade_greedy_worm_arcade_119",
+    "arcade_phantom_118",
+    "ascension_stilledalen_stinger_184",
+    "downpour_monocle_man_114",
+    "downpour_void_113",
+    "sh2_prisoner_035",
+    "sh3_closer_036",
+    "sh3_double_head_040",
+    "sh4_ghost_victim_066"
+  ],
+  "freshlyClearedProfileIds": [
+    "arcade_greedy_worm_arcade_119",
+    "ascension_stilledalen_stinger_184",
+    "downpour_void_113"
+  ],
+  "referenceResearch": [
+    "wave6-references/arcade/research.json",
+    "wave6-references/arcade/source-audit.json",
+    "wave6-references/downpour/monocle-source-audit.json",
+    "wave6-references/downpour/prisoner-source-audit.json",
+    "wave6-references/downpour/void-source-audit.json",
+    "wave6-references/sh3/sources.json",
+    "wave6-references/sh4-ghost/source-audit.json",
+    "wave6-references/stinger/source-audit.json"
+  ],
+  "validation": {
+    "preservation": {
+      "baselineCommit": "318b8856ab8f0c8e18d2e25a066bc8dbad505748",
+      "identicalHistoricalPNGs": 282,
+      "identicalHistoricalPortraits": 184,
+      "unchangedRoster": true,
+      "importHashesVerified": 14,
+      "preservedMotionFramesById": {
+        "sh3_closer_036": 3,
+        "sh3_double_head_040": 3
+      }
+    },
+    "visualSuites": [
+      {
+        "path": "qa-sprite-wave6-2026-11-18/additional/report.json",
+        "checks": 99,
+        "duels": 4,
+        "portraits": 8,
+        "inspectors": 0
+      },
+      {
+        "path": "qa-sprite-wave6-2026-11-18/additional-workshop/report.json",
+        "checks": 28,
+        "duels": 0,
+        "portraits": 0,
+        "inspectors": 6
+      },
+      {
+        "path": "qa-sprite-wave6-2026-11-18/arcade-selection/report.json",
+        "checks": 11,
+        "duels": 0,
+        "portraits": 2,
+        "inspectors": 0
+      },
+      {
+        "path": "qa-sprite-wave6-2026-11-18/core/report.json",
+        "checks": 75,
+        "duels": 4,
+        "portraits": 8,
+        "inspectors": 0
+      },
+      {
+        "path": "qa-sprite-wave6-2026-11-18/core-workshop/report.json",
+        "checks": 9,
+        "duels": 0,
+        "portraits": 0,
+        "inspectors": 2
+      },
+      {
+        "path": "qa-sprite-wave6-2026-11-18/selection/report.json",
+        "checks": 20,
+        "duels": 0,
+        "portraits": 4,
+        "inspectors": 0
+      },
+      {
+        "path": "qa-sprite-wave6-2026-11-18/role-check.json",
+        "checks": 9,
+        "duels": 0,
+        "portraits": 0,
+        "inspectors": 0
+      }
+    ],
+    "visualChecks": 251,
+    "duels": 8,
+    "portraits": 22,
+    "node": {
+      "passed": 1261,
+      "path": "qa-sprite-wave6-2026-11-18/npm-test.log.gz"
+    },
+    "python": {
+      "passed": 114,
+      "path": "qa-sprite-wave6-2026-11-18/python-art-tests.log.gz"
+    },
+    "browserSprites": {
+      "passed": 324,
+      "browser": "153.0.8010.0",
+      "path": "qa-sprite-wave6-2026-11-18/browser-sprites.json"
+    },
+    "art144Chromium": {
+      "passed": 1004,
+      "path": "qa-sprite-wave6-2026-11-18/art144-browser.json.gz"
+    },
+    "art92Chromium": {
+      "passed": 410,
+      "path": "qa-sprite-wave6-2026-11-18/art92-browser.json.gz"
+    },
+    "visualReview": "qa-sprite-wave6-2026-11-18/visual-review.json"
+  }
+}

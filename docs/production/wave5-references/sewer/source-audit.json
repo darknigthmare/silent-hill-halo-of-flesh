@@ -1,0 +1,92 @@
+{
+  "schema": "silent-hill-source-review/1",
+  "date": "2026-11-18",
+  "fighterId": "sh3_sewer_creature_052",
+  "result": "incomplete-source",
+  "generationAttempts": 0,
+  "newGameFiles": [],
+  "edition": "Silent Hill 3 (2003), Underpass, scripted encounter",
+  "findings": [
+    {
+      "url": "https://www.youtube.com/watch?v=9Zt3fCg2SKA",
+      "identity": "Contemporary recording of the retail encounter, published in 2006. The player crosses the walkway. Sampled 28 storyboard cells at one-second intervals (120×90). The camera cuts between the character, water, and catwalk. The very dark shapes do not yield an independently readable complete creature, even for its emergence phase. Platform of this recording unconfirmed."
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_05_underpass_en.htm",
+      "identity": "The corpse which later disappears is described under Garbage Room before the player picks up the hair dryer. The creature event occurs later, in a different room. The text does not identify that earlier corpse as the creature."
+    },
+    {
+      "url": "https://silenthillmuseum.org/",
+      "identity": "The museum renders original retail data and describes its Silent Hill 3 inventory as most PS2 models."
+    },
+    {
+      "url": "https://github.com/dreamingmoths/silent-hill-museum/blob/main/src/sh3/sh3.ts",
+      "identity": "Reviewed the museum’s openly published model list including en/ and bg/ paths. Asset labels are abbreviated and no source-to-scene mapping for the Underpass creature was established. This does not show that a mesh is absent."
+    },
+    {
+      "url": "https://github.com/many-bees/SilentHillFileGuide/blob/main/SH3%20Map%20Files.md",
+      "identity": "Archive guide identifies bgus.arc as Underpass/Sewers, without an entry identifying a creature model."
+    },
+    {
+      "url": "https://github.com/dreamingmoths/memory-of-alessa/tree/main/silent-hill-3/src/Event/stage",
+      "identity": "Public PS2 SLUS_206.22 matching-decompilation sewer_00 and sewer_01 comprise partially mapped event code. Their symbol indices do not label an individual model or prove a complete silhouette. No game data extracted."
+    }
+  ],
+  "references": [
+    {
+      "path": "docs/production/wave5-references/sewer/encounter-04s.png",
+      "url": "https://www.youtube.com/watch?v=9Zt3fCg2SKA&t=4s",
+      "sha256": "dac78b7da914425a5c86127181279fdbec8397143411cbcacb8d762a0e3b6d97",
+      "nativeDimensions": [
+        120,
+        90
+      ],
+      "sourceSheet": 0,
+      "sourceCell": 4,
+      "cropXYXY": [
+        480,
+        0,
+        600,
+        90
+      ],
+      "sheetSha256": "a1619f25cd8d73d146e2d5c13b67e6f7542a71d5fbdda61a574d5ea7bcc7e637"
+    },
+    {
+      "path": "docs/production/wave5-references/sewer/encounter-07s.png",
+      "url": "https://www.youtube.com/watch?v=9Zt3fCg2SKA&t=7s",
+      "sha256": "2032b495d76d3cbac473b397fb57af4b8b0defbdf807cfc0ebf3bd842563e433",
+      "nativeDimensions": [
+        120,
+        90
+      ],
+      "sourceSheet": 0,
+      "sourceCell": 7,
+      "cropXYXY": [
+        240,
+        90,
+        360,
+        180
+      ],
+      "sheetSha256": "a1619f25cd8d73d146e2d5c13b67e6f7542a71d5fbdda61a574d5ea7bcc7e637"
+    },
+    {
+      "path": "docs/production/wave5-references/sewer/encounter-22s.png",
+      "url": "https://www.youtube.com/watch?v=9Zt3fCg2SKA&t=22s",
+      "sha256": "7da0acb0c5c0c667722c5c452fa38c204d63841c6bb0db1040749c27538ef6a4",
+      "nativeDimensions": [
+        120,
+        90
+      ],
+      "sourceSheet": 0,
+      "sourceCell": 22,
+      "cropXYXY": [
+        240,
+        360,
+        360,
+        450
+      ],
+      "sheetSha256": "a1619f25cd8d73d146e2d5c13b67e6f7542a71d5fbdda61a574d5ea7bcc7e637"
+    }
+  ],
+  "limit": "Underwater extent, shape of the base and a defensible isolated silhouette remain unknown. The sewer goddess and generic tentacle or Slurper models do not establish this form."
+}

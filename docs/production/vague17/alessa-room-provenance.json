@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "wave": "wave17",
+  "stageId": "film_hospital",
+  "source": "film",
+  "title": "Chambre d’Alessa · film 2006",
+  "createdAt": "2026-11-19 05:25:31 UTC",
+  "baseCommit": "96cbd9c49233230e8ddaed08f6f6063734aef96e",
+  "productionStatus": "prepared-for-parent-integration",
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "pullRequest": 6,
+  "branch": "art/missing-fullbody-20261117",
+  "scope": {
+    "generatedPngCount": 2,
+    "newAnimatedClips": 0,
+    "commonRegistryEdited": false,
+    "gitCommitCreated": false,
+    "gitReferenceUpdated": false,
+    "referencePhotosCountAsNewAssets": false
+  },
+  "sourceDocuments": [
+    "docs/production/research/extended.json",
+    "docs/production/batches/lot9-stages.json"
+  ],
+  "batchRowId": "film_hospital:reference:1",
+  "references": [
+    {
+      "id": "EXT49",
+      "url": "https://www.imdb.com/title/tt0384537/plotsummary/",
+      "type": "secondaire-guide",
+      "inspection": "Contexte documentaire déjà présent dans extended.json ; cette page IMDb n’a pas été nouvellement inspectée pendant cette production."
+    },
+    {
+      "filename": "sh_the_movie_46.jpg",
+      "sha256": "a1515183bf63e9a1d8b245bbc1784951897d390e36d9aaccaa02ce84fe69e620",
+      "bytes": 252547,
+      "width": 1052,
+      "height": 662,
+      "mode": "RGB",
+      "id": "EXT9_FILM2006_ALESSA_ROOM_46_20261026",
+      "url": "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_46.jpg",
+      "type": "photo-film-republiee-par-guide",
+      "localReferencePath": "/workspace/scratch/b86991fb2253/wave17/alessa-room/references/sh_the_movie_46.jpg",
+      "inspection": "Fichier téléchargé puis pixels inspectés avec view_image pendant cette production.",
+      "countAsGeneratedAsset": false
+    },
+    {
+      "filename": "sh_the_movie_81.jpg",
+      "sha256": "c4696333b4ddf5f804ef6580b3a6a2643cafcd32a0c628633b9a8cd61eacd04b",
+      "bytes": 73582,
+      "width": 450,
+      "height": 300,
+      "mode": "RGB",
+      "id": "EXT9_FILM2006_ALESSA_ROOM_81_20261026",
+      "url": "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_81.jpg",
+      "type": "photo-film-republiee-par-guide",
+      "localReferencePath": "/workspace/scratch/b86991fb2253/wave17/alessa-room/references/sh_the_movie_81.jpg",
+      "inspection": "Fichier téléchargé puis pixels inspectés avec view_image pendant cette production.",
+      "countAsGeneratedAsset": false
+    }
+  ],
+  "sourceObservations": [
+    "La photo 46 montre une tente médicale opaque en plastique sombre, aux reflets lie-de-vin, sur un cadre métallique rectangulaire dans la moitié droite de la chambre.",
+    "Les deux vues montrent des carreaux inférieurs ocre/brun et des surfaces supérieures sombres, abîmées et craquelées.",
+    "La photo 81 documente une lumière chaude sous la tente et un morceau de sol grillagé à proximité.",
+    "Une bande de plastique suspendue verticale et un montant proche motivent le plan avant séparé ; l’évier vieilli à gauche vient de la photo 46.",
+    "Les personnages présents dans les références sont absents de la production. Aucun nom Brookhaven n’est déduit de ces vues."
+  ],
+  "authoredReconstruction": [
+    "Caméra élargie presque frontale pour une arène versus et sol horizontal libre ; profondeur, dimensions et perspective non mesurées sur le film.",
+    "Tente conservée sur la droite, opaque et sans corps visible ni lit occupé. Le bord du voile proche est déplacé à l’extrême gauche pour dégager la lecture du duel.",
+    "Les images sont des plans statiques. Les mouvements et le repos de manche restent les adaptations authored existantes du moteur."
+  ],
+  "assets": [
+    {
+      "role": "background",
+      "sourceFile": "/workspace/scratch/b86991fb2253/generated_images/exec-83874272-166e-4ff6-a9d5-d0320b3898b6.png",
+      "localPath": "/workspace/scratch/b86991fb2253/wave17/alessa-room/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+      "path": "assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+      "sha256": "d6410e6a7d3b43e677865f44da90ec5c00d54b09792ef747a1cb7665e9c27beb",
+      "bytes": 2829692,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "audit": {
+        "format": "PNG",
+        "width": 1672,
+        "height": 941,
+        "animated": false,
+        "sha256": "d6410e6a7d3b43e677865f44da90ec5c00d54b09792ef747a1cb7665e9c27beb",
+        "pixelSHA256": "7d1b34932e777c173f2cd446fb1b358032b462f7fe6145c55bd0a5b5743e479d",
+        "mode": "RGB",
+        "alpha": false,
+        "alphaBounds": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "visibleBounds": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "transparentFraction": 0,
+        "opaqueFraction": 1,
+        "rightOfQuarterMaxAlpha": 255
+      },
+      "githubBlobSha": "34e7bbe973a8d1e3550c5959b93b295b4bbde6f1",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "/workspace/scratch/b86991fb2253/wave17/alessa-room/references/sh_the_movie_46.jpg",
+          "/workspace/scratch/b86991fb2253/wave17/alessa-room/references/sh_the_movie_81.jpg"
+        ],
+        "prompt": "Use case: precise-object-edit.\nAsset: one finished opaque 2D fighting-game stage background plate for Silent Hill: Halo of Flesh, stage film_hospital, Alessa's hospital room in the 2006 Silent Hill film.\nInput image 1 and image 2: visual references of the same room. Preserve their recognizable architectural materials and isolation tent design; remove every person, nurse, chair occupant, and human silhouette.\nRecompose the room into a clean wide 16:9 side-on fighting arena, camera pulled back to show a horizontal unobstructed fighting floor across the bottom third. The back wall is seen nearly square on, with shallow readable depth rather than a long corridor. Keep the small yellow-ochre and dark brown rectangular lower-wall tiles and the deeply cracked black/charcoal plaster upper wall. The EMPTY isolation canopy sits against the back wall on the RIGHT half: opaque shiny black plastic sheeting with dark wine-red highlights, slack folds and a raised rectangular supporting metal frame, like the references. The drapery must hide no visible person, body, face, limbs or occupied bed; leave the frame unoccupied. Warm low light from below the canopy grazes the nearby metal floor grille. Do not show the source characters or recreate their action.\nContinue the worn dark tiled floor naturally across the front, level and open, with a modest grille patch near the back-right canopy and no raised obstacles. Keep the central horizontal fighting lane clear and well readable. No foreground column on this plate, no props crossing the playable foreground. No generic hospital beds, gurneys, chains, nurses' corridor, medical monitors, supernatural figures, logos or lettering. Do not label it Brookhaven.\nStyle: dense realistic painterly 2D game background with the same muted charcoal, rust, ochre and wine-dark palette as the two references. Film-like practical low lighting, convincing aged materials, enough tonal separation for fighters. Sharp clean environment image, not a screenshot with HUD. Entire landscape image is opaque and filled; no transparency, no borders, no collage, no split panels, no text. Wide landscape 16:9, ideally native 3840x2160; preserve the 16:9 framing if tool resolution differs. This is a versus reconstruction from film-room references, not a claim of measured source geometry.",
+        "requestedAspect": "16:9",
+        "requestedNativeResolution": "3840x2160 if supported",
+        "actualNativeResolution": [
+          1672,
+          941
+        ],
+        "attempt": 1,
+        "accepted": true,
+        "postprocessing": "Aucune modification de pixels ; copie byte-identique de la sortie native."
+      },
+      "anatomy": {
+        "left": "Évier vieilli et petits carreaux ocre/brun.",
+        "middle": "Paroi craquelée et piste de duel horizontale dégagée.",
+        "right": "Tente plastique opaque sombre, cadre métallique et grille de sol éclairée.",
+        "people": 0,
+        "visibleBodies": 0,
+        "occupiedBeds": 0,
+        "textOrHud": false
+      }
+    },
+    {
+      "role": "foreground",
+      "sourceFile": "/workspace/scratch/b86991fb2253/generated_images/exec-37fb3d0c-9b8e-4626-a429-8b68b6c0d067.png",
+      "localPath": "/workspace/scratch/b86991fb2253/wave17/alessa-room/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+      "path": "assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+      "sha256": "6ea5905574b3ea669204aae5771bc7321f04e6c40f0e9880f1a362ddd900a47d",
+      "bytes": 228118,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "audit": {
+        "format": "PNG",
+        "width": 1672,
+        "height": 941,
+        "animated": false,
+        "sha256": "6ea5905574b3ea669204aae5771bc7321f04e6c40f0e9880f1a362ddd900a47d",
+        "pixelSHA256": "6fbb972ff824e363331f4b85aa6ba4a452efe4d1c155fd17ebe012a9cb333e68",
+        "mode": "RGBA",
+        "alpha": true,
+        "alphaBounds": [
+          65,
+          23,
+          1425,
+          921
+        ],
+        "visibleBounds": [
+          67,
+          26,
+          190,
+          914
+        ],
+        "transparentFraction": 0.94912,
+        "opaqueFraction": 0.0004,
+        "rightOfQuarterMaxAlpha": 1
+      },
+      "githubBlobSha": "fc3568ebb4c5f18df11a32c2fbfeb68ce5da864e",
+      "generation": {
+        "tool": "image_gen.imagegen",
+        "transparent_background": true,
+        "referenced_image_paths": [
+          "/workspace/scratch/b86991fb2253/wave17/alessa-room/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+          "/workspace/scratch/b86991fb2253/wave17/alessa-room/references/sh_the_movie_46.jpg",
+          "/workspace/scratch/b86991fb2253/wave17/alessa-room/references/sh_the_movie_81.jpg"
+        ],
+        "prompt": "Use case: precise-object-edit.\nAsset: ONE isolated transparent foreground parallax layer for the already generated Alessa hospital-room background in image 1. Image 2 and image 3 are the film-room references, showing the slim vertical translucent hanging plastic curtain and narrow support near the front of the room.\nExtract and reconstruct ONLY that nearby vertical curtain edge and its slender aged dark-metal supporting upright. Keep the dark charcoal/wine-brown plastic material and warm dim highlights from the reference room. Do not include any background wall, floor, tent, bed, person, nurse, chair, sink or grating in this layer.\nComposition is mandatory: a WIDE LANDSCAPE 16:9 canvas matching image 1, 1672 pixels wide by 941 pixels high if supported. Put the single narrow vertical upright and hanging folded strip ONLY at the FAR LEFT of that landscape canvas, within x=25..175 pixels, extending from y=20 to y=920. The rest of the full wide canvas, especially the entire center and right, must be genuinely transparent alpha zero. Leave at least 20 pixels clear margin around the top, left and bottom of the complete object. The pole has a small unobtrusive base; the plastic strip hangs from the pole with two or three natural folds and reaches near its base. Maximum object width 150 pixels out of the 1672-pixel canvas. No text, labels, panorama border, checkerboard rendering, atmospheric haze, colored vignette or ground shadow.\nThis is a separate foreground component that will overlay image 1. Do NOT return the whole room and do NOT fill the canvas with plastic. Preserve shallow frontal 2D game-art perspective and realistic painterly texture. Real PNG transparency around the narrow object, clean edges. The output canvas must remain wide landscape even though the object is tall and narrow.",
+        "requestedAspect": "16:9",
+        "requestedNativeResolution": "1672x941 matching background",
+        "actualNativeResolution": [
+          1672,
+          941
+        ],
+        "attempt": 1,
+        "accepted": true,
+        "postprocessing": "Aucune modification de pixels ; copie byte-identique de la sortie native."
+      },
+      "anatomy": {
+        "object": "Montant métallique étroit et bande suspendue de plastique sombre, avec petit socle.",
+        "placement": "Bord gauche du canevas horizontal.",
+        "visiblePixelAlphaThreshold": 32,
+        "visibleXAt1280Pixels": [
+          51.29,
+          145.45
+        ],
+        "centerAndRightMaxAlpha": 1,
+        "people": 0,
+        "visibleBodies": 0,
+        "occupiedBeds": 0,
+        "opaqueBackdrop": false
+      },
+      "alphaCaveat": "94,912 % de pixels alpha 0 ; quelques résidus alpha 1/255 dépassent la silhouette visible. Le centre et la droite ne comportent aucun pixel alpha ≥ 32 ; le fond n’est pas entièrement alpha 0 à chaque pixel."
+    }
+  ],
+  "variants": {
+    "generationCalls": 2,
+    "acceptedOutputs": 2,
+    "rejectedOutputs": 0,
+    "rawGeneratedFilesPreserved": true,
+    "additionalVariants": []
+  },
+  "proposedManifestEntry": {
+    "stageId": "film_hospital",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "alessa-isolation-room-2006",
+    "referenceIds": [
+      "EXT49",
+      "EXT9_FILM2006_ALESSA_ROOM_46_20261026",
+      "EXT9_FILM2006_ALESSA_ROOM_81_20261026"
+    ],
+    "layers": [
+      {
+        "id": "alessa-isolation-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+            "sha256": "d6410e6a7d3b43e677865f44da90ec5c00d54b09792ef747a1cb7665e9c27beb",
+            "bytes": 2829692,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-privacy-curtain",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.012,
+        "frames": [
+          {
+            "path": "assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+            "sha256": "6ea5905574b3ea669204aae5771bc7321f04e6c40f0e9880f1a362ddd900a47d",
+            "bytes": 228118,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": "Deux plans statiques candidats de la chambre d’Alessa du film 2006. Matériaux et tente documentés par les photos 46 et 81 ; cadrage versus, volumes et piste de combat reconstruits. Aucun personnage, corps visible, lit occupé ou couloir des Dark Nurses. Le nom Brookhaven n’est pas attesté. Dimensions natives 1672 × 941 ; pas de certification 1:1 ni 4K natif. Préserver les compositions authored existantes gansAlessaTentCloth et alessaRoomRoundRest avec un raccord bitmap ciblé ; les PNG ne constituent pas de nouveaux clips animés."
+  },
+  "terrainPolicy": {
+    "existingSceneId": null,
+    "proposedSceneIsNewDescriptiveMetadata": true,
+    "normalPhaseLabel": "CHAMBRE D’ALESSA · FILM 2006",
+    "terrainRules": false,
+    "automaticFinishers": false,
+    "geometryOverrideProposed": false,
+    "preserveCollisionsAndPhysics": true
+  },
+  "existingCompositions": {
+    "ambient": "gansAlessaTentCloth",
+    "roundRest": "alessaRoomRoundRest",
+    "currentAnchor": [
+      0.68,
+      0.57
+    ],
+    "bitmapIntegrationConcern": "Le chemin raster mode replace retourne avant drawStageReferenceTracks. Le rendu existant gansAlessaTentCloth dessine une tente complète qui recouvrirait la partie gauche du nouveau fond ; sa simple réactivation est déconseillée. Le helper séparé proposé conserve les clés et le temps de présentation mais limite l’effet à des plis sous un clip du panneau droit ; parent doit décider l’intégration.",
+    "proposedHelper": "stage-bitmap-compositions.proposed.mjs",
+    "notSourceCertified": true,
+    "proposalReport": "integration-proposal.md"
+  },
+  "checks": {
+    "pngDecoder": "scripts/validate-stage-png.py : CRC et décodage complets réussis sur les deux PNG.",
+    "sha256AndDimensions": "Calculés sur les fichiers locaux copiés.",
+    "visualReview": "Sources et deux sorties natives inspectées.",
+    "sameNativeCanvas": true,
+    "manifestSchema": "validateStageBitmap et stageBitmapFor exécutés sur le STAGES film_hospital réel : entrée valide, sélection correcte, 2 plans, sceneId de policy toujours null.",
+    "runtimeIntegration": "Responsabilité de l’intégrateur ; non revendiquée par cette livraison.",
+    "browserIntegrationReview": "Non exécutée par cet agent.",
+    "compositionProposal": {
+      "syntax": "passed",
+      "testFile": "composition-proposal.test.mjs",
+      "passed": 5,
+      "failed": 0,
+      "browserObserved": false
+    }
+  },
+  "limits": [
+    "Aucune certification 1:1.",
+    "1672 × 941 natif, pas 4K natif ; ratio proche de 16:9, sortie exacte conservée sans rééchantillonnage.",
+    "Le nom Brookhaven n’est pas attesté pour cette chambre.",
+    "Aucun mélange avec le couloir des Dark Nurses ni le film 2012.",
+    "Aucune nouvelle animation autonome, attaque, fatalité, apparition ni mécanique de terrain.",
+    "Deux références photographiques récupérées sont des entrées documentaires, pas des créations."
+  ]
+}

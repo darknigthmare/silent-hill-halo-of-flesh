@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "purpose": "Native Canvas/FightEngine checks of explicit missing stage candidates.",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "startedAtUnix": 1795178304.2468705,
+  "durationSeconds": 8.272,
+  "stageIds": [
+    "nightmare_theater",
+    "nightmare_school",
+    "nightmare_mall_sm"
+  ],
+  "processes": [
+    {
+      "id": "nightmare_theater",
+      "command": [
+        "node",
+        "--expose-gc",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-stages-native.mjs",
+        "--stages=nightmare_theater",
+        "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-native/stages-a/nightmare_theater"
+      ],
+      "startedAtUnix": 1795178304.2470207,
+      "timeoutSeconds": 180,
+      "exitCode": 0,
+      "timeout": false,
+      "durationSeconds": 3.204,
+      "reportPresent": true,
+      "reportSHA256": "6817b010396788d33ebe5f4a67ff5619b458a15a9fd0374b0aa229c27c9bec8f",
+      "reportPassed": true,
+      "checks": 46,
+      "cases": 1,
+      "referencePreviews": 0,
+      "captures": 1,
+      "failure": null,
+      "passed": true
+    },
+    {
+      "id": "nightmare_school",
+      "command": [
+        "node",
+        "--expose-gc",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-stages-native.mjs",
+        "--stages=nightmare_school",
+        "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-native/stages-a/nightmare_school"
+      ],
+      "startedAtUnix": 1795178307.4525993,
+      "timeoutSeconds": 180,
+      "exitCode": 0,
+      "timeout": false,
+      "durationSeconds": 2.534,
+      "reportPresent": true,
+      "reportSHA256": "8b008846f938b0ece75e9fbc80d8ddea7b485443e09a142b9760f2ce53dafa0e",
+      "reportPassed": true,
+      "checks": 46,
+      "cases": 1,
+      "referencePreviews": 0,
+      "captures": 1,
+      "failure": null,
+      "passed": true
+    },
+    {
+      "id": "nightmare_mall_sm",
+      "command": [
+        "node",
+        "--expose-gc",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-stages-native.mjs",
+        "--stages=nightmare_mall_sm",
+        "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-native/stages-a/nightmare_mall_sm"
+      ],
+      "startedAtUnix": 1795178309.988331,
+      "timeoutSeconds": 180,
+      "exitCode": 0,
+      "timeout": false,
+      "durationSeconds": 2.529,
+      "reportPresent": true,
+      "reportSHA256": "2cc2d14393d567fbf28753109ecc217008c86a2954fca5928de058a7f5b57e05",
+      "reportPassed": true,
+      "checks": 46,
+      "cases": 1,
+      "referencePreviews": 0,
+      "captures": 1,
+      "failure": null,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "successfulProcesses": 3,
+  "checksInSuccessfulProcesses": 138,
+  "stageCasesInSuccessfulProcesses": 3,
+  "referencePreviewsInSuccessfulProcesses": 0,
+  "capturesInSuccessfulProcesses": 3,
+  "limits": [
+    "No source animation timings or one-to-one fidelity are certified.",
+    "Visual review of the captured images is a separate recorded step.",
+    "Failed or interrupted processes are retained and excluded from success counts."
+  ]
+}

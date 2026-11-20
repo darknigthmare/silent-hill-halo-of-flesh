@@ -1,0 +1,108 @@
+{
+  "schema": "sprite-native-visual-review/1",
+  "date": "2026-11-17",
+  "label": "sprite-suite-steel",
+  "machineReport": "report.json",
+  "machineChecks": 39,
+  "failedMachineChecks": 0,
+  "passed": true,
+  "mode": "Actual FightEngine with native Canvas; not browser screenshots",
+  "characters": [
+    "bom_steel_guardian_146",
+    "downpour_anne_cunningham"
+  ],
+  "portraitRenders": 4,
+  "duels": 2,
+  "finalCapturesInspected": [
+    {
+      "file": "duel-bom_steel_guardian_146--downpour_anne_cunningham-tick120.png",
+      "sha256": "cfaed00412a2b3947c96e8cbfcdb4873f5aa47fb52acf927ca285a07af4385ec"
+    },
+    {
+      "file": "duel-downpour_anne_cunningham--bom_steel_guardian_146-tick120.png",
+      "sha256": "e5bee508f6d27f7cba9c7618b90f70aa384928c29f5fa019b103b57e64c69627"
+    }
+  ],
+  "selectionPortraitCapturesInspected": [
+    {
+      "file": "portrait-bom_steel_guardian_146-right.png",
+      "sha256": "7430efeb151abc8f05cf8c04abe7f19e1495ebbcd0fcdcfede56e800e7a6bc79"
+    },
+    {
+      "file": "portrait-bom_steel_guardian_146-left.png",
+      "sha256": "bf7b7d7377cc69096805520ea71f209323c2b885367edfaa108b389e0cd6c5d7"
+    }
+  ],
+  "visualFindings": {
+    "orientation": "Steel Guardian turns its head and central body toward Anne in both slot orders. The distinct side-facing combat silhouette is used.",
+    "combatExterior": "Both mechanical wings, horn/spike tips, hanging blades, visible chains, hands and long foot claws remain complete in both final captures.",
+    "portraitExterior": "Both 500 by 500 selection portraits were inspected. The broad frontal wings, hanging chains/blades and claws are complete despite the source portrait narrow vertical margin.",
+    "alpha": "The stage/portrait background remains visible around and between the silhouette parts. No opaque rectangle or conspicuous background halo observed at the displayed sizes.",
+    "hoverAnchor": "The lowest visible point is 4.3607 px above the engine ground in both slots; the central body and claws visibly hang above the shadow. This agrees with the requested suspended pose.",
+    "camera": "Real engine camera scale is 0.9303687252 in both duels. The exterior wing retains 28.6819 px from the nearest viewport edge, so the wide asymmetric silhouette is included.",
+    "selectionIsolation": "Draw tracing confirms only assets/sprites/bom_steel_guardian_146.221d68a36f7a.png is used for Steel in combat; selection uses assets/sprites/bom_steel_guardian_146.34f6a40e4729.png.",
+    "calibration": "The supplied anchor [0.725, 0.98] and bodyHeight 0.86 require no correction for these idle views."
+  },
+  "measurements": [
+    {
+      "pair": [
+        "bom_steel_guardian_146",
+        "downpour_anne_cunningham"
+      ],
+      "cameraScale": 0.9303687252353431,
+      "actors": [
+        {
+          "id": "bom_steel_guardian_146",
+          "slot": 1,
+          "visibleBottomMinusGroundPx": -4.3607,
+          "viewportMarginLeftPx": 28.6819,
+          "viewportMarginRightPx": 843.6276,
+          "complete": true
+        },
+        {
+          "id": "downpour_anne_cunningham",
+          "slot": 2,
+          "visibleBottomMinusGroundPx": 1.4325,
+          "viewportMarginLeftPx": 922.5666,
+          "viewportMarginRightPx": 255.0746,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "pair": [
+        "downpour_anne_cunningham",
+        "bom_steel_guardian_146"
+      ],
+      "cameraScale": 0.9303687252353431,
+      "actors": [
+        {
+          "id": "downpour_anne_cunningham",
+          "slot": 1,
+          "visibleBottomMinusGroundPx": 1.4325,
+          "viewportMarginLeftPx": 255.0746,
+          "viewportMarginRightPx": 922.5666,
+          "complete": true
+        },
+        {
+          "id": "bom_steel_guardian_146",
+          "slot": 2,
+          "visibleBottomMinusGroundPx": -4.3607,
+          "viewportMarginLeftPx": 843.6276,
+          "viewportMarginRightPx": 28.6819,
+          "complete": true
+        }
+      ]
+    }
+  ],
+  "registryUnchangedDuringRun": true,
+  "manifestUnchangedDuringRun": true,
+  "limits": [
+    "Only static idle and intro/pause paths were exercised; no source animation, attack/collision fidelity or 1:1 fidelity is certified.",
+    "Left-facing appearance is the engine mirror, not a separately sourced opposite-side asset.",
+    "No blade or chain-link count is certified by this game render review.",
+    "Browser DOM, CSS, input, decoding and service worker were not tested.",
+    "Sharp normalizes PNG encoding losslessly in memory; source PNGs remain unchanged."
+  ],
+  "registryAdjustmentRecommended": false
+}

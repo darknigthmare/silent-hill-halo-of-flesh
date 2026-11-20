@@ -1,0 +1,1790 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-19T11:57:42.017Z",
+  "repositoryRoot": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh",
+  "localHead": "857d4b8136c4e81097d49927033cd6c454b608fc",
+  "scope": "Read-only stage audit; no generation or repository edits. Bitmap absence differs from existing procedural Canvas stage.",
+  "counts": {
+    "roster": 123,
+    "activeStages": 32,
+    "missingStages": 91,
+    "manifestStageKeys": 32,
+    "storedRoomCompositions": 34,
+    "inactiveManifestMappings": 0,
+    "missingBlocked": 15,
+    "missingUnblocked": 76,
+    "missingActiveRasterFiles": 0
+  },
+  "runtimeFindings": [
+    "stageBitmapFor validates stageId/source, rejects unresolved stages, then selects the exact referencePolicy.sceneId among root/variants.",
+    "32 current stage IDs resolve to a bitmap; 91 IDs resolve to null. All 91 are absent from the manifest, not inactive historical-room mappings.",
+    "34 room compositions are stored for 32 IDs: woodside and shopping_mall each retain one historical room plus the currently selected room.",
+    "All 12 proposed targets are absent, unblocked and currently have no forced sceneId, so their exact IDs can select new root descriptors without remapping.",
+    "hinako_home and shimizu_residence are different rooms in the same address; both remain distinct IDs.",
+    "Use per-stage source and room scopes; a generic new bitmap must not substitute another edition or another room."
+  ],
+  "missingRasterFiles": [],
+  "historicalArchiveStatus": {
+    "paths": [
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/batch10-stages-2026-10-26",
+        "exists": false
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/batch9-stages-2026-10-26",
+        "exists": false
+      },
+      {
+        "path": "/workspace/shared/halo-of-flesh/references/batch8-roles-2026-10-26",
+        "exists": false
+      }
+    ],
+    "proof": "Repository JSON source records and SHA256s exist, but historical external archive paths do not. Re-fetch only chosen small reference images before generation."
+  },
+  "groups": {
+    "A": [
+      "nightmare_mall",
+      "sewers",
+      "lakeside_sh3",
+      "nightmare_hospital_sh3"
+    ],
+    "B": [
+      "dark_shrine",
+      "school_shf",
+      "hinako_home",
+      "shimizu_residence"
+    ],
+    "C": [
+      "hospital_world",
+      "artaud_theater",
+      "devils_pit",
+      "overlook"
+    ]
+  },
+  "targets": [
+    {
+      "group": "A",
+      "id": "nightmare_mall",
+      "source": "sh3",
+      "name": "CENTRAL SQUARE — NIGHTMARE MALL",
+      "worldState": "fixed-altered",
+      "room": "Palier de l’arène Split Worm, six ouvertures conservées, sans boss.",
+      "proposedSceneId": "split-worm-six-openings-platform",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "CL_SH3_03_NIGHTMARE_MALL"
+      ],
+      "references": [
+        {
+          "id": "CL_SH3_03_NIGHTMARE_MALL",
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough_03_nightmare_mall_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Lieu, rencontres et événements du chapitre exact.",
+          "proofFile": "docs/production/research/classic.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/classic.json",
+        "docs/production/batches/lot9-stages.json",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-lot9.test.mjs"
+      ],
+      "locationNote": "Centre commercial Otherworld de SH3, comprenant l’arène souterraine de Split Worm.",
+      "visualReferenceStatus": "Exact guide/chapter and scope recorded; retrieve and inspect the relevant native screenshot before generation."
+    },
+    {
+      "group": "A",
+      "id": "sewers",
+      "source": "sh3",
+      "name": "SEWER CHANNEL",
+      "worldState": "fixed-normal",
+      "room": "Passerelle du canal après le sèche-cheveux ; eau en contrebas, câble posé, aucun courant actif.",
+      "proposedSceneId": "underpass-canal-after-hairdryer",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "CL_SH3_05_UNDERPASS"
+      ],
+      "references": [
+        {
+          "id": "CL_SH3_05_UNDERPASS",
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough_05_underpass_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Lieu, rencontres et événements du chapitre exact.",
+          "proofFile": "docs/production/research/classic.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/classic.json",
+        "docs/production/AUTHORING_BRIEF_2026-11-17.md",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-sh1-sh3-rooms.test.mjs"
+      ],
+      "locationNote": "Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau. Vue retenue : passerelle du canal APRÈS usage du sèche-cheveux, car le câble n’est installé qu’à ce moment. Eau sous la passerelle, sans ennemi vivant réintroduit ni courant électrique jouable. Vibrations du câble/remous proposés, pas plateau de duel inondé.",
+      "visualReferenceStatus": "Exact guide/chapter and scope recorded; retrieve and inspect the relevant native screenshot before generation."
+    },
+    {
+      "group": "A",
+      "id": "lakeside_sh3",
+      "source": "sh3",
+      "name": "LAKESIDE AMUSEMENT PARK — SH3",
+      "worldState": "fixed-normal",
+      "room": "Plateau du Happy Carousel SH3 avant transition et Memory of Alessa ; sculptures fixées aux mâts.",
+      "proposedSceneId": "happy-carousel-before-transition",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK"
+      ],
+      "references": [
+        {
+          "id": "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK",
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough_13_lakeside_amusement_park_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Lieu, rencontres et événements du chapitre exact.",
+          "proofFile": "docs/production/research/classic.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/classic.json",
+        "docs/production/AUTHORING_BRIEF_2026-11-17.md",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-sh1-sh3-rooms.test.mjs"
+      ],
+      "locationNote": "Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1. Vue retenue : Happy Carousel SH3 AVANT sa transition et Memory of Alessa ; trois sculptures visibles sur mâts fixes interprètent une partie des douze chevaux. Va-et-vient proposé, ni gaz nocif/puzzle/Alessa ou Cybil ajouté. Plateau couvert distinct du béton humide extérieur ; physique et caméra non certifiées.",
+      "visualReferenceStatus": "Exact guide/chapter and scope recorded; retrieve and inspect the relevant native screenshot before generation."
+    },
+    {
+      "group": "A",
+      "id": "nightmare_hospital_sh3",
+      "source": "sh3",
+      "name": "BROOKHAVEN — NIGHTMARE HOSPITAL",
+      "worldState": "fixed-altered",
+      "room": "Salle au miroir de Brookhaven Otherworld SH3, isolée du bassin Leonard ; choisir un instant statique sans Heather.",
+      "proposedSceneId": "brookhaven-otherworld-mirror-storage",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "CL_SH3_12_NIGHTMARE_HOSPITAL"
+      ],
+      "references": [
+        {
+          "id": "CL_SH3_12_NIGHTMARE_HOSPITAL",
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough_12_nightmare_hospital_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Lieu, rencontres et événements du chapitre exact.",
+          "proofFile": "docs/production/research/classic.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/classic.json",
+        "docs/production/AUTHORING_BRIEF_2026-11-17.md",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-reference-policy.test.mjs"
+      ],
+      "locationNote": "Brookhaven Otherworld de SH3 ; salle au miroir isolée du bassin Leonard.",
+      "visualReferenceStatus": "Exact guide/chapter and scope recorded; retrieve and inspect the relevant native screenshot before generation."
+    },
+    {
+      "group": "B",
+      "id": "dark_shrine",
+      "source": "shf",
+      "name": "DARK SHRINE — PARVIS DE SHRINE VAULT",
+      "worldState": "fixed-altered",
+      "room": "Parvis extérieur devant Shrine Vault fermé, petit Hokora à gauche, corde/shide et lanternes.",
+      "proposedSceneId": "shrine-vault-closed-forecourt",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "EXT33",
+        "EXT34",
+        "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+        "EXT10_SHF_SHRINE_HOKORA_20261026"
+      ],
+      "references": [
+        {
+          "id": "EXT33",
+          "url": "https://www.silenthillmemories.net/shf/monsters_en.htm",
+          "type": "secondaire-transcription-jeu",
+          "scope": "Noms, journaux et silhouettes des 11 ennemis",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT34",
+          "url": "https://www.silenthillmemories.net/shf/bosses_en.htm",
+          "type": "secondaire-transcription-jeu",
+          "scope": "Entités Sakuko/Rinko, parents et boss de fins",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough_02_dark_shrine_path_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Parvis, Hokora et accès au Shrine Vault au début de Dark Shrine Path ; contexte de pièce, pas mouvement attesté.",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT10_SHF_SHRINE_HOKORA_20261026",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/02_shrine_vault.jpg",
+          "type": "capture-jeu-republiee-par-guide",
+          "scope": "Parvis du Shrine Vault : petit Hokora à gauche avec corde et papiers shide, lanternes et porte fermée devant Hinako.",
+          "proofFile": "docs/production/research/extended.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/extended.json",
+        "docs/production/batches/lot10-stages.json",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-lot10.test.mjs"
+      ],
+      "locationNote": "Dark Shrine Path : parvis extérieur devant la porte encore fermée du Shrine Vault. Le petit Hokora à gauche porte une corde et des papiers shide, près des lanternes et des marches. Ce cadrage ne fusionne pas les corridors, Main Hall ou Treasure Hall ; oscillation et éclairage du versus restent adaptés, sans vent ou mouvement original mesuré.",
+      "visualReferenceStatus": "Fixed screenshot URL and prior inspection recorded in repository; historical local archive absent."
+    },
+    {
+      "group": "B",
+      "id": "school_shf",
+      "source": "shf",
+      "name": "EBISUGAOKA SCHOOL — BUREAU DU PERSONNEL",
+      "worldState": "fixed-normal",
+      "room": "Bureau du personnel au coffret de clés ; tableau mural de service, armoire et plancher bois.",
+      "proposedSceneId": "staff-room-back-mountains-key-box",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "EXT32",
+        "EXT10_SHF_SCHOOL_GUIDE_20261026",
+        "EXT10_SHF_STAFF_ROOM_20261026"
+      ],
+      "references": [
+        {
+          "id": "EXT32",
+          "url": "https://www.konami.com/games/eu/fr/products/silenthill_f/",
+          "type": "primaire-editeur",
+          "scope": "Œuvre publiée 25/09/2025; Ebisugaoka, Japon années1960",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT10_SHF_SCHOOL_GUIDE_20261026",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough_06_ebisugaoka_middle_school_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Bureau du personnel et coffret de la Key to the Back Mountains ; distinction avec salles de classe et couloirs.",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT10_SHF_STAFF_ROOM_20261026",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/06_key_to_the_back_mountains_a.jpg",
+          "type": "capture-jeu-republiee-par-guide",
+          "scope": "Bureau du personnel : coffret à clés et tableau mural de service à sa droite, distinct d’un tableau de classe.",
+          "proofFile": "docs/production/research/extended.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/extended.json",
+        "docs/production/batches/lot10-stages.json",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-lot10.test.mjs"
+      ],
+      "locationNote": "Ebisugaoka Middle School : bureau du personnel au coffret de la Key to the Back Mountains. La capture montre un tableau mural de service à droite du coffret, une armoire et du bois au sol ; il ne s’agit pas d’une salle de classe ou d’un couloir à rideaux. Ne pas importer Hinako, la clé, sa prise, son arme ou des ennemis. Animation, caméra et dimensions restent à produire ou comparer.",
+      "visualReferenceStatus": "Fixed screenshot URL and prior inspection recorded in repository; historical local archive absent."
+    },
+    {
+      "group": "B",
+      "id": "hinako_home",
+      "source": "shf",
+      "name": "SHIMIZU RESIDENCE I — CORRIDOR D’ENTRÉE",
+      "worldState": "fixed-normal",
+      "room": "Shimizu Residence I, corridor de sortie, plancher bois et porte coulissante translucide.",
+      "proposedSceneId": "residence-i-entry-corridor",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "EXT34",
+        "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+        "EXT10_SHF_RESIDENCE_ENTRY_20261026"
+      ],
+      "references": [
+        {
+          "id": "EXT34",
+          "url": "https://www.silenthillmemories.net/shf/bosses_en.htm",
+          "type": "secondaire-transcription-jeu",
+          "scope": "Entités Sakuko/Rinko, parents et boss de fins",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Parcours ResidenceI, salle à manger du calendrier et corridor de sortie ; deux pièces de la même résidence, pas deux adresses.",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT10_SHF_RESIDENCE_ENTRY_20261026",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_shimizu_residence_i_exit.jpg",
+          "type": "capture-jeu-republiee-par-guide",
+          "scope": "ResidenceI, corridor de sortie : plancher de bois et huisserie coulissante quadrillée à panneaux translucides.",
+          "proofFile": "docs/production/research/extended.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/extended.json",
+        "docs/production/batches/lot10-stages.json",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-lot10.test.mjs"
+      ],
+      "locationNote": "Shimizu ResidenceI : corridor d’entrée/sortie avec plancher de bois et porte coulissante à panneaux translucides, cadré par la vue de fin de cette visite. Il s’agit de la même résidence que shimizu_residence, ici dans une pièce différente ; aucune seconde maison n’est inventée. Ni passage de porte, ouverture ou transition vers ResidenceII ne sont automatiquement rejoués.",
+      "visualReferenceStatus": "Fixed screenshot URL and prior inspection recorded in repository; historical local archive absent."
+    },
+    {
+      "group": "B",
+      "id": "shimizu_residence",
+      "source": "shf",
+      "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+      "worldState": "fixed-normal",
+      "room": "Shimizu Residence I, salle à manger du calendrier jauni, tatamis et table basse ronde.",
+      "proposedSceneId": "residence-i-yellowed-calendar-dining",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "EXT34",
+        "EXT41",
+        "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+        "EXT10_SHF_RESIDENCE_DINING_20261026"
+      ],
+      "references": [
+        {
+          "id": "EXT34",
+          "url": "https://www.silenthillmemories.net/shf/bosses_en.htm",
+          "type": "secondaire-transcription-jeu",
+          "scope": "Entités Sakuko/Rinko, parents et boss de fins",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT41",
+          "url": "https://automaton-media.com/en/tips/silent-hill-f-how-to-defeat-the-mother-and-father-bosses/",
+          "type": "secondaire-guide",
+          "scope": "Père comme Ara-abare; mère lancer et saisie",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Parcours ResidenceI, salle à manger du calendrier et corridor de sortie ; deux pièces de la même résidence, pas deux adresses.",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT10_SHF_RESIDENCE_DINING_20261026",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_yellowed_calendar_a.jpg",
+          "type": "capture-jeu-republiee-par-guide",
+          "scope": "ResidenceI, salle à manger du calendrier : tatamis, table basse ronde, coussins et vaisselle visibles.",
+          "proofFile": "docs/production/research/extended.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/extended.json",
+        "docs/production/batches/lot10-stages.json",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-lot10.test.mjs"
+      ],
+      "locationNote": "Shimizu ResidenceI : salle à manger du Yellowed Calendar, avec tatamis, table basse ronde, coussins et vaisselle. Cette pièce se distingue du corridor retenu pour hinako_home, sans créer une autre adresse. Elle n’est pas fusionnée avec la rencontre des parents, une variante ultérieure ou une scène de repas animée ; caméra et géométrie ne sont pas mesurées.",
+      "visualReferenceStatus": "Fixed screenshot URL and prior inspection recorded in repository; historical local archive absent."
+    },
+    {
+      "group": "C",
+      "id": "hospital_world",
+      "source": "sh4",
+      "name": "HOSPITAL WORLD",
+      "worldState": "fixed-normal",
+      "room": "Couloir des chambres au deuxième étage SH4 ; hors chambre à tête géante, pas de lits ou ennemis.",
+      "proposedSceneId": "hospital-second-floor-corridor",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "CL_SH4_07_HOSPITAL_WORLD"
+      ],
+      "references": [
+        {
+          "id": "CL_SH4_07_HOSPITAL_WORLD",
+          "url": "https://www.silenthillmemories.net/sh4/walkthrough_07_hospital_world_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Lieu, rencontres et événements du chapitre exact.",
+          "proofFile": "docs/production/research/classic.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/classic.json",
+        "docs/production/AUTHORING_BRIEF_2026-11-17.md",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-sh4-proposals.test.mjs"
+      ],
+      "locationNote": "Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven. Vue retenue : couloir des chambres au 2e étage, sans chambre de tête géante ni lits. Le fauteuil abstrait de fond est la proposition versus ; les Wheelchairs sont des ennemis dans SH4, leurs dégâts/IA ne sont pas importés par cette piste décorative. Aucun réarrangement des pièces actives.",
+      "visualReferenceStatus": "Exact guide/chapter and scope recorded; retrieve and inspect the relevant native screenshot before generation."
+    },
+    {
+      "group": "C",
+      "id": "artaud_theater",
+      "source": "origins",
+      "name": "ARTAUD THEATER",
+      "worldState": "fixed-normal",
+      "room": "Plateau normal éclairé après les quatre ampoules et lever du rideau ; avant mélange des états de leviers/miroir.",
+      "proposedSceneId": "normal-theater-stage-lit",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "EXT03",
+        "EXT01",
+        "EXT_ORIGINS_THEATER_GUIDE_20261026"
+      ],
+      "references": [
+        {
+          "id": "EXT03",
+          "url": "https://www.silenthillmemories.net/sh0/maps_en.htm",
+          "type": "secondaire-guide",
+          "scope": "Noms et plans des lieux Origins",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT01",
+          "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+          "type": "secondaire-guide",
+          "scope": "Identité et gestes des ennemis Origins",
+          "proofFile": "docs/production/research/extended.json"
+        },
+        {
+          "id": "EXT_ORIGINS_THEATER_GUIDE_20261026",
+          "url": "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+          "type": "guide-specialise-secondaire",
+          "scope": "Parcours Artaud : projecteurs rétablis dans le monde normal, commande du rideau puis leviers des décors et grand miroir ; phases du plateau distinctes.",
+          "proofFile": "docs/production/research/extended.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/extended.json",
+        "docs/production/research/role-decisions-batch8-2026-10-26.json",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-later-games.test.mjs"
+      ],
+      "locationNote": "Artaud Theater, Origins : plateau normal après pose et activation des quatre ampoules du catwalk, puis lever du rideau depuis Curtain Control. Le guide distingue ensuite les configurations commandées par leviers et le passage du grand miroir, dont l’état menant au combat Caliban ; le prototype ne fusionne pas ces états. Éclairage fixe de la scène documenté, balayage cyclique et caméra du versus non mesurés.",
+      "visualReferenceStatus": "Exact guide/chapter and scope recorded; retrieve and inspect the relevant native screenshot before generation."
+    },
+    {
+      "group": "C",
+      "id": "devils_pit",
+      "source": "downpour",
+      "name": "DEVIL’S PIT",
+      "worldState": "fixed-normal",
+      "room": "Cavité des roues hydrauliques/lift vue depuis une coursive sèche, poutres et conduites.",
+      "proposedSceneId": "water-wheels-cavern-dry-catwalk",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "EXT11"
+      ],
+      "references": [
+        {
+          "id": "EXT11",
+          "url": "https://www.silenthillmemories.net/sh8/walkthrough_en.htm",
+          "type": "secondaire-guide",
+          "scope": "Sections du parcours et lieux",
+          "proofFile": "docs/production/research/extended.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/extended.json",
+        "docs/production/AUTHORING_BRIEF_2026-11-17.md",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-room-scope.test.mjs"
+      ],
+      "locationNote": "Devil’s Pit; préciser attraction, mine ou arrivée ferroviaire. Vue retenue : cavité intérieure des roues hydrauliques/lift, depuis la coursive sèche ; poutres et conduites de l’illustration du puzzle Water Wheels. Gouttes de traverse proposées pour le versus ; attraction extérieure, cave inondée adjacente et trajet de train hors cadre, aucun puzzle ou pompe automatique.",
+      "visualReferenceStatus": "Exact guide/chapter and scope recorded; retrieve and inspect the relevant native screenshot before generation."
+    },
+    {
+      "group": "C",
+      "id": "overlook",
+      "source": "downpour",
+      "name": "OVERLOOK PENITENTIARY",
+      "worldState": "fixed-normal",
+      "room": "Coursive Block A normale Downpour, avant la vision du couloir inondé.",
+      "proposedSceneId": "block-a-before-flooded-vision",
+      "currentSceneId": null,
+      "runtimeUsable": true,
+      "referenceIds": [
+        "EXT11"
+      ],
+      "references": [
+        {
+          "id": "EXT11",
+          "url": "https://www.silenthillmemories.net/sh8/walkthrough_en.htm",
+          "type": "secondaire-guide",
+          "scope": "Sections du parcours et lieux",
+          "proofFile": "docs/production/research/extended.json"
+        }
+      ],
+      "proofFiles": [
+        "docs/production/research/extended.json",
+        "docs/production/batches/lot9-stages.json",
+        "src/stage-reference-policy.js",
+        "src/stage-architecture.js",
+        "tests/stage-lot9.test.mjs"
+      ],
+      "locationNote": "Overlook Penitentiary version Downpour; ne pas reprendre le plan de Homecoming. Vue retenue : coursive BlockA de la prison normale Downpour, avant la cellule transformée en couloir inondé. Ombres des barreaux proposées pour le versus ; tours extérieures, showers/crime scene, workshop flooding et PrisonHC séparés.",
+      "visualReferenceStatus": "Exact guide/chapter and scope recorded; retrieve and inspect the relevant native screenshot before generation."
+    }
+  ],
+  "inventory": [
+    {
+      "id": "midwich",
+      "source": "sh1",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "normal-courtyard",
+      "storedScenes": [
+        "normal-courtyard"
+      ]
+    },
+    {
+      "id": "alchemilla",
+      "source": "sh1",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "normal-waiting-room",
+      "storedScenes": [
+        "normal-waiting-room"
+      ]
+    },
+    {
+      "id": "old_silent_hill",
+      "source": "sh1",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "nowhere",
+      "source": "sh1",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "lakeside_amusement",
+      "source": "sh1",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "cybil-carousel-platform-1999",
+      "storedScenes": [
+        "cybil-carousel-platform-1999"
+      ]
+    },
+    {
+      "id": "woodside",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": "woodside-208-clock-room",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "woodside-208-clock-room",
+      "storedScenes": [
+        "original-pc-corridor",
+        "woodside-208-clock-room"
+      ]
+    },
+    {
+      "id": "blue_creek",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": "blue-creek-stairwell-before-drainage",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "blue-creek-stairwell-before-drainage",
+      "storedScenes": [
+        "blue-creek-stairwell-before-drainage"
+      ]
+    },
+    {
+      "id": "brookhaven_sh2",
+      "source": "sh2",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "otherworld-b1-elevator-terminus",
+      "storedScenes": [
+        "otherworld-b1-elevator-terminus"
+      ]
+    },
+    {
+      "id": "toluca_prison",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": "toluca-courtyard-scaffold",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "toluca-courtyard-scaffold",
+      "storedScenes": [
+        "toluca-courtyard-scaffold"
+      ]
+    },
+    {
+      "id": "labyrinth",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": "labyrinth-box-of-faces-control",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "labyrinth-box-of-faces-control",
+      "storedScenes": [
+        "labyrinth-box-of-faces-control"
+      ]
+    },
+    {
+      "id": "hotel_otherworld",
+      "source": "sh2",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "shopping_mall",
+      "source": "sh3",
+      "worldState": "fixed-normal",
+      "sceneId": "central-square-happy-burger",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "central-square-happy-burger",
+      "storedScenes": [
+        "normal-helens-bakery",
+        "central-square-happy-burger"
+      ]
+    },
+    {
+      "id": "brookhaven_sh3",
+      "source": "sh3",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "leonard-basin-below-c4",
+      "storedScenes": [
+        "leonard-basin-below-c4"
+      ]
+    },
+    {
+      "id": "church",
+      "source": "sh3",
+      "worldState": "fixed-normal",
+      "sceneId": "sh3-chapel-before-altar-departure",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "sh3-chapel-before-altar-departure",
+      "storedScenes": [
+        "sh3-chapel-before-altar-departure"
+      ]
+    },
+    {
+      "id": "apartment_roof",
+      "source": "sh3",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "sewers",
+      "source": "sh3",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "room_302",
+      "source": "sh4",
+      "worldState": "fixed-normal",
+      "sceneId": "room302-first-entry-door",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "room302-first-entry-door",
+      "storedScenes": [
+        "room302-first-entry-door"
+      ]
+    },
+    {
+      "id": "subway_world",
+      "source": "sh4",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "lynch-street-platform-first-visit",
+      "storedScenes": [
+        "lynch-street-platform-first-visit"
+      ]
+    },
+    {
+      "id": "water_prison",
+      "source": "sh4",
+      "worldState": "fixed-normal",
+      "sceneId": "water-prison-2f-surveillance",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "water-prison-2f-surveillance",
+      "storedScenes": [
+        "water-prison-2f-surveillance"
+      ]
+    },
+    {
+      "id": "apartment_world",
+      "source": "sh4",
+      "worldState": "fixed-normal",
+      "sceneId": "south-ashfield-room105-desk",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "south-ashfield-room105-desk",
+      "storedScenes": [
+        "south-ashfield-room105-desk"
+      ]
+    },
+    {
+      "id": "hospital_world",
+      "source": "sh4",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "cedar_grove",
+      "source": "origins",
+      "worldState": "fixed-normal",
+      "sceneId": "female-treatment-mirror",
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "riverside_motel",
+      "source": "origins",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "riverside-motel-mist-guest-courtyard",
+      "storedScenes": [
+        "riverside-motel-mist-guest-courtyard"
+      ]
+    },
+    {
+      "id": "shepherds_glen",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "grand_hotel",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "nightmare_school",
+      "source": "shattered",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "overlook",
+      "source": "downpour",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "arcade_ship",
+      "source": "arcade",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "book_zone",
+      "source": "bom",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "looping_hall",
+      "source": "pt",
+      "worldState": "fixed-normal",
+      "sceneId": "lit-beige-hall-unidentified-loop",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "lit-beige-hall-unidentified-loop",
+      "storedScenes": [
+        "lit-beige-hall-unidentified-loop"
+      ]
+    },
+    {
+      "id": "villa",
+      "source": "shortmessage",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "ebisugaoka",
+      "source": "shf",
+      "worldState": "versus-transition",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "dark_shrine",
+      "source": "shf",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "school_shf",
+      "source": "shf",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "hinako_home",
+      "source": "shf",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "festival_square",
+      "source": "shf",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "book_fire",
+      "source": "bom",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "book_wood",
+      "source": "bom",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "wood-guardian-clearing",
+      "storedScenes": [
+        "wood-guardian-clearing"
+      ]
+    },
+    {
+      "id": "book_light",
+      "source": "bom",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "book_water",
+      "source": "bom",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "book_earth",
+      "source": "bom",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "book_blood",
+      "source": "bom",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "book_steel",
+      "source": "bom",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "antique_shop",
+      "source": "origins",
+      "worldState": "fixed-altered",
+      "sceneId": "green-lion-inner-passage",
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "church_hc",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": "holy-way-main-hall-before-glass-break",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "holy-way-main-hall-before-glass-break",
+      "storedScenes": [
+        "holy-way-main-hall-before-glass-break"
+      ]
+    },
+    {
+      "id": "underground_hc",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": "founding-families-antechamber",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "founding-families-antechamber",
+      "storedScenes": [
+        "founding-families-antechamber"
+      ]
+    },
+    {
+      "id": "film_midwich",
+      "source": "film",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "film_hospital",
+      "source": "film",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "alessa-isolation-room-2006",
+      "storedScenes": [
+        "alessa-isolation-room-2006"
+      ]
+    },
+    {
+      "id": "film_church",
+      "source": "film",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "film_sanctuary",
+      "source": "film",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "hope_junction",
+      "source": "ascension",
+      "worldState": "versus-transition",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "stilledalen",
+      "source": "ascension",
+      "worldState": "versus-transition",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "ascension_otherworld",
+      "source": "ascension",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "hospital_nightmare",
+      "source": "sh1",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "midwich_nightmare",
+      "source": "sh1",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "otherworld-boiler-hearth",
+      "storedScenes": [
+        "otherworld-boiler-hearth"
+      ]
+    },
+    {
+      "id": "central_nightmare",
+      "source": "sh1",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "sewer_resort",
+      "source": "sh1",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "south_vale",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "brookhaven_roof",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "original-roof-before-fall",
+      "storedScenes": [
+        "original-roof-before-fall"
+      ]
+    },
+    {
+      "id": "historical_society",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "second-exhibition-room",
+      "storedScenes": [
+        "second-exhibition-room"
+      ]
+    },
+    {
+      "id": "prison_meat_locker",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "lakeview",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "normal-lobby-before-video",
+      "storedScenes": [
+        "normal-lobby-before-video"
+      ]
+    },
+    {
+      "id": "baldwin_mansion",
+      "source": "sh2",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "closed-lounge-landing",
+      "storedScenes": [
+        "closed-lounge-landing"
+      ]
+    },
+    {
+      "id": "nightmare_mall",
+      "source": "sh3",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "hazel_subway",
+      "source": "sh3",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "underpass_sh3",
+      "source": "sh3",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "hilltop_center",
+      "source": "sh3",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "monica-reception-normal",
+      "storedScenes": [
+        "monica-reception-normal"
+      ]
+    },
+    {
+      "id": "nightmare_hilltop",
+      "source": "sh3",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "nightmare_hospital_sh3",
+      "source": "sh3",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "lakeside_sh3",
+      "source": "sh3",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "forest_world",
+      "source": "sh4",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "first-visit-rocky-clearing",
+      "storedScenes": [
+        "first-visit-rocky-clearing"
+      ]
+    },
+    {
+      "id": "building_world",
+      "source": "sh4",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "b12-b15-fan-stairwell-first-visit",
+      "storedScenes": [
+        "b12-b15-fan-stairwell-first-visit"
+      ]
+    },
+    {
+      "id": "outside_room_302",
+      "source": "sh4",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "wish_house",
+      "source": "sh4",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "final_sacrament",
+      "source": "sh4",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "alchemilla_origins",
+      "source": "origins",
+      "worldState": "versus-transition",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "artaud_theater",
+      "source": "origins",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "nightmare_theater",
+      "source": "origins",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "nightmare_hospital_hc",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "police_station_hc",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "town_hall_hc",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "prison_hc",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "shepherd_house_hc",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "scarlet_chamber",
+      "source": "homecoming",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "curtis_shop",
+      "source": "homecoming",
+      "worldState": "fixed-normal",
+      "sceneId": "junkyard-counter-first-exchange",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "junkyard-counter-first-exchange",
+      "storedScenes": [
+        "junkyard-counter-first-exchange"
+      ]
+    },
+    {
+      "id": "frozen_streets",
+      "source": "shattered",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "nightmare_hospital_sm",
+      "source": "shattered",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "nightmare_mall_sm",
+      "source": "shattered",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "lighthouse_sm",
+      "source": "shattered",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "devils_pit",
+      "source": "downpour",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "centennial_building",
+      "source": "downpour",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "st_marias",
+      "source": "downpour",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "downpour_streets",
+      "source": "downpour",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "otherworld_void",
+      "source": "downpour",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "anne_fight",
+      "source": "downpour",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "arcade_city",
+      "source": "arcade",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "arcade_hospital",
+      "source": "arcade",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "arcade_hospital_roof",
+      "source": "arcade",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "arcade_historical",
+      "source": "arcade",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "arcade_prison",
+      "source": "arcade",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "arcade_graveyard",
+      "source": "arcade",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "arcade_toluca_lake",
+      "source": "arcade",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "arcade_1918",
+      "source": "arcade",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "arcade_1993",
+      "source": "arcade",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "arcade_mall",
+      "source": "arcade",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "arcade_amusement",
+      "source": "arcade",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "villa_rooftop",
+      "source": "shortmessage",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "villa_stairwell",
+      "source": "shortmessage",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "dark_shrine_corridors",
+      "source": "shf",
+      "worldState": "fixed-altered",
+      "sceneId": "inari-altar-before-replacement",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "inari-altar-before-replacement",
+      "storedScenes": [
+        "inari-altar-before-replacement"
+      ]
+    },
+    {
+      "id": "shimizu_residence",
+      "source": "shf",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "dark_shrine_main",
+      "source": "shf",
+      "worldState": "fixed-altered",
+      "sceneId": "first-ritual-chamber-threshold",
+      "bitmapActive": true,
+      "manifestPresent": true,
+      "blocked": false,
+      "selectedScene": "first-ritual-chamber-threshold",
+      "storedScenes": [
+        "first-ritual-chamber-threshold"
+      ]
+    },
+    {
+      "id": "corrupted_ebisugaoka",
+      "source": "shf",
+      "worldState": "fixed-altered",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "return_streets",
+      "source": "film",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "return_brookhaven",
+      "source": "film",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "return_lakeview",
+      "source": "film",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "return_portrait_room",
+      "source": "film",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "st_amelia_marina",
+      "source": "townfall",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "st_amelia_residential",
+      "source": "townfall",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    },
+    {
+      "id": "townfall_medical",
+      "source": "townfall",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "ceg_tower",
+      "source": "townfall",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "clara_woods",
+      "source": "townfall",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "clara_woods_different",
+      "source": "townfall",
+      "worldState": "unresolved",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": true
+    },
+    {
+      "id": "alternate_facility",
+      "source": "townfall",
+      "worldState": "fixed-normal",
+      "sceneId": null,
+      "bitmapActive": false,
+      "manifestPresent": false,
+      "blocked": false
+    }
+  ],
+  "limitations": [
+    "Inventory and metadata audit only; no fresh web-source access or visual QA performed in this audit.",
+    "All art will remain integrated candidates with unverified fidelity; static layers and parallax are not certified original animations.",
+    "No changes to characters, movesets, portraits or workbook."
+  ]
+}

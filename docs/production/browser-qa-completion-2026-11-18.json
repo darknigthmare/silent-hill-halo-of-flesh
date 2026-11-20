@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-18T06:44:52Z",
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "pr": {"number": 6, "state": "open", "draft": true, "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/pull/6"},
+  "branch": "art/missing-fullbody-20261117",
+  "head": "fd5b6d8969a8dc7f1bdcb92ed07a28a8c1c4abd4",
+  "tree": "c950e77ff9de54235fa171a60b5eff91c12df263",
+  "parent": "c2a9fc4acf1934294bb39d29e6759c747e90d87d",
+  "qa": {
+    "runId": 44197059644,
+    "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44197059644",
+    "status": "completed", "conclusion": "success", "completedAt": "2026-11-17T23:12:53Z",
+    "jobs": [{"id": 134441154112, "name": "test", "conclusion": "success", "tests": 1251, "passed": 1251, "failed": 0, "generatedFilesCheck": "success"}, {"id": 134441153672, "name": "sprite-importer", "conclusion": "success", "tests": 111, "passed": 111}]
+  },
+  "browser": {
+    "runId": 44197059597, "jobId": 134441158024,
+    "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44197059597/job/134441158024",
+    "status": "completed", "conclusion": "cancelled",
+    "startedAt": "2026-11-17T23:10:59Z", "completedAt": "2026-11-17T23:41:15Z",
+    "runner": "ubuntu-24.04", "configuredTimeoutMinutes": 30,
+    "command": "npm run build && npm run qa:browser",
+    "sequentialScripts": 16, "lastScriptReached": "scripts/http-qa-art92.mjs",
+    "completeJsonReportsExtracted": 14, "completeJsonReportsPassed": 14,
+    "riteRegression": {"name": "Rite 3 advances from a coherent match end to its next prepared encounter", "passed": true, "resultLogAt": "2026-11-17T23:14:16.0704416Z"},
+    "lastReports": [{"campaign": "art144", "logAt": "2026-11-17T23:38:46.2856585Z", "passed": true, "checks": 1018, "captures": 145}, {"campaign": "art92", "logAt": "2026-11-17T23:41:01.4206817Z", "passed": true, "checks": 424, "captures": 47}],
+    "cancellation": {"logAt": "2026-11-17T23:41:01.5293343Z", "message": "The operation was canceled.", "cause": "unconfirmed", "inference": "The elapsed time is consistent with the configured 30-minute job timeout. The log does not explicitly state the cause; the connector does not support the check-annotations endpoint.", "normalCommandExitConfirmed": false, "cleanupCompletionConfirmed": false},
+    "artifact": {"id": 14381078565, "name": "http-qa-v096", "sizeBytes": 286789432, "digestReportedByGitHub": "sha256:871d3a0d7403d3ea73f74f6fc2b549158219d5fdcb9a2ce9f304bf336e9c714e", "expiredAtCheck": false, "downloadedForThisReview": false, "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44197059597/artifacts/14381078565"}
+  },
+  "workflowChange": {"path": ".github/workflows/browser-qa.yml", "key": "jobs.browser.timeout-minutes", "before": 30, "after": 45, "reason": "Allow margin for process cleanup and runner variability after the last suite.", "otherWorkflowChanges": false, "assertionsRemoved": 0, "additionalTestsRun": false, "requiresNewRunForGlobalSuccess": true},
+  "limits": ["A positive final script report does not change the cancelled workflow conclusion.", "Fourteen parsed JSON reports are not a count of the sixteen scripts.", "The artifact digest is GitHub metadata, not an independently downloaded-archive hash.", "Historical reports from 2026-11-17 were not rewritten."]
+}

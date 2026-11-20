@@ -1,0 +1,31 @@
+{
+  "schema": "silent-hill-source-review/1",
+  "fighterId": "sh2_prisoner_035",
+  "edition": "Silent Hill 2, original continuity (2001). The examination video predates the remake.",
+  "result": "immaterial-form",
+  "generationAttempts": 0,
+  "newGameFiles": [],
+  "sources": [
+    {
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/048-049_en.htm",
+      "nature": "English translation of Konami’s Book of Lost Memories, Silent Hill 2 Creature Commentary, pp. 48–49. In the section on the unseen prison monster, the commentary ties the voice in the cell to the creature named prisoner. It supplies no creature silhouette."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mttqCjum9no&t=54s",
+      "nature": "Firsthand inspection of the level using a camera modification. The 90-second recording was sampled at one-second intervals, native cells 160×90. Changing the camera angle shows cell surfaces, bars and James. The sampled views do not establish a visible actor or a sprite outline; this observation makes no claim that no underlying technical model can exist.",
+      "path": "docs/production/wave6-references/downpour/prisoner-cell-camera-054s.png",
+      "sha256": "f47872db975c6b6bc6ec84041d7ca4358023bd9a2c1e9aee426e0b087b9cb068",
+      "sheetSha256": "aeedad4859ebd09e364cf31485b1250b99394b157367a194f67b6a93ace57bc4",
+      "sourceSheet": 2,
+      "sourceCell": 4,
+      "nominalSeconds": 54,
+      "cropXYXY": [
+        640,
+        0,
+        800,
+        90
+      ]
+    }
+  ],
+  "decision": "The audio cue, empty cell, reticle, and a possible hit response do not depict the Prisoner. Do not add a body or turn an invisible presence into an illustration. No generation."
+}

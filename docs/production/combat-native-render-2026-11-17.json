@@ -1,0 +1,1947 @@
+{
+  "schema": 1,
+  "kind": "native-canvas-engine-render",
+  "createdAt": "2026-11-17T13:28:40.612Z",
+  "backend": "@napi-rs/canvas",
+  "backendVersion": "0.1.100",
+  "browser": false,
+  "buildRun": false,
+  "registrySHA256": "745375872406b138b752b31f112673e35021067cf0733f19c000e1362741b45a",
+  "sourceCode": {
+    "src/sprite-system.js": "72d645597d3926994a328783b961d218694ea206ca554d44e6416fe0f38d2a4d",
+    "src/sprite-framing.js": "563aebcd9987de1841b4f71a58a06710bfd0dae1861dffaf6560487d4441baaf",
+    "src/sprite-animation.js": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+    "src/sprite-usage.js": "cce9eeb60700a40c0974709abb53a582838d27187d583bb4e800bf5922788541",
+    "src/combat-geometry.js": "b08f368df5617a4aebb17bb19256a1f895490efc4ef7d08df3d50c4f5878edab"
+  },
+  "sourceFiles": {
+    "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png": {
+      "sha256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        40,
+        65,
+        872,
+        1603
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        927,
+        1672
+      ],
+      "framingBounds": [
+        36,
+        62,
+        874,
+        1608
+      ]
+    },
+    "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png": {
+      "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        63,
+        61,
+        877,
+        1634
+      ],
+      "alphaBounds": [
+        0,
+        45,
+        923,
+        1672
+      ],
+      "framingBounds": [
+        60,
+        58,
+        879,
+        1641
+      ]
+    },
+    "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png": {
+      "sha256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        36,
+        280,
+        890,
+        1438
+      ],
+      "alphaBounds": [
+        0,
+        23,
+        931,
+        1668
+      ],
+      "framingBounds": [
+        33,
+        271,
+        891,
+        1446
+      ]
+    },
+    "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png": {
+      "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        27,
+        238,
+        897,
+        1394
+      ],
+      "alphaBounds": [
+        23,
+        37,
+        927,
+        1614
+      ],
+      "framingBounds": [
+        23,
+        231,
+        900,
+        1399
+      ]
+    },
+    "assets/sprites/downpour_shadow_107.4a43797eb735.png": {
+      "sha256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        73,
+        131,
+        886,
+        1541
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        923,
+        1672
+      ],
+      "framingBounds": [
+        70,
+        129,
+        889,
+        1544
+      ]
+    },
+    "assets/sprites/downpour_shadow_107.d39788178ac5.png": {
+      "sha256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        30,
+        207,
+        914,
+        1555
+      ],
+      "alphaBounds": [
+        17,
+        31,
+        927,
+        1672
+      ],
+      "framingBounds": [
+        21,
+        203,
+        926,
+        1560
+      ]
+    },
+    "assets/sprites/sh3_god_050.f6f8f72ed323.png": {
+      "sha256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        52,
+        25,
+        894,
+        1649
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        920,
+        1672
+      ],
+      "framingBounds": [
+        49,
+        22,
+        897,
+        1660
+      ]
+    },
+    "assets/sprites/sh3_god_050.ef8d8f24df0b.png": {
+      "sha256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        67,
+        50,
+        874,
+        1625
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        925,
+        1656
+      ],
+      "framingBounds": [
+        64,
+        46,
+        877,
+        1627
+      ]
+    },
+    "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png": {
+      "sha256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        76,
+        97,
+        818,
+        1573
+      ],
+      "alphaBounds": [
+        0,
+        19,
+        935,
+        1672
+      ],
+      "framingBounds": [
+        71,
+        93,
+        822,
+        1578
+      ]
+    },
+    "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png": {
+      "sha256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        149,
+        202,
+        729,
+        1498
+      ],
+      "alphaBounds": [
+        0,
+        152,
+        890,
+        1672
+      ],
+      "framingBounds": [
+        145,
+        194,
+        732,
+        1498
+      ]
+    },
+    "assets/sprites/origins_demon_084.abac0695168a.png": {
+      "sha256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+      "width": 1536,
+      "height": 1024,
+      "visibleBounds": [
+        233,
+        9,
+        1150,
+        1004
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1520,
+        1009
+      ],
+      "framingBounds": [
+        227,
+        0,
+        1152,
+        1009
+      ]
+    },
+    "assets/sprites/origins_demon_084.c23b0115c82b.png": {
+      "sha256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        27,
+        100,
+        920,
+        1573
+      ],
+      "alphaBounds": [
+        0,
+        4,
+        941,
+        1672
+      ],
+      "framingBounds": [
+        21,
+        97,
+        925,
+        1579
+      ]
+    },
+    "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png": {
+      "sha256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+      "width": 1672,
+      "height": 941,
+      "visibleBounds": [
+        136,
+        22,
+        1520,
+        905
+      ],
+      "alphaBounds": [
+        0,
+        14,
+        1634,
+        941
+      ],
+      "framingBounds": [
+        130,
+        17,
+        1531,
+        909
+      ]
+    },
+    "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png": {
+      "sha256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+      "width": 1672,
+      "height": 941,
+      "visibleBounds": [
+        243,
+        12,
+        1389,
+        926
+      ],
+      "alphaBounds": [
+        25,
+        0,
+        1642,
+        929
+      ],
+      "framingBounds": [
+        239,
+        0,
+        1397,
+        929
+      ]
+    },
+    "assets/sprites/film_armless_man_170.a103ebba3cce.png": {
+      "sha256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        89,
+        115,
+        848,
+        1587
+      ],
+      "alphaBounds": [
+        0,
+        37,
+        921,
+        1652
+      ],
+      "framingBounds": [
+        83,
+        110,
+        851,
+        1593
+      ]
+    },
+    "assets/sprites/film_armless_man_170.25e542fa86c4.png": {
+      "sha256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        93,
+        78,
+        850,
+        1635
+      ],
+      "alphaBounds": [
+        25,
+        40,
+        937,
+        1672
+      ],
+      "framingBounds": [
+        78,
+        72,
+        860,
+        1642
+      ]
+    },
+    "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png": {
+      "sha256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+      "width": 1671,
+      "height": 941,
+      "visibleBounds": [
+        397,
+        108,
+        1106,
+        809
+      ],
+      "alphaBounds": [
+        140,
+        39,
+        1641,
+        909
+      ],
+      "framingBounds": [
+        394,
+        105,
+        1109,
+        812
+      ]
+    },
+    "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png": {
+      "sha256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+      "width": 941,
+      "height": 1672,
+      "visibleBounds": [
+        178,
+        12,
+        763,
+        1658
+      ],
+      "alphaBounds": [
+        0,
+        1,
+        925,
+        1672
+      ],
+      "framingBounds": [
+        176,
+        1,
+        768,
+        1661
+      ]
+    },
+    "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png": {
+      "sha256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+      "width": 1774,
+      "height": 887,
+      "visibleBounds": [
+        145,
+        20,
+        1495,
+        817
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        1736,
+        887
+      ],
+      "framingBounds": [
+        143,
+        15,
+        1502,
+        823
+      ]
+    },
+    "assets/sprites/arcade_hummer_arcade.488927e4b09b.png": {
+      "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+      "width": 1536,
+      "height": 1024,
+      "visibleBounds": [
+        63,
+        88,
+        1483,
+        863
+      ],
+      "alphaBounds": [
+        31,
+        17,
+        1518,
+        1024
+      ],
+      "framingBounds": [
+        60,
+        86,
+        1489,
+        865
+      ]
+    },
+    "assets/sprites/arcade_tremer_arcade.b02634efb95b.png": {
+      "sha256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+      "width": 2172,
+      "height": 724,
+      "visibleBounds": [
+        156,
+        133,
+        2011,
+        613
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        2156,
+        724
+      ],
+      "framingBounds": [
+        154,
+        130,
+        2012,
+        615
+      ]
+    },
+    "assets/sprites/arcade_tremer_arcade.f20804673e14.png": {
+      "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+      "width": 1086,
+      "height": 1448,
+      "visibleBounds": [
+        221,
+        112,
+        778,
+        1362
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        1070,
+        1448
+      ],
+      "framingBounds": [
+        217,
+        109,
+        782,
+        1372
+      ]
+    },
+    "assets/sprites/arcade_tuberculosis.f0f6525955eb.png": {
+      "sha256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+      "width": 1536,
+      "height": 1024,
+      "visibleBounds": [
+        69,
+        78,
+        1469,
+        924
+      ],
+      "alphaBounds": [
+        0,
+        15,
+        1526,
+        1024
+      ],
+      "framingBounds": [
+        63,
+        73,
+        1475,
+        930
+      ]
+    },
+    "assets/sprites/arcade_tuberculosis.05377508d32c.png": {
+      "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+      "width": 1536,
+      "height": 1024,
+      "visibleBounds": [
+        58,
+        27,
+        1468,
+        968
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1523,
+        1024
+      ],
+      "framingBounds": [
+        53,
+        18,
+        1474,
+        974
+      ]
+    }
+  },
+  "profiles": [
+    {
+      "id": "downpour_prisoner_minion_brawler_108",
+      "name": "Prisoner Minion — Brawler",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "combatPath": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.7865792688563
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 291.7927263911173,
+            "y": 383.9816487759224,
+            "width": 123.36283556831519,
+            "height": 219.19517648270244,
+            "flip": 1,
+            "localX": -58.2072736088827,
+            "localY": -210.01835122407763,
+            "scale": 0.13109759359013304
+          },
+          "visibleBox": {
+            "x": 303.947039765549,
+            "y": 396.4796195010537,
+            "w": 107.48186603830352,
+            "h": 198.2899342425027
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 864.8444380405675,
+            "y": 383.9816487759224,
+            "width": 123.36283556831519,
+            "height": 219.19517648270244,
+            "flip": -1,
+            "localX": -58.2072736088827,
+            "localY": -210.01835122407763,
+            "scale": 0.13109759359013304
+          },
+          "visibleBox": {
+            "x": 868.5710941961473,
+            "y": 396.4796195010537,
+            "w": 107.48186603830352,
+            "h": 198.2899342425027
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "downpour_prisoner_minion_brawler_108-pair.png",
+        "comparison": "downpour_prisoner_minion_brawler_108-comparison.png",
+        "selection": "downpour_prisoner_minion_brawler_108-selection.png",
+        "right": "downpour_prisoner_minion_brawler_108-right.png",
+        "left": "downpour_prisoner_minion_brawler_108-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 612.7865792688563
+          }
+        },
+        "exactMirroredPixels": false,
+        "differentPixels": 22,
+        "visiblePixels": 8378,
+        "maxChannelDifference": 8,
+        "meanAbsoluteChannelDifference": 0.000008409288194444444,
+        "maxAlphaDifference": 1,
+        "maxPremultipliedDifference": 1.3254901960784338,
+        "meanAbsolutePremultipliedDifference": 0.000007921716140159773,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "downpour_prisoner_minion_agile_109",
+      "name": "Prisoner Minion — Agile",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "combatPath": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.2554342627102
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 280.32123806194176,
+            "y": 368.3284296136826,
+            "width": 147.67518075707815,
+            "height": 262.3941575194842,
+            "flip": 1,
+            "localX": -69.67876193805824,
+            "localY": -225.67157038631737,
+            "scale": 0.15693430473653364
+          },
+          "visibleBox": {
+            "x": 293.1732287736965,
+            "y": 414.82174684236367,
+            "w": 131.73513923312453,
+            "h": 180.4065135185563
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 852.0035811809801,
+            "y": 368.3284296136826,
+            "width": 147.67518075707815,
+            "height": 262.3941575194842,
+            "flip": -1,
+            "localX": -69.67876193805824,
+            "localY": -225.67157038631737,
+            "scale": 0.15693430473653364
+          },
+          "visibleBox": {
+            "x": 855.0916319931789,
+            "y": 414.82174684236367,
+            "w": 131.73513923312453,
+            "h": 180.4065135185563
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "downpour_prisoner_minion_agile_109-pair.png",
+        "comparison": "downpour_prisoner_minion_agile_109-comparison.png",
+        "selection": "downpour_prisoner_minion_agile_109-selection.png",
+        "right": "downpour_prisoner_minion_agile_109-right.png",
+        "left": "downpour_prisoner_minion_agile_109-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 613.2554342627102
+          }
+        },
+        "exactMirroredPixels": true,
+        "differentPixels": 0,
+        "visiblePixels": 9003,
+        "maxChannelDifference": 0,
+        "meanAbsoluteChannelDifference": 0,
+        "maxAlphaDifference": 0,
+        "maxPremultipliedDifference": 0,
+        "meanAbsolutePremultipliedDifference": 0,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "downpour_shadow_107",
+      "name": "Shadow",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+      "combatPath": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.416326926386
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 293.0929935296223,
+            "y": 380.11301842586477,
+            "width": 130.60842830245497,
+            "height": 232.06938588916546,
+            "flip": 1,
+            "localX": -56.907006470377745,
+            "localY": -213.88698157413523,
+            "scale": 0.13879747959878316
+          },
+          "visibleBox": {
+            "x": 310.1073275538847,
+            "y": 402.2599302357938,
+            "w": 111.2146350166977,
+            "h": 192.14738528525916
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 856.2985781679228,
+            "y": 380.11301842586477,
+            "width": 130.60842830245497,
+            "height": 232.06938588916546,
+            "flip": -1,
+            "localX": -56.907006470377745,
+            "localY": -213.88698157413523,
+            "scale": 0.13879747959878316
+          },
+          "visibleBox": {
+            "x": 858.6780374294175,
+            "y": 402.2599302357938,
+            "w": 111.2146350166977,
+            "h": 192.14738528525916
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "downpour_shadow_107-pair.png",
+        "comparison": "downpour_shadow_107-comparison.png",
+        "selection": "downpour_shadow_107-selection.png",
+        "right": "downpour_shadow_107-right.png",
+        "left": "downpour_shadow_107-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 612.416326926386
+          }
+        },
+        "exactMirroredPixels": false,
+        "differentPixels": 39,
+        "visiblePixels": 7187,
+        "maxChannelDifference": 127,
+        "meanAbsoluteChannelDifference": 0.000059407552083333336,
+        "maxAlphaDifference": 1,
+        "maxPremultipliedDifference": 1.2549019607843093,
+        "meanAbsolutePremultipliedDifference": 0.000011976897240377634,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "sh3_god_050",
+      "name": "God",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+      "combatPath": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 614.2212426222497
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 275.28564048411147,
+            "y": 261.01651295103363,
+            "width": 190.01665700037015,
+            "height": 337.62789639173104,
+            "flip": 1,
+            "localX": -74.71435951588855,
+            "localY": -332.98348704896637,
+            "scale": 0.20193056004290133
+          },
+          "visibleBox": {
+            "x": 292.86031935638215,
+            "y": 272.5702626470429,
+            "w": 167.53068385758422,
+            "h": 323.6029011305695
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 814.6977025155184,
+            "y": 261.01651295103363,
+            "width": 190.01665700037015,
+            "height": 337.62789639173104,
+            "flip": -1,
+            "localX": -74.71435951588855,
+            "localY": -332.98348704896637,
+            "scale": 0.20193056004290133
+          },
+          "visibleBox": {
+            "x": 819.6089967860335,
+            "y": 272.5702626470429,
+            "w": 167.53068385758422,
+            "h": 323.6029011305695
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "sh3_god_050-pair.png",
+        "comparison": "sh3_god_050-comparison.png",
+        "selection": "sh3_god_050-selection.png",
+        "right": "sh3_god_050-right.png",
+        "left": "sh3_god_050-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 614.2212426222497
+          }
+        },
+        "exactMirroredPixels": true,
+        "differentPixels": 0,
+        "visiblePixels": 22563,
+        "maxChannelDifference": 0,
+        "meanAbsoluteChannelDifference": 0,
+        "maxAlphaDifference": 0,
+        "maxPremultipliedDifference": 0,
+        "meanAbsolutePremultipliedDifference": 0,
+        "reflectedPlacementError": 2.2737367544323206e-13
+      }
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_axe",
+      "name": "Robbie the Rabbit — Axe",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+      "combatPath": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.6500387792206
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 292.8056069780517,
+            "y": 389.53029102523857,
+            "width": 122.31792309030236,
+            "height": 217.3385413464246,
+            "flip": 1,
+            "localX": -57.1943930219483,
+            "localY": -204.46970897476143,
+            "scale": 0.1299871658770482
+          },
+          "visibleBox": {
+            "x": 309.3499620809644,
+            "y": 405.78318625154856,
+            "w": 95.50736673440642,
+            "h": 188.85278242422572
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 864.8764699316459,
+            "y": 389.53029102523857,
+            "width": 122.31792309030236,
+            "height": 217.3385413464246,
+            "flip": -1,
+            "localX": -57.1943930219483,
+            "localY": -204.46970897476143,
+            "scale": 0.1299871658770482
+          },
+          "visibleBox": {
+            "x": 875.142671184629,
+            "y": 405.78318625154856,
+            "w": 95.50736673440642,
+            "h": 188.85278242422572
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "arcade_robbie_the_rabbit_axe-pair.png",
+        "comparison": "arcade_robbie_the_rabbit_axe-comparison.png",
+        "selection": "arcade_robbie_the_rabbit_axe-selection.png",
+        "right": "arcade_robbie_the_rabbit_axe-right.png",
+        "left": "arcade_robbie_the_rabbit_axe-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 612.6500387792206
+          }
+        },
+        "exactMirroredPixels": false,
+        "differentPixels": 36,
+        "visiblePixels": 8428,
+        "maxChannelDifference": 128,
+        "meanAbsoluteChannelDifference": 0.00008002387152777778,
+        "maxAlphaDifference": 1,
+        "maxPremultipliedDifference": 1.1568627450980387,
+        "meanAbsolutePremultipliedDifference": 0.000011880446623093675,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "origins_demon_084",
+      "name": "Demon",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+      "combatPath": "assets/sprites/origins_demon_084.abac0695168a.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.7623591961394
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/origins_demon_084.abac0695168a.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 185.51855548786352,
+            "y": 299.4017712508417,
+            "width": 451.1495174271331,
+            "height": 300.76634495142207,
+            "flip": 1,
+            "localX": -164.48144451213648,
+            "localY": -294.5982287491583,
+            "scale": 0.2937171337416231
+          },
+          "visibleBox": {
+            "x": 260.58644993709913,
+            "y": 305.7783562887023,
+            "w": 265.80764852245153,
+            "h": 289.94585660449036
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/origins_demon_084.abac0695168a.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 643.3319270850034,
+            "y": 299.4017712508417,
+            "width": 451.1495174271331,
+            "height": 300.76634495142207,
+            "flip": -1,
+            "localX": -164.48144451213648,
+            "localY": -294.5982287491583,
+            "scale": 0.2937171337416231
+          },
+          "visibleBox": {
+            "x": 753.6059015404493,
+            "y": 305.7783562887023,
+            "w": 265.80764852245153,
+            "h": 289.94585660449036
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "origins_demon_084-pair.png",
+        "comparison": "origins_demon_084-comparison.png",
+        "selection": "origins_demon_084-selection.png",
+        "right": "origins_demon_084-right.png",
+        "left": "origins_demon_084-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 613.7623591961394
+          }
+        },
+        "exactMirroredPixels": true,
+        "differentPixels": 0,
+        "visiblePixels": 32388,
+        "maxChannelDifference": 0,
+        "meanAbsoluteChannelDifference": 0,
+        "maxAlphaDifference": 0,
+        "maxPremultipliedDifference": 0,
+        "meanAbsolutePremultipliedDifference": 0,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "bom_fire_guardian_137",
+      "name": "Fire Guardian",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+      "combatPath": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.4797354544476
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 42.942679522888,
+            "y": 259.19614987513194,
+            "width": 618.5546260600833,
+            "height": 348.1219516283124,
+            "flip": 1,
+            "localX": -307.057320477112,
+            "localY": -334.80385012486806,
+            "scale": 0.3699489390311503
+          },
+          "visibleBox": {
+            "x": 102.91837835890856,
+            "y": 272.59599002397186,
+            "w": 507.0798821198137,
+            "h": 322.8517165245352
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 618.5026944170287,
+            "y": 259.19614987513194,
+            "width": 618.5546260600833,
+            "height": 348.1219516283124,
+            "flip": -1,
+            "localX": -307.057320477112,
+            "localY": -334.80385012486806,
+            "scale": 0.3699489390311503
+          },
+          "visibleBox": {
+            "x": 670.0017395212775,
+            "y": 272.59599002397186,
+            "w": 507.0798821198137,
+            "h": 322.8517165245352
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "bom_fire_guardian_137-pair.png",
+        "comparison": "bom_fire_guardian_137-comparison.png",
+        "selection": "bom_fire_guardian_137-selection.png",
+        "right": "bom_fire_guardian_137-right.png",
+        "left": "bom_fire_guardian_137-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 613.4797354544476
+          }
+        },
+        "exactMirroredPixels": false,
+        "differentPixels": 291,
+        "visiblePixels": 80087,
+        "maxChannelDifference": 255,
+        "meanAbsoluteChannelDifference": 0.00017740885416666667,
+        "maxAlphaDifference": 1,
+        "maxPremultipliedDifference": 1.984313725490189,
+        "meanAbsolutePremultipliedDifference": 0.00010042495007262185,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "film_armless_man_170",
+      "name": "Armless Man",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+      "combatPath": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.7865152932307
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 294.9389721494516,
+            "y": 385.94804870414873,
+            "width": 123.36283556831519,
+            "height": 219.19517648270244,
+            "flip": 1,
+            "localX": -55.06102785054839,
+            "localY": -208.0519512958513,
+            "scale": 0.13109759359013304
+          },
+          "visibleBox": {
+            "x": 313.05340418328905,
+            "y": 404.55993586055547,
+            "w": 98.50366720455501,
+            "h": 190.209555292129
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 861.6981922822332,
+            "y": 385.94804870414873,
+            "width": 123.36283556831519,
+            "height": 219.19517648270244,
+            "flip": -1,
+            "localX": -55.06102785054839,
+            "localY": -208.0519512958513,
+            "scale": 0.13109759359013304
+          },
+          "visibleBox": {
+            "x": 868.4429286121557,
+            "y": 404.55993586055547,
+            "w": 98.50366720455501,
+            "h": 190.209555292129
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "film_armless_man_170-pair.png",
+        "comparison": "film_armless_man_170-comparison.png",
+        "selection": "film_armless_man_170-selection.png",
+        "right": "film_armless_man_170-right.png",
+        "left": "film_armless_man_170-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 612.7865152932307
+          }
+        },
+        "exactMirroredPixels": false,
+        "differentPixels": 16,
+        "visiblePixels": 6793,
+        "maxChannelDifference": 8,
+        "meanAbsoluteChannelDifference": 0.000009765625,
+        "maxAlphaDifference": 1,
+        "maxPremultipliedDifference": 1.3294117647058812,
+        "meanAbsolutePremultipliedDifference": 0.000005995540577342061,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "film_red_pyramid_thing_return_to_silent_hill",
+      "name": "Red Pyramid Thing — Return to Silent Hill",
+      "combatView": "side-view-candidate",
+      "combatEnabled": false,
+      "portrait": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+      "combatPath": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.0928138671661
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 14.838394384275432,
+            "y": 299.2765232120008,
+            "width": 608.75495281377,
+            "height": 342.8117358454564,
+            "flip": 1,
+            "localX": -335.16160561572457,
+            "localY": -294.7234767879992,
+            "scale": 0.36430577666892283
+          },
+          "visibleBox": {
+            "x": 168.79965674698616,
+            "y": 343.0799581223624,
+            "w": 254.84056472697506,
+            "h": 251.9892017649949
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 656.4066528019545,
+            "y": 299.2765232120008,
+            "width": 608.75495281377,
+            "height": 342.8117358454564,
+            "flip": -1,
+            "localX": -335.16160561572457,
+            "localY": -294.7234767879992,
+            "scale": 0.36430577666892283
+          },
+          "visibleBox": {
+            "x": 856.3597785260387,
+            "y": 343.0799581223624,
+            "w": 254.84056472697506,
+            "h": 251.9892017649949
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "film_red_pyramid_thing_return_to_silent_hill-pair.png",
+        "comparison": "film_red_pyramid_thing_return_to_silent_hill-comparison.png",
+        "selection": "film_red_pyramid_thing_return_to_silent_hill-selection.png",
+        "right": "film_red_pyramid_thing_return_to_silent_hill-right.png",
+        "left": "film_red_pyramid_thing_return_to_silent_hill-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 613.0928138671661
+          }
+        },
+        "exactMirroredPixels": false,
+        "differentPixels": 114,
+        "visiblePixels": 18623,
+        "maxChannelDifference": 51,
+        "meanAbsoluteChannelDifference": 0.000078125,
+        "maxAlphaDifference": 1,
+        "maxPremultipliedDifference": 1.984313725490189,
+        "meanAbsolutePremultipliedDifference": 0.00003781289714960062,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "arcade_hummer_arcade",
+      "name": "Hummer — Arcade",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+      "combatPath": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 594
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 28.23909124916605,
+            "y": 289.40572662658457,
+            "width": 600.8461209173894,
+            "height": 300.4230604586947,
+            "flip": 1,
+            "localX": -321.76090875083395,
+            "localY": -304.59427337341543,
+            "scale": 0.3386956713175814
+          },
+          "visibleBox": {
+            "x": 88.86580661451566,
+            "y": 300.96914520941436,
+            "w": 450.3244862097577,
+            "h": 267.7425937141164
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 566.7234632034632
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 650.9147878334446,
+            "y": 289.40572662658457,
+            "width": 600.8461209173894,
+            "height": 300.4230604586947,
+            "flip": -1,
+            "localX": -321.76090875083395,
+            "localY": -304.59427337341543,
+            "scale": 0.3386956713175814
+          },
+          "visibleBox": {
+            "x": 740.8097071757264,
+            "y": 300.96914520941436,
+            "w": 450.3244862097577,
+            "h": 267.7425937141164
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 566.7234632034632
+          }
+        }
+      ],
+      "captures": {
+        "pair": "arcade_hummer_arcade-pair.png",
+        "comparison": "arcade_hummer_arcade-comparison.png",
+        "selection": "arcade_hummer_arcade-selection.png",
+        "right": "arcade_hummer_arcade-right.png",
+        "left": "arcade_hummer_arcade-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 594
+          }
+        },
+        "exactMirroredPixels": false,
+        "differentPixels": 60,
+        "visiblePixels": 51494,
+        "maxChannelDifference": 6,
+        "meanAbsoluteChannelDifference": 0.00002251519097222222,
+        "maxAlphaDifference": 1,
+        "maxPremultipliedDifference": 1.9764705882352942,
+        "meanAbsolutePremultipliedDifference": 0.000022321225944081348,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "arcade_tremer_arcade",
+      "name": "Tremer — Arcade",
+      "combatView": "side-view-candidate",
+      "combatEnabled": true,
+      "portrait": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+      "combatPath": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.2200067411711
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 223.49990210910383,
+            "y": 526.5699633323932,
+            "width": 238.92015330709842,
+            "height": 79.64005110236614,
+            "flip": 1,
+            "localX": -126.50009789089617,
+            "localY": -67.43003666760688,
+            "scale": 0.11000007058337864
+          },
+          "visibleBox": {
+            "x": 249.08839971100159,
+            "y": 542.0199731032924,
+            "w": 199.95631878149504,
+            "h": 52.19527158720403
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 817.5799445837977,
+            "y": 526.5699633323932,
+            "width": 238.92015330709842,
+            "height": 79.64005110236614,
+            "flip": -1,
+            "localX": -126.50009789089617,
+            "localY": -67.43003666760688,
+            "scale": 0.11000007058337864
+          },
+          "visibleBox": {
+            "x": 830.9552815075032,
+            "y": 542.0199731032924,
+            "w": 199.95631878149504,
+            "h": 52.19527158720403
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "arcade_tremer_arcade-pair.png",
+        "comparison": "arcade_tremer_arcade-comparison.png",
+        "selection": "arcade_tremer_arcade-selection.png",
+        "right": "arcade_tremer_arcade-right.png",
+        "left": "arcade_tremer_arcade-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 612.2200067411711
+          }
+        },
+        "exactMirroredPixels": false,
+        "differentPixels": 10,
+        "visiblePixels": 5833,
+        "maxChannelDifference": 1,
+        "meanAbsoluteChannelDifference": 0.0000035264756944444443,
+        "maxAlphaDifference": 1,
+        "maxPremultipliedDifference": 0.9921568627451052,
+        "meanAbsolutePremultipliedDifference": 0.0000032864129448075514,
+        "reflectedPlacementError": 0
+      }
+    },
+    {
+      "id": "arcade_tuberculosis",
+      "name": "Tuberculosis",
+      "combatView": "side-view-candidate",
+      "combatEnabled": false,
+      "portrait": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+      "combatPath": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+      "distinctFiles": true,
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.4455850150688
+        }
+      },
+      "actors": [
+        {
+          "facing": 1,
+          "x": 350,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 159.65648752025413,
+            "y": 371.3703471359129,
+            "width": 370.085554174606,
+            "height": 246.72370278307065,
+            "flip": 1,
+            "localX": -190.34351247974587,
+            "localY": -222.62965286408712,
+            "scale": 0.24094111599909243
+          },
+          "visibleBox": {
+            "x": 184.90426748559526,
+            "y": 393.3971644349322,
+            "w": 332.84502774330036,
+            "h": 202.01713086119574
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 356.27705627705626,
+            "y": 594
+          }
+        },
+        {
+          "facing": -1,
+          "x": 930,
+          "y": 594,
+          "result": {
+            "kind": "raster",
+            "path": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+            "pose": "idle",
+            "requestedClipKey": "idle",
+            "fallback": false,
+            "x": 750.2579583051399,
+            "y": 371.3703471359129,
+            "width": 370.085554174606,
+            "height": 246.72370278307065,
+            "flip": -1,
+            "localX": -190.34351247974587,
+            "localY": -222.62965286408712,
+            "scale": 0.24094111599909243
+          },
+          "visibleBox": {
+            "x": 762.2507047711042,
+            "y": 393.3971644349322,
+            "w": 332.84502774330036,
+            "h": 202.01713086119574
+          },
+          "completeWithinCombatArea": true,
+          "anchorScreen": {
+            "x": 923.7229437229437,
+            "y": 594
+          }
+        }
+      ],
+      "captures": {
+        "pair": "arcade_tuberculosis-pair.png",
+        "comparison": "arcade_tuberculosis-comparison.png",
+        "selection": "arcade_tuberculosis-selection.png",
+        "right": "arcade_tuberculosis-right.png",
+        "left": "arcade_tuberculosis-left.png"
+      },
+      "mirror": {
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 613.4455850150688
+          }
+        },
+        "exactMirroredPixels": false,
+        "differentPixels": 67,
+        "visiblePixels": 22643,
+        "maxChannelDifference": 9,
+        "meanAbsoluteChannelDifference": 0.000026584201388888887,
+        "maxAlphaDifference": 1,
+        "maxPremultipliedDifference": 1.976470588235287,
+        "meanAbsolutePremultipliedDifference": 0.00002218647875816996,
+        "reflectedPlacementError": 0
+      }
+    }
+  ],
+  "limits": [
+    "Native Canvas 2D rendering, not a browser, DOM, HTTP, service-worker or gameplay session.",
+    "Uses current art/registry.json with fresh raster-validation bounds in memory; generated manifests are not rebuilt or mutated.",
+    "Calls the real drawRasterMonster, paintRasterPortrait, combatFraming, completeSpriteBox and rasterPlacement dependencies.",
+    "Idle snapshots at chosen QA actor coordinates; no simulation or source-animation timing is evaluated.",
+    "Opposite directions are runtime mirrors of one native source image, not independently observed anatomy.",
+    "Fractional scaling can produce small native rasterization differences between reflected pixel buffers; placement symmetry and pixel differences are reported separately.",
+    "Complete delivered pixel bounds and calibration can be checked; missing canonical anatomy, 1:1 fidelity, poses and animations cannot be certified.",
+    "Source combat-role restrictions remain unchanged; a reference-only dossier can be rendered without authorizing a match."
+  ],
+  "summary": {
+    "profiles": 12,
+    "combatRendered": 12,
+    "selectionOnly": 0,
+    "allCombatGeometryContained": true,
+    "allMirrorPlacementsCorrect": true,
+    "allMirroredPixelsExact": false
+  }
+}

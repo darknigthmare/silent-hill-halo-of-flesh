@@ -1,0 +1,646 @@
+{
+  "schemaVersion": 1,
+  "group": "wave22-stages",
+  "scope": "missing stages only",
+  "createdAt": "2026-11-19T15:28:08.172891+00:00",
+  "baseCommit": "80db2a9fdda7032bcaf110df79915be598290f08",
+  "deliveryState": "candidate-ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "outside_room_302",
+      "source": "sh4",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "final-hallway-chained-room105",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH4_13_OUTSIDE_ROOM_302"
+      ],
+      "worldState": "fixed-altered",
+      "locationScope": "SH4 original : dernier parcours Outside Room302, couloir altéré1F devant la porte105 du superintendent encore chaînée ; pas le premier Apartment World.",
+      "selectedSubLocation": "SH4 original : dernier parcours Outside Room302, couloir altéré1F devant la porte105 du superintendent encore chaînée ; pas le premier Apartment World.",
+      "supports": {
+        "description": "Panneaux/planches sombres continus devant le mur rouge ; chaînes fixées au mur, appuis dégagés.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "door105",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/outside_room_302.door105.1a96e575d9fd.png",
+              "sha256": "1a96e575d9fdbfca1a67143b3c82946826b997c6404e342c83d9cb6e26644143",
+              "bytes": 2425527,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-wall-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/outside_room_302.near-wall-edges.0fafe322dcde.png",
+              "sha256": "0fafe322dcde13854f14a966dd680ac663a32fec3d964eacf517a51d095f4cae",
+              "bytes": 264338,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh4_removing_room_105's_chains_01.jpg"
+      ],
+      "notes": [
+        "Porte105 élancée, grille haute, chaînes obliques et mur rouge tirés de la capture native1920×1080.",
+        "Aucune statue humaine suspendue ni acteur de la zone voisine104 utilisé ; cadrage limité à la baie105.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    },
+    {
+      "stageId": "alchemilla_origins",
+      "source": "origins",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "normal-first-floor-elevator-landing",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT03",
+        "EXT01"
+      ],
+      "worldState": "versus-transition",
+      "locationScope": "Silent Hill Origins2007 : palier de l’ascenseur au1F normal, rencontre de Kaufmann avant la montée au2F ; aucune chambre205 ni salle d’une autre édition.",
+      "selectedSubLocation": "Silent Hill Origins2007 : palier de l’ascenseur au1F normal, rencontre de Kaufmann avant la montée au2F ; aucune chambre205 ni salle d’une autre édition.",
+      "supports": {
+        "description": "Carrelage continu devant les portes de l’ascenseur normal, élargi pour le versus.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "elevator-landing",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/alchemilla_origins.elevator-landing.d7a48880728c.png",
+              "sha256": "d7a48880728c021669239f9c9e0a3d178a48c67d2c6ed3de9cabc8e59e006531",
+              "bytes": 2275547,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-wall-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/alchemilla_origins.near-wall-edges.88e0d0800459.png",
+              "sha256": "88e0d0800459a36b5c4b5b834b59b31565ba5c97134a09ee6868e004983d3587",
+              "bytes": 195761,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "origins-native-page-021.jpg"
+      ],
+      "notes": [
+        "Capture native du guide officiel BradyGames page imprimée20/PDF21 : portes, panneaux carrés, peinture verte basse et bouton à droite.",
+        "PDF original conservé et hashé ; JPEG natif de page extrait sans retouche, vues de Kaufmann et du palier inspectées.",
+        "La politique moteur versus-transition reste inchangée ; ce lot fournit uniquement un fond normal statique, aucune phase Otherworld ni transition bitmap.",
+        "Résolution des vues de guide limitée : proportions et textures fines reconstruites, pas de fidélité1:1 prétendue.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    },
+    {
+      "stageId": "nightmare_hospital_hc",
+      "source": "homecoming",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "initial-clinical-dream-gate2a",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT06"
+      ],
+      "worldState": "fixed-normal",
+      "locationScope": "Homecoming2008 : couloir clinique2F du rêve initial devant la grille2A et son clavier, AVANT le miroir et la transformation ; pas l’ascenseur final.",
+      "selectedSubLocation": "Homecoming2008 : couloir clinique2F du rêve initial devant la grille2A et son clavier, AVANT le miroir et la transformation ; pas l’ascenseur final.",
+      "supports": {
+        "description": "Grandes dalles claires continues devant la grille ; trolley bas en fond extrême gauche.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "gate2a",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/nightmare_hospital_hc.gate2a.faf8d083f23c.png",
+              "sha256": "faf8d083f23c60b6ab83cea558412faf3f9d7c0077bd7240b098c43c58b9b01c",
+              "bytes": 2463170,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-wall-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/nightmare_hospital_hc.near-wall-edges.e7c5e101d745.png",
+              "sha256": "e7c5e101d745d272eadbcc199e13228a429da7e2ff39a36620dfd24bee9de132",
+              "bytes": 185326,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "homecoming-native-hospital-gate2a.png"
+      ],
+      "notes": [
+        "La phase fixed-normal et le libellé RÊVE CLINIQUE AVANT LE MIROIR sont respectés ; aucune rouille Otherworld ajoutée.",
+        "Capture native officielle page imprimée29/PDF8, raster240×135 décodé du PDF Pearson/BradyGames ; limites de détail explicites.",
+        "Grille, plaque2A, clavier/lumière droite, plâtre bleuté écaillé, carrelage bas et trolley gauche visibles sur la preuve.",
+        "Alex et Joshua retirés ; aucun personnage ou monstre ajouté.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "promptKey": "outside_room_302_bg",
+      "filename": "outside_room_302.door105.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-2044cd6f-62eb-44c3-a67f-6636df5490aa.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/outside_room_302.door105.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2425527,
+      "sha256": "1a96e575d9fdbfca1a67143b3c82946826b997c6404e342c83d9cb6e26644143",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "hardlinkVerified": true,
+      "stageId": "outside_room_302",
+      "role": "opaque-background",
+      "path": "assets/stages/outside_room_302.door105.1a96e575d9fd.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch",
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "outside_room_302_fg",
+      "filename": "outside_room_302.near-wall-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-33d76b07-dba9-48c1-a8fc-432715d84232.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/outside_room_302.near-wall-edges.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 264338,
+      "sha256": "0fafe322dcde13854f14a966dd680ac663a32fec3d964eacf517a51d095f4cae",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "transparentFraction": 0.9291811368339697,
+        "semiTransparentPixels": 110866,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlinkVerified": true,
+      "stageId": "outside_room_302",
+      "role": "transparent-foreground",
+      "path": "assets/stages/outside_room_302.near-wall-edges.0fafe322dcde.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "alchemilla_origins_bg",
+      "filename": "alchemilla_origins.elevator-landing.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-338e2914-0d61-4d93-9bd3-34baa9aa29c1.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/alchemilla_origins.elevator-landing.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2275547,
+      "sha256": "d7a48880728c021669239f9c9e0a3d178a48c67d2c6ed3de9cabc8e59e006531",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "hardlinkVerified": true,
+      "stageId": "alchemilla_origins",
+      "role": "opaque-background",
+      "path": "assets/stages/alchemilla_origins.elevator-landing.d7a48880728c.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch",
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "alchemilla_origins_fg",
+      "filename": "alchemilla_origins.near-wall-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-fcc5aea7-0b1c-4755-b0d5-7ddef9e948fe.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/alchemilla_origins.near-wall-edges.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 195761,
+      "sha256": "88e0d0800459a36b5c4b5b834b59b31565ba5c97134a09ee6868e004983d3587",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "transparentFraction": 0.946859952509038,
+        "semiTransparentPixels": 83258,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlinkVerified": true,
+      "stageId": "alchemilla_origins",
+      "role": "transparent-foreground",
+      "path": "assets/stages/alchemilla_origins.near-wall-edges.88e0d0800459.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "nightmare_hospital_hc_bg",
+      "filename": "nightmare_hospital_hc.gate2a.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-f2af922e-b054-4210-9eb0-7c190779c252.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hospital_hc.gate2a.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2463170,
+      "sha256": "faf8d083f23c60b6ab83cea558412faf3f9d7c0077bd7240b098c43c58b9b01c",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "hardlinkVerified": true,
+      "stageId": "nightmare_hospital_hc",
+      "role": "opaque-background",
+      "path": "assets/stages/nightmare_hospital_hc.gate2a.faf8d083f23c.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch",
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "nightmare_hospital_hc_fg",
+      "filename": "nightmare_hospital_hc.near-wall-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-2eec2938-2627-4671-9cd0-3e14751fec95.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hospital_hc.near-wall-edges.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 185326,
+      "sha256": "e7c5e101d745d272eadbcc199e13228a429da7e2ff39a36620dfd24bee9de132",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "transparentFraction": 0.9571704234017563,
+        "semiTransparentPixels": 66773,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlinkVerified": true,
+      "stageId": "nightmare_hospital_hc",
+      "role": "transparent-foreground",
+      "path": "assets/stages/nightmare_hospital_hc.near-wall-edges.e7c5e101d745.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.silenthillmemories.net/sh4/puzzles/pics/sh4_removing_room_105's_chains_01.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh4_removing_room_105's_chains_01.jpg",
+      "sha256": "eba54c6ad18a2466ce68e2acc2b302c8b3971354f2e3942591edc93f91dbc25a",
+      "bytes": 566452,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "url": "https://ptgmedia.pearsoncmg.com/images/9780744010435/samplepages/1043-5_silent_hill.pdf#page=8",
+      "path": "/workspace/scratch/halo-wave22-stages/references/homecoming-native-hospital-gate2a.png",
+      "sha256": "0670a3ebc44f7fc6806660ce7f3982f789be3c4f091ecbd7251415c2afb10d70",
+      "bytes": 62524,
+      "width": 240,
+      "height": 135,
+      "extraction": "embedded raster decoded from PDF CMYK into RGB lossless PNG; no geometry/crop edit",
+      "pdfSHA256": "f01865db7cd59a274ed0efac5eb80f5f76f89441de049e7a1116b2818e5aa82f",
+      "embeddedRasterSHA256": "0670a3ebc44f7fc6806660ce7f3982f789be3c4f091ecbd7251415c2afb10d70",
+      "xref": 634,
+      "pdfPage": 8,
+      "printedPage": 29
+    },
+    {
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf#page=21",
+      "path": "/workspace/scratch/halo-wave22-stages/references/origins-native-page-021.jpg",
+      "sha256": "1f60f93440685381fb1310c205f1e30fadabf2b1dae09fbfc8b6d2b28921ef65",
+      "bytes": 156579,
+      "width": 1212,
+      "height": 1542,
+      "extraction": "embedded native JPEG from official PDF; no pixel edit",
+      "pdfSHA256": "f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80",
+      "pdfPage": 21,
+      "printedPage": 20
+    }
+  ],
+  "prompts": [
+    {
+      "key": "outside_room_302_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/sh4_removing_room_105's_chains_01.jpg"
+      ],
+      "prompt": "Create ONE opaque wide16:9 environment plate, ideally1672×941, for a side-view 2D fighting stage. Exact source: Silent Hill4: The Room (2004), final OUTSIDE ROOM302 route, FIRST FLOOR corridor outside chained Superintendent Room105, as in the attached native screenshot. This is the late red altered apartment world, not the normal apartment hallway and not Room302 interior. Strict observed identity: heavily mottled rust-red walls, red/dark worn floorboards or broad rectangular floor panels, very tall desaturated green-gray door on the right half with small mesh upper panel and lower inset panels, battered door frame, several long chains fixed to the door and the wall at diagonal angles, tiny105 door number plate and slanted superintendent sign. Keep that same door and chains, with no invented adjacent numbered door or furniture. Small distant corridor continuation only at extremeleft as observed. No hanging person, statue, Henry, Eileen, weapon or other actor. Reconstruct the referenced wall bay in a wide nearly straight-on side-facing view, door fully visible, wall/floor junction y≈63%, and lower37% continuous level dark-red floor clear for a horizontal fight-foot line at y82.5%. All chains remain on rear wall above y67%, never hanging over the combat lane. Avoid deep first-person corridor, dramatic forced perspective and wide hall redesign. Low dim red-brown original-game illumination and steel-gray door contrast. No UI, captions, HUD, logos, readable added text or border. Any source door plate is tiny and unobtrusive. Fully opaque to all edges, one scene, no montage. Native source-guided versus camera adaptation, no claim of exact replica."
+    },
+    {
+      "key": "alchemilla_origins_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/origins-native-page-021.jpg"
+      ],
+      "prompt": "Generate ONE opaque16:9 side-view fighting stage BACKGROUND, ideally1672×941. Use the attached OFFICIAL Silent Hill: Origins (2007) guide page as SOURCE EVIDENCE, not as a layout to copy. The specific target is Alchemilla Hospital NORMAL first-floor ELEVATOR LANDING where Travis meets Kaufmann before riding upstairs. On the guide page, study ONLY the two middle-right native screenshots showing Kaufmann in front of the elevator and the bottom-left native close view of those doors. Ignore the separate bulletin-board screenshot and every page graphic/text. The observed environment has old muted olive-brown double-leaf elevator doors with small square inset glazed or recessed panels at eye height, dirty pale gray/beige plaster above faded green lower walls, a narrow dark wall rail, a small call-button plate on the wall to the right of the doors, and dull gray-green square floor tiles. Preserve these restrained 2007 room materials and door arrangement. Remove Travis, Kaufmann and all actors; no silhouettes in windows. Reconstruct this landing in a wide straight-on side-facing composition with the closed elevator in the rear wall, low room junction y≈63%, and a broad continuous tiled floor across the lower37%; horizontal fight foot line y82.5%, no furniture in the lane. No corridor labyrinth, beds, surgical equipment, save glyph, mirror, blood growth, extra doorway or modern hospital redesign. This is one NORMAL static plate; do not combine the Otherworld version and do not add a transformation. No HUD, guide page, text, caption, paper border, logo or watermark. Fill all edges with architecture. Faithful limited reconstruction from documented native angles, detailed but restrained original-game look; not a certified exact replica."
+    },
+    {
+      "key": "nightmare_hospital_hc_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/homecoming-native-hospital-gate2a.png"
+      ],
+      "prompt": "Generate ONE opaque wide16:9 fighting-stage BACKGROUND, ideally1672×941. Exact source is Silent Hill: Homecoming (2008) initial DREAM Alchemilla hospital, the CLINICAL second-floor corridor at security gate2A, BEFORE the restroom mirror is taken and before the Otherworld transformation. The attached actual native screenshot extracted from the official BradyGames guide establishes the exact wall bay. This is not the later elevator, rust nightmare, Homecoming prison or another game's hospital. Preserve the off-white square-bar security gate against the rear wall, small2A plaque immediately left, small keypad and blue-white wall lamp to its right, gray/teal decayed plaster above off-white tiled lower walls with horizontal trim, and dirty light-gray large floor squares. A plain low dark examination trolley/bench is barely visible at farleft; keep it at the rear only. Remove the adult man and any child, patients, nurses, bodies, weapons and HUD. Reframe the same gate bay laterally, nearly straight-on, gate modest width near center-left, wall/floor junction y≈62%, broad continuous tiled floor from y65% to100% for horizontal combat contact at y82.5%. No rails, gaps or props across that band. Keep the cold dim cyan-gray hospital lighting, peeling plaster and original scene restraint; no added gurney rows, hanging hooks, organics, dramatic red blood, large pipes or new clinical machinery. Do not invent extra unreadable signage. One exact room/phase, no split view. Opaque frame to every edge. No captions, guide layout, logo, borders or watermark. Source-guided versus camera reconstruction only, not certified1:1."
+    },
+    {
+      "key": "outside_room_302_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/outside_room_302.door105.png"
+      ],
+      "prompt": "Create ONE foreground parallax overlay PNG, wide16:9 ideally1672×941, with real RGBA ALPHA transparency. Match the attached opaque stage plate's camera, material and lighting. Copy NO background. Show only very narrow near-camera wall-return fragments at extremeleft x0..3% and extremeright x97..100%, existing architectural material continued slightly toward viewer. Entire central94%, including every pixel of the combat-foot band y75..90%, fully transparent. No floor strip, connecting beam, ceiling across top, fog, black matte, checkerboard, vignette, halo or extra prop. Natural clean antialiased alpha, no text, actors, creatures, HUD or logo. The fragments must be small peripheral details, no large foreground obstruction. Exact material: SH4 final OutsideRoom302 route at room105, coarse dark red mottled altered apartment wall with narrow worn dark trim. Thin edge fragments only; do not copy the door, chains, pipes or sign. Do not add human forms or loose chains."
+    },
+    {
+      "key": "alchemilla_origins_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/alchemilla_origins.elevator-landing.png"
+      ],
+      "prompt": "Create ONE foreground parallax overlay PNG, wide16:9 ideally1672×941, with real RGBA ALPHA transparency. Match the attached opaque stage plate's camera, material and lighting. Copy NO background. Show only very narrow near-camera wall-return fragments at extremeleft x0..3% and extremeright x97..100%, existing architectural material continued slightly toward viewer. Entire central94%, including every pixel of the combat-foot band y75..90%, fully transparent. No floor strip, connecting beam, ceiling across top, fog, black matte, checkerboard, vignette, halo or extra prop. Natural clean antialiased alpha, no text, actors, creatures, HUD or logo. The fragments must be small peripheral details, no large foreground obstruction. Exact material: Silent Hill Origins2007 NORMAL first-floor elevator landing; dull gray plaster above faded green lower painted plaster, thin brown wood rail. Show two slight flat wall-return slivers, no elevator doors, buttons, mirror, lamps or new equipment. Keep the quiet muted beige-green scheme. This is normal hospital, no rust blood transformation."
+    },
+    {
+      "key": "nightmare_hospital_hc_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/nightmare_hospital_hc.gate2a.png"
+      ],
+      "prompt": "Create ONE foreground parallax overlay PNG, wide16:9 ideally1672×941, with real RGBA ALPHA transparency. Match the attached opaque stage plate's camera, material and lighting. Copy NO background. Show only very narrow near-camera wall-return fragments at extremeleft x0..3% and extremeright x97..100%, existing architectural material continued slightly toward viewer. Entire central94%, including every pixel of the combat-foot band y75..90%, fully transparent. No floor strip, connecting beam, ceiling across top, fog, black matte, checkerboard, vignette, halo or extra prop. Natural clean antialiased alpha, no text, actors, creatures, HUD or logo. The fragments must be small peripheral details, no large foreground obstruction. Exact material: Silent Hill Homecoming initial clinical dream BEFORE the mirror, second-floor gate2A corridor; peeling blue-gray plaster above small dirty pale tiles and narrow trim. The same existing wall surfaces form thin slivers. No foreground bars, gate, lamp, trolley, door or new object. Preserve cold dim cyan-gray lighting, no altered red organic world."
+    }
+  ],
+  "provenance": {
+    "generator": "integrated image_gen.imagegen",
+    "callsPerAsset": 1,
+    "sourceGuides": [
+      {
+        "id": "sh4_final",
+        "url": "https://www.silenthillmemories.net/sh4/walkthrough_13_outside_room_302_en.htm",
+        "sha256": "0b729cfbbd80fd7ec4bb8a1c0821d3779ccecb2b07ca7b4be8210f1d0d18c1fa",
+        "bytes": 44427
+      },
+      {
+        "id": "origins",
+        "url": "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+        "sha256": "3aa8bad9114902f0eb6a79dc25c29cbc750b7673750eba2ab572ac3e5be05b93",
+        "bytes": 37701
+      },
+      {
+        "id": "homecoming",
+        "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+        "bytes": 111444
+      }
+    ],
+    "imageEditing": false,
+    "nativePixelsPreserved": true,
+    "noRuntimeChanges": true,
+    "noCharactersOrPortraitsChanged": true
+  },
+  "qa": {
+    "visualOutputsInspected": 6,
+    "nativePNGMetadataMeasured": 6,
+    "opaqueBackgrounds": 3,
+    "genuineAlphaForegrounds": 3,
+    "browserTest": false,
+    "runtimeTest": "pending root integration",
+    "candidateFidelity": "unverified"
+  },
+  "totals": {
+    "stages": 3,
+    "png": 6,
+    "bytes": 7809669
+  },
+  "deferredPrevious": [
+    "nightmare_mall",
+    "apartment_roof",
+    "shimizu_residence",
+    "police_station_hc"
+  ]
+}

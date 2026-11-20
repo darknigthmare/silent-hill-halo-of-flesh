@@ -1,0 +1,20 @@
+[
+  {
+    "stageId": "ebisugaoka",
+    "key": "ebisugaoka-fg",
+    "references": [
+      "/workspace/scratch/6d8d28552d08/generated_images/exec-2cf8ecc7-d0c5-4814-8cf2-8af813318795.png",
+      "/workspace/scratch/6d8d28552d08/stage-research/ebisugaoka-fogworld-hq.jpg"
+    ],
+    "prompt": "Use case: background-extraction. Asset type: one 2D fighting-game FOREGROUND OVERLAY with TRUE TRANSPARENT RGBA alpha. Output a single 16:9 image, same 1672×941 canvas as input 1. Image 1 is the completed opaque backdrop for exact scale, color and material matching only. Produce only a sparse close foreground edge plane; REMOVE EVERYTHING ELSE to true transparency. Almost the entire canvas, including all pixels between x=0.07 and x=0.93 from top to bottom, MUST be fully transparent. No opaque black/white background, no painted checkerboard, no scene, sky, road, floor strip, central object, furniture, characters, monsters, text, logo or watermark. Keep all visible material strictly in the outermost 5% at the far left and far right, irregular slim vertical cropped edge silhouettes with clean alpha. Do not show a complete rectangular frame. Foreground edges are a modest fixed-camera adaptation of attested wall materials, not a new room. Lower central foot-band y=0.72..0.95 is completely empty transparent.\nExact material: the dark weathered timber vertical siding/door-jamb edges of Ebisugaoka's wooden corner-shop street in normal Fog World. At far left, a slim shadowed vertical timber post cut by the image edge, dark grey-brown weathered grain; at far right an even thinner cut edge of the same timber siding with one subtle seam. Cold grey outdoor light. The two narrow strips should sit at the extreme canvas edges and be understated. No roof, lantern, wires, mailbox, flowers, greenery or new props. Preserve wide unobstructed view of the backdrop after compositing."
+  },
+  {
+    "stageId": "book_fire",
+    "key": "book-fire-fg",
+    "references": [
+      "/workspace/scratch/6d8d28552d08/generated_images/exec-57720cc8-d25f-4906-b782-c03787ecc07d.png",
+      "/workspace/scratch/6d8d28552d08/stage-research/book-fire-launch01.jpg"
+    ],
+    "prompt": "Use case: background-extraction. Asset type: one 2D fighting-game FOREGROUND OVERLAY with TRUE TRANSPARENT RGBA alpha. Output a single 16:9 image, same 1672×941 canvas as input 1. Image 1 is the completed opaque backdrop for exact scale, color and material matching only. Produce only a sparse close foreground edge plane; REMOVE EVERYTHING ELSE to true transparency. Almost the entire canvas, including all pixels between x=0.07 and x=0.93 from top to bottom, MUST be fully transparent. No opaque black/white background, no painted checkerboard, no scene, sky, road, floor strip, central object, furniture, characters, monsters, text, logo or watermark. Keep all visible material strictly in the outermost 5% at the far left and far right, irregular slim vertical cropped edge silhouettes with clean alpha. Do not show a complete rectangular frame. Foreground edges are a modest fixed-camera adaptation of attested wall materials, not a new room. Lower central foot-band y=0.72..0.95 is completely empty transparent.\nExact material: Fire Zone's rusted industrial iron wall returns, flange seams and slim pipe edge. At the extreme left draw one very narrow cropped shadowed rusted metal wall return, and at the extreme right a slim dark iron edge with a few small rivets. Warm low orange rim light, same iron texture as the backdrop. Keep each within its outermost 5% of canvas width. No railing across the bottom, no floor, no flames, embers, smoke, gears, machinery, doorway outline or additional props. Sparse true-alpha edge overlay only."
+  }
+]

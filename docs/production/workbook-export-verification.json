@@ -1,117 +1,96 @@
 {
-  "schema": 1,
-  "xlsxSha256": "7de47c02b04650c8982fc2d86e414a4c35637ce080446e00cd6189465a0f3b7d",
-  "planSha256": "45b092009538a4586933571ac633f094b8de3f9bb7fdbad4cb8795ef5873bede",
-  "bytes": 1808573,
-  "sheets": {
-    "Combattants": {
-      "dataRows": 230,
-      "tableRef": "A5:V235",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 1
-    },
-    "Mouvements": {
-      "dataRows": 4600,
-      "tableRef": "A5:AE4605",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 1
-    },
-    "Finishers": {
-      "dataRows": 583,
-      "tableRef": "A5:Q588",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 1
-    },
-    "Présentations": {
-      "dataRows": 1610,
-      "tableRef": "A5:N1615",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 1
-    },
-    "Clips": {
-      "dataRows": 2300,
-      "tableRef": "A5:M2305",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 1
-    },
-    "Arènes": {
-      "dataRows": 123,
-      "tableRef": "A5:S128",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 1
-    },
-    "Animations arènes": {
-      "dataRows": 1799,
-      "tableRef": "A5:L1804",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 1
-    },
-    "Actions": {
-      "dataRows": 875,
-      "tableRef": "A5:K880",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 2
-    },
-    "Gestes référencés": {
-      "dataRows": 435,
-      "tableRef": "A5:I440",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 0
-    },
-    "Sources": {
-      "dataRows": 277,
-      "tableRef": "A5:G282",
-      "frozenRows": 5,
-      "frozenColumns": 3,
-      "validationLists": 0
-    }
-  },
-  "errors": [],
-  "sourceUrls": 277,
-  "summaryFormulas": 80,
-  "checks": [
-    "ZIP CRC",
-    "worksheet scope",
-    "row IDs and totals",
-    "frozen panes",
-    "native tables and filters",
-    "validation lists",
-    "all cached error cells",
-    "summary formula caches",
-    "source URLs",
-    "numeric engine data",
-    "empty source timing fields",
-    "blocked production statuses"
-  ],
-  "totalDataRows": 12832,
   "passed": true,
-  "limits": "Read-only OOXML verification; no claim of a native Excel desktop session or a full animation review.",
   "preservation": {
     "passed": true,
+    "method": "Every native ZIP part compared after resolving relationship IDs to their type/target and masking only journaled values, exact journaled row heights, and recalculated formula caches.",
     "comparedCells": 250550,
-    "authoredChanges": 247,
-    "enlargedRows": 162,
+    "authoredChanges": 330,
+    "enlargedRows": 151,
     "appendedSourceRows": 0,
     "appendedSourceCells": 0,
     "auditedFormulaExpansions": 0,
+    "nativeParts": 38,
+    "serializerChangedParts": [
+      "xl/workbook.xml",
+      "xl/worksheets/sheet1.xml",
+      "xl/worksheets/sheet2.xml",
+      "xl/worksheets/sheet3.xml",
+      "xl/worksheets/sheet4.xml",
+      "xl/worksheets/sheet5.xml",
+      "xl/worksheets/sheet6.xml",
+      "xl/worksheets/sheet7.xml",
+      "xl/worksheets/sheet8.xml",
+      "xl/worksheets/sheet9.xml",
+      "xl/worksheets/sheet10.xml",
+      "xl/worksheets/sheet11.xml",
+      "_rels/.rels",
+      "xl/_rels/workbook.xml.rels",
+      "xl/worksheets/_rels/sheet10.xml.rels",
+      "xl/worksheets/_rels/sheet11.xml.rels",
+      "xl/worksheets/_rels/sheet2.xml.rels",
+      "xl/worksheets/_rels/sheet3.xml.rels",
+      "xl/worksheets/_rels/sheet4.xml.rels",
+      "xl/worksheets/_rels/sheet5.xml.rels",
+      "xl/worksheets/_rels/sheet6.xml.rels",
+      "xl/worksheets/_rels/sheet7.xml.rels",
+      "xl/worksheets/_rels/sheet8.xml.rels",
+      "xl/worksheets/_rels/sheet9.xml.rels"
+    ],
+    "strictByteIdentityComparator": {
+      "passed": false,
+      "reason": "Unrelated ZIP member changed: xl/workbook.xml",
+      "interpretation": "The Artifact Tool serializer reassigns relationship IDs. The complete XML graph is checked below after resolving each relationship ID to its same target."
+    },
     "unchanged": [
       "worksheet order",
-      "unrelated values",
-      "all formulas",
-      "effective cell formatting",
+      "all unrelated values",
+      "all 80 formulas",
+      "all effective cell styles",
       "column widths",
       "unrelated row heights",
-      "native tables and validation features",
-      "unrelated ZIP members"
+      "native tables and filters",
+      "validation lists",
+      "all relationship targets",
+      "all other native XML metadata and binary parts"
     ]
+  },
+  "zipCrc": true,
+  "all80FormulaCachesNumeric": true,
+  "formulaErrors": [],
+  "historyRetainedEntries": 177,
+  "protectedAnnotationCellsUnchanged": 55229,
+  "currentTotals": [
+    230,
+    123,
+    4600,
+    460,
+    460,
+    123,
+    1610,
+    2300,
+    1799,
+    435,
+    277,
+    204,
+    6,
+    0,
+    840,
+    93
+  ],
+  "coverage": {
+    "pngCandidates": 204,
+    "animatedClips": 6,
+    "activeStageBitmapCandidates": 32
+  },
+  "planBaseline": "No complete-plan baseline invented. Historical plan hash retained separately; canonical planSha256 is null.",
+  "limits": "Read-only native workbook audit and Artifact Tool rendering. No native Excel application or artwork certification.",
+  "contractTests": {
+    "status": "passed",
+    "suite": "tests/test_production_workbook_update.py",
+    "tests": 10,
+    "seconds": 165.553,
+    "execution": "Exact repository test/updater/verifier sources in an isolated fixture tree, using the candidate XLSX and proposed canonical report. Source repository was not modified.",
+    "log": "workbook-contract-tests.log",
+    "logSha256": "98d911fffee4070d55f35d58045bdd7d13b35b8c539b330231d364ac2659a432"
   }
 }

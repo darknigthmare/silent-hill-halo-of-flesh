@@ -30,7 +30,7 @@ test('audit rejects duplicated fighter identities and contradictory counts',()=>
  assert.throws(()=>auditSpriteCoverage({entries:[{...row,frames:-1}]}),/Invalid sprite counters/);
 });
 
-test('real sprite coverage identifies Air Screamer as animation-validation candidate',async()=>{
+test('real sprite coverage keeps authored animated clips in the validation queue',async()=>{
  const report=JSON.parse(readFileSync(new URL('../data/sprite-coverage.json',import.meta.url),'utf8'));
  const assets=JSON.parse(readFileSync(new URL('../art/registry.json',import.meta.url),'utf8')).assets;
  const intake=JSON.parse(readFileSync(new URL('../docs/production/art144-intake.json',import.meta.url),'utf8'));
@@ -67,11 +67,13 @@ test('real sprite coverage identifies Air Screamer as animation-validation candi
  assert.equal(result.summary.illustrated,intake.baselineProfiles+candidates.length+newlyResolved);
  assert.equal(result.summary.missing,blocked.length-newlyResolved);
  assert.equal(result.summary.certified,0);
- const first=result.rows[0];
- assert.equal(first.id,'sh1_air_screamer_001');
- assert.equal(first.priority,'P0-validate-animation');
- assert.equal(first.animated,1);
- assert.equal(first.fidelity,'unverified');
+ for(const [id,animated] of Object.entries({sh1_air_screamer_001:1,origins_faceless_nurse:2,arcade_scraper_arcade:1,homecoming_scarlet_doll_form_094:1})){
+  const row=result.rows.find(candidate=>candidate.id===id);
+  assert.equal(row.priority,'P0-validate-animation',id);
+  assert.equal(row.animated,animated,id);
+  assert.equal(row.fidelity,'unverified',id);
+ }
+ assert.equal(result.rows[0].priority,'P0-validate-animation');
 });
 
 test('clip inspector lists only actual authored poses and distinct pixels',()=>{

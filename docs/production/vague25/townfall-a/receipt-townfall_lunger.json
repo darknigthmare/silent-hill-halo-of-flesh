@@ -1,0 +1,16 @@
+{
+  "fighterId": "townfall_lunger",
+  "startedAt": "2026-11-20T09:14:05.900Z",
+  "completedAt": "2026-11-20T09:16:29.115Z",
+  "tool": "image_gen.imagegen",
+  "request": {
+    "prompt": "Create one whole-character 2D fighting-game sprite cutout from the supplied exact Silent Hill: Townfall reference artwork. This is a new reconstructed side view of that same subject, not a new monster design. Render one subject only, on a truly transparent RGBA background. The camera is exactly 90 degrees to the body: strict lateral profile facing RIGHT. The head, rib cage, pelvis, knees and toes all face image-right; show the narrow side of the torso, not its frontal width. Near and far limbs can overlap naturally with a small clear separation at the extremities. Preserve the source proportions, materials and visual identity. Use realistic detailed game creature rendering with soft neutral lighting, restrained contrast, crisp readable silhouette. Full figure from the very top through both feet, all fingers and every small attached appendage visible or naturally occluded, generous transparent padding on every side. No cropped body, no 3/4 presentation angle, no environment, ground plane, pedestal, drop shadow, letters, labels, border, collage or alternate views. The first reference (creature_lunger_03) is the whole final Lunger model; the second (04) supplies head, strap and hand detail only. Preserve its upright thin elongated body and very long narrow legs, two complete bare feet, two arms bent and tightly restrained across its front by dark woven straps with buckles around shoulders, chest, belly and hips, and a strap across the upper thigh. The bent hands and fingers stay visibly retained under the restraints; do not free a hand. Preserve the flattened asymmetric organic wedge of the head, with the dark blade-like edge integrated into the front of the head and projecting toward RIGHT. It is not a held weapon, an axe, a helmet or a pyramid. Preserve muted mottled gray-brown leathery material, its asymmetric bony/sinewy head contours and bowed tension. Exactly two arms and two legs. Stand upright in a tense quiet idle weight shift, feet pointing RIGHT, camera looking squarely across the shoulders/hips. Keep the forearms folded against the narrow front of the torso, so their crossed construction is read in true profile rather than turning the whole rib cage toward us. Do not invent a human face, hair, clothing, horns, any handheld prop or additional limb.",
+    "referenced_image_paths": [
+      "/workspace/scratch/62cbb5f4a653/production/wave25-townfall-a/references/creature_lunger_03.jpg",
+      "/workspace/scratch/62cbb5f4a653/production/wave25-townfall-a/references/creature_lunger_04.jpg"
+    ],
+    "transparent_background": true
+  },
+  "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-87ed2a41-7649-4763-8dbb-cf78d317894f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "status": "native-output-returned"
+}

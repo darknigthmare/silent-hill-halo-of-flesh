@@ -1,0 +1,2770 @@
+{
+  "schema": 1,
+  "recoveryWave": 24,
+  "createdAt": "2026-11-19T22:19:52.337813+00:00",
+  "publishedBaseline": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "sourceCommits": {
+    "activeSessionA": "aa97ffba2c6ca0b6d6bdc61ee1c17dc091933231",
+    "recoveredSessionB": "c0eea6d1185cee0575c407aaf1e5854e9077db10",
+    "wave22Archive": "6757168e36aaf9e99d5889197da05a28abd7c698"
+  },
+  "policy": "A remains active; only two unique reviewed B views are recovered as active. Overlapping B art and rejected art are retained inactive. Historical evidence is copied byte-for-byte, not rewritten or rerun.",
+  "files": [
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/README.md",
+      "path": "docs/production/vague24-recovery/session-6101-original-state/README.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-state-not-runtime",
+      "bytes": 48759,
+      "sha256": "291ed7007a68a38c7003beb10c6c358902cf61fbaac06a06b2922520919bf7ff",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/art/registry.json",
+      "path": "docs/production/vague24-recovery/session-6101-original-state/art/registry.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-state-not-runtime",
+      "bytes": 753230,
+      "sha256": "4d0caa281fff9c28a9529f1a659d45dd4f577ca8a2885be93d49b968d97c54a8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/sprites/bom_gray_child_147.b8eaa81de9d2.png",
+      "path": "assets/sprites/bom_gray_child_147.b8eaa81de9d2.png",
+      "sourceSession": "session-B",
+      "disposition": "active-recovered-static-idle",
+      "bytes": 1170129,
+      "sha256": "b8eaa81de9d223724ae53d604a101f3b1c82f062ac33708b1375ea8eab925b08",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/sprites/bom_raw_shock_148.a881f09b463e.png",
+      "path": "assets/sprites/bom_raw_shock_148.a881f09b463e.png",
+      "sourceSession": "session-B",
+      "disposition": "active-recovered-static-idle",
+      "bytes": 612548,
+      "sha256": "a881f09b463e206a6a2408623bb9609202a51e216ee0b25ed5c43d2f1955e1e7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/sprites/bom_tremer_133.d6f54ebac80d.png",
+      "path": "assets/sprites/bom_tremer_133.d6f54ebac80d.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 453599,
+      "sha256": "d6f54ebac80dad273d74296c38f645cda4c3230ea7bbe9e5b8bc0b7c366ece04",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/sprites/bom_wood_sapling_139.c26ab2d65518.png",
+      "path": "assets/sprites/bom_wood_sapling_139.c26ab2d65518.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 724793,
+      "sha256": "c26ab2d65518bafb126d7d5b6f6f9e03d4c5256b4d3ab8b7e063435900925850",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+      "path": "assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 1006402,
+      "sha256": "b2de331812cab2ef81949111176d6ae392facaba6c535031074b6fead5549e34",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/sprites/sh4_whitestool_062.5f6ad30d02b8.png",
+      "path": "assets/sprites/sh4_whitestool_062.5f6ad30d02b8.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 1338348,
+      "sha256": "5f6ad30d02b867c20f663cb19ee368b9afcc769817fbe23e26f7b8d455bb03f0",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/stages/book_blood.blood-arena.a2f0bf8241d3.png",
+      "path": "assets/stages/book_blood.blood-arena.a2f0bf8241d3.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 1864385,
+      "sha256": "a2f0bf8241d3a7b77f2379654bdf58f79881af710a65603bf6090614f7ba8c14",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/stages/book_blood.near-perimeter-edges.472f222bec21.png",
+      "path": "assets/stages/book_blood.near-perimeter-edges.472f222bec21.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 77156,
+      "sha256": "472f222bec2101e6b073da623df1bd2189a98950306bba970e96a47747459f96",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/stages/book_earth.earth-gallery.d68ff2b3d5a6.png",
+      "path": "assets/stages/book_earth.earth-gallery.d68ff2b3d5a6.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 2615157,
+      "sha256": "d68ff2b3d5a6e89a9947e6e2a4fe197761e5ffac3fd0d4d19580d6e07303f150",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/stages/book_earth.near-rock-edges.e2f163225507.png",
+      "path": "assets/stages/book_earth.near-rock-edges.e2f163225507.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 129276,
+      "sha256": "e2f16322550789968fbf16abb53e0b324881bc85f65d1fe83aa832d493257638",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/stages/book_fire.fire-room.7f1236bf6694.png",
+      "path": "assets/stages/book_fire.fire-room.7f1236bf6694.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 2197958,
+      "sha256": "7f1236bf66946438ebbb93b74dc948bfc29bea058e7c43ead125437c2607d9f1",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/stages/book_fire.near-steel-edges.e238137c6bfd.png",
+      "path": "assets/stages/book_fire.near-steel-edges.e238137c6bfd.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 188064,
+      "sha256": "e238137c6bfd31443ff58eaf97e743c60baae68de92666308d3801b9fc80b800",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/stages/book_water.near-tile-edges.9db746e9832f.png",
+      "path": "assets/stages/book_water.near-tile-edges.9db746e9832f.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 204775,
+      "sha256": "9db746e9832ff87bbbb4cce22e73ef6d21f563fb6903ab10b534ce676f8d978a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/assets/stages/book_water.water-basin.12604eb0cf73.png",
+      "path": "assets/stages/book_water.water-basin.12604eb0cf73.png",
+      "sourceSession": "session-B",
+      "disposition": "inactive-alternative-native-png",
+      "bytes": 2156656,
+      "sha256": "12604eb0cf73963d8fbcb1222129f0b984bc417f6be3514712d6ecd5188f06cf",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/data/sprite-coverage.json",
+      "path": "docs/production/vague24-recovery/session-6101-original-state/data/sprite-coverage.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-state-not-runtime",
+      "bytes": 154706,
+      "sha256": "9d43d091961f0a267150e65c2292857c15afe8a6f0cf7e3fabe24cecd64bbc4f",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "path": "docs/production/vague24-recovery/session-6101-original-state/docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-state-not-runtime",
+      "bytes": 48301,
+      "sha256": "75ac1eee15b90e8ff981e4531b2ad6801b68a61732d4974794583b10965eb6ff",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/sprite-wave23-imports-2026-11-19.json",
+      "path": "docs/production/vague24-recovery/session-6101-original-state/docs/production/sprite-wave23-imports-2026-11-19.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-state-not-runtime",
+      "bytes": 21491,
+      "sha256": "fc1259d3adf72ae127296739bd1c0f1289ee82651d130933973650d023c72d1e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/RAPPORT_VAGUE23_PERSONNAGES_STAGES.md",
+      "path": "docs/production/vague23-session-6101/RAPPORT_VAGUE23_PERSONNAGES_STAGES.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 11206,
+      "sha256": "4204d1d64ad3f314bf11377b3a6cf52e6a83d6b82578a7599ef0cde6ac702e5b",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/README.md",
+      "path": "docs/production/vague23-session-6101/README.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1159,
+      "sha256": "8b62622d71a48fe13432a62cc7858d7032f009bf477cee43dee57940dee9dfa2",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/aggregate-native.mjs",
+      "path": "docs/production/vague23-session-6101/aggregate-native.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6850,
+      "sha256": "60043c2eb6f33a496c96bb050470daa1a515131637ec76db6bc425dac0dcf3b8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/audit-final.mjs",
+      "path": "docs/production/vague23-session-6101/audit-final.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 10774,
+      "sha256": "5294e8476f5a8b173a1c5f55c87611ef71d1695978b1449b722506224d8105ac",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/baseline-pr6.json",
+      "path": "docs/production/vague23-session-6101/baseline-pr6.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 9311,
+      "sha256": "97e4ec3cb4c3eea56aa483b7362e2db5f533da17c11bb5983b1e2caef73fbbd4",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/capture-baseline.mjs",
+      "path": "docs/production/vague23-session-6101/capture-baseline.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 3654,
+      "sha256": "f2fdbe9257f29fa979b8b096ebbedb102d2aeec86e4f65a06aa023bd25214f70",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/character-import-preflight-http-source.log",
+      "path": "docs/production/vague23-session-6101/character-import-preflight-http-source.log",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 752,
+      "sha256": "893b9c3ea6bb2009a7414f5aea0a8690ecfa6cd71bbbb791474ce4e5bf172ea0",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/character-import.log",
+      "path": "docs/production/vague23-session-6101/character-import.log",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 956,
+      "sha256": "c05eddca698f89a52ce6147206614f8d6f26c6775174be20445629815fd32cfd",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/NATIVE_QA.md",
+      "path": "docs/production/vague23-session-6101/characters/NATIVE_QA.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6356,
+      "sha256": "250fdd495312f088cf534e858dac2b5da3f8dd5881b8d04009fad657ef977da5",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/README.md",
+      "path": "docs/production/vague23-session-6101/characters/README.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 8268,
+      "sha256": "00288799714fbd010ab064cdd4d454aabbab353d89cd597fd4de053637be099b",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/build-delivery.mjs",
+      "path": "docs/production/vague23-session-6101/characters/build-delivery.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 17793,
+      "sha256": "35c4fc4c4413009712154292a0be39c4d150610b5c6392f79942c7f060bfc877",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/delivery.json",
+      "path": "docs/production/vague23-session-6101/characters/delivery.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 51490,
+      "sha256": "b3f63409b2dadf326033ddb62fb6f4c8e42289d780f1694c1ac38b10208bbe6c",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/native-png-audit.json",
+      "path": "docs/production/vague23-session-6101/characters/native-png-audit.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 33351,
+      "sha256": "a6c0c35f871aafb6bf11ae129bc50bda72bde287b020fb0095e131b575d8ee9e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/native-process-summary.json",
+      "path": "docs/production/vague23-session-6101/characters/native-process-summary.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1573,
+      "sha256": "d9c0e901ea124f8f1fe0e9c0697234d94c69c8a53b62199ca60c272445cde1cb",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/native-visual-review.json",
+      "path": "docs/production/vague23-session-6101/characters/native-visual-review.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 41936,
+      "sha256": "b4b927e503644d0ec2c830a59719fcd5f99b617767118af214885a8e0c9d8639",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/png/bom_gray_child_147.png",
+      "path": "docs/production/vague23-session-6101/characters/png/bom_gray_child_147.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1170129,
+      "sha256": "b8eaa81de9d223724ae53d604a101f3b1c82f062ac33708b1375ea8eab925b08",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/png/bom_raw_shock_148.png",
+      "path": "docs/production/vague23-session-6101/characters/png/bom_raw_shock_148.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 612548,
+      "sha256": "a881f09b463e206a6a2408623bb9609202a51e216ee0b25ed5c43d2f1955e1e7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/png/bom_tremer_133.png",
+      "path": "docs/production/vague23-session-6101/characters/png/bom_tremer_133.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 453599,
+      "sha256": "d6f54ebac80dad273d74296c38f645cda4c3230ea7bbe9e5b8bc0b7c366ece04",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/png/bom_wood_sapling_139.png",
+      "path": "docs/production/vague23-session-6101/characters/png/bom_wood_sapling_139.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 724793,
+      "sha256": "c26ab2d65518bafb126d7d5b6f6f9e03d4c5256b4d3ab8b7e063435900925850",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/png/sh4_toadstool_061.png",
+      "path": "docs/production/vague23-session-6101/characters/png/sh4_toadstool_061.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1006402,
+      "sha256": "b2de331812cab2ef81949111176d6ae392facaba6c535031074b6fead5549e34",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/png/sh4_whitestool_062.png",
+      "path": "docs/production/vague23-session-6101/characters/png/sh4_whitestool_062.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1338348,
+      "sha256": "5f6ad30d02b867c20f663cb19ee368b9afcc769817fbe23e26f7b8d455bb03f0",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/prompt-whitestool-alpha-repair.json",
+      "path": "docs/production/vague23-session-6101/characters/prompt-whitestool-alpha-repair.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1085,
+      "sha256": "d4b3f1a6a9b8a2e6f9857f3f8d291e55c56ca41fe6509f6c6285d77ccc9957fc",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/prompts-first.json",
+      "path": "docs/production/vague23-session-6101/characters/prompts-first.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2847,
+      "sha256": "00f40d5a2292caffe89157be3366c2abfb0d4334f3e6d90bdc72b1b1c676e561",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/prompts-second.json",
+      "path": "docs/production/vague23-session-6101/characters/prompts-second.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 3099,
+      "sha256": "d5839b77ba970143f68ccfe3f18bf94b9313c4e57f0ec1553fbb5797a94b5ecb",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/prompts-third.json",
+      "path": "docs/production/vague23-session-6101/characters/prompts-third.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 3482,
+      "sha256": "74368a979b8427765d60526c968ad3a120ecfe1be360cb348f41227f0acffe23",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/qa/bom_gray_child_147.png",
+      "path": "docs/production/vague23-session-6101/characters/qa/bom_gray_child_147.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 87591,
+      "sha256": "e903eba6a0fb1b66f2cc70e0b47a32bb0107e02b22d6660d46973b23e3d1cef7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/qa/bom_raw_shock_148.png",
+      "path": "docs/production/vague23-session-6101/characters/qa/bom_raw_shock_148.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 141422,
+      "sha256": "b255dc68f094d894d49856aa976726efb13cfb7934a1d81bf5ecd571707443b8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/qa/bom_tremer_133.png",
+      "path": "docs/production/vague23-session-6101/characters/qa/bom_tremer_133.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 67772,
+      "sha256": "d38b6af115972249dde2d2a7e6e9502f2ad6531108ff40bb4cc3687c127d6515",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/qa/bom_wood_sapling_139.png",
+      "path": "docs/production/vague23-session-6101/characters/qa/bom_wood_sapling_139.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 167446,
+      "sha256": "679d2dc37431529e1032e45fe1c3ac15373cfb55b46a4b11e89c365af90be71a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/qa/sh4_toadstool_061.png",
+      "path": "docs/production/vague23-session-6101/characters/qa/sh4_toadstool_061.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 208099,
+      "sha256": "c5d3abea28fe9f8b377704bce2914da1cc33a0187b2ec02491388f9fbfb0a6b5",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/qa/sh4_whitestool_062-alpha-repair1.png",
+      "path": "docs/production/vague23-session-6101/characters/qa/sh4_whitestool_062-alpha-repair1.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 266052,
+      "sha256": "1d57fa365279a222021c51a46672e9778dc30ad14fc58f9e59b0bff437e00ff9",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/qa/sh4_whitestool_062.png",
+      "path": "docs/production/vague23-session-6101/characters/qa/sh4_whitestool_062.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 278785,
+      "sha256": "093711a5c65ffd8a91628c6c3e8e12fc3e173a10ebe04dbceba6f458ca9184c6",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/reference-catalog.json",
+      "path": "docs/production/vague23-session-6101/characters/reference-catalog.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 7015,
+      "sha256": "0d4abe730110f87c0a2d2def4f8957fb843f3603c57ea8f4b9557ce1bc4841a2",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/reference-download-list.json",
+      "path": "docs/production/vague23-session-6101/characters/reference-download-list.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1160,
+      "sha256": "d2c71c2d2c2460b337a2e41fee86403847002cbfdfe1335ef94fcae8084b2c9f",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/reference-download-results.json",
+      "path": "docs/production/vague23-session-6101/characters/reference-download-results.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2714,
+      "sha256": "241362df15002a1bcdb5ad60e05b3cf6680d6660879fcc519d28954f71ecc93d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-gray-child.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-gray-child.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 11675,
+      "sha256": "869bede26c83995d9f98f9263abb4a8ab408faa7496d472ff135bc62bddc1059",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-gray29.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-gray29.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 236504,
+      "sha256": "074fab1703829d48fc19b3b8508b93316831b93079db08078e58c5bcb0cd7013",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-gray30.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-gray30.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 162524,
+      "sha256": "9f4534c924581e7e39066792c35b25d616e6d1b0e344ef9ee2a7255a74547d4f",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-raw-shock.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-raw-shock.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 11553,
+      "sha256": "86fd3db0e75c5f5e87b60506644337b1cb36e13cf112a26999254341dbe6ba05",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-raw27.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-raw27.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 293531,
+      "sha256": "d16e16c076d617d0c20c5a4090d885643653aa6b52898dc6c32e855fa79ba3f1",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-raw28.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-raw28.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 221071,
+      "sha256": "c4a5ad781ed77de155ef7e256ce798caba9d15acfdbc568893003e0240f5e22d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-raw34.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-raw34.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 192893,
+      "sha256": "ec8bb34abfe06061f179c2e47408bbc1e17bcf2d47a9d0f20a52ba6969b55ce1",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-tremer.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-tremer.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 8774,
+      "sha256": "ff2c19e2d4102044240c07b82a66f64745f1b65539d94d25c96364ebdd08305a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-wood-retail16.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-wood-retail16.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 116658,
+      "sha256": "40640b6e4635ab7ddacb3a686fcbf9daedab21aba539c6006b169274663f3c87",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-wood-sapling.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-wood-sapling.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 13029,
+      "sha256": "2dcfc58fa87a091979a13995a45cd90ed32db67607f5d71711ceb95d093ad2ed",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-wood53.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-wood53.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 173778,
+      "sha256": "0d25638575c60b4a1a6f544c60f6d5ce36fa4bfb750116a0d46aefb69972da0e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/bom-wood54.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/bom-wood54.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 184905,
+      "sha256": "3aa7edc878a7d97246ab075972f59020c45c4d94c37735dba8733cf5ae21abed",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/origins-remnant.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/origins-remnant.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 27394,
+      "sha256": "d645302f2244a9b88cf3a38e40ed9f89110810d1943abfb9515b6dc7af907231",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/sh4-toadstool.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/sh4-toadstool.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 16435,
+      "sha256": "85d38c62f9929b6262c9ec7e84405db92853672c59a3857bb2c5a7d21832a733",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/sh4-whitestool.jpg",
+      "path": "docs/production/vague23-session-6101/characters/references/sh4-whitestool.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 20451,
+      "sha256": "25ba356a7b11ffab92047ca421b8c6c6a848918381778af9f7da64443e59537c",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/render-qa.mjs",
+      "path": "docs/production/vague23-session-6101/characters/render-qa.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1195,
+      "sha256": "ad08b4a4bd7f97fd15368025f2be316bbc6b4eb710e626fc412130ad89cfbeb5",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/run-native-qa.mjs",
+      "path": "docs/production/vague23-session-6101/characters/run-native-qa.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 4071,
+      "sha256": "61bcf0d9a6e67116c47838b8b3343735468c371d40712ef6aaf7720fb1419df7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/variants/sh4_whitestool_062-alpha-repair1.png",
+      "path": "docs/production/vague23-session-6101/characters/variants/sh4_whitestool_062-alpha-repair1.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1323123,
+      "sha256": "27e5ae8c6dc7ba97947b47eafbfe206963acc2a1f40e9282fb3dacf89f4fefe4",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/characters/visual-review.json",
+      "path": "docs/production/vague23-session-6101/characters/visual-review.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 14272,
+      "sha256": "6db16092d07d848e1d17d8207c278de768e3eb06652df0f043e34253be86b3f9",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/corpus/README.md",
+      "path": "docs/production/vague23-session-6101/corpus/README.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 4083,
+      "sha256": "cb996d443bc6bbcd38d9c30d8816f472da6b51cd9a322aec6b9b44191c2e212d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/corpus/evidence-addendum.json",
+      "path": "docs/production/vague23-session-6101/corpus/evidence-addendum.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 7797,
+      "sha256": "d5e141bc7ebee673778fe1824158f15e88122f417d2f534d547f7435c6f9dcdc",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/fighter-integration-bom-sh4.json",
+      "path": "docs/production/vague23-session-6101/fighter-integration-bom-sh4.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 8365,
+      "sha256": "c703f0fbaca68e7f42d965d80166c310d78d08b673ce5d7a4402c9e7b36570e0",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/final-audit.json",
+      "path": "docs/production/vague23-session-6101/final-audit.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 96701,
+      "sha256": "445cecf872c1ce94ac6003fe56bcbce182706ef4fb8519a4aa3e7a038d92e7c6",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/import-character-delivery.mjs",
+      "path": "docs/production/vague23-session-6101/import-character-delivery.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 7617,
+      "sha256": "925667ca018bd758ffc325be047ab4e1941aea0f5fd02d09937d588c9315c3e7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/integrate-stage-deliveries.mjs",
+      "path": "docs/production/vague23-session-6101/integrate-stage-deliveries.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6479,
+      "sha256": "973f7ef783acdc07217c1073f48a8099b63deb645f55ee9cc09d6d3e8f7ed755",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/prepare-corpus-input.mjs",
+      "path": "docs/production/vague23-session-6101/prepare-corpus-input.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2843,
+      "sha256": "9ed7724de3912f5753cd55cb9a12ae2b7d49559be8eaef953e6b510119196977",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-characters-native.mjs",
+      "path": "docs/production/vague23-session-6101/qa-characters-native.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 24511,
+      "sha256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1174249,
+      "sha256": "eb8b0f164cbccc02cbdc3574b4be7b900dc0b7d84f676e02ed0300fb0898add9",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-movement-released-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-movement-released-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1174773,
+      "sha256": "bbddc4ed276e66bd8c04da212a9ac16afca2593264d0995728d035922d106d22",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-movement-static-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-movement-static-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1174841,
+      "sha256": "f2a4ab7d3e4b19a3de207d996a3a8de696370dd2468c2b2abbf1cc9b7e03744b",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1172638,
+      "sha256": "ac2e1229fa2f5c29d5f46aeb15a55ba3f59c0950da261a973532c0f2991adc29",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-movement-released-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-movement-released-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1171948,
+      "sha256": "3b80e44afbfcb17cc3fa3f5438f332bb4e4b7083104ce894f5455d51a1358e99",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-movement-static-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-movement-static-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1171953,
+      "sha256": "08450959ba2464256381a768a90910d57f59bf6b91f6ba06564bf77c39779928",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1235,
+      "sha256": "1d128f308fcf21f64dd3f652888098a1dac7bef9e7c63812f5998c9a61726b91",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 511,
+      "sha256": "cdad00d5f80cd9b23b0e47ee55ffa688e028075535f368ba4a57fa38a42049a9",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 229347,
+      "sha256": "9cf8463a78c46d0fc3c6a467e46c6daa965cca996fda4caa50eacc3a600f51dc",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_gray_child_147/selection-bom_gray_child_147.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/selection-bom_gray_child_147.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 191724,
+      "sha256": "fcd9b716caba73a8ef8fd66609d6a796d352e4c89af49dd8987d22ba2b78c1a6",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1178823,
+      "sha256": "38a19cc8e1ce56cb1a0ba2bb05af4ad3ecb01c983922e4ad3864ed72b6f067ae",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-movement-released-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-movement-released-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1179409,
+      "sha256": "39927c872e8d634eb94d063982d703c55275c4278f1145acb2feb5b096593d88",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-movement-static-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-movement-static-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1179415,
+      "sha256": "7bb4f740a7c553a02d9b928795b001abc9bf4f032470c8199b5b8fc43b8d9512",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1179789,
+      "sha256": "458f1ef79252fa9c15a5823938576ee045e617374561932507d2e9161b1c322d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-movement-released-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-movement-released-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1179111,
+      "sha256": "1930c48a6e5d731d09ca9beff50a2f106bfafa09b4a2602f0fc7024037f8d080",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-movement-static-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-movement-static-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1178943,
+      "sha256": "bb94b5de8ed731b55bcda1332941a4699d016c17f106a9f3920d66ba8423fe13",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1233,
+      "sha256": "df0289f24c1bb90fd3d769f5a22428b29f1d9079cdc2558d5046731731557cf7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 506,
+      "sha256": "05cf2c73a7e3172de4e43474b1549cdd468813be90e10c5ad7ee9ad8473ac938",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 229360,
+      "sha256": "57ee8ba28a903f586c743b28b92da7dffcd2c27c8c553a34eed49baaf715430d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_raw_shock_148/selection-bom_raw_shock_148.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/selection-bom_raw_shock_148.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 131075,
+      "sha256": "b6bb2cff25ce057921d91744c966bc150709d8332fe7d8a7675f11d8c7f48526",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-left-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-left-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1165129,
+      "sha256": "64c3f7f9e7860cd0147c07a97004e2e66a8b8a08a3e46b12c9b5f4701caeedff",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-left-movement-released-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-left-movement-released-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1164766,
+      "sha256": "95af42d590d49024164a0bdef81376e0ab8c5c81e4863fa6ec9d9cd7b56ac872",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-left-movement-static-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-left-movement-static-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1164991,
+      "sha256": "15b0a9e5ba5d05ff90852d3797aff6727664b6c0a63fab2a420e9def5dfe8747",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-right-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-right-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1165610,
+      "sha256": "97f993ea7795f418aa8e406f108dcc76324b1fb10e178fa3c69c3dd0af1622d2",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-right-movement-released-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-right-movement-released-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1165381,
+      "sha256": "799daf8c30bd9d91149d397b7726c03058852356ba205f541e2f821b93a24aa8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-right-movement-static-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-right-movement-static-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1165460,
+      "sha256": "7a4dc91668bbfeda51e7aa71b1a7814cb4c6884aff575e6c58ff7e49142bc63c",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1224,
+      "sha256": "bff897a3c3bda76922a1b7501f7f10b08124a43d424e402e5dc13692a6b8a172",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 491,
+      "sha256": "d67fc21d9ef4346959d51f88c3bc5046734c1fc202ff1c5ab4db5c71b30107b9",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 226828,
+      "sha256": "2eb60ffa009586255324b249774a8c681e667c250fa3879fcec4cf2c3b0c933b",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_tremer_133/selection-bom_tremer_133.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/selection-bom_tremer_133.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 139307,
+      "sha256": "d88ead87d80cd4506ffbd6086a6604e01142a725da3781a65fda661ae5d2baa7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1166351,
+      "sha256": "6e7ddebb859f7c4491d851474c89f5e4e4be6fe8bd82670ea6ded4c74acf9b1a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-movement-released-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-movement-released-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1166513,
+      "sha256": "812fc7817e28b89fb96e71f84b523592827debdb04ca9ac638175fdc51c90783",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-movement-static-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-movement-static-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1166883,
+      "sha256": "30a2f4a7223f5877fdb3279ff8359931273bb13e034b394ccc52113d6e697c8e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1166602,
+      "sha256": "90231dfa35b5c81ec0da6fc1e6c087dd1b866098995dff769449ec4582fe94ec",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-movement-released-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-movement-released-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1166886,
+      "sha256": "f98dc85b30cf4265d4c4d141a8887ac06d101e737ac815974db08fd4a7cc2d99",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-movement-static-idle.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-movement-static-idle.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1166359,
+      "sha256": "4f4e4f4be063d545f56a3365cf2c473dc0b8a7beb63cc8a34a2942679f980746",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1241,
+      "sha256": "93491ac8d455c4050348c6097d75a431d7029b5d16332c50abd187aba96810f8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 521,
+      "sha256": "326654fdfdf712d9ee4544f2a980e1d45830f3ae9eb559f66250cb169e050189",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 228926,
+      "sha256": "22b143551814d1a7a4ce5519d092e2dc03dce32d35a628de3fe54e503c24e651",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/bom_wood_sapling_139/selection-bom_wood_sapling_139.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/selection-bom_wood_sapling_139.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 167892,
+      "sha256": "80498641ec5a40ca628acfd7d8e1ff9f8aab64dd52e5fc4c2c6762ab9df6f878",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_blood/book_blood.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_blood/book_blood.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1103519,
+      "sha256": "b4eaebd2981cd89911af51003e996b53439970245e1c2e5e0d4f932cfc16934f",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_blood/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_blood/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1140,
+      "sha256": "229101513d74279ce2ecbe403072476fc14ed7bb451c539b44f83300d8204a00",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_blood/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_blood/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6751,
+      "sha256": "e9e1e62548e9f9972a9a6d680f6f4c17baa4d3af94eb75280de14687c59bf6f7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_blood/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_blood/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 19355,
+      "sha256": "252b1777b4278301fc3da31ff0cb01500acf562f1134628c42f129e883487b31",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_earth/book_earth.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_earth/book_earth.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1463799,
+      "sha256": "27b23fa625e74732e439fb6251a12aee5228ccaa586d75902ae52596ab725ead",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_earth/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_earth/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1140,
+      "sha256": "6a55f3d639d1769058f8065d7000b683776d17ae5480f9f4e1eeebf3cc41f724",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_earth/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_earth/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6741,
+      "sha256": "ea1a4cc703231e11fd6a3cdfee063eba5befc03630d8b16790c1ecd71ae787a5",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_earth/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_earth/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 19334,
+      "sha256": "baf7a54c9018a5c4018b349385527ed29c460fba6118d64f469f9b3833aba438",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_fire/book_fire.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_fire/book_fire.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1327980,
+      "sha256": "a4667e24d97e5012f5f001fbc2e4ff3e1faaa63907ec8629fbead2bf045f1174",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_fire/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_fire/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1137,
+      "sha256": "191e65eabd791b7f3d8b68153931590226cd1b9f37c66a177213ff32b7e76aa5",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_fire/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_fire/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6714,
+      "sha256": "3c23b196d8645a65070ae6f378402c1df10abbc1ebf4c1aa2b551592ee88ea7d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_fire/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_fire/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 19275,
+      "sha256": "8ed9115f6c9fb161924ae78c11554e8c0bec20a9577124b7ce649935d8ef7d06",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_water/book_water.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_water/book_water.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1255789,
+      "sha256": "9edadd6e8113caafe8694edf5912218934add76ef6b60454c0eebb47cb77dd10",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_water/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_water/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1140,
+      "sha256": "190817d7870dc66a7c28023a38c6032e27b1cc689cd39eedea7591d9b8225cd0",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_water/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_water/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6736,
+      "sha256": "8b0290fb27cc2d9293276419a2ece1151eb9d773732f71e1b7d174693b84f631",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_water/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/book_water/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 19316,
+      "sha256": "6d6e5598a70dc9ab12a9dc690833291ba47233616bcdb429850ecd56b9a2903a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_toadstool_061/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1233,
+      "sha256": "f8637acf4dd04273e56fbf9e29df9123c76ba2459847b504bd3ea412191564e8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_toadstool_061/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 202,
+      "sha256": "cbc3b13f74e779f139ab421e68bd85e9024ea2d8a6e37319dfe949f9efb982a7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_toadstool_061/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 18233,
+      "sha256": "4e1c7be280794ce0411c0db733d3d85e94402f20de26b19a58c6723699134fa8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_toadstool_061/selection-sh4_toadstool_061.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/selection-sh4_toadstool_061.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 243895,
+      "sha256": "cf1e0a6d55aae72fc3f520fc087b40fb403c6212be97f5f445983e88ddde5e60",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_toadstool_061/sh4_toadstool_061-reference-left.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/sh4_toadstool_061-reference-left.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 12670,
+      "sha256": "4171862e69f1bde07a3e22dbd139c03b7ae1743f6caa178d49f51809ab2fb11e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_toadstool_061/sh4_toadstool_061-reference-right.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/sh4_toadstool_061-reference-right.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 12570,
+      "sha256": "33def6cdfdf4019284cb1a38b28d6ddad912baadfb3338476fdbde07bb64ab20",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_whitestool_062/process-observation.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/process-observation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1236,
+      "sha256": "c4bc3a2f350923bd158a8aa50e48767fd40bb1712eed90ae4f298bdd01b64226",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_whitestool_062/process.txt",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/process.txt",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 203,
+      "sha256": "8147739526ba471e69c8924b0b0b64bf26e8b78db7bf673b13938cd6c34590a8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_whitestool_062/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 18281,
+      "sha256": "3f999cac572f1ac104d7bbd2af5bc84b9721c026975b700730f262bec8a7a84f",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_whitestool_062/selection-sh4_whitestool_062.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/selection-sh4_whitestool_062.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 298138,
+      "sha256": "06455b1c57288e299958e1128913c415a268ff7fe87ad7f18ae73c29ef8eb57a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_whitestool_062/sh4_whitestool_062-reference-left.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/sh4_whitestool_062-reference-left.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 16236,
+      "sha256": "3abc5ffa8b45869b224bc464534ffb4c12cd559ec04491c6f6bfb68e618977ca",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/sh4_whitestool_062/sh4_whitestool_062-reference-right.png",
+      "path": "docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/sh4_whitestool_062-reference-right.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 16239,
+      "sha256": "f262da132321b8e98df84eb100cbb826a768f001729eea185f1d30c00e699537",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/executed/qa-characters-native-e5e7ede8084a.mjs",
+      "path": "docs/production/vague23-session-6101/qa-native/executed/qa-characters-native-e5e7ede8084a.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 24511,
+      "sha256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/executed/qa-stages-native-5e4cee0ced1c.mjs",
+      "path": "docs/production/vague23-session-6101/qa-native/executed/qa-stages-native-5e4cee0ced1c.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 15268,
+      "sha256": "5e4cee0ced1cb66ce3ab5b7ceb1d46e82057bfad275ccd973f0cb10b39b047d2",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/parent-visual-review.json",
+      "path": "docs/production/vague23-session-6101/qa-native/parent-visual-review.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1720,
+      "sha256": "ab5af8a3e3ee1f90415d69fb53b3ee0a01de2d1e04a309b7d09a55fec9650345",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/report.json",
+      "path": "docs/production/vague23-session-6101/qa-native/report.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1035093,
+      "sha256": "62cc863b9615ff16510435f65a89ac5e4add765b022bad7a4b6721fef1fb67bf",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/README.md",
+      "path": "docs/production/vague23-session-6101/qa-preparation/README.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6243,
+      "sha256": "bb21e4de23f9b46ca173b169113329441a305dca9f36795205c89d78ae8d2fa8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/environment-probe.json",
+      "path": "docs/production/vague23-session-6101/qa-preparation/environment-probe.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 7060,
+      "sha256": "1c75c5a780adf1a95a2353760480664e97b37889de4ccaf85d0212beaa16e024",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/environment-probe.mjs",
+      "path": "docs/production/vague23-session-6101/qa-preparation/environment-probe.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 4118,
+      "sha256": "54d177120734552af5eb751405f2720a6c186beb119b065ee10ac8804c8c1b04",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/probe-dxf-export.mjs",
+      "path": "docs/production/vague23-session-6101/qa-preparation/probe-dxf-export.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2469,
+      "sha256": "8c148db50620827ddf511edc6fc4a35b72ee4d3ce5756f326aefde90e1b51c87",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/read-source-conditional-formats.py",
+      "path": "docs/production/vague23-session-6101/qa-preparation/read-source-conditional-formats.py",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 4505,
+      "sha256": "c7b14535cf4a959a4bbbaf1afa4bf41f4b054eb286f672e67c7b3416ec1e84d3",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/source-inspection.json",
+      "path": "docs/production/vague23-session-6101/qa-preparation/source-inspection.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 835,
+      "sha256": "a05a65e75b62abbfb7aaf85d3ac780ef63a908d2e98c25bf19523d8341ec5d1d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/verify-workbook-package.py",
+      "path": "docs/production/vague23-session-6101/qa-preparation/verify-workbook-package.py",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 25496,
+      "sha256": "5d1f92e3fb661af982de73bc126c220f11365e131cea032af3b44843fad04d1d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/workbook-package-check.md",
+      "path": "docs/production/vague23-session-6101/qa-preparation/workbook-package-check.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2993,
+      "sha256": "10f9cfc19f00f93efdb5aef695782f3f8261fbc204da8e420b47781363e0da8f",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/workbook-package-selfcheck.json",
+      "path": "docs/production/vague23-session-6101/qa-preparation/workbook-package-selfcheck.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 3157,
+      "sha256": "9a1a7deb64139296b2e6d30c9fc1cbda2f105dc20bec17525dabf19c1c008b5e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-stages-native.mjs",
+      "path": "docs/production/vague23-session-6101/qa-stages-native.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 15268,
+      "sha256": "5e4cee0ced1cb66ce3ab5b7ceb1d46e82057bfad275ccd973f0cb10b39b047d2",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa/final-audit.log",
+      "path": "docs/production/vague23-session-6101/qa/final-audit.log",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1448,
+      "sha256": "01b37242a95f61e204246a3b7199541761c76d443583cd80fbdbc355a3dd4639",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa/gates.json",
+      "path": "docs/production/vague23-session-6101/qa/gates.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1936,
+      "sha256": "7fff7c71885f1005141966dbf71cf4ed45e2dfcffcfa9073f0ab571b8f356e7d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa/npm-test.log",
+      "path": "docs/production/vague23-session-6101/qa/npm-test.log",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 135502,
+      "sha256": "02c43869105944905d08b37962b374ff1960fb000d21d66d08b5a3ece7aa814a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa/test-art.log",
+      "path": "docs/production/vague23-session-6101/qa/test-art.log",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 16358,
+      "sha256": "53e5a8976e4613a5503b8eb9129346903e17ebff8eb710f479ddeb7bdebed1e2",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/scope-baseline.json",
+      "path": "docs/production/vague23-session-6101/scope-baseline.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 284459,
+      "sha256": "bdd94b4d7232a7f55598b327d81d9f6e1b6d4f4da74847dbbb07d04015f2d404",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stage-import.log",
+      "path": "docs/production/vague23-session-6101/stage-import.log",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 374,
+      "sha256": "788756cb246f98cfe9217818e03f121ef5c8314b98f804f5df031a448d8837a4",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stage-integration-bom.json",
+      "path": "docs/production/vague23-session-6101/stage-integration-bom.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 18506,
+      "sha256": "058ab1b56ac432f6e88e35ce07bb1e27e90de2628409908678df76ae52e82f03",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/NATIVE_GAMEPLAY_REVIEW.md",
+      "path": "docs/production/vague23-session-6101/stages/NATIVE_GAMEPLAY_REVIEW.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 5636,
+      "sha256": "9da7666ca4d63ce8b974b94f66f5405fa82518c7281da9fbd50468397ad211be",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/README.md",
+      "path": "docs/production/vague23-session-6101/stages/README.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6992,
+      "sha256": "e363c757c7c22ff9a073b63c3f3f8538b1a3457fefd32423b7e6c770a0c107de",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/assemble_delivery.py",
+      "path": "docs/production/vague23-session-6101/stages/assemble_delivery.py",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6930,
+      "sha256": "2a0401f123bf0a0a3078e4e80475f3817cdcead2626a149c6c0ef1ef6a3541ea",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/delivery.json",
+      "path": "docs/production/vague23-session-6101/stages/delivery.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 48660,
+      "sha256": "32e6bb58c9e9f862323e27d146bb4be3496e1b26c362f4801a0bdd846701ffcd",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_blood.blood-arena.png",
+      "path": "docs/production/vague23-session-6101/stages/images/book_blood.blood-arena.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1864385,
+      "sha256": "a2f0bf8241d3a7b77f2379654bdf58f79881af710a65603bf6090614f7ba8c14",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_blood.near-perimeter-edges.png",
+      "path": "docs/production/vague23-session-6101/stages/images/book_blood.near-perimeter-edges.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 77156,
+      "sha256": "472f222bec2101e6b073da623df1bd2189a98950306bba970e96a47747459f96",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_earth.earth-gallery.png",
+      "path": "docs/production/vague23-session-6101/stages/images/book_earth.earth-gallery.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2615157,
+      "sha256": "d68ff2b3d5a6e89a9947e6e2a4fe197761e5ffac3fd0d4d19580d6e07303f150",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_earth.near-rock-edges.png",
+      "path": "docs/production/vague23-session-6101/stages/images/book_earth.near-rock-edges.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 129276,
+      "sha256": "e2f16322550789968fbf16abb53e0b324881bc85f65d1fe83aa832d493257638",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_fire.fire-room.png",
+      "path": "docs/production/vague23-session-6101/stages/images/book_fire.fire-room.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2197958,
+      "sha256": "7f1236bf66946438ebbb93b74dc948bfc29bea058e7c43ead125437c2607d9f1",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_fire.near-steel-edges.png",
+      "path": "docs/production/vague23-session-6101/stages/images/book_fire.near-steel-edges.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 188064,
+      "sha256": "e238137c6bfd31443ff58eaf97e743c60baae68de92666308d3801b9fc80b800",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_water.near-tile-edges.png",
+      "path": "docs/production/vague23-session-6101/stages/images/book_water.near-tile-edges.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 204775,
+      "sha256": "9db746e9832ff87bbbb4cce22e73ef6d21f563fb6903ab10b534ce676f8d978a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_water.water-basin.png",
+      "path": "docs/production/vague23-session-6101/stages/images/book_water.water-basin.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2156656,
+      "sha256": "12604eb0cf73963d8fbcb1222129f0b984bc417f6be3514712d6ecd5188f06cf",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/native-gameplay-visual-review.json",
+      "path": "docs/production/vague23-session-6101/stages/native-gameplay-visual-review.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 21031,
+      "sha256": "e0a92497308a283faae1e2746da7de74b70ff412f23906fb1c3b21cb74a4d25d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/native-process-summary.json",
+      "path": "docs/production/vague23-session-6101/stages/native-process-summary.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1248,
+      "sha256": "4a7d4a249f89f664e14ad889e0f11b06f29b90c2fed7987184b97731ab858c22",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/native-visual-review.json",
+      "path": "docs/production/vague23-session-6101/stages/native-visual-review.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6976,
+      "sha256": "0dfb46f7d4bf77adacffe75e16c739d1cd3e67486345a9b6460c53670a937b88",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/outputs.json",
+      "path": "docs/production/vague23-session-6101/stages/outputs.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1659,
+      "sha256": "8833607c99477a1d03f885bafc8c572a9534ac3a085deb782447e40835034cd4",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/prompt-blood-correction.json",
+      "path": "docs/production/vague23-session-6101/stages/prompt-blood-correction.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1294,
+      "sha256": "af25dcf3b5d178ffc55bfae40be436e449c0cffc6ac0b48f7566bfa2a6a0f081",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/prompts-bg-first.json",
+      "path": "docs/production/vague23-session-6101/stages/prompts-bg-first.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 3971,
+      "sha256": "d28f9cb5db202df4569d5290366d0d3a507b77cc3b0af9e55ca63a74c5eeb5bc",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/prompts-bg-second.json",
+      "path": "docs/production/vague23-session-6101/stages/prompts-bg-second.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 4621,
+      "sha256": "1aff5f98ee5247481ecd707214115a3f7ef9609c3803867ad385b4b7284432f8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/prompts-fg-first.json",
+      "path": "docs/production/vague23-session-6101/stages/prompts-fg-first.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2665,
+      "sha256": "97c84b8196cbe6159bb47f062087b5bfa164505122cc74cc941217ef7968b5d8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/prompts-fg-second.json",
+      "path": "docs/production/vague23-session-6101/stages/prompts-fg-second.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2464,
+      "sha256": "002ee581918801dd7ba7408ab3740d73cd9ba56c99528808b22db6fb89741a70",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/raster-audit.json",
+      "path": "docs/production/vague23-session-6101/stages/raster-audit.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 3506,
+      "sha256": "22750597ba311eb28847ade57ee4887eb18881e1288e07b70760807b459d7132",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/reference-inventory.json",
+      "path": "docs/production/vague23-session-6101/stages/reference-inventory.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 3494,
+      "sha256": "1442e08fb2cf34f76f92eda0fec1fa252aead1ab92b5f0cc06ed21ae12b0ede5",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/downloads-bom.json",
+      "path": "docs/production/vague23-session-6101/stages/references/downloads-bom.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2060,
+      "sha256": "b44eb8d739b07c1e22ad40bb4e3f827ddea8336a74494da5cc55822f0fcfa0ee",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/downloads-initial.json",
+      "path": "docs/production/vague23-session-6101/stages/references/downloads-initial.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1765,
+      "sha256": "aaba2e43346e1bbc6930aef27a4ebd7e2ab988fc5f4f5b4d023b2b2365325375",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh3_03_moon_door.jpg",
+      "path": "docs/production/vague23-session-6101/stages/references/sh3_03_moon_door.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 447831,
+      "sha256": "da3da28a7849295cbf56208ab9dbb38dbf8263fbe647d25920c5ca6eb71285dc",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh3_09_daisy_villa_apartments_01.jpg",
+      "path": "docs/production/vague23-session-6101/stages/references/sh3_09_daisy_villa_apartments_01.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 436221,
+      "sha256": "60e9f13600f393a0d9d0fbe68938582a3967ed12752454064f4270a8175a3650",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh3_boss_missionary.jpg",
+      "path": "docs/production/vague23-session-6101/stages/references/sh3_boss_missionary.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 109689,
+      "sha256": "f5bf9422a0c1811efb9ab42af7d3662045aa907b9f0c9975382ef10c98d05190",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh3_boss_split_worm.jpg",
+      "path": "docs/production/vague23-session-6101/stages/references/sh3_boss_split_worm.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 236024,
+      "sha256": "ab87dfade02ae967d3ff54c38639bd909b458187c19fcfe2b98433b291c215a9",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_31_blood_boss.jpg",
+      "path": "docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20120606_31_blood_boss.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 158090,
+      "sha256": "2f400be911a675a1df96affe07abc636a32173312b57c9a4e9fff991223e43e4",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_37_earth_world.jpg",
+      "path": "docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20120606_37_earth_world.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 179692,
+      "sha256": "f21e7b14146affb5330ad1e51713b808012a77cefb0606aa5182219d2b663273",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+      "path": "docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 162926,
+      "sha256": "92143fe2c8def2311cd8317671e3d8c3317c390d6ebebf5f0f21eb026ae95b44",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20121016_01.jpg",
+      "path": "docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20121016_01.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 173779,
+      "sha256": "39441bb698a9f311de162264ba47c3b8e5284abaf9609e5f74a6b8f5cda8e0f3",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20121016_02.jpg",
+      "path": "docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20121016_02.jpg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 239307,
+      "sha256": "626219e788febaffe8a6c93462d64815c25e67a3d18ccbbbc6ebc94c4bef793b",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/silent-hill-the-short-message-BIG.jpeg",
+      "path": "docs/production/vague23-session-6101/stages/references/silent-hill-the-short-message-BIG.jpeg",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 101173,
+      "sha256": "99add075da39fc85ad6e7d8e9533bb21e08a33aa3e543c85fe6fd6cf2de1146b",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/run-native-qa.py",
+      "path": "docs/production/vague23-session-6101/stages/run-native-qa.py",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 3153,
+      "sha256": "c61f0a1adf73590f20fd64186ca3f94289a86d9f1f6d7e322718bee8434b130e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/stage-specs.json",
+      "path": "docs/production/vague23-session-6101/stages/stage-specs.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6090,
+      "sha256": "bd9207abe3be3179e465e9262257ce8021e76aa4d0cd6b0c48d6d4267197af92",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/validation.json",
+      "path": "docs/production/vague23-session-6101/stages/validation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1410,
+      "sha256": "588fb850be2660eac9a282781c8ef1b8d3a84c656aa0a6497d791482b0b3c972",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/variants/book_blood.initial-disk-draft.png",
+      "path": "docs/production/vague23-session-6101/stages/variants/book_blood.initial-disk-draft.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1943049,
+      "sha256": "a88c156c68204da6ba2f30094e9e31d1852153f97f6740b041e56766f6961a12",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/variants/book_fire.initial-platform-draft.png",
+      "path": "docs/production/vague23-session-6101/stages/variants/book_fire.initial-platform-draft.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 2378307,
+      "sha256": "caa26e530c99683dc8081cbbbc7d235e5ebd16131b7c3b7e241d3f2d1e0c1eb5",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/update-workbook.mjs",
+      "path": "docs/production/vague23-session-6101/update-workbook.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 10297,
+      "sha256": "26f80c5a08d869aac1a87d33d8c796e65f5b337bb5ce48cda26d888c78dfb479",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook-edit.log",
+      "path": "docs/production/vague23-session-6101/workbook-edit.log",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 595,
+      "sha256": "95be32e52a3bb94a0e7693b1f463040b31b9d2e6cf8aa31aa83b1af32f872f66",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook-inspect.log",
+      "path": "docs/production/vague23-session-6101/workbook-inspect.log",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 363,
+      "sha256": "6881d57d5d0d2a112adf759811f92fb5238253285b1bb0374de6be6e2f3c03ad",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/before.json",
+      "path": "docs/production/vague23-session-6101/workbook/before.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 515,
+      "sha256": "09c464bcaca24e3ecb043e79d7faf351878445990f2af44096c63a81adda26b6",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/book-zones-after.png",
+      "path": "docs/production/vague23-session-6101/workbook/book-zones-after.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 352972,
+      "sha256": "5937068b1dfb85071bfbbe174560da96caa6dcab5f867b3f87e68f44b443ca8d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/book-zones-before.png",
+      "path": "docs/production/vague23-session-6101/workbook/book-zones-before.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 513992,
+      "sha256": "d4e79cd5425346b3197d79095b702c0f6c4469549741087205d53d27f7969269",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/conditional-format-api-help.json",
+      "path": "docs/production/vague23-session-6101/workbook/conditional-format-api-help.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 4227,
+      "sha256": "d9d559650d06f0192e871e7b098d009cf1795e2840d544c22ed196dadd3570cb",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/conditional-format-api-probe.json",
+      "path": "docs/production/vague23-session-6101/workbook/conditional-format-api-probe.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 718,
+      "sha256": "0ffa0f154e9182f1fcc356035eb56549f61d556247d23b31ab7a41bb5153e3cf",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/conditional-format-preservation.json",
+      "path": "docs/production/vague23-session-6101/workbook/conditional-format-preservation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 1383,
+      "sha256": "3a2a62246da6b00bb3cb3f1a57bfe7e3a87566c951c5aa5e1412a991c39c3d59",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/conditional-format-resolution.md",
+      "path": "docs/production/vague23-session-6101/workbook/conditional-format-resolution.md",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6258,
+      "sha256": "7dabae361004aaf413a325f5ca897444e63d38cb2e04beabc062d1db56402895",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/edit-inspection.json",
+      "path": "docs/production/vague23-session-6101/workbook/edit-inspection.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 433,
+      "sha256": "3fc96ce696fef236f7aeaaed8315dc02b4c172debe3eebe3f8c5380d3d94d6e0",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/inspect-inspection.json",
+      "path": "docs/production/vague23-session-6101/workbook/inspect-inspection.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 433,
+      "sha256": "6741c230b5b9a9e8468b44dd1236278ee3701868a42d1493c554974c227daa80",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/package-preservation-initial-export.json",
+      "path": "docs/production/vague23-session-6101/workbook/package-preservation-initial-export.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 11381,
+      "sha256": "d4e88e4a0e8715f6ba0d1499d81860523e5e0ddae83b02d1d10b53a8729ef78c",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/package-preservation.json",
+      "path": "docs/production/vague23-session-6101/workbook/package-preservation.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 11004,
+      "sha256": "6522785312ad2a87bf2eff26b4356a93dc45e0be12931c508d7e7ca4c12f1c26",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/prepared-input.json",
+      "path": "docs/production/vague23-session-6101/workbook/prepared-input.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 127374,
+      "sha256": "79c457e7aeafa497689f73358cc309d92fbb2d5c3dfbe568a113ec0a9ed1734a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/stages-after-summary.png",
+      "path": "docs/production/vague23-session-6101/workbook/stages-after-summary.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 45651,
+      "sha256": "ba66f2d611f45d14cde3043bc9f30ad6fb06d5b39b61f2cebdfdcfbead79df94",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/stages-before.png",
+      "path": "docs/production/vague23-session-6101/workbook/stages-before.png",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 126921,
+      "sha256": "4a5d002ce5aa704b302932972a47b3cc0cec3512e3498f67f38a0cef136bd322",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/workbook-verification-initial-export.json",
+      "path": "docs/production/vague23-session-6101/workbook/workbook-verification-initial-export.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 6566,
+      "sha256": "39fb6fc2fa0427ca93aab3e99f6d450c2ba30424cfb0ea163f113878c1c7f4bc",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/workbook/workbook-verification.json",
+      "path": "docs/production/vague23-session-6101/workbook/workbook-verification.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 9156,
+      "sha256": "f99aae73967221ddae6fb9bfbe2ef657ce2e698664fb905b90725381f1b02d03",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/write-import-journal.mjs",
+      "path": "docs/production/vague23-session-6101/write-import-journal.mjs",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-evidence",
+      "bytes": 4221,
+      "sha256": "f50ce7c27b5a43d6952efd0c85282745987e2c00061cc39f6c31b16eadaaf6ac",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/service-worker.js",
+      "path": "docs/production/vague24-recovery/session-6101-original-state/service-worker.js",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-state-not-runtime",
+      "bytes": 45200,
+      "sha256": "9a707b1603d40606757bcc7fed0dc6f2958f5aa2fb398023ceb4598b6206cbe1",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/src/sprite-manifest.js",
+      "path": "docs/production/vague24-recovery/session-6101-original-state/src/sprite-manifest.js",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-state-not-runtime",
+      "bytes": 832459,
+      "sha256": "37ad7ea5e154c4e7b40dec16171204f981d036b47479d7d191cb347dd60bc121",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/src/stage-bitmap-manifest.js",
+      "path": "docs/production/vague24-recovery/session-6101-original-state/src/stage-bitmap-manifest.js",
+      "sourceSession": "session-B",
+      "disposition": "historical-session-B-state-not-runtime",
+      "bytes": 139753,
+      "sha256": "a3e0ff06e26ff3ebc66bb1c1d86c7a7093c93b927d22ad9bd8ec9897d49ddbe6",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/previous-local-file-audit.json",
+      "path": "docs/production/vague23/previous-local-file-audit.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 112341,
+      "sha256": "309124f487f0cd77e8b7f3efbc1131a4e4f781a69ca856281e25cb02fddaeb79",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/README.md",
+      "path": "docs/production/vague23/recovered-wave22/README.md",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1316,
+      "sha256": "a2fc601073cb9aac02cab3f09374d5a1c4fffa903a88a089cc46977663a9e592",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/fighters-a/close-part4.py",
+      "path": "docs/production/vague23/recovered-wave22/fighters-a/close-part4.py",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 8767,
+      "sha256": "22034c2fa64848082d0dc865127f86967d79958ede9e85dc1ca534d7880c020f",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/fighters-a/close-scope.py",
+      "path": "docs/production/vague23/recovered-wave22/fighters-a/close-scope.py",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 6943,
+      "sha256": "7ff3528549dd3906ba54f1c86bdabc3db3da5915fbbd3dba458640d39092e753",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/fighters-a/fetch-sources.py",
+      "path": "docs/production/vague23/recovered-wave22/fighters-a/fetch-sources.py",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 3440,
+      "sha256": "4f942bc9f93921c7d68bb28d2ff54ba505f9ed72ff8b94663583c4856ba170e3",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/fighters-a/finalize-metadata.py",
+      "path": "docs/production/vague23/recovered-wave22/fighters-a/finalize-metadata.py",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 3983,
+      "sha256": "64349a32f428cd806e6f41143bd0ffff4b582345a396de587a0e5f190954cd5c",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/fighters-a/write-review-eight.py",
+      "path": "docs/production/vague23/recovered-wave22/fighters-a/write-review-eight.py",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 4771,
+      "sha256": "da17393e7ec2d0c74a7838eea6db25958ff9b966e10c293327313feb3eb5437a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/fighters-a/write-review-final.py",
+      "path": "docs/production/vague23/recovered-wave22/fighters-a/write-review-final.py",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 7126,
+      "sha256": "4dfa2869066942ba7550123aa094bfdff85194dc6122e4f3116c98d34d2ab4b5",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/fighters-b/review-native.py",
+      "path": "docs/production/vague23/recovered-wave22/fighters-b/review-native.py",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 6535,
+      "sha256": "b37804a0c709f8e6b9568b16d0c3304634672e68284f961f6b433be6826474be",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/recovery-manifest.json",
+      "path": "docs/production/vague23/recovered-wave22/recovery-manifest.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 73055,
+      "sha256": "c9f138a4043f9a5eb6b43928a3bc77e311065621248106f3044baef9b3144017",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/central-guide-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/central-guide-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 746,
+      "sha256": "5ccd820732abf86333a6ad2f474593f2811009791b19c728883b3d5d9f3d400a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/evidence-inventory-provisional.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/evidence-inventory-provisional.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 4497,
+      "sha256": "734b7c64c947a8643e2498c355495ace6fc4d55169c263669b142c427c07069e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/finalize_evidence.py",
+      "path": "docs/production/vague23/recovered-wave22/stages/finalize_evidence.py",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 13105,
+      "sha256": "e962beb0789613cdc4654e4091393c8ce65e24a9207f4f1e4f70b8efa33ae2be",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/frozen-guide-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/frozen-guide-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 633,
+      "sha256": "f830ef155ea5139c6d602b90d550904785d10d06a628df1c2b2cbadf872bb44f",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/hc-guide-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/hc-guide-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 8660,
+      "sha256": "1c772864bcbd0116a8c0e4a400fc8041ed8acd392ee574d3699d074af2239f0d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/homecoming-official-source.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/homecoming-official-source.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 311,
+      "sha256": "4702aa9c327654c785463c5e4ba9fa3eaefe1856b07862a1eea33f104ec124aa",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/nowhere-guide-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/nowhere-guide-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 2442,
+      "sha256": "b8e26983b1caf3ab753df16399f016fb25b1cc0eb483a40654a56403388e455a",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/nowhere.generator-room-draft.png",
+      "path": "docs/production/vague23/recovered-wave22/stages/nowhere.generator-room-draft.png",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1983288,
+      "sha256": "d0deb8e7dd89f9a3470a0c8f474bb8767bf9ad83c19d00bed2394216bc4d7a79",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/other-guide-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/other-guide-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 6738,
+      "sha256": "17ae40c90882ca7cd1805d6496d7e952b16cd43048efb4571d7f3328b578ef07",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/outputs.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/outputs.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 14116,
+      "sha256": "255928dd4ea7d46a74d48a44a356c033dc25a099a57451aad2b0977bf6431373",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompt-central-nightmare-bg.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompt-central-nightmare-bg.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 2025,
+      "sha256": "a1ecbc8ebe338ab9e4adfd0928a152c49224780cc2390c3a301d7dc6a1104f4d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompt-central-nightmare-fg.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompt-central-nightmare-fg.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1355,
+      "sha256": "5bba026eba0bcce500390e1738d1a1b789cfade05e5576b42c79ea41077a1529",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompt-nightmare-hospital-sm-bg.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompt-nightmare-hospital-sm-bg.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 2664,
+      "sha256": "6719c4e8ad332208c18909e270c9672cbcba5ea0185d79c683b1fd9bc9227143",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompt-nightmare-hospital-sm-fg.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompt-nightmare-hospital-sm-fg.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1350,
+      "sha256": "1093ad78c60bb47b72a27b57c90d98b54b33db01f24173b5025fabc21bde52a7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompt-nowhere-bg.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompt-nowhere-bg.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1979,
+      "sha256": "ba9f2b324e6489428ac660e13c608e23b92ac703e0395957d7487a604d69a823",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompt-nowhere-fg.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompt-nowhere-fg.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1178,
+      "sha256": "f6174e8eafa3ed8a6dd49ba52c893094c97c43bdbd1d340ffd5fa8877c1b47e9",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompt-villa-bg.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompt-villa-bg.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1854,
+      "sha256": "cbcb0b7986ed9c69d9ed0a200df72dfd0291000bba8db77c75e429213be3fee8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompt-villa-fg.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompt-villa-fg.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1619,
+      "sha256": "35e0c7501897c4d2a8204b6022b97c7ca98fd87db75959ad9b77074b04ba9b72",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompts-current.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompts-current.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 30522,
+      "sha256": "3dac84f77cee8cda72e2648c5f78f3326ca5885698107cc115beb6ad24caf014",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/prompts.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/prompts.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 34568,
+      "sha256": "e3cfa4790cb82031f8566fe2f573ea1d8e0b0a30f2d30c9a935103f39292cd46",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/reference-crops-origins.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/reference-crops-origins.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 3556,
+      "sha256": "6b75b194cb0c9b8e15432b247299e949c61ad28b2faf0018fdff0fd9c6942b15",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-cedar.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-cedar.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 946,
+      "sha256": "5d2f5898b06c4fff4eef63043116b8992d72bb608320302b6d93d8ba4ce0d085",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-central.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-central.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1723,
+      "sha256": "c9797d6963d90d19d442eec261da8f855105e782de242c0ffa4dc088f97fd12d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-hc-official.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-hc-official.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1407,
+      "sha256": "08d38acba10c5e51b4fdac2bc0425d9d0a2a8c17b9f004134c20d788f23a8f58",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-hc-small.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-hc-small.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1309,
+      "sha256": "5794346194da7670539644936c5703ddc218fd37856d4f7bb6510aa6c163c63e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-hc.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-hc.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 613,
+      "sha256": "a37f7656f11ef587411659ca61f61f0ef086f14fdd80fb1d73f1db7751e7ddf6",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-nowhere.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-nowhere.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1302,
+      "sha256": "990d4815bfd4eda505b802aa58030a5deaed61fd456ac41e126a0d8a8724e081",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-origins.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-origins.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1141,
+      "sha256": "e548cc5abdea77195c822f110153cddcb3963bce3d7e6640cfcb06c431e6e146",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-sh3.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-sh3.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 3077,
+      "sha256": "ec1204b4187450e81b67584889a29e72395891723dc968bdee06e632a06632b7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-sh4.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-sh4.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1396,
+      "sha256": "95dbf0de84a57417d194a23be658e84e9e4ee66f2447988c7a96aeba432b48e5",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-shsm-er-cells.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-shsm-er-cells.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 3559,
+      "sha256": "8f56583d5643382da6a993c010386db7752ac412e89a8e3e58629a1cf74eab68",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-shsm-hospital-video.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-shsm-hospital-video.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 3598,
+      "sha256": "bed53a63544430e6c5e7d533d072ec3109bd7dbba64218affbfa6734f8f9ee48",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-shsm-hospital.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-shsm-hospital.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 692,
+      "sha256": "05a7e424f7f54864a8d8dc6dcad28bbc3346953017679f85620fc76a877cac0c",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-sm-official.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-sm-official.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 3784,
+      "sha256": "51358a1fe08dba16fbe32955c5ead0b2d93302940a96064e9e0c70790a7f1088",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-sm-pgg.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-sm-pgg.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 476,
+      "sha256": "5e34f5cb0b9f5b66335a35058a508d8714eabb7c224de617f05f807e9bfc5797",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-sm-storyboard.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-sm-storyboard.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 1490,
+      "sha256": "891aa13fa26f53812499cefd0a6fd97fd5135e633c7520eb77b769df0ac08481",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/references-sm.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/references-sm.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 2376,
+      "sha256": "c5aea6c85803c515b327aca3ca36cd71fb69f21d33b3cad258341b47b4578d24",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/runtime-policy-replacements.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/runtime-policy-replacements.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 26754,
+      "sha256": "4ac99e9929759f31d004600b726627f927abe67de385f7f0216335621f3528c8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/runtime-policy-snapshot.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/runtime-policy-snapshot.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 107854,
+      "sha256": "9e46fd5603f2115d8f64fdc29ff8c8945bd36ccf3a5346396f2c7b5a6d3f6f2f",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/sh3-guide-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/sh3-guide-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 20072,
+      "sha256": "0e5c1f6d5ca12deb4e3d46e974fe0e698f3dd925c3ae914c46f81ef84a9baf4e",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/shsm-hospital-guide-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/shsm-hospital-guide-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 493,
+      "sha256": "73f25fe900232ad2c215d5e5fefda654091a2676184a4bad10cd4b8cc4690560",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/shsm-puzzle-original-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/shsm-puzzle-original-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 878,
+      "sha256": "cc8ff1eb13e947e9de997e30de6d1e96fe5cab97e9bcec5fb4731f5566bdfd3d",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/shsm-walkthrough-original-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/shsm-walkthrough-original-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 925,
+      "sha256": "62a9397648d66868960313778027eaa5454f2abbb2e3acbac850dfa56ed88694",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/sm-guide-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/sm-guide-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 7361,
+      "sha256": "6a8271c6a7b2a0b89fbb11136c9efe91059e536fc12b8285feddc7dca7d539cc",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/sm-official-screenshots-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/sm-official-screenshots-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 3009,
+      "sha256": "fcfdd272e91ed7750ecc6e2e16d520b24f40945814baffefda27cf9efad679b7",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/ss-guide-index.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/ss-guide-index.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 764,
+      "sha256": "d122ca4d9364333e20d44cc5013cb7d96b5c37ad4c49f84243448e3959f81a02",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/recovered-wave22/stages/stage-specs.json",
+      "path": "docs/production/vague23/recovered-wave22/stages/stage-specs.json",
+      "sourceSession": "wave22-archive",
+      "disposition": "preserved-original-archive",
+      "bytes": 10188,
+      "sha256": "392baa59021f4b053de2eb46850faaa8c8b54e7b71ee14092c440edf9d3d72cf",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/aggregate-native.mjs",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/aggregate-native.mjs",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 6760,
+      "sha256": "7765b3c027d198b5ca890510f83fc95e19dd50d4588c3e0c19e85c5d09a3a5e4",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/audit-final.mjs",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/audit-final.mjs",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 10774,
+      "sha256": "5294e8476f5a8b173a1c5f55c87611ef71d1695978b1449b722506224d8105ac",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/capture-baseline.mjs",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/capture-baseline.mjs",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 3654,
+      "sha256": "f2fdbe9257f29fa979b8b096ebbedb102d2aeec86e4f65a06aa023bd25214f70",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/import-character-delivery.mjs",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/import-character-delivery.mjs",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 6384,
+      "sha256": "c31b01d7d6784fdeb4b4cb9b52b11098950722d8b5962fee3869aed8de527f08",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/integrate-stage-deliveries.mjs",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/integrate-stage-deliveries.mjs",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 6479,
+      "sha256": "973f7ef783acdc07217c1073f48a8099b63deb645f55ee9cc09d6d3e8f7ed755",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/prepare-publication.py",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/prepare-publication.py",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 4006,
+      "sha256": "54b17b59c3b0124429ecec51d95ffd1d7ea07ca30b7178afa7ab69aed1731bd0",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/qa-characters-native.mjs",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/qa-characters-native.mjs",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 24511,
+      "sha256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/qa-stages-native.mjs",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/qa-stages-native.mjs",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 15268,
+      "sha256": "5e4cee0ced1cb66ce3ab5b7ceb1d46e82057bfad275ccd973f0cb10b39b047d2",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/read-publication.py",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/read-publication.py",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 1253,
+      "sha256": "b933d84c5715ad9a519efa18c3404ccd8eedf1a4554f06189e9336b1e76c6043",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/run-native-cases.py",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/run-native-cases.py",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 3210,
+      "sha256": "31a3de3e299b9a39157fd3db8889d9178cea39d78587d938455a27462bbfcefc",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/run-validation-gates.py",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/run-validation-gates.py",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 3393,
+      "sha256": "d2e6b5277541f2f77044971f56f645237e0f1bdcd64d61e9b6cea1d618c47e46",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/silent-hill-wave22/docs/production/vague23/scope-baseline.json",
+      "path": "docs/production/vague24-recovery/loose-wave23-scripts/scope-baseline.json",
+      "sourceSession": "wave22-worktree",
+      "disposition": "inactive-untracked-production-script-or-baseline",
+      "bytes": 284459,
+      "sha256": "a74eed6a20cc1ca667112024bd9c0519812ad4a6af06eeac414b6233748adc91",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6d8d28552d08/generated_images/exec-adbf1708-b405-4628-9d14-6bb38c664d52.png",
+      "path": "docs/production/vague24-recovery/rejected/arcade-hospital-unverified-location.png",
+      "sourceSession": "session-A",
+      "disposition": "rejected-location-unverified-never-active",
+      "bytes": 2102368,
+      "sha256": "0fccb593b8c29414fe241161008c48bc836e55e3e62424a1429f879729d36388",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6d8d28552d08/wave23-publication-inventory.json",
+      "path": "docs/production/vague24-recovery/session-6d8d-publication-inventory.json",
+      "sourceSession": "session-A",
+      "disposition": "historical-publication-inventory",
+      "bytes": 104463,
+      "sha256": "ee6b4a40283ed651b8627ad18403d327c9b5fa6c043540ae2ec07a8467f36bd8",
+      "byteIdentical": true
+    },
+    {
+      "source": "/workspace/scratch/6101dce1e243/publication-wave23/manifest.json",
+      "path": "docs/production/vague24-recovery/session-6101-publication-manifest.json",
+      "sourceSession": "session-B",
+      "disposition": "historical-publication-inventory",
+      "bytes": 76716,
+      "sha256": "c5c7fbb54e60f1e49a8a3f89610c2ba37670eb861c32d2503a4f359bbb1610df",
+      "byteIdentical": true
+    }
+  ],
+  "counts": {
+    "sessionBChangedFilesPreserved": 233,
+    "wave22ArchiveFilesPreserved": 57,
+    "looseProductionFilesPreserved": 12,
+    "allMappedFiles": 305,
+    "bytes": 86465727,
+    "nativeBActiveImagesRetained": 14,
+    "uniqueBViewsToActivate": 2,
+    "overlappingBImagesRetainedInactive": 12,
+    "rejectedAImagesRetainedInactive": 1
+  }
+}

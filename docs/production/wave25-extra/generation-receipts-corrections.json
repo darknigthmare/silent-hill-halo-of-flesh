@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "entries": [
+    {
+      "fighterId": "shf_hinako_s_father_164",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "prompt": "Use case: precise-object-edit. Asset: one transparent full-body 2D combat sprite of Hinako's Father from Silent Hill f. Image 1 is the edit target; image 2 is the original character design reference.\nCorrect ONLY the camera orientation of image 1. It is currently a three-quarter view, which is wrong for this sprite. Re-render the SAME one character in a TRUE 90-degree ORTHOGRAPHIC SIDE ELEVATION facing RIGHT. The camera must see the RIGHT flank of the creature, like a pure side-view technical model rendering. Align the shoulder and hip axes with the camera viewing direction, so the far shoulder and far hip are naturally occluded behind the near ones. The front of the belly must point to the right edge, NOT toward the viewer. Both feet point directly right; the far foot may be slightly offset so both supports can be read. Position the near knife-bearing arm low beside the body, with the complete blade visible, and preserve the far curved appendage without inventing another limb.\nKeep the exact same original character, huge spherical body proportions, navy torn jacket, pale cloth remnants, reddish fungal surface, two short legs, two small feet and original single knife. Do not change identity, materials, costume or weapon, and do not add a normal head. One whole figure only. Keep the entire body and blade visible with generous clear padding on all sides. Preserve actual transparent background, without checkerboard, floor, shadow, text, panels or other subjects. No three-quarter rotation anywhere: head/body, shoulders, hips and feet must all read as a lateral profile.",
+      "referencesPassed": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/wave25-extra/png/shf_hinako_s_father_164.initial.png",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/wave25-extra/references/shf-silent_hill_f_art_monster_hinakos_parents_01.jpg"
+      ],
+      "outputPath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-5cbf63b9-b019-43b2-a692-58d9c27f8235.png",
+      "outputHint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-5cbf63b9-b019-43b2-a692-58d9c27f8235.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "fighterId": "bom_blood_baby_144",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "prompt": "Use case: precise-object-edit. Asset: one transparent whole lateral sprite of Blood Baby from Silent Hill: Book of Memories. Image 1 is the edit target. Image 2 is the original finished model reference, including a true side-view gray sculpt near the lower center.\nCorrect ONLY the viewing angle of image 1, which is still a front three-quarter view. Turn the SAME character to a strict 90-degree ORTHOGRAPHIC SIDE ELEVATION facing RIGHT, matching the profile camera angle shown in the reference's gray side sculpt. The camera sees the creature's RIGHT flank. The far shoulder, torso side and hip lie naturally behind the near ones; we must not see the full frontal abdomen or the full frontal opening of the head. The vertical mouth opening is visible only from its side edge, with its tongue pointing/hanging forward to the right. The large right arm is nearest the viewer and hangs low; the smaller far arm may be narrowly offset forward for readability. Both knees, feet and head face directly right. Keep two complete feet and both hands inside the canvas.\nPreserve the head shape, exact original monster identity, primary model's asymmetrical arms and bands, torso proportions, reddish-brown and pale material colors, small claw-like feet, and the same restrained standing idle. No added anatomy or weapon. One whole figure only, fully framed with generous clear padding on all sides. Preserve real alpha transparency without a painted checkerboard, floor, shadow, labels, additional views or other subjects. Do not leave the chest or face turned toward the viewer.",
+      "referencesPassed": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/wave25-extra/png/bom_blood_baby_144.initial.png",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/wave25-extra/references/bom-sh_bom_art_20160221_everson_01_blood_baby.jpg"
+      ],
+      "outputPath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-7d9e9840-5c5f-4062-bf98-cbf4527ce7f4.png",
+      "outputHint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-7d9e9840-5c5f-4062-bf98-cbf4527ce7f4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

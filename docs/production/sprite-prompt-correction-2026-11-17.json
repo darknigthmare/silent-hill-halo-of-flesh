@@ -1,0 +1,14 @@
+{
+  "id": "arcade_robbie_the_rabbit_axe",
+  "prompt": "Edit Image1, the generated Robbie the Rabbit sprite, making only the following precise fidelity corrections, using Image2 (original Silent Hill THE ARCADE render) to verify details. 1. Replace the TWO divided front teeth with ONE single centered small rectangular ivory buck tooth, with no vertical split or seam. 2. Each pink foot must have FOUR distinct rounded toes, not three. Show the four toe tips on each foot clearly, with tiny pale nails matching the reference, without turning them into human feet. 3. Enlarge the TRANSPARENT canvas margin so the unchanged figure occupies at most80percent of the image height; both ear tips and both feet must have at least10percent canvas height of completely clear space outside them. Keep character proportions, face, expression, colors, green bowtie, dark overalls, buttons, axe, pose, full-body rendering and all other design details unchanged. Do not introduce another costume or weapon. Preserve real transparent alpha; clean any stray red/yellow edge fringe without changing pink fur. No new floor shadow, background, text,watermark, or additional view. Produce a single complete2D sprite, portrait2160x3840pixels requested if supported. This is a narrowly targeted asset correction; no blood or horror action.",
+  "requestedCorrections": [
+    "dentition",
+    "four toes per foot",
+    "transparent margins"
+  ],
+  "inspection": {
+    "fourToesPerFoot": "corrected",
+    "margins": "increased",
+    "dentition": "The original source is only about6x4pixels in this region; a single tooth versus two adjoining incisors cannot be established. Do not certify the requested single-tooth change as necessary or achieved."
+  }
+}

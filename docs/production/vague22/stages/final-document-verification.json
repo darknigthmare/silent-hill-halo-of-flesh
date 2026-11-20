@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "checks": [
+    "Frozen incremental deliveries unchanged",
+    "Consolidated production bytes match20 assets",
+    "README local links resolve in intended repository location or producer evidence directory"
+  ],
+  "passed": true,
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "fd8bffd7d047623f9864c2dc85a1204bf1bed7dae3642392f27337bcef8876e3",
+      "bytes": 8795
+    },
+    {
+      "file": "delivery.json",
+      "sha256": "2352e4b672a91adf8f4b320d5cdf58551fcfc526526a7b09ebb28717d039b272",
+      "bytes": 136155
+    },
+    {
+      "file": "reference-inventory.json",
+      "sha256": "a368d6fcc95f44af17fb68ad835d116e766c04b37fc2926cbfa22804d4e19ac3",
+      "bytes": 38596
+    },
+    {
+      "file": "native-visual-review.json",
+      "sha256": "9088e690333d0c125c6a592e6eede9a9b6e79949dd836d723c5a4b851c892e2b",
+      "bytes": 13517
+    },
+    {
+      "file": "selection-decisions.json",
+      "sha256": "92d0b5522c991138f13196ce6b980227218862df6607d5aac8b75bfd18efa93f",
+      "bytes": 9010
+    },
+    {
+      "file": "evidence-inventory.json",
+      "sha256": "6af972bcbc0efff937cf73cbd6337c6b7ebe4033309e64c94bd9ad906c75002b",
+      "bytes": 16457
+    }
+  ],
+  "browserTest": false,
+  "newTestOrRenderExecution": false
+}

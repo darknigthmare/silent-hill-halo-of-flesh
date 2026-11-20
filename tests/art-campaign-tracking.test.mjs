@@ -4,6 +4,8 @@ import {mkdtempSync,mkdirSync,readFileSync,writeFileSync,rmSync,symlinkSync} fro
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {createHash} from 'node:crypto';
+import {deflateSync} from 'node:zlib';
+import {crc32} from '../scripts/raster-validation.mjs';
 import {applyArtCampaignProgress,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_ID,ART_CONTINUATION_BASE,
   ART_CONTINUATION_GROUP_SIZES,latestArtContinuationDelivery} from '../scripts/art-campaign-tracking.mjs';
 
@@ -86,6 +88,24 @@ function continuationFixture(context){
   return {...f,root,previous,next,intake,saveIntake,options:{root}};
 }
 
+function laterCombatFixture(context){
+  const f=continuationFixture(context);
+  Object.assign(f.next,{status:'blocked',reason:'No accepted lateral idle at the time of ART92.',artifacts:[]});
+  f.intake.entries[0].workbookRowId=f.rowId;f.saveIntake();
+  function raster(color,purpose){
+    const chunk=(type,data)=>{const name=Buffer.from(type),size=Buffer.alloc(4),crc=Buffer.alloc(4);size.writeUInt32BE(data.length);crc.writeUInt32BE(crc32(Buffer.concat([name,data])));return Buffer.concat([size,name,data,crc]);};
+    const header=Buffer.alloc(13);header.writeUInt32BE(1,0);header.writeUInt32BE(1,4);header[8]=8;header[9]=6;
+    const png=Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',header),chunk('IDAT',deflateSync(Buffer.from([0,...color,255]))),chunk('IEND',Buffer.alloc(0))]);
+    const sha256=createHash('sha256').update(png).digest('hex'),path=`assets/sprites/${f.id}.${sha256.slice(0,12)}.png`;
+    writeFileSync(join(f.root,path),png);return {path,sha256,bytes:png.length,width:1,height:1,purpose,facing:1};
+  }
+  const portrait=raster([130,60,40],'selection'),frame={...raster([80,120,160],'combat'),view:'side-view'};
+  Object.assign(f.assets[f.id],{frames:[frame],portrait,combatView:'side-view-candidate',status:'integrated-candidate',singleSubjectReviewed:true});
+  const journal={outputs:[{id:f.id,file:frame.path,sha256:frame.sha256,status:'integrated-candidate'}],selectionOutputs:[{id:f.id,file:portrait.path,sha256:portrait.sha256,status:'integrated-candidate'}]};
+  const saveJournal=()=>writeFileSync(join(f.root,'docs/production/combat-generation-2026-11-17.json'),JSON.stringify(journal));saveJournal();
+  return {...f,journal,saveJournal};
+}
+
 test('ART92 retains the exact unpadded 18/21/18/15/20 allocation and its own baseline',()=>{
   assert.equal(ART_CONTINUATION_ID,'art92');assert.equal(ART_CONTINUATION_BASE,'82e5f413300ca1112d153ee407dd988b70efd313');
   assert.deepEqual(Object.values(ART_CONTINUATION_GROUP_SIZES),[18,21,18,15,20]);
@@ -114,6 +134,68 @@ test('a renewed ART92 blocker keeps both old and new diagnostics without pretend
     assert.ok(text.includes(f.previous.reason));assert.ok(text.includes(f.next.reason));assert.match(text,/Blocage de reprise/);
   }
   assert.throws(()=>applyArtCampaignProgress(fixture().plan,[f.previous,f.next],f.assets,f.options),/ART92 blocked row/);
+});
+
+test('a later combat revision keeps the original ART92 candidate and checks both actual PNG files',context=>{
+  function setup(){
+    const f=laterCombatFixture(context),art=f.assets[f.id],frame=art.frames[0];
+    Object.assign(f.next,{status:'implemented-candidate',artifacts:[art.portrait.path]});delete f.next.reason;
+    const archived={...art,frames:[{...art.portrait}],combatView:'legacy-unreviewed'};
+    const fragment={schema:1,campaign:'art92',baseCommit:ART_CONTINUATION_BASE,group:'a',assets:{[f.id]:archived}};
+    const folder=join(f.root,'art/fragments');mkdirSync(folder,{recursive:true});
+    const fragmentPath=join(folder,'art92-a.json');writeFileSync(fragmentPath,JSON.stringify(fragment));
+    const journalPath=join(f.root,'docs/production/sprite-wave5-imports-2026-11-18.json');
+    writeFileSync(journalPath,JSON.stringify({schema:1,imports:[{fighterId:f.id,source:art.source,kind:'distinct-combat-idle',
+      path:frame.path,sha256:frame.sha256,bytes:frame.bytes,existingSelectionReference:art.portrait}]}));
+    return {...f,art,frame,fragmentPath,journalPath};
+  }
+  const f=setup(),original=structuredClone(f.next);
+  applyArtCampaignProgress(f.plan,[f.previous,f.next],f.assets,f.options);
+  assert.deepEqual(f.next,original);assert.equal(f.plan.artContinuation.candidates,1);assert.equal(f.plan.artContinuation.blocked,0);
+  assert.equal(f.plan.tasks[0].delivery,'art92-static-candidate-2026-11-02');
+  for(const corrupt of [g=>rmSync(g.fragmentPath),g=>rmSync(g.journalPath),
+    g=>writeFileSync(join(g.root,g.art.portrait.path),'bad old PNG'),g=>writeFileSync(join(g.root,g.frame.path),'bad new PNG'),
+    g=>{g.next.artifacts=[g.frame.path];}]){
+    const changed=setup();corrupt(changed);
+    assert.throws(()=>applyArtCampaignProgress(changed.plan,[changed.previous,changed.next],changed.assets,changed.options),/matching artifact file/);
+  }
+});
+
+test('a later exact combat delivery coexists with both immutable blocked campaigns without approving work',context=>{
+  const f=laterCombatFixture(context),before=structuredClone([f.previous,f.next,f.assets,f.plan.tasks[1]]);
+  applyArtCampaignProgress(f.plan,[f.previous,f.next],f.assets,f.options);
+  assert.equal(f.plan.artCampaign.blocked,1);assert.equal(f.plan.artCampaign.candidates,0);
+  assert.equal(f.plan.artContinuation.blocked,1);assert.equal(f.plan.artContinuation.candidates,0);
+  assert.equal(f.plan.artContinuation.laterCombatImages,1);assert.equal(f.plan.artContinuation.certifiedOneToOne,false);
+  assert.equal(f.plan.tasks[0].status,'À faire');assert.equal(f.plan.poses[0].productionStatus,'Rôle à décider');
+  assert.deepEqual([f.previous,f.next,f.assets,f.plan.tasks[1]],before);
+  for(const text of [f.plan.poses[0].existing,f.plan.tasks[0].reason]){
+    assert.ok(text.includes(f.previous.reason));assert.ok(text.includes(f.next.reason));
+    assert.match(text,/image de combat latérale candidate documentée/);assert.ok(text.includes(f.assets[f.id].frames[0].path));
+    assert.match(text,/Ni animation, ni fidélité 1:1, ni approbation de production, ni rôle/);
+  }
+});
+
+test('a later selection portrait leaves the historical combat action unresolved',context=>{
+  const f=laterCombatFixture(context);f.journal.outputs=[];f.saveJournal();
+  Object.assign(f.assets[f.id],{frames:[],clips:{},combatView:'selection-only'});
+  applyArtCampaignProgress(f.plan,[f.previous,f.next],f.assets,f.options);
+  assert.equal(f.plan.artContinuation.laterCombatImages,0);assert.equal(f.plan.artContinuation.blocked,1);
+  assert.equal(f.plan.tasks[0].status,'À faire');assert.equal(f.plan.poses[0].productionStatus,'Rôle à décider');
+  assert.doesNotMatch(f.plan.poses[0].existing,/image de combat latérale candidate documentée/);
+});
+
+test('later combat resolution rejects selection-only claims, wrong identity or source, exclusions and missing exact bytes',context=>{
+  for(const corrupt of [f=>f.journal.outputs=[],f=>f.journal.outputs[0].status='pending',
+    f=>f.journal.outputs[0].file=f.assets[f.id].portrait.path,f=>f.journal.outputs[0].sha256='0'.repeat(64),
+    f=>{f.journal.outputs[0].id='other';f.journal.outputs[0].file=f.journal.outputs[0].file.replace('subject.','other.');},
+    f=>f.assets[f.id].source='film',f=>f.assets[f.id].combatView='selection-only',f=>f.assets[f.id].fidelity='verified',
+    f=>f.intake.entries[0].generationExcluded=true,f=>delete f.intake.entries[0].workbookRowId,
+    f=>rmSync(join(f.root,f.assets[f.id].frames[0].path)),f=>rmSync(join(f.root,f.assets[f.id].portrait.path)),
+    f=>writeFileSync(join(f.root,f.assets[f.id].frames[0].path),'not the registered PNG')]){
+    const f=laterCombatFixture(context);corrupt(f);f.saveIntake();f.saveJournal();
+    assert.throws(()=>applyArtCampaignProgress(f.plan,[f.previous,f.next],f.assets,f.options),/ART92 blocked row/);
+  }
 });
 
 test('a later campaign cannot override an absent, borrowed, or previously implemented ART144 identity',context=>{

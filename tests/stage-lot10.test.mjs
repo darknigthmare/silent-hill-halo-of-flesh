@@ -10,7 +10,7 @@ import {drawStageArchitecture,stageSpace} from '../src/stage-architecture.js';
 import {stageTerrainProfile} from '../src/stage-director.js';
 import {FightEngine} from '../src/fight.js';
 import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
-import {stageBitmapFor} from '../src/stage-bitmaps.js';
+import {stageBitmapFor,stageBitmapCache} from '../src/stage-bitmaps.js';
 const ledger=JSON.parse(readFileSync(new URL('../docs/production/batches/lot10-stages.json',import.meta.url))),previous=JSON.parse(readFileSync(new URL('../docs/production/batches/lot9-stages.json',import.meta.url)));
 const parts=ledger.items.filter(i=>i.trigger==='ambient'),recipes=ledger.items.filter(i=>i.trigger==='match-phase');
 const stage=id=>{const s=STAGES.find(s=>s.id===id);assert.ok(s,id);return s;};
@@ -59,7 +59,36 @@ test('new SHf and Wii rooms retain exact distinct phases, no unsupported fixture
  assert.equal(stageSpace(stage('dark_shrine')),'exterior');assert.equal(stageSpace(stage('nightmare_school')),'exterior');assert.match(stage('hinako_home').referencePolicy.terrainPresentation.name,/PLANCHER/);assert.match(stage('shimizu_residence').referencePolicy.terrainPresentation.name,/TATAMI/);assert.ok(!stage('hinako_home').props.includes('tatami'));assert.ok(!stage('hinako_home').props.includes('roots'));assert.ok(!stage('corrupted_ebisugaoka').props.includes('roots'));assert.ok(stage('corrupted_ebisugaoka').referenceTracks.some(t=>t.key==='rootBorder'));assert.match(stage('school_shf').reference.locationNote,/personnel/);assert.ok(!stage('nightmare_hospital_sm').props.includes('beds'));assert.ok(!stage('nightmare_mall_sm').props.includes('escalator'));assert.equal(Object.keys(materials).length,14);assert.deepEqual(STAGE_TERRAINS,materials);
 });
 
-test('renderer forwards match projection to all scenery while leaving galleries ambient and all six replacement bitmaps masked',()=>{
+test('renderer keeps gallery motion ambient and preserves the result composition over matching raster rooms',t=>{
  const s=stage('book_fire'),phase=result(1020,25),a=trace(),b=trace();drawStage(a.context,s,1,{matchState:phase});drawStage(b.context,s,987654,{matchState:phase});assert.deepEqual(a.calls,b.calls);const native=draw(s,1000),resultFrame=draw(s,1000,{matchState:phase});assert.ok(!native.ids.includes('book_fire:reference:4'));assert.ok(resultFrame.ids.includes('book_fire:reference:4'));assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);assert.equal(STAGES.flatMap(s=>s.referenceTracks).length,163);
- const replaced=STAGES.filter(s=>stageBitmapFor(s)?.mode==='replace');assert.equal(replaced.length,4);assert.equal(replaced.flatMap(s=>s.referenceTracks).length,5);assert.ok(!replaced.some(s=>recipes.some(i=>i.entityId===s.id)));
+ const replaced=STAGES.filter(s=>stageBitmapFor(s)?.mode==='replace');
+ const original=['midwich','alchemilla','brookhaven_roof','lakeview'].map(stage);
+ assert.ok(original.every(s=>replaced.includes(s)));
+ assert.equal(original.flatMap(s=>s.referenceTracks).length,5);
+ for(const id of ['woodside','shopping_mall']){
+  const room=stage(id),art=STAGE_BITMAPS[id];
+  assert.ok(art?.scene);assert.notEqual(art.scene,room.referencePolicy.sceneId);
+  const selected=stageBitmapFor(room);assert.equal(selected.scene,room.referencePolicy.sceneId);
+  assert.ok(selected.layers.some(layer=>layer.parallaxX>0));
+  assert.equal(stageBitmapFor({...room,referencePolicy:{sceneId:art.scene}}),art);
+ }
+ const parallax=['lakeside_amusement','room_302','riverside_motel'].map(stage);
+ assert.ok(parallax.every(s=>replaced.includes(s)&&stageBitmapFor(s).layers.some(layer=>layer.parallaxX>0)));
+ assert.equal(parallax.flatMap(s=>s.referenceTracks).length,6);
+ const wood=stage('book_wood'),art=stageBitmapFor(wood);
+ assert.equal(art.scene,'wood-guardian-clearing');
+ const paths=art.layers.flatMap(layer=>layer.frames.map(frame=>frame.path));
+ t.mock.method(stageBitmapCache,'peek',path=>paths.includes(path)?path:null);
+ const gallery=trace(),settled=trace(),disabled=trace();
+ drawStage(gallery.context,wood,3000);
+ drawStage(settled.context,wood,3000,{matchState:phase});
+ drawStage(disabled.context,wood,3000,{matchState:phase,animationsEnabled:false});
+ for(const render of [gallery,settled,disabled]){
+  assert.deepEqual(render.calls.filter(call=>call[0]==='drawImage').map(call=>call[1]),paths);
+  assert.equal(render.stack.length,0);
+ }
+ const lastLayer=settled.calls.map(call=>call[0]).lastIndexOf('drawImage');
+ assert.ok(settled.calls.slice(lastLayer+1).some(call=>call[0]==='stroke'));
+ assert.ok(!gallery.calls.some(call=>call[0]==='stroke'));
+ assert.deepEqual(disabled.calls,gallery.calls);
 });

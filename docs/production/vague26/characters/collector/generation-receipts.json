@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "fighterId": "ascension_the_collector_183",
+  "generator": "built-in image_gen",
+  "attempts": [
+    {
+      "kind": "schema-preflight-rejection",
+      "references": 6,
+      "error": "referenced_image_paths must contain at most 5 paths",
+      "outputProduced": false,
+      "safetyRefusal": false
+    },
+    {
+      "kind": "generation",
+      "promptFile": "prompt.json",
+      "outputHint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-107ea523-d7fe-4861-ae03-c85fd950ce2d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "retainedNative": "native/collector-side-v1.png",
+      "sha256": "dd0896570c1afe49fac732ea114e84d6fd5b7f5e2ba9cc165a1dd79e6de034e8",
+      "selected": false,
+      "reason": "Cloak tails below sole line; archived."
+    },
+    {
+      "kind": "quality-edit",
+      "promptFile": "correction-prompt.json",
+      "outputHint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-dd3ab55d-9ac9-48b1-942c-be8969a9e0a1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "retainedNative": "native/collector-side-v2.png",
+      "sha256": "d157ac2cd4c29a6b88daa57465134a6f676315e7a2c60b8c1b6575f62e314287",
+      "selected": true,
+      "reason": "Only lowest cape tips lifted to shared ground baseline; further root runtime QA pending."
+    }
+  ],
+  "imageCallsThatProducedOutputs": 2,
+  "nativeOutputs": 2,
+  "selected": 1,
+  "archived": 1,
+  "sourcePixelsEditedProgrammatically": false,
+  "newAnimatedClips": 0,
+  "certifiedOneToOne": 0
+}

@@ -1,0 +1,2122 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-19",
+  "status": "final-audited-corpus",
+  "scope": "Corpus documentaire de franchise : jeux et scénarios, éditions/remakes significatifs, films, récits publiés, annonces et projets annulés, programmes promotionnels, supports documentaires majeurs, crossovers et machines sous licence. Les catégories ne sont pas fusionnées en une continuité narrative.",
+  "repository": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh",
+  "localEvidence": {
+    "sourceRegistry": "data/sources.json",
+    "bible": "docs/GDD_FR.md",
+    "sourceGuide": "docs/SOURCES.md",
+    "workbook": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+    "workbookSHA256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+    "runtimeSourceCount": 16,
+    "workbookSheets": 11,
+    "workbookUnmodified": true
+  },
+  "definitions": {
+    "coverageStatus": "Couverture AVANT la passe wave21 dans les fichiers inspectés et le classeur historique ; ni statut après intégration, ni certification de bestiaire exhaustif.",
+    "published": "Publication historique établie ; ne signifie pas que le service ou le produit est encore commercialisé.",
+    "generationEligibility": "La présente recherche ne suffit jamais à valider un nouveau profil, moveset ou décor.",
+    "nextAction": "Étude ou raccord restant après l’indexation documentaire réalisée par cette passe ; ce champ ne demande pas une seconde création de la même entrée.",
+    "releaseYear": "Année de publication attestée ; null pour une simple annonce ou un lancement cible non confirmé. announcedYear et targetedReleaseYear sont séparés."
+  },
+  "limits": [
+    "Pas de ligne par OST, marchandise, réimpression ou portage au contenu identique.",
+    "Les variantes d’édition restent reliées à leur œuvre ; remakes et scénarios substantiels sont distingués.",
+    "Les crossovers et machines sous licence ne sont pas assimilés à la continuité des jeux.",
+    "Les projets annulés restent documentaires ; aucune campagne, créature ou salle n’en est inventée.",
+    "Les annonces et calendriers ne sont pas, seuls, une preuve de disponibilité effective.",
+    "Les cinq supports documentaires majeurs sont indexés sans créer une ligne pour chaque OST, guide, réimpression ou port identique.",
+    "Les apparitions ponctuelles et collaborations ne constituent pas ici un catalogue garanti de tous les clins d’œil commerciaux ; seules les entrées sourcées sont indexées.",
+    "Book of Lost Memories et le DVD Lost Memories possédaient déjà des citations dans les dossiers de production ; leur indexation d’œuvre complète cette couverture partielle."
+  ],
+  "records": [
+    {
+      "id": "sh1_original_1999",
+      "title": "SILENT HILL",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 1999,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "sh1"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "midwich"
+      ],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/en/products/silenthill/"
+      ],
+      "sourceRefs": [
+        "turn551390543search0"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "sh2_original_2001",
+      "title": "SILENT HILL 2",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2001,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "sh2"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "woodside"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/versions_en.htm"
+      ],
+      "sourceRefs": [
+        "turn880500395view2"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "sh3_original_2003",
+      "title": "SILENT HILL 3",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2003,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "sh3"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "shopping_mall"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "sh4_the_room_2004",
+      "title": "SILENT HILL 4: THE ROOM",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2004,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "sh4"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "room_302"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "origins_2007",
+      "title": "SILENT HILL: ORIGINS",
+      "aliases": [
+        "SILENT HILL ZERO",
+        "SILENT HILL 0rigins"
+      ],
+      "category": "game",
+      "releaseYear": 2007,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "origins"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "cedar_grove"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [
+        "Les éditions PSP/PS2 restent rattachées à cette œuvre ; pas de nouveau jeu par simple portage."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "homecoming_2008",
+      "title": "SILENT HILL: HOMECOMING",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2008,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "homecoming"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "shepherds_glen"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "shattered_memories_2009",
+      "title": "SILENT HILL: SHATTERED MEMORIES",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2009,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "shattered"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "nightmare_school"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "downpour_2012",
+      "title": "SILENT HILL: DOWNPOUR",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2012,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "downpour"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "overlook"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "the_arcade_2007",
+      "title": "SILENT HILL: THE ARCADE",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2007,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "arcade"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "arcade_ship"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "book_of_memories_2012",
+      "title": "SILENT HILL: BOOK OF MEMORIES",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2012,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "bom"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "book_zone"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "pt_2014",
+      "title": "P.T.",
+      "aliases": [],
+      "category": "playable_teaser",
+      "releaseYear": 2014,
+      "releaseDate": null,
+      "releaseStatus": "published-then-delisted",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "pt"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "looping_hall"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.gamespot.com/articles/silent-hills-cancelled-konami-confirms/1100-6426919/",
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn134321792search0",
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [
+        "Teaser jouable publié en 2014 ; ne pas assimiler à une campagne Silent Hills sortie."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "the_short_message_2024",
+      "title": "SILENT HILL: THE SHORT MESSAGE",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2024,
+      "releaseDate": "2024-01-31",
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "shortmessage"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "villa"
+      ],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://blog.playstation.com/2024/01/31/silent-hill-the-short-message-now-available-free-on-ps5-new-silent-hill-2-remake-trailer-revealed/"
+      ],
+      "sourceRefs": [
+        "turn806712181view0"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "silent_hill_f_2025",
+      "title": "SILENT HILL f",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2025,
+      "releaseDate": "2025-09-25",
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "shf"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "ebisugaoka"
+      ],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/en/products/silenthill_f/",
+        "https://www.konami.com/games/eu/en/topics/18839/"
+      ],
+      "sourceRefs": [
+        "turn373042418search1",
+        "turn373042418search0"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "ascension_2023",
+      "title": "SILENT HILL: ASCENSION",
+      "aliases": [],
+      "category": "interactive_series",
+      "releaseYear": 2023,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "ascension"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "hope_junction"
+      ],
+      "evidenceStatus": "existing-corpus-and-reference-chronology",
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/topics/16705/",
+        "https://www.silenthillmemories.net/lore/releases_en.htm"
+      ],
+      "sourceRefs": [
+        "turn551390543search2",
+        "turn556809699search7"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [
+        "Série interactive en streaming, pas un jeu d’action traditionnel. Disponibilité actuelle des applications non réauditée."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "townfall_2026",
+      "title": "SILENT HILL: TOWNFALL",
+      "aliases": [],
+      "category": "game",
+      "releaseYear": 2026,
+      "releaseDate": "2026-09-24",
+      "releaseStatus": "published",
+      "coverageStatus": "covered",
+      "coverageNote": "Présent dans data/sources.json, docs/SOURCES.md et la Synthèse du classeur de production.",
+      "runtimeSourceIds": [
+        "townfall"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [
+        "st_amelia_marina"
+      ],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/en/topics/19323/"
+      ],
+      "sourceRefs": [
+        "turn405745206view1"
+      ],
+      "nextAction": "Conserver le raccord existant ; préciser l’édition lorsque nécessaire.",
+      "generationEligibility": "existing-corpus-only",
+      "notes": [
+        "Statut de sortie corroboré par un communiqué de lancement ; docs/SOURCES.md le traite déjà comme sorti."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "film_silent_hill_2006",
+      "title": "Silent Hill",
+      "aliases": [],
+      "category": "film",
+      "releaseYear": 2006,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered-within-aggregate",
+      "coverageNote": "Déjà inclus dans le pack runtime film et dans les fiches du classeur.",
+      "runtimeSourceIds": [
+        "film"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.sonypictures.com/movies/silenthill"
+      ],
+      "sourceRefs": [
+        "turn470850736search0"
+      ],
+      "nextAction": "Maintenir le raccord au pack film et préciser l’œuvre dans chaque preuve visuelle ; ne pas dupliquer les profils.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "film_revelation_2012",
+      "title": "Silent Hill: Revelation",
+      "aliases": [
+        "Silent Hill: Revelation 3D"
+      ],
+      "category": "film",
+      "releaseYear": 2012,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "covered-within-aggregate",
+      "coverageNote": "Variantes Revelation présentes dans docs/ROSTER.md ; pack runtime commun film.",
+      "runtimeSourceIds": [
+        "film"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.universalpicturesathome.com/movies/silent-hill-revelation"
+      ],
+      "sourceRefs": [
+        "turn470850736search1"
+      ],
+      "nextAction": "Préciser l’édition du film de 2012 dans les preuves, en conservant les profils déjà présents.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "film_return_2026",
+      "title": "Return to Silent Hill",
+      "aliases": [],
+      "category": "film",
+      "releaseYear": 2026,
+      "releaseDate": "2026-01-23",
+      "releaseStatus": "published",
+      "coverageStatus": "covered-within-aggregate",
+      "coverageNote": "Déjà référencé dans SOURCES/ROSTER et Combattants!D219 du classeur.",
+      "runtimeSourceIds": [
+        "film"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://returntosilenthillmovie.com/welcome-back/",
+        "https://s202.q4cdn.com/484194886/files/doc_news/Return-to-Silent-Hill-from-Cineverse-Premieres-on-Hulu-2026.pdf"
+      ],
+      "sourceRefs": [
+        "turn134321792search17",
+        "turn470850736search7"
+      ],
+      "nextAction": "Raccorder les preuves de sortie et les profils 2026 existants ; étudier séparément la novelisation.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Le communiqué Cineverse de juin 2026 confirme une diffusion effective ; ne pas conserver seulement le statut d’annonce de 2022."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "sh2_remake_2024",
+      "title": "SILENT HILL 2 — remake",
+      "aliases": [],
+      "category": "remake",
+      "releaseYear": 2024,
+      "releaseDate": "2024-10-08",
+      "releaseStatus": "published",
+      "coverageStatus": "partially-covered",
+      "coverageNote": "Deux fiches sont explicitement marquées SH2 remake 2024, mais restent sous la source générale sh2 (2001).",
+      "runtimeSourceIds": [
+        "sh2"
+      ],
+      "runtimeProfileIds": [
+        "sh2_mannequin_ambusher_023",
+        "sh2_spider_mannequin"
+      ],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.konami.com/games/us/en/topics/2681/"
+      ],
+      "sourceRefs": [
+        "turn405745206search0"
+      ],
+      "nextAction": "Documenter les écarts d’édition dans les deux fiches existantes et rattacher les prochaines captures au remake exact.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Classeur : Combattants!A29:D29 et A42:D42. Les ports Xbox/PS5/PC ne constituent pas trois remakes différents."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "sh2_born_from_a_wish",
+      "title": "SILENT HILL 2: Born from a Wish",
+      "aliases": [
+        "Born From a Wish",
+        "Restless Dreams — scénario Maria"
+      ],
+      "category": "additional_scenario",
+      "releaseYear": 2001,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "partially-covered",
+      "coverageNote": "Déjà nommé dans la colonne édition de fiches SH2 ; aucune entrée autonome dans data/sources.json.",
+      "runtimeSourceIds": [
+        "sh2"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "specialist-edition-documented",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/versions_en.htm"
+      ],
+      "sourceRefs": [
+        "turn373042418view0"
+      ],
+      "nextAction": "Étudier le scénario et le support des éditions enrichies de SH2 original ; aucun DLC du remake 2024 n’est déduit.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les appellations Restless Dreams, Inner Fears, Saigo no Uta et Director’s Cut relèvent d’éditions régionales ; vérifier le support précis avant capture."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "sh_hd_collection_2012",
+      "title": "Silent Hill HD Collection",
+      "aliases": [],
+      "category": "compilation_remaster",
+      "releaseYear": 2012,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune occurrence ciblée dans le classeur ; aucune source dédiée.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/en/products/shhd/"
+      ],
+      "sourceRefs": [
+        "turn349995904search0"
+      ],
+      "nextAction": "Identifier précisément les différences de la compilation avant toute preuve visuelle ; conserver les liens SH2/SH3.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les pages KONAMI européennes consultées affichent des dates locales différentes (29/03 FR, 30/03 EN) : retenir 2012 et conserver la région."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "sh1_remake_announced",
+      "title": "SILENT HILL — remake du premier jeu",
+      "aliases": [],
+      "category": "announced_remake",
+      "releaseYear": null,
+      "releaseDate": null,
+      "releaseStatus": "announced-in-development",
+      "coverageStatus": "absent",
+      "coverageNote": "Le jeu original est couvert ; le projet de remake annoncé n’a pas de fiche documentaire distincte.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-announcement",
+      "sourceUrls": [
+        "https://www.konami.com/games/ca/en/topics/2890/",
+        "https://img.konami.com/ir/en/ir-data/statements/2026/en0129_cf84s6.pdf"
+      ],
+      "sourceRefs": [
+        "turn880500395search6",
+        "turn880500395search9"
+      ],
+      "nextAction": "Surveiller les annonces primaires et attendre une preuve d’édition ou de contenu avant toute étude de roster.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Développement annoncé dans KONAMI PRESS START en juin 2025, encore décrit dans le rapport KONAMI de janvier 2026. Aucune sortie établie par les sources consultées."
+      ],
+      "announcedYear": 2025,
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "silent_hills_cancelled",
+      "title": "Silent Hills",
+      "aliases": [],
+      "category": "cancelled_game",
+      "releaseYear": null,
+      "releaseDate": null,
+      "releaseStatus": "cancelled",
+      "coverageStatus": "mentioned-only",
+      "coverageNote": "Classeur Sources!D95 : aucune campagne Silent Hills sortie. P.T. possède déjà sa source pt.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "publisher-statement-reported",
+      "sourceUrls": [
+        "https://www.gamespot.com/articles/silent-hills-cancelled-konami-confirms/1100-6426919/"
+      ],
+      "sourceRefs": [
+        "turn134321792search0"
+      ],
+      "nextAction": "Conserver le lien historique avec P.T. et l’annulation ; ne pas reconstruire une campagne qui n’a pas été publiée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Annulation confirmée par déclaration KONAMI rapportée le 27/04/2015."
+      ],
+      "announcedYear": 2014,
+      "cancellationDate": "2015-04-27",
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "play_novel_2001",
+      "title": "Play Novel: Silent Hill",
+      "aliases": [
+        "プレイノベル サイレントヒル",
+        "Silent Hill: Play Novel"
+      ],
+      "category": "game",
+      "releaseYear": 2001,
+      "releaseDate": "2001-03-21",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Absent des 16 sources et des recherches ciblées du classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.nintendo.co.jp/n08/before/01_0306.html"
+      ],
+      "sourceRefs": [
+        "turn409356572search0"
+      ],
+      "nextAction": "Étudier les sources détaillées de cette œuvre, ses éditions et ses identités avant tout nouveau profil ou lieu.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Titre GBA distinct ; date confirmée par Nintendo. Les scénarios et contenus téléchargeables demandent un dossier spécifique."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "mobile_dx_2006",
+      "title": "Silent Hill: Mobile DX",
+      "aliases": [
+        "Silent Hill DX",
+        "Silent Hill Mobile (Japon, 2006)",
+        "サイレントヒル（携帯アプリ版）"
+      ],
+      "category": "mobile_game",
+      "releaseYear": 2006,
+      "releaseDate": "2006-07-05",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucun raccord dans la bible ou le classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "contemporary-press-and-specialist",
+      "sourceUrls": [
+        "https://www.itmedia.co.jp/mobile/articles/0607/05/news092.html",
+        "https://www.silenthillmemories.net/sh_dx/info_en.htm"
+      ],
+      "sourceRefs": [
+        "turn409356572search8",
+        "turn880500395view5"
+      ],
+      "nextAction": "Étudier les sources détaillées de cette œuvre, ses éditions et ses identités avant tout nouveau profil ou lieu.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Adaptation mobile japonaise de SH1 pour le service Konami Net DX. Ne pas fusionner avec Orphan/Mobile (2007) ni avec Play Novel."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "orphan_mobile_2007",
+      "title": "Silent Hill: Orphan",
+      "aliases": [
+        "Silent Hill Mobile",
+        "Silent Hill: Mobile",
+        "Mobile 1"
+      ],
+      "category": "mobile_game",
+      "releaseYear": 2007,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Absent du registre et du classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-documented",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_orphan/info_en.htm"
+      ],
+      "sourceRefs": [
+        "turn975001043search1"
+      ],
+      "nextAction": "Étudier les sources détaillées de cette œuvre, ses éditions et ses identités avant tout nouveau profil ou lieu.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Orphan et Mobile sont des appellations régionales d’une même œuvre ; première sortie européenne 2007, sortie américaine 2008. Ne pas compter deux jeux."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "mobile_2_2008",
+      "title": "Silent Hill: Mobile 2",
+      "aliases": [
+        "Silent Hill: Orphan 2"
+      ],
+      "category": "mobile_game",
+      "releaseYear": 2008,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Absent du registre et du classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-documented",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_mobile2/info_en.htm"
+      ],
+      "sourceRefs": [
+        "turn880500395view3"
+      ],
+      "nextAction": "Étudier les sources détaillées de cette œuvre, ses éditions et ses identités avant tout nouveau profil ou lieu.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "La page spécialiste indique septembre 2008. L’ancien lien KONAMI est conservé dans cette source ; statut primaire à récupérer avant production."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "mobile_3_2010",
+      "title": "Silent Hill: Mobile 3",
+      "aliases": [
+        "Silent Hill: Orphan 3"
+      ],
+      "category": "mobile_game",
+      "releaseYear": 2010,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Absent du registre et du classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-documented",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_mobile3/info_en.htm"
+      ],
+      "sourceRefs": [
+        "turn880500395view4"
+      ],
+      "nextAction": "Étudier les sources détaillées de cette œuvre, ses éditions et ses identités avant tout nouveau profil ou lieu.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Mars 2010 est établi dans les catalogues consultés ; le jour exact varie selon les notices, donc pas de jour imposé."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "the_escape_mobile_2007",
+      "title": "SILENT HILL: The Escape",
+      "aliases": [
+        "SILENT HILL The Escape"
+      ],
+      "category": "mobile_game",
+      "releaseYear": 2007,
+      "releaseDate": "2007-12-19",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Absent du registre et du classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "contemporary-press-and-republished-official-release",
+      "sourceUrls": [
+        "https://game.watch.impress.co.jp/docs/20071219/shte.htm",
+        "https://www.4gamer.net/games/080/G008092/20081224057/"
+      ],
+      "sourceRefs": [
+        "turn409356572search3",
+        "turn409356572search4"
+      ],
+      "nextAction": "Étudier les sources détaillées de cette œuvre, ses éditions et ses identités avant tout nouveau profil ou lieu.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Première version i-mode/FOMA en décembre 2007 ; version iPhone/iPod touch annoncée disponible par communiqué KONAMI reproduit le 24/12/2008. Distinct de la machine à sous Silent Hill Escape."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "the_experience_2006",
+      "title": "The Silent Hill Experience",
+      "aliases": [
+        "Silent Hill Experience"
+      ],
+      "category": "multimedia_collection",
+      "releaseYear": 2006,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Absent de la bible et du classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-corroborated",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/she/info_en.htm",
+        "https://www.gamespot.com/articles/silent-hill-gets-experience/1100-6143103/"
+      ],
+      "sourceRefs": [
+        "turn409356572search5",
+        "turn409356572search6"
+      ],
+      "nextAction": "Étudier les séquences UMD et les liens Hunger/Dying Inside avant toute extraction ; aucun bestiaire autonome n’est présumé.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Comics animés, musique, entretiens et vidéos ; éviter un double comptage de Dying Inside déjà publié séparément."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "bom_expansion_2013",
+      "title": "Silent Hill: Book of Memories — Expansion Pack",
+      "aliases": [
+        "DLC Pack 1"
+      ],
+      "category": "game_dlc",
+      "releaseYear": 2013,
+      "releaseDate": "2013-03-19",
+      "releaseStatus": "published",
+      "coverageStatus": "edition-not-indexed",
+      "coverageNote": "Le jeu BoM est couvert, mais le DLC n’a pas de ligne d’édition explicitement identifiée dans le registre inspecté.",
+      "runtimeSourceIds": [
+        "bom"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://blog.playstation.com/2013/03/19/playstation-store-update-283/",
+        "https://blog.playstation.com/archive/2013/03/20/heads-up-playstation-store-update-20th-march-2013"
+      ],
+      "sourceRefs": [
+        "turn305823986search0",
+        "turn305823986search1"
+      ],
+      "nextAction": "Rapprocher le contenu du DLC des fiches BoM existantes ; ne pas déduire de nouveaux ennemis/lieux du seul communiqué.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "PlayStation confirme notamment deux types d’ennemis et deux forsaken rooms ; leur présence exacte dans le corpus actuel reste à auditer. Sortie européenne indiquée le 20/03/2013."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_dying_inside_2004",
+      "title": "Silent Hill: Dying Inside",
+      "aliases": [],
+      "category": "licensed_comic",
+      "releaseYear": 2004,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune entrée d’œuvre dans les sources runtime et aucune occurrence ciblée dans le classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-and-specialist",
+      "sourceUrls": [
+        "https://comics.lib.msu.edu/rri/irri/idwm.htm",
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn695863440view1",
+        "turn134321792view1"
+      ],
+      "nextAction": "Constituer un dossier de pages et d’identités avant toute transposition, avec la continuité de la publication indiquée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les recueils Three Bloody Tales et Omnibus sont des contenants éditoriaux ; ils ne créent pas de nouvelles histoires à compter."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_among_the_damned_2004",
+      "title": "Silent Hill: Among the Damned",
+      "aliases": [],
+      "category": "licensed_comic",
+      "releaseYear": 2004,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune entrée d’œuvre dans les sources runtime et aucune occurrence ciblée dans le classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-and-specialist",
+      "sourceUrls": [
+        "https://comics.lib.msu.edu/rri/irri/idwm.htm",
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn695863440view1",
+        "turn134321792view1"
+      ],
+      "nextAction": "Constituer un dossier de pages et d’identités avant toute transposition, avec la continuité de la publication indiquée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les recueils Three Bloody Tales et Omnibus sont des contenants éditoriaux ; ils ne créent pas de nouvelles histoires à compter."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_paint_it_black_2005",
+      "title": "Silent Hill: Paint It Black",
+      "aliases": [],
+      "category": "licensed_comic",
+      "releaseYear": 2005,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune entrée d’œuvre dans les sources runtime et aucune occurrence ciblée dans le classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-and-specialist",
+      "sourceUrls": [
+        "https://comics.lib.msu.edu/rri/irri/idwm.htm",
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn695863440view1",
+        "turn134321792view1"
+      ],
+      "nextAction": "Constituer un dossier de pages et d’identités avant toute transposition, avec la continuité de la publication indiquée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les recueils Three Bloody Tales et Omnibus sont des contenants éditoriaux ; ils ne créent pas de nouvelles histoires à compter."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_grinning_man_2005",
+      "title": "Silent Hill: The Grinning Man",
+      "aliases": [],
+      "category": "licensed_comic",
+      "releaseYear": 2005,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune entrée d’œuvre dans les sources runtime et aucune occurrence ciblée dans le classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-and-specialist",
+      "sourceUrls": [
+        "https://comics.lib.msu.edu/rri/irri/idwm.htm",
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn695863440view1",
+        "turn134321792view1"
+      ],
+      "nextAction": "Constituer un dossier de pages et d’identités avant toute transposition, avec la continuité de la publication indiquée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les recueils Three Bloody Tales et Omnibus sont des contenants éditoriaux ; ils ne créent pas de nouvelles histoires à compter."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_dead_alive_2005",
+      "title": "Silent Hill: Dead/Alive",
+      "aliases": [],
+      "category": "licensed_comic",
+      "releaseYear": 2005,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune entrée d’œuvre dans les sources runtime et aucune occurrence ciblée dans le classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-and-specialist",
+      "sourceUrls": [
+        "https://comics.lib.msu.edu/rri/irri/idwm.htm",
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn695863440view1",
+        "turn134321792view1"
+      ],
+      "nextAction": "Constituer un dossier de pages et d’identités avant toute transposition, avec la continuité de la publication indiquée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les recueils Three Bloody Tales et Omnibus sont des contenants éditoriaux ; ils ne créent pas de nouvelles histoires à compter."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_sinners_reward_2008",
+      "title": "Silent Hill: Sinner’s Reward",
+      "aliases": [],
+      "category": "licensed_comic",
+      "releaseYear": 2008,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune entrée d’œuvre dans les sources runtime et aucune occurrence ciblée dans le classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-and-specialist",
+      "sourceUrls": [
+        "https://comics.lib.msu.edu/rri/irri/idwm.htm",
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn695863440view1",
+        "turn134321792view1"
+      ],
+      "nextAction": "Constituer un dossier de pages et d’identités avant toute transposition, avec la continuité de la publication indiquée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les recueils Three Bloody Tales et Omnibus sont des contenants éditoriaux ; ils ne créent pas de nouvelles histoires à compter."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_past_life_2010",
+      "title": "Silent Hill: Past Life",
+      "aliases": [],
+      "category": "licensed_comic",
+      "releaseYear": 2010,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune entrée d’œuvre dans les sources runtime et aucune occurrence ciblée dans le classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-and-specialist",
+      "sourceUrls": [
+        "https://comics.lib.msu.edu/rri/irri/idwm.htm",
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn695863440view1",
+        "turn134321792view1"
+      ],
+      "nextAction": "Constituer un dossier de pages et d’identités avant toute transposition, avec la continuité de la publication indiquée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les recueils Three Bloody Tales et Omnibus sont des contenants éditoriaux ; ils ne créent pas de nouvelles histoires à compter."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_annes_story_2014",
+      "title": "Silent Hill Downpour: Anne’s Story",
+      "aliases": [],
+      "category": "licensed_comic",
+      "releaseYear": 2014,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune entrée d’œuvre dans les sources runtime et aucune occurrence ciblée dans le classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-and-specialist",
+      "sourceUrls": [
+        "https://comics.lib.msu.edu/rri/irri/idwm.htm",
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn695863440view1",
+        "turn134321792view1"
+      ],
+      "nextAction": "Constituer un dossier de pages et d’identités avant toute transposition, avec la continuité de la publication indiquée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les recueils Three Bloody Tales et Omnibus sont des contenants éditoriaux ; ils ne créent pas de nouvelles histoires à compter."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_hunger_2006",
+      "title": "Silent Hill: Hunger",
+      "aliases": [],
+      "category": "digital_comic",
+      "releaseYear": 2006,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Absent ; The Silent Hill Experience est également absent.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-corroborated",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/she/info_en.htm",
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn409356572search5",
+        "turn134321792view1"
+      ],
+      "nextAction": "Raccorder comme récit inclus dans The Silent Hill Experience, avec une preuve de séquence avant toute extraction de profil.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [],
+      "relatedIds": [
+        "the_experience_2006"
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "manga_cage_of_cradle_2006",
+      "title": "Silent Hill: Cage of Cradle",
+      "aliases": [],
+      "category": "mobile_manga",
+      "releaseYear": 2006,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune couverture documentaire trouvée dans le périmètre inspecté.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-documented-primary-content-needed",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/publications/comics_en.htm",
+        "https://www.itmedia.co.jp/mobile/articles/0607/05/news092.html"
+      ],
+      "sourceRefs": [
+        "turn134321792view1",
+        "turn409356572search8"
+      ],
+      "nextAction": "Étudier les sources détaillées de cette œuvre, ses éditions et ses identités avant tout nouveau profil ou lieu.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Manga mobile attribué à Hiroyuki Owaku et Masahiro Ito. Les fragments retrouvés ne suffisent pas à reconstruire une œuvre complète."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "manga_double_under_dusk_2007",
+      "title": "Silent Hill: Double under Dusk",
+      "aliases": [],
+      "category": "mobile_manga",
+      "releaseYear": 2007,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune couverture documentaire trouvée dans le périmètre inspecté.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-documented-primary-content-needed",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn134321792view1"
+      ],
+      "nextAction": "Étudier les sources détaillées de cette œuvre, ses éditions et ses identités avant tout nouveau profil ou lieu.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Ne pas transformer une notice bibliographique en preuve visuelle ou en bestiaire complet."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_white_hunter_2008",
+      "title": "White Hunter",
+      "aliases": [
+        "Белый охотник",
+        "Belyj okhotnik"
+      ],
+      "category": "bonus_comic",
+      "releaseYear": 2008,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Absent du corpus inspecté.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-documented-primary-booklet-needed",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/publications/sh_white_hunter_en.htm"
+      ],
+      "sourceRefs": [
+        "turn695863440search1"
+      ],
+      "nextAction": "Consulter le livret Origins exact et ses pages avant tout rapprochement avec les versions Pyramid Head existantes.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_dock_house_2026",
+      "title": "SILENT HILL: Townfall – The Dock House",
+      "aliases": [],
+      "category": "licensed_comic",
+      "releaseYear": 2026,
+      "releaseDate": "2026-09-16",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Townfall est couvert ; son préquel dans 2000 AD Prog 2500 est absent.",
+      "runtimeSourceIds": [
+        "townfall"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-announcement-and-publication-corroboration",
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/en/topics/19315/",
+        "https://atomicbooks.com/products/2000-ad-prog-2500",
+        "https://graphicpolicy.com/2026/09/16/preview-2000-ad-prog-2500/"
+      ],
+      "sourceRefs": [
+        "turn405745206search3",
+        "turn880500395view1",
+        "turn880500395view0"
+      ],
+      "nextAction": "Consulter les pages exactes du récit publié et établir leur relation avec Townfall avant toute transposition.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "KONAMI annonce le préquel et le numéro. Le sommaire de parution et la notice de libraire corroborent la publication ; 16/09 UK, 30/09 USA."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "comic_comx_unreleased_1999",
+      "title": "Silent Hill — projet de roman graphique Com.X",
+      "aliases": [],
+      "category": "unreleased_comic",
+      "releaseYear": null,
+      "releaseDate": null,
+      "releaseStatus": "unreleased-cancelled",
+      "coverageStatus": "absent",
+      "coverageNote": "Non répertorié dans la bible inspectée.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-documented",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/publications/comics_en.htm"
+      ],
+      "sourceRefs": [
+        "turn134321792view1"
+      ],
+      "nextAction": "Conserver la provenance du projet non publié ; identifier seulement les pages promotionnelles réellement disponibles.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Projet annoncé pour 1999, ISBN 9781903286005 ; une notice ou des pages promotionnelles ne prouvent pas une publication commerciale complète."
+      ],
+      "announcedYear": 1999,
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "novel_sh1_2006",
+      "title": "Silent Hill: The Novel",
+      "aliases": [],
+      "category": "novelization",
+      "releaseYear": 2006,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Le jeu/film associé est couvert, mais cette adaptation littéraire n’est pas identifiée comme œuvre dans la bible/classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-corroborated",
+      "sourceUrls": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784861558153",
+        "https://www.silenthillmemories.net/publications/books_en.htm"
+      ],
+      "sourceRefs": [
+        "turn658939783search0",
+        "turn134321792view0"
+      ],
+      "nextAction": "Étudier les passages nécessaires de la novelisation en conservant la distinction avec l’œuvre adaptée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les trois romans KONAMI de jeux ont des écarts de date fine entre catalogues (mise en vente/édition) : l’année seule est retenue ici."
+      ],
+      "isbn": "9784861558153",
+      "relatedIds": [
+        "sh1_original_1999"
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "novel_sh2_2006",
+      "title": "Silent Hill 2: The Novel",
+      "aliases": [],
+      "category": "novelization",
+      "releaseYear": 2006,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Le jeu/film associé est couvert, mais cette adaptation littéraire n’est pas identifiée comme œuvre dans la bible/classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-corroborated",
+      "sourceUrls": [
+        "https://www.hanmoto.com/bd/isbn/9784861558320",
+        "https://www.silenthillmemories.net/publications/books_en.htm"
+      ],
+      "sourceRefs": [
+        "turn658939783search4",
+        "turn134321792view0"
+      ],
+      "nextAction": "Étudier les passages nécessaires de la novelisation en conservant la distinction avec l’œuvre adaptée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les trois romans KONAMI de jeux ont des écarts de date fine entre catalogues (mise en vente/édition) : l’année seule est retenue ici."
+      ],
+      "isbn": "9784861558320",
+      "relatedIds": [
+        "sh2_original_2001"
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "novel_sh3_2007",
+      "title": "Silent Hill 3: The Novel",
+      "aliases": [],
+      "category": "novelization",
+      "releaseYear": 2007,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Le jeu/film associé est couvert, mais cette adaptation littéraire n’est pas identifiée comme œuvre dans la bible/classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-corroborated",
+      "sourceUrls": [
+        "https://store-tsutaya.tsite.jp/search/item/sell_book/40664107/9784861558429",
+        "https://www.silenthillmemories.net/publications/books_en.htm"
+      ],
+      "sourceRefs": [
+        "turn658939783search5",
+        "turn134321792view0"
+      ],
+      "nextAction": "Étudier les passages nécessaires de la novelisation en conservant la distinction avec l’œuvre adaptée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Les trois romans KONAMI de jeux ont des écarts de date fine entre catalogues (mise en vente/édition) : l’année seule est retenue ici."
+      ],
+      "isbn": "9784861558429",
+      "relatedIds": [
+        "sh3_original_2003"
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "novel_film_silent_hill_2006",
+      "title": "Silent Hill — novélisation du film",
+      "aliases": [],
+      "category": "novelization",
+      "releaseYear": 2006,
+      "releaseDate": "2006-06-24",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Le jeu/film associé est couvert, mais cette adaptation littéraire n’est pas identifiée comme œuvre dans la bible/classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-publisher-confirmed",
+      "sourceUrls": [
+        "https://www.kadokawa.co.jp/product/200604000197/"
+      ],
+      "sourceRefs": [
+        "turn880500395search0"
+      ],
+      "nextAction": "Étudier les passages nécessaires de la novelisation en conservant la distinction avec l’œuvre adaptée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Date et ISBN de la page éditeur KADOKAWA ; elle prime sur la date du 25/06 affichée par la source secondaire."
+      ],
+      "isbn": "9784043522088",
+      "relatedIds": [
+        "film_silent_hill_2006"
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "novel_film_revelation_2013",
+      "title": "Silent Hill: Revelation — novélisation",
+      "aliases": [],
+      "category": "novelization",
+      "releaseYear": 2013,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Le jeu/film associé est couvert, mais cette adaptation littéraire n’est pas identifiée comme œuvre dans la bible/classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-corroborated",
+      "sourceUrls": [
+        "https://www.abebooks.com/9784812495148/Michael-Bassett-Kiyomi-Abe-4812495148/plp",
+        "https://www.silenthillmemories.net/publications/books_en.htm"
+      ],
+      "sourceRefs": [
+        "turn880500395search1",
+        "turn134321792view0"
+      ],
+      "nextAction": "Étudier les passages nécessaires de la novelisation en conservant la distinction avec l’œuvre adaptée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Novelisation japonaise Takeshobo distincte du film de 2012 ; année 2013 retenue, notice primaire de l’éditeur non retrouvée."
+      ],
+      "isbn": "9784812495148",
+      "relatedIds": [
+        "film_revelation_2012"
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "novel_silent_hill_f_2025",
+      "title": "Silent Hill f — roman",
+      "aliases": [
+        "サイレントヒルｆ"
+      ],
+      "category": "novelization",
+      "releaseYear": 2025,
+      "releaseDate": "2025-10-30",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Le jeu/film associé est couvert, mais cette adaptation littéraire n’est pas identifiée comme œuvre dans la bible/classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-publisher-confirmed",
+      "sourceUrls": [
+        "https://www.kadokawa.co.jp/product/322507000131/"
+      ],
+      "sourceRefs": [
+        "turn470850736view1"
+      ],
+      "nextAction": "Étudier les passages nécessaires de la novelisation en conservant la distinction avec l’œuvre adaptée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "Roman de 黒史郎, œuvre originale et supervision KONAMI, édition KADOKAWA."
+      ],
+      "isbn": "9784047386426",
+      "relatedIds": [
+        "silent_hill_f_2025"
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "novel_return_2026",
+      "title": "Return to Silent Hill: The Official Movie Novelization",
+      "aliases": [],
+      "category": "novelization",
+      "releaseYear": 2026,
+      "releaseDate": "2026-01-27",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Le jeu/film associé est couvert, mais cette adaptation littéraire n’est pas identifiée comme œuvre dans la bible/classeur.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-publisher-confirmed",
+      "sourceUrls": [
+        "https://titanbooks.com/72540-return-to-silent-hill-the-official-movie-novelization/"
+      ],
+      "sourceRefs": [
+        "turn470850736view0"
+      ],
+      "nextAction": "Étudier les passages nécessaires de la novelisation en conservant la distinction avec l’œuvre adaptée.",
+      "generationEligibility": "not-established-by-this-audit",
+      "notes": [
+        "John Passarella, Titan Books ; publication US/UK attestée par l’éditeur."
+      ],
+      "isbn": "9781835413319",
+      "relatedIds": [
+        "film_return_2026"
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "silent_hill_transmission",
+      "title": "SILENT HILL Transmission",
+      "aliases": [],
+      "category": "promotional_broadcast",
+      "releaseYear": 2022,
+      "releaseDate": null,
+      "releaseStatus": "broadcast-series",
+      "coverageStatus": "absent-as-programme",
+      "coverageNote": "Aucune fiche de programme. Les occurrences Transmission du classeur concernent un geste narratif de Joseph Schreiber, sans rapport avec l’émission.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/topics/16705/",
+        "https://www.konami.com/games/eu/en/topics/18565/",
+        "https://www.konami.com/games/corporate/ja/news/topics/20260213s/"
+      ],
+      "sourceRefs": [
+        "turn551390543search2",
+        "turn268002175search0",
+        "turn405745206view2"
+      ],
+      "nextAction": "Raccorder les émissions aux annonces qu’elles documentent et maintenir leur catégorie de programme promotionnel.",
+      "generationEligibility": "not-a-fictional-game-or-location",
+      "notes": [
+        "KONAMI définit le programme comme une diffusion d’actualités de la série. Émissions documentées en 2022, 2024, 2025 et 2026 ; #3 centrée sur f, #4 sur Townfall et le film Return."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "konami_press_start",
+      "title": "KONAMI PRESS START",
+      "aliases": [],
+      "category": "publisher_broadcast",
+      "releaseYear": 2025,
+      "releaseDate": null,
+      "releaseStatus": "broadcast-series",
+      "coverageStatus": "absent",
+      "coverageNote": "Programme éditeur non indexé, alors qu’il porte l’annonce du remake du premier Silent Hill.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.konami.com/games/ca/en/topics/2890/",
+        "https://www.konami.com/games/eu/en/topics/19272/"
+      ],
+      "sourceRefs": [
+        "turn880500395search6",
+        "turn349995904search3"
+      ],
+      "nextAction": "Raccorder uniquement les segments Silent Hill aux annonces concernées.",
+      "generationEligibility": "not-a-fictional-game-or-location",
+      "notes": [],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "crossover_dead_by_daylight_2020",
+      "title": "Dead by Daylight — chapitre Silent Hill",
+      "aliases": [],
+      "category": "licensed_crossover",
+      "releaseYear": 2020,
+      "releaseDate": "2020-06-16",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucun raccord documentaire dans le corpus inspecté.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://deadbydaylight.com/game/chapters/silent-hill/",
+        "https://www.youtube.com/watch?v=nsJ5igHp1hc"
+      ],
+      "sourceRefs": [
+        "turn756159674search2",
+        "turn756159674youtube10"
+      ],
+      "nextAction": "Étudier les contenus propres au jeu hôte avec cette provenance, sans transférer leurs pouvoirs à la continuité des jeux Silent Hill.",
+      "generationEligibility": "separate-crossover-reference-required",
+      "notes": [
+        "Les skins et personnages légendaires ne seront pas déclinés en une ligne d’œuvre par costume."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "crossover_bomberman",
+      "title": "Super Bomberman — personnages Silent Hill",
+      "aliases": [
+        "Pyramid Head Bomber",
+        "Bubble Head Bomber",
+        "Robbie Bomber"
+      ],
+      "category": "licensed_crossover",
+      "releaseYear": 2017,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucun raccord documentaire trouvé.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/en/topics/14217/",
+        "https://www.konami.com/games/bomberman/online/us/en/character/",
+        "https://www.konami.com/games/bomberman/online/eu/en/news/"
+      ],
+      "sourceRefs": [
+        "turn756159674search7",
+        "turn756159674search5",
+        "turn305823986search7"
+      ],
+      "nextAction": "Conserver une famille de crossover avec les versions hôtes attestées R et R Online ; pas d’import des pouvoirs comiques dans le canon des jeux Silent Hill.",
+      "generationEligibility": "separate-crossover-reference-required",
+      "notes": [
+        "Service R Online terminé le 01/12/2022 selon KONAMI ; cela n’efface pas sa publication historique. R2 n’est pas ajouté sans contrôle de son contenu précis."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "crossover_dark_deception_2021",
+      "title": "Dark Deception: Monsters & Mortals — Silent Hill DLC",
+      "aliases": [],
+      "category": "licensed_crossover",
+      "releaseYear": 2021,
+      "releaseDate": "2021-03-23",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Absent du corpus inspecté.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "developer-announcement-and-store-metadata",
+      "sourceUrls": [
+        "https://store.steampowered.com/news/posts/?appgroupname=Dark+Deception%3A+Monsters+%26+Mortals&appids=1266690&enddate=1703286695&feed=steam_community_announcements",
+        "https://steamdb.info/app/1508810/subs/"
+      ],
+      "sourceRefs": [
+        "turn756159674search8",
+        "turn814244729search5"
+      ],
+      "nextAction": "Étudier les contenus historiquement publiés à partir de preuves du DLC exact ; distinguer ces preuves de sa disponibilité commerciale.",
+      "generationEligibility": "separate-crossover-reference-required",
+      "notes": [
+        "Le développeur annonçait la sortie sur Steam pour le 23/03/2021. Le catalogue SteamDB corrobore cette publication et signale la fiche retirée de la vente ; aucune date exacte de retrait n’est affirmée."
+      ],
+      "availabilityStatus": "retired-store-entry-secondary",
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "machine_pachislot_2015",
+      "title": "SILENT HILL — pachislot TAKASAGO",
+      "aliases": [],
+      "category": "licensed_machine",
+      "releaseYear": 2015,
+      "releaseDate": "2015-10-05",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune fiche documentaire ; aucune source runtime dédiée.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://www.konami.com/amusement/psm/archive/psm_archive_title.html?kinds=ps&title=silenthill",
+        "https://www.konami.com/amusement/psm/portal/magihallo/blog_mh/2015/mhs_blog_151027.html"
+      ],
+      "sourceRefs": [
+        "turn140511237search2",
+        "turn140511237search3"
+      ],
+      "nextAction": "Conserver la catégorie de machine sous licence et consulter les présentations fabricant si une étude documentaire est nécessaire.",
+      "generationEligibility": "licensed-machine-only",
+      "notes": [
+        "Machine pachislot ; aucune machine CR/pachinko séparée n’est créée sans preuve."
+      ],
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "machine_silent_hill_escape",
+      "title": "Silent Hill Escape — machine à sous",
+      "aliases": [
+        "Silent Hill: Escape",
+        "Silent Hill The Escape (slot)"
+      ],
+      "category": "licensed_machine",
+      "releaseYear": null,
+      "releaseDate": null,
+      "releaseStatus": "published-manufacturer-catalogue",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune couverture documentaire trouvée.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-manufacturer-confirmed",
+      "sourceUrls": [
+        "https://www.konamigaming.com/games/all-games/details/silent-hill-escape",
+        "https://www.fantiniresearch.com/images/pdf/KNM_Pre-NIGA2020_MediaBrief.pdf",
+        "https://www.gamespot.com/articles/konamis-new-silent-hill-project-is-probably-not-wh/1100-6470508/"
+      ],
+      "sourceRefs": [
+        "turn140511237search0",
+        "turn140511237search8",
+        "turn140511237search7"
+      ],
+      "nextAction": "Étudier la documentation fabricant en séparant annonce, objectif de lancement et exploitation ; garder la distinction avec The Escape mobile.",
+      "generationEligibility": "licensed-machine-only",
+      "notes": [
+        "L’année 2020 correspond au lancement cible du dossier fabricant ; le catalogue actuel confirme le produit. Ne pas fusionner avec The Escape mobile.",
+        "Aucune date de première exploitation n’est affirmée : annonce 2019, objectif T1 2020 et présence au catalogue fabricant sont trois constats distincts."
+      ],
+      "announcedYear": 2019,
+      "targetedReleaseYear": 2020,
+      "targetedReleasePeriod": "Q1",
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "machine_silent_hill_return",
+      "title": "Silent Hill Return — machine à sous",
+      "aliases": [
+        "Silent Hill: Return",
+        "Silent Hill The Return (slot)"
+      ],
+      "category": "licensed_machine",
+      "releaseYear": null,
+      "releaseDate": null,
+      "releaseStatus": "published-manufacturer-catalogue",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune couverture documentaire trouvée.",
+      "runtimeSourceIds": [],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-manufacturer-confirmed",
+      "sourceUrls": [
+        "https://www.konamigaming.com/games/all-games/details/silent-hill-return",
+        "https://www.fantiniresearch.com/images/pdf/KNM_Pre-NIGA2020_MediaBrief.pdf",
+        "https://www.gamespot.com/articles/konamis-new-silent-hill-project-is-probably-not-wh/1100-6470508/"
+      ],
+      "sourceRefs": [
+        "turn140511237search1",
+        "turn140511237search8",
+        "turn140511237search7"
+      ],
+      "nextAction": "Étudier la documentation fabricant sans confondre cette machine avec le film Return to Silent Hill.",
+      "generationEligibility": "licensed-machine-only",
+      "notes": [
+        "La date fine de première exploitation n’est pas vérifiée ; dossier fabricant visant T1 2020 et catalogue actuel disponibles.",
+        "Aucune date de première exploitation n’est affirmée : annonce 2019, objectif T1 2020 et présence au catalogue fabricant sont trois constats distincts."
+      ],
+      "announcedYear": 2019,
+      "targetedReleaseYear": 2020,
+      "targetedReleasePeriod": "Q1",
+      "coveragePhase": "before-wave21"
+    },
+    {
+      "id": "collection_ps2_2006",
+      "title": "The Silent Hill Collection",
+      "aliases": [
+        "Silent Hill Collection (PS2 Europe)"
+      ],
+      "category": "game_compilation",
+      "releaseYear": 2006,
+      "releaseDate": "2006-04-21",
+      "releaseStatus": "published",
+      "coverageStatus": "edition-not-indexed",
+      "coverageNote": "Les trois jeux sont présents ; le coffret européen PS2 de 2006 n’était pas indexé comme édition.",
+      "runtimeSourceIds": [
+        "sh2",
+        "sh3",
+        "sh4"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-corroborated",
+      "sourceUrls": [
+        "https://crimson-ceremony.net/lostreleases/item.php?id=shgame_shbox-eur-collection",
+        "https://www.silenthillmemories.net/collections/sh_collection_en.htm"
+      ],
+      "sourceRefs": [
+        "turn394338773view1",
+        "turn806712181search6"
+      ],
+      "nextAction": "Étudier le support exact et sa provenance avant toute utilisation de son contenu.",
+      "generationEligibility": "reference-material-only",
+      "notes": [
+        "Coffret européen réunissant SH2 original, SH3 et SH4 ; il ne contient pas une nouvelle campagne.",
+        "Ne pas confondre avec HD Collection (2012), ni supposer que le disque SH2 contient Born from a Wish.",
+        "La date indiquée est celle de l’édition européenne documentée ; les variantes régionales restent des éditions du coffret."
+      ],
+      "coveragePhase": "before-wave21",
+      "relatedIds": [
+        "sh2_original_2001",
+        "sh3_original_2003",
+        "sh4_the_room_2004"
+      ]
+    },
+    {
+      "id": "dvd_art_silent_hill_2001",
+      "title": "Art of Silent Hill",
+      "aliases": [
+        "The Art of Silent Hill"
+      ],
+      "category": "documentary_multimedia",
+      "releaseYear": 2001,
+      "releaseDate": "2001-11-22",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune fiche de l’œuvre documentaire retrouvée avant cette passe.",
+      "runtimeSourceIds": [
+        "sh1",
+        "sh2"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-corroborated",
+      "sourceUrls": [
+        "https://silenthillheaven.com/aosh/",
+        "https://www.crimson-ceremony.net/lostreleases/shostv/video.php"
+      ],
+      "sourceRefs": [
+        "turn806712181search1",
+        "turn806712181search0"
+      ],
+      "nextAction": "Étudier le support exact et sa provenance avant toute utilisation de son contenu.",
+      "generationEligibility": "reference-material-only",
+      "notes": [
+        "DVD japonais KONAMI NM075 / SKG0001 ; matériel visuel et vidéos, pas un jeu autonome.",
+        "La notice et l’objet éditorial sont corroborés par deux archives spécialisées ; les séquences ne sont pas auditées intégralement ici."
+      ],
+      "coveragePhase": "before-wave21",
+      "relatedIds": [
+        "sh1_original_1999",
+        "sh2_original_2001"
+      ]
+    },
+    {
+      "id": "dvd_lost_memories_2003",
+      "title": "Lost Memories: The Art & Music of Silent Hill",
+      "aliases": [],
+      "category": "documentary_multimedia",
+      "releaseYear": 2003,
+      "releaseDate": "2003-07-03",
+      "releaseStatus": "published",
+      "coverageStatus": "partially-covered",
+      "coverageNote": "Des images issues de dvd_lm sont déjà citées dans RECHERCHE_1TO1 et les rapports sprites wave7/wave9 ; l’œuvre n’était pas indexée globalement.",
+      "runtimeSourceIds": [
+        "sh1",
+        "sh2",
+        "sh3"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-corroborated",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/dvd_lm/info_en.htm",
+        "https://www.crimson-ceremony.net/lostreleases/shostv/video.php"
+      ],
+      "sourceRefs": [
+        "turn394338773view0",
+        "turn806712181search0"
+      ],
+      "nextAction": "Étudier le support exact et sa provenance avant toute utilisation de son contenu.",
+      "generationEligibility": "reference-material-only",
+      "notes": [
+        "DVD japonais distinct du livre Lost Memories: Silent Hill Chronicle.",
+        "Relier les références visuelles déjà employées à ce support ; les bandes-annonces ou clips peuvent montrer des éléments absents du jeu final."
+      ],
+      "coveragePhase": "before-wave21",
+      "relatedIds": [
+        "sh1_original_1999",
+        "sh2_original_2001",
+        "sh3_original_2003",
+        "sh2_born_from_a_wish"
+      ],
+      "localEvidencePaths": [
+        "docs/production/RECHERCHE_1TO1_2026-10-23.md",
+        "docs/production/sprite-status-wave7-2026-11-18.json",
+        "docs/production/sprite-status-wave9-2026-11-18.json"
+      ]
+    },
+    {
+      "id": "book_lost_memories_2003",
+      "title": "Lost Memories: Silent Hill Chronicle",
+      "aliases": [
+        "Book of Lost Memories",
+        "失われた記憶～サイレントヒル・クロニクル～"
+      ],
+      "category": "official_guide",
+      "releaseYear": 2003,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "partially-covered",
+      "coverageNote": "Le livre est déjà cité comme source de commentaires de créatures dans MOVESETS et research/classic.json ; sa notice d’œuvre et son édition restent à indexer.",
+      "runtimeSourceIds": [
+        "sh1",
+        "sh2",
+        "sh3"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "bibliographic-and-specialist",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/lost_memories/info_en.htm",
+        "https://www.hanmoto.com/bd/isbn/9784757181458"
+      ],
+      "sourceRefs": [
+        "turn806712181view2",
+        "turn373042418search5"
+      ],
+      "nextAction": "Étudier le support exact et sa provenance avant toute utilisation de son contenu.",
+      "generationEligibility": "reference-material-only",
+      "notes": [
+        "Section de l’ouvrage officiel SH3 公式完全攻略ガイド, KONAMI / NTT Publishing (2003), distincte du DVD.",
+        "Les traductions en ligne sont non officielles : conserver le japonais et la page comme preuve primaire lorsque l’interprétation compte.",
+        "Les notices divergent sur juillet/août 2003 ; l’année seule est retenue."
+      ],
+      "coveragePhase": "before-wave21",
+      "isbn": "9784757181458",
+      "relatedIds": [
+        "sh1_original_1999",
+        "sh2_original_2001",
+        "sh3_original_2003"
+      ],
+      "localEvidencePaths": [
+        "docs/MOVESETS.md",
+        "docs/production/research/classic.json",
+        "docs/production/research/extended.json"
+      ]
+    },
+    {
+      "id": "making_of_sh2_2001",
+      "title": "The Making of Silent Hill 2",
+      "aliases": [
+        "Making of Silent Hill 2 (Fun TV)"
+      ],
+      "category": "making_of_documentary",
+      "releaseYear": 2001,
+      "releaseDate": null,
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune fiche de l’œuvre documentaire retrouvée avant cette passe.",
+      "runtimeSourceIds": [
+        "sh2"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "secondary-corroborated",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/mosh2_info_en.htm",
+        "https://crimson-ceremony.net/lostreleases/item.php?id=shgame_sh2-ps2-eur1"
+      ],
+      "sourceRefs": [
+        "turn806712181view3",
+        "turn394338773search0"
+      ],
+      "nextAction": "Étudier le support exact et sa provenance avant toute utilisation de son contenu.",
+      "generationEligibility": "reference-material-only",
+      "notes": [
+        "DVD bonus de l’édition européenne PS2 de SH2 ; documentaire Fun TV et compléments.",
+        "Séparer le témoignage de fabrication, le contenu de bande-annonce et le jeu final ; aucun monstre ou lieu supplémentaire n’est déduit."
+      ],
+      "coveragePhase": "before-wave21",
+      "relatedIds": [
+        "sh2_original_2001"
+      ]
+    },
+    {
+      "id": "crossover_urban_myth_2026",
+      "title": "SILENT HILL f × Urban Myth Dissolution Center — Special Mini-Game",
+      "aliases": [
+        "SILENT HILL f × 都市伝説解体センター コラボ開催記念 スペシャルミニゲーム"
+      ],
+      "category": "promotional_crossover_game",
+      "releaseYear": 2026,
+      "releaseDate": "2026-09-09",
+      "releaseStatus": "published",
+      "coverageStatus": "absent",
+      "coverageNote": "Aucune entrée de cette collaboration dans le registre des 16 packs ; la présence de SHf n’établit pas celle de ce mini-jeu.",
+      "runtimeSourceIds": [
+        "shf"
+      ],
+      "runtimeProfileIds": [],
+      "runtimeStageIds": [],
+      "evidenceStatus": "primary-confirmed",
+      "sourceUrls": [
+        "https://prtimes.jp/main/html/rd/p/000001493.000050711.html",
+        "https://shueisha-games.com/news/20260909_umdc_silenthill-f/",
+        "https://shf-umdc-specialminigame.shueisha-games.com/"
+      ],
+      "sourceRefs": [
+        "turn814244729view0",
+        "turn814244729search1",
+        "turn814244729view1"
+      ],
+      "nextAction": "Étudier le mini-jeu et ses séquences exactes comme collaboration promotionnelle avant toute transposition ; ne pas le fusionner avec la continuité de SHf.",
+      "generationEligibility": "crossover-documentary-only",
+      "notes": [
+        "Publication effective confirmée le 09/09/2026 par KONAMI et Shueisha Games ; site officiel consultable.",
+        "Mini-jeu de navigateur développé par Hakaba-bunko avec Hinako et Azami ; l’œuvre et les illustrations promotionnelles restent distinctes du jeu principal.",
+        "Aucune partie complète ni capture de scène du mini-jeu n’a été auditée ici."
+      ],
+      "coveragePhase": "before-wave21",
+      "relatedIds": [
+        "silent_hill_f_2025"
+      ]
+    }
+  ],
+  "revision": "2026-11-19-final-66",
+  "coveragePhase": {
+    "id": "before-wave21",
+    "label": "Couverture avant ajout",
+    "baseCommit": "ca25d04196b73d6229cdef4dd572eb76846ca7ad",
+    "note": "coverageStatus et coverageNote décrivent l’état du projet avant cette passe documentaire, pas l’état après intégration du présent corpus."
+  }
+}

@@ -1,0 +1,964 @@
+TAP version 13
+# Subtest: campaign review binds a retained portrait to its original fragment and its distinct idle to the combat import
+ok 1 - campaign review binds a retained portrait to its original fragment and its distinct idle to the combat import
+  ---
+  duration_ms: 31.488133
+  type: 'test'
+  ...
+# Subtest: browser campaign review handles selection-only dossiers and detects shared combat paths and pixels
+ok 2 - browser campaign review handles selection-only dossiers and detects shared combat paths and pixels
+  ---
+  duration_ms: 0.488476
+  type: 'test'
+  ...
+# Subtest: historical source blocker can have a later exact-ID candidate while history stays unchanged
+ok 3 - historical source blocker can have a later exact-ID candidate while history stays unchanged
+  ---
+  duration_ms: 0.283067
+  type: 'test'
+  ...
+# Subtest: no later ledger or imported image leaves the historical blocker unresolved
+ok 4 - no later ledger or imported image leaves the historical blocker unresolved
+  ---
+  duration_ms: 0.178709
+  type: 'test'
+  ...
+# Subtest: review rejects missing evidence, wrong source, false animation and excluded generation identities
+ok 5 - review rejects missing evidence, wrong source, false animation and excluded generation identities
+  ---
+  duration_ms: 0.80935
+  type: 'test'
+  ...
+# Subtest: malformed review arrays and missing eligibility fail closed without throwing
+ok 6 - malformed review arrays and missing eligibility fail closed without throwing
+  ---
+  duration_ms: 0.785644
+  type: 'test'
+  ...
+# Subtest: a later selection delivery resolves artwork presence without completing combat
+ok 7 - a later selection delivery resolves artwork presence without completing combat
+  ---
+  duration_ms: 0.541266
+  type: 'test'
+  ...
+# Subtest: a separate combat journal must bind an actual side-view frame, not its portrait
+ok 8 - a separate combat journal must bind an actual side-view frame, not its portrait
+  ---
+  duration_ms: 0.321084
+  type: 'test'
+  ...
+# Subtest: continuation reader accepts five exact ledger/fragment bindings without editing historical rows
+ok 9 - continuation reader accepts five exact ledger/fragment bindings without editing historical rows
+  ---
+  duration_ms: 7.660073
+  type: 'test'
+  ...
+# Subtest: continuation reader binds the two explicit purpose journals and ignores unfinished outputs
+ok 10 - continuation reader binds the two explicit purpose journals and ignores unfinished outputs
+  ---
+  duration_ms: 11.778921
+  type: 'test'
+  ...
+# Subtest: sprite-continuation-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+ok 11 - sprite-continuation-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 17.478711
+  type: 'test'
+  ...
+# Subtest: sprite-next-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+ok 12 - sprite-next-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 18.149612
+  type: 'test'
+  ...
+# Subtest: sprite-suite-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+ok 13 - sprite-suite-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 16.136818
+  type: 'test'
+  ...
+# Subtest: sprite-following-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+ok 14 - sprite-following-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 18.14217
+  type: 'test'
+  ...
+# Subtest: sprite-resume-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 15 - sprite-resume-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 16.348313
+  type: 'test'
+  ...
+# Subtest: sprite-complement-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 16 - sprite-complement-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 19.585826
+  type: 'test'
+  ...
+# Subtest: sprite-wave3-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 17 - sprite-wave3-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 16.946278
+  type: 'test'
+  ...
+# Subtest: sprite-wave4-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 18 - sprite-wave4-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 19.364272
+  type: 'test'
+  ...
+# Subtest: sprite-wave5-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 19 - sprite-wave5-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 15.26863
+  type: 'test'
+  ...
+# Subtest: sprite-wave6-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 20 - sprite-wave6-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 15.294809
+  type: 'test'
+  ...
+# Subtest: sprite-wave14-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 21 - sprite-wave14-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 12.09029
+  type: 'test'
+  ...
+# Subtest: continuation reader returns null before any ledger exists and rejects partial campaigns
+ok 22 - continuation reader returns null before any ledger exists and rejects partial campaigns
+  ---
+  duration_ms: 5.670114
+  type: 'test'
+  ...
+# Subtest: continuation reader rejects forged groups, source, exclusions, evidence and undeclared fragments
+ok 23 - continuation reader rejects forged groups, source, exclusions, evidence and undeclared fragments
+  ---
+  duration_ms: 49.955573
+  type: 'test'
+  ...
+# Subtest: later source-reviewed images for Cybil and Curtis preserve their original ART92 exclusion
+ok 24 - later source-reviewed images for Cybil and Curtis preserve their original ART92 exclusion
+  ---
+  duration_ms: 27.343898
+  type: 'test'
+  ...
+# Subtest: sprite backlog separates missing art, static art and actual animation
+ok 25 - sprite backlog separates missing art, static art and actual animation
+  ---
+  duration_ms: 7.390498
+  type: 'test'
+  ...
+# Subtest: sprite backlog rejects absent entries instead of inventing coverage
+ok 26 - sprite backlog rejects absent entries instead of inventing coverage
+  ---
+  duration_ms: 0.340744
+  type: 'test'
+  ...
+# Subtest: audit rejects duplicated fighter identities and contradictory counts
+ok 27 - audit rejects duplicated fighter identities and contradictory counts
+  ---
+  duration_ms: 0.262135
+  type: 'test'
+  ...
+# Subtest: real sprite coverage keeps authored animated clips in the validation queue
+ok 28 - real sprite coverage keeps authored animated clips in the validation queue
+  ---
+  duration_ms: 34.805783
+  type: 'test'
+  ...
+# Subtest: clip inspector lists only actual authored poses and distinct pixels
+ok 29 - clip inspector lists only actual authored poses and distinct pixels
+  ---
+  duration_ms: 0.440344
+  type: 'test'
+  ...
+# Subtest: walking samples actual distinct frames at authored durations
+ok 30 - walking samples actual distinct frames at authored durations
+  ---
+  duration_ms: 2.01713
+  type: 'test'
+  ...
+# Subtest: missing attack art is disclosed as fallback, never counted as animated attack
+ok 31 - missing attack art is disclosed as fallback, never counted as animated attack
+  ---
+  duration_ms: 0.167732
+  type: 'test'
+  ...
+# Subtest: non-looping hurt image stays on final frame
+ok 32 - non-looping hurt image stays on final frame
+  ---
+  duration_ms: 0.177738
+  type: 'test'
+  ...
+# Subtest: weapon-specific idle must not borrow generic weapon image
+ok 33 - weapon-specific idle must not borrow generic weapon image
+  ---
+  duration_ms: 0.273232
+  type: 'test'
+  ...
+# Subtest: repeated pixels do not qualify as animation
+ok 34 - repeated pixels do not qualify as animation
+  ---
+  duration_ms: 0.113261
+  type: 'test'
+  ...
+# Subtest: runtime rejects malformed and oversized authored clip durations
+ok 35 - runtime rejects malformed and oversized authored clip durations
+  ---
+  duration_ms: 0.142284
+  type: 'test'
+  ...
+# Subtest: combat pose priority never lets stale movement hide hurt or knockdown
+ok 36 - combat pose priority never lets stale movement hide hurt or knockdown
+  ---
+  duration_ms: 0.128624
+  type: 'test'
+  ...
+# Subtest: attack clip cannot borrow its obsolete animation clock after an interruption
+ok 37 - attack clip cannot borrow its obsolete animation clock after an interruption
+  ---
+  duration_ms: 0.175575
+  type: 'test'
+  ...
+# Subtest: sprite clock resets on pose changes and sanitizes invalid legacy ticks
+ok 38 - sprite clock resets on pose changes and sanitizes invalid legacy ticks
+  ---
+  duration_ms: 0.283528
+  type: 'test'
+  ...
+# Subtest: presentation clock uses its own sequence frame and resets after it ends
+ok 39 - presentation clock uses its own sequence frame and resets after it ends
+  ---
+  duration_ms: 0.250257
+  type: 'test'
+  ...
+# Subtest: changing attack identity resets the pose clock even for the same move
+ok 40 - changing attack identity resets the pose clock even for the same move
+  ---
+  duration_ms: 0.160021
+  type: 'test'
+  ...
+# Subtest: runtime refuses missing ticksPerFrame rather than silently inventing timing
+ok 41 - runtime refuses missing ticksPerFrame rather than silently inventing timing
+  ---
+  duration_ms: 0.150878
+  type: 'test'
+  ...
+# Subtest: malformed runtime clip arrays fail safely without throwing
+ok 42 - malformed runtime clip arrays fail safely without throwing
+  ---
+  duration_ms: 0.127072
+  type: 'test'
+  ...
+# Subtest: runtime rejects clips without explicit loop semantics
+ok 43 - runtime rejects clips without explicit loop semantics
+  ---
+  duration_ms: 0.090477
+  type: 'test'
+  ...
+# Subtest: clip contract keeps thirty old indices and appends nine presentation states
+ok 44 - clip contract keeps thirty old indices and appends nine presentation states
+  ---
+  duration_ms: 2.783345
+  type: 'test'
+  ...
+# Subtest: native raster is not altered by local timeline editing
+ok 45 - native raster is not altered by local timeline editing
+  ---
+  duration_ms: 1.304807
+  type: 'test'
+  ...
+# Subtest: timeline order reuses images without manufacturing files
+ok 46 - timeline order reuses images without manufacturing files
+  ---
+  duration_ms: 0.315455
+  type: 'test'
+  ...
+# Subtest: repeating a static image is not an animation
+ok 47 - repeating a static image is not an animation
+  ---
+  duration_ms: 0.188474
+  type: 'test'
+  ...
+# Subtest: re-encoded identical pixels do not count as different animation images
+ok 48 - re-encoded identical pixels do not count as different animation images
+  ---
+  duration_ms: 0.282846
+  type: 'test'
+  ...
+# Subtest: authored variable durations run with the exact live sampler
+ok 49 - authored variable durations run with the exact live sampler
+  ---
+  duration_ms: 0.513544
+  type: 'test'
+  ...
+# Subtest: non-looping clips hold their last frame after all steps
+ok 50 - non-looping clips hold their last frame after all steps
+  ---
+  duration_ms: 0.202355
+  type: 'test'
+  ...
+# Subtest: a dedicated core KO is used only for an actual final KO of its owner
+ok 51 - a dedicated core KO is used only for an actual final KO of its owner
+  ---
+  duration_ms: 0.536248
+  type: 'test'
+  ...
+# Subtest: attack clips cannot loop independently of collision timing
+ok 52 - attack clips cannot loop independently of collision timing
+  ---
+  duration_ms: 0.467645
+  type: 'test'
+  ...
+# Subtest: move timing displayed to authors comes from the actual combat profile
+ok 53 - move timing displayed to authors comes from the actual combat profile
+  ---
+  duration_ms: 1.254982
+  type: 'test'
+  ...
+# Subtest: timeline rejects negative index
+ok 54 - timeline rejects negative index
+  ---
+  duration_ms: 0.167042
+  type: 'test'
+  ...
+# Subtest: timeline rejects outside index
+ok 55 - timeline rejects outside index
+  ---
+  duration_ms: 0.063947
+  type: 'test'
+  ...
+# Subtest: timeline rejects fractional index
+ok 56 - timeline rejects fractional index
+  ---
+  duration_ms: 0.056746
+  type: 'test'
+  ...
+# Subtest: timeline rejects boolean index
+ok 57 - timeline rejects boolean index
+  ---
+  duration_ms: 0.03338
+  type: 'test'
+  ...
+# Subtest: timeline rejects empty timeline
+ok 58 - timeline rejects empty timeline
+  ---
+  duration_ms: 0.126341
+  type: 'test'
+  ...
+# Subtest: timeline rejects too many steps
+ok 59 - timeline rejects too many steps
+  ---
+  duration_ms: 0.046901
+  type: 'test'
+  ...
+# Subtest: timeline rejects noninteger ticks
+ok 60 - timeline rejects noninteger ticks
+  ---
+  duration_ms: 0.052349
+  type: 'test'
+  ...
+# Subtest: timeline rejects unbounded ticks
+ok 61 - timeline rejects unbounded ticks
+  ---
+  duration_ms: 0.080862
+  type: 'test'
+  ...
+# Subtest: timeline rejects null duration list
+ok 62 - timeline rejects null duration list
+  ---
+  duration_ms: 0.041853
+  type: 'test'
+  ...
+# Subtest: timeline rejects null durations
+ok 63 - timeline rejects null durations
+  ---
+  duration_ms: 0.038407
+  type: 'test'
+  ...
+# Subtest: timeline rejects missing duration
+ok 64 - timeline rejects missing duration
+  ---
+  duration_ms: 0.029715
+  type: 'test'
+  ...
+# Subtest: timeline rejects zero duration
+ok 65 - timeline rejects zero duration
+  ---
+  duration_ms: 0.029444
+  type: 'test'
+  ...
+# Subtest: timeline rejects NaN duration
+ok 66 - timeline rejects NaN duration
+  ---
+  duration_ms: 0.026931
+  type: 'test'
+  ...
+# Subtest: timeline rejects loop coercion
+ok 67 - timeline rejects loop coercion
+  ---
+  duration_ms: 0.026029
+  type: 'test'
+  ...
+# Subtest: timeline rejects total duration overflow
+ok 68 - timeline rejects total duration overflow
+  ---
+  duration_ms: 0.030485
+  type: 'test'
+  ...
+# Subtest: timeline rejects injected stat
+ok 69 - timeline rejects injected stat
+  ---
+  duration_ms: 0.028623
+  type: 'test'
+  ...
+# Subtest: unknown and inherited pose names are rejected
+ok 70 - unknown and inherited pose names are rejected
+  ---
+  duration_ms: 0.237067
+  type: 'test'
+  ...
+# Subtest: packet captures the previous clip and ordered immutable identities
+ok 71 - packet captures the previous clip and ordered immutable identities
+  ---
+  duration_ms: 0.178519
+  type: 'test'
+  ...
+# Subtest: idle reuse alone cannot be exported as a new attack pose
+ok 72 - idle reuse alone cannot be exported as a new attack pose
+  ---
+  duration_ms: 0.221063
+  type: 'test'
+  ...
+# Subtest: a dedicated action frame can share a recovery image with idle
+ok 73 - a dedicated action frame can share a recovery image with idle
+  ---
+  duration_ms: 0.239541
+  type: 'test'
+  ...
+# Subtest: draft normalization does not mutate the source clip
+ok 74 - draft normalization does not mutate the source clip
+  ---
+  duration_ms: 0.147773
+  type: 'test'
+  ...
+# Subtest: the Python publication contract lists the same pose keys
+ok 75 - the Python publication contract lists the same pose keys
+  ---
+  duration_ms: 0.724722
+  type: 'test'
+  ...
+# Subtest: clip export refuses frames inserted without image import
+ok 76 - clip export refuses frames inserted without image import
+  ---
+  duration_ms: 0.122404
+  type: 'test'
+  ...
+# Subtest: intro requires a one-shot timeline and has a French label
+ok 77 - intro requires a one-shot timeline and has a French label
+  ---
+  duration_ms: 0.353653
+  type: 'test'
+  ...
+# Subtest: intro preview uses the actor presentation clock, not an attack alias
+ok 78 - intro preview uses the actor presentation clock, not an attack alias
+  ---
+  duration_ms: 0.21896
+  type: 'test'
+  ...
+# Subtest: intro cannot turn idle reuse into a new presentation
+ok 79 - intro cannot turn idle reuse into a new presentation
+  ---
+  duration_ms: 0.238058
+  type: 'test'
+  ...
+# Subtest: winRound requires a one-shot timeline and has a French label
+ok 80 - winRound requires a one-shot timeline and has a French label
+  ---
+  duration_ms: 0.083927
+  type: 'test'
+  ...
+# Subtest: winRound preview uses the actor presentation clock, not an attack alias
+ok 81 - winRound preview uses the actor presentation clock, not an attack alias
+  ---
+  duration_ms: 0.103256
+  type: 'test'
+  ...
+# Subtest: winRound cannot turn idle reuse into a new presentation
+ok 82 - winRound cannot turn idle reuse into a new presentation
+  ---
+  duration_ms: 0.259701
+  type: 'test'
+  ...
+# Subtest: loseRound requires a one-shot timeline and has a French label
+ok 83 - loseRound requires a one-shot timeline and has a French label
+  ---
+  duration_ms: 0.27165
+  type: 'test'
+  ...
+# Subtest: loseRound preview uses the actor presentation clock, not an attack alias
+ok 84 - loseRound preview uses the actor presentation clock, not an attack alias
+  ---
+  duration_ms: 0.114592
+  type: 'test'
+  ...
+# Subtest: loseRound cannot turn idle reuse into a new presentation
+ok 85 - loseRound cannot turn idle reuse into a new presentation
+  ---
+  duration_ms: 0.098378
+  type: 'test'
+  ...
+# Subtest: winMatch requires a one-shot timeline and has a French label
+ok 86 - winMatch requires a one-shot timeline and has a French label
+  ---
+  duration_ms: 0.130817
+  type: 'test'
+  ...
+# Subtest: winMatch preview uses the actor presentation clock, not an attack alias
+ok 87 - winMatch preview uses the actor presentation clock, not an attack alias
+  ---
+  duration_ms: 0.053871
+  type: 'test'
+  ...
+# Subtest: winMatch cannot turn idle reuse into a new presentation
+ok 88 - winMatch cannot turn idle reuse into a new presentation
+  ---
+  duration_ms: 0.087782
+  type: 'test'
+  ...
+# Subtest: loseMatch requires a one-shot timeline and has a French label
+ok 89 - loseMatch requires a one-shot timeline and has a French label
+  ---
+  duration_ms: 0.050276
+  type: 'test'
+  ...
+# Subtest: loseMatch preview uses the actor presentation clock, not an attack alias
+ok 90 - loseMatch preview uses the actor presentation clock, not an attack alias
+  ---
+  duration_ms: 0.108704
+  type: 'test'
+  ...
+# Subtest: loseMatch cannot turn idle reuse into a new presentation
+ok 91 - loseMatch cannot turn idle reuse into a new presentation
+  ---
+  duration_ms: 0.075704
+  type: 'test'
+  ...
+# Subtest: outro requires a one-shot timeline and has a French label
+ok 92 - outro requires a one-shot timeline and has a French label
+  ---
+  duration_ms: 0.11916
+  type: 'test'
+  ...
+# Subtest: outro preview uses the actor presentation clock, not an attack alias
+ok 93 - outro preview uses the actor presentation clock, not an attack alias
+  ---
+  duration_ms: 0.093321
+  type: 'test'
+  ...
+# Subtest: outro cannot turn idle reuse into a new presentation
+ok 94 - outro cannot turn idle reuse into a new presentation
+  ---
+  duration_ms: 0.106991
+  type: 'test'
+  ...
+# Subtest: finisher requires a one-shot timeline and has a French label
+ok 95 - finisher requires a one-shot timeline and has a French label
+  ---
+  duration_ms: 0.05335
+  type: 'test'
+  ...
+# Subtest: finisher preview uses the actor presentation clock, not an attack alias
+ok 96 - finisher preview uses the actor presentation clock, not an attack alias
+  ---
+  duration_ms: 0.037116
+  type: 'test'
+  ...
+# Subtest: finisher cannot turn idle reuse into a new presentation
+ok 97 - finisher cannot turn idle reuse into a new presentation
+  ---
+  duration_ms: 0.082634
+  type: 'test'
+  ...
+# Subtest: finished requires a one-shot timeline and has a French label
+ok 98 - finished requires a one-shot timeline and has a French label
+  ---
+  duration_ms: 0.047872
+  type: 'test'
+  ...
+# Subtest: finished preview uses the actor presentation clock, not an attack alias
+ok 99 - finished preview uses the actor presentation clock, not an attack alias
+  ---
+  duration_ms: 0.037597
+  type: 'test'
+  ...
+# Subtest: finished cannot turn idle reuse into a new presentation
+ok 100 - finished cannot turn idle reuse into a new presentation
+  ---
+  duration_ms: 0.065849
+  type: 'test'
+  ...
+# Subtest: taunt requires a one-shot timeline and has a French label
+ok 101 - taunt requires a one-shot timeline and has a French label
+  ---
+  duration_ms: 0.356588
+  type: 'test'
+  ...
+# Subtest: taunt preview uses the actor presentation clock, not an attack alias
+ok 102 - taunt preview uses the actor presentation clock, not an attack alias
+  ---
+  duration_ms: 0.045269
+  type: 'test'
+  ...
+# Subtest: taunt cannot turn idle reuse into a new presentation
+ok 103 - taunt cannot turn idle reuse into a new presentation
+  ---
+  duration_ms: 0.096305
+  type: 'test'
+  ...
+# Subtest: missing presentation preview explicitly reports idle fallback
+ok 104 - missing presentation preview explicitly reports idle fallback
+  ---
+  duration_ms: 0.076766
+  type: 'test'
+  ...
+# Subtest: preview clocks remain integer and non-negative for all presentation states
+ok 105 - preview clocks remain integer and non-negative for all presentation states
+  ---
+  duration_ms: 0.230838
+  type: 'test'
+  ...
+# Subtest: new presentation cannot bypass idle protection by changing a draft pixel digest
+ok 106 - new presentation cannot bypass idle protection by changing a draft pixel digest
+  ---
+  duration_ms: 0.150266
+  type: 'test'
+  ...
+# Subtest: clip export keeps the exact profile and media identity
+ok 107 - clip export keeps the exact profile and media identity
+  ---
+  duration_ms: 0.182995
+  type: 'test'
+  ...
+# Subtest: presentation coverage separates imported static scenes, animation and absent scenes
+ok 108 - presentation coverage separates imported static scenes, animation and absent scenes
+  ---
+  duration_ms: 0.420414
+  type: 'test'
+  ...
+# Subtest: actual Twin Victim exact static taunt covers its own slot without claiming animation or unrelated presentations
+ok 109 - actual Twin Victim exact static taunt covers its own slot without claiming animation or unrelated presentations
+  ---
+  duration_ms: 0.186181
+  type: 'test'
+  ...
+# Subtest: owned round contexts map workbook round-one names and an individual finisher never covers the whole finisher slot
+ok 110 - owned round contexts map workbook round-one names and an individual finisher never covers the whole finisher slot
+  ---
+  duration_ms: 0.29832
+  type: 'test'
+  ...
+# Subtest: selection painter and combat renderer use their distinct registered pixels
+ok 111 - selection painter and combat renderer use their distinct registered pixels
+  ---
+  duration_ms: 2.012192
+  type: 'test'
+  ...
+# Subtest: combat orientation follows the enemy side without changing the portrait orientation
+ok 112 - combat orientation follows the enemy side without changing the portrait orientation
+  ---
+  duration_ms: 0.348264
+  type: 'test'
+  ...
+# Subtest: selection-only art cannot reach combat even if an obsolete idle remains in memory
+ok 113 - selection-only art cannot reach combat even if an obsolete idle remains in memory
+  ---
+  duration_ms: 0.359852
+  type: 'test'
+  ...
+# Subtest: normal preflight rejects a selection-only profile before loading any image
+ok 114 - normal preflight rejects a selection-only profile before loading any image
+  ---
+  duration_ms: 0.999316
+  type: 'test'
+  ...
+# Subtest: coverage distinguishes portraits, side views, legacy views and missing combat
+ok 115 - coverage distinguishes portraits, side views, legacy views and missing combat
+  ---
+  duration_ms: 0.409336
+  type: 'test'
+  ...
+# Subtest: a portrait-only frame cannot be mislabeled as combat by copying an idle clip
+ok 116 - a portrait-only frame cannot be mislabeled as combat by copying an idle clip
+  ---
+  duration_ms: 0.151999
+  type: 'test'
+  ...
+# Subtest: exact source and profile identity apply independently to combat routing
+ok 117 - exact source and profile identity apply independently to combat routing
+  ---
+  duration_ms: 0.131518
+  type: 'test'
+  ...
+# Subtest: backlog accepts a selection portrait without falsely counting a combat frame
+ok 118 - backlog accepts a selection portrait without falsely counting a combat frame
+  ---
+  duration_ms: 6.338483
+  type: 'test'
+  ...
+# Subtest: raster coverage counts real exact-ID assets, not roster entries or resized copies
+ok 119 - raster coverage counts real exact-ID assets, not roster entries or resized copies
+  ---
+  duration_ms: 2.088627
+  type: 'test'
+  ...
+# Subtest: Scarlet crawls through three lateral drawings and returns to rest on release
+ok 120 - Scarlet crawls through three lateral drawings and returns to rest on release
+  ---
+  duration_ms: 1.200108
+  type: 'test'
+  ...
+# Subtest: film bitmap is not silently used for the SH2 original or spear
+ok 121 - film bitmap is not silently used for the SH2 original or spear
+  ---
+  duration_ms: 0.161053
+  type: 'test'
+  ...
+# Subtest: an explicit source mismatch rejects otherwise valid ID
+ok 122 - an explicit source mismatch rejects otherwise valid ID
+  ---
+  duration_ms: 0.147593
+  type: 'test'
+  ...
+# Subtest: unknown and inherited property names never resolve as images
+ok 123 - unknown and inherited property names never resolve as images
+  ---
+  duration_ms: 0.215034
+  type: 'test'
+  ...
+# Subtest: no ID case normalization or fuzzy aliases are used
+ok 124 - no ID case normalization or fuzzy aliases are used
+  ---
+  duration_ms: 0.101332
+  type: 'test'
+  ...
+# Subtest: each runtime bitmap has its actual digest, PNG header and native dimensions
+ok 125 - each runtime bitmap has its actual digest, PNG header and native dimensions
+  ---
+  duration_ms: 428.056846
+  type: 'test'
+  ...
+# Subtest: mirrored presentation reuses an image but is not counted as generated animation
+ok 126 - mirrored presentation reuses an image but is not counted as generated animation
+  ---
+  duration_ms: 0.816791
+  type: 'test'
+  ...
+# Subtest: pose priority and missing pose fallback are explicit
+ok 127 - pose priority and missing pose fallback are explicit
+  ---
+  duration_ms: 0.375126
+  type: 'test'
+  ...
+# Subtest: future frame clips advance using simulation ticks only
+ok 128 - future frame clips advance using simulation ticks only
+  ---
+  duration_ms: 0.189736
+  type: 'test'
+  ...
+# Subtest: non-looping future pose clips hold their final actual frame
+ok 129 - non-looping future pose clips hold their final actual frame
+  ---
+  duration_ms: 0.115694
+  type: 'test'
+  ...
+# Subtest: native aspect ratio is preserved for all roster size profiles
+ok 130 - native aspect ratio is preserved for all roster size profiles
+  ---
+  duration_ms: 1.394992
+  type: 'test'
+  ...
+# Subtest: left and right raster anchors are exact mirror positions around the actor
+ok 131 - left and right raster anchors are exact mirror positions around the actor
+  ---
+  duration_ms: 0.273192
+  type: 'test'
+  ...
+# Subtest: grounded feet and floating bodies retain their source geometry offsets
+ok 132 - grounded feet and floating bodies retain their source geometry offsets
+  ---
+  duration_ms: 0.114402
+  type: 'test'
+  ...
+# Subtest: cache deduplicates requests and decoding for repeated portraits
+ok 133 - cache deduplicates requests and decoding for repeated portraits
+  ---
+  duration_ms: 3.439343
+  type: 'test'
+  ...
+# Subtest: cache caps concurrent decoders
+ok 134 - cache caps concurrent decoders
+  ---
+  duration_ms: 18.87187
+  type: 'test'
+  ...
+# Subtest: failed assets do not auto-retry on every render frame
+ok 135 - failed assets do not auto-retry on every render frame
+  ---
+  duration_ms: 0.635177
+  type: 'test'
+  ...
+# Subtest: a new explicit preflight retries a failed asset
+ok 136 - a new explicit preflight retries a failed asset
+  ---
+  duration_ms: 2.586669
+  type: 'test'
+  ...
+# Subtest: decoder errors and dimensions mismatches fail safely
+ok 137 - decoder errors and dimensions mismatches fail safely
+  ---
+  duration_ms: 1.435002
+  type: 'test'
+  ...
+# Subtest: a stalled image has a bounded timeout and releases its slot
+ok 138 - a stalled image has a bounded timeout and releases its slot
+  ---
+  duration_ms: 8.508903
+  type: 'test'
+  ...
+# Subtest: an unavailable browser image API is a controlled load failure
+ok 139 - an unavailable browser image API is a controlled load failure
+  ---
+  duration_ms: 0.231619
+  type: 'test'
+  ...
+# Subtest: LRU eviction frees unpinned decoded images
+ok 140 - LRU eviction frees unpinned decoded images
+  ---
+  duration_ms: 2.900912
+  type: 'test'
+  ...
+# Subtest: current combat images survive LRU eviction
+ok 141 - current combat images survive LRU eviction
+  ---
+  duration_ms: 1.664488
+  type: 'test'
+  ...
+# Subtest: preflight refuses missing art before issuing any network load
+ok 142 - preflight refuses missing art before issuing any network load
+  ---
+  duration_ms: 0.309887
+  type: 'test'
+  ...
+# Subtest: preflight reports successful decode even when long-run unpinned frames were evicted
+ok 143 - preflight reports successful decode even when long-run unpinned frames were evicted
+  ---
+  duration_ms: 6.199813
+  type: 'test'
+  ...
+# Subtest: diagnostic mode is explicit and lists all missing IDs
+ok 144 - diagnostic mode is explicit and lists all missing IDs
+  ---
+  duration_ms: 0.270618
+  type: 'test'
+  ...
+# Subtest: battle rendering issues a raster draw, not skeletal geometry
+ok 145 - battle rendering issues a raster draw, not skeletal geometry
+  ---
+  duration_ms: 0.811573
+  type: 'test'
+  ...
+# Subtest: missing art uses a labeled card instead of fabricated anatomy
+ok 146 - missing art uses a labeled card instead of fabricated anatomy
+  ---
+  duration_ms: 0.264729
+  type: 'test'
+  ...
+# Subtest: asynchronous portrait completion cannot paint the previous selected ID
+ok 147 - asynchronous portrait completion cannot paint the previous selected ID
+  ---
+  duration_ms: 26.175327
+  type: 'test'
+  ...
+# Subtest: single loaded bitmap paints both left-facing and right-facing portraits
+ok 148 - single loaded bitmap paints both left-facing and right-facing portraits
+  ---
+  duration_ms: 1.668724
+  type: 'test'
+  ...
+# Subtest: all monster entry points route through raster code; command hero has no old drawing functions
+ok 149 - all monster entry points route through raster code; command hero has no old drawing functions
+  ---
+  duration_ms: 1.421272
+  type: 'test'
+  ...
+# Subtest: every actual sprite path is in the generated offline shell
+ok 150 - every actual sprite path is in the generated offline shell
+  ---
+  duration_ms: 1.655896
+  type: 'test'
+  ...
+# Subtest: portrait orientation combines presentation side with a left-facing native frame
+ok 151 - portrait orientation combines presentation side with a left-facing native frame
+  ---
+  duration_ms: 1.652501
+  type: 'test'
+  ...
+# Subtest: a portrait paints its successful decode even when the next queued image evicts it before the callback
+ok 152 - a portrait paints its successful decode even when the next queued image evicts it before the callback
+  ---
+  duration_ms: 2.814823
+  type: 'test'
+  ...
+# Subtest: over-budget pinned animation sets are rejected before changing the previous lease
+ok 153 - over-budget pinned animation sets are rejected before changing the previous lease
+  ---
+  duration_ms: 0.854789
+  type: 'test'
+  ...
+# Subtest: mirror combat pins each actual file only once
+ok 154 - mirror combat pins each actual file only once
+  ---
+  duration_ms: 0.109666
+  type: 'test'
+  ...
+# Subtest: pinning unmeasured unknown paths cannot bypass the memory budget
+ok 155 - pinning unmeasured unknown paths cannot bypass the memory budget
+  ---
+  duration_ms: 0.111177
+  type: 'test'
+  ...
+# Subtest: one oversized image is rejected without invoking a decoder
+ok 156 - one oversized image is rejected without invoking a decoder
+  ---
+  duration_ms: 0.081203
+  type: 'test'
+  ...
+# Subtest: in-flight reservations bound simultaneous decoded memory, not only the final LRU
+ok 157 - in-flight reservations bound simultaneous decoded memory, not only the final LRU
+  ---
+  duration_ms: 32.113695
+  type: 'test'
+  ...
+# Subtest: full pinned cache refuses unrelated decodes without a queued-load deadlock
+ok 158 - full pinned cache refuses unrelated decodes without a queued-load deadlock
+  ---
+  duration_ms: 1.569365
+  type: 'test'
+  ...
+# Subtest: decoder timeout releases its memory reservation as well as concurrency
+ok 159 - decoder timeout releases its memory reservation as well as concurrency
+  ---
+  duration_ms: 4.374132
+  type: 'test'
+  ...
+1..159
+# tests 159
+# suites 0
+# pass 159
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3234.470742

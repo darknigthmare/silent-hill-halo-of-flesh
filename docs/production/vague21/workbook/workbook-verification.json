@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-19",
+  "createdAt": "2026-11-19T13:58:39.818Z",
+  "authoring": "@oai/artifact-tool JavaScript",
+  "builderSHA256": "b6ec9d74ffabe222c15f340a51e903bdc71d17840b0ca89514722ba489be8bd9",
+  "sourceHashes": {
+    "docs/production/franchise-corpus.json": "9df5b1b7d228b82559a2295b33b2ed47dabe812bc1b29f11a9ec841eaaa1ee86",
+    "src/data.js": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+    "src/production-reference.js": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889",
+    "src/stage-bitmap-manifest.js": "7b2a5a2007e02f72a7671767db56874f8322adada9c059a36e272db690271403",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871"
+  },
+  "preparedInputSHA256": "fb1854fd8b94714b595097cb85053c989f795ddce3f9a1d025b418cdc55b8f61",
+  "preparerSHA256": "9ed7724de3912f5753cd55cb9a12ae2b7d49559be8eaef953e6b510119196977",
+  "historicalWorkbookUnmodified": true,
+  "corpusRecords": 66,
+  "previousCoverage": {
+    "covered": 15,
+    "covered-within-aggregate": 3,
+    "partially-covered": 4,
+    "absent": 40,
+    "mentioned-only": 1,
+    "edition-not-indexed": 2,
+    "absent-as-programme": 1
+  },
+  "categories": {
+    "game": 14,
+    "playable_teaser": 1,
+    "interactive_series": 1,
+    "film": 3,
+    "remake": 1,
+    "additional_scenario": 1,
+    "compilation_remaster": 1,
+    "announced_remake": 1,
+    "cancelled_game": 1,
+    "mobile_game": 5,
+    "multimedia_collection": 1,
+    "game_dlc": 1,
+    "licensed_comic": 9,
+    "digital_comic": 1,
+    "mobile_manga": 2,
+    "bonus_comic": 1,
+    "unreleased_comic": 1,
+    "novelization": 7,
+    "promotional_broadcast": 1,
+    "publisher_broadcast": 1,
+    "licensed_crossover": 3,
+    "licensed_machine": 3,
+    "game_compilation": 1,
+    "documentary_multimedia": 2,
+    "official_guide": 1,
+    "making_of_documentary": 1,
+    "promotional_crossover_game": 1
+  },
+  "runtimeSourceCount": 16,
+  "stages": {
+    "total": 123,
+    "bitmapActive": 55,
+    "missing": 68,
+    "missingUnblocked": 53,
+    "referenceBlocked": 15
+  },
+  "worksheets": [
+    "Corpus",
+    "Stages"
+  ],
+  "nativeTables": 2,
+  "formulaChecks": "passed",
+  "representativeEditRecalculation": "passed-and-restored",
+  "exportReadback": "passed",
+  "formulaErrors": 0,
+  "visualReview": "passed-for-recorded-ranges",
+  "xlsx": {
+    "path": "/workspace/scratch/8edddaaaab76/outputs/wave21-bible/SILENT_HILL_CORPUS_BIBLE.xlsx",
+    "bytes": 47348,
+    "sha256": "dd67b2206c0e579f4c9bc53deaccdd9946541ea734e6d63476b80712cea8dfa0",
+    "repositoryPath": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx"
+  },
+  "readbackSummary": {
+    "corpus": 66,
+    "originalOmissions": 41,
+    "stages": 123,
+    "active": 55,
+    "missingUnblocked": 53,
+    "blocked": 15
+  },
+  "renderedSheets": [
+    {
+      "sheet": "Corpus",
+      "region": "opening",
+      "range": "A1:H15",
+      "file": "corpus-preview.png",
+      "sha256": "a5f238b888d256a543d223d6c9b90270808e6e0b05d6694262889e8c784e0130",
+      "bytes": 113609
+    },
+    {
+      "sheet": "Stages",
+      "region": "opening",
+      "range": "A1:H15",
+      "file": "stages-preview.png",
+      "sha256": "1fdad4cbc40f2b48f29a0006feaf72c0960ec02a81b0895dd965987188260dc5",
+      "bytes": 158926
+    },
+    {
+      "sheet": "Corpus",
+      "region": "long-notes",
+      "range": "I67:M74",
+      "file": "corpus-long-notes-preview.png",
+      "sha256": "5ac52cb074db6f96965d8eea1e84b673696fe5ecbd70cf5c4b6f06e063b6e76f",
+      "bytes": 428665
+    }
+  ],
+  "visualReviewDetails": {
+    "reviewer": "root",
+    "method": "Direct inspection of three previews rendered from reopened XLSX",
+    "ranges": [
+      "Corpus!A1:H15",
+      "Stages!A1:H15",
+      "Corpus!I67:M74"
+    ],
+    "observations": [
+      "Titles, indicators and headers readable; table rows have distinct bands.",
+      "Stage absence and reference status visible alongside separate next actions.",
+      "Long source URLs, explicit line breaks, Japanese aliases and notes visible in reviewed long-note rows."
+    ],
+    "scopeLimit": "Representative opening ranges and the final eight corpus records were inspected; no native Excel application session was run."
+  },
+  "exportStructure": {
+    "sheets": [
+      {
+        "part": "xl/worksheets/sheet1.xml",
+        "pane": {
+          "xSplit": "2",
+          "ySplit": "8",
+          "topLeftCell": "C9",
+          "activePane": "bottomRight",
+          "state": "frozen"
+        },
+        "formulas": 3,
+        "maximumRowHeightPoints": 127.0
+      },
+      {
+        "part": "xl/worksheets/sheet2.xml",
+        "pane": {
+          "xSplit": "2",
+          "ySplit": "8",
+          "topLeftCell": "C9",
+          "activePane": "bottomRight",
+          "state": "frozen"
+        },
+        "formulas": 4,
+        "maximumRowHeightPoints": 166.0
+      }
+    ],
+    "tables": [
+      {
+        "part": "xl/tables/table1.xml",
+        "name": "CorpusSilentHill",
+        "range": "A8:M74",
+        "autoFilter": "A8:M74"
+      },
+      {
+        "part": "xl/tables/table2.xml",
+        "name": "StagesSilentHill",
+        "range": "A8:J131",
+        "autoFilter": "A8:J131"
+      }
+    ],
+    "formulaCount": 7,
+    "status": "passed"
+  }
+}

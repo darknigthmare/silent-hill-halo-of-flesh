@@ -1,0 +1,1659 @@
+{
+  "schema": 3,
+  "label": "wave17",
+  "generatedAt": "2026-11-19T05:35:20.068Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4237\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_needler_127.579a17e5bccf.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 599254,
+        "sha256": "579a17e5bccff841503619573365953f98bf565a89d8a35e49fad890db25f72d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_needler_127.579a17e5bccf.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 386427,
+        "sha256": "9f41a2f38998b0f9c45b997e0c059deae270a91e921a31ec162e686002bb813f"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_nurse_128.902db2be4c5b.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 463056,
+        "sha256": "902db2be4c5bb2de890a303cf18dd8bb0cc2f43b2f34d8775ea5416dca7d58fc"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_nurse_128.902db2be4c5b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 509415,
+        "sha256": "af4b765e16180871d34b19bb8a26ac8235013ca48d14677d3be322e5cf727cd5"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 656138,
+        "sha256": "7875b7b8cc53cf1652cc677b29456ed43f4e737355c767ae5caef1c3eeb1ecfd"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 705868,
+        "sha256": "4f0ad91d37c585e4d771c4e8fb54a560776f6239156caf6ace9c6df98ab87f5e"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 651021,
+        "sha256": "a8c37a63c5fc78c9576299d17e7571aa6b32d8a9e0e7c008a5e94a7b968ae4a3"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 649938,
+        "sha256": "b93c719c310436aefaf806c169eb1a6375fe6202f6c09eaa18c94ea1223cb0d7"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 574669,
+        "sha256": "533898f3a5ea73c86ca90678cdf1e099851441c9c7706b67a4ec4a9aa5c1c2a2"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 2829692,
+        "sha256": "d6410e6a7d3b43e677865f44da90ec5c00d54b09792ef747a1cb7665e9c27beb"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 228118,
+        "sha256": "6ea5905574b3ea669204aae5771bc7321f04e6c40f0e9880f1a362ddd900a47d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_needler_127.579a17e5bccf.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_needler_127.579a17e5bccf.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          67,
+          208,
+          1705,
+          721
+        ],
+        "expected": [
+          67,
+          208,
+          1705,
+          721
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          251,
+          305,
+          1193,
+          976
+        ],
+        "expected": [
+          251,
+          305,
+          1193,
+          976
+        ]
+      }
+    },
+    {
+      "name": "bom_needler_127 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/bom_needler_127.579a17e5bccf.png"
+        ],
+        "portrait": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "bom_needler_127 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_needler_127.9f41a2f38998.png"
+        ],
+        "expected": "assets/sprites/bom_needler_127.9f41a2f38998.png"
+      }
+    },
+    {
+      "name": "bom_needler_127 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_needler_127.9f41a2f38998.png"
+        ],
+        "expected": "assets/sprites/bom_needler_127.9f41a2f38998.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_nurse_128.902db2be4c5b.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_nurse_128.902db2be4c5b.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          439,
+          85,
+          841,
+          1168
+        ],
+        "expected": [
+          439,
+          85,
+          841,
+          1168
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          336,
+          97,
+          931,
+          1159
+        ],
+        "expected": [
+          336,
+          97,
+          931,
+          1159
+        ]
+      }
+    },
+    {
+      "name": "bom_nurse_128 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/bom_nurse_128.902db2be4c5b.png"
+        ],
+        "portrait": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "bom_nurse_128 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_nurse_128.af4b765e1618.png"
+        ],
+        "expected": "assets/sprites/bom_nurse_128.af4b765e1618.png"
+      }
+    },
+    {
+      "name": "bom_nurse_128 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_nurse_128.af4b765e1618.png"
+        ],
+        "expected": "assets/sprites/bom_nurse_128.af4b765e1618.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          245,
+          84,
+          915,
+          1230
+        ],
+        "expected": [
+          245,
+          84,
+          915,
+          1230
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          327,
+          115,
+          823,
+          1218
+        ],
+        "expected": [
+          327,
+          115,
+          823,
+          1218
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          211,
+          90,
+          861,
+          1305
+        ],
+        "expected": [
+          211,
+          90,
+          861,
+          1305
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          207,
+          80,
+          919,
+          1210
+        ],
+        "expected": [
+          207,
+          80,
+          919,
+          1210
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          413,
+          94,
+          908,
+          1164
+        ],
+        "expected": [
+          413,
+          94,
+          908,
+          1164
+        ]
+      }
+    },
+    {
+      "name": "origins_faceless_nurse idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png"
+        ],
+        "portrait": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "origins_faceless_nurse portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_faceless_nurse.533898f3a5ea.png"
+        ],
+        "expected": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png"
+      }
+    },
+    {
+      "name": "origins_faceless_nurse portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_faceless_nurse.533898f3a5ea.png"
+        ],
+        "expected": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png"
+      }
+    },
+    {
+      "name": "bom_needler_127/bom_nurse_128 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_needler_127/bom_nurse_128 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "bom_needler_127/bom_nurse_128 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "bom_needler_127",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "bom_nurse_128",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "bom_needler_127/bom_nurse_128 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/bom_needler_127.579a17e5bccf.png",
+          "assets/sprites/bom_nurse_128.902db2be4c5b.png"
+        ],
+        "expected": [
+          "assets/sprites/bom_needler_127.579a17e5bccf.png",
+          "assets/sprites/bom_nurse_128.902db2be4c5b.png"
+        ]
+      }
+    },
+    {
+      "name": "bom_needler_127 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 74.78285543860969,
+          "top": 437.1967642638036,
+          "right": 575.3355888422241,
+          "bottom": 595.5224463622703
+        },
+        "visible": {
+          "left": 75.69627283533163,
+          "top": 437.80570919495153,
+          "right": 574.422171445502,
+          "bottom": 594.0000840344005
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_nurse_128 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 911.9538450382631,
+          "top": 379.57680489634447,
+          "right": 992.5345565376464,
+          "bottom": 595.5724193788377
+        },
+        "visible": {
+          "left": 912.739998321184,
+          "top": 381.14911146218606,
+          "right": 991.7484032547256,
+          "bottom": 594.0001128129961
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_needler_127/bom_nurse_128 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "bom_nurse_128/bom_needler_127 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_nurse_128/bom_needler_127 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "bom_nurse_128/bom_needler_127 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "bom_nurse_128",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "bom_needler_127",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "bom_nurse_128/bom_needler_127 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+          "assets/sprites/bom_needler_127.579a17e5bccf.png"
+        ],
+        "expected": [
+          "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+          "assets/sprites/bom_needler_127.579a17e5bccf.png"
+        ]
+      }
+    },
+    {
+      "name": "bom_nurse_128 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 287.4654739799317,
+          "top": 379.57680489634447,
+          "right": 368.046185479315,
+          "bottom": 595.5724193788377
+        },
+        "visible": {
+          "left": 288.25162726285254,
+          "top": 381.14911146218606,
+          "right": 367.26003219639415,
+          "bottom": 594.0001128129961
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_needler_127 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 704.664441675354,
+          "top": 437.1967642638036,
+          "right": 1205.2171750789685,
+          "bottom": 595.5224463622703
+        },
+        "visible": {
+          "left": 705.5778590720761,
+          "top": 437.80570919495153,
+          "right": 1204.3037576822464,
+          "bottom": 594.0000840344005
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_nurse_128/bom_needler_127 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "origins_faceless_nurse/bom_nurse_128 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "origins_faceless_nurse/bom_nurse_128 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "origins_faceless_nurse/bom_nurse_128 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "origins_faceless_nurse",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "bom_nurse_128",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "origins_faceless_nurse/bom_nurse_128 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "assets/sprites/bom_nurse_128.902db2be4c5b.png"
+        ],
+        "expected": [
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "assets/sprites/bom_nurse_128.902db2be4c5b.png"
+        ]
+      }
+    },
+    {
+      "name": "origins_faceless_nurse full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 263.2139353956961,
+          "top": 380.59188693105864,
+          "right": 388.5842368069541,
+          "bottom": 594.5572013396056
+        },
+        "visible": {
+          "left": 263.7711367353017,
+          "top": 381.1490882706642,
+          "right": 388.21276924721707,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_nurse_128 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 911.9538450382631,
+          "top": 379.57680489634447,
+          "right": 992.5345565376464,
+          "bottom": 595.5724193788377
+        },
+        "visible": {
+          "left": 912.739998321184,
+          "top": 381.14911146218606,
+          "right": 991.7484032547256,
+          "bottom": 594.0001128129961
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_faceless_nurse/bom_nurse_128 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "bom_nurse_128/origins_faceless_nurse asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_nurse_128/origins_faceless_nurse real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "bom_nurse_128/origins_faceless_nurse actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "bom_nurse_128",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "origins_faceless_nurse",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "bom_nurse_128/origins_faceless_nurse fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png"
+        ],
+        "expected": [
+          "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png"
+        ]
+      }
+    },
+    {
+      "name": "bom_nurse_128 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 287.4654739799317,
+          "top": 379.57680489634447,
+          "right": 368.046185479315,
+          "bottom": 595.5724193788377
+        },
+        "visible": {
+          "left": 288.25162726285254,
+          "top": 381.14911146218606,
+          "right": 367.26003219639415,
+          "bottom": 594.0001128129961
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_faceless_nurse full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 891.415793710624,
+          "top": 380.59188693105864,
+          "right": 1016.786095121882,
+          "bottom": 594.5572013396056
+        },
+        "visible": {
+          "left": 891.787261270361,
+          "top": 381.1490882706642,
+          "right": 1016.2288937822764,
+          "bottom": 594
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_nurse_128/origins_faceless_nurse pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "f10b8b9305fb992a0eefb6dde1194436fde918ae2b7d608a25092da7fbfc61eb",
+        "after": "f10b8b9305fb992a0eefb6dde1194436fde918ae2b7d608a25092da7fbfc61eb"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "6155873169552dae95f9a3226ff4787565de7abd4c1831c4aef7291d530966f6",
+        "after": "6155873169552dae95f9a3226ff4787565de7abd4c1831c4aef7291d530966f6"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "bom_needler_127",
+      "path": "assets/sprites/bom_needler_127.579a17e5bccf.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.8841305389510771,
+      "visibleBounds": [
+        67,
+        208,
+        1705,
+        721
+      ]
+    },
+    {
+      "id": "bom_needler_127",
+      "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9206170239285324,
+      "visibleBounds": [
+        251,
+        305,
+        1193,
+        976
+      ]
+    },
+    {
+      "id": "bom_nurse_128",
+      "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8925429057637569,
+      "visibleBounds": [
+        439,
+        85,
+        841,
+        1168
+      ]
+    },
+    {
+      "id": "bom_nurse_128",
+      "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8776972698528982,
+      "visibleBounds": [
+        336,
+        97,
+        931,
+        1159
+      ]
+    },
+    {
+      "id": "origins_faceless_nurse",
+      "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+      "width": 1199,
+      "height": 1312,
+      "transparentFraction": 0.8513668656807503,
+      "visibleBounds": [
+        245,
+        84,
+        915,
+        1230
+      ]
+    },
+    {
+      "id": "origins_faceless_nurse",
+      "path": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+      "width": 1199,
+      "height": 1312,
+      "transparentFraction": 0.8383688642974837,
+      "visibleBounds": [
+        327,
+        115,
+        823,
+        1218
+      ]
+    },
+    {
+      "id": "origins_faceless_nurse",
+      "path": "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+      "width": 1108,
+      "height": 1420,
+      "transparentFraction": 0.8461788783240962,
+      "visibleBounds": [
+        211,
+        90,
+        861,
+        1305
+      ]
+    },
+    {
+      "id": "origins_faceless_nurse",
+      "path": "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+      "width": 1199,
+      "height": 1312,
+      "transparentFraction": 0.8440494110946114,
+      "visibleBounds": [
+        207,
+        80,
+        919,
+        1210
+      ]
+    },
+    {
+      "id": "origins_faceless_nurse",
+      "path": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8681825812901108,
+      "visibleBounds": [
+        413,
+        94,
+        908,
+        1164
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "bom_needler_127",
+      "facing": 1,
+      "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "file": "portrait-bom_needler_127-right.png"
+    },
+    {
+      "id": "bom_needler_127",
+      "facing": -1,
+      "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "file": "portrait-bom_needler_127-left.png"
+    },
+    {
+      "id": "bom_nurse_128",
+      "facing": 1,
+      "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "file": "portrait-bom_nurse_128-right.png"
+    },
+    {
+      "id": "bom_nurse_128",
+      "facing": -1,
+      "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "file": "portrait-bom_nurse_128-left.png"
+    },
+    {
+      "id": "origins_faceless_nurse",
+      "facing": 1,
+      "path": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "file": "portrait-origins_faceless_nurse-right.png"
+    },
+    {
+      "id": "origins_faceless_nurse",
+      "facing": -1,
+      "path": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "file": "portrait-origins_faceless_nurse-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "bom_needler_127",
+        "bom_nurse_128"
+      ],
+      "stage": "film_hospital",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.6072073982701
+        }
+      },
+      "geometries": [
+        {
+          "id": "bom_needler_127",
+          "slot": 1,
+          "path": "assets/sprites/bom_needler_127.579a17e5bccf.png",
+          "exterior": {
+            "left": 74.78285543860969,
+            "top": 437.1967642638036,
+            "right": 575.3355888422241,
+            "bottom": 595.5224463622703
+          },
+          "visible": {
+            "left": 75.69627283533163,
+            "top": 437.80570919495153,
+            "right": 574.422171445502,
+            "bottom": 594.0000840344005
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00008403440051552025,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_needler_127.579a17e5bccf.png",
+            "args": [
+              -267.63929012335007,
+              -224.3812989968082,
+              552.0840177469163,
+              276.04200887345814
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "bom_nurse_128",
+          "slot": 2,
+          "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+          "exterior": {
+            "left": 911.9538450382631,
+            "top": 379.57680489634447,
+            "right": 992.5345565376464,
+            "bottom": 595.5724193788377
+          },
+          "visible": {
+            "left": 912.739998321184,
+            "top": 381.14911146218606,
+            "right": 991.7484032547256,
+            "bottom": 594.0001128129961
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.0001128129961216473,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+            "args": [
+              -117.71958996614313,
+              -234.63532974540198,
+              251.9116850154463,
+              251.9116850154463
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/bom_needler_127.579a17e5bccf.png",
+        "assets/sprites/bom_nurse_128.902db2be4c5b.png"
+      ],
+      "snapshots": [
+        "duel-bom_needler_127--bom_nurse_128-tick0.png",
+        "duel-bom_needler_127--bom_nurse_128-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "bom_nurse_128",
+        "bom_needler_127"
+      ],
+      "stage": "film_hospital",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.6072073982701
+        }
+      },
+      "geometries": [
+        {
+          "id": "bom_nurse_128",
+          "slot": 1,
+          "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+          "exterior": {
+            "left": 287.4654739799317,
+            "top": 379.57680489634447,
+            "right": 368.046185479315,
+            "bottom": 595.5724193788377
+          },
+          "visible": {
+            "left": 288.25162726285254,
+            "top": 381.14911146218606,
+            "right": 367.26003219639415,
+            "bottom": 594.0001128129961
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.0001128129961216473,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+            "args": [
+              -117.71958996614313,
+              -234.63532974540198,
+              251.9116850154463,
+              251.9116850154463
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "id": "bom_needler_127",
+          "slot": 2,
+          "path": "assets/sprites/bom_needler_127.579a17e5bccf.png",
+          "exterior": {
+            "left": 704.664441675354,
+            "top": 437.1967642638036,
+            "right": 1205.2171750789685,
+            "bottom": 595.5224463622703
+          },
+          "visible": {
+            "left": 705.5778590720761,
+            "top": 437.80570919495153,
+            "right": 1204.3037576822464,
+            "bottom": 594.0000840344005
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00008403440051552025,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_needler_127.579a17e5bccf.png",
+            "args": [
+              -267.63929012335007,
+              -224.3812989968082,
+              552.0840177469163,
+              276.04200887345814
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+        "assets/sprites/bom_needler_127.579a17e5bccf.png"
+      ],
+      "snapshots": [
+        "duel-bom_nurse_128--bom_needler_127-tick0.png",
+        "duel-bom_nurse_128--bom_needler_127-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "origins_faceless_nurse",
+        "bom_nurse_128"
+      ],
+      "stage": "film_hospital",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.6072073982701
+        }
+      },
+      "geometries": [
+        {
+          "id": "origins_faceless_nurse",
+          "slot": 1,
+          "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "exterior": {
+            "left": 263.2139353956961,
+            "top": 380.59188693105864,
+            "right": 388.5842368069541,
+            "bottom": 594.5572013396056
+          },
+          "visible": {
+            "left": 263.7711367353017,
+            "top": 381.1490882706642,
+            "right": 388.21276924721707,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+            "args": [
+              -101.06402387434555,
+              -233.50680628272252,
+              227.62167539267017,
+              249.07392670157068
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        },
+        {
+          "id": "bom_nurse_128",
+          "slot": 2,
+          "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+          "exterior": {
+            "left": 911.9538450382631,
+            "top": 379.57680489634447,
+            "right": 992.5345565376464,
+            "bottom": 595.5724193788377
+          },
+          "visible": {
+            "left": 912.739998321184,
+            "top": 381.14911146218606,
+            "right": 991.7484032547256,
+            "bottom": 594.0001128129961
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.0001128129961216473,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+            "args": [
+              -117.71958996614313,
+              -234.63532974540198,
+              251.9116850154463,
+              251.9116850154463
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+        "assets/sprites/bom_nurse_128.902db2be4c5b.png"
+      ],
+      "snapshots": [
+        "duel-origins_faceless_nurse--bom_nurse_128-tick0.png",
+        "duel-origins_faceless_nurse--bom_nurse_128-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "bom_nurse_128",
+        "origins_faceless_nurse"
+      ],
+      "stage": "film_hospital",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.6072073982701
+        }
+      },
+      "geometries": [
+        {
+          "id": "bom_nurse_128",
+          "slot": 1,
+          "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+          "exterior": {
+            "left": 287.4654739799317,
+            "top": 379.57680489634447,
+            "right": 368.046185479315,
+            "bottom": 595.5724193788377
+          },
+          "visible": {
+            "left": 288.25162726285254,
+            "top": 381.14911146218606,
+            "right": 367.26003219639415,
+            "bottom": 594.0001128129961
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.0001128129961216473,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+            "args": [
+              -117.71958996614313,
+              -234.63532974540198,
+              251.9116850154463,
+              251.9116850154463
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1254,
+            "height": 1254
+          }
+        },
+        {
+          "id": "origins_faceless_nurse",
+          "slot": 2,
+          "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "exterior": {
+            "left": 891.415793710624,
+            "top": 380.59188693105864,
+            "right": 1016.786095121882,
+            "bottom": 594.5572013396056
+          },
+          "visible": {
+            "left": 891.787261270361,
+            "top": 381.1490882706642,
+            "right": 1016.2288937822764,
+            "bottom": 594
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+            "args": [
+              -101.06402387434555,
+              -233.50680628272252,
+              227.62167539267017,
+              249.07392670157068
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+        "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png"
+      ],
+      "snapshots": [
+        "duel-bom_nurse_128--origins_faceless_nurse-tick0.png",
+        "duel-bom_nurse_128--origins_faceless_nurse-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "f10b8b9305fb992a0eefb6dde1194436fde918ae2b7d608a25092da7fbfc61eb",
+  "src/sprite-manifest.jsSHA256": "6155873169552dae95f9a3226ff4787565de7abd4c1831c4aef7291d530966f6",
+  "version": "0.9.6",
+  "ids": [
+    "bom_needler_127",
+    "bom_nurse_128",
+    "origins_faceless_nurse"
+  ],
+  "stage": {
+    "id": "film_hospital",
+    "name": "HÔPITAL DU FILM — CHAMBRE D’ALESSA"
+  },
+  "passed": true
+}

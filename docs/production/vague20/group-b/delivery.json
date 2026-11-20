@@ -1,0 +1,1630 @@
+{
+  "schemaVersion": 1,
+  "batch": "stage-pass20-b",
+  "createdAt": "2026-11-19T12:16:29.150616+00:00",
+  "scope": "Missing stages only; Silent Hill f exact documented rooms/states. Isolated candidates; repository integration belongs to parent.",
+  "counts": {
+    "stages": 4,
+    "pngs": 8,
+    "opaqueBackgrounds": 4,
+    "transparentForegrounds": 4,
+    "newAnimatedClips": 0,
+    "deferredOriginalTargets": 1
+  },
+  "stages": [
+    {
+      "stageId": "dark_shrine",
+      "source": "shf",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "shrine-vault-forecourt-closed",
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT33",
+        "EXT34",
+        "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+        "EXT10_SHF_SHRINE_HOKORA_20261026"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+              "sha256": "2664d35ea29745a4372c226486c61d90f8a04fb5d309a97d9c590bb2e14b8981",
+              "bytes": 2294268,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+              "sha256": "2abdd42961b578991e4b0f5670ffcab08a2678af7bf0a5930976b1af1d64dcff",
+              "bytes": 132551,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": "Parvis extérieur devant les portes fermées de Shrine Vault, Hokora à gauche, lanternes et marches derrière une bande de sol libre ; aucun acteur ni HUD. Deux couches statiques générées d’après capture native exacte, adaptées au duel latéral. Géométrie, caméra, détails occultés et fidélité 1:1 non certifiés ; aucun clip animé créé."
+    },
+    {
+      "stageId": "school_shf",
+      "source": "shf",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "staff-room-key-cabinet",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT32",
+        "EXT10_SHF_SCHOOL_GUIDE_20261026",
+        "EXT10_SHF_STAFF_ROOM_20261026"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/school_shf.background.360ffba8283b.png",
+              "sha256": "360ffba8283bcffb155b4fbdd3e01378ebeb5444a27b2cbe5751f4c99b999614",
+              "bytes": 2265328,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+              "sha256": "a50d69a51274e519af937eea250adced9eaa18c554b0245c2a8eccddbe74d9ce",
+              "bytes": 185180,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": "Bureau du personnel identifiable : bibliothèque vitrée/globe à gauche, coffret mural et planning à droite, plancher libre ; aucun acteur ni HUD. Deux couches statiques générées d’après capture native exacte, adaptées au duel latéral. Géométrie, caméra, détails occultés et fidélité 1:1 non certifiés ; aucun clip animé créé."
+    },
+    {
+      "stageId": "hinako_home",
+      "source": "shf",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "residence-i-entry-corridor",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT34",
+        "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+        "EXT10_SHF_RESIDENCE_ENTRY_20261026"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+              "sha256": "90570edd1d72771cd12dff858ae4c9b533d4278d698d88855c897816adc8d75f",
+              "bytes": 2117156,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+              "sha256": "e1ab86dcc94ac3a1bc1adcc212f75df96062367d02b5d5be9b9ff06ad9d3813b",
+              "bytes": 204582,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": "Corridor à plancher bois avec porte quadrillée fermée, enduit et poutres, petit calendrier ; aucun tatami, acteur ou HUD. Deux couches statiques générées d’après capture native exacte, adaptées au duel latéral. Géométrie, caméra, détails occultés et fidélité 1:1 non certifiés ; aucun clip animé créé."
+    },
+    {
+      "stageId": "corrupted_ebisugaoka",
+      "source": "shf",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "shimizu-forecourt-part5",
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT32",
+        "EXT_SHF_EBISUGAOKA5_20261025",
+        "EXT10_SHF_RESIDENCE_FORECOURT_20261026"
+      ],
+      "layers": [
+        {
+          "id": "background",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+              "sha256": "3e90f59a15a20b03a2f36ee1653f99efedb828386e556b68ce910673a571ef23",
+              "bytes": 2452216,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "foreground",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+              "sha256": "097c19a0598acde9f37df4fdde9533f2c4ae0f9cd05c4b271ea0b3e0197db4bc",
+              "bytes": 299193,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": "Façade et parvis documentés de Shimizu Part 5 ; pots à droite, linge à gauche, végétation rouge aux marges, espace central libre ; aucun acteur ni HUD. Deux couches statiques générées d’après capture native exacte, adaptées au duel latéral. Géométrie, caméra, détails occultés et fidélité 1:1 non certifiés ; aucun clip animé créé."
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "dark_shrine",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-b/dark_shrine.background.v1.png",
+      "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+      "sha256": "2664d35ea29745a4372c226486c61d90f8a04fb5d309a97d9c590bb2e14b8981",
+      "bytes": 2294268,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: production-ready background bitmap for a lateral 2D versus stage. Create ONE empty environment, ONE single view, wide 16:9 landscape, ideally 1672 by 941 pixels, fully opaque edge to edge. The supplied image is a native gameplay reference for the exact architecture and materials, not an actor to reproduce. Reconstruct the specific documented place as a grounded realistic game environment with the same muted, aged-material lighting. Reframe to a nearly frontal side-on fighting-game camera, only mild perspective. Keep a continuous level support lane across the lower 30% of the image, and the middle 65% of the image clear for two fighters. Preserve source-specific architectural features; any extra breadth is only conservative camera reconstruction. No people, creatures, body parts, actor shadows or reflections, weapons, pickups, interact prompts, HUD, captions, logos, watermark, grid, storyboard, multiple panels or placeholder. No new animated event or source-fidelity claim.\nScene: Silent Hill f, Dark Shrine Path, exterior forecourt immediately before the still-CLOSED Shrine Vault. Keep the broad dark vermilion and brown timber facade, square upper lattice vents, round red-brown pillars with aged bronze mounts, and the central closed heavy double wooden door with metal bands and floral medallions from the reference. The shallow central stone steps remain BEHIND the clear horizontal foreground lane. The small low Hokora shrine with its curved roof, braided rope and white zigzag shide stays at the far left; the two compact stone lanterns flank the steps in the middle distance. Dark moss, worn earth and stone edging are present but subdued. Nighttime warm lantern light against dark green shadow, enough readable texture for gameplay. Keep the shrine door closed; no torii avenue, no Main Hall, no Treasure Hall, no boss altar, no red sky, no flying petals, no magical glyphs. Exclude the character and the carried paper lantern. Do not place any upright foreground object in the fighting lane.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/dark_shrine.native-shrine-vault.jpg",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/02_shrine_vault.jpg",
+          "role": "native-game-capture",
+          "bytes": 425488,
+          "sha256": "eaff09b5f8c7581a6810a01d54fd7ae1866f1c01475a1d1e57487f23ae7f9895",
+          "contentType": "image/jpeg",
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "usage": "Native exact-location visual reference; inspected before generation."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-dd9ca830-41f0-4734-a972-f7db147de1a4.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Parvis extérieur devant les portes fermées de Shrine Vault, Hokora à gauche, lanternes et marches derrière une bande de sol libre ; aucun acteur ni HUD.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent integration harness pending; not asserted by this isolated delivery."
+      }
+    },
+    {
+      "stageId": "dark_shrine",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-b/dark_shrine.foreground.v1.png",
+      "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "sha256": "2abdd42961b578991e4b0f5670ffcab08a2678af7bf0a5930976b1af1d64dcff",
+      "bytes": 132551,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9792907118051142,
+        "fullyOpaqueFraction": 1.716081334628233e-05,
+        "boundsAlpha32Exclusive": [
+          0,
+          845,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 3.498277098523683e-05
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 4.242591374770122e-06
+        }
+      },
+      "prompt": "Use case: background-extraction. Asset type: a separate transparent FOREGROUND OVERLAY PNG for a lateral 2D fighting stage. Produce ONE image with a genuine transparent alpha channel, not a painted checkerboard, white card, black card, or full scene. Wide 16:9 canvas, ideally exactly 1672 by 941 pixels, keeping the same full-frame coordinate system as image 2. Image 1 is the native Silent Hill f room/material reference. Image 2 is the accepted opaque background which will be displayed underneath; use it only for alignment, scale and lighting, DO NOT copy its opaque room pixels. The middle 70% of the entire canvas must remain fully transparent, including the walking support lane at y=82.5% of image height. Only the explicitly requested edge objects may be opaque. No people, creatures, body parts, actor shadows/reflections, weapons, pickup items, HUD, symbols, text, labels, watermark, multiple views, placeholders, vignette or full-canvas fog. Natural clean antialiased material edges, no opaque rectangular backing.\nGenerate just two small near-ground edge clusters from the Shrine Vault forecourt's existing mossy stone border and short dark wiry grass: one cropped low cluster in the extreme bottom-left corner and one in the extreme bottom-right corner. Keep them below the bottom 13% except at the outermost 8% of width. Retain the native rough dark gray-brown stones, faint moss, sparse dried brown leaf litter and thin green-black grass tips, lit subtly by the warm distant stone lanterns. Nothing at all across the central walking lane. No extra shrine, lantern, rope, wall, door, stairs, water, trees, floating paper or copied background. These are shallow parallax edge details, not new obstacles or a solid strip of terrain.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/dark_shrine.native-shrine-vault.jpg",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/02_shrine_vault.jpg",
+          "role": "native-game-capture",
+          "bytes": 425488,
+          "sha256": "eaff09b5f8c7581a6810a01d54fd7ae1866f1c01475a1d1e57487f23ae7f9895",
+          "contentType": "image/jpeg",
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "usage": "Native exact-location visual reference; inspected before generation."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/dark_shrine.background.v1.png",
+          "sha256": "2664d35ea29745a4372c226486c61d90f8a04fb5d309a97d9c590bb2e14b8981",
+          "role": "accepted-generated-background",
+          "usage": "Only layout, scale and lighting alignment; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-52ef34c6-f510-49c7-b1c5-30454194662b.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Parvis extérieur devant les portes fermées de Shrine Vault, Hokora à gauche, lanternes et marches derrière une bande de sol libre ; aucun acteur ni HUD.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent integration harness pending; not asserted by this isolated delivery."
+      }
+    },
+    {
+      "stageId": "school_shf",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-b/school_shf.background.v1.png",
+      "path": "assets/stages/school_shf.background.360ffba8283b.png",
+      "sha256": "360ffba8283bcffb155b4fbdd3e01378ebeb5444a27b2cbe5751f4c99b999614",
+      "bytes": 2265328,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: production-ready background bitmap for a lateral 2D versus stage. Create ONE empty environment, ONE single view, wide 16:9 landscape, ideally 1672 by 941 pixels, fully opaque edge to edge. The supplied image is a native gameplay reference for the exact architecture and materials, not an actor to reproduce. Reconstruct the specific documented place as a grounded realistic game environment with the same muted, aged-material lighting. Reframe to a nearly frontal side-on fighting-game camera, only mild perspective. Keep a continuous level support lane across the lower 30% of the image, and the middle 65% of the image clear for two fighters. Preserve source-specific architectural features; any extra breadth is only conservative camera reconstruction. No people, creatures, body parts, actor shadows or reflections, weapons, pickups, interact prompts, HUD, captions, logos, watermark, grid, storyboard, multiple panels or placeholder. No new animated event or source-fidelity claim.\nScene: Silent Hill f, Ebisugaoka Middle School STAFF OFFICE at the wall-mounted key cabinet. Match the reference's aged off-white plaster above waist-high dark wooden vertical wainscoting, dark timber uprights, brown plank floor, and tall sliding-glass wooden bookcase filled with old books on the left with the visible globe on top. The shallow gray metal key cabinet is open with its door swung right; show its interior hooks but omit removable keys and the white interaction dot. Immediately to its right is the small dark staff duty-schedule board with thin grid lines and restrained indistinct existing chalk marks; this is NOT a classroom blackboard and must not invent legible writing. Keep the small traces of stationary red growth confined to the far floor edges visible in the native reference, never central. Omit the portable fan and any actor/weapon. Camera widened conservatively around this same wall bay, not a new classroom or corridor. Clear wood floor across the front, no rows of school desks, no ceiling damage, no fog or animated flora.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/school_shf.native-staff-room.jpg",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/06_key_to_the_back_mountains_a.jpg",
+          "role": "native-game-capture",
+          "bytes": 382563,
+          "sha256": "cecee3b322a84efc0a195755767ad66e54da8a9fbf170f5ac78006707a37d586",
+          "contentType": "image/jpeg",
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "usage": "Native exact-location visual reference; inspected before generation."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-6f2515fd-7256-4e22-aa3a-d311ce94b043.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Bureau du personnel identifiable : bibliothèque vitrée/globe à gauche, coffret mural et planning à droite, plancher libre ; aucun acteur ni HUD.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent integration harness pending; not asserted by this isolated delivery."
+      }
+    },
+    {
+      "stageId": "school_shf",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-b/school_shf.foreground.v1.png",
+      "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+      "sha256": "a50d69a51274e519af937eea250adced9eaa18c554b0245c2a8eccddbe74d9ce",
+      "bytes": 185180,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9498046209621241,
+        "fullyOpaqueFraction": 0.0002605901285916947,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            0,
+            0
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 0.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 1.2727774124421387e-05
+        }
+      },
+      "prompt": "Use case: background-extraction. Asset type: a separate transparent FOREGROUND OVERLAY PNG for a lateral 2D fighting stage. Produce ONE image with a genuine transparent alpha channel, not a painted checkerboard, white card, black card, or full scene. Wide 16:9 canvas, ideally exactly 1672 by 941 pixels, keeping the same full-frame coordinate system as image 2. Image 1 is the native Silent Hill f room/material reference. Image 2 is the accepted opaque background which will be displayed underneath; use it only for alignment, scale and lighting, DO NOT copy its opaque room pixels. The middle 70% of the entire canvas must remain fully transparent, including the walking support lane at y=82.5% of image height. Only the explicitly requested edge objects may be opaque. No people, creatures, body parts, actor shadows/reflections, weapons, pickup items, HUD, symbols, text, labels, watermark, multiple views, placeholders, vignette or full-canvas fog. Natural clean antialiased material edges, no opaque rectangular backing.\nCreate a restrained close layer from the STAFF OFFICE's observed materials: at the extreme left edge, a very narrow cropped dark-brown outer wood frame/base of the existing sliding-glass bookcase, occupying only the leftmost 5% of the canvas; at the extreme bottom-right corner, a low cluster of the reference's stationary dark red stems/leaves, confined to the outermost 9% of width and the lowest 10% of height. Use the accepted background's warm worn timber and low diffuse light. Show no new bookcase or globe, no portable fan, no new furniture, no key cabinet, no keys, no board, no chalk dust, no central floor plank texture. The large open area between these two edge details must be completely transparent; the subtle near objects must fit the existing room without duplicating its wall.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/school_shf.native-staff-room.jpg",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/06_key_to_the_back_mountains_a.jpg",
+          "role": "native-game-capture",
+          "bytes": 382563,
+          "sha256": "cecee3b322a84efc0a195755767ad66e54da8a9fbf170f5ac78006707a37d586",
+          "contentType": "image/jpeg",
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "usage": "Native exact-location visual reference; inspected before generation."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/school_shf.background.v1.png",
+          "sha256": "360ffba8283bcffb155b4fbdd3e01378ebeb5444a27b2cbe5751f4c99b999614",
+          "role": "accepted-generated-background",
+          "usage": "Only layout, scale and lighting alignment; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-623e1534-70fa-4a2e-8a8f-539f4977ec09.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Bureau du personnel identifiable : bibliothèque vitrée/globe à gauche, coffret mural et planning à droite, plancher libre ; aucun acteur ni HUD.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent integration harness pending; not asserted by this isolated delivery."
+      }
+    },
+    {
+      "stageId": "hinako_home",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-b/hinako_home.background.v1.png",
+      "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+      "sha256": "90570edd1d72771cd12dff858ae4c9b533d4278d698d88855c897816adc8d75f",
+      "bytes": 2117156,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: production-ready background bitmap for a lateral 2D versus stage. Create ONE empty environment, ONE single view, wide 16:9 landscape, ideally 1672 by 941 pixels, fully opaque edge to edge. The supplied image is a native gameplay reference for the exact architecture and materials, not an actor to reproduce. Reconstruct the specific documented place as a grounded realistic game environment with the same muted, aged-material lighting. Reframe to a nearly frontal side-on fighting-game camera, only mild perspective. Keep a continuous level support lane across the lower 30% of the image, and the middle 65% of the image clear for two fighters. Preserve source-specific architectural features; any extra breadth is only conservative camera reconstruction. No people, creatures, body parts, actor shadows or reflections, weapons, pickups, interact prompts, HUD, captions, logos, watermark, grid, storyboard, multiple panels or placeholder. No new animated event or source-fidelity claim.\nScene: Silent Hill f, SHIMIZU RESIDENCE I entry/exit corridor, the exact bay shown at the end of the first residence visit. Preserve the closed sliding timber door with a large frosted/translucent rectangular grid, dark wooden lower panels, pale aged plaster, exposed brown vertical and horizontal timber framing and waist-high plank wainscoting. The floor is aged wide WOODEN BOARDS, not tatami. Retain the small old hanging tear-off calendar on the right wall as a modest aged paper object without invented readable text. Soft muted green-gray light comes through the frosted door and casts the observed broad window-grid shadow across the wooden boards. Reframe the same corridor wall-and-door bay frontally for lateral fighting; no other room is opened. Door stays closed, no people, no dinner table, no parental confrontation, no blood effects, no red floral invasion, no Residence II/III substitution. Leave the entire front walking strip level and clear.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/hinako_home.native-residence-i-exit.jpg",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_shimizu_residence_i_exit.jpg",
+          "role": "native-game-capture",
+          "bytes": 451154,
+          "sha256": "fe5e9212573d016596b090859079fcc0dd0a32692540b0f3fcb0e3928ac37eb3",
+          "contentType": "image/jpeg",
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "usage": "Native exact-location visual reference; inspected before generation."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-e75a7868-3202-47a7-be93-fbb689258403.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Corridor à plancher bois avec porte quadrillée fermée, enduit et poutres, petit calendrier ; aucun tatami, acteur ou HUD.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent integration harness pending; not asserted by this isolated delivery."
+      }
+    },
+    {
+      "stageId": "hinako_home",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-b/hinako_home.foreground.v1.png",
+      "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "sha256": "e1ab86dcc94ac3a1bc1adcc212f75df96062367d02b5d5be9b9ff06ad9d3813b",
+      "bytes": 204582,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9388401324052088,
+        "fullyOpaqueFraction": 0.0005821964824146154,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            0,
+            0
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 0.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 7.070985624690884e-06
+        }
+      },
+      "prompt": "Use case: background-extraction. Asset type: one separate transparent FOREGROUND OVERLAY PNG for a lateral 2D versus game. One image with genuine transparent alpha, not a painted checkerboard, white card, black card, opaque backing, or full scene. Wide 16:9 canvas, ideally exactly 1672 by 941 pixels, identical full-frame coordinates to image 2. Image 1 is the native Silent Hill f scene/material reference. Image 2 is the accepted opaque background that will be underneath, for scale, placement and lighting only: do not copy its background pixels. Large uninterrupted transparent space for two fighters and the level support lane y=82.5% of canvas height. Natural clean antialiased material edges. No people, creatures, actor shadows or reflections, weapons, game pickups, HUD, new symbols, labels, logos, watermarks, montage, panels, placeholders or full-frame haze.\nExact location: the closed entrance/exit corridor of Shimizu Residence I, not the dining room or Residence II. Create only two extremely narrow cropped foreground timber door-jamb edges, matching the dark aged wood beams observed in the native corridor and the accepted background. One dark timber sliver on the extreme leftmost 3% of the image and one on the extreme rightmost 3%; subtly irregular worn edges and restrained faint diffuse reflected warm light. These near-plane margins must remain understated and must not become a new doorway across the image. Nothing extends horizontally across the canvas: no crossbar, ceiling beam, threshold strip, floor, wall, frosted glass panel, calendar, socket, box, vegetation, furniture or new object. The middle 90% is absolutely transparent at every height, especially the entire support band. The transparency should allow the existing frosted sliding door, plaster and wood wall, small calendar, and wooden plank floor underneath to remain visible. These edge margins are a conservative near-plane reconstruction from observed timber materials, not a new room.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/hinako_home.native-residence-i-exit.jpg",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_shimizu_residence_i_exit.jpg",
+          "role": "native-game-capture",
+          "bytes": 451154,
+          "sha256": "fe5e9212573d016596b090859079fcc0dd0a32692540b0f3fcb0e3928ac37eb3",
+          "contentType": "image/jpeg",
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "usage": "Native exact-location visual reference; inspected before generation."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/hinako_home.background.v1.png",
+          "sha256": "90570edd1d72771cd12dff858ae4c9b533d4278d698d88855c897816adc8d75f",
+          "role": "accepted-generated-background",
+          "usage": "Only layout, scale and lighting alignment; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-ccfad341-4978-485e-99be-f276c572cada.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Corridor à plancher bois avec porte quadrillée fermée, enduit et poutres, petit calendrier ; aucun tatami, acteur ou HUD.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent integration harness pending; not asserted by this isolated delivery."
+      }
+    },
+    {
+      "stageId": "corrupted_ebisugaoka",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-b/corrupted_ebisugaoka.background.v1.png",
+      "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "sha256": "3e90f59a15a20b03a2f36ee1653f99efedb828386e556b68ce910673a571ef23",
+      "bytes": 2452216,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": false,
+        "extrema": [
+          255,
+          255
+        ],
+        "fullyTransparentFraction": 0.0,
+        "fullyOpaqueFraction": 1.0,
+        "boundsAlpha32Exclusive": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            255,
+            255
+          ],
+          "fractionVisibleAlpha32": 1.0,
+          "fractionNonzeroAlpha": 1.0
+        }
+      },
+      "prompt": "Use case: stylized-concept. Asset type: one fully opaque 16:9 background layer for a lateral 2D versus stage, ideally 1672 by 941 pixels. The supplied picture is a native Silent Hill f gameplay reference; reproduce the EMPTY ENVIRONMENT only, with no person or creature. Exact scene: Ebisugaoka part 5, the forecourt immediately in front of Shimizu Residence before entering it. Preserve the specific low broad timber house facade and asymmetric roof forms shown: dark weathered brown lattice wall sections, layered gray ceramic roof tiles, upper gabled timber portion toward the right, and the central closed gridded frosted-glass sliding entrance with its few shallow stone steps. Keep the small hanging household cloths on the far-left facade, modest potted plants on the low stone-edged ledge to the right of the entrance, and the observed stationary red growth at the distant edges. Cool damp gray-blue fog behind the house and dark muted natural red foliage, readable worn earth and packed gravel in front. Convert the framing conservatively to a nearly frontal lateral-fighting-game camera with slight perspective, leaving a clear level continuous support lane across the lower 30% and the middle 65% empty for two fighters; place the steps behind that lane. This is not a whole town street or a procession. The bicycle is reserved for the separate transparent foreground layer, so OMIT the bicycle from this background. Omit all actors, their equipment or shadows, game pickups, HUD, aiming dots, text, labels, logos, watermarks, smoke effects, fire, supernatural symbols, moving vines, frame borders, panels, and placeholders. One image, one view, exact documented facade identity, no new unobserved buildings or scene blending. Realistic aged game-environment materials matched to the reference. No claim of exact geometry or original-camera fidelity.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/corrupted_ebisugaoka.native-forecourt.jpg",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/10_shimizu_residence.jpg",
+          "role": "native-game-capture",
+          "bytes": 422842,
+          "sha256": "f766e34bb2fd1882f4f4fae03926af53ded1d71f7b177f8abb053e6b77c72c94",
+          "contentType": "image/jpeg",
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "usage": "Native exact-location visual reference; inspected before generation."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": false,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-22f2fb1e-f930-4f3a-ac8c-0cf07511989d.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Façade et parvis documentés de Shimizu Part 5 ; pots à droite, linge à gauche, végétation rouge aux marges, espace central libre ; aucun acteur ni HUD.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent integration harness pending; not asserted by this isolated delivery."
+      }
+    },
+    {
+      "stageId": "corrupted_ebisugaoka",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-b/corrupted_ebisugaoka.foreground.v1.png",
+      "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "sha256": "097c19a0598acde9f37df4fdde9533f2c4ae0f9cd05c4b271ea0b3e0197db4bc",
+      "bytes": 299193,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "pngFormat": "PNG",
+      "alpha": {
+        "hasAlphaChannel": true,
+        "extrema": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9422265329055418,
+        "fullyOpaqueFraction": 0.00018686218977062983,
+        "boundsAlpha32Exclusive": [
+          0,
+          520,
+          1672,
+          941
+        ],
+        "supportBand": {
+          "normalizedBounds": [
+            0.2,
+            0.8,
+            0.8,
+            0.86
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            752,
+            1337,
+            809
+          ],
+          "alphaExtrema": [
+            0,
+            1
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 3.498277098523683e-05
+        },
+        "centralBodyArea": {
+          "normalizedBounds": [
+            0.2,
+            0.15,
+            0.8,
+            0.9
+          ],
+          "pixelBoundsExclusive": [
+            334,
+            141,
+            1337,
+            846
+          ],
+          "alphaExtrema": [
+            0,
+            3
+          ],
+          "fractionVisibleAlpha32": 0.0,
+          "fractionNonzeroAlpha": 4.666850512291543e-05
+        }
+      },
+      "prompt": "Use case: background-extraction. Asset type: one separate transparent FOREGROUND OVERLAY PNG for a lateral 2D versus game. One image with genuine transparent alpha, not a painted checkerboard, white card, black card, opaque backing, or full scene. Wide 16:9 canvas, ideally exactly 1672 by 941 pixels, identical full-frame coordinates to image 2. Image 1 is the native Silent Hill f scene/material reference. Image 2 is the accepted opaque background that will be underneath, for scale, placement and lighting only: do not copy its background pixels. Large uninterrupted transparent space for two fighters and the level support lane y=82.5% of canvas height. Natural clean antialiased material edges. No people, creatures, actor shadows or reflections, weapons, game pickups, HUD, new symbols, labels, logos, watermarks, montage, panels, placeholders or full-frame haze.\nExact location: the forecourt in front of Shimizu Residence in Ebisugaoka part 5. Reconstruct the observed parked dark steel city bicycle as a cropped near-edge prop at the far left, with thin wheels, simple frame and chain guard, upright curved handlebars, and rectangular wire front basket. Match its muted worn materials and angle to the native screenshot; like the reference, its rear portion may continue outside the left edge. Keep the entire visible bicycle in x=0–19% of the canvas, with the visible front wheel at about x=12%, its bottom around y=83%, and basket/handlebars around y=57%. It should be modest in scale, stationary, with no rider and no new lamp or elaborate decoration. Add only very low native dark red stems and fallen red leaves at the extreme bottom corners, below y=89% and confined to the outermost 12% on each side. Preserve the center x=20–80% as completely transparent at every height, including the support lane. Do not add any full ground strip, cast shadow into the center, fog, building, stone steps, fence, hanging cloths, trees, duplicated potted plants or unrelated street object: all those background pixels must stay transparent. Match the accepted background's cool dim blue-gray daylight and dark muted red flora. This layer supplies the documented bicycle that was deliberately omitted from the opaque layer.",
+      "references": [
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/corrupted_ebisugaoka.native-forecourt.jpg",
+          "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/10_shimizu_residence.jpg",
+          "role": "native-game-capture",
+          "bytes": 422842,
+          "sha256": "f766e34bb2fd1882f4f4fae03926af53ded1d71f7b177f8abb053e6b77c72c94",
+          "contentType": "image/jpeg",
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "usage": "Native exact-location visual reference; inspected before generation."
+        },
+        {
+          "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/corrupted_ebisugaoka.background.v1.png",
+          "sha256": "3e90f59a15a20b03a2f36ee1653f99efedb828386e556b68ce910673a571ef23",
+          "role": "accepted-generated-background",
+          "usage": "Only layout, scale and lighting alignment; not a native source."
+        }
+      ],
+      "generation": {
+        "tool": "image_gen__imagegen",
+        "transparentBackground": true,
+        "originalOutputPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-e33db441-7c7a-45c0-9fe4-f1cb04a0d9b6.png",
+        "nativeOutputPreserved": true,
+        "pixelPostProcessing": false,
+        "sameInodeAsOriginal": true,
+        "variant": "v1",
+        "targetedCorrectionUsed": false
+      },
+      "visualReview": {
+        "status": "candidate-accepted-for-integration-review",
+        "observations": "Façade et parvis documentés de Shimizu Part 5 ; pots à droite, linge à gauche, végétation rouge aux marges, espace central libre ; aucun acteur ni HUD.",
+        "fighterSupportYNormalized": 0.825,
+        "liveEngineReview": "Parent integration harness pending; not asserted by this isolated delivery."
+      }
+    }
+  ],
+  "stageEvidence": [
+    {
+      "stageId": "dark_shrine",
+      "name": "DARK SHRINE — PARVIS DE SHRINE VAULT",
+      "source": "shf",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-altered",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "normalPhaseLabel": "PARVIS AVANT SHRINE VAULT",
+        "alteredPhaseLabel": "PARVIS AVANT SHRINE VAULT",
+        "terrainPresentation": {
+          "name": "PARVIS DU HOKORA",
+          "description": "Parvis devant Shrine Vault fermé et son petit Hokora latéral ; pas couloirs, salle de boss ou coffre ouvert. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        },
+        "weather": "none",
+        "interior": false,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "ritualWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "rootWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "ritualSeal",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "rootSnare",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "lanternSway",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
+            "id": "ritualGlyph",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "petals",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "dark_shrine:reference:1",
+          "dark_shrine:reference:2",
+          "dark_shrine:reference:3",
+          "dark_shrine:reference:4"
+        ],
+        "pendingProposalIds": []
+      },
+      "referenceIds": [
+        "EXT33",
+        "EXT34",
+        "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+        "EXT10_SHF_SHRINE_HOKORA_20261026"
+      ],
+      "locationNote": "Dark Shrine Path : parvis extérieur devant la porte encore fermée du Shrine Vault. Le petit Hokora à gauche porte une corde et des papiers shide, près des lanternes et des marches. Ce cadrage ne fusionne pas les corridors, Main Hall ou Treasure Hall ; oscillation et éclairage du versus restent adaptés, sans vent ou mouvement original mesuré.",
+      "guide": {
+        "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/dark_shrine.guide.html",
+        "url": "https://www.silenthillmemories.net/shf/walkthrough_02_dark_shrine_path_en.htm",
+        "role": "guide-context",
+        "bytes": 56912,
+        "sha256": "0908e9d97ed34e8aa2094ffe98e383d67f65fada5db0ddac67bffa3cf5338301",
+        "contentType": "text/html; charset=UTF-8"
+      },
+      "descriptorScene": "shrine-vault-forecourt-closed",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for the already documented location; source policy had no sceneId and was not modified.",
+      "visualAcceptance": "Parvis extérieur devant les portes fermées de Shrine Vault, Hokora à gauche, lanternes et marches derrière une bande de sol libre ; aucun acteur ni HUD.",
+      "limits": [
+        "Caméra recentrée de façon frontale et aire d’appui élargie pour le versus ; proportions, topologie complète et distances du jeu original non mesurées.",
+        "Pierres, herbes et litière des deux coins proches sont une reconstruction des matériaux observés ; leur placement exact ne fait pas l’objet d’une certification.",
+        "Les lanternes et le Hokora restent fixes dans les PNG ; aucune oscillation, particule, animation ou interaction source mesurée ajoutée."
+      ]
+    },
+    {
+      "stageId": "school_shf",
+      "name": "EBISUGAOKA SCHOOL — BUREAU DU PERSONNEL",
+      "source": "shf",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "normalPhaseLabel": "BUREAU AU COFFRET DE CLÉS",
+        "alteredPhaseLabel": "BUREAU AU COFFRET DE CLÉS",
+        "terrainPresentation": {
+          "name": "SOL DU BUREAU DU PERSONNEL",
+          "description": "Bureau du personnel avec coffret de clés et tableau de planning ; pas classe générique ou rideau non observé. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        },
+        "weather": "none",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "ritualWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "rootWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "school_shf:reference:2",
+          "school_shf:reference:4"
+        ],
+        "pendingProposalIds": [
+          "school_shf:reference:1",
+          "school_shf:reference:3"
+        ]
+      },
+      "referenceIds": [
+        "EXT32",
+        "EXT10_SHF_SCHOOL_GUIDE_20261026",
+        "EXT10_SHF_STAFF_ROOM_20261026"
+      ],
+      "locationNote": "Ebisugaoka Middle School : bureau du personnel au coffret de la Key to the Back Mountains. La capture montre un tableau mural de service à droite du coffret, une armoire et du bois au sol ; il ne s’agit pas d’une salle de classe ou d’un couloir à rideaux. Ne pas importer Hinako, la clé, sa prise, son arme ou des ennemis. Animation, caméra et dimensions restent à produire ou comparer.",
+      "guide": {
+        "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/school_shf.guide.html",
+        "url": "https://www.silenthillmemories.net/shf/walkthrough_06_ebisugaoka_middle_school_en.htm",
+        "role": "guide-context",
+        "bytes": 75919,
+        "sha256": "3097b73b49f81ef2f267c6acae686a745633d58c1294decb2a4c7a1989207ef8",
+        "contentType": "text/html; charset=UTF-8"
+      },
+      "descriptorScene": "staff-room-key-cabinet",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for the already documented location; source policy had no sceneId and was not modified.",
+      "visualAcceptance": "Bureau du personnel identifiable : bibliothèque vitrée/globe à gauche, coffret mural et planning à droite, plancher libre ; aucun acteur ni HUD.",
+      "limits": [
+        "Le bureau au coffret de clés est conservé ; le cadrage frontal et la largeur du plancher sont adaptés au duel.",
+        "Les clés portables, le ventilateur et le personnage de la capture sont exclus conformément au périmètre du prototype ; le coffret reste un repère architectural, sans pickup.",
+        "Les petites marques du tableau ne sont pas une transcription certifiée du planning. Le bois proche et la flore du coin sont des détails de profondeur reconstruits.",
+        "Aucune nouvelle animation de lumière, rideau ou poussière n’est attestée par cette paire statique."
+      ]
+    },
+    {
+      "stageId": "hinako_home",
+      "name": "SHIMIZU RESIDENCE I — CORRIDOR D’ENTRÉE",
+      "source": "shf",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "normalPhaseLabel": "RESIDENCE I · ENTRÉE",
+        "alteredPhaseLabel": "RESIDENCE I · ENTRÉE",
+        "terrainPresentation": {
+          "name": "PLANCHER DU CORRIDOR",
+          "description": "Corridor d’entrée à plancher bois, distinct de la salle à manger tatami de ResidenceI et des étatsResidenceII/III. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        },
+        "weather": "none",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "roomBreath",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "ritualWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "rootWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "doorSlam",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "floorCreak",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "hinako_home:reference:1",
+          "hinako_home:reference:3",
+          "hinako_home:reference:4"
+        ],
+        "pendingProposalIds": [
+          "hinako_home:reference:2"
+        ]
+      },
+      "referenceIds": [
+        "EXT34",
+        "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+        "EXT10_SHF_RESIDENCE_ENTRY_20261026"
+      ],
+      "locationNote": "Shimizu ResidenceI : corridor d’entrée/sortie avec plancher de bois et porte coulissante à panneaux translucides, cadré par la vue de fin de cette visite. Il s’agit de la même résidence que shimizu_residence, ici dans une pièce différente ; aucune seconde maison n’est inventée. Ni passage de porte, ouverture ou transition vers ResidenceII ne sont automatiquement rejoués.",
+      "guide": {
+        "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/shimizu_residence.guide.html",
+        "url": "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+        "role": "guide-context",
+        "bytes": 83984,
+        "sha256": "8c594b66c9882404d56745c17a84fba9dbbe7a261442793b7eb03917bef6dd06",
+        "contentType": "text/html; charset=UTF-8"
+      },
+      "descriptorScene": "residence-i-entry-corridor",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for the already documented location; source policy had no sceneId and was not modified.",
+      "visualAcceptance": "Corridor à plancher bois avec porte quadrillée fermée, enduit et poutres, petit calendrier ; aucun tatami, acteur ou HUD.",
+      "limits": [
+        "La capture retenue est explicitement celle de la sortie de Residence I, à plancher bois, porte vitrée quadrillée et petit calendrier.",
+        "Le cadrage est remis frontal ; les jambages proches et les zones occultées par le personnage sont reconstruits. Une petite prise murale apparaît dans le fond généré et ne constitue pas une preuve d’accessoire source.",
+        "Le calendrier demeure un repère visuel ; ses petites inscriptions ne sont pas certifiées. La salle à manger et les variantes Residence II/III sont exclues."
+      ]
+    },
+    {
+      "stageId": "corrupted_ebisugaoka",
+      "name": "EBISUGAOKA — PARVIS SHIMIZU",
+      "source": "shf",
+      "referencePolicySnapshot": {
+        "worldState": "fixed-altered",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "normalPhaseLabel": "PARTIE 5 · DEVANT LA RÉSIDENCE",
+        "alteredPhaseLabel": "PARTIE 5 · DEVANT LA RÉSIDENCE",
+        "terrainPresentation": {
+          "name": "PARVIS DEVANT SHIMIZU",
+          "description": "Parvis de la vue Part5 devant Shimizu ; pétales et brouillard, sans procession ajoutée ou feu de fin de récit. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        },
+        "weather": "none",
+        "interior": false,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "rootWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "ritualWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "rootSnare",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "petalBloom",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "ritualSeal",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "petalSpiral",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lanternSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "rootsCreep",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "weather",
+            "id": "petals",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "corrupted_ebisugaoka:reference:1",
+          "corrupted_ebisugaoka:reference:2",
+          "corrupted_ebisugaoka:reference:3",
+          "corrupted_ebisugaoka:reference:4"
+        ],
+        "pendingProposalIds": []
+      },
+      "referenceIds": [
+        "EXT32",
+        "EXT_SHF_EBISUGAOKA5_20261025",
+        "EXT10_SHF_RESIDENCE_FORECOURT_20261026"
+      ],
+      "locationNote": "Ebisugaoka partie5 : parvis immédiatement devant Shimizu Residence, avec flore rouge, brouillard, façade, pots et bicyclette visibles. Corrupted Procession reste un libellé éditorial ; la capture ne prouve ni procession, ni croissance instantanée des fleurs, vent, terrain ralentissant ou état uniforme de toute Ebisugaoka. Le mouvement d’ambiance du versus reste une adaptation locale.",
+      "guide": {
+        "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/corrupted_ebisugaoka.guide.html",
+        "url": "https://www.silenthillmemories.net/shf/walkthrough_10_ebisugaoka_part_5_en.htm",
+        "role": "guide-context",
+        "bytes": 49959,
+        "sha256": "702c96b8f7517db06754282257c3e6922ef10a770bb9fe7a825abb9419454a32",
+        "contentType": "text/html; charset=UTF-8"
+      },
+      "descriptorScene": "shimizu-forecourt-part5",
+      "existingPolicySceneId": null,
+      "sceneIdStatus": "New descriptive bitmap scene identifier for the already documented location; source policy had no sceneId and was not modified.",
+      "visualAcceptance": "Façade et parvis documentés de Shimizu Part 5 ; pots à droite, linge à gauche, végétation rouge aux marges, espace central libre ; aucun acteur ni HUD.",
+      "limits": [
+        "Le parvis Part 5 documenté est conservé : façade bois, toit en tuiles, porte vitrée, marches, pots, linge, vélo et végétation rouge.",
+        "Le vélo documenté est déplacé dans le premier plan séparé ; sa géométrie et sa position après reprojection ne sont pas certifiées 1:1.",
+        "La brume distante et la flore sont figées dans les pixels. Aucune procession, incendie, météo active, danger ou transformation n’est ajoutée."
+      ]
+    }
+  ],
+  "deferred": [
+    {
+      "stageId": "shimizu_residence",
+      "status": "deferred-source-state-conflict",
+      "replacementStageId": "corrupted_ebisugaoka",
+      "authorization": "Root message stage-pass20 scope correction after checking source conflict",
+      "reason": "The local contract names Residence I dining room at the Yellowed Calendar, while the current guide locates that capture and item under Residence II. No image generated for this ambiguous state and no repository policy changed.",
+      "localEvidence": [
+        {
+          "path": "data/stages.json",
+          "fields": [
+            "lore.premise",
+            "reference.locationNote",
+            "name"
+          ],
+          "linesAtResearch": [
+            34284,
+            34419
+          ],
+          "label": "Shimizu Residence I / salle à manger du Yellowed Calendar"
+        },
+        {
+          "path": "docs/production/research/extended.json",
+          "field": "stages[].locationNote",
+          "lineAtResearch": 23674,
+          "label": "Shimizu Residence I / salle à manger du Yellowed Calendar"
+        }
+      ],
+      "webEvidence": {
+        "url": "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+        "archivedFile": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/shimizu_residence.guide.html",
+        "archivedSha256": "8c594b66c9882404d56745c17a84fba9dbbe7a261442793b7eb03917bef6dd06",
+        "section": "Shimizu Residence II",
+        "htmlLinesAtResearch": {
+          "heading": 592,
+          "diningCalendar": 604,
+          "associatedImage": "11_yellowed_calendar_a.jpg"
+        },
+        "interpretation": "The guide puts the dining-room Yellowed Calendar screenshot in Residence II, with other item placements for New Game+ paths. The Residence I exit screenshot used for hinako_home occurs immediately before the Residence II heading."
+      },
+      "referenceImage": {
+        "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/shimizu_residence.native-yellowed-calendar.jpg",
+        "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_yellowed_calendar_a.jpg",
+        "role": "native-game-capture-state-under-review",
+        "bytes": 547548,
+        "sha256": "a987b1ee81a5b9ace9795ee61326ba968e9b4eff3b23854d9eb94d68331a3db9",
+        "contentType": "image/jpeg",
+        "width": 1920,
+        "height": 1080,
+        "mode": "RGB"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/dark_shrine.native-shrine-vault.jpg",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/02_shrine_vault.jpg",
+      "role": "native-game-capture",
+      "bytes": 425488,
+      "sha256": "eaff09b5f8c7581a6810a01d54fd7ae1866f1c01475a1d1e57487f23ae7f9895",
+      "contentType": "image/jpeg",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/school_shf.native-staff-room.jpg",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/06_key_to_the_back_mountains_a.jpg",
+      "role": "native-game-capture",
+      "bytes": 382563,
+      "sha256": "cecee3b322a84efc0a195755767ad66e54da8a9fbf170f5ac78006707a37d586",
+      "contentType": "image/jpeg",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/hinako_home.native-residence-i-exit.jpg",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_shimizu_residence_i_exit.jpg",
+      "role": "native-game-capture",
+      "bytes": 451154,
+      "sha256": "fe5e9212573d016596b090859079fcc0dd0a32692540b0f3fcb0e3928ac37eb3",
+      "contentType": "image/jpeg",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/shimizu_residence.native-yellowed-calendar.jpg",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/11_yellowed_calendar_a.jpg",
+      "role": "native-game-capture-state-under-review",
+      "bytes": 547548,
+      "sha256": "a987b1ee81a5b9ace9795ee61326ba968e9b4eff3b23854d9eb94d68331a3db9",
+      "contentType": "image/jpeg",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/dark_shrine.guide.html",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_02_dark_shrine_path_en.htm",
+      "role": "guide-context",
+      "bytes": 56912,
+      "sha256": "0908e9d97ed34e8aa2094ffe98e383d67f65fada5db0ddac67bffa3cf5338301",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/school_shf.guide.html",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_06_ebisugaoka_middle_school_en.htm",
+      "role": "guide-context",
+      "bytes": 75919,
+      "sha256": "3097b73b49f81ef2f267c6acae686a745633d58c1294decb2a4c7a1989207ef8",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/shimizu_residence.guide.html",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+      "role": "guide-context",
+      "bytes": 83984,
+      "sha256": "8c594b66c9882404d56745c17a84fba9dbbe7a261442793b7eb03917bef6dd06",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/corrupted_ebisugaoka.native-forecourt.jpg",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough/pics/10_shimizu_residence.jpg",
+      "role": "native-game-capture",
+      "bytes": 422842,
+      "sha256": "f766e34bb2fd1882f4f4fae03926af53ded1d71f7b177f8abb053e6b77c72c94",
+      "contentType": "image/jpeg",
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB"
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-b/references/corrupted_ebisugaoka.guide.html",
+      "url": "https://www.silenthillmemories.net/shf/walkthrough_10_ebisugaoka_part_5_en.htm",
+      "role": "guide-context",
+      "bytes": 49959,
+      "sha256": "702c96b8f7517db06754282257c3e6922ef10a770bb9fe7a825abb9419454a32",
+      "contentType": "text/html; charset=UTF-8"
+    }
+  ],
+  "inputHashesAtResearch": {
+    "data/stages.json": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+    "docs/production/research/extended.json": "3fb766eed4d6405cf7be4c1d6c9dae0420a2fb7030ebb4b5b7f82e6ec1fa1696",
+    "src/stage-bitmap-manifest.js": "c89280165cb5c1c4c2cefc1c7ec3479c49269354fa6023b8ddb080b8d46ced9e"
+  },
+  "generationPolicy": {
+    "builtinImagegenOnly": true,
+    "nativeCaptureInspectedBeforeGeneration": true,
+    "noPixelRetouch": true,
+    "notCertifiedOneToOne": true,
+    "notCertifiedUhd": true,
+    "repositoryFilesModifiedByThisAgent": false
+  },
+  "qa": {
+    "allPngsInspectedVisually": true,
+    "allOriginalOutputShaMatch": true,
+    "allReferencesShaMatch": true,
+    "allDimensions": [
+      1672,
+      941
+    ],
+    "alpha32Threshold": 32,
+    "supportBandNormalized": [
+      0.2,
+      0.8,
+      0.8,
+      0.86
+    ],
+    "supportBandAllForegroundsVisibleFractionAlpha32Zero": true,
+    "supportFloorNormalized": 0.825,
+    "notes": [
+      "Small near-transparent alpha values below 32, if present, are retained in native outputs and reported numerically.",
+      "Transparent RGB is not flattened or chroma-keyed. Real runtime composite review belongs to parent.",
+      "Static two-layer images do not count as new animation clips.",
+      "Scene identifiers are descriptive additions only; existing location policies are unchanged."
+    ],
+    "descriptorValidationFile": "descriptor-validation.json"
+  }
+}

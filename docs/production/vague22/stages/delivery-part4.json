@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "group": "wave22-stages",
+  "scope": "missing stages only",
+  "createdAt": "2026-11-19T16:04:05.358687+00:00",
+  "baseCommit": "80db2a9fdda7032bcaf110df79915be598290f08",
+  "deliveryState": "candidate-ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "nightmare_hospital_sm",
+      "source": "shattered",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "psp-er-radio-room-iced-exit",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT09",
+        "EXT10_SM_HOSPITAL_GUIDE_20261026",
+        "EXT10_SM_HOSPITAL_ROOM_20261026"
+      ],
+      "worldState": "fixed-altered",
+      "locationScope": "Silent Hill: Shattered Memories, version PSP US 2010 uniquement : chambre ER d’Alchemilla, Nightmare 4, pendant le puzzle radio et avant le dégel de la porte de sortie.",
+      "selectedSubLocation": "Silent Hill: Shattered Memories, version PSP US 2010 uniquement : chambre ER d’Alchemilla, Nightmare 4, pendant le puzzle radio et avant le dégel de la porte de sortie.",
+      "supports": {
+        "description": "Sol continu de la chambre devant le mur de sortie ; appuis y=0,825 libres, lit et chevet retirés vers le bord arrière gauche.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.06,
+          0.75,
+          0.88,
+          0.15
+        ],
+        "centerClear": [
+          0.06,
+          0,
+          0.88,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Foreground alpha measured; rear props are behind the fight lane. Values describe artwork intent, not new engine collisions."
+      },
+      "layers": [
+        {
+          "id": "psp-er-iced-exit",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/nightmare_hospital_sm.psp-er-iced-exit.52b62d0305f9.png",
+              "sha256": "52b62d0305f9d115edf0503904dbc4e987cc8cc8cf18bbdbe7dc72df68837d65",
+              "bytes": 2477450,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-wall-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/nightmare_hospital_sm.near-wall-edges.e3eb42c05e84.png",
+              "sha256": "e3eb42c05e8497b59c3ea7178597334ad5f245f67d90ebd72ca6e9c18b54c62b",
+              "bytes": 166438,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "shsm-psp-er-iced-exit.png",
+        "shsm-psp-er-exit-close.png",
+        "shsm-psp-er-bed.png"
+      ],
+      "notes": [
+        "Trois vues natives PSP 318×180 du longplay 2Ekz2eUCIbU : porte bleue bouchée de glace, colonne fixe de pavés de verre immédiatement à gauche, lit et meuble bas attestés. Les feuilles sources M60/M61 ont été inspectées avant génération ; seules les cellules pertinentes sont livrées.",
+        "La nouvelle preuve PSP précise une colonne maçonnée de pavés de verre ; elle ne justifie aucune cloison vitrée, rideau animé, autre salle ou mélange avec la version Wii. Les anciennes annotations de propositions Wii ne sont pas transformées en preuve visuelle PSP.",
+        "Harry, père/enfant gelés, téléphone, radio jouable, sous-titres et interface sont exclus. La glace reste fixe ; aucune fonte, chanson, transformation ou règle de terrain ajoutée.",
+        "La faible résolution, la caméra mobile et l’occlusion par le joueur limitent les détails visibles. Le volume hors cadre, l’échelle, la largeur pour le duel et l’éclairage uniforme sont reconstruits ; aucune identité pixel à pixel ni fidélité 1:1 certifiée.",
+        "Two independent static PNG planes with different horizontal parallax; no animated clip, transition or hazard added.",
+        "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
+        "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "promptKey": "nightmare_hospital_sm_bg",
+      "filename": "nightmare_hospital_sm.psp-er-iced-exit.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hospital_sm.psp-er-iced-exit.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-abfe7b23-eba9-4146-b4e2-793920b57737.png",
+      "sha256": "52b62d0305f9d115edf0503904dbc4e987cc8cc8cf18bbdbe7dc72df68837d65",
+      "bytes": 2477450,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "zeroFraction": 0.0,
+        "opaqueFraction": 1.0
+      },
+      "qa": {
+        "noCharacters": true,
+        "noHUD": true,
+        "visualInspection": "accepted",
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlink": true,
+      "stageId": "nightmare_hospital_sm",
+      "role": "opaque-background",
+      "path": "assets/stages/nightmare_hospital_sm.psp-er-iced-exit.52b62d0305f9.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    },
+    {
+      "promptKey": "nightmare_hospital_sm_fg",
+      "filename": "nightmare_hospital_sm.near-wall-edges.png",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hospital_sm.near-wall-edges.png",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-3b9c3681-d9ff-49c9-9389-d1078634c847.png",
+      "sha256": "e3eb42c05e8497b59c3ea7178597334ad5f245f67d90ebd72ca6e9c18b54c62b",
+      "bytes": 166438,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "zeroFraction": 0.9561032750458893,
+        "opaqueFraction": 0.00016843020506536363
+      },
+      "qa": {
+        "noCharacters": true,
+        "noHUD": true,
+        "visualInspection": "accepted",
+        "footBandAlphaMax": 1,
+        "centerAlphaMax": 1,
+        "footingLineNormalizedY": 0.825,
+        "visualOutcome": "accepted as source-guided versus candidate; clear fighting lane",
+        "browserTest": false,
+        "engineTest": false
+      },
+      "hardlink": true,
+      "stageId": "nightmare_hospital_sm",
+      "role": "transparent-foreground",
+      "path": "assets/stages/nightmare_hospital_sm.near-wall-edges.e3eb42c05e84.png",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "visualInspection": "completed",
+      "preservation": "native generated PNG; hardlink preserves source inode and SHA256; no pixel retouch"
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.youtube.com/watch?v=2Ekz2eUCIbU",
+      "path": "/workspace/scratch/halo-wave22-stages/references/shsm-psp-er-iced-exit.png",
+      "sha256": "3375da65ba9d12706289b573b2f3807148b90f20236bf1cafa4cacfef41f94f0",
+      "bytes": 51563,
+      "width": 318,
+      "height": 180,
+      "edition": "PlayStation Portable US, released Jan19 2010; uploader states platform",
+      "sourceSheetURL": "https://i.ytimg.com/sb/2Ekz2eUCIbU/storyboard3_L3/M61.jpg?sqp=-oaymwENSDfyq4qpAwVwAcABBqLzl_8DBgiok4vNBg==&sigh=rs$AOn4CLDt8DzAaMiIoD_g99LbFAGcAEGtAQ",
+      "sourceSheetSHA256": "f97aed371e071320a7ee0fe00a08a4b01a33b83f3df9c98803b37c63bb199bea",
+      "sourceSheetFilename": "shsm-psp-native-hospital-M61.jpg",
+      "nativeCellRectXYWH": [
+        0,
+        0,
+        318,
+        180
+      ],
+      "approximateVideoSeconds": 5481.891398783663,
+      "extraction": "ffmpeg JPEG decode + native cell extraction to lossless RGB PNG; no resampling, repaint or generated reference",
+      "extractionFilter": "crop=318:180:0:0",
+      "note": "Source sheets were inspected and supplied to imagegen; delivery includes only the three relevant native room views, sheets retained as working sources."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2Ekz2eUCIbU",
+      "path": "/workspace/scratch/halo-wave22-stages/references/shsm-psp-er-exit-close.png",
+      "sha256": "2d37c35fc6d9f7e88de1818ffc8fd14474477f66571836d0f450248011b7bf16",
+      "bytes": 55920,
+      "width": 318,
+      "height": 180,
+      "edition": "PlayStation Portable US, released Jan19 2010; uploader states platform",
+      "sourceSheetURL": "https://i.ytimg.com/sb/2Ekz2eUCIbU/storyboard3_L3/M61.jpg?sqp=-oaymwENSDfyq4qpAwVwAcABBqLzl_8DBgiok4vNBg==&sigh=rs$AOn4CLDt8DzAaMiIoD_g99LbFAGcAEGtAQ",
+      "sourceSheetSHA256": "f97aed371e071320a7ee0fe00a08a4b01a33b83f3df9c98803b37c63bb199bea",
+      "sourceSheetFilename": "shsm-psp-native-hospital-M61.jpg",
+      "nativeCellRectXYWH": [
+        636,
+        180,
+        318,
+        180
+      ],
+      "approximateVideoSeconds": 5531.817549956556,
+      "extraction": "ffmpeg JPEG decode + native cell extraction to lossless RGB PNG; no resampling, repaint or generated reference",
+      "extractionFilter": "crop=318:180:636:180",
+      "note": "Source sheets were inspected and supplied to imagegen; delivery includes only the three relevant native room views, sheets retained as working sources."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2Ekz2eUCIbU",
+      "path": "/workspace/scratch/halo-wave22-stages/references/shsm-psp-er-bed.png",
+      "sha256": "11a6bbc1e34328bede2d237272dcd652d4d0bc6ec36b22b462e68f3f6645db23",
+      "bytes": 59125,
+      "width": 318,
+      "height": 180,
+      "edition": "PlayStation Portable US, released Jan19 2010; uploader states platform",
+      "sourceSheetURL": "https://i.ytimg.com/sb/2Ekz2eUCIbU/storyboard3_L3/M60.jpg?sqp=-oaymwENSDfyq4qpAwVwAcABBqLzl_8DBgiok4vNBg==&sigh=rs$AOn4CLDt8DzAaMiIoD_g99LbFAGcAEGtAQ",
+      "sourceSheetSHA256": "6475c8ef5f8b11e06a6dcd520f6d5a98d355f0ad9c794b5424314b36ef586933",
+      "sourceSheetFilename": "shsm-psp-native-hospital-M60.jpg",
+      "nativeCellRectXYWH": [
+        636,
+        360,
+        318,
+        180
+      ],
+      "approximateVideoSeconds": 5471.906168549084,
+      "extraction": "ffmpeg JPEG decode + native cell extraction to lossless RGB PNG; no resampling, repaint or generated reference",
+      "extractionFilter": "crop=318:180:636:360",
+      "note": "Source sheets were inspected and supplied to imagegen; delivery includes only the three relevant native room views, sheets retained as working sources."
+    }
+  ],
+  "prompts": [
+    {
+      "key": "nightmare_hospital_sm_bg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/references/shsm-psp-native-hospital-M61.jpg",
+        "/workspace/scratch/halo-wave22-stages/references/shsm-psp-native-hospital-M60.jpg"
+      ],
+      "prompt": "Produce ONE 1672x941 full-frame opaque background for a lateral 2D fighting game, faithfully guided by these native YouTube storyboard frames from Silent Hill: Shattered Memories, US PSP edition (2010). These sheets contain multiple video frames ONLY AS REFERENCE; the output must be one continuous room, never a sheet or montage. EXACT location and phase: Alchemilla Hospital, Nightmare4 ER hospital room during the radio puzzle, BEFORE the exit door ice melts. Use the repeated top-row and middle-right views in the FIRST reference sheet for the EXIT WALL: a simple closed doorway blocked by rough opaque blue-gray ice, blue painted doorframe, a narrow vertical column of square translucent glass blocks immediately left of that doorway, pale cold walls with a restrained dark blue lower rail. These glass blocks are fixed masonry visibly present in this PSP scene, not a glass partition. The doorway remains ice-filled, not an open portal. The bottom-right view in the SECOND sheet documents the room's simple metal hospital bed and low bedside cabinet; retain only a small empty bed portion at the far rear-left edge, behind the duel, no extra beds or invented furniture. Exclude all the other outdoor/train locations from that second sheet. Reframe the exit wall almost straight-on for lateral combat, with the ice-blocked door near x=60%, and extend only plain existing wall and floor materials. A subdued clinical wall poster may remain an indistinct texture; no readable lettering or invented sign. One continuous level blue-gray, finely mottled floor extends through the lower third; no raised thresholds or objects in the central fight strip. Foot line y=82.5%, x=6%-94%, stays clear. Cool dim gray-blue room lighting adapted to be readable without Harry's flashlight circle; no blizzard, snow shower, medical gore, glass room divider, curtains, rails across the screen or added lamps. Remove Harry, the frozen father, frozen child, all people, their shadows, phone, radio, interactive puzzle prompts, crosshairs, captions and UI. Do not reproduce the radio itself or portray any puzzle resolution. Preserve the native PSP scene's plain modest architecture and blue doorway, no shiny modern hospital redesign. No characters, monster, text, logo, watermark, border, collage or cinematic letterbox. Full opaque environment plate, restrained source-guided reconstruction; no unsupported hidden-room details."
+    },
+    {
+      "key": "nightmare_hospital_sm_fg",
+      "refs": [
+        "/workspace/scratch/halo-wave22-stages/nightmare_hospital_sm.psp-er-iced-exit.png"
+      ],
+      "prompt": "Generate only the independent FOREGROUND PARALLAX layer for this exact Shattered Memories PSP hospital ER room, same full1672x941 canvas and alignment. Genuine transparent RGBA PNG. Paint two thin near-camera wall-return slivers at the extreme left x=0%-3% and right x=97%-100%, matching the background's dim pale cold blue-gray painted plaster and dark blue lower wall band. Modest chipped texture only, no new object. Both inner edges must remain outside x=4%-96%. Everything else must be completely transparent, including the entire floor and foot line at y=82.5%. No top or bottom border between the slivers. Do not render the ice-filled door, glass blocks, bed, cabinet, poster, ceiling, floor, wall, lighting glow, casts of shadow or a complete scene. Preserve blank transparent center throughout. No glass partition, curtain, floor frost effect, haze, fog, vignette, black/white fill, checkerboard, matte or colored halo. Clean native-alpha antialiasing at opaque plaster edges only. No people, creature, phone, radio, text, interface, logo or watermark. One sparse source-material foreground plate suited to a very small horizontal parallax; all fighting action and feet unobscured."
+    }
+  ],
+  "provenance": {
+    "generator": "integrated image_gen.imagegen",
+    "callsPerGeneratedPNG": 1,
+    "retainedRevisionHistory": "See assets[].generation when a targeted imagegen correction was required",
+    "sourceGuides": [
+      {
+        "id": "shsm_nightmare_hospital",
+        "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_08_nightmare_4_hospital_en.htm",
+        "sha256": "17762e5200fc0e005899dfc01440e4c72e3b57425bdf65a2557c03ea1816b597",
+        "bytes": 17192
+      }
+    ],
+    "postGenerationPixelEditing": false,
+    "nativePixelsPreserved": true,
+    "noRuntimeChanges": true,
+    "noCharactersOrPortraitsChanged": true
+  },
+  "qa": {
+    "visualOutputsInspected": 2,
+    "nativePNGMetadataMeasured": 2,
+    "opaqueBackgrounds": 1,
+    "genuineAlphaForegrounds": 1,
+    "browserTest": false,
+    "runtimeTest": "pending root integration",
+    "candidateFidelity": "unverified"
+  },
+  "totals": {
+    "stages": 1,
+    "png": 2,
+    "bytes": 2643888
+  },
+  "deferredPrevious": [
+    "nightmare_mall",
+    "apartment_roof",
+    "shimizu_residence",
+    "police_station_hc"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "fighterId": "sh1_larval_stalker_007",
+  "source": "sh1",
+  "prompt": "Use case: precise-object-edit. Image 1 is the edit target: the new full-body RIGHT-side Larval Stalker candidate. Image 2 is the original Silent Hill 1999 source appearance. Correct ONLY the shadow material and edge treatment in image 1 to match the dark source apparition.\nThe current target looks like luminous pale-gray mist. The original Larval Stalker is a neutral near-black shadow with a mostly transparent interior, not a glowing white ghost. Make the visible silhouette and soft outline genuinely dark charcoal-black RGB, roughly #080808 to #202020, with translucent interior and soft alpha falloff. Remove all pale bloom, milky white highlights and luminous halo. Preserve actual transparency inside the vague shadow; do not replace it with a solid opaque gray sculpture. Do not copy the green room or floor from image 2 into the body.\nPreserve the target's exact whole silhouette and strict right-facing side posture: elongated smooth featureless head with no face or hair, narrow torso, exactly two drooping arms, exactly two little legs and feet. Keep every tip, full head, body and feet in frame with the existing margins. No clothing, weapon, facial features, muscle detail, extra limb or new anatomy. Preserve the transparent RGBA backdrop; no scenery, room, floor, cast shadow, checkerboard, label or second subject. One isolated passive original Larval Stalker. All changes are to color/material/alpha, not pose or anatomy.",
+  "references": [
+    "/workspace/scratch/62cbb5f4a653/production/wave25-classics/png/sh1_larval_stalker_007.side.png",
+    "/workspace/scratch/62cbb5f4a653/production/wave25-classics/references/sh1-larval-stalker-art.jpg"
+  ],
+  "intent": "targeted-material-correction",
+  "transparent_background": true,
+  "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-cb907bff-291e-45dd-b382-210e2a1972b0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "tool": "image_gen.imagegen",
+  "status": "generated"
+}

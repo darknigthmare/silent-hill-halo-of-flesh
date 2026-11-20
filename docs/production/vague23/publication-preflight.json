@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "branch": "art/missing-fullbody-20261117",
+  "baseCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "functionalValidationPassed": true,
+  "evidence": {
+    "final-audit.json": "f889f993065104d791edc16219b27b14a8a8f69e491dea705d9a964c353dab45",
+    "qa-native/report.json": "93805e4d15563bcf2267585bd5019b4f572a11069beba6e29d8ce9d6ea313fb4",
+    "validation/gates.json": "7c253f5298f4a6787e1207a13439dafa03c07cfc9fe19ede111b1830fb3d7b06",
+    "workbook/workbook-verification.json": "34669a17135d57acefd1d0b5bae089c07cbf1a1d5def8de631e4d6dd1e07231e",
+    "characters/integration-review.json": "671c0596a1d7158d0a83db7fe14ba6d4a1c5f62140be4a6f1c684acf3579efde"
+  },
+  "newActivePNG": 20,
+  "whitespaceReview": {
+    "exitCode": 2,
+    "findings": [
+      "docs/production/vague23/baseline/pr6-before.json:13: new blank line at EOF.",
+      "docs/production/vague23/capture-baseline.mjs:43: new blank line at EOF.",
+      "docs/production/vague23/characters-extra/film-red-pyramid-prompt.json:26: new blank line at EOF.",
+      "docs/production/vague23/import-character-delivery.mjs:64: new blank line at EOF.",
+      "docs/production/vague23/integrate-stage-deliveries.mjs:75: new blank line at EOF.",
+      "docs/production/vague23/qa-characters-native.mjs:220: new blank line at EOF.",
+      "docs/production/vague23/stages/README.md:84: new blank line at EOF.",
+      "docs/production/vague23/update-corpus-workbook.mjs:92: new blank line at EOF.",
+      "docs/production/vague23/verify-corpus-workbook.mjs:33: new blank line at EOF.",
+      "docs/production/vague23/write-import-journal.mjs:54: new blank line at EOF.",
+      "docs/production/vague23/write-wave-report.py:161: new blank line at EOF."
+    ],
+    "disposition": "Trailing blank lines in production evidence are retained. Executed harnesses and provenance files remain byte-identical to their recorded hashes. No runtime whitespace finding."
+  },
+  "publicationTarget": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/pull/6",
+  "publicationState": "ready-to-commit-and-push"
+}

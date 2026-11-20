@@ -1,0 +1,1929 @@
+{
+  "schema": 3,
+  "label": "wave6-additional",
+  "generatedAt": "2026-11-18T10:03:14.857Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4275\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1575569,
+        "sha256": "2230de7fb2f98cc2e0a49fcd19222dd56b8a105d608b17c2533253e73a74d0b2"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 380212,
+        "sha256": "769a4578e91b7dbcf6497bbee1782f69fb63c7716cdb9c3cfb506f9caaf1fc0e"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1113904,
+        "sha256": "2a35fe388a6bd2d01b62c188acfc8ab0e0b56e92a3263a25da7e25ad00d5d1df"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 459361,
+        "sha256": "a2ce60380f5dcaa91f6c06502b0ad6f9e9f8600a36b0f4bea6764c9677db9528"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_closer_036.19e033cd6a51.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1271818,
+        "sha256": "19e033cd6a51e9d663b912dffe35c955f4a5b9e53bfce49809585459b5f55d26"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_closer_036.19e033cd6a51.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_closer_036.83102a051acb.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 968738,
+        "sha256": "83102a051acb47688d8f0a5fde7452b2d1ccc226fe3b8b21cb490b295a64c9b5"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_closer_036.83102a051acb.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_closer_036.f18918ff7e87.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1292476,
+        "sha256": "f18918ff7e87e7445254583f1603e794269f6569984698d4a6ba87a553ce0715"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_closer_036.f18918ff7e87.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_closer_036.a571dd362666.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 987634,
+        "sha256": "a571dd362666d9d003949203fed33d34c6a77002af2f0f9a051d38b80aa7d910"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_closer_036.a571dd362666.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_closer_036.e00beefd711f.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1504645,
+        "sha256": "e00beefd711ff7880f6fe915f6049a18b4e2ce97b0170e4a1e596c01ceb4befb"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_closer_036.e00beefd711f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1419103,
+        "sha256": "8c3f9985c31e57bd4d85678702b7aa23c207ea7dffa686a9ceda8a2a80dd4df9"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1238987,
+        "sha256": "a0885231d6ff688cbe59b1c619e455146a8d0721a0ba9ccfa64706b33c175f90"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1138573,
+        "sha256": "6d8c0b112533fc149871a120df9b24b413c09794c6ab4b3274aaaed437cae8cd"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_double_head_040.0ef012666f82.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1109240,
+        "sha256": "0ef012666f825977bda04d26aeea0733c106065d8b7529b71381a186b0ac5683"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_double_head_040.0ef012666f82.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1433387,
+        "sha256": "fd9ce712ec8f3143f998351facee7febf2624ce9ed38bdeaa26733ba6307f5dd"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          85,
+          84,
+          1115,
+          1241
+        ],
+        "expected": [
+          85,
+          84,
+          1115,
+          1241
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          476,
+          333,
+          884,
+          956
+        ],
+        "expected": [
+          476,
+          333,
+          884,
+          956
+        ]
+      }
+    },
+    {
+      "name": "homecoming_order_soldier_091 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png"
+        ],
+        "portrait": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "homecoming_order_soldier_091 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png"
+        ],
+        "expected": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png"
+      }
+    },
+    {
+      "name": "homecoming_order_soldier_091 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png"
+        ],
+        "expected": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          113,
+          109,
+          2092,
+          611
+        ],
+        "expected": [
+          113,
+          109,
+          2092,
+          611
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          169,
+          463,
+          1147,
+          878
+        ],
+        "expected": [
+          169,
+          463,
+          1147,
+          878
+        ]
+      }
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png"
+        ],
+        "portrait": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png"
+        ],
+        "expected": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png"
+      }
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png"
+        ],
+        "expected": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_closer_036.19e033cd6a51.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_closer_036.19e033cd6a51.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          142,
+          51,
+          1029,
+          1321
+        ],
+        "expected": [
+          142,
+          51,
+          1029,
+          1321
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_closer_036.83102a051acb.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_closer_036.83102a051acb.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          206,
+          200,
+          1077,
+          1164
+        ],
+        "expected": [
+          206,
+          200,
+          1077,
+          1164
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_closer_036.f18918ff7e87.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_closer_036.f18918ff7e87.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          92,
+          52,
+          1236,
+          1183
+        ],
+        "expected": [
+          92,
+          52,
+          1236,
+          1183
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_closer_036.a571dd362666.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_closer_036.a571dd362666.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          74,
+          619,
+          1165,
+          1178
+        ],
+        "expected": [
+          74,
+          619,
+          1165,
+          1178
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_closer_036.e00beefd711f.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_closer_036.e00beefd711f.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          164,
+          7,
+          1083,
+          1298
+        ],
+        "expected": [
+          164,
+          7,
+          1083,
+          1298
+        ]
+      }
+    },
+    {
+      "name": "sh3_closer_036 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_closer_036.19e033cd6a51.png"
+        ],
+        "portrait": "assets/sprites/sh3_closer_036.e00beefd711f.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_closer_036 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_closer_036.e00beefd711f.png"
+        ],
+        "expected": "assets/sprites/sh3_closer_036.e00beefd711f.png"
+      }
+    },
+    {
+      "name": "sh3_closer_036 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_closer_036.e00beefd711f.png"
+        ],
+        "expected": "assets/sprites/sh3_closer_036.e00beefd711f.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          79,
+          55,
+          1667,
+          824
+        ],
+        "expected": [
+          79,
+          55,
+          1667,
+          824
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          80,
+          339,
+          1227,
+          1145
+        ],
+        "expected": [
+          80,
+          339,
+          1227,
+          1145
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          182,
+          331,
+          1183,
+          1125
+        ],
+        "expected": [
+          182,
+          331,
+          1183,
+          1125
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_double_head_040.0ef012666f82.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_double_head_040.0ef012666f82.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          74,
+          471,
+          1197,
+          981
+        ],
+        "expected": [
+          74,
+          471,
+          1197,
+          981
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          50,
+          127,
+          1406,
+          972
+        ],
+        "expected": [
+          50,
+          127,
+          1406,
+          972
+        ]
+      }
+    },
+    {
+      "name": "sh3_double_head_040 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_double_head_040.8c3f9985c31e.png"
+        ],
+        "portrait": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_double_head_040 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png"
+        ],
+        "expected": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png"
+      }
+    },
+    {
+      "name": "sh3_double_head_040 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png"
+        ],
+        "expected": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png"
+      }
+    },
+    {
+      "name": "homecoming_order_soldier_091/sh2_lying_figure_crawling_021 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "homecoming_order_soldier_091/sh2_lying_figure_crawling_021 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "homecoming_order_soldier_091/sh2_lying_figure_crawling_021 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "homecoming_order_soldier_091",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "homecoming_order_soldier_091/sh2_lying_figure_crawling_021 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+          "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png"
+        ],
+        "expected": [
+          "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+          "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png"
+        ]
+      }
+    },
+    {
+      "name": "homecoming_order_soldier_091 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 233.69372084920815,
+          "top": 407.7024490200407,
+          "right": 400.4316597759224,
+          "bottom": 595.7636051364212
+        },
+        "visible": {
+          "left": 234.4953455555866,
+          "top": 408.50407372641916,
+          "right": 399.63003506954396,
+          "bottom": 594.0000307823888
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 725.5920277931386,
+          "top": 471.2346716074364,
+          "right": 1208.1446124584604,
+          "bottom": 594.7292373555389
+        },
+        "visible": {
+          "left": 726.3213264097614,
+          "top": 471.96397022405904,
+          "right": 1207.4153138418378,
+          "bottom": 593.9999387389162
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_order_soldier_091/sh2_lying_figure_crawling_021 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021/homecoming_order_soldier_091 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021/homecoming_order_soldier_091 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021/homecoming_order_soldier_091 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "homecoming_order_soldier_091",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021/homecoming_order_soldier_091 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png"
+        ],
+        "expected": [
+          "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png"
+        ]
+      }
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 71.85541805911762,
+          "top": 471.2346716074364,
+          "right": 554.4080027244395,
+          "bottom": 594.7292373555389
+        },
+        "visible": {
+          "left": 72.58471667574034,
+          "top": 471.96397022405904,
+          "right": 553.6787041078168,
+          "bottom": 593.9999387389162
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_order_soldier_091 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 879.5683707416557,
+          "top": 407.7024490200407,
+          "right": 1046.30630966837,
+          "bottom": 595.7636051364212
+        },
+        "visible": {
+          "left": 880.3699954480342,
+          "top": 408.50407372641916,
+          "right": 1045.5046849619916,
+          "bottom": 594.0000307823888
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_lying_figure_crawling_021/homecoming_order_soldier_091 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_closer_036/sh3_double_head_040 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_closer_036/sh3_double_head_040 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_closer_036/sh3_double_head_040 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_closer_036",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_double_head_040",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_closer_036/sh3_double_head_040 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+          "assets/sprites/sh3_double_head_040.8c3f9985c31e.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+          "assets/sprites/sh3_double_head_040.8c3f9985c31e.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_closer_036 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 213.67085158119295,
+          "top": 298.87377507341057,
+          "right": 422.6608778891788,
+          "bottom": 598.8495144922764
+        },
+        "visible": {
+          "left": 214.1327079929233,
+          "top": 300.72120072033204,
+          "right": 418.96602659533596,
+          "bottom": 594.0000221691078
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_double_head_040 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 856.9697126477319,
+          "top": 501.6604174650521,
+          "right": 1048.5151695930704,
+          "bottom": 594.5919277877287
+        },
+        "visible": {
+          "left": 857.9167853643961,
+          "top": 502.9626424504654,
+          "right": 1045.9107196222437,
+          "bottom": 594.0000073398136
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_closer_036/sh3_double_head_040 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_double_head_040/sh3_closer_036 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_double_head_040/sh3_closer_036 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_double_head_040/sh3_closer_036 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_double_head_040",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_closer_036",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_double_head_040/sh3_closer_036 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+          "assets/sprites/sh3_closer_036.19e033cd6a51.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+          "assets/sprites/sh3_closer_036.19e033cd6a51.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_double_head_040 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 231.48486092450773,
+          "top": 501.6604174650521,
+          "right": 423.0303178698463,
+          "bottom": 594.5919277877287
+        },
+        "visible": {
+          "left": 234.08931089533434,
+          "top": 502.9626424504654,
+          "right": 422.083245153182,
+          "bottom": 594.0000073398136
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_closer_036 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 857.3391526283993,
+          "top": 298.87377507341057,
+          "right": 1066.3291789363852,
+          "bottom": 598.8495144922764
+        },
+        "visible": {
+          "left": 861.0340039222422,
+          "top": 300.72120072033204,
+          "right": 1065.8673225246548,
+          "bottom": 594.0000221691078
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_double_head_040/sh3_closer_036 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "41cf644abf609063d33731d1ac14027e89f79a9bd2940b0c3a0d001ff935cf22",
+        "after": "41cf644abf609063d33731d1ac14027e89f79a9bd2940b0c3a0d001ff935cf22"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "3330c7416c1773c8ffa0a4bcd72f32907d84554374bc6e6f59f04e9b1f37ed60",
+        "after": "3330c7416c1773c8ffa0a4bcd72f32907d84554374bc6e6f59f04e9b1f37ed60"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "homecoming_order_soldier_091",
+      "path": "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+      "width": 1199,
+      "height": 1312,
+      "transparentFraction": 0.5757497355519844,
+      "visibleBounds": [
+        85,
+        84,
+        1115,
+        1241
+      ]
+    },
+    {
+      "id": "homecoming_order_soldier_091",
+      "path": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9214163798651334,
+      "visibleBounds": [
+        476,
+        333,
+        884,
+        956
+      ]
+    },
+    {
+      "id": "sh2_lying_figure_crawling_021",
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+      "width": 2172,
+      "height": 724,
+      "transparentFraction": 0.6740986487998942,
+      "visibleBounds": [
+        113,
+        109,
+        2092,
+        611
+      ]
+    },
+    {
+      "id": "sh2_lying_figure_crawling_021",
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8760604025650613,
+      "visibleBounds": [
+        169,
+        463,
+        1147,
+        878
+      ]
+    },
+    {
+      "id": "sh3_closer_036",
+      "path": "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+      "width": 1143,
+      "height": 1376,
+      "transparentFraction": 0.6274078567213982,
+      "visibleBounds": [
+        142,
+        51,
+        1029,
+        1321
+      ]
+    },
+    {
+      "id": "sh3_closer_036",
+      "path": "assets/sprites/sh3_closer_036.83102a051acb.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.768348938897919,
+      "visibleBounds": [
+        206,
+        200,
+        1077,
+        1164
+      ]
+    },
+    {
+      "id": "sh3_closer_036",
+      "path": "assets/sprites/sh3_closer_036.f18918ff7e87.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.697604984623368,
+      "visibleBounds": [
+        92,
+        52,
+        1236,
+        1183
+      ]
+    },
+    {
+      "id": "sh3_closer_036",
+      "path": "assets/sprites/sh3_closer_036.a571dd362666.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7702567096296635,
+      "visibleBounds": [
+        74,
+        619,
+        1165,
+        1178
+      ]
+    },
+    {
+      "id": "sh3_closer_036",
+      "path": "assets/sprites/sh3_closer_036.e00beefd711f.png",
+      "width": 1192,
+      "height": 1320,
+      "transparentFraction": 0.5984727730323368,
+      "visibleBounds": [
+        164,
+        7,
+        1083,
+        1298
+      ]
+    },
+    {
+      "id": "sh3_double_head_040",
+      "path": "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.5334037055349156,
+      "visibleBounds": [
+        79,
+        55,
+        1667,
+        824
+      ]
+    },
+    {
+      "id": "sh3_double_head_040",
+      "path": "assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7139692060366953,
+      "visibleBounds": [
+        80,
+        339,
+        1227,
+        1145
+      ]
+    },
+    {
+      "id": "sh3_double_head_040",
+      "path": "assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.730772214718324,
+      "visibleBounds": [
+        182,
+        331,
+        1183,
+        1125
+      ]
+    },
+    {
+      "id": "sh3_double_head_040",
+      "path": "assets/sprites/sh3_double_head_040.0ef012666f82.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7467224498828628,
+      "visibleBounds": [
+        74,
+        471,
+        1197,
+        981
+      ]
+    },
+    {
+      "id": "sh3_double_head_040",
+      "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "width": 1448,
+      "height": 1086,
+      "transparentFraction": 0.6308816122828973,
+      "visibleBounds": [
+        50,
+        127,
+        1406,
+        972
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "homecoming_order_soldier_091",
+      "facing": 1,
+      "path": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "file": "portrait-homecoming_order_soldier_091-right.png"
+    },
+    {
+      "id": "homecoming_order_soldier_091",
+      "facing": -1,
+      "path": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "file": "portrait-homecoming_order_soldier_091-left.png"
+    },
+    {
+      "id": "sh2_lying_figure_crawling_021",
+      "facing": 1,
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "file": "portrait-sh2_lying_figure_crawling_021-right.png"
+    },
+    {
+      "id": "sh2_lying_figure_crawling_021",
+      "facing": -1,
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "file": "portrait-sh2_lying_figure_crawling_021-left.png"
+    },
+    {
+      "id": "sh3_closer_036",
+      "facing": 1,
+      "path": "assets/sprites/sh3_closer_036.e00beefd711f.png",
+      "file": "portrait-sh3_closer_036-right.png"
+    },
+    {
+      "id": "sh3_closer_036",
+      "facing": -1,
+      "path": "assets/sprites/sh3_closer_036.e00beefd711f.png",
+      "file": "portrait-sh3_closer_036-left.png"
+    },
+    {
+      "id": "sh3_double_head_040",
+      "facing": 1,
+      "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "file": "portrait-sh3_double_head_040-right.png"
+    },
+    {
+      "id": "sh3_double_head_040",
+      "facing": -1,
+      "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "file": "portrait-sh3_double_head_040-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "homecoming_order_soldier_091",
+        "sh2_lying_figure_crawling_021"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.8026229268294
+        }
+      },
+      "geometries": [
+        {
+          "id": "homecoming_order_soldier_091",
+          "slot": 1,
+          "path": "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+          "exterior": {
+            "left": 233.69372084920815,
+            "top": 407.7024490200407,
+            "right": 400.4316597759224,
+            "bottom": 595.7636051364212
+          },
+          "visible": {
+            "left": 234.4953455555866,
+            "top": 408.50407372641916,
+            "right": 399.63003506954396,
+            "bottom": 594.0000307823888
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00003078238876241812,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+            "args": [
+              -98.24123475609757,
+              -203.36506,
+              196.48246951219514,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        },
+        {
+          "id": "sh2_lying_figure_crawling_021",
+          "slot": 2,
+          "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "exterior": {
+            "left": 725.5920277931386,
+            "top": 471.2346716074364,
+            "right": 1208.1446124584604,
+            "bottom": 594.7292373555389
+          },
+          "visible": {
+            "left": 726.3213264097614,
+            "top": 471.96397022405904,
+            "right": 1207.4153138418378,
+            "bottom": 593.9999387389162
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00006126108382886741,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+            "args": [
+              -269.8469387755102,
+              -151.82002540816325,
+              539.6938775510204,
+              179.89795918367346
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+        "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png"
+      ],
+      "snapshots": [
+        "duel-homecoming_order_soldier_091--sh2_lying_figure_crawling_021-tick0.png",
+        "duel-homecoming_order_soldier_091--sh2_lying_figure_crawling_021-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh2_lying_figure_crawling_021",
+        "homecoming_order_soldier_091"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.8026229268294
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh2_lying_figure_crawling_021",
+          "slot": 1,
+          "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "exterior": {
+            "left": 71.85541805911762,
+            "top": 471.2346716074364,
+            "right": 554.4080027244395,
+            "bottom": 594.7292373555389
+          },
+          "visible": {
+            "left": 72.58471667574034,
+            "top": 471.96397022405904,
+            "right": 553.6787041078168,
+            "bottom": 593.9999387389162
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00006126108382886741,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+            "args": [
+              -269.8469387755102,
+              -151.82002540816325,
+              539.6938775510204,
+              179.89795918367346
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        },
+        {
+          "id": "homecoming_order_soldier_091",
+          "slot": 2,
+          "path": "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+          "exterior": {
+            "left": 879.5683707416557,
+            "top": 407.7024490200407,
+            "right": 1046.30630966837,
+            "bottom": 595.7636051364212
+          },
+          "visible": {
+            "left": 880.3699954480342,
+            "top": 408.50407372641916,
+            "right": 1045.5046849619916,
+            "bottom": 594.0000307823888
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00003078238876241812,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+            "args": [
+              -98.24123475609757,
+              -203.36506,
+              196.48246951219514,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+        "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png"
+      ],
+      "snapshots": [
+        "duel-sh2_lying_figure_crawling_021--homecoming_order_soldier_091-tick0.png",
+        "duel-sh2_lying_figure_crawling_021--homecoming_order_soldier_091-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_closer_036",
+        "sh3_double_head_040"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 616.956804574468
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_closer_036",
+          "slot": 1,
+          "path": "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+          "exterior": {
+            "left": 213.67085158119295,
+            "top": 298.87377507341057,
+            "right": 422.6608778891788,
+            "bottom": 598.8495144922764
+          },
+          "visible": {
+            "left": 214.1327079929233,
+            "top": 300.72120072033204,
+            "right": 418.96602659533596,
+            "bottom": 594.0000221691078
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00002216910775132419,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+            "args": [
+              -137.59318484042555,
+              -311.80516351063835,
+              269.79055851063833,
+              324.7872340425532
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1143,
+            "height": 1376
+          }
+        },
+        {
+          "id": "sh3_double_head_040",
+          "slot": 2,
+          "path": "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+          "exterior": {
+            "left": 856.9697126477319,
+            "top": 501.6604174650521,
+            "right": 1048.5151695930704,
+            "bottom": 594.5919277877287
+          },
+          "visible": {
+            "left": 857.9167853643961,
+            "top": 502.9626424504654,
+            "right": 1045.9107196222437,
+            "bottom": 594.0000073398136
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000007339813578255416,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+            "args": [
+              -94.45026178010473,
+              -99.70663350785341,
+              214.65968586387436,
+              107.32984293193718
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+        "assets/sprites/sh3_double_head_040.8c3f9985c31e.png"
+      ],
+      "snapshots": [
+        "duel-sh3_closer_036--sh3_double_head_040-tick0.png",
+        "duel-sh3_closer_036--sh3_double_head_040-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_double_head_040",
+        "sh3_closer_036"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 616.956804574468
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_double_head_040",
+          "slot": 1,
+          "path": "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+          "exterior": {
+            "left": 231.48486092450773,
+            "top": 501.6604174650521,
+            "right": 423.0303178698463,
+            "bottom": 594.5919277877287
+          },
+          "visible": {
+            "left": 234.08931089533434,
+            "top": 502.9626424504654,
+            "right": 422.083245153182,
+            "bottom": 594.0000073398136
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000007339813578255416,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+            "args": [
+              -94.45026178010473,
+              -99.70663350785341,
+              214.65968586387436,
+              107.32984293193718
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "sh3_closer_036",
+          "slot": 2,
+          "path": "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+          "exterior": {
+            "left": 857.3391526283993,
+            "top": 298.87377507341057,
+            "right": 1066.3291789363852,
+            "bottom": 598.8495144922764
+          },
+          "visible": {
+            "left": 861.0340039222422,
+            "top": 300.72120072033204,
+            "right": 1065.8673225246548,
+            "bottom": 594.0000221691078
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00002216910775132419,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+            "args": [
+              -137.59318484042555,
+              -311.80516351063835,
+              269.79055851063833,
+              324.7872340425532
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1143,
+            "height": 1376
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+        "assets/sprites/sh3_closer_036.19e033cd6a51.png"
+      ],
+      "snapshots": [
+        "duel-sh3_double_head_040--sh3_closer_036-tick0.png",
+        "duel-sh3_double_head_040--sh3_closer_036-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "41cf644abf609063d33731d1ac14027e89f79a9bd2940b0c3a0d001ff935cf22",
+  "src/sprite-manifest.jsSHA256": "3330c7416c1773c8ffa0a4bcd72f32907d84554374bc6e6f59f04e9b1f37ed60",
+  "version": "0.9.6",
+  "ids": [
+    "homecoming_order_soldier_091",
+    "sh2_lying_figure_crawling_021",
+    "sh3_closer_036",
+    "sh3_double_head_040"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

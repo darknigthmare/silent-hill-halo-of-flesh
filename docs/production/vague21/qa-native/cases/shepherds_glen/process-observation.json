@@ -1,0 +1,30 @@
+{
+  "exitCode": 0,
+  "wallTimeSeconds": 2.100807718,
+  "toolYieldTimeMs": 30000,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=64",
+    "--max-semi-space-size=1"
+  ],
+  "stageId": "shepherds_glen",
+  "startedAt": "2026-11-19T13:41:34.550Z",
+  "completedAt": "2026-11-19T13:41:36.535Z",
+  "signal": null,
+  "passed": true,
+  "checks": 46,
+  "harnessSHA256": "aa2f2f5094f7a62b96653ceaed51db6d936865b2b91f56406a193c6f45413812",
+  "report": "cases/shepherds_glen/report.json",
+  "reportSHA256": "1220772f5481df1a922f4992520f9da2c74c138f92ac19700a12ffe37e53f61d",
+  "command": [
+    "node",
+    "--expose-gc",
+    "--max-old-space-size=64",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/8edddaaaab76/stage-pass21-verification/qa-stage-pass21-native-shepherd-gc.mjs",
+    "--stages=shepherds_glen",
+    "--out=/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/cases/shepherds_glen"
+  ],
+  "combinedLog": "cases/shepherds_glen/process.combined.log",
+  "observationSource": "Actual isolated exec_command result: exit0,2.100807718s; authorized one-off after prior SIGKILL. No game logic or actor state changed."
+}

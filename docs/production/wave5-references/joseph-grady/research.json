@@ -1,0 +1,196 @@
+{
+  "date": "2026-11-18",
+  "baseline": "67fbe03d79124ac88d86a508a41f1eba745086c7",
+  "profiles": [
+    {
+      "id": "sh4_joseph_schreiber_victim_15",
+      "edition": "Silent Hill 4: The Room (2004), Room 302 of the Past",
+      "role": "noncombatant",
+      "priorEvidence": "docs/production/wave3-research-2026-11-18/research.json",
+      "identitySource": "https://www.silenthillmemories.net/publications/guides/silent_hill_4_the_official_strategy_guide_piggyback.pdf",
+      "identityFinding": "The official Piggyback guide, printed pp. 144–145, identifies the hanging apparition in this room as Joseph’s ghost. The original victim dossier silhouette depicts a standing figure and was excluded from the ghost geometry.",
+      "victimDossierExcluded": "https://www.silenthillmemories.net/sh4/victim_files/victim_15.jpg",
+      "visualFinding": "In the 640 × 480 recording at 08:46–08:54, the wide shot separates both shoulders, the complete head and the ceiling junction from Henry and Eileen. The form ends at the plane of the ceiling. In the frontal close-up the face, collar and shoulders have distinct modelling in near-black values. Only the parts visible below the ceiling enter the selection portrait. The clean close-up alone crops the subject.",
+      "evidence": [
+        {
+          "path": "docs/production/wave5-references/joseph-grady/joseph-ceiling-full-frame.png",
+          "sha256": "89d0ad2d9eb0d349e977058c2b085d04c965e0d2288bc2209537639742f68990",
+          "url": "https://archive.org/details/LP_Silent_Hill_4",
+          "mediaUrl": "https://archive.org/download/LP_Silent_Hill_4/sh4_12.mp4",
+          "timeSeconds": 530,
+          "nativeFrame": [
+            640,
+            480
+          ],
+          "cropXYXYExclusive": null,
+          "dimensions": [
+            640,
+            480
+          ],
+          "sourceType": "Recorded released-game footage from Niggurath’s playthrough, Part 12 (published 2012). Public Archive.org H.264. Uploader platform setting not independently confirmed. Game studio original scene, independent recording.",
+          "use": "Identification and complete visible manifestation at right, distinct from Henry and Eileen."
+        },
+        {
+          "path": "docs/production/wave5-references/joseph-grady/joseph-ceiling-contour.png",
+          "sha256": "55cac81eb4b2e51d9421524c8852070a522f507c0360613eca1abd5c3bf56bf3",
+          "url": "https://archive.org/details/LP_Silent_Hill_4",
+          "mediaUrl": "https://archive.org/download/LP_Silent_Hill_4/sh4_12.mp4",
+          "timeSeconds": 530,
+          "nativeFrame": [
+            640,
+            480
+          ],
+          "cropXYXYExclusive": [
+            473,
+            87,
+            640,
+            248
+          ],
+          "dimensions": [
+            167,
+            161
+          ],
+          "sourceType": "Recorded released-game footage from Niggurath’s playthrough, Part 12 (published 2012). Public Archive.org H.264. Uploader platform setting not independently confirmed. Game studio original scene, independent recording.",
+          "use": "The dark ceiling junction surrounds the shoulders. The head hangs down. Both shoulder sides terminate in the ceiling; unobstructed down to the crown of the head."
+        },
+        {
+          "path": "docs/production/wave5-references/joseph-grady/joseph-face-collar.png",
+          "sha256": "e886971beeb9f2fb328202cc0bf0eccfc8191d84caa106920ae5cf8b8b9b222a",
+          "url": "https://archive.org/details/LP_Silent_Hill_4",
+          "mediaUrl": "https://archive.org/download/LP_Silent_Hill_4/sh4_12.mp4",
+          "timeSeconds": 605,
+          "nativeFrame": [
+            640,
+            480
+          ],
+          "cropXYXYExclusive": [
+            90,
+            55,
+            626,
+            393
+          ],
+          "dimensions": [
+            536,
+            338
+          ],
+          "sourceType": "Recorded released-game footage from Niggurath’s playthrough, Part 12 (published 2012). Public Archive.org H.264. Uploader platform setting not independently confirmed. Game studio original scene, independent recording.",
+          "use": "Supplementary frontal close-up for upside-down facial planes, the jacket collar and tonal range. The frame crops the torso; framing must follow the wide view."
+        }
+      ],
+      "additionalRecording": "https://www.youtube.com/watch?v=JNDD9crXYW4&t=325s",
+      "additionalObservation": "The same broad composition repeats near 05:25–05:30 and a frontal close-up follows near 05:35 in the Silent Hill Memories recording. Used as cross-check only.",
+      "outcome": "first selection candidate, one still; fixed noncombatant",
+      "generation": {
+        "purpose": "selection",
+        "tool": "image_gen",
+        "exactPrompt": "Create a single transparent selection-catalogue sprite of Joseph Schreiber’s ceiling apparition, Victim 15 in the original Silent Hill 4: The Room. Use the two supplied native gameplay crops as the fixed guide. The first crop shows the entire visible manifestation, the second is only a facial detail. Reproduce the upright screen orientation of the first photograph: viewed by a person looking up, Joseph’s face is upside down, his bald crown points downward, his mouth and nose are above his eyes, and a broad shallow arc of his dark suit shoulders meets the ceiling immediately above his collar. A compact roughly triangular, shallow bust-like silhouette with a strong shoulders-to-head size relationship, shaped by the game’s original low-polygon model. Preserve the charcoal jacket, almost-black open shadow at the lapels, smooth dim grey face and small restrained highlights as observed. Calm still expression. Include the complete visible shape, his collar, both shoulder contours and only the very narrow irregular smoky-grey junction where the visible shoulders dissolve into the ceiling; let that junction fade to transparent. Centre the broad upper junction and dangling head together, upright in the canvas as shown in the references, with generous transparent margin on every side. This spectral man calmly speaking in a supernatural interior is the only subject. The portrait uses real transparent alpha. Keep all surrounding room, people, words, rectangular ceiling panels, furnishings and architecture outside the sprite. No freestanding body, arms, hands, legs, blood or rope. Static catalogue portrait, original 2004 PS2-era game rendering style.",
+        "generatorReferences": [
+          "docs/production/wave5-references/joseph-grady/joseph-ceiling-contour.png",
+          "docs/production/wave5-references/joseph-grady/joseph-face-collar.png"
+        ],
+        "sha256": "41c23490fcf287a6d86f25bc8570d075f9cd1c6e25245da90734f274205859f0",
+        "dimensions": [
+          1277,
+          1231
+        ],
+        "mode": "RGBA",
+        "alphaRange": [
+          0,
+          255
+        ],
+        "visualReview": "Upside-down head, collar and both shoulders have visible margins. The upper edge fades into a narrow grey seam. No additional figures, complete lower body, scenery or lettering."
+      },
+      "fidelity": "candidate; no 1:1 certification"
+    },
+    {
+      "id": "origins_memory_of_richard_grady_083",
+      "edition": "Silent Hill: Origins, Room 500 of Riverside Motel",
+      "role": "stationary-boss",
+      "priorEvidence": "docs/production/sprite-resume-reference-research-2026-11-18.json",
+      "identitySource": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf",
+      "guideType": "Official BradyGames PlayStation Portable guide. Printed pp. 113–114 show the combat and p. 147 labels the boss Sad Daddy. The living human in the preceding scene was excluded from the monster geometry.",
+      "evidence": [
+        {
+          "path": "docs/production/wave5-references/joseph-grady/grady-brady-p113-encounter.png",
+          "sha256": "94436ea382006498527570a7806b25ec14e64b93e4d20078d13f2ba9e341644c",
+          "dimensions": [
+            292,
+            180
+          ],
+          "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf",
+          "printedPage": 113,
+          "pdfPage": 114,
+          "sourceEmbeddedRaster": [
+            1202,
+            1536
+          ],
+          "cropXYXYExclusive": [
+            636,
+            1187,
+            928,
+            1367
+          ],
+          "observation": "Room 500 battle, caged central form behind Travis. Upper edge cuts the assembly."
+        },
+        {
+          "path": "docs/production/wave5-references/joseph-grady/grady-brady-p114-neck.png",
+          "sha256": "32f58fa39848fd85cb5ec041fe9436ba51eafe9cde1a57bc0ea34a09529df98c",
+          "dimensions": [
+            252,
+            160
+          ],
+          "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf",
+          "printedPage": 114,
+          "pdfPage": 115,
+          "sourceEmbeddedRaster": [
+            1206,
+            1536
+          ],
+          "cropXYXYExclusive": [
+            242,
+            408,
+            494,
+            568
+          ],
+          "observation": "Extended appendage at left, bars and adjoining installation. Partial view only."
+        },
+        {
+          "path": "docs/production/wave5-references/joseph-grady/grady-ps2-battle-72s.png",
+          "sha256": "aceed09274493ca0ab4705ab1ed574c23f48a27c941d8dc8774e0ff934ee2a78",
+          "dimensions": [
+            400,
+            300
+          ],
+          "url": "https://archive.org/details/SHOrigins_PS2_4559",
+          "mediaUrl": "https://archive.org/download/SHOrigins_PS2_4559/sho-run10.ogv",
+          "timeSeconds": 72,
+          "nativeFrame": [
+            400,
+            300
+          ],
+          "observation": "Whole decoded video frame from LucianoRX’s 2008 PS2 recording. Central and lateral fragments sit behind bars. Upper suspension exits the frame. HUD lower centre; player and lighting conceal much of the foreground."
+        }
+      ],
+      "visualFinding": "The PSP guide confirms the central cage and neck movement. In the PS2 stage footage, the observable central mass and adjacent appendages fit the printed saw-tooth cage and suspension. All views still cut or conceal the upper connection and the lateral ends. The fixed installation cannot be split away as one complete visible subject; drawing a continuous top or side would require guessing where it joins the room.",
+      "comparisonLimit": "The 2008 independently recorded PS2 capture and the PSP guide describe the same event. Exact mesh identity between the ports is unverified. The earlier modified PS2 footage and concept drawings were not used to reconstruct any missing parts.",
+      "decision": "blocked on the unobserved upper and lateral attachment contours; zero generation calls"
+    },
+    {
+      "id": "sh2_mandarin_floor_form",
+      "edition": "Silent Hill 2 (2001), original game",
+      "role": "unverified",
+      "priorEvidence": "art/provenance-art92-a.json",
+      "creatorSource": "https://www.silenthillmemories.net/lost_memories/guide/048-049_en.htm",
+      "sourceType": "English transcription of the Lost Memories creation commentary, printed pp. 48–49.",
+      "finding": "The described Mandarin hangs from mesh by its arms. The commentary explicitly places it below the floor. No distinct floor-standing 2001 model is identified. The existing hanging Mandarin ID has independent artwork. The remake and the similar Closer do not establish this original-game variant.",
+      "decision": "distinct grounded variant remains unverified; zero generation calls"
+    }
+  ],
+  "coverage": {
+    "reviewedEmptyProfiles": 3,
+    "firstSelectionCandidates": 1,
+    "newCombatCandidates": 0,
+    "unresolvedProfiles": 2
+  },
+  "editing": "No changes to art registry, original production ledger, combat capabilities or existing sprites."
+}

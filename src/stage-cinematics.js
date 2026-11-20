@@ -982,7 +982,7 @@ export function stageReferencePresentation(stage,time,matchState=null,{reducedMo
   return {time:reducedMotion?0:clock,track,strength,phase:matchState.phase};
 }
 
-function drawRoundComposition(ctx,w,h,track,strength){
+export function drawRoundComposition(ctx,w,h,track,strength){
   if(strength<=0)return;
   const x=track.anchor.x*w,y=track.anchor.y*h;
   ctx.save();ctx.globalAlpha*=strength;

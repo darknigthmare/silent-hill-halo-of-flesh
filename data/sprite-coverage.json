@@ -2,10 +2,16 @@
   "schema": 1,
   "version": "0.9.6",
   "total": 230,
-  "integrated": 154,
-  "missing": 76,
+  "integrated": 204,
+  "missing": 26,
+  "selectionAvailable": 204,
+  "selectionMissing": 26,
+  "combatSideViewCandidates": 190,
+  "combatLegacyUnreviewed": 4,
+  "combatMissing": 36,
+  "separateSelectionAndCombat": 190,
   "certified": 0,
-  "animatedClips": 1,
+  "animatedClips": 6,
   "presentationKeys": [
     "intro",
     "winRound",
@@ -26,9 +32,12 @@
       "source": "sh1",
       "game": "SILENT HILL",
       "status": "integrated-candidate",
-      "frames": 3,
+      "frames": 4,
       "animatedClips": 1,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -54,6 +63,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -79,6 +91,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -104,6 +119,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -129,6 +147,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -154,6 +175,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -179,6 +203,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -204,6 +231,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -229,6 +259,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -254,6 +287,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -279,6 +315,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -304,6 +343,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -329,6 +371,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -354,6 +399,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -379,6 +427,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -404,6 +455,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -425,10 +479,13 @@
       "name": "Monster Cybil",
       "source": "sh1",
       "game": "SILENT HILL",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -454,6 +511,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -479,6 +539,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -504,6 +567,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -529,6 +595,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -554,6 +623,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -575,10 +647,13 @@
       "name": "Mannequin",
       "source": "sh2",
       "game": "SILENT HILL 2",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -604,6 +679,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -629,6 +707,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -654,6 +735,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -679,6 +763,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -700,10 +787,13 @@
       "name": "Flesh Lip",
       "source": "sh2",
       "game": "SILENT HILL 2",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -729,6 +819,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -754,6 +847,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -779,6 +875,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -804,6 +903,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -829,6 +931,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -854,6 +959,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -879,6 +987,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -904,6 +1015,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -929,6 +1043,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -954,6 +1071,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -979,6 +1099,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1004,6 +1127,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1029,6 +1155,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1054,6 +1183,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1079,6 +1211,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1104,6 +1239,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1129,6 +1267,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1154,6 +1295,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1179,6 +1323,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1200,10 +1347,13 @@
       "name": "Nurse — Pipe",
       "source": "sh3",
       "game": "SILENT HILL 3",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 3,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1226,9 +1376,12 @@
       "source": "sh3",
       "game": "SILENT HILL 3",
       "status": "integrated-candidate",
-      "frames": 1,
+      "frames": 2,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1254,6 +1407,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1279,6 +1435,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1304,6 +1463,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1329,6 +1491,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1354,6 +1519,9 @@
       "frames": 3,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1375,10 +1543,13 @@
       "name": "God",
       "source": "sh3",
       "game": "SILENT HILL 3",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1404,6 +1575,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -1425,10 +1599,13 @@
       "name": "Sewer Creature",
       "source": "sh3",
       "game": "SILENT HILL 3",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -1454,6 +1631,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1479,6 +1659,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1504,6 +1687,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1529,6 +1715,9 @@
       "frames": 4,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1554,6 +1743,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1579,6 +1771,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1604,6 +1799,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1629,6 +1827,9 @@
       "frames": 2,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [
           "taunt@sh4_twin_victim_059:taunt"
@@ -1655,6 +1856,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1680,6 +1884,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1705,6 +1912,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1730,6 +1940,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1755,6 +1968,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1780,6 +1996,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1805,6 +2024,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -1830,6 +2052,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1855,6 +2080,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1880,6 +2108,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1905,6 +2136,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1930,6 +2164,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1951,10 +2188,13 @@
       "name": "Toby Archbolt — Victim 14",
       "source": "sh4",
       "game": "SILENT HILL 4: THE ROOM",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -1976,10 +2216,13 @@
       "name": "Joseph Schreiber — Victim 15",
       "source": "sh4",
       "game": "SILENT HILL 4: THE ROOM",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2005,6 +2248,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2026,10 +2272,13 @@
       "name": "Jasper Gein — Victim 17",
       "source": "sh4",
       "game": "SILENT HILL 4: THE ROOM",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2051,10 +2300,13 @@
       "name": "Andrew DeSalvo — Victim 18",
       "source": "sh4",
       "game": "SILENT HILL 4: THE ROOM",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2080,6 +2332,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2105,6 +2360,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2130,6 +2388,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2155,6 +2416,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2180,6 +2444,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2205,6 +2472,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -2230,6 +2500,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2251,10 +2524,13 @@
       "name": "Eileen Head",
       "source": "sh4",
       "game": "SILENT HILL 4: THE ROOM",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -2280,6 +2556,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2302,9 +2581,12 @@
       "source": "origins",
       "game": "SILENT HILL: ORIGINS",
       "status": "integrated-candidate",
-      "frames": 1,
-      "animatedClips": 0,
+      "frames": 6,
+      "animatedClips": 2,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2330,6 +2612,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2355,6 +2640,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2380,6 +2668,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2405,6 +2696,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2430,6 +2724,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2455,6 +2752,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2480,6 +2780,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2501,10 +2804,13 @@
       "name": "Memory of Richard Grady",
       "source": "origins",
       "game": "SILENT HILL: ORIGINS",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2526,10 +2832,13 @@
       "name": "Demon",
       "source": "origins",
       "game": "SILENT HILL: ORIGINS",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2555,6 +2864,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2580,6 +2892,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2605,6 +2920,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2630,6 +2948,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2655,6 +2976,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2680,6 +3004,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2705,6 +3032,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2727,9 +3057,12 @@
       "source": "homecoming",
       "game": "SILENT HILL: HOMECOMING",
       "status": "integrated-candidate",
-      "frames": 1,
+      "frames": 2,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2755,6 +3088,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2776,10 +3112,13 @@
       "name": "Curtis Ackers",
       "source": "homecoming",
       "game": "SILENT HILL: HOMECOMING",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2805,6 +3144,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2830,6 +3172,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2852,9 +3197,12 @@
       "source": "homecoming",
       "game": "SILENT HILL: HOMECOMING",
       "status": "integrated-candidate",
-      "frames": 1,
-      "animatedClips": 0,
+      "frames": 3,
+      "animatedClips": 1,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2877,9 +3225,12 @@
       "source": "homecoming",
       "game": "SILENT HILL: HOMECOMING",
       "status": "integrated-candidate",
-      "frames": 1,
-      "animatedClips": 0,
+      "frames": 3,
+      "animatedClips": 1,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2905,6 +3256,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -2930,6 +3284,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -2955,6 +3312,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -2980,6 +3340,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3005,6 +3368,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3030,6 +3396,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3055,6 +3424,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3080,6 +3452,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3105,6 +3480,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3130,6 +3508,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3155,6 +3536,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3176,10 +3560,13 @@
       "name": "Shadow",
       "source": "downpour",
       "game": "SILENT HILL: DOWNPOUR",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3201,10 +3588,13 @@
       "name": "Prisoner Minion — Brawler",
       "source": "downpour",
       "game": "SILENT HILL: DOWNPOUR",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3226,10 +3616,13 @@
       "name": "Prisoner Minion — Agile",
       "source": "downpour",
       "game": "SILENT HILL: DOWNPOUR",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3255,6 +3648,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3280,6 +3676,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3305,6 +3704,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3326,10 +3728,13 @@
       "name": "Void",
       "source": "downpour",
       "game": "SILENT HILL: DOWNPOUR",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -3351,10 +3756,13 @@
       "name": "Monocle Man",
       "source": "downpour",
       "game": "SILENT HILL: DOWNPOUR",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -3380,6 +3788,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3401,10 +3812,13 @@
       "name": "Wheelman",
       "source": "downpour",
       "game": "SILENT HILL: DOWNPOUR",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3430,6 +3844,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3451,10 +3868,13 @@
       "name": "Mama",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3476,10 +3896,13 @@
       "name": "Phantom",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3501,10 +3924,13 @@
       "name": "Greedy Worm — Arcade",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -3526,10 +3952,13 @@
       "name": "Split Worm — Arcade",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3551,10 +3980,13 @@
       "name": "Tremer — Arcade",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3576,10 +4008,13 @@
       "name": "Double Head — Arcade",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3601,10 +4036,13 @@
       "name": "Insane Cancer — Arcade",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3626,10 +4064,13 @@
       "name": "Hummer — Arcade",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3655,6 +4096,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -3680,6 +4124,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -3705,6 +4152,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3730,6 +4180,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -3751,10 +4204,13 @@
       "name": "Creeper — Arcade",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3777,9 +4233,12 @@
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
       "status": "integrated-candidate",
-      "frames": 1,
-      "animatedClips": 0,
+      "frames": 4,
+      "animatedClips": 1,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3801,10 +4260,13 @@
       "name": "Toadstool — Arcade",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -3826,10 +4288,13 @@
       "name": "Tuberculosis",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3851,10 +4316,13 @@
       "name": "Robbie the Rabbit — Axe",
       "source": "arcade",
       "game": "SILENT HILL: THE ARCADE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3880,6 +4348,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3905,6 +4376,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -3930,6 +4404,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3955,6 +4432,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -3980,6 +4460,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4005,6 +4488,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4026,10 +4512,13 @@
       "name": "Ghost",
       "source": "bom",
       "game": "SILENT HILL: BOOK OF MEMORIES",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4055,6 +4544,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4080,6 +4572,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4105,6 +4600,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4130,6 +4628,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4155,6 +4656,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4180,6 +4684,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4205,6 +4712,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -4230,6 +4740,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4251,10 +4764,13 @@
       "name": "Flesh Lips",
       "source": "bom",
       "game": "SILENT HILL: BOOK OF MEMORIES",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4280,6 +4796,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -4305,6 +4824,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -4326,10 +4848,13 @@
       "name": "Fire Guardian",
       "source": "bom",
       "game": "SILENT HILL: BOOK OF MEMORIES",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4351,10 +4876,13 @@
       "name": "Wood Guardian",
       "source": "bom",
       "game": "SILENT HILL: BOOK OF MEMORIES",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4380,6 +4908,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4405,6 +4936,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4430,6 +4964,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4455,6 +4992,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4480,6 +5020,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -4505,6 +5048,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4530,6 +5076,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -4551,10 +5100,13 @@
       "name": "Steel Guardian",
       "source": "bom",
       "game": "SILENT HILL: BOOK OF MEMORIES",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4580,6 +5132,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4605,6 +5160,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4626,10 +5184,13 @@
       "name": "Lisa",
       "source": "pt",
       "game": "P.T.",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4655,6 +5216,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4680,6 +5244,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4701,10 +5268,13 @@
       "name": "Ayakakashi",
       "source": "shf",
       "game": "SILENT HILL f",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4730,6 +5300,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4755,6 +5328,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4780,6 +5356,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -4805,6 +5384,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -4830,6 +5412,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4855,6 +5440,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4880,6 +5468,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4905,6 +5496,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -4930,6 +5524,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4951,10 +5548,13 @@
       "name": "Sakuko-Like Entity",
       "source": "shf",
       "game": "SILENT HILL f",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -4980,6 +5580,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5005,6 +5608,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5030,6 +5636,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5055,6 +5664,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5080,6 +5692,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5105,6 +5720,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5130,6 +5748,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5151,10 +5772,13 @@
       "name": "Armless Man",
       "source": "film",
       "game": "SILENT HILL — FILM UNIVERSE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5180,6 +5804,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5205,6 +5832,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5230,6 +5860,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5251,10 +5884,13 @@
       "name": "Colin the Janitor",
       "source": "film",
       "game": "SILENT HILL — FILM UNIVERSE",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5280,6 +5916,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5305,6 +5944,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5330,6 +5972,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5355,6 +6000,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5376,10 +6024,13 @@
       "name": "Bubble Head Nurse — Return to Silent Hill",
       "source": "film",
       "game": "SILENT HILL — FILM UNIVERSE",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5401,10 +6052,13 @@
       "name": "Creeper — Return to Silent Hill",
       "source": "film",
       "game": "SILENT HILL — FILM UNIVERSE",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5426,10 +6080,13 @@
       "name": "Red Pyramid Thing — Return to Silent Hill",
       "source": "film",
       "game": "SILENT HILL — FILM UNIVERSE",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5455,6 +6112,9 @@
       "frames": 0,
       "animatedClips": 0,
       "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5476,10 +6136,13 @@
       "name": "Wanderer",
       "source": "ascension",
       "game": "SILENT HILL: ASCENSION",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5501,10 +6164,13 @@
       "name": "Fighter",
       "source": "ascension",
       "game": "SILENT HILL: ASCENSION",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5526,10 +6192,13 @@
       "name": "Snarler",
       "source": "ascension",
       "game": "SILENT HILL: ASCENSION",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5555,6 +6224,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5580,6 +6252,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5601,10 +6276,13 @@
       "name": "The Collector",
       "source": "ascension",
       "game": "SILENT HILL: ASCENSION",
-      "status": "missing",
-      "frames": 0,
+      "status": "integrated-candidate",
+      "frames": 1,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5626,10 +6304,13 @@
       "name": "Stilledalen Stinger",
       "source": "ascension",
       "game": "SILENT HILL: ASCENSION",
-      "status": "missing",
+      "status": "integrated-candidate",
       "frames": 0,
       "animatedClips": 0,
-      "fidelity": "not-assessed",
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
       "presentations": {
         "present": [],
         "missing": [
@@ -5655,6 +6336,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5680,6 +6364,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5705,6 +6392,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5730,6 +6420,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [
@@ -5755,6 +6448,9 @@
       "frames": 1,
       "animatedClips": 0,
       "fidelity": "unverified",
+      "selection": true,
+      "combatView": "side-view-candidate",
+      "separateSelectionAndCombat": true,
       "presentations": {
         "present": [],
         "missing": [

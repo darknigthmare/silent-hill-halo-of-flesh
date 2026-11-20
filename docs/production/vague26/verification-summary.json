@@ -1,0 +1,254 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "createdAt": "2026-11-20T13:10:13.983151+00:00",
+  "status": "local-final-checks-passed-remote-ci-pending-publication",
+  "baseCommit": "8c2b56320ceb9fd5490660cb8e20a2dbf62c57bb",
+  "baseTree": "6a91576644a19bd0fb2ac23278e8584071e61dca",
+  "scope": "Three static lateral candidates on existing IDs; four new stage compositions; preserve source editions, roles, portraits and prior clips.",
+  "coverage": {
+    "sprites": {
+      "schema": 1,
+      "version": "0.9.6",
+      "total": 230,
+      "integrated": 204,
+      "missing": 26,
+      "selectionAvailable": 204,
+      "selectionMissing": 26,
+      "combatSideViewCandidates": 190,
+      "combatLegacyUnreviewed": 4,
+      "combatMissing": 36,
+      "separateSelectionAndCombat": 190,
+      "certified": 0,
+      "animatedClips": 6,
+      "presentationClips": 1,
+      "animatedPresentationClips": 0
+    },
+    "upgradedProfiles": {
+      "total": 3,
+      "staticProfiles": 3,
+      "existingAnimatedProfilesReoriented": 0,
+      "existingAnimatedFrameReplacements": 0,
+      "animatedIds": [],
+      "combatCandidates": 2,
+      "referenceOnly": 1,
+      "ids": [
+        "ascension_the_collector_183",
+        "film_creeper_swarm_film_173",
+        "sh1_stalker_008"
+      ],
+      "combatIds": [
+        "film_creeper_swarm_film_173",
+        "sh1_stalker_008"
+      ],
+      "referenceOnlyIds": [
+        "ascension_the_collector_183"
+      ],
+      "newPortraits": 0,
+      "newAnimatedClips": 0,
+      "filledMissing": [
+        "ascension_the_collector_183"
+      ],
+      "upgradedLegacy": [
+        "film_creeper_swarm_film_173",
+        "sh1_stalker_008"
+      ],
+      "newStaticIdles": 1
+    },
+    "stages": {
+      "total": 123,
+      "active": 79,
+      "missing": 44,
+      "missingUnblocked": 29,
+      "blocked": 15,
+      "added": 4,
+      "ids": [
+        "nightmare_theater",
+        "nightmare_school",
+        "nightmare_mall_sm",
+        "frozen_streets"
+      ],
+      "storedCompositions": 81,
+      "activePNG": 154
+    }
+  },
+  "nativeImageOutputs": {
+    "newNativeOutputs": 13,
+    "selectedActiveOutputs": 11,
+    "archivedSupersededOutputs": 2,
+    "activeStaticCharacterOutputs": 3,
+    "activeStagePlanes": 8,
+    "newPortraits": 0,
+    "newAnimatedClips": 0,
+    "refusedAttemptsWithNoImage": 1
+  },
+  "localQA": {
+    "fullRepositoryCommand": "npm test",
+    "nodeTests": {
+      "tests": 1292,
+      "pass": 1292,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "pythonTests": 115,
+    "fullCommandsPassed": true,
+    "protectedFilesVerified": 65,
+    "trackedTreeUnchangedByQA": true,
+    "preservationAuditChecks": 320,
+    "priorPNGByteIdentical": 591,
+    "sourceFilesProtectedByBaseline": 59,
+    "nativeProcesses": {
+      "processes": 7,
+      "successfulProcesses": 7,
+      "nativeAssertions": 364,
+      "characterCombatCases": 4,
+      "stageCases": 4,
+      "referencePreviews": 2,
+      "generatedCaptures": 21,
+      "capturesActuallyViewed": 10,
+      "charactersReviewed": 3,
+      "stagesReviewed": 4
+    },
+    "evidenceRevalidationChecks": 258
+  },
+  "memoryAdmission": {
+    "fighterBudgetBytes": 67108864,
+    "changedPairsChecked": 337,
+    "maximumDecodedBytes": 44046656,
+    "rejections": 0,
+    "scope": "Changed combat views paired with every currently illustrated, combat-enabled opponent. Other registry frames are verified unchanged; the earlier full pair matrix is not recounted as a new run.",
+    "stages": {
+      "budgetBytes": 67108864,
+      "changedStageRoomPairsChecked": 324,
+      "maximumDecodedBytes": 25174376,
+      "rejections": 0,
+      "scope": "Each newly authored stage paired with every stored room composition, including historical room variants. No full unchanged pair matrix is recounted."
+    }
+  },
+  "remaining": {
+    "remainingRows": 40,
+    "legacyUnreviewed": 4,
+    "missingCombatView": 36,
+    "selectionMissingWithinRemaining": 26,
+    "productionInProgress": 0,
+    "resolvedProfilesThisWave": 3,
+    "resolvedLegacyThisWave": 2,
+    "resolvedMissingThisWave": 1,
+    "byPrimaryReason": {
+      "source-insufficient": 14,
+      "historical-refusal": 12,
+      "related-refusal-hold": 9,
+      "corpus-divergence": 5
+    }
+  },
+  "httpBrowser": {
+    "localAttemptStatus": "blocked-before-browser-launch",
+    "localFailure": "Chromium socket() failed: Operation not permitted",
+    "localApplicationChecksPassed": 0,
+    "localCaptures": 0,
+    "remoteGateAdded": true,
+    "remoteBuild": "dist",
+    "remoteCharacterIds": [
+      "ascension_the_collector_183",
+      "film_creeper_swarm_film_173",
+      "sh1_stalker_008"
+    ],
+    "remoteStageIds": [
+      "nightmare_theater",
+      "nightmare_school",
+      "nightmare_mall_sm",
+      "frozen_streets"
+    ],
+    "remoteStatusAtThisSnapshot": "not-yet-run-on-published-commit",
+    "serviceWorkerOfflineOrUpdateTested": false
+  },
+  "resolvedRegressions": [
+    {
+      "kind": "existing-CI-test-stale-path",
+      "change": "One Air Screamer expected PNG path updated to the already published wave25 lateral asset; no runtime change.",
+      "evidence": "ci-regression-result.json"
+    },
+    {
+      "kind": "wave26-import-journal-contract",
+      "change": "Add required top-level kind and SHA256 from immutable receipts; preserve the collective Creeper declaration; generic validator unchanged.",
+      "evidence": "ci-journal-regression-result.json",
+      "firstFailedFullRun": "full-checks.json",
+      "finalPassedFullRun": "full-checks-final.json",
+      "targetedTestsAreSubsetOfFullCount": true
+    }
+  ],
+  "generationRefusal": {
+    "fighterId": "film_bubble_head_nurse_return_to_silent_hill",
+    "requestId": "b468e2dc-c90c-4431-ab93-83f40574d77c",
+    "attempts": 1,
+    "successfulImages": 0,
+    "retried": false,
+    "receipt": "docs/production/vague26/film/receipt-nurse-return-refused.json"
+  },
+  "limitations": [
+    "All newly generated character views are static, with fidelity unverified. No new animation and no1:1 certification.",
+    "Collector stays noncombatant and reference-only. Creeper is one collective profile with three complete bodies, not a canonical swarm-size claim or three independent actors.",
+    "Stalker alpha is authored; exact PS1 subtractive blending and source timing are not certified.",
+    "Stage lateral expansion is interpreted; the frozen street source is a prerelease promotional capture.",
+    "Native Canvas evidence is distinct from browser HTTP evidence. Remote results are reported on the exact published commit in PR6 after this snapshot."
+  ],
+  "evidence": [
+    {
+      "path": "docs/production/vague26/final-audit.json",
+      "bytes": 104637,
+      "sha256": "f73ebfb7ee80f35fff42414b7c09b5236c409bf3a7540e21da6a978f3a3e49a2"
+    },
+    {
+      "path": "docs/production/vague26/full-checks-final.json",
+      "bytes": 8076,
+      "sha256": "bc600ab21b0e8da9a698c085da950d9a5eccea041a623ceace7eabe90aecb2fe"
+    },
+    {
+      "path": "docs/production/vague26/native-evidence-final.json",
+      "bytes": 38284,
+      "sha256": "01b86094aa3e508580e54d71c052a97169a98c69de9571c379d6b9052ac23311"
+    },
+    {
+      "path": "docs/production/vague26/native-dispositions.json",
+      "bytes": 8235,
+      "sha256": "2e3915be36ce7377d5619f3f8109a181f173b20fb360fa2b89aacdd24e450dae"
+    },
+    {
+      "path": "docs/production/vague26/remaining-evidence.json",
+      "bytes": 82085,
+      "sha256": "1c132c507bb99438c9752433e9b4282bf7a3f832ff2c2d07b9d021f5118cdfdf"
+    },
+    {
+      "path": "docs/production/vague26/ci-base-status.json",
+      "bytes": 3978,
+      "sha256": "75266478876ad45af02702eaae3d63549101f6a072eb299912a011958ce05bb2"
+    },
+    {
+      "path": "docs/production/vague26/ci-regression-result.json",
+      "bytes": 424,
+      "sha256": "4602de4940c765e9d597f703234ba2d96088bc485bf68d4e3931e0cd382e4b05"
+    },
+    {
+      "path": "docs/production/vague26/ci-journal-regression-result.json",
+      "bytes": 21376,
+      "sha256": "6b1fbe926687b350004c3cb7352b844ba1b0135f167c3455738d3a5ea3abfbf8"
+    },
+    {
+      "path": "docs/production/vague26/qa-http/batch-a/report.json",
+      "bytes": 7107,
+      "sha256": "4886a1f1d3291eb888da051eaec88ab87dbf9c53609efc5159dd3e0daff5d968"
+    },
+    {
+      "path": "docs/production/vague26/qa-http/batch-a/process-observation.json",
+      "bytes": 5672,
+      "sha256": "e33f68ad01c7cd60a5f71e6ad2f02d1241d7a4bb9e4fcdbc22865a7a11cff64e"
+    },
+    {
+      "path": "docs/production/vague26/RAPPORT_VAGUE26_PERSONNAGES_ET_ARENES.md",
+      "bytes": 14221,
+      "sha256": "c7c46bbf1f0d88e7388e93da6bf769dcd4e3ad78ae4f49d0002e7f03f48f8255"
+    }
+  ]
+}

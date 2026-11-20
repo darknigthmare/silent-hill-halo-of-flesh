@@ -1,0 +1,1614 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "reviewedAt": "2026-11-20T09:53:43.222530+00:00",
+  "status": "final",
+  "scope": "Evidence register for remaining art views. Coverage labels describe art availability; they do not activate combat or certify fidelity.",
+  "baseRemoteCommit": "ebca8aa25d943692ae78837ea81b07cc229eeea5",
+  "baseLocalEquivalent": "941ebe70c72bd473bceff6ce59ea4438cb889629",
+  "currentCoverage": {
+    "schema": 1,
+    "version": "0.9.6",
+    "total": 230,
+    "integrated": 204,
+    "missing": 26,
+    "selectionAvailable": 204,
+    "selectionMissing": 26,
+    "combatSideViewCandidates": 187,
+    "combatLegacyUnreviewed": 6,
+    "combatMissing": 37,
+    "separateSelectionAndCombat": 187,
+    "certified": 0,
+    "animatedClips": 6,
+    "presentationClips": 1,
+    "animatedPresentationClips": 0
+  },
+  "coverageEvidence": {
+    "path": "data/sprite-coverage.json",
+    "jsonPointer": "",
+    "fileSHA256": "37380897151c7caae1df7874c7c2370bf556ae9b14db1cb5b4989f22a25c4933",
+    "relation": "direct"
+  },
+  "baselineEvidence": {
+    "path": "docs/production/vague25/scope-baseline.json",
+    "jsonPointer": "",
+    "fileSHA256": "02d3beb2f8d031a3f6845168392eb6377f7eb39ae31f6f2eb47503f9f04d629a",
+    "relation": "direct"
+  },
+  "townfallRecoveredSourceEvidence": {
+    "path": "docs/production/vague25/townfall/references/source-inventory.json",
+    "jsonPointer": "",
+    "fileSHA256": "d053a7051f1c67f290e4321e92a022aee45df3e39284b9f918fc948cb8cbd9c3",
+    "relation": "direct"
+  },
+  "registrySHA256": "581fc105104dcb11ccefaa6f9fde2597ac13a477da2a063264a2e31bb3993efb",
+  "counts": {
+    "remainingRows": 43,
+    "legacyUnreviewed": 6,
+    "missingCombatView": 37,
+    "selectionMissingWithinRemaining": 26,
+    "productionInProgress": 0,
+    "resolvedLegacyThisWave": 12,
+    "byPrimaryReason": {
+      "source-insufficient": 16,
+      "historical-refusal": 11,
+      "related-refusal-hold": 9,
+      "corpus-divergence": 7
+    }
+  },
+  "method": [
+    "Current built coverage and project roles read directly; no corpus definitions changed by this register.",
+    "Historical ART92, ART144, 20261117 and wave23 refusal records reconciled by exact ID and JSON pointer.",
+    "Latest usable evidence takes precedence over older missing-source statements; historical records remain intact.",
+    "All evidence paths and JSON pointers resolved and their complete file SHA256 recorded.",
+    "Historical research is not described as a new search in this wave."
+  ],
+  "importantCorrections": [
+    "Townfall is not source-less: five named ART92-e profiles have eight native JPEG references verified again in vague25/townfall/references/source-inventory.json.",
+    "Air Screamer cannot be flattened to a static image; a lateral glide alone does not validate its three frontal idle frames. An animated update requires preserving frame3, portrait, clip order and timings.",
+    "BoM Swarm currently depicts one insect; collective prose is a corpus disagreement, not proof that a group is required.",
+    "Arcade Red Pyramid has no own refusal found; the related refinement hold is explicitly documented by the film refusal, so do not relabel it as a direct Arcade rejection.",
+    "Dark Nurse 2006 full costume references were found before its 20261117 output refusal; the old incomplete-source reason is no longer the primary blocker.",
+    "Role noncombatant/environmental/unverified remains independent of an absent view; no new duel permission follows from this art register."
+  ],
+  "resolvedThisWave": [
+    {
+      "fighterId": "sh1_air_screamer_001",
+      "name": "Air Screamer",
+      "source": "sh1",
+      "combatView": "side-view-candidate",
+      "animatedClips": 1
+    },
+    {
+      "fighterId": "sh1_larval_stalker_007",
+      "name": "Larval Stalker",
+      "source": "sh1",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "downpour_tormented_soul_111",
+      "name": "Tormented Soul",
+      "source": "downpour",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "downpour_wall_corpse_112",
+      "name": "Wall Corpse",
+      "source": "downpour",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "bom_blood_baby_144",
+      "name": "Blood Baby",
+      "source": "bom",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "shf_rinko_like_entity_163",
+      "name": "Rinko-Like Entity",
+      "source": "shf",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "shf_hinako_s_father_164",
+      "name": "Hinako’s Father",
+      "source": "shf",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "townfall_lunger",
+      "name": "Lunger",
+      "source": "townfall",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "townfall_sorrowful",
+      "name": "Sorrowful",
+      "source": "townfall",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "townfall_fallen",
+      "name": "Fallen",
+      "source": "townfall",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "townfall_widow",
+      "name": "Widow",
+      "source": "townfall",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    },
+    {
+      "fighterId": "townfall_the_weight",
+      "name": "The Weight",
+      "source": "townfall",
+      "combatView": "side-view-candidate",
+      "animatedClips": 0
+    }
+  ],
+  "productionInProgress": [],
+  "entries": [
+    {
+      "fighterId": "sh1_stalker_008",
+      "name": "Stalker",
+      "source": "sh1",
+      "combatView": "legacy-unreviewed",
+      "selectionAvailable": true,
+      "activeFrames": 1,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reasonCodes": [
+        "source-insufficient",
+        "corpus-divergence"
+      ],
+      "reason": "L’ancien candidat est une reconstruction textuelle dérivée du Grey Child. Le Stalker armé translucide de Nowhere reste distinct du petit Larval Stalker ; aucune source entière exacte suffisante n’a été livrée.",
+      "requiredEvidenceOrAction": "Capture ou modèle de cette forme armée et de sa transparence dans l’édition choisie ; ne pas recolorer Grey Child ou Larval Stalker.",
+      "evidence": [
+        {
+          "path": "docs/production/vague25/classics/scope-audit.json",
+          "jsonPointer": "/entries/2",
+          "fileSHA256": "dc2dae1be67b78579977b84e613fb6c9e91ae36228cf111f378eef42631295f6",
+          "relation": "direct"
+        },
+        {
+          "path": "art/registry.json",
+          "jsonPointer": "/assets/sh1_stalker_008",
+          "fileSHA256": "581fc105104dcb11ccefaa6f9fde2597ac13a477da2a063264a2e31bb3993efb",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh1_incubus_019",
+      "name": "Incubus",
+      "source": "sh1",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "stationary-boss",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Refus antérieur explicite de génération de l’Incubus SH1 ; aucune nouvelle tentative, reformulation ou variante de remplacement.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "sh1_incubus_019",
+        "requestId": null
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/1",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-a.json",
+          "jsonPointer": "/blocked/1",
+          "fileSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh2_mannequin_ambusher_023",
+      "name": "Mannequin — Ambusher",
+      "source": "sh2",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Même sujet Mannequin SH2 que le refus antérieur ; aucune variante Ambusher utilisée pour reprendre la génération refusée.",
+      "reasonCodes": [
+        "related-refusal-hold"
+      ],
+      "historicalRefusal": {
+        "kind": "related",
+        "subject": "Mannequin SH2",
+        "ownRefusalClaimed": false
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/3",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-a.json",
+          "jsonPointer": "/blocked/3",
+          "fileSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh2_maria_final_manifestation_033",
+      "name": "Maria — Final Manifestation",
+      "source": "sh2",
+      "combatView": "legacy-unreviewed",
+      "selectionAvailable": true,
+      "activeFrames": 1,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reasonCodes": [
+        "related-refusal-hold"
+      ],
+      "reason": "Le candidat Maria précède le refus explicite Mary Final Manifestation. Le sujet apparenté n’a pas été régénéré sous l’autre nom.",
+      "requiredEvidenceOrAction": "Conserver le candidat antérieur ; aucun nouvel appel, relabel ou variante de remplacement du sujet refusé.",
+      "evidence": [
+        {
+          "path": "docs/production/vague25/classics/scope-audit.json",
+          "jsonPointer": "/entries/3",
+          "fileSHA256": "dc2dae1be67b78579977b84e613fb6c9e91ae36228cf111f378eef42631295f6",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-a.json",
+          "jsonPointer": "/newRefusals/0",
+          "fileSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f",
+          "relation": "related"
+        }
+      ],
+      "historicalRefusal": {
+        "kind": "related",
+        "subject": "Mary Final Manifestation",
+        "requestId": "aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30"
+      },
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh2_mary_final_manifestation_034",
+      "name": "Mary — Final Manifestation",
+      "source": "sh2",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Refus explicite de l’outil image pour Mary Final Manifestation SH2, catégorie output violence, requête aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30. Un seul appel ; aucune nouvelle requête ou autre identité utilisée après le refus.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "sh2_mary_final_manifestation_034",
+        "requestId": "aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30"
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/5",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-a.json",
+          "jsonPointer": "/newRefusals/0",
+          "fileSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh2_prisoner_035",
+      "name": "Prisoner",
+      "source": "sh2",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "La FAQ SH2 relue qualifie la présence de « invisible unknown creature » et décrit dégâts/cris, sans apparition corporelle. Ce signal peut être ciblé mais ne fournit aucun extérieur visible ; ni silhouette de prisonnier inventée, ni corps du remake transféré.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Une apparence visible réellement documentée de cette présence ; ne pas lui inventer un corps de prisonnier.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/6",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-a.json",
+          "jsonPointer": "/newResearchFindings/0",
+          "fileSHA256": "5384abc212e1e40fddea4cc7ce5b5dbcda5ed43aa83e6977a1805c843de8231c",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh2_spider_mannequin",
+      "name": "Spider Mannequin",
+      "source": "sh2",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Même famille de sujet Mannequin SH2 précédemment refusée ; variante Spider non utilisée comme nouvel essai ni substitution.",
+      "reasonCodes": [
+        "related-refusal-hold"
+      ],
+      "historicalRefusal": {
+        "kind": "related",
+        "subject": "Mannequin SH2",
+        "ownRefusalClaimed": false
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/7",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-a.json",
+          "jsonPointer": "/blocked/7",
+          "fileSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh2_mandarin_floor_form",
+      "name": "Mandarin — Floor Form",
+      "source": "sh2",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "unverified",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Le commentaire de création original relu décrit la suspension par les bras puis dit explicitement « it is not permitted to stand above ground ». Aucun modèle propre de Floor Form n’est identifié dans la source ; adaptation non canonique toujours sans apparence validable, pas de réemploi du Mandarin suspendu.",
+      "reasonCodes": [
+        "corpus-divergence"
+      ],
+      "requiredEvidenceOrAction": "Une identité et un modèle autonomes attestant cette adaptation Floor Form ; ne pas déplacer le Mandarin suspendu au sol.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/8",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-a.json",
+          "jsonPointer": "/newResearchFindings/1",
+          "fileSHA256": "5384abc212e1e40fddea4cc7ce5b5dbcda5ed43aa83e6977a1805c843de8231c",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "source": "sh3",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Refus antérieur explicite de génération de Valtiel SH3 ; aucune nouvelle tentative ou substitution.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "sh3_valtiel_051",
+        "requestId": null
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/10",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-a.json",
+          "jsonPointer": "/blocked/12",
+          "fileSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh3_sewer_creature_052",
+      "name": "Sewer Creature",
+      "source": "sh3",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "scripted-encounter",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Les trois nouvelles vues associées à Underpass montrent l’emplacement du mémo, sa carte et Heather avec le sèche-cheveux, aucune silhouette entière du monstre. Le guide établit un danger scripté sous la passerelle et sa neutralisation, pas son contour corporel. Aucun corps caché déduit de l’eau ni confusion avec la sewer lady de l’Extra New Game.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Le contour complet du même danger de l’Underpass, y compris les parties sous l’eau ; pas un corps inféré des appendices.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/11",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-a.json",
+          "jsonPointer": "/newResearchFindings/3",
+          "fileSHA256": "5384abc212e1e40fddea4cc7ce5b5dbcda5ed43aa83e6977a1805c843de8231c",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh4_ghost_victim_066",
+      "name": "Ghost — Victim",
+      "source": "sh4",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Galerie SH4 correcte arts_monsters consultée et cinq arts supplémentaires inspectés :01/02 montrent des bustes pris dans une paroi/substance, avec bas caché ;06/07/39 sont explicitement Cynthia selon les légendes de galerie. Aucun extérieur entier propre au dossier collectif des anciens Ghosts ainsi découvert. Le corps d’une victime nommée n’est pas réétiqueté, et aucun membre de la famille refusé n’est repris sous le nom collectif.",
+      "reasonCodes": [
+        "corpus-divergence",
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Une identité propre au dossier collectif et une vue entière de ce sujet, sans emprunter ni fusionner les victimes nommées.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/12",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-a.json",
+          "jsonPointer": "/newResearchFindings/4",
+          "fileSHA256": "5384abc212e1e40fddea4cc7ce5b5dbcda5ed43aa83e6977a1805c843de8231c",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh4_sacrificed_walter_071",
+      "name": "Sacrificed Walter",
+      "source": "sh4",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "scripted-encounter",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "La nouvelle illustration native Final Boss38 complète le visage/torse ; avec la capture des Final Sacraments, les extrémités latérales restent hors cadre. L’union ne fournit pas tout l’extérieur du Conjurer et de ses attaches ; aucun transfert du Shadow Walter mobile.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Une vue du Conjurer sacrifié et de toutes ses attaches/extrémités ; ne pas réutiliser Shadow Walter mobile.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/17",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-b.json",
+          "jsonPointer": "/items/2",
+          "fileSHA256": "166b4d9988e93f6345a3be13157d8c61a24dcd13a31fbb401056a74dfe061873",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "sh4_eileen_head_073",
+      "name": "Eileen Head",
+      "source": "sh4",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "La nouvelle capture presse SH4 de juin 2004 montre la tête géante, mais le personnage masque encore bouche, menton et raccord au sol. Le contour entier reste inconnu ; aucun corps de duel ajouté.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Le contour inférieur complet et le raccord de la tête géante au sol ; ne pas ajouter un corps de duel.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/18",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-b.json",
+          "jsonPointer": "/items/3",
+          "fileSHA256": "166b4d9988e93f6345a3be13157d8c61a24dcd13a31fbb401056a74dfe061873",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "homecoming_amnion_hanging_form_097",
+      "name": "Amnion — Hanging Form",
+      "source": "homecoming",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Refus antérieur Amnion conservé ; aucune nouvelle requête pour ce sujet.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "homecoming_amnion_hanging_form_097",
+        "requestId": "618d08f4-0487-4b32-839f-f69a2983f6e2"
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/21",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/reference-provenance-batch12.json",
+          "jsonPointer": "/blocked/3",
+          "fileSHA256": "b64091acc89f6f0189c9a0dfe1b84c7c546a0ff26f5de8a1ece2e6869497a7bd",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "homecoming_amnion_exposed_form_098",
+      "name": "Amnion — Exposed Form",
+      "source": "homecoming",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Même sujet Amnion déjà refusé ; la phase Exposed ne sert pas de variante de contournement. Aucune requête.",
+      "reasonCodes": [
+        "related-refusal-hold"
+      ],
+      "historicalRefusal": {
+        "kind": "related",
+        "subject": "Amnion Hanging Form",
+        "ownRefusalClaimed": false
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/22",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/reference-provenance-batch12.json",
+          "jsonPointer": "/blocked/4",
+          "fileSHA256": "b64091acc89f6f0189c9a0dfe1b84c7c546a0ff26f5de8a1ece2e6869497a7bd",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "downpour_void_113",
+      "name": "Void",
+      "source": "downpour",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Le Void est une lumière/consommation du décor, sans corps fini dans la capture native. Le rendre comme un monstre entier ou inventer une extrémité du phénomène n’aurait pas de support visuel ; rôle environnemental conservé.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Une représentation fidèle du phénomène environnemental sans lui inventer de corps fini ; conserver son rôle.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/23",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-b.json",
+          "jsonPointer": "/items/15",
+          "fileSHA256": "166b4d9988e93f6345a3be13157d8c61a24dcd13a31fbb401056a74dfe061873",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "downpour_monocle_man_114",
+      "name": "Monocle Man",
+      "source": "downpour",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "La référence nommée résout la membrane faciale et le monocle, mais les rayons, rubans et chaîne sortent du cadre. Aucune nouvelle vue complémentaire exacte de leurs extrémités ; pas de corps humain ajouté.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Des vues exactes des extrémités des rayons, rubans et chaîne actuellement hors cadre ; aucun corps humain ajouté.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/24",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-b.json",
+          "jsonPointer": "/items/16",
+          "fileSHA256": "166b4d9988e93f6345a3be13157d8c61a24dcd13a31fbb401056a74dfe061873",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "arcade_greedy_worm_arcade_119",
+      "name": "Greedy Worm — Arcade",
+      "source": "arcade",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "superEnabled": false,
+      "reason": "Les31 captures Arcade montrent un gros plan de créature vermiforme mais ne prouvent pas son extérieur entier. Les nouveaux rendus Greedy Worm SH4 appartiennent à une autre œuvre et ne sont pas transférés à ce profil Arcade.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Un extérieur entier nominatif de l’édition Arcade ; les 31 captures proches et le Greedy Worm SH4 ne le prouvent pas.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/28",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-b.json",
+          "jsonPointer": "/items/20",
+          "fileSHA256": "166b4d9988e93f6345a3be13157d8c61a24dcd13a31fbb401056a74dfe061873",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "arcade_numb_body_arcade",
+      "name": "Numb Body — Arcade",
+      "source": "arcade",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": false,
+      "reason": "Aucun modèle entier Numb Body nommément attribuable à Arcade trouvé parmi les galeries et captures consultées. Les figures humanoïdes attestées dans ces vues sont Gum Head/Scraper ou restent non attribuées ; elles ne sont pas renommées Numb Body.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Une vue Arcade entière nommée Numb Body ; ne pas renommer Gum Head, Scraper ou une figure non identifiée.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/34",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-c.json",
+          "jsonPointer": "/blocked/5",
+          "fileSHA256": "f649aa3f9967cdf50f4e258b247b9f1f4e8de57ccb54979bd5c485275827cad5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "arcade_nurse_arcade",
+      "name": "Nurse — Arcade",
+      "source": "arcade",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": false,
+      "reason": "Sujet déjà arrêté dans ART144 : le modèle Nurse Arcade correspond au design SH3 Pipe précédemment refusé. Aucun nouvel appel, réétiquetage ou autre variante pour contourner ce refus ; aucun modèle indépendant distinct établi.",
+      "reasonCodes": [
+        "related-refusal-hold"
+      ],
+      "historicalRefusal": {
+        "kind": "related",
+        "subject": "Nurse Pipe SH3, même design non démontré indépendant",
+        "ownRefusalClaimed": false
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/35",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-c.json",
+          "jsonPointer": "/blocked/6",
+          "fileSHA256": "f649aa3f9967cdf50f4e258b247b9f1f4e8de57ccb54979bd5c485275827cad5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "arcade_red_pyramid_thing_arcade",
+      "name": "Red Pyramid Thing — Arcade",
+      "source": "arcade",
+      "combatView": "legacy-unreviewed",
+      "selectionAvailable": true,
+      "activeFrames": 1,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": false,
+      "reasonCodes": [
+        "related-refusal-hold"
+      ],
+      "reason": "La source Arcade est identifiée et distincte, mais l’arrêt explicite des raffinements Pyramid apparentés suit le refus du profil film en vague23. Aucun refus propre à cet ID Arcade n’est retrouvé.",
+      "requiredEvidenceOrAction": "Préserver le candidat Arcade existant ; ne pas réessayer le sujet par changement d’édition ni attribuer le refus film directement à cet ID.",
+      "evidence": [
+        {
+          "path": "art/reference-provenance-batch12.json",
+          "jsonPointer": "/selected/10",
+          "fileSHA256": "b64091acc89f6f0189c9a0dfe1b84c7c546a0ff26f5de8a1ece2e6869497a7bd",
+          "relation": "direct"
+        },
+        {
+          "path": "docs/production/vague23/characters-extra/film-red-pyramid-generation-blocked.json",
+          "jsonPointer": "",
+          "fileSHA256": "53ca8f702f31d70d1bfea5f338b2e3e2fde8ce76787b721fe1d8027666736fbc",
+          "relation": "related"
+        }
+      ],
+      "historicalRefusal": {
+        "kind": "related",
+        "subject": "Film Red Pyramid et arrêt explicite des raffinements Pyramid apparentés",
+        "requestId": "15d589f4-eb36-45f9-a620-971a58114c38",
+        "ownRefusalFound": false
+      },
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "arcade_toadstool_arcade",
+      "name": "Toadstool — Arcade",
+      "source": "arcade",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "unverified",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Les cartes Arcade nomment Toadstool, mais leurs pictogrammes représentent des positions de parcours, pas le corps du monstre. Aucune silhouette entière Arcade identifiée dans les captures consultées ; pas de champignon SH4 importé par défaut.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Une silhouette corporelle entière Arcade ; les pictogrammes de parcours ne documentent pas son anatomie.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/37",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-c.json",
+          "jsonPointer": "/blocked/8",
+          "fileSHA256": "f649aa3f9967cdf50f4e258b247b9f1f4e8de57ccb54979bd5c485275827cad5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "arcade_robbie_the_rabbit_shotgun",
+      "name": "Robbie the Rabbit — Shotgun",
+      "source": "arcade",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Conflit de variante : le modèle est nommé Robbie_Rifle.obj et le port décrit un rifle, alors que le profil actuel indique Shotgun. Aucun fusil attribué arbitrairement à ce profil.",
+      "reasonCodes": [
+        "corpus-divergence"
+      ],
+      "requiredEvidenceOrAction": "Résoudre la variante Shotgun face au modèle nommé Robbie_Rifle.obj et documenter l’arme complète tenue par ce sujet.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/39",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-c.json",
+          "jsonPointer": "/blocked/11",
+          "fileSHA256": "f649aa3f9967cdf50f4e258b247b9f1f4e8de57ccb54979bd5c485275827cad5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "bom_swarm_132",
+      "name": "Swarm",
+      "source": "bom",
+      "combatView": "legacy-unreviewed",
+      "selectionAvailable": true,
+      "activeFrames": 1,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reasonCodes": [
+        "source-insufficient",
+        "corpus-divergence"
+      ],
+      "reason": "Le bestiaire et le PNG actif représentent un petit insecte individuel, malgré le nom Swarm et le prose du corpus évoquant un essaim. La source native 127×127 en vue dorsale oblique ne résout pas le profil et les volumes cachés.",
+      "requiredEvidenceOrAction": "Une référence BoM nominative plus lisible du profil ; résoudre explicitement individu/groupe avant toute nouvelle composition. Ne pas déduire plusieurs corps du seul nom.",
+      "evidence": [
+        {
+          "path": "art/provenance-art144-c.json",
+          "jsonPointer": "/selected/10",
+          "fileSHA256": "dbfdfced01b5afc77366ddd4f596df2c75f357cb2c20f86de4d0236193f01090",
+          "relation": "direct"
+        },
+        {
+          "path": "art/reference-provenance-batch12.json",
+          "jsonPointer": "/blocked/13",
+          "fileSHA256": "b64091acc89f6f0189c9a0dfe1b84c7c546a0ff26f5de8a1ece2e6869497a7bd",
+          "relation": "direct"
+        },
+        {
+          "path": "art/registry.json",
+          "jsonPointer": "/assets/bom_swarm_132",
+          "fileSHA256": "581fc105104dcb11ccefaa6f9fde2597ac13a477da2a063264a2e31bb3993efb",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "bom_mother_135",
+      "name": "Mother",
+      "source": "bom",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Refus explicite antérieur Mother BoM, catégories sexual/violence, requête a78228ad-d44c-40b7-8a8e-214bf0b7508e. Aucun nouvel essai ni modification d’élément ou emprunt d’un autre sujet après ce refus. Aucun PNG livré dans ART92.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "bom_mother_135",
+        "requestId": "a78228ad-d44c-40b7-8a8e-214bf0b7508e"
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/42",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-c.json",
+          "jsonPointer": "/newRefusals/0",
+          "fileSHA256": "dbfdfced01b5afc77366ddd4f596df2c75f357cb2c20f86de4d0236193f01090",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "bom_valtiel_136",
+      "name": "Valtiel",
+      "source": "bom",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Refus antérieur du sujet Valtiel respecté. Aucun appel ART92 sous une autre édition ou apparence, aucune reprise d’anatomie ni relabel BoM pour contourner le refus. Aucun rôle ou pouvoir ajouté.",
+      "reasonCodes": [
+        "related-refusal-hold"
+      ],
+      "historicalRefusal": {
+        "kind": "related",
+        "subject": "Valtiel SH3",
+        "ownRefusalClaimed": false
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/43",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-c.json",
+          "jsonPointer": "/blocked/15",
+          "fileSHA256": "f649aa3f9967cdf50f4e258b247b9f1f4e8de57ccb54979bd5c485275827cad5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "bom_blood_guardian_143",
+      "name": "Blood Guardian",
+      "source": "bom",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "multi-body",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Non tenté : Blood Guardian contient la même Blood Mama dans son état sur la masse multi-bras. Le refus nouveau Blood Mama b6688211-2810-4d1e-ae1c-963cc64a7ea9 interdit un essai de cet autre état comme variante ou substitut ; aucune image demandée ni importée pour Blood Guardian.",
+      "reasonCodes": [
+        "related-refusal-hold"
+      ],
+      "historicalRefusal": {
+        "kind": "related",
+        "subject": "Blood Mama dans la masse multi-bras",
+        "ownRefusalClaimed": false
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/45",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-d.json",
+          "jsonPointer": "/blockedEntries/0",
+          "fileSHA256": "732f8e893a0e508bc2a76c2c595f155b0333666898a2811bcfeb11fa5a68d974",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "bom_blood_mama_145",
+      "name": "Blood Mama",
+      "source": "bom",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "multi-body",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Génération individuelle refusée ; aucun réessai, variante, relabel ou substitution.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "bom_blood_mama_145",
+        "requestId": "b6688211-2810-4d1e-ae1c-963cc64a7ea9"
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/46",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-d.json",
+          "jsonPointer": "/newRefusals/0",
+          "fileSHA256": "732f8e893a0e508bc2a76c2c595f155b0333666898a2811bcfeb11fa5a68d974",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "shf_corruptor_155",
+      "name": "Corruptor",
+      "source": "shf",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "shf_corruptor_155",
+        "requestId": "dbf7e92d-aba3-4115-b752-0234e8660483"
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/50",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-d.json",
+          "jsonPointer": "/newRefusals/1",
+          "fileSHA256": "6ab389d5291fbbd32a553c7351d7c91a2ad83d9ece3e5f6d0520f70d4afc7a39",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "shf_hatcher_156",
+      "name": "Hatcher",
+      "source": "shf",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "shf_hatcher_156",
+        "requestId": "5cb09bcb-9e8b-40be-b3c2-391e62900d5e"
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/51",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-d.json",
+          "jsonPointer": "/newRefusals/2",
+          "fileSHA256": "6ab389d5291fbbd32a553c7351d7c91a2ad83d9ece3e5f6d0520f70d4afc7a39",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "shf_dark_hatcher_160",
+      "name": "Dark Hatcher",
+      "source": "shf",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "environmental-obstacle",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Dark Hatcher est une variante du Hatcher refusé dans ce lot (sexual + violence, 5cb09bcb-9e8b-40be-b3c2-391e62900d5e). Aucun prompt, variante ou réessai utilisé pour contourner ce refus. Portrait sombre inspecté seulement.",
+      "reasonCodes": [
+        "related-refusal-hold"
+      ],
+      "historicalRefusal": {
+        "kind": "related",
+        "subject": "Hatcher",
+        "ownRefusalClaimed": false
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/52",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-d.json",
+          "jsonPointer": "/blockedEntries/7",
+          "fileSHA256": "732f8e893a0e508bc2a76c2c595f155b0333666898a2811bcfeb11fa5a68d974",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "shf_hinako_s_mother_165",
+      "name": "Hinako’s Mother",
+      "source": "shf",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "combatant",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "shf_hinako_s_mother_165",
+        "requestId": "13cb56a1-c05c-45b6-a193-987153da6fca"
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/54",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-d.json",
+          "jsonPointer": "/newRefusals/3",
+          "fileSHA256": "6ab389d5291fbbd32a553c7351d7c91a2ad83d9ece3e5f6d0520f70d4afc7a39",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "film_dark_nurse_171",
+      "name": "Dark Nurse",
+      "source": "film",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Des références entières du costume original 2006 ont été inspectées. L’appel de génération a été refusé à la sortie (violence) ; aucune image livrée ni réessai.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "film_dark_nurse_171",
+        "requestId": "3904324b-a515-4299-82b9-b9cfbdf04f5d"
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/55",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/newGenerationRefusals/0",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "film_grey_child_film_172",
+      "name": "Grey Child — Film",
+      "source": "film",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "superEnabled": false,
+      "reason": "Les nouveaux PSP «thegraychild» et wallpapers2006 n°05/13 ne montrent que visage/torse. Les maquettes16–18 de fabrication terminent les jambes sur des supports de prothèse ; les22scans Score n’apportent aucun pied final. Identité enfant-like surnaturelle conservée ; aucune génération ni relabel adulte.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Une vue du costume final 2006 avec pieds et jambes entiers ; les supports de prothèse ne sont pas l’anatomie finale, aucune réidentification adulte.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/56",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-e.json",
+          "jsonPointer": "/blockedEntries/2",
+          "fileSHA256": "fa911d8ba434d8a5bfcc42d617064e63cf0ebecaf73641708e80d21ee0b7e0d5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "film_creeper_swarm_film_173",
+      "name": "Creeper Swarm — Film",
+      "source": "film",
+      "combatView": "legacy-unreviewed",
+      "selectionAvailable": true,
+      "activeFrames": 1,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "superEnabled": false,
+      "reasonCodes": [
+        "corpus-divergence",
+        "source-insufficient"
+      ],
+      "reason": "Le candidat existant montre trois créatures d’après un concept 2006 ; singleSubjectReviewed et l’absence de composition formelle ne décrivent pas clairement ce groupe. Aucun refus propre trouvé ; la cardinalité trois n’est pas certifiée canonique.",
+      "requiredEvidenceOrAction": "Vérifier la composition collective, les individus et une vue entière du modèle final du film 2006 ; ne pas convertir arbitrairement ce groupe en insecte unique ni imposer trois comme compte source.",
+      "evidence": [
+        {
+          "path": "art/provenance-art144-e.json",
+          "jsonPointer": "/profiles/3",
+          "fileSHA256": "59ac30245433315222220c62d544908d10faae87d6c1555e2cf6b1572b7f9212",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-e.json",
+          "jsonPointer": "/rasterQA/0",
+          "fileSHA256": "59ac30245433315222220c62d544908d10faae87d6c1555e2cf6b1572b7f9212",
+          "relation": "direct"
+        },
+        {
+          "path": "art/registry.json",
+          "jsonPointer": "/assets/film_creeper_swarm_film_173",
+          "fileSHA256": "581fc105104dcb11ccefaa6f9fde2597ac13a477da2a063264a2e31bb3993efb",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "film_colin_the_janitor_174",
+      "name": "Colin the Janitor",
+      "source": "film",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Les nouveaux PSP «thejanitor1/2», wallpapers2006 n°02/15/16, Score47 et Fangoria253/49 montrent Colin entravé dans les toilettes, avec pieds et segments des jambes masqués. Les notes décrivent des jambes tordues ; aucune nouvelle pièce n’établit les membres cachés et aucun rampant complet n’est inventé.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Des vues des jambes tordues et pieds actuellement occultés par les entraves ; ne pas compléter un rampant générique.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/57",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-e.json",
+          "jsonPointer": "/blockedEntries/3",
+          "fileSHA256": "fa911d8ba434d8a5bfcc42d617064e63cf0ebecaf73641708e80d21ee0b7e0d5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "film_red_pyramid_film_175",
+      "name": "Red Pyramid — Film",
+      "source": "film",
+      "combatView": "legacy-unreviewed",
+      "selectionAvailable": true,
+      "activeFrames": 1,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "superEnabled": false,
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "reason": "Le raffinement exact du Red Pyramid film a été refusé en sortie pour violence en vague23. Aucun PNG produit ni importé ; l’ancienne sélection et l’ancien idle restent présents.",
+      "requiredEvidenceOrAction": "Conserver l’art existant ; aucun réessai ni variante ou autre voie pour cette génération refusée.",
+      "evidence": [
+        {
+          "path": "docs/production/vague23/characters-extra/film-red-pyramid-generation-blocked.json",
+          "jsonPointer": "",
+          "fileSHA256": "53ca8f702f31d70d1bfea5f338b2e3e2fde8ce76787b721fe1d8027666736fbc",
+          "relation": "direct"
+        }
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "film_red_pyramid_film_175",
+        "requestId": "15d589f4-eb36-45f9-a620-971a58114c38"
+      },
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "source": "film",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "scripted-encounter",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Costume de production identifié dans les collections Cineloggia/HSPPA, mais les nouvelles photos accessibles ne montrent pas les pieds du Missionary. Photo pertinente inaccessible (402) ; chaussure finale toujours non établie.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Le costume final Revelation, instruments et chaussures complets ; ne pas transférer un concept Mercer rejeté ou le Missionary SH3.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/58",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-e.json",
+          "jsonPointer": "/blockedEntries/4",
+          "fileSHA256": "fa911d8ba434d8a5bfcc42d617064e63cf0ebecaf73641708e80d21ee0b7e0d5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "film_bubble_head_nurse_return_to_silent_hill",
+      "name": "Bubble Head Nurse — Return to Silent Hill",
+      "source": "film",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "unverified",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Photos entières du produit Zombie Sailor retrouvées, mais figurine explicitement stylisée années 1990 et images marquées « PENDING LICENSOR APPROVAL ». Source complémentaire conservée ; référence finale du costume exacte non établie, aucune génération.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Le costume final de Return, pieds et instrument compris ; une figurine stylisée en attente d’approbation ne suffit pas.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/59",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-e.json",
+          "jsonPointer": "/blockedEntries/5",
+          "fileSHA256": "fa911d8ba434d8a5bfcc42d617064e63cf0ebecaf73641708e80d21ee0b7e0d5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "film_creeper_return_to_silent_hill",
+      "name": "Creeper — Return to Silent Hill",
+      "source": "film",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "unverified",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Présence du Creeper et bouche humanoïde sous le corps corroborées dans les comptes rendus du film. Aucun visuel entier attribué obtenu ; téléchargement presse VVS arrêté après 403.",
+      "reasonCodes": [
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Un visuel entier identifié Creeper Return et sa bouche ventrale, sans emprunter le Creeper du film 2006.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/60",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-e.json",
+          "jsonPointer": "/blockedEntries/6",
+          "fileSHA256": "fa911d8ba434d8a5bfcc42d617064e63cf0ebecaf73641708e80d21ee0b7e0d5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "film_fused_mattress_manifestation_return",
+      "name": "Fused Mattress Manifestation — Return",
+      "source": "film",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "unverified",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "La fusion Angela/Joshua en manifestation de matelas est corroborée. Le rapprochement avec Abstract Daddy reste une inférence ; aucune vue finale entière ni correspondance officielle exacte du libellé.",
+      "reasonCodes": [
+        "corpus-divergence"
+      ],
+      "requiredEvidenceOrAction": "Une identité exacte et une vue finale entière de la fusion Angela/Joshua ; le lien à Abstract Daddy reste une inférence.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/61",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-e.json",
+          "jsonPointer": "/blockedEntries/8",
+          "fileSHA256": "fa911d8ba434d8a5bfcc42d617064e63cf0ebecaf73641708e80d21ee0b7e0d5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "ascension_the_collector_183",
+      "name": "The Collector",
+      "source": "ascension",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Portfolio primaire de Rodion Vlasov nommant The Collector retrouvé, mais aucune vue entière récupérée. L’anatomie multibras avec portail de torse ne correspond pas au concept obèse voilé.",
+      "reasonCodes": [
+        "corpus-divergence",
+        "source-insufficient"
+      ],
+      "requiredEvidenceOrAction": "Récupérer un modèle entier nominatif compatible avec le portail de torse et les bras multiples ; le concept obèse voilé ne convient pas.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/65",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-e.json",
+          "jsonPointer": "/blockedEntries/12",
+          "fileSHA256": "fa911d8ba434d8a5bfcc42d617064e63cf0ebecaf73641708e80d21ee0b7e0d5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    },
+    {
+      "fighterId": "ascension_stilledalen_stinger_184",
+      "name": "Stilledalen Stinger",
+      "source": "ascension",
+      "combatView": "missing",
+      "selectionAvailable": true,
+      "activeFrames": 0,
+      "role": "unverified",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Le concept entier retrouvé appartient au Stinger standard déjà représenté. Aucune anatomie régionale indépendante n’est attestée ; aucune duplication ou recoloration.",
+      "reasonCodes": [
+        "corpus-divergence"
+      ],
+      "requiredEvidenceOrAction": "Une preuve d’anatomie régionale distincte, pas la seule présence du Stinger standard à Stilledalen.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/66",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art92-e.json",
+          "jsonPointer": "/blockedEntries/13",
+          "fileSHA256": "fa911d8ba434d8a5bfcc42d617064e63cf0ebecaf73641708e80d21ee0b7e0d5",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false
+    }
+  ],
+  "pointerValidation": {
+    "passed": true,
+    "pointersResolved": 90,
+    "uniqueEvidenceFiles": 17
+  },
+  "limits": "New output remains generated candidate art. No original animation, opposite-side reference, source timing, or 1:1 certification is implied."
+}

@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-18T08:40:24.441Z",
+  "mode": "native paintRasterPortrait",
+  "browserTest": false,
+  "assets": [
+    {
+      "id": "arcade_toadstool_arcade",
+      "path": "assets/sprites/arcade_toadstool_arcade.6e616bb88c7c.png",
+      "width": 1312,
+      "height": 1199,
+      "bounds": [
+        68,
+        37,
+        1183,
+        1161
+      ],
+      "role": "unverified",
+      "preexistingRulesCombatEnabled": false
+    }
+  ],
+  "portraits": [
+    {
+      "id": "arcade_toadstool_arcade",
+      "facing": 1,
+      "path": "assets/sprites/arcade_toadstool_arcade.6e616bb88c7c.png",
+      "file": "selection-arcade_toadstool_arcade-right.png"
+    },
+    {
+      "id": "arcade_toadstool_arcade",
+      "facing": -1,
+      "path": "assets/sprites/arcade_toadstool_arcade.6e616bb88c7c.png",
+      "file": "selection-arcade_toadstool_arcade-left.png"
+    }
+  ],
+  "checks": [
+    {
+      "name": "arcade_toadstool_arcade selection-only contract",
+      "passed": true,
+      "detail": {
+        "artKind": "selection-only",
+        "combatArt": "missing",
+        "documentedRole": "unverified",
+        "preexistingRulesCombatEnabled": false
+      }
+    },
+    {
+      "name": "arcade_toadstool_arcade asset identity",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/arcade_toadstool_arcade.6e616bb88c7c.png",
+        "sha256": "6e616bb88c7c823beab5e6b2422f07002f1508ea4a1f2f49045f5dd674e7a7db",
+        "bytes": 1511984
+      }
+    },
+    {
+      "name": "arcade_toadstool_arcade native decode adapter preserves pixels",
+      "passed": true
+    },
+    {
+      "name": "arcade_toadstool_arcade source dimensions",
+      "passed": true,
+      "detail": {
+        "width": 1312,
+        "height": 1199
+      }
+    },
+    {
+      "name": "arcade_toadstool_arcade complete alpha bounds and transparent exterior",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          68,
+          37,
+          1183,
+          1161
+        ],
+        "transparentFraction": 0.6181338869789865
+      }
+    },
+    {
+      "name": "arcade_toadstool_arcade selection draw right",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/arcade_toadstool_arcade.6e616bb88c7c.png"
+        ],
+        "dataset": {
+          "spriteId": "arcade_toadstool_arcade",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "arcade_toadstool_arcade visible outline framed right",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          68,
+          37,
+          1115,
+          1124
+        ],
+        "destination": [
+          -242.0462633451957,
+          -244,
+          484.0925266903914,
+          488
+        ],
+        "expectedFacing": 1
+      }
+    },
+    {
+      "name": "arcade_toadstool_arcade selection draw left",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/arcade_toadstool_arcade.6e616bb88c7c.png"
+        ],
+        "dataset": {
+          "spriteId": "arcade_toadstool_arcade",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "arcade_toadstool_arcade visible outline framed left",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          68,
+          37,
+          1115,
+          1124
+        ],
+        "destination": [
+          -242.0462633451957,
+          -244,
+          484.0925266903914,
+          488
+        ],
+        "expectedFacing": -1
+      }
+    },
+    {
+      "name": "art/registry.json stable during selection renders",
+      "passed": true
+    },
+    {
+      "name": "src/sprite-manifest.js stable during selection renders",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "The native renderer uses a predecoded local image cache. This run covers selection, asset identity and combat-art exclusion.",
+    "The resulting PNGs require separate visual inspection."
+  ],
+  "hashesBefore": {
+    "art/registry.json": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+    "src/sprite-manifest.js": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8"
+  },
+  "hashesAfter": {
+    "art/registry.json": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+    "src/sprite-manifest.js": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8"
+  },
+  "passed": true
+}

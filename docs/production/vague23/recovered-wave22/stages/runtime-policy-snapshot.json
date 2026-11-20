@@ -1,0 +1,3084 @@
+{
+  "repository": "/workspace/scratch/silent-hill-wave22",
+  "dataSHA256": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+  "stages": [
+    {
+      "id": "hazel_subway",
+      "name": "HAZEL STREET SUBWAY",
+      "source": "sh3",
+      "family": "subway",
+      "sky": [
+        "#303431",
+        "#101311",
+        "#030404"
+      ],
+      "weather": "flicker",
+      "props": [
+        "rails",
+        "platform",
+        "lights"
+      ],
+      "animations": [
+        "lightFlicker"
+      ],
+      "hazard": "staticBurst",
+      "fatality": {
+        "id": "hazel_subway_fatality",
+        "name": "OTHERWORLD STAGE FATALITY",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "impact",
+          "blackout"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de HAZEL STREET SUBWAY."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Station Hazel Street de SH3 ; danger des voies distinct du métro SH4.",
+        "canonicalBasis": "CL_SH3_04_SUBWAY_STATION",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "steel",
+        "name": "CAILLEBOTIS MÉTALLIQUE",
+        "moveScale": 0.98,
+        "jumpScale": 0.96,
+        "dodgeScale": 0.98,
+        "friction": 0.86,
+        "knockbackScale": 1.04,
+        "guardRegenScale": 0.94,
+        "description": "Le métal résonne, accentue la radio et transmet les chocs."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.5,
+        "radioScale": 1.2320000000000002,
+        "silhouetteRange": 515,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "flesh",
+        "name": "MÉTAMORPHOSE ORGANIQUE",
+        "cue": "VENTILATION",
+        "duration": 155,
+        "threshold": 0.6,
+        "timerRatio": 0.56,
+        "radioScale": 1.1,
+        "overlay": "flesh",
+        "description": "Les parois deviennent chair, tuyaux et membranes, sans copier une texture officielle.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 306,
+        "initialDelay": 266,
+        "intensity": 1.11,
+        "arenaInset": 84,
+        "hazardDeck": [
+          "trainRush"
+        ],
+        "events": [
+          "trainRumble",
+          "powerFailure"
+        ],
+        "motifPolicy": {
+          "events": [
+            "trainRumble",
+            "powerFailure"
+          ],
+          "hazards": [
+            "trainRush"
+          ],
+          "ambienceOnly": false,
+          "excludedEvents": [],
+          "excludedHazards": [
+            "staticBurst",
+            "steamVent"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "animation",
+              "id": "trainPass",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "tunnelWind",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "hazel_subway:flesh:steel:fixed-normal:trainRush:trainRumble+powerFailure"
+      },
+      "gameplay": {
+        "arenaInset": 84,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "platform",
+        "tunnel",
+        "rails",
+        "lights"
+      ],
+      "animationTracks": [
+        {
+          "id": "lightFlicker",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "irregular"
+        }
+      ],
+      "interactions": [
+        {
+          "id": "hazel_subway_trainRumble_1",
+          "event": "trainRumble",
+          "name": "RAME FANTÔME",
+          "trigger": "time-or-first-heavy-impact",
+          "triggerLabel": "IMPACT LOURD / PREMIER TEMPS",
+          "triggerDescription": "Réagit au premier coup lourd, à une rupture d’armure, à un rebond au sol ou au délai initial du lieu.",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
+          "canonicalBasis": "Station Hazel Street de SH3 ; danger des voies distinct du métro SH4.",
+          "referenceIds": [
+            "CL_SH3_04_SUBWAY_STATION"
+          ],
+          "proposalId": null
+        },
+        {
+          "id": "hazel_subway_powerFailure_2",
+          "event": "powerFailure",
+          "name": "PANNE GÉNÉRALE",
+          "trigger": "otherworld-halfway",
+          "triggerLabel": "MI-CHEMIN OTHERWORLD",
+          "triggerDescription": "Réagit lorsque la transformation visuelle et matérielle du lieu dépasse la moitié de sa progression.",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
+          "canonicalBasis": "Station Hazel Street de SH3 ; danger des voies distinct du métro SH4.",
+          "referenceIds": [
+            "CL_SH3_04_SUBWAY_STATION"
+          ],
+          "proposalId": null
+        }
+      ],
+      "reference": {
+        "id": "hazel_subway",
+        "source": "sh3",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "HAZEL STREET SUBWAY",
+        "correctedName": null,
+        "locationNote": "Station Hazel Street de SH3 ; danger des voies distinct du métro SH4.",
+        "referenceIds": [
+          "CL_SH3_04_SUBWAY_STATION"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Le train et les rails forment un danger de parcours.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH3_04_SUBWAY_STATION"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Le souffle d’un train lointain déplace papier et cheveux sans obstacle traversant l’espace jouable.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH3_04_SUBWAY_STATION"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Le panneau d’arrivée s’éclaire après impact proche, suivi d’un grondement hors champ.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH3_04_SUBWAY_STATION"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "Passage d’un train derrière une barrière pendant le résultat, puis retour au quai dégagé.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH3_04_SUBWAY_STATION"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referenceTracks": [],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [
+          "trainRumble",
+          "powerFailure"
+        ],
+        "allowedHazards": [
+          "trainRush"
+        ],
+        "automaticFinishers": true,
+        "weather": "flicker",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "animation",
+            "id": "trainPass",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "tunnelWind",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [],
+        "pendingProposalIds": [
+          "hazel_subway:reference:1",
+          "hazel_subway:reference:2",
+          "hazel_subway:reference:3",
+          "hazel_subway:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "underpass_sh3",
+      "name": "UNDERPASS",
+      "source": "sh3",
+      "family": "sewer",
+      "sky": [
+        "#29312f",
+        "#0d1110",
+        "#020303"
+      ],
+      "weather": "water",
+      "props": [
+        "water",
+        "pipes",
+        "grates"
+      ],
+      "animations": [
+        "waterRipple"
+      ],
+      "hazard": "bloodTide",
+      "fatality": {
+        "id": "underpass_sh3_fatality",
+        "name": "OTHERWORLD STAGE FATALITY",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "impact",
+          "blackout"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de UNDERPASS."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Couloirs et locaux techniques avant le canal de SH3 ; sous-zone distincte du stage sewers.",
+        "canonicalBasis": "CL_SH3_05_UNDERPASS",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "flooded",
+        "name": "EAU STAGNANTE",
+        "moveScale": 0.87,
+        "jumpScale": 0.9,
+        "dodgeScale": 0.9,
+        "friction": 0.8,
+        "knockbackScale": 0.92,
+        "guardRegenScale": 0.92,
+        "splash": true,
+        "description": "L’eau freine les déplacements et les esquives sans rendre le combat illisible."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.38,
+        "radioScale": 1.2320000000000002,
+        "silhouetteRange": 515,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "flesh",
+        "name": "MÉTAMORPHOSE ORGANIQUE",
+        "cue": "VENTILATION",
+        "duration": 155,
+        "threshold": 0.6,
+        "timerRatio": 0.56,
+        "radioScale": 1.1,
+        "overlay": "flesh",
+        "description": "Les parois deviennent chair, tuyaux et membranes, sans copier une texture officielle.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 306,
+        "initialDelay": 269,
+        "intensity": 1.11,
+        "arenaInset": 92,
+        "hazardDeck": [],
+        "events": [
+          "referenceSteamPurge"
+        ],
+        "motifPolicy": {
+          "events": [
+            "referenceSteamPurge"
+          ],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [],
+          "excludedHazards": [],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "waterRise",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "steamRelease",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "waterSurge",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "steamVent",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "bloodTide",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "pipeSteam",
+              "reason": "Remplacé par une piste précise du classeur."
+            },
+            {
+              "kind": "animation",
+              "id": "shadowPass",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "underpass_sh3:flesh:flooded:fixed-normal::referenceSteamPurge"
+      },
+      "gameplay": {
+        "arenaInset": 92,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "tunnel",
+        "pipes",
+        "canal",
+        "water",
+        "grates"
+      ],
+      "animationTracks": [
+        {
+          "id": "waterRipple",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "continuous"
+        }
+      ],
+      "interactions": [
+        {
+          "id": "underpass_sh3_referenceSteamPurge_1",
+          "event": "referenceSteamPurge",
+          "name": "Trois jets derrière la protection",
+          "trigger": "local-heavy-impact",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+          "canonicalBasis": "Un robinet desserré libère trois jets de vapeur après choc proche, puis se referme.",
+          "referenceIds": [
+            "CL_SH3_05_UNDERPASS"
+          ],
+          "proposalId": "underpass_sh3:reference:3",
+          "zone": {
+            "x": 0.2,
+            "radius": 0.15
+          },
+          "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+          "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+        }
+      ],
+      "reference": {
+        "id": "underpass_sh3",
+        "source": "sh3",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "UNDERPASS",
+        "correctedName": null,
+        "locationNote": "Couloirs et locaux techniques avant le canal de SH3 ; sous-zone distincte du stage sewers.",
+        "referenceIds": [
+          "CL_SH3_05_UNDERPASS"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Le parcours alterne passages techniques et canaux.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH3_05_UNDERPASS"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Un ventilateur tourne lentement derrière une protection ; son ombre balaie un mur éloigné.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH3_05_UNDERPASS"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Un robinet desserré libère trois jets de vapeur après choc proche, puis se referme.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH3_05_UNDERPASS"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "La caméra suit une conduite vers une porte close pendant la pause, puis revient au plan de duel.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH3_05_UNDERPASS"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "underpass_sh3:reference:2",
+          "key": "fanEccentric",
+          "name": "Ventilateur derrière sa protection",
+          "description": "Un ventilateur tourne lentement derrière une protection ; son ombre balaie un mur éloigné.",
+          "proposalIndex": 1,
+          "source": "sh3",
+          "evidence": [
+            "CL_SH3_05_UNDERPASS"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.79,
+            "y": 0.27
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Ventilateur derrière sa protection",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": null,
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        },
+        {
+          "id": "underpass_sh3:reference:3",
+          "key": "pipePurge",
+          "name": "Trois jets derrière la protection",
+          "description": "Un robinet desserré libère trois jets de vapeur après choc proche, puis se referme.",
+          "proposalIndex": 2,
+          "source": "sh3",
+          "evidence": [
+            "CL_SH3_05_UNDERPASS"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.2,
+            "y": 0.58
+          },
+          "trigger": "local-heavy-impact",
+          "event": "referenceSteamPurge",
+          "eventEnabled": true,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Trois jets derrière la protection",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "storyboard-a-valider",
+          "locationScope": null,
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [
+          "referenceSteamPurge"
+        ],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "water",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "waterRise",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "steamRelease",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "waterSurge",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "steamVent",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "bloodTide",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "pipeSteam",
+            "reason": "Remplacé par une piste précise du classeur."
+          },
+          {
+            "kind": "animation",
+            "id": "shadowPass",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "underpass_sh3:reference:2",
+          "underpass_sh3:reference:3"
+        ],
+        "pendingProposalIds": [
+          "underpass_sh3:reference:1",
+          "underpass_sh3:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "nightmare_hilltop",
+      "name": "HILLTOP CENTER — OTHERWORLD",
+      "source": "sh3",
+      "family": "otherworld",
+      "sky": [
+        "#351f1b",
+        "#120807",
+        "#020202"
+      ],
+      "weather": "dust",
+      "props": [
+        "grates",
+        "fans",
+        "blood"
+      ],
+      "animations": [
+        "fanSpin"
+      ],
+      "hazard": "emberFall",
+      "fatality": {
+        "id": "nightmare_hilltop_fatality",
+        "name": "GRILLE DE ROUILLE",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "grate-open",
+          "seal"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de HILLTOP CENTER — OTHERWORLD."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Hilltop Otherworld de SH3, avec le Glutton comme obstacle de progression.",
+        "canonicalBasis": "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "steel",
+        "name": "CAILLEBOTIS MÉTALLIQUE",
+        "moveScale": 0.98,
+        "jumpScale": 0.96,
+        "dodgeScale": 0.98,
+        "friction": 0.86,
+        "knockbackScale": 1.04,
+        "guardRegenScale": 0.94,
+        "description": "Le métal résonne, accentue la radio et transmet les chocs."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.38,
+        "radioScale": 1.2320000000000002,
+        "silhouetteRange": 515,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "flesh",
+        "name": "MÉTAMORPHOSE ORGANIQUE",
+        "cue": "VENTILATION",
+        "duration": 155,
+        "threshold": 0.6,
+        "timerRatio": 0.56,
+        "radioScale": 1.1,
+        "overlay": "flesh",
+        "description": "Les parois deviennent chair, tuyaux et membranes, sans copier une texture officielle.",
+        "startOtherworld": true,
+        "enabled": false,
+        "referenceState": "fixed-altered"
+      },
+      "director": {
+        "cadence": 225,
+        "initialDelay": 281,
+        "intensity": 1.11,
+        "arenaInset": 96,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [],
+          "excludedHazards": [
+            "sirenShock"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "voidPull",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "chainSweep",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "emberFall",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "voidPull",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "sirenPulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "bloodPulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "chainSway",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "weather",
+              "id": "embers",
+              "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "nightmare_hilltop:flesh:steel:fixed-altered::"
+      },
+      "gameplay": {
+        "arenaInset": 96,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "grates",
+        "chains",
+        "industrial-depth",
+        "fans",
+        "blood"
+      ],
+      "animationTracks": [
+        {
+          "id": "fanSpin",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "continuous"
+        }
+      ],
+      "interactions": [],
+      "reference": {
+        "id": "nightmare_hilltop",
+        "source": "sh3",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "HILLTOP CENTER — OTHERWORLD",
+        "correctedName": null,
+        "locationNote": "Hilltop Otherworld de SH3, avec le Glutton comme obstacle de progression.",
+        "referenceIds": [
+          "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Le récit du livre fait disparaître le Glutton.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Une silhouette reste prisonnière derrière le treillis ; mouvement bref et non offensif.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Une page de conte s’agite à un choc voisin ; la récitation complète appartient à la scène du puzzle.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "La porte du fond paraît s’allonger par perspective pendant le résultat puis retrouve son volume initial.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referenceTracks": [],
+      "referencePolicy": {
+        "worldState": "fixed-altered",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "voidPull",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "chainSweep",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "emberFall",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "voidPull",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "sirenPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "bloodPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "chainSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "embers",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [],
+        "pendingProposalIds": [
+          "nightmare_hilltop:reference:1",
+          "nightmare_hilltop:reference:2",
+          "nightmare_hilltop:reference:3",
+          "nightmare_hilltop:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "outside_room_302",
+      "name": "OUTSIDE ROOM 302",
+      "source": "sh4",
+      "family": "apartment",
+      "sky": [
+        "#34332f",
+        "#12120f",
+        "#030303"
+      ],
+      "weather": "fog",
+      "props": [
+        "doors",
+        "windows",
+        "chains"
+      ],
+      "animations": [],
+      "hazard": "staticBurst",
+      "fatality": {
+        "id": "outside_room_302_fatality",
+        "name": "PORTE SANS RETOUR",
+        "effect": "door",
+        "sequence": [
+          "hallway",
+          "door-open",
+          "door-seal"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de OUTSIDE ROOM 302."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Dernier parcours autour de 302 dans SH4, altéré après les retours.",
+        "canonicalBasis": "CL_SH4_13_OUTSIDE_ROOM_302",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "carpet",
+        "name": "MOQUETTE HUMIDE",
+        "moveScale": 0.92,
+        "jumpScale": 0.96,
+        "dodgeScale": 0.9,
+        "friction": 0.76,
+        "knockbackScale": 0.88,
+        "guardRegenScale": 1.04,
+        "description": "Les pas sont étouffés mais les esquives perdent de la portée."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.48,
+        "radioScale": 1.4396,
+        "silhouetteRange": 524,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "haunting",
+        "name": "HANTISE DE LA PIÈCE",
+        "cue": "GRÉSILLEMENT",
+        "duration": 180,
+        "threshold": 0.52,
+        "timerRatio": 0.52,
+        "radioScale": 1.18,
+        "overlay": "haunting",
+        "description": "L’espace se contamine par les victimes, les murs et les objets hantés.",
+        "startOtherworld": true,
+        "enabled": false,
+        "referenceState": "fixed-altered"
+      },
+      "director": {
+        "cadence": 283,
+        "initialDelay": 278,
+        "intensity": 1.2,
+        "arenaInset": 108,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "portraitWatch"
+          ],
+          "excludedHazards": [
+            "staticBurst",
+            "portraitGaze"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "roomBreath",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "doorSlam",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "doorPulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "windowShadow",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "fogDrift",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "outside_room_302:haunting:carpet:fixed-altered::"
+      },
+      "gameplay": {
+        "arenaInset": 108,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": true
+      },
+      "layers": [
+        "hallway",
+        "doors",
+        "windows",
+        "chains"
+      ],
+      "animationTracks": [],
+      "interactions": [],
+      "reference": {
+        "id": "outside_room_302",
+        "source": "sh4",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "OUTSIDE ROOM 302",
+        "correctedName": null,
+        "locationNote": "Dernier parcours autour de 302 dans SH4, altéré après les retours.",
+        "referenceIds": [
+          "CL_SH4_13_OUTSIDE_ROOM_302"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Des Wallmen occupent les surfaces du parcours final.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH4_13_OUTSIDE_ROOM_302"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Une bosse avance sous le revêtement d’un mur puis s’arrête avant l’aire jouable.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH4_13_OUTSIDE_ROOM_302"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "La grille vibre et une main s’y plaque après un impact de décor ; aucune saisie gratuite.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH4_13_OUTSIDE_ROOM_302"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "La porte de 302 devient le seul point éclairé pendant le résultat puis les murs reprennent leur relief.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH4_13_OUTSIDE_ROOM_302"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referenceTracks": [],
+      "referencePolicy": {
+        "worldState": "fixed-altered",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "fog",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "roomBreath",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "doorSlam",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "doorPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "windowShadow",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "fogDrift",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [],
+        "pendingProposalIds": [
+          "outside_room_302:reference:1",
+          "outside_room_302:reference:2",
+          "outside_room_302:reference:3",
+          "outside_room_302:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "final_sacrament",
+      "name": "21 SACRAMENTS — FINAL CHAMBER",
+      "source": "sh4",
+      "family": "otherworld",
+      "sky": [
+        "#321e1d",
+        "#100706",
+        "#020202"
+      ],
+      "weather": "blood",
+      "props": [
+        "altar",
+        "chains",
+        "runes"
+      ],
+      "animations": [
+        "chainSway"
+      ],
+      "hazard": "bloodTide",
+      "fatality": {
+        "id": "final_sacrament_fatality",
+        "name": "GRILLE DE ROUILLE",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "grate-open",
+          "seal"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de 21 SACRAMENTS — FINAL CHAMBER."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Chambre finale SH4 : Walter mobile, Conjurer fixé et Eileen soumis au rituel.",
+        "canonicalBasis": "CL_SH4_13_OUTSIDE_ROOM_302",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "steel",
+        "name": "CAILLEBOTIS MÉTALLIQUE",
+        "moveScale": 0.98,
+        "jumpScale": 0.96,
+        "dodgeScale": 0.98,
+        "friction": 0.86,
+        "knockbackScale": 1.04,
+        "guardRegenScale": 0.94,
+        "description": "Le métal résonne, accentue la radio et transmet les chocs."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.48,
+        "radioScale": 1.4396,
+        "silhouetteRange": 524,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "haunting",
+        "name": "HANTISE DE LA PIÈCE",
+        "cue": "GRÉSILLEMENT",
+        "duration": 180,
+        "threshold": 0.52,
+        "timerRatio": 0.52,
+        "radioScale": 1.18,
+        "overlay": "haunting",
+        "description": "L’espace se contamine par les victimes, les murs et les objets hantés.",
+        "startOtherworld": true,
+        "enabled": false,
+        "referenceState": "fixed-altered"
+      },
+      "director": {
+        "cadence": 208,
+        "initialDelay": 275,
+        "intensity": 1.2,
+        "arenaInset": 96,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "portraitWatch"
+          ],
+          "excludedHazards": [
+            "sirenShock",
+            "emberFall"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "voidPull",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "roomBreath",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "chainSweep",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "voidPull",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "bloodTide",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "ritualGlyph",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "bloodPulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "sirenPulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "final_sacrament:haunting:steel:fixed-altered::"
+      },
+      "gameplay": {
+        "arenaInset": 96,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "grates",
+        "chains",
+        "industrial-depth",
+        "altar",
+        "runes"
+      ],
+      "animationTracks": [
+        {
+          "id": "chainSway",
+          "phase": "both",
+          "layer": "foreground",
+          "intensity": 1,
+          "cadence": "continuous"
+        }
+      ],
+      "interactions": [],
+      "reference": {
+        "id": "final_sacrament",
+        "source": "sh4",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente",
+        "catalogueName": "21 SACRAMENTS — FINAL CHAMBER",
+        "correctedName": null,
+        "locationNote": "Chambre finale SH4 : Walter mobile, Conjurer fixé et Eileen soumis au rituel.",
+        "referenceIds": [
+          "CL_SH4_13_OUTSIDE_ROOM_302"
+        ],
+        "constraints": [],
+        "proposals": [
+          {
+            "name": "Motif du jeu à capturer",
+            "description": "Le cordon et huit lances retirent la protection de Walter.",
+            "status": "motif-documente-a-capturer",
+            "evidence": [
+              "CL_SH4_13_OUTSIDE_ROOM_302"
+            ],
+            "captureStatus": "capture-a-relever",
+            "timecode": ""
+          },
+          {
+            "name": "Boucle d’ambiance proposée",
+            "description": "Le dispositif central tourne à allure constante ; les armes rituelles restent dans leur état de phase.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH4_13_OUTSIDE_ROOM_302"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Interaction proposée",
+            "description": "Une lance posée déclenche une vibration et une variation de lumière ; interaction réservée au mode scénario.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH4_13_OUTSIDE_ROOM_302"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          },
+          {
+            "name": "Transition de manche proposée",
+            "description": "Le score suspend la progression mortelle d’Eileen ; reprise depuis un état validé, jamais reset inexpliqué du rituel.",
+            "status": "adaptation-versus-proposee",
+            "evidence": [
+              "CL_SH4_13_OUTSIDE_ROOM_302"
+            ],
+            "captureStatus": "storyboard-a-valider",
+            "timecode": ""
+          }
+        ]
+      },
+      "referenceTracks": [],
+      "referencePolicy": {
+        "worldState": "fixed-altered",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "weather": "blood",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "voidPull",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "roomBreath",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "chainSweep",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "voidPull",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "bloodTide",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "ritualGlyph",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "bloodPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "sirenPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [],
+        "pendingProposalIds": [
+          "final_sacrament:reference:1",
+          "final_sacrament:reference:2",
+          "final_sacrament:reference:3",
+          "final_sacrament:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "alchemilla_origins",
+      "name": "ALCHEMILLA HOSPITAL — ORIGINS",
+      "source": "origins",
+      "family": "hospital",
+      "sky": [
+        "#3b3a34",
+        "#15140f",
+        "#040403"
+      ],
+      "weather": "flicker",
+      "props": [
+        "beds",
+        "mirrors",
+        "lights"
+      ],
+      "animations": [
+        "mirrorGlitch",
+        "lightFlicker"
+      ],
+      "hazard": "staticBurst",
+      "fatality": {
+        "id": "alchemilla_origins_fatality",
+        "name": "PROTOCOLE TERMINAL",
+        "effect": "flicker",
+        "sequence": [
+          "lights-out",
+          "gurney",
+          "monitor-flatline"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de ALCHEMILLA HOSPITAL — ORIGINS."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Alchemilla Hospital dans Origins; garder plans2007 et miroir propre à cette œuvre.",
+        "canonicalBasis": "EXT03 ; EXT01",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "concrete",
+        "name": "BÉTON SEC",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Sol stable et neutre."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.52,
+        "radioScale": 1.1130000000000002,
+        "silhouetteRange": 497,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "mirror",
+        "name": "PASSAGE PAR LE MIROIR",
+        "cue": "VERRE FISSURÉ",
+        "duration": 118,
+        "threshold": 0.62,
+        "timerRatio": 0.6,
+        "radioScale": 1.05,
+        "overlay": "mirror",
+        "description": "Le reflet se fracture et remplace progressivement la version normale du lieu.",
+        "startOtherworld": false,
+        "enabled": true,
+        "referenceState": "versus-transition"
+      },
+      "director": {
+        "cadence": 322,
+        "initialDelay": 284,
+        "intensity": 1.0550000000000002,
+        "arenaInset": 92,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "elevatorCall"
+          ],
+          "excludedHazards": [
+            "staticBurst"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "gurneyRush",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "mirrorTurn",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "gurneyRush",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "mirrorFracture",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "hospitalMonitor",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "alchemilla_origins:mirror:concrete:versus-transition::"
+      },
+      "gameplay": {
+        "arenaInset": 92,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": true
+      },
+      "layers": [
+        "ward",
+        "curtains",
+        "monitor",
+        "beds",
+        "mirrors",
+        "lights"
+      ],
+      "animationTracks": [
+        {
+          "id": "mirrorGlitch",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "irregular"
+        },
+        {
+          "id": "lightFlicker",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "irregular"
+        }
+      ],
+      "interactions": [],
+      "reference": {
+        "id": "alchemilla_origins",
+        "source": "origins",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente-secondaire",
+        "catalogueName": "ALCHEMILLA HOSPITAL — ORIGINS",
+        "correctedName": null,
+        "locationNote": "Alchemilla Hospital dans Origins; garder plans2007 et miroir propre à cette œuvre.",
+        "referenceIds": [
+          "EXT03",
+          "EXT01"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "alchemilla_origins_ambient_01",
+            "description": "Faisceau des néons sur le carrelage",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT03",
+              "EXT01"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "alchemilla_origins_ambient_02",
+            "description": "Reflet altéré dans un miroir intact",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT03",
+              "EXT01"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "alchemilla_origins_ambient_03",
+            "description": "Bord de rideau hospitalier qui tremble",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT03",
+              "EXT01"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "alchemilla_origins_round_transition",
+            "description": "Transition proposée pour ALCHEMILLA HOSPITAL — ORIGINS : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT03",
+              "EXT01"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "alchemilla_origins:reference:3",
+          "key": "curtainBreathe",
+          "name": "Bord de rideau dans un courant faible",
+          "description": "Bord de rideau hospitalier qui tremble",
+          "proposalIndex": 2,
+          "source": "origins",
+          "evidence": [
+            "EXT03",
+            "EXT01"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.3,
+            "y": 0.39
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Bord de rideau dans un courant faible",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": null,
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "versus-transition",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "flicker",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "gurneyRush",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "mirrorTurn",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "gurneyRush",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "mirrorFracture",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "hospitalMonitor",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "alchemilla_origins:reference:3"
+        ],
+        "pendingProposalIds": [
+          "alchemilla_origins:reference:1",
+          "alchemilla_origins:reference:2",
+          "alchemilla_origins:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "nightmare_theater",
+      "name": "ARTAUD THEATER — NIGHTMARE",
+      "source": "origins",
+      "family": "theater",
+      "sky": [
+        "#351d1c",
+        "#110706",
+        "#020202"
+      ],
+      "weather": "dust",
+      "props": [
+        "stage",
+        "chains",
+        "flesh"
+      ],
+      "animations": [],
+      "hazard": "emberFall",
+      "fatality": {
+        "id": "nightmare_theater_fatality",
+        "name": "OTHERWORLD STAGE FATALITY",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "impact",
+          "blackout"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de ARTAUD THEATER — NIGHTMARE."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Variation Otherworld d’Artaud; même théâtre, géométrie d’arène à reconstruire.",
+        "canonicalBasis": "EXT03 ; EXT02",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "wood",
+        "name": "PLANCHER ANCIEN",
+        "moveScale": 0.97,
+        "jumpScale": 1,
+        "dodgeScale": 0.96,
+        "friction": 0.85,
+        "knockbackScale": 1,
+        "guardRegenScale": 0.98,
+        "creak": true,
+        "description": "Le plancher trahit les déplacements par des craquements."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.4,
+        "radioScale": 1.1130000000000002,
+        "silhouetteRange": 497,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "mirror",
+        "name": "PASSAGE PAR LE MIROIR",
+        "cue": "VERRE FISSURÉ",
+        "duration": 118,
+        "threshold": 0.62,
+        "timerRatio": 0.6,
+        "radioScale": 1.05,
+        "overlay": "mirror",
+        "description": "Le reflet se fracture et remplace progressivement la version normale du lieu.",
+        "startOtherworld": true,
+        "enabled": false,
+        "referenceState": "fixed-altered"
+      },
+      "director": {
+        "cadence": 322,
+        "initialDelay": 281,
+        "intensity": 1.0550000000000002,
+        "arenaInset": 92,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "spotlightHunt",
+            "mirrorTurn"
+          ],
+          "excludedHazards": [
+            "spotlightSweep"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "emberFall",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "sirenPulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "curtainSway",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "firePulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "weather",
+              "id": "embers",
+              "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "nightmare_theater:mirror:wood:fixed-altered::"
+      },
+      "gameplay": {
+        "arenaInset": 92,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "stage",
+        "curtains",
+        "spotlight",
+        "chains",
+        "flesh"
+      ],
+      "animationTracks": [],
+      "interactions": [],
+      "reference": {
+        "id": "nightmare_theater",
+        "source": "origins",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "variante-de-lieu-documente",
+        "catalogueName": "ARTAUD THEATER — NIGHTMARE",
+        "correctedName": null,
+        "locationNote": "Variation Otherworld d’Artaud; même théâtre, géométrie d’arène à reconstruire.",
+        "referenceIds": [
+          "EXT03",
+          "EXT02"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "nightmare_theater_ambient_01",
+            "description": "Toiles de décor déformées lentement",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT03",
+              "EXT02"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "nightmare_theater_ambient_02",
+            "description": "Cordes d’Ariel en tension",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT03",
+              "EXT02"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "nightmare_theater_ambient_03",
+            "description": "Lumière de rampe révélant une seconde profondeur",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT03",
+              "EXT02"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "nightmare_theater_round_transition",
+            "description": "Transition proposée pour ARTAUD THEATER — NIGHTMARE : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT03",
+              "EXT02"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [],
+      "referencePolicy": {
+        "worldState": "fixed-altered",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "emberFall",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "sirenPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "curtainSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "firePulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "embers",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [],
+        "pendingProposalIds": [
+          "nightmare_theater:reference:1",
+          "nightmare_theater:reference:2",
+          "nightmare_theater:reference:3",
+          "nightmare_theater:reference:4"
+        ]
+      }
+    },
+    {
+      "id": "nightmare_hospital_hc",
+      "name": "ALCHEMILLA — HOMECOMING NIGHTMARE",
+      "source": "homecoming",
+      "family": "hospital",
+      "sky": [
+        "#321f1d",
+        "#100706",
+        "#020202"
+      ],
+      "weather": "dust",
+      "props": [],
+      "animations": [
+        "lightFlicker"
+      ],
+      "hazard": "staticBurst",
+      "fatality": {
+        "id": "nightmare_hospital_hc_fatality",
+        "name": "PROTOCOLE TERMINAL",
+        "effect": "flicker",
+        "sequence": [
+          "lights-out",
+          "gurney",
+          "monitor-flatline"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de ALCHEMILLA — HOMECOMING NIGHTMARE."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Cauchemar Alchemilla de Homecoming, avant le réveil d’Alex.",
+        "canonicalBasis": "EXT06",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "concrete",
+        "name": "COULOIR DU RÊVE INITIAL",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Couloir clinique du rêve initial avant sa transformation ; ascenseur final et état Otherworld séparés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.52,
+        "radioScale": 1.2768,
+        "silhouetteRange": 502,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "rust",
+        "name": "ROUILLE INDUSTRIELLE",
+        "cue": "SIRÈNE",
+        "duration": 150,
+        "threshold": 0.58,
+        "timerRatio": 0.58,
+        "radioScale": 1.12,
+        "overlay": "rust",
+        "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 301,
+        "initialDelay": 293,
+        "intensity": 1.13,
+        "arenaInset": 92,
+        "hazardDeck": [],
+        "events": [
+          "powerFailure"
+        ],
+        "motifPolicy": {
+          "events": [
+            "powerFailure"
+          ],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "elevatorCall"
+          ],
+          "excludedHazards": [
+            "staticBurst",
+            "mirrorFracture"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "gurneyRush",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "gurneyRush",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "hazard",
+              "id": "fallingDebris",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "fanSpin",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "hospitalMonitor",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "weather",
+              "id": "flicker",
+              "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "nightmare_hospital_hc:rust:concrete:fixed-normal::powerFailure"
+      },
+      "gameplay": {
+        "arenaInset": 92,
+        "terrainRules": false,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": true
+      },
+      "layers": [
+        "ward",
+        "curtains"
+      ],
+      "animationTracks": [
+        {
+          "id": "lightFlicker",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "irregular"
+        }
+      ],
+      "interactions": [
+        {
+          "id": "nightmare_hospital_hc_powerFailure_2",
+          "event": "powerFailure",
+          "name": "PANNE GÉNÉRALE",
+          "trigger": "otherworld-halfway",
+          "triggerLabel": "MI-CHEMIN OTHERWORLD",
+          "triggerDescription": "Réagit lorsque la transformation visuelle et matérielle du lieu dépasse la moitié de sa progression.",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
+          "canonicalBasis": "Cauchemar Alchemilla de Homecoming, avant le réveil d’Alex.",
+          "referenceIds": [
+            "EXT06"
+          ],
+          "proposalId": null
+        }
+      ],
+      "reference": {
+        "id": "nightmare_hospital_hc",
+        "source": "homecoming",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "lieu-documente-secondaire",
+        "catalogueName": "ALCHEMILLA — HOMECOMING NIGHTMARE",
+        "correctedName": null,
+        "locationNote": "Cauchemar Alchemilla de Homecoming, avant le réveil d’Alex.",
+        "referenceIds": [
+          "EXT06"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "nightmare_hospital_hc_ambient_01",
+            "description": "Décollement du revêtement pendant la transition",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "nightmare_hospital_hc_ambient_02",
+            "description": "Bascule du témoin d’ascenseur",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "nightmare_hospital_hc_ambient_03",
+            "description": "Rideaux et sangles d’un brancard qui remuent",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "nightmare_hospital_hc_round_transition",
+            "description": "Transition proposée pour ALCHEMILLA — HOMECOMING NIGHTMARE : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT06"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "nightmare_hospital_hc:reference:3",
+          "key": "hcDreamCurtainGurney",
+          "name": "Rideau et brancard du couloir initial",
+          "description": "Rideaux et sangles d’un brancard qui remuent",
+          "proposalIndex": 2,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.76,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Rideau et brancard du couloir initial",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Rêve clinique Homecoming avant le miroir et l’écorchure Otherworld",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Rideau sur cadre roulant et brancard vides attestés ; frémissement du tissu proposé. Sangles non confirmées et non produites ; aucun patient ou corps, pas état rouillé après le miroir."
+        },
+        {
+          "id": "nightmare_hospital_hc:reference:4",
+          "key": "clinicalDreamRoundRest",
+          "name": "Le tissu cesse de flotter, le cadre du brancard reste un repère clair",
+          "description": "Transition proposée pour ALCHEMILLA — HOMECOMING NIGHTMARE : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "proposalIndex": 3,
+          "source": "homecoming",
+          "evidence": [
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.76,
+            "y": 0.57
+          },
+          "trigger": "match-phase",
+          "event": null,
+          "matchRecipe": {
+            "targets": [
+              "hcDreamCurtainGurney"
+            ],
+            "settleFrames": 27,
+            "kind": "clinicalDreamRoundRest"
+          },
+          "requiresExplicitMatchPhase": true,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Le tissu cesse de flotter, le cadre du brancard reste un repère clair",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Rêve clinique Homecoming avant le miroir et l’écorchure Otherworld",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Le tissu cesse de flotter, le cadre du brancard reste un repère clair. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [
+          "powerFailure"
+        ],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "COULOIR DU RÊVE INITIAL",
+          "description": "Couloir clinique du rêve initial avant sa transformation ; ascenseur final et état Otherworld séparés. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+        },
+        "normalPhaseLabel": "RÊVE CLINIQUE AVANT LE MIROIR",
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "gurneyRush",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "gurneyRush",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "fanSpin",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "hospitalMonitor",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "flicker",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "nightmare_hospital_hc:reference:3",
+          "nightmare_hospital_hc:reference:4"
+        ],
+        "pendingProposalIds": [
+          "nightmare_hospital_hc:reference:1",
+          "nightmare_hospital_hc:reference:2"
+        ]
+      }
+    },
+    {
+      "id": "prison_hc",
+      "name": "OVERLOOK PENITENTIARY",
+      "source": "homecoming",
+      "family": "prison",
+      "sky": [
+        "#2f302c",
+        "#0f100d",
+        "#030303"
+      ],
+      "weather": "dust",
+      "props": [
+        "bars",
+        "lights"
+      ],
+      "animations": [
+        "lightFlicker"
+      ],
+      "hazard": "staticBurst",
+      "fatality": {
+        "id": "prison_hc_fatality",
+        "name": "CELLULE DU JUGEMENT",
+        "effect": "chains",
+        "sequence": [
+          "bars-close",
+          "chains",
+          "blackout"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de SHEPHERD’S GLEN PENITENTIARY."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Nom à corriger : Overlook Penitentiary; même établissement nommé dans le guide Homecoming.",
+        "canonicalBasis": "EXT04 ; EXT06",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "steel",
+        "name": "COURSIVE CELL BLOCK B",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Coursive de la prison Homecoming avant la séquence des cages ; lampe et ombres de versus, sans projecteur source certifié. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.52,
+        "radioScale": 1.2768,
+        "silhouetteRange": 502,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "rust",
+        "name": "ROUILLE INDUSTRIELLE",
+        "cue": "SIRÈNE",
+        "duration": 150,
+        "threshold": 0.58,
+        "timerRatio": 0.58,
+        "radioScale": 1.12,
+        "overlay": "rust",
+        "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
+        "startOtherworld": false,
+        "enabled": false,
+        "referenceState": "fixed-normal"
+      },
+      "director": {
+        "cadence": 301,
+        "initialDelay": 257,
+        "intensity": 1.13,
+        "arenaInset": 92,
+        "hazardDeck": [],
+        "events": [
+          "powerFailure",
+          "referenceGateReply"
+        ],
+        "motifPolicy": {
+          "events": [
+            "powerFailure",
+            "referenceGateReply"
+          ],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "spotlightHunt",
+            "bellToll"
+          ],
+          "excludedHazards": [
+            "spotlightSweep",
+            "frostWave",
+            "staticBurst"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "chainSweep",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "chainSway",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "cellShadow",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "weather",
+              "id": "flicker",
+              "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "prison_hc:rust:steel:fixed-normal::powerFailure+referenceGateReply"
+      },
+      "gameplay": {
+        "arenaInset": 92,
+        "terrainRules": false,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "cells",
+        "bars",
+        "lights"
+      ],
+      "animationTracks": [
+        {
+          "id": "lightFlicker",
+          "phase": "both",
+          "layer": "midground",
+          "intensity": 1,
+          "cadence": "irregular"
+        }
+      ],
+      "interactions": [
+        {
+          "id": "prison_hc_powerFailure_2",
+          "event": "powerFailure",
+          "name": "PANNE GÉNÉRALE",
+          "trigger": "otherworld-halfway",
+          "triggerLabel": "MI-CHEMIN OTHERWORLD",
+          "triggerDescription": "Réagit lorsque la transformation visuelle et matérielle du lieu dépasse la moitié de sa progression.",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
+          "canonicalBasis": "Nom à corriger : Overlook Penitentiary; même établissement nommé dans le guide Homecoming.",
+          "referenceIds": [
+            "EXT04",
+            "EXT06"
+          ],
+          "proposalId": null
+        },
+        {
+          "id": "prison_hc_referenceGateReply_2",
+          "event": "referenceGateReply",
+          "name": "Porte de cellule Overlook Homecoming",
+          "trigger": "local-heavy-impact",
+          "fidelity": "adaptation-versus-proposee",
+          "fidelityLabel": "PROPOSITION LORE · PROTOTYPE VERSUS",
+          "canonicalBasis": "Porte de cellule vibrant",
+          "referenceIds": [
+            "EXT04",
+            "EXT06"
+          ],
+          "proposalId": "prison_hc:reference:1",
+          "zone": {
+            "x": 0.68,
+            "radius": 0.15
+          },
+          "triggerLabel": "IMPACT LOURD À PROXIMITÉ",
+          "triggerDescription": "Réagit une fois à un choc lourd près de l’accessoire de fond ; le temps seul ne déclenche pas cette réaction."
+        }
+      ],
+      "reference": {
+        "id": "prison_hc",
+        "source": "homecoming",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "nom-a-corriger",
+        "catalogueName": "SHEPHERD’S GLEN PENITENTIARY",
+        "correctedName": "OVERLOOK PENITENTIARY",
+        "locationNote": "Nom à corriger : Overlook Penitentiary; même établissement nommé dans le guide Homecoming.",
+        "referenceIds": [
+          "EXT04",
+          "EXT06"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "prison_hc_ambient_01",
+            "description": "Porte de cellule vibrant",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT04",
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "prison_hc_ambient_02",
+            "description": "Ombres de barreaux déplacées par la lampe",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT04",
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "prison_hc_ambient_03",
+            "description": "Passage de lumière de sécurité sur coursive",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT04",
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "prison_hc_round_transition",
+            "description": "Transition proposée pour SHEPHERD’S GLEN PENITENTIARY : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT04",
+              "EXT06"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [
+        {
+          "id": "prison_hc:reference:1",
+          "key": "overlookHCCellReply",
+          "name": "Porte de cellule Overlook Homecoming",
+          "description": "Porte de cellule vibrant",
+          "proposalIndex": 0,
+          "source": "homecoming",
+          "evidence": [
+            "EXT04",
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.68,
+            "y": 0.57
+          },
+          "trigger": "local-heavy-impact",
+          "event": "referenceGateReply",
+          "eventEnabled": true,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Porte de cellule Overlook Homecoming",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Coursive normale Cell Block B avant le puzzle des cages Otherworld",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Porte grillagée interprétée, oscillation très faible proposée ; sans prison Downpour, cage du puzzle, levier automatique, ouverture ou chute."
+        },
+        {
+          "id": "prison_hc:reference:2",
+          "key": "overlookHCBarLight",
+          "name": "Ombres des barreaux du Cell Block B",
+          "description": "Ombres de barreaux déplacées par la lampe",
+          "proposalIndex": 1,
+          "source": "homecoming",
+          "evidence": [
+            "EXT04",
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.68,
+            "y": 0.57
+          },
+          "trigger": "ambient",
+          "event": null,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Ombres des barreaux du Cell Block B",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Coursive normale de la prison Overlook Homecoming",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Barreaux attestés ; mouvement de l’éclairage du versus proposé, sans projecteur de surveillance source revendiqué ni passage d’un gardien."
+        },
+        {
+          "id": "prison_hc:reference:4",
+          "key": "cellBlockBRoundRest",
+          "name": "Les ombres des barreaux cessent leur dérive et gardent une ligne fixe",
+          "description": "Transition proposée pour SHEPHERD’S GLEN PENITENTIARY : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "proposalIndex": 3,
+          "source": "homecoming",
+          "evidence": [
+            "EXT04",
+            "EXT06"
+          ],
+          "layer": "background",
+          "anchor": {
+            "x": 0.68,
+            "y": 0.57
+          },
+          "trigger": "match-phase",
+          "event": null,
+          "matchRecipe": {
+            "targets": [
+              "overlookHCBarLight"
+            ],
+            "settleFrames": 33,
+            "kind": "cellBlockBRoundRest"
+          },
+          "requiresExplicitMatchPhase": true,
+          "eventEnabled": null,
+          "implementation": "canvas-prototype",
+          "coverage": "partial-visual-prototype",
+          "implementedElement": "Les ombres des barreaux cessent leur dérive et gardent une ligne fixe",
+          "fidelity": "adaptation-versus-proposee",
+          "captureStatus": "capture-a-relever",
+          "locationScope": "Coursive normale de la prison Overlook Homecoming",
+          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les ombres des barreaux cessent leur dérive et gardent une ligne fixe. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus."
+        }
+      ],
+      "referencePolicy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [
+          "powerFailure",
+          "referenceGateReply"
+        ],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "terrainPresentation": {
+          "name": "COURSIVE CELL BLOCK B",
+          "description": "Coursive de la prison Homecoming avant la séquence des cages ; lampe et ombres de versus, sans projecteur source certifié. Physique neutre du versus ; échelle, caméra et animation non certifiées 1:1."
+        },
+        "normalPhaseLabel": "CELL BLOCK B NORMAL",
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "chainSweep",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "chainSway",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "cellShadow",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "flicker",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [
+          "prison_hc:reference:1",
+          "prison_hc:reference:2",
+          "prison_hc:reference:4"
+        ],
+        "pendingProposalIds": [
+          "prison_hc:reference:3"
+        ]
+      }
+    },
+    {
+      "id": "scarlet_chamber",
+      "name": "SCARLET’S CHAMBER",
+      "source": "homecoming",
+      "family": "lair",
+      "sky": [
+        "#3b2427",
+        "#13080a",
+        "#020102"
+      ],
+      "weather": "dust",
+      "props": [
+        "dolls",
+        "flesh"
+      ],
+      "animations": [],
+      "hazard": "bloodTide",
+      "fatality": {
+        "id": "scarlet_chamber_fatality",
+        "name": "OTHERWORLD STAGE FATALITY",
+        "effect": "rust",
+        "sequence": [
+          "siren",
+          "impact",
+          "blackout"
+        ],
+        "triggerZone": "either-edge",
+        "fidelity": "environmental-adaptation",
+        "canonicalBasis": "Décor et dangers documentés de SCARLET’S CHAMBER."
+      },
+      "catalogueStatus": "verified-location",
+      "lore": {
+        "premise": "Arène de Scarlet en Hell Descent; Scarlet’s Chamber est un nom éditorial.",
+        "canonicalBasis": "EXT05 ; EXT06",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
+        "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+      },
+      "terrain": {
+        "id": "mud",
+        "name": "BOUE ET RACINES",
+        "moveScale": 0.88,
+        "jumpScale": 0.9,
+        "dodgeScale": 0.86,
+        "friction": 0.77,
+        "knockbackScale": 0.9,
+        "guardRegenScale": 0.92,
+        "description": "Le terrain retient les pieds et favorise les attaques de poursuite."
+      },
+      "visibility": {
+        "fog": 0.2,
+        "darkness": 0.4,
+        "radioScale": 1.2768,
+        "silhouetteRange": 502,
+        "flashlight": true
+      },
+      "shift": {
+        "style": "rust",
+        "name": "ROUILLE INDUSTRIELLE",
+        "cue": "SIRÈNE",
+        "duration": 150,
+        "threshold": 0.58,
+        "timerRatio": 0.58,
+        "radioScale": 1.12,
+        "overlay": "rust",
+        "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
+        "startOtherworld": true,
+        "enabled": false,
+        "referenceState": "fixed-altered"
+      },
+      "director": {
+        "cadence": 301,
+        "initialDelay": 275,
+        "intensity": 1.13,
+        "arenaInset": 102,
+        "hazardDeck": [],
+        "events": [],
+        "motifPolicy": {
+          "events": [],
+          "hazards": [],
+          "ambienceOnly": true,
+          "excludedEvents": [
+            "rootWake",
+            "steamRelease"
+          ],
+          "excludedHazards": [
+            "rootSnare",
+            "steamVent"
+          ],
+          "evidenceScope": "exact-production-reference / original-versus-prototypes",
+          "suppression": [
+            {
+              "kind": "event",
+              "id": "sirenCall",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "event",
+              "id": "powerFailure",
+              "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+            },
+            {
+              "kind": "hazard",
+              "id": "bloodTide",
+              "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+            },
+            {
+              "kind": "animation",
+              "id": "dollTurn",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "mirrorGlitch",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "animation",
+              "id": "bloodPulse",
+              "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+            },
+            {
+              "kind": "weather",
+              "id": "blood",
+              "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+            }
+          ]
+        },
+        "safeMargin": 118,
+        "signature": "scarlet_chamber:rust:mud:fixed-altered::"
+      },
+      "gameplay": {
+        "arenaInset": 102,
+        "terrainRules": true,
+        "environmentalDirector": true,
+        "edgePressure": false,
+        "verticalPressure": false,
+        "closeQuarters": false
+      },
+      "layers": [
+        "organic-wall",
+        "pipes",
+        "roots",
+        "dolls",
+        "flesh"
+      ],
+      "animationTracks": [],
+      "interactions": [],
+      "reference": {
+        "id": "scarlet_chamber",
+        "source": "homecoming",
+        "identityMatched": true,
+        "blocked": false,
+        "locationStatus": "nom-editorial-lieu-documente",
+        "catalogueName": "SCARLET’S CHAMBER",
+        "correctedName": null,
+        "locationNote": "Arène de Scarlet en Hell Descent; Scarlet’s Chamber est un nom éditorial.",
+        "referenceIds": [
+          "EXT05",
+          "EXT06"
+        ],
+        "constraints": [
+          "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+          "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        ],
+        "proposals": [
+          {
+            "name": "scarlet_chamber_ambient_01",
+            "description": "Vibrations de passerelle métallique",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT05",
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "scarlet_chamber_ambient_02",
+            "description": "Mouvement des câbles au plafond",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT05",
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "scarlet_chamber_ambient_03",
+            "description": "Poussière de porcelaine après impact",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT05",
+              "EXT06"
+            ],
+            "category": "ambient",
+            "timecode": null
+          },
+          {
+            "name": "scarlet_chamber_round_transition",
+            "description": "Transition proposée pour SCARLET’S CHAMBER : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+            "status": "adaptation-animation-proposee",
+            "evidence": [
+              "EXT05",
+              "EXT06"
+            ],
+            "category": "round_transition",
+            "timecode": null
+          }
+        ]
+      },
+      "referenceTracks": [],
+      "referencePolicy": {
+        "worldState": "fixed-altered",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": true,
+        "weather": "dust",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "bloodTide",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "dollTurn",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "mirrorGlitch",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "bloodPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "blood",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [],
+        "pendingProposalIds": [
+          "scarlet_chamber:reference:1",
+          "scarlet_chamber:reference:2",
+          "scarlet_chamber:reference:3",
+          "scarlet_chamber:reference:4"
+        ]
+      }
+    }
+  ]
+}

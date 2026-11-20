@@ -1,0 +1,452 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-19T12:18:45.433Z",
+  "scope": "Missing stage bitmap candidates only",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/8edddaaaab76/stage-pass20-b/delivery.json",
+      "sha256": "67dbcc9981c6893e62711233d7e4e564d2292dcdccd3bea93caeb4ab477cbff9"
+    },
+    {
+      "path": "/workspace/scratch/8edddaaaab76/stage-pass20-c/delivery.json",
+      "sha256": "09cf3927b13e327e41eff2749610fd30f52201802ea020304aa1ad1c148adf42"
+    }
+  ],
+  "stages": [
+    {
+      "stageId": "dark_shrine",
+      "source": "shf",
+      "scene": "shrine-vault-forecourt-closed",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT33",
+        "EXT34",
+        "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+        "EXT10_SHF_SHRINE_HOKORA_20261026"
+      ],
+      "paths": [
+        "assets/stages/dark_shrine.background.2664d35ea297.png",
+        "assets/stages/dark_shrine.foreground.2abdd42961b5.png"
+      ]
+    },
+    {
+      "stageId": "school_shf",
+      "source": "shf",
+      "scene": "staff-room-key-cabinet",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT32",
+        "EXT10_SHF_SCHOOL_GUIDE_20261026",
+        "EXT10_SHF_STAFF_ROOM_20261026"
+      ],
+      "paths": [
+        "assets/stages/school_shf.background.360ffba8283b.png",
+        "assets/stages/school_shf.foreground.a50d69a51274.png"
+      ]
+    },
+    {
+      "stageId": "hinako_home",
+      "source": "shf",
+      "scene": "residence-i-entry-corridor",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT34",
+        "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+        "EXT10_SHF_RESIDENCE_ENTRY_20261026"
+      ],
+      "paths": [
+        "assets/stages/hinako_home.background.90570edd1d72.png",
+        "assets/stages/hinako_home.foreground.e1ab86dcc94a.png"
+      ]
+    },
+    {
+      "stageId": "corrupted_ebisugaoka",
+      "source": "shf",
+      "scene": "shimizu-forecourt-part5",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT32",
+        "EXT_SHF_EBISUGAOKA5_20261025",
+        "EXT10_SHF_RESIDENCE_FORECOURT_20261026"
+      ],
+      "paths": [
+        "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+        "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png"
+      ]
+    },
+    {
+      "stageId": "hospital_world",
+      "source": "sh4",
+      "scene": "hospital-second-floor-corridor",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH4_07_HOSPITAL_WORLD"
+      ],
+      "paths": [
+        "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+        "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png"
+      ]
+    },
+    {
+      "stageId": "artaud_theater",
+      "source": "origins",
+      "scene": "normal-theater-forest-set-lit",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT03",
+        "EXT_ORIGINS_THEATER_GUIDE_20261026"
+      ],
+      "paths": [
+        "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+        "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png"
+      ]
+    },
+    {
+      "stageId": "devils_pit",
+      "source": "downpour",
+      "scene": "water-wheels-cavern-dry-catwalk",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT11"
+      ],
+      "paths": [
+        "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+        "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png"
+      ]
+    },
+    {
+      "stageId": "overlook",
+      "source": "downpour",
+      "scene": "block-a-a2-before-flooded-vision",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT11"
+      ],
+      "paths": [
+        "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+        "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+      "sha256": "2664d35ea29745a4372c226486c61d90f8a04fb5d309a97d9c590bb2e14b8981",
+      "bytes": 2294268,
+      "width": 1672,
+      "height": 941,
+      "stageId": "dark_shrine",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-b/dark_shrine.background.v1.png",
+      "sourcePixelSHA256": "f00894779beb0937f8a9422fd583ae7ebd2733bf5b3dff8a9144270053a96aa3",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "sha256": "2abdd42961b578991e4b0f5670ffcab08a2678af7bf0a5930976b1af1d64dcff",
+      "bytes": 132551,
+      "width": 1672,
+      "height": 941,
+      "stageId": "dark_shrine",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-b/dark_shrine.foreground.v1.png",
+      "sourcePixelSHA256": "94ad2d05044dc2d25f4fd5f39f07a5d3158f1e65d8739dcb4584a82c595bb39f",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/school_shf.background.360ffba8283b.png",
+      "sha256": "360ffba8283bcffb155b4fbdd3e01378ebeb5444a27b2cbe5751f4c99b999614",
+      "bytes": 2265328,
+      "width": 1672,
+      "height": 941,
+      "stageId": "school_shf",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-b/school_shf.background.v1.png",
+      "sourcePixelSHA256": "4b59329056e34c550429ca693c26d18801753495b3a6fcc3399c382cd1d77f31",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+      "sha256": "a50d69a51274e519af937eea250adced9eaa18c554b0245c2a8eccddbe74d9ce",
+      "bytes": 185180,
+      "width": 1672,
+      "height": 941,
+      "stageId": "school_shf",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-b/school_shf.foreground.v1.png",
+      "sourcePixelSHA256": "ba88e086fb6b8e9f684420ea415667808cb7cac234ddffba944ec0acaeccd919",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+      "sha256": "90570edd1d72771cd12dff858ae4c9b533d4278d698d88855c897816adc8d75f",
+      "bytes": 2117156,
+      "width": 1672,
+      "height": 941,
+      "stageId": "hinako_home",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-b/hinako_home.background.v1.png",
+      "sourcePixelSHA256": "fe55d8032c3633872a20d0a0625703749cebab01a0d56182de1eb995846bd474",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "sha256": "e1ab86dcc94ac3a1bc1adcc212f75df96062367d02b5d5be9b9ff06ad9d3813b",
+      "bytes": 204582,
+      "width": 1672,
+      "height": 941,
+      "stageId": "hinako_home",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-b/hinako_home.foreground.v1.png",
+      "sourcePixelSHA256": "bbd5baf3147443cd58947db9d51ea8e72b2cc322cf7ff2fd4157367945131f13",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "sha256": "3e90f59a15a20b03a2f36ee1653f99efedb828386e556b68ce910673a571ef23",
+      "bytes": 2452216,
+      "width": 1672,
+      "height": 941,
+      "stageId": "corrupted_ebisugaoka",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-b/corrupted_ebisugaoka.background.v1.png",
+      "sourcePixelSHA256": "27aa34abac744444564e0c8ae4e1882ed4225778695eff93a8cd871465ae3f69",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "sha256": "097c19a0598acde9f37df4fdde9533f2c4ae0f9cd05c4b271ea0b3e0197db4bc",
+      "bytes": 299193,
+      "width": 1672,
+      "height": 941,
+      "stageId": "corrupted_ebisugaoka",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-b/corrupted_ebisugaoka.foreground.v1.png",
+      "sourcePixelSHA256": "764afdfddf51b530c7ee4a531c7ca94ca50627ad00002df28869acc758b8735c",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "sha256": "0bb80f0606449b629f834810497a61d800e7dc1d3d885568b0071ae91e250910",
+      "bytes": 2109114,
+      "width": 1672,
+      "height": 941,
+      "stageId": "hospital_world",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/hospital_world-background.png",
+      "sourcePixelSHA256": "140ff2ad527429e3a6a49d2ec14a5d1fb1043b6aff3d5cdbf368fb6676d8808a",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "sha256": "d94873aa3fe8d3321442db077fd37fc25f35bab8c9ba333f6b688af57c4d15bd",
+      "bytes": 288757,
+      "width": 1671,
+      "height": 941,
+      "stageId": "hospital_world",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/hospital_world-foreground.png",
+      "sourcePixelSHA256": "b1bb8a9187e89e44172251003b1025fb5edacadd94faab8b56aec7f7d7fe5bab",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "sha256": "73ab43a7563e0aaa24a9c8b0fa8942b4201bb8e08f1c6c1b2bbf3bc6693f4b21",
+      "bytes": 2274126,
+      "width": 1672,
+      "height": 941,
+      "stageId": "artaud_theater",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/artaud_theater-background.png",
+      "sourcePixelSHA256": "ca5467794e384f2aad01e76230b95694789107f240be0f92f61306cf1761c059",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "sha256": "133f10a3b7775e1642def9f424fee9c9393544976943038a28f37373d24d545a",
+      "bytes": 377476,
+      "width": 1672,
+      "height": 941,
+      "stageId": "artaud_theater",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/artaud_theater-foreground.png",
+      "sourcePixelSHA256": "2bfea9dcee922512c2c308aeaff378dc64bdaf067776870708d7874d44d187ee",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "sha256": "406d6f6df55f370912c5ff5b2df6bb30f1846d5b65b59a192657c947081d0381",
+      "bytes": 2964994,
+      "width": 1672,
+      "height": 941,
+      "stageId": "devils_pit",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/devils_pit-background.png",
+      "sourcePixelSHA256": "d87192803691142339356f0d92e073af9ef0b5bdf43588da2cc28d3ea41f0ceb",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "sha256": "1858e96a1fd21deb630f02dd6a24f0947d968f041ec168380c8ca73fd304b57b",
+      "bytes": 235056,
+      "width": 1672,
+      "height": 941,
+      "stageId": "devils_pit",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/devils_pit-foreground.png",
+      "sourcePixelSHA256": "325f8822f081f0b642149758d06f006cc491a6cfe639f74f9ed624b7d9bc8697",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "sha256": "da91aaa922c03b973ee7ffb7ade47a91cd2aef81244be1f813fce4526d98bdc5",
+      "bytes": 2595719,
+      "width": 1672,
+      "height": 941,
+      "stageId": "overlook",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/overlook-background.png",
+      "sourcePixelSHA256": "6ee7f72b89c8a08fff416528edaf3a05a0c493a0eebb2b4ccf0be32488efc615",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "sha256": "29b757fe46c2e25ab7da25f70081adedcd66f951af5c5ddb081458f867433b84",
+      "bytes": 418385,
+      "width": 1672,
+      "height": 941,
+      "stageId": "overlook",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/overlook-foreground.png",
+      "sourcePixelSHA256": "cfab86bfbecfe15d3219c619fb64674bacb0980d168a9631f1d9edff09b84880",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    }
+  ],
+  "protectedFiles": [
+    "art/registry.json",
+    "data/sprite-coverage.json",
+    "src/sprite-manifest.js",
+    "data/roster.json",
+    "data/movesets.json",
+    "src/fight.js",
+    "src/sprite-system.js",
+    "src/sprite-animation.js",
+    "src/versus.js",
+    "data/stages.json",
+    "src/renderers.js",
+    "src/stage-bitmaps.js",
+    "src/stage-bitmap-compositions.js",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+    "docs/production/workbook-verification.json"
+  ],
+  "existingCompositionsPreserved": true,
+  "build": {
+    "stages": 40,
+    "files": 78,
+    "paths": [
+      "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+      "/assets/stages/apartment_world.office.6001d447c296.png",
+      "/assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
+      "/assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "/assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "/assets/stages/baldwin_mansion.closed-lounge-landing.5fa7f85bcd25.png",
+      "/assets/stages/baldwin_mansion.near-timber-jambs.de3ae2125a5e.png",
+      "/assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
+      "/assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
+      "/assets/stages/book_wood.bare-bough.58fbcd47b401.png",
+      "/assets/stages/book_wood.wood-clearing.badc47213490.png",
+      "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+      "/assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+      "/assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "/assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png",
+      "/assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
+      "/assets/stages/building_world.fan-stairwell.15995c474e24.png",
+      "/assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png",
+      "/assets/stages/church.candle-stand.53fb59eeefa2.png",
+      "/assets/stages/church.initial-chapel.1b637d5146cd.png",
+      "/assets/stages/church_hc.candle-stand.31cb771411d7.png",
+      "/assets/stages/church_hc.holy-way-nave.03a8aefbef40.png",
+      "/assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "/assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "/assets/stages/curtis_shop.sales-counter.003f99674bac.png",
+      "/assets/stages/curtis_shop.workshop.910767824f6e.png",
+      "/assets/stages/dark_shrine.background.2664d35ea297.png",
+      "/assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "/assets/stages/dark_shrine_corridors.inari-altar.c91ff918e575.png",
+      "/assets/stages/dark_shrine_corridors.lacquer-shelf.fb67e770ed74.png",
+      "/assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
+      "/assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
+      "/assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "/assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "/assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+      "/assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+      "/assets/stages/forest_world.first-visit-clearing.76588be774de.png",
+      "/assets/stages/forest_world.near-bark-and-grass.5df8c21ae5bc.png",
+      "/assets/stages/hilltop_center.monica-reception.8153762e19e6.png",
+      "/assets/stages/hilltop_center.near-cabinet-edges.e64c163eeca2.png",
+      "/assets/stages/hinako_home.background.90570edd1d72.png",
+      "/assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "/assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
+      "/assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
+      "/assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "/assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "/assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
+      "/assets/stages/labyrinth.control-chamber.60453a15467d.png",
+      "/assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
+      "/assets/stages/lakeside_amusement.platform.e002db685c30.png",
+      "/assets/stages/lakeview.lobby.7bc2120c786c.png",
+      "/assets/stages/looping_hall.hallway.b48a0819aed4.png",
+      "/assets/stages/looping_hall.radio-cabinet.b16069870543.png",
+      "/assets/stages/midwich.courtyard.c9728428d63d.png",
+      "/assets/stages/midwich_nightmare.hearth.862c9df53e36.png",
+      "/assets/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
+      "/assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "/assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "/assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
+      "/assets/stages/riverside_motel.gate.270f1cbab7c5.png",
+      "/assets/stages/room_302.chair.739650b60353.png",
+      "/assets/stages/room_302.entrance.6535cc934c6c.png",
+      "/assets/stages/school_shf.background.360ffba8283b.png",
+      "/assets/stages/school_shf.foreground.a50d69a51274.png",
+      "/assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
+      "/assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
+      "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
+      "/assets/stages/subway_world.lynch-platform.db4c6baf4c38.png",
+      "/assets/stages/subway_world.near-platform-uprights.6fac368c5db5.png",
+      "/assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
+      "/assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
+      "/assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+      "/assets/stages/underground_hc.near-jambs.a49721844afa.png",
+      "/assets/stages/water_prison.surveillance-room.5f3849f04407.png",
+      "/assets/stages/water_prison.valve-pedestal.7711109d1342.png",
+      "/assets/stages/woodside.clock-room.da94acd4e920.png",
+      "/assets/stages/woodside.corridor.c6ac083599d0.png",
+      "/assets/stages/woodside.grandfather-clock.bc7fec047ff5.png"
+    ],
+    "revision": "ce06f79b059ded7f4c6b3592b620e43c72fdd8f7ccb23d40ad57bb9b857ee86e"
+  },
+  "protectedScopeUnchanged": true,
+  "coverage": {
+    "total": 123,
+    "beforeActive": 32,
+    "afterActive": 40,
+    "remaining": 83
+  },
+  "activePNGBytes": 21214101
+}

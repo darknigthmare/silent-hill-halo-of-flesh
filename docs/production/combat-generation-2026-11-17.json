@@ -1,0 +1,472 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "base": "c68a1a97f1680a38613ac92f00524b00c245df89",
+  "purpose": "Separate selection portraits and lateral combat idle sprites",
+  "status": "integrated-candidates-validation-in-progress",
+  "specs": [
+    {
+      "id": "downpour_prisoner_minion_brawler_108",
+      "source": "downpour",
+      "refs": [
+        "/workspace/scratch/ae07d9a11c02/references/parent/downpour-brawler.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: separate in-engine idle sprite for a SIDE-VIEW 2D fighting game. Input image 1 is the exact official Silent Hill Downpour Brawler identity reference; input image 2 is the existing character-selection art, a color/material reference only. Produce ONE full-body BRAWLER in a genuinely lateral combat guard facing SCREEN RIGHT. Turn his entire head, ribcage, pelvis and both feet toward the opponent at the right edge: nose and open mouth in clear right profile, the visible near shoulder overlaps the far shoulder; the chest is mostly seen from the side, never square to the viewer. Camera level, orthographic side-on gameplay view, not an isometric or roster presentation angle. He braces with knees slightly bent, rightward front foot and rear foot separated horizontally on one ground baseline, both closed fists held ahead of the torso in a rough heavy brawler guard. Preserve the exact short dark hair, gaunt distressed face, paired narrow upright forehead restraint bands and jaw frame, tattooed heavy muscular torso, olive-brown loose trousers, bare feet and metal ankle restraints. Both hands are empty. Retain the supplied design and proportions, no new wounds, gore or redesigned armor. Crisp detailed realistic painted 2D sprite, neutral light, no outline glow or color fringe. Entire top of restraint, both fists, both feet and all anatomy inside the frame, generous 8% empty transparent padding. Request native 2160x3840 portrait if supported; TRUE transparent alpha background. No environment, floor plane, floor shadow, text, watermark, duplicate pose, portrait composition or opponent."
+    },
+    {
+      "id": "downpour_prisoner_minion_agile_109",
+      "source": "downpour",
+      "refs": [
+        "/workspace/scratch/ae07d9a11c02/references/parent/downpour-stabber.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: separate SIDE-ON combat idle sprite for a 2D fighting game. Image 1 is the named official Silent Hill Downpour Stabber reference (existing Agile profile), image 2 is existing selection artwork for identity/colors only. Generate one ENTIRE exact Stabber, rotated into a right-facing SIDE PROFILE combat stance. His nose, face frame, chest, hips, knees and toes point at the enemy offscreen RIGHT, not toward the viewer. Camera is horizontal at body height, orthographic game side view, no top-down floor perspective. Preserve his angular cage around head and jaw, short brown hair, asymmetric muscular tattooed pale torso, larger weapon arm holding ONE long thin pointed metal blade, thinner empty other arm, dark olive loose trousers, ankle cuffs and bare feet. Adapt pose into a low agile idle: knees flexed, feet separated fore-and-aft horizontally on the same baseline, free fist slightly ahead, weapon hand held low beside the forward hip, complete blade sloping toward the right in readable side silhouette without touching the crop. Near and far limbs separated enough to count exactly two arms and two legs. Retain exact costume and anatomy; do not turn him into Brawler, add weaponry, wounds or splatter. Detailed realistic painted 2D game art consistent with image2, clean edges with no colored fringe. Full head restraint, full hands, weapon tip and both soles visible with at least 8% transparent padding. True alpha background, native 2160x3840 portrait requested if supported. No opponent, floor, shadow, scenery, labels, multiple views or frontal selection pose."
+    },
+    {
+      "id": "downpour_shadow_107",
+      "source": "downpour",
+      "refs": [
+        "/workspace/scratch/ae07d9a11c02/references/parent/downpour-shadow.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/downpour_shadow_107.d39788178ac5.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset type: standalone SIDE-VIEW fighting-game combat idle sprite. Reference1 is the exact official Silent Hill Downpour Shadow render; reference2 is our matching selection image for material/color continuity, not the desired pose. Create one full-body exact adult Shadow turned into a strict SCREEN-RIGHT side-on guard. Head and hollow mask mouth look right in clear profile; shoulders and hips are side-on, near shoulder overlaps the far one; do not show a front-facing chest or look at camera. Orthographic horizontal side-view fighting-game camera with no elevated view. Keep the short grey bob haircut, pale hollow mask face, dark sleeveless bodice with thin red straps, aged torn striped stockings, red forearms and fully covered feet. The canonical hunched torso leans slightly toward the right-side opponent; knees flexed, one foot forward and one back horizontally along the same ground baseline. Both empty claw-like hands are poised ahead at different heights, fully readable and separated, not reaching toward the viewer. Maintain exact outfit, adult body proportions and material colors, without adding injury, blood spray or accessories. Crisp highly detailed realistic painted 2D sprite, soft neutral illumination and clean alpha contours with no colored fringe. Whole hair, fingers, feet and all silhouette contained with 8% transparent safety margin; native 2160x3840 portrait requested if supported. TRUE transparent background, no painted checkerboard, no scene, floor shadow, text, watermark, enemy, alternate views, duplication or frontal character-selection composition."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "downpour_prisoner_minion_brawler_108",
+      "file": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+      "pixelSHA256": "46d8d77832cac6af314713dd60c1cf5d4ac102614fa4fff94b80d96cd24879f6",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "anchor": [
+        0.471838,
+        0.958134
+      ],
+      "bodyHeight": 0.980861,
+      "selectionFile": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-ddfc84b5-955e-4094-83fc-87e4c2018b72.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit de la tête ; torse légèrement en trois quarts, garde latérale. Ancre au centre horizontal des deux appuis estimés, sur la semelle basse (y=1602). Stature reconstruite par segments tête-cou, torse, cuisse, jambe et pied : environ 1640 px, au-dessus des 1537 px visibles car genoux fléchis et cou incliné. Écart de hauteur des semelles d’environ 48 px : l’appui arrière et l’appui avant ne partagent pas une ligne strictement orthographique. Les tatouages, dents et métal fin restent une interprétation générée du rendu de petite taille. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "downpour_prisoner_minion_agile_109",
+      "file": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+      "pixelSHA256": "10bc90edaff686911c6cb1cde731fca8fee6753eb5c302b0833838affe4b108b",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "anchor": [
+        0.471838,
+        0.860048
+      ],
+      "bodyHeight": 0.819378,
+      "selectionFile": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-6ffbcbf1-c8a9-479b-b248-892cf6025be3.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit de la tête et posture de combat latérale. Ancre entre les deux appuis de pieds, y=1438. Stature redressée estimée à 1370 px en suivant tête-cou, torse incliné et segments des jambes ; hauteur occupée accroupie de 1158 px non utilisée directement. Alias de profil Agile / Stabber hérité de l’identification Prima, sans changement du profil de jeu. Lame entière ; épaisseur et détails de texture non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "downpour_shadow_107",
+      "file": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+      "pixelSHA256": "6b7e7a10a3124aa64c64888793c2ecc043796cd5462a31fbb62c2d786ea3c95a",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "anchor": [
+        0.435707,
+        0.921651
+      ],
+      "bodyHeight": 0.944976,
+      "selectionFile": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-b2c686eb-c2e3-4001-ae67-65f9bc46a5eb.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit clair, mains projetées vers l’adversaire à droite. Ancre entre les deux appuis à y=1541. Stature redressée estimée à 1580 px à partir de la chaîne tête-cou-tronc et des deux segments de jambe ; silhouette penchée visible de 1410 px. Pose statique nouvelle ; aucune validation du mouvement ou du lien avec le corps Doll en combat. Motifs des jambes et détails de mains non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "sh3_god_050",
+      "file": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+      "pixelSHA256": "249b53c6dfb89ba70389e336238cbfa83f9cb8ff0277c1ccf89f1bd066339f89",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "anchor": [
+        0.393199,
+        0.986244
+      ],
+      "bodyHeight": 0.861244,
+      "selectionFile": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-7cd3e9e1-5056-477e-a19d-f98cb4749f26.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête de profil droit ; torse et bassin en trois quarts latéral. Ancre conventionnelle entre les deux extrémités inférieures, au point bas y=1649 ; ce n’est pas un appui de pied. Stature corporelle de référence environ 1440 px depuis la crête (y≈227) aux extrémités, avec faible correction du tronc. Le rideau montant à y=25 est exclu de cette mesure. Morphologie sans pieds : placement au sol conventionnel à vérifier dans la scène de combat. Trois quarts latéral, pas un dessin orthographique strict. Limites de référence du modèle de jeu ; aucune certification 1:1 ni conformité retail intégrale. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "origins_demon_084",
+      "file": "assets/sprites/origins_demon_084.abac0695168a.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+      "pixelSHA256": "dc85e787ce494c9994d8c3ae73dfe7c582b0d6a50d198da50c2f91493ff9e759",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "anchor": [
+        0.364583,
+        0.979492
+      ],
+      "bodyHeight": 0.966797,
+      "selectionFile": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-37da6be7-6f1d-4bb2-88e5-d9bfacc327c7.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête et corps orientés à droite, torse légèrement en trois quarts latéral. Ancre entre les deux appuis, y=1003. Chaîne anatomique tête-cou-tronc-cuisse-jambe-pied environ 990 px redressée ; les projections dorsales qui montent à y=9 ne définissent pas la stature. Marge haute de 9 px seulement pour les projections dorsales, mais elles restent entières. PNG natif 1536 × 1024 ; le fond brun de l’aperçu se trouve dans du RGB à alpha 0. Échantillons de fond inspectés : alpha nul ; dès alpha ≥2, les limites se resserrent au sujet. Les sources natives sont de basse résolution ; cornes, doigts et texture ne sont pas certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "bom_fire_guardian_137",
+      "file": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+      "pixelSHA256": "b1e0219579c76697c15471b7aaeeab41187d2d7677bf96ed1c9a4b2529235d51",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "anchor": [
+        0.496411,
+        0.961743
+      ],
+      "bodyHeight": 0.835282,
+      "selectionFile": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-0bfa753d-8403-4c86-b64e-38b9adcfd3a5.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête et corps latéraux face à droite, avant-bras projetés vers l’adversaire. Ancre de soutien entre membres postérieurs et avant-griffes, au point inférieur y=905. Pour cette morphologie canoniquement ramassée, la stature de référence suit le dos porteur (y≈114) aux appuis (y≈900), soit 786 px, hors cornes. Aucune posture bipède redressée n’est inventée. Calibration morphologique provisoire, à contrôler en scène. La source native et le portrait se complètent mais présentent des auto-occultations. La stature de référence est celle de sa pose neutre non humaine ; un étalon debout officiel n’est pas disponible. Cornes, petites griffes et détails du dos non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "film_armless_man_170",
+      "file": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+      "pixelSHA256": "ddda5b205fa9d77bb806b7add0c84b8cd53a7a769671441bc0bbacb0f2d72065",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "anchor": [
+        0.446334,
+        0.949163
+      ],
+      "bodyHeight": 0.980861,
+      "selectionFile": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-0156d823-a916-48e1-8c1e-5d297305e2be.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Corps et tête inclinés vers la droite, côté antérieur identifié par l’ouverture thoracique. Ancre entre les deux appuis à y=1587. Stature redressée estimée à 1640 px par les segments tête-cou, torse et jambes ; la hauteur visible inclinée est de 1472 px. Référence de costume de tournage avec petite capture du film ; l’aspect après tous les effets visuels du film n’est pas certifié. Détails réticulés et cavité thoracique générés, non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "film_red_pyramid_thing_return_to_silent_hill",
+      "file": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+      "pixelSHA256": "844d35209d8e485f579cb9a83d52cb104a2745a90817c3846b09c967582e6b36",
+      "nativeDimensions": [
+        1671,
+        941
+      ],
+      "anchor": [
+        0.550569,
+        0.859724
+      ],
+      "bodyHeight": 0.765143,
+      "selectionFile": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-2b007f29-8a35-423f-bb4a-07c04ef36b1f.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Casque et corps orientés à droite, garde latérale ; main armée ramenée en arrière avec lame entière. Ancre entre les deux pieds au plan des semelles y=809. Stature de référence environ 720 px, casque canonique inclus, avec correction faible de la flexion et de l’écartement des jambes ; la lame n’influence pas cette stature. Référence issue d’une figurine sous licence Star Ace SA0164 : elle ne certifie pas tous les détails du costume final à l’écran. Vue latérale générée ; petits perforations, boucles et texture non certifiés 1:1. Correction de cadrage acceptée : marge significative haute 108 px et basse 132 px. Le premier PNG aux marges serrées n’a pas été importé. Dimensions natives de la correction : 1671 × 941, sans prétention UHD. Candidat généré non certifié 1:1 ; aucune animation complète."
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_axe",
+      "file": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+      "pixelSHA256": "761193ad2dc338d66ef58dcf06d2321053d04a5270f74af02f8f55f3eff6099f",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "anchor": [
+        0.467588,
+        0.940789
+      ],
+      "bodyHeight": 0.927033,
+      "selectionFile": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-81c594c9-a289-40d5-a571-c3da14ba244f.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête de profil droit ; corps en garde latérale, hache tenue devant le corps. Ancre au centre des deux appuis, y=1573. Stature redressée estimée à 1550 px, oreilles incluses comme silhouette de tête, avec correction modérée des genoux fléchis par rapport aux 1476 px occupés. Le nombre exact de dents demeure non résolu dans la référence native de faible taille ; aucune exigence d’une dent unique n’est affirmée. Quatre orteils existent dans la sélection conservée ; la vue de côté masque les orteils internes et ne permet pas leur certification complète. La géométrie détaillée de la hache s’appuie aussi sur un port de modèle modifié documenté dans la provenance de sélection ; elle n’est pas certifiée comme modèle retail exact. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "arcade_hummer_arcade",
+      "file": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+      "pixelSHA256": "b5c6a454a42775809db1d8ff8de2a5d7ddc28d6bd76bc688f85d90118d97b7cd",
+      "nativeDimensions": [
+        1774,
+        887
+      ],
+      "anchor": [
+        0.535513,
+        0.921082
+      ],
+      "bodyHeight": 0.518602,
+      "selectionFile": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-95ddb254-1edd-4b79-a7d4-1ff8e7b640b1.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Bec dirigé vers la droite ; corps en vol latéral, deux ailes étendues avec leurs pointes entières. Ancre conventionnelle sous la masse centrale du corps, y=817 ; elle ne prétend pas être un pied posé au sol. Référence morphologique en vol : hauteur du corps central environ 460 px, depuis son dos autour de y=355 jusqu’au dessous à y=815. L’étendue des ailes n’est pas utilisée comme stature. Ailes en trois quarts pour les rendre distinctes ; pose latérale adaptée, pas frame native extraite. Sources entières petites ; le gros plan de jeu coupe une aile. Petites griffes et texture non certifiées. Marge haute de l’aile proche : 20 px significatifs, aile entière. Ancrage de vol et échelle non validés dans une scène de combat. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "arcade_tremer_arcade",
+      "file": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+      "pixelSHA256": "a87ad5200052adb74dd59b59126fc6a7f5595bc5bab5539bfd9c5d95d829d656",
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "anchor": [
+        0.529466,
+        0.846685
+      ],
+      "bodyHeight": 0.662983,
+      "selectionFile": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-5db4f8fd-f8ab-4528-8d08-048831647a73.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Corps rampant horizontal ; extrémité antérieure large et ouverture ventrale à droite, queue effilée à gauche. Ancre conventionnelle sur le dessous du corps rampant, y=613, sous sa masse centrale. Référence morphologique au repos : épaisseur maximale du corps 480 px, de y=133 à y=613. Ce profil sans membres n’a pas de stature bipède debout ; sa longueur horizontale ne remplace pas sa hauteur de référence. Orientation déduite de l’extrémité large et de l’ouverture ; pose latérale adaptée depuis les vues native de dessus/dessous. Corps natif petit et éclairages différents ; texture et forme fine non certifiées 1:1. Ancrage rampant et échelle non validés dans une scène de combat. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    },
+    {
+      "id": "arcade_tuberculosis",
+      "file": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+      "status": "integrated-candidate",
+      "purpose": "combat",
+      "pose": "idle",
+      "frames": 1,
+      "animated": false,
+      "facing": 1,
+      "sha256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+      "pixelSHA256": "9537582494d64ea9a604ac64f41812ea290a3f36a5ad17daacc524e2e5e3df4d",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "anchor": [
+        0.514323,
+        0.902344
+      ],
+      "bodyHeight": 0.996094,
+      "selectionFile": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+      "selectionPreserved": true,
+      "fidelity": "unverified",
+      "nativeUHD": false,
+      "sourceFile": "exec-b2d6ae24-3e49-4192-a3df-c00951fb3835.png",
+      "notes": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Long cou et gueule orientés à droite ; torse en trois quarts latéral, queue complète vers la gauche. Ancre entre les deux appuis à y=924. Stature équivalente estimée à environ 1020 px en conservant la courbure cervicale canonique : 846 px de corps visible plus environ 175 px de redressement des jambes fortement fléchies. La queue et l’extension latérale de la lame sont exclues. Estimation de faible précision, à vérifier en scène. Appuis décalés verticalement d’environ 24 px ; vue en trois quarts, pas une projection strictement orthographique. La courbure de la queue est adaptée au cadrage à partir de l’union des quatre vues, et non certifiée 1:1. Stature estimée près de la limite de la hauteur d’image ; aucun étalon natif debout complet n’est disponible. Le fond brun de l’aperçu est constitué de RGB à alpha 0 ; les échantillons périphériques ont été contrôlés. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète."
+    }
+  ],
+  "blocked": [
+    {
+      "id": "arcade_numb_body_arcade",
+      "attemptedPurpose": "selection",
+      "status": "tool-refusal",
+      "stage": "output",
+      "categories": [
+        "sexual"
+      ],
+      "requestId": "69e384e1-616d-4d50-90f8-23ec8263d6c0",
+      "attempts": 1,
+      "retry": false,
+      "combatAttempted": false,
+      "referenceReady": true
+    }
+  ],
+  "selectionOutputs": [
+    {
+      "id": "arcade_hummer_arcade",
+      "file": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+      "status": "integrated-candidate",
+      "purpose": "selection",
+      "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "sourceFile": "exec-b1158687-9dd2-4aec-a288-3d180ec20dff.png",
+      "fidelity": "unverified",
+      "nativeUHD": false
+    },
+    {
+      "id": "arcade_tremer_arcade",
+      "file": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+      "status": "integrated-candidate",
+      "purpose": "selection",
+      "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "sourceFile": "exec-ba71e15c-fc0c-4c75-827e-0d6f6fe4f849.png",
+      "fidelity": "unverified",
+      "nativeUHD": false
+    },
+    {
+      "id": "arcade_tuberculosis",
+      "file": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+      "status": "integrated-candidate",
+      "purpose": "selection",
+      "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "sourceFile": "exec-1d38b07a-34af-46f5-a684-f3773f580b62.png",
+      "fidelity": "unverified",
+      "nativeUHD": false
+    }
+  ],
+  "additionalPromptFiles": [
+    "combat-prompts-2026-11-17-b.json",
+    "combat-prompts-2026-11-17-c.json",
+    "combat-prompts-2026-11-17-d.json",
+    "combat-prompts-2026-11-17-e.json"
+  ],
+  "superseded": [
+    {
+      "id": "film_red_pyramid_thing_return_to_silent_hill",
+      "purpose": "combat",
+      "sourceFile": "exec-9faf9e6d-ce34-4953-9b13-d3ea8a5e219a.png",
+      "reason": "Marges haute et basse insuffisantes ; remplacé par une correction de cadrage via image_gen. Non importé."
+    }
+  ],
+  "counts": {
+    "roster": 230,
+    "selectionAvailable": 166,
+    "selectionMissing": 64,
+    "newSelectionImages": 3,
+    "newCombatImages": 12,
+    "separateSelectionAndCombat": 12,
+    "combatSideViewCandidates": 12,
+    "combatLegacyUnreviewed": 154,
+    "combatMissing": 64,
+    "priorSelectionImagesPreserved": 9,
+    "legacyProfilesUnchanged": 154,
+    "newAnimatedClips": 0,
+    "certified1to1": 0,
+    "nativeUHD": false,
+    "newImageFilesInstalled": 15,
+    "generationCalls": 17,
+    "generationSuccesses": 16,
+    "generationRefusals": 1,
+    "supersededGeneratedImages": 1
+  },
+  "combatRole": {
+    "activeAmongNewCombatImages": 10,
+    "disabledDossiers": [
+      "arcade_tuberculosis",
+      "film_red_pyramid_thing_return_to_silent_hill"
+    ],
+    "rolesChanged": false
+  },
+  "notes": [
+    "Les neuf images du journal précédent sont des images de sélection, conformément à la correction utilisateur. Leurs dictionnaires et octets sont préservés.",
+    "Tous les nouveaux sprites de combat sont des images idle statiques distinctes, orientées à droite. Le moteur retourne la présentation pour le sujet droit.",
+    "Aucune nouvelle vue gauche indépendante : les asymétries anatomiques ne sont pas vérifiées par ce miroir.",
+    "Les 154 profils antérieurs restent inchangés et non audités comme latéraux ; leur disponibilité technique ne certifie pas leur orientation.",
+    "Les sprites sont des candidats générés. Résolution native mesurée, aucune UHD native ni fidélité 1:1 certifiée."
+  ]
+}

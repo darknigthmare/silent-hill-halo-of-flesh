@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-19T16:09:28.333870+00:00",
+  "status": "complete",
+  "scope": "Wave22 stage evidence only",
+  "delivery": {
+    "file": "delivery.json",
+    "localPath": "/workspace/scratch/halo-wave22-stages/delivery.json",
+    "sha256": "2352e4b672a91adf8f4b320d5cdf58551fcfc526526a7b09ebb28717d039b272",
+    "bytes": 136155
+  },
+  "incrementalDeliveries": [
+    {
+      "file": "delivery-part1.json",
+      "sha256": "3fcce7407b2d6bfc8003adbfad22aa7b2ac3f130f514746b38bb2b591ef38a18",
+      "bytes": 53145,
+      "stageIds": [
+        "hazel_subway",
+        "underpass_sh3",
+        "nightmare_hilltop"
+      ],
+      "totals": {
+        "stages": 3,
+        "png": 6,
+        "bytes": 7497060
+      }
+    },
+    {
+      "file": "delivery-part2.json",
+      "sha256": "f0d3c4f978612106980b34ab9e45644346264d184d061c81bcc6f717a73f2fd4",
+      "bytes": 31782,
+      "stageIds": [
+        "outside_room_302",
+        "alchemilla_origins",
+        "nightmare_hospital_hc"
+      ],
+      "totals": {
+        "stages": 3,
+        "png": 6,
+        "bytes": 7809669
+      }
+    },
+    {
+      "file": "delivery-part3.json",
+      "sha256": "4fbcf7bcf0fb4a162657d24b355ab9c1e8aa54c58552a619708bcd969ad8af45",
+      "bytes": 34240,
+      "stageIds": [
+        "villa",
+        "nowhere",
+        "central_nightmare"
+      ],
+      "totals": {
+        "stages": 3,
+        "png": 6,
+        "bytes": 6042736
+      }
+    },
+    {
+      "file": "delivery-part4.json",
+      "sha256": "33d75a6015166802cef98969f3d0963ec19ea336df10afa0482ad625db139b8b",
+      "bytes": 16703,
+      "stageIds": [
+        "nightmare_hospital_sm"
+      ],
+      "totals": {
+        "stages": 1,
+        "png": 2,
+        "bytes": 2643888
+      }
+    }
+  ],
+  "selectionDecisions": {
+    "file": "selection-decisions.json",
+    "localPath": "/workspace/scratch/halo-wave22-stages/selection-decisions.json",
+    "sha256": "92d0b5522c991138f13196ce6b980227218862df6607d5aac8b75bfd18efa93f",
+    "bytes": 9010
+  },
+  "referenceInventory": {
+    "file": "reference-inventory.json",
+    "localPath": "/workspace/scratch/halo-wave22-stages/reference-inventory.json",
+    "sha256": "a368d6fcc95f44af17fb68ad835d116e766c04b37fc2926cbfa22804d4e19ac3",
+    "bytes": 38596
+  },
+  "nativeVisualReview": {
+    "file": "native-visual-review.json",
+    "sha256": "9088e690333d0c125c6a592e6eede9a9b6e79949dd836d723c5a4b851c892e2b",
+    "bytes": 13517
+  },
+  "productionAssets": [
+    {
+      "stageId": "hazel_subway",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/hazel_subway.ticket-alcove.png",
+      "path": "assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "sha256": "4d537af9a1485e2e384396327b8a60c35c923552f8318e92021fff76e75c40c3",
+      "bytes": 2203973,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "hazel_subway",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/hazel_subway.near-wall-edges.png",
+      "path": "assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "sha256": "98e4c72a83083b2f1dcabd1417e687c20d31daaac96ece679ffedd266584b884",
+      "bytes": 200941,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "underpass_sh3",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/underpass_sh3.map-room.png",
+      "path": "assets/stages/underpass_sh3.map-room.da4cf2791272.png",
+      "sha256": "da4cf2791272392c8e54a54009dd9f9f1db636cf669687f5a8fb7bf43909a366",
+      "bytes": 2137101,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "underpass_sh3",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/underpass_sh3.near-wall-edges.png",
+      "path": "assets/stages/underpass_sh3.near-wall-edges.a65261780188.png",
+      "sha256": "a6526178018839d6009a259e7bdd5fa5e3c2f0ed72bd416ef361a5da82651565",
+      "bytes": 216890,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "nightmare_hilltop",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hilltop.gallery-painting.png",
+      "path": "assets/stages/nightmare_hilltop.gallery-painting.2a9fc04c0043.png",
+      "sha256": "2a9fc04c004376adb2ea2ee5acb6e13247d23c6a5f2b77329178e1b58247e856",
+      "bytes": 2475526,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "nightmare_hilltop",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hilltop.near-wall-edges.png",
+      "path": "assets/stages/nightmare_hilltop.near-wall-edges.cfcaac8fc270.png",
+      "sha256": "cfcaac8fc270606dad7c4177774b7edff77e17bb8d6ef468ebab075cd4251cf3",
+      "bytes": 262629,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "outside_room_302",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/outside_room_302.door105.png",
+      "path": "assets/stages/outside_room_302.door105.1a96e575d9fd.png",
+      "sha256": "1a96e575d9fdbfca1a67143b3c82946826b997c6404e342c83d9cb6e26644143",
+      "bytes": 2425527,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "outside_room_302",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/outside_room_302.near-wall-edges.png",
+      "path": "assets/stages/outside_room_302.near-wall-edges.0fafe322dcde.png",
+      "sha256": "0fafe322dcde13854f14a966dd680ac663a32fec3d964eacf517a51d095f4cae",
+      "bytes": 264338,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "alchemilla_origins",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/alchemilla_origins.elevator-landing.png",
+      "path": "assets/stages/alchemilla_origins.elevator-landing.d7a48880728c.png",
+      "sha256": "d7a48880728c021669239f9c9e0a3d178a48c67d2c6ed3de9cabc8e59e006531",
+      "bytes": 2275547,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "alchemilla_origins",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/alchemilla_origins.near-wall-edges.png",
+      "path": "assets/stages/alchemilla_origins.near-wall-edges.88e0d0800459.png",
+      "sha256": "88e0d0800459a36b5c4b5b834b59b31565ba5c97134a09ee6868e004983d3587",
+      "bytes": 195761,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "nightmare_hospital_hc",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hospital_hc.gate2a.png",
+      "path": "assets/stages/nightmare_hospital_hc.gate2a.faf8d083f23c.png",
+      "sha256": "faf8d083f23c60b6ab83cea558412faf3f9d7c0077bd7240b098c43c58b9b01c",
+      "bytes": 2463170,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "nightmare_hospital_hc",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hospital_hc.near-wall-edges.png",
+      "path": "assets/stages/nightmare_hospital_hc.near-wall-edges.e7c5e101d745.png",
+      "sha256": "e7c5e101d745d272eadbcc199e13228a429da7e2ff39a36620dfd24bee9de132",
+      "bytes": 185326,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "villa",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/villa.apartment214-door.png",
+      "path": "assets/stages/villa.apartment214-door.263d6a61f2f4.png",
+      "sha256": "263d6a61f2f44d7baf21e2b8ca7792601205004b4881887e92dfeb81b3f8f65d",
+      "bytes": 2247109,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "villa",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/villa.near-wall-edges.png",
+      "path": "assets/stages/villa.near-wall-edges.4d500efc075f.png",
+      "sha256": "4d500efc075fb1f14c489a6c0aa865210f26dc289fef13f3c2b6c3e6ff2dadbe",
+      "bytes": 208154,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "nowhere",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nowhere.bethor-generator-room.png",
+      "path": "assets/stages/nowhere.bethor-generator-room.6c753fcbaa0a.png",
+      "sha256": "6c753fcbaa0afb827734973cfb66a27e62df7958a75274a70826074b87c5b1c9",
+      "bytes": 1808666,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "nowhere",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nowhere.near-wall-edges.png",
+      "path": "assets/stages/nowhere.near-wall-edges.70fd5fb39aff.png",
+      "sha256": "70fd5fb39afff30d8938646e6f53f60d28dc6bed7f914713fed259a4bcaf9768",
+      "bytes": 196477,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "central_nightmare",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/central_nightmare.floatstinger-roof.png",
+      "path": "assets/stages/central_nightmare.floatstinger-roof.a166c86064f4.png",
+      "sha256": "a166c86064f447441dfc3006b71dff73c734c5c466cc0f66722d3871d3c4fc14",
+      "bytes": 1499491,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "central_nightmare",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/central_nightmare.near-roof-edges.png",
+      "path": "assets/stages/central_nightmare.near-roof-edges.d6d18810f03e.png",
+      "sha256": "d6d18810f03ef335e814402ef2d4d90abf7ab227fc1c3b22778f856f3114ff72",
+      "bytes": 82839,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "nightmare_hospital_sm",
+      "role": "opaque-background",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hospital_sm.psp-er-iced-exit.png",
+      "path": "assets/stages/nightmare_hospital_sm.psp-er-iced-exit.52b62d0305f9.png",
+      "sha256": "52b62d0305f9d115edf0503904dbc4e987cc8cc8cf18bbdbe7dc72df68837d65",
+      "bytes": 2477450,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "stageId": "nightmare_hospital_sm",
+      "role": "transparent-foreground",
+      "localPath": "/workspace/scratch/halo-wave22-stages/nightmare_hospital_sm.near-wall-edges.png",
+      "path": "assets/stages/nightmare_hospital_sm.near-wall-edges.e3eb42c05e84.png",
+      "sha256": "e3eb42c05e8497b59c3ea7178597334ad5f245f67d90ebd72ca6e9c18b54c62b",
+      "bytes": 166438,
+      "width": 1672,
+      "height": 941
+    }
+  ],
+  "nativeCaptures": [
+    {
+      "stageId": "hazel_subway",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/hazel_subway/hazel_subway.png",
+      "sha256": "464b49857d7cbea82eef7aa8141aa2ced21949f08ec3d9a4c65bfe5106156bb5",
+      "bytes": 1206851,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/hazel_subway/report.json",
+      "caseReportSHA256": "c436f3cff423730511509660b1b03de7c5e99f5ea77fc68e5f1e7437e1784ab9"
+    },
+    {
+      "stageId": "underpass_sh3",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/underpass_sh3/underpass_sh3.png",
+      "sha256": "811fbf4246facf3465c66fdbb81a6aa08fba4157c2eb86aeaae7ed61dc5e7236",
+      "bytes": 1205775,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/underpass_sh3/report.json",
+      "caseReportSHA256": "f648a8136520c4e266226d4cba6906c7225a7c479c96f5479244736915b0bb04"
+    },
+    {
+      "stageId": "nightmare_hilltop",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hilltop/nightmare_hilltop.png",
+      "sha256": "aad1c7abcf8ee2c235ba37bb21694ce73ad0b4a378b53cff5667f2571136f59d",
+      "bytes": 1503192,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hilltop/report.json",
+      "caseReportSHA256": "bff5d96e2f67569d7cab1a0af9a82d4cbbb656393b5cc8991e8b697824c95fe2"
+    },
+    {
+      "stageId": "outside_room_302",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/outside_room_302/outside_room_302.png",
+      "sha256": "e02982a2dc5a3a4823ceee0853158aba612cc2eaca26aa1925f34ace6440f86e",
+      "bytes": 1441189,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/outside_room_302/report.json",
+      "caseReportSHA256": "497956f2c0c8f00147a22463a4184a975a3a138b7d35a175fe2cccaaa852c0c5"
+    },
+    {
+      "stageId": "alchemilla_origins",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/alchemilla_origins/alchemilla_origins.png",
+      "sha256": "7c1f1530ac77e2d943ae9edf3c6137bfbaf40b102656ecd130948dcbf44c2cb0",
+      "bytes": 1179747,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/alchemilla_origins/report.json",
+      "caseReportSHA256": "b0b389d2eaa67af21a170f5cf82940df734b8205be7b0611ea87bc5befabc76b"
+    },
+    {
+      "stageId": "nightmare_hospital_hc",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hospital_hc/nightmare_hospital_hc.png",
+      "sha256": "2371f699221ddb49fe785fa28514817b1b9c082805ba4c5668e4c26b7b88b13f",
+      "bytes": 1353226,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hospital_hc/report.json",
+      "caseReportSHA256": "65fa2bc5d3f244b5969a080a40dfd9f65a5d76c34a39eb486740e0ba0e927666"
+    },
+    {
+      "stageId": "villa",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/villa/villa.png",
+      "sha256": "fa476c2ec1cf9b3a0d9c4e71554257415c7d90f4b02c3e4a1b04e02fb3635ba3",
+      "bytes": 1235376,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/villa/report.json",
+      "caseReportSHA256": "8e9d1dc5a441f6d9ac1c152b8909ce2768179007cbf976204c587ee011d33dbd"
+    },
+    {
+      "stageId": "nowhere",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nowhere/nowhere.png",
+      "sha256": "5d70192f882506d844538ef4d21e3da256344a203cfd5dbd43149b09a79e95b3",
+      "bytes": 1097447,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nowhere/report.json",
+      "caseReportSHA256": "f4e69f95be8916f862202acbccbad09f747b7817065e2b8c3d4aff896cd2c3cc"
+    },
+    {
+      "stageId": "central_nightmare",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/central_nightmare/central_nightmare.png",
+      "sha256": "2d30b6e23d5c4e18ab37dd2bbc0bc828836ffeefa2c21e7dfe5099c6bfe0d70f",
+      "bytes": 892589,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/central_nightmare/report.json",
+      "caseReportSHA256": "c9be34482e9dde62fc2d4eb3269b80acbbe8244cf9845d3fd68425ea246e8652"
+    },
+    {
+      "stageId": "nightmare_hospital_sm",
+      "path": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hospital_sm/nightmare_hospital_sm.png",
+      "sha256": "008653defcb8a7eafa32e28e29acbebc4a3d25dae0794b78f12275ccb0147933",
+      "bytes": 1328665,
+      "caseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hospital_sm/report.json",
+      "caseReportSHA256": "20a3a8ef467eb97ba551a4f2694b1849b72a7b0860e1de329070c0c5f1690575"
+    }
+  ],
+  "totals": {
+    "stages": 10,
+    "png": 20,
+    "productionBytes": 23993353,
+    "nativeCases": 10,
+    "nativeAssertions": 460,
+    "nativeCaptures": 10,
+    "selectedReferenceRasters": 15,
+    "selectedReferenceBytes": 3020287
+  },
+  "publishInstructions": "Use reference-inventory.json.references for documentary raster copies, not the working source paths inside frozen prompts. Production paths already integrated by root; no further asset import or generation required.",
+  "excluded": "Full PDF/HTML/video metadata, unused research rasters, source sheets replaced by relevant cells, rejected draft, redundant copies of native captures.",
+  "browserTest": false,
+  "certified1to1": false
+}

@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {VERSION} from '../src/data.js';
 import {SPRITES} from '../src/sprite-manifest.js';
-import {readArtContinuation,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
+import {readArtContinuation,resolvedHistoricalArtwork,matchesCampaignCandidate} from './art-campaign-review.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-art-batch4');
 const source=process.env.QA_SOURCE_TREE==='1',base=process.env.QA_BASE_URL||'http://127.0.0.1:4195';
@@ -30,30 +30,45 @@ const batch12=ledger12.items.filter(item=>item.status==='implemented-candidate')
 const blocked12=ledger12.items.filter(item=>item.status==='blocked').map(item=>item.entityId);
 // Old ledgers remain historical evidence. A later exact-ID candidate can resolve
 // an old source/cropping blocker, but cannot silently erase that history.
-const art144Rows=(await Promise.all(['a','b','c','d','e'].map(async group=>JSON.parse(await readFile(resolve(root,`docs/production/batches/art144-${group}.json`),'utf8')).items))).flat();
+const art144Groups=await Promise.all(['a','b','c','d','e'].map(async group=>{
+ const [ledger,fragment]=await Promise.all([
+  readFile(resolve(root,`docs/production/batches/art144-${group}.json`),'utf8'),
+  readFile(resolve(root,`art/fragments/art144-${group}.json`),'utf8')
+ ]);
+ return {rows:JSON.parse(ledger).items,assets:JSON.parse(fragment).assets};
+}));
 const historicalBlocked=[...new Set([...blocked9,...blocked11,...blocked12])];
 const resolvedHistorical=historicalBlocked.filter(id=>SPRITES[id]);
 const currentBlocked=historicalBlocked.filter(id=>!SPRITES[id]);
 const continuation=await readArtContinuation(root);
-const unretriedRefusals=['sh1_incubus_019','sh3_nurse_pipe_043','sh3_valtiel_051','sh4_jasper_gein_victim_17','sh4_andrew_desalvo_victim_18','sh4_toby_archbolt_victim_14','homecoming_amnion_hanging_form_097','homecoming_amnion_exposed_form_098'];
-if(unretriedRefusals.some(id=>SPRITES[id]))throw Error('A previously tool-refused identity unexpectedly acquired artwork.');
+const originalRefusals=['sh1_incubus_019','sh3_nurse_pipe_043','sh3_valtiel_051','sh4_jasper_gein_victim_17','sh4_andrew_desalvo_victim_18','sh4_toby_archbolt_victim_14','homecoming_amnion_hanging_form_097','homecoming_amnion_exposed_form_098'];
+for(const id of originalRefusals){
+ const row=art144Groups.flatMap(group=>group.rows).find(item=>item.entityId===id);
+ if(row?.status!=='blocked')throw Error('Missing original ART144 blocker: '+id);
+ const intake=continuation?.intake.entries.find(item=>item.fighter.id===id);
+ if(continuation&&intake?.generationExcluded!==true)throw Error('Missing original ART92 exclusion: '+id);
+ if(SPRITES[id]&&!resolvedHistoricalArtwork(row,SPRITES[id],continuation))throw Error('Unverified later delivery for historical exclusion: '+id);
+}
 for(const id of resolvedHistorical){
- const row=art144Rows.find(item=>item.entityId===id),art=SPRITES[id];
- if(row?.status==='implemented-candidate'&&row.evidence?.length&&row.limits?.trim()&&row.artifacts?.includes(art.frames[0].path))continue;
+ const group=art144Groups.find(group=>group.rows.some(item=>item.entityId===id));
+ const row=group?.rows.find(item=>item.entityId===id),art=SPRITES[id];
+ if(row?.status==='implemented-candidate'&&row.evidence?.length&&row.limits?.trim()){
+  if(row.artifacts.includes(art.frames[0].path)||matchesCampaignCandidate(row,art.source,group.assets[id],art,continuation))continue;
+ }
  if(!row||!resolvedHistoricalArtwork(row,art,continuation))throw Error('Historical blocker requires a documented later exact-ID delivery: '+id);
 }
 const twinId='sh4_twin_victim_059',twinTaunt='taunt@'+twinId+':taunt';
 const required=[...batch4,...batch5,...batch6,...batch7,...batch8,...batch9,...batch11,...batch12];
 const sceneContracts={woodside:{source:'sh2',scene:'original-pc-corridor'},alchemilla:{source:'sh1',scene:'normal-waiting-room'},lakeview:{source:'sh2',scene:'normal-lobby-before-video'},shopping_mall:{source:'sh3',scene:'normal-helens-bakery'},brookhaven_roof:{source:'sh2',scene:'original-roof-before-fall',ceiling:false}};
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],assets:[],fixtures:[
-  'Production HTTP manifests and PNGs are used without route substitutions. Four exact profiles from each of batches 4, 5, 6 and 7, then three SH4 profiles from batch 8 and twenty-four exact profiles from batch 9, are required and inspected through the actual workshop controls; a missing import fails the suite. The six historical batch-9 blockers remain archived. Five tool refusals stay without artwork; a source-body blocker can be superseded only by a later bound exact-ID candidate, never borrowed pixels.',
+  'Production HTTP manifests and PNGs are used without route substitutions. Four exact profiles from each of batches 4, 5, 6 and 7, then three SH4 profiles from batch 8 and twenty-four exact profiles from batch 9, are required and inspected through the actual workshop controls; a missing import fails the suite. The six historical batch-9 blockers remain archived. Subsequent deliveries require a source-reviewed exact-ID record.',
   'The browser independently decodes the registered files on an offscreen canvas to measure alpha; these temporary canvases do not replace the real inspector or combat rendering.',
   'Local matches retain Groaner/Split Head/Wood Side, Wormhead/Closer/Alchemilla and Twin Victim/Slurper/Lakeview coverage, then require Double Head/Insane Cancer/Central Square Mall through the real roster and stage gallery. Two further real matches cover Patient/Gum Head New Type and Bottom/Patient on the original Brookhaven roof before the fall; the wide facade camera is a bounded reconstruction rather than source geometry. Ordinary intros and live images, camera and foot placement are observed; no fighter position, damage, win, clip or gameplay state is injected.',
   'Canvas drawImage calls are recorded without changing their arguments. The genuine pause/resume button and a 430-pixel viewport exercise the same loaded assets.',
   'Static idles, one separate non-looping Twin Victim pointing image, missing-pose previews and generated scenery remain unverified candidates. An emulated touchscreen presses the real taunt and attack controls; no physical device, source gameplay, animation, original-game timing or 1:1 visual fidelity is certified.',
   'Batch10 adds thirty independent one-image walk/hurt/ko clips to ten existing exact profiles, preserving their idle files. All thirty files are decoded, painted with the actual inspector, and checked for alpha support and standing-equivalent scale. Three additional ordinary matches cover Hummer/Small Numb Body, Romper/Slurper and Groaner/Split Head; genuine movement controls select the new walk PNGs. The last match uses repeated real player2 neutralLight inputs to reach a grounded final KO. These played-versus input observations are separate from the static workshop pose previews and prove no original-game motion/timing.',
   'Lot11 requires every implemented exact-ID full-body idle from its thirty-row art ledger and archives every original blocker. A blocked identity remains without artwork unless a later exact-ID ART144/ART92 delivery passes its own evidence, source and fragment checks. Independent browser alpha decoding checks raw alpha metadata; framing includes the readable subject and its connected faint tips, excluding detached low-alpha padding noise. Five additional ordinary menu matches exercise humanoids, quadrupeds, large bodies, long limbs and weapons on existing bitmap arenas. These cross-work versus pairings are not original encounters; source anatomy and unseen details remain unverified. No extra images, poses or tests are counted as production rows.',
-  'Lot12 retains its twelve exact-ID single-frame idle images and its eighteen historical blockers. Every blocker still unresolved after bound ART144/ART92 deliveries keeps a missing-art dossier. Six ordinary menu matches cover the twelve lot12 exterior bodies, attached supports and weapons. Wall Man and One Truth show their attested visible exterior, not hidden anatomy or a twelve-body encounter. The discarded lot12 Peter12 image is never imported; the later ART144 candidate preserves the source age13 and has separate evidence. Tool-refused Toby14 and Amnion are not retried. No source animation, source scale or 1:1 fidelity is certified.'
+  'Lot12 retains its twelve exact-ID single-frame idle images and its eighteen historical blockers. Every blocker still unresolved after bound ART144/ART92 deliveries keeps a missing-art dossier. Six ordinary menu matches cover the twelve lot12 exterior bodies, attached supports and weapons. Wall Man and One Truth show their attested visible exterior, not hidden anatomy or a twelve-body encounter. The discarded lot12 Peter12 image is never imported; the later ART144 candidate preserves the source age13 and has separate evidence. The original Toby14 and Amnion exclusions remain in the lot12 record. No source animation, source scale or 1:1 fidelity is certified.'
 ]};
 let server,browser;
 const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(!passed&&detail!==undefined?{detail}:{})});if(!passed)throw Error(name);};
@@ -135,11 +150,45 @@ try{
     const isBatch8=batch8.includes(id),isBatch9=batch9.includes(id),isBatch10=batch10.includes(id),isBatch11=batch11.includes(id),isBatch12=batch12.includes(id);
     const exactSource=id.split('_')[0],exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004,origins:2007,homecoming:2008,downpour:2012,arcade:2007,bom:2012}[exactSource];
     const isTwin=id===twinId;
-    check(id+': exact source owns its static idle and only its declared additional stills',art.fighterId===id&&art.source===exactSource&&fighter.source===exactSource&&fighter.year===exactYear&&art.status==='integrated-candidate'&&art.fidelity==='unverified'&&art.frames.length===(isBatch10?4:isTwin?2:1)&&Object.keys(art.clips).length===(isBatch10?4:isTwin?2:1)&&art.clips.idle?.frames.length===1&&art.clips.idle.frames[0]===0&&art.animatedClips===0&&(!isTwin||art.clips[twinTaunt]?.frames.length===1&&art.clips[twinTaunt].frames[0]===1&&art.clips[twinTaunt].loop===false&&art.frames[0].path!==art.frames[1].path)&&(!isBatch10||batch10Poses.every((pose,i)=>art.clips[pose]?.frames.length===1&&art.clips[pose].frames[0]===i+1&&art.clips[pose].loop===false)&&new Set(art.frames.map(frame=>frame.pixelSHA256)).size===4),art);
+    const laterClips = {
+      origins_faceless_nurse: {guard: [1], walk: [0,2,3,2], neutralSpecial: [4,5,4,0]},
+      arcade_scraper_arcade: {walk: [0,1,2,1], guard: [3]},
+      homecoming_scarlet_doll_form_094: {walk: [0,1,2,1]},
+      sh3_nurse_revolver_044: {guard: [1]},
+      homecoming_nurse: {hurt: [1]},
+      homecoming_scarlet_spider_form_095: {walk: [0,1,2,1]}
+    }[id] || {};
+    const expectedClips = {idle: [0], ...laterClips};
+    if (isTwin) expectedClips[twinTaunt] = [1];
+    if (isBatch10) batch10Poses.forEach((pose, index) => { expectedClips[pose] = [index + 1]; });
+    const expectedIndices = new Set(Object.values(expectedClips).flat());
+    const animatedCount = Object.values(expectedClips).filter(indices => new Set(indices).size > 1).length;
+    check(id+': exact source owns every declared frame and clip',
+      art.fighterId === id && art.source === exactSource && fighter.source === exactSource && fighter.year === exactYear
+      && art.status === 'integrated-candidate' && art.fidelity === 'unverified'
+      && art.frames.length === expectedIndices.size && new Set(art.frames.map(frame=>frame.pixelSHA256)).size === expectedIndices.size
+      && art.animatedClips === animatedCount && Object.keys(art.clips).length === Object.keys(expectedClips).length
+      && Object.entries(expectedClips).every(([pose, indices]) =>
+        JSON.stringify(art.clips[pose]?.frames) === JSON.stringify(indices)
+        && (pose === 'idle' || art.clips[pose].loop === (pose === 'walk' && new Set(indices).size > 1))), art);
     await selectSubject(page,id,fighter.source);
     check(id+': real inspector paints its loaded bitmap and disables animation playback',await page.locator('.sprite-inspector').count()===1&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='0');
     for(const [frameIndex,frame] of art.frames.entries()){
     await verifyFile(frame,id+'/image-'+frameIndex);
+    if(frameIndex>0&&Object.keys(laterClips).length){
+      const [pose, indices]=Object.entries(laterClips).find(([, sequence])=>sequence.includes(frameIndex));
+      await page.selectOption('[data-inspect=pose]',pose);
+      const clip=art.clips[pose];
+      const tick=indices.slice(0,indices.indexOf(frameIndex)).reduce((sum,_,i)=>sum+(clip.frameTicks?.[i]??clip.ticksPerFrame),0);
+      await page.locator('[data-inspect=tick]').evaluate((input,tick)=>{
+        input.value=String(tick);input.dispatchEvent(new Event('input',{bubbles:true}));
+      },tick);
+      await page.waitForFunction(({id,pose,index,path})=>{
+        const canvas=document.querySelector('#spriteDetail canvas');
+        return canvas?.dataset.spriteId===id&&canvas.dataset.artStatus==='raster'&&canvas.dataset.pose===pose
+          &&canvas.dataset.frameIndex===String(index)&&__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path);
+      },{id,pose,index:frameIndex,path:frame.path});
+    }
     if(isTwin&&frameIndex===1){
       await page.selectOption('[data-inspect=pose]',twinTaunt);
       check(id+': exact pointing context uses its distinct static image and no playback animation',await page.locator('#spriteDetail canvas').getAttribute('data-pose')===twinTaunt&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='1'&&await page.locator('[data-inspect=play]').isDisabled()&&!/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
@@ -170,7 +219,7 @@ try{
     report.assets.push({id,frameIndex,source:art.source,path:frame.path,sha256:frame.sha256,bytes:frame.bytes,alpha:decoded});
     check(id+': inspector drawImage used that registered image',await page.evaluate(path=>__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path&&draw.width>0),frame.path));
     }
-    for(const pose of [...(isBatch10?['guard','dodge']:['walk']),'crouch',`finisher@${id}_signature`,...(isTwin?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),...((isBatch8||isBatch9||isBatch10||isBatch11||isBatch12)?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]){
+    for(const pose of [...(isBatch10?['guard','dodge']:[laterClips.walk?'jump':'walk']),'crouch',`finisher@${id}_signature`,...(isTwin?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),...((isBatch8||isBatch9||isBatch10||isBatch11||isBatch12)?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]){
       await page.selectOption('[data-inspect=pose]',pose);
       check(id+': absent '+pose+' stays an explicit static idle preview',/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent())&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-requested-pose')===pose);
     }
@@ -230,16 +279,18 @@ try{
   for(const scene of registry.scenes){
     const {id,stage,decor}=scene,{source:exactSource,scene:exactScene,ceiling=true}=sceneContracts[id];
     check(id+': exact source/room is an unverified cover replacement with its declared ceiling geometry',stage?.source===exactSource&&decor?.stageId===id&&decor.source===exactSource&&decor.scene===exactScene&&decor.mode==='replace'&&decor.geometry?.ceiling===ceiling&&decor.status==='integrated-candidate'&&decor.fidelity==='unverified'&&decor.layers.length===1&&decor.layers.every(layer=>layer.fit==='cover'&&layer.frames.length===1&&layer.loop===false),decor);
-    for(const layer of decor.layers)for(const frame of layer.frames)await verifyFile(frame,id+'/'+layer.id);
-    check(id+': selected sub-room either uses its own raster or retains the historical raster without borrowing it', ['woodside','shopping_mall'].includes(id)?scene.activeDecor===null&&stage.referencePolicy.sceneId===({woodside:'woodside-208-clock-room',shopping_mall:'central-square-happy-burger'})[id]:scene.activeDecor?.scene===exactScene,scene);
+    const rooms=scene.activeDecor&&scene.activeDecor.scene!==decor.scene?[decor,scene.activeDecor]:[decor];
+    for(const room of rooms)for(const layer of room.layers)for(const frame of layer.frames)await verifyFile(frame,id+'/'+room.scene+'/'+layer.id);
+    check(id+': selected sub-room either uses its own raster or retains the historical raster without borrowing it', ['woodside','shopping_mall'].includes(id)?scene.activeDecor?.scene===stage.referencePolicy.sceneId&&scene.activeDecor.scene!==decor.scene&&stage.referencePolicy.sceneId===({woodside:'woodside-208-clock-room',shopping_mall:'central-square-happy-burger'})[id]:scene.activeDecor?.scene===exactScene,scene);
     check(id+': scenery rejects another work/variant and never borrows another image owner',await page.evaluate(async id=>{
-      const {STAGES}=await import('/src/data.js'),{STAGE_BITMAPS}=await import('/src/stage-bitmap-manifest.js'),{stageBitmapFor}=await import('/src/stage-bitmaps.js');
-      const stage=STAGES.find(s=>s.id===id),paths=new Set(STAGE_BITMAPS[id].layers.flatMap(layer=>layer.frames.map(frame=>frame.path)));
+      const {STAGES}=await import('/src/data.js'),{STAGE_BITMAPS}=await import('/src/stage-bitmap-manifest.js'),{stageBitmapFor,stageBitmapRooms}=await import('/src/stage-bitmaps.js');
+      const stage=STAGES.find(s=>s.id===id),roomPaths=entry=>stageBitmapRooms(entry).flatMap(room=>room.layers.flatMap(layer=>layer.frames.map(frame=>frame.path)));
+      const paths=new Set(roomPaths(STAGE_BITMAPS[id]));
       let wrongSourceRejected=false;try{stageBitmapFor({...stage,source:stage.source+'-unverified-edition'});}catch{wrongSourceRejected=true;}
-      const owners=Object.entries(STAGE_BITMAPS).filter(([,art])=>art.layers.some(layer=>layer.frames.some(frame=>paths.has(frame.path)))).map(([owner])=>owner);
+      const owners=Object.entries(STAGE_BITMAPS).filter(([,entry])=>roomPaths(entry).some(path=>paths.has(path))).map(([owner])=>owner);
       return wrongSourceRejected&&stageBitmapFor({...stage,id:id+'-unverified-variant'})===null&&owners.length===1&&owners[0]===id;
     },id));
-    report.scenery.push({id,source:decor.source,scene:decor.scene,activeScene:stage.referencePolicy?.sceneId||decor.scene,activeRaster:!!scene.activeDecor,geometry:decor.geometry,frames:decor.layers.flatMap(layer=>layer.frames)});
+    report.scenery.push({id,source:decor.source,scene:decor.scene,activeScene:stage.referencePolicy?.sceneId||decor.scene,activeRaster:!!scene.activeDecor,geometry:decor.geometry,frames:decor.layers.flatMap(layer=>layer.frames),activeFrames:scene.activeDecor?.layers.flatMap(layer=>layer.frames)||[]});
   }
   const matches=[{scene:registry.scenes.find(scene=>scene.id==='woodside'),ids:batch4.slice(0,2)},
     {scene:registry.scenes.find(scene=>scene.id==='alchemilla'),ids:['sh1_wormhead_004','sh3_closer_036']},
@@ -283,7 +334,8 @@ try{
     check(stageId+': real menu selects exact PNG profiles and room without diagnostic mode',await page.evaluate(({ids,stageId})=>{const q=__HALO_QA__;return q.selection.p1.id===ids[0]&&q.selection.p2.id===ids[1]&&q.selection.stage.id===stageId&&!document.querySelector('#artDiagnostic').checked;},{ids,stageId}));
     await page.evaluate(()=>{window.__ART_BATCH4_DRAWS__=[];});await page.click('#launch');
     await page.waitForFunction(()=>__HALO_QA__.engine?.phase==='fight'&&!__HALO_QA__.engine.paused);
-    const expected=[...ids.map(id=>registry.subjects.find(subject=>subject.id===id).art.frames[0].path),...(decor?.layers||[]).flatMap(layer=>layer.frames.map(frame=>frame.path))];
+    const stagePaths=new Set((decor?.layers||[]).flatMap(layer=>layer.frames.map(frame=>frame.path)));
+    const expected=[...ids.map(id=>registry.subjects.find(subject=>subject.id===id).art.frames[0].path),...stagePaths];
     await page.waitForFunction(paths=>paths.every(path=>__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='game'&&draw.path==='/'+path&&draw.calls>0)),expected);
     await page.waitForFunction(()=>__HALO_QA__.engine.phase==='fight'&&__HALO_QA__.engine.texts.every(text=>!['intro','round','fight'].includes(text.kind)));
     const combat=await page.evaluate(()=>({phase:__HALO_QA__.engine.phase,stage:__HALO_QA__.engine.stage.id,diagnostic:__HALO_QA__.engine.config.artDiagnostic,camera:__HALO_QA__.engine.presentationCamera,
@@ -310,9 +362,16 @@ try{
       check('Brookhaven roof actual HUD does not invent wet concrete, rain or Fog World',combat.hudTexts.every(row=>!row.text.includes('BÉTON TREMPÉ')&&!row.text.includes('PLUIE')&&!row.text.includes('FOG WORLD')),combat.hudTexts);
       check('Brookhaven pre-fall roof keeps fixed phase, no weather, events, hazards or automatic fall',await page.evaluate(()=>{const stage=__HALO_QA__.engine.stage;return stage.weather==='none'&&stage.referencePolicy.worldState==='fixed-normal'&&stage.referencePolicy.automaticFinishers===false&&stage.referencePolicy.allowedEvents.length===0&&stage.referencePolicy.allowedHazards.length===0&&!stage.shift.enabled&&!stage.visibility.fog;}));
     }
-    check(stageId+': actual canvas paints both registered images and full cover scenery',!combat.diagnostic&&combat.stage===stageId&&expected.every(path=>combat.draws.some(draw=>draw.path==='/'+path&&draw.width>0&&draw.height>0))&&combat.draws.filter(draw=>draw.path.includes('/assets/stages/')).every(draw=>draw.args.length===8&&draw.args[6]===1280&&draw.args[7]===720),combat);
+    const stageDraws=combat.draws.filter(draw=>draw.path.includes('/assets/stages/'));
+    const expectedLayers=(decor?.layers||[]).every(layer=>layer.frames.every(frame=>{
+      const draw=stageDraws.find(row=>row.path==='/'+frame.path);
+      if(!draw)return false;
+      if(layer.fit==='cover')return draw.args.length===8&&draw.args[6]===1280&&draw.args[7]===720;
+      return draw.args.length===4&&draw.args[2]>0&&draw.args[3]>0;
+    }));
+    check(stageId+': actual canvas paints both actors and each registered scenery plane with its declared fit',!combat.diagnostic&&combat.stage===stageId&&expected.every(path=>combat.draws.some(draw=>draw.path==='/'+path&&draw.width>0&&draw.height>0))&&stageDraws.every(draw=>stagePaths.has(draw.path.slice(1)))&&expectedLayers,combat);
     const actorPaths=ids.flatMap(id=>registry.subjects.find(subject=>subject.id===id).art.frames.map(frame=>frame.path));
-    check(stageId+': combat leases contain exactly all PNGs of the selected two actors and room',combat.actorPins.length===actorPaths.length&&combat.stagePins.length===(decor?1:0)&&[...actorPaths,...expected].every(path=>[...combat.actorPins,...combat.stagePins].includes(path)),combat);
+    check(stageId+': combat leases contain exactly all PNGs of the selected two actors and room',combat.actorPins.length===actorPaths.length&&combat.stagePins.length===stagePaths.size&&[...actorPaths,...expected].every(path=>[...combat.actorPins,...combat.stagePins].includes(path)),combat);
     if(!decor)check(stageId+': current documented room paints procedurally without leasing or drawing its older different-room bitmap',combat.stagePins.length===0&&!combat.draws.some(draw=>draw.path.includes('/assets/stages/')),combat);
     combat.imagePlacement=ids.map(id=>{
       const frame=registry.subjects.find(subject=>subject.id===id).art.frames[0],alpha=report.assets.find(asset=>asset.id===id).alpha.bounds,draw=combat.draws.find(draw=>draw.path==='/'+frame.path);

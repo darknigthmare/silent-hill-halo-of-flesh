@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-19 05:44:38 UTC",
+  "mode": "native Canvas visual review",
+  "successfulRun": "native-walk-run2/report.json",
+  "successfulRunSHA256": "849d635770625ea24afc564b15f9f10d79c7a76e63db2564818a810585dc4189",
+  "harness": "qa-nurse-walk-native.mjs",
+  "harnessSHA256": "838c65d7cbb75e027905d98abb1ff6baad034bde5d01770b3711d77d25a10625",
+  "execution": {
+    "passed": true,
+    "checks": 118,
+    "commandsThroughOriginalCallbacks": 12,
+    "walkDirections": 2,
+    "walkTicksPerDirection": 56,
+    "cyclesPerDirection": 2,
+    "ticksPerStep": 7,
+    "frameSequence": [
+      0,
+      2,
+      3,
+      2
+    ],
+    "guardDirections": 2,
+    "idleReturns": 4,
+    "captures": 18,
+    "browserLaunches": 0,
+    "httpServersStarted": 0
+  },
+  "inspectedCaptures": [
+    "walk-right-step0-frame0.png",
+    "walk-right-step1-frame2.png",
+    "walk-right-step2-frame3.png",
+    "walk-left-step0-frame0.png",
+    "walk-left-step1-frame2.png",
+    "walk-left-step2-frame3.png",
+    "guard-right.png",
+    "guard-left.png",
+    "guard-left-released-idle.png"
+  ],
+  "observations": [
+    "Les trois images de marche sont visuellement distinctes : attente large, passage avec pied arrière relevé, puis enjambée opposée.",
+    "La tête, les deux jambes, les mains et la seringue restent dans le cadre natif 1280×720 dans les deux orientations inspectées.",
+    "Le retournement change bien la direction des mêmes images et conserve leur composition générale.",
+    "Les gardes à droite et à gauche utilisent l’image dédiée ; le relâchement gauche revient à l’attente historique de combat.",
+    "Les montants du décor restent latéraux. La porte et les quatre tablettes couvertes restent lisibles derrière le combat.",
+    "Les petites particules claires visibles près des appuis après le saut proviennent de la poussière du moteur, et non d’un fond opaque ajouté aux PNG.",
+    "Aucun halo coloré large ne ressort à l’échelle native des captures inspectées. Cette observation ne remplace pas un examen agrandi des bords des fichiers sources."
+  ],
+  "technicalEvidence": {
+    "rightMovementX": [
+      310,
+      601.2000000000004
+    ],
+    "leftMovementX": [
+      1081.66782250145,
+      913.2239112507233
+    ],
+    "nativeParallaxDelta": [
+      0,
+      -3.577215061567176
+    ],
+    "expectedParallaxDelta": [
+      0,
+      -3.5772150615671765
+    ],
+    "stageAnimations": true,
+    "sourceAndOriginalPNGHashesUnchanged": true,
+    "actorStateInjected": false
+  },
+  "limits": [
+    "Revue de captures natives, pas une validation Chromium ou du clavier navigateur.",
+    "Aucune fidélité 1:1, anatomie canonique, géométrie source ni chronologie originale de marche certifiée.",
+    "Les captures montrent la simulation versus. Le saut de changement de côté n’a pas de nouvelle pose native revendiquée.",
+    "Les 18 captures sont conservées ; neuf captures représentatives ont été ouvertes pour cette revue."
+  ],
+  "attemptHistory": [
+    {
+      "directory": "native-walk-run1",
+      "passed": false,
+      "captures": 0,
+      "reason": "Le harness n’avait pas encore préchargé le portrait distinct du Creeper avant sa vérification des dimensions. Aucun problème de PNG ou de moteur identifié par cet arrêt.",
+      "correction": "Précharger les portraits des deux sujets avec spriteCache.load ; seul le harness dans ce dossier a été modifié."
+    },
+    {
+      "directory": "native-walk-run2",
+      "passed": true,
+      "checks": 118,
+      "captures": 18
+    }
+  ]
+}

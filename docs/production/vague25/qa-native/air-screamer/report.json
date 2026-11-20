@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "label": "wave25-air-screamer-native-animation",
+  "generatedAt": "2026-11-20T09:35:12.834Z",
+  "root": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh",
+  "fighterId": "sh1_air_screamer_001",
+  "stageId": "hazel_subway",
+  "browserTest": false,
+  "httpTest": false,
+  "browserLaunches": 0,
+  "httpServersStarted": 0,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "Exact preimport Air entry snapshot",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-framing.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/combat-geometry.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/player-input.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/data.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/shared.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: data/roster.json",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: docs/production/vague25/qa-characters-native.mjs",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: art/registry.json",
+      "passed": true
+    }
+  ],
+  "errors": [
+    "ENOENT: no such file or directory, open '/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/art/stage-registry.json'"
+  ],
+  "cases": [],
+  "captures": [],
+  "assets": [],
+  "roles": [],
+  "sourceHashes": {
+    "src/fight.js": {
+      "before": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "after": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a"
+    },
+    "src/sprite-system.js": {
+      "before": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+      "after": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/sprite-framing.js": {
+      "before": "563aebcd9987de1841b4f71a58a06710bfd0dae1861dffaf6560487d4441baaf",
+      "after": "563aebcd9987de1841b4f71a58a06710bfd0dae1861dffaf6560487d4441baaf"
+    },
+    "src/combat-geometry.js": {
+      "before": "b08f368df5617a4aebb17bb19256a1f895490efc4ef7d08df3d50c4f5878edab",
+      "after": "b08f368df5617a4aebb17bb19256a1f895490efc4ef7d08df3d50c4f5878edab"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/player-input.js": {
+      "before": "0899714b23759478a1bf495ab965702b46f6d656c776346940028628e50f59d1",
+      "after": "0899714b23759478a1bf495ab965702b46f6d656c776346940028628e50f59d1"
+    },
+    "src/data.js": {
+      "before": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+      "after": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35"
+    },
+    "src/shared.js": {
+      "before": "6f2b1244748c36b10595ff2661926a454f3dbf64b415e434dce7885a7d55cd3e",
+      "after": "6f2b1244748c36b10595ff2661926a454f3dbf64b415e434dce7885a7d55cd3e"
+    },
+    "data/roster.json": {
+      "before": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3",
+      "after": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3"
+    },
+    "docs/production/vague25/qa-characters-native.mjs": {
+      "before": "383290a848d6459fce9ee09b8a4e57d4227b90127cbb77845707d24a5e12a529",
+      "after": "383290a848d6459fce9ee09b8a4e57d4227b90127cbb77845707d24a5e12a529"
+    },
+    "art/registry.json": {
+      "before": "f70e6b434c6fb8952306fa7189bb8125238cbcdb33409cdd9e0cbf668951299c",
+      "after": "f70e6b434c6fb8952306fa7189bb8125238cbcdb33409cdd9e0cbf668951299c"
+    }
+  },
+  "testedSpriteEntryHashes": {},
+  "testedStageEntryHashes": {},
+  "method": {
+    "engine": "Unmodified FightEngine.update/render with native Canvas drawImage observed after the real draw.",
+    "input": "Only original registered InputState keydown/keyup callbacks receive synthetic events. No writes to actors, input sets, clocks, phase, facing, positions, health or attacks.",
+    "cadence": "An ordinary 12-tick movement uses existing static walk frame3. Keyup changes the real pose to idle and naturally resets its clock to zero; 48 successive updates/renders observe two complete cycles.",
+    "orientations": "Separate local duels put Air Screamer in its ordinary player1/player2 spawn. No teleport, actor swap or facing assignment.",
+    "alignment": "SHA-bound manually reviewed anatomical landmarks are projected through observed drawImage arguments/matrices. Wing extents are not body landmarks.",
+    "decoder": "Source PNG bytes are verified. Sharp normalizes PNG encoding in memory only, with exact decoded RGBA comparison."
+  },
+  "limits": [
+    "Native Canvas is not browser/DOM/HTTP/actual physical keyboard validation.",
+    "Idle cadence is authored versus timing, not certified timing from the original game. walk[3] is one retained static image, not a multi-frame animation.",
+    "Landmarks are manually selected silhouette points and their projection cannot certify canonical anatomy or hidden geometry.",
+    "The six named idle pose captures still require manual review for cropping, identity, angle and apparent body stability.",
+    "No attack/contact/guard/finisher behavior, role changes or one-to-one fidelity are asserted."
+  ],
+  "harnessSHA256": "567c7033bc652ea51e28469f421db67fcce5d255d6504cad0abbcc8e76a4c248",
+  "preservationBaseline": {
+    "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-air-screamer-baseline.json",
+    "sha256": "68ee2d8d6855b8ed057b2418e5681d0de35aed70350900009099d1d7b0a6deec",
+    "entrySHA256": "b41cd66bdecf47b0e3d96f1f9723cd8179380a9f0ebbeb0ae641a32e024d3c3a",
+    "baseCommit": "941ebe70c72bd473bceff6ce59ea4438cb889629"
+  },
+  "failure": "Error: ENOENT: no such file or directory, open '/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/art/stage-registry.json'\n    at async open (node:internal/fs/promises:1345:25)\n    at async readFile (node:internal/fs/promises:2003:14)\n    at async file:///workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-air-screamer-native.mjs:48:77",
+  "passed": false,
+  "completedAt": "2026-11-20T09:35:12.857Z"
+}

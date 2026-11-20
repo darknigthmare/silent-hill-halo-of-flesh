@@ -1,0 +1,56 @@
+[
+  {
+    "fighterId": "film_mannequin_monster_176",
+    "command": [
+      "python",
+      "scripts/import-sprite.py",
+      "/workspace/scratch/b86991fb2253/wave18/arcade/film_mannequin_monster_176_combat_idle.png",
+      "--fighter",
+      "film_mannequin_monster_176",
+      "--source",
+      "film",
+      "--origin",
+      "conversation-image-generation",
+      "--single-subject-reviewed",
+      "--anchor-x",
+      "0.4984051036682616",
+      "--anchor-y",
+      "0.6985645933014354",
+      "--body-height",
+      "0.38995215311004783",
+      "--facing",
+      "1",
+      "--combat-idle"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"fighterId\": \"film_mannequin_monster_176\",\n  \"source\": \"film\",\n  \"path\": \"assets/sprites/film_mannequin_monster_176.d5bc6baa191d.png\",\n  \"pose\": \"idle\",\n  \"frames\": 1,\n  \"animatedClips\": 0,\n  \"fidelity\": \"unverified\",\n  \"combatView\": \"side-view-candidate\",\n  \"portraitPath\": \"assets/sprites/film_mannequin_monster_176.dc9b92150b37.png\",\n  \"technical\": {\n    \"pixelSHA256\": \"b7f7455e988253a0979915e5e49f1518d31386ec86084e8a3852f88866445eb5\",\n    \"sha256\": \"d5bc6baa191d8bab7a0232001b57d936578635f12ad8acf41bdf6d73f9712eef\",\n    \"bytes\": 553460,\n    \"width\": 1254,\n    \"height\": 1254,\n    \"extension\": \"png\",\n    \"visibleBounds\": [\n      228,\n      387,\n      1022,\n      876\n    ],\n    \"transparentFraction\": 0.89412\n  },\n  \"dryRun\": false,\n  \"nextStep\": \"npm run sprites:check && npm test && npm run build\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "fighterId": "film_lying_figure_return_to_silent_hill",
+    "command": [
+      "python",
+      "scripts/import-sprite.py",
+      "/workspace/scratch/b86991fb2253/wave18/arcade/film_lying_figure_return_to_silent_hill_combat_idle.png",
+      "--fighter",
+      "film_lying_figure_return_to_silent_hill",
+      "--source",
+      "film",
+      "--origin",
+      "conversation-image-generation",
+      "--single-subject-reviewed",
+      "--anchor-x",
+      "0.4892344497607656",
+      "--anchor-y",
+      "0.8835725677830941",
+      "--body-height",
+      "0.7639553429027113",
+      "--facing",
+      "1",
+      "--combat-idle"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"fighterId\": \"film_lying_figure_return_to_silent_hill\",\n  \"source\": \"film\",\n  \"path\": \"assets/sprites/film_lying_figure_return_to_silent_hill.5d110b145c90.png\",\n  \"pose\": \"idle\",\n  \"frames\": 1,\n  \"animatedClips\": 0,\n  \"fidelity\": \"unverified\",\n  \"combatView\": \"side-view-candidate\",\n  \"portraitPath\": \"assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png\",\n  \"technical\": {\n    \"pixelSHA256\": \"1a73de61d7ec83a626f46611254e2000d4063a351af194fd5c9d04eeef2df616\",\n    \"sha256\": \"5d110b145c90b5a8f6071d37956b411cc278e2becf17a7c423d897a57074b835\",\n    \"bytes\": 332268,\n    \"width\": 1254,\n    \"height\": 1254,\n    \"extension\": \"png\",\n    \"visibleBounds\": [\n      448,\n      150,\n      779,\n      1108\n    ],\n    \"transparentFraction\": 0.92985\n  },\n  \"dryRun\": false,\n  \"nextStep\": \"npm run sprites:check && npm test && npm run build\"\n}\n",
+    "stderr": ""
+  }
+]

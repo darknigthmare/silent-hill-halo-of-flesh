@@ -1,0 +1,613 @@
+{
+  "schemaVersion": 1,
+  "group": "stage-pass20-a",
+  "scope": "stage-only",
+  "createdAt": "2026-11-19",
+  "deliveryState": "final-three-pairs",
+  "requestedInitially": [
+    "nightmare_mall",
+    "sewers",
+    "lakeside_sh3",
+    "nightmare_hospital_sh3"
+  ],
+  "stages": [
+    {
+      "stageId": "lakeside_sh3",
+      "source": "sh3",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "happy-carousel-before-transition",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK"
+      ],
+      "worldState": "fixed-normal",
+      "locationNote": "Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1. Vue retenue : Happy Carousel SH3 AVANT sa transition et Memory of Alessa ; trois sculptures visibles sur mâts fixes interprètent une partie des douze chevaux. Va-et-vient proposé, ni gaz nocif/puzzle/Alessa ou Cybil ajouté. Plateau couvert distinct du béton humide extérieur ; physique et caméra non certifiées.",
+      "layers": [
+        {
+          "id": "happy-carousel-before-transition",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+              "sha256": "bdd844f50ec7c6d96d60502aa5e23afdb0f8c0aa9ac33529e0154c7763ac2949",
+              "bytes": 2284992,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-canopy-poles",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+              "sha256": "4249d9b871856257e242050e0da77d741e61e0e16f8a501992c6e8f98f151ce2",
+              "bytes": 214606,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Happy Carousel SH3 avant transition et Memory of Alessa ; trois sculptures sur mâts fixes, sans gaz ni personne.",
+        "Cadrage latéral reconstruit ; les trois chevaux représentent une partie des douze. Plateau couvert rouille, sans sol extérieur mouillé.",
+        "Deux plans statiques distincts ; aucune rotation ou animation de chevaux produite."
+      ],
+      "referenceFiles": [
+        "sh3_13_happy_carousel.jpg",
+        "sh3_13_happy_carousel_riddle.jpg"
+      ]
+    },
+    {
+      "stageId": "nightmare_hospital_sh3",
+      "source": "sh3",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "brookhaven-3f-storeroom-mirror",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH3_12_NIGHTMARE_HOSPITAL"
+      ],
+      "worldState": "fixed-altered",
+      "locationNote": "Brookhaven Otherworld de SH3 ; salle au miroir isolée du bassin Leonard.",
+      "layers": [
+        {
+          "id": "mirror-storeroom",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+              "sha256": "a60fa6d89fbf8f0d0854453a45597724a1a44e783e2cdf5dd4deeb91f460d51a",
+              "bytes": 2501782,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-doorjambs",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+              "sha256": "1d8e55fb19ab4cfba5b3a830489b87aa561e3077bc984d8a1efd8750139c1fe0",
+              "bytes": 391266,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Réserve 3F de Brookhaven Otherworld : grand miroir, bassin utilitaire et traces sombres fixes, sans reflet humain.",
+        "Reconstruction latérale du lieu ; capture native republiée par Den of Geek, plateforme exacte de cette capture non vérifiée indépendamment.",
+        "Aucune contamination animée ni reflet dynamique produit ; aucune salle téléphonique ou bassin Leonard substitué."
+      ],
+      "referenceFiles": [
+        "sh3_mirror_storeroom_denofgeek.jpg"
+      ]
+    },
+    {
+      "stageId": "sewers",
+      "source": "sh3",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "underpass-bridge-after-hair-dryer",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH3_05_UNDERPASS"
+      ],
+      "worldState": "fixed-normal",
+      "locationNote": "Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau. Vue retenue : passerelle du canal APRÈS usage du sèche-cheveux, car le câble n’est installé qu’à ce moment. Eau sous la passerelle, sans ennemi vivant réintroduit ni courant électrique jouable. Vibrations du câble/remous proposés, pas plateau de duel inondé.",
+      "layers": [
+        {
+          "id": "channel-after-dryer",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+              "sha256": "9572d9592225a1014a0d9cf914a5834ddad5e2795887ac35b058eaad4999db10",
+              "bytes": 2499871,
+              "width": 1671,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-basin-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+              "sha256": "5698b0266f8c9ea3bbfe2097e6feec0f10cbcc5aaefc998c1b548f08a01bab32",
+              "bytes": 316219,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Passerelle du canal après usage du sèche-cheveux ; câble posé au bord, eau sous le plateau, aucun ennemi vivant ni courant actif.",
+        "L’architecture est guidée par la capture du pont lors de la rencontre ; la phase après sèche-cheveux est une reconstruction fondée sur la fiche et le guide.",
+        "Une correction imagegen ciblée a élargi la passerelle afin que y=82,5% tombe sur le treillis. Aucun pixel modifié par script.",
+        "Le fond livré mesure 1671×941 et le premier plan 1672×941. fit=cover conserve les proportions ; différence de largeur de 1 pixel source, sans recadrage matériel."
+      ],
+      "referenceFiles": [
+        "sh3_sewer_underpass-grate.jpg",
+        "sh3_05_underpass_02.jpg"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "lakeside_sh3",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-a/lakeside_sh3.happy-carousel-before-transition.png",
+      "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+      "sha256": "bdd844f50ec7c6d96d60502aa5e23afdb0f8c0aa9ac33529e0154c7763ac2949",
+      "bytes": 2284992,
+      "width": 1672,
+      "height": 941,
+      "role": "opaque-background",
+      "mode": "RGB",
+      "promptKey": "lakeside_bg",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-932be8aa-4b54-4af5-8dfe-75793dd530cb.png",
+      "preservation": "original PNG bytes; hardlink; no pixel postprocessing",
+      "visualInspection": "completed",
+      "qa": {
+        "opaque": true,
+        "decodedAlphaRange": [
+          255,
+          255
+        ],
+        "footingLineNormalizedY": 0.825,
+        "visualFooting": "continuous walkable floor at footing line; no central actor or prop"
+      }
+    },
+    {
+      "stageId": "lakeside_sh3",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-a/lakeside_sh3.near-canopy-poles.png",
+      "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+      "sha256": "4249d9b871856257e242050e0da77d741e61e0e16f8a501992c6e8f98f151ce2",
+      "bytes": 214606,
+      "width": 1672,
+      "height": 941,
+      "role": "transparent-foreground",
+      "mode": "RGBA",
+      "promptKey": "lakeside_fg",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-3290460a-9a17-4aac-976f-c85b82cb6f3c.png",
+      "preservation": "original PNG bytes; hardlink; no pixel postprocessing",
+      "visualInspection": "completed",
+      "qa": {
+        "alphaRange": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9552859118620627,
+        "nonzeroAlphaFraction": 0.04471408813793731,
+        "centerBand": [
+          0.08,
+          0,
+          0.92,
+          1
+        ],
+        "centerMaxAlpha": 1,
+        "feetBand": [
+          0.08,
+          0.75,
+          0.92,
+          0.88
+        ],
+        "feetMaxAlpha": 1,
+        "visibleGeometry": "sparse outer architectural edges only; central alpha residue at most 1/255 when reported",
+        "transparentBackground": true
+      }
+    },
+    {
+      "stageId": "nightmare_hospital_sh3",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-a/nightmare_hospital_sh3.mirror-storeroom.png",
+      "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+      "sha256": "a60fa6d89fbf8f0d0854453a45597724a1a44e783e2cdf5dd4deeb91f460d51a",
+      "bytes": 2501782,
+      "width": 1672,
+      "height": 941,
+      "role": "opaque-background",
+      "mode": "RGB",
+      "promptKey": "hospital_bg",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-443b5f27-2d86-461f-bb74-d66e3e57f494.png",
+      "preservation": "original PNG bytes; hardlink; no pixel postprocessing",
+      "visualInspection": "completed",
+      "qa": {
+        "opaque": true,
+        "decodedAlphaRange": [
+          255,
+          255
+        ],
+        "footingLineNormalizedY": 0.825,
+        "visualFooting": "continuous walkable floor at footing line; no central actor or prop"
+      }
+    },
+    {
+      "stageId": "nightmare_hospital_sh3",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-a/nightmare_hospital_sh3.near-doorjambs.png",
+      "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+      "sha256": "1d8e55fb19ab4cfba5b3a830489b87aa561e3077bc984d8a1efd8750139c1fe0",
+      "bytes": 391266,
+      "width": 1672,
+      "height": 941,
+      "role": "transparent-foreground",
+      "mode": "RGBA",
+      "promptKey": "hospital_fg",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-a59b1910-1f47-4e30-b3bc-eda14e3457db.png",
+      "preservation": "original PNG bytes; hardlink; no pixel postprocessing",
+      "visualInspection": "completed",
+      "qa": {
+        "alphaRange": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9022678968215632,
+        "nonzeroAlphaFraction": 0.09773210317843684,
+        "centerBand": [
+          0.08,
+          0,
+          0.92,
+          1
+        ],
+        "centerMaxAlpha": 1,
+        "feetBand": [
+          0.08,
+          0.75,
+          0.92,
+          0.88
+        ],
+        "feetMaxAlpha": 1,
+        "visibleGeometry": "sparse outer architectural edges only; central alpha residue at most 1/255 when reported",
+        "transparentBackground": true
+      }
+    },
+    {
+      "stageId": "sewers",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-a/sewers.channel-after-dryer.png",
+      "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+      "sha256": "9572d9592225a1014a0d9cf914a5834ddad5e2795887ac35b058eaad4999db10",
+      "bytes": 2499871,
+      "width": 1671,
+      "height": 941,
+      "role": "opaque-background",
+      "mode": "RGB",
+      "promptKey": "sewers_bg_fix",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-e80b3d9d-623d-4f3e-beba-1edb04b59b68.png",
+      "preservation": "original PNG bytes; hardlink; no pixel postprocessing",
+      "visualInspection": "completed",
+      "qa": {
+        "opaque": true,
+        "decodedAlphaRange": [
+          255,
+          255
+        ],
+        "footingLineNormalizedY": 0.825,
+        "visualFooting": "continuous walkable floor at footing line; no central actor or prop"
+      }
+    },
+    {
+      "stageId": "sewers",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-a/sewers.near-basin-edges.png",
+      "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+      "sha256": "5698b0266f8c9ea3bbfe2097e6feec0f10cbcc5aaefc998c1b548f08a01bab32",
+      "bytes": 316219,
+      "width": 1672,
+      "height": 941,
+      "role": "transparent-foreground",
+      "mode": "RGBA",
+      "promptKey": "sewers_fg",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-a5c29594-c25d-49b7-9c21-ea004cd05f50.png",
+      "preservation": "original PNG bytes; hardlink; no pixel postprocessing",
+      "visualInspection": "completed",
+      "qa": {
+        "alphaRange": [
+          0,
+          255
+        ],
+        "fullyTransparentFraction": 0.9235028143733888,
+        "nonzeroAlphaFraction": 0.07649718562661123,
+        "centerBand": [
+          0.08,
+          0,
+          0.92,
+          1
+        ],
+        "centerMaxAlpha": 1,
+        "feetBand": [
+          0.08,
+          0.75,
+          0.92,
+          0.88
+        ],
+        "feetMaxAlpha": 1,
+        "visibleGeometry": "sparse outer architectural edges only; central alpha residue at most 1/255 when reported",
+        "transparentBackground": true
+      }
+    }
+  ],
+  "references": [
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-a/references/sh3_13_happy_carousel.jpg",
+      "path": "references/sh3_13_happy_carousel.jpg",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_13_happy_carousel.jpg",
+      "sha256": "324ee837b57c8db9718c3d730687a98c4e170bc01bc829f680d87488e55837e2",
+      "bytes": 409046,
+      "width": 1920,
+      "height": 1080,
+      "visualInspection": "completed-before-generation",
+      "notes": "Entrée Happy Carousel ; canopy, couleurs et matériau avant transition."
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-a/references/sh3_13_happy_carousel_riddle.jpg",
+      "path": "references/sh3_13_happy_carousel_riddle.jpg",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_13_happy_carousel_riddle.jpg",
+      "sha256": "1983a65b4550a0e9019bed7dcf72f494c14a694a978c8f88f43d557f6c905119",
+      "bytes": 537286,
+      "width": 1920,
+      "height": 1080,
+      "visualInspection": "completed-before-generation",
+      "notes": "Vue embarquée avant transition ; chevaux, hub, plateau et balustrade. Heather et la note ne sont pas reproduites."
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-a/references/sh3_mirror_storeroom_denofgeek.jpg",
+      "path": "references/sh3_mirror_storeroom_denofgeek.jpg",
+      "url": "https://www.denofgeek.com/wp-content/uploads/2021/10/Silent-Hill-3.jpg?resize=1024%2C576",
+      "sha256": "a4a793c37243627b64059c2ef0f9168f66a8b93219e659cecec42db04c364428",
+      "bytes": 57540,
+      "width": 1024,
+      "height": 576,
+      "visualInspection": "completed-before-generation",
+      "notes": "Capture native de la réserve aux miroirs 3F, vérifiée visuellement. Plateforme et réglages de capture non établis ; pas une preuve UHD."
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-a/references/sh3_sewer_underpass-grate.jpg",
+      "path": "references/sh3_sewer_underpass-grate.jpg",
+      "url": "https://static.wikia.nocookie.net/silent/images/5/51/Heather_sewer_monster.jpg/revision/latest?cb=20131003185906",
+      "sha256": "41b0c490039522e0a11ccda2303b824e048650fe4f21a000f33fdfa2c04c40ce",
+      "bytes": 533135,
+      "width": 1503,
+      "height": 907,
+      "visualInspection": "completed-before-generation",
+      "notes": "Capture native existante du dépôt docs/production/wave8-references/sewer/underpass-grate.jpg, lue sans nouvelle requête au site ; pont et canal lors de la rencontre, pas preuve de la phase post-événement."
+    },
+    {
+      "file": "/workspace/scratch/8edddaaaab76/stage-pass20-a/references/sh3_05_underpass_02.jpg",
+      "path": "references/sh3_05_underpass_02.jpg",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_02.jpg",
+      "sha256": "8b0b971afef526fdae7702c1224560c6f96ca990a89b7cf382ee8f304f9c0ebf",
+      "bytes": 267085,
+      "width": 1920,
+      "height": 1080,
+      "visualInspection": "completed-before-generation",
+      "notes": "Cutscene du sèche-cheveux ; même pièce, plafond en béton, lampe protégée et câble. Ce gros plan ne prouve pas seul la géométrie du pont."
+    }
+  ],
+  "prompts": [
+    {
+      "key": "lakeside_bg",
+      "prompt": "Use case: stylized-concept. Asset type: opaque background plane for a 2D side-view fighting-game arena, one single landscape image, desired 1672 by 941 pixels.\nAdapt the supplied authentic Silent Hill 3 (2003 original game) Happy Carousel screenshots into an EMPTY lateral arena background. Image 1 is the exterior canopy/material reference; image 2 is the ON-BOARD carousel BEFORE the nightmare transition and BEFORE Memory of Alessa. Preserve this specific pre-transition ride. The horses are inanimate carousel sculptures on fixed poles, not live creatures. Remove Heather and all figures entirely; also remove all notes, text, signs, HUD and logos.\nScene: a cropped cross-section across the covered carousel deck, with only THREE of its battered pale wooden horse sculptures in the rear, rust-red abrasions, teal saddle patches, each fixed to a slender pole. At the rear center is the aged mustard-yellow polygonal hub with small arched dark inset panels, faded floral trim and restrained small warm bulbs. A low gray metal balustrade behind the horse row fades into the black exterior. Above, the weathered teal underside and radial braces of the canopy, a few slim pastel fluorescent strips and tiny warm bulbs, all taken from the reference palette. No blazing red post-transition room, no gore, no gas, no fallen horses, no enemy.\nCamera: level broad lateral game composition, moderate perspective, no fisheye, no tilted frame. Open continuous deck extends across the entire width in the LOWER 35 percent; flat readable footing line at y=82.5% of the image. Keep all horses, hub and rear railing BEHIND the combat band, their bases above y=68%; no prop crosses the empty central combat space. Weathered russet square metal deck plates, not exterior wet concrete. Restrained dark nostalgic original-console material response, detailed raster game scenery rather than a photograph of a modern park. Even legibility, dark olive/teal shadows, ochre bulbs, reddish-brown floor. No frame, no montage, no people or human reflections, no text, watermark or invented emblems. Entire canvas opaque. This is a source-guided versus reconstruction, not a fidelity-certified capture.",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "references/sh3_13_happy_carousel.jpg",
+        "references/sh3_13_happy_carousel_riddle.jpg"
+      ]
+    },
+    {
+      "key": "lakeside_fg",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-a/lakeside_sh3.happy-carousel-before-transition.png"
+      ],
+      "prompt": "Use case: background-extraction. Asset type: a genuinely TRANSPARENT PNG foreground parallax plane aligned to the supplied opaque 1672 by 941 Happy Carousel background. Produce a separate full-size 1672 by 941 landscape PNG; the supplied image is a composition/material reference, NOT an image to repeat.\nDraw ONLY two very narrow cropped near-side carousel support-pole fragments at the far outer edges and two small aged teal/rust canopy bracket tips in the upper corners. Use the same dark teal corroded metal, ochre wear and restrained warm edge light as this exact pre-transition SH3 carousel. All visible material must lie in x=0-5% or x=95-100%; corner bracket tips may extend to x=7% only above y=8%. Keep the entire center x=8%-92%, y=0%-100% fully alpha zero, especially the fighter feet line at y=82.5%. No connecting horizontal railing, no ground, no canopy across the top, no horses, no hub, no lamps in the middle, no floor or background reconstruction. This is a sparse framing plane with TWO edge elements separated by real transparency, not an empty placeholder: textured iron edge silhouettes must be clearly visible and correspond to the carousel. Do not render checkerboard, black backing, white backing, haze, vignette, drop shadows or translucent full-canvas pixels. No text, person, creature, reflection, logo or watermark. Actual transparent background is mandatory. Preserve the source landscape dimensions and camera alignment."
+    },
+    {
+      "key": "sewers_bg",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-a/references/sh3_sewer_underpass-grate.jpg",
+        "/workspace/scratch/8edddaaaab76/stage-pass20-a/references/sh3_05_underpass_02.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: opaque landscape background plane, desired 1672 by 941, for an empty 2D side-view fighting-game stage.\nReconstruct the EXACT Silent Hill 3 (original 2003 game) Underpass water-channel crossing shown in image 1. This is the narrow rusty grated bridge over the sewer-creature channel, not a generic tunnel or the earlier garbage-room bridge. Image 2 only confirms the concrete beam/wall texture, caged fluorescent fitting and hair-dryer lead in this room. The requested moment is AFTER the hair dryer has been used: the water is still, the cable is present at one entry edge, no active electricity and no creature.\nComposition: rotate the viewpoint for a broad level lateral fighting arena across the same crossing, preserving the rusty diamond/diagonal mesh bridge with solid rusted rim, grimy poured-concrete basin walls, black/yellow caution edging and dark recessed drain bars visible in the references. The bridge runs horizontally all the way across the image, occupying y=73%-88%, with a flat unobstructed foot line at y=82.5%. Calm dark brown water remains visibly BELOW the bridge; never paint water over the mesh or the fighting surface. Opposite concrete bank and basin lip are in the background, with sparse rectangular drainage bars and the caged pale industrial wall light; subdued gray-green and ochre-brown game textures. A thin disconnected-looking dark dryer cable remains slack at the FAR LEFT bridge approach, hanging to water level without crossing the open combat center. No hair dryer floating in midair, no sparks.\nBroaden only the bridge/deck camera framing for versus readability; do not add other rooms, curved subway tunnels, cathedrals, machines, a forest, rails across the foreground, ladders or unsupported new props. Every person and creature in the reference is omitted, as are weapons and bodies. Empty center; no HUD, text, labels, signage, logo, watermark or montage. Opaque single image, atmospheric but readable, no vignette hiding the bridge ends. Source-guided candidate reconstruction with modest original-console material detail, not a photographic modernization."
+    },
+    {
+      "key": "hospital_bg",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-a/references/sh3_mirror_storeroom_denofgeek.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: single opaque landscape background, desired 1672 by 941 pixels, for a lateral 2D fighting-game arena.\nUse the supplied actual Silent Hill 3 Brookhaven Otherworld MIRROR STOREROOM capture as the architectural reference. Reconstruct this exact small mirror room into a broader side-view stage. It is NOT Leonard's flooded basin, the telephone locker room, a public restroom, the SH2 hospital or an Origins mirror room. Omit Heather and her reflected figure completely.\nThe huge rectangular wall mirror occupies most of the rear wall, from roughly y=12% to y=65%, with its low corroded ochre/rust sill. It reflects the EMPTY SAME room with the same dirty pale small square floor tiles, heavily mottled off-white/rust wall panels and shadowed far doorway. At the rear-right, the single stained utilitarian basin on narrow dark supports is partially reflected; dark branching contamination adheres to the basin and the right mirror surface. Keep those fixed dark traces subtle and confined to the rear, without inventing vines across the combat lane. Preserve the source's oppressive dark red-brown oxidized textures, grimy beige tiles and sickly dim overhead light; no glowing runes, portals, shattered mirror, endless corridor or lit modern fixtures.\nCamera: level shallow lateral perspective, clear readable rear plane, no skewed frame. Extend the empty tile floor across the LOWER 34 percent as a flat continuous duel band; the intended fighter footing line is y=82.5%. Nothing stands in this band; sink, mirror and architectural detail stay behind it. No people, humanoid stains, silhouettes, creatures, bodies, gurneys, hospital beds, weapons, blood pool, water, active supernatural effects, HUD, text, numbers, logos or watermark. One cohesive fully opaque environment, not multiple panels. Grounded game-scenery raster with restrained detail, source-guided versus reconstruction, not a fidelity-certified game capture."
+    },
+    {
+      "key": "sewers_bg_fix",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/generated_images/exec-e414adfa-adc5-496a-a905-8cc871b62c6d.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Target: the supplied empty SH3 sewer bridge stage background. Preserve the exact 1672 by 941 landscape canvas, all concrete walls, barred drain, caution markings, lamp, cables, colors, texture and empty room. Make ONE targeted composition correction for the fighting-game foot line: move and broaden the grated bridge's walkable TOP SURFACE downward toward the foreground. Its rear horizontal edge must sit at approximately y=72% of the image, and its front rim must sit at y=90%, so the complete horizontal line at y=82.5% crosses grating, NOT WATER. Keep the bridge straight across the whole width, connected to both side approaches, with its rusty diamond mesh visible. Keep the water strictly below and behind the bridge, no water over the mesh. Adjust only the short side approaches and slack cable at the far edge as necessary to join the lowered deck. Preserve the rest of the scene and lighting. No people, monsters, new props, text, HUD, montage or transparency. This is an opaque game background; do not put markings, guides or words on the image."
+    },
+    {
+      "key": "hospital_fg",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-a/nightmare_hospital_sh3.mirror-storeroom.png"
+      ],
+      "prompt": "Use case: background-extraction. Asset type: separate transparent foreground parallax plane for this exact SH3 Brookhaven mirror-storeroom background, same desired 1672 by 941 landscape canvas. The supplied image is a material/lighting and composition reference; DO NOT repeat the background.\nCreate ONLY two narrow cropped near-doorjamb fragments at the extreme left and right edges, heavily weathered off-white paint over iron, mottled dark rust matching the room's existing panels. Give the right outer edge a very small handful of fixed dark branching grime lines matching the rear basin, but keep all material within the outer 5 percent of the canvas on either side. Near-jamb edges should provide modest depth with dull brown rim light. No horizontal connection across the image, no freestanding props, basin, mirror, reflection, floor, wall rectangle, text or person.\nThe whole central x=8%-92% region from top to bottom MUST be truly transparent, alpha zero. Also preserve the foot band y=75%-88% with absolutely no obstacle except the farthest x<5% and x>95% edges. Do not render a checkerboard, a black or white background, a vignette, blur veil, particles or soft shadows across empty alpha. Crisp irregular architectural cutout edges, actual RGBA transparency; match the source camera and aspect ratio. A sparse useful close plane, not a full scene and not an empty PNG."
+    },
+    {
+      "key": "sewers_fg",
+      "prompt": "Create ONE transparent PNG foreground/parallax layer for the supplied finished background of Silent Hill 3 (2003) Underpass, specifically the Sewer Creature canal AFTER the hair dryer event. Use the supplied image as strict camera, palette and texture alignment reference. This is only the NEAR EDGE layer, not another complete scene. Preserve its landscape canvas approximately 16:9, exactly 1671 x 941 pixels if supported. True transparent background. The visible objects must be restricted to the outermost left 4% and outermost right 4% of the canvas: a thin close concrete basin jamb at each border with small rusted iron attachment brackets, cropped by the sides, weathered olive grey concrete and old brown iron matching the background. Very sparse corner framing, no central crossbar, no overhead beam across the picture, no rail across the fighters, no duplicate footbridge. Keep the entire middle 92% of the image from top to bottom empty with actual alpha 0; especially y=75%-90%, the combat foot zone, must be completely clear. No floor, no wall, no water, no fog or lighting rectangle in the transparent area. No characters, monsters, people, faces, creature body, hair dryer, sparks, current, gore, text, logos, HUD, or checkerboard painted in the image. Detailed restrained game environment rendering, ambient cage-lamp lighting consistent with the reference. Standalone foreground only, unpremultiplied clean alpha edges, no opaque matte. Do not reproduce the reference background.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-a/sewers.channel-after-dryer.png"
+      ],
+      "transparent_background": true
+    }
+  ],
+  "provenance": {
+    "generator": "integrated image_gen__imagegen",
+    "skill": "e0/imagegen",
+    "generatedResolutionClaim": "measured PNG dimensions only; not UHD",
+    "fidelityClaim": "source-guided versus reconstruction, unverified; no 1:1 certification",
+    "repositoryChanges": "none by this producer",
+    "frameAnimation": "one still per layer; true independent camera parallax via descriptor",
+    "runtimeSceneId": "null for these stage records; descriptive scene strings are bitmap labels, no runtime scene ID invented"
+  },
+  "qa": {
+    "method": "visual inspection of each native reference before generation, visual inspection of every selected output, Pillow read-only dimensions/alpha and SHA256 of unchanged original PNG bytes",
+    "engineQA": "not run by this producer; parent runs stage-only native harness after integration",
+    "parallax": "background factor 0, separate transparent foreground factor 0.012; camera displacement is an engine feature, not pre-rendered movement",
+    "limitations": [
+      "No 1:1, native UHD, frame animation or attack tests claimed.",
+      "Transparent foregrounds can contain invisible alpha 1/255 residue; measured exact values are reported per file.",
+      "No characters, portraits, movesets, workbook, runtime or workflows modified."
+    ],
+    "descriptorValidation": {
+      "result": "passed",
+      "validator": "src/stage-bitmaps.js validateStageBitmap",
+      "stagesValidated": [
+        "lakeside_sh3",
+        "nightmare_hospital_sh3",
+        "sewers"
+      ],
+      "method": "read-only Node import against data/stages.json; no engine render or actor injection"
+    },
+    "frozenHandoff": "The three stage descriptors and six asset records were frozen after the initial handoff; only outer closure/QA metadata was updated."
+  },
+  "deferred": [
+    {
+      "stageId": "nightmare_mall",
+      "reason": "No sufficiently wide native view of the underground six-tunnel arena inspected. Available boss close-up hides the room; PC gallery screenshots 10–14 show prior mall rooms. No generation was attempted from those inadequate views.",
+      "replacementAuthorized": "apartment_roof",
+      "replacementStatus": "also deferred: insufficient native rooftop view"
+    },
+    {
+      "stageId": "apartment_roof",
+      "referenceId": "CL_SH3_09_DAISY_VILLA_APARTMENTS",
+      "reason": "The guide and native PC gallery supplied apartment corridor or monster close-up images, not a readable roof view. A separate Missionary image from Bogleech is an isolated model. The original-PC video metadata was found but extracted frame decoding failed and small storyboard downloads timed out; no roof image was inspected successfully. No generation attempted.",
+      "status": "awaiting-readable-native-rooftop-reference",
+      "runtimeBlocked": false
+    }
+  ],
+  "rejectedCandidate": [
+    {
+      "stageId": "sewers",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-e414adfa-adc5-496a-a905-8cc871b62c6d.png",
+      "promptKey": "sewers_bg",
+      "reason": "Bridge front edge ended above y=.825 so intended feet line crossed water; replaced by targeted imagegen correction. Not delivered."
+    }
+  ],
+  "rejectedReferenceExamples": [
+    {
+      "file": "sh3_12_nightmare_hospital_01.jpg",
+      "reason": "Telephone/locker room, not 3F mirror storeroom."
+    },
+    {
+      "file": "sh3_boss_split_worm.jpg",
+      "reason": "Monster close-up, insufficient visible architecture for six-tunnel arena."
+    },
+    {
+      "file": "sh3_boss_missionary.jpg",
+      "reason": "Monster close-up, insufficient roof geometry."
+    },
+    {
+      "file": "sh3_09_daisy_villa_apartments_01.jpg",
+      "reason": "Apartment door corridor, not rooftop."
+    }
+  ]
+}

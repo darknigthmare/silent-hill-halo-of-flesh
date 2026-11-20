@@ -1,0 +1,148 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "label": "wave26-stages-a-peer-visual-review",
+  "reviewer": "/root/generate_stages_wave26",
+  "reviewedAt": "2026-11-20T12:46:22.551342+00:00",
+  "status": "accepted-for-candidate-integration",
+  "passed": true,
+  "scope": "Separate integration review from the native harness author and root primary reviewer. This reviewer authored the native stage plates; authorship is disclosed and this is not independent validation of source fidelity.",
+  "method": "Actually opened each original 1280x720 native FightEngine PNG separately with view_image. Then recomputed its SHA256 and matched the exact capture record in the individually hashed native report. No contact sheet, thumbnail or regenerated image substituted for the viewed PNG.",
+  "delivery": {
+    "path": "docs/production/vague26/stages/integration-delivery-a.json",
+    "sha256": "a004b6467c8dc202fa486c67cee327bde39d43da920c4667a796ec48402c9411"
+  },
+  "capturesActuallyViewed": 3,
+  "entries": [
+    {
+      "stageId": "nightmare_theater",
+      "status": "accepted-for-candidate-integration",
+      "accepted": true,
+      "viewed": true,
+      "viewedWithViewImage": true,
+      "reportPath": "docs/production/vague26/qa-native/stages-a/nightmare_theater/report.json",
+      "reportSHA256": "6817b010396788d33ebe5f4a67ff5619b458a15a9fd0374b0aa229c27c9bec8f",
+      "capturePath": "docs/production/vague26/qa-native/stages-a/nightmare_theater/nightmare_theater.png",
+      "captureSHA256": "686492dbcfe0a2135b8be5eaec16cde94f8c62d296fd16cc2c8b574498ee4460",
+      "viewedSHA256": "686492dbcfe0a2135b8be5eaec16cde94f8c62d296fd16cc2c8b574498ee4460",
+      "captureMatchesReport": true,
+      "capturePurpose": "actual-native-FightEngine",
+      "captureFrame": 229,
+      "width": 1280,
+      "height": 720,
+      "reportedAssertions": {
+        "passed": 46,
+        "total": 46
+      },
+      "reportedHarnessSHA256": "02dc030a8051c909f7f4e017d113eb5c8d9e27f72a866b1f4247cc3ad092e8bc",
+      "testedStageEntryHashes": {
+        "nightmare_theater": "3d6ea933e8c90300692b520c243e1a40bf2171618cc7bfd12be2ce0adf8765d4"
+      },
+      "sourceReference": {
+        "path": "docs/production/vague26/stages/references/origins-guide-native-page-082.jpeg",
+        "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf",
+        "sha256": "b108e2f3c4e197f62a9cd4ead1f5299d7c6c7298ebacf2fba3fea2f52823b73c",
+        "width": 1203,
+        "height": 1542
+      },
+      "findings": [
+        "Viewed original 1280x720 native FightEngine capture: cave rock wall, gravel floor and pale rectangular mirror exit at the right remain legible.",
+        "Both existing test fighters are wholly visible with their feet on the floor; the long weapon clears the near rocks. The visible foreground remains at the extreme side and bottom edges.",
+        "Names, health bars and center stage information remain visible. No embedded person or monster is visible in the background."
+      ],
+      "sourceLimits": [
+        "Source is the official Silent Hill: Origins strategy guide PDF page 82 (printed page 81), selected gameplay panels for the Caliban cave beyond the Artaud stage mirror. The normal auditorium and earlier painted cave scenery are not the depicted location.",
+        "The side-on spacing, unseen wall surfaces and diffuse light are authored adaptations; this review does not establish 1:1 geometry, texture fidelity or source encounter timing."
+      ]
+    },
+    {
+      "stageId": "nightmare_school",
+      "status": "accepted-for-candidate-integration",
+      "accepted": true,
+      "viewed": true,
+      "viewedWithViewImage": true,
+      "reportPath": "docs/production/vague26/qa-native/stages-a/nightmare_school/report.json",
+      "reportSHA256": "8b008846f938b0ece75e9fbc80d8ddea7b485443e09a142b9760f2ce53dafa0e",
+      "capturePath": "docs/production/vague26/qa-native/stages-a/nightmare_school/nightmare_school.png",
+      "captureSHA256": "5c8d2efbe78f2679f0f4b6ac425911bbd3364780c55c48717dc0a2dd4a571a5f",
+      "viewedSHA256": "5c8d2efbe78f2679f0f4b6ac425911bbd3364780c55c48717dc0a2dd4a571a5f",
+      "captureMatchesReport": true,
+      "capturePurpose": "actual-native-FightEngine",
+      "captureFrame": 229,
+      "width": 1280,
+      "height": 720,
+      "reportedAssertions": {
+        "passed": 46,
+        "total": 46
+      },
+      "reportedHarnessSHA256": "02dc030a8051c909f7f4e017d113eb5c8d9e27f72a866b1f4247cc3ad092e8bc",
+      "testedStageEntryHashes": {
+        "nightmare_school": "af38b6c883f5ccabf2389d12456db09c4719a0f31727dca279fcf39b248f42ec"
+      },
+      "sourceReference": {
+        "path": "docs/production/vague26/stages/references/shsm-school-courtyard-walkthrough.jpg",
+        "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_3b.jpg",
+        "sha256": "2bb818a5425f0da246f266999a2196a945f528a548ea67359277933e8f02ccca",
+        "width": 200,
+        "height": 150
+      },
+      "findings": [
+        "Viewed original 1280x720 native FightEngine capture: frozen brick facade, broad pale-mullioned window, faint red interior glow and low icy overhang remain legible.",
+        "Both existing test fighters stand on the clear horizontal frozen courtyard surface. Edge frost does not cover either silhouette or weapon.",
+        "HUD names and health bars remain readable; the window contains no frozen couple, phone, reticle or puzzle actor."
+      ],
+      "sourceLimits": [
+        "Source screenshot 3b is only 200x150 and is largely occupied by a camera phone. It supplies partial window, brickwork and overhang evidence; the walkthrough identifies the first Paparazzi courtyard window and red lighting.",
+        "Full courtyard geometry, wall span, mullion spacing and frost detail are authored adaptations. No frozen couple, chase, door event, Paparazzi interaction, weather behavior or source cadence is certified."
+      ]
+    },
+    {
+      "stageId": "nightmare_mall_sm",
+      "status": "accepted-for-candidate-integration",
+      "accepted": true,
+      "viewed": true,
+      "viewedWithViewImage": true,
+      "reportPath": "docs/production/vague26/qa-native/stages-a/nightmare_mall_sm/report.json",
+      "reportSHA256": "2cc2d14393d567fbf28753109ecc217008c86a2954fca5928de058a7f5b57e05",
+      "capturePath": "docs/production/vague26/qa-native/stages-a/nightmare_mall_sm/nightmare_mall_sm.png",
+      "captureSHA256": "ef41cd588332aaf44d3e7e10f685e6efb1b4c047d2232e6f1b47f1300a1d37eb",
+      "viewedSHA256": "ef41cd588332aaf44d3e7e10f685e6efb1b4c047d2232e6f1b47f1300a1d37eb",
+      "captureMatchesReport": true,
+      "capturePurpose": "actual-native-FightEngine",
+      "captureFrame": 229,
+      "width": 1280,
+      "height": 720,
+      "reportedAssertions": {
+        "passed": 46,
+        "total": 46
+      },
+      "reportedHarnessSHA256": "02dc030a8051c909f7f4e017d113eb5c8d9e27f72a866b1f4247cc3ad092e8bc",
+      "testedStageEntryHashes": {
+        "nightmare_mall_sm": "a9c1585ff23212669d0d68ae76c9948aace711692cd2e9be639f0521342b719f"
+      },
+      "sourceReference": {
+        "path": "docs/production/vague26/stages/references/shsm-mall-gumball-walkthrough.jpg",
+        "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_6a.jpg",
+        "sha256": "17dd833f287a7319cd8cdcf7bec1b8b700e8237d23e9ec0505e87643bf3ad2a7",
+        "width": 200,
+        "height": 150
+      },
+      "findings": [
+        "Viewed original 1280x720 native FightEngine capture: enclosed frozen hall, blank oval wall panel, angular rear/right ice and square tiled floor remain legible.",
+        "Both existing test fighters are wholly visible and grounded. Bright foreground ice slivers occupy the extreme left and right edges without covering the fighters or their weapons.",
+        "HUD names, health bars and center stage information remain visible. No dispenser, Tookie statue, frozen people or puzzle colors are embedded in the scene."
+      ],
+      "sourceLimits": [
+        "Source screenshot 6a is only 200x150. It locates the frozen Gumball hall after Garage Access South, before thaw; it does not document a complete side-on room.",
+        "The wider hall, unseen left extent, texture scale, blank oval panel and ice geometry are adaptations. This is not the Tookie atrium or roof, and no puzzle interaction, thaw event or source cadence is certified."
+      ]
+    }
+  ],
+  "limits": [
+    "This visual review is limited to the three stated still captures at frame 229. Native harness assertions are quoted from the bound reports, not independently rerun by this reviewer.",
+    "Each bound report declares browserTest=false, httpTest=false and actorStateInjected=false. This review does not certify Chromium, DOM/CSS, HTTP, real browser keyboard delivery or service workers.",
+    "Two static image planes plus runtime parallax do not constitute a new source animation. No new fighter pose, attack, contact, guard, finisher, hazard, weather, collision or gameplay behavior is certified.",
+    "Native foreground plates retain tiny alpha 1-2/255 traces, as recorded by the native plate analysis; visual clearance does not assert that every central alpha byte is zero.",
+    "Source fidelity remains unverified. Acceptance covers the observed framing, floor readability, HUD visibility and absence of foreground obstruction in these exact captures."
+  ]
+}

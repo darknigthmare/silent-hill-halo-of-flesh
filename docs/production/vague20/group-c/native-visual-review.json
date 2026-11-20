@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-19T12:26:34.698839+00:00",
+  "scope": "Revue visuelle en lecture seule de quatre captures natives existantes de la passe stages 20, groupe C.",
+  "sourceUnmodified": true,
+  "newTestRun": false,
+  "imageEdited": false,
+  "result": "Aucun défaut bloquant de lisibilité, d’appui, de placement des plans ou de HUD observé sur ces quatre captures.",
+  "captures": [
+    {
+      "stageId": "hospital_world",
+      "capture": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/hospital_world.png",
+      "sha256": "dc40a6b04bc7864337cf4eede50bd775d69e8820e1118f9836b24cd8c12b22ef",
+      "bytes": 1131105,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "method": "view_image, observation du PNG natif existant",
+      "observations": {
+        "readability": "Les deux silhouettes et leurs armes se détachent du couloir olive ; les éclairages muraux restent derrière les acteurs.",
+        "floor": "Sol continu et dégagé ; les pieds reposent sur le même plan visuel, sans obstruction de la zone centrale.",
+        "layers": "Le jambage proche reste sur le bord gauche ; portes et lumières forment le fond. Aucune couture, duplication ou découpe alpha visible.",
+        "hud": "Noms, barres et libellés lisibles dans le bandeau sombre, sans chevauchement des acteurs.",
+        "objects": "Portes et lumières au fond ; aucun objet, personnage supplémentaire ou monstre intégré à la scène."
+      },
+      "renderingBlockerObserved": false
+    },
+    {
+      "stageId": "artaud_theater",
+      "capture": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/artaud_theater.png",
+      "sha256": "87a328af49ae16352d399797264a6b33451debc82482667c18b88566f8040ff8",
+      "bytes": 1274197,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "method": "view_image, observation du PNG natif existant",
+      "observations": {
+        "readability": "Les combattants restent lisibles devant le décor de théâtre ocre et arboré ; le grand intervalle central est dégagé.",
+        "floor": "Planches continues et zone d’appui libre. Le petit arbre de décor demeure derrière la ligne de combat.",
+        "layers": "Les deux rideaux étroits restent aux extrémités ; la toile/scénographie et l’arche restent au fond.",
+        "hud": "Le long libellé de scène tient entre les barres. Le libellé BÉTON SEC résulte du terrain désactivé par le harness.",
+        "objects": "Le petit arbre est identifiable comme élément de décor, sans masquer les corps ou les armes."
+      },
+      "renderingBlockerObserved": false
+    },
+    {
+      "stageId": "devils_pit",
+      "capture": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/devils_pit.png",
+      "sha256": "f41b4690c699b648ba3414c7b3ef0b415e12a14b058235abac1c5779ca275c98",
+      "bytes": 1567656,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "method": "view_image, observation du PNG natif existant",
+      "observations": {
+        "readability": "Silhouettes lisibles sur les planches claires ; les roues sombres et garde-corps restent derrière elles.",
+        "floor": "Passerelle en bois continue et sèche ; aucun trou ou obstacle au milieu de la zone d’appui.",
+        "layers": "La poutre proche reste au bord gauche. Roues, cage et balustrades sont dans le fond et ne recouvrent pas les acteurs.",
+        "hud": "Le bandeau sombre maintient la lecture sur l’architecture claire. Le libellé BÉTON SEC résulte du terrain désactivé par le harness.",
+        "objects": "Roues et accès à grille restent lisibles comme infrastructure de mine, sans mécanisme venant couper la ligne de combat."
+      },
+      "renderingBlockerObserved": false
+    },
+    {
+      "stageId": "overlook",
+      "capture": "/workspace/scratch/8edddaaaab76/stage-pass20-verification/native/overlook.png",
+      "sha256": "0c7765ec7c70c525f24561f0e1a6c925c917a6aa73a2cdba03c26f7bcc80de09",
+      "bytes": 1456388,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "method": "view_image, observation du PNG natif existant",
+      "observations": {
+        "readability": "Les deux combattants se détachent de la galerie froide et du métal éclairé ; les armes sont entièrement visibles.",
+        "floor": "Passerelle métallique continue, caillebotis central en arrière de la ligne des pieds ; aucun obstacle sur les appuis.",
+        "layers": "Les jambages proches encadrent les bords. Les garde-corps et cellules restent à l’arrière, sans masque sur les acteurs.",
+        "hud": "Noms et barres lisibles. Le libellé BÉTON SEC résulte du terrain désactivé par le harness.",
+        "objects": "Cellules, luminaires et garde-corps sont distincts. Pas d’eau, d’arc électrique, de corps ou d’objet dans la voie de combat."
+      },
+      "renderingBlockerObserved": false
+    }
+  ],
+  "issues": [],
+  "limitations": [
+    "Une image fixe par scène : cette revue ne démontre pas le mouvement ou le pan ; le rapport natif existant porte ces contrôles séparément.",
+    "Captures natives de 1280×720 ; aucune certification navigateur, HTTP, UHD ou fidélité 1:1.",
+    "La revue ne couvre pas les sept autres scènes de la passe ni toutes les positions possibles des acteurs.",
+    "stageTerrain:false dans le harness : BÉTON SEC correspond au repli neutre de currentTerrain(), indépendamment des planches ou du métal dessinés. Cette capture ne valide pas le terrain actif de production."
+  ],
+  "publicationReadOnlyProbe": {
+    "expectedHead": "2db0c78284f681d641d439c62e1bd4487838677e",
+    "observedHead": "2db0c78284f681d641d439c62e1bd4487838677e",
+    "observedTree": "4f6bfc86544056dd7d206f2d72415472da2ca608",
+    "apiReadAvailable": true,
+    "apiMutationPerformed": false
+  },
+  "captureContext": {
+    "stageTerrain": false,
+    "neutralTerrainLabel": "BÉTON SEC",
+    "interpretation": "Le harness désactive le terrain ; currentTerrain() renvoie alors le terrain neutre. Le libellé ne décrit donc pas le matériau dessiné dans cette capture QA et ne constitue pas un défaut de production identifié."
+  }
+}

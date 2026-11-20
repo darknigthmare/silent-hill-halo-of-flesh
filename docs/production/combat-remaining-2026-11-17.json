@@ -1,0 +1,2932 @@
+{
+  "schema": "sprite-missing-followup-reconciliation/1",
+  "reviewedAt": "2026-11-17",
+  "scope": "Réconciliation des 67 profils précédemment sans image avec trois nouveaux profils disposant chacun de candidats sélection et combat. Aucun ancien ledger, registre ou code modifié.",
+  "sourceArtifacts": [
+    {
+      "path": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/docs/production/SPRITE_MISSING_2026-11-17.md",
+      "sha256": "d734c6c391ae9fd9689288328270f79c39f3a6fc59f7d59f15b0be40a80d3ee4"
+    },
+    {
+      "path": "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/art/provenance-20261117.json",
+      "sha256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65"
+    },
+    {
+      "path": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/followup-result.json",
+      "role": "Exact supplementary image references; this earlier research snapshot is preserved."
+    }
+  ],
+  "baselineSnapshot": {
+    "rosterProfiles": 230,
+    "registeredProfilesWithArt": 163,
+    "missingProfiles": 67,
+    "newProfilesWithStaticCandidate": 9
+  },
+  "followupCounts": {
+    "previousMissingProfiles": 67,
+    "newlyIllustratedUniqueProfiles": 3,
+    "newSelectionImagesReported": 3,
+    "newCombatImagesReported": 3,
+    "remainingMissingProfiles": 64,
+    "newGenerationRefusals": 1,
+    "previousPassGenerationRefusalsRetained": 2,
+    "otherRemainingEntriesPreservedExactly": 63,
+    "expectedProfilesWithCandidateArt": 166,
+    "rosterProfiles": 230
+  },
+  "countingMethod": "Exact set subtraction from the agreed 67-profile snapshot: remaining 64 = previous 67 minus Hummer, Tremer and Tuberculosis. Two image uses for one fighter count as one profile. The expected 166 candidate-profile count is 163 + 3 based on reported generated outputs; this reconciliation does not itself certify their registry import.",
+  "removedFromMissing": [
+    {
+      "fighterId": "arcade_hummer_arcade",
+      "name": "Hummer — Arcade",
+      "previousEntry": {
+        "fighterId": "arcade_hummer_arcade",
+        "name": "Hummer — Arcade",
+        "source": "arcade",
+        "game": "SILENT HILL: THE ARCADE",
+        "status": "missing",
+        "recheckedThisTurn": false,
+        "reviewStatus": "inherited",
+        "blockerCategory": "incomplete-source",
+        "currentReason": "Motif hérité d’ART92 : Les vues de groupe et projectiles/insectes de la galerie Arcade ne sont pas nommées Hummer de façon assez précise pour attribuer un corps complet à ce profil. Aucun modèle entier Arcade identifié ; aucun rendu SH4 transféré sur le seul nom.",
+        "inheritedEvidence": {
+          "group": "C",
+          "state": "Sans image",
+          "reason": "Les vues de groupe et projectiles/insectes de la galerie Arcade ne sont pas nommées Hummer de façon assez précise pour attribuer un corps complet à ce profil. Aucun modèle entier Arcade identifié ; aucun rendu SH4 transféré sur le seul nom.",
+          "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+          "provenanceArtifacts": [
+            "art/provenance-art92-c.json"
+          ],
+          "referenceUrls": [
+            "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+            "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_12.jpg",
+            "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+          ],
+          "newResearchClaimedForInheritedEvidence": false
+        },
+        "generationAttemptedThisTurn": false,
+        "newArtifactDelivered": false,
+        "oneToOneCertified": false
+      },
+      "currentStatus": "selection-and-combat-candidates-generated",
+      "selectionImagesProduced": 1,
+      "combatImagesProduced": 1,
+      "reportedByParent": true,
+      "registryImportVerifiedByThisReconciliation": false,
+      "oneToOneCertified": false,
+      "sourceEvidence": {
+        "fighterId": "arcade_hummer_arcade",
+        "fromStatus": "incomplete-source",
+        "toStatus": "reference-candidate-ready",
+        "generationPerformed": false,
+        "certified1to1": false,
+        "edition": "Silent Hill: The Arcade (retail game)",
+        "referenceKind": "Native gameplay screenshots published with a first-person playthrough review",
+        "references": [
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_060.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEh0CUXvae89nRVQNhiKCVPCIB2fmPjFb9MKZvm7sY_rjmcSJMNLWRLnB1dIkxSV04sD5w7jR-DjQ208u84bnorhi60FyJPhT-4m65i6AANy9yDRccJLrcdEiDUkY_3qTw_2oIRVFrYckRZo4hOg_JUk6hxhjWFwtnzJ56stZT2Xyvq5FfRjAMtK82MpCIA=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 60,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 13556,
+            "sha256": "50ee3aceee892757c09f5ebc48016fce42cfcb1f829161d2f0f61cb9f6d40674",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_061.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEgmGtPwHKIIbwLTyFDR3zBkGBCy7MeqLmpCjM9JeUmEDPDvfaHgU-aZ5MLC4aXMgpy7-avBvg-iRtDX3zUE_Sb6foYz23wMWbGw9lgDDxgh8-8vsumV5vezOtX9cU8S5h14xl4cWiDozf-luespdBMpGG8GpXMBhi3UuGLHtCM6L-kZL0WHiZamGXJ6Oy0=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 61,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 20198,
+            "sha256": "4bb40d36c93b442a40c8fe72d78b97c9a9e08f8576562742880be590a5526a71",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          }
+        ],
+        "observations": [
+          "Image060 contains multiple complete flying silhouettes, with all wing extremities and the narrow beak inside the frame.",
+          "Image061 is a close view of the underside/head/torso and broad angular wing membranes; its left wing extremity is cropped.",
+          "The Arcade HUD and continuous playthrough establish the exact edition; this is not the SH4 Hummer model."
+        ],
+        "limits": [
+          "Whole silhouettes are small, and screenshot compression obscures tiny claws and surface detail.",
+          "Close-up061 cannot establish a whole left wing alone; use060 for its outer contour.",
+          "Perspective/lighting vary; lateral combat pose is an explicit adaptation and not an extracted native frame."
+        ],
+        "promptGuidance": "Use only the Arcade batlike body, dark broad angular membranes and narrow pale beak documented by060/061. Keep entire wings and beak within a transparent canvas. Separate a selection image from a side-facing combat pose; preserve proportions and do not import the SH4 insectlike design."
+      },
+      "statusHistory": [
+        "incomplete-source",
+        "reference-candidate-ready",
+        "selection-and-combat-candidates-generated"
+      ]
+    },
+    {
+      "fighterId": "arcade_tremer_arcade",
+      "name": "Tremer — Arcade",
+      "previousEntry": {
+        "fighterId": "arcade_tremer_arcade",
+        "name": "Tremer — Arcade",
+        "source": "arcade",
+        "game": "SILENT HILL: THE ARCADE",
+        "status": "missing",
+        "recheckedThisTurn": false,
+        "reviewStatus": "inherited",
+        "blockerCategory": "incomplete-source",
+        "currentReason": "Motif hérité d’ART92 : La carte Arcade Historical Society mentionne RedTremer et des sangsues, attestant une rencontre mais sans vue du corps. Les feuilles BoM ou rendus SH4 ne prouvent pas la texture/anatomie précise de cette édition Arcade. Aucune silhouette entière nommée exploitable trouvée.",
+        "inheritedEvidence": {
+          "group": "C",
+          "state": "Sans image",
+          "reason": "La carte Arcade Historical Society mentionne RedTremer et des sangsues, attestant une rencontre mais sans vue du corps. Les feuilles BoM ou rendus SH4 ne prouvent pas la texture/anatomie précise de cette édition Arcade. Aucune silhouette entière nommée exploitable trouvée.",
+          "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+          "provenanceArtifacts": [
+            "art/provenance-art92-c.json"
+          ],
+          "referenceUrls": [
+            "https://www.silenthillmemories.net/sh_arcade/stages/st2_1.gif",
+            "https://www.silenthillmemories.net/sh_arcade/stages/st2_2.gif",
+            "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm"
+          ],
+          "newResearchClaimedForInheritedEvidence": false
+        },
+        "generationAttemptedThisTurn": false,
+        "newArtifactDelivered": false,
+        "oneToOneCertified": false
+      },
+      "currentStatus": "selection-and-combat-candidates-generated",
+      "selectionImagesProduced": 1,
+      "combatImagesProduced": 1,
+      "reportedByParent": true,
+      "registryImportVerifiedByThisReconciliation": false,
+      "oneToOneCertified": false,
+      "sourceEvidence": {
+        "fighterId": "arcade_tremer_arcade",
+        "fromStatus": "incomplete-source",
+        "toStatus": "reference-candidate-ready",
+        "generationPerformed": false,
+        "certified1to1": false,
+        "edition": "Silent Hill: The Arcade (retail game)",
+        "referenceKind": "Native gameplay screenshots published with a first-person playthrough review",
+        "references": [
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_085.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEiZyApJ0XNzIeX4pwXNuyJxOKzfnajoss8lPWJE-t1SDh4MreaTON5SAQZIejXCbTVZda0Ir9ppZ8PKk2lzV-RRBckSP1f7sVJyY7V8z7Zq_9dE6I5KGbx31ftrmgPYHFqZO-g1FwMOImRnlSJXc90SU3-PbWYlUN-8ZA_zzrbc3FhhCX_YXbDopVRpbTM=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 85,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 34412,
+            "sha256": "a69039ecb671ef3b07b254aad61082c1f464c52507c2aa2ed928d02e4abe9dea",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_086.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEgDmIJNHlAKNnJQbJ3EoCXCDyuRsqlhKGqVXrcYNJYgeC7jyleopl_P471EA1-g7pRLTXFxZVSHZ6p_uhi3mMoTg9RWQbL0XuosEaJEs7nQ2RMFR4xkKeqEKWc2RFSUNaHnRl4L7H_Xn0WU87sII8Yt67WyrRcuzlrDVn6eBIWC4200dqXJAboWC7Rv9Go=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 86,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 14398,
+            "sha256": "70e570a99fe44559869b3d88a6c6001ae1dfcfd02e3fe4c8217c2255193d8310",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          }
+        ],
+        "observations": [
+          "Image085 shows a complete upright underside of the sluglike body, including its oval outline and central recessed fold.",
+          "Image086 shows several complete smooth pinkish backs and a whole side outline at right.",
+          "Both are from the Arcade prison sequence; no limbs or feet are present to reconstruct."
+        ],
+        "limits": [
+          "Very small body detail, compression and strong orange/green scene lighting.",
+          "Avoid treating the dark recessed fold as a fully documented mouth with invented teeth.",
+          "The lateral pose can preserve the simple body contour, but its texture remains candidate interpretation."
+        ],
+        "promptGuidance": "Render a single complete Arcade Tremer, a limbless compact sluglike organism. Use085 for the underside fold and086 for the smooth pinkish back and side contour. Do not invent arms, feet, teeth or a long segmented worm body. Provide a clear side-facing combat silhouette and separate selection representation."
+      },
+      "statusHistory": [
+        "incomplete-source",
+        "reference-candidate-ready",
+        "selection-and-combat-candidates-generated"
+      ]
+    },
+    {
+      "fighterId": "arcade_tuberculosis",
+      "name": "Tuberculosis",
+      "previousEntry": {
+        "fighterId": "arcade_tuberculosis",
+        "name": "Tuberculosis",
+        "source": "arcade",
+        "game": "SILENT HILL: THE ARCADE",
+        "status": "missing",
+        "recheckedThisTurn": true,
+        "reviewStatus": "rechecked-this-turn",
+        "blockerCategory": "incomplete-source",
+        "currentReason": "Une page de modèle Tuberculosis a été retrouvée, sans aperçu exploitable. Accès directs 403 ; aucun nouveau corps entier inspecté.",
+        "inheritedEvidence": {
+          "group": "C",
+          "state": "Sans image",
+          "reason": "Le toit et le boss sont attestés par Stages Arcade ; la carte Stage1-3 ne montre aucun modèle. Les captures inspectées ne couvrent pas un corps entier attribuable à Tuberculosis. Le dossier nominatif Fandom renvoie402 ; il n’a pas été repris par un autre accès. Aucun boss ou projectile de groupe renommé pour remplir ce profil.",
+          "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+          "provenanceArtifacts": [
+            "art/provenance-art92-c.json"
+          ],
+          "referenceUrls": [
+            "https://www.silenthillmemories.net/sh_arcade/stages_en.htm",
+            "https://www.silenthillmemories.net/sh_arcade/stages/st1_3.gif",
+            "https://silenthill.fandom.com/wiki/Tuberculosis",
+            "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+          ],
+          "newResearchClaimedForInheritedEvidence": false
+        },
+        "generationAttemptedThisTurn": false,
+        "newArtifactDelivered": false,
+        "oneToOneCertified": false,
+        "currentResearch": {
+          "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/arcade/research-result.json",
+          "record": {
+            "modelName": "Tuberculosis",
+            "modelPage": "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/320992/",
+            "finding": "Page nominative retrouvée ; aucune image complète téléchargée ou inspectée. Les accès directs ont renvoyé 403, puis ont été arrêtés.",
+            "network": "Direct advertised ZIP links for Robbie, Phantom and Tuberculosis each returned HTTP403. No retries or bypass. Mama/Split Worm page fetch returned403; no download attempted."
+          }
+        },
+        "currentReferenceUrls": [
+          "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/320992/"
+        ]
+      },
+      "currentStatus": "selection-and-combat-candidates-generated",
+      "selectionImagesProduced": 1,
+      "combatImagesProduced": 1,
+      "reportedByParent": true,
+      "registryImportVerifiedByThisReconciliation": false,
+      "oneToOneCertified": false,
+      "sourceEvidence": {
+        "fighterId": "arcade_tuberculosis",
+        "fromStatus": "incomplete-source",
+        "toStatus": "reference-candidate-ready",
+        "generationPerformed": false,
+        "certified1to1": false,
+        "edition": "Silent Hill: The Arcade (retail game)",
+        "referenceKind": "Native gameplay screenshots published with a first-person playthrough review",
+        "references": [
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_081.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEj4CQvi0s56QEhffyS3Tqy5Y77LMa3owVarIn1QPXN5S_gnWuhA8PASC8HE8hN458LqwFgeJ6RcmJ-gRVRqZFpAqVFluA7SyyrLfofe8AC_AOTgb2AXA6dO_noKiV0iDmx_bOy6qzLntfhnkFd0FuiWuvMbdD3BMvBYUZBOKoBvaGGlsus1GQNW4G2bbqk=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 81,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 13436,
+            "sha256": "fdbcf291ed7700b96eb55d4aa6838aad75481e832dbd5c28c8bd16fd60ba9048",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_082.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEj7UcP4LxSaeuug58nUeYDmu6qWSYglVtt-tXVqJ4MbbV1DlWM6LknRXlfQI8QD797zbhBOa8pmfjHgOfvi7K5-h4sGyXgnzKAa2KORsHt_11ECHcU3WiQ-RUzDpsRygK_1UZQT8nJ0BYcCj6688-zcBYjamSN9nYjeoiFt9PhCcDFU8etp5otnLPXjSh4=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 82,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 20134,
+            "sha256": "f987997c7fb61768b59581fc6404a204c4bc30e529b93199b5dd34141c7e1d78",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_083.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEjAJL54fsS06YqP8IGdLnIOp2nUyLNXDop2bbbnP_PePyJ5j07ZVAG_uS9lBXRHt3ba0t7H07D_bk57L5wygypMTR4uIqCOWUa45xCDdp67eFewClh_JsHMmbg4X6-n44ke6ChtJ99Xp77AKkcvSWUnKha3ZXLM7OHEsxTXznWyuX5DgsaCPNSUcxfdxps=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 83,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 14820,
+            "sha256": "595ca604cf39fab72b1a1a371ddda88b5962656cbaf07fffd289d29400e9286e",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_084.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEhr9qpkNO-eoHavPHsDct7Ltv5QXRjBRyCp7N3nWNf1gbgzxySgyAGUJWRjj1eWTakZZOZR24s-nrpYNdpgeWxMVmHg-hfy2HzSP-kipOccIty5Cj2ZweNof39tAFSDApGYq1HrWjLTCClIGTBXAmxQsbAPwP2ozpkIGKF1sn1su575W7ne81QS7k9yK7A=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 84,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 14608,
+            "sha256": "f6c30775e53feb62231d6e17ab47f8db4175ce8f174e246c1f7a047415a2ffc4",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          }
+        ],
+        "observations": [
+          "No single screenshot shows the entire posed body, but complementary views establish the named extremities of the same boss.",
+          "Image081 shows the full head, clawed left hand, right-foot extremities and terminal tail point raised at screen right.",
+          "Image083 shows the complete opposite foot and membrane edges;082 adds torso detail;084 shows the reverse of the bladed hand and membrane.",
+          "The initial whole-frame-only blocker was revised after checking the union of views."
+        ],
+        "limits": [
+          "In081 part of the low tail curve passes beneath the image edge; root and terminal point are visible, so a new side pose can adapt the curve but cannot claim exact native geometry.",
+          "All sources are compressed639x476 views with perspective and orange lighting.",
+          "Fine digits, textures and joint geometry remain uncertain; this is reference-candidate-ready only, never certified1:1.",
+          "Use the Arcade boss only, not another game creature or a generic dragon."
+        ],
+        "promptGuidance": "Reconstruct one complete Arcade Tuberculosis from all four native captures. Preserve the long reptilian head, open toothed snout, chest, asymmetric crescent-bladed right hand and clawed left hand, membranous forelimbs, long bent legs with the separately documented feet, and narrow long tail with the visible raised terminal point. A lateral fighting pose may curve the tail within frame; do not add extra horns, toes, limbs or weapons.",
+        "complementaryCoverage": {
+          "headAndTeeth": [
+            81,
+            82
+          ],
+          "torso": [
+            81,
+            82
+          ],
+          "rightBladedHand": [
+            81,
+            83,
+            84
+          ],
+          "leftClawedHand": [
+            81
+          ],
+          "wingMembranes": [
+            83,
+            84
+          ],
+          "leftFoot": [
+            83
+          ],
+          "rightFoot": [
+            81
+          ],
+          "tailRoot": [
+            81,
+            83
+          ],
+          "tailTerminalPoint": {
+            "image": 81,
+            "approximatePixel": [
+              596,
+              450
+            ],
+            "insideFrame": true
+          },
+          "tailMiddleCurve": "Partly cropped in081; complement with portions visible in083/084, adapting pose explicitly."
+        }
+      },
+      "statusHistory": [
+        "incomplete-source",
+        "reference-candidate-ready",
+        "selection-and-combat-candidates-generated"
+      ]
+    }
+  ],
+  "remainingByPrimaryBlocker": {
+    "historical-refusal-or-related-stop": 26,
+    "immaterial-form": 2,
+    "identity-or-variant-unresolved": 7,
+    "incomplete-source": 26,
+    "new-generation-refusal": 3
+  },
+  "categoryDefinitions": {
+    "new-generation-refusal": "Refus outil récents documentés : deux refus conservés de la passe précédente (Lisa/Dark Nurse), plus le seul refus nouveau de cette suite (Numb Body). Ce total de 3 ne signifie pas trois nouveaux appels refusés dans cette suite.",
+    "historical-refusal-or-related-stop": "Refus déjà archivé ou arrêt d’une variante/famille liée. Ne prétend pas qu’un nouvel appel a été effectué pour chaque ligne.",
+    "incomplete-source": "Source finale entière, extrémités, détails ou accès nécessaires encore absents.",
+    "identity-or-variant-unresolved": "Attribution d’un modèle, d’une variante ou d’un libellé insuffisamment établie.",
+    "immaterial-form": "Présence invisible ou phénomène environnemental sans corps fini attesté."
+  },
+  "newGenerationRefusals": [
+    {
+      "id": "arcade_numb_body_arcade",
+      "status": "generation-output-rejected",
+      "stage": "output",
+      "category": "sexual",
+      "requestId": "69e384e1-616d-4d50-90f8-23ec8263d6c0",
+      "attempts": 1,
+      "attemptPurpose": "selection",
+      "newThisFollowup": true,
+      "retriedAfterRefusal": false,
+      "combatGenerationAttempted": false,
+      "imageDelivered": false,
+      "evidenceSource": "Parent agent reported the final image-tool result in the current collaboration task; no new call was made by this agent."
+    }
+  ],
+  "previousPassGenerationRefusalsRetained": [
+    {
+      "id": "film_dark_nurse_171",
+      "status": "generation-output-rejected",
+      "requestId": "3904324b-a515-4299-82b9-b9cfbdf04f5d",
+      "category": "violence",
+      "attempts": 1,
+      "stage": "output",
+      "newThisTurn": true,
+      "retriedAfterRefusal": false
+    },
+    {
+      "id": "pt_lisa_149",
+      "status": "generation-output-rejected",
+      "requestId": "36708bbe-274e-49cd-ae50-bb5aa2c6c5cd",
+      "category": "violence",
+      "attempts": 1,
+      "stage": "output",
+      "newThisTurn": true,
+      "retriedAfterRefusal": false
+    }
+  ],
+  "remainingEntries": [
+    {
+      "fighterId": "sh1_monster_cybil_017",
+      "name": "Monster Cybil",
+      "source": "sh1",
+      "game": "SILENT HILL",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur du groupe Flesh Lip/Cybil dont l’attribution n’est pas résolue. Aucun nouvel appel, variante ou substitution après ce refus potentiel ; action artistique ouverte.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Refus antérieur du groupe Flesh Lip/Cybil dont l’attribution n’est pas résolue. Aucun nouvel appel, variante ou substitution après ce refus potentiel ; action artistique ouverte.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "group-attribution-unresolved",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh1_incubus_019",
+      "name": "Incubus",
+      "source": "sh1",
+      "game": "SILENT HILL",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur explicite de génération de l’Incubus SH1 ; aucune nouvelle tentative, reformulation ou variante de remplacement.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Refus antérieur explicite de génération de l’Incubus SH1 ; aucune nouvelle tentative, reformulation ou variante de remplacement.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh2_mannequin_022",
+      "name": "Mannequin",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur explicite du Mannequin SH2 ; aucune nouvelle tentative, variante ou corps emprunté.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Refus antérieur explicite du Mannequin SH2 ; aucune nouvelle tentative, variante ou corps emprunté.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh2_mannequin_ambusher_023",
+      "name": "Mannequin — Ambusher",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Même sujet Mannequin SH2 que le refus antérieur ; aucune variante Ambusher utilisée pour reprendre la génération refusée.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Même sujet Mannequin SH2 que le refus antérieur ; aucune variante Ambusher utilisée pour reprendre la génération refusée.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "same-subject-or-variant-stop",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh2_flesh_lip_027",
+      "name": "Flesh Lip",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur du groupe Flesh Lip/Cybil dont l’attribution n’est pas résolue. Aucun nouvel appel, variante ou substitution après ce refus potentiel.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Refus antérieur du groupe Flesh Lip/Cybil dont l’attribution n’est pas résolue. Aucun nouvel appel, variante ou substitution après ce refus potentiel.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "group-attribution-unresolved",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh2_mary_final_manifestation_034",
+      "name": "Mary — Final Manifestation",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus explicite de l’outil image pour Mary Final Manifestation SH2, catégorie output violence, requête aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30. Un seul appel ; aucune nouvelle requête ou autre identité utilisée après le refus.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Refus explicite de l’outil image pour Mary Final Manifestation SH2, catégorie output violence, requête aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30. Un seul appel ; aucune nouvelle requête ou autre identité utilisée après le refus.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh2_prisoner_035",
+      "name": "Prisoner",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "immaterial-form",
+      "currentReason": "Motif hérité d’ART92 : La FAQ SH2 relue qualifie la présence de « invisible unknown creature » et décrit dégâts/cris, sans apparition corporelle. Ce signal peut être ciblé mais ne fournit aucun extérieur visible ; ni silhouette de prisonnier inventée, ni corps du remake transféré.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "La FAQ SH2 relue qualifie la présence de « invisible unknown creature » et décrit dégâts/cris, sans apparition corporelle. Ce signal peut être ciblé mais ne fournit aucun extérieur visible ; ni silhouette de prisonnier inventée, ni corps du remake transféré.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-a.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh2/faq_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "sh2_spider_mannequin",
+      "name": "Spider Mannequin",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Même famille de sujet Mannequin SH2 précédemment refusée ; variante Spider non utilisée comme nouvel essai ni substitution.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Même famille de sujet Mannequin SH2 précédemment refusée ; variante Spider non utilisée comme nouvel essai ni substitution.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "same-subject-or-variant-stop",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh2_mandarin_floor_form",
+      "name": "Mandarin — Floor Form",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "identity-or-variant-unresolved",
+      "currentReason": "Motif hérité d’ART92 : Le commentaire de création original relu décrit la suspension par les bras puis dit explicitement « it is not permitted to stand above ground ». Aucun modèle propre de Floor Form n’est identifié dans la source ; adaptation non canonique toujours sans apparence validable, pas de réemploi du Mandarin suspendu.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Le commentaire de création original relu décrit la suspension par les bras puis dit explicitement « it is not permitted to stand above ground ». Aucun modèle propre de Floor Form n’est identifié dans la source ; adaptation non canonique toujours sans apparence validable, pas de réemploi du Mandarin suspendu.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-a.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/lost_memories/guide/048-049_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "sh3_nurse_pipe_043",
+      "name": "Nurse — Pipe",
+      "source": "sh3",
+      "game": "SILENT HILL 3",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur explicite de génération de Nurse Pipe SH3 ; aucun nouvel appel ni infirmière apparentée utilisée comme contournement.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Refus antérieur explicite de génération de Nurse Pipe SH3 ; aucun nouvel appel ni infirmière apparentée utilisée comme contournement.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "source": "sh3",
+      "game": "SILENT HILL 3",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur explicite de génération de Valtiel SH3 ; aucune nouvelle tentative ou substitution.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Refus antérieur explicite de génération de Valtiel SH3 ; aucune nouvelle tentative ou substitution.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh3_sewer_creature_052",
+      "name": "Sewer Creature",
+      "source": "sh3",
+      "game": "SILENT HILL 3",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : Les trois nouvelles vues associées à Underpass montrent l’emplacement du mémo, sa carte et Heather avec le sèche-cheveux, aucune silhouette entière du monstre. Le guide établit un danger scripté sous la passerelle et sa neutralisation, pas son contour corporel. Aucun corps caché déduit de l’eau ni confusion avec la sewer lady de l’Extra New Game.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Les trois nouvelles vues associées à Underpass montrent l’emplacement du mémo, sa carte et Heather avec le sèche-cheveux, aucune silhouette entière du monstre. Le guide établit un danger scripté sous la passerelle et sa neutralisation, pas son contour corporel. Aucun corps caché déduit de l’eau ni confusion avec la sewer lady de l’Extra New Game.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-a.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh3/walkthrough_05_underpass_en.htm",
+          "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_about_the_monster_in_the_water_a.jpg",
+          "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_about_the_monster_in_the_water_b.jpg",
+          "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_02.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "sh4_ghost_victim_066",
+      "name": "Ghost — Victim",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "identity-or-variant-unresolved",
+      "currentReason": "Motif hérité d’ART92 : Galerie SH4 correcte arts_monsters consultée et cinq arts supplémentaires inspectés :01/02 montrent des bustes pris dans une paroi/substance, avec bas caché ;06/07/39 sont explicitement Cynthia selon les légendes de galerie. Aucun extérieur entier propre au dossier collectif des anciens Ghosts ainsi découvert. Le corps d’une victime nommée n’est pas réétiqueté, et aucun membre de la famille refusé n’est repris sous le nom collectif.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Galerie SH4 correcte arts_monsters consultée et cinq arts supplémentaires inspectés :01/02 montrent des bustes pris dans une paroi/substance, avec bas caché ;06/07/39 sont explicitement Cynthia selon les légendes de galerie. Aucun extérieur entier propre au dossier collectif des anciens Ghosts ainsi découvert. Le corps d’une victime nommée n’est pas réétiqueté, et aucun membre de la famille refusé n’est repris sous le nom collectif.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-a.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm",
+          "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_01_victim.jpg",
+          "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_02_victim.jpg",
+          "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_06_victim.jpg",
+          "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_07_victim.jpg",
+          "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_39_victim.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "sh4_toby_archbolt_victim_14",
+      "name": "Toby Archbolt — Victim 14",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur explicite de Toby Archbolt Victim 14 SH4, catégorie violence, requête cbdfef7f-6a5c-405e-a58f-a5a455b2e62f. Aucun nouvel appel, variante ou corps de substitution.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Refus antérieur explicite de Toby Archbolt Victim 14 SH4, catégorie violence, requête cbdfef7f-6a5c-405e-a58f-a5a455b2e62f. Aucun nouvel appel, variante ou corps de substitution.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh4_joseph_schreiber_victim_15",
+      "name": "Joseph Schreiber — Victim 15",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : La scène native Room302 of the Past téléchargée montre l’apparition au plafond, en grande partie masquée par Henry/Eileen et l’obscurité ; aucune terminaison complète du corps ou des mains lisible. La galerie personnages et la galerie monstres relues n’offrent pas de modèle entier identifié Joseph/Victim15. Son rôle de conseil non hostile est conservé ; aucun bas de corps inventé et aucun Ghost offensif de substitution.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "La scène native Room302 of the Past téléchargée montre l’apparition au plafond, en grande partie masquée par Henry/Eileen et l’obscurité ; aucune terminaison complète du corps ou des mains lisible. La galerie personnages et la galerie monstres relues n’offrent pas de modèle entier identifié Joseph/Victim15. Son rôle de conseil non hostile est conservé ; aucun bas de corps inventé et aucun Ghost offensif de substitution.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-a.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh4/walkthrough_12_room_302_of_the_past_en.htm",
+          "https://www.silenthillmemories.net/sh4/walkthrough/sh4_12_room_302_of_the_past_01.jpg",
+          "https://www.silenthillmemories.net/sh4/arts_characters_en.htm",
+          "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "sh4_jasper_gein_victim_17",
+      "name": "Jasper Gein — Victim 17",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur explicite de génération de Jasper Gein Victim 17 SH4 ; aucune nouvelle tentative, autre arme ou variante pour contourner ce refus.",
+      "inheritedEvidence": {
+        "group": "A",
+        "state": "Sans image",
+        "reason": "Refus antérieur explicite de génération de Jasper Gein Victim 17 SH4 ; aucune nouvelle tentative, autre arme ou variante pour contourner ce refus.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [],
+        "referenceUrls": [],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh4_andrew_desalvo_victim_18",
+      "name": "Andrew DeSalvo — Victim 18",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur Andrew Victim18 conservé ; aucune nouvelle requête, variante ou substitution.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Refus antérieur Andrew Victim18 conservé ; aucune nouvelle requête, variante ou substitution.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh4/enemies_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "sh4_sacrificed_walter_071",
+      "name": "Sacrificed Walter",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : La nouvelle illustration native Final Boss38 complète le visage/torse ; avec la capture des Final Sacraments, les extrémités latérales restent hors cadre. L’union ne fournit pas tout l’extérieur du Conjurer et de ses attaches ; aucun transfert du Shadow Walter mobile.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "La nouvelle illustration native Final Boss38 complète le visage/torse ; avec la capture des Final Sacraments, les extrémités latérales restent hors cadre. L’union ne fournit pas tout l’extérieur du Conjurer et de ses attaches ; aucun transfert du Shadow Walter mobile.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh4/puzzles/pics/sh4_the_final_sacraments_01.jpg",
+          "https://www.silenthillmemories.net/sh4/bosses_en.htm",
+          "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_38_final_boss.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "sh4_eileen_head_073",
+      "name": "Eileen Head",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "La nouvelle capture presse SH4 de juin 2004 montre la tête géante, mais le personnage masque encore bouche, menton et raccord au sol. Le contour entier reste inconnu ; aucun corps de duel ajouté.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Recherche ciblée supplémentaire : Cool and Scary Things utilise le surnom Eileen big head et décrit la réaction des yeux, sans attester une duplication exacte du modèle humain ni la terminaison de l’objet géant. Les portraits humains et captures disponibles ne couvrent donc pas sûrement son contour entier ; aucun corps ni base coupée inventé.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh4/walkthrough_07_hospital_world_en.htm",
+          "https://www.silenthillmemories.net/sh4/arts_characters_en.htm",
+          "https://www.silenthillmemories.net/sh4/cool_and_scary_things_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "id": "sh4_eileen_head_073",
+          "status": "complete_object_contour_still_unresolved",
+          "references": [
+            {
+              "file": "sh4_eileen_head_press_screenshot.jpg",
+              "url": "https://www.pcgames.de/screenshots/medium/2004/06/Silent_Hill_4_PC_00.jpg",
+              "size": [
+                640,
+                480
+              ],
+              "visually_inspected": true,
+              "role": "June2004 press screenshot, authentic giant head but player obscures mouth/chin/base."
+            }
+          ],
+          "observations": "Giant female head fills narrow hospital room. Asymmetrical dark brown hair, very large greenish grey eyes, distorted skin around eyes and cheeks. The environmental manifestation has no visible separate fighting body.",
+          "limits": "Player and framing still conceal mouth/chin and exact floor termination. Complete isolated object silhouette is not established. Keep non-duel role; do not attach a human body or invent a flat base."
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/classic/reference_review.json"
+      },
+      "currentReferenceUrls": [
+        "https://www.pcgames.de/screenshots/medium/2004/06/Silent_Hill_4_PC_00.jpg"
+      ]
+    },
+    {
+      "fighterId": "origins_memory_of_richard_grady_083",
+      "name": "Memory of Richard Grady",
+      "source": "origins",
+      "game": "SILENT HILL: ORIGINS",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : Le rendu natif Sad Daddy11 et les concepts ont été réexaminés. Le haut du corps/support est encore coupé et les concepts ne prouvent pas l’union complète du même modèle commercial ; extrémités cachées non reconstruites.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Le rendu natif Sad Daddy11 et les concepts ont été réexaminés. Le haut du corps/support est encore coupé et les concepts ne prouvent pas l’union complète du même modèle commercial ; extrémités cachées non reconstruites.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_30_sad_daddy.jpg",
+          "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_saul_marchese_07_daddy.jpg",
+          "https://www.silenthillmemories.net/sh0/arts_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "homecoming_curtis_ackers",
+      "name": "Curtis Ackers",
+      "source": "homecoming",
+      "game": "SILENT HILL: HOMECOMING",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Corps et scie circulaire ont été documentés en ART144, puis la génération exacte Curtis armé a été refusée (requestID a55dd5fe-3bd4-44ce-97db-22edc1bb8e74). Aucun nouvel essai ni outil alternatif.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Corps et scie circulaire ont été documentés en ART144, puis la génération exacte Curtis armé a été refusée (requestID a55dd5fe-3bd4-44ce-97db-22edc1bb8e74). Aucun nouvel essai ni outil alternatif.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_08_curtis_ackers.png",
+          "https://www.silenthillmemories.net/sh5/weapons/circular%20saw.jpg",
+          "https://www.silenthillmemories.net/sh5/weapons_en.htm",
+          "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "homecoming_amnion_hanging_form_097",
+      "name": "Amnion — Hanging Form",
+      "source": "homecoming",
+      "game": "SILENT HILL: HOMECOMING",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur Amnion conservé ; aucune nouvelle requête pour ce sujet.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Refus antérieur Amnion conservé ; aucune nouvelle requête pour ce sujet.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "homecoming_amnion_exposed_form_098",
+      "name": "Amnion — Exposed Form",
+      "source": "homecoming",
+      "game": "SILENT HILL: HOMECOMING",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Même sujet Amnion déjà refusé ; la phase Exposed ne sert pas de variante de contournement. Aucune requête.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Même sujet Amnion déjà refusé ; la phase Exposed ne sert pas de variante de contournement. Aucune requête.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "same-subject-or-variant-stop",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "downpour_void_113",
+      "name": "Void",
+      "source": "downpour",
+      "game": "SILENT HILL: DOWNPOUR",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "immaterial-form",
+      "currentReason": "Motif hérité d’ART92 : Le Void est une lumière/consommation du décor, sans corps fini dans la capture native. Le rendre comme un monstre entier ou inventer une extrémité du phénomène n’aurait pas de support visuel ; rôle environnemental conservé.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Le Void est une lumière/consommation du décor, sans corps fini dans la capture native. Le rendre comme un monstre entier ou inventer une extrémité du phénomène n’aurait pas de support visuel ; rôle environnemental conservé.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh8/creatures/void.png",
+          "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "downpour_monocle_man_114",
+      "name": "Monocle Man",
+      "source": "downpour",
+      "game": "SILENT HILL: DOWNPOUR",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : La référence nommée résout la membrane faciale et le monocle, mais les rayons, rubans et chaîne sortent du cadre. Aucune nouvelle vue complémentaire exacte de leurs extrémités ; pas de corps humain ajouté.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "La référence nommée résout la membrane faciale et le monocle, mais les rayons, rubans et chaîne sortent du cadre. Aucune nouvelle vue complémentaire exacte de leurs extrémités ; pas de corps humain ajouté.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh8/creatures/monocle_man.png",
+          "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "downpour_wheelman_116",
+      "name": "Wheelman",
+      "source": "downpour",
+      "game": "SILENT HILL: DOWNPOUR",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : Les vues10.11/10.12 du walkthrough et le rendu natif Wheelman ont été examinés ensemble : tête, torse et bras sont corroborés mais la base du support médical et ses connexions demeurent masquées/coupées. Pas de fauteuil ou terminaison de câbles inventés.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Les vues10.11/10.12 du walkthrough et le rendu natif Wheelman ont été examinés ensemble : tête, torse et bras sont corroborés mais la base du support médical et ses connexions demeurent masquées/coupées. Pas de fauteuil ou terminaison de câbles inventés.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh8/creatures/wheelman.png",
+          "https://www.silenthillmemories.net/sh8/monsters_en.htm",
+          "https://www.silenthillmemories.net/sh8/walkthrough/sh8_walkthrough_10.11.jpg",
+          "https://www.silenthillmemories.net/sh8/walkthrough/sh8_walkthrough_10.12.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "arcade_mama_117",
+      "name": "Mama",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Une page de modèle nommée Mama a été retrouvée ; accès direct 403, aucun modèle ni aperçu entier obtenu. Le manque de corps complet du dossier ART92 reste ouvert.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Les31 captures natives Arcade ont été récupérées et inspectées. Plusieurs gros plans montrent des boss, mais aucune vue clairement attribuée de Mama n’atteste tout son corps et ses terminaisons ; aucun transfert de Blood Mama de Book of Memories.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/arts_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/arcade/research-result.json",
+        "record": {
+          "modelName": "Mama",
+          "modelPage": "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/",
+          "finding": "Page nominative retrouvée ; aucune image complète téléchargée ou inspectée. Les accès directs ont renvoyé 403, puis ont été arrêtés.",
+          "network": "Direct advertised ZIP links for Robbie, Phantom and Tuberculosis each returned HTTP403. No retries or bypass. Mama/Split Worm page fetch returned403; no download attempted."
+        }
+      },
+      "currentReferenceUrls": [
+        "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340932/"
+      ]
+    },
+    {
+      "fighterId": "arcade_phantom_118",
+      "name": "Phantom",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Une page nominative de modèle a été retrouvée, sans aperçu statique exposé. Téléchargement et accès direct refusés 403 ; aucune nouvelle silhouette entière inspectée.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Les31 captures natives Arcade contiennent des gros plans de visage/torse du boss supposé, sans ensemble entier clairement attribué. Ne pas inventer le corps colossal du Phantom depuis un visage ni transférer un autre fantôme.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/arts_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/arcade/research-result.json",
+        "record": {
+          "modelName": "Phantom",
+          "modelPage": "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/320991/",
+          "finding": "Page nominative retrouvée ; aucune image complète téléchargée ou inspectée. Les accès directs ont renvoyé 403, puis ont été arrêtés.",
+          "network": "Direct advertised ZIP links for Robbie, Phantom and Tuberculosis each returned HTTP403. No retries or bypass. Mama/Split Worm page fetch returned403; no download attempted."
+        }
+      },
+      "currentReferenceUrls": [
+        "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/320991/"
+      ]
+    },
+    {
+      "fighterId": "arcade_greedy_worm_arcade_119",
+      "name": "Greedy Worm — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : Les31 captures Arcade montrent un gros plan de créature vermiforme mais ne prouvent pas son extérieur entier. Les nouveaux rendus Greedy Worm SH4 appartiennent à une autre œuvre et ne sont pas transférés à ce profil Arcade.",
+      "inheritedEvidence": {
+        "group": "B",
+        "state": "Sans image",
+        "reason": "Les31 captures Arcade montrent un gros plan de créature vermiforme mais ne prouvent pas son extérieur entier. Les nouveaux rendus Greedy Worm SH4 appartiennent à une autre œuvre et ne sont pas transférés à ce profil Arcade.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-b.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/arts_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "arcade_split_worm_arcade",
+      "name": "Split Worm — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Une page de modèle Split Worm Arcade a été retrouvée ; accès direct 403 et aucun téléchargement. La géométrie propre à cette édition reste non vérifiée.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Le boss Split Worm est nommé sur la page Stages Arcade et sa carte Toluca Prison. Les cartes sont des schémas de parcours, pas des vues du monstre ; aucune vue entière attribuée à ce modèle Arcade trouvée dans les31captures et galeries consultées. Pas de ver SH3 importé pour compléter ce profil.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/stages_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/stages/st2_2.gif",
+          "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/arcade/research-result.json",
+        "record": {
+          "modelName": "Split Worm",
+          "modelPage": "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/",
+          "finding": "Page nominative retrouvée ; aucune image complète téléchargée ou inspectée. Les accès directs ont renvoyé 403, puis ont été arrêtés.",
+          "network": "Direct advertised ZIP links for Robbie, Phantom and Tuberculosis each returned HTTP403. No retries or bypass. Mama/Split Worm page fetch returned403; no download attempted."
+        }
+      },
+      "currentReferenceUrls": [
+        "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340934/"
+      ]
+    },
+    {
+      "fighterId": "arcade_double_head_arcade",
+      "name": "Double Head — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : La galerie nominative Arcade ne fournit pas de modèle Double Head et les captures examinées ne permettent pas d’attribuer une vue entière à ce profil. La simple présence documentaire de l’espèce ne prouve pas un rendu SH3/BoM réutilisable ; aucun corps d’autre édition repris.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "La galerie nominative Arcade ne fournit pas de modèle Double Head et les captures examinées ne permettent pas d’attribuer une vue entière à ce profil. La simple présence documentaire de l’espèce ne prouve pas un rendu SH3/BoM réutilisable ; aucun corps d’autre édition repris.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "arcade_insane_cancer_arcade",
+      "name": "Insane Cancer — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : La carte Historical Society nomme Insane Cancer et la capture Arcade15 montre sa masse, sa tête et ses bras : l’édition est corroborée. Cette capture coupe cependant le bas des jambes ; aucune autre vue Arcade consultée ne couvre les pieds manquants. Pas de complément de corps SH3 sans preuve de ce bas précis.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "La carte Historical Society nomme Insane Cancer et la capture Arcade15 montre sa masse, sa tête et ses bras : l’édition est corroborée. Cette capture coupe cependant le bas des jambes ; aucune autre vue Arcade consultée ne couvre les pieds manquants. Pas de complément de corps SH3 sans preuve de ce bas précis.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/stages/st2_1.gif",
+          "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_15.jpg",
+          "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "arcade_numb_body_arcade",
+      "name": "Numb Body — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-followup",
+      "blockerCategory": "new-generation-refusal",
+      "currentReason": "Les nouvelles captures natives Arcade 113/114 ont résolu le manque de référence entière au niveau candidat. La génération de sélection a ensuite été refusée à la sortie, catégorie sexual, requête 69e384e1-616d-4d50-90f8-23ec8263d6c0. Un appel ; aucune image livrée, aucun réessai et aucune génération de combat. Le profil reste manquant, avec refus outil comme motif principal actuel.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Aucun modèle entier Numb Body nommément attribuable à Arcade trouvé parmi les galeries et captures consultées. Les figures humanoïdes attestées dans ces vues sont Gum Head/Scraper ou restent non attribuées ; elles ne sont pas renommées Numb Body.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": true,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "newToolRefusalClaimed": true,
+      "previousEntry": {
+        "fighterId": "arcade_numb_body_arcade",
+        "name": "Numb Body — Arcade",
+        "source": "arcade",
+        "game": "SILENT HILL: THE ARCADE",
+        "status": "missing",
+        "recheckedThisTurn": false,
+        "reviewStatus": "inherited",
+        "blockerCategory": "incomplete-source",
+        "currentReason": "Motif hérité d’ART92 : Aucun modèle entier Numb Body nommément attribuable à Arcade trouvé parmi les galeries et captures consultées. Les figures humanoïdes attestées dans ces vues sont Gum Head/Scraper ou restent non attribuées ; elles ne sont pas renommées Numb Body.",
+        "inheritedEvidence": {
+          "group": "C",
+          "state": "Sans image",
+          "reason": "Aucun modèle entier Numb Body nommément attribuable à Arcade trouvé parmi les galeries et captures consultées. Les figures humanoïdes attestées dans ces vues sont Gum Head/Scraper ou restent non attribuées ; elles ne sont pas renommées Numb Body.",
+          "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+          "provenanceArtifacts": [
+            "art/provenance-art92-c.json"
+          ],
+          "referenceUrls": [
+            "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+            "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+          ],
+          "newResearchClaimedForInheritedEvidence": false
+        },
+        "generationAttemptedThisTurn": false,
+        "newArtifactDelivered": false,
+        "oneToOneCertified": false
+      },
+      "followupGenerationRefusal": {
+        "id": "arcade_numb_body_arcade",
+        "status": "generation-output-rejected",
+        "stage": "output",
+        "category": "sexual",
+        "requestId": "69e384e1-616d-4d50-90f8-23ec8263d6c0",
+        "attempts": 1,
+        "attemptPurpose": "selection",
+        "newThisFollowup": true,
+        "retriedAfterRefusal": false,
+        "combatGenerationAttempted": false,
+        "imageDelivered": false,
+        "evidenceSource": "Parent agent reported the final image-tool result in the current collaboration task; no new call was made by this agent."
+      },
+      "followupReferenceEvidence": {
+        "fighterId": "arcade_numb_body_arcade",
+        "fromStatus": "incomplete-source",
+        "toStatus": "reference-candidate-ready",
+        "generationPerformed": false,
+        "certified1to1": false,
+        "edition": "Silent Hill: The Arcade (retail game)",
+        "referenceKind": "Native gameplay screenshots published with a first-person playthrough review",
+        "references": [
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_113.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEh3f1viJGypxBxeqAMjpTD_ktdeeda8AScP4eBmmA6z1MHVqNnBhVEgqwfEzfiZgmx1nUfgVyiafqw-PkNdrKXchAFMc5A6fVYf0_0kZZgIO0Ce3sI0DBjn7mdMjBy5jwNxblzn8pULC05FHDcZOtWDhFAIBLT0fP0A8AfT3GcXpvvPXES24DpLT4xZy3U=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 113,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 21720,
+            "sha256": "f27233d0b55b0213e0ad2a2b9d4ff72a01af261315845dd692549972ebe33d0e",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_114.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEjOP0BjP5eagY6xVJkQNbE_n3Jaa9GzJFzI7cSw8BYYYpDyiSbaMiFZNjLkZNY86gmOdFSMHFpLLMxJwuK92T387EhV2F_giRSCSrVYEDATrkGsl9N_DJzecz3Ha-5tZB6iX8XHQMyhNi6m97JZqk1afFEVpbFvQuoDQq3A66ZCozqtpAGTzIfFwFSZ1D0=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 114,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 18200,
+            "sha256": "395fc3591d4425568ba3e294d0cf3874e1bdd2a356fe76d6a9bbe6c6cae9f024",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          }
+        ],
+        "observations": [
+          "Image113 foreground individual is visible from head to both foot extremities, without arms.",
+          "Image114 provides whole standing and oblique/profile views in the Arcade shopping mall.",
+          "Smooth pale gray-beige surfaces, tapering head/body and heavily bent legs are visible in the same retail model."
+        ],
+        "limits": [
+          "Body occupies a limited fraction of the639x476 screenshots; fine toes/skin detail cannot be certified.",
+          "Several creatures overlap in the scene; reference the nearest intact individual, not a composite of dead bodies.",
+          "No new arms, hands or unrelated SH3 textures should be introduced."
+        ],
+        "promptGuidance": "Render one entire Arcade Numb Body from the nearest intact creature in113, using114 for standing proportions and side orientation. Preserve its armless silhouette, tapered head/body, bent thick legs and exact visible feet. Transparent background, full margins, no scene props."
+      },
+      "followupStatusHistory": [
+        "incomplete-source",
+        "reference-candidate-ready",
+        "generation-output-rejected"
+      ]
+    },
+    {
+      "fighterId": "arcade_nurse_arcade",
+      "name": "Nurse — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Sujet déjà arrêté dans ART144 : le modèle Nurse Arcade correspond au design SH3 Pipe précédemment refusé. Aucun nouvel appel, réétiquetage ou autre variante pour contourner ce refus ; aucun modèle indépendant distinct établi.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Sujet déjà arrêté dans ART144 : le modèle Nurse Arcade correspond au design SH3 Pipe précédemment refusé. Aucun nouvel appel, réétiquetage ou autre variante pour contourner ce refus ; aucun modèle indépendant distinct établi.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/arts/pics/sh_arcade_art_cre_01.jpg",
+          "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "same-subject-or-variant-stop",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "arcade_creeper_arcade",
+      "name": "Creeper — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : Aucune vue entière de Creeper attribuée à Arcade retrouvée. La capture12 contient des formes entremêlées et recadrées sans légende d’espèce, insuffisantes pour assigner ce profil ou inventer les extrémités ; aucun insecte SH1/SH2 emprunté.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Aucune vue entière de Creeper attribuée à Arcade retrouvée. La capture12 contient des formes entremêlées et recadrées sans légende d’espèce, insuffisantes pour assigner ce profil ou inventer les extrémités ; aucun insecte SH1/SH2 emprunté.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_12.jpg",
+          "https://www.silenthillmemories.net/sh_arcade/creatures_en.htm",
+          "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "arcade_toadstool_arcade",
+      "name": "Toadstool — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : Les cartes Arcade nomment Toadstool, mais leurs pictogrammes représentent des positions de parcours, pas le corps du monstre. Aucune silhouette entière Arcade identifiée dans les captures consultées ; pas de champignon SH4 importé par défaut.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Les cartes Arcade nomment Toadstool, mais leurs pictogrammes représentent des positions de parcours, pas le corps du monstre. Aucune silhouette entière Arcade identifiée dans les captures consultées ; pas de champignon SH4 importé par défaut.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/stages/st2_1.gif",
+          "https://www.silenthillmemories.net/sh_arcade/stages/st2_2.gif",
+          "https://www.silenthillmemories.net/sh_arcade/screens_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "arcade_robbie_the_rabbit_shotgun",
+      "name": "Robbie the Rabbit — Shotgun",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "identity-or-variant-unresolved",
+      "currentReason": "Conflit de variante : le modèle est nommé Robbie_Rifle.obj et le port décrit un rifle, alors que le profil actuel indique Shotgun. Aucun fusil attribué arbitrairement à ce profil.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "La capture robby_screen01 établit un Robbie à arme longue, mais coupe l’extrémité du canon et ne prouve pas shotgun versus fusil. La vue20100221_10 montre une arme à ramasser par le joueur ; l’association de ce modèle précis à Robbie n’est pas établie. Le dossier public Robbie renvoie402 sans contournement. Aucun fusil ou crosse inventé.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen01.jpg",
+          "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_20100221_10.jpg",
+          "https://www.silenthillmemories.net/sh_arcade/creatures/robby.jpg",
+          "https://silenthill.fandom.com/wiki/Robbie_the_Rabbit"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/arcade/research-result.json",
+        "record": {
+          "id": "arcade_robbie_the_rabbit_shotgun",
+          "observation": "The Models Resource lists Robbie_Rifle.obj and Robbie_Axe.obj. Both a 2007 Japanese player report and the model port call the weapon rifle, while secondary English wiki descriptions call it shotgun. Preserve roster and flag identity; do not assign a rifle image to Shotgun.",
+          "modelPage": "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340933/page-1/",
+          "supplementaryPortPage": "https://steamcommunity.com/sharedfiles/filedetails/?id=1976566039"
+        }
+      },
+      "currentReferenceUrls": [
+        "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340933/page-1/",
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=1976566039"
+      ]
+    },
+    {
+      "fighterId": "bom_ghost_125",
+      "name": "Ghost",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "identity-or-variant-unresolved",
+      "currentReason": "Deux nouvelles captures MeriStation montrent un humanoïde entier, mais son attribution Ghost ou Butcher reste incertaine. Le portrait nommé Ghost coupe le bas du corps ; aucune substitution adoptée.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Le portrait retail Ghost et la nouvelle feuille native d’icônes Criswell04 coupent tous deux le corps sous les genoux. Les captures BoM examinées n’ajoutent pas un bas du corps attribuable avec certitude à ce modèle. Le dossier nominatif retourne402, sans nouvel accès alternatif. Aucun pied ou corps d’un fantôme SH4 nommé inventé/transféré.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/ghost.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_criswell_04_icons.png",
+          "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm",
+          "https://silenthill.fandom.com/wiki/Ghost_(Book_of_Memories"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "bom_ghost_125",
+          "name": "Ghost",
+          "recommendation": "needs_identity_review_of_new_native_views",
+          "referencePaths": [
+            "/workspace/scratch/ae07d9a11c02/references/extended/ghost.jpg",
+            "/workspace/scratch/ae07d9a11c02/references/extended/bom_meristation_03.jpg",
+            "/workspace/scratch/ae07d9a11c02/references/extended/bom_meristation_05.jpg"
+          ],
+          "finding": "Bestiary portrait remains cropped at thighs/knees. Two new MeriStation screenshots show a bald hunched humanoid with long arms, dark garment and full legs/feet, but no name caption. Could be Ghost or Butcher; not reliably attributed. Do not relabel or generate as Ghost until independent visual identification. Butcher portrait was fetched separately for comparison, still unresolved.",
+          "limits": [
+            "Potentially useful full body exists, identity unresolved.",
+            "Do not substitute SH4 named ghost or costume."
+          ],
+          "sourcePages": [
+            "https://as.com/meristation/2012/10/21/analisis/1350846000_109297.html",
+            "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+          ]
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/extended/research_extended_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://as.com/meristation/2012/10/21/analisis/1350846000_109297.html",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+      ]
+    },
+    {
+      "fighterId": "bom_flesh_lips_134",
+      "name": "Flesh Lips",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur du design Flesh Lip respecté. Aucun appel dans ART92 sous l’étiquette BoM, aucune variante ou substitution pour contourner le refus ; l’ancienne ligne ART144 reste archivée.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Refus antérieur du design Flesh Lip respecté. Aucun appel dans ART92 sous l’étiquette BoM, aucune variante ou substitution pour contourner le refus ; l’ancienne ligne ART144 reste archivée.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "same-subject-or-variant-stop",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "bom_mother_135",
+      "name": "Mother",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus explicite antérieur Mother BoM, catégories sexual/violence, requête a78228ad-d44c-40b7-8a8e-214bf0b7508e. Aucun nouvel essai ni modification d’élément ou emprunt d’un autre sujet après ce refus. Aucun PNG livré dans ART92.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Refus explicite antérieur Mother BoM, catégories sexual/violence, requête a78228ad-d44c-40b7-8a8e-214bf0b7508e. Aucun nouvel essai ni modification d’élément ou emprunt d’un autre sujet après ce refus. Aucun PNG livré dans ART92.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_07_mother.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "bom_valtiel_136",
+      "name": "Valtiel",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus antérieur du sujet Valtiel respecté. Aucun appel ART92 sous une autre édition ou apparence, aucune reprise d’anatomie ni relabel BoM pour contourner le refus. Aucun rôle ou pouvoir ajouté.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Refus antérieur du sujet Valtiel respecté. Aucun appel ART92 sous une autre édition ou apparence, aucune reprise d’anatomie ni relabel BoM pour contourner le refus. Aucun rôle ou pouvoir ajouté.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "same-subject-or-variant-stop",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "bom_wood_guardian_138",
+      "name": "Wood Guardian",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "La phase mobile après déracinement est documentée, mais aucune nouvelle vue entière de ses branches et appuis n’a été obtenue. Le portrait et les anciennes captures restent coupés.",
+      "inheritedEvidence": {
+        "group": "C",
+        "state": "Sans image",
+        "reason": "Les vues natives20120606_51/52/55,20121016_06 et nouvelle20120606_53 confirment le tronc implanté, les racines et plusieurs branches du Wood Guardian. Leur haut reste rogné/masqué par le cadrage et le décor ; la feuille d’icônes ne couvre pas les pointes manquantes. Fin extérieure complète non établie par ces vues composées ; aucun Wood Sapling, nouvelle branche ou anatomie souterraine substitué.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-c.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/wood_guardian.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_53_wood_boss.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_06.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_criswell_04_icons.png"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "bom_wood_guardian_138",
+          "name": "Wood Guardian",
+          "recommendation": "blocked_no_new_complete_reference",
+          "referencePaths": [
+            "/workspace/scratch/ae07d9a11c02/references/extended/wood_guardian.jpg"
+          ],
+          "finding": "Bestiary portrait still crops lower body and branch tips. New documentary lead: after enough damage the guardian detaches from tree base and walks; a screenshot labelled free from its base exists in indexed fandom gallery, but the image was not accessible. Existing root-base shots remain insufficient for all branch tips.",
+          "nextUsefulSource": "Native gameplay capture of mobile phase following initial damage, whole branch silhouette and lower limbs visible.",
+          "sourcePages": [
+            "https://silenthill.fandom.com/wiki/Wood_Guardian",
+            "https://silenthill.fandom.com/wiki/User_blog%3ABigsister/Silent_Hill%3A_Book_of_Memories---My_gameplay%27s_screenshots",
+            "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+          ]
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/extended/research_extended_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://silenthill.fandom.com/wiki/Wood_Guardian",
+        "https://silenthill.fandom.com/wiki/User_blog%3ABigsister/Silent_Hill%3A_Book_of_Memories---My_gameplay%27s_screenshots",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm"
+      ]
+    },
+    {
+      "fighterId": "bom_blood_guardian_143",
+      "name": "Blood Guardian",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Non tenté : Blood Guardian contient la même Blood Mama dans son état sur la masse multi-bras. Le refus nouveau Blood Mama b6688211-2810-4d1e-ae1c-963cc64a7ea9 interdit un essai de cet autre état comme variante ou substitut ; aucune image demandée ni importée pour Blood Guardian.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Non tenté : Blood Guardian contient la même Blood Mama dans son état sur la masse multi-bras. Le refus nouveau Blood Mama b6688211-2810-4d1e-ae1c-963cc64a7ea9 interdit un essai de cet autre état comme variante ou substitut ; aucune image demandée ni importée pour Blood Guardian.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_guardian.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "same-subject-or-variant-stop",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "bom_blood_mama_145",
+      "name": "Blood Mama",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Génération individuelle refusée ; aucun réessai, variante, relabel ou substitution.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Génération individuelle refusée ; aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID b6688211-2810-4d1e-ae1c-963cc64a7ea9. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"input\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/blood_mama.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_castillo_01_blood_mama.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "bom_steel_guardian_146",
+      "name": "Steel Guardian",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Les deux sculptures Hershberg ont été revues : rendu texturé aux ailes rognées, sculpture grise sans ailes. Aucune preuve des pointes finales ni d’une phase sans ailes en jeu.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Réexamen des deux planches de production : rendu texturé avec ailes coupe leurs extrémités externes ; modèle gris complet montre le corps sans ailes. Aucun modèle entier attestant les ailes finales ni preuve d’une phase canonique sans ailes trouvés. Le corps seul ne remplace pas la silhouette complète ; aucun mélange des états ni longueur de plume/lame inventée.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+          "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/steel_guardian.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_14_steel_boss.jpg",
+          "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_15_steel_boss.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "bom_steel_guardian_146",
+          "name": "Steel Guardian",
+          "recommendation": "blocked_wing_extremities_unknown",
+          "referencePaths": [
+            "/workspace/scratch/ae07d9a11c02/references/extended/steel14.jpg",
+            "/workspace/scratch/ae07d9a11c02/references/extended/steel15.jpg",
+            "/workspace/scratch/ae07d9a11c02/references/extended/steel_guardian.jpg"
+          ],
+          "finding": "Inspected textured John Hershberg model, gray model and portrait. Textured model reveals complete central body and claw tips but cuts both outer wings at horizontal borders. Gray model gives complete central body only, no wings; a wingless sculpt is not proof of an in-game wingless phase. Portrait crops wings and lower body.",
+          "nextUsefulSource": "A full-width render of the textured original model or native combat view showing both outer wing ends.",
+          "sourcePages": [
+            "https://www.silenthillmemories.net/sh_book_of_memories/arts_en.htm",
+            "https://bigjohn.artstation.com/"
+          ]
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/extended/research_extended_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/arts_en.htm",
+        "https://bigjohn.artstation.com/"
+      ]
+    },
+    {
+      "fighterId": "pt_lisa_149",
+      "name": "Lisa",
+      "source": "pt",
+      "game": "P.T.",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "new-generation-refusal",
+      "currentReason": "Nouveau modèle natif P.T. entier retrouvé et inspecté, avec chaussure rouge au pied droit et pied gauche nu. L’appel de génération a été refusé à la sortie (violence) ; aucune image livrée ni réessai.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Nouvelles recherches : galerie d’art P.T. complète et illustrations natives examinées (logos, forêt, protagoniste) ne montrent pas Lisa ; galerie vidéo liste des liens sans modèle complet accessible. Les deux captures de jeu existantes donnent un visage à travers une porte et une silhouette lointaine sombre, sans robe/pieds lisibles. Aucune nouvelle vue complète sûre ; pas de fantôme générique ni arme inventée. Fandom précédemment402 et aucune tentative de contournement.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/silent_hills/pt_walkthrough_en.htm",
+          "https://www.silenthillmemories.net/silent_hills/pt_walkthrough/pt_05.jpg",
+          "https://www.silenthillmemories.net/silent_hills/pt_walkthrough/pt_04.jpg",
+          "https://www.silenthillmemories.net/silent_hills/arts_en.htm",
+          "https://www.silenthillmemories.net/silent_hills/arts/pics/silent_hills_art_20140812_03_pt_bg.jpg",
+          "https://www.silenthillmemories.net/silent_hills/arts/pics/silent_hills_art_20140901_01.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": true,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "id": "pt_lisa_149",
+          "status": "new_full_body_reference_found",
+          "page": "https://www.gamesradar.com/hidden-pt-files-are-unearthing-what-silent-hills-could-have-been/",
+          "references": [
+            {
+              "file": "pt_lisa_extracted_model.png",
+              "url": "https://cdn.mos.cms.futurecdn.net/jurNcAfp6rTTDWTXt5qKUM.png",
+              "size": [
+                1600,
+                866
+              ],
+              "visually_inspected": true,
+              "role": "Textured extracted original P.T. model, front and back, whole dress/hands/feet visible."
+            },
+            {
+              "file": "pt_lisa_extracted_detail.jpg",
+              "url": "https://cdn.mos.cms.futurecdn.net/f5dosHEKqZBmvrBXBatrgS.jpg",
+              "size": [
+                1280,
+                720
+              ],
+              "visually_inspected": true,
+              "role": "Whole-body untextured original geometry and dress diffuse map."
+            },
+            {
+              "file": "pt_lisa_original_screenshot.jpg",
+              "url": "https://cdn.mos.cms.futurecdn.net/dN5pYMUVGmwoATyNUojQF3-1280-80.jpg",
+              "size": [
+                1280,
+                720
+              ],
+              "visually_inspected": true,
+              "role": "Retail hallway screenshot, pose/overall appearance corroboration."
+            }
+          ],
+          "observations": "One red high-heel shoe on Lisa's RIGHT foot, LEFT foot bare, verified on front/back textured model. Long grey/off-white high-waisted dress down to above ankles, long gathered sleeves with narrow cuffs. Pregnant silhouette under opaque dress. Short/receding dark disordered hair, not long hair draped over face. Pale face, asymmetrical dark eye area and slightly open mouth. Native diffuse dark stains from lower torso to skirt; preserve source placement without adding graphic wounds.",
+          "prompt": "Create one isolated full-body 2D UHD sprite of Lisa from the original 2014 P.T., using the supplied extracted native front/back model as the identity and costume reference, and original hallway screenshot only for posture. One full figure, from top of head through both soles, in a quiet unsettling idle stance with a slight head tilt and arms at her sides; keep both hands readable and all extremities within generous transparent margins. Preserve her tall thin adult proportions and clothed pregnant silhouette, short dark disordered hair and pale asymmetrical face. Reproduce the opaque grey/off-white ankle-length high-waisted dress, gathered long sleeves and source fabric stain pattern. Crucial asymmetric footwear: Lisa's RIGHT foot wears the single red high-heel shoe, Lisa's LEFT foot is bare. No second shoe, no generic long-haired ghost, no weapon, no invented costume. Detailed painted 2D game art, coherent soft lighting and crisp silhouette, transparent background, no scene, no text, no shadow plane. Do not add injuries beyond the source.",
+          "limits": "Native model extraction is republished by GamesRadar with provenance; texture lighting differs from the retail corridor. Exact fine details in generated output still require visual comparison."
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/classic/reference_review.json"
+      },
+      "currentReferenceUrls": [
+        "https://www.gamesradar.com/hidden-pt-files-are-unearthing-what-silent-hills-could-have-been/",
+        "https://cdn.mos.cms.futurecdn.net/jurNcAfp6rTTDWTXt5qKUM.png",
+        "https://cdn.mos.cms.futurecdn.net/f5dosHEKqZBmvrBXBatrgS.jpg",
+        "https://cdn.mos.cms.futurecdn.net/dN5pYMUVGmwoATyNUojQF3-1280-80.jpg"
+      ],
+      "generationRefusal": {
+        "id": "pt_lisa_149",
+        "status": "generation-output-rejected",
+        "requestId": "36708bbe-274e-49cd-ae50-bb5aa2c6c5cd",
+        "category": "violence",
+        "attempts": 1,
+        "stage": "output",
+        "newThisTurn": true,
+        "retriedAfterRefusal": false
+      }
+    },
+    {
+      "fighterId": "shf_ayakakashi_152",
+      "name": "Ayakakashi",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 8ab20bbe-af0e-44c3-95c3-34b9bbb4d019. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ayakakashi_01.png",
+          "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ayakakashi_02.png"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "shf_corruptor_155",
+      "name": "Corruptor",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID dbf7e92d-aba3-4115-b752-0234e8660483. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_corruptor_01.jpg",
+          "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_corruptor_02.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "shf_hatcher_156",
+      "name": "Hatcher",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 5cb09bcb-9e8b-40be-b3c2-391e62900d5e. safety_violations=[sexual, violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hatcher_01.jpg",
+          "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hatcher_02.jpg",
+          "https://www.silenthillmemories.net/shf/monsters/hatcher.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "shf_dark_hatcher_160",
+      "name": "Dark Hatcher",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Dark Hatcher est une variante du Hatcher refusé dans ce lot (sexual + violence, 5cb09bcb-9e8b-40be-b3c2-391e62900d5e). Aucun prompt, variante ou réessai utilisé pour contourner ce refus. Portrait sombre inspecté seulement.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Dark Hatcher est une variante du Hatcher refusé dans ce lot (sexual + violence, 5cb09bcb-9e8b-40be-b3c2-391e62900d5e). Aucun prompt, variante ou réessai utilisé pour contourner ce refus. Portrait sombre inspecté seulement.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shf/monsters_en.htm",
+          "https://www.silenthillmemories.net/shf/monsters/hatcher_dark.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "same-subject-or-variant-stop",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "shf_sakuko_like_entity_162",
+      "name": "Sakuko-Like Entity",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "identity-or-variant-unresolved",
+      "currentReason": "Motif hérité d’ART92 : Non tenté : les planches identifient une jeune figure ressemblant explicitement à Sakuko avec des blessures/cavités natives ; âge/identité incertains maintenus. Aucune génération à violence graphique de mineur ni relabel adulte ; ne pas altérer l’identité ou substituer un prêtre générique pour remplir la ligne.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Non tenté : les planches identifient une jeune figure ressemblant explicitement à Sakuko avec des blessures/cavités natives ; âge/identité incertains maintenus. Aucune génération à violence graphique de mineur ni relabel adulte ; ne pas altérer l’identité ou substituer un prêtre générique pour remplir la ligne.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shf/bosses_en.htm",
+          "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_sakukolike_entity_01.jpg",
+          "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_sakukolike_entity_02.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "shf_hinako_s_mother_165",
+      "name": "Hinako’s Mother",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "historical-refusal-or-related-stop",
+      "currentReason": "Motif hérité d’ART92 : Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution.",
+      "inheritedEvidence": {
+        "group": "D",
+        "state": "Sans image",
+        "reason": "Refus/arrêt antérieur maintenu, aucune nouvelle génération pour ce sujet ni variante. Génération individuelle refusée par le système de sécurité. Aucun réessai, variante, relabel ou substitution. image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 13cb56a1-c05c-45b6-a193-987153da6fca. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-d.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_hinakos_parents_02.jpg",
+          "https://www.silenthillmemories.net/shf/bosses/hinakos_parents.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "historicalRefusalRelation": "recorded-prior-refusal",
+      "newToolRefusalClaimed": false
+    },
+    {
+      "fighterId": "film_dark_nurse_171",
+      "name": "Dark Nurse",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "new-generation-refusal",
+      "currentReason": "Des références entières du costume original 2006 ont été inspectées. L’appel de génération a été refusé à la sortie (violence) ; aucune image livrée ni réessai.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "Le wallpaper officiel2006 n°12 et le PSP «thenurses» identifient le costume et montrent un instrument allongé, mais seulement des bustes. Le costume écran1040 ne contient ni corps chaussé ni pied ; les nouveaux scans Score/Fangoria n’ajoutent aucune vue entière2006. La photo entière20140427_06 de Revelation est2012 : elle est exclue comme preuve du corps2006.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shm/production_en.htm",
+          "https://www.silenthillmemories.net/shm/props2_en.htm",
+          "https://www.silenthillmemories.net/shm/props/pics/shl1040a.jpg",
+          "https://www.silenthillmemories.net/shm/arts_en.htm",
+          "https://www.silenthillmemories.net/shm/media_en.htm",
+          "https://www.silenthillmemories.net/shm/media/psp/pics/shm_psp_wallpaper_03_thenurses_psp.jpg",
+          "https://www.silenthillmemories.net/shm/wallpapers/pics/sh_the_movie_wallp_12_1280x1024.jpg",
+          "https://www.silenthillmemories.net/shm/articles_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": true,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "localReportAtReview": "docs/production/sprite-generation-2026-11-17.json",
+        "record": {
+          "finding": "Références entières du costume 2006 inspectées, puis génération refusée à la sortie ; aucune image livrée et aucun réessai.",
+          "referencePathsAtReview": [
+            "/workspace/scratch/ae07d9a11c02/references/parent/dark-nurse-2006-full.jpg",
+            "/workspace/scratch/ae07d9a11c02/references/parent/dark-nurse-2006-alt.jpg"
+          ],
+          "toolResult": {
+            "id": "film_dark_nurse_171",
+            "status": "generation-output-rejected",
+            "requestId": "3904324b-a515-4299-82b9-b9cfbdf04f5d",
+            "category": "violence",
+            "attempts": 1
+          }
+        }
+      },
+      "currentReferenceUrls": [],
+      "generationRefusal": {
+        "id": "film_dark_nurse_171",
+        "status": "generation-output-rejected",
+        "requestId": "3904324b-a515-4299-82b9-b9cfbdf04f5d",
+        "category": "violence",
+        "attempts": 1,
+        "stage": "output",
+        "newThisTurn": true,
+        "retriedAfterRefusal": false
+      }
+    },
+    {
+      "fighterId": "film_grey_child_film_172",
+      "name": "Grey Child — Film",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : Les nouveaux PSP «thegraychild» et wallpapers2006 n°05/13 ne montrent que visage/torse. Les maquettes16–18 de fabrication terminent les jambes sur des supports de prothèse ; les22scans Score n’apportent aucun pied final. Identité enfant-like surnaturelle conservée ; aucune génération ni relabel adulte.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "Les nouveaux PSP «thegraychild» et wallpapers2006 n°05/13 ne montrent que visage/torse. Les maquettes16–18 de fabrication terminent les jambes sur des supports de prothèse ; les22scans Score n’apportent aucun pied final. Identité enfant-like surnaturelle conservée ; aucune génération ni relabel adulte.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shm/production_en.htm",
+          "https://www.silenthillmemories.net/shm/arts_en.htm",
+          "https://www.silenthillmemories.net/shm/arts/pics/sh_the_movie_art_17.jpg",
+          "https://www.silenthillmemories.net/shm/media_en.htm",
+          "https://www.silenthillmemories.net/shm/media/psp/pics/shm_psp_wallpaper_04_thegraychild_psp.jpg",
+          "https://www.silenthillmemories.net/shm/wallpapers/pics/sh_the_movie_wallp_13_1280x1024.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "film_colin_the_janitor_174",
+      "name": "Colin the Janitor",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "recheckedThisTurn": false,
+      "reviewStatus": "inherited",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Motif hérité d’ART92 : Les nouveaux PSP «thejanitor1/2», wallpapers2006 n°02/15/16, Score47 et Fangoria253/49 montrent Colin entravé dans les toilettes, avec pieds et segments des jambes masqués. Les notes décrivent des jambes tordues ; aucune nouvelle pièce n’établit les membres cachés et aucun rampant complet n’est inventé.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "Les nouveaux PSP «thejanitor1/2», wallpapers2006 n°02/15/16, Score47 et Fangoria253/49 montrent Colin entravé dans les toilettes, avec pieds et segments des jambes masqués. Les notes décrivent des jambes tordues ; aucune nouvelle pièce n’établit les membres cachés et aucun rampant complet n’est inventé.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shm/production_en.htm",
+          "https://www.silenthillmemories.net/shm/photos_en.htm",
+          "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_57.jpg",
+          "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_132.jpg",
+          "https://www.silenthillmemories.net/shm/media_en.htm",
+          "https://www.silenthillmemories.net/shm/media/psp/pics/shm_psp_wallpaper_06_thejanitor1_psp.jpg",
+          "https://www.silenthillmemories.net/shm/media/psp/pics/shm_psp_wallpaper_07_thejanitor2_psp.jpg",
+          "https://www.silenthillmemories.net/shm/articles/pics/score_10.jpg"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Costume de production identifié dans les collections Cineloggia/HSPPA, mais les nouvelles photos accessibles ne montrent pas les pieds du Missionary. Photo pertinente inaccessible (402) ; chaussure finale toujours non établie.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "La nouvelle galerie art_en.htm2012 nomme Missionary et livre les costumes/maquillages du booklet12–15 et la photo20140427_05 : visage final et quatre lames crâniennes attestés. Le bas des costumes filmés reste coupé. Mercer19–29 propose plusieurs vêtements, talons et fixations concurrents ; Mercer30 est explicitement une maquette précoce inutilisée. Aucun recoupement des pieds du même costume final dans Fangoria318 ou les photos inspectées ; ne pas choisir arbitrairement une variante de chaussure.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/shm2/photos_en.htm",
+          "https://www.silenthillmemories.net/shm2/photos/pics/sh_revelation_photo_20121004_01.jpg",
+          "https://www.silenthillmemories.net/shm2/art_en.htm",
+          "https://www.silenthillmemories.net/shm2/art/pics/sh_revelation_art_20130818_12.jpg",
+          "https://www.silenthillmemories.net/shm2/art/pics/sh_revelation_art_20130818_13.jpg",
+          "https://www.silenthillmemories.net/shm2/art/pics/sh_revelation_art_20130818_14.jpg",
+          "https://www.silenthillmemories.net/shm2/art/pics/sh_revelation_art_20130818_15.jpg",
+          "https://www.silenthillmemories.net/shm2/art/pics/sh_revelation_art_20140427_05.png",
+          "https://www.silenthillmemories.net/shm2/articles_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "film_missionary_revelation_177",
+          "name": "Missionary (Revelation2012)",
+          "status": "blocked_final_footwear_still_unverified",
+          "generationReady": false,
+          "referencePaths": [],
+          "finding": "New provenance points to a full production-worn Missionary costume at Cineloggia/HSPPA, confirmed by exhibition reporting and a photographed prop-artist exhibit. However fetched independent KNPR photos show other costumes, not Missionary. Las Vegas Weekly relevant photo returned402 Payment Required; route stopped. Prior competing concept footwear remains unresolved.",
+          "sourcePages": [
+            "https://www.flickr.com/photos/139932824@N06/50777020678/in/dateposted-public/",
+            "https://knpr.org/fifth-street/2021-07-21/july-22-2021",
+            "https://lasvegasweekly.com/ae/film/2021/mar/25/cineloggia-brings-movie-nostalgia-to-las-vegas/",
+            "https://cinemovie.tv/index.php/behind-the-scenes/silent-hill-revelation-3d-movie-production-notes"
+          ],
+          "nextUsefulEvidence": "Full-length Cineloggia/HSPPA original costume photograph showing final boots/feet, or a final film frame."
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/films/research_films_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://www.flickr.com/photos/139932824@N06/50777020678/in/dateposted-public/",
+        "https://knpr.org/fifth-street/2021-07-21/july-22-2021",
+        "https://lasvegasweekly.com/ae/film/2021/mar/25/cineloggia-brings-movie-nostalgia-to-las-vegas/",
+        "https://cinemovie.tv/index.php/behind-the-scenes/silent-hill-revelation-3d-movie-production-notes"
+      ]
+    },
+    {
+      "fighterId": "film_bubble_head_nurse_return_to_silent_hill",
+      "name": "Bubble Head Nurse — Return to Silent Hill",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Photos entières du produit Zombie Sailor retrouvées, mais figurine explicitement stylisée années 1990 et images marquées « PENDING LICENSOR APPROVAL ». Source complémentaire conservée ; référence finale du costume exacte non établie, aucune génération.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "Les nouvelles galeries art2026 et wallpapers sont contrôlées ; la photo13 reste une vue de têtes/torse et mains floues. Le concept de couloir art03 contient de petites silhouettes entières trop peu résolues pour établir chaussures, outil et raccords au costume final. Aucune Nurse2006/2012/SH3 transférée.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/return_to_sh/photos_en.htm",
+          "https://www.silenthillmemories.net/return_to_sh/photos/pics/return_to_silent_hill_photo_13.jpg",
+          "https://www.silenthillmemories.net/return_to_sh/art_en.htm",
+          "https://www.silenthillmemories.net/return_to_sh/wallpapers_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "film_bubble_head_nurse_return_to_silent_hill",
+          "name": "Bubble Head Nurse (Return2026)",
+          "status": "conditional_candidate_licensed_stylized_reference",
+          "generationReady": true,
+          "referencePaths": [
+            "/workspace/scratch/ae07d9a11c02/references/films/return_nurse_02.jpg",
+            "/workspace/scratch/ae07d9a11c02/references/films/return_nurse_03.jpg",
+            "/workspace/scratch/ae07d9a11c02/references/films/return_nurse_04.jpg",
+            "/workspace/scratch/ae07d9a11c02/references/films/return_nurse_01.jpg"
+          ],
+          "finding": "New1200x1200 original product photos of explicitly licensed Return2026 Nurse show complete front, three-quarter and back silhouette with both shoes, cap, perforated facial shell, short belted uniform and knife. This is recognizably Return2026 anatomy, distinct from DarkNurse2006. Useful for a source-based provisional static candidate, not pixel-exact final film.",
+          "limits": [
+            "Primary product description explicitly says stylized1990s vintage-style action figure, so toy proportions are not proof of exact actress proportions.",
+            "Images themselves say PENDING LICENSOR APPROVAL. Licensed product line is established, but these are provisional design photos.",
+            "No new final-film whole-body view retrieved to normalize all toy proportions.",
+            "Use existing Return2026 screen photo only if needed for upper-body texture; do not transfer2006/2012 costume geometry."
+          ],
+          "prompt": "Using these exact Return to Silent Hill2026 licensed-product reference photos, create a single detailed full-body2D sprite of the same Return2026 Nurse. Preserve its hollow irregular dark openings through the faceless gray-white head shell, small nurse cap, pale stained short-sleeved belted medical dress with vertical panel seams, long pale legs and modest pointed heel shoes. Use the knife-carrying pose from reference03: head tilted, right forearm raised, other arm curved downward, bent asymmetrical standing legs. Preserve the entire known silhouette and reference markings; do not add a pipe,2006 mask, or SH2-game head. Transparent background and generous margins, neutral light, no packaging, toy joints, text or cinematic scenery. Treat as a provisional source-informed static candidate; full film geometry remains uncertified.",
+          "sourcePages": [
+            "https://zombiesailor.com/products/bubble-head-nurse-return-to-silent-hill-1-of-2200",
+            "https://zombiesailor.com/blogs/news/return-to-silent-hill-zombie-sailors-toys"
+          ],
+          "rejectedAlternative": "StarAce DefoStyle Return2026 Nurse is explicitly chibi/exaggerated and not usable for1:1 body proportions."
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/films/research_films_20261117.json",
+        "assessmentStatus": "Proposition initiale archivée ; la décision finale ci-dessous prévaut sur generationReady dans le rapport source."
+      },
+      "currentReferenceUrls": [
+        "https://zombiesailor.com/products/bubble-head-nurse-return-to-silent-hill-1-of-2200",
+        "https://zombiesailor.com/blogs/news/return-to-silent-hill-zombie-sailors-toys"
+      ],
+      "sourceAssessmentDecision": {
+        "supplementaryProductReferenceOnly": true,
+        "exactFinalCostumeEstablished": false,
+        "generationApprovedFromTheseReferences": false,
+        "reason": "Le rapport de recherche proposait un candidat conditionnel ; décision finale : figurine stylisée et provisoire insuffisante pour la fidélité exacte demandée. Aucun appel de génération pour ce profil."
+      }
+    },
+    {
+      "fighterId": "film_creeper_return_to_silent_hill",
+      "name": "Creeper — Return to Silent Hill",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Présence du Creeper et bouche humanoïde sous le corps corroborées dans les comptes rendus du film. Aucun visuel entier attribué obtenu ; téléchargement presse VVS arrêté après 403.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "Les nouvelles galeries art2026 et wallpapers ne fournissent aucune vue entière attribuée à ce Creeper2026. Les24photos précédentes ne l’identifient pas davantage. Le modèle2006 et le Lying Figure2026 sont des identités distinctes et ne remplissent pas cette ligne.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/return_to_sh/photos_en.htm",
+          "https://www.silenthillmemories.net/return_to_sh/art_en.htm",
+          "https://www.silenthillmemories.net/return_to_sh/wallpapers_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "film_creeper_return_to_silent_hill",
+          "name": "Creeper (Return2026)",
+          "status": "blocked_no_attributed_complete_image",
+          "generationReady": false,
+          "referencePaths": [],
+          "finding": "Searches attempted by exact creature, film, VFX company and official press materials. Multiple film reviews identify insect hordes and humanoid mouths on their underside, supporting existence of a distinct Return2026 creature. No attributed complete image acquired. Official distributor VVS page could be read through search but direct press asset request returned403, stopped.",
+          "sourcePages": [
+            "https://dailydead.com/review-return-to-silent-hill-is-no-warm-welcome/",
+            "https://vvsfilms.com/press/return-to-silent-hill/",
+            "https://iffr.com/en/iffr/2026/films/return-to-silent-hill"
+          ],
+          "nextUsefulEvidence": "An approved studio still, practical/VFX turnaround, or clear final-film frame of a single2026 Creeper."
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/films/research_films_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://dailydead.com/review-return-to-silent-hill-is-no-warm-welcome/",
+        "https://vvsfilms.com/press/return-to-silent-hill/",
+        "https://iffr.com/en/iffr/2026/films/return-to-silent-hill"
+      ]
+    },
+    {
+      "fighterId": "film_fused_mattress_manifestation_return",
+      "name": "Fused Mattress Manifestation — Return",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "identity-or-variant-unresolved",
+      "currentReason": "La fusion Angela/Joshua en manifestation de matelas est corroborée. Le rapprochement avec Abstract Daddy reste une inférence ; aucune vue finale entière ni correspondance officielle exacte du libellé.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "Les nouveaux arts/wallpapers2026 n’établissent ni identité officielle ni silhouette finale entière de cette manifestation. La photo de plateau12 montre un lit et un élément de corps à distance, sans anatomie finale vérifiable ; aucun Flesh Lip, Abstract Daddy ou autre état de fin n’est transféré.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/return_to_sh/photos_en.htm",
+          "https://www.silenthillmemories.net/return_to_sh/photos/pics/return_to_silent_hill_photo_12.jpg",
+          "https://www.silenthillmemories.net/return_to_sh/art_en.htm",
+          "https://www.silenthillmemories.net/return_to_sh/wallpapers_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "film_fused_mattress_manifestation_return",
+          "name": "Fused Mattress Manifestation (Return2026)",
+          "status": "blocked_no_final_silhouette_identity_only_partially_resolved",
+          "generationReady": false,
+          "referencePaths": [],
+          "finding": "Independent plot summaries agree that Angela merges with Joshua Crane in the hotel to form a mattress-and-body monster. Secondary production accounts identify a mostly practical AbstractDaddy animatronic under stained linen. Correspondence to the roster descriptive label is a reasoned inference, not an official exact name mapping. No whole final creature image acquired; do not import SH2AbstractDaddy.",
+          "sourcePages": [
+            "https://www.imdb.com/title/tt22868010/plotsummary/",
+            "https://culturecrypt.com/movie-reviews/return-to-silent-hill-2026",
+            "https://www.commonsensemedia.org/movie-reviews/return-to-silent-hill",
+            "https://en.wikipedia.org/wiki/Return_to_Silent_Hill",
+            "https://3dvf.com/redaction/retour-a-silent-hill-les-secrets-du-film-et-de-ses-creatures-avec-david-ratajczak-head-of-visual-development/"
+          ],
+          "accessLimit": "3DVF creator interview restricted; not retried through another route."
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/films/research_films_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://www.imdb.com/title/tt22868010/plotsummary/",
+        "https://culturecrypt.com/movie-reviews/return-to-silent-hill-2026",
+        "https://www.commonsensemedia.org/movie-reviews/return-to-silent-hill",
+        "https://en.wikipedia.org/wiki/Return_to_Silent_Hill",
+        "https://3dvf.com/redaction/retour-a-silent-hill-les-secrets-du-film-et-de-ses-creatures-avec-david-ratajczak-head-of-visual-development/"
+      ]
+    },
+    {
+      "fighterId": "ascension_wanderer_178",
+      "name": "Wanderer",
+      "source": "ascension",
+      "game": "SILENT HILL: ASCENSION",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Description d’un humanoïde entravé sans bras libres retrouvée ; aucun modèle entier nominatif. Le concept obèse voilé aux bras libres n’est pas utilisé.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "Aucune nouvelle galerie nominative native : monsters_en.htm et creatures_en.htm renvoient404. Les concepts anonymes et vidéos indexées ne permettent pas de relier un corps entier à Wanderer sans bras libres ; le modèle obèse aux longs bras n’est pas attribué à ce nom. Aucun membre ou modèle d’un autre jeu ajouté.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_ascension/info_en.htm",
+          "https://www.silenthillmemories.net/sh_ascension/art_en.htm",
+          "https://www.silenthillmemories.net/sh_ascension/videos_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "ascension_wanderer_178",
+          "name": "Wanderer",
+          "recommendation": "blocked_no_attributed_full_body_image",
+          "referencePaths": [],
+          "finding": "Indexed documentary descriptions identify an armless bound humanoid wrapped in wire. None of downloaded official concepts shows an attributed Wanderer. The obese veiled long-armed model must not be used.",
+          "sourcePages": [
+            "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+          ]
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/extended/research_extended_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+      ]
+    },
+    {
+      "fighterId": "ascension_fighter_179",
+      "name": "Fighter",
+      "source": "ascension",
+      "game": "SILENT HILL: ASCENSION",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Portfolio primaire nominatif de Rodion Vlasov retrouvé, mais visuel inaccessible. Le Fighter décrit porte une combinaison et des griffes en râteau ; l’ancien concept obèse voilé 01/08 n’est pas une référence fiable de ce profil.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "Les concepts entiers01/08 montrent un modèle obèse voilé au long bras mais aucune légende nominative. La revue indépendante confirme seulement une hypothèse Fighter, sans attribution source. La nouvelle recherche Google normale aboutit au challenge de trafic inhabituel et a été arrêtée ; aucune route publique nouvelle ne prouve cette identité.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_ascension/art_en.htm",
+          "https://www.silenthillmemories.net/sh_ascension/art/pics/sh_ascension_art_monster_01.jpg",
+          "https://www.silenthillmemories.net/sh_ascension/art/pics/sh_ascension_art_monster_08.jfif",
+          "https://www.silenthillmemories.net/sh_ascension/videos_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "ascension_fighter_179",
+          "name": "Fighter",
+          "recommendation": "blocked_named_primary_portfolio_found_but_image_unavailable",
+          "referencePaths": [],
+          "finding": "Correction to prior hypothesis: official indexed artist portfolio names Fighter, sculptor Rodion Vlasov, concept Mike Franchina. Documentary description says head-to-toe rubber suit, bound wire, two arms with rake-like claw hands. The obese veiled asymmetrical long-arm concepts01/08 are not supported as Fighter and should not be used. Direct primary project returned403 and was not retried or bypassed.",
+          "sourcePages": [
+            "https://rodionvlasov.artstation.com/",
+            "https://www.artstation.com/artwork/w0lOkX",
+            "https://silenthill.fandom.com/wiki/Fighter",
+            "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+          ]
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/extended/research_extended_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://rodionvlasov.artstation.com/",
+        "https://www.artstation.com/artwork/w0lOkX",
+        "https://silenthill.fandom.com/wiki/Fighter",
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+      ]
+    },
+    {
+      "fighterId": "ascension_snarler_180",
+      "name": "Snarler",
+      "source": "ascension",
+      "game": "SILENT HILL: ASCENSION",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Attribution primaire au projet de canidé d’Amilcar Fong retrouvée, concept Mike Franchina. Aucun visuel entier exact récupéré ; arrêt après 403.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "La description documentaire indique un canidé, mais ni les nouvelles pages publiques ni les concepts Ascension consultés ne livrent un modèle entier nommé Snarler. Monsters/creatures404 ; les routes Fandom/YouTube précédemment refusées ne sont pas retentées. Aucun chien d’un autre Silent Hill substitué.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_ascension/info_en.htm",
+          "https://www.silenthillmemories.net/sh_ascension/art_en.htm",
+          "https://www.silenthillmemories.net/sh_ascension/videos_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "ascension_snarler_180",
+          "name": "Snarler",
+          "recommendation": "blocked_named_primary_portfolio_found_but_image_unavailable",
+          "referencePaths": [],
+          "finding": "Primary indexed Amilcar Fong portfolio identifies a Genvid Silent Hill Ascencion hell haund creature. Secondary attribution specifically links Snarler sculpt to Amilcar Fong, concept Mike Franchina. Canine anatomy documented; no actual attributable complete picture obtained. ArtStation403 was not retried or bypassed.",
+          "sourcePages": [
+            "https://amilcaraldanafong.artstation.com/",
+            "https://amilcaraldanafong.artstation.com/projects/GeBEXd",
+            "https://silenthill.fandom.com/wiki/Snarler"
+          ]
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/extended/research_extended_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://amilcaraldanafong.artstation.com/",
+        "https://amilcaraldanafong.artstation.com/projects/GeBEXd",
+        "https://silenthill.fandom.com/wiki/Snarler"
+      ]
+    },
+    {
+      "fighterId": "ascension_the_collector_183",
+      "name": "The Collector",
+      "source": "ascension",
+      "game": "SILENT HILL: ASCENSION",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "incomplete-source",
+      "currentReason": "Portfolio primaire de Rodion Vlasov nommant The Collector retrouvé, mais aucune vue entière récupérée. L’anatomie multibras avec portail de torse ne correspond pas au concept obèse voilé.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "Le Collector décrit multibras avec portail de torse ne correspond pas au concept obèse voilé. Aucune nouvelle vue entière nominative ne résout cette incompatibilité ; les galeries dédiées404 et l’index vidéo ne suffisent pas. Rôle noncombatant conservé, sans pose offensive inventée.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_ascension/info_en.htm",
+          "https://www.silenthillmemories.net/sh_ascension/art_en.htm",
+          "https://www.silenthillmemories.net/sh_ascension/videos_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "ascension_the_collector_183",
+          "name": "The Collector",
+          "recommendation": "blocked_named_primary_portfolio_found_but_image_unavailable",
+          "referencePaths": [],
+          "finding": "Rodion Vlasov indexed primary portfolio explicitly lists The Collector - Silent Hill: Ascension. Documented multi-armed creature with torso portal remains incompatible with obese veiled model. No downloadable attributed full-body image found. Preserve noncombatant role.",
+          "sourcePages": [
+            "https://rodionvlasov.artstation.com/",
+            "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+          ]
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/extended/research_extended_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://rodionvlasov.artstation.com/",
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+      ]
+    },
+    {
+      "fighterId": "ascension_stilledalen_stinger_184",
+      "name": "Stilledalen Stinger",
+      "source": "ascension",
+      "game": "SILENT HILL: ASCENSION",
+      "status": "missing",
+      "recheckedThisTurn": true,
+      "reviewStatus": "rechecked-this-turn",
+      "blockerCategory": "identity-or-variant-unresolved",
+      "currentReason": "Le concept entier retrouvé appartient au Stinger standard déjà représenté. Aucune anatomie régionale indépendante n’est attestée ; aucune duplication ou recoloration.",
+      "inheritedEvidence": {
+        "group": "E",
+        "state": "Sans image",
+        "reason": "La nouvelle recherche ne prouve aucune anatomie régionale autonome : la présence du Stinger à Stilledalen reste un événement, pas un modèle distinct attesté. Le Stinger déjà livré ne peut être dupliqué, recoloré ou renommé pour ce profil ; aucune nouvelle vue nominative propre à cette variante.",
+        "statusDocument": "docs/production/ART92_PROFILE_STATUS.md",
+        "provenanceArtifacts": [
+          "art/provenance-art92-e.json"
+        ],
+        "referenceUrls": [
+          "https://www.silenthillmemories.net/sh_ascension/info_en.htm",
+          "https://www.silenthillmemories.net/sh_ascension/art_en.htm",
+          "https://www.silenthillmemories.net/sh_ascension/videos_en.htm"
+        ],
+        "newResearchClaimedForInheritedEvidence": false
+      },
+      "generationAttemptedThisTurn": false,
+      "newArtifactDelivered": false,
+      "oneToOneCertified": false,
+      "currentResearch": {
+        "record": {
+          "fighterId": "ascension_stilledalen_stinger_184",
+          "name": "Stilledalen Stinger",
+          "recommendation": "blocked_no_distinct_regional_anatomy_attested",
+          "referencePaths": [
+            "/workspace/scratch/ae07d9a11c02/references/extended/sh_ascension_art_monster_09.jfif"
+          ],
+          "finding": "Official archived Stinger concept gives full membrane-winged humanoid with ceramic mask, pointed bandaged legs and red tendrils. This is standard Stinger already represented. Sources place the creature in both Pennsylvania and Norway but do not establish a separate regional model. Do not recolor or duplicate existing Stinger as new anatomy.",
+          "sourcePages": [
+            "https://www.silenthillmemories.net/sh_ascension/art_en.htm",
+            "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+          ]
+        },
+        "localReportAtReview": "/workspace/scratch/ae07d9a11c02/references/extended/research_extended_20261117.json"
+      },
+      "currentReferenceUrls": [
+        "https://www.silenthillmemories.net/sh_ascension/art_en.htm",
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+      ]
+    }
+  ],
+  "scopeOfCopiedFields": "For the 63 unchanged entries, all fields including reviewStatus, recheckedThisTurn, currentReason and inheritedEvidence are copied exactly from provenance-20261117.json; their relative this-turn language refers to that preceding snapshot, not a claim of fresh research in this reconciliation. Numb Body alone has a new blocker/review result, and its complete old record is retained in previousEntry. The three removed entries also retain their complete previousEntry.",
+  "historicalLateralCombatAudit": {
+    "historicalIllustratedProfiles": 154,
+    "allAuditedForLateralCombat": false,
+    "individualAuditCountEstablishedHere": null,
+    "selectionPortraitAvailabilityDoesNotProveLateralCombatReadiness": true,
+    "statement": "Les 154 illustrations historiques n’ont pas toutes été auditées comme sprites latéraux de combat. Les 64 manquants mesurent l’absence d’images candidates par profil et ne mesurent pas le nombre de poses latérales encore à vérifier ou produire."
+  },
+  "qualityLimits": [
+    "Les images annoncées sont des candidats non certifiés 1:1.",
+    "La présence d’une image de sélection et d’une image de combat ne démontre pas un jeu complet d’animations.",
+    "Aucune certification UHD, aucune QA en combat et aucune importation au registre ne sont affirmées par ce rapport de réconciliation."
+  ],
+  "verification": {
+    "previousMarkdownAndProvenanceSetsMatchExactly": true,
+    "previousUniqueMissingIds": 67,
+    "removedUniqueIds": 3,
+    "remainingUniqueIds": 64,
+    "exactSetSubtraction": true,
+    "onlyRemainingEntryWithChangedBlocker": "arcade_numb_body_arcade",
+    "otherRemainingEntriesByteValueEquivalentToPreviousObjects": 63,
+    "sourceArtifactsUnchangedByThisAgent": true,
+    "noNewResearch": true,
+    "noGenerationCalls": true,
+    "noRegistryOrCodeWrites": true
+  },
+  "integrationVerifiedByRoot": {
+    "selectionAvailable": 166,
+    "remaining": 64,
+    "newProfiles": [
+      {
+        "id": "arcade_hummer_arcade",
+        "selectionFile": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "combatFile": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+        "distinct": true
+      },
+      {
+        "id": "arcade_tremer_arcade",
+        "selectionFile": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "combatFile": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+        "distinct": true
+      },
+      {
+        "id": "arcade_tuberculosis",
+        "selectionFile": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "combatFile": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+        "distinct": true
+      }
+    ]
+  }
+}

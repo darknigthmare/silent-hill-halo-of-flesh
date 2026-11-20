@@ -1,0 +1,1230 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-19",
+  "status": "final",
+  "corpusRevision": "2026-11-19-final-66",
+  "corpusFile": "corpus.json",
+  "recordCount": 66,
+  "purpose": "Documenter les œuvres et supports manquants de la bible, sans créer de contenu runtime ni confondre communication, éditions, sorties et continuités.",
+  "coveragePhase": {
+    "id": "before-wave21",
+    "label": "Couverture avant ajout",
+    "baseCommit": "ca25d04196b73d6229cdef4dd572eb76846ca7ad",
+    "note": "coverageStatus et coverageNote décrivent l’état du projet avant cette passe documentaire, pas l’état après intégration du présent corpus."
+  },
+  "localAudit": {
+    "repository": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh",
+    "baseCommit": "ca25d04196b73d6229cdef4dd572eb76846ca7ad",
+    "sourceRegistry": "data/sources.json",
+    "runtimeSourceCount": 16,
+    "runtimeSourceIds": [
+      "sh1",
+      "sh2",
+      "sh3",
+      "sh4",
+      "origins",
+      "homecoming",
+      "shattered",
+      "downpour",
+      "arcade",
+      "bom",
+      "pt",
+      "shortmessage",
+      "shf",
+      "film",
+      "ascension",
+      "townfall"
+    ],
+    "runtimeProfiles": 230,
+    "runtimeStages": 123,
+    "sourceGuide": "docs/SOURCES.md",
+    "principalBible": "docs/GDD_FR.md",
+    "scopeAudit": "docs/COVERAGE_AUDIT.md",
+    "historicalWorkbook": {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "sha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+      "bytes": 1776905,
+      "sheets": 11,
+      "tables": 11,
+      "sourceRows": 277,
+      "readOnly": true,
+      "exported": false
+    },
+    "evidenceFiles": [
+      "workbook-readonly-audit.json",
+      "local-documentary-audit.json"
+    ],
+    "workbookExamples": [
+      {
+        "range": "Combattants!A29:D29",
+        "id": "sh2_mannequin_ambusher_023",
+        "finding": "Le profil est explicitement rattaché à SH2 remake 2024."
+      },
+      {
+        "range": "Combattants!A42:D42",
+        "id": "sh2_spider_mannequin",
+        "finding": "Le profil est explicitement rattaché à SH2 remake 2024."
+      },
+      {
+        "range": "Combattants!D26:D28",
+        "finding": "Born from a Wish apparaît déjà dans les précisions d’édition."
+      },
+      {
+        "range": "Sources!D95",
+        "finding": "P.T. est accompagné de la précision qu’aucune campagne Silent Hills n’est sortie."
+      },
+      {
+        "range": "Mouvements!L1566:L1568",
+        "finding": "Les correspondances du mot Transmission concernent Joseph Schreiber et une transmission narrative, pas l’émission KONAMI."
+      }
+    ],
+    "extraWorkbookScan": {
+      "status": "not-completed",
+      "exitCode": 137,
+      "note": "Une seconde importation en lecture seule pour les nouveaux mots-clés a été arrêtée par le runtime. Elle ne constitue pas un résultat négatif. Les cinq supports ont été comparés à tous les fichiers JSON/Markdown/CSV data/docs de la base immuable ; les citations existantes sont conservées dans local-documentary-audit.json."
+    }
+  },
+  "counts": {
+    "coverageBeforeAddition": {
+      "covered": 15,
+      "covered-within-aggregate": 3,
+      "partially-covered": 4,
+      "absent": 40,
+      "mentioned-only": 1,
+      "edition-not-indexed": 2,
+      "absent-as-programme": 1
+    },
+    "categories": {
+      "game": 14,
+      "playable_teaser": 1,
+      "interactive_series": 1,
+      "film": 3,
+      "remake": 1,
+      "additional_scenario": 1,
+      "compilation_remaster": 1,
+      "announced_remake": 1,
+      "cancelled_game": 1,
+      "mobile_game": 5,
+      "multimedia_collection": 1,
+      "game_dlc": 1,
+      "licensed_comic": 9,
+      "digital_comic": 1,
+      "mobile_manga": 2,
+      "bonus_comic": 1,
+      "unreleased_comic": 1,
+      "novelization": 7,
+      "promotional_broadcast": 1,
+      "publisher_broadcast": 1,
+      "licensed_crossover": 3,
+      "licensed_machine": 3,
+      "game_compilation": 1,
+      "documentary_multimedia": 2,
+      "official_guide": 1,
+      "making_of_documentary": 1,
+      "promotional_crossover_game": 1
+    },
+    "evidence": {
+      "primary-confirmed": 17,
+      "existing-corpus-and-reference-chronology": 11,
+      "specialist-edition-documented": 1,
+      "primary-announcement": 1,
+      "publisher-statement-reported": 1,
+      "contemporary-press-and-specialist": 1,
+      "secondary-documented": 4,
+      "contemporary-press-and-republished-official-release": 1,
+      "secondary-corroborated": 6,
+      "bibliographic-and-specialist": 9,
+      "secondary-documented-primary-content-needed": 2,
+      "secondary-documented-primary-booklet-needed": 1,
+      "primary-announcement-and-publication-corroboration": 1,
+      "bibliographic-corroborated": 4,
+      "primary-publisher-confirmed": 3,
+      "developer-announcement-and-store-metadata": 1,
+      "primary-manufacturer-confirmed": 2
+    }
+  },
+  "method": [
+    "Comparer le registre runtime, la bible, le guide des sources et les cellules du classeur historique, sans les modifier.",
+    "Privilégier les pages produit, communiqués et éditeurs officiels ; conserver une qualité de preuve distincte pour les notices spécialisées ou bibliographiques.",
+    "Utiliser une preuve de publication effective lorsqu’elle existe, au lieu de convertir une annonce en sortie.",
+    "Maintenir les alias régionaux et les éditions dans les relations d’une œuvre, sans créer artificiellement plusieurs jeux.",
+    "Arrêter le corpus à 66 entrées documentées dans le périmètre demandé ; aucune génération ou intégration de profil ne découle de ces métadonnées."
+  ],
+  "keyFindings": [
+    {
+      "id": "scope-is-16-runtime-packs",
+      "finding": "La couverture annoncée complète était celle des 16 packs du projet, pas celle de toute la franchise. f, Townfall, Ascension et les trois films étaient déjà couverts, avec agrégation des films.",
+      "evidence": [
+        "data/sources.json",
+        "docs/COVERAGE_AUDIT.md",
+        "docs/SOURCES.md",
+        "workbook-readonly-audit.json"
+      ],
+      "recordIds": [
+        "silent_hill_f_2025",
+        "townfall_2026",
+        "ascension_2023",
+        "film_silent_hill_2006",
+        "film_revelation_2012",
+        "film_return_2026"
+      ]
+    },
+    {
+      "id": "transmission-is-broadcast",
+      "finding": "Transmission est un programme officiel d’actualités, à indexer comme source des annonces. La recherche du mot seul dans le classeur produit un faux positif lié à SH4.",
+      "sourceKeys": [
+        "transmission",
+        "transmission3",
+        "reveal2022"
+      ],
+      "recordIds": [
+        "silent_hill_transmission",
+        "konami_press_start"
+      ]
+    },
+    {
+      "id": "missing-legacy-games",
+      "finding": "Play Novel, Mobile DX, la trilogie Orphan/Mobile et The Escape sont des œuvres distinctes absentes du registre des 16 packs.",
+      "sourceKeys": [
+        "playnovel",
+        "mobileDX",
+        "mobileDXDetail",
+        "orphan",
+        "mobile2",
+        "mobile3",
+        "escapeFoma",
+        "escapeIos"
+      ],
+      "recordIds": [
+        "play_novel_2001",
+        "mobile_dx_2006",
+        "orphan_mobile_2007",
+        "mobile_2_2008",
+        "mobile_3_2010",
+        "the_escape_mobile_2007"
+      ]
+    },
+    {
+      "id": "editions-not-new-roster",
+      "finding": "SH2 remake et Born from a Wish possèdent déjà des indices dans les fiches ; HD Collection, le coffret PS2 2006 et l’extension BoM exigent une notice d’édition, pas un double comptage de tous leurs personnages.",
+      "sourceKeys": [
+        "sh2r",
+        "sh2Versions",
+        "hd",
+        "collection2006",
+        "bomDlc"
+      ],
+      "recordIds": [
+        "sh2_remake_2024",
+        "sh2_born_from_a_wish",
+        "sh_hd_collection_2012",
+        "collection_ps2_2006",
+        "bom_expansion_2013"
+      ]
+    },
+    {
+      "id": "major-documentary-supports",
+      "finding": "Les DVD Art of Silent Hill et Making of SH2 sont à indexer. Le livre Lost Memories et le DVD Lost Memories avaient déjà servi de sources ponctuelles ; ils sont partiellement couverts.",
+      "sourceKeys": [
+        "dvdArt",
+        "makingSh2",
+        "bookLost",
+        "bookLostBib",
+        "dvdLost"
+      ],
+      "evidence": [
+        "local-documentary-audit.json"
+      ],
+      "recordIds": [
+        "dvd_art_silent_hill_2001",
+        "making_of_sh2_2001",
+        "book_lost_memories_2003",
+        "dvd_lost_memories_2003"
+      ]
+    },
+    {
+      "id": "new-published-narratives",
+      "finding": "Le récit The Dock House, les romans f et Return, ainsi que les romans historiques et comics, reçoivent des notices distinctes de leurs jeux ou films parents.",
+      "sourceKeys": [
+        "dock",
+        "dockReleased",
+        "dockContents",
+        "novelF",
+        "novelReturn",
+        "books",
+        "comics",
+        "comicsLibrary"
+      ],
+      "recordIds": [
+        "comic_dock_house_2026",
+        "novel_silent_hill_f_2025",
+        "novel_return_2026"
+      ]
+    },
+    {
+      "id": "new-promotion-minigame",
+      "finding": "Le mini-jeu SILENT HILL f × Urban Myth Dissolution Center est publié le 09/09/2026. Sa collaboration promotionnelle constitue une entrée distincte ; aucune autorité canonique sur SHf n’est déduite.",
+      "sourceKeys": [
+        "urbanKonami",
+        "urbanShueisha",
+        "urbanGame"
+      ],
+      "recordIds": [
+        "crossover_urban_myth_2026"
+      ]
+    },
+    {
+      "id": "announcements-cancellations",
+      "finding": "Le remake SH1 reste une annonce de développement dans les sources consultées. Silent Hills est annulé ; P.T. reste un teaser historiquement publié. Les deux machines Escape/Return ont une année de lancement cible séparée de leur présence au catalogue.",
+      "sourceKeys": [
+        "sh1Remake",
+        "sh1RemakeAnn",
+        "hillsCancelled",
+        "slotLaunch",
+        "slotEscape",
+        "slotReturn"
+      ],
+      "recordIds": [
+        "sh1_remake_announced",
+        "silent_hills_cancelled",
+        "pt_2014",
+        "machine_silent_hill_escape",
+        "machine_silent_hill_return"
+      ]
+    }
+  ],
+  "dateResolutions": [
+    {
+      "recordIds": [
+        "the_escape_mobile_2007"
+      ],
+      "decision": "Première édition FOMA/i-mode le 19/12/2007 ; édition iPhone/iPod touch le 24/12/2008. Ne pas utiliser 2009 comme première sortie du titre.",
+      "sourceKeys": [
+        "escapeFoma",
+        "escapeIos"
+      ]
+    },
+    {
+      "recordIds": [
+        "mobile_3_2010"
+      ],
+      "decision": "Année 2010 seulement : les notices divergent sur le jour de mars.",
+      "sourceKeys": [
+        "mobile3"
+      ]
+    },
+    {
+      "recordIds": [
+        "sh_hd_collection_2012"
+      ],
+      "decision": "Année 2012 confirmée par KONAMI ; conserver les dates régionales 29/03 FR et 30/03 EN sans leur imposer une date mondiale.",
+      "sourceKeys": [
+        "hd"
+      ]
+    },
+    {
+      "recordIds": [
+        "novel_sh1_2006",
+        "novel_sh2_2006",
+        "novel_sh3_2007"
+      ],
+      "decision": "Année seule ; variations entre jour de commercialisation et mois d’édition dans les catalogues.",
+      "sourceKeys": [
+        "books",
+        "novel1",
+        "novel2",
+        "novel3"
+      ]
+    },
+    {
+      "recordIds": [
+        "novel_film_silent_hill_2006"
+      ],
+      "decision": "24/06/2006 retenu selon KADOKAWA, plutôt que 25/06 dans une notice spécialisée.",
+      "sourceKeys": [
+        "novelFilm1"
+      ]
+    },
+    {
+      "recordIds": [
+        "book_lost_memories_2003"
+      ],
+      "decision": "2003 seulement : juillet/août varie entre notices d’édition et de vente.",
+      "sourceKeys": [
+        "bookLostBib",
+        "bookLost"
+      ]
+    },
+    {
+      "recordIds": [
+        "comic_dock_house_2026"
+      ],
+      "decision": "16/09/2026 au Royaume-Uni ; 30/09/2026 aux États-Unis. Publication corroborée après le communiqué.",
+      "sourceKeys": [
+        "dock",
+        "dockReleased",
+        "dockContents"
+      ]
+    },
+    {
+      "recordIds": [
+        "machine_silent_hill_escape",
+        "machine_silent_hill_return"
+      ],
+      "decision": "releaseYear=null, announcedYear=2019, targetedReleaseYear=2020, targetedReleasePeriod=Q1. Le catalogue fabricant confirme le produit sans établir la date de première exploitation.",
+      "sourceKeys": [
+        "slotAnnouncement",
+        "slotLaunch",
+        "slotEscape",
+        "slotReturn"
+      ]
+    },
+    {
+      "recordIds": [
+        "sh1_remake_announced"
+      ],
+      "decision": "releaseYear=null et releaseDate=null ; announcedYear=2025. Aucun statut de sortie n’est affirmé.",
+      "sourceKeys": [
+        "sh1RemakeAnn",
+        "sh1Remake"
+      ]
+    },
+    {
+      "recordIds": [
+        "crossover_dark_deception_2021"
+      ],
+      "decision": "Publication 2021 conservée. La fiche est signalée retirée de la vente par SteamDB ; aucune date exacte de retrait ni disponibilité console n’est affirmée.",
+      "sourceKeys": [
+        "darkDeception",
+        "darkDeceptionCatalogue"
+      ]
+    }
+  ],
+  "inclusionPolicy": {
+    "included": "Œuvres narratives distinctes, jeux publiés, scénarios et éditions significatives, films individualisés, annonces explicites, projets annulés documentés, communications officielles utiles, supports documentaires majeurs et collaborations/machines identifiées.",
+    "grouped": [
+      "Ports identiques et éditions régionales sans œuvre nouvelle.",
+      "Recueils Three Bloody Tales et Omnibus reliés aux récits qu’ils contiennent.",
+      "Skins et costumes des crossovers regroupés avec le jeu hôte.",
+      "Programmes Transmission et PRESS START regroupés par série avec les épisodes utiles comme preuves."
+    ],
+    "excluded": [
+      "Catalogue exhaustif des OST, rééditions musicales et marchandises.",
+      "Chaque guide commercial ou ouvrage critique indépendant.",
+      "Rumeurs et pitches sans confirmation suffisante.",
+      "Fanworks ou publications dont la licence n’est pas établie ; par exemple aucune qualification officielle de Silent Hill: Betrayal n’est inférée.",
+      "Ajout de personnages, de scènes, de capacités ou de chronologie canonique depuis une simple notice bibliographique."
+    ],
+    "completenessClaim": "Couverture documentée du périmètre convenu ; aucune promesse d’exhaustivité mondiale de tous les produits dérivés."
+  },
+  "bibleIntegration": {
+    "principal": "docs/GDD_FR.md",
+    "annex": "docs/BIBLE_CORPUS_SILENT_HILL.md",
+    "registry": "docs/production/franchise-corpus.json",
+    "sources": "docs/SOURCES.md",
+    "supplementalWorkbook": "SILENT_HILL_CORPUS_BIBLE.xlsx",
+    "workbookTabs": [
+      "Corpus",
+      "Stages"
+    ],
+    "keepHistoricalWorkbookUnchanged": true,
+    "keepRuntimeRegistryForPlayablePacks": true,
+    "rules": [
+      "Conserver les IDs stables du corpus documentaire et les relier aux IDs runtime existants sans les renommer.",
+      "Afficher Couverture avant ajout pour coverageStatus ; l’indexation actuelle ne rend pas rétroactivement les œuvres couvertes dans le moteur.",
+      "Afficher année d’annonce, publication, état de sortie et lancement cible dans des champs distincts.",
+      "Ne pas ajouter toutes les œuvres à data/sources.json : ce registre configure actuellement 16 packs exécutables avec stages par défaut.",
+      "Utiliser les prochaines actions comme dossiers d’étude, non comme demandes de génération automatique.",
+      "Rattacher les pages et séquences à leur édition, support et statut : jeu final, teaser, making-of, roman, film, crossover ou machine."
+    ],
+    "firstStudyPriorities": [
+      {
+        "recordIds": [
+          "play_novel_2001"
+        ],
+        "reason": "Source Nintendo et guide identifié ; établir d’abord les scénarios effectivement disponibles et leurs captures."
+      },
+      {
+        "recordIds": [
+          "bom_expansion_2013"
+        ],
+        "reason": "Annonce primaire prouvant un contenu additionnel ; comparer précisément les fiches BoM existantes avant de déclarer de nouveaux ennemis ou lieux."
+      },
+      {
+        "recordIds": [
+          "comic_dock_house_2026"
+        ],
+        "reason": "Compagnon narratif officiel publié ; acquérir/consulter ses pages pour distinguer éléments nouveaux et éléments de Townfall déjà présents."
+      },
+      {
+        "recordIds": [
+          "mobile_dx_2006",
+          "orphan_mobile_2007",
+          "mobile_2_2008",
+          "mobile_3_2010",
+          "the_escape_mobile_2007"
+        ],
+        "reason": "Éditions anciennes distinctes ; réunir des captures et identités suffisantes avant une production visuelle."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "chrono",
+      "url": "https://www.silenthillmemories.net/lore/releases_en.htm",
+      "webRef": "turn556809699search7",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "sh3_original_2003",
+        "sh4_the_room_2004",
+        "origins_2007",
+        "homecoming_2008",
+        "shattered_memories_2009",
+        "downpour_2012",
+        "the_arcade_2007",
+        "book_of_memories_2012",
+        "pt_2014",
+        "ascension_2023"
+      ]
+    },
+    {
+      "id": "sh1",
+      "url": "https://www.konami.com/games/eu/en/products/silenthill/",
+      "webRef": "turn551390543search0",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "sh1_original_1999"
+      ]
+    },
+    {
+      "id": "sh2r",
+      "url": "https://www.konami.com/games/us/en/topics/2681/",
+      "webRef": "turn405745206search0",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "sh2_remake_2024"
+      ]
+    },
+    {
+      "id": "shf",
+      "url": "https://www.konami.com/games/eu/en/products/silenthill_f/",
+      "webRef": "turn373042418search1",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "silent_hill_f_2025"
+      ]
+    },
+    {
+      "id": "townfall",
+      "url": "https://www.konami.com/games/eu/en/topics/19323/",
+      "webRef": "turn405745206view1",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "townfall_2026"
+      ]
+    },
+    {
+      "id": "reveal2022",
+      "url": "https://www.konami.com/games/eu/fr/topics/16705/",
+      "webRef": "turn551390543search2",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "ascension_2023",
+        "silent_hill_transmission"
+      ]
+    },
+    {
+      "id": "playnovel",
+      "url": "https://www.nintendo.co.jp/n08/before/01_0306.html",
+      "webRef": "turn409356572search0",
+      "kind": "primary-platform-holder",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "play_novel_2001"
+      ]
+    },
+    {
+      "id": "mobileDX",
+      "url": "https://www.itmedia.co.jp/mobile/articles/0607/05/news092.html",
+      "webRef": "turn409356572search8",
+      "kind": "contemporary-press",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "mobile_dx_2006",
+        "manga_cage_of_cradle_2006"
+      ]
+    },
+    {
+      "id": "mobileDXDetail",
+      "url": "https://www.silenthillmemories.net/sh_dx/info_en.htm",
+      "webRef": "turn880500395view5",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "mobile_dx_2006"
+      ]
+    },
+    {
+      "id": "orphan",
+      "url": "https://www.silenthillmemories.net/sh_orphan/info_en.htm",
+      "webRef": "turn975001043search1",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "orphan_mobile_2007"
+      ]
+    },
+    {
+      "id": "mobile2",
+      "url": "https://www.silenthillmemories.net/sh_mobile2/info_en.htm",
+      "webRef": "turn880500395view3",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "mobile_2_2008"
+      ]
+    },
+    {
+      "id": "mobile3",
+      "url": "https://www.silenthillmemories.net/sh_mobile3/info_en.htm",
+      "webRef": "turn880500395view4",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "mobile_3_2010"
+      ]
+    },
+    {
+      "id": "escapeFoma",
+      "url": "https://game.watch.impress.co.jp/docs/20071219/shte.htm",
+      "webRef": "turn409356572search3",
+      "kind": "contemporary-press",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "the_escape_mobile_2007"
+      ]
+    },
+    {
+      "id": "escapeIos",
+      "url": "https://www.4gamer.net/games/080/G008092/20081224057/",
+      "webRef": "turn409356572search4",
+      "kind": "official-press-release-republished",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "the_escape_mobile_2007"
+      ]
+    },
+    {
+      "id": "experience",
+      "url": "https://www.silenthillmemories.net/she/info_en.htm",
+      "webRef": "turn409356572search5",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "the_experience_2006",
+        "comic_hunger_2006"
+      ]
+    },
+    {
+      "id": "experienceContemp",
+      "url": "https://www.gamespot.com/articles/silent-hill-gets-experience/1100-6143103/",
+      "webRef": "turn409356572search6",
+      "kind": "contemporary-press",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "the_experience_2006"
+      ]
+    },
+    {
+      "id": "sh2Versions",
+      "url": "https://www.silenthillmemories.net/sh2/versions_en.htm",
+      "webRef": "turn373042418view0",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "sh2_original_2001",
+        "sh2_born_from_a_wish"
+      ]
+    },
+    {
+      "id": "hd",
+      "url": "https://www.konami.com/games/eu/en/products/shhd/",
+      "webRef": "turn349995904search0",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "sh_hd_collection_2012"
+      ]
+    },
+    {
+      "id": "sh1Remake",
+      "url": "https://img.konami.com/ir/en/ir-data/statements/2026/en0129_cf84s6.pdf",
+      "webRef": "turn880500395search9",
+      "kind": "primary-corporate-report",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "sh1_remake_announced"
+      ]
+    },
+    {
+      "id": "sh1RemakeAnn",
+      "url": "https://www.konami.com/games/ca/en/topics/2890/",
+      "webRef": "turn880500395search6",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "sh1_remake_announced",
+        "konami_press_start"
+      ]
+    },
+    {
+      "id": "hillsCancelled",
+      "url": "https://www.gamespot.com/articles/silent-hills-cancelled-konami-confirms/1100-6426919/",
+      "webRef": "turn134321792search0",
+      "kind": "publisher-statement-reported-by-press",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "pt_2014",
+        "silent_hills_cancelled"
+      ]
+    },
+    {
+      "id": "film1",
+      "url": "https://www.sonypictures.com/movies/silenthill",
+      "webRef": "turn470850736search0",
+      "kind": "primary-distributor",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "film_silent_hill_2006"
+      ]
+    },
+    {
+      "id": "film2",
+      "url": "https://www.universalpicturesathome.com/movies/silent-hill-revelation",
+      "webRef": "turn470850736search1",
+      "kind": "primary-distributor",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "film_revelation_2012"
+      ]
+    },
+    {
+      "id": "film3",
+      "url": "https://returntosilenthillmovie.com/welcome-back/",
+      "webRef": "turn134321792search17",
+      "kind": "primary-distributor",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "film_return_2026"
+      ]
+    },
+    {
+      "id": "film3Released",
+      "url": "https://s202.q4cdn.com/484194886/files/doc_news/Return-to-Silent-Hill-from-Cineverse-Premieres-on-Hulu-2026.pdf",
+      "webRef": "turn470850736search7",
+      "kind": "primary-distributor-release",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "film_return_2026"
+      ]
+    },
+    {
+      "id": "comics",
+      "url": "https://www.silenthillmemories.net/publications/comics_en.htm",
+      "webRef": "turn134321792view1",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "comic_dying_inside_2004",
+        "comic_among_the_damned_2004",
+        "comic_paint_it_black_2005",
+        "comic_grinning_man_2005",
+        "comic_dead_alive_2005",
+        "comic_sinners_reward_2008",
+        "comic_past_life_2010",
+        "comic_annes_story_2014",
+        "comic_hunger_2006",
+        "manga_cage_of_cradle_2006",
+        "manga_double_under_dusk_2007",
+        "comic_comx_unreleased_1999"
+      ]
+    },
+    {
+      "id": "comicsLibrary",
+      "url": "https://comics.lib.msu.edu/rri/irri/idwm.htm",
+      "webRef": "turn695863440view1",
+      "kind": "institutional-bibliography",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "comic_dying_inside_2004",
+        "comic_among_the_damned_2004",
+        "comic_paint_it_black_2005",
+        "comic_grinning_man_2005",
+        "comic_dead_alive_2005",
+        "comic_sinners_reward_2008",
+        "comic_past_life_2010",
+        "comic_annes_story_2014"
+      ]
+    },
+    {
+      "id": "whiteHunter",
+      "url": "https://www.silenthillmemories.net/publications/sh_white_hunter_en.htm",
+      "webRef": "turn695863440search1",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "comic_white_hunter_2008"
+      ]
+    },
+    {
+      "id": "dock",
+      "url": "https://www.konami.com/games/eu/en/topics/19315/",
+      "webRef": "turn405745206search3",
+      "kind": "primary-publisher-announcement",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "comic_dock_house_2026"
+      ]
+    },
+    {
+      "id": "dockReleased",
+      "url": "https://atomicbooks.com/products/2000-ad-prog-2500",
+      "webRef": "turn880500395view1",
+      "kind": "bookseller-publication-catalogue",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "comic_dock_house_2026"
+      ]
+    },
+    {
+      "id": "dockContents",
+      "url": "https://graphicpolicy.com/2026/09/16/preview-2000-ad-prog-2500/",
+      "webRef": "turn880500395view0",
+      "kind": "contemporary-publication-contents",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "comic_dock_house_2026"
+      ]
+    },
+    {
+      "id": "books",
+      "url": "https://www.silenthillmemories.net/publications/books_en.htm",
+      "webRef": "turn134321792view0",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "novel_sh1_2006",
+        "novel_sh2_2006",
+        "novel_sh3_2007",
+        "novel_film_revelation_2013"
+      ]
+    },
+    {
+      "id": "novel1",
+      "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784861558153",
+      "webRef": "turn658939783search0",
+      "kind": "bookseller-bibliography",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "novel_sh1_2006"
+      ]
+    },
+    {
+      "id": "novel2",
+      "url": "https://www.hanmoto.com/bd/isbn/9784861558320",
+      "webRef": "turn658939783search4",
+      "kind": "bibliographic-registry",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "novel_sh2_2006"
+      ]
+    },
+    {
+      "id": "novel3",
+      "url": "https://store-tsutaya.tsite.jp/search/item/sell_book/40664107/9784861558429",
+      "webRef": "turn658939783search5",
+      "kind": "bookseller-bibliography",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "novel_sh3_2007"
+      ]
+    },
+    {
+      "id": "novelFilm1",
+      "url": "https://www.kadokawa.co.jp/product/200604000197/",
+      "webRef": "turn880500395search0",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "novel_film_silent_hill_2006"
+      ]
+    },
+    {
+      "id": "novelFilm2",
+      "url": "https://www.abebooks.com/9784812495148/Michael-Bassett-Kiyomi-Abe-4812495148/plp",
+      "webRef": "turn880500395search1",
+      "kind": "bookseller-bibliography",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "novel_film_revelation_2013"
+      ]
+    },
+    {
+      "id": "novelF",
+      "url": "https://www.kadokawa.co.jp/product/322507000131/",
+      "webRef": "turn470850736view1",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "novel_silent_hill_f_2025"
+      ]
+    },
+    {
+      "id": "novelReturn",
+      "url": "https://titanbooks.com/72540-return-to-silent-hill-the-official-movie-novelization/",
+      "webRef": "turn470850736view0",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "novel_return_2026"
+      ]
+    },
+    {
+      "id": "transmission",
+      "url": "https://www.konami.com/games/corporate/ja/news/topics/20260213s/",
+      "webRef": "turn405745206view2",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "silent_hill_transmission"
+      ]
+    },
+    {
+      "id": "transmission3",
+      "url": "https://www.konami.com/games/eu/en/topics/18565/",
+      "webRef": "turn268002175search0",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "silent_hill_transmission"
+      ]
+    },
+    {
+      "id": "pressStart",
+      "url": "https://www.konami.com/games/eu/en/topics/19272/",
+      "webRef": "turn349995904search3",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "konami_press_start"
+      ]
+    },
+    {
+      "id": "bomDlc",
+      "url": "https://blog.playstation.com/2013/03/19/playstation-store-update-283/",
+      "webRef": "turn305823986search0",
+      "kind": "primary-platform-holder",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "bom_expansion_2013"
+      ]
+    },
+    {
+      "id": "bomDlcEu",
+      "url": "https://blog.playstation.com/archive/2013/03/20/heads-up-playstation-store-update-20th-march-2013",
+      "webRef": "turn305823986search1",
+      "kind": "primary-platform-holder",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "bom_expansion_2013"
+      ]
+    },
+    {
+      "id": "dbd",
+      "url": "https://deadbydaylight.com/game/chapters/silent-hill/",
+      "webRef": "turn756159674search2",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_dead_by_daylight_2020"
+      ]
+    },
+    {
+      "id": "dbdRelease",
+      "url": "https://www.youtube.com/watch?v=nsJ5igHp1hc",
+      "webRef": "turn756159674youtube10",
+      "kind": "primary-official-video",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_dead_by_daylight_2020"
+      ]
+    },
+    {
+      "id": "bomberman",
+      "url": "https://www.konami.com/games/eu/en/topics/14217/",
+      "webRef": "turn756159674search7",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_bomberman"
+      ]
+    },
+    {
+      "id": "bombermanOnline",
+      "url": "https://www.konami.com/games/bomberman/online/us/en/character/",
+      "webRef": "turn756159674search5",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_bomberman"
+      ]
+    },
+    {
+      "id": "bombermanClosed",
+      "url": "https://www.konami.com/games/bomberman/online/eu/en/news/",
+      "webRef": "turn305823986search7",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_bomberman"
+      ]
+    },
+    {
+      "id": "darkDeception",
+      "url": "https://store.steampowered.com/news/posts/?appgroupname=Dark+Deception%3A+Monsters+%26+Mortals&appids=1266690&enddate=1703286695&feed=steam_community_announcements",
+      "webRef": "turn756159674search8",
+      "kind": "primary-developer-announcement",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_dark_deception_2021"
+      ]
+    },
+    {
+      "id": "pachislot",
+      "url": "https://www.konami.com/amusement/psm/archive/psm_archive_title.html?kinds=ps&title=silenthill",
+      "webRef": "turn140511237search2",
+      "kind": "primary-manufacturer",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "machine_pachislot_2015"
+      ]
+    },
+    {
+      "id": "pachislotDate",
+      "url": "https://www.konami.com/amusement/psm/portal/magihallo/blog_mh/2015/mhs_blog_151027.html",
+      "webRef": "turn140511237search3",
+      "kind": "primary-manufacturer",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "machine_pachislot_2015"
+      ]
+    },
+    {
+      "id": "slotEscape",
+      "url": "https://www.konamigaming.com/games/all-games/details/silent-hill-escape",
+      "webRef": "turn140511237search0",
+      "kind": "primary-manufacturer",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "machine_silent_hill_escape"
+      ]
+    },
+    {
+      "id": "slotReturn",
+      "url": "https://www.konamigaming.com/games/all-games/details/silent-hill-return",
+      "webRef": "turn140511237search1",
+      "kind": "primary-manufacturer",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "machine_silent_hill_return"
+      ]
+    },
+    {
+      "id": "slotLaunch",
+      "url": "https://www.fantiniresearch.com/images/pdf/KNM_Pre-NIGA2020_MediaBrief.pdf",
+      "webRef": "turn140511237search8",
+      "kind": "manufacturer-brief-rehosted",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "machine_silent_hill_escape",
+        "machine_silent_hill_return"
+      ]
+    },
+    {
+      "id": "shfLaunch",
+      "url": "https://www.konami.com/games/eu/en/topics/18839/",
+      "webRef": "turn373042418search0",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "silent_hill_f_2025"
+      ]
+    },
+    {
+      "id": "tsm",
+      "url": "https://blog.playstation.com/2024/01/31/silent-hill-the-short-message-now-available-free-on-ps5-new-silent-hill-2-remake-trailer-revealed/",
+      "webRef": "turn806712181view0",
+      "kind": "primary-producer-on-platform-blog",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "the_short_message_2024"
+      ]
+    },
+    {
+      "id": "collection2006",
+      "url": "https://crimson-ceremony.net/lostreleases/item.php?id=shgame_shbox-eur-collection",
+      "webRef": "turn394338773view1",
+      "kind": "specialist-object-archive",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "collection_ps2_2006"
+      ]
+    },
+    {
+      "id": "collection2006B",
+      "url": "https://www.silenthillmemories.net/collections/sh_collection_en.htm",
+      "webRef": "turn806712181search6",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "collection_ps2_2006"
+      ]
+    },
+    {
+      "id": "dvdLost",
+      "url": "https://www.silenthillmemories.net/dvd_lm/info_en.htm",
+      "webRef": "turn394338773view0",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "dvd_lost_memories_2003"
+      ]
+    },
+    {
+      "id": "dvdArt",
+      "url": "https://silenthillheaven.com/aosh/",
+      "webRef": "turn806712181search1",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "dvd_art_silent_hill_2001"
+      ]
+    },
+    {
+      "id": "dvdVideoIndex",
+      "url": "https://www.crimson-ceremony.net/lostreleases/shostv/video.php",
+      "webRef": "turn806712181search0",
+      "kind": "specialist-object-archive",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "dvd_art_silent_hill_2001",
+        "dvd_lost_memories_2003"
+      ]
+    },
+    {
+      "id": "bookLost",
+      "url": "https://www.silenthillmemories.net/lost_memories/info_en.htm",
+      "webRef": "turn806712181view2",
+      "kind": "secondary-specialist-and-unofficial-translation",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "book_lost_memories_2003"
+      ]
+    },
+    {
+      "id": "bookLostBib",
+      "url": "https://www.hanmoto.com/bd/isbn/9784757181458",
+      "webRef": "turn373042418search5",
+      "kind": "bibliographic-registry",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "book_lost_memories_2003"
+      ]
+    },
+    {
+      "id": "makingSh2",
+      "url": "https://www.silenthillmemories.net/sh2/mosh2_info_en.htm",
+      "webRef": "turn806712181view3",
+      "kind": "secondary-specialist",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "making_of_sh2_2001"
+      ]
+    },
+    {
+      "id": "makingSh2Disc",
+      "url": "https://crimson-ceremony.net/lostreleases/item.php?id=shgame_sh2-ps2-eur1",
+      "webRef": "turn394338773search0",
+      "kind": "specialist-object-archive",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "making_of_sh2_2001"
+      ]
+    },
+    {
+      "id": "urbanKonami",
+      "url": "https://prtimes.jp/main/html/rd/p/000001493.000050711.html",
+      "webRef": "turn814244729view0",
+      "kind": "primary-publisher-release-on-distributor",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_urban_myth_2026"
+      ]
+    },
+    {
+      "id": "urbanShueisha",
+      "url": "https://shueisha-games.com/news/20260909_umdc_silenthill-f/",
+      "webRef": "turn814244729search1",
+      "kind": "primary-publisher",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_urban_myth_2026"
+      ]
+    },
+    {
+      "id": "urbanGame",
+      "url": "https://shf-umdc-specialminigame.shueisha-games.com/",
+      "webRef": "turn814244729view1",
+      "kind": "primary-official-product",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_urban_myth_2026"
+      ]
+    },
+    {
+      "id": "darkDeceptionCatalogue",
+      "url": "https://steamdb.info/app/1508810/subs/",
+      "webRef": "turn814244729search5",
+      "kind": "secondary-store-metadata",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "crossover_dark_deception_2021"
+      ]
+    },
+    {
+      "id": "slotAnnouncement",
+      "url": "https://www.gamespot.com/articles/konamis-new-silent-hill-project-is-probably-not-wh/1100-6470508/",
+      "webRef": "turn140511237search7",
+      "kind": "contemporary-press",
+      "retrievedAsOf": "2026-11-19",
+      "usedBy": [
+        "machine_silent_hill_escape",
+        "machine_silent_hill_return"
+      ]
+    }
+  ],
+  "limitations": [
+    "L’audit porte sur les œuvres, éditions et liens documentaires, pas sur une lecture intégrale de chaque jeu, comic, roman ou documentaire.",
+    "Les anciennes œuvres mobiles, mangas et certains objets éditoriaux reposent en partie sur des archives spécialisées ; la qualité de preuve figure dans chaque entrée.",
+    "Une œuvre publiée historiquement peut être retirée de la vente ou d’un service ; published ne garantit pas sa disponibilité actuelle.",
+    "La nature officielle d’un produit sous licence ne suffit pas à établir sa place dans une continuité canonique.",
+    "Le contrôle complémentaire du classeur interrompu ne permet pas d’affirmer l’absence de tous les nouveaux mots-clés dans les cellules ; aucune cellule n’a été modifiée.",
+    "Les refus historiques de génération et les limites de référence des profils existants ne sont ni modifiés ni contournés par cet audit."
+  ]
+}

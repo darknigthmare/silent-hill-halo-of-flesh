@@ -1,0 +1,1492 @@
+{
+  "schema": 1,
+  "label": "wave23-native-art-and-inputs",
+  "generatedAt": "2026-11-19T20:02:40.005Z",
+  "root": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh",
+  "browserTest": false,
+  "httpTest": false,
+  "browserLaunches": 0,
+  "httpServersStarted": 0,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "Historical portrait preserved and separated: sh4_greedy_worm_069",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait preserved and separated: sh4_toadstool_061",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait preserved and separated: sh4_whitestool_062",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait preserved and separated: sh3_glutton",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh4_toadstool_061.c420453d2412.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh4_toadstool_061.c420453d2412.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh3_glutton.13d4153c810d.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh3_glutton.13d4153c810d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh3_glutton.90c14e5d4c7d.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh3_glutton.90c14e5d4c7d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "passed": true
+    },
+    {
+      "name": "Native historical selection decodes: sh4_greedy_worm_069",
+      "passed": true
+    },
+    {
+      "name": "Native historical selection decodes: sh4_toadstool_061",
+      "passed": true
+    },
+    {
+      "name": "Native historical selection decodes: sh4_whitestool_062",
+      "passed": true
+    },
+    {
+      "name": "Native historical selection decodes: sh3_glutton",
+      "passed": true
+    },
+    {
+      "name": "sh4_greedy_worm_069: documented role remains outside combat",
+      "passed": true
+    },
+    {
+      "name": "sh4_greedy_worm_069: workshop reference frames decode",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": []
+      }
+    },
+    {
+      "name": "sh4_greedy_worm_069: reference renderer selects dedicated view 1",
+      "passed": true
+    },
+    {
+      "name": "sh4_greedy_worm_069: full reference silhouette fits workshop 1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          319.42584669496944,
+          326.05117361233323,
+          400.3048558273423,
+          430.89765825896086
+        ],
+        "visible": [
+          319.964441650346,
+          326.50000274181366,
+          400.035558349654,
+          430
+        ],
+        "pixelScale": 0.08976582589608527,
+        "anchor": [
+          0.4944178628389155,
+          0.9609250398724083
+        ],
+        "bodyHeight": 0.919457735247209,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh4_greedy_worm_069: workshop facing matrix 1",
+      "passed": true
+    },
+    {
+      "name": "sh4_greedy_worm_069: reference renderer selects dedicated view -1",
+      "passed": true
+    },
+    {
+      "name": "sh4_greedy_worm_069: full reference silhouette fits workshop -1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          319.6951441726577,
+          326.05117361233323,
+          400.57415330503056,
+          430.89765825896086
+        ],
+        "visible": [
+          319.964441650346,
+          326.50000274181366,
+          400.035558349654,
+          430
+        ],
+        "pixelScale": 0.08976582589608527,
+        "anchor": [
+          0.4944178628389155,
+          0.9609250398724083
+        ],
+        "bodyHeight": 0.919457735247209,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh4_greedy_worm_069: workshop facing matrix -1",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: documented role remains outside combat",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: workshop reference frames decode",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": []
+      }
+    },
+    {
+      "name": "sh4_toadstool_061: reference renderer selects dedicated view 1",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: full reference silhouette fits workshop 1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          330.3555327002038,
+          331.09766219448534,
+          389.2072332688257,
+          430.3497872247764
+        ],
+        "visible": [
+          331.14255395595063,
+          331.36000261306765,
+          388.85744604404937,
+          430
+        ],
+        "pixelScale": 0.08744680619408898,
+        "anchor": [
+          0.5015948963317385,
+          0.9521531100478469
+        ],
+        "bodyHeight": 0.8995215311004785,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh4_toadstool_061: workshop facing matrix 1",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: reference renderer selects dedicated view -1",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: full reference silhouette fits workshop -1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          330.7927667311743,
+          331.09766219448534,
+          389.6444672997962,
+          430.3497872247764
+        ],
+        "visible": [
+          331.14255395595063,
+          331.36000261306765,
+          388.85744604404937,
+          430
+        ],
+        "pixelScale": 0.08744680619408898,
+        "anchor": [
+          0.5015948963317385,
+          0.9521531100478469
+        ],
+        "bodyHeight": 0.8995215311004785,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh4_toadstool_061: workshop facing matrix -1",
+      "passed": true
+    },
+    {
+      "name": "sh4_whitestool_062: documented role remains outside combat",
+      "passed": true
+    },
+    {
+      "name": "sh4_whitestool_062: workshop reference frames decode",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": []
+      }
+    },
+    {
+      "name": "sh4_whitestool_062: reference renderer selects dedicated view 1",
+      "passed": true
+    },
+    {
+      "name": "sh4_whitestool_062: full reference silhouette fits workshop 1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          324.8721725123391,
+          331.00740208621534,
+          394.68707682909553,
+          430.4407506585654
+        ],
+        "visible": [
+          325.75367382946985,
+          331.36000261306765,
+          394.24632617053015,
+          430
+        ],
+        "pixelScale": 0.0881501317130763,
+        "anchor": [
+          0.4996012759170654,
+          0.9457735247208932
+        ],
+        "bodyHeight": 0.8923444976076556,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh4_whitestool_062: workshop facing matrix 1",
+      "passed": true
+    },
+    {
+      "name": "sh4_whitestool_062: reference renderer selects dedicated view -1",
+      "passed": true
+    },
+    {
+      "name": "sh4_whitestool_062: full reference silhouette fits workshop -1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          325.31292317090447,
+          331.00740208621534,
+          395.1278274876609,
+          430.4407506585654
+        ],
+        "visible": [
+          325.75367382946985,
+          331.36000261306765,
+          394.24632617053015,
+          430
+        ],
+        "pixelScale": 0.0881501317130763,
+        "anchor": [
+          0.4996012759170654,
+          0.9457735247208932
+        ],
+        "bodyHeight": 0.8923444976076556,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh4_whitestool_062: workshop facing matrix -1",
+      "passed": true
+    },
+    {
+      "name": "sh3_glutton: documented role remains outside combat",
+      "passed": true
+    },
+    {
+      "name": "sh3_glutton: workshop reference frames decode",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": []
+      }
+    },
+    {
+      "name": "sh3_glutton: reference renderer selects dedicated view 1",
+      "passed": true
+    },
+    {
+      "name": "sh3_glutton: full reference silhouette fits workshop 1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          276.9328472584088,
+          154.25130739389311,
+          443.8011776553608,
+          430.7340249137696
+        ],
+        "visible": [
+          277.42219720092186,
+          155.23000727891923,
+          442.57780279907814,
+          430
+        ],
+        "pixelScale": 0.24467497125652785,
+        "anchor": [
+          0.4964114832535885,
+          0.94896331738437
+        ],
+        "bodyHeight": 0.8955342902711324,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh3_glutton: workshop facing matrix 1",
+      "passed": true
+    },
+    {
+      "name": "sh3_glutton: reference renderer selects dedicated view -1",
+      "passed": true
+    },
+    {
+      "name": "sh3_glutton: full reference silhouette fits workshop -1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          276.1988223446392,
+          154.25130739389311,
+          443.0671527415912,
+          430.7340249137696
+        ],
+        "visible": [
+          277.42219720092186,
+          155.23000727891923,
+          442.57780279907814,
+          430
+        ],
+        "pixelScale": 0.24467497125652785,
+        "anchor": [
+          0.4964114832535885,
+          0.94896331738437
+        ],
+        "bodyHeight": 0.8955342902711324,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh3_glutton: workshop facing matrix -1",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh4_toadstool_061.c420453d2412.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh3_glutton.13d4153c810d.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh3_glutton.90c14e5d4c7d.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "cases": [],
+  "captures": [
+    {
+      "file": "selection-sh4_greedy_worm_069.png",
+      "sha256": "bc80857421bec0df616f6459e7d9a74b64b31a9422d3b30c4c1060d894c01e01",
+      "bytes": 331005,
+      "width": 500,
+      "height": 500,
+      "purpose": "preserved-selection",
+      "fighterId": "sh4_greedy_worm_069",
+      "path": "assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png"
+    },
+    {
+      "file": "selection-sh4_toadstool_061.png",
+      "sha256": "cf1e0a6d55aae72fc3f520fc087b40fb403c6212be97f5f445983e88ddde5e60",
+      "bytes": 243895,
+      "width": 500,
+      "height": 500,
+      "purpose": "preserved-selection",
+      "fighterId": "sh4_toadstool_061",
+      "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png"
+    },
+    {
+      "file": "selection-sh4_whitestool_062.png",
+      "sha256": "06455b1c57288e299958e1128913c415a268ff7fe87ad7f18ae73c29ef8eb57a",
+      "bytes": 298138,
+      "width": 500,
+      "height": 500,
+      "purpose": "preserved-selection",
+      "fighterId": "sh4_whitestool_062",
+      "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png"
+    },
+    {
+      "file": "selection-sh3_glutton.png",
+      "sha256": "5b4f302dc3c38cbe1694607761bc7189d0d265ccd682b950f7f326d054067858",
+      "bytes": 346607,
+      "width": 500,
+      "height": 500,
+      "purpose": "preserved-selection",
+      "fighterId": "sh3_glutton",
+      "path": "assets/sprites/sh3_glutton.90c14e5d4c7d.png"
+    },
+    {
+      "file": "sh4_greedy_worm_069-reference-right.png",
+      "sha256": "e02a477a6640700d2ccbe065f40e56a8fc62a2fb075053c8229c11b3587d08ea",
+      "bytes": 22302,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh4_greedy_worm_069",
+      "combatEnabled": false,
+      "facing": 1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          319.42584669496944,
+          326.05117361233323,
+          400.3048558273423,
+          430.89765825896086
+        ],
+        "visible": [
+          319.964441650346,
+          326.50000274181366,
+          400.035558349654,
+          430
+        ],
+        "pixelScale": 0.08976582589608527,
+        "anchor": [
+          0.4944178628389155,
+          0.9609250398724083
+        ],
+        "bodyHeight": 0.919457735247209,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+        "args": [
+          -61.83868169991326,
+          -120.18647007805723,
+          125.07372072853424,
+          125.07372072853424
+        ],
+        "matrix": [
+          0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "sh4_greedy_worm_069-reference-left.png",
+      "sha256": "4cf5c5c0fbf89307b72f28cba46122c40a28e29d9993365ad590286b0ef8cfe3",
+      "bytes": 22320,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh4_greedy_worm_069",
+      "combatEnabled": false,
+      "facing": -1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          319.6951441726577,
+          326.05117361233323,
+          400.57415330503056,
+          430.89765825896086
+        ],
+        "visible": [
+          319.964441650346,
+          326.50000274181366,
+          400.035558349654,
+          430
+        ],
+        "pixelScale": 0.08976582589608527,
+        "anchor": [
+          0.4944178628389155,
+          0.9609250398724083
+        ],
+        "bodyHeight": 0.919457735247209,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+        "args": [
+          -61.83868169991326,
+          -120.18647007805723,
+          125.07372072853424,
+          125.07372072853424
+        ],
+        "matrix": [
+          -0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "sh4_toadstool_061-reference-right.png",
+      "sha256": "d72d56664d587ce19f9ee88bafa9d8efb379fc92df4e3668e203767ce4b8a695",
+      "bytes": 14581,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh4_toadstool_061",
+      "combatEnabled": false,
+      "facing": 1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          330.3555327002038,
+          331.09766219448534,
+          389.2072332688257,
+          430.3497872247764
+        ],
+        "visible": [
+          331.14255395595063,
+          331.36000261306765,
+          388.85744604404937,
+          430
+        ],
+        "pixelScale": 0.08744680619408898,
+        "anchor": [
+          0.5015948963317385,
+          0.9521531100478469
+        ],
+        "bodyHeight": 0.8995215311004785,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_toadstool_061.c420453d2412.png",
+        "args": [
+          -61.11560283687944,
+          -116.0127659574468,
+          121.84255319148936,
+          121.84255319148936
+        ],
+        "matrix": [
+          0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "sh4_toadstool_061-reference-left.png",
+      "sha256": "e546a62f3e238a999086486bb984e5bdd42e7587aa3d8ad58cd71ba0a37a1be8",
+      "bytes": 14595,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh4_toadstool_061",
+      "combatEnabled": false,
+      "facing": -1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          330.7927667311743,
+          331.09766219448534,
+          389.6444672997962,
+          430.3497872247764
+        ],
+        "visible": [
+          331.14255395595063,
+          331.36000261306765,
+          388.85744604404937,
+          430
+        ],
+        "pixelScale": 0.08744680619408898,
+        "anchor": [
+          0.5015948963317385,
+          0.9521531100478469
+        ],
+        "bodyHeight": 0.8995215311004785,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_toadstool_061.c420453d2412.png",
+        "args": [
+          -61.11560283687944,
+          -116.0127659574468,
+          121.84255319148936,
+          121.84255319148936
+        ],
+        "matrix": [
+          -0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "sh4_whitestool_062-reference-right.png",
+      "sha256": "edc1b5b0a80449a62859c94180d2f5e3d2471ac4482dc9a8aeb3898837c97041",
+      "bytes": 19062,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh4_whitestool_062",
+      "combatEnabled": false,
+      "facing": 1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          324.8721725123391,
+          331.00740208621534,
+          394.68707682909553,
+          430.4407506585654
+        ],
+        "visible": [
+          325.75367382946985,
+          331.36000261306765,
+          394.24632617053015,
+          430
+        ],
+        "pixelScale": 0.0881501317130763,
+        "anchor": [
+          0.4996012759170654,
+          0.9457735247208932
+        ],
+        "bodyHeight": 0.8923444976076556,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+        "args": [
+          -61.36228775692583,
+          -116.16228775692583,
+          122.82252010723862,
+          122.82252010723862
+        ],
+        "matrix": [
+          0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "sh4_whitestool_062-reference-left.png",
+      "sha256": "f01f44597544326f92239246b010dd2d7bce049a8d2debd04855d04838f7b943",
+      "bytes": 19027,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh4_whitestool_062",
+      "combatEnabled": false,
+      "facing": -1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          325.31292317090447,
+          331.00740208621534,
+          395.1278274876609,
+          430.4407506585654
+        ],
+        "visible": [
+          325.75367382946985,
+          331.36000261306765,
+          394.24632617053015,
+          430
+        ],
+        "pixelScale": 0.0881501317130763,
+        "anchor": [
+          0.4996012759170654,
+          0.9457735247208932
+        ],
+        "bodyHeight": 0.8923444976076556,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+        "args": [
+          -61.36228775692583,
+          -116.16228775692583,
+          122.82252010723862,
+          122.82252010723862
+        ],
+        "matrix": [
+          -0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "sh3_glutton-reference-right.png",
+      "sha256": "de4c2a632380e75d4a31d786ebfc860f4889aa56fd8d65cb5502ec0afad5af0b",
+      "bytes": 107313,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh3_glutton",
+      "combatEnabled": false,
+      "facing": 1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          276.9328472584088,
+          154.25130739389311,
+          443.8011776553608,
+          430.7340249137696
+        ],
+        "visible": [
+          277.42219720092186,
+          155.23000727891923,
+          442.57780279907814,
+          430
+        ],
+        "pixelScale": 0.24467497125652785,
+        "anchor": [
+          0.4964114832535885,
+          0.94896331738437
+        ],
+        "bodyHeight": 0.8955342902711324,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh3_glutton.13d4153c810d.png",
+        "args": [
+          -169.23352626892253,
+          -323.51469278717724,
+          340.9138023152271,
+          340.9138023152271
+        ],
+        "matrix": [
+          0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "sh3_glutton-reference-left.png",
+      "sha256": "d25f51f6b4e65ab73d64270b2debe692ad117f2c2470f05aee446345e8f43deb",
+      "bytes": 107335,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh3_glutton",
+      "combatEnabled": false,
+      "facing": -1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          276.1988223446392,
+          154.25130739389311,
+          443.0671527415912,
+          430.7340249137696
+        ],
+        "visible": [
+          277.42219720092186,
+          155.23000727891923,
+          442.57780279907814,
+          430
+        ],
+        "pixelScale": 0.24467497125652785,
+        "anchor": [
+          0.4964114832535885,
+          0.94896331738437
+        ],
+        "bodyHeight": 0.8955342902711324,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh3_glutton.13d4153c810d.png",
+        "args": [
+          -169.23352626892253,
+          -323.51469278717724,
+          340.9138023152271,
+          340.9138023152271
+        ],
+        "matrix": [
+          -0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+      "sha256": "a40c72b3344f3e66bc1b144a4823a30a783fffa7a2614510afd33459b42ed001",
+      "bytes": 1596643,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "e6ad973585017c9790440b8fd27efdc2287ee3fd74fc10981cda54e5bd13a6f5",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
+      "sha256": "4bcd7d35af777977f58a74377d74a3d3f861213b008e1179b3a2e825225fa021",
+      "bytes": 1167472,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "e9698327c9f00de9501fec33b300a003e8a4d89182fc99008bee78efb254f11c",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh4_toadstool_061.c420453d2412.png",
+      "sha256": "c420453d24121dc076747d818aa0406db6861d7221afec6ca8632c847240a035",
+      "bytes": 1070813,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "60e4645b49e8cb3a3a2f147d218ed3877b6efcb5326eeee8a774a77a34469dde",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "sha256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+      "bytes": 1806980,
+      "width": 1031,
+      "height": 1525,
+      "rawRGBAHash": "2ea8a0c9166e2bd60b998131dc0d04e0e9819d0263c43e5b2a92fe17b03cf7c6",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+      "sha256": "0b358ca3be803594ecaa3402cdde51423a89f64a3232227926431498ba67ffe8",
+      "bytes": 1682872,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "fddd871fb02ec54732ada5b31e0b2167fe39a433936193d2ed7eafa8fbdd2dd2",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+      "sha256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+      "bytes": 2296027,
+      "width": 1040,
+      "height": 1512,
+      "rawRGBAHash": "347ecd06d8b597658bcbf27962a50c73ccccfd9bca0874751d19cfbe43c32d3e",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh3_glutton.13d4153c810d.png",
+      "sha256": "13d4153c810d71779beac6a0c7b3a6cbefbd73f18dde89af6a96b77155dfc07d",
+      "bytes": 1497938,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "47840fd63f1c427e940e31c5d06998460661d53e9386bf82f4806ee9066354f9",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh3_glutton.90c14e5d4c7d.png",
+      "sha256": "90c14e5d4c7d390beedd4794d7e5b29cc03afed3d3f8f9864665f8da78cf2589",
+      "bytes": 1572464,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "8de4d019452f57befd45872d0a5cf12afb89795c2a7363c1712427d808c0125b",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "bytes": 1181785,
+      "width": 2172,
+      "height": 724,
+      "rawRGBAHash": "28b59b2a1bb4f2e01c42a53ce514d38088004343a42db9d7658d97fbe9a05d81",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "sha256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
+      "bytes": 633182,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "06040a0bb0a2553bb69d76447f823b29d7f8d4a71906f379fef759fcbf23946f",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+      "sha256": "5ae0d389b5c51d2c567e6cb9b8c8291541ce05b71da925d4a27c990b353271f6",
+      "bytes": 2613099,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "5eb5acd36bb0b6bc058e1092e960528914aefc5cd7ea76bd1a22b728e75f04df",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "sha256": "2f663e35be1ca7edba101cb790bc78fcb09485e57e627ffa7420e3cd784a098a",
+      "bytes": 461573,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "881b71d0c995809abb1363892052d5e8c7ededc1b302d0162a25ec10164f908c",
+      "adapterLossless": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "sh4_greedy_worm_069",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "role": "noncombatant",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": false,
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "referenceIds": [
+        "CL_GREEDY",
+        "EXT_SH4_ODDITIES_20261023"
+      ],
+      "observedBasis": "Transit : Créature tubulaire visible près des tourniquets du métro ; un segment apparaît aussi en mouvement vertical dans la zone de la roue à eau B2 au second passage de Water Prison. Réaction : Créature attaquable mais non tuable selon le relevé de curiosités ; la contraction à l’impact reste à confirmer par capture.",
+      "superEnabled": false,
+      "superReason": "Le rôle documenté ne permet pas un kit de combat autonome.",
+      "superName": "Super proposé — Greedy Worm",
+      "superDescription": "Aucune super offensive en fidélité stricte.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    },
+    {
+      "id": "sh4_toadstool_061",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "role": "environmental-obstacle",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": false,
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "referenceIds": [
+        "CL_SH4_04_WATER_PRISON_WORLD",
+        "CL_SH4_ENEMIES"
+      ],
+      "observedBasis": "Contact : Blesse au contact ; reste passif.",
+      "superEnabled": false,
+      "superReason": "Le rôle documenté ne permet pas un kit de combat autonome.",
+      "superName": "Super proposé — Toadstool",
+      "superDescription": "Aucun super actif ; zone de contact environnementale seulement.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    },
+    {
+      "id": "sh4_whitestool_062",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "role": "environmental-obstacle",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": false,
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "referenceIds": [
+        "CL_SH4_ENEMIES"
+      ],
+      "observedBasis": "Contact : Se détruit en blessant au contact.",
+      "superEnabled": false,
+      "superReason": "Le rôle documenté ne permet pas un kit de combat autonome.",
+      "superName": "Super proposé — Whitestool",
+      "superDescription": "Variante à réaliser avec son apparence propre. Aucun super actif ; zone de contact environnementale seulement.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    },
+    {
+      "id": "sh3_glutton",
+      "source": "sh3",
+      "edition": "SH3 original 2003",
+      "role": "environmental-obstacle",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": false,
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "referenceIds": [
+        "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER",
+        "CL_SH3_CREATURES"
+      ],
+      "observedBasis": "Blocage : Obstrue le passage. Rituel : Disparaît après la formule du conte.",
+      "superEnabled": false,
+      "superReason": "Le rôle documenté ne permet pas un kit de combat autonome.",
+      "superName": "Super proposé — Glutton",
+      "superDescription": "Pas de super offensive en mode fidèle ; changement de passage uniquement.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    },
+    {
+      "id": "sh2_creeper_025",
+      "source": "sh2",
+      "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+      "role": "combatant",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": true,
+      "canMove": true,
+      "canJump": false,
+      "canDodge": true,
+      "referenceIds": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "observedBasis": "Morsure : Court vers le pied et mord.",
+      "superEnabled": true,
+      "superReason": "",
+      "superName": "Super proposé — Creeper",
+      "superDescription": "Variante à réaliser avec son apparence propre. Angle de cheville : deux changements de direction puis morsure ; pas de bond humain.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "258127cd42f7cdf96792779e5aea16d156a6d15a18fd8d399d469b5749b66db7",
+      "after": "258127cd42f7cdf96792779e5aea16d156a6d15a18fd8d399d469b5749b66db7"
+    },
+    "src/sprite-manifest.js": {
+      "before": "2818aa1b6d4217bf872413f8da19c9c1cf7385a00d103bc8924441dbc7bc517d",
+      "after": "2818aa1b6d4217bf872413f8da19c9c1cf7385a00d103bc8924441dbc7bc517d"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "12f6ea793dc9a5acd7f1efe081046d6c97f575ef24783c2f59e1024f742f1f18",
+      "after": "12f6ea793dc9a5acd7f1efe081046d6c97f575ef24783c2f59e1024f742f1f18"
+    },
+    "src/fight.js": {
+      "before": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "after": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a"
+    },
+    "src/sprite-system.js": {
+      "before": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+      "after": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "rendererPreviews": [
+    {
+      "id": "sh4_greedy_worm_069",
+      "facing": 1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -61.83868169991326,
+        "y": -120.18647007805723,
+        "width": 125.07372072853424,
+        "height": 125.07372072853424,
+        "flip": 1,
+        "localX": -61.83868169991326,
+        "localY": -120.18647007805723,
+        "scale": 0.09973980919340848
+      },
+      "capture": "sh4_greedy_worm_069-reference-right.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "sh4_greedy_worm_069",
+      "facing": -1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -63.23503902862098,
+        "y": -120.18647007805723,
+        "width": 125.07372072853424,
+        "height": 125.07372072853424,
+        "flip": -1,
+        "localX": -61.83868169991326,
+        "localY": -120.18647007805723,
+        "scale": 0.09973980919340848
+      },
+      "capture": "sh4_greedy_worm_069-reference-left.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "sh4_toadstool_061",
+      "facing": 1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh4_toadstool_061.c420453d2412.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -61.11560283687944,
+        "y": -116.0127659574468,
+        "width": 121.84255319148936,
+        "height": 121.84255319148936,
+        "flip": 1,
+        "localX": -61.11560283687944,
+        "localY": -116.0127659574468,
+        "scale": 0.09716312056737589
+      },
+      "capture": "sh4_toadstool_061-reference-right.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "sh4_toadstool_061",
+      "facing": -1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh4_toadstool_061.c420453d2412.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -60.72695035460992,
+        "y": -116.0127659574468,
+        "width": 121.84255319148936,
+        "height": 121.84255319148936,
+        "flip": -1,
+        "localX": -61.11560283687944,
+        "localY": -116.0127659574468,
+        "scale": 0.09716312056737589
+      },
+      "capture": "sh4_toadstool_061-reference-left.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "sh4_whitestool_062",
+      "facing": 1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -61.36228775692583,
+        "y": -116.16228775692583,
+        "width": 122.82252010723862,
+        "height": 122.82252010723862,
+        "flip": 1,
+        "localX": -61.36228775692583,
+        "localY": -116.16228775692583,
+        "scale": 0.09794459338695265
+      },
+      "capture": "sh4_whitestool_062-reference-right.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "sh4_whitestool_062",
+      "facing": -1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -61.460232350312786,
+        "y": -116.16228775692583,
+        "width": 122.82252010723862,
+        "height": 122.82252010723862,
+        "flip": -1,
+        "localX": -61.36228775692583,
+        "localY": -116.16228775692583,
+        "scale": 0.09794459338695265
+      },
+      "capture": "sh4_whitestool_062-reference-left.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "sh3_glutton",
+      "facing": 1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh3_glutton.13d4153c810d.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -169.23352626892253,
+        "y": -323.51469278717724,
+        "width": 340.9138023152271,
+        "height": 340.9138023152271,
+        "flip": 1,
+        "localX": -169.23352626892253,
+        "localY": -323.51469278717724,
+        "scale": 0.27186108637577916
+      },
+      "capture": "sh3_glutton-reference-right.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "sh3_glutton",
+      "facing": -1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh3_glutton.13d4153c810d.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -171.68027604630456,
+        "y": -323.51469278717724,
+        "width": 340.9138023152271,
+        "height": 340.9138023152271,
+        "flip": -1,
+        "localX": -169.23352626892253,
+        "localY": -323.51469278717724,
+        "scale": 0.27186108637577916
+      },
+      "capture": "sh3_glutton-reference-left.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    }
+  ],
+  "method": {
+    "engine": "Actual FightEngine.update/render; native Canvas drawImage observed after executing its real draw.",
+    "inputs": "Only original InputState keydown/keyup callbacks receive synthetic events. No held/pressed sets or actor positions, facing, health, phase, clocks or attack objects are assigned.",
+    "oppositeSides": "Separate ordinary local duels put each controlled fighter in the real player1 or player2 spawn. No teleport, actor swap or pose injection.",
+    "decoder": "Exact source bytes verified. Sharp normalizes PNG encoding only in memory for native decoding; all decoded RGBA bytes compared.",
+    "rolePolicy": "Only existing combat-enabled profiles enter duels. Other roles receive native workshop-renderer views only; no role or permission is changed."
+  },
+  "limits": [
+    "Native Canvas is not Chromium; DOM/CSS, actual browser keyboard delivery, HTTP, service worker and CI browser behavior are not tested.",
+    "Timing and mirrored left views are authored versus presentation; no original film/game animation timing or 1:1 fidelity is certified.",
+    "These wave23 candidates are exercised through idle, permitted static-frame movement or stationary-input rejection, and release-to-idle; no attack/contact/guard/finisher matrix is exercised.",
+    "Skull/torso size, foot contacts and limb identity still require visual review of the native captures."
+  ],
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "e97e85cbf40d60a357073384d8c9e4e91166490ead0b9639e3a5aad8d7eb88d9",
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "sh4_greedy_worm_069": "5b489ec038309210cfd94789357eaf09db2c90c75251f4663e31f29c14802ab4",
+    "sh4_toadstool_061": "9e129bcd137bb25fcb3fe9ce4bc6960e8d59966baec815a71a8701e31dfd66df",
+    "sh4_whitestool_062": "595b1a4709a43d3bb49d07117d96108e646dd6e537bfe7033758f9521291770f",
+    "sh3_glutton": "9c645243071ebf02e4995c1bcb740f3e46ffc45ae120f2846a65a91e72d6b04e",
+    "sh2_creeper_025": "c406619e7c5636e3c5e7b9a8df6bae2657010793de09126704e368cb01feb47a"
+  },
+  "testedStageEntryHashes": {
+    "brookhaven_sh2": "0524e8b6747187c5452d9febf7fd78220a922e21801bb8cc7f685bb666596ff7"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "combatIds": [],
+  "referenceOnlyIds": [
+    "sh4_greedy_worm_069",
+    "sh4_toadstool_061",
+    "sh4_whitestool_062",
+    "sh3_glutton"
+  ],
+  "passed": true,
+  "completedAt": "2026-11-19T20:02:42.697Z"
+}

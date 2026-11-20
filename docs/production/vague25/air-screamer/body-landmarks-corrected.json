@@ -1,0 +1,95 @@
+{
+  "method": "Same anatomical landmarks at alpha>=96 inside fixed manually reviewed head and foot regions; no image modification. Skull and feet are outline landmarks, not wing extents. Common renderer anchor/scale will remain identical for all three frames. Corrected frame2 measured with the same regions and threshold; rows0/1 unchanged. One common anchorY=.745 is used for all three images; only rendering metadata changes, never native pixels.",
+  "landmarks": [
+    {
+      "frameIndex": 0,
+      "pixels": {
+        "beakTip": [
+          1490.0,
+          592.5
+        ],
+        "skullCrest": [
+          1164.0,
+          477.0
+        ],
+        "nearFootEnd": [
+          721.5,
+          742.0
+        ],
+        "farFootEnd": [
+          758.0,
+          751.0
+        ]
+      },
+      "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
+      "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-neutral.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "frameIndex": 1,
+      "pixels": {
+        "beakTip": [
+          1489.0,
+          592.0
+        ],
+        "skullCrest": [
+          1165.0,
+          477.0
+        ],
+        "nearFootEnd": [
+          723.0,
+          741.0
+        ],
+        "farFootEnd": [
+          758.5,
+          751.0
+        ]
+      },
+      "sha256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4",
+      "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-up.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "frameIndex": 2,
+      "pixels": {
+        "beakTip": [
+          1489.0,
+          593.0
+        ],
+        "skullCrest": [
+          1163.0,
+          476.0
+        ],
+        "nearFootEnd": [
+          724.0,
+          741.0
+        ],
+        "farFootEnd": [
+          758.0,
+          751.0
+        ]
+      },
+      "sha256": "88d752b48e9fa4aa0104527a898c14fe7f44d5eee1f8e74262b668a65e1973ac",
+      "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-down.corrected.png",
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "headAlphaMaskIoUAgainstNeutral": {
+    "1": 0.9905031598577201,
+    "2": 0.9640387275242047
+  },
+  "calibration": {
+    "anchor": [
+      0.51,
+      0.745
+    ],
+    "bodyHeight": 0.42
+  },
+  "supersedes": {
+    "file": "body-landmarks.json",
+    "sha256": "de6f7240fe8d306c58db8f76aa426168e5f0d5b334bc03e7e3b3226c544cf68d"
+  }
+}

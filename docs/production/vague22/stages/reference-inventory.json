@@ -1,0 +1,868 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-19T16:09:28.333870+00:00",
+  "scope": "Only relevant native raster views for the ten retained stages",
+  "references": [
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_ticket_machine_newspaper_a.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh3_04_ticket_machine_newspaper_a.jpg",
+      "sha256": "959f095746335bb361c39f8e589fef7ad3e22cdc6aa94244909726d016d94ca3",
+      "bytes": 399007,
+      "width": 1920,
+      "height": 1080,
+      "publicationPath": "references/sh3_04_ticket_machine_newspaper_a.jpg",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_map_location.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh3_05_underpass_map_location.jpg",
+      "sha256": "862b033ebff2c4fb3221219482645320385d075439ab1a28ce32e67e95e5ee80",
+      "bytes": 330347,
+      "width": 1920,
+      "height": 1080,
+      "publicationPath": "references/sh3_05_underpass_map_location.jpg",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_maul_a.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh3_05_maul_a.jpg",
+      "sha256": "00712ebbaf4008b618e8cdb84f51f7fe9ab9ae6e01760f054928118cc59ed244",
+      "bytes": 357274,
+      "width": 1920,
+      "height": 1080,
+      "publicationPath": "references/sh3_05_maul_a.jpg",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_flame_purifies_all_a.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh3_08_flame_purifies_all_a.jpg",
+      "sha256": "9149978705cf42ee5d2a3a1168c48faffae6e58a9bfa89da6e21917aec827595",
+      "bytes": 615608,
+      "width": 1920,
+      "height": 1080,
+      "publicationPath": "references/sh3_08_flame_purifies_all_a.jpg",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh4/puzzles/pics/sh4_removing_room_105's_chains_01.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh4_removing_room_105's_chains_01.jpg",
+      "sha256": "eba54c6ad18a2466ce68e2acc2b302c8b3971354f2e3942591edc93f91dbc25a",
+      "bytes": 566452,
+      "width": 1920,
+      "height": 1080,
+      "publicationPath": "references/sh4_removing_room_105's_chains_01.jpg",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://ptgmedia.pearsoncmg.com/images/9780744010435/samplepages/1043-5_silent_hill.pdf#page=8",
+      "path": "/workspace/scratch/halo-wave22-stages/references/homecoming-native-hospital-gate2a.png",
+      "sha256": "0670a3ebc44f7fc6806660ce7f3982f789be3c4f091ecbd7251415c2afb10d70",
+      "bytes": 62524,
+      "width": 240,
+      "height": 135,
+      "extraction": "embedded raster decoded from PDF CMYK into RGB lossless PNG; no geometry/crop edit",
+      "pdfSHA256": "f01865db7cd59a274ed0efac5eb80f5f76f89441de049e7a1116b2818e5aa82f",
+      "embeddedRasterSHA256": "0670a3ebc44f7fc6806660ce7f3982f789be3c4f091ecbd7251415c2afb10d70",
+      "xref": 634,
+      "pdfPage": 8,
+      "printedPage": 29,
+      "publicationPath": "references/homecoming-native-hospital-gate2a.png",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/pics/sh1_boss_floatstinger_moth.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh1_boss_floatstinger_moth.jpg",
+      "bytes": 102262,
+      "sha256": "ba4f7b2dee3f032716c9a4c30b695a974438a79f5a7ef2d3f6c59783f13aa407",
+      "width": 1048,
+      "height": 789,
+      "publicationPath": "references/sh1_boss_floatstinger_moth.jpg",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/sh1_15_generator_room.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/sh1_15_generator_room.jpg",
+      "bytes": 59356,
+      "sha256": "8c0231483c1c5ed90dd6d415296946f812d97f5e93cfc39ba0bde0e7c61fb3d1",
+      "width": 600,
+      "height": 450,
+      "publicationPath": "references/sh1_15_generator_room.jpg",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh_the_short_message/walkthrough/shtsm_chapter_1_06.jpg",
+      "path": "/workspace/scratch/halo-wave22-stages/references/shtsm_chapter_1_06.jpg",
+      "sha256": "d215634c7db07e55ee69e76cb4665f168b2ed446aee2fbf9c50096a9101539f4",
+      "bytes": 73954,
+      "width": 800,
+      "height": 450,
+      "publicationPath": "references/shtsm_chapter_1_06.jpg",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2Ekz2eUCIbU",
+      "path": "/workspace/scratch/halo-wave22-stages/references/shsm-psp-er-iced-exit.png",
+      "sha256": "3375da65ba9d12706289b573b2f3807148b90f20236bf1cafa4cacfef41f94f0",
+      "bytes": 51563,
+      "width": 318,
+      "height": 180,
+      "edition": "PlayStation Portable US, released Jan19 2010; uploader states platform",
+      "sourceSheetURL": "https://i.ytimg.com/sb/2Ekz2eUCIbU/storyboard3_L3/M61.jpg?sqp=-oaymwENSDfyq4qpAwVwAcABBqLzl_8DBgiok4vNBg==&sigh=rs$AOn4CLDt8DzAaMiIoD_g99LbFAGcAEGtAQ",
+      "sourceSheetSHA256": "f97aed371e071320a7ee0fe00a08a4b01a33b83f3df9c98803b37c63bb199bea",
+      "sourceSheetFilename": "shsm-psp-native-hospital-M61.jpg",
+      "nativeCellRectXYWH": [
+        0,
+        0,
+        318,
+        180
+      ],
+      "approximateVideoSeconds": 5481.891398783663,
+      "extraction": "ffmpeg JPEG decode + native cell extraction to lossless RGB PNG; no resampling, repaint or generated reference",
+      "extractionFilter": "crop=318:180:0:0",
+      "note": "Source sheets were inspected and supplied to imagegen; delivery includes only the three relevant native room views, sheets retained as working sources.",
+      "publicationPath": "references/shsm-psp-er-iced-exit.png",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2Ekz2eUCIbU",
+      "path": "/workspace/scratch/halo-wave22-stages/references/shsm-psp-er-exit-close.png",
+      "sha256": "2d37c35fc6d9f7e88de1818ffc8fd14474477f66571836d0f450248011b7bf16",
+      "bytes": 55920,
+      "width": 318,
+      "height": 180,
+      "edition": "PlayStation Portable US, released Jan19 2010; uploader states platform",
+      "sourceSheetURL": "https://i.ytimg.com/sb/2Ekz2eUCIbU/storyboard3_L3/M61.jpg?sqp=-oaymwENSDfyq4qpAwVwAcABBqLzl_8DBgiok4vNBg==&sigh=rs$AOn4CLDt8DzAaMiIoD_g99LbFAGcAEGtAQ",
+      "sourceSheetSHA256": "f97aed371e071320a7ee0fe00a08a4b01a33b83f3df9c98803b37c63bb199bea",
+      "sourceSheetFilename": "shsm-psp-native-hospital-M61.jpg",
+      "nativeCellRectXYWH": [
+        636,
+        180,
+        318,
+        180
+      ],
+      "approximateVideoSeconds": 5531.817549956556,
+      "extraction": "ffmpeg JPEG decode + native cell extraction to lossless RGB PNG; no resampling, repaint or generated reference",
+      "extractionFilter": "crop=318:180:636:180",
+      "note": "Source sheets were inspected and supplied to imagegen; delivery includes only the three relevant native room views, sheets retained as working sources.",
+      "publicationPath": "references/shsm-psp-er-exit-close.png",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2Ekz2eUCIbU",
+      "path": "/workspace/scratch/halo-wave22-stages/references/shsm-psp-er-bed.png",
+      "sha256": "11a6bbc1e34328bede2d237272dcd652d4d0bc6ec36b22b462e68f3f6645db23",
+      "bytes": 59125,
+      "width": 318,
+      "height": 180,
+      "edition": "PlayStation Portable US, released Jan19 2010; uploader states platform",
+      "sourceSheetURL": "https://i.ytimg.com/sb/2Ekz2eUCIbU/storyboard3_L3/M60.jpg?sqp=-oaymwENSDfyq4qpAwVwAcABBqLzl_8DBgiok4vNBg==&sigh=rs$AOn4CLDt8DzAaMiIoD_g99LbFAGcAEGtAQ",
+      "sourceSheetSHA256": "6475c8ef5f8b11e06a6dcd520f6d5a98d355f0ad9c794b5424314b36ef586933",
+      "sourceSheetFilename": "shsm-psp-native-hospital-M60.jpg",
+      "nativeCellRectXYWH": [
+        636,
+        360,
+        318,
+        180
+      ],
+      "approximateVideoSeconds": 5471.906168549084,
+      "extraction": "ffmpeg JPEG decode + native cell extraction to lossless RGB PNG; no resampling, repaint or generated reference",
+      "extractionFilter": "crop=318:180:636:360",
+      "note": "Source sheets were inspected and supplied to imagegen; delivery includes only the three relevant native room views, sheets retained as working sources.",
+      "publicationPath": "references/shsm-psp-er-bed.png",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf#page=21",
+      "path": "/workspace/scratch/halo-wave22-stages/references/origins-elevator-kaufmann-close.png",
+      "sha256": "eba649eea571f7fa40e3cca964be9e8e3bca672229fa460bb185627f6d6a7364",
+      "bytes": 62084,
+      "width": 288,
+      "height": 144,
+      "pdfSHA256": "f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80",
+      "pdfPage": 21,
+      "printedPage": 20,
+      "parentRasterFilename": "origins-native-page-021.jpg",
+      "parentRasterSHA256": "1f60f93440685381fb1310c205f1e30fadabf2b1dae09fbfc8b6d2b28921ef65",
+      "nativeCellRectXYWH": [
+        838,
+        538,
+        288,
+        144
+      ],
+      "extraction": "Native relevant screenshot rectangle from the original embedded JPEG; JPEG decoded to PNG without resampling, repaint or enhanced detail.",
+      "generationReferenceNote": "Full embedded page raster was inspected and supplied to imagegen. Final publication inventory retains only the relevant native screenshot excerpts; the full PDF and page remain working sources.",
+      "extractionFilter": "format=rgb24,crop=288:144:838:538:exact=1",
+      "publicationPath": "references/origins-elevator-kaufmann-close.png",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf#page=21",
+      "path": "/workspace/scratch/halo-wave22-stages/references/origins-elevator-kaufmann-wide.png",
+      "sha256": "02df125dc1a6e98c711cdb27595b1d4cd96a273b678c1844ff0259c539a3a4ab",
+      "bytes": 129404,
+      "width": 424,
+      "height": 205,
+      "pdfSHA256": "f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80",
+      "pdfPage": 21,
+      "printedPage": 20,
+      "parentRasterFilename": "origins-native-page-021.jpg",
+      "parentRasterSHA256": "1f60f93440685381fb1310c205f1e30fadabf2b1dae09fbfc8b6d2b28921ef65",
+      "nativeCellRectXYWH": [
+        699,
+        763,
+        424,
+        205
+      ],
+      "extraction": "Native relevant screenshot rectangle from the original embedded JPEG; JPEG decoded to PNG without resampling, repaint or enhanced detail.",
+      "generationReferenceNote": "Full embedded page raster was inspected and supplied to imagegen. Final publication inventory retains only the relevant native screenshot excerpts; the full PDF and page remain working sources.",
+      "extractionFilter": "format=rgb24,crop=424:205:699:763:exact=1",
+      "publicationPath": "references/origins-elevator-kaufmann-wide.png",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf#page=21",
+      "path": "/workspace/scratch/halo-wave22-stages/references/origins-elevator-landing.png",
+      "sha256": "095fe04195a1be75bceb34dddb42effa13a08d5a55f4ac5194f7a54833d61352",
+      "bytes": 95407,
+      "width": 433,
+      "height": 215,
+      "pdfSHA256": "f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80",
+      "pdfPage": 21,
+      "printedPage": 20,
+      "parentRasterFilename": "origins-native-page-021.jpg",
+      "parentRasterSHA256": "1f60f93440685381fb1310c205f1e30fadabf2b1dae09fbfc8b6d2b28921ef65",
+      "nativeCellRectXYWH": [
+        220,
+        1216,
+        433,
+        215
+      ],
+      "extraction": "Native relevant screenshot rectangle from the original embedded JPEG; JPEG decoded to PNG without resampling, repaint or enhanced detail.",
+      "generationReferenceNote": "Full embedded page raster was inspected and supplied to imagegen. Final publication inventory retains only the relevant native screenshot excerpts; the full PDF and page remain working sources.",
+      "extractionFilter": "format=rgb24,crop=433:215:220:1216:exact=1",
+      "publicationPath": "references/origins-elevator-landing.png",
+      "visualInspection": "completed; source or relevant source excerpt opened with view_image"
+    }
+  ],
+  "totals": {
+    "files": 15,
+    "bytes": 3020287
+  },
+  "sourceGuides": [
+    {
+      "stageId": "hazel_subway",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_04_subway_station_en.htm",
+      "sha256": "ca260b77d36f158cdd6d656aa582728724f39301f3002a893d4b3bd9c7899e6d",
+      "bytes": 30281,
+      "images": [
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_ticket_machine_newspaper_a.jpg",
+          "heading": "To the Concourse",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_ticket_machine_newspaper_a.jpg",
+          "heading": "To the Concourse",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_ticket_machine_newspaper_b.jpg",
+          "heading": "To the Concourse",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_ticket_machine_newspaper_b.jpg",
+          "heading": "To the Concourse",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_subway_station_map_location.jpg",
+          "heading": "To the Concourse",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_subway_station_map_location.jpg",
+          "heading": "To the Concourse",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_occult_magazine_a.jpg",
+          "heading": "Platform 4",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_occult_magazine_a.jpg",
+          "heading": "Platform 4",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_occult_magazine_b.jpg",
+          "heading": "Platform 4",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_occult_magazine_b.jpg",
+          "heading": "Platform 4",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_subway_station_save_point_a.jpg",
+          "heading": "Connecting Hallways",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_subway_station_save_point_a.jpg",
+          "heading": "Connecting Hallways",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_subway_station_save_point_b.jpg",
+          "heading": "Connecting Hallways",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_subway_station_save_point_b.jpg",
+          "heading": "Connecting Hallways",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_platform_2_locked_gate.jpg",
+          "heading": "Connecting Hallways",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_platform_2_locked_gate.jpg",
+          "heading": "Connecting Hallways",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_nutcracker_a.jpg",
+          "heading": "Platform 1/2 North",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_nutcracker_a.jpg",
+          "heading": "Platform 1/2 North",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_nutcracker_b.jpg",
+          "heading": "Platform 1/2 North",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_nutcracker_b.jpg",
+          "heading": "Platform 1/2 North",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_shotgun_a.jpg",
+          "heading": "Platform 2 South",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_shotgun_a.jpg",
+          "heading": "Platform 2 South",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_shotgun_b.jpg",
+          "heading": "Platform 2 South",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_shotgun_b.jpg",
+          "heading": "Platform 2 South",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_platform_3_red_glowing_door.jpg",
+          "heading": "Platform 3 East",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_platform_3_red_glowing_door.jpg",
+          "heading": "Platform 3 East",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_moving_subway_train_save_point.jpg",
+          "heading": "Moving Subway Train",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_moving_subway_train_save_point.jpg",
+          "heading": "Moving Subway Train",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_04_unknown_platform_save_point.jpg",
+          "heading": "Unknown Platform",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_04_unknown_platform_save_point.jpg",
+          "heading": "Unknown Platform",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "stageId": "underpass_sh3",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_05_underpass_en.htm",
+      "sha256": "f8373c0438dfb58430552e2ce56c4838c8be188e34c65134d3e4608ce3e42ca0",
+      "bytes": 30277,
+      "images": [
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_map_location.jpg",
+          "heading": "Map Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_underpass_map_location.jpg",
+          "heading": "Map Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_maul_a.jpg",
+          "heading": "Map Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_maul_a.jpg",
+          "heading": "Map Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_maul_b.jpg",
+          "heading": "Map Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_maul_b.jpg",
+          "heading": "Map Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_wine_bottle_a.jpg",
+          "heading": "Southwest Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_wine_bottle_a.jpg",
+          "heading": "Southwest Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_wine_bottle_b.jpg",
+          "heading": "Southwest Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_wine_bottle_b.jpg",
+          "heading": "Southwest Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_oil-filled_bottle_a.jpg",
+          "heading": "Eastern Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_oil-filled_bottle_a.jpg",
+          "heading": "Eastern Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_oil-filled_bottle_b.jpg",
+          "heading": "Eastern Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_oil-filled_bottle_b.jpg",
+          "heading": "Eastern Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_01.jpg",
+          "heading": "Eastern Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_underpass_01.jpg",
+          "heading": "Eastern Corridor",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_dryer_a.jpg",
+          "heading": "Garbage Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_dryer_a.jpg",
+          "heading": "Garbage Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_dryer_b.jpg",
+          "heading": "Garbage Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_dryer_b.jpg",
+          "heading": "Garbage Room",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_about_the_monster_in_the_water_a.jpg",
+          "heading": "Lower Level East",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_about_the_monster_in_the_water_a.jpg",
+          "heading": "Lower Level East",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_about_the_monster_in_the_water_b.jpg",
+          "heading": "Lower Level East",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_about_the_monster_in_the_water_b.jpg",
+          "heading": "Lower Level East",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_underpass_02.jpg",
+          "heading": "Bloody Walkway: Monster or Myth?",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_underpass_02.jpg",
+          "heading": "Bloody Walkway: Monster or Myth?",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_extra_weapon_gold_silver_pipes.jpg",
+          "heading": "Extra New Game Weapons: Gold Pipe and Silver Pipe",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_extra_weapon_gold_silver_pipes.jpg",
+          "heading": "Extra New Game Weapons: Gold Pipe and Silver Pipe",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_extra_weapon_gold_silver_pipes_lady.jpg",
+          "heading": "Extra New Game Weapons: Gold Pipe and Silver Pipe",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_05_construction_site_save_point.jpg",
+          "heading": "Outside",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_05_construction_site_save_point.jpg",
+          "heading": "Outside",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "stageId": "nightmare_hilltop",
+      "url": "https://www.silenthillmemories.net/sh3/walkthrough_08_nightmare_hilltop_center_en.htm",
+      "sha256": "674e25a1a68769c526300bfe449cd76e0a1e78d412d5d4aea8a6e0050de8c3f9",
+      "bytes": 31537,
+      "images": [
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_photo_on_chair_a.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_photo_on_chair_a.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_photo_on_chair_b.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_photo_on_chair_b.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_oxydol_a.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_oxydol_a.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_oxydol_b.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_oxydol_b.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_junior_high_school_chemistry_book_a.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_junior_high_school_chemistry_book_a.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_junior_high_school_chemistry_book_b.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_junior_high_school_chemistry_book_b.jpg",
+          "heading": "Second Floor: Green Ridge Mental Health Clinic",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_glutton.jpg",
+          "heading": "First Floor Hallway",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_glutton.jpg",
+          "heading": "First Floor Hallway",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_pork_liver_a.jpg",
+          "heading": "First Floor: Last Drop Cafe",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_pork_liver_a.jpg",
+          "heading": "First Floor: Last Drop Cafe",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_pork_liver_b.jpg",
+          "heading": "First Floor: Last Drop Cafe",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_pork_liver_b.jpg",
+          "heading": "First Floor: Last Drop Cafe",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_matchbook_a.jpg",
+          "heading": "Fifth Floor: KMN Auto Parts",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_matchbook_a.jpg",
+          "heading": "Fifth Floor: KMN Auto Parts",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_matchbook_b.jpg",
+          "heading": "Fifth Floor: KMN Auto Parts",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_matchbook_b.jpg",
+          "heading": "Fifth Floor: KMN Auto Parts",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_wheelchair_behind_glass.jpg",
+          "heading": "Fifth Floor: KMN Auto Parts",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_wheelchair_behind_glass.jpg",
+          "heading": "Fifth Floor: KMN Auto Parts",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_flame_purifies_all_a.jpg",
+          "heading": "Fifth Floor: Gallery of Fine Arts",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_flame_purifies_all_a.jpg",
+          "heading": "Fifth Floor: Gallery of Fine Arts",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_fairy_tale_continued_a.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_fairy_tale_continued_a.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_fairy_tale_continued_b.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_fairy_tale_continued_b.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_silver_coin_a.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_silver_coin_a.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_silver_coin_b.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_silver_coin_b.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_life_insurance_key_a.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_life_insurance_key_a.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_life_insurance_key_b.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_life_insurance_key_b.jpg",
+          "heading": "Fourth Floor: Onestop Imports",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_fairy_tale_last_part_a.jpg",
+          "heading": "First Floor: Elberton Life Insurance",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_fairy_tale_last_part_a.jpg",
+          "heading": "First Floor: Elberton Life Insurance",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_08_fairy_tale_last_part_b.jpg",
+          "heading": "First Floor: Elberton Life Insurance",
+          "alt": ""
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/thumbs/sh3_08_fairy_tale_last_part_b.jpg",
+          "heading": "First Floor: Elberton Life Insurance",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "id": "sh4_final",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough_13_outside_room_302_en.htm",
+      "sha256": "0b729cfbbd80fd7ec4bb8a1c0821d3779ccecb2b07ca7b4be8210f1d0d18c1fa",
+      "bytes": 44427
+    },
+    {
+      "id": "origins",
+      "url": "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+      "sha256": "3aa8bad9114902f0eb6a79dc25c29cbc750b7673750eba2ab572ac3e5be05b93",
+      "bytes": 37701
+    },
+    {
+      "id": "homecoming",
+      "url": "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+      "sha256": "fd69756beaf3bc3d4cb7e7e20cb25a5fcc93c858de6652465d52e2bc896a6da4",
+      "bytes": 111444
+    },
+    {
+      "id": "shortmessage",
+      "url": "https://www.silenthillmemories.net/sh_the_short_message/walkthrough_en.htm",
+      "sha256": "3c3c360a415f0459f5099b4bac3231a0a329bcf5c25072b708acc56a92771ef6",
+      "bytes": 38327
+    },
+    {
+      "id": "sh1_nowhere",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough_15_nowhere_en.htm",
+      "sha256": "b3ce089e5126a80fc09991565f343af17bb5c32fce36e6bf5b0875a620c0d594",
+      "bytes": 61026
+    },
+    {
+      "id": "sh1_central_nightmare",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough_09_nightmare_central_silent_hill_en.htm",
+      "sha256": "715b76c62ec683b42723b2f365b8e0ebf68a24c1bb86423579bd8bf52681ec6d",
+      "bytes": 31713
+    },
+    {
+      "id": "shsm_nightmare_hospital",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_08_nightmare_4_hospital_en.htm",
+      "sha256": "17762e5200fc0e005899dfc01440e4c72e3b57425bdf65a2557c03ea1816b597",
+      "bytes": 17192
+    }
+  ],
+  "workingArchivesNotForPublication": [
+    {
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf",
+      "sha256": "f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80",
+      "reason": "Full guide remains scratch work source; only the three relevant native elevator views are selected."
+    },
+    {
+      "url": "https://ptgmedia.pearsoncmg.com/images/9780744010435/samplepages/1043-5_silent_hill.pdf",
+      "sha256": "f01865db7cd59a274ed0efac5eb80f5f76f89441de049e7a1116b2818e5aa82f",
+      "reason": "Full sample guide remains work source; only native gate2A image selected."
+    },
+    {
+      "file": "origins-native-page-021.jpg",
+      "sha256": "1f60f93440685381fb1310c205f1e30fadabf2b1dae09fbfc8b6d2b28921ef65",
+      "replacementPublicationFiles": [
+        "origins-elevator-kaufmann-close.png",
+        "origins-elevator-kaufmann-wide.png",
+        "origins-elevator-landing.png"
+      ],
+      "reason": "Full embedded page was inspected and used as a generation reference; publication uses its three relevant screenshot excerpts with exact source rectangles."
+    },
+    {
+      "file": "shsm-psp-native-hospital-M60.jpg",
+      "sha256": "6475c8ef5f8b11e06a6dcd520f6d5a98d355f0ad9c794b5424314b36ef586933",
+      "reason": "Full native storyboard inspected and used as reference; only relevant ER bed cell selected for publication."
+    },
+    {
+      "file": "shsm-psp-native-hospital-M61.jpg",
+      "sha256": "f97aed371e071320a7ee0fe00a08a4b01a33b83f3df9c98803b37c63bb199bea",
+      "reason": "Full native storyboard inspected and used as reference; only two relevant iced-exit cells selected for publication."
+    }
+  ],
+  "exclusions": "Do not publish full PDF guides, full HTML pages, full YouTube metadata/formats, unrelated gallery screenshots, unused storyboards or the rejected generated draft.",
+  "referenceProcessing": "Native raster extraction or crop only; no resampling or generated source detail. This does not alter any production PNG."
+}

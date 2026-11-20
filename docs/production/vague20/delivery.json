@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "date": "2026-11-19",
+  "scope": "Missing stage bitmap compositions only",
+  "basePublishedCommit": "2db0c78284f681d641d439c62e1bd4487838677e",
+  "coverage": {
+    "totalStages": 123,
+    "beforeActive": 32,
+    "afterActive": 43,
+    "beforeMissing": 91,
+    "afterMissing": 80,
+    "remainingUnblocked": 65,
+    "remainingBlocked": 15,
+    "storedRoomCompositions": 45,
+    "referencedPNGCount": 84,
+    "activePNGCount": 82,
+    "historicalInactivePNGCount": 2,
+    "addedStageIds": [
+      "dark_shrine",
+      "school_shf",
+      "hinako_home",
+      "corrupted_ebisugaoka",
+      "hospital_world",
+      "artaud_theater",
+      "devils_pit",
+      "overlook",
+      "lakeside_sh3",
+      "nightmare_hospital_sh3",
+      "sewers"
+    ],
+    "addedPNGCount": 22
+  },
+  "assets": {
+    "addedPNGCount": 22,
+    "addedBytes": 29422837,
+    "nativeDimensions": [
+      "1671x941",
+      "1672x941"
+    ],
+    "sourcePixelsModified": false,
+    "newAnimatedClips": 0,
+    "newFidelityCertifications": 0
+  },
+  "verification": {
+    "nativeEngine": {
+      "passed": true,
+      "checks": 356,
+      "stages": 11,
+      "captures": 11,
+      "browser": false,
+      "http": false,
+      "actorStateInjected": false
+    },
+    "targetedNodeTests": {
+      "passed": 137,
+      "failed": 0,
+      "command": "node --test --test-concurrency=2 tests/stage-*.test.mjs tests/render-smoke.test.mjs"
+    },
+    "sourceBuildVerification": {
+      "passed": true,
+      "command": "node scripts/build.mjs --verify-only",
+      "distBuiltLocally": false
+    },
+    "stageScopeAndMemoryAudit": {
+      "passed": true,
+      "protectedFiles": 15,
+      "activeStagePairs": 946,
+      "allRoomPairs": 1035
+    },
+    "visualReview": {
+      "stages": 11,
+      "blockingDefects": 0,
+      "reports": [
+        "group-a/native-visual-review.json",
+        "group-b/native-visual-review.json",
+        "group-c/native-visual-review.json"
+      ]
+    }
+  },
+  "unchanged": {
+    "portraits": 204,
+    "lateralCombatCandidates": 135,
+    "legacyCombatViews": 58,
+    "missingPortraits": 26,
+    "missingCombatViews": 37,
+    "animatedClips": 6,
+    "productionWorkbook": "Byte-identical to wave19. The current 43-stage bitmap count is recorded only in this stage-specific report."
+  },
+  "deferred": [
+    {
+      "stageId": "nightmare_mall",
+      "reason": "Insufficient source view of the complete six-tunnel arena."
+    },
+    {
+      "stageId": "apartment_roof",
+      "reason": "No sufficiently legible source view of the complete rooftop."
+    },
+    {
+      "stageId": "shimizu_residence",
+      "reason": "Local Residence I contract conflicts with the inspected Residence II Yellowed Calendar dining source."
+    }
+  ],
+  "limitations": [
+    "Reconstructed candidates adapted for a side-view duel, with native image dimensions; no UHD or 1:1 certification.",
+    "Two static planes with runtime parallax are not an additional source animation.",
+    "Native Canvas QA does not verify Chromium, DOM, HTTP, service worker delivery, gameplay hazards or original animation timing.",
+    "The QA harness disables stage terrain; its neutral BÉTON SEC label is a capture configuration, not a finding about source floor materials.",
+    "New-commit GitHub Actions outcomes are checked separately after publication; base-commit success is not reused as current-pass success."
+  ]
+}

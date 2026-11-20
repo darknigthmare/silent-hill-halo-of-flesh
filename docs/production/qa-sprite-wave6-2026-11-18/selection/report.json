@@ -1,0 +1,305 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-18T10:03:17.605Z",
+  "mode": "native paintRasterPortrait",
+  "browserTest": false,
+  "assets": [
+    {
+      "id": "downpour_void_113",
+      "path": "assets/sprites/downpour_void_113.aaad63ad6961.png",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        149,
+        67,
+        1061,
+        1102
+      ],
+      "role": "environmental-obstacle",
+      "preexistingRulesCombatEnabled": false
+    },
+    {
+      "id": "ascension_stilledalen_stinger_184",
+      "path": "assets/sprites/ascension_stilledalen_stinger_184.214630045589.png",
+      "width": 978,
+      "height": 1609,
+      "bounds": [
+        221,
+        37,
+        734,
+        1579
+      ],
+      "role": "unverified",
+      "preexistingRulesCombatEnabled": false
+    }
+  ],
+  "portraits": [
+    {
+      "id": "downpour_void_113",
+      "facing": 1,
+      "path": "assets/sprites/downpour_void_113.aaad63ad6961.png",
+      "file": "selection-downpour_void_113-right.png"
+    },
+    {
+      "id": "downpour_void_113",
+      "facing": -1,
+      "path": "assets/sprites/downpour_void_113.aaad63ad6961.png",
+      "file": "selection-downpour_void_113-left.png"
+    },
+    {
+      "id": "ascension_stilledalen_stinger_184",
+      "facing": 1,
+      "path": "assets/sprites/ascension_stilledalen_stinger_184.214630045589.png",
+      "file": "selection-ascension_stilledalen_stinger_184-right.png"
+    },
+    {
+      "id": "ascension_stilledalen_stinger_184",
+      "facing": -1,
+      "path": "assets/sprites/ascension_stilledalen_stinger_184.214630045589.png",
+      "file": "selection-ascension_stilledalen_stinger_184-left.png"
+    }
+  ],
+  "checks": [
+    {
+      "name": "downpour_void_113 selection-only contract",
+      "passed": true,
+      "detail": {
+        "artKind": "selection-only",
+        "combatArt": "missing",
+        "documentedRole": "environmental-obstacle",
+        "preexistingRulesCombatEnabled": false
+      }
+    },
+    {
+      "name": "downpour_void_113 asset identity",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/downpour_void_113.aaad63ad6961.png",
+        "sha256": "aaad63ad69611014c787e5f623a0a406d92116d392c7278cf411cb63628b2bf1",
+        "bytes": 1561784
+      }
+    },
+    {
+      "name": "downpour_void_113 native decode adapter preserves pixels",
+      "passed": true
+    },
+    {
+      "name": "downpour_void_113 source dimensions",
+      "passed": true,
+      "detail": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "name": "downpour_void_113 complete alpha bounds and transparent exterior",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          149,
+          67,
+          1061,
+          1102
+        ],
+        "transparentFraction": 0.3099923943540161
+      }
+    },
+    {
+      "name": "downpour_void_113 selection draw right",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/downpour_void_113.aaad63ad6961.png"
+        ],
+        "dataset": {
+          "spriteId": "downpour_void_113",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "downpour_void_113 visible outline framed right",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          149,
+          67,
+          912,
+          1035
+        ],
+        "destination": [
+          -215.00289855072464,
+          -244,
+          430.0057971014493,
+          488
+        ],
+        "expectedFacing": 1
+      }
+    },
+    {
+      "name": "downpour_void_113 selection draw left",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/downpour_void_113.aaad63ad6961.png"
+        ],
+        "dataset": {
+          "spriteId": "downpour_void_113",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "downpour_void_113 visible outline framed left",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          149,
+          67,
+          912,
+          1035
+        ],
+        "destination": [
+          -215.00289855072464,
+          -244,
+          430.0057971014493,
+          488
+        ],
+        "expectedFacing": -1
+      }
+    },
+    {
+      "name": "ascension_stilledalen_stinger_184 selection-only contract",
+      "passed": true,
+      "detail": {
+        "artKind": "selection-only",
+        "combatArt": "missing",
+        "documentedRole": "unverified",
+        "preexistingRulesCombatEnabled": false
+      }
+    },
+    {
+      "name": "ascension_stilledalen_stinger_184 asset identity",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/ascension_stilledalen_stinger_184.214630045589.png",
+        "sha256": "21463004558953b5cfdd0299720f69629d1f99238cd90817b6c06a8ce7f38384",
+        "bytes": 948712
+      }
+    },
+    {
+      "name": "ascension_stilledalen_stinger_184 native decode adapter preserves pixels",
+      "passed": true
+    },
+    {
+      "name": "ascension_stilledalen_stinger_184 source dimensions",
+      "passed": true,
+      "detail": {
+        "width": 978,
+        "height": 1609
+      }
+    },
+    {
+      "name": "ascension_stilledalen_stinger_184 complete alpha bounds and transparent exterior",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          221,
+          37,
+          734,
+          1579
+        ],
+        "transparentFraction": 0.7118731420015989
+      }
+    },
+    {
+      "name": "ascension_stilledalen_stinger_184 selection draw right",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/ascension_stilledalen_stinger_184.214630045589.png"
+        ],
+        "dataset": {
+          "spriteId": "ascension_stilledalen_stinger_184",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "ascension_stilledalen_stinger_184 visible outline framed right",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          221,
+          37,
+          513,
+          1542
+        ],
+        "destination": [
+          -81.1750972762646,
+          -244,
+          162.3501945525292,
+          488
+        ],
+        "expectedFacing": 1
+      }
+    },
+    {
+      "name": "ascension_stilledalen_stinger_184 selection draw left",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/ascension_stilledalen_stinger_184.214630045589.png"
+        ],
+        "dataset": {
+          "spriteId": "ascension_stilledalen_stinger_184",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "ascension_stilledalen_stinger_184 visible outline framed left",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          221,
+          37,
+          513,
+          1542
+        ],
+        "destination": [
+          -81.1750972762646,
+          -244,
+          162.3501945525292,
+          488
+        ],
+        "expectedFacing": -1
+      }
+    },
+    {
+      "name": "art/registry.json stable during selection renders",
+      "passed": true
+    },
+    {
+      "name": "src/sprite-manifest.js stable during selection renders",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "The native renderer uses a predecoded local image cache. This run covers selection, asset identity and combat-art exclusion.",
+    "The resulting PNGs require separate visual inspection."
+  ],
+  "hashesBefore": {
+    "art/registry.json": "41cf644abf609063d33731d1ac14027e89f79a9bd2940b0c3a0d001ff935cf22",
+    "src/sprite-manifest.js": "3330c7416c1773c8ffa0a4bcd72f32907d84554374bc6e6f59f04e9b1f37ed60"
+  },
+  "hashesAfter": {
+    "art/registry.json": "41cf644abf609063d33731d1ac14027e89f79a9bd2940b0c3a0d001ff935cf22",
+    "src/sprite-manifest.js": "3330c7416c1773c8ffa0a4bcd72f32907d84554374bc6e6f59f04e9b1f37ed60"
+  },
+  "passed": true
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-19T17:36:23.234102+00:00",
+  "method": "Visual inspection of source images, native imagegen outputs and two targeted corrected outputs; no pixel edits.",
+  "retainedOutputs": 8,
+  "totalInspectedOutputs": 10,
+  "reviewedStages": [
+    {
+      "stageId": "book_fire",
+      "edition": "PS Vita — US launch screenshot, 2012-10-16",
+      "observations": [
+        "Book of Memories, Fire : salle industrielle de la capture de lancement US du 16 octobre 2012, image 01. La seconde vue corrobore les matériaux ; elle ne sert pas à importer une autre pièce.",
+        "La capture01 montre le meuble d’atelier rouge à tiroirs, une petite table/assise voisine, des parois métalliques et une grille de sol lumineuse.",
+        "La sortie retenue garde ces motifs et dégage un sol horizontal. Une révision imagegen a supprimé le rebord de plateforme et les bandes jaunes/noires apparus au bas de la première sortie.",
+        "La nouvelle orientation de caméra, la largeur, l’échelle des panneaux et le reste du sol sont des adaptations versus ; le plan procédural entier n’est pas connu.",
+        "Pas de lave, brasier ajouté, Guardian, personnage, arme, HUD ni danger de terrain déduit de l’image.",
+        "Le premier plan est une transposition des chants d’acier observés, pas une séparation mesurée des couches originales.",
+        "Two independent static PNG planes; foreground parallax0.006. No new original animation, hazard, transition or collision.",
+        "Native1672×941 generation; no upscaling, raster retouch, automatic alpha cleanup or1:1/UHD certification.",
+        "Camera position and hidden geometry are versus reconstructions; foreground margins are very sparse and do not occlude the fighting lane."
+      ],
+      "foregroundFootBandMaxAlpha": 1,
+      "assessment": "candidate, source-guided, visually inspected, not certified1:1"
+    },
+    {
+      "stageId": "book_earth",
+      "edition": "PS Vita — E3 prerelease screenshot, 2012-06-06",
+      "observations": [
+        "Book of Memories, Earth : galerie à soutènements de bois et récipients de la capture E3 du 6 juin 2012, image37 ; version précommerciale uniquement.",
+        "La source native montre un sol pierreux humide, des soutènements horizontaux en bois, une ouverture dans le mur, deux roues et des récipients ; une zone verdâtre est visible à gauche.",
+        "La sortie reprend les matériaux et une roue au fond ; elle reconstruit la vue frontale et laisse un plateau vide sans armes, corps ni interface.",
+        "L’ouverture, le plafond rocheux et la largeur latérale sont une reconstruction de caméra, pas la preuve du plan complet ou de la version commerciale.",
+        "Préversion explicitement conservée ; aucun état final commercial, géométrie, physique ni animation d’origine certifié.",
+        "Le bord rocheux proche est une adaptation de cadrage des matériaux visibles, pas un ajout de piège ou de mécanique.",
+        "Two independent static PNG planes; foreground parallax0.006. No new original animation, hazard, transition or collision.",
+        "Native1672×941 generation; no upscaling, raster retouch, automatic alpha cleanup or1:1/UHD certification.",
+        "Camera position and hidden geometry are versus reconstructions; foreground margins are very sparse and do not occlude the fighting lane."
+      ],
+      "foregroundFootBandMaxAlpha": 0,
+      "assessment": "candidate, source-guided, visually inspected, not certified1:1"
+    },
+    {
+      "stageId": "book_blood",
+      "edition": "PS Vita — E3 prerelease screenshot, 2012-06-06",
+      "observations": [
+        "Book of Memories, Blood : plateforme de l’arène Blood Guardian illustrée à l’E3 le 6 juin 2012, image31 ; boss entièrement exclu du décor.",
+        "La source montre de larges surfaces rouges séparées par du métal quadrillé sombre ; le Guardian masque une partie de la plateforme centrale.",
+        "La sortie garde les plaques rouges, les canaux grillagés et les petits blocs de périphérie, sans le boss, sans personnages, organes ni interface. Une correction imagegen a retiré le disque central qui avait été extrapolé par le premier essai.",
+        "Le cadrage demeure en plongée douce ; la largeur, les divisions du plateau et le nombre de blocs périphériques sont une reconstruction de la partie occultée. Ils ne sont pas certifiés comme plan d’origine.",
+        "Préversion uniquement. Les surfaces rouges ne prouvent ni liquide, ni marée, ni lave, ni comportement animé.",
+        "La reprise des extrémités de blocs dans les deux coins du premier plan est une adaptation de caméra ; la plupart du calque est transparent.",
+        "Two independent static PNG planes; foreground parallax0.006. No new original animation, hazard, transition or collision.",
+        "Native1672×941 generation; no upscaling, raster retouch, automatic alpha cleanup or1:1/UHD certification.",
+        "Camera position and hidden geometry are versus reconstructions; foreground margins are very sparse and do not occlude the fighting lane."
+      ],
+      "foregroundFootBandMaxAlpha": 0,
+      "assessment": "candidate, source-guided, visually inspected, not certified1:1"
+    },
+    {
+      "stageId": "book_water",
+      "edition": "PS Vita — E3 prerelease screenshot, 2012-06-06",
+      "observations": [
+        "Book of Memories, Water : bassin carrelé de l’arène Water Guardian illustrée à l’E3 le 6 juin 2012, image50 ; boss exclu.",
+        "La capture native montre le bassin sombre, du carrelage vert-gris, des montants maçonnés, une ouverture circulaire à droite et quelques débris plats.",
+        "Le fond retenu reprend ces motifs et les reflets bleutés ; les personnages, le Guardian et les reflets de leurs silhouettes ont disparu.",
+        "La vue frontale, la largeur et les dimensions du conduit sont réinterprétées pour le versus ; la source masque une partie du mur derrière le boss.",
+        "Préversion uniquement. Aucune cascade, arrivée d’eau, noyade, collision ni animation de ruissellement n’est ajoutée.",
+        "Les champs de reflet font partie d’un PNG statique ; aucune animation de la source n’est comptée.",
+        "Two independent static PNG planes; foreground parallax0.006. No new original animation, hazard, transition or collision.",
+        "Native1672×941 generation; no upscaling, raster retouch, automatic alpha cleanup or1:1/UHD certification.",
+        "Camera position and hidden geometry are versus reconstructions; foreground margins are very sparse and do not occlude the fighting lane."
+      ],
+      "foregroundFootBandMaxAlpha": 1,
+      "assessment": "candidate, source-guided, visually inspected, not certified1:1"
+    }
+  ],
+  "deliveryFrozenSHA256": "32e6bb58c9e9f862323e27d146bb4be3496e1b26c362f4801a0bdd846701ffcd",
+  "runtimeOrBrowserSuccessClaimed": false
+}

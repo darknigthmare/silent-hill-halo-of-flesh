@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "stages",
+  "id": "alchemilla_origins",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-stages-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/alchemilla_origins",
+    "--stages=alchemilla_origins"
+  ],
+  "startedAt": "2026-11-19T15:30:21.986076+00:00",
+  "completedAt": "2026-11-19T15:30:23.931758+00:00",
+  "durationSeconds": 1.946,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "786e1c10f3801b0fa5ed4b79d9c0b8d64685fcd7ae0233c37a955a9e58179dd3",
+  "executedHarness": "executed/qa-stages-native-786e1c10f380.mjs",
+  "reportSHA256": "b0b389d2eaa67af21a170f5cf82940df734b8205be7b0611ea87bc5befabc76b",
+  "log": "process.txt",
+  "logSHA256": "2bc755347ca56f8090773d123d39b3f364fd51ee34850004cc1506731e84243f",
+  "passed": true
+}

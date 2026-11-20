@@ -1,0 +1,232 @@
+{
+  "schema": 1,
+  "date": "2026-11-19",
+  "baseCommit": "67d8df2cff2132387ee39b590420145204729a44",
+  "stageId": "brookhaven_sh2",
+  "source": "sh2",
+  "referenceEdition": "Silent Hill 2 original (2001)",
+  "location": "Otherworld Brookhaven B1, terminus du couloir de poursuite devant l’ascenseur",
+  "before": {
+    "stageBitmapPresent": false,
+    "activeSceneId": null,
+    "referenceBlocked": false,
+    "sourceStageCount": 123,
+    "bitmapStageCount": 23
+  },
+  "sourceEvidence": [
+    {
+      "kind": "project-location-policy",
+      "path": "data/stages.json",
+      "blobSHA": "0a01f53ddac10bb904a755f663a5d21c24b3765a",
+      "selector": "id=brookhaven_sh2.reference"
+    },
+    {
+      "kind": "project-source-register",
+      "path": "docs/production/research/classic.json",
+      "id": "CL_SH2_06_NIGHTMARE_HOSPITAL"
+    },
+    {
+      "kind": "secondary-guide-for-original-game",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough_06_nightmare_hospital_en.htm",
+      "section": "Pyramid Head in the Basement Hallway / Hospital Lobby",
+      "observed": "Confirme couloir serré B1, ascenseur au bout, fermeture en cinématique puis remontée. Le maintien des portes entrouvertes et le cadrage latéral relèvent de la mise en scène versus."
+    }
+  ],
+  "method": "built-in image_gen; one PNG per asset; foreground corrected by image_gen only; original variant archived; no deterministic pixel edits",
+  "files": [
+    {
+      "path": "assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+      "blobSHA": "9a2c6b9437b2463cc7ef596a65987b1439911e0d",
+      "sha256": "5ae0d389b5c51d2c567e6cb9b8c8291541ce05b71da925d4a27c990b353271f6",
+      "bytes": 2613099,
+      "width": 1672,
+      "height": 941,
+      "colorType": 2,
+      "bitDepth": 8,
+      "interlace": 0,
+      "role": "background"
+    },
+    {
+      "path": "assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "blobSHA": "a3ddc08748705e24195e669737a006d0ac4093a3",
+      "sha256": "2f663e35be1ca7edba101cb790bc78fcb09485e57e627ffa7420e3cd784a098a",
+      "bytes": 461573,
+      "width": 1672,
+      "height": 941,
+      "colorType": 6,
+      "bitDepth": 8,
+      "interlace": 0,
+      "role": "foreground"
+    }
+  ],
+  "prompts": {
+    "background": "Use case: stylized-concept. Asset type: finished 2D UHD fighting-game stage BACKGROUND plate, single image, wide 16:9 landscape around 1672x941. Primary request: Silent Hill 2 ORIGINAL 2001, Brookhaven Hospital Otherworld BASEMENT B1, the end of the tight pursuit corridor directly outside the elevator; faithful period visual materials, not the 2024 remake. There are no people, creatures, weapons, silhouettes or gore. Scene: rusty stained concrete and heavily decayed pale plaster in the narrow dim institutional corridor; rectangular old dull metal elevator doorway at the rear, double elevator doors held just barely apart, dark gap. Ceiling low and unadorned, dirty grey-brown industrial floor. The actual corridor terminus is re-composed into a SIDE-ON fighting-game camera, level horizon, readable horizontal walking line across the lower quarter; widen the near floor only for a practical duel, retain the cramped depth at the back. No stairs, furniture, beds, cages, ward curtains, modern signage, neon, falling debris, hanging chains or hospital monitors. Mottled brown-black decay with restrained sickly grey light near the elevator, enough soft ambient brightness to read the floor and walls. High-definition hand-painted survival-horror game environment with detailed distressed texture and crisp silhouettes. Composition: rear elevator slightly right of center, uninterrupted horizontal foot-contact band at y~78%, low contrast floor so large fighters remain readable. Keep left/right outer edges as plain decayed walls; foreground door jamb will be authored separately. Opaque full rectangular background, no border, no HUD, no text, no watermark, no UI. Single background only; no collage or separate panels. This is an adaptation of the exact documented scene for versus camera, not a source screenshot or certified 1:1 geometry.",
+    "foreground": "Use case: stylized-concept. Asset type: one transparent isolated FOREGROUND PARALLAX architectural prop for a 2D UHD fighting game. Reference image is the just-created Brookhaven SH2 ORIGINAL 2001 B1 elevator-corridor backplate; it defines materials and lighting only. Create one separate old hospital CORRIDOR DOOR JAMB, a single narrow upright rectangular fragment of thick decayed plaster wall with a dull rusted steel lining along its right edge. The complete jamb prop is visible top to base, vertical and straight, subtle side-facing thickness, distressed peeling grey-brown plaster and corroded dark metal matched to the reference. Size composition: portrait 1024x1536, jamb occupies the central 40% width and 85% height with safe transparent margins, base level at bottom, no perspective skew. This prop will be placed as a very thin near-camera piece along the left screen edge, leaving fighting area entirely open. No door panel, no wall extending across the image, no second object, no writing, symbols, pipes, bed, people, shadows cast on any background, no pedestal, no ground plane. Truly transparent alpha background, absolutely no white or black rectangle, no checkerboard baked into image. One asset only, not a spritesheet, no labels, no border. Camera level, hand-painted survival-horror game material rendering, crisp cutout edge. Foreground architecture is a versus framing interpretation; do not add canon-specific story props.",
+    "foregroundCorrection": "Use case: background-extraction / identity-preserve. EDIT the reference image of the single rusted hospital door jamb. Preserve EXACTLY this one jamb's material, chipped plaster, rusty metal profile, worn base and proportions. Two changes only: (1) remove ALL external brown glow, halo, lighting gradient, dark backdrop and cast shadow; every pixel outside the physical silhouette must be completely transparent alpha=0, including immediately around all edges; (2) change the canvas layout to a wide transparent landscape, 1672x941 (16:9), and place the same complete vertical jamb at the extreme LEFT of this canvas. The jamb is approximately 176 pixels wide and 880 pixels tall, from x=18 to x=194 and y=30 to y=910; keep the whole base visible and level. Fill all of the remaining 88 percent of canvas to the right with genuinely EMPTY TRANSPARENCY. No rectangle, no smoky vignette, no ambient haze, no light falloff in empty pixels. Do not add any wall, door, floor, pedestal, text, other object or scene. This is a single clean architectural cutout ready to layer over a different game background; maintain only the original object's own shading. One asset, no panels."
+  },
+  "foregroundAlphaAudit": {
+    "width": 1672,
+    "height": 941,
+    "alpha": true,
+    "animated": false,
+    "format": "PNG",
+    "visibleBounds": [
+      30,
+      29,
+      212,
+      925
+    ],
+    "alphaBounds": [
+      25,
+      24,
+      1499,
+      927
+    ],
+    "framingBounds": [
+      25,
+      24,
+      215,
+      927
+    ],
+    "transparentFraction": 0.89945,
+    "pixelSHA256": "761b9f5ce3eb7980310e8462fa95d60dec9aae7059217fddb3f528d3b4c35b8c"
+  },
+  "review": {
+    "background": "Fond opaque entier, point de fuite léger à droite, bande de sol lisible, aucun personnage ni HUD. Vue latérale composée ; aucune correspondance pixel à pixel source attestée.",
+    "foreground": "Huisserie propre déplacée à gauche sur canvas16:9 transparent. Aucun halo visible ni rectangle opaque. Audit exact du décodeur PNG du dépôt : 89.945% de pixels alpha<16 ; tous les pixels lisibles(alpha>=32) dans x30..211,y29..924. Quelques pixels alpha faibles isolés en marge sont conservés ; framingBounds du contour connecté x25..214,y24..926.",
+    "fidelity": "unverified",
+    "animation": "two static PNG layers; no animated clip; camera-driven parallax only",
+    "notRun": [
+      "browser gameplay rendering",
+      "official Python stage-image decoder",
+      "complete build and test suites"
+    ],
+    "integrationStatus": "proposed; root publishes and verifies",
+    "placement": "Proposition de rect plein cadre [0,0,1,1], fit cover, parallaxX .012. À1280×720, silhouette lisible autour de x23..162, déplacement±15.36px ; le centre reste libre. Base autour de y708 sur le plan avant. Contrôle visuel en moteur restant à exécuter.",
+    "manifestValidation": {
+      "validator": "unchanged functions from src/stage-bitmaps.js at baseCommit",
+      "identity": true,
+      "source": true,
+      "paths": true,
+      "dimensions": true,
+      "layerClocks": true,
+      "rectangles": true,
+      "referenceBlocked": false,
+      "activeSceneResolved": true
+    }
+  },
+  "proposedManifestEntry": {
+    "stageId": "brookhaven_sh2",
+    "source": "sh2",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "otherworld-b1-elevator-terminus",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH2_06_NIGHTMARE_HOSPITAL"
+    ],
+    "layers": [
+      {
+        "id": "elevator-terminus",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+            "sha256": "5ae0d389b5c51d2c567e6cb9b8c8291541ce05b71da925d4a27c990b353271f6",
+            "bytes": 2613099,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-door-jamb",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+            "sha256": "2f663e35be1ca7edba101cb790bc78fcb09485e57e627ffa7420e3cd784a098a",
+            "bytes": 461573,
+            "width": 1672,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Extrémité du couloir Otherworld B1 de Brookhaven dans Silent Hill 2 original (2001), devant l’ascenseur de la poursuite. Élargissement du sol, cadrage latéral, matériaux fins, éclairage, huisserie proche et portes entrouvertes sont des interprétations pour le versus. Aucun personnage, décès de Maria, poursuite ni cycle source reproduit."
+  },
+  "archivedVariants": [
+    {
+      "path": "art/sources/stages/vague16/brookhaven_sh2.near-door-jamb-halo.254cf813d400.png",
+      "blobSHA": "51d207b14f7e08725678b2cd08ac70504c5dfd74",
+      "sha256": "254cf813d400bbc4840335df1fd4bdfbebc610253ec9d2680d97cb20862f2ea3",
+      "bytes": 1709197,
+      "width": 1024,
+      "height": 1536,
+      "role": "discarded-foreground-candidate",
+      "reason": "Un halo brun externe et le centrage sur canvas portrait ne convenaient pas au plan proche. Conservé comme étape de production, aucun usage actif."
+    }
+  ],
+  "rootPixelValidation": {
+    "background": {
+      "width": 1672,
+      "height": 941,
+      "alpha": false,
+      "animated": false,
+      "format": "PNG",
+      "pixelSHA256": "5eb5acd36bb0b6bc058e1092e960528914aefc5cd7ea76bd1a22b728e75f04df"
+    },
+    "foreground": {
+      "width": 1672,
+      "height": 941,
+      "alpha": true,
+      "animated": false,
+      "format": "PNG",
+      "visibleBounds": [
+        30,
+        29,
+        212,
+        925
+      ],
+      "alphaBounds": [
+        25,
+        24,
+        1499,
+        927
+      ],
+      "framingBounds": [
+        25,
+        24,
+        215,
+        927
+      ],
+      "transparentFraction": 0.89945,
+      "pixelSHA256": "761b9f5ce3eb7980310e8462fa95d60dec9aae7059217fddb3f528d3b4c35b8c",
+      "path": "assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "sha256": "2f663e35be1ca7edba101cb790bc78fcb09485e57e627ffa7420e3cd784a098a",
+      "bytes": 461573
+    },
+    "method": "CRC, zlib stream, dimensions and RGBA pixel audit in V8. The canonical sprite decoder was reused with a bounded JS inflate implementation and cross-checked against an unchanged committed sprite; full Node/Python and browser suites are delegated to the repository CI."
+  }
+}

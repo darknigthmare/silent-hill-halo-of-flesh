@@ -1,0 +1,6 @@
+{
+  "createdAt": "2026-11-19T15:28:07.637413+00:00",
+  "reason": "The native QA was launched while the derived sprite build was still running. Grey Child resolved its previous shared portrait instead of the newly imported lateral frame; the first assertion failed, before any rendering or captures.",
+  "assetChangeRequired": false,
+  "resolution": "Waited for the official sprite build to finish, then launched the exact candidate again. This failed attempt is excluded from success totals."
+}

@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "purpose": "Temporary reference research for continuing missing exact-edition sprite candidates. No new asset generation in this research task.",
+  "unblockedCandidates": [
+    {
+      "fighterId": "arcade_double_head_arcade",
+      "name": "Double Head — The Arcade",
+      "previousBlocker": "incomplete-source",
+      "newStatus": "reference-candidate-ready",
+      "selectionCandidateReady": true,
+      "sideCombatCandidateReady": true,
+      "oneToOneCertified": false,
+      "sourcePage": "https://retrocatalog.com/games/silent-hill-the-arcade",
+      "imageUrl": "https://images.igdb.com/igdb/image/upload/t_1080p/sc8983.jpg",
+      "referenceType": "Native gameplay screenshot redistributed by IGDB and shown on Retro Catalog; not a newly generated or cross-edition model.",
+      "localReference": "/workspace/scratch/eb1659a0c6b9/references-next/arcade-doublehead-igdb.jpg",
+      "sha256": "5834abf01661cebd9c1517b76b314a1d3e19e084cf9f67bc1833de4f80e91c20",
+      "nativeFileDimensions": [
+        1440,
+        1080
+      ],
+      "matchingPriorReference": "/workspace/scratch/862f02546e7a/reference_arcade/arcade-doublehead.jpg",
+      "priorSha256": "7a004f753f6e0930d6a4ee7a16b4122f610dd553ffa67918edc1dc524350d4d3",
+      "priorDimensions": [
+        960,
+        720
+      ],
+      "matchingEvidence": "Same scene, two dogs, Eric 79 / Tina 100 HUD. Mean absolute RGB difference 1.84/1.76/1.99 per 255 after resizing prior capture to the public IGDB image. Different compression/size, not byte-identical.",
+      "visuallyObserved": "Both canine silhouettes extend from full heads to tapered tails within the frame. Across the two poses, limbs and paws are visible. Dark charcoal body, pale grey-beige bindings along head, shoulders, spine and flanks; long muzzle, small canine paws and thin tapered tail. One body per creature; split jaw must not become two complete heads.",
+      "limits": [
+        "View is high frontal three-quarter, not orthographic side-on.",
+        "Opposite side and concealed underside are not independently documented.",
+        "Thin binding placement, eye details, teeth and paw anatomy remain limited by source resolution.",
+        "Do not use SH3 or Book of Memories model as an undocumented supplement.",
+        "1440x1080 file likely enlarged from 960x720 scene; no new native detail claimed."
+      ]
+    }
+  ],
+  "notUnblocked": [
+    {
+      "fighterId": "arcade_phantom_118",
+      "sourcePage": "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/320991/",
+      "localModel": "/workspace/scratch/862f02546e7a/reference_arcade/phantom-model/Phantom/Phantom.obj",
+      "finding": "The native OBJ includes out_hair groups extending roughly to Y3028 versus core body Y88.7. Previously generated full-frame reference makes the core about 30px high, while core-detail camera crops extension geometry. This bind-pose export does not establish a useful finite native silhouette or its animated deformation. No hair truncation, scaling or omission authorized; reference blocker preserved."
+    },
+    {
+      "fighterId": "ascension_snarler_180",
+      "sourcePage": "https://amilcaraldanafong.artstation.com/projects/GeBEXd",
+      "finding": "Primary creator page text read: creature sculpt for Silent Hill Ascension, concept by Mike Franchina. Direct page retrieval returned 403 and no new attributable full-body picture was obtained. Existing native Tenor head/profile closeups remain incomplete."
+    },
+    {
+      "fighterId": "ascension_the_collector_183",
+      "sourcePage": "https://rodionvlasov.artstation.com/projects/AZqEWe",
+      "finding": "Primary sculptor page identified and read. Author states second version was rejected during development and textures were unfinished. No new full-body image recovered; must distinguish final first version from rejected alternative. Preserve noncombatant roster role."
+    },
+    {
+      "fighterId": "bom_steel_guardian_146",
+      "sourcePage": "https://bigjohn.artstation.com/projects/bPZno",
+      "finding": "Primary John Hershberg page explicitly identifies Steel-world boss highpoly and in-game model/texture for WayForward. No wider image retrieved; prior cropped wings remain unresolved."
+    },
+    {
+      "fighterId": "bom_wood_guardian_138",
+      "rejectedSource": "https://sketchfab.com/Purple_Point/collections/horror-game-characters-ea994b873ff04b47b9ad188802afec8a",
+      "rejectedImageLocal": "/workspace/scratch/eb1659a0c6b9/references-next/woodguardian-sketchfab-preview.jpeg",
+      "finding": "Image search offered an unrelated wooden skeleton model. It does not match the documented hooded Wood Guardian and is not usable as a substitute."
+    },
+    {
+      "fighterId": "downpour_wheelman_116",
+      "sourcePage": "https://p3dm.ru/files/characters/supernatural/571-wheelman-.html",
+      "finding": "New secondary native-model lead names Vatra Games / rip by luxox_18, PSK/TGA and personal-use license. Direct page retrieval 403; no model or full visual acquired. No clearance for exact final giant boss/support variant."
+    }
+  ],
+  "excludedSubjects": "No research generation attempted for any prior refusal-related ID; all refusals and the three recent additions of Mama/Split Worm/Fighter plus Hummer/Tremer/Tuberculosis remain untouched.",
+  "originalReferencePixelsForPublication": false
+}

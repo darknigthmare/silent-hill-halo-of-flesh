@@ -1,0 +1,77 @@
+{
+  "edition": "Silent Hill: The Arcade (Konami, 2007) et Silent Hill: Ascension (Genvid, 2023–2024)",
+  "profiles": [
+    {
+      "id": "arcade_phantom_118",
+      "status": "incomplete-source",
+      "generationAttempts": 0,
+      "newPrimaryGameplayCapture": {
+        "title": "Arcade Longplay Silent Hill: The Arcade",
+        "player": "Spazbo4",
+        "page": "https://archive.org/details/Arcade_Longplay_Silent_Hill_the_Arcade",
+        "media": "https://archive.org/download/Arcade_Longplay_Silent_Hill_the_Arcade/Arcade_Longplay_Silent_Hill_the_Arcade.ia.mp4",
+        "sampledClipSeconds": [
+          3253,
+          3328
+        ],
+        "sampledFrames": 150,
+        "sampleRateHz": 2,
+        "retained": [
+          {
+            "timeSeconds": 3267.5,
+            "path": "docs/production/wave5-references/arcade-ascension/phantom-3267.5.jpg",
+            "nativeFrameSize": [
+              640,
+              480
+            ],
+            "sha256": "0aaa20a466e89ca82e54bdbf8b4188e31917f7b41bd69d679113ab2823dffda6",
+            "finding": "Plan large du boss émergé face à la caméra. La surface du lac est visible en dessous. Des mèches atteignent et dépassent les deux bords latéraux et le haut."
+          },
+          {
+            "timeSeconds": 3322.0,
+            "path": "docs/production/wave5-references/arcade-ascension/phantom-3322.jpg",
+            "nativeFrameSize": [
+              640,
+              480
+            ],
+            "sha256": "f2ae09e08734d981c53f9d0602f1d95776ec15475e244ac5591696567820f51c",
+            "finding": "Après la défaite, le bras traverse le haut du cadre. Plusieurs terminaisons des mèches restent hors du cadre."
+          },
+          {
+            "timeSeconds": 3326.5,
+            "path": "docs/production/wave5-references/arcade-ascension/phantom-3326.5.jpg",
+            "nativeFrameSize": [
+              640,
+              480
+            ],
+            "sha256": "e7b2364a334b23115254f8ae37a1ee7cae9ecfba2ccbad097aeed4c7224afdb0",
+            "finding": "Le corps central est déjà submergé. Le bras subsiste et les mèches résiduelles se confondent avec les effets d’eau. Ce n’est pas le contour du boss complet."
+          }
+        ]
+      },
+      "supplementaryRun": [
+        "https://www.youtube.com/watch?v=xmeJ82wbmHg&t=3120",
+        "https://www.youtube.com/watch?v=uNOxPmegQiM&t=820"
+      ],
+      "publishedModel": "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/320991/",
+      "meshAudit": "docs/production/sprite-suite-reference-research-2026-11-17.json",
+      "conclusion": "Les plans du combat et de toute la submersion dans cet enregistrement ne montrent à aucun moment à la fois le corps émergé, le bras entier et les pointes extérieures des mèches opaques. Le modèle publié sans pose ni squelette ne permet pas de restituer leur déformation observée. Aucun nouveau sprite."
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "status": "identity-or-variant-unresolved",
+      "generationAttempts": 0,
+      "modelArchive": "https://models.spriters-resource.com/arcade/silenthillthearcade/asset/340933/page-1/",
+      "supplementaryComparison": "https://www.imfdb.org/wiki/Talk:Silent_Hill:_The_Arcade",
+      "finding": "L’archive de Henchman800 contient les trois maillages Robbie_Axe.obj, Robbie_Saw.obj et Robbie_Rifle.obj. Dans les commentaires, le déposant précise que le troisième accessoire est un rifle. La comparaison des armes de cette édition attribue aussi le rifle à Robbie ; le shotgun montré y est associé aux protagonistes. Les plans collectifs du carrousel conservés à la vague 4 ne peuvent identifier une quatrième variante. Le roster demeure inchangé."
+    },
+    {
+      "id": "ascension_stilledalen_stinger_184",
+      "status": "identity-or-variant-unresolved",
+      "generationAttempts": 0,
+      "artist": "https://starkie.artstation.com/projects/1xeVwL",
+      "crossCheck": "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters",
+      "finding": "Le concept Butterfly est déjà associé au Stinger. La description des apparitions dans les deux lieux identifie le Stinger en Pennsylvanie comme en Norvège. Aucune différence morphologique propre à une seconde variante régionale n’a été établie. Le portrait existant du Stinger demeure affecté à son identifiant."
+    }
+  ]
+}

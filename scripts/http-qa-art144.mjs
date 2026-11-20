@@ -9,7 +9,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {VERSION} from '../src/data.js';
 import {ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-tracking.mjs';
-import {readArtContinuation,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
+import {matchesCampaignCandidate,readArtContinuation,readBrowserCampaignSubjects,resolvedHistoricalArtwork} from './art-campaign-review.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const campaign=process.env.QA_ART_CAMPAIGN||'art144';
@@ -20,14 +20,15 @@ const source=process.env.QA_SOURCE_TREE==='1',port=process.env[`QA_${campaign.to
 const base=process.env.QA_BASE_URL||`http://127.0.0.1:${port}`;
 const out=resolve(process.env[`QA_${campaign.toUpperCase()}_OUTPUT`]||process.env.QA_ART144_OUTPUT||`/tmp/halo-${campaign}-qa-${source?'source':'dist'}`);
 const report={schema:1,campaign,version:VERSION,baselineCommit:spec.base,base,
- build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],assets:[],inspectors:[],roles:[],duels:[],
+ build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],assets:[],inspectors:[],roles:[],duels:[],laterClipExtensions:[],
  limits:[
   `All ${spec.requested} original missing identities are assessed exactly once. Static candidates, blockers and source fidelity remain separate. Historical blockers may be resolved only by a documented later exact-ID delivery.`,
   'Production PNGs and modules arrive over HTTP. Independent browser decoding measures alpha and duplicate pixels; no replacement imagery is injected.',
   'The real workshop flip, zoom and pose controls inspect the complete delivered exterior. Native anatomy, hidden parts, exact proportions and 1:1 fidelity are not certified by this geometry.',
   'Ordinary local matches cover every new combat-enabled profile on both player sides. Normal inputs and intros are used; actor positions, facing, health, poses, wins and timers are never injected.',
   'Profiles whose source role forbids autonomous combat retain their artwork dossier and remain rejected by both normal and diagnostic launch. A PNG grants no combat capability.',
-  'One static non-looping idle is not a walk, attack, KO or native animation. Opposite-side views are presentation mirrors, not independently observed source anatomy.'
+  'One static non-looping idle is not a walk, attack, KO or native animation. Opposite-side views are presentation mirrors, not independently observed source anatomy.',
+  'Later imported walk clips are exercised separately through the real inspector timeline and playback controls. They do not change the original campaign fragments, dispositions or animation counts.'
  ]};
 let server,browser;
 const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(!passed&&detail!==undefined?{detail}:{})});if(!passed)throw Error(name);};
@@ -56,6 +57,68 @@ function measuredDrawing({path,bounds,canvas}){
  const surface=canvas==='game'?document.querySelector('#game'):document.querySelector('#spriteDetail canvas');
  return {path,canvas,box,width:surface.width,height:surface.height,draw,
   complete:Object.values(box).every(Number.isFinite)&&box.left>=-.01&&box.top>=-.01&&box.right<=surface.width+.01&&box.bottom<=surface.height+.01};
+}
+
+async function inspectLaterWalk(page,id,art){
+ const clip=art.clips.walk,durations=clip.frameTicks||clip.frames.map(()=>clip.ticksPerFrame);
+ const total=durations.reduce((sum,ticks)=>sum+ticks,0),indices=[...new Set(clip.frames)];
+ const distinct=new Set(indices.map(index=>art.frames[index].pixelSHA256||art.frames[index].sha256)).size,animated=distinct>1;
+ const extension={id,pose:'walk',clip,distinctImages:distinct,animated,totalTicks:total,assets:[],scrub:[],playback:[]};
+ report.laterClipExtensions.push(extension);
+ for(const index of indices){
+  const frame=art.frames[index],response=await fetch(base+'/'+frame.path),bytes=Buffer.from(await response.arrayBuffer());
+  check(id+': later walk frame '+index+' arrives as its exact versioned PNG',response.ok&&response.headers.get('content-type')?.includes('image/png')&&bytes.length===frame.bytes&&createHash('sha256').update(bytes).digest('hex')===frame.sha256);
+  extension.assets.push({index,path:frame.path,sha256:frame.sha256,bytes:frame.bytes});
+ }
+ await page.waitForFunction(index=>{const c=document.querySelector('#spriteDetail canvas');return c?.dataset.artStatus==='raster'&&c.dataset.requestedPose==='walk'&&c.dataset.pose==='walk'&&c.dataset.frameIndex===String(index);},clip.frames[0]);
+ const controls=await page.evaluate(()=>{
+  const timeline=document.querySelector('[data-inspect=tick]'),play=document.querySelector('[data-inspect=play]'),canvas=document.querySelector('#spriteDetail canvas');
+  return {min:timeline.min,max:timeline.max,step:timeline.step,value:timeline.value,disabled:timeline.disabled,
+   playDisabled:play.disabled,playLabel:play.textContent,draft:canvas.dataset.clipDraft,
+   option:document.querySelector('[data-inspect=pose]').selectedOptions[0].textContent,status:document.querySelector('[data-inspect=status]').textContent};
+ });
+ check(id+': later walk exposes its real imported timeline and appropriate playback control',controls.min==='0'&&controls.max===String(total-1)&&controls.step==='1'&&controls.value==='0'&&!controls.disabled&&controls.playDisabled===!animated&&controls.playLabel==='LIRE'&&controls.draft==='false'&&/présent/.test(controls.option)&&!/À PRODUIRE/.test(controls.status)&&controls.status.includes(`Image 1/${clip.frames.length} · tick 0/${total-1}`),controls);
+ const seek=async tick=>{
+  // Exercise the range input's own handler, without changing inspector or actor state.
+  await page.locator('[data-inspect=tick]').evaluate((input,value)=>{input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));},tick);
+ };
+ let start=0;
+ for(const [step,index] of clip.frames.entries()){
+  const frame=art.frames[index];
+  for(const tick of new Set([start,start+durations[step]-1])){
+   await seek(tick);
+   await page.waitForFunction(({index,path,tick})=>{
+    const c=document.querySelector('#spriteDetail canvas');return c?.dataset.artStatus==='raster'&&c.dataset.requestedPose==='walk'&&c.dataset.pose==='walk'&&c.dataset.frameIndex===String(index)&&document.querySelector('[data-inspect=tick]').value===String(tick)&&window.__ART144_DRAWS__.some(draw=>draw.canvas==='workshop'&&draw.path==='/'+path);
+   },{index,path:frame.path,tick});
+   const geometry=await page.evaluate(measuredDrawing,{path:frame.path,bounds:frame.framingBounds||frame.visibleBounds,canvas:'workshop'});
+   check(id+': later walk scrub renders complete step '+step+' at tick '+tick,geometry.complete&&await page.locator('[data-inspect=play]').textContent()==='LIRE'&&(await page.locator('[data-inspect=status]').textContent()).includes(`Image ${step+1}/${clip.frames.length} · tick ${tick}/${total-1}`),geometry);
+   extension.scrub.push({step,index,tick,geometry});
+  }
+  start+=durations[step];
+ }
+ await capture(page,'inspector-'+id+'-later-walk');
+ if(animated){
+  await seek(0);
+  await page.evaluate(()=>{
+   const canvas=document.querySelector('#spriteDetail canvas'),timeline=document.querySelector('[data-inspect=tick]');
+   const sample=()=>({tick:Number(timeline.value),index:Number(canvas.dataset.frameIndex),pose:canvas.dataset.pose,requestedPose:canvas.dataset.requestedPose,artStatus:canvas.dataset.artStatus});
+   window.__ART144_WALK_PLAYBACK__=[sample()];
+   window.__ART144_WALK_OBSERVER__=new MutationObserver(()=>{const current=sample(),previous=window.__ART144_WALK_PLAYBACK__.at(-1);if(current.tick!==previous.tick||current.index!==previous.index)window.__ART144_WALK_PLAYBACK__.push(current);});
+   window.__ART144_WALK_OBSERVER__.observe(canvas,{attributes:true,attributeFilter:['data-frame-index','data-art-status']});
+  });
+  try{
+   await page.click('[data-inspect=play]');
+   await page.waitForFunction(({indices,loop,total})=>{
+    const samples=window.__ART144_WALK_PLAYBACK__,seen=new Set(samples.filter(sample=>sample.artStatus==='raster').map(sample=>sample.index));
+    return indices.every(index=>seen.has(index))&&(loop?samples.some((sample,index)=>index>0&&sample.tick<samples[index-1].tick):samples.at(-1).tick===total-1&&document.querySelector('[data-inspect=play]').textContent==='LIRE');
+   },{indices,loop:clip.loop,total});
+   if(await page.locator('[data-inspect=play]').textContent()==='PAUSE')await page.click('[data-inspect=play]');
+  }finally{
+   extension.playback=await page.evaluate(()=>{window.__ART144_WALK_OBSERVER__.disconnect();return window.__ART144_WALK_PLAYBACK__;});
+  }
+  const expectedIndex=tick=>{let end=0;for(const [step,duration] of durations.entries()){end+=duration;if(tick<end)return clip.frames[step];}return undefined;};
+  check(id+': ordinary walk playback visits every imported frame with its authored timing and '+(clip.loop?'loops':'stops'),extension.playback.length>1&&extension.playback.every(sample=>Number.isInteger(sample.tick)&&sample.tick>=0&&sample.tick<total&&sample.index===expectedIndex(sample.tick)&&sample.pose==='walk'&&sample.requestedPose==='walk'&&sample.artStatus==='raster')&&await page.locator('[data-inspect=play]').textContent()==='LIRE',extension.playback);
+ }
 }
 
 await mkdir(out,{recursive:true});
@@ -106,21 +169,20 @@ try{
  page.on('console',message=>{if(message.type()==='error')report.errors.push('console: '+message.text());});
  page.on('response',response=>{if(response.status()>=400&&/\/(assets|src|modules)\//.test(new URL(response.url()).pathname))report.errors.push(`HTTP ${response.status()}: ${response.url()}`);});
  await page.goto(base+'/modules/sprite-workshop.html');
- const subjects=await page.evaluate(async ids=>{
-  const {SPRITES}=await import('/src/sprite-manifest.js'),{ROSTER,createCombatProfile}=await import('/src/data.js');
-  return ids.map(id=>{const fighter=ROSTER.find(f=>f.id===id),art=SPRITES[id];return {id,fighter,art,policy:fighter?createCombatProfile(fighter).referencePolicy:null,
-   owners:art?Object.entries(SPRITES).filter(([,other])=>other.frames.some(frame=>frame.path===art.frames[0].path||frame.pixelSHA256===art.frames[0].pixelSHA256)).map(([owner])=>owner):[]};});
- },ids);
+ const subjects=await page.evaluate(readBrowserCampaignSubjects,ids);
  const byId=new Map(subjects.map(subject=>[subject.id,subject]));
  const browserPixels=new Map();
  for(const row of candidates){
   const {id,fighter,art,policy,owners}=byId.get(row.entityId),frame=art?.frames?.[0];
-  check(id+': own source image is a single unverified static idle',!!fighter&&art?.fighterId===id&&art.source===fighter.source&&art.status==='integrated-candidate'&&art.fidelity==='unverified'&&art.frames.length===1&&art.animatedClips===0&&Object.keys(art.clips).length===1&&JSON.stringify(art.clips.idle.frames)==='[0]'&&art.clips.idle.loop===false&&art.clips.idle.ticksPerFrame===1&&row.artifacts.includes(frame.path));
+  const original=intake.entries.find(entry=>entry.fighter.id===id);
+  check(id+': historical portrait and current static idle match the exact source and their deliveries',
+   !!fighter&&fighter.source===original.fighter.source&&matchesCampaignCandidate(row,fighter.source,fragmentAssets[id],art,continuation));
   check(id+': no other identity borrows its path or decoded pixels',owners.length===1&&owners[0]===id,owners);
-  const fragment=fragmentAssets[id],original=intake.entries.find(entry=>entry.fighter.id===id);
-  check(id+': served manifest matches its additive fragment and original edition',fragment?.fighterId===id&&fragment.source===original.fighter.source&&art.source===original.fighter.source&&fragment.frames?.length===1&&fragment.frames[0].path===frame.path&&fragment.frames[0].sha256===frame.sha256&&fragment.frames[0].bytes===frame.bytes);
-  const response=await fetch(base+'/'+frame.path),bytes=Buffer.from(await response.arrayBuffer());
-  check(id+': exact versioned PNG bytes arrive over HTTP',response.ok&&response.headers.get('content-type')?.includes('image/png')&&bytes.length===frame.bytes&&createHash('sha256').update(bytes).digest('hex')===frame.sha256);
+  const rasters=art.portrait.path===frame.path?[frame]:[art.portrait,frame];
+  for(const raster of rasters){
+   const response=await fetch(base+'/'+raster.path),bytes=Buffer.from(await response.arrayBuffer());
+   check(id+': exact versioned PNG bytes arrive over HTTP for '+raster.path,response.ok&&response.headers.get('content-type')?.includes('image/png')&&bytes.length===raster.bytes&&createHash('sha256').update(bytes).digest('hex')===raster.sha256);
+  }
   const decoded=await page.evaluate(async frame=>{
    const image=new Image();image.src='/'+frame.path;await image.decode();
    const canvas=document.createElement('canvas');canvas.width=image.naturalWidth;canvas.height=image.naturalHeight;
@@ -147,9 +209,15 @@ try{
    report.inspectors.push({id,side,zoom:.5,geometry});await capture(page,'inspector-'+id+'-'+side);
   }
   await page.selectOption('[data-inspect=pose]','walk');
-  check(id+': absent walk remains an explicit static idle preview',await page.locator('#spriteDetail canvas').getAttribute('data-requested-pose')==='walk'&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('[data-inspect=play]').isDisabled()&&/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
-  const duelLinks=await page.locator('#spriteDetail a[href*="unified-versus"]').count(),imageLinks=await page.locator('#spriteDetail a[href*="assets/sprites/"]').count();
-  check(id+': dossier keeps its original combat role',imageLinks===1&&(policy.combatEnabled?duelLinks===1:duelLinks===0&&await page.locator('[data-reference-only]').count()===1),{policy,duelLinks,imageLinks});
+  if(Object.hasOwn(art.clips,'walk'))await inspectLaterWalk(page,id,art);
+  else check(id+': absent walk remains an explicit static idle preview',await page.locator('#spriteDetail canvas').getAttribute('data-requested-pose')==='walk'&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('[data-inspect=play]').isDisabled()&&/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
+  await page.selectOption('[data-inspect=pose]','idle');
+  check(id+': historical dossier checks resume on the original static idle',await page.locator('#spriteDetail canvas').getAttribute('data-requested-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='0'&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('[data-inspect=tick]').inputValue()==='0');
+  const duelLinks=await page.locator('#spriteDetail a[href*="unified-versus"]').count();
+  const imageLinks=await page.locator('#spriteDetail a[href*="assets/sprites/"]').evaluateAll(links=>links.map(link=>new URL(link.href).pathname));
+  const selectionPath=await page.locator('#spriteDetail img[data-art-purpose="selection"]').evaluate(img=>new URL(img.src).pathname);
+  check(id+': dossier shows the historical selection and links its exact image files',selectionPath==='/'+art.portrait.path&&imageLinks.length===rasters.length&&rasters.every(raster=>imageLinks.includes('/'+raster.path)),{selectionPath,imageLinks});
+  check(id+': dossier keeps its original combat role',policy.combatEnabled?duelLinks===1:duelLinks===0&&await page.locator('[data-reference-only]').count()===1,{policy,duelLinks});
   if(row.rolePreserved!==undefined)check(id+': ledger role agrees with source policy',row.rolePreserved===policy.role&&row.combatEnabledPreserved===policy.combatEnabled,{row,policy});
   report.roles.push({id,role:policy.role,combatEnabled:policy.combatEnabled});
  }
@@ -157,7 +225,8 @@ try{
   const subject=byId.get(row.entityId);
   if(resolvedHistoricalArtwork(row,subject?.art,continuation)){
    check(row.entityId+': historical blocker has an exact later source-owned delivery',true);
-   (report.resolvedHistorical||=[]).push({id:row.entityId,originalStatus:'blocked',laterCampaign:'art92'});continue;
+   // The resolver accepts ART92 and later purpose-specific journals without attributing a campaign.
+   (report.resolvedHistorical||=[]).push({id:row.entityId,originalStatus:'blocked',laterCampaign:null,resolution:'documented-later-exact-id-delivery'});continue;
   }
   check(row.entityId+': blocker has a specific reason and no imported image',!!subject?.fighter&&!subject.art&&!fragmentAssets[row.entityId]&&!!row.reason?.trim());
   await selectDossier(page,row.entityId,false);

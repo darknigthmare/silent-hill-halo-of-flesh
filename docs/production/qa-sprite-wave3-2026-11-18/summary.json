@@ -1,0 +1,46 @@
+{
+  "schema": "sprite-wave3-native-qa-summary/1",
+  "date": "2026-11-18",
+  "browserTest": false,
+  "passed": true,
+  "runs": [
+    {
+      "path": "main/report.json",
+      "visualReview": "main/visual-review.json",
+      "method": "FightEngine native Canvas",
+      "checks": 75,
+      "failed": 0,
+      "duels": 4,
+      "portraits": 8,
+      "finalDuelsVisuallyInspected": 4,
+      "portraitsVisuallyInspected": 8
+    },
+    {
+      "path": "selection/report.json",
+      "visualReview": "selection/visual-review.json",
+      "method": "paintRasterPortrait native Canvas",
+      "checks": 20,
+      "failed": 0,
+      "duels": 0,
+      "portraits": 4,
+      "finalDuelsVisuallyInspected": 0,
+      "portraitsVisuallyInspected": 4
+    }
+  ],
+  "totalChecks": 95,
+  "failedChecks": 0,
+  "duels": 4,
+  "portraits": 12,
+  "finalCapturesVisuallyInspected": 4,
+  "selectionPortraitCapturesVisuallyInspected": 12,
+  "sourceHashesReadOnly": {
+    "art/registry.json": "e6eb54a9552e9b8eaa936ed0bccef17f6969c65c56b1f370c77111a95f8b6829",
+    "src/sprite-manifest.js": "a36edf1f86806ac34cf4d5aab26987bcf62dccc28480a8df3e3515e035769878"
+  },
+  "registryAdjustmentRecommended": false,
+  "limits": [
+    "Images de garde et de sélection statiques. Le miroir du moteur fournit l’autre orientation.",
+    "Les tests couvrent le rendu natif. DOM, décodage par navigateur et service worker restent en dehors de la vérification.",
+    "La QA visuelle ne certifie ni l’identité au détail près, ni des animations ou des attaques."
+  ]
+}

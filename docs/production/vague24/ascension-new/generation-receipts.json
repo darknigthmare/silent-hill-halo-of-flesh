@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-20",
+  "method": "built-in image_gen",
+  "calls": [
+    {
+      "fighterId": "ascension_the_immolator_182",
+      "operation": "generate",
+      "prompt": "Use case: stylized-concept. Asset type: one static high-detail 2D fighting-game idle sprite candidate. Subject: The Immolator from Silent Hill: Ascension (2023), EXACT design shown in the supplied official concept sheet, not a generic fire creature. This input is a source artwork reference, not an edit target. Use the top color rendering for materials and the small rear construction drawing for the cylindrical back canister and hoses. ONE whole creature in true SIDE PROFILE, clearly facing SCREEN RIGHT, in its original low heavy four-contact knuckle-walking idle posture. Camera perpendicular to the combat plane. Two huge long forearms support clenched fists at the front, two shorter bent hind legs and human-like feet support the rear. Offset far limbs just enough to show four distinct supporting ends. Preserve the square gridded iron brazier replacing the head, restrained orange flame rising inside/above it, looped dark hoses beneath the cage and along the sides, the small weathered cylindrical canister strapped to its upper back, and the existing criss-cross wraps around the grey-pink limbs. Preserve the source's mass, proportions, attachments, material palette and limb count. Detailed painted game-sprite realism with clear edge readability and even neutral illumination. True transparent RGBA background. Entire cage top, flame tips, all four support ends, back tank and all hose loops visible; centered in a square canvas with at least 12 percent empty space on all four sides. Do not add new wounds, red splashes, human victims, weapons, tail, skulls or extra limbs. No background, floor, cast shadow, text, logos, UI, labels, character sheet, extra subject or duplicate. This is a new authored static side-view candidate from the promotional concept, not a source frame or an animation or a 1:1 certification.",
+      "referenced_image_paths": [
+        "/workspace/scratch/62cbb5f4a653/production/ascension-new/references/sh_ascension_art_monster_10.jfif"
+      ],
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-ecf0f0e7-f542-4a4b-8624-c458e62dedf2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "disposition": "retained-threequarter-variant-not-selected"
+    },
+    {
+      "fighterId": "ascension_stinger_181",
+      "operation": "generate",
+      "prompt": "Use case: stylized-concept. Asset type: one full-body static lateral 2D fighting-game sprite. Subject: the Stinger from Silent Hill: Ascension (2023), according to the supplied official concept sheet. Use the THREE WHOLE BODY views at the bottom as the anatomy and materials reference, and specifically keep the SMALL CLOSED PALE MASK visible in the central lower full-body pose; do not reproduce the open head in the large upper close-up. This input is source artwork, not an edit target. Create ONE whole creature in STRICT SIDE PROFILE FACING SCREEN RIGHT, entire head, ribbed torso, hips and pointed feet oriented right. Preserve its very thin elongated humanoid central torso, small elongated pale closed mask, red scalloped face collar, exactly FOUR long jointed arms carrying dark burgundy membranous wing panels, each arm ending in its own long curved slender hooked tip, and exactly TWO slender wrapped lower legs ending in pointed feet. Keep the same membrane attachment topology, triangular gaps, joint positions, bony thinness and desaturated flesh-brown and deep burgundy palette. Fold the near and far wing arms partially backward in the same native idle range so the silhouette reads from the side; offset their four hooked tips in depth enough to distinguish all four attachments, no extra arms, extra legs or disconnected pieces. Entire creature and all four hook tips remain visible. Detailed source-faithful textured game art with even neutral lighting and no extra injury or added blood. True RGBA transparent background, whole centered silhouette within central 75 percent of canvas with clear 12 percent or more margin at head, hooks, wing extremities and feet. Single subject, no floor, cast shadow, smoke, background, effect, labels, logo, reference inset or sheet. This is one source-guided static lateral reconstruction, not a native animation or a fidelity certificate.",
+      "referenced_image_paths": [
+        "/workspace/scratch/62cbb5f4a653/production/ascension-new/references/sh_ascension_art_monster_09.jfif"
+      ],
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-878fd155-88e2-4957-a055-40aa7d1a2a8e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "disposition": "selected-side-view"
+    },
+    {
+      "fighterId": "ascension_the_immolator_182",
+      "operation": "edit",
+      "prompt": "Edit the supplied Immolator game sprite: change ONLY the camera orientation and framing to a STRICT ORTHOGRAPHIC RIGHT-FACING SIDE VIEW suitable for a 2D fighting game. Rotate the WHOLE creature another 60 degrees away from the camera, so we see its LEFT FLANK directly, the torso axis horizontal left-to-right, the side of its cage head facing us, and its front directed to the RIGHT edge. Both hind feet and both knuckles must point RIGHT and share the same ground baseline, far limbs slightly offset but naturally attached. Do not keep the near-frontal pose. Preserve exactly the existing creature identity, two long forelimbs and two shorter hind legs, grey-pink texture, wraps, cage grid, orange flame, back tank and hose loops. Do not add or remove any limb or equipment. Entire silhouette must fit within the central 75% of the square canvas, including fire tips and toes, with generous real transparent margin on all sides. One creature, no floor or shadow, no background, labels or reference inset. Preserve transparent RGBA background. This is a single static side-view asset.",
+      "referenced_image_paths": [
+        "/workspace/scratch/62cbb5f4a653/generated_images/exec-ecf0f0e7-f542-4a4b-8624-c458e62dedf2.png"
+      ],
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-89f62369-4791-4817-8bb6-35d54c61a704.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "disposition": "selected-side-view"
+    }
+  ]
+}

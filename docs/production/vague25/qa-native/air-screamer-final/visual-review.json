@@ -1,0 +1,880 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "reviewer": "/root/generate_ascension_missing",
+  "reviewedAt": "2026-11-20T09:40:28.662383+00:00",
+  "method": "Manual review of six real native FightEngine idle pose captures (three frames in both directions) and two retained static walk3 captures, with exact SHA binding. Real keydown/keyup only; no actor injection.",
+  "execution": {
+    "report": "docs/production/vague25/qa-native/air-screamer-final/report.json",
+    "sha256": "d030e37f872085b64c8601ae23132caa3e9061f36f0259a325602ae153b45f9b",
+    "processObservation": "docs/production/vague25/qa-native/air-screamer-final/process-observation.json",
+    "processes": 1,
+    "exitCode": 0,
+    "passed": true,
+    "automatedChecks": 293,
+    "combatCases": 2,
+    "generatedCaptures": 9,
+    "browserTest": false,
+    "httpTest": false,
+    "actorStateInjected": false
+  },
+  "summary": {
+    "profilesReviewed": 1,
+    "capturesActuallyViewed": 8,
+    "acceptedAsCandidate": 0,
+    "held": 1,
+    "nativePoseCorrectionRequired": 1,
+    "certifiedOneToOne": 0
+  },
+  "entries": [
+    {
+      "fighterId": "sh1_air_screamer_001",
+      "source": "sh1",
+      "assetPath": "assets/sprites/sh1_air_screamer_001.3af1bfe6260c.png",
+      "assetSHA256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
+      "assetsReviewed": [
+        {
+          "frameIndex": 0,
+          "path": "assets/sprites/sh1_air_screamer_001.3af1bfe6260c.png",
+          "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0"
+        },
+        {
+          "frameIndex": 1,
+          "path": "assets/sprites/sh1_air_screamer_001.54bc7ba84975.png",
+          "sha256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4"
+        },
+        {
+          "frameIndex": 2,
+          "path": "assets/sprites/sh1_air_screamer_001.3b30a8c6cdae.png",
+          "sha256": "3b30a8c6cdae02716cec44551d348e02259dbd2aa9bce787ad1db6d58dc4bfc6"
+        },
+        {
+          "frameIndex": 3,
+          "path": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+          "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01"
+        }
+      ],
+      "combatEnabled": true,
+      "roleUsage": "combat-lateral-candidate",
+      "decision": "hold-for-wing-clearance",
+      "technicalResult": "passed",
+      "certifiedOneToOne": false,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "belowCombatFloorObserved": true,
+      "calibrationChangeRecommended": {
+        "type": "targeted-native-pose-correction",
+        "frameIndex": 2,
+        "request": "Raise only the lowest wing extremity/membrane to native y<=810–820. Keep body/head/feet landmarks, common anchor[0.51,0.735], bodyHeight0.42, frame3, portrait and clip timing unchanged.",
+        "avoid": "A uniform anchorY change to approximately0.81 would raise all idle bodies about27screenpixels relative to retained walk3 and introduce a transition jump."
+      },
+      "observation": "All six idle poses and both retained walk captures are complete, correctly oriented and proportionally coherent. Neck, skull, beak and feet remain stable within the three idle images; projected body-landmark drift is below one world pixel. The unchanged single walk frame has comparable overall length and foot height, though its historical beak shape sits slightly lower. Frame2 downstroke alone crosses below the physical combat floor in both orientations.",
+      "limitations": [
+        "This visual hold is separate from the successful technical cadence/mirror/input checks. The old technical pass does not test floor clearance and must not be counted as final visual success.",
+        "No source timing, canonical scale, hidden side, smooth intermediate interpolation or one-to-one fidelity is certified.",
+        "Only eight named gameplay captures were visually inspected; the ninth preserved-selection capture was generated but not reviewed in this step."
+      ],
+      "contact": "Feet intentionally hover roughly28–32worldpixels above the actor origin. The downstroke wing tip reaches screeny617.887, with framing fringe618.950, while the projected physical floor is594.",
+      "sourceReviewIndependence": "This reviewer did not generate the Air PNGs. Native runtime/source silhouette review remains candidate-only.",
+      "evidence": [
+        {
+          "path": "docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-right-walk-static-frame3.png",
+          "sha256": "46ba74afb1f3f897a05c89ddb419b8357b831558f0923dc4e1e7679aff5ee143"
+        },
+        {
+          "path": "docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-right-idle-frame0-tick0.png",
+          "sha256": "5273820438d7fae531b7a2df5b69a9e826d8f1558ff0a51d6a6714c0ac3231bc"
+        },
+        {
+          "path": "docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-right-idle-frame1-tick6.png",
+          "sha256": "81bd70c050573b9af129e595535126ae066c5f2e86510543fdd6c26f0307aa44"
+        },
+        {
+          "path": "docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-right-idle-frame2-tick18.png",
+          "sha256": "b3bdb2b4e33baf0edc783a18fa806b78d11e7fa2a4ed0ca665fad4f1f32a7eb0"
+        },
+        {
+          "path": "docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-left-walk-static-frame3.png",
+          "sha256": "866e8a57736c86e3dd9949e04706905e4f52228af44b44314fc911950736c8a2"
+        },
+        {
+          "path": "docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-left-idle-frame0-tick0.png",
+          "sha256": "710e2d6c4c9e3222dc52daf34ff36f53bc0cb491782676f6eff78e5130e78c87"
+        },
+        {
+          "path": "docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-left-idle-frame1-tick6.png",
+          "sha256": "707622d09dc7c84aaba2801e253016779f01f085991bded634b1858f21a9e55a"
+        },
+        {
+          "path": "docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-left-idle-frame2-tick18.png",
+          "sha256": "18ec06765e5ff17e94e71cead62f8e112461326a8fc93c1d592c8330ee534279"
+        }
+      ],
+      "automatedReport": "docs/production/vague25/qa-native/air-screamer-final/report.json",
+      "automatedReportSHA256": "d030e37f872085b64c8601ae23132caa3e9061f36f0259a325602ae153b45f9b",
+      "automatedGeometry": [
+        {
+          "file": "sh1_air_screamer_001-right-walk-static-frame3.png",
+          "complete": true,
+          "exterior": [
+            134.79251588376275,
+            399.7161714454951,
+            644.8147830941061,
+            568.9340856953665
+          ],
+          "visible": [
+            135.05568526828816,
+            400.50567959907147,
+            643.2357667869535,
+            568.1445775417901
+          ],
+          "anchorScreen": [
+            390.51947021484375,
+            566.7234628653526
+          ],
+          "anchor": [
+            0.51,
+            0.9
+          ],
+          "bodyHeight": 0.8,
+          "pixelScale": 0.263169384525461,
+          "worldPixelScale": 0.26899171270718225,
+          "declaredBodyHeightWorld": 155.79999999999995,
+          "aspectUndistorted": true,
+          "projectedLandmarks": {}
+        },
+        {
+          "file": "sh1_air_screamer_001-right-idle-frame0-tick0.png",
+          "complete": true,
+          "exterior": [
+            140.02090393739888,
+            441.03298157377657,
+            648.2550291689578,
+            567.9143043303303
+          ],
+          "visible": [
+            140.72973814274278,
+            441.74181577912043,
+            647.546194963614,
+            566.8510530223145
+          ],
+          "anchorScreen": [
+            396.3920593261719,
+            566.7234628653526
+          ],
+          "anchor": [
+            0.51,
+            0.735
+          ],
+          "bodyHeight": 0.42,
+          "pixelScale": 0.3544171026719379,
+          "worldPixelScale": 0.3622581845238095,
+          "declaredBodyHeightWorld": 155.79999999999998,
+          "aspectUndistorted": true,
+          "projectedLandmarks": {
+            "beakTip": {
+              "native": [
+                1490,
+                592.5
+              ],
+              "screen": [
+                646.83736075827,
+                509.9671080434685
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                255.9861235119047,
+                -85.89202566964285
+              ]
+            },
+            "skullCrest": {
+              "native": [
+                1164,
+                477
+              ],
+              "screen": [
+                531.2973852872183,
+                469.03193268485967
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                137.8899553571428,
+                -127.73284598214285
+              ]
+            },
+            "nearFootEnd": {
+              "native": [
+                721.5,
+                742
+              ],
+              "screen": [
+                374.46781735488577,
+                562.9524648929232
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -22.409291294642884,
+                -31.734427083333326
+              ]
+            },
+            "farFootEnd": {
+              "native": [
+                758,
+                751
+              ],
+              "screen": [
+                387.40404160241144,
+                566.1422188169706
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -9.186867559523902,
+                -28.474103422619073
+              ]
+            }
+          }
+        },
+        {
+          "file": "sh1_air_screamer_001-right-idle-frame1-tick6.png",
+          "complete": true,
+          "exterior": [
+            178.47976232508776,
+            346.7580322630411,
+            678.5622941951922,
+            567.2054701249865
+          ],
+          "visible": [
+            179.89743073577552,
+            349.5933690844166,
+            677.4990428871763,
+            566.4966359196426
+          ],
+          "anchorScreen": [
+            427.0537414550781,
+            566.7234628653526
+          ],
+          "anchor": [
+            0.51,
+            0.735
+          ],
+          "bodyHeight": 0.42,
+          "pixelScale": 0.3544171026719379,
+          "worldPixelScale": 0.3622581845238095,
+          "declaredBodyHeightWorld": 155.79999999999998,
+          "aspectUndistorted": true,
+          "projectedLandmarks": {
+            "beakTip": {
+              "native": [
+                1489,
+                592
+              ],
+              "screen": [
+                677.1446257845043,
+                509.7898994921325
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                255.62386532738088,
+                -86.07315476190476
+              ]
+            },
+            "skullCrest": {
+              "native": [
+                1165,
+                477
+              ],
+              "screen": [
+                562.3134845187965,
+                469.03193268485967
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                138.25221354166663,
+                -127.73284598214285
+              ]
+            },
+            "nearFootEnd": {
+              "native": [
+                723,
+                741
+              ],
+              "screen": [
+                405.6611251377999,
+                562.5980477902513
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -21.865904017857197,
+                -32.09668526785716
+              ]
+            },
+            "farFootEnd": {
+              "native": [
+                758.5,
+                751
+              ],
+              "screen": [
+                418.2429322826537,
+                566.1422188169706
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -9.005738467261928,
+                -28.474103422619073
+              ]
+            }
+          }
+        },
+        {
+          "file": "sh1_air_screamer_001-right-idle-frame2-tick18.png",
+          "complete": true,
+          "exterior": [
+            208.66233598436673,
+            452.7287459619505,
+            721.149466447989,
+            618.9503671150894
+          ],
+          "visible": [
+            209.0167530870387,
+            453.7919972699664,
+            720.440632242645,
+            617.8871158070735
+          ],
+          "anchorScreen": [
+            469.9953308105469,
+            566.7234628653526
+          ],
+          "anchor": [
+            0.51,
+            0.735
+          ],
+          "bodyHeight": 0.42,
+          "pixelScale": 0.3544171026719379,
+          "worldPixelScale": 0.3622581845238095,
+          "declaredBodyHeightWorld": 155.79999999999998,
+          "aspectUndistorted": true,
+          "projectedLandmarks": {
+            "beakTip": {
+              "native": [
+                1488,
+                593
+              ],
+              "screen": [
+                719.7317980373011,
+                510.1443165948044
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                255.26160714285706,
+                -85.71089657738099
+              ]
+            },
+            "skullCrest": {
+              "native": [
+                1163.5,
+                477
+              ],
+              "screen": [
+                604.7234482202573,
+                469.03193268485967
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                137.70882626488088,
+                -127.73284598214285
+              ]
+            },
+            "nearFootEnd": {
+              "native": [
+                723.17,
+                740
+              ],
+              "screen": [
+                448.66296540072284,
+                562.2436306875793
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -21.80432012648819,
+                -32.45894345238099
+              ]
+            },
+            "farFootEnd": {
+              "native": [
+                759.5,
+                750
+              ],
+              "screen": [
+                461.5389387407944,
+                565.7878017142987
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -8.643480282738153,
+                -28.836361607142905
+              ]
+            }
+          }
+        },
+        {
+          "file": "sh1_air_screamer_001-left-walk-static-frame3.png",
+          "complete": true,
+          "exterior": [
+            635.1852779410501,
+            399.7161714454951,
+            1145.2075451513936,
+            568.9340856953665
+          ],
+          "visible": [
+            636.7642942482028,
+            400.50567959907147,
+            1144.944375766868,
+            568.1445775417901
+          ],
+          "anchorScreen": [
+            889.4805908203125,
+            566.7234628653526
+          ],
+          "anchor": [
+            0.51,
+            0.9
+          ],
+          "bodyHeight": 0.8,
+          "pixelScale": 0.263169384525461,
+          "worldPixelScale": 0.26899171270718225,
+          "declaredBodyHeightWorld": 155.79999999999995,
+          "aspectUndistorted": true,
+          "projectedLandmarks": {}
+        },
+        {
+          "file": "sh1_air_screamer_001-left-idle-frame0-tick0.png",
+          "complete": true,
+          "exterior": [
+            631.7449403134641,
+            441.03298157377657,
+            1139.9790655450229,
+            567.9143043303303
+          ],
+          "visible": [
+            632.4537745188079,
+            441.74181577912043,
+            1139.2702313396792,
+            566.8510530223145
+          ],
+          "anchorScreen": [
+            883.60791015625,
+            566.7234628653526
+          ],
+          "anchor": [
+            0.51,
+            0.735
+          ],
+          "bodyHeight": 0.42,
+          "pixelScale": 0.3544171026719379,
+          "worldPixelScale": 0.3622581845238095,
+          "declaredBodyHeightWorld": 155.79999999999998,
+          "aspectUndistorted": true,
+          "projectedLandmarks": {
+            "beakTip": {
+              "native": [
+                1490,
+                592.5
+              ],
+              "screen": [
+                633.1626087241518,
+                509.9671080434685
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                255.9861235119047,
+                -85.89202566964285
+              ]
+            },
+            "skullCrest": {
+              "native": [
+                1164,
+                477
+              ],
+              "screen": [
+                748.7025841952036,
+                469.03193268485967
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                137.8899553571428,
+                -127.73284598214285
+              ]
+            },
+            "nearFootEnd": {
+              "native": [
+                721.5,
+                742
+              ],
+              "screen": [
+                905.5321521275362,
+                562.9524648929232
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -22.409291294642944,
+                -31.734427083333326
+              ]
+            },
+            "farFootEnd": {
+              "native": [
+                758,
+                751
+              ],
+              "screen": [
+                892.5959278800104,
+                566.1422188169706
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -9.186867559523902,
+                -28.474103422619073
+              ]
+            }
+          }
+        },
+        {
+          "file": "sh1_air_screamer_001-left-idle-frame1-tick6.png",
+          "complete": true,
+          "exterior": [
+            601.437736322386,
+            346.7580322630411,
+            1101.5202681924904,
+            567.2054701249865
+          ],
+          "visible": [
+            602.5009876304018,
+            349.5933690844166,
+            1100.1025997818026,
+            566.4966359196426
+          ],
+          "anchorScreen": [
+            852.9462890625,
+            566.7234628653526
+          ],
+          "anchor": [
+            0.51,
+            0.735
+          ],
+          "bodyHeight": 0.42,
+          "pixelScale": 0.3544171026719379,
+          "worldPixelScale": 0.3622581845238095,
+          "declaredBodyHeightWorld": 155.79999999999998,
+          "aspectUndistorted": true,
+          "projectedLandmarks": {
+            "beakTip": {
+              "native": [
+                1489,
+                592
+              ],
+              "screen": [
+                602.8554047330738,
+                509.7898994921325
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                255.62386532738088,
+                -86.07315476190476
+              ]
+            },
+            "skullCrest": {
+              "native": [
+                1165,
+                477
+              ],
+              "screen": [
+                717.6865459987816,
+                469.03193268485967
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                138.25221354166663,
+                -127.73284598214285
+              ]
+            },
+            "nearFootEnd": {
+              "native": [
+                723,
+                741
+              ],
+              "screen": [
+                874.3389053797782,
+                562.5980477902513
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -21.865904017857197,
+                -32.09668526785716
+              ]
+            },
+            "farFootEnd": {
+              "native": [
+                758.5,
+                751
+              ],
+              "screen": [
+                861.7570982349245,
+                566.1422188169706
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -9.005738467261985,
+                -28.474103422619073
+              ]
+            }
+          }
+        },
+        {
+          "file": "sh1_air_screamer_001-left-idle-frame2-tick18.png",
+          "complete": true,
+          "exterior": [
+            558.8506251047454,
+            452.7287459619505,
+            1071.3377555683676,
+            618.9503671150894
+          ],
+          "visible": [
+            559.5594593100893,
+            453.7919972699664,
+            1070.9833384656956,
+            617.8871158070735
+          ],
+          "anchorScreen": [
+            810.0047607421875,
+            566.7234628653526
+          ],
+          "anchor": [
+            0.51,
+            0.735
+          ],
+          "bodyHeight": 0.42,
+          "pixelScale": 0.3544171026719379,
+          "worldPixelScale": 0.3622581845238095,
+          "declaredBodyHeightWorld": 155.79999999999998,
+          "aspectUndistorted": true,
+          "projectedLandmarks": {
+            "beakTip": {
+              "native": [
+                1488,
+                593
+              ],
+              "screen": [
+                560.2682935154332,
+                510.1443165948044
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                255.26160714285706,
+                -85.71089657738099
+              ]
+            },
+            "skullCrest": {
+              "native": [
+                1163.5,
+                477
+              ],
+              "screen": [
+                675.2766433324771,
+                469.03193268485967
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                137.70882626488088,
+                -127.73284598214285
+              ]
+            },
+            "nearFootEnd": {
+              "native": [
+                723.17,
+                740
+              ],
+              "screen": [
+                831.3371261520115,
+                562.2436306875793
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -21.80432012648813,
+                -32.45894345238099
+              ]
+            },
+            "farFootEnd": {
+              "native": [
+                759.5,
+                750
+              ],
+              "screen": [
+                818.46115281194,
+                565.7878017142987
+              ],
+              "actorRelativeNativeOrientationWorld": [
+                -8.643480282738153,
+                -28.836361607142905
+              ]
+            }
+          }
+        }
+      ],
+      "automatedMirrorChecks": [
+        {
+          "name": "Existing field unchanged: mirrorPolicy",
+          "passed": true
+        },
+        {
+          "name": "sh1_air_screamer_001-right: static walk silhouette and mirror",
+          "passed": true
+        },
+        {
+          "name": "sh1_air_screamer_001-right: all48 actual facing/mirror matrices agree",
+          "passed": true
+        },
+        {
+          "name": "sh1_air_screamer_001-left: static walk silhouette and mirror",
+          "passed": true
+        },
+        {
+          "name": "sh1_air_screamer_001-left: all48 actual facing/mirror matrices agree",
+          "passed": true
+        },
+        {
+          "name": "R/L matrices reverse X only and retain equal scale",
+          "passed": true
+        }
+      ],
+      "cadence": [
+        {
+          "orientation": 1,
+          "cycles": 2,
+          "totalTicks": 48,
+          "observedRuns": [
+            {
+              "frameIndex": 0,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 1,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 0,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 2,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 0,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 1,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 0,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 2,
+              "ticks": 6
+            }
+          ]
+        },
+        {
+          "orientation": -1,
+          "cycles": 2,
+          "totalTicks": 48,
+          "observedRuns": [
+            {
+              "frameIndex": 0,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 1,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 0,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 2,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 0,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 1,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 0,
+              "ticks": 6
+            },
+            {
+              "frameIndex": 2,
+              "ticks": 6
+            }
+          ]
+        }
+      ],
+      "maxProjectedBodyLandmarkDriftWorldPixels": 0.9438824520652009,
+      "wingClearance": [
+        {
+          "file": "sh1_air_screamer_001-right-idle-frame0-tick0.png",
+          "frameIndex": 0,
+          "facing": 1,
+          "projectedPhysicalFloorY": 594.0,
+          "visibleBottomY": 566.8510530223145,
+          "framingBottomY": 567.9143043303303,
+          "visibleBelowFloorPixels": -27.148946977685455,
+          "framingBelowFloorPixels": -26.08569566966969
+        },
+        {
+          "file": "sh1_air_screamer_001-right-idle-frame1-tick6.png",
+          "frameIndex": 1,
+          "facing": 1,
+          "projectedPhysicalFloorY": 594.0,
+          "visibleBottomY": 566.4966359196426,
+          "framingBottomY": 567.2054701249865,
+          "visibleBelowFloorPixels": -27.503364080357414,
+          "framingBelowFloorPixels": -26.794529875013495
+        },
+        {
+          "file": "sh1_air_screamer_001-right-idle-frame2-tick18.png",
+          "frameIndex": 2,
+          "facing": 1,
+          "projectedPhysicalFloorY": 594.0,
+          "visibleBottomY": 617.8871158070735,
+          "framingBottomY": 618.9503671150894,
+          "visibleBelowFloorPixels": 23.887115807073542,
+          "framingBelowFloorPixels": 24.95036711508942
+        },
+        {
+          "file": "sh1_air_screamer_001-left-idle-frame0-tick0.png",
+          "frameIndex": 0,
+          "facing": -1,
+          "projectedPhysicalFloorY": 594.0,
+          "visibleBottomY": 566.8510530223145,
+          "framingBottomY": 567.9143043303303,
+          "visibleBelowFloorPixels": -27.148946977685455,
+          "framingBelowFloorPixels": -26.08569566966969
+        },
+        {
+          "file": "sh1_air_screamer_001-left-idle-frame1-tick6.png",
+          "frameIndex": 1,
+          "facing": -1,
+          "projectedPhysicalFloorY": 594.0,
+          "visibleBottomY": 566.4966359196426,
+          "framingBottomY": 567.2054701249865,
+          "visibleBelowFloorPixels": -27.503364080357414,
+          "framingBelowFloorPixels": -26.794529875013495
+        },
+        {
+          "file": "sh1_air_screamer_001-left-idle-frame2-tick18.png",
+          "frameIndex": 2,
+          "facing": -1,
+          "projectedPhysicalFloorY": 594.0,
+          "visibleBottomY": 617.8871158070735,
+          "framingBottomY": 618.9503671150894,
+          "visibleBelowFloorPixels": 23.887115807073542,
+          "framingBelowFloorPixels": 24.95036711508942
+        }
+      ]
+    }
+  ],
+  "historicalHarness": {
+    "path": "docs/production/vague25/qa-native/air-screamer-final/harness-at-technical-pass.mjs",
+    "sha256": "dd137950dbdcee27d4eec7014946f9cc090dbaacd6adc4a95bf5185439045095"
+  },
+  "excludedFromFinalSuccessTotals": true,
+  "limits": [
+    "Technical pass with visual hold. A corrected native downstroke and a fresh run with explicit floor-clearance assertions are required.",
+    "The initial setup failure and this visually held attempt are retained, not added to final successful coverage."
+  ]
+}

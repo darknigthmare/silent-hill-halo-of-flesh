@@ -1,0 +1,4712 @@
+{
+  "schema": 3,
+  "label": "wave7",
+  "generatedAt": "2026-11-18T12:31:23.023Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4329\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1544075,
+        "sha256": "9ab82a90231f6b38f72829652e883aa6c87ac7fec8531072797627c553b5f29a"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1091589,
+        "sha256": "cfa48c2c5630318dddc5c669494447913fa2f004e8caf22c2c71ab4a2c6541db"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1321541,
+        "sha256": "ff3410acb3a045b00665af62a502b418feac29345408e795956abf7c1625801f"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_groaner_003.82984139e47a.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 835841,
+        "sha256": "82984139e47ae9cb48ad2be07a7e421310e04185757ad45278a5fc0117425fce"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_groaner_003.82984139e47a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1287938,
+        "sha256": "b1df281db9ab467efd0ebedbeecee04542d6885ec7e3526f551814eb3476cdcd"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1232129,
+        "sha256": "13a4fcfcf0d60fca9dbb3eb51efea85a83bc4d9e225cdc257df0500828966ad0"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_split_head_014.2b9d7a5ec550.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 744380,
+        "sha256": "2b9d7a5ec550b66acb21d9ef958d8cb4aa53c4c05ae07ede8aec430954f58375"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_split_head_014.2b9d7a5ec550.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_split_head_014.0422e5926e4d.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 726218,
+        "sha256": "0422e5926e4df4e58986794afdf49c6e0d2db7324d0b18848c212b0b05e1c495"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_split_head_014.0422e5926e4d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_split_head_014.e48107f497d7.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 673410,
+        "sha256": "e48107f497d7905fa37f9a8212d72fe658b10601e671c4bcb8dea7d5e0be40ee"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_split_head_014.e48107f497d7.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1001511,
+        "sha256": "483ae08e94aa83be4025a160b8bdbf92c2b817b19614e3d756b5343b065029c3"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_wormhead_004.60b854394522.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1489126,
+        "sha256": "60b854394522c018dc02ab01104c0c96e9d96769c0586f39ed7cca721f47f664"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_wormhead_004.60b854394522.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1309263,
+        "sha256": "aebf12dd2f70b1fbc68149dc4e15e74e8d0fe88249a55f83d47cecf98b1b6578"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1185443,
+        "sha256": "08501d7f2bd550c3615b0103e0a5db90e526ff054ca340f77dea933f5e52a730"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1026533,
+        "sha256": "16f970ba8d80ddd9ae0a5b065b3d38f92cdabb76870d0a70415e7fbb1c9e48c8"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1218735,
+        "sha256": "339fd5045d590b82a1c182dff8dee81d2a3efce290564d6ea2e74ab1af9bf61e"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_romper_010.b71ffb03f441.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 2097371,
+        "sha256": "b71ffb03f44127738dbcd7a908615e4926d9ddcfe05bc6f1f74523a90c5ac9a8"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_romper_010.b71ffb03f441.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_romper_010.fa62c070efdd.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1097459,
+        "sha256": "fa62c070efdd5fceacad94cc65b5fd7590547a2ff26ac08883ce4bc2bd065946"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_romper_010.fa62c070efdd.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_romper_010.09a1f60ce398.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1043216,
+        "sha256": "09a1f60ce398da7a456f8becac85c5801e7503789961a92ed0d7431aef13bd91"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_romper_010.09a1f60ce398.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_romper_010.f5be63471b21.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 872861,
+        "sha256": "f5be63471b21e05895eaa65701932836bd2f31dc7098d61c0899379587bd4c45"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_romper_010.f5be63471b21.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1093300,
+        "sha256": "6ceba51e9d28fa51afb123b2349459d419f9f11bc6188763ce9d4ba00373103a"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1733855,
+        "sha256": "fbc3269a88c0a276b12056a9254a6eaf0e0334f6b12bb6629fde696b7ab19bb3"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 399721,
+        "sha256": "1baeea09fe9006a0b1c6051f6f11fb029f476befef448e1d0fc08578e7583c77"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1165865,
+        "sha256": "aaa9a22e2beb715b306c8b5053fd9a36b2beae087e877ed98caa6ffbb13bb6a0"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1303720,
+        "sha256": "0cf7eb3b5514cac4b74ce7fd309976c4cbbb98c64b8ed5df1bc73ca9bd5ece62"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 761798,
+        "sha256": "fdb0379cf4b5cb9a4c5d6633a6879785207a0f89a27d2ac069177993303f648a"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 662108,
+        "sha256": "b6ec9f61d8262af1376d713a6b5bf525fa57f272a04de813caaec1d1ea38ea54"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 770156,
+        "sha256": "ce4b2fdfbc00806398c3ab21d5044aa7df2095fecd95180c3388e3625a3f9e58"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_hummer_055.9d51cedd24be.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 663909,
+        "sha256": "9d51cedd24be9ea37745e55a23e49ec6d664efcb75cb13abd15f0a844e3a1755"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_hummer_055.9d51cedd24be.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_hummer_055.8561079c64dc.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 893461,
+        "sha256": "8561079c64dca5f054d25fa87ed90644b5a093276d5f6b8a7ec121747b3f8b63"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_hummer_055.8561079c64dc.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1399325,
+        "sha256": "770cd55b09c9a678342e1b0aed3956420b4b749faeaa04e80c24072e15b33382"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 975908,
+        "sha256": "269a6ac1ed420eb461e2618cce852867da14574dae8222eb18bdca23fb022b88"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_slurper_042.5cda350161d4.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1187787,
+        "sha256": "5cda350161d475ae9fd095da77dfb5dfe5ee9ca4d8fa6169a90b357c0bd88eae"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_slurper_042.5cda350161d4.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 963944,
+        "sha256": "ccdea6132d6f30b3a6805358bc5b73e4a4601317a017c8e317fc70e35f3068de"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1481436,
+        "sha256": "3f0598df95a460b0cc1ebf954bc1674ddff72b8bdf593bfebc80e1a4a784a2de"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1957929,
+        "sha256": "f72ba07f41b863e926c28f651dd28795df60571b0f5d6655a69f8988353ce5d6"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1897822,
+        "sha256": "4066ed2666113af8d143d70bf76e288c26af031de8dfb5101a13ea7f183290a6"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          37,
+          37,
+          1701,
+          836
+        ],
+        "expected": [
+          37,
+          37,
+          1701,
+          836
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          11,
+          295,
+          1251,
+          1058
+        ],
+        "expected": [
+          11,
+          295,
+          1251,
+          1058
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          31,
+          130,
+          1237,
+          1202
+        ],
+        "expected": [
+          31,
+          130,
+          1237,
+          1202
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_groaner_003.82984139e47a.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_groaner_003.82984139e47a.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          59,
+          689,
+          1229,
+          1112
+        ],
+        "expected": [
+          59,
+          689,
+          1229,
+          1112
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          18,
+          136,
+          1432,
+          1050
+        ],
+        "expected": [
+          18,
+          136,
+          1432,
+          1050
+        ]
+      }
+    },
+    {
+      "name": "sh1_groaner_003 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_groaner_003.9ab82a90231f.png"
+        ],
+        "portrait": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_groaner_003 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_groaner_003.b1df281db9ab.png"
+        ],
+        "expected": "assets/sprites/sh1_groaner_003.b1df281db9ab.png"
+      }
+    },
+    {
+      "name": "sh1_groaner_003 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_groaner_003.b1df281db9ab.png"
+        ],
+        "expected": "assets/sprites/sh1_groaner_003.b1df281db9ab.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          52,
+          113,
+          2143,
+          686
+        ],
+        "expected": [
+          52,
+          113,
+          2143,
+          686
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_split_head_014.2b9d7a5ec550.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_split_head_014.2b9d7a5ec550.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          46,
+          480,
+          1240,
+          1023
+        ],
+        "expected": [
+          46,
+          480,
+          1240,
+          1023
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_split_head_014.0422e5926e4d.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_split_head_014.0422e5926e4d.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          40,
+          520,
+          1222,
+          1181
+        ],
+        "expected": [
+          40,
+          520,
+          1222,
+          1181
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_split_head_014.e48107f497d7.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_split_head_014.e48107f497d7.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          29,
+          729,
+          1226,
+          1109
+        ],
+        "expected": [
+          29,
+          729,
+          1226,
+          1109
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          27,
+          158,
+          1753,
+          861
+        ],
+        "expected": [
+          27,
+          158,
+          1753,
+          861
+        ]
+      }
+    },
+    {
+      "name": "sh1_split_head_014 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png"
+        ],
+        "portrait": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_split_head_014 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_split_head_014.483ae08e94aa.png"
+        ],
+        "expected": "assets/sprites/sh1_split_head_014.483ae08e94aa.png"
+      }
+    },
+    {
+      "name": "sh1_split_head_014 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_split_head_014.483ae08e94aa.png"
+        ],
+        "expected": "assets/sprites/sh1_split_head_014.483ae08e94aa.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_wormhead_004.60b854394522.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_wormhead_004.60b854394522.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          54,
+          14,
+          1697,
+          877
+        ],
+        "expected": [
+          54,
+          14,
+          1697,
+          877
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          61,
+          165,
+          1242,
+          1134
+        ],
+        "expected": [
+          61,
+          165,
+          1242,
+          1134
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          80,
+          110,
+          1182,
+          1160
+        ],
+        "expected": [
+          80,
+          110,
+          1182,
+          1160
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          23,
+          541,
+          1232,
+          1121
+        ],
+        "expected": [
+          23,
+          541,
+          1232,
+          1121
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          97,
+          13,
+          1361,
+          1068
+        ],
+        "expected": [
+          97,
+          13,
+          1361,
+          1068
+        ]
+      }
+    },
+    {
+      "name": "sh1_wormhead_004 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_wormhead_004.60b854394522.png"
+        ],
+        "portrait": "assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_wormhead_004 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_wormhead_004.339fd5045d59.png"
+        ],
+        "expected": "assets/sprites/sh1_wormhead_004.339fd5045d59.png"
+      }
+    },
+    {
+      "name": "sh1_wormhead_004 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_wormhead_004.339fd5045d59.png"
+        ],
+        "expected": "assets/sprites/sh1_wormhead_004.339fd5045d59.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_romper_010.b71ffb03f441.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_romper_010.b71ffb03f441.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          32,
+          57,
+          1510,
+          967
+        ],
+        "expected": [
+          32,
+          57,
+          1510,
+          967
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_romper_010.fa62c070efdd.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_romper_010.fa62c070efdd.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          76,
+          269,
+          1201,
+          1120
+        ],
+        "expected": [
+          76,
+          269,
+          1201,
+          1120
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_romper_010.09a1f60ce398.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_romper_010.09a1f60ce398.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          191,
+          176,
+          1175,
+          1185
+        ],
+        "expected": [
+          191,
+          176,
+          1175,
+          1185
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_romper_010.f5be63471b21.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_romper_010.f5be63471b21.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          33,
+          601,
+          1222,
+          1119
+        ],
+        "expected": [
+          33,
+          601,
+          1222,
+          1119
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          17,
+          12,
+          1422,
+          1071
+        ],
+        "expected": [
+          17,
+          12,
+          1422,
+          1071
+        ]
+      }
+    },
+    {
+      "name": "sh1_romper_010 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_romper_010.b71ffb03f441.png"
+        ],
+        "portrait": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_romper_010 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_romper_010.6ceba51e9d28.png"
+        ],
+        "expected": "assets/sprites/sh1_romper_010.6ceba51e9d28.png"
+      }
+    },
+    {
+      "name": "sh1_romper_010 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_romper_010.6ceba51e9d28.png"
+        ],
+        "expected": "assets/sprites/sh1_romper_010.6ceba51e9d28.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          99,
+          60,
+          913,
+          1507
+        ],
+        "expected": [
+          99,
+          60,
+          913,
+          1507
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          450,
+          231,
+          772,
+          1060
+        ],
+        "expected": [
+          450,
+          231,
+          772,
+          1060
+        ]
+      }
+    },
+    {
+      "name": "sh4_steve_garland_victim_4 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png"
+        ],
+        "portrait": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_steve_garland_victim_4 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png"
+        ],
+        "expected": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png"
+      }
+    },
+    {
+      "name": "sh4_steve_garland_victim_4 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png"
+        ],
+        "expected": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          40,
+          89,
+          1900,
+          745
+        ],
+        "expected": [
+          40,
+          89,
+          1900,
+          745
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          19,
+          19,
+          1650,
+          923
+        ],
+        "expected": [
+          19,
+          19,
+          1650,
+          923
+        ]
+      }
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png"
+        ],
+        "portrait": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png"
+        ],
+        "expected": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png"
+      }
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png"
+        ],
+        "expected": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          132,
+          11,
+          1441,
+          955
+        ],
+        "expected": [
+          132,
+          11,
+          1441,
+          955
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          75,
+          304,
+          1180,
+          1110
+        ],
+        "expected": [
+          75,
+          304,
+          1180,
+          1110
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          144,
+          132,
+          1206,
+          1040
+        ],
+        "expected": [
+          144,
+          132,
+          1206,
+          1040
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_hummer_055.9d51cedd24be.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_hummer_055.9d51cedd24be.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          155,
+          548,
+          1132,
+          1028
+        ],
+        "expected": [
+          155,
+          548,
+          1132,
+          1028
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_hummer_055.8561079c64dc.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_hummer_055.8561079c64dc.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          109,
+          49,
+          1688,
+          881
+        ],
+        "expected": [
+          109,
+          49,
+          1688,
+          881
+        ]
+      }
+    },
+    {
+      "name": "sh4_hummer_055 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png"
+        ],
+        "portrait": "assets/sprites/sh4_hummer_055.8561079c64dc.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_hummer_055 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_hummer_055.8561079c64dc.png"
+        ],
+        "expected": "assets/sprites/sh4_hummer_055.8561079c64dc.png"
+      }
+    },
+    {
+      "name": "sh4_hummer_055 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_hummer_055.8561079c64dc.png"
+        ],
+        "expected": "assets/sprites/sh4_hummer_055.8561079c64dc.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          43,
+          156,
+          1736,
+          757
+        ],
+        "expected": [
+          43,
+          156,
+          1736,
+          757
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          23,
+          404,
+          1237,
+          1084
+        ],
+        "expected": [
+          23,
+          404,
+          1237,
+          1084
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_slurper_042.5cda350161d4.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_slurper_042.5cda350161d4.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          66,
+          151,
+          1212,
+          1107
+        ],
+        "expected": [
+          66,
+          151,
+          1212,
+          1107
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          20,
+          519,
+          1239,
+          1003
+        ],
+        "expected": [
+          20,
+          519,
+          1239,
+          1003
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          33,
+          21,
+          1298,
+          1150
+        ],
+        "expected": [
+          33,
+          21,
+          1298,
+          1150
+        ]
+      }
+    },
+    {
+      "name": "sh3_slurper_042 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_slurper_042.770cd55b09c9.png"
+        ],
+        "portrait": "assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_slurper_042 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_slurper_042.3f0598df95a4.png"
+        ],
+        "expected": "assets/sprites/sh3_slurper_042.3f0598df95a4.png"
+      }
+    },
+    {
+      "name": "sh3_slurper_042 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_slurper_042.3f0598df95a4.png"
+        ],
+        "expected": "assets/sprites/sh3_slurper_042.3f0598df95a4.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          54,
+          11,
+          1442,
+          915
+        ],
+        "expected": [
+          54,
+          11,
+          1442,
+          915
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          209,
+          13,
+          1267,
+          1056
+        ],
+        "expected": [
+          209,
+          13,
+          1267,
+          1056
+        ]
+      }
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png"
+        ],
+        "portrait": "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png"
+        ],
+        "expected": "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png"
+      }
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png"
+        ],
+        "expected": "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png"
+      }
+    },
+    {
+      "name": "sh1_groaner_003/sh1_split_head_014 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_groaner_003/sh1_split_head_014 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_groaner_003/sh1_split_head_014 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_groaner_003",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_split_head_014",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_groaner_003/sh1_split_head_014 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+          "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+          "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_groaner_003 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 220.3662272308698,
+          "top": 497.2233744476667,
+          "right": 409.9624901412238,
+          "bottom": 588.9124437501694
+        },
+        "visible": {
+          "left": 221.04456806418054,
+          "top": 497.90171528097744,
+          "right": 409.17109250236126,
+          "bottom": 588.2341029168587
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_split_head_014 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 714.1232589351949,
+          "top": 446.72649359431387,
+          "right": 1216.8679974145405,
+          "bottom": 586.8042260713834
+        },
+        "visible": {
+          "left": 714.8428363280566,
+          "top": 447.4460709871755,
+          "right": 1216.3882791526328,
+          "bottom": 584.8853530237523
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_groaner_003/sh1_split_head_014 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh1_split_head_014/sh1_groaner_003 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_split_head_014/sh1_groaner_003 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_split_head_014/sh1_groaner_003 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_split_head_014",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_groaner_003",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_split_head_014/sh1_groaner_003 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+          "assets/sprites/sh1_groaner_003.9ab82a90231f.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+          "assets/sprites/sh1_groaner_003.9ab82a90231f.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_split_head_014 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 63.132033103037685,
+          "top": 446.72649359431387,
+          "right": 565.8767715823832,
+          "bottom": 586.8042260713834
+        },
+        "visible": {
+          "left": 63.61175136494535,
+          "top": 447.4460709871755,
+          "right": 565.1571941895215,
+          "bottom": 584.8853530237523
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_groaner_003 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 870.0375403763544,
+          "top": 497.2233744476667,
+          "right": 1059.6338032867084,
+          "bottom": 588.9124437501694
+        },
+        "visible": {
+          "left": 870.8289380152169,
+          "top": 497.90171528097744,
+          "right": 1058.9554624533976,
+          "bottom": 588.2341029168587
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_split_head_014/sh1_groaner_003 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh1_wormhead_004/sh1_romper_010 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_wormhead_004/sh1_romper_010 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_wormhead_004/sh1_romper_010 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_wormhead_004",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_romper_010",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_wormhead_004/sh1_romper_010 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_wormhead_004.60b854394522.png",
+          "assets/sprites/sh1_romper_010.b71ffb03f441.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_wormhead_004.60b854394522.png",
+          "assets/sprites/sh1_romper_010.b71ffb03f441.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_wormhead_004 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 221.94902250859488,
+          "top": 494.84918153107907,
+          "right": 409.05803569680944,
+          "bottom": 594
+        },
+        "visible": {
+          "left": 222.966533758561,
+          "top": 495.30140875328624,
+          "right": 408.71886528015403,
+          "bottom": 592.8694319444821
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_romper_010 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 889.0171724224347,
+          "top": 499.00688971806085,
+          "right": 1038.0682176277041,
+          "bottom": 593.0206895847223
+        },
+        "visible": {
+          "left": 890.1923449207679,
+          "top": 499.30068284264416,
+          "right": 1034.9344242988154,
+          "bottom": 588.417930632917
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_wormhead_004/sh1_romper_010 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh1_romper_010/sh1_wormhead_004 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_romper_010/sh1_wormhead_004 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_romper_010/sh1_wormhead_004 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_romper_010",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_wormhead_004",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_romper_010/sh1_wormhead_004 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+          "assets/sprites/sh1_wormhead_004.60b854394522.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+          "assets/sprites/sh1_wormhead_004.60b854394522.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_romper_010 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 241.93181288987398,
+          "top": 499.00688971806085,
+          "right": 390.98285809514346,
+          "bottom": 593.0206895847223
+        },
+        "visible": {
+          "left": 245.0656062187627,
+          "top": 499.30068284264416,
+          "right": 389.8076855968102,
+          "bottom": 588.417930632917
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_wormhead_004 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 870.9419948207687,
+          "top": 494.84918153107907,
+          "right": 1058.0510080089832,
+          "bottom": 594
+        },
+        "visible": {
+          "left": 871.281165237424,
+          "top": 495.30140875328624,
+          "right": 1057.0334967590172,
+          "bottom": 592.8694319444821
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_romper_010/sh1_wormhead_004 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_steve_garland_victim_4/sh4_cynthia_velasquez_victim_16 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_steve_garland_victim_4/sh4_cynthia_velasquez_victim_16 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_steve_garland_victim_4/sh4_cynthia_velasquez_victim_16 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_steve_garland_victim_4",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_cynthia_velasquez_victim_16",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_steve_garland_victim_4/sh4_cynthia_velasquez_victim_16 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+          "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+          "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_steve_garland_victim_4 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 260.7108783282805,
+          "top": 387.54837068223856,
+          "right": 375.3907076042495,
+          "bottom": 590.2285561626661
+        },
+        "visible": {
+          "left": 261.1299276435399,
+          "top": 387.8277368924115,
+          "right": 374.8319751839037,
+          "bottom": 589.9491899524932
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 713.8694561936237,
+          "top": 401.16695608333305,
+          "right": 1211.3151381654652,
+          "bottom": 581.815494477793
+        },
+        "visible": {
+          "left": 716.253381187099,
+          "top": 403.0211199671471,
+          "right": 1208.9312131719898,
+          "bottom": 576.7827639360119
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_steve_garland_victim_4/sh4_cynthia_velasquez_victim_16 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16/sh4_steve_garland_victim_4 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16/sh4_steve_garland_victim_4 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16/sh4_steve_garland_victim_4 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_cynthia_velasquez_victim_16",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_steve_garland_victim_4",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16/sh4_steve_garland_victim_4 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+          "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+          "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 68.684892352113,
+          "top": 401.16695608333305,
+          "right": 566.1305743239544,
+          "bottom": 581.815494477793
+        },
+        "visible": {
+          "left": 71.06881734558823,
+          "top": 403.0211199671471,
+          "right": 563.7466493304792,
+          "bottom": 576.7827639360119
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_steve_garland_victim_4 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 904.6093229133287,
+          "top": 387.54837068223856,
+          "right": 1019.2891521892976,
+          "bottom": 590.2285561626661
+        },
+        "visible": {
+          "left": 905.1680553336744,
+          "top": 387.8277368924115,
+          "right": 1018.8701028740383,
+          "bottom": 589.9491899524932
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_cynthia_velasquez_victim_16/sh4_steve_garland_victim_4 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_hummer_055/sh3_slurper_042 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_hummer_055/sh3_slurper_042 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_hummer_055/sh3_slurper_042 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_hummer_055",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_slurper_042",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_hummer_055/sh3_slurper_042 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+          "assets/sprites/sh3_slurper_042.770cd55b09c9.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+          "assets/sprites/sh3_slurper_042.770cd55b09c9.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_hummer_055 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 211.83200060912506,
+          "top": 415.69990004386,
+          "right": 416.5250940200738,
+          "bottom": 563.9151734740439
+        },
+        "visible": {
+          "left": 212.1440327637149,
+          "top": 416.0119321984498,
+          "right": 416.3690779427789,
+          "bottom": 563.2911091648641
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_slurper_042 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 871.0164468634491,
+          "top": 514.4190388237879,
+          "right": 1058.2467893064022,
+          "bottom": 585.0740273275329
+        },
+        "visible": {
+          "left": 872.0918652577222,
+          "top": 515.3869153786337,
+          "right": 1054.1601994081643,
+          "bottom": 580.0195608744492
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_hummer_055/sh3_slurper_042 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_slurper_042/sh4_hummer_055 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_slurper_042/sh4_hummer_055 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_slurper_042/sh4_hummer_055 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_slurper_042",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_hummer_055",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_slurper_042/sh4_hummer_055 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+          "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+          "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_slurper_042 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 221.75324121117592,
+          "top": 514.4190388237879,
+          "right": 408.983583654129,
+          "bottom": 585.0740273275329
+        },
+        "visible": {
+          "left": 225.83983110941386,
+          "top": 515.3869153786337,
+          "right": 407.9081652598559,
+          "bottom": 580.0195608744492
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_hummer_055 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 863.4749364975042,
+          "top": 415.69990004386,
+          "right": 1068.168029908453,
+          "bottom": 563.9151734740439
+        },
+        "visible": {
+          "left": 863.6309525747993,
+          "top": 416.0119321984498,
+          "right": 1067.8559977538632,
+          "bottom": 563.2911091648641
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_slurper_042/sh4_hummer_055 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083/sh1_romper_010 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083/sh1_romper_010 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083/sh1_romper_010 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "origins_memory_of_richard_grady_083",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_romper_010",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083/sh1_romper_010 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+          "assets/sprites/sh1_romper_010.b71ffb03f441.png"
+        ],
+        "expected": [
+          "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+          "assets/sprites/sh1_romper_010.b71ffb03f441.png"
+        ]
+      }
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 119.37622594052226,
+          "top": 295.3082214057445,
+          "right": 526.577127227222,
+          "bottom": 563.080733856454
+        },
+        "visible": {
+          "left": 120.54299070065608,
+          "top": 298.5168244961125,
+          "right": 525.4103624670882,
+          "bottom": 562.2056602863537
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_romper_010 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 889.0171724224347,
+          "top": 499.00688971806085,
+          "right": 1038.0682176277041,
+          "bottom": 593.0206895847223
+        },
+        "visible": {
+          "left": 890.1923449207679,
+          "top": 499.30068284264416,
+          "right": 1034.9344242988154,
+          "bottom": 588.417930632917
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083/sh1_romper_010 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh1_romper_010/origins_memory_of_richard_grady_083 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_romper_010/origins_memory_of_richard_grady_083 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_romper_010/origins_memory_of_richard_grady_083 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_romper_010",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "origins_memory_of_richard_grady_083",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_romper_010/origins_memory_of_richard_grady_083 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+          "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+          "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_romper_010 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 241.93181288987398,
+          "top": 499.00688971806085,
+          "right": 390.98285809514346,
+          "bottom": 593.0206895847223
+        },
+        "visible": {
+          "left": 245.0656062187627,
+          "top": 499.30068284264416,
+          "right": 389.8076855968102,
+          "bottom": 588.417930632917
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_memory_of_richard_grady_083 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 753.4229032903561,
+          "top": 295.3082214057445,
+          "right": 1160.6238045770558,
+          "bottom": 563.080733856454
+        },
+        "visible": {
+          "left": 754.5896680504899,
+          "top": 298.5168244961125,
+          "right": 1159.4570398169221,
+          "bottom": 562.2056602863537
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_romper_010/origins_memory_of_richard_grady_083 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "980f77aac00af5d9cd85a0c542d6ab6af157e8f12aeaf67fbd26a55935873e42",
+        "after": "980f77aac00af5d9cd85a0c542d6ab6af157e8f12aeaf67fbd26a55935873e42"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "fbcf2651147ff76c787d6064c770737ce2a7a604f546fc6890626d5f07da96a2",
+        "after": "fbcf2651147ff76c787d6064c770737ce2a7a604f546fc6890626d5f07da96a2"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "sh1_groaner_003",
+      "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.5641484349281682,
+      "visibleBounds": [
+        37,
+        37,
+        1701,
+        836
+      ]
+    },
+    {
+      "id": "sh1_groaner_003",
+      "path": "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7348987228110875,
+      "visibleBounds": [
+        11,
+        295,
+        1251,
+        1058
+      ]
+    },
+    {
+      "id": "sh1_groaner_003",
+      "path": "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.6718551671334346,
+      "visibleBounds": [
+        31,
+        130,
+        1237,
+        1202
+      ]
+    },
+    {
+      "id": "sh1_groaner_003",
+      "path": "assets/sprites/sh1_groaner_003.82984139e47a.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7944815823813557,
+      "visibleBounds": [
+        59,
+        689,
+        1229,
+        1112
+      ]
+    },
+    {
+      "id": "sh1_groaner_003",
+      "path": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "width": 1448,
+      "height": 1086,
+      "transparentFraction": 0.6541498784123398,
+      "visibleBounds": [
+        18,
+        136,
+        1432,
+        1050
+      ]
+    },
+    {
+      "id": "sh1_split_head_014",
+      "path": "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+      "width": 2172,
+      "height": 724,
+      "transparentFraction": 0.5976637617899332,
+      "visibleBounds": [
+        52,
+        113,
+        2143,
+        686
+      ]
+    },
+    {
+      "id": "sh1_split_head_014",
+      "path": "assets/sprites/sh1_split_head_014.2b9d7a5ec550.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8048961028059491,
+      "visibleBounds": [
+        46,
+        480,
+        1240,
+        1023
+      ]
+    },
+    {
+      "id": "sh1_split_head_014",
+      "path": "assets/sprites/sh1_split_head_014.0422e5926e4d.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.800211889735939,
+      "visibleBounds": [
+        40,
+        520,
+        1222,
+        1181
+      ]
+    },
+    {
+      "id": "sh1_split_head_014",
+      "path": "assets/sprites/sh1_split_head_014.e48107f497d7.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8253156088713882,
+      "visibleBounds": [
+        29,
+        729,
+        1226,
+        1109
+      ]
+    },
+    {
+      "id": "sh1_split_head_014",
+      "path": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.6681573625803762,
+      "visibleBounds": [
+        27,
+        158,
+        1753,
+        861
+      ]
+    },
+    {
+      "id": "sh1_wormhead_004",
+      "path": "assets/sprites/sh1_wormhead_004.60b854394522.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.5371862643291742,
+      "visibleBounds": [
+        54,
+        14,
+        1697,
+        877
+      ]
+    },
+    {
+      "id": "sh1_wormhead_004",
+      "path": "assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.6229342022593093,
+      "visibleBounds": [
+        61,
+        165,
+        1242,
+        1134
+      ]
+    },
+    {
+      "id": "sh1_wormhead_004",
+      "path": "assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.663749049294252,
+      "visibleBounds": [
+        80,
+        110,
+        1182,
+        1160
+      ]
+    },
+    {
+      "id": "sh1_wormhead_004",
+      "path": "assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7011547100315673,
+      "visibleBounds": [
+        23,
+        541,
+        1232,
+        1121
+      ]
+    },
+    {
+      "id": "sh1_wormhead_004",
+      "path": "assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+      "width": 1448,
+      "height": 1086,
+      "transparentFraction": 0.567331074550024,
+      "visibleBounds": [
+        97,
+        13,
+        1361,
+        1068
+      ]
+    },
+    {
+      "id": "sh1_romper_010",
+      "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.5962778727213541,
+      "visibleBounds": [
+        32,
+        57,
+        1510,
+        967
+      ]
+    },
+    {
+      "id": "sh1_romper_010",
+      "path": "assets/sprites/sh1_romper_010.fa62c070efdd.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7294641199199245,
+      "visibleBounds": [
+        76,
+        269,
+        1201,
+        1120
+      ]
+    },
+    {
+      "id": "sh1_romper_010",
+      "path": "assets/sprites/sh1_romper_010.09a1f60ce398.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7300663395475785,
+      "visibleBounds": [
+        191,
+        176,
+        1175,
+        1185
+      ]
+    },
+    {
+      "id": "sh1_romper_010",
+      "path": "assets/sprites/sh1_romper_010.f5be63471b21.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7721441308069361,
+      "visibleBounds": [
+        33,
+        601,
+        1222,
+        1119
+      ]
+    },
+    {
+      "id": "sh1_romper_010",
+      "path": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "width": 1448,
+      "height": 1086,
+      "transparentFraction": 0.6748986345553147,
+      "visibleBounds": [
+        17,
+        12,
+        1422,
+        1071
+      ]
+    },
+    {
+      "id": "sh4_steve_garland_victim_4",
+      "path": "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7171732584635416,
+      "visibleBounds": [
+        99,
+        60,
+        913,
+        1507
+      ]
+    },
+    {
+      "id": "sh4_steve_garland_victim_4",
+      "path": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9024270659249254,
+      "visibleBounds": [
+        450,
+        231,
+        772,
+        1060
+      ]
+    },
+    {
+      "id": "sh4_cynthia_velasquez_victim_16",
+      "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+      "width": 1942,
+      "height": 810,
+      "transparentFraction": 0.6806531385487787,
+      "visibleBounds": [
+        40,
+        89,
+        1900,
+        745
+      ]
+    },
+    {
+      "id": "sh4_cynthia_velasquez_victim_16",
+      "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "width": 1670,
+      "height": 942,
+      "transparentFraction": 0.6475634717825496,
+      "visibleBounds": [
+        19,
+        19,
+        1650,
+        923
+      ]
+    },
+    {
+      "id": "sh4_hummer_055",
+      "path": "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+      "width": 1610,
+      "height": 977,
+      "transparentFraction": 0.821212737687305,
+      "visibleBounds": [
+        132,
+        11,
+        1441,
+        955
+      ]
+    },
+    {
+      "id": "sh4_hummer_055",
+      "path": "assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8542043451386186,
+      "visibleBounds": [
+        75,
+        304,
+        1180,
+        1110
+      ]
+    },
+    {
+      "id": "sh4_hummer_055",
+      "path": "assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8161379598045425,
+      "visibleBounds": [
+        144,
+        132,
+        1206,
+        1040
+      ]
+    },
+    {
+      "id": "sh4_hummer_055",
+      "path": "assets/sprites/sh4_hummer_055.9d51cedd24be.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8610462469062318,
+      "visibleBounds": [
+        155,
+        548,
+        1132,
+        1028
+      ]
+    },
+    {
+      "id": "sh4_hummer_055",
+      "path": "assets/sprites/sh4_hummer_055.8561079c64dc.png",
+      "width": 1723,
+      "height": 913,
+      "transparentFraction": 0.764128004658321,
+      "visibleBounds": [
+        109,
+        49,
+        1688,
+        881
+      ]
+    },
+    {
+      "id": "sh3_slurper_042",
+      "path": "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.5924648785094482,
+      "visibleBounds": [
+        43,
+        156,
+        1736,
+        757
+      ]
+    },
+    {
+      "id": "sh3_slurper_042",
+      "path": "assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7794954073599251,
+      "visibleBounds": [
+        23,
+        404,
+        1237,
+        1084
+      ]
+    },
+    {
+      "id": "sh3_slurper_042",
+      "path": "assets/sprites/sh3_slurper_042.5cda350161d4.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7312453418597966,
+      "visibleBounds": [
+        66,
+        151,
+        1212,
+        1107
+      ]
+    },
+    {
+      "id": "sh3_slurper_042",
+      "path": "assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.7853134721681687,
+      "visibleBounds": [
+        20,
+        519,
+        1239,
+        1003
+      ]
+    },
+    {
+      "id": "sh3_slurper_042",
+      "path": "assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+      "width": 1324,
+      "height": 1188,
+      "transparentFraction": 0.6098999816900119,
+      "visibleBounds": [
+        33,
+        21,
+        1298,
+        1150
+      ]
+    },
+    {
+      "id": "origins_memory_of_richard_grady_083",
+      "path": "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.5783023834228516,
+      "visibleBounds": [
+        54,
+        11,
+        1442,
+        915
+      ]
+    },
+    {
+      "id": "origins_memory_of_richard_grady_083",
+      "path": "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+      "width": 1444,
+      "height": 1089,
+      "transparentFraction": 0.47694077516540373,
+      "visibleBounds": [
+        209,
+        13,
+        1267,
+        1056
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh1_groaner_003",
+      "facing": 1,
+      "path": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "file": "portrait-sh1_groaner_003-right.png"
+    },
+    {
+      "id": "sh1_groaner_003",
+      "facing": -1,
+      "path": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "file": "portrait-sh1_groaner_003-left.png"
+    },
+    {
+      "id": "sh1_split_head_014",
+      "facing": 1,
+      "path": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "file": "portrait-sh1_split_head_014-right.png"
+    },
+    {
+      "id": "sh1_split_head_014",
+      "facing": -1,
+      "path": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "file": "portrait-sh1_split_head_014-left.png"
+    },
+    {
+      "id": "sh1_wormhead_004",
+      "facing": 1,
+      "path": "assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+      "file": "portrait-sh1_wormhead_004-right.png"
+    },
+    {
+      "id": "sh1_wormhead_004",
+      "facing": -1,
+      "path": "assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+      "file": "portrait-sh1_wormhead_004-left.png"
+    },
+    {
+      "id": "sh1_romper_010",
+      "facing": 1,
+      "path": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "file": "portrait-sh1_romper_010-right.png"
+    },
+    {
+      "id": "sh1_romper_010",
+      "facing": -1,
+      "path": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "file": "portrait-sh1_romper_010-left.png"
+    },
+    {
+      "id": "sh4_steve_garland_victim_4",
+      "facing": 1,
+      "path": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "file": "portrait-sh4_steve_garland_victim_4-right.png"
+    },
+    {
+      "id": "sh4_steve_garland_victim_4",
+      "facing": -1,
+      "path": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "file": "portrait-sh4_steve_garland_victim_4-left.png"
+    },
+    {
+      "id": "sh4_cynthia_velasquez_victim_16",
+      "facing": 1,
+      "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "file": "portrait-sh4_cynthia_velasquez_victim_16-right.png"
+    },
+    {
+      "id": "sh4_cynthia_velasquez_victim_16",
+      "facing": -1,
+      "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "file": "portrait-sh4_cynthia_velasquez_victim_16-left.png"
+    },
+    {
+      "id": "sh4_hummer_055",
+      "facing": 1,
+      "path": "assets/sprites/sh4_hummer_055.8561079c64dc.png",
+      "file": "portrait-sh4_hummer_055-right.png"
+    },
+    {
+      "id": "sh4_hummer_055",
+      "facing": -1,
+      "path": "assets/sprites/sh4_hummer_055.8561079c64dc.png",
+      "file": "portrait-sh4_hummer_055-left.png"
+    },
+    {
+      "id": "sh3_slurper_042",
+      "facing": 1,
+      "path": "assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+      "file": "portrait-sh3_slurper_042-right.png"
+    },
+    {
+      "id": "sh3_slurper_042",
+      "facing": -1,
+      "path": "assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+      "file": "portrait-sh3_slurper_042-left.png"
+    },
+    {
+      "id": "origins_memory_of_richard_grady_083",
+      "facing": 1,
+      "path": "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+      "file": "portrait-origins_memory_of_richard_grady_083-right.png"
+    },
+    {
+      "id": "origins_memory_of_richard_grady_083",
+      "facing": -1,
+      "path": "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+      "file": "portrait-origins_memory_of_richard_grady_083-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "sh1_groaner_003",
+        "sh1_split_head_014"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.104118591341
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_groaner_003",
+          "slot": 1,
+          "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+          "exterior": {
+            "left": 220.3662272308698,
+            "top": 497.2233744476667,
+            "right": 409.9624901412238,
+            "bottom": 588.9124437501694
+          },
+          "visible": {
+            "left": 221.04456806418054,
+            "top": 497.90171528097744,
+            "right": 409.17109250236126,
+            "bottom": 588.2341029168587
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -5.76589708314134,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+            "args": [
+              -102.5,
+              -102.5,
+              205,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "sh1_split_head_014",
+          "slot": 2,
+          "path": "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+          "exterior": {
+            "left": 714.1232589351949,
+            "top": 446.72649359431387,
+            "right": 1216.8679974145405,
+            "bottom": 586.8042260713834
+          },
+          "visible": {
+            "left": 714.8428363280566,
+            "top": 447.4460709871755,
+            "right": 1216.3882791526328,
+            "bottom": 584.8853530237523
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -9.114646976247741,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+            "args": [
+              -266.25,
+              -177.5,
+              532.5,
+              177.5
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+        "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png"
+      ],
+      "snapshots": [
+        "duel-sh1_groaner_003--sh1_split_head_014-tick0.png",
+        "duel-sh1_groaner_003--sh1_split_head_014-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh1_split_head_014",
+        "sh1_groaner_003"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.104118591341
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_split_head_014",
+          "slot": 1,
+          "path": "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+          "exterior": {
+            "left": 63.132033103037685,
+            "top": 446.72649359431387,
+            "right": 565.8767715823832,
+            "bottom": 586.8042260713834
+          },
+          "visible": {
+            "left": 63.61175136494535,
+            "top": 447.4460709871755,
+            "right": 565.1571941895215,
+            "bottom": 584.8853530237523
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -9.114646976247741,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+            "args": [
+              -266.25,
+              -177.5,
+              532.5,
+              177.5
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        },
+        {
+          "id": "sh1_groaner_003",
+          "slot": 2,
+          "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+          "exterior": {
+            "left": 870.0375403763544,
+            "top": 497.2233744476667,
+            "right": 1059.6338032867084,
+            "bottom": 588.9124437501694
+          },
+          "visible": {
+            "left": 870.8289380152169,
+            "top": 497.90171528097744,
+            "right": 1058.9554624533976,
+            "bottom": 588.2341029168587
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -5.76589708314134,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+            "args": [
+              -102.5,
+              -102.5,
+              205,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+        "assets/sprites/sh1_groaner_003.9ab82a90231f.png"
+      ],
+      "snapshots": [
+        "duel-sh1_split_head_014--sh1_groaner_003-tick0.png",
+        "duel-sh1_split_head_014--sh1_groaner_003-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh1_wormhead_004",
+        "sh1_romper_010"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.6984440439943
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_wormhead_004",
+          "slot": 1,
+          "path": "assets/sprites/sh1_wormhead_004.60b854394522.png",
+          "exterior": {
+            "left": 221.94902250859488,
+            "top": 494.84918153107907,
+            "right": 409.05803569680944,
+            "bottom": 594
+          },
+          "visible": {
+            "left": 222.966533758561,
+            "top": 495.30140875328624,
+            "right": 408.71886528015403,
+            "bottom": 592.8694319444821
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -1.1305680555178697,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_wormhead_004.60b854394522.png",
+            "args": [
+              -102.5,
+              -102.5,
+              205,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "sh1_romper_010",
+          "slot": 2,
+          "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+          "exterior": {
+            "left": 889.0171724224347,
+            "top": 499.00688971806085,
+            "right": 1038.0682176277041,
+            "bottom": 593.0206895847223
+          },
+          "visible": {
+            "left": 890.1923449207679,
+            "top": 499.30068284264416,
+            "right": 1034.9344242988154,
+            "bottom": 588.417930632917
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -5.582069367083022,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+            "args": [
+              -76.875,
+              -102.5,
+              153.75,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_wormhead_004.60b854394522.png",
+        "assets/sprites/sh1_romper_010.b71ffb03f441.png"
+      ],
+      "snapshots": [
+        "duel-sh1_wormhead_004--sh1_romper_010-tick0.png",
+        "duel-sh1_wormhead_004--sh1_romper_010-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh1_romper_010",
+        "sh1_wormhead_004"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 613.6984440439943
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_romper_010",
+          "slot": 1,
+          "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+          "exterior": {
+            "left": 241.93181288987398,
+            "top": 499.00688971806085,
+            "right": 390.98285809514346,
+            "bottom": 593.0206895847223
+          },
+          "visible": {
+            "left": 245.0656062187627,
+            "top": 499.30068284264416,
+            "right": 389.8076855968102,
+            "bottom": 588.417930632917
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -5.582069367083022,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+            "args": [
+              -76.875,
+              -102.5,
+              153.75,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "sh1_wormhead_004",
+          "slot": 2,
+          "path": "assets/sprites/sh1_wormhead_004.60b854394522.png",
+          "exterior": {
+            "left": 870.9419948207687,
+            "top": 494.84918153107907,
+            "right": 1058.0510080089832,
+            "bottom": 594
+          },
+          "visible": {
+            "left": 871.281165237424,
+            "top": 495.30140875328624,
+            "right": 1057.0334967590172,
+            "bottom": 592.8694319444821
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -1.1305680555178697,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_wormhead_004.60b854394522.png",
+            "args": [
+              -102.5,
+              -102.5,
+              205,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+        "assets/sprites/sh1_wormhead_004.60b854394522.png"
+      ],
+      "snapshots": [
+        "duel-sh1_romper_010--sh1_wormhead_004-tick0.png",
+        "duel-sh1_romper_010--sh1_wormhead_004-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_steve_garland_victim_4",
+        "sh4_cynthia_velasquez_victim_16"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 608.1451171875
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_steve_garland_victim_4",
+          "slot": 1,
+          "path": "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+          "exterior": {
+            "left": 260.7108783282805,
+            "top": 387.54837068223856,
+            "right": 375.3907076042495,
+            "bottom": 590.2285561626661
+          },
+          "visible": {
+            "left": 261.1299276435399,
+            "top": 387.8277368924115,
+            "right": 374.8319751839037,
+            "bottom": 589.9491899524932
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -4.050810047506843,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+            "args": [
+              -73.10000000000001,
+              -219.3,
+              146.20000000000002,
+              219.3
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "sh4_cynthia_velasquez_victim_16",
+          "slot": 2,
+          "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+          "exterior": {
+            "left": 713.8694561936237,
+            "top": 401.16695608333305,
+            "right": 1211.3151381654652,
+            "bottom": 581.815494477793
+          },
+          "visible": {
+            "left": 716.253381187099,
+            "top": 403.0211199671471,
+            "right": 1208.9312131719898,
+            "bottom": 576.7827639360119
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -17.21723606398814,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+            "args": [
+              -262.8892592592593,
+              -219.30000000000004,
+              525.7785185185186,
+              219.30000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1942,
+            "height": 810
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+        "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png"
+      ],
+      "snapshots": [
+        "duel-sh4_steve_garland_victim_4--sh4_cynthia_velasquez_victim_16-tick0.png",
+        "duel-sh4_steve_garland_victim_4--sh4_cynthia_velasquez_victim_16-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_cynthia_velasquez_victim_16",
+        "sh4_steve_garland_victim_4"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 608.1451171875
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_cynthia_velasquez_victim_16",
+          "slot": 1,
+          "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+          "exterior": {
+            "left": 68.684892352113,
+            "top": 401.16695608333305,
+            "right": 566.1305743239544,
+            "bottom": 581.815494477793
+          },
+          "visible": {
+            "left": 71.06881734558823,
+            "top": 403.0211199671471,
+            "right": 563.7466493304792,
+            "bottom": 576.7827639360119
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -17.21723606398814,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+            "args": [
+              -262.8892592592593,
+              -219.30000000000004,
+              525.7785185185186,
+              219.30000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1942,
+            "height": 810
+          }
+        },
+        {
+          "id": "sh4_steve_garland_victim_4",
+          "slot": 2,
+          "path": "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+          "exterior": {
+            "left": 904.6093229133287,
+            "top": 387.54837068223856,
+            "right": 1019.2891521892976,
+            "bottom": 590.2285561626661
+          },
+          "visible": {
+            "left": 905.1680553336744,
+            "top": 387.8277368924115,
+            "right": 1018.8701028740383,
+            "bottom": 589.9491899524932
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -4.050810047506843,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+            "args": [
+              -73.10000000000001,
+              -219.3,
+              146.20000000000002,
+              219.3
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+        "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png"
+      ],
+      "snapshots": [
+        "duel-sh4_cynthia_velasquez_victim_16--sh4_steve_garland_victim_4-tick0.png",
+        "duel-sh4_cynthia_velasquez_victim_16--sh4_steve_garland_victim_4-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_hummer_055",
+        "sh3_slurper_042"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.8103384447545
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_hummer_055",
+          "slot": 1,
+          "path": "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+          "exterior": {
+            "left": 211.83200060912506,
+            "top": 415.69990004386,
+            "right": 416.5250940200738,
+            "bottom": 563.9151734740439
+          },
+          "visible": {
+            "left": 212.1440327637149,
+            "top": 416.0119321984498,
+            "right": 416.3690779427789,
+            "bottom": 563.2911091648641
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -30.70889083513589,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+            "args": [
+              -128.37154554759468,
+              -183.67999999999998,
+              256.74309109518936,
+              155.79999999999998
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1610,
+            "height": 977
+          }
+        },
+        {
+          "id": "sh3_slurper_042",
+          "slot": 2,
+          "path": "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+          "exterior": {
+            "left": 871.0164468634491,
+            "top": 514.4190388237879,
+            "right": 1058.2467893064022,
+            "bottom": 585.0740273275329
+          },
+          "visible": {
+            "left": 872.0918652577222,
+            "top": 515.3869153786337,
+            "right": 1054.1601994081643,
+            "bottom": 580.0195608744492
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -13.980439125550788,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+            "args": [
+              -97.5,
+              -97.5,
+              195,
+              97.5
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+        "assets/sprites/sh3_slurper_042.770cd55b09c9.png"
+      ],
+      "snapshots": [
+        "duel-sh4_hummer_055--sh3_slurper_042-tick0.png",
+        "duel-sh4_hummer_055--sh3_slurper_042-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_slurper_042",
+        "sh4_hummer_055"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.8103384447545
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_slurper_042",
+          "slot": 1,
+          "path": "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+          "exterior": {
+            "left": 221.75324121117592,
+            "top": 514.4190388237879,
+            "right": 408.983583654129,
+            "bottom": 585.0740273275329
+          },
+          "visible": {
+            "left": 225.83983110941386,
+            "top": 515.3869153786337,
+            "right": 407.9081652598559,
+            "bottom": 580.0195608744492
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -13.980439125550788,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+            "args": [
+              -97.5,
+              -97.5,
+              195,
+              97.5
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "sh4_hummer_055",
+          "slot": 2,
+          "path": "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+          "exterior": {
+            "left": 863.4749364975042,
+            "top": 415.69990004386,
+            "right": 1068.168029908453,
+            "bottom": 563.9151734740439
+          },
+          "visible": {
+            "left": 863.6309525747993,
+            "top": 416.0119321984498,
+            "right": 1067.8559977538632,
+            "bottom": 563.2911091648641
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -30.70889083513589,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+            "args": [
+              -128.37154554759468,
+              -183.67999999999998,
+              256.74309109518936,
+              155.79999999999998
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1610,
+            "height": 977
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+        "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png"
+      ],
+      "snapshots": [
+        "duel-sh3_slurper_042--sh4_hummer_055-tick0.png",
+        "duel-sh3_slurper_042--sh4_hummer_055-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "origins_memory_of_richard_grady_083",
+        "sh1_romper_010"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.6293482394798
+        }
+      },
+      "geometries": [
+        {
+          "id": "origins_memory_of_richard_grady_083",
+          "slot": 1,
+          "path": "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+          "exterior": {
+            "left": 119.37622594052226,
+            "top": 295.3082214057445,
+            "right": 526.577127227222,
+            "bottom": 563.080733856454
+          },
+          "visible": {
+            "left": 120.54299070065608,
+            "top": 298.5168244961125,
+            "right": 525.4103624670882,
+            "bottom": 562.2056602863537
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -31.79433971364631,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+            "args": [
+              -228.97500000000002,
+              -305.3,
+              457.95000000000005,
+              305.3
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "sh1_romper_010",
+          "slot": 2,
+          "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+          "exterior": {
+            "left": 889.0171724224347,
+            "top": 499.00688971806085,
+            "right": 1038.0682176277041,
+            "bottom": 593.0206895847223
+          },
+          "visible": {
+            "left": 890.1923449207679,
+            "top": 499.30068284264416,
+            "right": 1034.9344242988154,
+            "bottom": 588.417930632917
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -5.582069367083022,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+            "args": [
+              -76.875,
+              -102.5,
+              153.75,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+        "assets/sprites/sh1_romper_010.b71ffb03f441.png"
+      ],
+      "snapshots": [
+        "duel-origins_memory_of_richard_grady_083--sh1_romper_010-tick0.png",
+        "duel-origins_memory_of_richard_grady_083--sh1_romper_010-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh1_romper_010",
+        "origins_memory_of_richard_grady_083"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.6293482394798
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_romper_010",
+          "slot": 1,
+          "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+          "exterior": {
+            "left": 241.93181288987398,
+            "top": 499.00688971806085,
+            "right": 390.98285809514346,
+            "bottom": 593.0206895847223
+          },
+          "visible": {
+            "left": 245.0656062187627,
+            "top": 499.30068284264416,
+            "right": 389.8076855968102,
+            "bottom": 588.417930632917
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -5.582069367083022,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+            "args": [
+              -76.875,
+              -102.5,
+              153.75,
+              102.5
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "origins_memory_of_richard_grady_083",
+          "slot": 2,
+          "path": "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+          "exterior": {
+            "left": 753.4229032903561,
+            "top": 295.3082214057445,
+            "right": 1160.6238045770558,
+            "bottom": 563.080733856454
+          },
+          "visible": {
+            "left": 754.5896680504899,
+            "top": 298.5168244961125,
+            "right": 1159.4570398169221,
+            "bottom": 562.2056602863537
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -31.79433971364631,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+            "args": [
+              -228.97500000000002,
+              -305.3,
+              457.95000000000005,
+              305.3
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+        "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png"
+      ],
+      "snapshots": [
+        "duel-sh1_romper_010--origins_memory_of_richard_grady_083-tick0.png",
+        "duel-sh1_romper_010--origins_memory_of_richard_grady_083-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "980f77aac00af5d9cd85a0c542d6ab6af157e8f12aeaf67fbd26a55935873e42",
+  "src/sprite-manifest.jsSHA256": "fbcf2651147ff76c787d6064c770737ce2a7a604f546fc6890626d5f07da96a2",
+  "version": "0.9.6",
+  "ids": [
+    "sh1_groaner_003",
+    "sh1_split_head_014",
+    "sh1_wormhead_004",
+    "sh1_romper_010",
+    "sh4_steve_garland_victim_4",
+    "sh4_cynthia_velasquez_victim_16",
+    "sh4_hummer_055",
+    "sh3_slurper_042",
+    "origins_memory_of_richard_grady_083"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

@@ -1,0 +1,727 @@
+{
+  "schema": "sprite-suite-reference-audit/1",
+  "date": "2026-11-17",
+  "baseCommitAtAuditStart": "dfd9c7f",
+  "scope": "Read-only roster/provenance audit and temporary reference inspection. This new report is the only repository file written by the audit agent. No registry, sprites, gameplay, historical ledgers or build manifests changed.",
+  "inventoryBaseline": {
+    "rosterProfiles": 230,
+    "illustratedProfiles": 170,
+    "missingProfiles": 60,
+    "distinctSideCombatCandidates": 19
+  },
+  "sourceJoin": {
+    "missingIds": "docs/production/sprite-status-next-2026-11-17.json#/missingProfiles",
+    "blockerEvidence": "docs/production/combat-remaining-2026-11-17.json#/remainingEntries",
+    "joinKey": "missingProfiles.id = remainingEntries.fighterId",
+    "whyThisLedger": "It contains the later Arcade Numb Body refusal absent from the older art/provenance-20261117.json. Status categories are inherited ledger labels, not claims of a new refusal in this audit.",
+    "matchedMissingIds": 60,
+    "duplicateMissingIds": 0,
+    "unmatchedMissingIds": 0,
+    "allMissingProfilesIndependentlyResearchedAgain": false,
+    "sourceFiles": [
+      {
+        "path": "docs/production/sprite-status-next-2026-11-17.json",
+        "sha256": "5c88284d83e59b70487cced3369b824b81b0e4d5cceff0140ede2f4a25be3f74"
+      },
+      {
+        "path": "docs/production/combat-remaining-2026-11-17.json",
+        "sha256": "6b8f41dad2de42558645c0ded38d45de08d871da19c6e7739b90f0a30f4add4d"
+      }
+    ]
+  },
+  "countsByInheritedBlocker": {
+    "historical-refusal-or-related-stop": 26,
+    "immaterial-form": 2,
+    "identity-or-variant-unresolved": 7,
+    "incomplete-source": 22,
+    "new-generation-refusal": 3
+  },
+  "refusalStopsRetained": {
+    "historicalRefusalOrRelatedStopCount": 26,
+    "documentedGenerationRefusalsAmongMissing": [
+      {
+        "id": "arcade_numb_body_arcade",
+        "requestId": "69e384e1-616d-4d50-90f8-23ec8263d6c0",
+        "category": "sexual",
+        "retriedInThisAudit": false
+      },
+      {
+        "id": "film_dark_nurse_171",
+        "requestId": "3904324b-a515-4299-82b9-b9cfbdf04f5d",
+        "category": "violence",
+        "retriedInThisAudit": false
+      },
+      {
+        "id": "pt_lisa_149",
+        "requestId": "36708bbe-274e-49cd-ae50-bb5aa2c6c5cd",
+        "category": "violence",
+        "retriedInThisAudit": false
+      }
+    ],
+    "existingPortraitSeparateStop": {
+      "id": "arcade_robbie_the_rabbit_chainsaw",
+      "purpose": "combat",
+      "requestId": "333364f3-aefb-4947-a66d-2c18ed7ca72d",
+      "category": "other",
+      "retriedInThisAudit": false,
+      "existingSelectionPreserved": true
+    }
+  },
+  "remainingProfiles": [
+    {
+      "id": "sh1_monster_cybil_017",
+      "name": "Monster Cybil",
+      "source": "sh1",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh1_incubus_019",
+      "name": "Incubus",
+      "source": "sh1",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh2_mannequin_022",
+      "name": "Mannequin",
+      "source": "sh2",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh2_mannequin_ambusher_023",
+      "name": "Mannequin — Ambusher",
+      "source": "sh2",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh2_flesh_lip_027",
+      "name": "Flesh Lip",
+      "source": "sh2",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh2_mary_final_manifestation_034",
+      "name": "Mary — Final Manifestation",
+      "source": "sh2",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh2_prisoner_035",
+      "name": "Prisoner",
+      "source": "sh2",
+      "blocker": "immaterial-form",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh2_spider_mannequin",
+      "name": "Spider Mannequin",
+      "source": "sh2",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh2_mandarin_floor_form",
+      "name": "Mandarin — Floor Form",
+      "source": "sh2",
+      "blocker": "identity-or-variant-unresolved",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh3_nurse_pipe_043",
+      "name": "Nurse — Pipe",
+      "source": "sh3",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "source": "sh3",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh3_sewer_creature_052",
+      "name": "Sewer Creature",
+      "source": "sh3",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh4_ghost_victim_066",
+      "name": "Ghost — Victim",
+      "source": "sh4",
+      "blocker": "identity-or-variant-unresolved",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh4_toby_archbolt_victim_14",
+      "name": "Toby Archbolt — Victim 14",
+      "source": "sh4",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh4_joseph_schreiber_victim_15",
+      "name": "Joseph Schreiber — Victim 15",
+      "source": "sh4",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh4_jasper_gein_victim_17",
+      "name": "Jasper Gein — Victim 17",
+      "source": "sh4",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh4_andrew_desalvo_victim_18",
+      "name": "Andrew DeSalvo — Victim 18",
+      "source": "sh4",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh4_sacrificed_walter_071",
+      "name": "Sacrificed Walter",
+      "source": "sh4",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "sh4_eileen_head_073",
+      "name": "Eileen Head",
+      "source": "sh4",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "origins_memory_of_richard_grady_083",
+      "name": "Memory of Richard Grady",
+      "source": "origins",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "homecoming_curtis_ackers",
+      "name": "Curtis Ackers",
+      "source": "homecoming",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "homecoming_amnion_hanging_form_097",
+      "name": "Amnion — Hanging Form",
+      "source": "homecoming",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "homecoming_amnion_exposed_form_098",
+      "name": "Amnion — Exposed Form",
+      "source": "homecoming",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "downpour_void_113",
+      "name": "Void",
+      "source": "downpour",
+      "blocker": "immaterial-form",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "downpour_monocle_man_114",
+      "name": "Monocle Man",
+      "source": "downpour",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "downpour_wheelman_116",
+      "name": "Wheelman",
+      "source": "downpour",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": true,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "arcade_phantom_118",
+      "name": "Phantom",
+      "source": "arcade",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "name": "Greedy Worm — Arcade",
+      "source": "arcade",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "arcade_insane_cancer_arcade",
+      "name": "Insane Cancer — Arcade",
+      "source": "arcade",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "arcade_numb_body_arcade",
+      "name": "Numb Body — Arcade",
+      "source": "arcade",
+      "blocker": "new-generation-refusal",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "arcade_nurse_arcade",
+      "name": "Nurse — Arcade",
+      "source": "arcade",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "arcade_creeper_arcade",
+      "name": "Creeper — Arcade",
+      "source": "arcade",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "arcade_toadstool_arcade",
+      "name": "Toadstool — Arcade",
+      "source": "arcade",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "name": "Robbie the Rabbit — Shotgun",
+      "source": "arcade",
+      "blocker": "identity-or-variant-unresolved",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "bom_ghost_125",
+      "name": "Ghost",
+      "source": "bom",
+      "blocker": "identity-or-variant-unresolved",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "bom_flesh_lips_134",
+      "name": "Flesh Lips",
+      "source": "bom",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "bom_mother_135",
+      "name": "Mother",
+      "source": "bom",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "bom_valtiel_136",
+      "name": "Valtiel",
+      "source": "bom",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "bom_wood_guardian_138",
+      "name": "Wood Guardian",
+      "source": "bom",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "bom_blood_guardian_143",
+      "name": "Blood Guardian",
+      "source": "bom",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "bom_blood_mama_145",
+      "name": "Blood Mama",
+      "source": "bom",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "bom_steel_guardian_146",
+      "name": "Steel Guardian",
+      "source": "bom",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "pt_lisa_149",
+      "name": "Lisa",
+      "source": "pt",
+      "blocker": "new-generation-refusal",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "shf_ayakakashi_152",
+      "name": "Ayakakashi",
+      "source": "shf",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "shf_corruptor_155",
+      "name": "Corruptor",
+      "source": "shf",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "shf_hatcher_156",
+      "name": "Hatcher",
+      "source": "shf",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "shf_dark_hatcher_160",
+      "name": "Dark Hatcher",
+      "source": "shf",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "shf_sakuko_like_entity_162",
+      "name": "Sakuko-Like Entity",
+      "source": "shf",
+      "blocker": "identity-or-variant-unresolved",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "shf_hinako_s_mother_165",
+      "name": "Hinako’s Mother",
+      "source": "shf",
+      "blocker": "historical-refusal-or-related-stop",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "film_dark_nurse_171",
+      "name": "Dark Nurse",
+      "source": "film",
+      "blocker": "new-generation-refusal",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "film_grey_child_film_172",
+      "name": "Grey Child — Film",
+      "source": "film",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "film_colin_the_janitor_174",
+      "name": "Colin the Janitor",
+      "source": "film",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "source": "film",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": true,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "film_bubble_head_nurse_return_to_silent_hill",
+      "name": "Bubble Head Nurse — Return to Silent Hill",
+      "source": "film",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "film_creeper_return_to_silent_hill",
+      "name": "Creeper — Return to Silent Hill",
+      "source": "film",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "film_fused_mattress_manifestation_return",
+      "name": "Fused Mattress Manifestation — Return",
+      "source": "film",
+      "blocker": "identity-or-variant-unresolved",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "ascension_wanderer_178",
+      "name": "Wanderer",
+      "source": "ascension",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": true,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "ascension_snarler_180",
+      "name": "Snarler",
+      "source": "ascension",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "ascension_the_collector_183",
+      "name": "The Collector",
+      "source": "ascension",
+      "blocker": "incomplete-source",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    },
+    {
+      "id": "ascension_stilledalen_stinger_184",
+      "name": "Stilledalen Stinger",
+      "source": "ascension",
+      "blocker": "identity-or-variant-unresolved",
+      "freshSourceSearchInThisAudit": false,
+      "generationReadyFromThisAudit": false
+    }
+  ],
+  "freshResearch": [
+    {
+      "id": "film_missionary_revelation_177",
+      "generationReady": false,
+      "result": "Final footwear still unverified. The Flickr photograph is explicitly three demon busts; two new BroadwayWorld Cineloggia photos were inspected but show unrelated costumes. No cosplay, competing Mercer concept heel, or early unused maquette is substituted.",
+      "sourceUrls": [
+        "https://www.flickr.com/photos/139932824@N06/50777020678/in/dateposted-public/",
+        "https://colinsartportfolio.wordpress.com/2020/12/24/movie-memorabilia-and-filming-locations-part-5/",
+        "https://www.broadwayworld.com/las-vegas/article/BWW-Feature-CINELOGGIA-BOUTIQUE-MUSEUM-celebrates-horror-and-Sci-Fi-genres-20201021",
+        "https://knpr.org/fifth-street/2021-07-21/july-22-2021",
+        "https://www.facebook.com/TheHSPPA/photos/pcb.3103318929991498/3103318349991556/",
+        "https://www.instagram.com/p/CPtAcLkh4Zo/"
+      ],
+      "imageUrls": [
+        "https://cloudimages2.broadwayworld.com/columnpiccloud/21603283206.jpg?format=auto&width=1400",
+        "https://cloudimages2.broadwayworld.com/upload13/2070169/IMG_6189.jpg?format=auto&width=1400"
+      ],
+      "newArtifacts": [
+        {
+          "path": "/workspace/scratch/eb1659a0c6b9/references-followup-audit/missionary-broadway-01.jpg",
+          "role": "Original downloaded bytes are AVIF despite JPEG URL suffix; inspected via lossless PNG decode; unrelated red devil costume.",
+          "bytes": 45204,
+          "sha256": "634e88e998fa4b74f13e20a92f5070c40f3e8b94634910cafff189b17720f19b"
+        },
+        {
+          "path": "/workspace/scratch/eb1659a0c6b9/references-followup-audit/missionary-broadway-02.jpg",
+          "role": "Original downloaded bytes are AVIF; inspected via lossless PNG decode; unrelated jacket costume.",
+          "bytes": 103428,
+          "sha256": "50bca06fb0fdd28b451265c245e08fef299a6ec3c9d12af2d46cb63d06d4ffd8"
+        }
+      ],
+      "accessLimit": "Las Vegas Sun returned 403; Facebook and Instagram tool routes unavailable. No bypass or repeated restricted request.",
+      "nextUsefulEvidence": "A final film frame or a full-length production costume photo whose final shoes are visible."
+    },
+    {
+      "id": "downpour_wheelman_116",
+      "generationReady": false,
+      "result": "A newly inspected public C4D model video exposes folded legs, torso, geared wheelchair/support and additional angles. Anatomy and equipment visually agree with the named native render. However the lower cables leave the frame at 71, 86 and 112 seconds; their complete terminal support/attachment remains unresolved. This improves reference coverage without proving the complete silhouette required by the current blocker.",
+      "sourceUrls": [
+        "https://ok.ru/video/1587089054",
+        "https://www.silenthillmemories.net/sh8/creatures/wheelman.png",
+        "https://p3dm.ru/files/characters/supernatural/571-wheelman-.html"
+      ],
+      "videoTitle": "SILENT HILL DOWNPOUR Shadow Doll & Wheelman (.c4d)",
+      "videoPublished": "2016-07-10",
+      "videoFrameDimensions": [
+        640,
+        356
+      ],
+      "newArtifacts": [
+        {
+          "path": "/workspace/scratch/eb1659a0c6b9/references-followup-audit/wheelman-video-071s.png",
+          "role": "Public video frame at 71 seconds; folded legs and geared support visible, lower cables cut.",
+          "bytes": 114239,
+          "sha256": "87e45542f721a491c54f6a1de90e390e6c3e11ec2005a702ba0fd8068417fbc7"
+        },
+        {
+          "path": "/workspace/scratch/eb1659a0c6b9/references-followup-audit/wheelman-video-086s.png",
+          "role": "Public video frame at 86 seconds; side support and attached cylinders visible, lower cables cut.",
+          "bytes": 103073,
+          "sha256": "a3b4365cfb1aa25be008b3b57cb394c1db0a4a24f36f3c7800f5c4c85344ebd9"
+        },
+        {
+          "path": "/workspace/scratch/eb1659a0c6b9/references-followup-audit/wheelman-video-112s.png",
+          "role": "Public video frame at 112 seconds; frontal angle, lower support/cables cut.",
+          "bytes": 98130,
+          "sha256": "7134bb84da26a0e3f9c45dcdd7abd49b80fd615791d9af84d3591d9935f0235a"
+        },
+        {
+          "path": "/workspace/scratch/eb1659a0c6b9/references-followup-audit/wheelman-native.png",
+          "role": "Named native reference, 300 by 300, used to compare identity/equipment.",
+          "bytes": 143718,
+          "sha256": "7195c18546767969cb9aa58f98dbbb82317d0dc2378179ca853b9f7d58c3c54f"
+        }
+      ],
+      "limitations": [
+        "The public model-video uploader does not certify unmodified native files; visual correspondence is evidence, not proof of byte-identical game geometry.",
+        "The model listing names Vatra Games and ripper luxox_18, but no P3DM file was downloaded.",
+        "An early prototype Wheelman is independently documented with a different head/pose; it is excluded."
+      ],
+      "nextUsefulEvidence": "A wider native model render with cable ends/attachment visible, or a matching final-game scene showing the same full support."
+    },
+    {
+      "id": "ascension_wanderer_178",
+      "generationReady": false,
+      "result": "Targeted search reconfirmed the armless wire-bound definition, but yielded no newly inspected attributable whole-body reference. The obese veiled long-armed concept remains excluded.",
+      "sourceUrls": [
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+      ],
+      "newArtifacts": []
+    }
+  ],
+  "combatCandidatesReadyAtAuditStart": [
+    {
+      "id": "origins_the_butcher_081",
+      "name": "The Butcher — Origins",
+      "existingSelection": "assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
+      "sourceProvenance": "art/reference-provenance-batch11.json",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_26_butcher.png",
+        "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_27_butcher.png"
+      ],
+      "framesAtAuditStart": 1,
+      "animatedClipsAtAuditStart": 0,
+      "existingPortraitVisuallyInspected": true,
+      "finding": "Frontal/three-quarter standing portrait, complete boots and cleaver. A true lateral guard is still absent at audit start.",
+      "previousRefusalFound": false,
+      "recommendedWork": "Add a distinct one-frame combat candidate; preserve selection and do not claim an animation."
+    },
+    {
+      "id": "downpour_anne_cunningham",
+      "name": "Anne Cunningham — Downpour",
+      "existingSelection": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "sourceProvenance": "art/reference-provenance-batch11.json",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120317_03_anne.png",
+        "https://www.silenthillmemories.net/sh8/characters/anne_cunningham.png"
+      ],
+      "framesAtAuditStart": 1,
+      "animatedClipsAtAuditStart": 0,
+      "existingPortraitVisuallyInspected": true,
+      "finding": "Frontal/three-quarter pistol stance; adult officer, navy jacket, grey-green trousers, duty belt, complete shoes. A true lateral guard is still absent at audit start.",
+      "previousRefusalFound": false,
+      "recommendedWork": "Add a distinct one-frame combat candidate; preserve selection and do not claim an animation."
+    },
+    {
+      "id": "downpour_prisoner_juggernaut_110",
+      "name": "Prisoner Juggernaut — Downpour",
+      "existingSelection": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "sourceProvenance": "art/reference-provenance-batch11.json",
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_13_pr_juggernaut.png",
+        "https://www.silenthillmemories.net/sh8/creatures/prisoner_juggernaut.png"
+      ],
+      "framesAtAuditStart": 1,
+      "animatedClipsAtAuditStart": 0,
+      "existingPortraitVisuallyInspected": true,
+      "finding": "Frontal broad stance; bald tattooed torso, brown trousers, bare feet. Exact Juggernaut attribution; do not relabel Brawler or Agile.",
+      "previousRefusalFound": false,
+      "recommendedWork": "Add a distinct one-frame combat candidate; preserve selection and do not claim an animation."
+    }
+  ],
+  "coordination": {
+    "otherAgentLeadsExcluded": [
+      "ascension_snarler_180",
+      "arcade_phantom_118",
+      "bom_steel_guardian_146",
+      "bom_wood_guardian_138"
+    ],
+    "alreadyDeliveredAssetsNotRegenerated": [
+      "sh2_eddie_dombrowski_032:combat",
+      "sh3_missionary_047:combat",
+      "arcade_double_head_arcade:selection",
+      "arcade_double_head_arcade:combat"
+    ],
+    "generationCallsByAuditAgent": 0,
+    "newFullyMissingProfilesClearedByThisAudit": 0
+  },
+  "verification": {
+    "missingCount": 60,
+    "uniqueMissingIds": 60,
+    "joinedEvidenceRows": 60,
+    "numbBodyLatestRefusalPreserved": true,
+    "new4PNGsExcludedFromMissing": true,
+    "combatPortraitsInspected": 3,
+    "modelVideoFramesInspected": 3,
+    "certifiedOneToOneFidelity": false
+  },
+  "subsequentWorkNote": {
+    "scope": "This report remains the initial 170-illustrated / 60-missing / 19-side-combat snapshot. Subsequent generation, refusals and imports are recorded in the new journals below; do not read the candidate shortlist above as a delivery claim.",
+    "generationJournal": "docs/production/sprite-suite-generation-2026-11-17.json",
+    "importJournal": "docs/production/sprite-suite-imports-2026-11-17.json",
+    "observedFollowup": "Anne Cunningham and Prisoner Juggernaut combat candidates imported. Butcher combat generation was refused at output, category violence, request ea87a46c-f8bb-4109-b400-474ab1ba8190; one attempt, no retry. Steel Guardian selection was still pending when this note was added.",
+    "inventoryRecomputed": false
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "file": "/workspace/scratch/62cbb5f4a653/production/wave25-townfall-b/png/townfall_the_weight.side.png",
+  "sha256": "7b899f339ae7b92c7abe9fe2775615c0a9f49c35b6d255b6837b203f7006b000",
+  "boundsByAlphaThreshold": {
+    "1": [
+      73,
+      119,
+      944,
+      1464
+    ],
+    "2": [
+      278,
+      278,
+      753,
+      1311
+    ],
+    "4": [
+      278,
+      280,
+      753,
+      1310
+    ],
+    "8": [
+      280,
+      280,
+      751,
+      1309
+    ],
+    "16": [
+      280,
+      280,
+      751,
+      1309
+    ],
+    "32": [
+      280,
+      280,
+      751,
+      1308
+    ],
+    "64": [
+      280,
+      280,
+      751,
+      1308
+    ],
+    "128": [
+      281,
+      281,
+      751,
+      1308
+    ],
+    "250": [
+      282,
+      282,
+      750,
+      1307
+    ]
+  },
+  "sampleRegions": [
+    {
+      "region": "leftVisibleRGBHalo",
+      "box": [
+        180,
+        430,
+        275,
+        750
+      ],
+      "alphaMinMax": [
+        0,
+        0
+      ],
+      "nonzeroAlphaPixels": 0,
+      "alphaOver1Pixels": 0,
+      "rgbaExample": [
+        22,
+        19,
+        18,
+        0
+      ]
+    },
+    {
+      "region": "rightVisibleRGBHalo",
+      "box": [
+        780,
+        400,
+        880,
+        720
+      ],
+      "alphaMinMax": [
+        0,
+        1
+      ],
+      "nonzeroAlphaPixels": 1,
+      "alphaOver1Pixels": 0,
+      "rgbaExample": [
+        27,
+        23,
+        22,
+        0
+      ]
+    },
+    {
+      "region": "aboveBodyHalo",
+      "box": [
+        350,
+        180,
+        650,
+        265
+      ],
+      "alphaMinMax": [
+        0,
+        1
+      ],
+      "nonzeroAlphaPixels": 1,
+      "alphaOver1Pixels": 0,
+      "rgbaExample": [
+        34,
+        31,
+        28,
+        0
+      ]
+    },
+    {
+      "region": "belowShoesHalo",
+      "box": [
+        300,
+        1320,
+        640,
+        1430
+      ],
+      "alphaMinMax": [
+        0,
+        0
+      ],
+      "nonzeroAlphaPixels": 0,
+      "alphaOver1Pixels": 0,
+      "rgbaExample": [
+        13,
+        12,
+        11,
+        0
+      ]
+    }
+  ],
+  "conclusion": "Visible RGB halo lies under alpha zero except two sampled trace-alpha pixels at 1/255. Native subject bounds already clean. No corrective generation or pixel modification warranted or performed."
+}

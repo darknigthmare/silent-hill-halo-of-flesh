@@ -1,0 +1,460 @@
+TAP version 13
+# Subtest: campaign review binds a retained portrait to its original fragment and its distinct idle to the combat import
+ok 1 - campaign review binds a retained portrait to its original fragment and its distinct idle to the combat import
+  ---
+  duration_ms: 36.063262
+  type: 'test'
+  ...
+# Subtest: browser campaign review handles selection-only dossiers and detects shared combat paths and pixels
+ok 2 - browser campaign review handles selection-only dossiers and detects shared combat paths and pixels
+  ---
+  duration_ms: 0.554937
+  type: 'test'
+  ...
+# Subtest: historical source blocker can have a later exact-ID candidate while history stays unchanged
+ok 3 - historical source blocker can have a later exact-ID candidate while history stays unchanged
+  ---
+  duration_ms: 0.359682
+  type: 'test'
+  ...
+# Subtest: no later ledger or imported image leaves the historical blocker unresolved
+ok 4 - no later ledger or imported image leaves the historical blocker unresolved
+  ---
+  duration_ms: 0.274644
+  type: 'test'
+  ...
+# Subtest: review rejects missing evidence, wrong source, false animation and excluded generation identities
+ok 5 - review rejects missing evidence, wrong source, false animation and excluded generation identities
+  ---
+  duration_ms: 0.684652
+  type: 'test'
+  ...
+# Subtest: malformed review arrays and missing eligibility fail closed without throwing
+ok 6 - malformed review arrays and missing eligibility fail closed without throwing
+  ---
+  duration_ms: 0.629118
+  type: 'test'
+  ...
+# Subtest: a later selection delivery resolves artwork presence without completing combat
+ok 7 - a later selection delivery resolves artwork presence without completing combat
+  ---
+  duration_ms: 0.683861
+  type: 'test'
+  ...
+# Subtest: a separate combat journal must bind an actual side-view frame, not its portrait
+ok 8 - a separate combat journal must bind an actual side-view frame, not its portrait
+  ---
+  duration_ms: 0.244078
+  type: 'test'
+  ...
+# Subtest: continuation reader accepts five exact ledger/fragment bindings without editing historical rows
+ok 9 - continuation reader accepts five exact ledger/fragment bindings without editing historical rows
+  ---
+  duration_ms: 14.280183
+  type: 'test'
+  ...
+# Subtest: continuation reader binds the two explicit purpose journals and ignores unfinished outputs
+ok 10 - continuation reader binds the two explicit purpose journals and ignores unfinished outputs
+  ---
+  duration_ms: 13.576982
+  type: 'test'
+  ...
+# Subtest: sprite-continuation-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+ok 11 - sprite-continuation-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 20.889804
+  type: 'test'
+  ...
+# Subtest: sprite-next-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+ok 12 - sprite-next-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 22.48595
+  type: 'test'
+  ...
+# Subtest: sprite-suite-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+ok 13 - sprite-suite-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 20.615175
+  type: 'test'
+  ...
+# Subtest: sprite-following-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+ok 14 - sprite-following-imports-2026-11-17.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 21.544029
+  type: 'test'
+  ...
+# Subtest: sprite-resume-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 15 - sprite-resume-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 22.660287
+  type: 'test'
+  ...
+# Subtest: sprite-complement-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 16 - sprite-complement-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 17.969994
+  type: 'test'
+  ...
+# Subtest: sprite-wave3-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 17 - sprite-wave3-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 21.084396
+  type: 'test'
+  ...
+# Subtest: sprite-wave4-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 18 - sprite-wave4-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 14.942841
+  type: 'test'
+  ...
+# Subtest: sprite-wave5-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 19 - sprite-wave5-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 19.376993
+  type: 'test'
+  ...
+# Subtest: sprite-wave6-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 20 - sprite-wave6-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 15.32722
+  type: 'test'
+  ...
+# Subtest: sprite-wave14-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+ok 21 - sprite-wave14-imports-2026-11-18.json resolves archived blockers by exact bytes after combat index normalization
+  ---
+  duration_ms: 20.19049
+  type: 'test'
+  ...
+# Subtest: continuation reader returns null before any ledger exists and rejects partial campaigns
+ok 22 - continuation reader returns null before any ledger exists and rejects partial campaigns
+  ---
+  duration_ms: 5.829536
+  type: 'test'
+  ...
+# Subtest: continuation reader rejects forged groups, source, exclusions, evidence and undeclared fragments
+ok 23 - continuation reader rejects forged groups, source, exclusions, evidence and undeclared fragments
+  ---
+  duration_ms: 98.023615
+  type: 'test'
+  ...
+# Subtest: later source-reviewed images for Cybil and Curtis preserve their original ART92 exclusion
+ok 24 - later source-reviewed images for Cybil and Curtis preserve their original ART92 exclusion
+  ---
+  duration_ms: 36.319458
+  type: 'test'
+  ...
+# Subtest: ART144 covers its exact 30/30/30/30/24 allocation without padding
+ok 25 - ART144 covers its exact 30/30/30/30/24 allocation without padding
+  ---
+  duration_ms: 4.829408
+  type: 'test'
+  ...
+# Subtest: a static candidate is recorded without closing art or changing a resolved noncombat role
+ok 26 - a static candidate is recorded without closing art or changing a resolved noncombat role
+  ---
+  duration_ms: 0.933998
+  type: 'test'
+  ...
+# Subtest: new artwork cannot erase the exact old source limitation from the row or parent action
+ok 27 - new artwork cannot erase the exact old source limitation from the row or parent action
+  ---
+  duration_ms: 0.300342
+  type: 'test'
+  ...
+# Subtest: current blockers retain both earlier and current reasons without borrowing an existing image
+ok 28 - current blockers retain both earlier and current reasons without borrowing an existing image
+  ---
+  duration_ms: 0.572623
+  type: 'test'
+  ...
+# Subtest: a declared import needs its own exact-source static idle rather than a placeholder or animated stand-in
+ok 29 - a declared import needs its own exact-source static idle rather than a placeholder or animated stand-in
+  ---
+  duration_ms: 0.364569
+  type: 'test'
+  ...
+# Subtest: duplicate, wrong-owner and non-idle deliveries cannot inflate the campaign
+ok 30 - duplicate, wrong-owner and non-idle deliveries cannot inflate the campaign
+  ---
+  duration_ms: 0.344128
+  type: 'test'
+  ...
+# Subtest: ART92 retains the exact unpadded 18/21/18/15/20 allocation and its own baseline
+ok 31 - ART92 retains the exact unpadded 18/21/18/15/20 allocation and its own baseline
+  ---
+  duration_ms: 0.246751
+  type: 'test'
+  ...
+# Subtest: an exact ART92 import preserves the historical ART144 blocker and cannot close role or art work
+ok 32 - an exact ART92 import preserves the historical ART144 blocker and cannot close role or art work
+  ---
+  duration_ms: 3.035875
+  type: 'test'
+  ...
+# Subtest: a renewed ART92 blocker keeps both old and new diagnostics without pretending to import a PNG
+ok 33 - a renewed ART92 blocker keeps both old and new diagnostics without pretending to import a PNG
+  ---
+  duration_ms: 1.517086
+  type: 'test'
+  ...
+# Subtest: a later combat revision keeps the original ART92 candidate and checks both actual PNG files
+ok 34 - a later combat revision keeps the original ART92 candidate and checks both actual PNG files
+  ---
+  duration_ms: 10.22435
+  type: 'test'
+  ...
+# Subtest: a later exact combat delivery coexists with both immutable blocked campaigns without approving work
+ok 35 - a later exact combat delivery coexists with both immutable blocked campaigns without approving work
+  ---
+  duration_ms: 1.894426
+  type: 'test'
+  ...
+# Subtest: a later selection portrait leaves the historical combat action unresolved
+ok 36 - a later selection portrait leaves the historical combat action unresolved
+  ---
+  duration_ms: 1.27373
+  type: 'test'
+  ...
+# Subtest: later combat resolution rejects selection-only claims, wrong identity or source, exclusions and missing exact bytes
+ok 37 - later combat resolution rejects selection-only claims, wrong identity or source, exclusions and missing exact bytes
+  ---
+  duration_ms: 11.287532
+  type: 'test'
+  ...
+# Subtest: a later campaign cannot override an absent, borrowed, or previously implemented ART144 identity
+ok 38 - a later campaign cannot override an absent, borrowed, or previously implemented ART144 identity
+  ---
+  duration_ms: 3.026742
+  type: 'test'
+  ...
+# Subtest: ART92 rejects missing source evidence, forged groups, duplicate rows and undeclared artwork
+ok 39 - ART92 rejects missing source evidence, forged groups, duplicate rows and undeclared artwork
+  ---
+  duration_ms: 5.053697
+  type: 'test'
+  ...
+# Subtest: ART92 requires the actual declared PNG bytes, not a missing path, symbolic link or mismatched hash
+ok 40 - ART92 requires the actual declared PNG bytes, not a missing path, symbolic link or mismatched hash
+  ---
+  duration_ms: 2.451134
+  type: 'test'
+  ...
+# Subtest: immutable intake exclusions cannot be removed by a candidate ledger or a different source label
+ok 41 - immutable intake exclusions cannot be removed by a candidate ledger or a different source label
+  ---
+  duration_ms: 1.467241
+  type: 'test'
+  ...
+# Subtest: sprite backlog separates missing art, static art and actual animation
+ok 42 - sprite backlog separates missing art, static art and actual animation
+  ---
+  duration_ms: 8.071916
+  type: 'test'
+  ...
+# Subtest: sprite backlog rejects absent entries instead of inventing coverage
+ok 43 - sprite backlog rejects absent entries instead of inventing coverage
+  ---
+  duration_ms: 0.447996
+  type: 'test'
+  ...
+# Subtest: audit rejects duplicated fighter identities and contradictory counts
+ok 44 - audit rejects duplicated fighter identities and contradictory counts
+  ---
+  duration_ms: 0.332791
+  type: 'test'
+  ...
+# Subtest: real sprite coverage keeps authored animated clips in the validation queue
+ok 45 - real sprite coverage keeps authored animated clips in the validation queue
+  ---
+  duration_ms: 27.850595
+  type: 'test'
+  ...
+# Subtest: clip inspector lists only actual authored poses and distinct pixels
+ok 46 - clip inspector lists only actual authored poses and distinct pixels
+  ---
+  duration_ms: 0.397559
+  type: 'test'
+  ...
+# Subtest: phase-one research covers exactly the live fighters and stages with all nine proposals
+ok 47 - phase-one research covers exactly the live fighters and stages with all nine proposals
+  ---
+  duration_ms: 5.14223
+  type: 'test'
+  ...
+# Subtest: ghost proximity documentation keeps its own source and the thirty new mechanics reach their Excel rows
+ok 48 - ghost proximity documentation keeps its own source and the thirty new mechanics reach their Excel rows
+  ---
+  duration_ms: 196.207342
+  type: 'test'
+  ...
+# Subtest: new shared mechanics keep the documented limb and distance-specific weapon in their Excel notes
+ok 49 - new shared mechanics keep the documented limb and distance-specific weapon in their Excel notes
+  ---
+  duration_ms: 0.593795
+  type: 'test'
+  ...
+# Subtest: the plan inventories every current move, finisher, presentation and core pose exactly once
+ok 50 - the plan inventories every current move, finisher, presentation and core pose exactly once
+  ---
+  duration_ms: 90.016136
+  type: 'test'
+  ...
+# Subtest: the exact Twin Victim pointing candidate is reported as one static context image without closing its choreography
+ok 51 - the exact Twin Victim pointing candidate is reported as one static context image without closing its choreography
+  ---
+  duration_ms: 0.425401
+  type: 'test'
+  ...
+# Subtest: stage inventory retains retired ideas and maps each live binding to its exact production row
+ok 52 - stage inventory retains retired ideas and maps each live binding to its exact production row
+  ---
+  duration_ms: 4.510527
+  type: 'test'
+  ...
+# Subtest: generated IDs are unique and all ownership, source and observation links resolve
+ok 53 - generated IDs are unique and all ownership, source and observation links resolve
+  ---
+  duration_ms: 16.059183
+  type: 'test'
+  ...
+# Subtest: variant bases are real, acyclic IDs and names do not silently become cross-edition links
+ok 54 - variant bases are real, acyclic IDs and names do not silently become cross-edition links
+  ---
+  duration_ms: 0.538752
+  type: 'test'
+  ...
+# Subtest: researched editions override inherited labels and genuine remake variants retain a dated fallback
+ok 55 - researched editions override inherited labels and genuine remake variants retain a dated fallback
+  ---
+  duration_ms: 417.741643
+  type: 'test'
+  ...
+# Subtest: engine timing remains distinct from unmeasured source frames and no artwork is certified 1:1
+ok 56 - engine timing remains distinct from unmeasured source frames and no artwork is certified 1:1
+  ---
+  duration_ms: 63.938474
+  type: 'test'
+  ...
+# Subtest: planning is deterministic and leaves both research and gameplay catalogues unchanged
+ok 57 - planning is deterministic and leaves both research and gameplay catalogues unchanged
+  ---
+  duration_ms: 1152.058106
+  type: 'test'
+  ...
+# Subtest: implementation progress maps to real hooks while every unproduced artistic sequence remains open
+ok 58 - implementation progress maps to real hooks while every unproduced artistic sequence remains open
+  ---
+  duration_ms: 5.158626
+  type: 'test'
+  ...
+# Subtest: a sourced noncombat role closes only its identity decision while production remains open
+ok 59 - a sourced noncombat role closes only its identity decision while production remains open
+  ---
+  duration_ms: 324.048204
+  type: 'test'
+  ...
+# Subtest: a role review rejects forged identity, borrowed evidence, unknown edition and malformed approval
+ok 60 - a role review rejects forged identity, borrowed evidence, unknown edition and malformed approval
+  ---
+  duration_ms: 73.69646
+  type: 'test'
+  ...
+# Subtest: a role review cannot close a runtime that still exposes combat or belongs to another edition
+ok 61 - a role review cannot close a runtime that still exposes combat or belongs to another edition
+  ---
+  duration_ms: 334.877543
+  type: 'test'
+  ...
+# Subtest: replacement bitmap scenery keeps procedural proposals prepared and visibly unproduced in the workbook
+ok 62 - replacement bitmap scenery keeps procedural proposals prepared and visibly unproduced in the workbook
+  ---
+  duration_ms: 310.057532
+  type: 'test'
+  ...
+# Subtest: new room rasters cover the active tracks while historical rooms remain separately inventoried
+ok 63 - new room rasters cover the active tracks while historical rooms remain separately inventoried
+  ---
+  duration_ms: 295.214107
+  type: 'test'
+  ...
+# Subtest: all thirty revised lot12 presentation targets archive their old proposal without declaring it delivered
+ok 64 - all thirty revised lot12 presentation targets archive their old proposal without declaring it delivered
+  ---
+  duration_ms: 11.625421
+  type: 'test'
+  ...
+# Subtest: the workbook exposes delivered weapon phases and the flight candidate without claiming measured source animation
+ok 65 - the workbook exposes delivered weapon phases and the flight candidate without claiming measured source animation
+  ---
+  duration_ms: 3.133312
+  type: 'test'
+  ...
+# Subtest: new combat rules retain their own source and describe versus limits in the workbook
+ok 66 - new combat rules retain their own source and describe versus limits in the workbook
+  ---
+  duration_ms: 0.308545
+  type: 'test'
+  ...
+# Subtest: unverified roles and locations remain blocked through their moves, poses and finishers
+ok 67 - unverified roles and locations remain blocked through their moves, poses and finishers
+  ---
+  duration_ms: 471.708822
+  type: 'test'
+  ...
+# Subtest: a blocked proposal cannot enter production solely because the fighter identity is documented
+ok 68 - a blocked proposal cannot enter production solely because the fighter identity is documented
+  ---
+  duration_ms: 320.182117
+  type: 'test'
+  ...
+# Subtest: missing, unknown and duplicated scope IDs cannot yield an apparently complete plan
+ok 69 - missing, unknown and duplicated scope IDs cannot yield an apparently complete plan
+  ---
+  duration_ms: 24.872496
+  type: 'test'
+  ...
+# Subtest: unknown source IDs are rejected wherever research attaches evidence
+ok 70 - unknown source IDs are rejected wherever research attaches evidence
+  ---
+  duration_ms: 30.451272
+  type: 'test'
+  ...
+# Subtest: unsupported canonical observations, proposals and stage animations are rejected
+ok 71 - unsupported canonical observations, proposals and stage animations are rejected
+  ---
+  duration_ms: 17.997855
+  type: 'test'
+  ...
+# Subtest: missing proposals, unknown combat roles and malformed reference containers are refused
+ok 72 - missing proposals, unknown combat roles and malformed reference containers are refused
+  ---
+  duration_ms: 19.265095
+  type: 'test'
+  ...
+# Subtest: variant lineage rejects missing bases, self references and multi-profile cycles
+ok 73 - variant lineage rejects missing bases, self references and multi-profile cycles
+  ---
+  duration_ms: 18.245267
+  type: 'test'
+  ...
+# Subtest: observation input cannot replace generated IDs, ownership, edition or source timing
+ok 74 - observation input cannot replace generated IDs, ownership, edition or source timing
+  ---
+  duration_ms: 305.399647
+  type: 'test'
+  ...
+# Subtest: shared source IDs are deduplicated but conflicting URLs and duplicate source rows are refused
+ok 75 - shared source IDs are deduplicated but conflicting URLs and duplicate source rows are refused
+  ---
+  duration_ms: 7.856731
+  type: 'test'
+  ...
+1..75
+# tests 75
+# suites 0
+# pass 75
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8104.754521

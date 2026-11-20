@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "id": "sh1_air_screamer_001",
+  "command": [
+    "node",
+    "--expose-gc",
+    "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-air-screamer-native.mjs",
+    "--landmarks=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/air-screamer/body-landmarks-corrected.json",
+    "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected",
+    "--stage=hazel_subway"
+  ],
+  "startedAtUnix": 1795168254.0029428,
+  "timeoutSeconds": 180,
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "exitCode": 0,
+  "timeout": false,
+  "durationSeconds": 8.119,
+  "reportPresent": true,
+  "reportSHA256": "ec1b8d51156f3feceef903bf20b58845176ce16f620d3d92f62cd95afe3169c4",
+  "reportPassed": true,
+  "checks": 295,
+  "cases": 2,
+  "captures": 9,
+  "failure": null,
+  "passed": true
+}

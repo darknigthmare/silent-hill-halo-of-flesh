@@ -1,0 +1,548 @@
+{
+  "schema": 1,
+  "label": "wave23-native-art-and-inputs",
+  "generatedAt": "2026-11-19T17:46:49.557Z",
+  "root": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh",
+  "browserTest": false,
+  "httpTest": false,
+  "browserLaunches": 0,
+  "httpServersStarted": 0,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "Historical portrait preserved and separated: sh4_toadstool_061",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    },
+    {
+      "name": "Native historical selection decodes: sh4_toadstool_061",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: documented role remains outside combat",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: workshop reference frames decode",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": []
+      }
+    },
+    {
+      "name": "sh4_toadstool_061: reference renderer selects dedicated view 1",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: full reference silhouette fits workshop 1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          336.929377269073,
+          330.56451794379257,
+          398.57937594664156,
+          430.3181932233681
+        ],
+        "visible": [
+          337.1680224252442,
+          331.36000179769667,
+          397.86344047812787,
+          429.99999968180646
+        ],
+        "pixelScale": 0.07954838539041112,
+        "anchor": [
+          0.42,
+          0.90360656
+        ],
+        "bodyHeight": 0.81311475,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh4_toadstool_061: workshop facing matrix 1",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: reference renderer selects dedicated view -1",
+      "passed": true
+    },
+    {
+      "name": "sh4_toadstool_061: full reference silhouette fits workshop -1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          321.42062405335844,
+          330.56451794379257,
+          383.070622730927,
+          430.3181932233681
+        ],
+        "visible": [
+          322.13655952187213,
+          331.36000179769667,
+          382.8319775747558,
+          429.99999968180646
+        ],
+        "pixelScale": 0.07954838539041112,
+        "anchor": [
+          0.42,
+          0.90360656
+        ],
+        "bodyHeight": 0.81311475,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh4_toadstool_061: workshop facing matrix -1",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "cases": [],
+  "captures": [
+    {
+      "file": "selection-sh4_toadstool_061.png",
+      "sha256": "cf1e0a6d55aae72fc3f520fc087b40fb403c6212be97f5f445983e88ddde5e60",
+      "bytes": 243895,
+      "width": 500,
+      "height": 500,
+      "purpose": "preserved-selection",
+      "fighterId": "sh4_toadstool_061",
+      "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png"
+    },
+    {
+      "file": "sh4_toadstool_061-reference-right.png",
+      "sha256": "33def6cdfdf4019284cb1a38b28d6ddad912baadfb3338476fdbde07bb64ab20",
+      "bytes": 12570,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh4_toadstool_061",
+      "combatEnabled": false,
+      "facing": 1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          336.929377269073,
+          330.56451794379257,
+          398.57937594664156,
+          430.3181932233681
+        ],
+        "visible": [
+          337.1680224252442,
+          331.36000179769667,
+          397.86344047812787,
+          429.99999968180646
+        ],
+        "pixelScale": 0.07954838539041112,
+        "anchor": [
+          0.42,
+          0.90360656
+        ],
+        "bodyHeight": 0.81311475,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+        "args": [
+          -38.273380838071475,
+          -121.7974203222854,
+          91.12709723350352,
+          134.7903232600319
+        ],
+        "matrix": [
+          0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "sh4_toadstool_061-reference-left.png",
+      "sha256": "4171862e69f1bde07a3e22dbd139c03b7ae1743f6caa178d49f51809ab2fb11e",
+      "bytes": 12670,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh4_toadstool_061",
+      "combatEnabled": false,
+      "facing": -1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          321.42062405335844,
+          330.56451794379257,
+          383.070622730927,
+          430.3181932233681
+        ],
+        "visible": [
+          322.13655952187213,
+          331.36000179769667,
+          382.8319775747558,
+          429.99999968180646
+        ],
+        "pixelScale": 0.07954838539041112,
+        "anchor": [
+          0.42,
+          0.90360656
+        ],
+        "bodyHeight": 0.81311475,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+        "args": [
+          -38.273380838071475,
+          -121.7974203222854,
+          91.12709723350352,
+          134.7903232600319
+        ],
+        "matrix": [
+          -0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+      "sha256": "b2de331812cab2ef81949111176d6ae392facaba6c535031074b6fead5549e34",
+      "bytes": 1006402,
+      "width": 1031,
+      "height": 1525,
+      "rawRGBAHash": "e28250ee40ae8bf6c95b99fb765a1f998662109c38590ae180153694d9761a9d",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "sha256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+      "bytes": 1806980,
+      "width": 1031,
+      "height": 1525,
+      "rawRGBAHash": "2ea8a0c9166e2bd60b998131dc0d04e0e9819d0263c43e5b2a92fe17b03cf7c6",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "bytes": 1181785,
+      "width": 2172,
+      "height": 724,
+      "rawRGBAHash": "28b59b2a1bb4f2e01c42a53ce514d38088004343a42db9d7658d97fbe9a05d81",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "sha256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
+      "bytes": 633182,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "06040a0bb0a2553bb69d76447f823b29d7f8d4a71906f379fef759fcbf23946f",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "sha256": "4d537af9a1485e2e384396327b8a60c35c923552f8318e92021fff76e75c40c3",
+      "bytes": 2203973,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "bd8555c4af22d190ae05f426ffbb9b47f03ca33e15f3832f3c5474ad07a871f1",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "sha256": "98e4c72a83083b2f1dcabd1417e687c20d31daaac96ece679ffedd266584b884",
+      "bytes": 200941,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "fee02ddf118c0f63b586bfa290dd7d136e1f8e57f1581dfc7c865017e1ec7580",
+      "adapterLossless": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "sh4_toadstool_061",
+      "source": "sh4",
+      "edition": "SH4 original 2004",
+      "role": "environmental-obstacle",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": false,
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "referenceIds": [
+        "CL_SH4_04_WATER_PRISON_WORLD",
+        "CL_SH4_ENEMIES"
+      ],
+      "observedBasis": "Contact : Blesse au contact ; reste passif.",
+      "superEnabled": false,
+      "superReason": "Le rôle documenté ne permet pas un kit de combat autonome.",
+      "superName": "Super proposé — Toadstool",
+      "superDescription": "Aucun super actif ; zone de contact environnementale seulement.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    },
+    {
+      "id": "sh2_creeper_025",
+      "source": "sh2",
+      "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+      "role": "combatant",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": true,
+      "canMove": true,
+      "canJump": false,
+      "canDodge": true,
+      "referenceIds": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "observedBasis": "Morsure : Court vers le pied et mord.",
+      "superEnabled": true,
+      "superReason": "",
+      "superName": "Super proposé — Creeper",
+      "superDescription": "Variante à réaliser avec son apparence propre. Angle de cheville : deux changements de direction puis morsure ; pas de bond humain.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "4d0caa281fff9c28a9529f1a659d45dd4f577ca8a2885be93d49b968d97c54a8",
+      "after": "4d0caa281fff9c28a9529f1a659d45dd4f577ca8a2885be93d49b968d97c54a8"
+    },
+    "src/sprite-manifest.js": {
+      "before": "37ad7ea5e154c4e7b40dec16171204f981d036b47479d7d191cb347dd60bc121",
+      "after": "37ad7ea5e154c4e7b40dec16171204f981d036b47479d7d191cb347dd60bc121"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "a3e0ff06e26ff3ebc66bb1c1d86c7a7093c93b927d22ad9bd8ec9897d49ddbe6",
+      "after": "a3e0ff06e26ff3ebc66bb1c1d86c7a7093c93b927d22ad9bd8ec9897d49ddbe6"
+    },
+    "src/fight.js": {
+      "before": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "after": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a"
+    },
+    "src/sprite-system.js": {
+      "before": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+      "after": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "rendererPreviews": [
+    {
+      "id": "sh4_toadstool_061",
+      "facing": 1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -38.273380838071475,
+        "y": -121.7974203222854,
+        "width": 91.12709723350352,
+        "height": 134.7903232600319,
+        "flip": 1,
+        "localX": -38.273380838071475,
+        "localY": -121.7974203222854,
+        "scale": 0.08838709721969304
+      },
+      "capture": "sh4_toadstool_061-reference-right.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "sh4_toadstool_061",
+      "facing": -1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -52.853716395432045,
+        "y": -121.7974203222854,
+        "width": 91.12709723350352,
+        "height": 134.7903232600319,
+        "flip": -1,
+        "localX": -38.273380838071475,
+        "localY": -121.7974203222854,
+        "scale": 0.08838709721969304
+      },
+      "capture": "sh4_toadstool_061-reference-left.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    }
+  ],
+  "method": {
+    "engine": "Actual FightEngine.update/render; native Canvas drawImage observed after executing its real draw.",
+    "inputs": "Only original InputState keydown/keyup callbacks receive synthetic events. No held/pressed sets or actor positions, facing, health, phase, clocks or attack objects are assigned.",
+    "oppositeSides": "Separate ordinary local duels put each controlled fighter in the real player1 or player2 spawn. No teleport, actor swap or pose injection.",
+    "decoder": "Exact source bytes verified. Sharp normalizes PNG encoding only in memory for native decoding; all decoded RGBA bytes compared.",
+    "rolePolicy": "Only existing combat-enabled profiles enter duels. Other roles receive native workshop-renderer views only; no role or permission is changed."
+  },
+  "limits": [
+    "Native Canvas is not Chromium; DOM/CSS, actual browser keyboard delivery, HTTP, service worker and CI browser behavior are not tested.",
+    "Timing and mirrored left views are authored versus presentation; no original film/game animation timing or 1:1 fidelity is certified.",
+    "These wave23 candidates are exercised through idle, permitted static-frame movement or stationary-input rejection, and release-to-idle; no attack/contact/guard/finisher matrix is exercised.",
+    "Skull/torso size, foot contacts and limb identity still require visual review of the native captures."
+  ],
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "sh4_toadstool_061": "9c0c1063d01a6f873b447d44e98100a0fae503eea34249f10688631159fc56a2",
+    "sh2_creeper_025": "c406619e7c5636e3c5e7b9a8df6bae2657010793de09126704e368cb01feb47a"
+  },
+  "testedStageEntryHashes": {
+    "hazel_subway": "c95e04fa47ff52810f388d336e0c2e6fcaacce9d5f145ee420bc021f333a737a"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "combatIds": [],
+  "referenceOnlyIds": [
+    "sh4_toadstool_061"
+  ],
+  "passed": true,
+  "completedAt": "2026-11-19T17:46:50.942Z"
+}

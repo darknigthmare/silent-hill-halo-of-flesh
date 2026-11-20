@@ -1,0 +1,840 @@
+{
+  "schema": 2,
+  "label": "sprite-following-main",
+  "generatedAt": "2026-11-17T22:55:24.291Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserConstraintEvidence": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh/docs/production/qa-sprite-continuation-2026-11-17/report.json",
+  "browserBlocker": "Prior session observed system Chromium abort before page creation: process_singleton_posix.cc socket() failed: Operation not permitted. This harness does not retry Chromium.",
+  "limits": [
+    "Native Canvas renders execute the real FightEngine; these are not browser screenshots. DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "PNG files are read unchanged through the source HTTP server and verified by SHA-256. Sharp normalizes PNG encoding only in memory for native Canvas compatibility; complete decoded pixel equality is checked. Original files remain unchanged.",
+    "Minimal adapters provide storage/events and absence of gamepads. Real engine intros, updates, render and pause are used; actor positions, facing, health and poses are never manually overridden.",
+    "Left-facing display is the engine mirror, not independently established opposite-side source anatomy. Static idle candidates do not certify source animation or 1:1 fidelity.",
+    "This harness writes only QA reports and rendered screenshots; it does not rebuild manifests or modify registry, artwork, rules or engine code."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": [
+        "HALO OF FLESH — http://127.0.0.1:4237\n"
+      ]
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1717026,
+        "sha256": "f7a3056ad30d2b8f41a87e88756dc5233ab8154d06a81503303668a62138a91b"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1769377,
+        "sha256": "7c27f4ac64aa28febe8237587f13b85137617b90d98b780512bdf535c1c2fe42"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1943951,
+        "sha256": "f6de13b5497f85cdf0c0154445f56620180bc1d2565be567e1ce7081d4f7da27"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 554533,
+        "sha256": "dd7b5abc8be81858a4c959c2ff999fd6e496788a398100165483a0ea6c6d58dd"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          180,
+          34,
+          760,
+          1513
+        ],
+        "expected": [
+          180,
+          34,
+          760,
+          1513
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          208,
+          45,
+          853,
+          1505
+        ],
+        "expected": [
+          208,
+          45,
+          853,
+          1505
+        ]
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png"
+        ],
+        "portrait": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png"
+        ],
+        "expected": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png"
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png"
+        ],
+        "expected": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          53,
+          85,
+          982,
+          1499
+        ],
+        "expected": [
+          53,
+          85,
+          982,
+          1499
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          368,
+          203,
+          846,
+          1098
+        ],
+        "expected": [
+          368,
+          203,
+          846,
+          1098
+        ]
+      }
+    },
+    {
+      "name": "downpour_bogeyman_115 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png"
+        ],
+        "portrait": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "downpour_bogeyman_115 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png"
+        ],
+        "expected": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png"
+      }
+    },
+    {
+      "name": "downpour_bogeyman_115 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png"
+        ],
+        "expected": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png"
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072/downpour_bogeyman_115 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072/downpour_bogeyman_115 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072/downpour_bogeyman_115 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_walter_sullivan_072",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "downpour_bogeyman_115",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_walter_sullivan_072/downpour_bogeyman_115 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+          "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+          "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 280.2446019650747,
+          "top": 393.65213893069824,
+          "right": 360.63085950011543,
+          "bottom": 597.4251392920961
+        },
+        "visible": {
+          "left": 280.79237884776666,
+          "top": 393.92602737204425,
+          "right": 360.2200268380965,
+          "bottom": 596.4665297473852
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_bogeyman_115 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 884.5707315829867,
+          "top": 392.65547715186966,
+          "right": 1018.5192974287477,
+          "bottom": 596.0747049431957
+        },
+        "visible": {
+          "left": 884.8560320427221,
+          "top": 393.3687283012081,
+          "right": 1017.3780955898061,
+          "bottom": 595.0761533341218
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072/downpour_bogeyman_115 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "downpour_bogeyman_115/sh4_walter_sullivan_072 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "downpour_bogeyman_115/sh4_walter_sullivan_072 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "downpour_bogeyman_115/sh4_walter_sullivan_072 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "downpour_bogeyman_115",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_walter_sullivan_072",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "downpour_bogeyman_115/sh4_walter_sullivan_072 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png"
+        ],
+        "expected": [
+          "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+          "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png"
+        ]
+      }
+    },
+    {
+      "name": "downpour_bogeyman_115 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 261.48073308883045,
+          "top": 392.65547715186966,
+          "right": 395.42929893459143,
+          "bottom": 596.0747049431957
+        },
+        "visible": {
+          "left": 262.621934927772,
+          "top": 393.3687283012081,
+          "right": 395.14399847485606,
+          "bottom": 595.0761533341218
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_walter_sullivan_072 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 919.3691710174627,
+          "top": 393.65213893069824,
+          "right": 999.7554285525034,
+          "bottom": 597.4251392920961
+        },
+        "visible": {
+          "left": 919.7800036794816,
+          "top": 393.92602737204425,
+          "right": 999.2076516698114,
+          "bottom": 596.4665297473852
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_bogeyman_115/sh4_walter_sullivan_072 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "e81e8058002ff4f10b60eb2a329d438025cab3f68062bdaf3aa994784a37334c",
+        "after": "e81e8058002ff4f10b60eb2a329d438025cab3f68062bdaf3aa994784a37334c"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "042d06f61f37b44ac9787c38a8fda4841f0d523d1da15557c255c0517769b558",
+        "after": "042d06f61f37b44ac9787c38a8fda4841f0d523d1da15557c255c0517769b558"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "sh4_walter_sullivan_072",
+      "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.732062021891276,
+      "visibleBounds": [
+        180,
+        34,
+        760,
+        1513
+      ]
+    },
+    {
+      "id": "sh4_walter_sullivan_072",
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.6889883677164713,
+      "visibleBounds": [
+        208,
+        45,
+        853,
+        1505
+      ]
+    },
+    {
+      "id": "downpour_bogeyman_115",
+      "path": "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.5576203664143881,
+      "visibleBounds": [
+        53,
+        85,
+        982,
+        1499
+      ]
+    },
+    {
+      "id": "downpour_bogeyman_115",
+      "path": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8546240546996025,
+      "visibleBounds": [
+        368,
+        203,
+        846,
+        1098
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh4_walter_sullivan_072",
+      "facing": 1,
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "file": "portrait-sh4_walter_sullivan_072-right.png"
+    },
+    {
+      "id": "sh4_walter_sullivan_072",
+      "facing": -1,
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "file": "portrait-sh4_walter_sullivan_072-left.png"
+    },
+    {
+      "id": "downpour_bogeyman_115",
+      "facing": 1,
+      "path": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "file": "portrait-downpour_bogeyman_115-right.png"
+    },
+    {
+      "id": "downpour_bogeyman_115",
+      "facing": -1,
+      "path": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "file": "portrait-downpour_bogeyman_115-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "sh4_walter_sullivan_072",
+        "downpour_bogeyman_115"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 615.5009166666666
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_walter_sullivan_072",
+          "slot": 1,
+          "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+          "exterior": {
+            "left": 280.2446019650747,
+            "top": 393.65213893069824,
+            "right": 360.63085950011543,
+            "bottom": 597.4251392920961
+          },
+          "visible": {
+            "left": 280.79237884776666,
+            "top": 393.92602737204425,
+            "right": 360.2200268380965,
+            "bottom": 596.4665297473852
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 2.4665297473851524,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+            "args": [
+              -62.35,
+              -209.2595,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "downpour_bogeyman_115",
+          "slot": 2,
+          "path": "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+          "exterior": {
+            "left": 884.5707315829867,
+            "top": 392.65547715186966,
+            "right": 1018.5192974287477,
+            "bottom": 596.0747049431957
+          },
+          "visible": {
+            "left": 884.8560320427221,
+            "top": 393.3687283012081,
+            "right": 1017.3780955898061,
+            "bottom": 595.0761533341218
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 1.076153334121841,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+            "args": [
+              -63.454861111111114,
+              -217.46354166666669,
+              149.30555555555557,
+              223.95833333333337
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+        "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png"
+      ],
+      "snapshots": [
+        "duel-sh4_walter_sullivan_072--downpour_bogeyman_115-tick0.png",
+        "duel-sh4_walter_sullivan_072--downpour_bogeyman_115-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "downpour_bogeyman_115",
+        "sh4_walter_sullivan_072"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 615.5009166666666
+        }
+      },
+      "geometries": [
+        {
+          "id": "downpour_bogeyman_115",
+          "slot": 1,
+          "path": "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+          "exterior": {
+            "left": 261.48073308883045,
+            "top": 392.65547715186966,
+            "right": 395.42929893459143,
+            "bottom": 596.0747049431957
+          },
+          "visible": {
+            "left": 262.621934927772,
+            "top": 393.3687283012081,
+            "right": 395.14399847485606,
+            "bottom": 595.0761533341218
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 1.076153334121841,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+            "args": [
+              -63.454861111111114,
+              -217.46354166666669,
+              149.30555555555557,
+              223.95833333333337
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "sh4_walter_sullivan_072",
+          "slot": 2,
+          "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+          "exterior": {
+            "left": 919.3691710174627,
+            "top": 393.65213893069824,
+            "right": 999.7554285525034,
+            "bottom": 597.4251392920961
+          },
+          "visible": {
+            "left": 919.7800036794816,
+            "top": 393.92602737204425,
+            "right": 999.2076516698114,
+            "bottom": 596.4665297473852
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 2.4665297473851524,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+            "args": [
+              -62.35,
+              -209.2595,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+        "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png"
+      ],
+      "snapshots": [
+        "duel-downpour_bogeyman_115--sh4_walter_sullivan_072-tick0.png",
+        "duel-downpour_bogeyman_115--sh4_walter_sullivan_072-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "art/registry.jsonSHA256": "e81e8058002ff4f10b60eb2a329d438025cab3f68062bdaf3aa994784a37334c",
+  "src/sprite-manifest.jsSHA256": "042d06f61f37b44ac9787c38a8fda4841f0d523d1da15557c255c0517769b558",
+  "version": "0.9.6",
+  "ids": [
+    "sh4_walter_sullivan_072",
+    "downpour_bogeyman_115"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "baseCommit": "151c6acf0092044068f6362651c6208aa69ffd35",
+  "failedGitHubRun": 44543361709,
+  "failedGitHubJob": 135627292438,
+  "nodeVersion": "v24.22.3",
+  "baselineReproduction": {
+    "commit": "151c6acf0092044068f6362651c6208aa69ffd35",
+    "gitStatusBefore": "",
+    "originalTestGitBlob": "096f2fdbeac54587c83528c353dea0f9510ec2ae",
+    "nodeVersion": "v24.22.3",
+    "command": [
+      "node",
+      "--test",
+      "--test-name-pattern=ceiling, floor grate",
+      "tests/cinematic-supports.test.mjs"
+    ],
+    "exitCode": 1,
+    "firstFailureReproduced": true,
+    "log": "baseline-reproduction.log"
+  },
+  "correctionScope": "tests/cinematic-supports.test.mjs only; no runtime, source-data, stage descriptor or pixel changes.",
+  "command": [
+    "node",
+    "--test",
+    "--test-reporter=tap",
+    "tests/cinematic-supports.test.mjs",
+    "tests/lore-cinematics.test.mjs",
+    "tests/stage-bitmaps.test.mjs",
+    "tests/stage-room-scope.test.mjs"
+  ],
+  "startedAt": "2026-11-19T14:38:26.914058+00:00",
+  "completedAt": "2026-11-19T14:38:27.631949+00:00",
+  "exitCode": 0,
+  "counts": {
+    "tests": 53,
+    "pass": 53,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "gitStatusAfter": " M tests/cinematic-supports.test.mjs\n",
+  "changedTrackedFiles": [
+    "tests/cinematic-supports.test.mjs"
+  ],
+  "diffCheckExitCode": 0,
+  "diffCheckOutput": "",
+  "correctedTest": {
+    "path": "tests/cinematic-supports.test.mjs",
+    "gitBlob": "7ecea689f521b388799af04a7955fdcaf2383cf6",
+    "sha256": "0ed0574e13700d925b2f4ad1c9b1ff8d23d1f5687bdba6ca6a29da2524cf9e7b",
+    "bytes": 16474
+  },
+  "patch": {
+    "path": "cinematic-support-fixture.patch",
+    "sha256": "ff11136139e65ba017c116cd43efdcf5a73799be216086aa6a03b0710d101f98"
+  },
+  "log": {
+    "path": "targeted-tests.log",
+    "sha256": "8f2ec30e33c4a1633beeaebb4049b9297012ccb5a4d65a1f69c506da71b16b02"
+  },
+  "passed": true,
+  "limitations": [
+    "Local Node24.22.3; failing GitHub job used Node22.23.4.",
+    "Only the four named test files were executed after the targeted baseline reproduction. No image suite, browser or full build was run.",
+    "No commit or remote mutation was performed."
+  ],
+  "draftAttemptArchive": "attempt1-verification-report.json"
+}

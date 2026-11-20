@@ -1,0 +1,141 @@
+{
+  "scope": "Read-only previously published art/*.json history; records are not new tool calls",
+  "records": [
+    {
+      "file": "art/provenance-art144-a.json",
+      "jsonPath": "$.newRefusals[0]",
+      "record": {
+        "fighterId": "sh2_mary_final_manifestation_034",
+        "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30. safety_violations=[violence].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+        "requestId": "aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30",
+        "categories": [
+          "violence"
+        ],
+        "stage": "output",
+        "retry": false
+      },
+      "sourceSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f"
+    },
+    {
+      "file": "art/provenance-art144-a.json",
+      "jsonPath": "$.blocked[1]",
+      "record": {
+        "fighterId": "sh1_incubus_019",
+        "reason": "Refus antérieur explicite de génération de l’Incubus SH1 ; aucune nouvelle tentative, reformulation ou variante de remplacement.",
+        "evidence": [
+          "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_14.jpg"
+        ]
+      },
+      "sourceSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f"
+    },
+    {
+      "file": "art/provenance-art144-a.json",
+      "jsonPath": "$.blocked[2]",
+      "record": {
+        "fighterId": "sh2_mannequin_022",
+        "reason": "Refus antérieur explicite du Mannequin SH2 ; aucune nouvelle tentative, variante ou corps emprunté.",
+        "evidence": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_CREATURES",
+          "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+        ]
+      },
+      "sourceSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f"
+    },
+    {
+      "file": "art/provenance-art144-a.json",
+      "jsonPath": "$.blocked[3]",
+      "record": {
+        "fighterId": "sh2_mannequin_ambusher_023",
+        "reason": "Même sujet Mannequin SH2 que le refus antérieur ; aucune variante Ambusher utilisée pour reprendre la génération refusée.",
+        "evidence": [
+          "CL_SH2R_MONSTERS",
+          "CL_SH2R_DEV",
+          "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+        ]
+      },
+      "sourceSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f"
+    },
+    {
+      "file": "art/provenance-art144-a.json",
+      "jsonPath": "$.blocked[5]",
+      "record": {
+        "fighterId": "sh2_mary_final_manifestation_034",
+        "reason": "Refus explicite de l’outil image pour Mary Final Manifestation SH2, catégorie output violence, requête aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30. Un seul appel ; aucune nouvelle requête ou autre identité utilisée après le refus.",
+        "evidence": [
+          "CL_SH2_BOSSES",
+          "CL_SH2_CREATURES",
+          "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+        ]
+      },
+      "sourceSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f"
+    },
+    {
+      "file": "art/provenance-art144-a.json",
+      "jsonPath": "$.blocked[7]",
+      "record": {
+        "fighterId": "sh2_spider_mannequin",
+        "reason": "Même famille de sujet Mannequin SH2 précédemment refusée ; variante Spider non utilisée comme nouvel essai ni substitution.",
+        "evidence": [
+          "CL_SH2R_MONSTERS",
+          "CL_SH2R_DEV",
+          "https://www.silenthillmemories.net/sh2/enemies_en.htm"
+        ]
+      },
+      "sourceSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f"
+    },
+    {
+      "file": "art/reference-provenance-batch12.json",
+      "jsonPath": "$.newRefusals[1]",
+      "record": {
+        "fighterId": "homecoming_amnion_hanging_form_097",
+        "requestId": "618d08f4-0487-4b32-839f-f69a2983f6e2",
+        "categories": [
+          "sexual",
+          "violence"
+        ],
+        "retry": false,
+        "exposedFormNotUsedAsWorkaround": true
+      },
+      "sourceSHA256": "b64091acc89f6f0189c9a0dfe1b84c7c546a0ff26f5de8a1ece2e6869497a7bd"
+    },
+    {
+      "file": "art/reference-provenance-batch12.json",
+      "jsonPath": "$.blocked[3]",
+      "record": {
+        "rowId": "homecoming_amnion_hanging_form_097:pose:idle",
+        "collection": "poses",
+        "entityId": "homecoming_amnion_hanging_form_097",
+        "pose": "idle",
+        "status": "blocked",
+        "artifacts": [],
+        "evidence": [
+          "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_23_amnion.png",
+          "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+        ],
+        "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Refus explicite de génération sexual/violence, requête 618d08f4-0487-4b32-839f-f69a2983f6e2, sur la première forme et son rig complet. Aucun essai supplémentaire ni retrait des éléments du corps pour contourner ; aucun PNG livré.",
+        "reason": "Refus explicite de génération sexual/violence, requête 618d08f4-0487-4b32-839f-f69a2983f6e2, sur la première forme et son rig complet. Aucun essai supplémentaire ni retrait des éléments du corps pour contourner ; aucun PNG livré."
+      },
+      "sourceSHA256": "b64091acc89f6f0189c9a0dfe1b84c7c546a0ff26f5de8a1ece2e6869497a7bd"
+    },
+    {
+      "file": "art/reference-provenance-batch12.json",
+      "jsonPath": "$.blocked[4]",
+      "record": {
+        "rowId": "homecoming_amnion_exposed_form_098:pose:idle",
+        "collection": "poses",
+        "entityId": "homecoming_amnion_exposed_form_098",
+        "pose": "idle",
+        "status": "blocked",
+        "artifacts": [],
+        "evidence": [
+          "https://www.silenthillmemories.net/sh5/arts/pics/shh_render_23_amnion.png",
+          "https://www.silenthillmemories.net/sh5/creatures_en.htm"
+        ],
+        "limits": "Aucun PNG livré, aucune animation, mesure originale ou certification 1:1. Le rendu identifié montre l’abdomen fermé et ne valide pas l’anatomie exposée de seconde phase. La génération de la première forme a de plus été refusée ; aucune tentative sur cette variante ne sert de contournement. Corps et animation restent à produire, sans copie de la première forme.",
+        "reason": "Le rendu identifié montre l’abdomen fermé et ne valide pas l’anatomie exposée de seconde phase. La génération de la première forme a de plus été refusée ; aucune tentative sur cette variante ne sert de contournement. Corps et animation restent à produire, sans copie de la première forme."
+      },
+      "sourceSHA256": "b64091acc89f6f0189c9a0dfe1b84c7c546a0ff26f5de8a1ece2e6869497a7bd"
+    }
+  ]
+}

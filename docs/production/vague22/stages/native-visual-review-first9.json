@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-19T16:05:57.034948+00:00",
+  "scope": "Wave22 stages only; first nine integrated candidates",
+  "status": "passed-for-nine-reviewed-captures",
+  "reviewMethod": "Each PNG opened with view_image and inspected at its native engine composition. Existing case report and capture SHA checked read-only; no test or render rerun by reviewer.",
+  "renderer": "Native Canvas / actual FightEngine.update and render",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "nativeHarnessSHA256": "786e1c10f3801b0fa5ed4b79d9c0b8d64685fcd7ae0233c37a955a9e58179dd3",
+  "testScope": "Normal entry into combat, movement right and left via registered input callbacks, release to idle, painting of exact planes and live parallax. No attack, guard, collision or finisher test claimed.",
+  "limits": [
+    "Visual inspection of static captures does not itself prove parallax; each linked case report measures the two distinct layer translations during normal movement.",
+    "Native rendering is not Chromium, DOM/CSS, HTTP or browser keyboard testing.",
+    "Neutral versus terrain and existing fighters are test fixtures; no new character, source animation or runtime transformation is added.",
+    "Scene reconstruction, camera widening, hidden details and scale remain unverified; no 1:1 or UHD certification."
+  ],
+  "totals": {
+    "visuallyReviewed": 9,
+    "nativeCasesPassed": 9,
+    "nativeAssertionsPassed": 414,
+    "openVisualDefects": 0
+  },
+  "pending": [
+    "nightmare_hospital_sm: part4 delivered; final native case and visual capture review not yet observed at this checkpoint."
+  ],
+  "cases": [
+    {
+      "stageId": "hazel_subway",
+      "status": "accepted",
+      "capture": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/hazel_subway/hazel_subway.png",
+      "captureSHA256": "464b49857d7cbea82eef7aa8141aa2ced21949f08ec3d9a4c65bfe5106156bb5",
+      "captureBytes": 1206851,
+      "width": 1280,
+      "height": 720,
+      "nativeCaseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/hazel_subway/report.json",
+      "nativeCaseReportSHA256": "c436f3cff423730511509660b1b03de7c5e99f5ea77fc68e5f1e7437e1784ab9",
+      "nativeChecksPassed": 46,
+      "visualChecks": {
+        "footing": true,
+        "combatLaneClear": true,
+        "HUDReadable": true,
+        "foregroundNoVisibleMatteOrColoredHalo": true,
+        "sourceSceneScopeConsistent": true
+      },
+      "observations": [
+        "Alcôve des quatre machines lisible ; pas de quai ou de voie ajouté dans le cadrage.",
+        "Carrelage continu sous les deux combattants ; retours aux bords, sans halo coloré visible ni occultation du HUD."
+      ]
+    },
+    {
+      "stageId": "underpass_sh3",
+      "status": "accepted",
+      "capture": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/underpass_sh3/underpass_sh3.png",
+      "captureSHA256": "811fbf4246facf3465c66fdbb81a6aa08fba4157c2eb86aeaae7ed61dc5e7236",
+      "captureBytes": 1205775,
+      "width": 1280,
+      "height": 720,
+      "nativeCaseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/underpass_sh3/report.json",
+      "nativeCaseReportSHA256": "f648a8136520c4e266226d4cba6906c7225a7c479c96f5479244736915b0bb04",
+      "nativeChecksPassed": 46,
+      "visualChecks": {
+        "footing": true,
+        "combatLaneClear": true,
+        "HUDReadable": true,
+        "foregroundNoVisibleMatteOrColoredHalo": true,
+        "sourceSceneScopeConsistent": true
+      },
+      "observations": [
+        "Plan mural, tonneau et casier tombé restent derrière la bande de combat ; la pièce supérieure est reconnaissable.",
+        "Sol et appuis dégagés ; deux retours latéraux cohérents, centre transparent dans le composite."
+      ]
+    },
+    {
+      "stageId": "nightmare_hilltop",
+      "status": "accepted",
+      "capture": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hilltop/nightmare_hilltop.png",
+      "captureSHA256": "aad1c7abcf8ee2c235ba37bb21694ce73ad0b4a378b53cff5667f2571136f59d",
+      "captureBytes": 1503192,
+      "width": 1280,
+      "height": 720,
+      "nativeCaseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hilltop/report.json",
+      "nativeCaseReportSHA256": "bff5d96e2f67569d7cab1a0af9a82d4cbbb656393b5cc8991e8b697824c95fe2",
+      "nativeChecksPassed": 46,
+      "visualChecks": {
+        "footing": true,
+        "combatLaneClear": true,
+        "HUDReadable": true,
+        "foregroundNoVisibleMatteOrColoredHalo": true,
+        "sourceSceneScopeConsistent": true
+      },
+      "observations": [
+        "Tableau Flame Purifies All et lampes encadrantes lisibles ; les figures appartiennent au tableau, aucun acteur n’est peint sur le sol.",
+        "Seau au fond derrière la bande d’appui ; grille continue sous les combattants. HUD lisible malgré le fond plus lumineux."
+      ]
+    },
+    {
+      "stageId": "outside_room_302",
+      "status": "accepted",
+      "capture": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/outside_room_302/outside_room_302.png",
+      "captureSHA256": "e02982a2dc5a3a4823ceee0853158aba612cc2eaca26aa1925f34ace6440f86e",
+      "captureBytes": 1441189,
+      "width": 1280,
+      "height": 720,
+      "nativeCaseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/outside_room_302/report.json",
+      "nativeCaseReportSHA256": "497956f2c0c8f00147a22463a4184a975a3a138b7d35a175fe2cccaaa852c0c5",
+      "nativeChecksPassed": 46,
+      "visualChecks": {
+        "footing": true,
+        "combatLaneClear": true,
+        "HUDReadable": true,
+        "foregroundNoVisibleMatteOrColoredHalo": true,
+        "sourceSceneScopeConsistent": true
+      },
+      "observations": [
+        "Porte 105 et chaînes reconnaissables dans le corridor altéré final ; aucun intérieur de 302 substitué.",
+        "Sol rouge sombre continu ; silhouettes et armes lisibles, bords de premier plan sans halo visible."
+      ]
+    },
+    {
+      "stageId": "alchemilla_origins",
+      "status": "accepted",
+      "capture": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/alchemilla_origins/alchemilla_origins.png",
+      "captureSHA256": "7c1f1530ac77e2d943ae9edf3c6137bfbaf40b102656ecd130948dcbf44c2cb0",
+      "captureBytes": 1179747,
+      "width": 1280,
+      "height": 720,
+      "nativeCaseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/alchemilla_origins/report.json",
+      "nativeCaseReportSHA256": "b0b389d2eaa67af21a170f5cf82940df734b8205be7b0611ea87bc5befabc76b",
+      "nativeChecksPassed": 46,
+      "visualChecks": {
+        "footing": true,
+        "combatLaneClear": true,
+        "HUDReadable": true,
+        "foregroundNoVisibleMatteOrColoredHalo": true,
+        "sourceSceneScopeConsistent": true
+      },
+      "observations": [
+        "Palier normal devant l’ascenseur et murs verts cohérents ; aucun passage visuel à l’Otherworld exercé par cette paire statique.",
+        "Appuis exacts sur le carrelage, avant-plan discret aux bords et HUD dégagé."
+      ]
+    },
+    {
+      "stageId": "nightmare_hospital_hc",
+      "status": "accepted",
+      "capture": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hospital_hc/nightmare_hospital_hc.png",
+      "captureSHA256": "2371f699221ddb49fe785fa28514817b1b9c082805ba4c5668e4c26b7b88b13f",
+      "captureBytes": 1353226,
+      "width": 1280,
+      "height": 720,
+      "nativeCaseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nightmare_hospital_hc/report.json",
+      "nativeCaseReportSHA256": "65fa2bc5d3f244b5969a080a40dfd9f65a5d76c34a39eb486740e0ba0e927666",
+      "nativeChecksPassed": 46,
+      "visualChecks": {
+        "footing": true,
+        "combatLaneClear": true,
+        "HUDReadable": true,
+        "foregroundNoVisibleMatteOrColoredHalo": true,
+        "sourceSceneScopeConsistent": true
+      },
+      "observations": [
+        "Grille 2A et ambiance clinique avant le miroir cohérentes avec le libellé de phase affiché.",
+        "Lit relégué au fond gauche ; éclairage et grille derrière le combat, sol dégagé et HUD lisible."
+      ]
+    },
+    {
+      "stageId": "villa",
+      "status": "accepted",
+      "capture": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/villa/villa.png",
+      "captureSHA256": "fa476c2ec1cf9b3a0d9c4e71554257415c7d90f4b02c3e4a1b04e02fb3635ba3",
+      "captureBytes": 1235376,
+      "width": 1280,
+      "height": 720,
+      "nativeCaseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/villa/report.json",
+      "nativeCaseReportSHA256": "8e9d1dc5a441f6d9ac1c152b8909ce2768179007cbf976204c587ee011d33dbd",
+      "nativeChecksPassed": 46,
+      "visualChecks": {
+        "footing": true,
+        "combatLaneClear": true,
+        "HUDReadable": true,
+        "foregroundNoVisibleMatteOrColoredHalo": true,
+        "sourceSceneScopeConsistent": true
+      },
+      "observations": [
+        "Porte sombre C.B., grand graffiti à gauche et grille latérale identifient le couloir normal devant 214.",
+        "Débris maintenus au pied du mur arrière ; appuis et centre dégagés, retours de mur sans halo visible."
+      ]
+    },
+    {
+      "stageId": "nowhere",
+      "status": "accepted",
+      "capture": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nowhere/nowhere.png",
+      "captureSHA256": "5d70192f882506d844538ef4d21e3da256344a203cfd5dbd43149b09a79e95b3",
+      "captureBytes": 1097447,
+      "width": 1280,
+      "height": 720,
+      "nativeCaseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/nowhere/report.json",
+      "nativeCaseReportSHA256": "f4e69f95be8916f862202acbccbad09f747b7817065e2b8c3d4aff896cd2c3cc",
+      "nativeChecksPassed": 46,
+      "visualChecks": {
+        "footing": true,
+        "combatLaneClear": true,
+        "HUDReadable": true,
+        "foregroundNoVisibleMatteOrColoredHalo": true,
+        "sourceSceneScopeConsistent": true
+      },
+      "observations": [
+        "Deux armoires du générateur et jauges éclairées visibles ; la petite trappe inventée à gauche du brouillon a disparu.",
+        "Retour structurel droit conservé depuis la référence. Appuis sur sol continu ; aucun halo visible, HUD et armes lisibles."
+      ]
+    },
+    {
+      "stageId": "central_nightmare",
+      "status": "accepted",
+      "capture": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/central_nightmare/central_nightmare.png",
+      "captureSHA256": "2d30b6e23d5c4e18ab37dd2bbc0bc828836ffeefa2c21e7dfe5099c6bfe0d70f",
+      "captureBytes": 892589,
+      "width": 1280,
+      "height": 720,
+      "nativeCaseReport": "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/central_nightmare/report.json",
+      "nativeCaseReportSHA256": "c9be34482e9dde62fc2d4eb3269b80acbbe8244cf9845d3fd68425ea246e8652",
+      "nativeChecksPassed": 46,
+      "visualChecks": {
+        "footing": true,
+        "combatLaneClear": true,
+        "HUDReadable": true,
+        "foregroundNoVisibleMatteOrColoredHalo": true,
+        "sourceSceneScopeConsistent": true
+      },
+      "observations": [
+        "Toit Floatstinger : ciel noir, parapet arrière, volume bas gauche, haut volume droit et garde-corps rouge visibles ; aucune sablière Twinfeeler.",
+        "Petits retours de maçonnerie limités aux coins bas ; appuis sur les dalles et HUD dégagés."
+      ]
+    }
+  ]
+}

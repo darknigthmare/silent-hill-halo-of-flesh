@@ -1,0 +1,84 @@
+{
+  "method": "Same anatomical landmarks at alpha>=96 inside fixed manually reviewed head and foot regions; no image modification. Skull and feet are outline landmarks, not wing extents. Common renderer anchor/scale will remain identical for all three frames.",
+  "landmarks": [
+    {
+      "frameIndex": 0,
+      "pixels": {
+        "beakTip": [
+          1490.0,
+          592.5
+        ],
+        "skullCrest": [
+          1164.0,
+          477.0
+        ],
+        "nearFootEnd": [
+          721.5,
+          742.0
+        ],
+        "farFootEnd": [
+          758.0,
+          751.0
+        ]
+      },
+      "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
+      "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-neutral.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "frameIndex": 1,
+      "pixels": {
+        "beakTip": [
+          1489.0,
+          592.0
+        ],
+        "skullCrest": [
+          1165.0,
+          477.0
+        ],
+        "nearFootEnd": [
+          723.0,
+          741.0
+        ],
+        "farFootEnd": [
+          758.5,
+          751.0
+        ]
+      },
+      "sha256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4",
+      "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-up.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "frameIndex": 2,
+      "pixels": {
+        "beakTip": [
+          1488.0,
+          593.0
+        ],
+        "skullCrest": [
+          1163.5,
+          477.0
+        ],
+        "nearFootEnd": [
+          723.17,
+          740.0
+        ],
+        "farFootEnd": [
+          759.5,
+          750.0
+        ]
+      },
+      "sha256": "3b30a8c6cdae02716cec44551d348e02259dbd2aa9bce787ad1db6d58dc4bfc6",
+      "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-down.png",
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "headAlphaMaskIoUAgainstNeutral": {
+    "1": 0.9905031598577201,
+    "2": 0.9710410930967676
+  }
+}

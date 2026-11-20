@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "tool": "image_gen.imagegen",
+  "jobs": [
+    {
+      "id": "arcade_gum_head_arcade",
+      "source": "arcade",
+      "referenceFiles": [
+        "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/gumhead-arcade.jpg",
+        "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/gumhead-arcade-game1.jpg",
+        "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/gumhead-arcade-game2.jpg"
+      ],
+      "role": "combatant",
+      "prompt": "Use case: stylized-concept. Asset type: a source-grounded raster sprite for a 2D side-view Silent Hill fighting game. Exactly ONE complete creature, full body, on genuinely transparent RGBA background. Side-facing battle-ready idle to the RIGHT, readable horizontal fighting-game silhouette, camera at body height with almost orthographic projection. Keep every extremity and required weapon wholly visible inside the central 60% of the square canvas, with 20% transparent margin on all sides. No cut-off head, hands, feet or weapon tip. Detailed source-matching game texture with soft neutral light, no cinematic glow or broad shadow. No panels, second view, text, UI, floor, scenery, border, grid or watermark.\nCharacter: Gum Head from the 2007 Silent Hill: The Arcade ONLY. Attached native model and two native gameplay frames define this exact version. Preserve its grey mottled stone-like leathery skin, tall smooth oval head with vague dark facial pits, thick neck, hunched shoulders, two long sinewy arms, two bent legs, humanlike hands and bare feet. Small irregular dark mottled patches run across the whole body; preserve that native gray color rather than making it brown, bloody or glossy. A slightly crouched forward-leaning right-facing ready stance; both arms held forward at distinct heights and both feet grounded, separated enough to read. Full head, both hands and all foot ends remain visible. Keep the indistinct smooth lower torso of the source, no added anatomical detail. No clothes, added armor, accessories or weapon. Specifically NO club, pipe, tree branch or other weapon from Silent Hill 4 Gum Heads. No extra limb, stretched mouth, giant fangs, claws, spikes, tail or invented body mutation. Maintain source proportions and identity; the composition is a new side-view pose of the Arcade creature.",
+      "limits": "Native Arcade model render plus two gameplay frames establish identity, mottled material and unarmed anatomy. Right-facing pose, occluded side and fine texture are reconstructed, not measured or fidelity-certified. Static idle candidate only."
+    },
+    {
+      "id": "arcade_red_pyramid_thing_arcade",
+      "source": "arcade",
+      "referenceFiles": [
+        "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/pyramid-arcade.jpg",
+        "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/pyramid-arcade-game1.jpg",
+        "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/pyramid-arcade-game2.jpg"
+      ],
+      "role": "combatant",
+      "prompt": "Use case: stylized-concept. Asset type: a source-grounded raster sprite for a 2D side-view Silent Hill fighting game. Exactly ONE complete creature, full body, on genuinely transparent RGBA background. Side-facing battle-ready idle to the RIGHT, readable horizontal fighting-game silhouette, camera at body height with almost orthographic projection. Keep every extremity and required weapon wholly visible inside the central 60% of the square canvas, with 20% transparent margin on all sides. No cut-off head, hands, feet or weapon tip. Detailed source-matching game texture with soft neutral light, no cinematic glow or broad shadow. No panels, second view, text, UI, floor, scenery, border, grid or watermark.\nCharacter: Red Pyramid Thing from Silent Hill: The Arcade (2007), exactly the version in the three attached native references. Entire helmet to both feet and entire large held blade visible. Recreate the particularly tall NARROW rust-dark angular pyramid helmet of the Arcade model, narrow high apex and its long pointed face plate. Match the thin proportions and panel edges in the source rather than the broad squat helmet from the film. Preserve the source's exposed sinewy weathered tan arms and upper torso, long dark brown coarse textured apron/skirt with its heavy uneven hem, and the dark lower footwear visible beneath it. One massive plain dark steel cleaver blade held low with the right hand, extending toward the rear LEFT and entirely within the transparent frame; reproduce the understated native weapon with no decorative teeth, chains or added ornament. The free hand is visible in front. Quiet grounded RIGHT-facing battle-ready stance, slight forward weight, both feet supported. No second Pyramid Head, no spear, no film costume, no SH2 duo, no chest straps or added armor, no blood spray or victims. Do not copy the orange light trails, scenery or UI. This is one authored lateral rendition of the specific Arcade model.",
+      "limits": "One native Arcade render and two gameplay frames define the narrow helmet and large blade. Lateral helmet geometry, lower footwear, pose and texture remain interpreted; no film or SH2 costume transfer, no native animation or1:1 claim."
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "group": "vague23-stages",
+  "scope": "New native static bitmap candidates for existing missing stages only",
+  "createdAt": "2026-11-19T20:16:59.366312+00:00",
+  "baseCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "deliveryState": "ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "arcade_city",
+      "source": "arcade",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "city-jacks-inn-fog-forecourt-opening",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT13",
+        "EXT15"
+      ],
+      "worldState": "fixed-normal",
+      "edition": "Silent Hill: The Arcade / official promotional gameplay views archived2007 and Konami Europe2010-02-21",
+      "locationScope": "Stage1 Area1 opening City / Jack's Inn forecourt, broad covered entrance looking into dense fog",
+      "selectedSubLocation": "Stage1 Area1 opening City / Jack's Inn forecourt, broad covered entrance looking into dense fog",
+      "layers": [
+        {
+          "id": "jacks-inn-fog-forecourt",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "0df4f76b667367ba07d41713728021fa83794b18f81c32a23e41b3457f45f00d",
+              "bytes": 2179945,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png"
+            }
+          ]
+        },
+        {
+          "id": "near-concrete-pillar-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "dc85c4de41ae8bc67bf1e1f13a3aae8e793a7bb9d8368be0aa326e8733448114",
+              "bytes": 162212,
+              "width": 1671,
+              "height": 941,
+              "path": "assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Le début du parcours City est documenté à Jack’s Inn ; seules l’entrée couverte et la rue brumeuse visibles dans ces deux images sont adaptées.",
+        "La brume masque les détails absents des captures. Aucun motel étendu, véhicule, boutique ou nouvelle rue n’est reconstitué.",
+        "Figures, monstres, texte d’interface, viseur, munitions, score et sous-titres retirés. L’enseigne reste illisible.",
+        "L’élargissement et le cadrage latéral sont des adaptations non certifiées. L’auvent appartient au décor de fond ; la géométrie de l’arène reste extérieure, sans changement moteur.",
+        "Deux PNG natifs indépendants, alpha réel aux extrêmes et centre libre. Aucun pixel retouché."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    },
+    {
+      "stageId": "book_blood",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "blood-platform-e3-20120606-view22",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT21"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "PS Vita pre-release / E3 screenshot2012-06-06; explicitly not a certified retail room",
+      "locationScope": "Blood World view22: solid red-brown platform before ribbed rectangular doorway, embedded disk, structural supports and void",
+      "selectedSubLocation": "Blood World view22: solid red-brown platform before ribbed rectangular doorway, embedded disk, structural supports and void",
+      "layers": [
+        {
+          "id": "blood-platform-ribbed-door",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "f3b31605cd4ea24d73c987630a74f72e39048ac5ff8bf87b36b5935bb94b86bd",
+              "bytes": 1989996,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/book_blood.blood-platform-ribbed-door.f3b31605cd4e.png"
+            }
+          ]
+        },
+        {
+          "id": "near-dry-structural-ribs",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "476ef774e0637e2523b4dce7db64b5e9562ea5f180ded8705faa8718ae87ffb5",
+              "bytes": 181436,
+              "width": 1672,
+              "height": 940,
+              "path": "assets/stages/book_blood.near-dry-structural-ribs.476ef774e063.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "État de préversion du6juin2012 explicitement conservé, conformément à la policyBORD DES PLATEFORMES BLOOD ; aucune fidélité à une pièce commerciale finale n’est revendiquée.",
+        "Seules la porte rectangulaire, la structure, le disque intégré et la plateforme de la capture22 sont repris. La largeur et la caméra latérale sont adaptées au versus.",
+        "La surface rouge est traitée comme matière solide sèche. Aucun sang liquide, écoulement, éclaboussure, effet, corps, organe, autel ou signe graphique n’est ajouté.",
+        "Joueurs, armes, HUD, glows et particules de combat exclus. Aucun danger, mouvement ou collision ne se déduit du décor.",
+        "Deux PNG natifs indépendants ; premier plan à véritable alpha limité aux extrêmes, aucun pixel repeint ou redimensionné."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "arcade_city",
+      "promptKey": "arcade-city-bg",
+      "role": "opaque-background",
+      "filename": "arcade_city.jacks-inn-fog-forecourt.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-61e928f4-b653-4e95-b9dc-b7d2a4329cf3.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/arcade_city.jacks-inn-fog-forecourt.png",
+      "path": "assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2179945,
+      "sha256": "0df4f76b667367ba07d41713728021fa83794b18f81c32a23e41b3457f45f00d",
+      "pixelSHA256": "2a13eaf0bdd99af176e8fbce42accb79e9e4b857c10a1525b3ab73642df37398",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "arcade_city",
+      "promptKey": "arcade-city-fg",
+      "role": "transparent-foreground",
+      "filename": "arcade_city.near-concrete-pillar-edges.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-75b37eb1-2515-4821-95b4-dde9082a1f81.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/arcade_city.near-concrete-pillar-edges.png",
+      "path": "assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png",
+      "width": 1671,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 162212,
+      "sha256": "dc85c4de41ae8bc67bf1e1f13a3aae8e793a7bb9d8368be0aa326e8733448114",
+      "pixelSHA256": "6500eda6c53a115ab89fcb2f76005de1eae4495d09e1f1f0e06d883a855b62e8",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9658072857541699,
+        "semiTransparentPixels": 53616,
+        "opaqueFraction": 9.475894025162633e-05,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "book_blood",
+      "promptKey": "book-blood-bg",
+      "role": "opaque-background",
+      "filename": "book_blood.blood-platform-ribbed-door.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-cd02797c-c2fb-4ff4-a8b0-7ba5a9e259b9.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/book_blood.blood-platform-ribbed-door.png",
+      "path": "assets/stages/book_blood.blood-platform-ribbed-door.f3b31605cd4e.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1989996,
+      "sha256": "f3b31605cd4ea24d73c987630a74f72e39048ac5ff8bf87b36b5935bb94b86bd",
+      "pixelSHA256": "dd1b6e2feeecb1df5a2c83a57ba8d4f41812d8ed16997034dc56671e0e117f49",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "book_blood",
+      "promptKey": "book-blood-fg",
+      "role": "transparent-foreground",
+      "filename": "book_blood.near-dry-structural-ribs.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-5b1e47e4-ebc9-4e1c-b31b-19340fdae9ba.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/book_blood.near-dry-structural-ribs.png",
+      "path": "assets/stages/book_blood.near-dry-structural-ribs.476ef774e063.png",
+      "width": 1672,
+      "height": 940,
+      "mode": "RGBA",
+      "bytes": 181436,
+      "sha256": "476ef774e0637e2523b4dce7db64b5e9562ea5f180ded8705faa8718ae87ffb5",
+      "pixelSHA256": "24b0a7f0b802cc1d36287ae28a2aaa0b2b2f27a64ab49f4f321301adca7f7922",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9546765244833554,
+        "semiTransparentPixels": 70857,
+        "opaqueFraction": 0.00023987071159523566,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "stageId": "arcade_city",
+      "file": "arcade-sh_arcade_20100221_03.jpg",
+      "url": "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_20100221_03.jpg",
+      "page": "https://www.silenthillmemories.net/sh_arcade/screens_en.htm",
+      "type": "archived-konami-europe-gameplay-screenshot",
+      "role": "Primary precise opening forecourt view; visible canopy, broad opening, support, planter and street post",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/arcade-sh_arcade_20100221_03.jpg",
+      "path": "docs/production/vague23/stages/references/arcade-sh_arcade_20100221_03.jpg",
+      "bytes": 40501,
+      "sha256": "c25e9682afe2c288fbc7eb7f25d79dab3b53c88605e9a28261d84407ac6bd500",
+      "width": 640,
+      "height": 480,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    },
+    {
+      "stageId": "arcade_city",
+      "file": "arcade-2007-02.jpg",
+      "url": "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_02.jpg",
+      "page": "https://www.silenthillmemories.net/sh_arcade/screens_en.htm",
+      "type": "archived-official-promotional-gameplay-screenshot",
+      "role": "Same opening forecourt and normal phase; confirms upper lintel and worn sign",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/arcade-2007-02.jpg",
+      "path": "docs/production/vague23/stages/references/arcade-2007-02.jpg",
+      "bytes": 40204,
+      "sha256": "395992d6856091969cbd023f9a1848010400dfa868bd4702dc9294b0a2ad9099",
+      "width": 600,
+      "height": 450,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    },
+    {
+      "stageId": "book_blood",
+      "file": "book-blood-e3-22.jpg",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_22_blood_world.jpg",
+      "page": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm",
+      "type": "archived-publisher-screenshot",
+      "role": "Primary exact pre-release Blood platform, matching existing stage policy for red platform surface",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/book-blood-e3-22.jpg",
+      "path": "docs/production/vague23/stages/references/book-blood-e3-22.jpg",
+      "bytes": 138698,
+      "sha256": "d8d9a30ab23160024003bcd1d8833f6356839515ed9bc0d0479e4d4b758569df",
+      "width": 960,
+      "height": 544,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    }
+  ],
+  "prompts": [
+    {
+      "stageId": "arcade_city",
+      "key": "arcade-city-bg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/stage-research/arcade-sh_arcade_20100221_03.jpg",
+        "/workspace/scratch/6d8d28552d08/stage-research/arcade-2007-02.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque background plate for a 2D side-on fighting-game stage. Deliver a single landscape 16:9 PNG, ideally 1672×941, at native output resolution. High-quality detailed painted game environment, sober realistic materials, faithful to the attached exact Silent Hill references. No UI, title, watermark, frame, characters, enemies, humans, silhouettes, blood effects or invented symbols. This is a scene adaptation for a fixed combat camera, not a claim of exact original geometry. Keep the ground in the bottom 30% as an unobstructed horizontal fighting lane; the feet baseline is at about 87% of image height. No camera roll, no fisheye, no high aerial/isometric view. Do not place large foreground objects across the center; the separate foreground will be produced later.\nExact scope: SILENT HILL: THE ARCADE, Stage1 Area1 City / Jack's Inn starting forecourt. Images1 and2 show the SAME normal-phase covered street/forecourt entrance in the2010 Konami Europe and2007 promotional gameplay views. Use Image1 as the geometry anchor and Image2 only to clarify the broad lintel and worn sign above it. Create the empty architectural scene seen behind the monsters: a broad low concrete rectangular entrance canopy spanning the composition, heavy grey upright supports near the outer edges, faded illegible horizontal inn sign above the center of its lintel, weathered pavement, a simple low rectangular planter near the far left pillar, a single slender vertical streetlamp/post visible past the opening, and a faint plain building frontage receding along the right. View from just under the overhang toward the fog-white street beyond, approximately straight on at human chest height with a wide flat grey asphalt strip in the bottom third for side-on combat. The fog must remain dense and pale as in the sources, hiding unshown scenery rather than inventing it; dark muted canopy and foreground pavement frame the grey-green haze. Preserve the modest proportions and boxy early arcade architecture. Do not reconstruct an elaborate motel, hotel name lettering, distant storefronts, parked vehicles, red flowers, graffiti, trees, fences, street furniture or objects not visibly supported. Remove every monster, crawling creature, person silhouette, crosshair, ammunition icon, score, life meter, subtitle, INSERT COIN/FREE PLAY/CREDIT wording. No expressive lighting, red Otherworld, dramatic storm, open chasm, blood or attack effects."
+    },
+    {
+      "stageId": "arcade_city",
+      "key": "arcade-city-fg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/generated_images/exec-61e928f4-b653-4e95-b9dc-b7d2a4329cf3.png",
+        "/workspace/scratch/6d8d28552d08/stage-research/arcade-sh_arcade_20100221_03.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Asset type: separate transparent foreground overlay for a2D fighting-game stage. Deliver one native landscape16:9 RGBA PNG at the same1672×941 composition as Image1, on a genuinely transparent background. Image1 is the completed foggy forecourt background; match its materials, palette, perspective and quiet lighting. Image2 is the original Arcade City starting scene for concrete support material only. Draw ONLY a pair of very thin cropped near-camera concrete pillar edges, one at the extreme left edge and the other extreme right, each no wider than the outermost3% of the canvas. Their irregular inner edge must stay completely within x0–4% orx96–100% at every height. Weathered dull grey concrete with subtle dark moss staining and small chips, same restrained mist-softened light as the background. All space between x7% and93% must have fully transparent alpha from top to bottom, including the entire ground and fighter foot band. No ceiling beam, top bar, bottom strip, border, complete scene, sidewalk, shrubs, planter, fog veil, light shaft, lamppost, shadows across the center, figure or text. Do not paint black, grey, white, checkerboard or an opaque matte in the empty opening. At least92% of the canvas must remain actual transparent pixels. Native fine antialiased edges only. This is a sparse edge overlay and does not reproduce the background."
+    },
+    {
+      "stageId": "book_blood",
+      "key": "book-blood-bg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/stage-research/book-blood-e3-22.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque background plate for a2D side-on fighting-game stage. Deliver a single native landscape16:9 PNG, ideally1672×941. High-quality detailed painted game environment faithful to the single attached Silent Hill screenshot. Exact scope: SILENT HILL: BOOK OF MEMORIES, PS Vita PRE-RELEASE screenshot dated6 June2012, Blood World view22. This is explicitly that pre-release platform and doorway, not a certified finished retail room and not the later launch stone/candle room. Image1 is the only reference. Remove all players, monsters, guns, HUD, icons, health bars, pickup glows and combat effects.\nAdapt the visible short dark-red platform passage in front of the rectangular ribbed doorway into an empty wide horizontal combat camera view. Preserve the distinct supported structures: thick dark reddish-brown ridged wall around a tall black rectangular doorway, the narrow beveled/ribbed jambs catching a muted dull red light, a solid irregular embossed vein-like textured platform surface, an embedded dark round disk immediately outside the doorway, and the tall slanting structural ribs dropping into a dim grey-brown void beyond the far right edge. Shift the viewpoint from overhead to nearly side-on at chest height while keeping the door slightly left of center and the drop safely behind the back plane. The lower30% must be a continuous, unobstructed level fighting strip made from the SAME dull sculpted red-brown solid platform material; feet baseline about87% of height. Do not put a hole, step or obstruction into the central floor. Upper right may show only a small slice of the source's empty murky void through supports, without invented vista. No ceiling over the full platform; cropped dark wall simply rises out of the frame. The original material looks organic but do not turn it into freshly bleeding flesh: no gore, viscera, corpses, open wounds, liquid pools, drips, splashes, flowing blood or glossy wet-red fluid. Use dim near-black oxblood and brown, low dull red highlights matching the reference, restrained dry rough relief. No altar, urns, candles, skulls, bones, extra arches, gothic church, runes, symbols, rails, chains, pipes, creatures, text, watermark or frame. Do not copy the source interface or attack particles. Hidden geometry and width are a declared fighting-view adaptation; avoid inventing new landmark props."
+    },
+    {
+      "stageId": "book_blood",
+      "key": "book-blood-fg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/generated_images/exec-cd02797c-c2fb-4ff4-a8b0-7ba5a9e259b9.png",
+        "/workspace/scratch/6d8d28552d08/stage-research/book-blood-e3-22.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Asset type: separate transparent foreground overlay for a2D fighting-game stage. Deliver one native landscape16:9 RGBA PNG with the same1672×941 composition as Image1, on a genuinely transparent background. Image1 is the completed pre-release Blood platform background; use it only for palette, material, lighting, scale. Image2 is the exact Book of Memories E3 6June2012 screenshot22; do not add any later retail feature. Create ONLY two extremely slim cropped near-camera structural rib edges in the same dry, dark oxblood-brown ridged material as Image1, one at the extreme left edge, one at the extreme right edge. Each must stay inside the outermost3% of image width at all heights, with subtle dull red highlights on its rough embossed vertical surface. The entire center between x7% and93% must have fully transparent alpha from top to bottom, especially the floor and fighter foot band. These are only sparse margins of existing support material, not flesh creatures. No round disk, doorway, second scene, background wall, platform floor strip, ceiling crosspiece, border, frame, chains, vines, tendrils across center, corpses, skulls, blood liquid, wet gore, drips, smoke, sparks, glow, symbols, text or figures. No painted black, grey, white, checkerboard or matte in empty space. At least92% of the image must remain truly transparent with native antialiased alpha. Do not connect the two sides anywhere. Single isolated overlay, dry surface, no effect or animation."
+    }
+  ],
+  "qa": {
+    "sourceAndGeneratedImagesVisuallyInspected": true,
+    "browserTest": false,
+    "engineTest": false,
+    "noPixelsRetouched": true,
+    "noAnimatedClips": true,
+    "certified1to1": false,
+    "certifiedUHD": false
+  },
+  "totals": {
+    "stages": 2,
+    "newPNG": 4,
+    "bytes": 4513589,
+    "references": 3
+  }
+}

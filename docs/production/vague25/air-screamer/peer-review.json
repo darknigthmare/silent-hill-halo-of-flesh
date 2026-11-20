@@ -1,0 +1,25 @@
+{
+  "reviewer": "/root/audit_previous_work",
+  "method": "Independent visual inspection of all three native outputs, existing walk frame3 and original SH1 render; source-bound, no certification.",
+  "passed": true,
+  "findings": "Tête et cou latéraux cohérents, deux ailes membraneuses et deux pattes, aucune pointe coupée ; poses haut/neutre/bas distinctes, corps stable. Légères différences de texture, aucune identité pixel annoncée.",
+  "condition": "Même ancre corporelle et même facteur d’échelle pour 0..2 ; ne pas recalibrer sur la hauteur des ailes.",
+  "reviewedFiles": [
+    {
+      "frameIndex": 0,
+      "path": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-neutral.png",
+      "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0"
+    },
+    {
+      "frameIndex": 1,
+      "path": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-up.png",
+      "sha256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4"
+    },
+    {
+      "frameIndex": 2,
+      "path": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-down.png",
+      "sha256": "3b30a8c6cdae02716cec44551d348e02259dbd2aa9bce787ad1db6d58dc4bfc6"
+    }
+  ],
+  "limits": "Three static native poses reviewed; actual cyclic engine QA remains required after import."
+}

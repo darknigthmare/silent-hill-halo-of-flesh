@@ -1,0 +1,1157 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "createdAt": "2026-11-19T17:51:02.729Z",
+  "label": "characters-native-visual-review",
+  "passed": true,
+  "scope": "Read-only native Canvas and actual FightEngine captures after import, following the parent signal that manifests were stable.",
+  "counts": {
+    "processes": 6,
+    "checks": 328,
+    "duelCases": 8,
+    "referencePreviews": 4,
+    "captures": 34,
+    "preservedSelections": 6
+  },
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "newAnimatedClips": 0,
+  "sourcePixelsModified": false,
+  "regenerationPerformed": false,
+  "cases": [
+    {
+      "fighterId": "bom_wood_sapling_139",
+      "combatEnabled": true,
+      "runtimeRole": "combatant",
+      "report": {
+        "path": "docs/production/vague23/qa-native/cases/bom_wood_sapling_139/report.json",
+        "sha256": "22b143551814d1a7a4ce5519d092e2dc03dce32d35a628de3fe54e503c24e651"
+      },
+      "process": {
+        "path": "docs/production/vague23/qa-native/cases/bom_wood_sapling_139/process-observation.json",
+        "exitCode": 0,
+        "durationSeconds": 4.83
+      },
+      "harnessSHA256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+      "passed": true,
+      "checks": 64,
+      "duelCases": 2,
+      "referencePreviews": 0,
+      "allCapturesVisuallyInspected": true,
+      "captures": [
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_wood_sapling_139/selection-bom_wood_sapling_139.png",
+          "sha256": "80498641ec5a40ca628acfd7d8e1ff9f8aab64dd52e5fc4c2c6762ab9df6f878",
+          "purpose": "preserved-selection",
+          "width": 500,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": null
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-idle.png",
+          "sha256": "90231dfa35b5c81ec0da6fc1e6c087dd1b866098995dff769449ec4582fe94ec",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              282.224565584415,
+              486.559116584287,
+              380.2856895858956,
+              594.4263529859156
+            ],
+            "visible": [
+              282.8640946539899,
+              486.7722929408119,
+              379.21980780327084,
+              594.0000002728657
+            ],
+            "pixelScale": 0.10658817826247893,
+            "anchor": [
+              0.4,
+              0.88719512
+            ],
+            "bodyHeight": 0.76676829,
+            "soleOffsetFromActor": 2.7286569093121216e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-movement-static-idle.png",
+          "sha256": "4f4e4f4be063d545f56a3365cf2c473dc0b8a7beb63cc8a34a2942679f980746",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              366.1674061605869,
+              486.559116584287,
+              464.2285301620675,
+              594.4263529859156
+            ],
+            "visible": [
+              366.8069352301618,
+              486.7722929408119,
+              463.1626483794427,
+              594.0000002728657
+            ],
+            "pixelScale": 0.10658817826247893,
+            "anchor": [
+              0.4,
+              0.88719512
+            ],
+            "bodyHeight": 0.76676829,
+            "soleOffsetFromActor": 2.7286569093121216e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-movement-released-idle.png",
+          "sha256": "f98dc85b30cf4265d4c4d141a8887ac06d101e737ac815974db08fd4a7cc2d99",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              375.4512501547275,
+              486.559116584287,
+              473.5123741562081,
+              594.4263529859156
+            ],
+            "visible": [
+              376.0907792243024,
+              486.7722929408119,
+              472.44649237358334,
+              594.0000002728657
+            ],
+            "pixelScale": 0.10658817826247893,
+            "anchor": [
+              0.4,
+              0.88719512
+            ],
+            "bodyHeight": 0.76676829,
+            "soleOffsetFromActor": 2.7286569093121216e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-idle.png",
+          "sha256": "6e7ddebb859f7c4491d851474c89f5e4e4be6fe8bd82670ea6ded4c74acf9b1a",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              899.7143409316825,
+              486.559116584287,
+              997.7754649331631,
+              594.4263529859156
+            ],
+            "visible": [
+              900.7802227143072,
+              486.7722929408119,
+              997.1359358635882,
+              594.0000002728657
+            ],
+            "pixelScale": 0.10658817826247893,
+            "anchor": [
+              0.4,
+              0.88719512
+            ],
+            "bodyHeight": 0.76676829,
+            "soleOffsetFromActor": 2.7286569093121216e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-movement-static-idle.png",
+          "sha256": "30a2f4a7223f5877fdb3279ff8359931273bb13e034b394ccc52113d6e697c8e",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              815.7714698379325,
+              486.559116584287,
+              913.8325938394131,
+              594.4263529859156
+            ],
+            "visible": [
+              816.8373516205572,
+              486.7722929408119,
+              913.1930647698382,
+              594.0000002728657
+            ],
+            "pixelScale": 0.10658817826247893,
+            "anchor": [
+              0.4,
+              0.88719512
+            ],
+            "bodyHeight": 0.76676829,
+            "soleOffsetFromActor": 2.7286569093121216e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-movement-released-idle.png",
+          "sha256": "812fc7817e28b89fb96e71f84b523592827debdb04ca9ac638175fdc51c90783",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              806.48765636137,
+              486.559116584287,
+              904.5487803628506,
+              594.4263529859156
+            ],
+            "visible": [
+              807.5535381439947,
+              486.7722929408119,
+              903.9092512932757,
+              594.0000002728657
+            ],
+            "pixelScale": 0.10658817826247893,
+            "anchor": [
+              0.4,
+              0.88719512
+            ],
+            "bodyHeight": 0.76676829,
+            "soleOffsetFromActor": 2.7286569093121216e-7
+          }
+        }
+      ],
+      "visibleSizePixels": [
+        96.35571314928092,
+        107.2277073320538
+      ],
+      "maxAbsSoleOffsetPixels": 2.7286569093121216e-7,
+      "referenceBaselinePixels": null,
+      "observations": [
+        "Les six captures de jeu montrent la tête, tous les doigts et les deux pointes d’appui entiers. Les deux racines sont lisibles sur le sol ; pas de glissement vertical entre idle, déplacement et relâchement.",
+        "Le volume penché et le bras avancé pointent vers Creeper des deux côtés. La petite silhouette garde ses creux internes à environ 107 px de haut.",
+        "Pas de frange colorée matériellement gênante ni de halo large discerné à la taille de jeu ; texture très fine réduite par l’échelle."
+      ],
+      "visualDecision": "acceptable-static-candidate-for-reviewed-scope",
+      "certifiedOneToOne": false,
+      "animated": false,
+      "sourceFilesUnchanged": true,
+      "historicalSelectionPreserved": true
+    },
+    {
+      "fighterId": "bom_tremer_133",
+      "combatEnabled": true,
+      "runtimeRole": "combatant",
+      "report": {
+        "path": "docs/production/vague23/qa-native/cases/bom_tremer_133/report.json",
+        "sha256": "2eb60ffa009586255324b249774a8c681e667c250fa3879fcec4cf2c3b0c933b"
+      },
+      "process": {
+        "path": "docs/production/vague23/qa-native/cases/bom_tremer_133/process-observation.json",
+        "exitCode": 0,
+        "durationSeconds": 4.522
+      },
+      "harnessSHA256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+      "passed": true,
+      "checks": 64,
+      "duelCases": 2,
+      "referencePreviews": 0,
+      "allCapturesVisuallyInspected": true,
+      "captures": [
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_tremer_133/selection-bom_tremer_133.png",
+          "sha256": "d88ead87d80cd4506ffbd6086a6604e01142a725da3781a65fda661ae5d2baa7",
+          "purpose": "preserved-selection",
+          "width": 500,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": null
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-right-idle.png",
+          "sha256": "97f993ea7795f418aa8e406f108dcc76324b1fb10e178fa3c69c3dd0af1622d2",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              228.75936793536118,
+              541.313145419381,
+              405.1831007966845,
+              594.5148547452665
+            ],
+            "visible": [
+              229.78907843844283,
+              542.3428559224627,
+              404.6682455451437,
+              593.9999994937257
+            ],
+            "pixelScale": 0.17161841718027562,
+            "anchor": [
+              0.5,
+              0.67192785
+            ],
+            "bodyHeight": 0.33934611,
+            "soleOffsetFromActor": -5.062743184680585e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-right-movement-static-idle.png",
+          "sha256": "7a4dc91668bbfeda51e7aa71b1a7814cb4c6884aff575e6c58ff7e49142bc63c",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              312.70220851153306,
+              541.313145419381,
+              489.1259413728564,
+              594.5148547452665
+            ],
+            "visible": [
+              313.73191901461473,
+              542.3428559224627,
+              488.61108612131557,
+              593.9999994937257
+            ],
+            "pixelScale": 0.17161841718027562,
+            "anchor": [
+              0.5,
+              0.67192785
+            ],
+            "bodyHeight": 0.33934611,
+            "soleOffsetFromActor": -5.062743184680585e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-right-movement-released-idle.png",
+          "sha256": "799daf8c30bd9d91149d397b7726c03058852356ba205f541e2f821b93a24aa8",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              321.9860525056737,
+              541.313145419381,
+              498.409785366997,
+              594.5148547452665
+            ],
+            "visible": [
+              323.01576300875536,
+              542.3428559224627,
+              497.8949301154562,
+              593.9999994937257
+            ],
+            "pixelScale": 0.17161841718027562,
+            "anchor": [
+              0.5,
+              0.67192785
+            ],
+            "bodyHeight": 0.33934611,
+            "soleOffsetFromActor": -5.062743184680585e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-left-idle.png",
+          "sha256": "64c3f7f9e7860cd0147c07a97004e2e66a8b8a08a3e46b12c9b5f4701caeedff",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              874.8169297208935,
+              541.313145419381,
+              1051.2406625822168,
+              594.5148547452665
+            ],
+            "visible": [
+              875.3317849724344,
+              542.3428559224627,
+              1050.2109520791353,
+              593.9999994937257
+            ],
+            "pixelScale": 0.17161841718027562,
+            "anchor": [
+              0.5,
+              0.67192785
+            ],
+            "bodyHeight": 0.33934611,
+            "soleOffsetFromActor": -5.062743184680585e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-left-movement-static-idle.png",
+          "sha256": "15b0a9e5ba5d05ff90852d3797aff6727664b6c0a63fab2a420e9def5dfe8747",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              790.8740586271435,
+              541.313145419381,
+              967.2977914884669,
+              594.5148547452665
+            ],
+            "visible": [
+              791.3889138786844,
+              542.3428559224627,
+              966.2680809853853,
+              593.9999994937257
+            ],
+            "pixelScale": 0.17161841718027562,
+            "anchor": [
+              0.5,
+              0.67192785
+            ],
+            "bodyHeight": 0.33934611,
+            "soleOffsetFromActor": -5.062743184680585e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_tremer_133/bom_tremer_133-left-movement-released-idle.png",
+          "sha256": "95af42d590d49024164a0bdef81376e0ab8c5c81e4863fa6ec9d9cd7b56ac872",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              781.590245150581,
+              541.313145419381,
+              958.0139780119044,
+              594.5148547452665
+            ],
+            "visible": [
+              782.1051004021219,
+              542.3428559224627,
+              956.9842675088228,
+              593.9999994937257
+            ],
+            "pixelScale": 0.17161841718027562,
+            "anchor": [
+              0.5,
+              0.67192785
+            ],
+            "bodyHeight": 0.33934611,
+            "soleOffsetFromActor": -5.062743184680585e-7
+          }
+        }
+      ],
+      "visibleSizePixels": [
+        174.87916710670086,
+        51.657143571262964
+      ],
+      "maxAbsSoleOffsetPixels": 5.062743184680585e-7,
+      "referenceBaselinePixels": null,
+      "observations": [
+        "La grande masse pâle est du côté de l’adversaire dans les deux placements ; pointe brune en arrière. Contour complet bas et horizontal, environ 175 × 52 px en jeu.",
+        "Le dessous touche la ligne de sol du moteur à chaque capture ; l’inversion est correcte. Le déplacement fait glisser le PNG statique, sans déformation ou cycle rampant ajouté.",
+        "Les franges ponctuelles remarquées dans l’aperçu natif ne forment pas de liseré coloré important sur Hazel Subway. Partie claire nettement plus lumineuse que le décor, sans large halo."
+      ],
+      "visualDecision": "acceptable-static-candidate-for-reviewed-scope",
+      "certifiedOneToOne": false,
+      "animated": false,
+      "sourceFilesUnchanged": true,
+      "historicalSelectionPreserved": true
+    },
+    {
+      "fighterId": "bom_raw_shock_148",
+      "combatEnabled": true,
+      "runtimeRole": "combatant",
+      "report": {
+        "path": "docs/production/vague23/qa-native/cases/bom_raw_shock_148/report.json",
+        "sha256": "57ee8ba28a903f586c743b28b92da7dffcd2c27c8c553a34eed49baaf715430d"
+      },
+      "process": {
+        "path": "docs/production/vague23/qa-native/cases/bom_raw_shock_148/process-observation.json",
+        "exitCode": 0,
+        "durationSeconds": 4.593
+      },
+      "harnessSHA256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+      "passed": true,
+      "checks": 64,
+      "duelCases": 2,
+      "referencePreviews": 0,
+      "allCapturesVisuallyInspected": true,
+      "captures": [
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_raw_shock_148/selection-bom_raw_shock_148.png",
+          "sha256": "b6bb2cff25ce057921d91744c966bc150709d8332fe7d8a7675f11d8c7f48526",
+          "purpose": "preserved-selection",
+          "width": 500,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": null
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-idle.png",
+          "sha256": "458f1ef79252fa9c15a5823938576ee045e617374561932507d2e9161b1c322d",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              280.3723302191386,
+              382.5084151430076,
+              406.3510723925326,
+              595.7178924273729
+            ],
+            "visible": [
+              280.94496086538123,
+              383.65367643549297,
+              405.58756486420896,
+              594.0000004886448
+            ],
+            "pixelScale": 0.19087688208090006,
+            "anchor": [
+              0.36,
+              0.91844512
+            ],
+            "bodyHeight": 0.83993902,
+            "soleOffsetFromActor": 4.886447868557298e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-movement-static-idle.png",
+          "sha256": "bb94b5de8ed731b55bcda1332941a4699d016c17f106a9f3920d66ba8423fe13",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              360.95750477968545,
+              382.5084151430076,
+              486.9362469530795,
+              595.7178924273729
+            ],
+            "visible": [
+              361.5301354259281,
+              383.65367643549297,
+              486.17273942475583,
+              594.0000004886448
+            ],
+            "pixelScale": 0.19087688208090006,
+            "anchor": [
+              0.36,
+              0.91844512
+            ],
+            "bodyHeight": 0.83993902,
+            "soleOffsetFromActor": 4.886447868557298e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-movement-released-idle.png",
+          "sha256": "1930c48a6e5d731d09ca9beff50a2f106bfafa09b4a2602f0fc7024037f8d080",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              369.8699498480448,
+              382.5084151430076,
+              495.84869202143886,
+              595.7178924273729
+            ],
+            "visible": [
+              370.4425804942875,
+              383.65367643549297,
+              495.0851844931152,
+              594.0000004886448
+            ],
+            "pixelScale": 0.19087688208090006,
+            "anchor": [
+              0.36,
+              0.91844512
+            ],
+            "bodyHeight": 0.83993902,
+            "soleOffsetFromActor": 4.886447868557298e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-idle.png",
+          "sha256": "38a19cc8e1ce56cb1a0ba2bb05af4ad3ecb01c983922e4ad3864ed72b6f067ae",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              873.6489581250455,
+              382.5084151430076,
+              999.6277002984395,
+              595.7178924273729
+            ],
+            "visible": [
+              874.4124656533692,
+              383.65367643549297,
+              999.0550696521968,
+              594.0000004886448
+            ],
+            "pixelScale": 0.19087688208090006,
+            "anchor": [
+              0.36,
+              0.91844512
+            ],
+            "bodyHeight": 0.83993902,
+            "soleOffsetFromActor": 4.886447868557298e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-movement-static-idle.png",
+          "sha256": "7bb4f740a7c553a02d9b928795b001abc9bf4f032470c8199b5b8fc43b8d9512",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              793.0637530469205,
+              382.5084151430076,
+              919.0424952203145,
+              595.7178924273729
+            ],
+            "visible": [
+              793.8272605752442,
+              383.65367643549297,
+              918.4698645740718,
+              594.0000004886448
+            ],
+            "pixelScale": 0.19087688208090006,
+            "anchor": [
+              0.36,
+              0.91844512
+            ],
+            "bodyHeight": 0.83993902,
+            "soleOffsetFromActor": 4.886447868557298e-7
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-movement-released-idle.png",
+          "sha256": "39927c872e8d634eb94d063982d703c55275c4278f1145acb2feb5b096593d88",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              784.151277460983,
+              382.5084151430076,
+              910.130019634377,
+              595.7178924273729
+            ],
+            "visible": [
+              784.9147849893067,
+              383.65367643549297,
+              909.5573889881343,
+              594.0000004886448
+            ],
+            "pixelScale": 0.19087688208090006,
+            "anchor": [
+              0.36,
+              0.91844512
+            ],
+            "bodyHeight": 0.83993902,
+            "soleOffsetFromActor": 4.886447868557298e-7
+          }
+        }
+      ],
+      "visibleSizePixels": [
+        124.64260399882772,
+        210.34632405315182
+      ],
+      "maxAbsSoleOffsetPixels": 4.886447868557298e-7,
+      "referenceBaselinePixels": null,
+      "observations": [
+        "Tête ovoïde, bras, doigts, deux jambes et pieds sont visibles dans les six captures de jeu. Pied proche posé au sol ; pied éloigné légèrement plus haut dans la perspective de la pose.",
+        "Profil droit puis miroir gauche corrects, tête et main avancée orientées vers l’adversaire. Silhouette mince entière à environ 210 px de haut.",
+        "Pas de rectangle de fond, de halo large ou de frange parasite gênante observé au niveau du crâne, des bras ou des pieds."
+      ],
+      "visualDecision": "acceptable-static-candidate-for-reviewed-scope",
+      "certifiedOneToOne": false,
+      "animated": false,
+      "sourceFilesUnchanged": true,
+      "historicalSelectionPreserved": true
+    },
+    {
+      "fighterId": "bom_gray_child_147",
+      "combatEnabled": true,
+      "runtimeRole": "combatant",
+      "report": {
+        "path": "docs/production/vague23/qa-native/cases/bom_gray_child_147/report.json",
+        "sha256": "9cf8463a78c46d0fc3c6a467e46c6daa965cca996fda4caa50eacc3a600f51dc"
+      },
+      "process": {
+        "path": "docs/production/vague23/qa-native/cases/bom_gray_child_147/process-observation.json",
+        "exitCode": 0,
+        "durationSeconds": 4.28
+      },
+      "harnessSHA256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+      "passed": true,
+      "checks": 64,
+      "duelCases": 2,
+      "referencePreviews": 0,
+      "allCapturesVisuallyInspected": true,
+      "captures": [
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_gray_child_147/selection-bom_gray_child_147.png",
+          "sha256": "fcd9b716caba73a8ef8fd66609d6a796d352e4c89af49dd8987d22ba2b78c1a6",
+          "purpose": "preserved-selection",
+          "width": 500,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": null
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-idle.png",
+          "sha256": "ac2e1229fa2f5c29d5f46aeb15a55ba3f59c0950da261a973532c0f2991adc29",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              284.6508055591876,
+              442.15314363134394,
+              388.99583120518815,
+              594.1987524298019
+            ],
+            "visible": [
+              285.24706284859326,
+              442.5506484909477,
+              387.60456419657476,
+              594
+            ],
+            "pixelScale": 0.19875242980190588,
+            "anchor": [
+              0.43,
+              0.87890625
+            ],
+            "bodyHeight": 0.74414063,
+            "soleOffsetFromActor": 0
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-movement-static-idle.png",
+          "sha256": "08450959ba2464256381a768a90910d57f59bf6b91f6ba06564bf77c39779928",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              332.7858763599688,
+              442.15314363134394,
+              437.1309020059694,
+              594.1987524298019
+            ],
+            "visible": [
+              333.3821336493745,
+              442.5506484909477,
+              435.739634997356,
+              594
+            ],
+            "pixelScale": 0.19875242980190588,
+            "anchor": [
+              0.43,
+              0.87890625
+            ],
+            "bodyHeight": 0.74414063,
+            "soleOffsetFromActor": 0
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-movement-released-idle.png",
+          "sha256": "3b80e44afbfcb17cc3fa3f5438f332bb4e4b7083104ce894f5455d51a1358e99",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              338.1094847584063,
+              442.15314363134394,
+              442.4545104044069,
+              594.1987524298019
+            ],
+            "visible": [
+              338.705742047812,
+              442.5506484909477,
+              441.0632433957935,
+              594
+            ],
+            "pixelScale": 0.19875242980190588,
+            "anchor": [
+              0.43,
+              0.87890625
+            ],
+            "bodyHeight": 0.74414063,
+            "soleOffsetFromActor": 0
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-idle.png",
+          "sha256": "eb8b0f164cbccc02cbdc3574b4be7b900dc0b7d84f676e02ed0300fb0898add9",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              891.00419931239,
+              442.15314363134394,
+              995.3492249583906,
+              594.1987524298019
+            ],
+            "visible": [
+              892.3954663210034,
+              442.5506484909477,
+              994.7529676689849,
+              594
+            ],
+            "pixelScale": 0.19875242980190588,
+            "anchor": [
+              0.43,
+              0.87890625
+            ],
+            "bodyHeight": 0.74414063,
+            "soleOffsetFromActor": 0
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-movement-static-idle.png",
+          "sha256": "f2a4ab7d3e4b19a3de207d996a3a8de696370dd2468c2b2abbf1cc9b7e03744b",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              842.8690674764525,
+              442.15314363134394,
+              947.214093122453,
+              594.1987524298019
+            ],
+            "visible": [
+              844.2603344850659,
+              442.5506484909477,
+              946.6178358330474,
+              594
+            ],
+            "pixelScale": 0.19875242980190588,
+            "anchor": [
+              0.43,
+              0.87890625
+            ],
+            "bodyHeight": 0.74414063,
+            "soleOffsetFromActor": 0
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-movement-released-idle.png",
+          "sha256": "bbddc4ed276e66bd8c04da212a9ac16afca2593264d0995728d035922d106d22",
+          "purpose": "actual-native-FightEngine",
+          "width": 1280,
+          "height": 720,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              837.5455811483275,
+              442.15314363134394,
+              941.890606794328,
+              594.1987524298019
+            ],
+            "visible": [
+              838.9368481569409,
+              442.5506484909477,
+              941.2943495049224,
+              594
+            ],
+            "pixelScale": 0.19875242980190588,
+            "anchor": [
+              0.43,
+              0.87890625
+            ],
+            "bodyHeight": 0.74414063,
+            "soleOffsetFromActor": 0
+          }
+        }
+      ],
+      "visibleSizePixels": [
+        102.3575013479815,
+        151.4493515090523
+      ],
+      "maxAbsSoleOffsetPixels": 0,
+      "referenceBaselinePixels": null,
+      "observations": [
+        "Tête disproportionnée, tronc court, mains, jambes et petite lame tenue basse sont présents dans les six captures. Pieds entiers et appui stable à environ 151 px de haut.",
+        "Présentation droite puis miroir gauche cohérents ; légère ouverture du torse conservée. La lame reste basse, sans attaque ni effet ajouté.",
+        "Le halo large suspecté dans l’aperçu natif n’apparaît pas dans ces captures de jeu. Alpha source maximal 254 conservé ; aucun nettoyage ou renforcement d’opacité."
+      ],
+      "visualDecision": "acceptable-static-candidate-for-reviewed-scope",
+      "certifiedOneToOne": false,
+      "animated": false,
+      "sourceFilesUnchanged": true,
+      "historicalSelectionPreserved": true
+    },
+    {
+      "fighterId": "sh4_toadstool_061",
+      "combatEnabled": false,
+      "runtimeRole": "environmental-obstacle",
+      "report": {
+        "path": "docs/production/vague23/qa-native/cases/sh4_toadstool_061/report.json",
+        "sha256": "4e1c7be280794ce0411c0db733d3d85e94402f20de26b19a58c6723699134fa8"
+      },
+      "process": {
+        "path": "docs/production/vague23/qa-native/cases/sh4_toadstool_061/process-observation.json",
+        "exitCode": 0,
+        "durationSeconds": 1.525
+      },
+      "harnessSHA256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+      "passed": true,
+      "checks": 36,
+      "duelCases": 0,
+      "referencePreviews": 2,
+      "allCapturesVisuallyInspected": true,
+      "captures": [
+        {
+          "file": "docs/production/vague23/qa-native/cases/sh4_toadstool_061/selection-sh4_toadstool_061.png",
+          "sha256": "cf1e0a6d55aae72fc3f520fc087b40fb403c6212be97f5f445983e88ddde5e60",
+          "purpose": "preserved-selection",
+          "width": 500,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": null
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/sh4_toadstool_061/sh4_toadstool_061-reference-right.png",
+          "sha256": "33def6cdfdf4019284cb1a38b28d6ddad912baadfb3338476fdbde07bb64ab20",
+          "purpose": "native-workshop-renderer-reference-only",
+          "width": 720,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              336.929377269073,
+              330.56451794379257,
+              398.57937594664156,
+              430.3181932233681
+            ],
+            "visible": [
+              337.1680224252442,
+              331.36000179769667,
+              397.86344047812787,
+              429.99999968180646
+            ],
+            "pixelScale": 0.07954838539041112,
+            "anchor": [
+              0.42,
+              0.90360656
+            ],
+            "bodyHeight": 0.81311475,
+            "soleOffsetFromActor": null
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/sh4_toadstool_061/sh4_toadstool_061-reference-left.png",
+          "sha256": "4171862e69f1bde07a3e22dbd139c03b7ae1743f6caa178d49f51809ab2fb11e",
+          "purpose": "native-workshop-renderer-reference-only",
+          "width": 720,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              321.42062405335844,
+              330.56451794379257,
+              383.070622730927,
+              430.3181932233681
+            ],
+            "visible": [
+              322.13655952187213,
+              331.36000179769667,
+              382.8319775747558,
+              429.99999968180646
+            ],
+            "pixelScale": 0.07954838539041112,
+            "anchor": [
+              0.42,
+              0.90360656
+            ],
+            "bodyHeight": 0.81311475,
+            "soleOffsetFromActor": null
+          }
+        }
+      ],
+      "visibleSizePixels": [
+        60.69541805288367,
+        98.63999788410979
+      ],
+      "maxAbsSoleOffsetPixels": null,
+      "referenceBaselinePixels": 430,
+      "observations": [
+        "Deux aperçus du renderer d’atelier montrent une seule colonie entière, toutes pointes et base visibles, environ 61 × 99 px.",
+        "L’attache rejoint la ligne de référence y=430 ; le miroir inverse les tiges inclinées. Les interstices restent sombres/transparents, sans webbing opaque gênant à cette échelle.",
+        "Aucun duel ne concerne ce profil : cases=[] et deux rendererPreviews combatEnabled=false. La capture n’est pas une page d’atelier DOM/CSS."
+      ],
+      "visualDecision": "acceptable-static-candidate-for-reviewed-scope",
+      "certifiedOneToOne": false,
+      "animated": false,
+      "sourceFilesUnchanged": true,
+      "historicalSelectionPreserved": true
+    },
+    {
+      "fighterId": "sh4_whitestool_062",
+      "combatEnabled": false,
+      "runtimeRole": "environmental-obstacle",
+      "report": {
+        "path": "docs/production/vague23/qa-native/cases/sh4_whitestool_062/report.json",
+        "sha256": "3f999cac572f1ac104d7bbd2af5bc84b9721c026975b700730f262bec8a7a84f"
+      },
+      "process": {
+        "path": "docs/production/vague23/qa-native/cases/sh4_whitestool_062/process-observation.json",
+        "exitCode": 0,
+        "durationSeconds": 1.616
+      },
+      "harnessSHA256": "e5e7ede8084a1e2e7c4216fe8fbd2393644fa6d9f561ec6088af2c9d27ee3a25",
+      "passed": true,
+      "checks": 36,
+      "duelCases": 0,
+      "referencePreviews": 2,
+      "allCapturesVisuallyInspected": true,
+      "captures": [
+        {
+          "file": "docs/production/vague23/qa-native/cases/sh4_whitestool_062/selection-sh4_whitestool_062.png",
+          "sha256": "06455b1c57288e299958e1128913c415a268ff7fe87ad7f18ae73c29ef8eb57a",
+          "purpose": "preserved-selection",
+          "width": 500,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": null
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/sh4_whitestool_062/sh4_whitestool_062-reference-right.png",
+          "sha256": "f262da132321b8e98df84eb100cbb826a768f001729eea185f1d30c00e699537",
+          "purpose": "native-workshop-renderer-reference-only",
+          "width": 720,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              332.1371123332626,
+              330.5536808470041,
+              397.9867021565808,
+              430.98550423739823
+            ],
+            "visible": [
+              332.94343384130326,
+              331.36000235504474,
+              396.8220155338555,
+              430.00000017201523
+            ],
+            "pixelScale": 0.08959127867118122,
+            "anchor": [
+              0.45,
+              0.84126984
+            ],
+            "bodyHeight": 0.7281746,
+            "soleOffsetFromActor": null
+          }
+        },
+        {
+          "file": "docs/production/vague23/qa-native/cases/sh4_whitestool_062/sh4_whitestool_062-reference-left.png",
+          "sha256": "3abc5ffa8b45869b224bc464534ffb4c12cd559ec04491c6f6bfb68e618977ca",
+          "purpose": "native-workshop-renderer-reference-only",
+          "width": 720,
+          "height": 500,
+          "visuallyInspected": true,
+          "geometry": {
+            "complete": true,
+            "exterior": [
+              322.0132978434192,
+              330.5536808470041,
+              387.8628876667374,
+              430.98550423739823
+            ],
+            "visible": [
+              323.1779844661445,
+              331.36000235504474,
+              387.05656615869674,
+              430.00000017201523
+            ],
+            "pixelScale": 0.08959127867118122,
+            "anchor": [
+              0.45,
+              0.84126984
+            ],
+            "bodyHeight": 0.7281746,
+            "soleOffsetFromActor": null
+          }
+        }
+      ],
+      "visibleSizePixels": [
+        63.878581692552245,
+        98.63999781697049
+      ],
+      "maxAbsSoleOffsetPixels": null,
+      "referenceBaselinePixels": 430,
+      "observations": [
+        "Deux aperçus du renderer d’atelier montrent une touffe entière de brins ivoire, fine et distincte de Toadstool, environ 64 × 99 px.",
+        "Base au niveau de la ligne y=430, pointes complètes, miroir cohérent. Les interstices restent lisibles sur le fond sombre ; pas de halo large ou de toile opaque visible.",
+        "Aucun duel ne concerne ce profil : cases=[] et deux rendererPreviews combatEnabled=false. L’original a été testé, pas la variante de détourage archivée."
+      ],
+      "visualDecision": "acceptable-static-candidate-for-reviewed-scope",
+      "certifiedOneToOne": false,
+      "animated": false,
+      "sourceFilesUnchanged": true,
+      "historicalSelectionPreserved": true
+    }
+  ],
+  "limits": [
+    "Native Canvas execution is not Chromium; no DOM/CSS, browser-delivered keyboard events, HTTP, service worker or screenshot browser claim.",
+    "InputState original callbacks receive synthetic key events. Ordinary local matches supply both player placements; no actor positions, facing or phase injected.",
+    "Movement holds the one generated idle image. Translation and return to idle are tested; no new walk-cycle animation is implied.",
+    "No attack/contact/guard/finisher matrix, full-game endurance test, source animation timing or 1:1 fidelity certification.",
+    "Very low alpha fringe/noise remains in the native sources. The conclusion is limited to the retained native captures at the tested game/workshop scale."
+  ],
+  "deliveryPreserved": {
+    "path": "docs/production/vague23/characters/delivery.json",
+    "sha256": "b3f63409b2dadf326033ddb62fb6f4c8e42289d780f1694c1ac38b10208bbe6c"
+  }
+}

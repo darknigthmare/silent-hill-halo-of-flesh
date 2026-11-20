@@ -1,0 +1,1635 @@
+{
+  "schema": 3,
+  "label": "sprite-wave4-additional",
+  "generatedAt": "2026-11-18T08:40:21.470Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4251\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1009821,
+        "sha256": "510c783296c3e91033349cc4cd937ab6ae4a6d9ccd542c525d8dfff22b608b85"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1107324,
+        "sha256": "7097962c69fe3fd531c70abc85cff5e18390e4d946bbb2b1734fd93fadcb91fe"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1606426,
+        "sha256": "797d28258adf44f004ca06fccc39e4aa5522184dddc0373a7f4c8951070a0d33"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1785759,
+        "sha256": "9ba1d2d57009366baa1f135dd7cfe55d84d0bc8acfc2522452f2054f29607315"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1865050,
+        "sha256": "764b1384ab0719d2007b303de3bcadd0ff43f59496e2425b65a44bde880dd081"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 901797,
+        "sha256": "ac97bc9432285cc05ef864f225fbdd190a94b57197b890f2767942bcc3220eae"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1530722,
+        "sha256": "dce588da250b1d5ceb9cc779ea374c3737abd63ddf56e48e6f56d255ab47142a"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 906744,
+        "sha256": "22940f0abe70d01308f27da1e2242259084f7f8e060effbe14a85c288121aa21"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          78,
+          145,
+          2080,
+          631
+        ],
+        "expected": [
+          78,
+          145,
+          2080,
+          631
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          6,
+          171,
+          2177,
+          637
+        ],
+        "expected": [
+          6,
+          171,
+          2177,
+          637
+        ]
+      }
+    },
+    {
+      "name": "sh1_twinfeeler_015 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_twinfeeler_015.510c783296c3.png"
+        ],
+        "portrait": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_twinfeeler_015 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png"
+        ],
+        "expected": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png"
+      }
+    },
+    {
+      "name": "sh1_twinfeeler_015 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png"
+        ],
+        "expected": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          108,
+          11,
+          1432,
+          1013
+        ],
+        "expected": [
+          108,
+          11,
+          1432,
+          1013
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          230,
+          28,
+          797,
+          1507
+        ],
+        "expected": [
+          230,
+          28,
+          797,
+          1507
+        ]
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png"
+        ],
+        "portrait": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png"
+        ],
+        "expected": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png"
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png"
+        ],
+        "expected": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          77,
+          98,
+          1435,
+          945
+        ],
+        "expected": [
+          77,
+          98,
+          1435,
+          945
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          253,
+          22,
+          1075,
+          1151
+        ],
+        "expected": [
+          253,
+          22,
+          1075,
+          1151
+        ]
+      }
+    },
+    {
+      "name": "sh3_numb_body_large_038 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png"
+        ],
+        "portrait": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh3_numb_body_large_038 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png"
+        ],
+        "expected": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png"
+      }
+    },
+    {
+      "name": "sh3_numb_body_large_038 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png"
+        ],
+        "expected": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          152,
+          14,
+          1466,
+          1010
+        ],
+        "expected": [
+          152,
+          14,
+          1466,
+          1010
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          211,
+          11,
+          1030,
+          1390
+        ],
+        "expected": [
+          211,
+          11,
+          1030,
+          1390
+        ]
+      }
+    },
+    {
+      "name": "bom_wood_guardian_138 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/bom_wood_guardian_138.dce588da250b.png"
+        ],
+        "portrait": "assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "bom_wood_guardian_138 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_wood_guardian_138.22940f0abe70.png"
+        ],
+        "expected": "assets/sprites/bom_wood_guardian_138.22940f0abe70.png"
+      }
+    },
+    {
+      "name": "bom_wood_guardian_138 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/bom_wood_guardian_138.22940f0abe70.png"
+        ],
+        "expected": "assets/sprites/bom_wood_guardian_138.22940f0abe70.png"
+      }
+    },
+    {
+      "name": "sh1_twinfeeler_015/sh2_red_pyramid_thing_spear_030 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_twinfeeler_015/sh2_red_pyramid_thing_spear_030 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_twinfeeler_015/sh2_red_pyramid_thing_spear_030 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_twinfeeler_015",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh2_red_pyramid_thing_spear_030",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_twinfeeler_015/sh2_red_pyramid_thing_spear_030 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+          "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+          "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_twinfeeler_015 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 248.03643992974088,
+          "top": 559.2527205391348,
+          "right": 391.8773256906436,
+          "bottom": 594.2140469393541
+        },
+        "visible": {
+          "left": 248.3218385125998,
+          "top": 559.3240701848495,
+          "right": 391.16382923349624,
+          "bottom": 593.99999800221
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 733.1228055586206,
+          "top": 331.6449299820074,
+          "right": 1080.3192000335914,
+          "bottom": 596.6105994497483
+        },
+        "visible": {
+          "left": 733.3838554792785,
+          "top": 332.16702982332316,
+          "right": 1079.013950430302,
+          "bottom": 593.7390503225117
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_twinfeeler_015/sh2_red_pyramid_thing_spear_030 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030/sh1_twinfeeler_015 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030/sh1_twinfeeler_015 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030/sh1_twinfeeler_015 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh2_red_pyramid_thing_spear_030",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_twinfeeler_015",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030/sh1_twinfeeler_015 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+          "assets/sprites/sh1_twinfeeler_015.510c783296c3.png"
+        ],
+        "expected": [
+          "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+          "assets/sprites/sh1_twinfeeler_015.510c783296c3.png"
+        ]
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 199.6808304839867,
+          "top": 331.6449299820074,
+          "right": 546.8772249589575,
+          "bottom": 596.6105994497483
+        },
+        "visible": {
+          "left": 200.98608008727606,
+          "top": 332.16702982332316,
+          "right": 546.6161750382996,
+          "bottom": 593.7390503225117
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_twinfeeler_015 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 888.1227048269345,
+          "top": 559.2527205391348,
+          "right": 1031.9635905878372,
+          "bottom": 594.2140469393541
+        },
+        "visible": {
+          "left": 888.8362012840819,
+          "top": 559.3240701848495,
+          "right": 1031.6781920049784,
+          "bottom": 593.99999800221
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_red_pyramid_thing_spear_030/sh1_twinfeeler_015 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh3_numb_body_large_038/bom_wood_guardian_138 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_numb_body_large_038/bom_wood_guardian_138 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh3_numb_body_large_038/bom_wood_guardian_138 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh3_numb_body_large_038",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "bom_wood_guardian_138",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh3_numb_body_large_038/bom_wood_guardian_138 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+          "assets/sprites/bom_wood_guardian_138.dce588da250b.png"
+        ],
+        "expected": [
+          "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+          "assets/sprites/bom_wood_guardian_138.dce588da250b.png"
+        ]
+      }
+    },
+    {
+      "name": "sh3_numb_body_large_038 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 134.62825740116864,
+          "top": 370.5768433447814,
+          "right": 493.1016078138714,
+          "bottom": 594.5243497474502
+        },
+        "visible": {
+          "left": 135.93942547144187,
+          "top": 371.8880114150547,
+          "right": 492.0526733576528,
+          "bottom": 593.9998825193409
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_wood_guardian_138 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 705.7391836844789,
+          "top": 298.7439441657038,
+          "right": 1096.4582835671893,
+          "bottom": 594.8865599618276
+        },
+        "visible": {
+          "left": 706.6258382227907,
+          "top": 299.335047191245,
+          "right": 1094.9805260033363,
+          "bottom": 593.7043539107453
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_numb_body_large_038/bom_wood_guardian_138 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "bom_wood_guardian_138/sh3_numb_body_large_038 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_wood_guardian_138/sh3_numb_body_large_038 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "bom_wood_guardian_138/sh3_numb_body_large_038 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "bom_wood_guardian_138",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh3_numb_body_large_038",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "bom_wood_guardian_138/sh3_numb_body_large_038 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+          "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png"
+        ],
+        "expected": [
+          "assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+          "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png"
+        ]
+      }
+    },
+    {
+      "name": "bom_wood_guardian_138 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 183.54174695038893,
+          "top": 298.7439441657038,
+          "right": 574.2608468330992,
+          "bottom": 594.8865599618276
+        },
+        "visible": {
+          "left": 185.01950451424182,
+          "top": 299.335047191245,
+          "right": 573.3741922947875,
+          "bottom": 593.7043539107453
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh3_numb_body_large_038 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 786.8984227037067,
+          "top": 370.5768433447814,
+          "right": 1145.3717731164095,
+          "bottom": 594.5243497474502
+        },
+        "visible": {
+          "left": 787.9473571599253,
+          "top": 371.8880114150547,
+          "right": 1144.0606050461363,
+          "bottom": 593.9998825193409
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "bom_wood_guardian_138/sh3_numb_body_large_038 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+        "after": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8",
+        "after": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "sh1_twinfeeler_015",
+      "path": "assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+      "width": 2172,
+      "height": 724,
+      "transparentFraction": 0.7123555192657937,
+      "visibleBounds": [
+        78,
+        145,
+        2080,
+        631
+      ]
+    },
+    {
+      "id": "sh1_twinfeeler_015",
+      "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "width": 2186,
+      "height": 719,
+      "transparentFraction": 0.6676206024683566,
+      "visibleBounds": [
+        6,
+        171,
+        2177,
+        637
+      ]
+    },
+    {
+      "id": "sh2_red_pyramid_thing_spear_030",
+      "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.8065325419108073,
+      "visibleBounds": [
+        108,
+        11,
+        1432,
+        1013
+      ]
+    },
+    {
+      "id": "sh2_red_pyramid_thing_spear_030",
+      "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.751977284749349,
+      "visibleBounds": [
+        230,
+        28,
+        797,
+        1507
+      ]
+    },
+    {
+      "id": "sh3_numb_body_large_038",
+      "path": "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.6800950368245443,
+      "visibleBounds": [
+        77,
+        98,
+        1435,
+        945
+      ]
+    },
+    {
+      "id": "sh3_numb_body_large_038",
+      "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "width": 1362,
+      "height": 1155,
+      "transparentFraction": 0.765202051986193,
+      "visibleBounds": [
+        253,
+        22,
+        1075,
+        1151
+      ]
+    },
+    {
+      "id": "bom_wood_guardian_138",
+      "path": "assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+      "width": 1536,
+      "height": 1024,
+      "transparentFraction": 0.8083922068277994,
+      "visibleBounds": [
+        152,
+        14,
+        1466,
+        1010
+      ]
+    },
+    {
+      "id": "bom_wood_guardian_138",
+      "path": "assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+      "width": 1113,
+      "height": 1414,
+      "transparentFraction": 0.757677365734263,
+      "visibleBounds": [
+        211,
+        11,
+        1030,
+        1390
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh1_twinfeeler_015",
+      "facing": 1,
+      "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "file": "portrait-sh1_twinfeeler_015-right.png"
+    },
+    {
+      "id": "sh1_twinfeeler_015",
+      "facing": -1,
+      "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "file": "portrait-sh1_twinfeeler_015-left.png"
+    },
+    {
+      "id": "sh2_red_pyramid_thing_spear_030",
+      "facing": 1,
+      "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "file": "portrait-sh2_red_pyramid_thing_spear_030-right.png"
+    },
+    {
+      "id": "sh2_red_pyramid_thing_spear_030",
+      "facing": -1,
+      "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "file": "portrait-sh2_red_pyramid_thing_spear_030-left.png"
+    },
+    {
+      "id": "sh3_numb_body_large_038",
+      "facing": 1,
+      "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "file": "portrait-sh3_numb_body_large_038-right.png"
+    },
+    {
+      "id": "sh3_numb_body_large_038",
+      "facing": -1,
+      "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "file": "portrait-sh3_numb_body_large_038-left.png"
+    },
+    {
+      "id": "bom_wood_guardian_138",
+      "facing": 1,
+      "path": "assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+      "file": "portrait-bom_wood_guardian_138-right.png"
+    },
+    {
+      "id": "bom_wood_guardian_138",
+      "facing": -1,
+      "path": "assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+      "file": "portrait-bom_wood_guardian_138-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "sh1_twinfeeler_015",
+        "sh2_red_pyramid_thing_spear_030"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 614.6683560416667
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_twinfeeler_015",
+          "slot": 1,
+          "path": "assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+          "exterior": {
+            "left": 248.03643992974088,
+            "top": 559.2527205391348,
+            "right": 391.8773256906436,
+            "bottom": 594.2140469393541
+          },
+          "visible": {
+            "left": 248.3218385125998,
+            "top": 559.3240701848495,
+            "right": 391.16382923349624,
+            "bottom": 593.99999800221
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.000001997790036512015,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+            "args": [
+              -76.032,
+              -46.0176816,
+              158.4,
+              52.800000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        },
+        {
+          "id": "sh2_red_pyramid_thing_spear_030",
+          "slot": 2,
+          "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+          "exterior": {
+            "left": 733.1228055586206,
+            "top": 331.6449299820074,
+            "right": 1080.3192000335914,
+            "bottom": 596.6105994497483
+          },
+          "visible": {
+            "left": 733.3838554792785,
+            "top": 332.16702982332316,
+            "right": 1079.013950430302,
+            "bottom": 593.7390503225117
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.26094967748827,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+            "args": [
+              -147.54375,
+              -270.560810625,
+              409.84375,
+              273.2291666666667
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+        "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png"
+      ],
+      "snapshots": [
+        "duel-sh1_twinfeeler_015--sh2_red_pyramid_thing_spear_030-tick0.png",
+        "duel-sh1_twinfeeler_015--sh2_red_pyramid_thing_spear_030-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh2_red_pyramid_thing_spear_030",
+        "sh1_twinfeeler_015"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 614.6683560416667
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh2_red_pyramid_thing_spear_030",
+          "slot": 1,
+          "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+          "exterior": {
+            "left": 199.6808304839867,
+            "top": 331.6449299820074,
+            "right": 546.8772249589575,
+            "bottom": 596.6105994497483
+          },
+          "visible": {
+            "left": 200.98608008727606,
+            "top": 332.16702982332316,
+            "right": 546.6161750382996,
+            "bottom": 593.7390503225117
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.26094967748827,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+            "args": [
+              -147.54375,
+              -270.560810625,
+              409.84375,
+              273.2291666666667
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "sh1_twinfeeler_015",
+          "slot": 2,
+          "path": "assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+          "exterior": {
+            "left": 888.1227048269345,
+            "top": 559.2527205391348,
+            "right": 1031.9635905878372,
+            "bottom": 594.2140469393541
+          },
+          "visible": {
+            "left": 888.8362012840819,
+            "top": 559.3240701848495,
+            "right": 1031.6781920049784,
+            "bottom": 593.99999800221
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.000001997790036512015,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+            "args": [
+              -76.032,
+              -46.0176816,
+              158.4,
+              52.800000000000004
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+        "assets/sprites/sh1_twinfeeler_015.510c783296c3.png"
+      ],
+      "snapshots": [
+        "duel-sh2_red_pyramid_thing_spear_030--sh1_twinfeeler_015-tick0.png",
+        "duel-sh2_red_pyramid_thing_spear_030--sh1_twinfeeler_015-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh3_numb_body_large_038",
+        "bom_wood_guardian_138"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.9061741090425
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh3_numb_body_large_038",
+          "slot": 1,
+          "path": "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+          "exterior": {
+            "left": 134.62825740116864,
+            "top": 370.5768433447814,
+            "right": 493.1016078138714,
+            "bottom": 594.5243497474502
+          },
+          "visible": {
+            "left": 135.93942547144187,
+            "top": 371.8880114150547,
+            "right": 492.0526733576528,
+            "bottom": 593.9998825193409
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00011748065912797756,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+            "args": [
+              -205.85106382978725,
+              -253.29342127659578,
+              411.7021276595745,
+              274.468085106383
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "bom_wood_guardian_138",
+          "slot": 2,
+          "path": "assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+          "exterior": {
+            "left": 705.7391836844789,
+            "top": 298.7439441657038,
+            "right": 1096.4582835671893,
+            "bottom": 594.8865599618276
+          },
+          "visible": {
+            "left": 706.6258382227907,
+            "top": 299.335047191245,
+            "right": 1094.9805260033363,
+            "bottom": 593.7043539107453
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.2956460892546602,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+            "args": [
+              -180.96414893617026,
+              -305.4133488297873,
+              464.01063829787245,
+              309.34042553191495
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+        "assets/sprites/bom_wood_guardian_138.dce588da250b.png"
+      ],
+      "snapshots": [
+        "duel-sh3_numb_body_large_038--bom_wood_guardian_138-tick0.png",
+        "duel-sh3_numb_body_large_038--bom_wood_guardian_138-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "bom_wood_guardian_138",
+        "sh3_numb_body_large_038"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.9061741090425
+        }
+      },
+      "geometries": [
+        {
+          "id": "bom_wood_guardian_138",
+          "slot": 1,
+          "path": "assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+          "exterior": {
+            "left": 183.54174695038893,
+            "top": 298.7439441657038,
+            "right": 574.2608468330992,
+            "bottom": 594.8865599618276
+          },
+          "visible": {
+            "left": 185.01950451424182,
+            "top": 299.335047191245,
+            "right": 573.3741922947875,
+            "bottom": 593.7043539107453
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.2956460892546602,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+            "args": [
+              -180.96414893617026,
+              -305.4133488297873,
+              464.01063829787245,
+              309.34042553191495
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        },
+        {
+          "id": "sh3_numb_body_large_038",
+          "slot": 2,
+          "path": "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+          "exterior": {
+            "left": 786.8984227037067,
+            "top": 370.5768433447814,
+            "right": 1145.3717731164095,
+            "bottom": 594.5243497474502
+          },
+          "visible": {
+            "left": 787.9473571599253,
+            "top": 371.8880114150547,
+            "right": 1144.0606050461363,
+            "bottom": 593.9998825193409
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.00011748065912797756,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+            "args": [
+              -205.85106382978725,
+              -253.29342127659578,
+              411.7021276595745,
+              274.468085106383
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1536,
+            "height": 1024
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+        "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png"
+      ],
+      "snapshots": [
+        "duel-bom_wood_guardian_138--sh3_numb_body_large_038-tick0.png",
+        "duel-bom_wood_guardian_138--sh3_numb_body_large_038-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "e02e0474f26780539f116d2e09d68cbd179acfeae3b66c625259f6f916895719",
+  "src/sprite-manifest.jsSHA256": "300d7a409d3d10645cff6208a7ad9c87cd12c942c59e42f4f92bb64d11057ea8",
+  "version": "0.9.6",
+  "ids": [
+    "sh1_twinfeeler_015",
+    "sh2_red_pyramid_thing_spear_030",
+    "sh3_numb_body_large_038",
+    "bom_wood_guardian_138"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

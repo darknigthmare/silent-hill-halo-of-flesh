@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "startedAt": "2026-11-20T09:37:10.395196+00:00",
+  "scope": "Final data verification and the six targeted sprite test suites; stage suites are retained separately and not recounted as rerun.",
+  "commands": [
+    {
+      "name": "build-verification",
+      "command": [
+        "node",
+        "scripts/build.mjs",
+        "--verify-only"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 4.434,
+      "log": "docs/production/vague25/build-verify-final.log",
+      "logSHA256": "7e74bc3ed972bbbc042d225b65fd00fad45ee96744fe75592af7b6d2e7536376",
+      "bytes": 152
+    }
+  ],
+  "passed": false
+}

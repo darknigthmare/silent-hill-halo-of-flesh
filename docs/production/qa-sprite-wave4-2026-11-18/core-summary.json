@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "label": "Premier sous-lot",
+  "checks": 183,
+  "failures": 0,
+  "coveredFighters": 10,
+  "newCombatFighters": 9,
+  "duels": 10,
+  "combatTick0AndTick120Captures": 20,
+  "finalDuelCapturesVisuallyReviewed": 10,
+  "selectionPortraitsVisuallyReviewed": 20,
+  "sourceHashes": {
+    "art/registry.json": "a5449cbfba917526569147f32c07d76f1d3dbbdb383a1abe6e27b4e52e168f7d",
+    "src/sprite-manifest.js": "044570509678c2fccbb0605c05c3e3c86d266f2a6f5c75d0926ff7cad8a6968f"
+  },
+  "combatEvidence": "core/report.json",
+  "combatVisualReview": "core/visual-review.json",
+  "selectionEvidence": "selection-core/report.json",
+  "selectionVisualReview": "selection-core/visual-review.json",
+  "limits": "Native Canvas Node. Le moteur du jeu charge les assets de combat via HTTP. Le vérificateur des sélections seules utilise un cache de décodage local. Les deux orientations proviennent du miroir de présentation."
+}

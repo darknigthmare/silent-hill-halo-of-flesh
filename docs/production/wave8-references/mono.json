@@ -1,0 +1,49 @@
+{
+  "fighterId": "downpour_monocle_man_114",
+  "source": "downpour",
+  "purpose": "selection",
+  "qualification": "reconstruction pour sélection; fidélité 1:1 non certifiée",
+  "sources": [
+    {
+      "url": "https://www.silenthillmemories.net/sh8/creatures/monocle_man.png",
+      "sha256": "0a7531e851b6e13f24fa53dd4cd03b7ff31c3772f0eaa6d2685665ebf9da89ae",
+      "type": "Released Downpour creature gallery, 300×300 close view",
+      "observation": "Seven stretched tapered sectors and material-to-band seams; the exposed central face has a ring on viewer right. Follow the visible tissue up to each seam."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=iD8Vc9ktLGI&t=4640s",
+      "sha256": "fd06e221ba1ab04f3b04e7d80e7686619afd4b3a165fb62a0300653bd6936cf0",
+      "type": "Downpour released train sequence, 4640 s",
+      "observation": "Luminous ocular lens and face integrated into the wall. The remote brackets and mine train are scenery.",
+      "path": "docs/production/wave6-references/downpour/monocle-retail-train-4640s.png"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dDGK6t5f1Ns&t=162s",
+      "sha256": "f5dfdb166bacf428e990a1992d8f0034ea94eb1cbb4587fe328ac805ff95ec0a",
+      "type": "Independent released Devil’s Pit footage",
+      "observation": "Scene placement and pale illuminated lens; silhouette of the attachment machinery is outside the selection subject.",
+      "path": "docs/production/wave4-references/manifestations/monocle-retail-162s.png"
+    }
+  ],
+  "visualReview": {
+    "publication": "https://tcrf.tiago.zip/wiki/Silent_Hill-3a_Downpour#unused-models",
+    "editionEvidence": "Analyse du fichier commercial 11_DEP_RIDE01_AI.XXX, char_jp_boss. La documentation des auteurs de l’extraction distingue la tête effectivement montrée lors du trajet des parties réservées à un combat non publié. Aucun détail d’une attaque, de la langue ou des tentacules de ce combat supprimé n’a été repris.",
+    "contour": "La vue frontale du bestiaire permet d’isoler la membrane aux transitions de matière entre peau pâle et brides métalliques. Les huit extrémités (gauche haute, haute centrale, droite haute, droite, droite basse, bas, gauche basse et gauche) restent lisibles et séparées sur alpha. Les chaînes et les rails au-delà des brides appartiennent à la mine et peuvent dépasser le champ des captures commerciales. Ce portrait représente la tête jusqu’aux brides, et non l’installation minière. Le matériau, les proportions et les longueurs des brides sont recomposés à partir des images, sans certification du maillage.",
+    "promptCountCorrection": "Le texte de génération estimait sept secteurs. Le contrôle du visuel d’origine et du rendu en distingue huit, conservés dans le fichier livré.",
+    "role": "Manifestation de scène, sélection et dossier uniquement. La progression du jeu ne lui attribue aucun déplacement ni combat.",
+    "lens": "Éclairage retenu pour le dossier, conforme au rendu frontal où le monocle reste sombre avec un reflet, tandis que la scène en mouvement le fait briller."
+  },
+  "output": {
+    "sha256": "1b0c72d6f6ab5e13aa22a7fa636cbd0a49a9c4ae00afbb2df59d10702b69c0b8",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "visibleBoundsAlpha32": [
+      17,
+      7,
+      1240,
+      1240
+    ]
+  }
+}

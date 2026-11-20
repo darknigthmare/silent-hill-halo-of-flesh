@@ -1,0 +1,43 @@
+diff --git a/tests/cinematic-supports.test.mjs b/tests/cinematic-supports.test.mjs
+index 096f2fd..b958048 100644
+--- a/tests/cinematic-supports.test.mjs
++++ b/tests/cinematic-supports.test.mjs
+@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
+ import {ROSTER,STAGES,createCombatProfile} from '../src/data.js';
+ import {FIGHTER_REFERENCES} from '../src/production-reference.js';
+ import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
++import {stageBitmapFor} from '../src/stage-bitmaps.js';
+ import {FightEngine} from '../src/fight.js';
+ import {loreFinisher,lorePresentation,sampleLorePresentation,sampleLoreCinematic,cinematicSummary,LORE_CINEMATIC_COVERAGE} from '../src/lore-cinematics.js';
+ 
+@@ -63,8 +64,12 @@ test('ten source-specific grammars provide twenty contiguous edits without produ
+ test('ceiling, floor grate, water, wall and furniture are real requirements, including source and blocked-place checks',()=>{
+   for(const id of ['sh1_hanged_scratcher_011','sh2_mandarin_026','sh2_flesh_lip_027','sh3_leonard_wolf_048','sh4_wall_man_056','sh4_gum_head_old_type_057']){
+     const validStage=subjectStage(id);assert.ok(plan(id).allowed,id);
++    // This synthetic room has neither procedural motifs nor a selected bitmap.
++    // Clearing motifs alone must not erase the real sewer bitmap's ceiling.
++    const unsupportedStage={...validStage,props:[],layers:[],referencePolicy:{...validStage.referencePolicy,sceneId:'synthetic-no-support-room'}};
++    assert.equal(stageBitmapFor(unsupportedStage),null,id+' fixture must have no selected bitmap');
+     for(const replacement of [
+-      {...validStage,props:[],layers:[]},
++      unsupportedStage,
+       {...validStage,id:'invented-support'},
+       {...validStage,source:'unrelated-edition'},
+       {...validStage,reference:{...validStage.reference,blocked:true}}
+@@ -77,6 +82,16 @@ test('ceiling, floor grate, water, wall and furniture are real requirements, inc
+   assert.equal(plan('sh4_gum_head_old_type_057','signature',{stage:stage('alchemilla')}).allowed,false,'the reviewed SH1 waiting room does not supply a desk, bed, gurney or wheelchair');
+ });
+ 
++test('the selected sewer bitmap retains its real ceiling without procedural motifs',()=>{
++  const withoutMotifs={...stage('sewer_resort'),props:[],layers:[]},bitmap=stageBitmapFor(withoutMotifs);
++  assert.ok(bitmap,'the real sewer room must select its integrated composition');
++  assert.equal(bitmap.scene,withoutMotifs.referencePolicy.sceneId);
++  assert.equal(bitmap.mode,'replace');assert.equal(bitmap.geometry.ceiling,true);
++  for(const id of ['sh1_hanged_scratcher_011','sh2_flesh_lip_027'])for(const type of ['signature','nightmare']){
++    assert.equal(plan(id,type,{stage:withoutMotifs}).allowed,true,id+' retains the documented bitmap ceiling');
++  }
++});
++
+ test('the fixed Mandarin, 2001 cage and Wall Man keep their support throughout both edits',()=>{
+   for(const id of FIXED){
+     assert.equal(actor(id).profile.referencePolicy.canMove,false);

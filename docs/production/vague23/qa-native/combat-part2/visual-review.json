@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-19T20:13:54.440Z",
+  "report": "report.json",
+  "reportSHA256": "92eb9a1146ed9c9b0acf9b5e7f2b05f2ea0f53bb23063db3a81b3ac651c5e1e6",
+  "passed": true,
+  "technicalResult": {
+    "passed": true,
+    "checks": 152,
+    "cases": 6,
+    "captures": 21
+  },
+  "testedSpriteEntryMatches": {
+    "origins_remnant_077": true,
+    "bom_tremer_133": true,
+    "bom_wood_sapling_139": true,
+    "sh2_creeper_025": true
+  },
+  "testedStageEntryMatches": {
+    "book_earth": true
+  },
+  "fidelity": "unverified",
+  "method": "Visual inspection of both initial orientations for all three fighters and four representative movement/released-idle captures from actual native FightEngine.",
+  "inspected": [
+    "origins_remnant_077-right-idle.png",
+    "origins_remnant_077-left-idle.png",
+    "bom_tremer_133-right-idle.png",
+    "bom_tremer_133-left-idle.png",
+    "bom_wood_sapling_139-right-idle.png",
+    "bom_wood_sapling_139-left-idle.png",
+    "origins_remnant_077-right-movement-static-idle.png",
+    "origins_remnant_077-right-movement-released-idle.png",
+    "bom_tremer_133-left-movement-static-idle.png",
+    "bom_wood_sapling_139-left-movement-released-idle.png"
+  ],
+  "findings": [
+    "All three source silhouettes remain complete in both initial orientations, with no visible clipping, placeholder or portrait substitution.",
+    "Tremer remains grounded; Wood Sapling keeps all branch-like limbs visible and its calibrated base on the existing floor. Their small presentation sizes follow unchanged source profiles.",
+    "Remnant retains the complete suspended cage and baked human-shaped ground silhouette in both orientations and through sampled movement. No clearly detached second shadow is distinguishable at this capture scale.",
+    "Movement and release samples preserve the same static idle bitmap. All six technical cases use the original input callbacks without actor-state injection."
+  ],
+  "limitations": [
+    "Native Canvas only; Chromium, DOM/CSS, HTTP, browser keyboard delivery and service workers are outside scope.",
+    "These are single-frame static idle candidates. No walk animation, attack, contact, guard, finisher, original timing or 1:1 fidelity is certified.",
+    "Remnant shadowScaleProposal:0 is not supported by the current calibration/rendering schema. Existing default runtime ellipse remains; no renderer or calibration change was made.",
+    "Visual review samples ten of the twenty-one saved images. Every capture and source asset is retained and hashed in the technical report."
+  ]
+}

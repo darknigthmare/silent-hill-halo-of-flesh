@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "id": "sh1_air_screamer_001",
+  "command": [
+    "node",
+    "--expose-gc",
+    "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-air-screamer-native.mjs",
+    "--landmarks=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/air-screamer/body-landmarks.json",
+    "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer",
+    "--stage=hazel_subway"
+  ],
+  "startedAtUnix": 1795167312.718033,
+  "timeoutSeconds": 180,
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "exitCode": 1,
+  "timeout": false,
+  "durationSeconds": 0.165,
+  "reportPresent": true,
+  "reportSHA256": "c43fcdba4cfa8abd0e7c7f40d7f4383ee6863b950b1e73e5b1de92fcabf12b74",
+  "reportPassed": false,
+  "checks": 13,
+  "cases": 0,
+  "captures": 0,
+  "failure": "Error: ENOENT: no such file or directory, open '/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/art/stage-registry.json'\n    at async open (node:internal/fs/promises:1345:25)\n    at async readFile (node:internal/fs/promises:2003:14)\n    at async file:///workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-air-screamer-native.mjs:48:77",
+  "passed": false
+}

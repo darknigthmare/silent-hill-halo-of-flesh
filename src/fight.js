@@ -2815,6 +2815,7 @@ export class FightEngine {
     context.translate(camera.x + shakeX, camera.y + shakeY);
     context.scale(camera.scale, camera.scale);
     drawStage(context, this.stage, time, {
+      viewPan:(this.actors[0].x+this.actors[1].x)/WIDTH-1,
       matchState:{phase:this.phase,frame:this.frame,phaseTimer:this.phaseTimer,round:this.round,
         phaseDuration:this.presentationSequence?.duration||145,resultTimer:this.resultTimer||0},
       width: WIDTH,
@@ -2977,6 +2978,8 @@ export class FightEngine {
 
   renderHUD(context) {
     const [p1, p2] = this.actors;
+    const sideInset = 42, barWidth = 460;
+    const centerTextWidth = WIDTH - 2 * (sideInset + barWidth + 12);
     context.save();
     context.fillStyle = 'rgba(3,5,4,.78)';
     context.fillRect(0, 0, WIDTH, 128);
@@ -2987,8 +2990,8 @@ export class FightEngine {
     context.stroke();
 
     const drawSide = (actor, left) => {
-      const x = left ? 42 : WIDTH - 42;
-      const width = 460;
+      const x = left ? sideInset : WIDTH - sideInset;
+      const width = barWidth;
       const barX = left ? x : x - width;
       const health = healthRatio(actor);
       const guard = clamp(actor.guard / actor.maxGuard, 0, 1);
@@ -3066,18 +3069,18 @@ export class FightEngine {
     context.fillText(Number.isFinite(this.matchTime) ? String(Math.ceil(this.matchTime)).padStart(2, '0') : '∞', WIDTH / 2, 47);
     context.fillStyle = this.world.phase === 'fog' ? '#8d9690' : '#b73942';
     context.font = '900 10px ui-monospace';
-    context.fillText(`ROUND ${this.round} · ${this.world.phase === 'fog' ? this.stage.referencePolicy?.normalPhaseLabel || 'FOG WORLD' : this.world.phase === 'shifting' ? 'SIREN' : this.stage.referencePolicy?.alteredPhaseLabel || 'OTHERWORLD'}`, WIDTH / 2, 68);
+    context.fillText(`ROUND ${this.round} · ${this.world.phase === 'fog' ? this.stage.referencePolicy?.normalPhaseLabel || 'FOG WORLD' : this.world.phase === 'shifting' ? 'SIREN' : this.stage.referencePolicy?.alteredPhaseLabel || 'OTHERWORLD'}`, WIDTH / 2, 68, centerTextWidth);
     context.fillStyle = '#7f877f';
     context.font = '700 9px ui-monospace';
-    context.fillText(this.stage.name, WIDTH / 2, 84);
+    context.fillText(this.stage.name, WIDTH / 2, 84, centerTextWidth);
     const terrain = this.currentTerrain();
     const activeEvent = this.stageRuntime?.activeEvent;
     context.fillStyle = activeEvent ? '#c7b790' : '#667068';
     context.font = '900 8px ui-monospace';
-    context.fillText(activeEvent ? `${activeEvent.name} · ${terrain.name}` : terrain.name, WIDTH / 2, 96);
+    context.fillText(activeEvent ? `${activeEvent.name} · ${terrain.name}` : terrain.name, WIDTH / 2, 96, centerTextWidth);
     context.fillStyle = this.ritual.id === 'none' ? '#59615b' : '#c34a52';
     context.font = '900 8px ui-monospace';
-    context.fillText(`RITE · ${this.ritual.name}`, WIDTH / 2, 107);
+    context.fillText(`RITE · ${this.ritual.name}`, WIDTH / 2, 107, centerTextWidth);
 
     if (this.config.radioWarning && !this.ritual.radioDisabled) {
       const bars = 8;

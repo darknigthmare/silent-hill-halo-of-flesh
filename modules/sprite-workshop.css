@@ -20,3 +20,5 @@
 .clip-row input { width: 5rem; }
 .clip-row select { width: 100%; max-width: 100%; }
 .clip-editor p { overflow-wrap: anywhere; }
+.sprite-previews{display:grid;grid-template-columns:1fr 1fr;gap:12px}.sprite-previews figure{margin:0;min-width:0}.sprite-previews figcaption{font-size:12px;line-height:1.45;color:#c5bc9f;margin-top:8px}.sprite-previews canvas,.sprite-previews img{display:block;width:100%;height:auto;aspect-ratio:720/500;object-fit:contain;background:#0b100d}.missing-selection{display:grid;place-items:center;aspect-ratio:720/500;background:#0b100d;color:#c6beb0;font-size:12px;text-align:center;padding:8px}
+@media(max-width:520px){.sprite-previews{grid-template-columns:1fr}}

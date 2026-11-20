@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "reviewedAtUTC": "2026-11-20",
+  "scope": "Preparation of lateral static candidates for wave25; source inspection only, no generated output acceptance or fidelity certification.",
+  "sourceInventory": "docs/production/wave25-extra/references/source-inventory.json",
+  "evidenceBasis": [
+    "art/provenance-art144-d.json",
+    "art/registry.json",
+    "src/data.js:createCombatProfile",
+    "All seven local references were inspected visually at native source contents."
+  ],
+  "generationRefusalAudit": {
+    "method": "Read-only search of art/*.json provenance and directly associated production refusal records for these exact IDs and related identities.",
+    "exactIdsWithRecordedOwnRefusal": [],
+    "limits": "This is a record audit, not a prediction of image generation acceptance. Any new refusal must be preserved without retry or alternate identity."
+  },
+  "profiles": [
+    {
+      "fighterId": "shf_rinko_like_entity_163",
+      "name": "Rinko-Like Entity",
+      "source": "shf",
+      "runtime": {
+        "role": "combatant",
+        "combatEnabled": true,
+        "canMove": true,
+        "canJump": true,
+        "visualScale": 1,
+        "superEnabled": true
+      },
+      "referenceFiles": [
+        "shf-silent_hill_f_art_monster_rinkolike_entity_01.jpg",
+        "shf-rinko-like_entity.jpg"
+      ],
+      "sourceHierarchy": "The 2560×1440 concept sheet documents complete front, back, three-quarter and narrow side views; the 300×500 retail portrait corroborates head and upper body only.",
+      "morphologyObserved": [
+        "Tall black conical headpiece.",
+        "Long black hair falls to the ground and extends behind the feet.",
+        "Purple robe panels with circular motifs; irregular dark textured surface with orange fissures and illuminated face area.",
+        "Two small dark feet are visible beneath the robe.",
+        "A lowered implement and hanging chain appear in front/three-quarter views."
+      ],
+      "composition": "Exactly one manifestation of this catalog identity, complete silhouette in a lateral neutral pose. The source sheet contains multiple views of one identity, not a group to copy.",
+      "preserve": [
+        "Keep the uncertain identity/age classification; no adult relabeling and no human face replacement.",
+        "Use the actual side view as the shape anchor and the other views only for materials and hidden volume.",
+        "Include the full hat, trailing hair, robe hem, feet and any depicted lowered implement/chain within the canvas.",
+        "Do not add school-age spawns, dolls, separate fire attacks, arena pieces or effects.",
+        "Existing gameplay role, source assertions and dedicated selection portrait stay unchanged."
+      ],
+      "decision": "Eligible to attempt a first lateral candidate for this exact identity; complete silhouette is documented. Candidate remains a reconstruction rather than a measured 1:1 model."
+    },
+    {
+      "fighterId": "shf_hinako_s_father_164",
+      "name": "Hinako’s Father",
+      "source": "shf",
+      "runtime": {
+        "role": "combatant",
+        "combatEnabled": true,
+        "canMove": true,
+        "canJump": true,
+        "visualScale": 1.42,
+        "superEnabled": true
+      },
+      "referenceFiles": [
+        "shf-silent_hill_f_art_monster_hinakos_parents_01.jpg",
+        "shf-hinakos_parents.jpg"
+      ],
+      "sourceHierarchy": "The 2560×1440 sheet supplies complete front/back monstrous Father views and small human transformation studies; the 300×500 in-game image shows Father and Mother together and is corroboration only.",
+      "morphologyObserved": [
+        "Large rounded swollen mass with a dark navy torn jacket.",
+        "Very short separated legs with two small feet.",
+        "Asymmetric appendages: one bent curled heavy appendage, one broad kitchen blade carried low.",
+        "The body is squat and much wider than the tiny human transformation studies."
+      ],
+      "composition": "One monstrous Father only. Neither the mother at the right of the retail image nor the small human sketches are the requested subject.",
+      "preserve": [
+        "Follow the recorded Ara-abare morphology and keep Father distinct from Mother.",
+        "Keep both feet, the full curved appendage and the whole kitchen blade inside the frame.",
+        "Do not use the double retail portrait as a group composition.",
+        "Mother shf_hinako_s_mother_165 has a previous refusal and must not be imported, reinterpreted or used as an alternate subject.",
+        "Use front/back agreement to reconstruct the lateral volume; a measured side orthographic view is not provided."
+      ],
+      "decision": "Eligible to attempt a first lateral candidate of Father from the dedicated complete concept model. The side volume is reconstructed; no 1:1 claim."
+    },
+    {
+      "fighterId": "bom_blood_baby_144",
+      "name": "Blood Baby",
+      "source": "bom",
+      "runtime": {
+        "role": "multi-body",
+        "combatEnabled": true,
+        "canMove": true,
+        "canJump": true,
+        "visualScale": 0.72,
+        "superEnabled": false,
+        "superReason": "La source décrit un rejeton créé par sa mère ; aucune invocation de Blood Mama par Blood Baby n’est attestée. Attaque propre à relever."
+      },
+      "referenceFiles": [
+        "bom-sh_bom_art_20160221_everson_01_blood_baby.jpg",
+        "bom-sh_bom_art_20160221_castillo_03_blood_baby.jpg",
+        "bom-blood_baby.jpg"
+      ],
+      "sourceHierarchy": "Prioritize Everson's textured production front/back model and neutral sculpt side view, corroborated by the retail bestiary portrait. Castillo's full concept confirms asymmetry but is secondary where its color or proportions differ.",
+      "morphologyObserved": [
+        "Split elongated head forming a vertical mouth with visible tongue.",
+        "Broad torso and thin short lower limbs ending in small feet.",
+        "Strongly asymmetric arms: the subject's right arm is much larger, wears several dark straps and ends in a large clawed hand; the opposite arm is slender.",
+        "The Everson production model has compact proportions and a warm dark reddish surface; the Castillo concept has a paler head and larger exaggerated features."
+      ],
+      "composition": "One whole canonical nonhuman Blood Baby individual in this asset. The current runtime role remains multi-body despite a single reviewed source model.",
+      "preserve": [
+        "Keep the existing exact identity and source name; do not relabel as a human adult.",
+        "Do not include or substitute Mother, Blood Mama or Blood Guardian; the related mother profiles have historical refusals.",
+        "Keep the asymmetry and complete head, tongue, fingers, legs and feet in frame.",
+        "No invented summoning ability: superEnabled remains false.",
+        "A single static candidate does not establish an animation cycle or individual-only game mechanics."
+      ],
+      "decision": "Eligible to attempt a first lateral candidate from a documented production model with profile evidence. Runtime multi-body classification and disabled super remain unchanged."
+    }
+  ],
+  "inspection": {
+    "filesViewed": 7,
+    "allDecoded": true,
+    "allMatchHistoricalSHA256": true,
+    "sourceUse": "One native source object per generated candidate; source sheets are reference evidence rather than output layouts."
+  }
+}

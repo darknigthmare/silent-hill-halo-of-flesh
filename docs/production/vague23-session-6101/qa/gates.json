@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "checkedAt": "2026-11-19T17:47:20.636050+00:00",
+  "passed": true,
+  "baseCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "observedProcessExitCodes": {
+    "npm test": 0,
+    "npm run test:art": 0,
+    "node docs/production/vague23/audit-final.mjs": 0
+  },
+  "gates": [
+    {
+      "command": "npm test",
+      "passed": true,
+      "tests": 1292,
+      "failures": 0,
+      "buildVerify": true,
+      "log": "npm-test.log",
+      "logSHA256": "02c43869105944905d08b37962b374ff1960fb000d21d66d08b5a3ece7aa814a"
+    },
+    {
+      "command": "npm run test:art",
+      "passed": true,
+      "tests": 115,
+      "log": "test-art.log",
+      "logSHA256": "53e5a8976e4613a5503b8eb9129346903e17ebff8eb710f479ddeb7bdebed1e2"
+    },
+    {
+      "command": "node docs/production/vague23/audit-final.mjs",
+      "passed": true,
+      "checks": 296,
+      "report": "../final-audit.json",
+      "reportSHA256": "445cecf872c1ce94ac6003fe56bcbce182706ef4fb8519a4aa3e7a038d92e7c6"
+    }
+  ],
+  "runtime": {
+    "node": "v24.22.3",
+    "python": "Python 3.12.14"
+  },
+  "scope": "Regression suites and build validation. Native visual cases and workbook verification have separate reports; this file does not certify browser behavior or fidelity.",
+  "sourceHashes": {
+    "art/registry.json": "4d0caa281fff9c28a9529f1a659d45dd4f577ca8a2885be93d49b968d97c54a8",
+    "src/sprite-manifest.js": "37ad7ea5e154c4e7b40dec16171204f981d036b47479d7d191cb347dd60bc121",
+    "src/stage-bitmap-manifest.js": "a3e0ff06e26ff3ebc66bb1c1d86c7a7093c93b927d22ad9bd8ec9897d49ddbe6",
+    "service-worker.js": "9a707b1603d40606757bcc7fed0dc6f2958f5aa2fb398023ceb4598b6206cbe1",
+    "data/sprite-coverage.json": "9d43d091961f0a267150e65c2292857c15afe8a6f0cf7e3fabe24cecd64bbc4f",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871"
+  }
+}

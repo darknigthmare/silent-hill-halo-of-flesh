@@ -4,6 +4,75 @@ Ce dossier suit la réalisation des movesets, supers, finishers, introductions, 
 
 Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les recherches JSON alimentent désormais `src/production-reference.js` et les règles du moteur par un générateur vérifié. Le fichier Excel n’est pas chargé par le jeu et ses annotations ne sont pas appliquées automatiquement. Le [rapport d’intégration](../EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) décrit les réalisations et leurs limites ; le [relevé initial](QA_2026-10-17.md) conserve l’historique de la première phase.
 
+## État actuel — vague 22 du 19 novembre 2026
+
+La [vague 22](vague22/README.md) ajoute **16 vues latérales dédiées et 10 stages**,
+soit 36 nouveaux PNG actifs. Le catalogue atteint **151 vues candidates et
+65 arènes bitmap sur 123**. Douze vues servent des profils déjà admissibles
+au combat ; quatre restent des références hors duel. Les 204 portraits et six
+clips animés sont conservés. Aucun nouveau profil moteur ou certificat 1:1.
+
+Il reste 58 stages sans bitmap (43 ouverts, 15 bloqués), 42 vues anciennes
+à revoir, 26 portraits absents et 37 images de combat absentes. Le [rapport complet](vague22/RAPPORT_VAGUE22_PERSONNAGES_STAGES.md)
+distingue les vrais manquants des nouvelles vues de profils déjà illustrés.
+Le [classeur Corpus / Stages](SILENT_HILL_CORPUS_BIBLE.xlsx) reflète les 65 lieux actifs ;
+les 66 notices du corpus et le classeur historique des animations sont préservés.
+
+## État précédent — vague 21 du 19 novembre 2026
+
+**55 arènes bitmap sur 123 ; 68 restent sans bitmap**, dont 53 fiches non
+bloquées et 15 références bloquées. La [vague 21](vague21/README.md) ajoute
+douze lieux avec un fond et un premier plan transparent indépendant, soit
+24 PNG natifs. Les 43 arènes précédentes et leurs variantes sont préservées.
+
+La [bible du corpus](../BIBLE_CORPUS_SILENT_HILL.md) indexe désormais **66 œuvres,
+éditions, récits, programmes et supports**, dont 41 étaient absents du périmètre
+documentaire inspecté. Elle distingue notamment Transmission, Play Novel,
+Mobile DX, Orphan / Mobile 1–3, The Escape, les trois films et les récits dérivés.
+Le [registre JSON](franchise-corpus.json) conserve les alias, sources, statuts
+antérieurs et prochaines études.
+
+Le nouveau [classeur Corpus / Stages](SILENT_HILL_CORPUS_BIBLE.xlsx) fournit deux
+tables filtrables : les 66 notices et les 123 stages avec leur couverture
+courante. Le classeur historique des movesets et animations reste identique à
+la vague 19 et conserve ses annotations. Les combattants restent à **204 portraits,
+135 vues latérales candidates et six clips animés**.
+
+## État précédent — vague 20 du 19 novembre 2026
+
+**43 arènes bitmap sur 123 ; 80 restent sans bitmap.** La [vague 20](vague20/README.md)
+ajoute uniquement des décors manquants : onze lieux, chacun avec un fond et un
+premier plan transparent indépendant, soit 22 nouveaux PNG. Les trois lieux
+reportés et les 80 absences restantes sont documentés dans le relevé de cette
+passe. Les 32 compositions actives antérieures et leurs variantes sont préservées.
+
+Les combattants restent à **204 portraits, 135 vues latérales candidates et six
+clips animés**. Aucun moveset, règle de stage, sprite ou contenu de classeur n'est
+modifié dans cette passe. Le suivi courant des décors se trouve dans
+[l'audit de la vague 20](vague20/final-audit.json).
+
+## État précédent — vague 19 du 19 novembre 2026
+
+**204 portraits, 135 vues latérales candidates, 32 arènes bitmap sur 123 et 6
+clips réellement animés.** La [vague 19](vague19/README.md) ajoute six idles BoM
+et quatre décors en deux plans, soit 14 PNG actifs et deux variantes conservées.
+La [vague 18](vague18/README.md) récupère 13 PNG actifs et sept variantes, avec
+trois nouveaux clips et deux décors en plans séparés.
+Les portraits historiques sont conservés. Le suivi courant des absences reste
+dans `data/sprite-coverage.json` : 26 portraits et 37 images de combat absents,
+58 anciennes vues de combat à revoir. Le [triage actuel](vague19/missing-triage.json)
+distingue les références manquantes, les refus historiques et les usages hors
+combat. Aucun certificat de fidélité 1:1.
+
+Le classeur a été actualisé sur la couverture de la vague 19 : 330 cellules factuelles,
+80 formules conservées et recalculées, 177 blocs d'historique préservés. Le
+[rapport de mise à jour](vague19/README.md#classeur-actualisé) et les journaux
+distinguent cette actualisation des décisions de production existantes.
+
+## Historique — reprise du 17 novembre 2026
+
+**172 profils illustrés sur 230, 58 encore sans image et 25 vues de combat latérales distinctes.** La dernière suite ajoute Insane Cancer de The Arcade (sélection et combat séparés), Walter Sullivan et le Bogeyman de Downpour (combats distincts), soit 4 nouveaux PNG. Utiliser le [rapport courant](SPRITE_FOLLOWING_2026-11-17.md) et le [relevé de reprise exact](sprite-status-following-2026-11-17.json). La [suite précédente](SPRITE_SUITE_2026-11-17.md) conserve Steel Guardian, Anne et Juggernaut ; la [reprise antérieure](SPRITE_NEXT_2026-11-17.md) documente la récupération de 22 originaux. Le [correctif de transition des Rites](BROWSER_QA_RITE_CACHE_2026-11-17.md) accompagne ce lot. Les sections historiques ci-dessous gardent les chiffres de leur date.
+
 ## Contenu
 
 | Onglet | Usage |

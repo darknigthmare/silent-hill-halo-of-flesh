@@ -1,0 +1,629 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-19T13:25:18.353Z",
+  "scope": "Missing stage bitmap candidates only",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/8edddaaaab76/stage-pass21-a/delivery.json",
+      "sha256": "ae28632d33ca86859183e22d2991b74638c5cfb2b1e381fbc8751b63dc0c25c2"
+    },
+    {
+      "path": "/workspace/scratch/8edddaaaab76/stage-pass21-b/delivery.json",
+      "sha256": "b7a1796a85192fa163064b52b6a86991e8e2f3165e6c9e2d64edb0099973c9ca"
+    }
+  ],
+  "stages": [
+    {
+      "stageId": "old_silent_hill",
+      "source": "sh1",
+      "scene": "levin-street-house",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH1_01_OLD_SILENT_HILL"
+      ],
+      "paths": [
+        "assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+        "assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png"
+      ]
+    },
+    {
+      "stageId": "hospital_nightmare",
+      "source": "sh1",
+      "scene": "room204",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH1_07_NIGHTMARE_HOSPITAL"
+      ],
+      "paths": [
+        "assets/stages/hospital_nightmare.room204.ce097401c830.png",
+        "assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png"
+      ]
+    },
+    {
+      "stageId": "sewer_resort",
+      "source": "sh1",
+      "scene": "south-tunnel-pipe-bay",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH1_10_SEWERS_TO_RESORT_AREA"
+      ],
+      "paths": [
+        "assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+        "assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png"
+      ]
+    },
+    {
+      "stageId": "south_vale",
+      "source": "sh2",
+      "scene": "neely-sanders-frontage",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH2_01_EAST_SOUTH_SIDE"
+      ],
+      "paths": [
+        "assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+        "assets/stages/south_vale.near-street-poles.7e6716e17a5e.png"
+      ]
+    },
+    {
+      "stageId": "hotel_otherworld",
+      "source": "sh2",
+      "scene": "last-hall-after-egg-doors",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH2_13_NIGHTMARE_HOTEL"
+      ],
+      "paths": [
+        "assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+        "assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png"
+      ]
+    },
+    {
+      "stageId": "prison_meat_locker",
+      "source": "sh2",
+      "scene": "second-freezer",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "CL_SH2_10_THE_LABYRINTH"
+      ],
+      "paths": [
+        "assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+        "assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png"
+      ]
+    },
+    {
+      "stageId": "grand_hotel",
+      "source": "homecoming",
+      "scene": "otherworld-atrium-without-sepulcher",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT06",
+        "EXT05"
+      ],
+      "paths": [
+        "assets/stages/grand_hotel.background.8250537eb741.png",
+        "assets/stages/grand_hotel.foreground.bc6963bb530b.png"
+      ]
+    },
+    {
+      "stageId": "town_hall_hc",
+      "source": "homecoming",
+      "scene": "public-hall-first-visit",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT06"
+      ],
+      "paths": [
+        "assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+        "assets/stages/town_hall_hc.foreground.a42274c88402.png"
+      ]
+    },
+    {
+      "stageId": "shepherd_house_hc",
+      "source": "homecoming",
+      "scene": "normal-attic-before-transformation",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT06"
+      ],
+      "paths": [
+        "assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+        "assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png"
+      ]
+    },
+    {
+      "stageId": "centennial_building",
+      "source": "downpour",
+      "scene": "library-normal-main-reading-room",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT11"
+      ],
+      "paths": [
+        "assets/stages/centennial_building.background.c8a81a276b6a.png",
+        "assets/stages/centennial_building.foreground.9ddcc6285a36.png"
+      ]
+    },
+    {
+      "stageId": "st_marias",
+      "source": "downpour",
+      "scene": "normal-chapel-closed-altar-gate",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT11"
+      ],
+      "paths": [
+        "assets/stages/st_marias.background.e8b396a71baf.png",
+        "assets/stages/st_marias.foreground.5ea59966acd3.png"
+      ]
+    },
+    {
+      "stageId": "shepherds_glen",
+      "source": "homecoming",
+      "scene": "elles-missing-persons-board-sidewalk",
+      "runtimeSceneId": null,
+      "referenceIds": [
+        "EXT06"
+      ],
+      "paths": [
+        "assets/stages/shepherds_glen.background.12de6f58dc06.png",
+        "assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+      "sha256": "b24f46cfebac68dc73b3d227ee2186b97ba9a1ce84e62278e9eb90c38260d2fa",
+      "bytes": 1624541,
+      "width": 1672,
+      "height": 941,
+      "stageId": "old_silent_hill",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/old_silent_hill.levin-street-house.png",
+      "sourcePixelSHA256": "2d30ba0479ee082e5c65cc675b7088a2b510d685992b05eaa7faa70583a5a3de",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png",
+      "sha256": "680e79d56e0381abd08b777cfa4d9450e3cab9312ba80da4555a55d567bc98b9",
+      "bytes": 160823,
+      "width": 1672,
+      "height": 941,
+      "stageId": "old_silent_hill",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/old_silent_hill.near-frontage-edges.png",
+      "sourcePixelSHA256": "a4195c37137a776ee37bb8bc4281ac433bfcabb56ec5c2ef8066a86a72fc3689",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/hospital_nightmare.room204.ce097401c830.png",
+      "sha256": "ce097401c830c49c6b8e798205841730db002e4076d20b7eb69af868a7987ea3",
+      "bytes": 1919049,
+      "width": 1672,
+      "height": 941,
+      "stageId": "hospital_nightmare",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/hospital_nightmare.room204.png",
+      "sourcePixelSHA256": "98940aa887dc45a22e843db26d9a0dc98d9790697204de59fa109bb203670fe9",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png",
+      "sha256": "18e549796dbddb1fc60a8be06ac7c47210c44c24f03210074e2b4b8adaaa00a7",
+      "bytes": 296524,
+      "width": 1672,
+      "height": 941,
+      "stageId": "hospital_nightmare",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/hospital_nightmare.near-doorjambs.png",
+      "sourcePixelSHA256": "3c8a630a0dfb6ba4158561837b653500a294c1c9ac8e98b365a16903a43df87e",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+      "sha256": "d8ad023bdfb37cc8541b0d4e943e9e2be772b6315db730d338adaac390281d42",
+      "bytes": 2118832,
+      "width": 1672,
+      "height": 941,
+      "stageId": "sewer_resort",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/sewer_resort.south-tunnel-pipe-bay.png",
+      "sourcePixelSHA256": "a760c36be5826edbde8180f1075c93658a42ad2116839affd76ccdbf64d1a4cd",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
+      "sha256": "f302d8e9f66995771b44eac9d4af591580d82b9cfb8183f88764d222b9e5e0bf",
+      "bytes": 278076,
+      "width": 1672,
+      "height": 941,
+      "stageId": "sewer_resort",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/sewer_resort.near-service-struts.png",
+      "sourcePixelSHA256": "97720fbfb01c2d6bcd93f6a7cbdef0b9193ae599024aaafff8818e5691004456",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+      "sha256": "f97d2c2df42aa5076923ef67040f537d1d6cd23a669fc1bd0001cffa639f13d4",
+      "bytes": 2217344,
+      "width": 1672,
+      "height": 941,
+      "stageId": "south_vale",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/south_vale.neely-sanders-frontage.png",
+      "sourcePixelSHA256": "345fc4fd551590f3075d0422da0b501499dfcdaa3de69a9bb230e6cc2062300d",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/south_vale.near-street-poles.7e6716e17a5e.png",
+      "sha256": "7e6716e17a5e0bc7a0c501257e278f29651e0555cb2b81fd24cf6c99d4270cfa",
+      "bytes": 210049,
+      "width": 1672,
+      "height": 941,
+      "stageId": "south_vale",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/south_vale.near-street-poles.png",
+      "sourcePixelSHA256": "7f5327d445647eb5793cfa0fa28ab9d3efc8d8429f9316b0714d5929b314846a",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+      "sha256": "23ccf794f57b3017d69a27996d78bdc358815130c1cea185c94e0ea1f932fba4",
+      "bytes": 1938212,
+      "width": 1672,
+      "height": 941,
+      "stageId": "hotel_otherworld",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/hotel_otherworld.last-hall-after-egg-doors.png",
+      "sourcePixelSHA256": "eeee106bb5ee45d37ba9d44cfb23c73ee878713731d90321add2be23779395e0",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png",
+      "sha256": "061fca74f43466de191d9abd002b4e7eb5ca5d961319fb91c8a998a34df2109e",
+      "bytes": 285111,
+      "width": 1672,
+      "height": 941,
+      "stageId": "hotel_otherworld",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/hotel_otherworld.near-panel-jambs.png",
+      "sourcePixelSHA256": "d8501cd8035ae9adcce66fb63fbb81a2398368d06fc4c171664bb244196ac3ca",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+      "sha256": "5437e088da66fda0f9fd9f9ca0bf38289189ca28133bccb33a02519d1877cea1",
+      "bytes": 1710056,
+      "width": 1671,
+      "height": 941,
+      "stageId": "prison_meat_locker",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/prison_meat_locker.second-freezer.png",
+      "sourcePixelSHA256": "c16081394bf6d4a3a677be5dfab127f22ba8a1ca95fd12e7d384555ae52c9025",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
+      "sha256": "4337c644a1714b7b41e07fc6e003c1d11fde8ba1de5e4b90092d3102f285b79a",
+      "bytes": 279546,
+      "width": 1670,
+      "height": 941,
+      "stageId": "prison_meat_locker",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-a/prison_meat_locker.near-freezer-jambs.png",
+      "sourcePixelSHA256": "78ea41170bdb6ed10fc3533ef57c4ecbcfafd77b65ec00948dda090e44fe79a2",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/grand_hotel.background.8250537eb741.png",
+      "sha256": "8250537eb741b52239e76f63a5de6e6e84a3f65da453c3b7c96b52d36a088cc2",
+      "bytes": 2018968,
+      "width": 1672,
+      "height": 941,
+      "stageId": "grand_hotel",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/grand_hotel.background.v1.png",
+      "sourcePixelSHA256": "6140190f0d68ec9c47adf8ab4a612f8df696faa2840f641dc72027ef075153c1",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/grand_hotel.foreground.bc6963bb530b.png",
+      "sha256": "bc6963bb530b8d1ee4080393d5c18bc066054d61ac26e33180b8382c15f69af9",
+      "bytes": 97721,
+      "width": 1672,
+      "height": 941,
+      "stageId": "grand_hotel",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/grand_hotel.foreground.v1.png",
+      "sourcePixelSHA256": "bf28f072d7d619fbba33473640457f9bb34646ecf5954abbf60edd67c49788b0",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+      "sha256": "ccb41f2ca3400fb30083aedaeeb25fb0f8830276cfb352e6f876d44d311c4177",
+      "bytes": 2299765,
+      "width": 1672,
+      "height": 941,
+      "stageId": "town_hall_hc",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/town_hall_hc.background.v1.png",
+      "sourcePixelSHA256": "8b1e17909704326f80b129b1094624f62fdb9f208259a4c741894dcf9caca5d0",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/town_hall_hc.foreground.a42274c88402.png",
+      "sha256": "a42274c88402daafa7ca162708731b14a37891e948966ea00ce008a72c24baac",
+      "bytes": 249564,
+      "width": 1672,
+      "height": 941,
+      "stageId": "town_hall_hc",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/town_hall_hc.foreground.v1.png",
+      "sourcePixelSHA256": "c923ed81155ecf037b4f77b574e347d2896244d8d6960bb22e12f8b642ea1f9b",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+      "sha256": "7f735ed7e9fe426c7d1ad211e368b9d8c762a9c02f6048b0c403f1d735b332fd",
+      "bytes": 2142985,
+      "width": 1672,
+      "height": 941,
+      "stageId": "shepherd_house_hc",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherd_house_hc.background.v1.png",
+      "sourcePixelSHA256": "265f04e99444fd3e8cb4585fa16daf6e580be8c3c34ddb6836da8fafbf11cdb6",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png",
+      "sha256": "a7cc1f1e9d27108af9ad916c9ac19cfca1d702c0512d1d323554d7ec03dd713b",
+      "bytes": 244289,
+      "width": 1672,
+      "height": 941,
+      "stageId": "shepherd_house_hc",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherd_house_hc.foreground.v1.png",
+      "sourcePixelSHA256": "3d6c0fff7fb21d2ae464afae00c82f9dc65cd64a6eebc2daad88725aae4dded5",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/centennial_building.background.c8a81a276b6a.png",
+      "sha256": "c8a81a276b6a7f3f1a252b0a7f5f0d327fe6254682304f79c04fa79fcf21b991",
+      "bytes": 2546849,
+      "width": 1672,
+      "height": 941,
+      "stageId": "centennial_building",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/centennial_building.background.v1.png",
+      "sourcePixelSHA256": "d2b558a4eb54b0ec2ef7e1d93f33b06202d0fd9780e8506b5ab164954ecbc2eb",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/centennial_building.foreground.9ddcc6285a36.png",
+      "sha256": "9ddcc6285a36798db5c6baa4947962bb2ca621b4b05603af2e05d7a9fde6530f",
+      "bytes": 205294,
+      "width": 1673,
+      "height": 940,
+      "stageId": "centennial_building",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/centennial_building.foreground.v1.png",
+      "sourcePixelSHA256": "e2c188eb19463f6fc6e30d56953f6c72f7a3036b4651db69228be8f0bd814094",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/st_marias.background.e8b396a71baf.png",
+      "sha256": "e8b396a71baf5bb0c5600090dbc9de112a07d2b304d485d4c0b4d9879c05797c",
+      "bytes": 2889977,
+      "width": 1672,
+      "height": 941,
+      "stageId": "st_marias",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/st_marias.background.v1.png",
+      "sourcePixelSHA256": "589d62bff6c3bce09879b8fe00353e62d4495d138e5c54f2954bbe101e84d8ee",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/st_marias.foreground.5ea59966acd3.png",
+      "sha256": "5ea59966acd38172eff9a5386b99efebba02bd66d2ba10d1be66a25422145a9f",
+      "bytes": 93452,
+      "width": 1672,
+      "height": 941,
+      "stageId": "st_marias",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/st_marias.foreground.v1.png",
+      "sourcePixelSHA256": "a9696aa73b5c2f63d44a2223237d49027ec4c856f1345145a66f0e268397301b",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/shepherds_glen.background.12de6f58dc06.png",
+      "sha256": "12de6f58dc06f590e24402da8cbf0dd48d298c43718348d3bce6325c6ee03696",
+      "bytes": 1966431,
+      "width": 1672,
+      "height": 941,
+      "stageId": "shepherds_glen",
+      "plane": "background",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherds_glen.background.v1.png",
+      "sourcePixelSHA256": "136ad6a297cf5ed5fc1aa408f611ecd260333c85f8514f7c5b81f9808f5da19c",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png",
+      "sha256": "c83fab7b1fd227e642b5a31eb0fddf47bb8f2488ffaea165d1f6d123c044cd62",
+      "bytes": 208307,
+      "width": 1672,
+      "height": 941,
+      "stageId": "shepherds_glen",
+      "plane": "foreground",
+      "localSource": "/workspace/scratch/8edddaaaab76/stage-pass21-b/shepherds_glen.foreground.v1.png",
+      "sourcePixelSHA256": "49c6039a6aadb3ae2e52277e0f1fe9f6728c8734aa7045169656dd585574c4e6",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    }
+  ],
+  "protectedFiles": [
+    "art/registry.json",
+    "data/sprite-coverage.json",
+    "src/sprite-manifest.js",
+    "data/roster.json",
+    "data/movesets.json",
+    "src/fight.js",
+    "src/sprite-system.js",
+    "src/sprite-animation.js",
+    "src/versus.js",
+    "data/stages.json",
+    "src/renderers.js",
+    "src/stage-bitmaps.js",
+    "src/stage-bitmap-compositions.js",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+    "docs/production/workbook-verification.json"
+  ],
+  "existingCompositionsPreserved": true,
+  "build": {
+    "stages": 55,
+    "files": 108,
+    "paths": [
+      "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+      "/assets/stages/apartment_world.office.6001d447c296.png",
+      "/assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
+      "/assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "/assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "/assets/stages/baldwin_mansion.closed-lounge-landing.5fa7f85bcd25.png",
+      "/assets/stages/baldwin_mansion.near-timber-jambs.de3ae2125a5e.png",
+      "/assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
+      "/assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
+      "/assets/stages/book_wood.bare-bough.58fbcd47b401.png",
+      "/assets/stages/book_wood.wood-clearing.badc47213490.png",
+      "/assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+      "/assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+      "/assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "/assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png",
+      "/assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
+      "/assets/stages/building_world.fan-stairwell.15995c474e24.png",
+      "/assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png",
+      "/assets/stages/centennial_building.background.c8a81a276b6a.png",
+      "/assets/stages/centennial_building.foreground.9ddcc6285a36.png",
+      "/assets/stages/church.candle-stand.53fb59eeefa2.png",
+      "/assets/stages/church.initial-chapel.1b637d5146cd.png",
+      "/assets/stages/church_hc.candle-stand.31cb771411d7.png",
+      "/assets/stages/church_hc.holy-way-nave.03a8aefbef40.png",
+      "/assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "/assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "/assets/stages/curtis_shop.sales-counter.003f99674bac.png",
+      "/assets/stages/curtis_shop.workshop.910767824f6e.png",
+      "/assets/stages/dark_shrine.background.2664d35ea297.png",
+      "/assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "/assets/stages/dark_shrine_corridors.inari-altar.c91ff918e575.png",
+      "/assets/stages/dark_shrine_corridors.lacquer-shelf.fb67e770ed74.png",
+      "/assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
+      "/assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
+      "/assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "/assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "/assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+      "/assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+      "/assets/stages/forest_world.first-visit-clearing.76588be774de.png",
+      "/assets/stages/forest_world.near-bark-and-grass.5df8c21ae5bc.png",
+      "/assets/stages/grand_hotel.background.8250537eb741.png",
+      "/assets/stages/grand_hotel.foreground.bc6963bb530b.png",
+      "/assets/stages/hilltop_center.monica-reception.8153762e19e6.png",
+      "/assets/stages/hilltop_center.near-cabinet-edges.e64c163eeca2.png",
+      "/assets/stages/hinako_home.background.90570edd1d72.png",
+      "/assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "/assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
+      "/assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
+      "/assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png",
+      "/assets/stages/hospital_nightmare.room204.ce097401c830.png",
+      "/assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "/assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "/assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+      "/assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png",
+      "/assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
+      "/assets/stages/labyrinth.control-chamber.60453a15467d.png",
+      "/assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
+      "/assets/stages/lakeside_amusement.platform.e002db685c30.png",
+      "/assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+      "/assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+      "/assets/stages/lakeview.lobby.7bc2120c786c.png",
+      "/assets/stages/looping_hall.hallway.b48a0819aed4.png",
+      "/assets/stages/looping_hall.radio-cabinet.b16069870543.png",
+      "/assets/stages/midwich.courtyard.c9728428d63d.png",
+      "/assets/stages/midwich_nightmare.hearth.862c9df53e36.png",
+      "/assets/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
+      "/assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+      "/assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+      "/assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+      "/assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png",
+      "/assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "/assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "/assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
+      "/assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+      "/assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
+      "/assets/stages/riverside_motel.gate.270f1cbab7c5.png",
+      "/assets/stages/room_302.chair.739650b60353.png",
+      "/assets/stages/room_302.entrance.6535cc934c6c.png",
+      "/assets/stages/school_shf.background.360ffba8283b.png",
+      "/assets/stages/school_shf.foreground.a50d69a51274.png",
+      "/assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
+      "/assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+      "/assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+      "/assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+      "/assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+      "/assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png",
+      "/assets/stages/shepherds_glen.background.12de6f58dc06.png",
+      "/assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png",
+      "/assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
+      "/assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
+      "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
+      "/assets/stages/south_vale.near-street-poles.7e6716e17a5e.png",
+      "/assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+      "/assets/stages/st_marias.background.e8b396a71baf.png",
+      "/assets/stages/st_marias.foreground.5ea59966acd3.png",
+      "/assets/stages/subway_world.lynch-platform.db4c6baf4c38.png",
+      "/assets/stages/subway_world.near-platform-uprights.6fac368c5db5.png",
+      "/assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
+      "/assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
+      "/assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+      "/assets/stages/town_hall_hc.foreground.a42274c88402.png",
+      "/assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+      "/assets/stages/underground_hc.near-jambs.a49721844afa.png",
+      "/assets/stages/water_prison.surveillance-room.5f3849f04407.png",
+      "/assets/stages/water_prison.valve-pedestal.7711109d1342.png",
+      "/assets/stages/woodside.clock-room.da94acd4e920.png",
+      "/assets/stages/woodside.corridor.c6ac083599d0.png",
+      "/assets/stages/woodside.grandfather-clock.bc7fec047ff5.png"
+    ],
+    "revision": "6d34f9d6d876992a8f8bd7d966b504bef30b42e454b0e56d0850a85d771d9f52"
+  },
+  "protectedScopeUnchanged": true,
+  "coverage": {
+    "total": 123,
+    "beforeActive": 43,
+    "afterActive": 55,
+    "remaining": 68
+  },
+  "activePNGBytes": 28001765
+}

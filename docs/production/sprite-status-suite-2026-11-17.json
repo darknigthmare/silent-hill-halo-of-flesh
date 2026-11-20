@@ -1,0 +1,608 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "currentReport": "SPRITE_SUITE_2026-11-17.md",
+  "baselineCommit": "dfd9c7f3d0b082dc0794e9f502246ffb630269da",
+  "counts": {
+    "rosterProfiles": 230,
+    "illustratedProfiles": 171,
+    "missingProfiles": 59,
+    "sideViewCombatCandidates": 22,
+    "legacyCombatViewsUnreviewed": 149,
+    "spritePNGs": 232,
+    "newPNGsThisContinuation": 4,
+    "newProfilesThisGeneration": 1,
+    "newStaticCombatIdles": 3,
+    "newAnimatedClips": 0,
+    "animatedClipsTotal": 1,
+    "certifiedFidelity": 0
+  },
+  "missingProfiles": [
+    {
+      "id": "sh1_monster_cybil_017",
+      "name": "Monster Cybil",
+      "source": "sh1"
+    },
+    {
+      "id": "sh1_incubus_019",
+      "name": "Incubus",
+      "source": "sh1"
+    },
+    {
+      "id": "sh2_mannequin_022",
+      "name": "Mannequin",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_mannequin_ambusher_023",
+      "name": "Mannequin — Ambusher",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_flesh_lip_027",
+      "name": "Flesh Lip",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_mary_final_manifestation_034",
+      "name": "Mary — Final Manifestation",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_prisoner_035",
+      "name": "Prisoner",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_spider_mannequin",
+      "name": "Spider Mannequin",
+      "source": "sh2"
+    },
+    {
+      "id": "sh2_mandarin_floor_form",
+      "name": "Mandarin — Floor Form",
+      "source": "sh2"
+    },
+    {
+      "id": "sh3_nurse_pipe_043",
+      "name": "Nurse — Pipe",
+      "source": "sh3"
+    },
+    {
+      "id": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "source": "sh3"
+    },
+    {
+      "id": "sh3_sewer_creature_052",
+      "name": "Sewer Creature",
+      "source": "sh3"
+    },
+    {
+      "id": "sh4_ghost_victim_066",
+      "name": "Ghost — Victim",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_toby_archbolt_victim_14",
+      "name": "Toby Archbolt — Victim 14",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_joseph_schreiber_victim_15",
+      "name": "Joseph Schreiber — Victim 15",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_jasper_gein_victim_17",
+      "name": "Jasper Gein — Victim 17",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_andrew_desalvo_victim_18",
+      "name": "Andrew DeSalvo — Victim 18",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_sacrificed_walter_071",
+      "name": "Sacrificed Walter",
+      "source": "sh4"
+    },
+    {
+      "id": "sh4_eileen_head_073",
+      "name": "Eileen Head",
+      "source": "sh4"
+    },
+    {
+      "id": "origins_memory_of_richard_grady_083",
+      "name": "Memory of Richard Grady",
+      "source": "origins"
+    },
+    {
+      "id": "homecoming_curtis_ackers",
+      "name": "Curtis Ackers",
+      "source": "homecoming"
+    },
+    {
+      "id": "homecoming_amnion_hanging_form_097",
+      "name": "Amnion — Hanging Form",
+      "source": "homecoming"
+    },
+    {
+      "id": "homecoming_amnion_exposed_form_098",
+      "name": "Amnion — Exposed Form",
+      "source": "homecoming"
+    },
+    {
+      "id": "downpour_void_113",
+      "name": "Void",
+      "source": "downpour"
+    },
+    {
+      "id": "downpour_monocle_man_114",
+      "name": "Monocle Man",
+      "source": "downpour"
+    },
+    {
+      "id": "downpour_wheelman_116",
+      "name": "Wheelman",
+      "source": "downpour"
+    },
+    {
+      "id": "arcade_phantom_118",
+      "name": "Phantom",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "name": "Greedy Worm — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_insane_cancer_arcade",
+      "name": "Insane Cancer — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_numb_body_arcade",
+      "name": "Numb Body — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_nurse_arcade",
+      "name": "Nurse — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_creeper_arcade",
+      "name": "Creeper — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_toadstool_arcade",
+      "name": "Toadstool — Arcade",
+      "source": "arcade"
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "name": "Robbie the Rabbit — Shotgun",
+      "source": "arcade"
+    },
+    {
+      "id": "bom_ghost_125",
+      "name": "Ghost",
+      "source": "bom"
+    },
+    {
+      "id": "bom_flesh_lips_134",
+      "name": "Flesh Lips",
+      "source": "bom"
+    },
+    {
+      "id": "bom_mother_135",
+      "name": "Mother",
+      "source": "bom"
+    },
+    {
+      "id": "bom_valtiel_136",
+      "name": "Valtiel",
+      "source": "bom"
+    },
+    {
+      "id": "bom_wood_guardian_138",
+      "name": "Wood Guardian",
+      "source": "bom"
+    },
+    {
+      "id": "bom_blood_guardian_143",
+      "name": "Blood Guardian",
+      "source": "bom"
+    },
+    {
+      "id": "bom_blood_mama_145",
+      "name": "Blood Mama",
+      "source": "bom"
+    },
+    {
+      "id": "pt_lisa_149",
+      "name": "Lisa",
+      "source": "pt"
+    },
+    {
+      "id": "shf_ayakakashi_152",
+      "name": "Ayakakashi",
+      "source": "shf"
+    },
+    {
+      "id": "shf_corruptor_155",
+      "name": "Corruptor",
+      "source": "shf"
+    },
+    {
+      "id": "shf_hatcher_156",
+      "name": "Hatcher",
+      "source": "shf"
+    },
+    {
+      "id": "shf_dark_hatcher_160",
+      "name": "Dark Hatcher",
+      "source": "shf"
+    },
+    {
+      "id": "shf_sakuko_like_entity_162",
+      "name": "Sakuko-Like Entity",
+      "source": "shf"
+    },
+    {
+      "id": "shf_hinako_s_mother_165",
+      "name": "Hinako’s Mother",
+      "source": "shf"
+    },
+    {
+      "id": "film_dark_nurse_171",
+      "name": "Dark Nurse",
+      "source": "film"
+    },
+    {
+      "id": "film_grey_child_film_172",
+      "name": "Grey Child — Film",
+      "source": "film"
+    },
+    {
+      "id": "film_colin_the_janitor_174",
+      "name": "Colin the Janitor",
+      "source": "film"
+    },
+    {
+      "id": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "source": "film"
+    },
+    {
+      "id": "film_bubble_head_nurse_return_to_silent_hill",
+      "name": "Bubble Head Nurse — Return to Silent Hill",
+      "source": "film"
+    },
+    {
+      "id": "film_creeper_return_to_silent_hill",
+      "name": "Creeper — Return to Silent Hill",
+      "source": "film"
+    },
+    {
+      "id": "film_fused_mattress_manifestation_return",
+      "name": "Fused Mattress Manifestation — Return",
+      "source": "film"
+    },
+    {
+      "id": "ascension_wanderer_178",
+      "name": "Wanderer",
+      "source": "ascension"
+    },
+    {
+      "id": "ascension_snarler_180",
+      "name": "Snarler",
+      "source": "ascension"
+    },
+    {
+      "id": "ascension_the_collector_183",
+      "name": "The Collector",
+      "source": "ascension"
+    },
+    {
+      "id": "ascension_stilledalen_stinger_184",
+      "name": "Stilledalen Stinger",
+      "source": "ascension"
+    }
+  ],
+  "missingProfilesByInheritedBlocker": {
+    "historical-refusal-or-related-stop": 26,
+    "identity-or-variant-unresolved": 7,
+    "immaterial-form": 2,
+    "incomplete-source": 21,
+    "new-generation-refusal": 3
+  },
+  "newOutputs": [
+    {
+      "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "sha256": "23e6f56e2c49c75c0b7433f0e60aabe4935f6b6d96d2f819b1adaf4fab0c3ce0",
+      "bytes": 1723731,
+      "width": 1024,
+      "height": 1536,
+      "pixelSHA256": "52862e101df254633a175684a376e5e2cea073b319c57a13dcc699f5735ee5a9",
+      "visibleBounds": [
+        128,
+        20,
+        914,
+        1516
+      ],
+      "transparentFraction": 0.71383,
+      "anchor": [
+        0.45,
+        0.9798177
+      ],
+      "bodyHeight": 1.0,
+      "facing": 1,
+      "sourceFile": "exec-6295761a-d7fe-4a97-a25e-b7004359243e.png",
+      "fighterId": "downpour_anne_cunningham",
+      "source": "downpour",
+      "kind": "distinct-combat-idle",
+      "notes": "Anne Cunningham — Downpour : profil droit entier, garde au pistolet depuis son rendu original et sa sélection conservée. Tenue et équipement de la même édition. Nouvelle pose fixe candidate ; détails fins et vue opposée non certifiés 1:1. Alpha original conservé, sans retouche ni agrandissement. Ancre entre les deux appuis, dont les profondeurs diffèrent légèrement.",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120317_03_anne.png",
+          "inspectedFile": "anne-official.png",
+          "sha256": "3f1fdba0e4fcd4eda615c0017e342b86d5a5f9686b69be5a13e59dd2d648df09"
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh8/characters/anne_cunningham.png",
+          "inspectedFile": "anne-character.png",
+          "sha256": "ed4f65a6142d3e0b21237ed40c86a45418d8fb7d89110668bb49c05829d31146"
+        }
+      ],
+      "nativeUHD": false,
+      "animated": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+      "sha256": "08ce5a51a4d6f828641f7b496e094d41a939ddac819eea0aaf5123bb048f231b",
+      "bytes": 975171,
+      "width": 1239,
+      "height": 1269,
+      "pixelSHA256": "2a87397d4d00188346501f5618fb08d6dccd42620ecaea85d425da0a404028c0",
+      "visibleBounds": [
+        188,
+        66,
+        990,
+        1223
+      ],
+      "transparentFraction": 0.75891,
+      "anchor": [
+        0.48,
+        0.963
+      ],
+      "bodyHeight": 0.99,
+      "facing": 1,
+      "sourceFile": "exec-e59d9068-9ed5-49d3-a1f9-7be5d459f5ae.png",
+      "fighterId": "downpour_prisoner_juggernaut_110",
+      "source": "downpour",
+      "kind": "distinct-combat-idle",
+      "notes": "Prisoner Juggernaut — Downpour : profil droit entier en garde désarmée, tête chauve, torse tatoué, pantalon brun et pieds nus selon le rendu original et la sélection conservée. Pose fixe candidate ; détails fins et vue opposée non certifiés 1:1. Alpha original conservé, sans retouche ni agrandissement.",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh8/arts/pics/sh_downpour_art_120422_13_pr_juggernaut.png",
+          "inspectedFile": "juggernaut-official.png",
+          "sha256": "3b5a0a46c194265380062898fd326e3089f83a82efdf36aa416ac765736ea723"
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh8/creatures/prisoner_juggernaut.png",
+          "inspectedFile": "juggernaut-creature.png",
+          "sha256": "81d86086a3ca73e0f8cc4b740e89d95c0ca6ae0ad141b622c02fb6c96a87fb9c"
+        }
+      ],
+      "nativeUHD": false,
+      "animated": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true
+    },
+    {
+      "pixelSHA256": "2355479d8b4a765b4d42d932b359b60ff868d4f8dfefa58947b5b3964ce58bc0",
+      "sha256": "34f6a40e472904bfdf5e5927758218bbb41cf6b891b9e2358f14b02ea63a5453",
+      "bytes": 2092489,
+      "width": 1774,
+      "height": 887,
+      "visibleBounds": [
+        35,
+        8,
+        1715,
+        877
+      ],
+      "transparentFraction": 0.63303,
+      "fighterId": "bom_steel_guardian_146",
+      "source": "bom",
+      "kind": "selection-base",
+      "path": "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "anchor": [
+        0.52,
+        0.99
+      ],
+      "bodyHeight": 0.84,
+      "facing": 1,
+      "sourceFile": "exec-6d6483f3-2f73-4a14-84b8-e7b3716aacfa.png",
+      "notes": "Steel Guardian — Book of Memories : sélection entière ailée issue du modèle texturé John Hershberg et de deux vues natives complémentaires du longplay ruh4O2ZO7aA à 14:18:10 et 14:18:30. Le rendu original coupe les bouts des ailes ; les vignettes natives de 160×90 renseignent les deux extrémités séparément. Les détails fins, nombres de lames et maillons, arrière et parties occultées restent non certifiés ; aucune phase sans ailes substituée. Pose fixe candidate, non UHD native et non certifiée 1:1, alpha original sans retouche ni agrandissement.",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_14_steel_boss.jpg",
+          "inspectedFile": "steel14.jpg",
+          "sha256": "23ac88bec9c8b6a8d6bebf5e229e23e195e5c01b75821384f1a5662e344670a3"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=51490",
+          "inspectedFile": "steel-threequarter-14h18m10-native.png",
+          "sha256": "6d30abd46052ee7f028ce02f9fad8db4675786963c211c85d0bca6ffb1f947c0",
+          "nativeDimensions": [
+            160,
+            90
+          ],
+          "videoTimeSeconds": 51490
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=51510",
+          "inspectedFile": "steel-fullbody-14h18m30-native.png",
+          "sha256": "74dacfc08d1ed7979d4bf03e20ddd58ff5a0c1c67bba2487813b83ec9d7157f3",
+          "nativeDimensions": [
+            160,
+            90
+          ],
+          "videoTimeSeconds": 51510
+        }
+      ],
+      "nativeUHD": false,
+      "animated": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true
+    },
+    {
+      "path": "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+      "sha256": "221d68a36f7a38f349961e894602123202878ff23b8d07e92a2a844dea5d7f80",
+      "bytes": 2117103,
+      "width": 1536,
+      "height": 1024,
+      "pixelSHA256": "4d49a7aad274cdf5f94ee72401fbb71f93a11174b9c641dd9425a0a8df6c09b7",
+      "visibleBounds": [
+        63,
+        7,
+        1327,
+        990
+      ],
+      "transparentFraction": 0.68354,
+      "anchor": [
+        0.725,
+        0.98
+      ],
+      "bodyHeight": 0.86,
+      "facing": 1,
+      "sourceFile": "exec-c7ae9856-132f-4ad9-ba2e-981810903e16.png",
+      "fighterId": "bom_steel_guardian_146",
+      "source": "bom",
+      "kind": "distinct-combat-idle",
+      "notes": "Steel Guardian — Book of Memories : pose de combat latérale droite distincte de sa sélection. Corps vert, capuchon métallique, ailes mécaniques doubles, lames pendantes et chaînes conservés ; orientation recomposée depuis le modèle texturé et deux vues natives complémentaires. Détails fins, nombre de lames/maillons, arrière et zones occultées non certifiés. Ancre sous les griffes, hauteur de référence du corps central, posture suspendue. PNG natif conservé sans retouche ni agrandissement ; image fixe candidate non UHD native, sans certification 1:1 ni animation.",
+      "references": [
+        {
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_hershberg_14_steel_boss.jpg",
+          "inspectedFile": "steel14.jpg",
+          "sha256": "23ac88bec9c8b6a8d6bebf5e229e23e195e5c01b75821384f1a5662e344670a3"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=51490",
+          "inspectedFile": "steel-threequarter-14h18m10-native.png",
+          "sha256": "6d30abd46052ee7f028ce02f9fad8db4675786963c211c85d0bca6ffb1f947c0",
+          "nativeDimensions": [
+            160,
+            90
+          ],
+          "videoTimeSeconds": 51490
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=51510",
+          "inspectedFile": "steel-fullbody-14h18m30-native.png",
+          "sha256": "74dacfc08d1ed7979d4bf03e20ddd58ff5a0c1c67bba2487813b83ec9d7157f3",
+          "nativeDimensions": [
+            160,
+            90
+          ],
+          "videoTimeSeconds": 51510
+        }
+      ],
+      "nativeUHD": false,
+      "animated": false,
+      "fidelity": "unverified",
+      "singleSubjectReviewed": true
+    }
+  ],
+  "blockedThisGeneration": [
+    {
+      "fighterId": "origins_the_butcher_081",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "ea87a46c-f8bb-4109-b400-474ab1ba8190",
+      "stage": "output",
+      "categories": [
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true
+    }
+  ],
+  "historicalBlockersRetained": true,
+  "allMissingStatusesReconciled": true,
+  "allMissingProfilesIndependentlyResearchedAgain": false,
+  "referenceAuditAtStart": "sprite-suite-reference-audit-2026-11-17.json",
+  "referenceResearch": "sprite-suite-reference-research-2026-11-17.json",
+  "status": "integrated-candidates-validated",
+  "validation": {
+    "npmTest": {
+      "passed": true,
+      "tests": 1247,
+      "failed": 0,
+      "verifiedBuildFiles": 313,
+      "verifiedJavaScriptFiles": 42,
+      "verifiedHTMLFiles": 10,
+      "logSHA256": "78fb34cc84a5a542ea27f25bc2cac20292033402194f2d3a5c6c60f8bcff27a0"
+    },
+    "nativeEngine": {
+      "passed": true,
+      "checks": 78,
+      "failed": 0,
+      "portraitRenders": 8,
+      "duels": 4,
+      "finalDuelScreenshotsInspected": 4,
+      "steelPortraitScreenshotsInspected": 2,
+      "browserTest": false,
+      "report": "qa-sprite-suite-2026-11-17/summary.json"
+    },
+    "preservationReport": "sprite-suite-preservation-2026-11-17.json",
+    "gitDiffCheck": true,
+    "remoteBrowserCI": {
+      "statusAtFreeze": "pending-publication",
+      "previousRun": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44184519620",
+      "previousResult": "cancelled after 12 of 16 suites; 977 checks passed, 0 failed",
+      "timeoutMinutes": 30,
+      "diagnosis": "BROWSER_QA_TIMEOUT_2026-11-17.md"
+    }
+  },
+  "previousStatus": "sprite-status-next-2026-11-17.json",
+  "retainedCombatGenerationStops": [
+    {
+      "fighterId": "arcade_robbie_the_rabbit_chainsaw",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "333364f3-aefb-4947-a66d-2c18ed7ca72d",
+      "stage": "output",
+      "categories": [
+        "other"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "sourceRecord": "sprite-status-next-2026-11-17.json",
+      "retriedInThisContinuation": false
+    },
+    {
+      "fighterId": "origins_the_butcher_081",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "ea87a46c-f8bb-4109-b400-474ab1ba8190",
+      "stage": "output",
+      "categories": [
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true,
+      "sourceRecord": "sprite-suite-imports-2026-11-17.json"
+    }
+  ]
+}

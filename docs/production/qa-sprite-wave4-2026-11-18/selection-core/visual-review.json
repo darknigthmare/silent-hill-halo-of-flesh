@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "reviewedAtUtc": "2026-11-18T08:29:15.139221+00:00",
+  "nativeCanvas": true,
+  "browserTest": false,
+  "checks": 11,
+  "failures": 0,
+  "sourceHashes": {
+    "art/registry.json": "a5449cbfba917526569147f32c07d76f1d3dbbdb383a1abe6e27b4e52e168f7d",
+    "src/sprite-manifest.js": "044570509678c2fccbb0605c05c3e3c86d266f2a6f5c75d0926ff7cad8a6968f"
+  },
+  "selectionCapturesReviewed": [
+    "selection-sh4_eileen_head_073-right.png",
+    "selection-sh4_eileen_head_073-left.png"
+  ],
+  "findings": [
+    {
+      "id": "sh4_eileen_head_073",
+      "role": "noncombatant",
+      "observation": "Sur les deux rendus 500 × 500, la bouche fermée, le menton et les deux mèches restent entiers. Le haut de la chevelure se perd en ombre. Les iris asymétriques et la raie changent de côté avec le miroir de présentation. Le jeu sélectionne le seul portrait et retourne une image de combat absente.",
+      "visibleBounds": [
+        129,
+        48,
+        1123,
+        1228
+      ]
+    }
+  ],
+  "calibrationAdjustmentSuggested": false
+}

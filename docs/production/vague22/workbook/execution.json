@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "startedAt": "2026-11-19T16:14:42.258798+00:00",
+  "runnerSHA256": "ac2f60abbd5803b77d2f50621af0e4526061163aca328ab7ef06a9801d26c38f",
+  "node": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "modules": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+  "temporaryExecutionDirectory": "/tmp/halo-wave22-workbook-90hwd8gs",
+  "scripts": [
+    {
+      "name": "prepare-corpus-input.mjs",
+      "sha256": "9ed7724de3912f5753cd55cb9a12ae2b7d49559be8eaef953e6b510119196977",
+      "copyExact": true
+    },
+    {
+      "name": "build-corpus-deliverables.mjs",
+      "sha256": "b6ec9d74ffabe222c15f340a51e903bdc71d17840b0ca89514722ba489be8bd9",
+      "copyExact": true
+    },
+    {
+      "name": "render-corpus-workbook.mjs",
+      "sha256": "23462c0410db237f78e8689d327bcbd9f84bc13e75d4a00e41940d7f9a2df358",
+      "copyExact": true
+    }
+  ],
+  "processes": [
+    {
+      "name": "prepare",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--expose-gc",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=1",
+        "/tmp/halo-wave22-workbook-90hwd8gs/prepare-corpus-input.mjs",
+        "--root=/workspace/scratch/silent-hill-wave22",
+        "--output=/workspace/scratch/silent-hill-wave22/docs/production/vague22/workbook/prepared-input.json"
+      ],
+      "startedAt": "2026-11-19T16:14:42.259892+00:00",
+      "finishedAt": "2026-11-19T16:14:42.830800+00:00",
+      "exitCode": 0,
+      "log": "prepare.txt",
+      "logSHA256": "595939a14a0cdcadfa02ddd82541b7ff3b652e692396b0aa8bf677594dd07d83"
+    },
+    {
+      "name": "build",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--expose-gc",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=1",
+        "/tmp/halo-wave22-workbook-90hwd8gs/build-corpus-deliverables.mjs",
+        "--root=/workspace/scratch/silent-hill-wave22",
+        "--input=/workspace/scratch/silent-hill-wave22/docs/production/vague22/workbook/prepared-input.json",
+        "--output=/workspace/scratch/silent-hill-wave22/docs/production/vague22/workbook"
+      ],
+      "startedAt": "2026-11-19T16:14:42.831526+00:00",
+      "finishedAt": "2026-11-19T16:14:46.226118+00:00",
+      "exitCode": 0,
+      "log": "build.txt",
+      "logSHA256": "6f0b27163f9be82726e4bd4635c4cd01bfc102b51a38d1c50f3b36aaf58618aa"
+    },
+    {
+      "name": "render-corpus",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--expose-gc",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=1",
+        "/tmp/halo-wave22-workbook-90hwd8gs/render-corpus-workbook.mjs",
+        "--output=/workspace/scratch/silent-hill-wave22/docs/production/vague22/workbook",
+        "--sheet=Corpus",
+        "--range=A1:H13"
+      ],
+      "startedAt": "2026-11-19T16:14:46.226895+00:00",
+      "finishedAt": "2026-11-19T16:14:50.801488+00:00",
+      "exitCode": 0,
+      "log": "render-corpus.txt",
+      "logSHA256": "da1be89e69892356e86b495493b718a4cf69702db80a7ab39c8a3a4f154e6545"
+    },
+    {
+      "name": "render-stages",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--expose-gc",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=1",
+        "/tmp/halo-wave22-workbook-90hwd8gs/render-corpus-workbook.mjs",
+        "--output=/workspace/scratch/silent-hill-wave22/docs/production/vague22/workbook",
+        "--sheet=Stages",
+        "--range=A1:H13"
+      ],
+      "startedAt": "2026-11-19T16:14:50.804255+00:00",
+      "finishedAt": "2026-11-19T16:14:55.311854+00:00",
+      "exitCode": 0,
+      "log": "render-stages.txt",
+      "logSHA256": "1e2f3acfb88cb9ff06e709c7d536336a707344418a9d4f8b27aa1adf90e7a744"
+    },
+    {
+      "name": "render-new-stage",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--expose-gc",
+        "--max-old-space-size=128",
+        "--max-semi-space-size=1",
+        "/tmp/halo-wave22-workbook-90hwd8gs/render-corpus-workbook.mjs",
+        "--output=/workspace/scratch/silent-hill-wave22/docs/production/vague22/workbook",
+        "--sheet=Stages",
+        "--range=A123:H125",
+        "--region=wave22-new-stage"
+      ],
+      "startedAt": "2026-11-19T16:14:55.315045+00:00",
+      "finishedAt": "2026-11-19T16:14:58.753028+00:00",
+      "exitCode": 0,
+      "log": "render-new-stage.txt",
+      "logSHA256": "43cae46d3f0ebabcc0ca847d97f56b083bd6da000c0e2df94818d84d6ac1ed74"
+    }
+  ],
+  "passed": true,
+  "finishedAt": "2026-11-19T16:14:58.754319+00:00",
+  "visualReview": "passed",
+  "visualReviewReport": "workbook-verification.json"
+}

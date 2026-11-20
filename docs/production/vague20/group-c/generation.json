@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-19T12:14:15.354Z",
+  "images": [
+    {
+      "stageId": "hospital_world",
+      "role": "background",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": false,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-2fca6451-a0fc-44f9-b86f-164f1bb61dee.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/hospital_world-background.png",
+      "promptFile": "prompts.json",
+      "promptKey": "hospital_world:background",
+      "referencedImagePaths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/hospital_world-native-corridor.png"
+      ],
+      "visuallyInspected": true,
+      "postprocessing": "None; immutable hard link only"
+    },
+    {
+      "stageId": "artaud_theater",
+      "role": "background",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": false,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-97d54801-1e40-442d-8ac9-3ebceb4e7b53.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/artaud_theater-background.png",
+      "promptFile": "prompts.json",
+      "promptKey": "artaud_theater:background",
+      "referencedImagePaths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/artaud_theater-native-stage.png"
+      ],
+      "visuallyInspected": true,
+      "postprocessing": "None; immutable hard link only"
+    },
+    {
+      "stageId": "hospital_world",
+      "role": "foreground",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-1bef4d34-6e5a-4202-8338-c19f785a5adc.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/hospital_world-foreground.png",
+      "promptFile": "prompts.json",
+      "promptKey": "hospital_world:foreground",
+      "referencedImagePaths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/hospital_world-background.png",
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/hospital_world-native-corridor.png"
+      ],
+      "visuallyInspected": true,
+      "postprocessing": "None; immutable hard link only"
+    },
+    {
+      "stageId": "artaud_theater",
+      "role": "foreground",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-512cff31-8a76-463d-82c6-4188c19ef510.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/artaud_theater-foreground.png",
+      "promptFile": "prompts.json",
+      "promptKey": "artaud_theater:foreground",
+      "referencedImagePaths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/artaud_theater-background.png",
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/artaud_theater-native-stage.png"
+      ],
+      "visuallyInspected": true,
+      "postprocessing": "None; immutable hard link only"
+    },
+    {
+      "stageId": "devils_pit",
+      "role": "background",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": false,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-824646e3-5d72-43a0-b0e6-1df53e1c9d4a.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/devils_pit-background.png",
+      "promptFile": "prompts.json",
+      "promptKey": "devils_pit:background",
+      "referencedImagePaths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02d-017.jpg",
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02d-018.jpg"
+      ],
+      "visuallyInspected": true,
+      "postprocessing": "None; immutable hard link only"
+    },
+    {
+      "stageId": "overlook",
+      "role": "background",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": false,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-4850ed80-8576-4769-ba61-b5d8edb4791f.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/overlook-background.png",
+      "promptFile": "prompts.json",
+      "promptKey": "overlook:background",
+      "referencedImagePaths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02l-020.jpg"
+      ],
+      "visuallyInspected": true,
+      "postprocessing": "None; immutable hard link only"
+    },
+    {
+      "stageId": "devils_pit",
+      "role": "foreground",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-df58dde1-0638-464b-8e3b-f9b9ad06faf3.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/devils_pit-foreground.png",
+      "promptFile": "prompts.json",
+      "promptKey": "devils_pit:foreground",
+      "referencedImagePaths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/devils_pit-background.png",
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02d-017.jpg"
+      ],
+      "visuallyInspected": true,
+      "postprocessing": "None; immutable hard link only"
+    },
+    {
+      "stageId": "overlook",
+      "role": "foreground",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-06edb868-24e5-4a28-b148-44546963bb7a.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/overlook-foreground.png",
+      "promptFile": "prompts.json",
+      "promptKey": "overlook:foreground",
+      "referencedImagePaths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/overlook-background.png",
+        "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02l-020.jpg"
+      ],
+      "visuallyInspected": true,
+      "postprocessing": "None; immutable hard link only"
+    }
+  ]
+}

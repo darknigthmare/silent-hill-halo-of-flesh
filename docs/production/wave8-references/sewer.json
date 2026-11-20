@@ -1,0 +1,55 @@
+{
+  "fighterId": "sh3_sewer_creature_052",
+  "source": "sh3",
+  "purpose": "selection",
+  "qualification": "reconstruction pour sélection; fidélité 1:1 non certifiée",
+  "sources": [
+    {
+      "url": "https://static.wikia.nocookie.net/silent/images/f/fd/SewerMonst.png/revision/latest?cb=20150503021221",
+      "sha256": "e2925f0b6469407abb204eef773c1a7d3d0c14654b120897fbb396d61d290340",
+      "type": "Three original-game tentacle views published 3 May 2015 by the gallery contributor",
+      "observation": "The long S-shaped appendage at left shows both dark blunt mesh ends, its continuous ivory/tan/rust textured surface and its varying radius. The two other views provide comparison; no central animal is documented.",
+      "path": "docs/production/wave8-references/sewer/model-views.png"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/silent/images/0/03/SewerMonster.jpg/revision/latest?cb=20141124230630",
+      "sha256": "22c1379db38670eb82383db029d0ce1d4e047e2f92fa1e9a002adce60549f5bb",
+      "type": "In-game submerged camera view, published November 2014",
+      "observation": "Identical pale striped blunt tip and rusty curve extend under the red-brown water.",
+      "path": "docs/production/wave8-references/sewer/underwater-view.jpg"
+    },
+    {
+      "url": "https://static.wikia.nocookie.net/silent/images/5/51/Heather_sewer_monster.jpg/revision/latest?cb=20131003185906",
+      "sha256": "41b0c490039522e0a11ccda2303b824e048650fe4f21a000f33fdfa2c04c40ce",
+      "type": "SH3 shipped Underpass encounter, October 2013 publication",
+      "observation": "The location is the narrow grate above the Underpass water, before or during the encounter. The environment is not the subject.",
+      "path": "docs/production/wave8-references/sewer/underpass-grate.jpg"
+    }
+  ],
+  "visualReview": {
+    "role": "Rencontre scénarisée de la passerelle des égouts : un appendice représentatif pour la fiche. Aucune proposition de duel ou animation.",
+    "sourceAttribution": "Le fichier SewerMonst.png, initialement mis en ligne par AlexShepherd le 3 mai 2015, porte les catégories SH3 et Sewer Monster. La page archivée du jeu le légende « Model ». La vue SewerMonster.jpg est légendée comme l’un des tentacules du monstre et permet de recouper la surface pâle marquée et la forme recourbée.",
+    "sourceArchive": "https://archive.org/details/wiki-silenthillfandomcom",
+    "archiveNames": [
+      "silenthillfandomcom-20220629-history.xml",
+      "silenthillfandomcom-20220701-wikidump.7z",
+      "images/SewerMonst.png",
+      "images/SewerMonster.jpg",
+      "images/Heather sewer monster.jpg"
+    ],
+    "visual": "Une seule silhouette sinueuse ; l’extrémité pâle striée se replie en haut à gauche, la terminaison sombre change de direction en bas à droite. Les deux bouts physiques de la pièce de gauche de la planche sont représentés avec une marge transparente. Le corps sous la surface reste indéterminé et n’est pas extrapolé. Les volumes et la texture sont reconstruits à partir des vues publiées, sans maillage réimporté."
+  },
+  "output": {
+    "sha256": "f1e1545f70aa19cb7ba8f4ed542e32946b111c7e9ee123b7b942c1b93adff488",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "visibleBoundsAlpha32": [
+      101,
+      12,
+      1364,
+      1011
+    ]
+  }
+}

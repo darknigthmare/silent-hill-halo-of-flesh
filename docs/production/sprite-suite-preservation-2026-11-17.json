@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "baselineCommit": "dfd9c7f3d0b082dc0794e9f502246ffb630269da",
+  "verdict": "PASS",
+  "auditMethod": "Read-only byte comparison against git cat-file baseline blobs, JSON object comparison, exact generation-source byte comparison and live purpose reader. Only this report is written.",
+  "registrySHA256": "07e323b2ad0cb1020392b7f7af80050c907c2ae78224420a806614e669748cef",
+  "counts": {
+    "baselineProfiles": 170,
+    "illustratedProfiles": 171,
+    "rosterProfiles": 230,
+    "missingProfiles": 59,
+    "sideViewCombatCandidates": 22,
+    "legacyCombatViewsUnreviewed": 149,
+    "unchangedBaselineProfiles": 168,
+    "modifiedBaselineProfiles": 2,
+    "newProfiles": 1,
+    "removedProfiles": 0,
+    "baselinePNGs": 228,
+    "newPNGs": 4,
+    "newSelectionImages": 1,
+    "newCombatImages": 3,
+    "animatedClipsBefore": 1,
+    "animatedClipsAfter": 1,
+    "newAnimatedClips": 0,
+    "certifiedOneToOne": 0
+  },
+  "modifiedBaselineProfileIDs": [
+    "downpour_anne_cunningham",
+    "downpour_prisoner_juggernaut_110"
+  ],
+  "newProfileIDs": [
+    "bom_steel_guardian_146"
+  ],
+  "all170BaselinePortraitsPreserved": true,
+  "downpourPortraits": [
+    {
+      "fighterId": "downpour_anne_cunningham",
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "sha256": "3e3d10e331463b05e1e90d5e974a03050973c7dc358e9fa8918b7354a8b7c21d",
+      "bytes": 465883,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "metadataAndBytesPreserved": true
+    },
+    {
+      "fighterId": "downpour_prisoner_juggernaut_110",
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "sha256": "036e48ab91fa9fa8a9c0cfba3661f8584c842b62838154030709bdf376fdfc7f",
+      "bytes": 481197,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "metadataAndBytesPreserved": true
+    }
+  ],
+  "baselineFilePreservation": {
+    "baselinePNGs": {
+      "checked": 228,
+      "byteIdentical": true,
+      "manifestSHA256": "b2fa1c44e4b5bef5702adf9f2d94dba3a80ebfc302c115e7b00955b84ba323d2"
+    },
+    "workbooks": {
+      "checked": 1,
+      "byteIdentical": true,
+      "manifestSHA256": "bedee8ca254750b014eed29c9f2869c8292f7b027a01dd6896983d4d5ccfd706"
+    },
+    "batchLedgers": {
+      "checked": 40,
+      "byteIdentical": true,
+      "manifestSHA256": "5b93eb278158211746d8f4a44b0f8ffedc9ffc18c54daab9889d84c97486e851"
+    },
+    "artFragments": {
+      "checked": 10,
+      "byteIdentical": true,
+      "manifestSHA256": "e2e15707e45601a858b29191745b6c734c8908e2affebc1563f0e1b5f023e832"
+    },
+    "intakes": {
+      "checked": 2,
+      "byteIdentical": true,
+      "manifestSHA256": "b56c951b679470c305360e9a55f765358fd0c5c0e2c68696dfad3daf9776c343"
+    },
+    "sourceProvenance": {
+      "checked": 24,
+      "byteIdentical": true,
+      "manifestSHA256": "6ceaaaa35bc6b3356128ae394d7418f3b688202df02b5f5c462f2592d1596c84"
+    },
+    "priorImportAndGenerationJournals": {
+      "checked": 5,
+      "byteIdentical": true,
+      "manifestSHA256": "17281909bda2891d56091da7db0ccc7b3db5144efa13aa07c177cbad27539748"
+    },
+    "roster": {
+      "checked": 1,
+      "byteIdentical": true,
+      "manifestSHA256": "5d964e61212e0a285e40bf5533ab10346a45a9afbf936643ef41a2dbed57417f"
+    }
+  },
+  "workbookDetails": [
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "gitBlob": "22739b8c8db510c0cf83f89140e7f1b9f903e2c1",
+      "sha256": "7de47c02b04650c8982fc2d86e414a4c35637ce080446e00cd6189465a0f3b7d",
+      "bytes": 1808573
+    }
+  ],
+  "newImages": [
+    {
+      "fighterId": "downpour_anne_cunningham",
+      "purpose": "combat",
+      "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "sha256": "23e6f56e2c49c75c0b7433f0e60aabe4935f6b6d96d2f819b1adaf4fab0c3ce0",
+      "bytes": 1723731,
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "sourceFile": "exec-6295761a-d7fe-4a97-a25e-b7004359243e.png",
+      "byteIdenticalToGeneratedSource": true
+    },
+    {
+      "fighterId": "downpour_prisoner_juggernaut_110",
+      "purpose": "combat",
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+      "sha256": "08ce5a51a4d6f828641f7b496e094d41a939ddac819eea0aaf5123bb048f231b",
+      "bytes": 975171,
+      "nativeDimensions": [
+        1239,
+        1269
+      ],
+      "sourceFile": "exec-e59d9068-9ed5-49d3-a1f9-7be5d459f5ae.png",
+      "byteIdenticalToGeneratedSource": true
+    },
+    {
+      "fighterId": "bom_steel_guardian_146",
+      "purpose": "selection",
+      "path": "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "sha256": "34f6a40e472904bfdf5e5927758218bbb41cf6b891b9e2358f14b02ea63a5453",
+      "bytes": 2092489,
+      "nativeDimensions": [
+        1774,
+        887
+      ],
+      "sourceFile": "exec-6d6483f3-2f73-4a14-84b8-e7b3716aacfa.png",
+      "byteIdenticalToGeneratedSource": true
+    },
+    {
+      "fighterId": "bom_steel_guardian_146",
+      "purpose": "combat",
+      "path": "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+      "sha256": "221d68a36f7a38f349961e894602123202878ff23b8d07e92a2a844dea5d7f80",
+      "bytes": 2117103,
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "sourceFile": "exec-c7ae9856-132f-4ad9-ba2e-981810903e16.png",
+      "byteIdenticalToGeneratedSource": true
+    }
+  ],
+  "purposeReader": {
+    "exactJournalDeliveries": 4,
+    "allIdentitySourcePurposePathDigestBindingsMatch": true,
+    "butcherDelivered": false
+  },
+  "butcher": {
+    "fighterId": "origins_the_butcher_081",
+    "entireRegistryEntryUnchanged": true,
+    "refusal": {
+      "fighterId": "origins_the_butcher_081",
+      "purpose": "combat",
+      "reason": "image-generation-refused",
+      "requestId": "ea87a46c-f8bb-4109-b400-474ab1ba8190",
+      "stage": "output",
+      "categories": [
+        "violence"
+      ],
+      "attempts": 1,
+      "imagesDelivered": 0,
+      "existingSelectionPreserved": true
+    },
+    "generationAttemptsRecorded": 1,
+    "newImages": 0,
+    "newImports": 0
+  },
+  "limits": [
+    "No build, large test suite or visual fidelity review is performed by this preservation audit; the concurrent npm gate and visual QA are reported separately.",
+    "The two former Downpour shared portrait/idle PNGs remain intact as selection portraits; their active combat slots use distinct new PNGs.",
+    "Counts derive from the frozen registry. Static candidates do not establish native UHD, certified 1:1 identity or new animations."
+  ]
+}

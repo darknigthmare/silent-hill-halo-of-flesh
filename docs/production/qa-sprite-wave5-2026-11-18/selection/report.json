@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-18T09:28:24.765Z",
+  "mode": "native paintRasterPortrait",
+  "browserTest": false,
+  "assets": [
+    {
+      "id": "sh4_joseph_schreiber_victim_15",
+      "path": "assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
+      "width": 1277,
+      "height": 1231,
+      "bounds": [
+        83,
+        183,
+        1195,
+        1077
+      ],
+      "role": "noncombatant",
+      "preexistingRulesCombatEnabled": false
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh4_joseph_schreiber_victim_15",
+      "facing": 1,
+      "path": "assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
+      "file": "selection-sh4_joseph_schreiber_victim_15-right.png"
+    },
+    {
+      "id": "sh4_joseph_schreiber_victim_15",
+      "facing": -1,
+      "path": "assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
+      "file": "selection-sh4_joseph_schreiber_victim_15-left.png"
+    }
+  ],
+  "checks": [
+    {
+      "name": "sh4_joseph_schreiber_victim_15 selection-only contract",
+      "passed": true,
+      "detail": {
+        "artKind": "selection-only",
+        "combatArt": "missing",
+        "documentedRole": "noncombatant",
+        "preexistingRulesCombatEnabled": false
+      }
+    },
+    {
+      "name": "sh4_joseph_schreiber_victim_15 asset identity",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
+        "sha256": "41c23490fcf287a6d86f25bc8570d075f9cd1c6e25245da90734f274205859f0",
+        "bytes": 762667
+      }
+    },
+    {
+      "name": "sh4_joseph_schreiber_victim_15 native decode adapter preserves pixels",
+      "passed": true
+    },
+    {
+      "name": "sh4_joseph_schreiber_victim_15 source dimensions",
+      "passed": true,
+      "detail": {
+        "width": 1277,
+        "height": 1231
+      }
+    },
+    {
+      "name": "sh4_joseph_schreiber_victim_15 complete alpha bounds and transparent exterior",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          83,
+          183,
+          1195,
+          1077
+        ],
+        "transparentFraction": 0.6364829989052072
+      }
+    },
+    {
+      "name": "sh4_joseph_schreiber_victim_15 selection draw right",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png"
+        ],
+        "dataset": {
+          "spriteId": "sh4_joseph_schreiber_victim_15",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "sh4_joseph_schreiber_victim_15 visible outline framed right",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          83,
+          183,
+          1112,
+          894
+        ],
+        "destination": [
+          -244,
+          -196.16546762589928,
+          488,
+          392.33093525179856
+        ],
+        "expectedFacing": 1
+      }
+    },
+    {
+      "name": "sh4_joseph_schreiber_victim_15 selection draw left",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png"
+        ],
+        "dataset": {
+          "spriteId": "sh4_joseph_schreiber_victim_15",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "sh4_joseph_schreiber_victim_15 visible outline framed left",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          83,
+          183,
+          1112,
+          894
+        ],
+        "destination": [
+          -244,
+          -196.16546762589928,
+          488,
+          392.33093525179856
+        ],
+        "expectedFacing": -1
+      }
+    },
+    {
+      "name": "art/registry.json stable during selection renders",
+      "passed": true
+    },
+    {
+      "name": "src/sprite-manifest.js stable during selection renders",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "The native renderer uses a predecoded local image cache. This run covers selection, asset identity and combat-art exclusion.",
+    "The resulting PNGs require separate visual inspection."
+  ],
+  "hashesBefore": {
+    "art/registry.json": "6e56c5ad9e0da4e9c624b5b962d7bfc6e04b1a74318634f9d2003687f1098991",
+    "src/sprite-manifest.js": "817bb0c678db993e8be9db620c3356e48f6cd3d3412d885b58676fc1dcbaf66a"
+  },
+  "hashesAfter": {
+    "art/registry.json": "6e56c5ad9e0da4e9c624b5b962d7bfc6e04b1a74318634f9d2003687f1098991",
+    "src/sprite-manifest.js": "817bb0c678db993e8be9db620c3356e48f6cd3d3412d885b58676fc1dcbaf66a"
+  },
+  "passed": true
+}

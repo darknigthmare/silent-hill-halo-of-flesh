@@ -1,0 +1,79 @@
+{
+  "runId": 44543361709,
+  "headSha": "151c6acf0092044068f6362651c6208aa69ffd35",
+  "testedMergeSha": "4d27d662e1fdb5dea0e89fd773464668c4138efb",
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "job": {
+    "id": 135627292438,
+    "name": "test",
+    "step": 5,
+    "stepName": "Run full QA",
+    "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44543361709/job/135627292438"
+  },
+  "assertion": {
+    "testFile": "tests/cinematic-supports.test.mjs",
+    "testLine": 63,
+    "assertionLine": 71,
+    "fighterId": "sh1_hanged_scratcher_011",
+    "expected": false,
+    "actual": true,
+    "code": "ERR_ASSERTION"
+  },
+  "qaResults": {
+    "nodeTests": 1290,
+    "nodePass": 1289,
+    "nodeFail": 1,
+    "spriteImporterTests": 115,
+    "spriteImporterPassed": true
+  },
+  "firstFailureExcerpt": [
+    "2026-11-19T14:27:38.9507025Z # Subtest: ceiling, floor grate, water, wall and furniture are real requirements, including source and blocked-place checks",
+    "2026-11-19T14:27:38.9508135Z not ok 161 - ceiling, floor grate, water, wall and furniture are real requirements, including source and blocked-place checks",
+    "2026-11-19T14:27:38.9511984Z   ---",
+    "2026-11-19T14:27:38.9528857Z   duration_ms: 3.690636",
+    "2026-11-19T14:27:38.9529692Z   type: 'test'",
+    "2026-11-19T14:27:38.9530571Z   location: '/home/runner/work/silent-hill-halo-of-flesh/silent-hill-halo-of-flesh/tests/cinematic-supports.test.mjs:63:1'",
+    "2026-11-19T14:27:38.9531621Z   failureType: 'testCodeFailure'",
+    "2026-11-19T14:27:38.9532136Z   error: |-",
+    "2026-11-19T14:27:38.9532515Z     sh1_hanged_scratcher_011",
+    "2026-11-19T14:27:38.9532982Z     ",
+    "2026-11-19T14:27:38.9533370Z     true !== false",
+    "2026-11-19T14:27:38.9534072Z     ",
+    "2026-11-19T14:27:38.9534515Z   code: 'ERR_ASSERTION'",
+    "2026-11-19T14:27:38.9535174Z   name: 'AssertionError'",
+    "2026-11-19T14:27:38.9535847Z   expected: false",
+    "2026-11-19T14:27:38.9536290Z   actual: true",
+    "2026-11-19T14:27:38.9536678Z   operator: 'strictEqual'",
+    "2026-11-19T14:27:38.9537117Z   stack: |-",
+    "2026-11-19T14:27:38.9538052Z     TestContext.<anonymous> (file:///home/runner/work/silent-hill-halo-of-flesh/silent-hill-halo-of-flesh/tests/cinematic-supports.test.mjs:71:14)",
+    "2026-11-19T14:27:38.9539227Z     Test.runInAsyncScope (node:async_hooks:214:14)",
+    "2026-11-19T14:27:38.9539825Z     Test.run (node:internal/test_runner/test:1047:25)",
+    "2026-11-19T14:27:38.9540525Z     Test.processPendingSubtests (node:internal/test_runner/test:744:18)",
+    "2026-11-19T14:27:38.9541223Z     Test.postRun (node:internal/test_runner/test:1173:19)",
+    "2026-11-19T14:27:38.9541753Z     Test.run (node:internal/test_runner/test:1101:12)",
+    "2026-11-19T14:27:38.9542436Z     async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)",
+    "2026-11-19T14:27:38.9543020Z   ..."
+  ],
+  "classification": "Existing negative fixture became incomplete when wave21 added sewer_resort bitmap geometry.ceiling=true. Existing engine intentionally uses selected replacement bitmap geometry before procedural props/layers. Test coverage regression revealed by new stage integration; no infrastructure failure or engine mutation.",
+  "unchangedBlobs": {
+    "test": "096f2fdbeac54587c83528c353dea0f9510ec2ae",
+    "loreCinematics": "692e4a495cd6fecfbbbd0a7279c60be314d73b19"
+  },
+  "baseCompared": "2c16796e6b99bb71f79fdfcf45b9cd2a84838581",
+  "correction": "Tests only: use synthetic-no-support-room sceneId and assert stageBitmapFor returns null; retain identity/source/blocked negatives; add positive assertion that actual selected sewer replacement bitmap has ceiling=true with empty procedural motifs.",
+  "limitations": "Local verification is Node24.22.3; GitHub failing run used Node22.23.4. No full image suite or browser run repeated locally. No commit or remote mutation.",
+  "localVerification": {
+    "report": "verification-report.json",
+    "baselineFailureReproduced": true,
+    "targetedTests": 53,
+    "passed": 53,
+    "failed": 0,
+    "nodeVersion": "v24.22.3",
+    "testGitBlob": "7ecea689f521b388799af04a7955fdcaf2383cf6",
+    "testSha256": "0ed0574e13700d925b2f4ad1c9b1ff8d23d1f5687bdba6ca6a29da2524cf9e7b",
+    "scope": [
+      "tests/cinematic-supports.test.mjs"
+    ],
+    "patch": "cinematic-support-fixture.patch"
+  }
+}

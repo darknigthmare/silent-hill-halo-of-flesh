@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "characters",
+  "id": "shattered_raw_shock_abstract_102",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-characters-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/shattered_raw_shock_abstract_102",
+    "--ids=shattered_raw_shock_abstract_102",
+    "--stages=hazel_subway"
+  ],
+  "startedAt": "2026-11-19T15:43:21.342848+00:00",
+  "completedAt": "2026-11-19T15:43:22.790467+00:00",
+  "durationSeconds": 1.448,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "44559063d248baf523fa8dc9ffef9b08281337496443bf05708b7b3b91934971",
+  "executedHarness": "executed/qa-characters-native-44559063d248.mjs",
+  "reportSHA256": "031994902ccbde2a7095562e2e529844e4d0612cf27d1a4b2d2f2704016ab04f",
+  "log": "process.txt",
+  "logSHA256": "99c4a977f2dd81aa5ca7058f1272260e5c1eff3c56978b802f8d579a84a25feb",
+  "passed": true
+}

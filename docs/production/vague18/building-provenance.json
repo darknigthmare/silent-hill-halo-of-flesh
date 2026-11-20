@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "task": "wave18-two-missing-arenas-production",
+  "recordedAt": "2026-11-19 08:22:53 UTC",
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "pullRequest": 6,
+  "branch": "art/missing-fullbody-20261117",
+  "baseCommit": "167abf6a369ab6c2329c2204e19bac79ce763ac9",
+  "stageId": "building_world",
+  "source": "sh4",
+  "sceneId": "b12-b15-fan-stairwell-first-visit",
+  "productionStatus": "two-png-candidates-ready-for-root-integration",
+  "fidelity": "unverified",
+  "generationTool": "image_gen__imagegen",
+  "authoredBy": "/root/wave18_stages",
+  "repositoryMutations": "None. All proposals and assets are in exclusive scratch directory; no shared registry, runtime source, branch, git or remote modified.",
+  "referenceBasis": {
+    "repositoryResearchPath": "docs/production/research/classic.json",
+    "sourceIds": [
+      "CL_SH4_05_BUILDING_WORLD"
+    ],
+    "references": [
+      {
+        "id": "CL_SH4_05_BUILDING_WORLD",
+        "url": "https://www.silenthillmemories.net/sh4/walkthrough_05_building_world_en.htm",
+        "title": "Silent Hill Memories — Silent Hill 4, Building World first visit walkthrough",
+        "type": "secondary-game-walkthrough",
+        "sha256": "c0a2977de0329c9e3e51e7950868e368b7780f1194769f739cab3d010699c6d3",
+        "inspected": "B12 to B15 stairwell passage.",
+        "observation": "The first visit has a large empty stairwell with a huge fan above. The staircase descends toward the B15 bar.",
+        "limits": "Text supports the fan and empty first-visit scene, but not the fan orientation, blade count, speed or full geometry."
+      },
+      {
+        "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_4_the_official_strategy_guide_piggyback.pdf",
+        "title": "Silent Hill 4: The Room — The Official Strategy Guide, Piggyback",
+        "type": "licensed-official-guide-with-original-game-captures",
+        "sha256": "2022eaefcd62a6050ff523d48dcab75826d496d869635b487699a00f117d70ed",
+        "inspectedPages": [
+          61,
+          62,
+          100,
+          101,
+          102
+        ],
+        "visualBasis": "Printed/PDF page101, figure12, familiar descending stair passage.",
+        "observation": "Small view of a broad dark descending stair, muted green-brown stained masonry and plain iron handrails.",
+        "limits": "Figure12 is from the second visit. It is used only for persistent stair and masonry appearance. All characters, wheelchairs and second-visit events are excluded. The inspected guide pages do not establish a full view of the fan."
+      }
+    ],
+    "authoredReconstruction": [
+      "Horizontal broad landing for versus in front of the stair flight.",
+      "Full camera, precise room proportions and wall arrangement.",
+      "Frontal fan orientation, four broad blades, diameter and appearance; source exact fan geometry remains unconfirmed.",
+      "Thin near-camera masonry returns for a separate camera-parallax plane."
+    ]
+  },
+  "preservedPolicies": {
+    "worldState": "fixed-normal",
+    "weather": "none",
+    "terrainRules": false,
+    "automaticFinishers": false,
+    "allowedEvents": [],
+    "allowedHazards": [],
+    "geometryCeilingDeclaration": "Omitted: no new ceiling capability or measured ceiling is claimed."
+  },
+  "generations": [
+    {
+      "variant": "background-v1",
+      "role": "opaque-background",
+      "prompt": "Create one original landscape 16:9 bitmap background plate for an existing side-on versus fighting game arena. Native wide output. One single coherent physical room, no panels, no collage, no UI. Exact scene: Silent Hill 4: The Room, first visit to Building World, the large EMPTY stairwell from B12 down to B15 with the huge ventilation fan above it. This is the original first-pass stairwell, not the second visit, not an elevator shaft, not the rooftop, not a shop, not the bar itself and not Water Prison. No people, monsters, wheelchairs, corpses, writing, signage, logos, symbols, weapons or furniture.\n\nSOURCE BASIS: The existing specialized walkthrough explicitly says a large empty stairwell with a huge fan above, descending B12 to B15. The licensed Piggyback guide printed page 101, figure 12, shows the familiar descending stair passage as stained desaturated green-brown masonry, broad worn steps, plain metal handrails and heavy shadow. That guide capture is a second-visit view used only to inform persistent masonry and stair material; exclude all entities and second-visit events. The exact fan blade count, its orientation and this wider combat camera are an authored candidate, not an exact source copy.\n\nCAMERA / GEOMETRY: Fixed wide side-on versus framing, modest perspective into one tall enclosed dirty masonry stairwell. Give the foreground a broad continuous horizontal worn concrete landing spanning the full width of the image, bottom 30% completely empty and unobstructed for fighting. This landing is an explicit versus adaptation. Behind the landing, a broad staircase with plain aged iron railings descends diagonally away to the left rear into darkness. Stairwell walls rise high on left and right, stained damp gray-green concrete/masonry, subtle vertical industrial structure, no elaborately invented machinery. A single huge circular industrial ventilation fan is mounted high at the rear above the staircase, centered around x=50%, y=23%, diameter approximately 29% of image width. Its heavy dark metal round frame and a restrained few broad dark blades read clearly against muted recess shadow; blades remain static with no motion blur. It must look physically part of the tall stairwell, not a portal, decorative emblem or turbine engine. Main light is soft green-gray environmental spill from above; dim brown oxidation on rails, dark lower stair flight, restrained grime. Keep the center fighting space visually quiet, neither pitch black nor luminous. Do not add exposed sky, overhead boiler pipes, a dramatic low ceiling, fire, water, fog, smoke, falling material, doors, windows, bars across the fighter area, ladders, chains, or a drop on the foreground landing. Detailed serious psychological-horror game environment, muted desaturated green-gray, rusty brown and charcoal, believable scale, modest grain, not photoreal marketing, not cartoon. Opaque full frame, no transparency. No foreground edge framing pieces; those will be a separate PNG.\n",
+      "referencedImagePaths": [],
+      "transparentBackground": false,
+      "originalToolFile": "/workspace/scratch/b86991fb2253/generated_images/exec-9c846d85-4b74-4b98-b00b-84c54e2431aa.png",
+      "localFile": "building_world.fan-stairwell.15995c474e24.png",
+      "selected": true,
+      "audit": {
+        "format": "PNG",
+        "width": 1672,
+        "height": 941,
+        "animated": false,
+        "sha256": "15995c474e24d66bed78609dea163344a04f4471260e5065edd2e9ecc834d23b",
+        "pixelSHA256": "2026d4a3e8abb65b4f1f0e01443afa6ec5f248390d6e8ae4e9794ea3d761be1b",
+        "path": "/workspace/scratch/b86991fb2253/wave18/stages/building_world.fan-stairwell.15995c474e24.png",
+        "originalLocalFile": "building_world.fan-stairwell.png",
+        "bytes": 2465408,
+        "mode": "RGB",
+        "alphaExtrema": [
+          255,
+          255
+        ],
+        "transparentPixels": 0,
+        "transparentFraction": 0.0,
+        "central90PercentAlphaExtrema": [
+          255,
+          255
+        ],
+        "central90PercentAlphaOnePixels": 0,
+        "central90PercentPixelsOverAlphaOne": 1416205,
+        "readableAlphaThreshold": 16,
+        "readableXSpanInclusive": [
+          [
+            0,
+            835
+          ],
+          [
+            836,
+            1671
+          ]
+        ],
+        "aspectRatio": 1.7768331562167907,
+        "nativeOutputPreserved": true,
+        "postProcessing": "None. Original tool PNG bytes copied without resize, crop, recolor or alpha modification."
+      }
+    },
+    {
+      "variant": "foreground-v1",
+      "role": "transparent-near-architecture",
+      "prompt": "Derive a separate transparent FOREGROUND PARALLAX PLATE matching the attached background, at exactly the same wide landscape 16:9 canvas and camera perspective. The final image must be an RGBA PNG with genuine alpha transparency everywhere except very narrow near-camera masonry wall returns at the extreme left and right edge. This is an independent layer, NOT another room image.\n\nMatch the desaturated green-gray stained concrete/masonry and dim light of this Silent Hill 4 Building World first-visit stairwell. Remove the entire supplied image to transparency, including all walls, stairs, floor, fan, railings, shadows and light washes. Only show a close cropped vertical worn masonry corner on the outermost left 0–3% of canvas and another on the outermost right 97–100%; their maximum inner extent is 4% of width at either edge. Each is a thin irregular corner return continuous offscreen above and below, with believable small chips and subtle grayed stain texture. No new objects, no pipes, door frames, warning stripes, signage, bars, horizontal railing, massive columns or sculpted detail. Match the source masonry scale and dull soft overhead lighting. The inner edges should be softly antialiased but clean, with no smoky fade or dark rectangle behind them. These are NOT a decorative picture border. Do not connect the two sides at the top or bottom.\n\nEvery pixel in the central 90% of the canvas width must be fully transparent, including the floor region. No horizontal bottom strip, ground shadow, vignette, glow, fan, steps, smoke, fog, character, text or logo. Preserve the empty wide canvas and exact full-canvas alignment to the background so the pair can be placed at [0,0,1,1] with only ±1.2% width of camera parallax. These narrow edge returns should never cover the combat area.\n",
+      "referencedImagePaths": [
+        "/workspace/scratch/b86991fb2253/wave18/stages/building_world.fan-stairwell.png"
+      ],
+      "transparentBackground": true,
+      "originalToolFile": "/workspace/scratch/b86991fb2253/generated_images/exec-89a4e636-3f40-40e3-9eb9-7fda10bb7816.png",
+      "localFile": "building_world.near-masonry-returns.9e753eeb66e2.png",
+      "selected": true,
+      "audit": {
+        "format": "PNG",
+        "width": 1671,
+        "height": 941,
+        "animated": false,
+        "sha256": "9e753eeb66e25617558a302d0ae75d622531b4d31917ca7a2bd63a320a962652",
+        "pixelSHA256": "080687ccc78e7bf5dad89b9ff88c6e7bb2abb13610488c2190cfdf41e32dcab7",
+        "path": "/workspace/scratch/b86991fb2253/wave18/stages/building_world.near-masonry-returns.9e753eeb66e2.png",
+        "originalLocalFile": "building_world.near-masonry-returns.png",
+        "bytes": 270542,
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "transparentPixels": 1466643,
+        "transparentFraction": 0.9327351436742684,
+        "central90PercentAlphaExtrema": [
+          0,
+          1
+        ],
+        "central90PercentAlphaOnePixels": 38,
+        "central90PercentPixelsOverAlphaOne": 0,
+        "readableAlphaThreshold": 16,
+        "readableXSpanInclusive": [
+          [
+            0,
+            52
+          ],
+          [
+            1618,
+            1670
+          ]
+        ],
+        "aspectRatio": 1.77577045696068,
+        "nativeOutputPreserved": true,
+        "postProcessing": "None. Original tool PNG bytes copied without resize, crop, recolor or alpha modification."
+      }
+    }
+  ],
+  "variantsPolicy": "First background and foreground generations retained unchanged; no output discarded, no image editing outside built-in generation.",
+  "qualityAudit": {
+    "pngDecode": "Passed existing scripts/validate-stage-png.py audit_png, including PNG structure, CRC, one static frame, native dimensions, full decode and pixel hash.",
+    "originalVisualInspection": "Both generated PNGs visually inspected. Background is one coherent physical chamber; foreground contains only thin matching edge objects, no readable central object or lower floor strip.",
+    "dimensionsNote": "Background1672×941; foreground1671×941. Native one-pixel width difference preserved. Full-frame cover-fit difference at1280×720 is below one vertical display pixel; no external resize.",
+    "centralAlphaNote": "Central90% alpha range0..1; 38 pixels have residual alpha1/255, none above1. The center is effectively clear but not mathematically zero at every pixel.",
+    "parallaxAudit": {
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "fit": "cover",
+      "parallaxX": 0.012,
+      "maxScreenShiftAt1280": 15.36,
+      "readableAlphaThreshold": 16,
+      "foregroundReadableXSpans": [
+        [
+          0,
+          52
+        ],
+        [
+          1618,
+          1670
+        ]
+      ],
+      "centralSafeIntervalNormalizedForAllPan": [
+        0.043718,
+        0.956282
+      ],
+      "centralClearWidthFractionForAllPan": 0.912564,
+      "conceptualCompositing": "Identical full-frame alignment and matching source material scale; thin edges only. Neither plane reaches the player area through the bounded pan. This is coordinate/alpha analysis, not a screenshot or live-fight certification."
+    },
+    "runtimeQA": "Pending parent integration and actual fight screenshot/side-switch check.",
+    "sourceFidelity": "Unverified reconstruction; source text and small original captures establish scene anchors only.",
+    "nativeResolution": "Approximately16:9 native PNG, not UHD.",
+    "descriptorValidation": {
+      "stageId": "building_world",
+      "source": "sh4",
+      "descriptor": "passed",
+      "frameCount": 2,
+      "sceneMismatchReturnsNull": true,
+      "fullFrameDraws": [
+        [
+          0,
+          0.25,
+          1672,
+          940.5,
+          0,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.53125,
+          1671,
+          939.9375,
+          15.36,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.25,
+          1672,
+          940.5,
+          0,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.53125,
+          1671,
+          939.9375,
+          0,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.25,
+          1672,
+          940.5,
+          0,
+          0,
+          1280,
+          720
+        ],
+        [
+          0,
+          0.53125,
+          1671,
+          939.9375,
+          -15.36,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "ceilingDeclared": false,
+      "actualImageCompositing": "Not performed here. Coordinate calls and decoded alpha audited separately; live fight QA belongs to root."
+    }
+  },
+  "rendererRaccord": {
+    "existingTrack": "stairwellFanTurn",
+    "existingAnchor": [
+      0.5,
+      0.23
+    ],
+    "imageAnchor": [
+      0.5,
+      0.225
+    ],
+    "imageOuterRadiusNormalizedX": 0.145,
+    "imageOuterRadiusNormalizedY": 0.235,
+    "visibleBladeCount": 4,
+    "implementationAdvice": "Four static authored blades are painted into the background. Raster replace suppresses the existing generic vector track. Do not overlay a differently sized fan or claim source rotation. Root must design a matching bounded raster raccord if motion is integrated; the present PNGs alone provide static fan and camera parallax only.",
+    "authoredAdaptations": [
+      "Horizontal broad landing for versus in front of the stair flight.",
+      "Full camera, precise room proportions and wall arrangement.",
+      "Frontal fan orientation, four broad blades, diameter and appearance; source exact fan geometry remains unconfirmed.",
+      "Thin near-camera masonry returns for a separate camera-parallax plane."
+    ]
+  },
+  "proposedManifestEntry": {
+    "stageId": "building_world",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "b12-b15-fan-stairwell-first-visit",
+    "referenceIds": [
+      "CL_SH4_05_BUILDING_WORLD"
+    ],
+    "layers": [
+      {
+        "id": "fan-stairwell",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/building_world.fan-stairwell.15995c474e24.png",
+            "sha256": "15995c474e24d66bed78609dea163344a04f4471260e5065edd2e9ecc834d23b",
+            "bytes": 2465408,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-masonry-returns",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "frames": [
+          {
+            "path": "assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png",
+            "sha256": "9e753eeb66e25617558a302d0ae75d622531b4d31917ca7a2bd63a320a962652",
+            "bytes": 270542,
+            "width": 1671,
+            "height": 941
+          }
+        ],
+        "parallaxX": 0.012
+      }
+    ],
+    "notes": "Grand escalier B12–B15 sous le ventilateur, premier Building World de SH4. Chambre vide sans fauteuils de la seconde visite. Matières et volée d’escalier informées par une capture de la seconde visite, sans importer ses entités ou événements. Palier horizontal, caméra, proportions, orientation frontale et quatre pales du ventilateur sont des adaptations non certifiées. Fond natif1672×941 et avant-plan natif1671×941, inchangés ; parallaxe de caméra .012. Aucun plafond déclaré, aucune chute, règle matérielle, cadence source ou fidélité 1:1 revendiquée."
+  }
+}

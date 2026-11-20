@@ -1,0 +1,395 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "date": "2026-11-19",
+  "baseLocalCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "scope": "New source-reviewed lateral images for existing profiles; historical campaign dispositions preserved.",
+  "imports": [
+    {
+      "fighterId": "bom_wood_sapling_139",
+      "source": "bom",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/bom_wood_sapling_139.c26ab2d65518.png",
+      "sha256": "c26ab2d65518bafb126d7d5b6f6f9e03d4c5256b4d3ab8b7e063435900925850",
+      "bytes": 724793,
+      "width": 1199,
+      "height": 1312,
+      "sourceSHA256": "c26ab2d65518bafb126d7d5b6f6f9e03d4c5256b4d3ab8b7e063435900925850",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "name": "bom-wood-sapling.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/wood_sapling.jpg",
+          "path": "docs/production/vague23/characters/references/bom-wood-sapling.jpg",
+          "bytes": 13029,
+          "sha256": "2dcfc58fa87a091979a13995a45cd90ed32db67607f5d71711ceb95d093ad2ed",
+          "visuallyInspected": true
+        },
+        {
+          "name": "bom-wood-retail16.jpg",
+          "url": "http://psvita-loc.mediagen.fr/silent-hill-book-of-memories-23-10-2012-16_0000372167.jpg",
+          "path": "docs/production/vague23/characters/references/bom-wood-retail16.jpg",
+          "bytes": 116658,
+          "sha256": "40640b6e4635ab7ddacb3a686fcbf9daedab21aba539c6006b169274663f3c87",
+          "visuallyInspected": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/bom_wood_sapling_139.5d67aa29cc35.png",
+        "sha256": "5d67aa29cc354986fd6c5ec2d758b592b28844ec55af42d670268dbd4c409c24",
+        "bytes": 867685,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "pose": "idle",
+      "frameIndex": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.4,
+          0.88719512
+        ],
+        "bodyHeight": 0.76676829,
+        "basis": "Authored display calibration, not a canonical size or timing measurement."
+      },
+      "provenance": "docs/production/vague23/characters/delivery.json",
+      "provenanceSHA256": "b3f63409b2dadf326033ddb62fb6f4c8e42289d780f1694c1ac38b10208bbe6c",
+      "importReceipt": {
+        "path": "docs/production/vague23/fighter-integration-bom-sh4.json",
+        "sha256": "c703f0fbaca68e7f42d965d80166c310d78d08b673ce5d7a4402c9e7b36570e0",
+        "completedAt": "2026-11-19T17:40:04.095Z"
+      },
+      "review": "Un seul petit rejeton entier, buste penché vers la droite, tête de bois pointue, bras de branches décalés et deux appuis effilés. Les doigts, les deux pointes inférieures et le sommet restent dans le cadre. Le petit Sapling à droite/bas-droite de la capture retail est la référence du corps ; le grand Guardian central est exclu.",
+      "limits": "Le portrait 127×127 montre surtout le haut ; les petits modèles entiers dans la capture retail sont peu résolus. Le dos, la rotation latérale, les doigts, les raccords de racines et la texture d’écorce sont reconstruits. La pose ne correspond pas à une frame d’animation extraite. PNG natif conservé sans redimensionnement, recadrage, peinture d’alpha ou autre modification des pixels. Un bruit d’alpha très faible peut dépasser les bornes lisibles. Contrôle du moteur et réglage final des ancres à effectuer par le parent ; aucune fidélité 1:1 ni animation nouvelle certifiée.",
+      "notes": "Static native PNG. Existing portrait, source role and clip semantics preserved. Image presence does not certify fidelity or animation."
+    },
+    {
+      "fighterId": "bom_tremer_133",
+      "source": "bom",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/bom_tremer_133.d6f54ebac80d.png",
+      "sha256": "d6f54ebac80dad273d74296c38f645cda4c3230ea7bbe9e5b8bc0b7c366ece04",
+      "bytes": 453599,
+      "width": 1774,
+      "height": 887,
+      "sourceSHA256": "d6f54ebac80dad273d74296c38f645cda4c3230ea7bbe9e5b8bc0b7c366ece04",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "name": "bom-tremer.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/tremer.jpg",
+          "path": "docs/production/vague23/characters/references/bom-tremer.jpg",
+          "bytes": 8774,
+          "sha256": "ff2c19e2d4102044240c07b82a66f64745f1b65539d94d25c96364ebdd08305a",
+          "visuallyInspected": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/bom_tremer_133.637b09a88365.png",
+        "sha256": "637b09a88365006d59f9a2c83e24ccf21e9aa77c1b5d1448e2402e046b58d254",
+        "bytes": 266529,
+        "width": 1254,
+        "height": 1254,
+        "facing": -1
+      },
+      "pose": "idle",
+      "frameIndex": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.67192785
+        ],
+        "bodyHeight": 0.33934611,
+        "basis": "Authored display calibration, not a canonical size or timing measurement."
+      },
+      "provenance": "docs/production/vague23/characters/delivery.json",
+      "provenanceSHA256": "b3f63409b2dadf326033ddb62fb6f4c8e42289d780f1694c1ac38b10208bbe6c",
+      "importReceipt": {
+        "path": "docs/production/vague23/fighter-integration-bom-sh4.json",
+        "sha256": "c703f0fbaca68e7f42d965d80166c310d78d08b673ce5d7a4402c9e7b36570e0",
+        "completedAt": "2026-11-19T17:40:04.095Z"
+      },
+      "review": "Un seul organisme rampant entier et horizontal. La grande extrémité pâle plissée pointe à droite, la petite pointe brune se termine à gauche ; contour continu sans membres ni appendices ajoutés. Le profil visuel est lisible à petite taille.",
+      "limits": "L’unique référence de bestiaire est une petite vue oblique 127×127. Le choix de présentation à droite, le profil, les plis fins et les surfaces cachées sont reconstruits ; pas de mesure native de longueur ou de locomotion. PNG natif conservé sans redimensionnement, recadrage, peinture d’alpha ou autre modification des pixels. Un bruit d’alpha très faible peut dépasser les bornes lisibles. Contrôle du moteur et réglage final des ancres à effectuer par le parent ; aucune fidélité 1:1 ni animation nouvelle certifiée.",
+      "notes": "Static native PNG. Existing portrait, source role and clip semantics preserved. Image presence does not certify fidelity or animation."
+    },
+    {
+      "fighterId": "bom_raw_shock_148",
+      "source": "bom",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/bom_raw_shock_148.a881f09b463e.png",
+      "sha256": "a881f09b463e206a6a2408623bb9609202a51e216ee0b25ed5c43d2f1955e1e7",
+      "bytes": 612548,
+      "width": 1199,
+      "height": 1312,
+      "sourceSHA256": "a881f09b463e206a6a2408623bb9609202a51e216ee0b25ed5c43d2f1955e1e7",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "name": "bom-raw-shock.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/raw_shock.jpg",
+          "path": "docs/production/vague23/characters/references/bom-raw-shock.jpg",
+          "bytes": 11553,
+          "sha256": "86fd3db0e75c5f5e87b60506644337b1cb36e13cf112a26999254341dbe6ba05",
+          "visuallyInspected": true
+        },
+        {
+          "name": "bom-raw34.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20130115_34.jpg",
+          "path": "docs/production/vague23/characters/references/bom-raw34.jpg",
+          "bytes": 192893,
+          "sha256": "ec8bb34abfe06061f179c2e47408bbc1e17bcf2d47a9d0f20a52ba6969b55ce1",
+          "visuallyInspected": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
+        "sha256": "d6ca2baa89ed0dfc12351fea1ebf26bd2aeab40216a123b788a6f1d01535d0ec",
+        "bytes": 574321,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "pose": "idle",
+      "frameIndex": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.36,
+          0.91844512
+        ],
+        "bodyHeight": 0.83993902,
+        "basis": "Authored display calibration, not a canonical size or timing measurement."
+      },
+      "provenance": "docs/production/vague23/characters/delivery.json",
+      "provenanceSHA256": "b3f63409b2dadf326033ddb62fb6f4c8e42289d780f1694c1ac38b10208bbe6c",
+      "importReceipt": {
+        "path": "docs/production/vague23/fighter-integration-bom-sh4.json",
+        "sha256": "c703f0fbaca68e7f42d965d80166c310d78d08b673ce5d7a4402c9e7b36570e0",
+        "completedAt": "2026-11-19T17:40:04.095Z"
+      },
+      "review": "Un Raw Shock révélé entier, mince et sans cheveux, de profil vers la droite. Tête ovoïde plissée, épaules rouge brun, longs bras et doigts, deux jambes et pieds complets. Bras proche bas vers l’avant, bras éloigné décalé derrière ; pose immobile de présentation.",
+      "limits": "Les références sont le bestiaire BoM et des créatures révélées dans une capture retail. Les captures 27/28 consultées montrent aussi le déguisement humain et ne sont pas des entrées de génération. Détails du visage, des doigts, des pieds et du dos reconstruits, sans certification des proportions fines. Aucune variante de Shattered Memories n’a été prise comme référence. PNG natif conservé sans redimensionnement, recadrage, peinture d’alpha ou autre modification des pixels. Un bruit d’alpha très faible peut dépasser les bornes lisibles. Contrôle du moteur et réglage final des ancres à effectuer par le parent ; aucune fidélité 1:1 ni animation nouvelle certifiée.",
+      "notes": "Static native PNG. Existing portrait, source role and clip semantics preserved. Image presence does not certify fidelity or animation."
+    },
+    {
+      "fighterId": "bom_gray_child_147",
+      "source": "bom",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/bom_gray_child_147.b8eaa81de9d2.png",
+      "sha256": "b8eaa81de9d223724ae53d604a101f3b1c82f062ac33708b1375ea8eab925b08",
+      "bytes": 1170129,
+      "width": 1536,
+      "height": 1024,
+      "sourceSHA256": "b8eaa81de9d223724ae53d604a101f3b1c82f062ac33708b1375ea8eab925b08",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "name": "bom-gray-child.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/gray_child.jpg",
+          "path": "docs/production/vague23/characters/references/bom-gray-child.jpg",
+          "bytes": 11675,
+          "sha256": "869bede26c83995d9f98f9263abb4a8ab408faa7496d472ff135bc62bddc1059",
+          "visuallyInspected": true
+        },
+        {
+          "name": "bom-gray29.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20130115_29.jpg",
+          "path": "docs/production/vague23/characters/references/bom-gray29.jpg",
+          "bytes": 236504,
+          "sha256": "074fab1703829d48fc19b3b8508b93316831b93079db08078e58c5bcb0cd7013",
+          "visuallyInspected": true
+        },
+        {
+          "name": "bom-gray30.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20130115_30.jpg",
+          "path": "docs/production/vague23/characters/references/bom-gray30.jpg",
+          "bytes": 162524,
+          "sha256": "9f4534c924581e7e39066792c35b25d616e6d1b0e344ef9ee2a7255a74547d4f",
+          "visuallyInspected": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/bom_gray_child_147.947d757ecfea.png",
+        "sha256": "947d757ecfea88ecbd1a5cfdadde9ba00d46a33d50d46eb4b8e5f6808cdf0782",
+        "bytes": 467880,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "pose": "idle",
+      "frameIndex": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.43,
+          0.87890625
+        ],
+        "bodyHeight": 0.74414063,
+        "basis": "Authored display calibration, not a canonical size or timing measurement."
+      },
+      "provenance": "docs/production/vague23/characters/delivery.json",
+      "provenanceSHA256": "b3f63409b2dadf326033ddb62fb6f4c8e42289d780f1694c1ac38b10208bbe6c",
+      "importReceipt": {
+        "path": "docs/production/vague23/fighter-integration-bom-sh4.json",
+        "sha256": "c703f0fbaca68e7f42d965d80166c310d78d08b673ce5d7a4402c9e7b36570e0",
+        "completedAt": "2026-11-19T17:40:04.095Z"
+      },
+      "review": "Un petit Gray Child non humain entier, tourné vers la droite, tête plissée disproportionnée, tronc court, bras longs, jambes courtes et deux pieds visibles. Une petite lame est tenue basse dans la main proche ; la main éloignée est vide. Légère ouverture du torse, sans présentation frontale.",
+      "limits": "La tête de la carte et les petites silhouettes des captures attestent l’identité BoM. Profil exact, main, lame et reliefs du torse restent interprétés. Alpha maximum 254 : aucune normalisation d’opacité n’a été faite. L’aperçu natif suggérait une auréole ; les composites noir/gris/clair ne montrent pas de halo large lisible. Pose statique, aucune animation ou fidélité 1:1 certifiée. PNG natif conservé sans redimensionnement, recadrage, peinture d’alpha ou autre modification des pixels. Un bruit d’alpha très faible peut dépasser les bornes lisibles. Contrôle du moteur et réglage final des ancres à effectuer par le parent ; aucune fidélité 1:1 ni animation nouvelle certifiée.",
+      "notes": "Static native PNG. Existing portrait, source role and clip semantics preserved. Image presence does not certify fidelity or animation."
+    },
+    {
+      "fighterId": "sh4_toadstool_061",
+      "source": "sh4",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+      "sha256": "b2de331812cab2ef81949111176d6ae392facaba6c535031074b6fead5549e34",
+      "bytes": 1006402,
+      "width": 1031,
+      "height": 1525,
+      "sourceSHA256": "b2de331812cab2ef81949111176d6ae392facaba6c535031074b6fead5549e34",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "name": "sh4-toadstool.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_14_toadstool.jpg",
+          "path": "docs/production/vague23/characters/references/sh4-toadstool.jpg",
+          "bytes": 16435,
+          "sha256": "85d38c62f9929b6262c9ec7e84405db92853672c59a3857bb2c5a7d21832a733",
+          "visuallyInspected": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+        "sha256": "a638ed6ea7d7acb707a759e1540a79b67453be0016981cf04c235a68b1982865",
+        "bytes": 1806980,
+        "width": 1031,
+        "height": 1525,
+        "facing": 1
+      },
+      "pose": "idle",
+      "frameIndex": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "combatEnabled": false,
+      "usage": "reference-only-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.42,
+          0.90360656
+        ],
+        "bodyHeight": 0.81311475,
+        "basis": "Authored display calibration, not a canonical size or timing measurement."
+      },
+      "provenance": "docs/production/vague23/characters/delivery.json",
+      "provenanceSHA256": "b3f63409b2dadf326033ddb62fb6f4c8e42289d780f1694c1ac38b10208bbe6c",
+      "importReceipt": {
+        "path": "docs/production/vague23/fighter-integration-bom-sh4.json",
+        "sha256": "c703f0fbaca68e7f42d965d80166c310d78d08b673ce5d7a4402c9e7b36570e0",
+        "completedAt": "2026-11-19T17:40:04.095Z"
+      },
+      "review": "Une colonie cohérente entière, tiges sombres fines portant des extrémités ovoïdes mouchetées beige-brun, réunies sur une petite attache basale. Toutes les pointes et la base sont visibles, avec inclinaisons latérales variées et tendance vers la droite. Vue d’atelier passive ; pas de pose de marche ou de combat.",
+      "limits": "L’art de créature original 169×250 est une vue de référence, pas une capture latérale animée. Nombre exact, torsion et microtextures des tiges sont reconstruits. Le profil est un obstacle environnemental existant, combatEnabled=false ; aucune autonomie en duel n’est ajoutée. PNG natif conservé sans redimensionnement, recadrage, peinture d’alpha ou autre modification des pixels. Un bruit d’alpha très faible peut dépasser les bornes lisibles. Contrôle du moteur et réglage final des ancres à effectuer par le parent ; aucune fidélité 1:1 ni animation nouvelle certifiée.",
+      "notes": "Static native PNG. Existing portrait, source role and clip semantics preserved. Image presence does not certify fidelity or animation."
+    },
+    {
+      "fighterId": "sh4_whitestool_062",
+      "source": "sh4",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/sh4_whitestool_062.5f6ad30d02b8.png",
+      "sha256": "5f6ad30d02b867c20f663cb19ee368b9afcc769817fbe23e26f7b8d455bb03f0",
+      "bytes": 1338348,
+      "width": 1040,
+      "height": 1512,
+      "sourceSHA256": "5f6ad30d02b867c20f663cb19ee368b9afcc769817fbe23e26f7b8d455bb03f0",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "name": "sh4-whitestool.jpg",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_13_whitestool.jpg",
+          "path": "docs/production/vague23/characters/references/sh4-whitestool.jpg",
+          "bytes": 20451,
+          "sha256": "25ba356a7b11ffab92047ca421b8c6c6a848918381778af9f7da64443e59537c",
+          "visuallyInspected": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+        "sha256": "bcbd834972411b5f045c49e7e88a7319fa92e9cccf39cfc5c9552c028fb249b7",
+        "bytes": 2296027,
+        "width": 1040,
+        "height": 1512,
+        "facing": 1
+      },
+      "pose": "idle",
+      "frameIndex": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "combatEnabled": false,
+      "usage": "reference-only-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.45,
+          0.84126984
+        ],
+        "bodyHeight": 0.7281746,
+        "basis": "Authored display calibration, not a canonical size or timing measurement."
+      },
+      "provenance": "docs/production/vague23/characters/delivery.json",
+      "provenanceSHA256": "b3f63409b2dadf326033ddb62fb6f4c8e42289d780f1694c1ac38b10208bbe6c",
+      "importReceipt": {
+        "path": "docs/production/vague23/fighter-integration-bom-sh4.json",
+        "sha256": "c703f0fbaca68e7f42d965d80166c310d78d08b673ce5d7a4402c9e7b36570e0",
+        "completedAt": "2026-11-19T17:40:04.095Z"
+      },
+      "review": "Une colonie entière de fins brins ivoire, hauteurs inégales, ramifications irrégulières et petite base sombre commune. Les pointes et l’attache basse sont dans le cadre. Silhouette latérale de référence passive ; aucune marche ou attaque représentée.",
+      "limits": "L’art de créature 165×240 fixe l’aspect filiforme mais ne résout pas chaque tige. La ramification et les textures sont reconstruites. Le rôle reste environnemental, combatEnabled=false. Une édition de détourage a été essayée après un aperçu natif ambigu ; elle n’améliore pas clairement le composite et reste archivée hors selected[]. PNG natif conservé sans redimensionnement, recadrage, peinture d’alpha ou autre modification des pixels. Un bruit d’alpha très faible peut dépasser les bornes lisibles. Contrôle du moteur et réglage final des ancres à effectuer par le parent ; aucune fidélité 1:1 ni animation nouvelle certifiée.",
+      "notes": "Static native PNG. Existing portrait, source role and clip semantics preserved. Image presence does not certify fidelity or animation."
+    }
+  ]
+}

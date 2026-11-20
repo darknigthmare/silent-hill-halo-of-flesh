@@ -1,0 +1,856 @@
+[
+  {
+    "id": "villa",
+    "name": "KETTENSTADT VILLA",
+    "source": "shortmessage",
+    "family": "villa",
+    "sky": [
+      "#3a3437",
+      "#140f11",
+      "#030203"
+    ],
+    "weather": "dust",
+    "props": [
+      "graffiti",
+      "stairs",
+      "fence"
+    ],
+    "hazard": "petalBloom",
+    "animations": [
+      "lightFlicker"
+    ],
+    "fatality": {
+      "id": "villa_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de KETTENSTADT VILLA."
+    },
+    "catalogueStatus": "verified-location",
+    "lore": {
+      "premise": "Complexe abandonné The Villa dans Kettenstadt; couloirs et appartements à différencier.",
+      "canonicalBasis": "EXT30 ; EXT31",
+      "fidelity": "lieu-reference / mise-en-scene-versus",
+      "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+    },
+    "terrain": {
+      "id": "petals",
+      "name": "PÉTALES ET VRILLES",
+      "moveScale": 0.93,
+      "jumpScale": 0.96,
+      "dodgeScale": 0.92,
+      "friction": 0.82,
+      "knockbackScale": 0.94,
+      "guardRegenScale": 0.9,
+      "bloom": true,
+      "description": "La flore réagit aux combattants et se densifie pendant la bascule."
+    },
+    "visibility": {
+      "fog": 0.42,
+      "darkness": 0.38,
+      "radioScale": 0.8280000000000001,
+      "silhouetteRange": 525,
+      "flashlight": true
+    },
+    "shift": {
+      "style": "floral",
+      "name": "FLORAISON DU TRAUMA",
+      "cue": "PÉTALES CONTRE LE VERRE",
+      "duration": 140,
+      "threshold": 0.6,
+      "timerRatio": 0.58,
+      "radioScale": 0.9,
+      "overlay": "floral",
+      "description": "Pétales, racines et masses florales envahissent le lieu en réponse au combat.",
+      "startOtherworld": false,
+      "enabled": false,
+      "referenceState": "fixed-normal"
+    },
+    "director": {
+      "cadence": 374,
+      "initialDelay": 245,
+      "intensity": 0.91,
+      "arenaInset": 92,
+      "hazardDeck": [],
+      "events": [],
+      "motifPolicy": {
+        "events": [],
+        "hazards": [],
+        "ambienceOnly": true,
+        "excludedEvents": [
+          "rootWake"
+        ],
+        "excludedHazards": [
+          "rootSnare"
+        ],
+        "evidenceScope": "exact-production-reference / original-versus-prototypes",
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "petalBloom",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "petalSpiral",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "shadowPass",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "petals",
+            "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+          }
+        ]
+      },
+      "safeMargin": 118,
+      "signature": "villa:floral:petals:fixed-normal::"
+    },
+    "gameplay": {
+      "arenaInset": 92,
+      "terrainRules": true,
+      "environmentalDirector": true,
+      "edgePressure": false,
+      "verticalPressure": false,
+      "closeQuarters": false
+    },
+    "layers": [
+      "villa-shell",
+      "messages",
+      "floral-growth",
+      "graffiti",
+      "stairs",
+      "fence"
+    ],
+    "animationTracks": [
+      {
+        "id": "lightFlicker",
+        "phase": "both",
+        "layer": "midground",
+        "intensity": 1,
+        "cadence": "irregular"
+      }
+    ],
+    "interactions": [],
+    "reference": {
+      "id": "villa",
+      "source": "shortmessage",
+      "identityMatched": true,
+      "blocked": false,
+      "locationStatus": "lieu-documente-secondaire",
+      "catalogueName": "KETTENSTADT VILLA",
+      "correctedName": null,
+      "locationNote": "Complexe abandonné The Villa dans Kettenstadt; couloirs et appartements à différencier.",
+      "referenceIds": [
+        "EXT30",
+        "EXT31"
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ],
+      "proposals": [
+        {
+          "name": "villa_ambient_01",
+          "description": "Post-it soulevé par courant d’air",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30",
+            "EXT31"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "villa_ambient_02",
+          "description": "Pulsation du téléphone hors plan",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30",
+            "EXT31"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "villa_ambient_03",
+          "description": "Ombres de clôtures dans le labyrinthe",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30",
+            "EXT31"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "villa_round_transition",
+          "description": "Transition proposée pour KETTENSTADT VILLA : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30",
+            "EXT31"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ]
+    },
+    "referenceTracks": [
+      {
+        "id": "villa:reference:1",
+        "key": "paperFlutter",
+        "name": "Papier retenu au décor",
+        "description": "Post-it soulevé par courant d’air",
+        "proposalIndex": 0,
+        "source": "shortmessage",
+        "evidence": [
+          "EXT30",
+          "EXT31"
+        ],
+        "layer": "background",
+        "anchor": {
+          "x": 0.3,
+          "y": 0.49
+        },
+        "trigger": "ambient",
+        "event": null,
+        "eventEnabled": null,
+        "implementation": "canvas-prototype",
+        "coverage": "partial-visual-prototype",
+        "implementedElement": "Papier retenu au décor",
+        "fidelity": "adaptation-versus-proposee",
+        "captureStatus": "capture-a-relever",
+        "locationScope": null,
+        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1."
+      }
+    ],
+    "referencePolicy": {
+      "worldState": "fixed-normal",
+      "allowedEvents": [],
+      "allowedHazards": [],
+      "automaticFinishers": false,
+      "weather": "dust",
+      "interior": false,
+      "baselineMotion": true,
+      "suppression": [
+        {
+          "kind": "event",
+          "id": "powerFailure",
+          "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+        },
+        {
+          "kind": "hazard",
+          "id": "petalBloom",
+          "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+        },
+        {
+          "kind": "hazard",
+          "id": "fallingDebris",
+          "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+        },
+        {
+          "kind": "animation",
+          "id": "petalSpiral",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
+          "id": "shadowPass",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "weather",
+          "id": "petals",
+          "reason": "Ambiance remplacée par dust pour conserver le lieu et l’œuvre."
+        }
+      ],
+      "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+      "renderedProposalIds": [
+        "villa:reference:1"
+      ],
+      "pendingProposalIds": [
+        "villa:reference:2",
+        "villa:reference:3",
+        "villa:reference:4"
+      ]
+    }
+  },
+  {
+    "id": "villa_rooftop",
+    "name": "KETTENSTADT VILLA — ROOFTOP",
+    "source": "shortmessage",
+    "family": "rooftop",
+    "sky": [
+      "#53424b",
+      "#1b1116",
+      "#050305"
+    ],
+    "weather": "fog",
+    "props": [
+      "fence",
+      "antenna",
+      "flowers"
+    ],
+    "animations": [
+      "windGust"
+    ],
+    "hazard": "petalBloom",
+    "fatality": {
+      "id": "villa_rooftop_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de KETTENSTADT VILLA — ROOFTOP."
+    },
+    "catalogueStatus": "verified-location",
+    "lore": {
+      "premise": "Toit de la Villa; préserver rôle narratif, finisher mortel environnemental non automatique.",
+      "canonicalBasis": "EXT30",
+      "fidelity": "lieu-reference / mise-en-scene-versus",
+      "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+    },
+    "terrain": {
+      "id": "petals",
+      "name": "PÉTALES ET VRILLES",
+      "moveScale": 0.93,
+      "jumpScale": 0.96,
+      "dodgeScale": 0.92,
+      "friction": 0.82,
+      "knockbackScale": 0.94,
+      "guardRegenScale": 0.9,
+      "bloom": true,
+      "description": "La flore réagit aux combattants et se densifie pendant la bascule."
+    },
+    "visibility": {
+      "fog": 0.42,
+      "darkness": 0.38,
+      "radioScale": 0.8280000000000001,
+      "silhouetteRange": 525,
+      "flashlight": true
+    },
+    "shift": {
+      "style": "floral",
+      "name": "FLORAISON DU TRAUMA",
+      "cue": "PÉTALES",
+      "duration": 140,
+      "threshold": 0.6,
+      "timerRatio": 0.58,
+      "radioScale": 0.9,
+      "overlay": "floral",
+      "description": "Pétales, racines et masses florales envahissent le lieu en réponse au combat.",
+      "startOtherworld": false,
+      "enabled": false,
+      "referenceState": "fixed-normal"
+    },
+    "director": {
+      "cadence": 374,
+      "initialDelay": 269,
+      "intensity": 0.91,
+      "arenaInset": 70,
+      "hazardDeck": [],
+      "events": [],
+      "motifPolicy": {
+        "events": [],
+        "hazards": [],
+        "ambienceOnly": true,
+        "excludedEvents": [],
+        "excludedHazards": [],
+        "evidenceScope": "exact-production-reference / original-versus-prototypes",
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "rootWake",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "stormSurge",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "windShear",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "petalBloom",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "lightningStrike",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "petalSpiral",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightning",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "petals",
+            "reason": "Ambiance remplacée par fog pour conserver le lieu et l’œuvre."
+          }
+        ]
+      },
+      "safeMargin": 118,
+      "signature": "villa_rooftop:floral:petals:fixed-normal::"
+    },
+    "gameplay": {
+      "arenaInset": 70,
+      "terrainRules": true,
+      "environmentalDirector": true,
+      "edgePressure": true,
+      "verticalPressure": true,
+      "closeQuarters": false
+    },
+    "layers": [
+      "roofline",
+      "fence",
+      "sky",
+      "antenna",
+      "flowers"
+    ],
+    "animationTracks": [
+      {
+        "id": "windGust",
+        "phase": "both",
+        "layer": "midground",
+        "intensity": 1,
+        "cadence": "continuous"
+      }
+    ],
+    "interactions": [],
+    "reference": {
+      "id": "villa_rooftop",
+      "source": "shortmessage",
+      "identityMatched": true,
+      "blocked": false,
+      "locationStatus": "lieu-documente-secondaire",
+      "catalogueName": "KETTENSTADT VILLA — ROOFTOP",
+      "correctedName": null,
+      "locationNote": "Toit de la Villa; préserver rôle narratif, finisher mortel environnemental non automatique.",
+      "referenceIds": [
+        "EXT30"
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ],
+      "proposals": [
+        {
+          "name": "villa_rooftop_ambient_01",
+          "description": "Vent sur clôture",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "villa_rooftop_ambient_02",
+          "description": "Variation de brume au-delà du toit",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "villa_rooftop_ambient_03",
+          "description": "Lueur du téléphone sur les mains en clôture",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "villa_rooftop_round_transition",
+          "description": "Transition proposée pour KETTENSTADT VILLA — ROOFTOP : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ]
+    },
+    "referenceTracks": [],
+    "referencePolicy": {
+      "worldState": "fixed-normal",
+      "allowedEvents": [],
+      "allowedHazards": [],
+      "automaticFinishers": false,
+      "weather": "fog",
+      "interior": false,
+      "baselineMotion": true,
+      "suppression": [
+        {
+          "kind": "event",
+          "id": "rootWake",
+          "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+        },
+        {
+          "kind": "event",
+          "id": "stormSurge",
+          "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+        },
+        {
+          "kind": "hazard",
+          "id": "windShear",
+          "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+        },
+        {
+          "kind": "hazard",
+          "id": "petalBloom",
+          "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+        },
+        {
+          "kind": "hazard",
+          "id": "lightningStrike",
+          "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+        },
+        {
+          "kind": "animation",
+          "id": "petalSpiral",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
+          "id": "lightning",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "weather",
+          "id": "petals",
+          "reason": "Ambiance remplacée par fog pour conserver le lieu et l’œuvre."
+        }
+      ],
+      "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+      "renderedProposalIds": [],
+      "pendingProposalIds": [
+        "villa_rooftop:reference:1",
+        "villa_rooftop:reference:2",
+        "villa_rooftop:reference:3",
+        "villa_rooftop:reference:4"
+      ]
+    }
+  },
+  {
+    "id": "villa_stairwell",
+    "name": "KETTENSTADT VILLA — STAIRWELL",
+    "source": "shortmessage",
+    "family": "building",
+    "sky": [
+      "#3c3035",
+      "#140d10",
+      "#030203"
+    ],
+    "weather": "flicker",
+    "props": [
+      "stairs",
+      "graffiti",
+      "lights"
+    ],
+    "animations": [
+      "lightFlicker"
+    ],
+    "hazard": "staticBurst",
+    "fatality": {
+      "id": "villa_stairwell_fatality",
+      "name": "OTHERWORLD STAGE FATALITY",
+      "effect": "rust",
+      "sequence": [
+        "siren",
+        "impact",
+        "blackout"
+      ],
+      "triggerZone": "either-edge",
+      "fidelity": "environmental-adaptation",
+      "canonicalBasis": "Décor et dangers documentés de KETTENSTADT VILLA — STAIRWELL."
+    },
+    "catalogueStatus": "verified-location",
+    "lore": {
+      "premise": "Escaliers de la Villa, sous-lieu du complexe.",
+      "canonicalBasis": "EXT30",
+      "fidelity": "lieu-reference / mise-en-scene-versus",
+      "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
+    },
+    "terrain": {
+      "id": "concrete",
+      "name": "BÉTON SEC",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Sol stable et neutre."
+    },
+    "visibility": {
+      "fog": 0.2,
+      "darkness": 0.5,
+      "radioScale": 0.8280000000000001,
+      "silhouetteRange": 525,
+      "flashlight": true
+    },
+    "shift": {
+      "style": "floral",
+      "name": "FLORAISON DU TRAUMA",
+      "cue": "PÉTALES",
+      "duration": 140,
+      "threshold": 0.6,
+      "timerRatio": 0.58,
+      "radioScale": 0.9,
+      "overlay": "floral",
+      "description": "Pétales, racines et masses florales envahissent le lieu en réponse au combat.",
+      "startOtherworld": false,
+      "enabled": false,
+      "referenceState": "fixed-normal"
+    },
+    "director": {
+      "cadence": 374,
+      "initialDelay": 275,
+      "intensity": 0.91,
+      "arenaInset": 100,
+      "hazardDeck": [],
+      "events": [
+        "powerFailure"
+      ],
+      "motifPolicy": {
+        "events": [
+          "powerFailure"
+        ],
+        "hazards": [],
+        "ambienceOnly": true,
+        "excludedEvents": [
+          "elevatorCall",
+          "rootWake"
+        ],
+        "excludedHazards": [
+          "elevatorDrop",
+          "staticBurst"
+        ],
+        "evidenceScope": "exact-production-reference / original-versus-prototypes",
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "corridorCollapse",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "doorSlam",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "shadowPass",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "doorPulse",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          }
+        ]
+      },
+      "safeMargin": 118,
+      "signature": "villa_stairwell:floral:concrete:fixed-normal::powerFailure"
+    },
+    "gameplay": {
+      "arenaInset": 100,
+      "terrainRules": true,
+      "environmentalDirector": true,
+      "edgePressure": false,
+      "verticalPressure": false,
+      "closeQuarters": false
+    },
+    "layers": [
+      "stairwell",
+      "doors",
+      "shaft",
+      "stairs",
+      "graffiti",
+      "lights"
+    ],
+    "animationTracks": [
+      {
+        "id": "lightFlicker",
+        "phase": "both",
+        "layer": "midground",
+        "intensity": 1,
+        "cadence": "irregular"
+      }
+    ],
+    "interactions": [
+      {
+        "id": "villa_stairwell_powerFailure_2",
+        "event": "powerFailure",
+        "name": "PANNE GÉNÉRALE",
+        "trigger": "otherworld-halfway",
+        "triggerLabel": "MI-CHEMIN OTHERWORLD",
+        "triggerDescription": "Réagit lorsque la transformation visuelle et matérielle du lieu dépasse la moitié de sa progression.",
+        "fidelity": "adaptation-versus-proposee",
+        "fidelityLabel": "MOTIF LORE · RÈGLE VERSUS",
+        "canonicalBasis": "Escaliers de la Villa, sous-lieu du complexe.",
+        "referenceIds": [
+          "EXT30"
+        ],
+        "proposalId": null
+      }
+    ],
+    "reference": {
+      "id": "villa_stairwell",
+      "source": "shortmessage",
+      "identityMatched": true,
+      "blocked": false,
+      "locationStatus": "lieu-documente-secondaire",
+      "catalogueName": "KETTENSTADT VILLA — STAIRWELL",
+      "correctedName": null,
+      "locationNote": "Escaliers de la Villa, sous-lieu du complexe.",
+      "referenceIds": [
+        "EXT30"
+      ],
+      "constraints": [
+        "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
+        "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+      ],
+      "proposals": [
+        {
+          "name": "villa_stairwell_ambient_01",
+          "description": "Ombre avançant sur palier",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "villa_stairwell_ambient_02",
+          "description": "Grésillement du néon",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "villa_stairwell_ambient_03",
+          "description": "Poussière soufflée par porte de secours",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30"
+          ],
+          "category": "ambient",
+          "timecode": null
+        },
+        {
+          "name": "villa_stairwell_round_transition",
+          "description": "Transition proposée pour KETTENSTADT VILLA — STAIRWELL : suspendre puis reprendre les boucles ci-dessus sans déplacer les collisions du plateau; préserver le lieu et sa phase.",
+          "status": "adaptation-animation-proposee",
+          "evidence": [
+            "EXT30"
+          ],
+          "category": "round_transition",
+          "timecode": null
+        }
+      ]
+    },
+    "referenceTracks": [],
+    "referencePolicy": {
+      "worldState": "fixed-normal",
+      "allowedEvents": [
+        "powerFailure"
+      ],
+      "allowedHazards": [],
+      "automaticFinishers": false,
+      "weather": "flicker",
+      "interior": true,
+      "baselineMotion": true,
+      "suppression": [
+        {
+          "kind": "event",
+          "id": "corridorCollapse",
+          "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+        },
+        {
+          "kind": "hazard",
+          "id": "fallingDebris",
+          "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+        },
+        {
+          "kind": "hazard",
+          "id": "doorSlam",
+          "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+        },
+        {
+          "kind": "animation",
+          "id": "shadowPass",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
+          "id": "doorPulse",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        }
+      ],
+      "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+      "renderedProposalIds": [],
+      "pendingProposalIds": [
+        "villa_stairwell:reference:1",
+        "villa_stairwell:reference:2",
+        "villa_stairwell:reference:3",
+        "villa_stairwell:reference:4"
+      ]
+    }
+  }
+]

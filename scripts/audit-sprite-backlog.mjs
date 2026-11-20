@@ -12,21 +12,25 @@ export function auditSpriteCoverage(report) {
     if (entry.frames===0 && entry.animatedClips!==0) throw new Error('Animation without frames: '+entry.id);
   }
   if (Number.isSafeInteger(report.total) && report.total!==report.entries.length) throw new Error('Sprite coverage total mismatch');
-  if (Number.isSafeInteger(report.integrated) && report.integrated!==report.entries.filter(e=>e.frames>0).length) throw new Error('Sprite coverage integrated mismatch');
-  if (Number.isSafeInteger(report.missing) && report.missing!==report.entries.filter(e=>e.frames===0).length) throw new Error('Sprite coverage missing mismatch');
+  const illustrated=e=>e.selection===true||e.frames>0;
+  if (Number.isSafeInteger(report.integrated) && report.integrated!==report.entries.filter(illustrated).length) throw new Error('Sprite coverage integrated mismatch');
+  if (Number.isSafeInteger(report.missing) && report.missing!==report.entries.filter(e=>!illustrated(e)).length) throw new Error('Sprite coverage missing mismatch');
   if (Number.isSafeInteger(report.animatedClips) && report.animatedClips!==report.entries.reduce((n,e)=>n+e.animatedClips,0)) throw new Error('Sprite coverage animation count mismatch');
   const rows = report.entries.map(e => {
     const frames = Number.isSafeInteger(e.frames) && e.frames >= 0 ? e.frames : 0;
     const animated = Number.isSafeInteger(e.animatedClips) && e.animatedClips >= 0 ? e.animatedClips : 0;
     const priority = animated > 0 ? 'P0-validate-animation' : frames > 0 ? 'P1-author-animation' : 'P2-import-sprites';
-    return {id:e.id,name:e.name,source:e.source,frames,animated,
+    return {id:e.id,name:e.name,source:e.source,frames,animated,selection:e.selection??frames>0,
+      combatView:e.combatView||(frames>0?'legacy-unreviewed':'missing'),
       missingPresentations:Array.isArray(e.presentations?.missing)?e.presentations.missing.length:null,
       fidelity:e.fidelity,priority};
   });
   rows.sort((a,b)=>a.priority.localeCompare(b.priority)||b.frames-a.frames||a.id.localeCompare(b.id));
-  return {summary:{total:rows.length,illustrated:rows.filter(r=>r.frames>0).length,
-    missing:rows.filter(r=>r.frames===0).length,animatedClips:rows.reduce((n,r)=>n+r.animated,0),
-    certified:rows.filter(r=>r.fidelity==='verified').length},rows};
+  return {summary:{total:rows.length,illustrated:rows.filter(illustrated).length,
+    missing:rows.filter(r=>!illustrated(r)).length,animatedClips:rows.reduce((n,r)=>n+r.animated,0),
+    certified:rows.filter(r=>r.fidelity==='verified').length},
+    usage:{selectionAvailable:rows.filter(r=>r.selection).length,combatSideViewCandidates:rows.filter(r=>r.combatView==='side-view-candidate').length,
+      combatLegacyUnreviewed:rows.filter(r=>r.combatView==='legacy-unreviewed').length,combatMissing:rows.filter(r=>r.combatView==='missing').length},rows};
 }
 
 
@@ -48,6 +52,7 @@ export function markdownSpriteAudit(result) {
   const lines=['# Animation production backlog','',
     'Generated from data/sprite-coverage.json. A declared animated clip does not certify visual fidelity.','',
     '**'+s.total+' profiles / '+s.illustrated+' illustrated / '+s.missing+' without art / '+s.animatedClips+' animated clips / '+s.certified+' certified.**','',
+    ...(result.usage?['Selection portraits: '+result.usage.selectionAvailable+'; side-view combat candidates: '+result.usage.combatSideViewCandidates+'; legacy combat views unreviewed: '+result.usage.combatLegacyUnreviewed+'; missing combat sprites: '+result.usage.combatMissing+'.','']:[]),
     '| Priority | ID | Name | Source | Frames | Animated clips | Missing presentations | Fidelity |',
     '|---|---|---|---|---:|---:|---:|---|'];
   for (const r of result.rows) lines.push('| '+[r.priority,r.id,String(r.name).replaceAll('|','/'),r.source,r.frames,r.animated,r.missingPresentations??'unknown',r.fidelity].join(' | ')+' |');

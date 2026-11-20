@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "createdAt": "2026-11-20T09:23:34.369Z",
+  "input": {
+    "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall-b/integration-delivery.json",
+    "sha256": "3d3decb8fa8c0755476a448821a2c008e5bdf827d3218ef92c50f3e7e37f786d"
+  },
+  "entries": [
+    {
+      "fighterId": "townfall_widow",
+      "source": "townfall",
+      "path": "assets/sprites/townfall_widow.10672c611252.png",
+      "pose": "idle",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "combatView": "side-view-candidate",
+      "portraitPath": "assets/sprites/townfall_widow.853146bb99d2.png",
+      "technical": {
+        "pixelSHA256": "8c0e2546958fa07ac3f2d33926569f642d6307e15540a22e0d38b4cf9c744f95",
+        "sha256": "10672c611252e4fe098cc415c7e9185267e5b547bbd51454cfa757a614eaa37e",
+        "bytes": 520415,
+        "width": 1086,
+        "height": 1448,
+        "extension": "png",
+        "visibleBounds": [
+          254,
+          211,
+          688,
+          1292
+        ],
+        "transparentFraction": 0.88767
+      },
+      "dryRun": false,
+      "nextStep": "npm run sprites:check && npm test && npm run build",
+      "combatEnabled": false,
+      "usage": "reference-only-lateral-candidate",
+      "sourceLocalPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall-b/png/townfall_widow.side.png",
+      "nativePixelsPreserved": true,
+      "portraitPreserved": true,
+      "clipSemanticsPreserved": true,
+      "roleUnchanged": true,
+      "reviewScope": "single-subject",
+      "reviewedSubjectCount": 1
+    },
+    {
+      "fighterId": "townfall_the_weight",
+      "source": "townfall",
+      "path": "assets/sprites/townfall_the_weight.7b899f339ae7.png",
+      "pose": "idle",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "combatView": "side-view-candidate",
+      "portraitPath": "assets/sprites/townfall_the_weight.d6c2834ffe6d.png",
+      "technical": {
+        "pixelSHA256": "89965940a33e90bf5c89a9e6b7e14d8ab5889e39c473c645f595b368d5edcf88",
+        "sha256": "7b899f339ae7b92c7abe9fe2775615c0a9f49c35b6d255b6837b203f7006b000",
+        "bytes": 1315627,
+        "width": 1024,
+        "height": 1536,
+        "extension": "png",
+        "visibleBounds": [
+          280,
+          280,
+          751,
+          1308
+        ],
+        "transparentFraction": 0.84003
+      },
+      "dryRun": false,
+      "nextStep": "npm run sprites:check && npm test && npm run build",
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "sourceLocalPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall-b/png/townfall_the_weight.side.png",
+      "nativePixelsPreserved": true,
+      "portraitPreserved": true,
+      "clipSemanticsPreserved": true,
+      "roleUnchanged": true,
+      "reviewScope": "single-subject",
+      "reviewedSubjectCount": 1
+    }
+  ],
+  "complete": true,
+  "completedAt": "2026-11-20T09:23:54.763Z"
+}

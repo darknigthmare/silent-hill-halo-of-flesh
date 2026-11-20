@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "scope": "Independent wave18 code and native rendering QA",
+  "root": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh",
+  "baseCommit": "167abf6a369ab6c2329c2204e19bac79ce763ac9",
+  "sourceModifiedByReviewer": false,
+  "targetedTests": {
+    "passed": 32,
+    "failed": 0,
+    "files": [
+      "tests/completed-result-retirement.test.mjs",
+      "tests/stage-bitmaps.test.mjs",
+      "tests/stage-bitmap-compositions.test.mjs"
+    ],
+    "evidence": "targeted-tests.tap"
+  },
+  "native": {
+    "passed": true,
+    "checks": 286,
+    "duels": 8,
+    "captures": 61,
+    "evidence": "native/report.json",
+    "reportSHA256": "f1aa8b37da62eff50d5183df0baf91fd7ff93c76e29469c9a16b18632880f743",
+    "dependencies": {
+      "node": "v24.22.3",
+      "canvas": "0.1.100",
+      "sharp": "0.35.5"
+    }
+  },
+  "codeReviewed": [
+    "src/fight.js",
+    "src/versus.js",
+    "src/sprite-system.js",
+    "src/renderers.js",
+    "src/stage-bitmap-compositions.js"
+  ],
+  "blockingFindings": [],
+  "visualReviewed": [
+    "origins_faceless_nurse-right-attack-frame5.png",
+    "arcade_scraper_arcade-left-walk-tick14-frame2.png",
+    "homecoming_scarlet_doll_form_094-right-walk-tick16-frame2.png",
+    "film_mannequin_monster_176-left-idle.png",
+    "origins_faceless_nurse-left-guard.png",
+    "homecoming_scarlet_doll_form_094-right-idle.png",
+    "return-renderer-preview-right.png"
+  ],
+  "observations": [
+    "HUD central strings stay within the clear gap between health bars in inspected native frames.",
+    "Nurse syringe and shoes, Scraper blades, Scarlet limbs and Mannequin exterior are fully visible in inspected captures.",
+    "The native walk trace records soleOffsetFromActor 0 for every sampled walk frame in both orientations.",
+    "Midwich uses the painted hearth with clipped light changes; no duplicate procedural cage visible.",
+    "Building World scene and near masonry leave the central fighting strip readable.",
+    "Return Lying Figure was inspected as renderer-only preview; its disabled combat role was preserved."
+  ],
+  "limitations": [
+    "No Chromium, DOM/CSS, network, service-worker or actual browser input validation performed by this review.",
+    "Native attack inspection covers ordinary whiffs, not every hit/guard/interruption situation.",
+    "Seven selected captures inspected visually, not every frame or original franchise comparison.",
+    "No source animation timing or 1:1 fidelity certified.",
+    "Completed-result retirement targets sprite-union overflow; stage-only union overflow remains safely rejected rather than optimized. No wave18 stage pair reaches the stage budget."
+  ]
+}

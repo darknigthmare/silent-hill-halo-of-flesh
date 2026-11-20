@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "group": "vague23-stages",
+  "scope": "New native static bitmap candidates for existing missing stages only",
+  "createdAt": "2026-11-19T20:07:17.510722+00:00",
+  "baseCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "deliveryState": "ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "book_earth",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "earth-gallery-e3-20120606-view37",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT21",
+        "EXT9_BOM_EARTH_VIEW_37_20261026"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "PS Vita pre-release / E3 screenshot 2012-06-06; explicitly not a certified retail room",
+      "locationScope": "Earth World gallery view37, timber-shored rock wall with doorway and containers",
+      "selectedSubLocation": "Earth World gallery view37, timber-shored rock wall with doorway and containers",
+      "layers": [
+        {
+          "id": "earth-gallery-timber-wall",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "9388cd040cd54c7fa58f1e83570dfa528463820e2bc9807a418d9fc228330773",
+              "bytes": 2306208,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/book_earth.earth-gallery-timber-wall.9388cd040cd5.png"
+            }
+          ]
+        },
+        {
+          "id": "near-earth-timber-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "e57d980721fcb5dd830c76ba6b0ae7c37797ce0b5d28b92e347ff881a1870a79",
+              "bytes": 224867,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/book_earth.near-earth-timber-edges.e57d980721fc.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "La policy existante demande explicitement cette préversion du 6 juin 2012. Aucun état final commercial n’est revendiqué.",
+        "La conversion de caméra plongeante en caméra de combat latérale, la largeur et les parties cachées sont des adaptations non certifiées.",
+        "Le mur de soutènement bois-pierre, l’entrée sombre, les planches, les récipients et l’éclairage olive proviennent de la capture précise ; personnages, armes, HUD, surbrillance du seau, sang et effets de combat exclus.",
+        "Deux PNG natifs indépendants ; premier plan à vrai alpha limité aux extrêmes. Aucun pixel repeint ou redimensionné.",
+        "Le décor ne valide pas les collisions, dangers, animations ou la fidélité1:1 ; importer comme candidat statique et vérifier dans le moteur."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "book_earth",
+      "promptKey": "book-earth-bg",
+      "role": "opaque-background",
+      "filename": "book_earth.earth-gallery-timber-wall.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-2e8ba887-acb0-4940-9d0a-d803a44479a3.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/book_earth.earth-gallery-timber-wall.png",
+      "path": "assets/stages/book_earth.earth-gallery-timber-wall.9388cd040cd5.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2306208,
+      "sha256": "9388cd040cd54c7fa58f1e83570dfa528463820e2bc9807a418d9fc228330773",
+      "pixelSHA256": "1a421e7cac691d0d818c784e956eddcb8664aea762b510605ef972ba26494df9",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "book_earth",
+      "promptKey": "book-earth-fg",
+      "role": "transparent-foreground",
+      "filename": "book_earth.near-earth-timber-edges.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-4c8ef3d3-8d86-4d54-8f8f-e413bec301e9.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/book_earth.near-earth-timber-edges.png",
+      "path": "assets/stages/book_earth.near-earth-timber-edges.e57d980721fc.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 224867,
+      "sha256": "e57d980721fcb5dd830c76ba6b0ae7c37797ce0b5d28b92e347ff881a1870a79",
+      "pixelSHA256": "2e15a1e1468e676208b3212c0f86d846fb5b6526a3b6e26f3d1d82e07c785454",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9460260640975446,
+        "semiTransparentPixels": 84636,
+        "opaqueFraction": 0.00018050633297571046,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "stageId": "book_earth",
+      "file": "book-earth-e3.jpg",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_37_earth_world.jpg",
+      "page": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm",
+      "type": "archived-publisher-screenshot",
+      "role": "Primary exact pre-release room reference already named in stage policy",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/book-earth-e3.jpg",
+      "path": "docs/production/vague23/stages/references/book-earth-e3.jpg",
+      "bytes": 179692,
+      "sha256": "f21e7b14146affb5330ad1e51713b808012a77cefb0606aa5182219d2b663273",
+      "width": 960,
+      "height": 544,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    }
+  ],
+  "prompts": [
+    {
+      "stageId": "book_earth",
+      "key": "book-earth-bg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/stage-research/book-earth-e3.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque background plate for a 2D side-on fighting-game stage. Deliver a single landscape 16:9 PNG, ideally 1672×941, at native output resolution. High-quality detailed painted game environment, sober realistic materials, faithful to the attached exact Silent Hill reference. No UI, title, watermark, frame, characters, enemies, humans, silhouettes, blood effects or invented symbols. This is a scene adaptation for a fixed combat camera, not a claim of exact original geometry. Keep the ground in the bottom 30% as an unobstructed horizontal fighting lane; the feet baseline is at about 87% of image height. No camera roll, no fisheye, no high aerial/isometric view. Do not place large foreground objects across the center; the separate foreground will be produced later.\nExact scope: SILENT HILL: BOOK OF MEMORIES, PS Vita PRE-RELEASE screenshot dated 6 June 2012, Earth World gallery image 37. Image 1 is the sole primary reference for this specific room and its pre-release state, not a finished retail room. Adapt the visible long timber-shored wall to a near straight-on chest-height view: coarse dark earthy rock base with old horizontal timber planks and diagonal wooden braces, thick square wooden uprights around a dark rectangular doorway slightly left of center, narrow leaning boards nearby, low wooden crates and a barrel or cask against the far wall. Match the brown-olive crushed-stone floor, dull rock textures, dry splintered wood, dim murky yellow-green lighting and rough wall proportions visible in the source. Preserve one round wooden wheel-like lid near the back wall and a modest open wooden bucket near an extreme edge only, both with dark iron hoops. All structural objects and containers must remain behind the clear flat fighting strip; the original screenshot's overhead camera is intentionally adapted to side view. Do not add scenic tunnels, new arches, rails, minecarts, crystals, stalactites, stalagmites, lava, red industrial rust or trees. Do not reproduce yellow monsters, players, handguns, red stains, pickup glow, outline around bucket, combat particles, readable signs, HUD, maps, numerals, health bars or icons. Keep the central floor wide, level and visually calm."
+    },
+    {
+      "stageId": "book_earth",
+      "key": "book-earth-fg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/generated_images/exec-2e8ba887-acb0-4940-9d0a-d803a44479a3.png",
+        "/workspace/scratch/6d8d28552d08/stage-research/book-earth-e3.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Asset type: separate transparent foreground overlay for a 2D fighting game. Create a landscape 16:9 native RGBA PNG at the same 1672×941 composition as Image 1, with a genuinely transparent background. Image 1 is the completed background to match in palette, material, scale, lighting and framing; Image 2 is the original Book of Memories Earth pre-release room reference for timber materials only. Draw ONLY two extremely slim cropped near-camera pieces of old dark splintered timber, one at the very left edge and one at the very right edge, each restricted to the outermost 4% of canvas width. These are sparse foreground edges of existing timber supports, rough square wood grain with dull olive-brown reflected light and a small iron nail. Their ragged inner silhouette must stay within x=0–5% or x=95–100% at all heights. Everything between x=7% and x=93% must be completely transparent from top to bottom, especially the floor and fighter foot zone. Match the background's perspective: no diagonal spanning beam or horizontal connecting wood. No rock border or floor strip, no second room, no doorway, no crates, barrels, wheel, bucket, lamps, leaves, characters, dust, fog, vignette or frame. No opaque black, grey, white, painted checkerboard, color matte or shadow extending into the transparent central opening. The actual alpha channel must remain clear for at least 90% of the image. Keep authentic thin splintered edge detail and native antialiased alpha. This is one isolated overlay, not a complete scene."
+    }
+  ],
+  "qa": {
+    "sourceAndGeneratedImagesVisuallyInspected": true,
+    "browserTest": false,
+    "engineTest": false,
+    "noPixelsRetouched": true,
+    "noAnimatedClips": true,
+    "certified1to1": false,
+    "certifiedUHD": false
+  },
+  "totals": {
+    "stages": 1,
+    "newPNG": 2,
+    "bytes": 2531075,
+    "references": 1
+  }
+}

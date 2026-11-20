@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "fighterId": "sh4_sacrificed_walter_071",
+  "edition": "Silent Hill 4: The Room, combat final",
+  "status": "incomplete-visible-attachments",
+  "generationAttempts": 0,
+  "source": {
+    "page": "https://archive.org/details/LP_Silent_Hill_4",
+    "mediaUrl": "https://archive.org/download/LP_Silent_Hill_4/sh4_13.mp4",
+    "sourceFile": "sh4_13.mp4",
+    "nativeFrameSize": [
+      640,
+      480
+    ],
+    "sampleTimesSeconds": [
+      420,
+      430,
+      440,
+      450,
+      455,
+      460,
+      465,
+      470,
+      480,
+      490,
+      500,
+      510,
+      520,
+      530,
+      540,
+      550,
+      560,
+      570
+    ],
+    "sampleCount": 18,
+    "observations": [
+      {
+        "timeRangeSeconds": [
+          420,
+          550
+        ],
+        "finding": "Le géant fixe occupe l’arrière de la salle. Le bassin, les mains, le torse ou des sections des liens sont lisibles selon la caméra. Le haut du corps ou les suspensions sortent par le bord supérieur, y compris dans les plans les plus reculés."
+      },
+      {
+        "timeSeconds": 560,
+        "finding": "La caméra a quitté le géant et montre le mécanisme central."
+      },
+      {
+        "timeSeconds": 570,
+        "finding": "Le corps humain à terre est celui du Walter mobile."
+      }
+    ]
+  },
+  "retainedEvidence": {
+    "path": "docs/production/wave5-references/sacrificed-walter/conjurer-arena-07m30s.jpg",
+    "timeSeconds": 450,
+    "sha256": "515927e125bab8b8f391d247e8fbe7b67992de4e4d8c35df35a72a6098e2cc3b",
+    "fileBytes": 19295,
+    "encoding": "Image complète extraite du flux 640 × 480, enregistrée en JPEG sans recadrage."
+  },
+  "modelInventory": [
+    {
+      "url": "https://github.com/many-bees/SilentHillFileGuide/blob/main/SH4%20Character%20Models.md",
+      "finding": "Le guide décrit klsp.bin comme la forme de boss final de Walter. Ce nom seul ne permet pas d’identifier la géométrie du géant suspendu."
+    },
+    {
+      "url": "https://github.com/many-bees/SilentHillFileGuide/blob/main/SH4%20World%20bin%20Files.md",
+      "finding": "ls02 désigne la salle du boss. L’inventaire fournit le nom de la zone sans vue de ses attaches."
+    },
+    {
+      "url": "https://sketchfab.com/3d-models/walter-sullivan-corpse-silent-hill-4-bce5e73483dc448f863047e53ece5ba2",
+      "finding": "Le déposant décrit le cadavre préservé de Walter et les modèles inutilisés de son fichier. Cette référence est distincte de la manifestation géante au bord de l’arène."
+    }
+  ],
+  "previousFinding": "docs/production/wave4-references/manifestations/conjurer-research.json",
+  "conclusion": "Les contours supérieurs et la jonction des attaches au décor restent indéterminés. La fiche conserve son état sans image."
+}

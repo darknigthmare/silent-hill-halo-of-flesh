@@ -1,0 +1,51 @@
+{
+  "schema": "sprite-suite-native-qa-summary/1",
+  "date": "2026-11-17",
+  "mode": "actual FightEngine, native Canvas",
+  "browserTest": false,
+  "runs": [
+    {
+      "label": "sprite-suite-downpour",
+      "report": "downpour/report.json",
+      "visualReview": "downpour/visual-review.json",
+      "checks": 39,
+      "failedChecks": 0,
+      "passed": true,
+      "portraits": 4,
+      "duels": 2,
+      "finalCapturesVisuallyInspected": 2,
+      "selectionPortraitCapturesVisuallyInspected": 0,
+      "registryAdjustmentRecommended": false
+    },
+    {
+      "label": "sprite-suite-steel",
+      "report": "steel/report.json",
+      "visualReview": "steel/visual-review.json",
+      "checks": 39,
+      "failedChecks": 0,
+      "passed": true,
+      "portraits": 4,
+      "duels": 2,
+      "finalCapturesVisuallyInspected": 2,
+      "selectionPortraitCapturesVisuallyInspected": 2,
+      "registryAdjustmentRecommended": false
+    }
+  ],
+  "totalChecks": 78,
+  "failedChecks": 0,
+  "passed": true,
+  "portraits": 8,
+  "duels": 4,
+  "finalCapturesVisuallyInspected": 4,
+  "selectionPortraitCapturesVisuallyInspected": 2,
+  "uniqueCombatIds": [
+    "downpour_anne_cunningham",
+    "downpour_prisoner_juggernaut_110",
+    "bom_steel_guardian_146"
+  ],
+  "limits": [
+    "Check count is the sum of assertions across both runs, not a count of unique tests.",
+    "Source PNG, registry and manifest were unchanged within each run; the Steel import occurred between runs.",
+    "No browser flow, source animation or 1:1 fidelity certified."
+  ]
+}

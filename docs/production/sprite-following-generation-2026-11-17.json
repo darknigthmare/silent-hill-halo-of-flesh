@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "date": "2026-11-17",
+  "baselineCommit": "c2a9fc4acf1934294bb39d29e6759c747e90d87d",
+  "generator": "image_gen.imagegen",
+  "transparentBackgroundRequested": true,
+  "attempts": [
+    {
+      "id": "sh4_walter_sullivan_072",
+      "refs": [
+        "/workspace/scratch/eb1659a0c6b9/references-following/walter-native.png",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png"
+      ],
+      "prompt": "Create ONE separate combat idle sprite for Walter Sullivan, the adult man with the coat from Silent Hill 4: The Room, faithful to the first original in-game model reference and visually consistent with the second existing selection illustration. Change viewpoint and pose to a clear SIDE VIEW facing SCREEN RIGHT, orthographic horizontal fighting-game camera. Full body including all hair, both entire shoes and BOTH complete pistols inside generous transparent padding. Preserve shoulder-length dirty blond hair, gaunt adult face, worn mottled blue-grey knee-length coat with high collar and flap pocket, faded grey trousers, dark brown shoes and exactly the two matching metal handguns from the references. No different weapon or extra accessories. Sideways alert standing stance, feet planted on one baseline, slight bend in knees, face and torso toward the right-side opponent. One handgun held forward to the right in a low ready grip, the other in the other hand slightly lower and separated so both weapons and both hands read clearly. Not firing, no muzzle flashes or action effects. Keep a calm menacing expression and the source body proportions. Realistic textured game-character rendering matching the selection; neutral readable light, no colored rim halo. Single figure, true transparent RGBA background, no scene, floor, cast shadow, fog, text, frame or extra view. High native-resolution portrait canvas. Single static candidate idle, not a sheet and not animation.",
+      "purpose": "combat",
+      "status": "generated",
+      "output_hint": "Generated images are saved to /workspace/scratch/eb1659a0c6b9/generated_images as /workspace/scratch/eb1659a0c6b9/generated_images/exec-631a412f-6557-4b7f-b220-b52cd949c3a3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "downpour_bogeyman_115",
+      "refs": [
+        "/workspace/scratch/eb1659a0c6b9/references-following/bogeyman-downpour-art.png",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png"
+      ],
+      "prompt": "Create ONE separate combat idle sprite of the Bogeyman specifically from Silent Hill: Downpour, exactly the hooded gas-mask figure in the references, NOT a different Silent Hill character. First image is original character art; second is the existing selection for rendering consistency. New pose: full-body SIDE VIEW facing SCREEN RIGHT, horizontal orthographic fighting-game camera. Preserve the long worn olive-brown protective coat down to the ankles, hood and broad shoulder capelet, black respirator with round eyepieces and circular filters, hanging front chains, long green gloves with narrow yellow bands and heavy boots. Preserve the same two-handed long-handled rectangular steel sledgehammer, both block ends and entire handle. Heavy stable combat-ready stance with both feet planted on the same baseline, torso and respirator facing right, holding the hammer low diagonally in front toward the opponent, ready but not swinging. Entire hood, coat, boots, hands and weapon completely inside at least 5 percent clear transparent margins. One subject, realistic textured game asset consistent with original, no costume redesign, no extra gore, no added symbols or armor. Neutral readable lighting without background glow. Transparent RGBA background only, no environment, ground, cast shadow, smoke, text, border, duplicate view or sprite sheet. High native-resolution portrait canvas. Single static combat candidate, distinct from selection.",
+      "purpose": "combat",
+      "status": "generated",
+      "output_hint": "Generated images are saved to /workspace/scratch/eb1659a0c6b9/generated_images as /workspace/scratch/eb1659a0c6b9/generated_images/exec-06845f1b-9bef-423a-a3c2-f28411f14122.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "sh4_patient_060",
+      "refs": [
+        "/workspace/scratch/eb1659a0c6b9/references-following/patient-native.png",
+        "/workspace/scratch/eb1659a0c6b9/silent-hill-halo-of-flesh/assets/sprites/sh4_patient_060.735bcaec2736.png"
+      ],
+      "prompt": "Create ONE separate combat idle sprite for the Patient creature specifically from Silent Hill 4: The Room, faithful to the first original game-model reference and consistent with the second existing selection. Full-body strict SIDE VIEW facing SCREEN RIGHT, horizontal orthographic fighting-game camera. Preserve the same tall elongated humanoid proportions, dark stringy shoulder-length hair partly covering the face, uneven mottled skin surface, the exact black diagonal upper garment and dark lower garment shown, long bare lower legs and bare feet. Keep the same short metal striking tool shown in the near hand, with its exact size and silhouette rather than making a larger weapon. Static slightly hunched idle, head and torso turned fully toward the right-side opponent, near arm holding the tool down and forward, other arm loosely bent, both complete feet on one baseline. Entire head, hands, tool and toes inside generous transparent padding. Match the source fictional monster design without adding injuries, exposed organs, blood spray, damage or any further graphic detail; no change of costume or anatomy. One figure only, neutral documentary game-character rendering, unglamorous and nonsexual, same realistic texture style as references. True transparent RGBA background, no scene, floor, cast shadow, haze, text, frame or multiple views. High native-resolution portrait canvas. One static candidate combat idle, not animation or a sprite sheet.",
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 088656ba-b3e7-4fec-807e-5cd3fa086065. safety_violations=[violence, sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\",\\n        \\\"violence\\\"\\n      ]\\n    }\\n  }\\n}\")",
+      "purpose": "combat",
+      "status": "refused"
+    },
+    {
+      "id": "arcade_insane_cancer_arcade",
+      "purpose": "selection",
+      "prompt": "Create ONE complete selection illustration of INSANE CANCER specifically from SILENT HILL: THE ARCADE, faithfully using these two exact-edition references together. First image is an actual Arcade gameplay capture and is authoritative for the upper-body design and material. Second is a named full-body view of the extracted Arcade model: it establishes the whole silhouette, BOTH legs and both dark feet, which are cut off in the first image. The second reference is native 120x90, so preserve its visible broad shapes without pretending its fine details are known. One huge bloated humanoid monster, with the same small folded sack-like head and dark head opening, massive pale grey-green swollen torso, sagging belly with the central dark vertical crease, thick heavy arms and small fists, mottled weathered surface, dark ragged covering around the hips and upper thighs, short thick uneven legs ending in the same dark rounded feet. Copy the exact source proportions and existing form; do not borrow the SH3 or Book of Memories variant. Full body in a frontal to slight three-quarter static selection pose, both arms relaxed away from the body enough to see the hands, both feet fully visible on one baseline. Keep top of head, every finger, hips, legs and feet inside at least 5 percent clear transparent padding. Neutral game-character render with realistic textures consistent with the source, no redesign, no added weapons, organs, wounds or blood effects. All coverage and source markings remain as shown. True transparent RGBA background only: no game scene, floor, cast shadow, fog, backdrop, labels, UI, words or borders. High native resolution, single isolated subject, no sprite sheet, not animation. This is an explicitly non-certified static candidate based on complementary original references.",
+      "refs": [
+        "/workspace/scratch/eb1659a0c6b9/references-next/arcade-screens/sh_arcade_15.jpg",
+        "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-390s-native.png"
+      ],
+      "status": "generated",
+      "output_hint": "Generated images are saved to /workspace/scratch/eb1659a0c6b9/generated_images as /workspace/scratch/eb1659a0c6b9/generated_images/exec-8a9e9277-fb9c-4597-9b38-fc9470bc0c37.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "arcade_insane_cancer_arcade",
+      "purpose": "combat",
+      "prompt": "Create ONE separate combat idle sprite of Insane Cancer specifically from Silent Hill: The Arcade. First reference is the new whole-body selection candidate; preserve its exact character design and texture style. Second is original Arcade gameplay for upper-body identity and materials. Third is the named extracted Arcade model for complete legs, feet and overall proportions; it is low resolution, so do not treat extra surface detail as verified. Compose a DIFFERENT pose and viewpoint for a fighting game: full-body SIDE VIEW facing SCREEN RIGHT, horizontal orthographic camera. Show the immense swollen belly and chest in clear profile, small sack-like head and its same dark opening looking right, thick heavy arms, fists, ragged dark hip covering, short thick legs and the same dark feet. Slight forward lean, a heavy stable unarmed ready stance, one fist ahead at belly height and the other a little lower; both complete feet planted on one common baseline. Keep the source massive proportions, anatomy and covering exactly, no armor, shoes, extra limbs or weapon additions, and no SH3 or Book of Memories model substitution. Preserve the existing fictional monster surface without adding wounds, organs or blood effects. Entire head, fists, belly and BOTH FEET completely visible with clear transparent padding on all edges. Realistic textured game-character render matching the selection, neutral readable light without background halo. One figure only on true transparent RGBA: no scene, floor, cast shadow, atmosphere, text, labels, border or other view. High native resolution; choose a canvas wide enough for the complete side silhouette. One static combat candidate, not a sheet and not an animation.",
+      "refs": [
+        "/workspace/scratch/eb1659a0c6b9/generated_images/exec-8a9e9277-fb9c-4597-9b38-fc9470bc0c37.png",
+        "/workspace/scratch/eb1659a0c6b9/references-next/arcade-screens/sh_arcade_15.jpg",
+        "/workspace/scratch/eb1659a0c6b9/references-following/audit/insane-cancer-arcade-390s-native.png"
+      ],
+      "status": "generated",
+      "output_hint": "Generated images are saved to /workspace/scratch/eb1659a0c6b9/generated_images as /workspace/scratch/eb1659a0c6b9/generated_images/exec-1c9152a1-d2b0-4f15-ae43-5f60430bfbfc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

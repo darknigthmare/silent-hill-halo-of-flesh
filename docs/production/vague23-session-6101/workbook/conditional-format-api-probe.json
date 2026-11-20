@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "kind": "isolated-public-api-export-probe",
+  "documentedCall": "range.conditionalFormats.add('containsText', {text:'Absent', format:{fill:'#FFF0CB'}})",
+  "sourceWorkbookTouched": false,
+  "disposableXlsxWrittenAndRemoved": true,
+  "dxfXml": [
+    "<ns0:dxf xmlns:ns0=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><ns0:fill><ns0:patternFill patternType=\"solid\"><ns0:bgColor rgb=\"FFFFF0CB\" /></ns0:patternFill></ns0:fill></ns0:dxf>"
+  ],
+  "patternTypes": [
+    "solid"
+  ],
+  "conclusion": "The documented fill exports with patternType=solid on a newly created rule. Test reapplying the original imported rules through the same public API before considering an OOXML repair."
+}

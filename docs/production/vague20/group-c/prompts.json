@@ -1,0 +1,79 @@
+[
+  {
+    "id": "hospital_world",
+    "layer": "background",
+    "refs": [
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/hospital_world-native-corridor.png"
+    ],
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Asset: ONE opaque landscape 1672x941 PNG background plate for a side-view versus stage. Source: Silent Hill 4: The Room (2004), Hospital World second-floor patient corridor, exact native screenshot attached as architectural and material reference. Generate an empty new side-on view along one side of this same corridor. Preserve the screenshot's low white horizontal wall lights at waist height, dark green-brown framing, stained pale olive plaster panels, regularly spaced closed dark rectangular patient doors, low dark ceiling beams and large grey-green rectangular floor slabs. Do not depict a deep corridor vanishing point in the center: rotate the camera to a restrained lateral elevation with a little visible floor depth, a continuous wall of these doors across the BACK of the view and a straight clear floor strip occupying the lower 38 percent of the image. The door bases lie around 63 percent image height. All playable floor from x=12 to 88 percent must remain flat, readable, empty and unobstructed, with no foreground posts. Cool dirty fluorescent light, dim green-grey 2004 survival-horror textured 3D look, enough light to see surface detail and grounding. Reference contains Henry, wheelchairs and HUD: omit every person, creature, wheelchair, item, HUD mark and lettering. No beds, giant head room, curtains, medical props, blood, new room door labels, text, logos, border, modern hospital equipment or Brookhaven imagery. Only this normal corridor, no transformation. Entire rectangular image opaque; no blank margin, no transparency. Versus camera and widened spacing are an artistic adaptation, keep observed material language."
+  },
+  {
+    "id": "artaud_theater",
+    "layer": "background",
+    "refs": [
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/artaud_theater-native-stage.png"
+    ],
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Asset: ONE opaque landscape 1672x941 PNG background plate for a side-view versus stage. Source: Silent Hill Origins (2007), Artaud Theater normal lit stage after the safety curtain is raised, with the first forest scenic setting displayed. The attached native screenshot from the official guide is the reference for this exact single normal stage configuration. Reconstruct the empty stage from an almost front-on lateral camera, with a wide level worn dark wood floor filling the lower 40 percent and all props behind the playable strip. Preserve the visibly FLAT theatrical scenic wall: a muted ochre painted masonry backdrop, a very tall narrow dark round-topped central opening/mirror, painted leafy green trees either side, a small simple tree PROP behind the floor line, restrained dark proscenium edges, warm weak amber spot lighting. These are painted stage flats and props indoors, not a real forest, not the Otherworld forest. Keep the center and foot-support area entirely unobstructed in front of the scenery, x=12..88 percent and y=62..100 percent. No characters, silhouettes, monsters, Caliban, puppet, audience, weapons, pickups, lever panel close-up, HUD, text, labels, book-page border, symbols, blood or modern theatrical equipment. Do not mix the library, cave or Otherworld configurations; the central dark opening remains static with no portal effects. Restrained textured PSP/PS2 survival horror game render, readable material detail, not glossy concept art. Full rectangular opaque background. Widen the documented scene only as a versus camera adaptation; keep its observed specific scenic identity."
+  },
+  {
+    "id": "hospital_world",
+    "layer": "foreground",
+    "refs": [
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/hospital_world-background.png",
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/hospital_world-native-corridor.png"
+    ],
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Asset: a sparse independent parallax FOREGROUND layer, true transparent RGBA PNG, landscape 1672x941. Image 1 is the approved empty Hospital World SH4 second-floor background, only for matching camera, materials and muted lighting. Image 2 is the native architectural reference. Draw only ONE narrow worn dark green-brown metal patient-door jamb at the FAR LEFT canvas edge, with a small attached section of dull pale olive wall panel behind it. The complete foreground strip occupies x=0..7 percent of the canvas and y=0..100 percent, deliberately cropped by the left/top/bottom image boundaries. Restrained near-camera depth, squared simple door-trim geometry, peeling grime matching the source. All pixels to the right of x=9 percent must be fully transparent; leave the entire center, right side and foot-support zone clear. Do not draw the scene, doors across the canvas, floor, ceiling, a complete doorway frame, fluorescent tube, people, wheelchair, beds, sign, text, shadows on a background, fog or opaque rectangle. No black or white background and no checkerboard pattern: genuine alpha outside the single left edge architectural strip. Lighting and material must blend with Image 1 when overlaid full size. This is one small static layer, not a scene change."
+  },
+  {
+    "id": "artaud_theater",
+    "layer": "foreground",
+    "refs": [
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/artaud_theater-background.png",
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/artaud_theater-native-stage.png"
+    ],
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Asset: a sparse independent parallax FOREGROUND layer, true transparent RGBA PNG, landscape 1672x941. Image 1 is the approved Artaud Theater normal-stage background, only for matching warm dim lighting, camera and worn materials. Image 2 is the native theater reference. Draw only the near edges of the OPEN stage curtains at the extreme left and extreme right: two narrow vertical folds of aged dark brown-burgundy theater cloth, hanging straight and cropped by the respective canvas edges. Each strip is at most 6 percent of image width. No swag connecting them across the top, no horizontal border, no curtain crossing the floor or middle, no tassels or gold decoration. Left strip x=0..6%, right strip x=94..100%; the entire x=8..92% region must be perfectly transparent from top to bottom, including all foot-support area. Keep the same restrained PSP/PS2 textured game-render style and soft amber side lighting as the approved background. There is no room background, floor, stage wall, tree, portal, person, character, puppet, monster, audience, text or HUD in this layer. Only these two quiet side curtain edges against genuine transparent alpha; never a black/white/checkerboard background. Normal lit stage only, no Otherworld."
+  },
+  {
+    "id": "devils_pit",
+    "layer": "background",
+    "refs": [
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02d-017.jpg",
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02d-018.jpg"
+    ],
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Asset: ONE opaque landscape 1672x941 PNG background plate for a side-view versus stage. Source: Silent Hill Downpour (2012), Devil's Pit UPPER CAVERNS water-wheel/lift chamber, from the dry wooden catwalk, before leaving for the deep mines. The two attached native Prima guide screenshots are exact references for the room's machinery, rock, light and timber architecture. Render an EMPTY lateral view of the same chamber: rough grey cave rock behind pale weathered timber posts and beams, a pale timber lift enclosure with a small closed metal mesh gate toward the far left, large dark blue-green paddle water wheels and horizontal wooden water troughs behind a wooden safety rail in the middle distance. Match the practical work-light tone and desaturated 2012 game texture. The continuous DRY timber catwalk floor must extend straight left-to-right across the entire lower 38 percent of the image, flat and clearly lit enough for feet, with all machinery and vertical support posts behind its back edge around y=62 percent. x=12..88 percent of the foreground play strip remains completely empty. Keep the wheel chamber one fixed state: no water crossing the playable floor, no active puzzle solution, no moving elevator, no exterior observation deck, tram, cart, train or flooded-cave fusion. Omit Murphy, all other people and monsters, weapons, pickups, signs and readable labels, UI, logos and border. Do not add rusted prison architecture or an imaginary mine shaft in the walkable strip. Perspective is mostly side-on with shallow depth, not a central vanishing corridor. Full opaque rectangle, no alpha. Widening and spacing are explicitly a versus adaptation of the documented chamber, not exact surveyed geometry."
+  },
+  {
+    "id": "overlook",
+    "layer": "background",
+    "refs": [
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02l-020.jpg"
+    ],
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Asset: ONE opaque landscape 1672x941 PNG background plate for a side-view versus stage. Source: Silent Hill Downpour (2012), Overlook Penitentiary BLOCK A, Cells A2 walkway just after the stairwell, BEFORE the barbed-wire barrier and flooded-cell vision. Use the attached native Prima screenshot as the exact reference for this edition and state. Generate the EMPTY same interior walkway restaged laterally for two fighters. Worn rusty metal diamond-plate floor with a few fixed grating panels spans a straight flat lower 38 percent of the frame, completely unobstructed. Behind the play strip retain rough grey-brown concrete and exposed old brick, simple heavy rusted cell door frames and sparse dim warm utility lights; a narrow rusted tubular guardrail at the far rear edge and the dark blue-grey interior void/opposite gallery remain behind the fighters, not across their feet. Preserve the native material contrast of brown rust, dull grey steel and dim cold prison depth; practical 2012 game lighting and restrained textured detail. Use a largely side-on camera with shallow depth, avoiding a tunnel receding through the center. Keep x=12..88%, y=62..100% free of poles, bars, stairs, gaps, debris or obstacles. No people, Murphy, creatures, prisoner silhouettes, weapons, pickups, numbered signs, cell labels, text, HUD, blood, bodies, coils of barbed wire, sparks, electricity, floodwater, exterior towers or Homecoming imagery. One normal Block A A2 state only, no riot, hallucination or transition. Full opaque rectangular background. Camera widening and unmeasured spacing are a versus interpretation, not a claim of original 1:1 geometry."
+  },
+  {
+    "id": "devils_pit",
+    "layer": "foreground",
+    "refs": [
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/devils_pit-background.png",
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02d-017.jpg"
+    ],
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Asset: a sparse independent parallax FOREGROUND layer, true transparent RGBA PNG, landscape 1672x941. Image 1 is the approved empty Devil's Pit upper-cavern water-wheel stage, for material and lighting matching. Image 2 is its native 2012 Downpour guide reference. Draw ONLY one close vertical pale weathered timber support post at the extreme LEFT edge, with a very short diagonal brace attached near its upper part. Use the photographed grey-brown timber grain, small dark bolts and practical cool cave work light, no decorative shapes. Confine the entire post and brace to x=0..7 percent of the canvas; post is deliberately cut by left/top/bottom boundaries. No object may extend into x=9..100 percent: all of that region must be genuinely transparent, including center and foot support area. Keep the camera side-on and appearance consistent with background image 1. Do not draw cave, rock, water wheel, floor, rail, water, boxes, sign, people, monsters, text, HUD, black rectangle or checkerboard. This is only a quiet close structural edge against real alpha, not another background plate. No water on the stage, no animation or puzzle state change."
+  },
+  {
+    "id": "overlook",
+    "layer": "foreground",
+    "refs": [
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/overlook-background.png",
+      "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02l-020.jpg"
+    ],
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Asset: a sparse independent parallax FOREGROUND layer, true transparent RGBA PNG, landscape 1672x941. Image 1 is the approved Overlook Penitentiary Downpour Block A A2 walkway background; use it only for matching camera, muted warm/cool lighting, rust and concrete. Image 2 is the native guide screenshot for the exact walkway state before the flooded-cell vision. Draw ONLY a close narrow rusted steel door-jamb/stanchion strip at each extreme outer edge of the canvas: left x=0..5 percent and right x=95..100 percent, deliberately cropped by those edges. Simple squared iron geometry with weathered brown rust, small fixed rivets and grime, faint warm edge light. The central x=7..93 percent must be genuinely transparent from top to bottom; no horizontal piece connects the two strips, no grille or rail crosses the fighters or their feet. No scene, floor, cell wall, prison bars elsewhere, ceiling beam, people, Murphy, creatures, silhouettes, weapons, text, labels, HUD, sparks, electric wire, barbed wire, water, blood or halo. True alpha outside the two slim structural edge pieces, not a black/white/checkerboard background. Keep the single normal Block A A2 state and restrained 2012 textured game-render materials."
+  }
+]

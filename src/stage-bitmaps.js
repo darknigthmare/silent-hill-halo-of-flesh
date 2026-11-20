@@ -1,12 +1,13 @@
 /** Stage rasters share the bounded decoder, but own a separate lease and budget. */
 import {STAGE_BITMAPS} from './stage-bitmap-manifest.js';
-import {SpriteCache,spriteCache,spriteFor} from './sprite-system.js';
+import {SpriteCache,spriteCache,combatSpriteFor} from './sprite-system.js';
 const own=(object,key)=>Object.prototype.hasOwnProperty.call(object,key);
 const uniqueStages=stages=>{
-  const result=new Map();
+  const result=new Map(),sources=new Map();
   for(const stage of stages.filter(Boolean)){
-    if(result.has(stage.id)&&result.get(stage.id).source!==stage.source)throw new Error('Stage bitmap: conflicting stage source');
-    result.set(stage.id,stage);
+    if(sources.has(stage.id)&&sources.get(stage.id)!==stage.source)throw new Error('Stage bitmap: conflicting stage source');
+    sources.set(stage.id,stage.source);
+    result.set(JSON.stringify([stage.id,stage.referencePolicy?.sceneId||null]),stage);
   }
   return [...result.values()];
 };
@@ -22,6 +23,7 @@ export function validateStageBitmap(stage,art){
   const ids=new Set(),paths=new Map();
   for(const layer of art.layers){
     if(!layer||!/^[a-z0-9_-]{1,64}$/.test(layer.id)||ids.has(layer.id))fail('invalid/duplicate layer');ids.add(layer.id);
+    if(layer.parallaxX!==undefined&&(!Number.isFinite(layer.parallaxX)||Math.abs(layer.parallaxX)>.25))fail('invalid horizontal parallax');
     if(layer.fit!==undefined&&!['stretch','cover','contain'].includes(layer.fit))fail('invalid layer fit');
     if(!Array.isArray(layer.frames)||!layer.frames.length||layer.frames.length>120||!Number.isSafeInteger(layer.ticksPerFrame)||layer.ticksPerFrame<1||layer.ticksPerFrame>600||typeof layer.loop!=='boolean')fail('invalid frame clock');
     if(!Array.isArray(layer.rect)||layer.rect.length!==4||!layer.rect.every(Number.isFinite)||layer.rect[0]<0||layer.rect[1]<0||layer.rect[2]<=0||layer.rect[3]<=0||layer.rect[0]+layer.rect[2]>1||layer.rect[1]+layer.rect[3]>1)fail('invalid layer rectangle');
@@ -34,6 +36,26 @@ export function validateStageBitmap(stage,art){
   }
   return art;
 }
+export function stageBitmapRooms(entry){
+  if(!entry)return [];
+  const variants=entry.variants;
+  if(variants===undefined)return [entry];
+  if(!Array.isArray(variants)||!entry.scene)throw new Error('Stage bitmap: invalid room variants');
+  const seen=new Set([entry.scene]);
+  for(const room of variants){
+    if(!room||typeof room.scene!=='string'||!room.scene||seen.has(room.scene)||room.variants!==undefined||
+       room.stageId!==entry.stageId||room.source!==entry.source)throw new Error('Stage bitmap: invalid/duplicate room variant');
+    seen.add(room.scene);
+  }
+  return [entry,...variants];
+}
+
+export function selectStageBitmapRoom(entry,scene){
+  if(!entry)return null;
+  if(!scene||!entry.scene||entry.scene===scene)return entry;
+  return stageBitmapRooms(entry).find(room=>room.scene===scene)||null;
+}
+
 export function stageBitmapFor(stage,registry=STAGE_BITMAPS){
   if(!stage||!own(registry,stage.id))return null;
   const art=validateStageBitmap(stage,registry[stage.id]);
@@ -41,8 +63,8 @@ export function stageBitmapFor(stage,registry=STAGE_BITMAPS){
   // A roster location can select a newly documented sub-room. An older raster
   // from that location must not hide it or grant the old room's geometry.
   const selectedScene=stage.referencePolicy?.sceneId;
-  if(selectedScene&&art.scene&&selectedScene!==art.scene)return null;
-  return art;
+  const selected=selectStageBitmapRoom(art,selectedScene);
+  return selected&&selected!==art?validateStageBitmap(stage,selected):selected;
 }
 export function stageBitmapFrames(stages,registry=STAGE_BITMAPS){
   const frames=new Map();
@@ -73,8 +95,8 @@ export async function prepareCombatAssets(fighters,stages,{fighterCache=spriteCa
   const [actors,decor]=await Promise.all([fighterCache.prepare(fighters,{retry,diagnostic}),stageCache.prepare(asStages(stages),{retry})]);
   return {ok:actors.ok&&decor.ok,missing:actors.missing,failed:[...actors.failed,...decor.failed],stageFailed:!decor.ok};
 }
-export function pinCombatAssets(fighters,stages,{fighterCache=spriteCache,stageCache=stageBitmapCache}={}){
-  const actors=fighters.flatMap(fighter=>spriteFor(fighter)?.frames||[]),decor=stageBitmapFrames(asStages(stages),stageCache.registry);
+export function pinCombatAssets(fighters,stages,{fighterCache=spriteCache,stageCache=stageBitmapCache,retainedFrames=[]}={}){
+  const actors=[...fighters.flatMap(fighter=>combatSpriteFor(fighter)?.frames||[]),...retainedFrames],decor=stageBitmapFrames(asStages(stages),stageCache.registry);
   // Validate both leases before replacing either one.
   fighterCache.validatePins(actors);stageCache.validatePins(decor);
   fighterCache.pin(actors);stageCache.pin(decor);
@@ -83,7 +105,7 @@ export function captureCombatAssetPins({fighterCache=spriteCache,stageCache=stag
   const actors=fighterCache.pinnedFrames(),decor=stageCache.pinnedFrames();
   return ()=>{fighterCache.validatePins(actors);stageCache.validatePins(decor);fighterCache.pin(actors);stageCache.pin(decor);};
 }
-export function drawStageBitmaps(context,stage,time,{width=1280,height=720,cache=stageBitmapCache,registry=cache.registry,paint=true}={}){
+export function drawStageBitmaps(context,stage,time,{width=1280,height=720,cache=stageBitmapCache,registry=cache.registry,paint=true,viewPan=0}={}){
   let art,frames;
   try{art=stageBitmapFor(stage,registry);if(!art)return {kind:'unregistered'};frames=stageBitmapFrames([stage],registry);}
   catch(error){return {kind:'error',error:String(error.message)};}
@@ -94,11 +116,13 @@ export function drawStageBitmaps(context,stage,time,{width=1280,height=720,cache
   }
   if(!paint)return {kind:'raster',mode:art.mode,layers:art.layers.length};
   const tick=Number.isFinite(time)?Math.max(0,Math.floor(time*60/1000+1e-7)):0;
+  const pan=Number.isFinite(viewPan)?Math.max(-1,Math.min(1,viewPan)):0;
   context.save();
   for(const layer of art.layers){
     const index=layer.loop?Math.floor(tick/layer.ticksPerFrame)%layer.frames.length:Math.min(layer.frames.length-1,Math.floor(tick/layer.ticksPerFrame));
     const frame=layer.frames[index],image=cache.peek(frame.path),[x,y,w,h]=layer.rect;
-    const destination=[x*width,y*height,w*width,h*height];
+    // A closer plane travels against the direction in which the fighters draw our gaze.
+    const destination=[(x-pan*(layer.parallaxX||0))*width,y*height,w*width,h*height];
     if(!layer.fit||layer.fit==='stretch')context.drawImage(image,...destination);
     else{
       const [dx,dy,dw,dh]=destination,scale=Math[layer.fit==='cover'?'max':'min'](dw/frame.width,dh/frame.height);

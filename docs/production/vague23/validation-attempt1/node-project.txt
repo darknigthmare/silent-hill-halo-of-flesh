@@ -1,0 +1,22 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> silent-hill-halo-of-flesh@0.9.6 test
+> node scripts/build-production-reference.mjs && node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs --verify-only && node --test tests/*.test.mjs && node scripts/build.mjs --verify
+
+node:internal/fs/promises:1345
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open '/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/research/classic.json'
+    at async open (node:internal/fs/promises:1345:25)
+    at async Object.readFile (node:internal/fs/promises:2003:14)
+    at async file:///workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/scripts/build-production-reference.mjs:9:69
+    at async Promise.all (index 0)
+    at async file:///workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/scripts/build-production-reference.mjs:9:15 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/research/classic.json'
+}
+
+Node.js v24.22.3

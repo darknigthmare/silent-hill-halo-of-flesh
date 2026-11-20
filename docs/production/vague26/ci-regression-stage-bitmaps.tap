@@ -1,0 +1,118 @@
+TAP version 13
+# Subtest: production stage candidates are exact and unregistered stages retain procedural rendering
+ok 1 - production stage candidates are exact and unregistered stages retain procedural rendering
+  ---
+  duration_ms: 8.618528
+  type: 'test'
+  ...
+# Subtest: stage declarations require exact identity/source, provenance and versioned stage paths
+ok 2 - stage declarations require exact identity/source, provenance and versioned stage paths
+  ---
+  duration_ms: 3.068845
+  type: 'test'
+  ...
+# Subtest: parallax follows arena focus proportionally while the fixed background and gallery stay anchored
+ok 3 - parallax follows arena focus proportionally while the fixed background and gallery stay anchored
+  ---
+  duration_ms: 5.473443
+  type: 'test'
+  ...
+# Subtest: duplicate paths with conflicting measured metadata fail before loading
+ok 4 - duplicate paths with conflicting measured metadata fail before loading
+  ---
+  duration_ms: 0.920971
+  type: 'test'
+  ...
+# Subtest: explicit scene ceiling metadata uses booleans and rejects ambiguous geometry
+ok 5 - explicit scene ceiling metadata uses booleans and rejects ambiguous geometry
+  ---
+  duration_ms: 1.303814
+  type: 'test'
+  ...
+# Subtest: joint preflight waits for every actor and stage image
+ok 6 - joint preflight waits for every actor and stage image
+  ---
+  duration_ms: 18.444428
+  type: 'test'
+  ...
+# Subtest: a failed declared stage blocks diagnostics and can be retried
+ok 7 - a failed declared stage blocks diagnostics and can be retried
+  ---
+  duration_ms: 1.636797
+  type: 'test'
+  ...
+# Subtest: diagnostics permits missing actors but never unreadable declared actor files
+ok 8 - diagnostics permits missing actors but never unreadable declared actor files
+  ---
+  duration_ms: 1.635165
+  type: 'test'
+  ...
+# Subtest: stages draw no partial layers while any declared image is pending or failed
+ok 9 - stages draw no partial layers while any declared image is pending or failed
+  ---
+  duration_ms: 6.782242
+  type: 'test'
+  ...
+# Subtest: ready stage layers draw cached images in declared rectangles on simulation ticks
+ok 10 - ready stage layers draw cached images in declared rectangles on simulation ticks
+  ---
+  duration_ms: 8.282302
+  type: 'test'
+  ...
+# Subtest: live renderer paints an overlay once and replaces procedural geometry when requested
+ok 11 - live renderer paints an overlay once and replaces procedural geometry when requested
+  ---
+  duration_ms: 22.810169
+  type: 'test'
+  ...
+# Subtest: cover and contain preserve native scenery proportions instead of stretching architecture
+ok 12 - cover and contain preserve native scenery proportions instead of stretching architecture
+  ---
+  duration_ms: 1.185001
+  type: 'test'
+  ...
+# Subtest: both leases are validated before either cache mutates
+ok 13 - both leases are validated before either cache mutates
+  ---
+  duration_ms: 1.769911
+  type: 'test'
+  ...
+# Subtest: failed replacement cannot evict old pinned images and restoring lease keeps them ready
+ok 14 - failed replacement cannot evict old pinned images and restoring lease keeps them ready
+  ---
+  duration_ms: 1.939037
+  type: 'test'
+  ...
+# Subtest: retired matches retain final presentations while live matches retain every combat pose
+ok 15 - retired matches retain final presentations while live matches retain every combat pose
+  ---
+  duration_ms: 3.416013
+  type: 'test'
+  ...
+# Subtest: an active final presentation retains all its future clip frames
+ok 16 - an active final presentation retains all its future clip frames
+  ---
+  duration_ms: 0.791115
+  type: 'test'
+  ...
+# Subtest: Numb Body to Split Head continuation stays within 64 MiB and preserves the old result on decode failure
+ok 17 - Numb Body to Split Head continuation stays within 64 MiB and preserves the old result on decode failure
+  ---
+  duration_ms: 8.892363
+  type: 'test'
+  ...
+# Subtest: one location leases the selected room and keeps its historical bitmap independently addressable
+ok 18 - one location leases the selected room and keeps its historical bitmap independently addressable
+  ---
+  duration_ms: 2.804605
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1208.857975

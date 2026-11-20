@@ -1,0 +1,10 @@
+{
+  "fighterId": "ascension_the_collector_183",
+  "mode": "built-in-edit",
+  "reason": "Root visual review finds cloak tips approximately32nativepixels below sole line; correct only cloth ends before integration.",
+  "prompt": "Edit only the lowest tips of the trailing cloak in this existing transparent side-view image. Keep exactly the same Collector creature, strict right-facing profile, pose, head, finger-like crown, face, arms and hands, chest, shoulder plates, circular belt seal, bare feet, staff, colors, texture, lighting, canvas size and alpha background. The feet and bottom end of the staff define the horizontal ground baseline at about y=1445 in this 1024x1536 image. Currently three cloak-tail tips at the lower left extend roughly 32 pixels below that baseline. Lift and gently reshape only those low cloth ends so all cloak tips rest on the SAME horizontal y=1445 baseline as the soles and staff base; their far-left points may stay leftward. Do not shorten the body, move the feet, move the staff, add a floor or cast shadow, or crop anything. Preserve actual RGBA transparency and all other pixels and anatomy as closely as possible. This is one isolated whole-body static asset, no text.",
+  "referenced_image_paths": [
+    "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/characters/collector/native/collector-side-v1.png"
+  ],
+  "transparent_background": true
+}

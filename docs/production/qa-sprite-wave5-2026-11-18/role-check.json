@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "date": "2026-11-18T09:28:24.151Z",
+  "browserTest": false,
+  "mode": "Actual combatReferencePolicy and regular prepareCombatAssets with an illustrated opponent and no bitmap stage. Selection rendering and positive duel rendering are covered in separate reports.",
+  "checks": [
+    {
+      "name": "sh4_joseph_schreiber_victim_15 documented role",
+      "passed": true,
+      "detail": {
+        "role": "noncombatant",
+        "combatEnabled": false
+      }
+    },
+    {
+      "name": "sh4_joseph_schreiber_victim_15 missing combat art blocks normal match preparation",
+      "passed": true,
+      "detail": {
+        "combatView": "missing",
+        "preflight": {
+          "ok": false,
+          "missing": [
+            "sh4_joseph_schreiber_victim_15"
+          ],
+          "failed": [],
+          "stageFailed": false
+        },
+        "requestedFighterImages": 0
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162 documented role",
+      "passed": true,
+      "detail": {
+        "role": "combatant",
+        "combatEnabled": true
+      }
+    },
+    {
+      "name": "shf_sakuko_like_entity_162 dedicated idle in manifest",
+      "passed": true,
+      "detail": {
+        "combatView": "side-view-candidate",
+        "indices": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "bom_ghost_125 documented role",
+      "passed": true,
+      "detail": {
+        "role": "combatant",
+        "combatEnabled": true
+      }
+    },
+    {
+      "name": "bom_ghost_125 dedicated idle in manifest",
+      "passed": true,
+      "detail": {
+        "combatView": "side-view-candidate",
+        "indices": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "Registry and manifest stable",
+      "passed": true,
+      "detail": {
+        "before": {
+          "registry": "6e56c5ad9e0da4e9c624b5b962d7bfc6e04b1a74318634f9d2003687f1098991",
+          "manifest": "817bb0c678db993e8be9db620c3356e48f6cd3d3412d885b58676fc1dcbaf66a"
+        },
+        "after": {
+          "registry": "6e56c5ad9e0da4e9c624b5b962d7bfc6e04b1a74318634f9d2003687f1098991",
+          "manifest": "817bb0c678db993e8be9db620c3356e48f6cd3d3412d885b58676fc1dcbaf66a"
+        }
+      }
+    }
+  ],
+  "passed": true
+}

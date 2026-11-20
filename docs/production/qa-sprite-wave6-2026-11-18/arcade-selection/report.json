@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-18T09:53:13.282Z",
+  "mode": "native paintRasterPortrait",
+  "browserTest": false,
+  "assets": [
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "path": "assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png",
+      "width": 1261,
+      "height": 1247,
+      "bounds": [
+        167,
+        96,
+        1094,
+        1161
+      ],
+      "role": "scripted-encounter",
+      "preexistingRulesCombatEnabled": true
+    }
+  ],
+  "portraits": [
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "facing": 1,
+      "path": "assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png",
+      "file": "selection-arcade_greedy_worm_arcade_119-right.png"
+    },
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "facing": -1,
+      "path": "assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png",
+      "file": "selection-arcade_greedy_worm_arcade_119-left.png"
+    }
+  ],
+  "checks": [
+    {
+      "name": "arcade_greedy_worm_arcade_119 selection-only contract",
+      "passed": true,
+      "detail": {
+        "artKind": "selection-only",
+        "combatArt": "missing",
+        "documentedRole": "scripted-encounter",
+        "preexistingRulesCombatEnabled": true
+      }
+    },
+    {
+      "name": "arcade_greedy_worm_arcade_119 asset identity",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png",
+        "sha256": "9ce02fc3c41e494d907dcfeaf1e7dd42ebf512d78ce7fda1fc46e6abcefa9696",
+        "bytes": 1306134
+      }
+    },
+    {
+      "name": "arcade_greedy_worm_arcade_119 native decode adapter preserves pixels",
+      "passed": true
+    },
+    {
+      "name": "arcade_greedy_worm_arcade_119 source dimensions",
+      "passed": true,
+      "detail": {
+        "width": 1261,
+        "height": 1247
+      }
+    },
+    {
+      "name": "arcade_greedy_worm_arcade_119 complete alpha bounds and transparent exterior",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          167,
+          96,
+          1094,
+          1161
+        ],
+        "transparentFraction": 0.5135268339494565
+      }
+    },
+    {
+      "name": "arcade_greedy_worm_arcade_119 selection draw right",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png"
+        ],
+        "dataset": {
+          "spriteId": "arcade_greedy_worm_arcade_119",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "arcade_greedy_worm_arcade_119 visible outline framed right",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          167,
+          96,
+          927,
+          1065
+        ],
+        "destination": [
+          -212.3830985915493,
+          -244,
+          424.7661971830986,
+          488
+        ],
+        "expectedFacing": 1
+      }
+    },
+    {
+      "name": "arcade_greedy_worm_arcade_119 selection draw left",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png"
+        ],
+        "dataset": {
+          "spriteId": "arcade_greedy_worm_arcade_119",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "arcade_greedy_worm_arcade_119 visible outline framed left",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          167,
+          96,
+          927,
+          1065
+        ],
+        "destination": [
+          -212.3830985915493,
+          -244,
+          424.7661971830986,
+          488
+        ],
+        "expectedFacing": -1
+      }
+    },
+    {
+      "name": "art/registry.json stable during selection renders",
+      "passed": true
+    },
+    {
+      "name": "src/sprite-manifest.js stable during selection renders",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "The native renderer uses a predecoded local image cache. This run covers selection, asset identity and combat-art exclusion.",
+    "The resulting PNGs require separate visual inspection."
+  ],
+  "hashesBefore": {
+    "art/registry.json": "a4d6d77151138e92e558590205698ce606fce9fb8e2ca101ab5403ed41beb826",
+    "src/sprite-manifest.js": "73e29fa8e8edfdcce541ab3972df2df2cee2eb6528983a57b8b8a40280bb27de"
+  },
+  "hashesAfter": {
+    "art/registry.json": "a4d6d77151138e92e558590205698ce606fce9fb8e2ca101ab5403ed41beb826",
+    "src/sprite-manifest.js": "73e29fa8e8edfdcce541ab3972df2df2cee2eb6528983a57b8b8a40280bb27de"
+  },
+  "passed": true
+}

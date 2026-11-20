@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "selected": [
+    {
+      "fighterId": "origins_remnant_077",
+      "source": "origins",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/candidates/origins_remnant_077.066fb3aaa887.png",
+      "sha256": "066fb3aaa8877f51b9cdeba00669452f97140aef60dea066ba6609ec66f3716e",
+      "bytes": 223796,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "calibrationProposal": {
+        "anchor": [
+          0.4964114832535885,
+          0.79585326953748
+        ],
+        "bodyHeight": 0.5239234449760766
+      },
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "combatEnabled": true,
+      "review": "Viewed the exact native gameplay source and full generated output. One empty floating rusty wire cage with a flat humanoid shadow below, no physical person, corpse, or invented hanging anatomy. Entire cage and shadow are visible. The shadow is part of the single creature presentation, not a second subject.",
+      "limits": "A 200×272 native gameplay reference establishes the empty cage and flat humanoid shadow. Wire topology, source scale and lateral shadow projection remain interpreted; no hidden anatomy or original animation is certified. Visible minimum padding measured at alpha>=24 is 20.41%; requested 20% is met. Low-alpha fringe extends beyond the visible silhouette; native pixels are preserved. In-engine support and overlap review remains pending. Cage orientation is presentation-facing only; the projected shadow head lies to the left and does not establish creature facing. Keep runtime generic shadow disabled to avoid a second shadow.",
+      "role": "combatant",
+      "references": [
+        {
+          "file": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/remnant.jpg",
+          "url": "https://www.silenthillmemories.net/sh0/creatures/remnant.jpg",
+          "status": 200,
+          "bytes": 27394,
+          "sha256": "d645302f2244a9b88cf3a38e40ed9f89110810d1943abfb9515b6dc7af907231",
+          "path": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/remnant.jpg"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one source-grounded raster sprite for a 2D side-view Silent Hill game. Create exactly ONE complete subject, isolated on a truly transparent RGBA background. No text, UI, grid, border, watermark, panels or copies. Entire subject including all extremities and its required supports must fit inside the middle 60% of the square canvas; leave generous 20% transparent padding on ALL four sides. Moderate scale, never a close-up. Detailed but restrained original-game-like materials in soft neutral light. No cinematic glow, no extra scenery. The facing direction is RIGHT.\nReference is actual Silent Hill Origins (2007) Remnant gameplay. Recreate this exact unusual bodiless creature: a single small thin rusty irregular wire cage floating in empty air, with a flat elongated humanoid SHADOW on the ground beneath it. The cage is empty: there is NO physical human, skeleton, corpse, head, legs or person inside or below it. The shadow is a dark flat translucent projection, not an anatomical object. Match the simple uneven narrow cage outline seen at center-right of the reference, subtle rust-tan wires with the same sparse pattern; avoid decorative hooks, loops, chains, hanging limbs, padlocks, spikes or an enlarged cage. Compose as a clean RIGHT-facing lateral elevation of the whole floating cage and its grounded shadow, one supernatural subject. Keep a clear transparent vertical gap between cage and shadow. Preserve the source's emptiness and modest scale. The human-shaped shadow stretches along the horizontal ground plane to the right; it remains a restrained flat dark silhouette with no modeled volume. Do not reproduce the hospital, tiles, camera artifacts, other cages or lighting from the photograph. No added generic oval drop shadow.",
+      "generatedFile": "/workspace/scratch/6d8d28552d08/generated_images/exec-a7ed03c8-5c28-43b9-a497-6cab51e3c4c4.png",
+      "technical": {
+        "mode": "RGBA",
+        "visibleBounds": [
+          315,
+          341,
+          930,
+          998
+        ],
+        "alphaBounds": [
+          41,
+          23,
+          1226,
+          1230
+        ],
+        "transparentFraction": 0.9516062157714135,
+        "semiTransparentFraction": 0.048165487664354446,
+        "pixelsModified": false,
+        "minimumVisiblePaddingFraction": 0.20414673046251994
+      },
+      "fidelity": "unverified",
+      "animatedClips": 0,
+      "runtimeNotes": {
+        "shadowScaleProposal": 0,
+        "anchorReason": "bottom of complete silhouette; Wood Sapling x aligned between root supports; Remnant bottom includes intrinsic flat shadow"
+      }
+    },
+    {
+      "fighterId": "bom_tremer_133",
+      "source": "bom",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/candidates/bom_tremer_133.a9b464909542.png",
+      "sha256": "a9b464909542b97197c608cf616b5fd8d961963f9a396eaa42cf22f9ac5c26c6",
+      "bytes": 338449,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "calibrationProposal": {
+        "anchor": [
+          0.4988038277511962,
+          0.6172248803827751
+        ],
+        "bodyHeight": 0.20095693779904306
+      },
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "combatEnabled": true,
+      "review": "Viewed native bestiary source and full generated output. One squat limbless Tremer in horizontal profile, broad pale front to the right and brown taper left, whole underside and both ends visible. No extra limbs, eyes, teeth, or snake anatomy. Minor low-alpha fringe remains in the native output.",
+      "limits": "The native bestiary reference is approximately 127 px and viewed obliquely. Right-facing horizontal presentation and relief are authored; no source scale, fine texture, opposite-side geometry or original crawling animation is certified. Visible minimum padding measured at alpha>=24 is 19.14%; requested 20% is not met. Low-alpha fringe extends beyond the visible silhouette; native pixels are preserved. In-engine support and overlap review remains pending.",
+      "role": "combatant",
+      "references": [
+        {
+          "file": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/tremer-bom.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/tremer.jpg",
+          "status": 200,
+          "bytes": 8774,
+          "sha256": "ff2c19e2d4102044240c07b82a66f64745f1b65539d94d25c96364ebdd08305a",
+          "path": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/tremer-bom.jpg"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one source-grounded raster sprite for a 2D side-view Silent Hill game. Create exactly ONE complete subject, isolated on a truly transparent RGBA background. No text, UI, grid, border, watermark, panels or copies. Entire subject including all extremities and its required supports must fit inside the middle 60% of the square canvas; leave generous 20% transparent padding on ALL four sides. Moderate scale, never a close-up. Detailed but restrained original-game-like materials in soft neutral light. No cinematic glow, no extra scenery. The facing direction is RIGHT.\nExact creature: Tremer from Silent Hill: Book of Memories (2012), based strictly on the attached small native bestiary view. One compact limbless pale folded slug, on its underside in horizontal crawling profile, broad blunt cream-colored leading end pointing RIGHT, narrower brown tapered rear pointing LEFT. Preserve the source's very simple wedge-like silhouette, smooth cream-gray top with a few broad leathery folds, darker tan-brown tapered rear and dark underside. The broad front is not a snail head, no drawn facial features. Rotate the source concept into a level side-view crawling pose without adding any anatomy. It has no legs, claws, arms, antennae, tentacles, eyes, teeth, mouth, shell, tail spikes or exposed organs. Keep it squat and simple; do not turn it into a long snake or a caterpillar. Show the full rear tip, whole belly contact and entire blunt front. No floor and no added shadow. One static ready-to-crawl pose.",
+      "generatedFile": "/workspace/scratch/6d8d28552d08/generated_images/exec-9fb8d8cc-df4d-4953-a5b8-49fcda33e466.png",
+      "technical": {
+        "mode": "RGBA",
+        "visibleBounds": [
+          240,
+          522,
+          1011,
+          774
+        ],
+        "alphaBounds": [
+          0,
+          21,
+          1240,
+          1254
+        ],
+        "transparentFraction": 0.908778034690903,
+        "semiTransparentFraction": 0.09094597447657131,
+        "pixelsModified": false,
+        "minimumVisiblePaddingFraction": 0.19138755980861244
+      },
+      "fidelity": "unverified",
+      "animatedClips": 0,
+      "runtimeNotes": {
+        "shadowScaleProposal": null,
+        "anchorReason": "bottom of complete silhouette; Wood Sapling x aligned between root supports; Remnant bottom includes intrinsic flat shadow"
+      }
+    },
+    {
+      "fighterId": "bom_wood_sapling_139",
+      "source": "bom",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/candidates/bom_wood_sapling_139.fb78edc7ace1.png",
+      "sha256": "fb78edc7ace1899f080169312bd8e3b3f07116d3c51c67eb70ec0c166033bcfc",
+      "bytes": 552540,
+      "width": 1254,
+      "height": 1254,
+      "facing": 1,
+      "calibrationProposal": {
+        "anchor": [
+          0.42,
+          0.8349282296650717
+        ],
+        "bodyHeight": 0.6706539074960127
+      },
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "combatEnabled": true,
+      "review": "Viewed native bestiary portrait, labeled gameplay image and full generated output. One right-facing wooden creature with pointed crown, branch arms, dark recessed face, twig fingers and full root supports. No human feet, clothing, or extra subject. Texture and branch structure remain authored.",
+      "limits": "Native bestiary portrait plus labeled pre-release gameplay screenshot dated 2012-06-06 establish the visible body. Branch geometry, lateral pose and retail-model equivalence remain unverified; no native walking cycle is claimed. Visible minimum padding measured at alpha>=24 is 16.43%; requested 20% is not met. Low-alpha fringe extends beyond the visible silhouette; native pixels are preserved. In-engine support and overlap review remains pending.",
+      "role": "combatant",
+      "references": [
+        {
+          "file": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/wood-sapling.jpg",
+          "path": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/wood-sapling.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/wood_sapling.jpg",
+          "status": 200,
+          "bytes": 13029,
+          "sha256": "2dcfc58fa87a091979a13995a45cd90ed32db67607f5d71711ceb95d093ad2ed"
+        },
+        {
+          "file": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/wood-sapling-game.jpg",
+          "path": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/wood-sapling-game.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_54_wood_boss.jpg",
+          "status": 200,
+          "bytes": 184905,
+          "sha256": "3aa7edc878a7d97246ab075972f59020c45c4d94c37735dba8733cf5ae21abed"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one source-grounded raster sprite for a 2D side-view Silent Hill game. Create exactly ONE complete subject, isolated on a truly transparent RGBA background. No text, UI, grid, border, watermark, panels or copies. Entire subject including all extremities and its required supports must fit inside the middle 60% of the square canvas; leave generous 20% transparent padding on ALL four sides. Moderate scale, never a close-up. Detailed but restrained original-game-like materials in soft neutral light. No cinematic glow, no extra scenery. The facing direction is RIGHT.\nExact creature: Wood Sapling from Silent Hill: Book of Memories. Use reference 1 for the bark, pointed crown/head and bent branch arms; use the specifically labeled Wood Sapling enemy in reference 2 for its complete body and lower root supports. Create one entire tree-like creature in a readable lateral battle-ready pose facing RIGHT, hunched forward with two uneven branch arms; all arm tips and root supports in frame. Preserve the source form: gray olive dry ridged bark, sharply pointed asymmetric crown, recessed black head opening, narrow crooked woody trunk, ragged branch projections on upper back, two long lower tapering woody root-like supports as the reference shows. Fingers remain small root twigs. No human face, skin, clothes, shoes, human feet or rounded muscular legs. No leaves, flowers, moss, vines, glowing eyes or added antlers. No humanoid knight, no cute plant character. Keep proportions and sparse branch count close to the reference, not an enlarged forest boss. Do not reproduce the player characters, HUD, fireball, scene, ground or nameplate. Whole autonomous sapling only on transparent, no extra grounding shadow.",
+      "generatedFile": "/workspace/scratch/6d8d28552d08/generated_images/exec-9b428673-f754-4cc8-9da3-85e308757c1d.png",
+      "technical": {
+        "mode": "RGBA",
+        "visibleBounds": [
+          326,
+          206,
+          1020,
+          1047
+        ],
+        "alphaBounds": [
+          0,
+          17,
+          1240,
+          1254
+        ],
+        "transparentFraction": 0.8679530128787243,
+        "semiTransparentFraction": 0.13189945285135413,
+        "pixelsModified": false,
+        "minimumVisiblePaddingFraction": 0.16427432216905902
+      },
+      "fidelity": "unverified",
+      "animatedClips": 0,
+      "runtimeNotes": {
+        "shadowScaleProposal": null,
+        "anchorReason": "bottom of complete silhouette; Wood Sapling x aligned between root supports; Remnant bottom includes intrinsic flat shadow"
+      }
+    }
+  ]
+}

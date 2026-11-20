@@ -3,12 +3,9 @@ import {lstatSync,readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {resolve,isAbsolute} from 'node:path';
 import {fileURLToPath} from 'node:url';
-export const ART_CAMPAIGN_ID='art144';
-export const ART_CAMPAIGN_BASE='221dcc8cac927291bb7e0b89139a504dabb857db';
-export const ART_CAMPAIGN_GROUP_SIZES=Object.freeze({a:30,b:30,c:30,d:30,e:24});
-export const ART_CONTINUATION_ID='art92';
-export const ART_CONTINUATION_BASE='82e5f413300ca1112d153ee407dd988b70efd313';
-export const ART_CONTINUATION_GROUP_SIZES=Object.freeze({a:18,b:21,c:18,d:15,e:20});
+import {ART_CAMPAIGN_ID,ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_ID,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES} from './art-campaign-constants.mjs';
+import {matchesCampaignCandidate,readPurposeDeliveries,resolvedHistoricalArtwork,expandedCombatIdle} from './art-campaign-review.mjs';
+export {ART_CAMPAIGN_ID,ART_CAMPAIGN_BASE,ART_CAMPAIGN_GROUP_SIZES,ART_CONTINUATION_ID,ART_CONTINUATION_BASE,ART_CONTINUATION_GROUP_SIZES};
 
 const repositoryRoot=fileURLToPath(new URL('../',import.meta.url));
 const nonempty=value=>typeof value==='string'&&value.trim().length>0;
@@ -35,15 +32,27 @@ function artifactMatches(root,frame){
   }catch{return false;}
 }
 
+function continuationCandidateFilesMatch(root,item,source,art,review){
+  const idle=art.frames[0];
+  if(!artifactMatches(root,idle))return false;
+  if(art.combatView!=='side-view-candidate'&&(!art.portrait||art.portrait.path===idle.path))return item.artifacts.includes(idle.path);
+  const file=resolve(root,`art/fragments/art92-${item.group}.json`);
+  let fragment;
+  try{fragment=JSON.parse(readFileSync(file,'utf8'));}catch(error){if(error.code==='ENOENT')return false;throw error;}
+  return fragment?.schema===1&&fragment.campaign===ART_CONTINUATION_ID&&fragment.baseCommit===ART_CONTINUATION_BASE&&fragment.group===item.group&&
+    matchesCampaignCandidate(item,source,fragment.assets?.[item.entityId],art,review)&&artifactMatches(root,art.portrait);
+}
+
 function validatedContinuation(plan,deliveries,assets,root){
-  const items=deliveries.filter(item=>item.batch===ART_CONTINUATION_ID),result=new Map();
-  if(!items.length)return result;
+  const items=deliveries.filter(item=>item.batch===ART_CONTINUATION_ID),result=new Map(),laterCombat=new Map();
+  if(!items.length)return {continuation:result,laterCombat};
   if(items.length>92)throw Error('ART92 production continuation exceeds its 92 original profiles');
   const intake=JSON.parse(readFileSync(resolve(root,'docs/production/art92-intake.json'),'utf8'));
   if(intake.schema!==1||intake.campaign!==ART_CONTINUATION_ID||intake.baseCommit!==ART_CONTINUATION_BASE||intake.requested!==92||!Array.isArray(intake.entries))
     throw Error('Invalid ART92 immutable intake');
   const assigned=new Map(intake.entries.map(entry=>[entry.fighter?.id,entry]));
   if(assigned.size!==intake.entries.length||assigned.has(undefined))throw Error('Duplicate ART92 intake identity');
+  const review={intake,rows:items,assets:{},purposeDeliveries:readPurposeDeliveries(root)};
   const poses=new Map(plan.poses.map(row=>[row.id,row])),tasks=new Set(plan.tasks.map(row=>row.id)),groupCounts={};
   for(const item of items){
     latestArtContinuationDelivery(deliveries,item.rowId);
@@ -59,20 +68,24 @@ function validatedContinuation(plan,deliveries,assets,root){
     if(groupCounts[item.group]>ART_CONTINUATION_GROUP_SIZES[item.group])throw Error('ART92 group exceeds its original allocation: '+item.group);
     const art=assets[item.entityId],clip=art?.clips?.idle;
     if(item.status==='blocked'){
-      if(!nonempty(item.reason)||clip?.frames?.length)throw Error('ART92 blocked row requires a reason and no imported idle: '+item.rowId);
+      const later=clip?.frames?.length&&resolvedHistoricalArtwork(item,art,review,{purpose:'combat'})&&
+        clip.frames.every(index=>artifactMatches(root,art.frames[index]))&&artifactMatches(root,art.portrait);
+      if(!nonempty(item.reason)||(clip?.frames?.length&&!later))throw Error('ART92 blocked row requires a reason and no imported idle: '+item.rowId);
+      if(later)laterCombat.set(item.rowId,art.frames[clip.frames[0]].path);
     }else if(entry.generationExcluded!==false||!art||art.fighterId!==item.entityId||art.source!==row.source||art.fidelity!=='unverified'||
-      art.animatedClips!==0||art.frames?.length!==1||!art.frames[0]||JSON.stringify(clip?.frames)!=='[0]'||clip.loop!==false||clip.ticksPerFrame!==1||
-      !item.artifacts.includes(art.frames[0].path)||!artifactMatches(root,art.frames[0])){
+      ((art.animatedClips!==0||art.frames?.length!==1)&&!expandedCombatIdle(item.entityId,row.source,art))||
+      !art.frames[0]||JSON.stringify(clip?.frames)!=='[0]'||clip.loop!==false||clip.ticksPerFrame!==1||
+      !continuationCandidateFilesMatch(root,item,row.source,art,review)){
       throw Error('ART92 candidate requires an eligible exact-source imported static idle, evidence and matching artifact file: '+item.rowId);
     }
     result.set(item.rowId,item);
   }
-  return result;
+  return {continuation:result,laterCombat};
 }
 
 export function applyArtCampaignProgress(plan,deliveries,assets,{root=repositoryRoot}={}){
   // A new image can supersede a historical blocker only after its own complete review.
-  const continuation=validatedContinuation(plan,deliveries,assets,root);
+  const {continuation,laterCombat}=validatedContinuation(plan,deliveries,assets,root);
   const campaign=deliveries.filter(item=>item.batch===ART_CAMPAIGN_ID);
   if(!campaign.length)return null;
   const latest=new Map(campaign.map(item=>[item.rowId,item]));
@@ -90,7 +103,7 @@ export function applyArtCampaignProgress(plan,deliveries,assets,{root=repository
       !Array.isArray(clip?.frames)||clip.frames.length!==1||clip.loop!==false||!art.frames?.[clip.frames[0]]))
       throw Error('ART144 candidate requires its own imported static idle: '+item.rowId);
     if(item.status==='blocked'&&(typeof item.reason!=='string'||!item.reason.trim()||
-      (clip?.frames?.length&&continuation.get(item.rowId)?.status!=='implemented-candidate')))
+      (clip?.frames?.length&&continuation.get(item.rowId)?.status!=='implemented-candidate'&&!laterCombat.has(item.rowId))))
       throw Error('ART144 blocked row requires a reason and no imported idle: '+item.rowId);
     // Previous reasons are history, even when new evidence permits a candidate.
     // Importing a still never closes its parent art action or certifies fidelity.
@@ -122,11 +135,15 @@ export function applyArtCampaignProgress(plan,deliveries,assets,{root=repository
         :`Livraison candidate — ${label} : image idle fixe importée. ${item.limits} Le blocage ART144 reste archivé comme diagnostic antérieur ; cette nouvelle image ne certifie ni la cible antérieure ni la fidélité 1:1. Le rôle et les capacités restent inchangés.`;
       row.existing+=' '+note;task.reason+=' '+note;
       if(item.status==='implemented-candidate')task.delivery='art92-static-candidate-2026-11-02';
+      if(laterCombat.has(item.rowId)){
+        const laterNote=`Livraison ultérieure distincte — image de combat latérale candidate documentée : ${laterCombat.get(item.rowId)}. Seule la présence du sprite de combat est actualisée ; les blocages ART144 et ART92 restent archivés. Ni animation, ni fidélité 1:1, ni approbation de production, ni rôle ne sont validés par cette image.`;
+        row.existing+=' '+laterNote;task.reason+=' '+laterNote;
+      }
     }
     const items=[...continuation.values()];
     plan.artContinuation={id:ART_CONTINUATION_ID,baselineCommit:ART_CONTINUATION_BASE,requested:92,assessed:items.length,
       candidates:items.filter(item=>item.status==='implemented-candidate').length,blocked:items.filter(item=>item.status==='blocked').length,
-      pending:92-items.length,certifiedOneToOne:false,
+      pending:92-items.length,laterCombatImages:laterCombat.size,certifiedOneToOne:false,
       scope:'Reassessment of the 92 ART144 historical blockers only. Prior delivery ledgers and role decisions remain unchanged; a source-owned static image is separate from animation or 1:1 certification.'};
   }
   return result;

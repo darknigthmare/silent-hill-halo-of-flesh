@@ -1,0 +1,548 @@
+{
+  "schema": 1,
+  "label": "wave24-native-art-and-inputs",
+  "generatedAt": "2026-11-20T08:33:33.861Z",
+  "root": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh",
+  "browserTest": false,
+  "httpTest": false,
+  "browserLaunches": 0,
+  "httpServersStarted": 0,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "Historical portrait preserved and separated: sh1_bloodsucker",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original bytes: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    },
+    {
+      "name": "In-memory decoder adapter preserves RGBA: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    },
+    {
+      "name": "Native historical selection decodes: sh1_bloodsucker",
+      "passed": true
+    },
+    {
+      "name": "sh1_bloodsucker: documented role remains outside combat",
+      "passed": true
+    },
+    {
+      "name": "sh1_bloodsucker: workshop reference frames decode",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": []
+      }
+    },
+    {
+      "name": "sh1_bloodsucker: reference renderer selects dedicated view 1",
+      "passed": true
+    },
+    {
+      "name": "sh1_bloodsucker: full reference silhouette fits workshop 1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          329.2609394424659,
+          271.4661413838287,
+          531.0571795840556,
+          430.85386279326485
+        ],
+        "visible": [
+          330.11480223573074,
+          272.32000417709355,
+          528.2109702731728,
+          430
+        ],
+        "pixelScale": 0.28462093108827885,
+        "anchor": [
+          0.30303030303030304,
+          0.7057416267942583
+        ],
+        "bodyHeight": 0.44178628389154706,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh1_bloodsucker: workshop facing matrix 1",
+      "passed": true
+    },
+    {
+      "name": "sh1_bloodsucker: reference renderer selects dedicated view -1",
+      "passed": true
+    },
+    {
+      "name": "sh1_bloodsucker: full reference silhouette fits workshop -1",
+      "passed": true,
+      "detail": {
+        "complete": true,
+        "exterior": [
+          188.9428204159444,
+          271.4661413838287,
+          390.7390605575341,
+          430.85386279326485
+        ],
+        "visible": [
+          191.78902972682718,
+          272.32000417709355,
+          389.88519776426926,
+          430
+        ],
+        "pixelScale": 0.28462093108827885,
+        "anchor": [
+          0.30303030303030304,
+          0.7057416267942583
+        ],
+        "bodyHeight": 0.44178628389154706,
+        "soleOffsetFromActor": null
+      }
+    },
+    {
+      "name": "sh1_bloodsucker: workshop facing matrix -1",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Shared source untouched: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG remains unchanged: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "cases": [],
+  "captures": [
+    {
+      "file": "selection-sh1_bloodsucker.png",
+      "sha256": "da80c900b33a072167c858151f6ee1c57e75bac63cce83213522ba84f9ed23bb",
+      "bytes": 124886,
+      "width": 500,
+      "height": 500,
+      "purpose": "preserved-selection",
+      "fighterId": "sh1_bloodsucker",
+      "path": "assets/sprites/sh1_bloodsucker.04acbc6820b3.png"
+    },
+    {
+      "file": "sh1_bloodsucker-reference-right.png",
+      "sha256": "0c804d3c6835c74143c2c3726636bb9b5e9c434179f9a8b78813950025ac6f56",
+      "bytes": 41418,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh1_bloodsucker",
+      "combatEnabled": false,
+      "facing": 1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          329.2609394424659,
+          271.4661413838287,
+          531.0571795840556,
+          430.85386279326485
+        ],
+        "visible": [
+          330.11480223573074,
+          272.32000417709355,
+          528.2109702731728,
+          430
+        ],
+        "pixelScale": 0.28462093108827885,
+        "anchor": [
+          0.30303030303030304,
+          0.7057416267942583
+        ],
+        "bodyHeight": 0.44178628389154706,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+        "args": [
+          -120.17328519855596,
+          -279.8772563176895,
+          396.57184115523467,
+          396.57184115523467
+        ],
+        "matrix": [
+          0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    },
+    {
+      "file": "sh1_bloodsucker-reference-left.png",
+      "sha256": "c00ecbc2e881962d8f403fe3874fcff416204a7b11323e7f0f311db3dfbaa03a",
+      "bytes": 41311,
+      "width": 720,
+      "height": 500,
+      "purpose": "native-workshop-renderer-reference-only",
+      "fighterId": "sh1_bloodsucker",
+      "combatEnabled": false,
+      "facing": -1,
+      "geometry": {
+        "complete": true,
+        "exterior": [
+          188.9428204159444,
+          271.4661413838287,
+          390.7390605575341,
+          430.85386279326485
+        ],
+        "visible": [
+          191.78902972682718,
+          272.32000417709355,
+          389.88519776426926,
+          430
+        ],
+        "pixelScale": 0.28462093108827885,
+        "anchor": [
+          0.30303030303030304,
+          0.7057416267942583
+        ],
+        "bodyHeight": 0.44178628389154706,
+        "soleOffsetFromActor": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+        "args": [
+          -120.17328519855596,
+          -279.8772563176895,
+          396.57184115523467,
+          396.57184115523467
+        ],
+        "matrix": [
+          -0.8999999761581421,
+          0,
+          0,
+          0.8999999761581421,
+          360,
+          430
+        ]
+      }
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+      "sha256": "c1a8f6c3471e7cf2f36c1a33fe6beea37a96912b2a96f5462d4344393b083e55",
+      "bytes": 443341,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "312cb9f4a3ec58f02a5a2eb0e85fd1dac7fed7a9de9dc8e8c7d2e36cea7be393",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+      "sha256": "04acbc6820b32ad83ff5d7f9e2fd10dbeed469d7dcbce379a2b2b26b40f9efe0",
+      "bytes": 556729,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "a95087728053ff9fc2d4ef1b83696f1c758ec13cadb3dab6c3fdfef72493b34b",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "bytes": 1181785,
+      "width": 2172,
+      "height": 724,
+      "rawRGBAHash": "28b59b2a1bb4f2e01c42a53ce514d38088004343a42db9d7658d97fbe9a05d81",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "sha256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547",
+      "bytes": 633182,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "06040a0bb0a2553bb69d76447f823b29d7f8d4a71906f379fef759fcbf23946f",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "sha256": "4d537af9a1485e2e384396327b8a60c35c923552f8318e92021fff76e75c40c3",
+      "bytes": 2203973,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "bd8555c4af22d190ae05f426ffbb9b47f03ca33e15f3832f3c5474ad07a871f1",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "sha256": "98e4c72a83083b2f1dcabd1417e687c20d31daaac96ece679ffedd266584b884",
+      "bytes": 200941,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "fee02ddf118c0f63b586bfa290dd7d136e1f8e57f1581dfc7c865017e1ec7580",
+      "adapterLossless": true
+    }
+  ],
+  "roles": [
+    {
+      "id": "sh1_bloodsucker",
+      "source": "sh1",
+      "edition": "SH1 original 1999, région à fixer",
+      "role": "environmental-obstacle",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": false,
+      "canMove": false,
+      "canJump": false,
+      "canDodge": false,
+      "referenceIds": [
+        "CL_SH1_07_NIGHTMARE_HOSPITAL",
+        "CL_SH1_CREATURES"
+      ],
+      "observedBasis": "Obstacle : Tentacules défendent un objet. Distraction : Réagit à la poche de sang.",
+      "superEnabled": false,
+      "superReason": "Le rôle documenté ne permet pas un kit de combat autonome.",
+      "superName": "Super proposé — Bloodsucker",
+      "superDescription": "Aucun super mobile en mode strict ; une courte défense de zone serait une adaptation explicite.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    },
+    {
+      "id": "sh2_creeper_025",
+      "source": "sh2",
+      "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+      "role": "combatant",
+      "adaptationMode": "versus-transposition",
+      "combatEnabled": true,
+      "canMove": true,
+      "canJump": false,
+      "canDodge": true,
+      "referenceIds": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "observedBasis": "Morsure : Court vers le pied et mord.",
+      "superEnabled": true,
+      "superReason": "",
+      "superName": "Super proposé — Creeper",
+      "superDescription": "Variante à réaliser avec son apparence propre. Angle de cheville : deux changements de direction puis morsure ; pas de bond humain.",
+      "capabilities": {
+        "reviewed": true,
+        "projectile": false,
+        "teleport": false,
+        "trap": false,
+        "aura": false,
+        "effects": []
+      }
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "6839aae1880ff9185243d832b56fd02f175ef14f1d249d219c36807255f2366e",
+      "after": "6839aae1880ff9185243d832b56fd02f175ef14f1d249d219c36807255f2366e"
+    },
+    "src/sprite-manifest.js": {
+      "before": "ddfae8f3d156510ae059abeb93656e45fdd517b080d8d906c0f131a6dcb09de6",
+      "after": "ddfae8f3d156510ae059abeb93656e45fdd517b080d8d906c0f131a6dcb09de6"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "d2dcf8f8b63ff37f15bbdc8f6c50acaf5fbbf53f6359521ec45c240c7248542b",
+      "after": "d2dcf8f8b63ff37f15bbdc8f6c50acaf5fbbf53f6359521ec45c240c7248542b"
+    },
+    "src/fight.js": {
+      "before": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "after": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a"
+    },
+    "src/sprite-system.js": {
+      "before": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+      "after": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "rendererPreviews": [
+    {
+      "id": "sh1_bloodsucker",
+      "facing": 1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -120.17328519855596,
+        "y": -279.8772563176895,
+        "width": 396.57184115523467,
+        "height": 396.57184115523467,
+        "flip": 1,
+        "localX": -120.17328519855596,
+        "localY": -279.8772563176895,
+        "scale": 0.31624548736462094
+      },
+      "capture": "sh1_bloodsucker-reference-right.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    },
+    {
+      "id": "sh1_bloodsucker",
+      "facing": -1,
+      "combatEnabled": false,
+      "rendered": {
+        "kind": "raster",
+        "path": "assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+        "pose": "idle",
+        "requestedClipKey": "idle",
+        "fallback": false,
+        "x": -276.3985559566787,
+        "y": -279.8772563176895,
+        "width": 396.57184115523467,
+        "height": 396.57184115523467,
+        "flip": -1,
+        "localX": -120.17328519855596,
+        "localY": -279.8772563176895,
+        "scale": 0.31624548736462094
+      },
+      "capture": "sh1_bloodsucker-reference-left.png",
+      "method": "drawRasterMonster at the existing inspector placement; no DOM/CSS or FightEngine duel for this profile."
+    }
+  ],
+  "method": {
+    "engine": "Actual FightEngine.update/render; native Canvas drawImage observed after executing its real draw.",
+    "inputs": "Only original InputState keydown/keyup callbacks receive synthetic events. No held/pressed sets or actor positions, facing, health, phase, clocks or attack objects are assigned.",
+    "oppositeSides": "Separate ordinary local duels put each controlled fighter in the real player1 or player2 spawn. No teleport, actor swap or pose injection.",
+    "decoder": "Exact source bytes verified. Sharp normalizes PNG encoding only in memory for native decoding; all decoded RGBA bytes compared.",
+    "rolePolicy": "Only existing combat-enabled profiles enter duels. Other roles receive native workshop-renderer views only; no role or permission is changed."
+  },
+  "limits": [
+    "Native Canvas is not Chromium; DOM/CSS, actual browser keyboard delivery, HTTP, service worker and CI browser behavior are not tested.",
+    "Timing and mirrored left views are authored versus presentation; no original film/game animation timing or 1:1 fidelity is certified.",
+    "These wave24 candidates are exercised through idle, permitted static-frame movement or stationary-input rejection, and release-to-idle; no attack/contact/guard/finisher matrix is exercised.",
+    "Skull/torso size, foot contacts and limb identity still require visual review of the native captures."
+  ],
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "e2ead88ac4120bcb54fdc482611999497a8401d66fdd29b006405661e72fdadd",
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "sh1_bloodsucker": "63f77e14a296cfbdc35c266ade2b94a9ff53017405e02caa33674d989bb36012",
+    "sh2_creeper_025": "c406619e7c5636e3c5e7b9a8df6bae2657010793de09126704e368cb01feb47a"
+  },
+  "testedStageEntryHashes": {
+    "hazel_subway": "c95e04fa47ff52810f388d336e0c2e6fcaacce9d5f145ee420bc021f333a737a"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "combatIds": [],
+  "referenceOnlyIds": [
+    "sh1_bloodsucker"
+  ],
+  "passed": true,
+  "completedAt": "2026-11-20T08:33:35.505Z"
+}

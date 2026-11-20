@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "reviewedAt": "2026-11-20T12:58:47.656465+00:00",
+  "reviewer": "root",
+  "method": "Both actual native FightEngine captures opened with view_image at original1280×720 dimensions; no browser claim.",
+  "entries": [
+    {
+      "fighterId": "sh1_stalker_008",
+      "decision": "accepted-as-candidate",
+      "automatedReport": "docs/production/vague26/qa-native/stalker/sh1_stalker_008/report.json",
+      "automatedReportSHA256": "20854ea9fd4c4d947badb63c49a0f83daff588d263530794835db42a8c76ed6b",
+      "assetSHA256": "7ae11fd6c58f4840655cb72d685530b6ec11ee2ab9c328dd7480ee880b431509",
+      "evidence": [
+        {
+          "path": "docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-right-idle.png",
+          "sha256": "34068f0c17361f5b17d556f7af58e34094cfd8a423ac8b7c4ca42aa62d6260c0",
+          "facing": 1
+        },
+        {
+          "path": "docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-left-idle.png",
+          "sha256": "5a2f12f5898715a192607155f1f2f261f940b5cdb8b4cfe434965473cf6117e2",
+          "facing": -1
+        }
+      ],
+      "findings": [
+        "Complete head, torso, arms, legs and feet remain visible in both actual game orientations.",
+        "The hunched silhouette faces the opponent and remains grounded at visible sole y594.",
+        "The new internal alpha reveals the scenery through the body, with a readable silhouette against both school and mall backgrounds.",
+        "Selection portrait remains separate and preserved; movement uses this static candidate, with no new animated clip."
+      ],
+      "limits": [
+        "The low-alpha fringe extends approximately1.53renderpixels below ground; visible bounds end at594.",
+        "Authored opacity and mirrored opposite side are not a reproduction of exact PS1 subtractive blending or source animation.",
+        "Native Canvas screenshots do not test HTTP, browser or service-worker behavior.",
+        "No fidelity1:1 certification."
+      ]
+    }
+  ],
+  "capturesActuallyViewed": 2
+}

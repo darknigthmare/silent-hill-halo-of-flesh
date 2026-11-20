@@ -1,6 +1,6 @@
 import {fighterReferenceHTML,stageReferenceHTML,finisherReferenceHTML,moveAvailabilityHTML,fighterRoleLabel,COMBAT_ROLE_LABELS} from './reference-ui.js';
-import { spriteFor, spriteStatus, spriteCache } from './sprite-system.js';
-import {stageBitmapCache,prepareCombatAssets,pinCombatAssets,captureCombatAssetPins} from './stage-bitmaps.js';
+import { combatSpriteFor, retainedCombatFrames, shouldRetireCompletedCombat, spriteStatus, spriteCache } from './sprite-system.js';
+import {stageBitmapCache,stageBitmapFrames,prepareCombatAssets,pinCombatAssets,captureCombatAssetPins} from './stage-bitmaps.js';
 import {
   CHRONICLES, ROSTER, STAGES, SOURCE_META, ARCHETYPES, CONTENT_STATS, STAGE_HAZARDS,
   AFFLICTIONS, RITUAL_MODIFIERS, VERSION, getRitualModifier, getFighter, getStage, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY
@@ -13,6 +13,7 @@ import { ACTIONS, loadControls, controlsLabel } from './player-input.js';
 import { installPlayflowUI } from './playflow-ui.js';
 import { FightEngine, CONTROL_LABELS, chronicleGrade } from './fight.js';
 import { drawStage, renderPortrait } from './renderers.js';
+import { chronicleArtwork, setChronicleImage } from './chronicle-art.js';
 import {
   attachGlobalAudioUnlock, audio, clamp, escapeHTML, loadJSON, loadSettings,
   returnToCommand, saveLastFront, writeJSON, RECORDS_KEY, CHRONICLES_KEY
@@ -67,6 +68,7 @@ const els = {
   pauseBtn: $('#pauseBtn'), trainingToggle: $('#trainingToggle'), trainingPanel: $('#trainingPanel'),
   hitboxes: $('#hitboxes'), autoHeal: $('#autoHeal'), freeMeter: $('#freeMeter'), resetDojo: $('#resetDojo'),
   touchLayer: $('#touchLayer'), mobileP1: $('#mobileP1'), result: $('#result'), resultKicker: $('#resultKicker'),
+  chronicleOpening: $('#chronicleOpening'), chronicleEnding: $('#chronicleEnding'),
   resultTitle: $('#resultTitle'), resultText: $('#resultText'), rematch: $('#rematch'), continueRun: $('#continueRun'),
   resultSelect: $('#resultSelect'), resultStats: $('#resultStats'),
   otherworldShift: $('#otherworldShift'), stageHazards: $('#stageHazards'), radioWarning: $('#radioWarning'), adaptiveAI: $('#adaptiveAI'),
@@ -144,9 +146,9 @@ function renderSelected() {
   els.slotP1.textContent = state.activeSlot === 1 ? 'SIGNAL DU SUJET I ACTIF' : 'ACCROCHER LE SUJET I';
   els.slotP2.textContent = state.activeSlot === 2 ? 'SIGNAL DU SUJET II ACTIF' : 'ACCROCHER LE SUJET II';
   renderStageMini();
-  const current=[state.p1,state.p2].filter(f=>!spriteFor(f));
+  const current=[state.p1,state.p2].filter(f=>!combatSpriteFor(f));
   const blocked=[state.p1,state.p2].filter(f=>createCombatProfile(f).referencePolicy?.combatEnabled===false);
-  const status=$('#spriteLaunchStatus');if(status)status.textContent=blocked.length?`${blocked.map(f=>f.name).join(' · ')} : rôle non combattant ou identité à confirmer. Consulter le dossier.`:current.length?`${current.length} sujet(s) sans image. Leur fiche reste consultable; le contact normal attend leur sprite.`:'Sprites disponibles. Poses statiques candidates; animations et fidélité restent à valider.';
+  const status=$('#spriteLaunchStatus');if(status)status.textContent=blocked.length?`${blocked.map(f=>f.name).join(' · ')} : rôle non combattant ou identité à confirmer. Consulter le dossier.`:current.length?`${current.length} sujet(s) sans sprite de combat. Leur image de sélection reste consultable lorsqu’elle est disponible.`:'Sprites de combat disponibles. Les vues historiques, animations et fidélité restent à valider.';
   renderModePanel();
 }
 
@@ -191,7 +193,7 @@ function currentRitualId() {
 function currentRitual() { return { id: currentRitualId(), ...getRitualModifier(currentRitualId()) }; }
 
 function matchesFilters(fighter) {
-  if ($('#artReadyOnly')?.checked && !spriteFor(fighter)) return false;
+  if ($('#artReadyOnly')?.checked && !combatSpriteFor(fighter)) return false;
   const query = els.search.value.trim().toLowerCase();
   const source = els.sourceFilter.value;
   const type = els.typeFilter.value;
@@ -277,7 +279,12 @@ function renderStageGallery() {
     const label = document.createElement('b'); label.textContent = stage.name; button.append(label);
     const meta = document.createElement('small'); const hazard = STAGE_HAZARDS[stage.director?.hazardDeck?.[0]]; meta.innerHTML = `${escapeHTML(SOURCE_META[stage.source]?.short || stage.source)} · ${escapeHTML(stage.family.toUpperCase())} · ${escapeHTML(stage.weather.toUpperCase())}${hazard ? ` · <em>${escapeHTML(hazard.name)}</em>` : ''}${!stage.director?.hazardDeck?.length ? ' · AMBIANCE SANS DÉGÂTS' : ''}<br>${stage.animationTracks?.length || stage.animations?.length || 0} ANIMATIONS · ${stage.director?.events?.length || 0} ÉVÉNEMENTS<br>${escapeHTML(stage.terrain?.name || 'TERRAIN NEUTRE')} · ${escapeHTML(stage.shift?.name || 'BASCULE STANDARD')}`; button.append(meta);
     button.addEventListener('click', () => {
-      state.stage = stage; audio.confirm(); renderSelected(); renderStageGallery();
+      // Récit and tournament own their arena; browsing must keep the encounter.
+      if(!currentModePlan()?.queue?.length){
+        if(stage.id!==state.stage.id&&(state.engine||state.loadingSprites))showSelect();
+        state.stage=stage;
+      }
+      audio.confirm(); renderSelected(); renderStageGallery();
       setTimeout(closeStageGallery, 110);
     });
     els.stageList.append(button);
@@ -331,8 +338,10 @@ function closeDossier() { els.dossier.classList.add('hidden'); }
 function randomItem(array) { return array[Math.floor(Math.random() * array.length)]; }
 function randomize() {
   const candidates = state.filtered.filter(f=>createCombatProfile(f).referencePolicy.combatEnabled);
-  const pool = $('#artDiagnostic')?.checked ? candidates : candidates.filter(f=>spriteFor(f));
+  const pool = $('#artDiagnostic')?.checked ? candidates : candidates.filter(f=>combatSpriteFor(f));
   if(!pool.length){flow.announce('Aucun sprite intégré dans ce filtre. Choisis les images disponibles ou le diagnostic explicite.',true);return;}
+  // A new contact returns to setup before replacing a live match's selection.
+  if(state.engine||state.loadingSprites)showSelect();
   state.p1 = randomItem(pool);
   state.p2 = randomItem(pool.length > 1 ? pool.filter(f => f.id !== state.p1.id) : pool);
   state.stage = randomItem(STAGES);
@@ -424,9 +433,10 @@ function activateRun(run) {
 }
 function restoreCheckpoint() {
   if(state.loadingSprites)return false;
-  const resumed=resumeRun(loadRun());
+  const saved=loadRun();
+  const resumed=resumeRun(saved);
   if(!resumed){flow.announce('Aucun parcours compatible à reprendre.',true);return false;}
-  return startFight({preserveRun:true,runCandidate:resumed});
+  return startFight({preserveRun:true,runCandidate:resumed,enteringChapter:saved.status==='won'});
 }
 function canRetryCurrentFight() {
   return !state.loadingSprites&&!(state.run&&['won','complete'].includes(state.run.status));
@@ -437,10 +447,31 @@ function retryCurrentFight() {
   return startFight({preserveRun:Boolean(candidate),runCandidate:candidate});
 }
 
-function showFight() {
+function showChronicleOpening(enteringChapter) {
+  const run = state.run;
+  const route = enteringChapter && run?.mode === 'chronicle'
+    ? CHRONICLES.find(entry => entry.id === run.routeId)
+    : null;
+  const scenes = chronicleArtwork(route?.id);
+  const rival = run?.index > 0 && scenes?.rival?.fighterId === run.queue[run.index]
+    ? scenes.rival
+    : null;
+  const artwork = run?.index === 0 ? scenes?.intro : rival;
+  const panel = els.chronicleOpening;
+  panel.hidden = !artwork;
+  setChronicleImage(panel.querySelector('img'), artwork);
+  if (artwork) {
+    panel.querySelector('strong').textContent = rival?.title || route.title;
+    panel.querySelector('p').textContent = rival?.caption || route.intro;
+  }
+}
+
+function showFight(enteringChapter) {
   els.selectScreen.classList.add('hidden');
   els.fightScreen.classList.remove('hidden');
   els.result.classList.add('hidden');
+  els.chronicleEnding.hidden=true;
+  showChronicleOpening(enteringChapter);
   window.scrollTo(0, 0);
 }
 function showSelect() {
@@ -481,11 +512,14 @@ function fightConfig() {
     initialHealthRatio: state.run?.carry ? state.run.carryHealth : 1,
     initialMeter: state.run?.carry ? state.run.carryMeter : null,
     seed: state.run ? (state.run.seed+state.run.index)>>>0 : Date.now(),
-    callbacks: { onMatchEnd: handleMatchEnd, onState: snapshot => flow.syncPause(snapshot), canResume: () => flow.canResume() }
+    callbacks: { onMatchEnd: handleMatchEnd, onState: snapshot => {
+      flow.syncPause(snapshot);
+      if(!els.chronicleOpening.hidden&&snapshot.phase!=='intro')els.chronicleOpening.hidden=true;
+    }, canResume: () => flow.canResume() }
   };
 }
 
-async function startFight({ preserveRun = false, runCandidate = null } = {}) {
+async function startFight({ preserveRun = false, runCandidate = null, enteringChapter = false } = {}) {
   if (state.loadingSprites) return false;
   const previousAnnouncement=flow.announcementId;
   const lease=++state.spriteLease;
@@ -509,9 +543,12 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   const stages=stageIds.map(id=>STAGES.find(stage=>stage.id===id));
   if(stages.some(stage=>!stage)){flow.announce('Une arène du parcours est indisponible. La progression reste intacte.',true);return false;}
   const currentStage=candidate?.stages?.length?stages.find(stage=>stage.id===candidate.stages[candidate.index%candidate.stages.length]):state.stage;
-  const restorePins=captureCombatAssetPins();
-  const retainedActors=state.engine&&!state.engine.destroyed?state.engine.actors.map(actor=>actor.data):[];
-  const retainedStage=state.engine&&!state.engine.destroyed?state.engine.stage:null;
+  let retainedFrames=retainedCombatFrames(state.engine);
+  let retainedStage=state.engine&&!state.engine.destroyed?state.engine.stage:null;
+  // Preserve the settled result and its stage throughout global preflight.
+  // Replacements that fit keep this lease until commit, including on failure.
+  pinCombatAssets([],retainedStage?[retainedStage]:[],{retainedFrames});
+  let restorePins=captureCombatAssetPins();
   state.loadingSprites=true;els.launch.disabled=true;els.launch.setAttribute('aria-busy','true');
   $('#spriteLaunchStatus').textContent='Vérification des images du contact…';
   let ready;
@@ -519,9 +556,19 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
     ready=await prepareCombatAssets(fighters,stages,{diagnostic});
     if(ready.ok&&lease===state.spriteLease&&selection()===originalSelection){
       const pair=candidate?[getFighter(candidate.playerId),getFighter(candidate.queue[candidate.index])]:[state.p1,state.p2];
-      // Keep the previous engine's images pinned until the entire replacement
-      // pair+stage is decoded. Failure or cancellation can restore its lease.
-      pinCombatAssets([...pair,...retainedActors],[currentStage,retainedStage].filter(Boolean));
+      const nextFrames=pair.flatMap(fighter=>combatSpriteFor(fighter)?.frames||[]);
+      if(shouldRetireCompletedCombat(state.engine,nextFrames,{settled:state.settled,retainedFrames,
+        resultVisible:!els.result.classList.contains('hidden')&&!els.fightScreen.classList.contains('hidden')})){
+        stageBitmapCache.validatePins(stageBitmapFrames([currentStage]));
+        // The revealed result is irreversible. Stopping its renderer preserves
+        // the canvas pixels without a snapshot or a larger decoded-image budget.
+        // If final decoding fails, its panel and won checkpoint remain usable.
+        state.engine.destroy();retainedFrames=[];retainedStage=null;
+        pinCombatAssets([],[]);restorePins=captureCombatAssetPins();
+      }
+      // Keep every image the old engine can still render until replacement is
+      // decoded. A live previous match still retains its complete combat set.
+      pinCombatAssets(pair,[currentStage,retainedStage].filter(Boolean),{retainedFrames});
       ready=await prepareCombatAssets(pair,[currentStage],{diagnostic});
     }
   } catch(error){ready={ok:false,missing:[],failed:['preflight']};}
@@ -548,7 +595,7 @@ async function startFight({ preserveRun = false, runCandidate = null } = {}) {
   }
   if (state.run?.rituals?.length) els.ritualSelect.value = currentRitualId();
   state.engine?.destroy();
-  showFight();
+  showFight(!preserveRun || enteringChapter);
   const training = preset === 'training';
   els.trainingToggle.classList.toggle('hidden', !training);
   els.trainingPanel.classList.toggle('hidden', !training);
@@ -660,6 +707,12 @@ function handleMatchEnd(result) {
     els.resultTitle.textContent=completedRun?(storyRun?'RÉCIT ACHEVÉ':tournamentRun?'MAÎTRE DU RITE':dossiers.length?'PARCOURS DE COMBAT TERMINÉ':'PARCOURS TERMINÉ'):result.winner.name;
     els.resultText.textContent=completedRun?(storyRun?`${storyRun.ending.text} ${storyRun.ending.note}`:tournamentRun?`${state.run.wins}/${state.run.queue.length} manches remportées. Le Rite des Huit est clos ; le rival documenté est tombé en finale.`:dossiers.length?`${state.run.wins}/${state.run.queue.length} rencontres combattantes remportées. ${dossiers.length} chapitre(s) conservé(s) comme dossiers hors combat : ${dossiers.map(d=>getFighter(d.fighterId).name).join(' · ')}.`:route?.outro||`${state.run.wins}/${state.run.queue.length} rencontres remportées.`):
       (won?`${result.winner.name} domine ${result.loser.name}.`:'Le parcours reste disponible. Rejouez cette rencontre ou revenez à la sélection.');
+    const artwork=completedRun&&state.run.mode==='chronicle'?chronicleArtwork(route?.id)?.ending:null;
+    els.chronicleEnding.hidden=!artwork;
+    setChronicleImage(els.chronicleEnding.querySelector('img'),artwork);
+    const caption=els.chronicleEnding.querySelector('figcaption');
+    caption.hidden=!artwork||!dossiers.length;
+    caption.textContent=artwork&&dossiers.length?route.outro:'';
     const rows=[['RANG DU SUJET I',grade],['COMBO MAX',playerStats.maxCombo||0],['GARDES PARFAITES',playerStats.perfectGuards||0],
       ['CONTRES',playerStats.counters||0],['DANGERS SUBIS',playerStats.hazardsTaken||0],['FATALITÉS',playerStats.fatalities||0]];
     if(routeGrade)rows.unshift(['RANG DU PARCOURS COMPLET',routeGrade]);
@@ -675,7 +728,7 @@ function handleMatchEnd(result) {
 }
 function continueRun() {
   if(state.loadingSprites||state.run?.status!=='won')return false;
-  return startFight({preserveRun:true,runCandidate:resumeRun(state.run)});
+  return startFight({preserveRun:true,runCandidate:resumeRun(state.run),enteringChapter:true});
 }
 function refreshControlHelp(bindings = state.controls) {
   state.controls=bindings;

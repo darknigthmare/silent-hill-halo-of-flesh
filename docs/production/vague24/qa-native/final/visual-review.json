@@ -1,0 +1,1027 @@
+{
+  "schema": 1,
+  "wave": 24,
+  "reviewer": "/root/generate_ascension_missing",
+  "reviewedAt": "2026-11-20T08:37:18.556007+00:00",
+  "method": "Viewed the actual unchanged native Canvas/FightEngine idle right and idle left captures for all 13 enabled fighters, plus both Bloodsucker atelier captures. Other generated captures were checked by the harness but not manually reviewed here.",
+  "scope": {
+    "profilesReviewed": 14,
+    "combatProfilesReviewed": 13,
+    "referenceProfilesReviewed": 1,
+    "capturesVisuallyReviewed": 28,
+    "generatedCaptures": 94
+  },
+  "execution": {
+    "runner": "docs/production/vague24/run-native-cases.py",
+    "summary": "docs/production/vague24/qa-native/final/process-summary.json",
+    "summarySHA256": "f759484335924bcacded62aea41dc8ed7ddb79da845dbd9e9e18260bf706aa13",
+    "passed": true,
+    "processes": 14,
+    "automatedChecks": 868,
+    "combatCases": 26,
+    "referencePreviews": 2,
+    "browserTest": false,
+    "httpTest": false,
+    "actorStateInjected": false
+  },
+  "summary": {
+    "acceptedAsCandidate": 14,
+    "held": 0,
+    "calibrationChangesRecommended": 0,
+    "certifiedOneToOne": 0
+  },
+  "entries": [
+    {
+      "fighterId": "shf_kashimashi_151",
+      "assetPath": "assets/sprites/shf_kashimashi_151.5de22a7d23d1.png",
+      "assetSHA256": "5de22a7d23d11091895e737c0f65c3605596646bb7493a85cca599cb7c09ea72",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Both complete feet meet the floor region. Three-arm outline and lowered knife remain readable in both facings; no crop or excessive viewport scale.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_kashimashi_151/shf_kashimashi_151-right-idle.png",
+          "sha256": "ba07009b6eab243bd8ceef7ac87e7d08f11bd1decd02c1167c38d229072c949a"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_kashimashi_151/shf_kashimashi_151-left-idle.png",
+          "sha256": "ada78f8c028402d7be88619601c325717e06a8db6f0b09f37f8a1f4db83a179d"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_kashimashi_151/report.json",
+      "automatedReportSHA256": "b2a3051658d8f2fdf395393ca8486ade404669a133f7a21912e2ccf6c717afbd",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_kashimashi_151-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            274.24089190538285,
+            382.02448865853364,
+            406.02413038240036,
+            594.7240837278957
+          ],
+          "visible": [
+            275.5080384292003,
+            383.653677046299,
+            405.3000466545047,
+            594
+          ],
+          "pixelScale": 0.18102093197392513,
+          "anchor": [
+            0.356234096692112,
+            0.9145427286356822
+          ],
+          "bodyHeight": 0.8710644677661169,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_kashimashi_151-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            873.9759001351778,
+            382.02448865853364,
+            1005.7591386121952,
+            594.7240837278957
+          ],
+          "visible": [
+            874.6999838630735,
+            383.653677046299,
+            1004.4919920883777,
+            594
+          ],
+          "pixelScale": 0.18102093197392513,
+          "anchor": [
+            0.356234096692112,
+            0.9145427286356822
+          ],
+          "bodyHeight": 0.8710644677661169,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "shf_irohihi_154",
+      "assetPath": "assets/sprites/shf_irohihi_154.19d51bfaaa12.png",
+      "assetSHA256": "19d51bfaaa12d84c5fa270617fc955d65426ad5ad6fab0032ad5a40533443441",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Crouched body, cranial fan and both hands remain complete. Lowest hand support reaches the floor; rear feet sit slightly higher in the native side projection. No global anchor shift is recommended because it would sink the hands. Standing-equivalent scale remains unverified.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_irohihi_154/shf_irohihi_154-right-idle.png",
+          "sha256": "fb0b93b26c286243f69a041afaf5fd215b1d8b68d18a9c19ca8cf512874604e3"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_irohihi_154/shf_irohihi_154-left-idle.png",
+          "sha256": "aeba4b48824c3c93aec230d6daaf66d7c17e0303d817a0c1873875bb754f2f97"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_irohihi_154/report.json",
+      "automatedReportSHA256": "ebbb1d3887cbded4b131941c4620d27ceca052a760726fce84778c1244a58b2a",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_irohihi_154-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            220.7735653093653,
+            382.89635455141615,
+            434.52783949003896,
+            595.1359837423242
+          ],
+          "visible": [
+            221.7202184279688,
+            383.653677046299,
+            433.9598476188769,
+            594
+          ],
+          "pixelScale": 0.18933062372070297,
+          "anchor": [
+            0.4573170731707317,
+            0.969140950792327
+          ],
+          "bodyHeight": 0.926605504587156,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_irohihi_154-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            845.4721910275391,
+            382.89635455141615,
+            1059.2264652082129,
+            595.1359837423242
+          ],
+          "visible": [
+            846.0401828987012,
+            383.653677046299,
+            1058.2798120896093,
+            594
+          ],
+          "pixelScale": 0.18933062372070297,
+          "anchor": [
+            0.4573170731707317,
+            0.969140950792327
+          ],
+          "bodyHeight": 0.926605504587156,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "shf_kamugara_157",
+      "assetPath": "assets/sprites/shf_kamugara_157.6236f540f7f3.png",
+      "assetSHA256": "6236f540f7f38a59f414591812c4534d6409da99906e136a0e6d62c52f38319e",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Whole upright profile and chain ends fit; near sole meets the floor and the far foot overlaps. Correct torso/head facing in both captures.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_kamugara_157/shf_kamugara_157-right-idle.png",
+          "sha256": "f097abf90ee01f5b5052b516dbf22f4290b43e7a7ae33e8e86710e953a8ebe6d"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_kamugara_157/shf_kamugara_157-left-idle.png",
+          "sha256": "595c7ffe170c1392639aad804846bfec15b95236d7faf94851bfc510109d3633"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_kamugara_157/report.json",
+      "automatedReportSHA256": "c06d10563c1628db17a54ac63f1646df8553b6ffe792d21184616999efc55877",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_kamugara_157-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            272.630081969711,
+            308.52476318280367,
+            348.79637869501977,
+            596.5718489803351
+          ],
+          "visible": [
+            273.61925465445523,
+            309.5139358675479,
+            342.6635080496053,
+            594
+          ],
+          "pixelScale": 0.197834536948854,
+          "anchor": [
+            0.517578125,
+            0.970703125
+          ],
+          "bodyHeight": 0.9361979166666666,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_kamugara_157-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            931.2036518225583,
+            308.52476318280367,
+            1007.3699485478671,
+            596.5718489803351
+          ],
+          "visible": [
+            937.3365224679728,
+            309.5139358675479,
+            1006.3807758631228,
+            594
+          ],
+          "pixelScale": 0.197834536948854,
+          "anchor": [
+            0.517578125,
+            0.970703125
+          ],
+          "bodyHeight": 0.9361979166666666,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "shf_harai_katashiro_158",
+      "assetPath": "assets/sprites/shf_harai_katashiro_158.78f3f9a74cfb.png",
+      "assetSHA256": "78f3f9a74cfbd18aae1e3db50e4a4010b78ba4964ab2f18661fb8d9329a104a9",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Both blade-leg tips remain visible at the floor. Knife, hair/twigs and head are complete. Right/left orientations are correct.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_harai_katashiro_158/shf_harai_katashiro_158-right-idle.png",
+          "sha256": "222e1346ed1583e516f35aaabb18906ff731d7e90e2bfe472e155d70e44a1ae6"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_harai_katashiro_158/shf_harai_katashiro_158-left-idle.png",
+          "sha256": "0461651fd68397b4a4a641bf2e2c3fa96e7650a44fd3fd55bea48cf46cd09444"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_harai_katashiro_158/report.json",
+      "automatedReportSHA256": "a058361073c4462058c4d2d8bb7e37b73db526aaecc09568f147d77eadacfaf9",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_harai_katashiro_158-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            291.06625520882125,
+            395.7316548063526,
+            371.95399313927305,
+            594
+          ],
+          "visible": [
+            292.50298234790563,
+            396.8810365176201,
+            371.3793022836393,
+            594
+          ],
+          "pixelScale": 0.14367271390844016,
+          "anchor": [
+            0.44189453125,
+            0.94921875
+          ],
+          "bodyHeight": 0.8932291666666666,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_harai_katashiro_158-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            908.0460373783051,
+            395.7316548063526,
+            988.9337753087569,
+            594
+          ],
+          "visible": [
+            908.6207282339388,
+            396.8810365176201,
+            987.4970481696724,
+            594
+          ],
+          "pixelScale": 0.14367271390844016,
+          "anchor": [
+            0.44189453125,
+            0.94921875
+          ],
+          "bodyHeight": 0.8932291666666666,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "shf_drum_monster_161",
+      "assetPath": "assets/sprites/shf_drum_monster_161.0d55bc93f1b5.png",
+      "assetSHA256": "0d55bc93f1b5ed123cf5211b1a1b8aae3b1d734bdb53b44754e70fcb543de6dc",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Large body and weapon arms remain entirely visible, including both feet and club tips. Near foot is at the floor; the far foot is higher due to the native oblique projection. Large size is a provisional versus calibration, not a source measurement.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_drum_monster_161/shf_drum_monster_161-right-idle.png",
+          "sha256": "b9dc44b3d13e2b4edb97484ca423868e5491fb2f2799d49232cfdd15c8af8f43"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_drum_monster_161/shf_drum_monster_161-left-idle.png",
+          "sha256": "a9fff096e710a93ab0b8b9f386f423b4ea1ba71bc31d0bb21b3e21597938af4c"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_drum_monster_161/report.json",
+      "automatedReportSHA256": "b575961ac587ea91bbfbf37cb5e641ffaa9ddf5c151bc8d95af855d0726910c9",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_drum_monster_161-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            208.0054721429944,
+            291.4788396288952,
+            519.7809718081521,
+            594.6382302961416
+          ],
+          "visible": [
+            210.55839332756068,
+            295.3082214057446,
+            518.8236263639396,
+            594
+          ],
+          "pixelScale": 0.3191151480707857,
+          "anchor": [
+            0.400390625,
+            0.9541015625
+          ],
+          "bodyHeight": 0.9140625,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_drum_monster_161-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            760.219058709426,
+            291.4788396288952,
+            1071.9945583745837,
+            594.6382302961416
+          ],
+          "visible": [
+            761.1764041536385,
+            295.3082214057446,
+            1069.4416371900174,
+            594
+          ],
+          "pixelScale": 0.3191151480707857,
+          "anchor": [
+            0.400390625,
+            0.9541015625
+          ],
+          "bodyHeight": 0.9140625,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "shf_shiromuku_166",
+      "assetPath": "assets/sprites/shf_shiromuku_166.23edbb28573f.png",
+      "assetSHA256": "23edbb28573fc53b98259ced31116db536c1f158dd6a8779a849fec6ad7380f3",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Hood, hands and full train fit. Garment hem rests on the floor in both facings; feet are intentionally concealed by the native garment.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_shiromuku_166/shf_shiromuku_166-right-idle.png",
+          "sha256": "0ee88db166ce177f629f73f315c828267f7a265bf322f2cf88d8f6d430047ea3"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_shiromuku_166/shf_shiromuku_166-left-idle.png",
+          "sha256": "25f1f48a185df6eefaebe8abdafc4918e238d3b33511c695a13a24c2a8a9b5b1"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_shiromuku_166/report.json",
+      "automatedReportSHA256": "ca102adac12de799c2ca4557e85279acec3cbebcd73a0bcfec94e2f89ea3c7c0",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_shiromuku_166-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            211.85858997692495,
+            353.54308476295074,
+            360.7220531389153,
+            595.5426265612641
+          ],
+          "visible": [
+            213.20838821803108,
+            355.0857113242149,
+            360.33639649859936,
+            594
+          ],
+          "pixelScale": 0.19282832015801865,
+          "anchor": [
+            0.603448275862069,
+            0.9557522123893806
+          ],
+          "bodyHeight": 0.9137168141592921,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_shiromuku_166-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            919.2779773786627,
+            353.54308476295074,
+            1068.141440540653,
+            595.5426265612641
+          ],
+          "visible": [
+            919.6636340189788,
+            355.0857113242149,
+            1066.791642299547,
+            594
+          ],
+          "pixelScale": 0.19282832015801865,
+          "anchor": [
+            0.603448275862069,
+            0.9557522123893806
+          ],
+          "bodyHeight": 0.9137168141592921,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "sh1_bloodsucker",
+      "assetPath": "assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+      "assetSHA256": "c1a8f6c3471e7cf2f36c1a33fe6beea37a96912b2a96f5462d4344393b083e55",
+      "combatEnabled": false,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Both atelier previews show the common base on the guide line and all three tubes/mouths complete. Correct horizontal mirroring. No combat case or combat enabling is claimed.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/sh1_bloodsucker/sh1_bloodsucker-reference-right.png",
+          "sha256": "0c804d3c6835c74143c2c3726636bb9b5e9c434179f9a8b78813950025ac6f56"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/sh1_bloodsucker/sh1_bloodsucker-reference-left.png",
+          "sha256": "c00ecbc2e881962d8f403fe3874fcff416204a7b11323e7f0f311db3dfbaa03a"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/sh1_bloodsucker/report.json",
+      "automatedReportSHA256": "ad01fa888627609db16178ca78795eff6556264c89ceffef58eaf2354edda822",
+      "automatedSilhouetteMeasurements": [],
+      "reviewScope": "Native atelier reference in both facings"
+    },
+    {
+      "fighterId": "shf_ara_abare_153",
+      "assetPath": "assets/sprites/shf_ara_abare_153.a60d35cd3f99.png",
+      "assetSHA256": "a60d35cd3f99e047b44d85f567b26194468853f9e6f8a4060f03363e55b9816d",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Both corrected support feet, knife, curled arm and flower tips remain complete. Large squat silhouette fits the combat viewport in both orientations. Head still has an oblique rather than strictly orthographic reading; see independent native review.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_ara_abare_153/shf_ara_abare_153-right-idle.png",
+          "sha256": "0844459db34265e726c812a11cb5d82f4316a9fc0376672a2138729d492e5591"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_ara_abare_153/shf_ara_abare_153-left-idle.png",
+          "sha256": "1fdfcdd67a3b5d2b86dfc800de98a18d6c8da3f99788e24f8cbffa3bdcfe1c11"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_ara_abare_153/report.json",
+      "automatedReportSHA256": "b5469bce9a15f5b870819b7e458d471fc3b76592f8ce05853f6f6ee841e73e8c",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_ara_abare_153-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            176.68839382768036,
+            293.4997948955876,
+            601.0658148778434,
+            595.2056176734379
+          ],
+          "visible": [
+            179.40103359291578,
+            295.3082214057445,
+            600.161601622765,
+            594
+          ],
+          "pixelScale": 0.3014044183594909,
+          "anchor": [
+            0.3437917222963952,
+            0.9657142857142857
+          ],
+          "bodyHeight": 0.9438095238095238,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_ara_abare_153-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            678.9342156397347,
+            293.4997948955876,
+            1103.3116366898978,
+            595.2056176734379
+          ],
+          "visible": [
+            679.8384288948131,
+            295.3082214057445,
+            1100.5989969246623,
+            594
+          ],
+          "pixelScale": 0.3014044183594909,
+          "anchor": [
+            0.3437917222963952,
+            0.9657142857142857
+          ],
+          "bodyHeight": 0.9438095238095238,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "shf_tsukumogami_167",
+      "assetPath": "assets/sprites/shf_tsukumogami_167.14916362c716.png",
+      "assetSHA256": "14916362c716b08cbbd930feabf26843b93f9c98dccdee21f84cfc1c92ed8a6c",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Hair, all exterior arms, robe/roots and both feet remain inside the combat viewport. Feet meet the floor. Torso and lead mask face the opponent correctly after mirroring.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_tsukumogami_167/shf_tsukumogami_167-right-idle.png",
+          "sha256": "564e8bad4b8b86cedd0dc136889aae4248a8f42088cb0507cdebdb71cbedb3ed"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_tsukumogami_167/shf_tsukumogami_167-left-idle.png",
+          "sha256": "e07e9d294406380fed5034e6d0c8790a60806a3be74d5a5b26a58918f28f5339"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_tsukumogami_167/report.json",
+      "automatedReportSHA256": "d3626f9530675161205d5ad7e816de0b04ca88c71adfffec4afee2a3ad51cfc5",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_tsukumogami_167-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            269.3686029779013,
+            395.8104650934116,
+            353.27463835023815,
+            594.9367499961824
+          ],
+          "visible": [
+            269.7700672619794,
+            396.88103651762003,
+            352.20406692602967,
+            594.2676428560521
+          ],
+          "pixelScale": 0.13382142802605562,
+          "anchor": [
+            0.517578125,
+            0.9759114583333334
+          ],
+          "bodyHeight": 0.958984375,
+          "soleOffsetFromActor": 0.26764285605213445
+        },
+        {
+          "check": "shf_tsukumogami_167-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            926.72539216734,
+            395.8104650934116,
+            1010.6314275396769,
+            594.9367499961824
+          ],
+          "visible": [
+            927.7959635915485,
+            396.88103651762003,
+            1010.2299632555987,
+            594.2676428560521
+          ],
+          "pixelScale": 0.13382142802605562,
+          "anchor": [
+            0.517578125,
+            0.9759114583333334
+          ],
+          "bodyHeight": 0.958984375,
+          "soleOffsetFromActor": 0.26764285605213445
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "ascension_stinger_181",
+      "assetPath": "assets/sprites/ascension_stinger_181.e179ecaa63b2.png",
+      "assetSHA256": "e179ecaa63b22df9a8746bb750c82df5db97657526ab46fdbfb88dd3b6cf9314",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "All four hooked arm ends, membranes and both legs fit in both orientations. The visible feet hover about 27.28 screen pixels above actor.y; this matches the existing flyer envelope (bottom 34, scale .82 and camera transform), not an asset-anchor defect.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/ascension_stinger_181/ascension_stinger_181-right-idle.png",
+          "sha256": "a5f91a8e64e6584e2dd91c419c19ce942cd20ad33dd907a9632b03785d33c113"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/ascension_stinger_181/ascension_stinger_181-left-idle.png",
+          "sha256": "bcfbdfbf7e91cb914a9518bd006e773a13eafc57d9b8161484ae2a71dd114e16"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/ascension_stinger_181/report.json",
+      "automatedReportSHA256": "29cf8ea1d47ab1b7b8cb89a90e6a45cec6e4dea3bb10bf447750dc57e9b852a0",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "ascension_stinger_181-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            237.4445477883525,
+            413.884463734276,
+            362.0459705813751,
+            567.5458443184106
+          ],
+          "visible": [
+            238.67822524174878,
+            414.29568955207475,
+            360.94936840057846,
+            566.723392682813
+          ],
+          "pixelScale": 0.13707527259958482,
+          "anchor": [
+            0.58,
+            0.935976
+          ],
+          "bodyHeight": 0.847561,
+          "soleOffsetFromActor": -27.276607317186972
+        },
+        {
+          "check": "ascension_stinger_181-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            917.954059936203,
+            413.884463734276,
+            1042.5554827292256,
+            567.5458443184106
+          ],
+          "visible": [
+            919.0506621169997,
+            414.29568955207475,
+            1041.3218052758293,
+            566.723392682813
+          ],
+          "pixelScale": 0.13707527259958482,
+          "anchor": [
+            0.58,
+            0.935976
+          ],
+          "bodyHeight": 0.847561,
+          "soleOffsetFromActor": -27.276607317186972
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "ascension_the_immolator_182",
+      "assetPath": "assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
+      "assetSHA256": "3e9055f1a6f0cdf908ad25d164aa5a53ce94f223fbea4c7749f441b51c1f18c4",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Whole cage/flame, tank/hoses, two forelimb fists and two hind feet remain in frame. Near supports meet the floor. The corrected torso reads laterally toward the opponent in both orientations.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/ascension_the_immolator_182/ascension_the_immolator_182-right-idle.png",
+          "sha256": "c65d8b4ac4fd9baa3567071739d55887e34aeb09508ef7fde2d569328104c1a9"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/ascension_the_immolator_182/ascension_the_immolator_182-left-idle.png",
+          "sha256": "c08a1b167f5640aa4aa74fc7d68e6656a5d6c0ee75cac95513bcca34552d1e64"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/ascension_the_immolator_182/report.json",
+      "automatedReportSHA256": "19bf096c3d1e5a2555052729f94c810a45e08e4ebab60a6a28b326b39d9640e7",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "ascension_the_immolator_182-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            143.908205658037,
+            294.6487362982188,
+            491.7226020289316,
+            597.626395317036
+          ],
+          "visible": [
+            144.89725133492107,
+            295.3081000828082,
+            489.7445106751635,
+            593.9998945017944
+          ],
+          "pixelScale": 0.3296818922946868,
+          "anchor": [
+            0.49,
+            0.85008
+          ],
+          "bodyHeight": 0.722488,
+          "soleOffsetFromActor": -0.0001054982055848086
+        },
+        {
+          "check": "ascension_the_immolator_182-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            788.2774284886466,
+            294.6487362982188,
+            1136.0918248595412,
+            597.626395317036
+          ],
+          "visible": [
+            790.2555198424146,
+            295.3081000828082,
+            1135.102779182657,
+            593.9998945017944
+          ],
+          "pixelScale": 0.3296818922946868,
+          "anchor": [
+            0.49,
+            0.85008
+          ],
+          "bodyHeight": 0.722488,
+          "soleOffsetFromActor": -0.0001054982055848086
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "shf_shichibi_168",
+      "assetPath": "assets/sprites/shf_shichibi_168.490006f1c119.png",
+      "assetSHA256": "490006f1c1190215818afe36fac8218425a4756ea0b88fa2c27e84096a0398a7",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Whole muzzle, four legs, pale tendrils and tail fan fit. Rear tail tips remain inside both viewport edges. Soles meet the floor region and torso direction is correct.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_shichibi_168/shf_shichibi_168-right-idle.png",
+          "sha256": "0109fd2456dd90da219326c7c3007834f3a84eeaec9d9577178d10bcc1ad6dfc"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_shichibi_168/shf_shichibi_168-left-idle.png",
+          "sha256": "a0b5ab7217d5c96ab34d458cf5fb7e923a75ad8948ca58e5115d0f538260065b"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_shichibi_168/report.json",
+      "automatedReportSHA256": "36b1946b61b1cd045d9522811cac2aec52ed1bbd4734c05a7bc5080717f28f5f",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_shichibi_168-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            38.64021731641304,
+            353.7015033944595,
+            450.30365562567425,
+            597.045257445462
+          ],
+          "visible": [
+            42.51599951972827,
+            355.0857113242149,
+            449.47313086782106,
+            594
+          ],
+          "pixelScale": 0.27684158595108355,
+          "anchor": [
+            0.6489234449760766,
+            0.9362380446333688
+          ],
+          "bodyHeight": 0.9171094580233794,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_shichibi_168-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            829.6963748919038,
+            353.7015033944595,
+            1241.359813201165,
+            597.045257445462
+          ],
+          "visible": [
+            830.5268996497571,
+            355.0857113242149,
+            1237.48403099785,
+            594
+          ],
+          "pixelScale": 0.27684158595108355,
+          "anchor": [
+            0.6489234449760766,
+            0.9362380446333688
+          ],
+          "bodyHeight": 0.9171094580233794,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "shf_kyubi_169",
+      "assetPath": "assets/sprites/shf_kyubi_169.9e78e93583b4.png",
+      "assetSHA256": "9e78e93583b48c0aff743dc8ab7a9e0e34c40a0d202ab7e18bdb0e418629f298",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Whole dark fox, four legs, pale tendrils and tail fan fit. Complete extremities and correct left/right direction; no excessive viewport scale. Exact individual tail topology is not independently certified from these gameplay captures.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_kyubi_169/shf_kyubi_169-right-idle.png",
+          "sha256": "79af19d92b6aa9ee3b533da57bdfd10e3292813586dff5ab85d1e4d92eecd4de"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_kyubi_169/shf_kyubi_169-left-idle.png",
+          "sha256": "15c62891a96af6354429b60c69be96138e37e4e0e9cadc8edcb737e7e26e6fbd"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_kyubi_169/report.json",
+      "automatedReportSHA256": "7f7417d7233c05841d4e5cc9745c2f55ca3fa240b04b038664f64fb57d49d23d",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_kyubi_169-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            29.62874747858399,
+            352.78014520912893,
+            457.59945759141976,
+            596.0173703507003
+          ],
+          "visible": [
+            39.13920770331367,
+            355.0857113242149,
+            456.44667453387683,
+            594
+          ],
+          "pixelScale": 0.288195764385748,
+          "anchor": [
+            0.6200676437429538,
+            0.9537767756482526
+          ],
+          "bodyHeight": 0.9346110484780158,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_kyubi_169-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            822.4005424085802,
+            352.78014520912893,
+            1250.371252521416,
+            596.0173703507003
+          ],
+          "visible": [
+            823.5533254661232,
+            355.0857113242149,
+            1240.8607922966862,
+            594
+          ],
+          "pixelScale": 0.288195764385748,
+          "anchor": [
+            0.6200676437429538,
+            0.9537767756482526
+          ],
+          "bodyHeight": 0.9346110484780158,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    },
+    {
+      "fighterId": "shf_oi_omoi_159",
+      "assetPath": "assets/sprites/shf_oi_omoi_159.4c0a30dbe658.png",
+      "assetSHA256": "4c0a30dbe6580d43e53ccd8cf416502b708ce62eb30b0f988593747a4fdf5a4d",
+      "combatEnabled": true,
+      "decision": "accepted-as-candidate",
+      "calibrationChangeRecommended": null,
+      "croppedExtremityObserved": false,
+      "wrongFacingObserved": false,
+      "excessiveViewportScaleObserved": false,
+      "observation": "Entire joined doll entity, hair, attached heads/arms, skirt and two lower legs/shoes fit. Shoes meet the floor in both directions. The engine shadow is wider than the narrow body, but no calibration shift is required.",
+      "capturesViewed": [
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_oi_omoi_159/shf_oi_omoi_159-right-idle.png",
+          "sha256": "9c41b3f77cac85e465e020812894bded68ad3a77e76647bfcd8b7fec9a758f16"
+        },
+        {
+          "path": "docs/production/vague24/qa-native/final/shf_oi_omoi_159/shf_oi_omoi_159-left-idle.png",
+          "sha256": "fb3f85e912f4beb727c5c4fdc25a2e50acd24c1d068c87da58a53fe077416dae"
+        }
+      ],
+      "automatedReport": "docs/production/vague24/qa-native/final/shf_oi_omoi_159/report.json",
+      "automatedReportSHA256": "f9b400d00f8d1cf65768e93b97a8f1ffc83aae08bfc5eea4f489096b6a23b013",
+      "automatedSilhouetteMeasurements": [
+        {
+          "check": "shf_oi_omoi_159-right: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            273.71979320514487,
+            352.38588133425014,
+            358.2187199516366,
+            594.7334976280077
+          ],
+          "visible": [
+            274.30659130755106,
+            353.5594775390625,
+            357.77862137483197,
+            594
+          ],
+          "pixelScale": 0.1466995256015482,
+          "anchor": [
+            0.4790748898678414,
+            0.9786497403346798
+          ],
+          "bodyHeight": 0.9457587997691864,
+          "soleOffsetFromActor": 0
+        },
+        {
+          "check": "shf_oi_omoi_159-left: complete initial silhouette",
+          "complete": true,
+          "exterior": [
+            921.7813105659415,
+            352.38588133425014,
+            1006.2802373124333,
+            594.7334976280077
+          ],
+          "visible": [
+            922.2214091427461,
+            353.5594775390625,
+            1005.6934392100271,
+            594
+          ],
+          "pixelScale": 0.1466995256015482,
+          "anchor": [
+            0.4790748898678414,
+            0.9786497403346798
+          ],
+          "bodyHeight": 0.9457587997691864,
+          "soleOffsetFromActor": 0
+        }
+      ],
+      "reviewScope": "Combat idle integration in both facings"
+    }
+  ],
+  "hoverEvidence": {
+    "fighterId": "ascension_stinger_181",
+    "paths": [
+      "src/combat-geometry.js",
+      "src/data.js"
+    ],
+    "finding": "The existing flyer profile defines bottom:34 and floating:true. The flyer visual scale is .82; the observed approximately 27.28px screen offset is consistent with this engine policy after camera scaling."
+  },
+  "independentNativeSourceReview": "docs/production/vague24/peer-visual-review.json",
+  "limits": [
+    "This is native Canvas/FightEngine verification, not a browser or HTTP session.",
+    "All 14 imports remain static candidates; ordinary input-driven movement does not prove source animation frames or timings.",
+    "Gameplay size is provisional versus calibration, not canonical relative size.",
+    "Only the 28 listed captures were manually inspected; the 94 total includes selection and static movement captures generated by the harness.",
+    "Source identity/fidelity review is separate. The Ascension source generation was performed by this same reviewer.",
+    "One-to-one fidelity, all-stage behavior, edge-of-stage camera limits and animation coverage are not certified."
+  ]
+}

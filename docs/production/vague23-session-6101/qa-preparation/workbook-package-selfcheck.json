@@ -1,0 +1,130 @@
+{
+  "schema": 1,
+  "scope": "In-memory counterexamples built from actual source workbook; no XLSX file written, no exported workbook certified.",
+  "sourceSHA256": "a7928d7350d35bcd61745b886110b1c007525b41644ff30001e1c981ace49649",
+  "sourceUnchanged": true,
+  "scriptSHA256": "5d1f92e3fb661af982de73bc126c220f11365e131cea032af3b44843fad04d1d",
+  "targetIds": [
+    "book_fire",
+    "book_earth",
+    "book_blood",
+    "book_water"
+  ],
+  "targetRows": [
+    23,
+    22,
+    21,
+    26
+  ],
+  "checks": [
+    {
+      "name": "Unchanged workbook semantic model",
+      "expectedPassed": true,
+      "actualPassed": true,
+      "passed": true,
+      "differencesByCategory": {}
+    },
+    {
+      "name": "Only allowed values, formula caches and four row heights",
+      "expectedPassed": true,
+      "actualPassed": true,
+      "passed": true,
+      "differencesByCategory": {}
+    },
+    {
+      "name": "Unrelated value rejected",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "cell-value": 1
+      }
+    },
+    {
+      "name": "Changed formula rejected despite allowed cache cell",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "cell-formula": 1
+      }
+    },
+    {
+      "name": "Removed validations rejected",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "sheet-dataValidations": 1
+      }
+    },
+    {
+      "name": "Removed conditional formats rejected",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "sheet-conditionalFormatting": 1
+      }
+    },
+    {
+      "name": "Changed table filter rejected",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "sheet-tables": 1
+      }
+    },
+    {
+      "name": "Removed frozen/view settings rejected",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "sheet-sheetViews": 1
+      }
+    },
+    {
+      "name": "Changed column width rejected",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "sheet-columns": 1
+      }
+    },
+    {
+      "name": "Unrelated row height rejected",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "sheet-row-properties": 1
+      }
+    },
+    {
+      "name": "Changed effective cell style rejected",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "cell-style": 1
+      }
+    },
+    {
+      "name": "Other property on target row rejected",
+      "expectedPassed": false,
+      "actualPassed": false,
+      "passed": true,
+      "differencesByCategory": {
+        "sheet-row-properties": 1
+      }
+    }
+  ],
+  "passed": true,
+  "allowedExampleChanges": {
+    "values": 14,
+    "rowHeights": 4
+  }
+}

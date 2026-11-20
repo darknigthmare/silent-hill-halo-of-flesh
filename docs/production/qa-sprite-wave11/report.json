@@ -1,0 +1,50 @@
+{
+  "duels": [
+    {
+      "seen": [
+        "assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
+        "assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
+        "assets/sprites/sh1_monster_cybil_017.1038cbaaadbf.png",
+        "assets/sprites/homecoming_curtis_ackers.c613b19dad1e.png"
+      ],
+      "diagnostic": false,
+      "ids": [
+        "sh1_monster_cybil_017",
+        "homecoming_curtis_ackers"
+      ],
+      "facings": [
+        1,
+        -1
+      ],
+      "stage": "toluca_prison",
+      "phase": "fight",
+      "capture": "sh1_monster_cybil_017--homecoming_curtis_ackers.jpg",
+      "pageErrors": []
+    },
+    {
+      "seen": [
+        "assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
+        "assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
+        "assets/sprites/homecoming_curtis_ackers.c613b19dad1e.png",
+        "assets/sprites/sh1_monster_cybil_017.1038cbaaadbf.png"
+      ],
+      "diagnostic": false,
+      "ids": [
+        "homecoming_curtis_ackers",
+        "sh1_monster_cybil_017"
+      ],
+      "facings": [
+        1,
+        -1
+      ],
+      "stage": "toluca_prison",
+      "phase": "fight",
+      "capture": "homecoming_curtis_ackers--sh1_monster_cybil_017.jpg",
+      "pageErrors": []
+    }
+  ],
+  "browser": "153.0.8010.0",
+  "method": "Chromium, lancement depuis le menu Versus en mode local, 75 ticks après l’entrée en combat et vérification des bitmaps réellement dessinés dans le canvas.",
+  "testedDuels": 2,
+  "status": "Les deux ordres du duel de Toluca Prison ont été vérifiés. Chromium local a interrompu la suite ; le contrôle natif couvre les dix duels."
+}

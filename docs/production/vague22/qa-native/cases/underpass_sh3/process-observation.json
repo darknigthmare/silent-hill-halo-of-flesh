@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "stages",
+  "id": "underpass_sh3",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-stages-native.mjs",
+    "--out=/workspace/scratch/silent-hill-wave22/docs/production/vague22/qa-native/cases/underpass_sh3",
+    "--stages=underpass_sh3"
+  ],
+  "startedAt": "2026-11-19T15:28:55.682863+00:00",
+  "completedAt": "2026-11-19T15:28:59.994558+00:00",
+  "durationSeconds": 4.312,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "786e1c10f3801b0fa5ed4b79d9c0b8d64685fcd7ae0233c37a955a9e58179dd3",
+  "executedHarness": "executed/qa-stages-native-786e1c10f380.mjs",
+  "reportSHA256": "f648a8136520c4e266226d4cba6906c7225a7c479c96f5479244736915b0bb04",
+  "log": "process.txt",
+  "logSHA256": "3178d640dbbc16b22c6b7f9a46ac48e4771c962b88ddfbb5e45235ff494a41e2",
+  "passed": true
+}

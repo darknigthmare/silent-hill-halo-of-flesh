@@ -1,0 +1,923 @@
+{
+  "schemaVersion": 1,
+  "group": "wave23-stages",
+  "createdAt": "2026-11-19T17:34:08.705460+00:00",
+  "scope": "missing stage bitmap candidates only",
+  "baseCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "deliveryState": "candidate-ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "book_fire",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "vita-launch-fire-industrial-room-20121016-01",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT21",
+        "EXT9_BOM_FIRE_VIEW_01_20261026",
+        "EXT9_BOM_FIRE_VIEW_02_20261026"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "PS Vita — US launch screenshot, 2012-10-16",
+      "locationScope": "Book of Memories, Fire : salle industrielle de la capture de lancement US du 16 octobre 2012, image 01. La seconde vue corrobore les matériaux ; elle ne sert pas à importer une autre pièce.",
+      "selectedSubLocation": "Book of Memories, Fire : salle industrielle de la capture de lancement US du 16 octobre 2012, image 01. La seconde vue corrobore les matériaux ; elle ne sert pas à importer une autre pièce.",
+      "supports": {
+        "description": "Plaques d’acier continues au premier plan. Grille à lueur chaude et meuble d’atelier restent en arrière du couloir de combat.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.08,
+          0.75,
+          0.84,
+          0.15
+        ],
+        "centerClear": [
+          0.08,
+          0,
+          0.84,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Measured alpha; values0–1/255 are preserved native traces, not falsely called all zero."
+      },
+      "layers": [
+        {
+          "id": "fire-room",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/book_fire.fire-room.7f1236bf6694.png",
+              "sha256": "7f1236bf66946438ebbb93b74dc948bfc29bea058e7c43ead125437c2607d9f1",
+              "bytes": 2197958,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-steel-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/book_fire.near-steel-edges.e238137c6bfd.png",
+              "sha256": "e238137c6bfd31443ff58eaf97e743c60baae68de92666308d3801b9fc80b800",
+              "bytes": 188064,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh_book_of_memories_screen_20121016_01.jpg",
+        "sh_book_of_memories_screen_20121016_02.jpg"
+      ],
+      "notes": [
+        "Book of Memories, Fire : salle industrielle de la capture de lancement US du 16 octobre 2012, image 01. La seconde vue corrobore les matériaux ; elle ne sert pas à importer une autre pièce.",
+        "La capture01 montre le meuble d’atelier rouge à tiroirs, une petite table/assise voisine, des parois métalliques et une grille de sol lumineuse.",
+        "La sortie retenue garde ces motifs et dégage un sol horizontal. Une révision imagegen a supprimé le rebord de plateforme et les bandes jaunes/noires apparus au bas de la première sortie.",
+        "La nouvelle orientation de caméra, la largeur, l’échelle des panneaux et le reste du sol sont des adaptations versus ; le plan procédural entier n’est pas connu.",
+        "Pas de lave, brasier ajouté, Guardian, personnage, arme, HUD ni danger de terrain déduit de l’image.",
+        "Le premier plan est une transposition des chants d’acier observés, pas une séparation mesurée des couches originales.",
+        "Two independent static PNG planes; foreground parallax0.006. No new original animation, hazard, transition or collision.",
+        "Native1672×941 generation; no upscaling, raster retouch, automatic alpha cleanup or1:1/UHD certification.",
+        "Camera position and hidden geometry are versus reconstructions; foreground margins are very sparse and do not occlude the fighting lane."
+      ]
+    },
+    {
+      "stageId": "book_earth",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "vita-e3-earth-gallery-20120606-37",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT21",
+        "EXT9_BOM_EARTH_VIEW_37_20261026"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "PS Vita — E3 prerelease screenshot, 2012-06-06",
+      "locationScope": "Book of Memories, Earth : galerie à soutènements de bois et récipients de la capture E3 du 6 juin 2012, image37 ; version précommerciale uniquement.",
+      "selectedSubLocation": "Book of Memories, Earth : galerie à soutènements de bois et récipients de la capture E3 du 6 juin 2012, image37 ; version précommerciale uniquement.",
+      "supports": {
+        "description": "Terre et cailloux au premier plan ; roues, caisses, tonneau et soutènements sont derrière les combattants.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.08,
+          0.75,
+          0.84,
+          0.15
+        ],
+        "centerClear": [
+          0.08,
+          0,
+          0.84,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 0,
+        "note": "Measured alpha; values0–1/255 are preserved native traces, not falsely called all zero."
+      },
+      "layers": [
+        {
+          "id": "earth-gallery",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/book_earth.earth-gallery.d68ff2b3d5a6.png",
+              "sha256": "d68ff2b3d5a6e89a9947e6e2a4fe197761e5ffac3fd0d4d19580d6e07303f150",
+              "bytes": 2615157,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-rock-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/book_earth.near-rock-edges.e2f163225507.png",
+              "sha256": "e2f16322550789968fbf16abb53e0b324881bc85f65d1fe83aa832d493257638",
+              "bytes": 129276,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh_book_of_memories_screen_20120606_37_earth_world.jpg"
+      ],
+      "notes": [
+        "Book of Memories, Earth : galerie à soutènements de bois et récipients de la capture E3 du 6 juin 2012, image37 ; version précommerciale uniquement.",
+        "La source native montre un sol pierreux humide, des soutènements horizontaux en bois, une ouverture dans le mur, deux roues et des récipients ; une zone verdâtre est visible à gauche.",
+        "La sortie reprend les matériaux et une roue au fond ; elle reconstruit la vue frontale et laisse un plateau vide sans armes, corps ni interface.",
+        "L’ouverture, le plafond rocheux et la largeur latérale sont une reconstruction de caméra, pas la preuve du plan complet ou de la version commerciale.",
+        "Préversion explicitement conservée ; aucun état final commercial, géométrie, physique ni animation d’origine certifié.",
+        "Le bord rocheux proche est une adaptation de cadrage des matériaux visibles, pas un ajout de piège ou de mécanique.",
+        "Two independent static PNG planes; foreground parallax0.006. No new original animation, hazard, transition or collision.",
+        "Native1672×941 generation; no upscaling, raster retouch, automatic alpha cleanup or1:1/UHD certification.",
+        "Camera position and hidden geometry are versus reconstructions; foreground margins are very sparse and do not occlude the fighting lane."
+      ]
+    },
+    {
+      "stageId": "book_blood",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "vita-e3-blood-arena-20120606-31",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT21"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "PS Vita — E3 prerelease screenshot, 2012-06-06",
+      "locationScope": "Book of Memories, Blood : plateforme de l’arène Blood Guardian illustrée à l’E3 le 6 juin 2012, image31 ; boss entièrement exclu du décor.",
+      "selectedSubLocation": "Book of Memories, Blood : plateforme de l’arène Blood Guardian illustrée à l’E3 le 6 juin 2012, image31 ; boss entièrement exclu du décor.",
+      "supports": {
+        "description": "Grande surface rouge opaque et continue au niveau des pieds ; canaux grillagés maintenus en retrait. Aucun écoulement ni dommage passif.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.08,
+          0.75,
+          0.84,
+          0.15
+        ],
+        "centerClear": [
+          0.08,
+          0,
+          0.84,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 0,
+        "note": "Measured alpha; values0–1/255 are preserved native traces, not falsely called all zero."
+      },
+      "layers": [
+        {
+          "id": "blood-arena",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/book_blood.blood-arena.a2f0bf8241d3.png",
+              "sha256": "a2f0bf8241d3a7b77f2379654bdf58f79881af710a65603bf6090614f7ba8c14",
+              "bytes": 1864385,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-perimeter-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/book_blood.near-perimeter-edges.472f222bec21.png",
+              "sha256": "472f222bec2101e6b073da623df1bd2189a98950306bba970e96a47747459f96",
+              "bytes": 77156,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh_book_of_memories_screen_20120606_31_blood_boss.jpg"
+      ],
+      "notes": [
+        "Book of Memories, Blood : plateforme de l’arène Blood Guardian illustrée à l’E3 le 6 juin 2012, image31 ; boss entièrement exclu du décor.",
+        "La source montre de larges surfaces rouges séparées par du métal quadrillé sombre ; le Guardian masque une partie de la plateforme centrale.",
+        "La sortie garde les plaques rouges, les canaux grillagés et les petits blocs de périphérie, sans le boss, sans personnages, organes ni interface. Une correction imagegen a retiré le disque central qui avait été extrapolé par le premier essai.",
+        "Le cadrage demeure en plongée douce ; la largeur, les divisions du plateau et le nombre de blocs périphériques sont une reconstruction de la partie occultée. Ils ne sont pas certifiés comme plan d’origine.",
+        "Préversion uniquement. Les surfaces rouges ne prouvent ni liquide, ni marée, ni lave, ni comportement animé.",
+        "La reprise des extrémités de blocs dans les deux coins du premier plan est une adaptation de caméra ; la plupart du calque est transparent.",
+        "Two independent static PNG planes; foreground parallax0.006. No new original animation, hazard, transition or collision.",
+        "Native1672×941 generation; no upscaling, raster retouch, automatic alpha cleanup or1:1/UHD certification.",
+        "Camera position and hidden geometry are versus reconstructions; foreground margins are very sparse and do not occlude the fighting lane."
+      ]
+    },
+    {
+      "stageId": "book_water",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "vita-e3-water-basin-20120606-50",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT21"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "PS Vita — E3 prerelease screenshot, 2012-06-06",
+      "locationScope": "Book of Memories, Water : bassin carrelé de l’arène Water Guardian illustrée à l’E3 le 6 juin 2012, image50 ; boss exclu.",
+      "selectedSubLocation": "Book of Memories, Water : bassin carrelé de l’arène Water Guardian illustrée à l’E3 le 6 juin 2012, image50 ; boss exclu.",
+      "supports": {
+        "description": "Plan carrelé continu sous une eau peu profonde, sans rupture au premier plan. Débris et ouverture de conduit restent au fond.",
+        "groundLineY": 0.825,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.08,
+          0.75,
+          0.84,
+          0.15
+        ],
+        "centerClear": [
+          0.08,
+          0,
+          0.84,
+          1
+        ],
+        "foregroundMaximumAlphaInFootBand": 1,
+        "note": "Measured alpha; values0–1/255 are preserved native traces, not falsely called all zero."
+      },
+      "layers": [
+        {
+          "id": "water-basin",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/book_water.water-basin.12604eb0cf73.png",
+              "sha256": "12604eb0cf73963d8fbcb1222129f0b984bc417f6be3514712d6ecd5188f06cf",
+              "bytes": 2156656,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-tile-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/book_water.near-tile-edges.9db746e9832f.png",
+              "sha256": "9db746e9832ff87bbbb4cce22e73ef6d21f563fb6903ab10b534ce676f8d978a",
+              "bytes": 204775,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "referenceFiles": [
+        "sh_book_of_memories_screen_20120606_50_water_boss.jpg"
+      ],
+      "notes": [
+        "Book of Memories, Water : bassin carrelé de l’arène Water Guardian illustrée à l’E3 le 6 juin 2012, image50 ; boss exclu.",
+        "La capture native montre le bassin sombre, du carrelage vert-gris, des montants maçonnés, une ouverture circulaire à droite et quelques débris plats.",
+        "Le fond retenu reprend ces motifs et les reflets bleutés ; les personnages, le Guardian et les reflets de leurs silhouettes ont disparu.",
+        "La vue frontale, la largeur et les dimensions du conduit sont réinterprétées pour le versus ; la source masque une partie du mur derrière le boss.",
+        "Préversion uniquement. Aucune cascade, arrivée d’eau, noyade, collision ni animation de ruissellement n’est ajoutée.",
+        "Les champs de reflet font partie d’un PNG statique ; aucune animation de la source n’est comptée.",
+        "Two independent static PNG planes; foreground parallax0.006. No new original animation, hazard, transition or collision.",
+        "Native1672×941 generation; no upscaling, raster retouch, automatic alpha cleanup or1:1/UHD certification.",
+        "Camera position and hidden geometry are versus reconstructions; foreground margins are very sparse and do not occlude the fighting lane."
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "promptKey": "book_fire_bg_correction",
+      "filename": "book_fire.fire-room.png",
+      "originalOutput": "/workspace/scratch/6101dce1e243/generated_images/exec-6277f0a7-9298-4dc2-b4c6-16cac986c4c3.png",
+      "localPath": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_fire.fire-room.png",
+      "stageId": "book_fire",
+      "role": "opaque-background",
+      "path": "assets/stages/book_fire.fire-room.7f1236bf6694.png",
+      "bytes": 2197958,
+      "sha256": "7f1236bf66946438ebbb93b74dc948bfc29bea058e7c43ead125437c2607d9f1",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "centerAlphaMax": 255,
+      "footBandAlphaMax": 255,
+      "transparentRatio": 0.0,
+      "pixelSHA256": "13e391c4b6d0920ae94015f65b90a8900d98aef16eff6057b38c01e5381fdbf0",
+      "nativeByteEqualityVerified": true,
+      "visualInspection": "completed",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "footBandAlphaMax": null,
+        "visualOutcome": "source-guided versus candidate; fidelity unverified",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "book_fire_fg",
+      "filename": "book_fire.near-steel-edges.png",
+      "originalOutput": "/workspace/scratch/6101dce1e243/generated_images/exec-486a1046-35d0-4ce3-b20a-a49b60f13cfe.png",
+      "localPath": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_fire.near-steel-edges.png",
+      "stageId": "book_fire",
+      "role": "transparent-foreground",
+      "path": "assets/stages/book_fire.near-steel-edges.e238137c6bfd.png",
+      "bytes": 188064,
+      "sha256": "e238137c6bfd31443ff58eaf97e743c60baae68de92666308d3801b9fc80b800",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "centerAlphaMax": 1,
+      "footBandAlphaMax": 1,
+      "transparentRatio": 0.9503035557205254,
+      "pixelSHA256": "6928836c7aedbc64c2d2f0187e36d3f49a512aeb6d985efbe7313a261b27ffa0",
+      "nativeByteEqualityVerified": true,
+      "visualInspection": "completed",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "footBandAlphaMax": 1,
+        "visualOutcome": "source-guided versus candidate; fidelity unverified",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "book_earth_bg",
+      "filename": "book_earth.earth-gallery.png",
+      "originalOutput": "/workspace/scratch/6101dce1e243/generated_images/exec-0a3baa77-fa00-43bb-b66b-b8df0548c7dd.png",
+      "localPath": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_earth.earth-gallery.png",
+      "stageId": "book_earth",
+      "role": "opaque-background",
+      "path": "assets/stages/book_earth.earth-gallery.d68ff2b3d5a6.png",
+      "bytes": 2615157,
+      "sha256": "d68ff2b3d5a6e89a9947e6e2a4fe197761e5ffac3fd0d4d19580d6e07303f150",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "centerAlphaMax": 255,
+      "footBandAlphaMax": 255,
+      "transparentRatio": 0.0,
+      "pixelSHA256": "c9d9867903c96aba3f1d9cdbd71536e3bca9592e6d8e9aa28ba240f54b435d2b",
+      "nativeByteEqualityVerified": true,
+      "visualInspection": "completed",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "footBandAlphaMax": null,
+        "visualOutcome": "source-guided versus candidate; fidelity unverified",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "book_earth_fg",
+      "filename": "book_earth.near-rock-edges.png",
+      "originalOutput": "/workspace/scratch/6101dce1e243/generated_images/exec-4e0a7def-c40f-4c3c-8388-6a1c44315c2f.png",
+      "localPath": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_earth.near-rock-edges.png",
+      "stageId": "book_earth",
+      "role": "transparent-foreground",
+      "path": "assets/stages/book_earth.near-rock-edges.e2f163225507.png",
+      "bytes": 129276,
+      "sha256": "e2f16322550789968fbf16abb53e0b324881bc85f65d1fe83aa832d493257638",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "centerAlphaMax": 1,
+      "footBandAlphaMax": 0,
+      "transparentRatio": 0.9742943727786281,
+      "pixelSHA256": "2bc4d1b719b7ea482c4ee243d75a6b1d228b6943aa1badd29bdc50268c3328c7",
+      "nativeByteEqualityVerified": true,
+      "visualInspection": "completed",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "footBandAlphaMax": 0,
+        "visualOutcome": "source-guided versus candidate; fidelity unverified",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "book_blood_bg_correction",
+      "filename": "book_blood.blood-arena.png",
+      "originalOutput": "/workspace/scratch/6101dce1e243/generated_images/exec-7fe5828a-fdfc-42c6-9f45-58d3b5e2f910.png",
+      "localPath": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_blood.blood-arena.png",
+      "stageId": "book_blood",
+      "role": "opaque-background",
+      "path": "assets/stages/book_blood.blood-arena.a2f0bf8241d3.png",
+      "bytes": 1864385,
+      "sha256": "a2f0bf8241d3a7b77f2379654bdf58f79881af710a65603bf6090614f7ba8c14",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "centerAlphaMax": 255,
+      "footBandAlphaMax": 255,
+      "transparentRatio": 0.0,
+      "pixelSHA256": "7e7a64a77a130bc717dc6835819222d68b0d4a3231bd815327641477d0d38b64",
+      "nativeByteEqualityVerified": true,
+      "visualInspection": "completed",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "footBandAlphaMax": null,
+        "visualOutcome": "source-guided versus candidate; fidelity unverified",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "book_blood_fg",
+      "filename": "book_blood.near-perimeter-edges.png",
+      "originalOutput": "/workspace/scratch/6101dce1e243/generated_images/exec-842d4a1d-9dcc-4c32-a4ca-69919dd19bef.png",
+      "localPath": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_blood.near-perimeter-edges.png",
+      "stageId": "book_blood",
+      "role": "transparent-foreground",
+      "path": "assets/stages/book_blood.near-perimeter-edges.472f222bec21.png",
+      "bytes": 77156,
+      "sha256": "472f222bec2101e6b073da623df1bd2189a98950306bba970e96a47747459f96",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "centerAlphaMax": 1,
+      "footBandAlphaMax": 0,
+      "transparentRatio": 0.9934884247136051,
+      "pixelSHA256": "062673d5ecea5259e2d5b9ac52df989e7e08e0e32420fd48084942db2424a59b",
+      "nativeByteEqualityVerified": true,
+      "visualInspection": "completed",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "footBandAlphaMax": 0,
+        "visualOutcome": "source-guided versus candidate; fidelity unverified",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "book_water_bg",
+      "filename": "book_water.water-basin.png",
+      "originalOutput": "/workspace/scratch/6101dce1e243/generated_images/exec-63e77d49-d97a-483c-95a3-aa0711f02685.png",
+      "localPath": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_water.water-basin.png",
+      "stageId": "book_water",
+      "role": "opaque-background",
+      "path": "assets/stages/book_water.water-basin.12604eb0cf73.png",
+      "bytes": 2156656,
+      "sha256": "12604eb0cf73963d8fbcb1222129f0b984bc417f6be3514712d6ecd5188f06cf",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "centerAlphaMax": 255,
+      "footBandAlphaMax": 255,
+      "transparentRatio": 0.0,
+      "pixelSHA256": "8c3c01f537802e8cb77c85fa7b69dc23ab87399b66026f5e23a06147554b67f3",
+      "nativeByteEqualityVerified": true,
+      "visualInspection": "completed",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "footBandAlphaMax": null,
+        "visualOutcome": "source-guided versus candidate; fidelity unverified",
+        "browserTest": false,
+        "engineTest": false
+      }
+    },
+    {
+      "promptKey": "book_water_fg",
+      "filename": "book_water.near-tile-edges.png",
+      "originalOutput": "/workspace/scratch/6101dce1e243/generated_images/exec-2339b28b-41c7-4d0f-82d3-0c467191d9c8.png",
+      "localPath": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/images/book_water.near-tile-edges.png",
+      "stageId": "book_water",
+      "role": "transparent-foreground",
+      "path": "assets/stages/book_water.near-tile-edges.9db746e9832f.png",
+      "bytes": 204775,
+      "sha256": "9db746e9832ff87bbbb4cce22e73ef6d21f563fb6903ab10b534ce676f8d978a",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "centerAlphaMax": 1,
+      "footBandAlphaMax": 1,
+      "transparentRatio": 0.9473258368121056,
+      "pixelSHA256": "8092a2bb3a287098c53a50c6242fb6783e4d66f78774f2e2da3827e532a01998",
+      "nativeByteEqualityVerified": true,
+      "visualInspection": "completed",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      },
+      "qa": {
+        "footingLineNormalizedY": 0.825,
+        "footBandAlphaMax": 1,
+        "visualOutcome": "source-guided versus candidate; fidelity unverified",
+        "browserTest": false,
+        "engineTest": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_01.jpg",
+      "path": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20121016_01.jpg",
+      "bytes": 173779,
+      "sha256": "39441bb698a9f311de162264ba47c3b8e5284abaf9609e5f74a6b8f5cda8e0f3",
+      "width": 960,
+      "height": 544,
+      "mode": "RGB",
+      "usedBy": [
+        "book_fire"
+      ],
+      "visualInspection": "completed on native image",
+      "sourceStatus": "published game screenshot hosted by an unofficial archive; dated launch or E3 prerelease set retained explicitly"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_02.jpg",
+      "path": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20121016_02.jpg",
+      "bytes": 239307,
+      "sha256": "626219e788febaffe8a6c93462d64815c25e67a3d18ccbbbc6ebc94c4bef793b",
+      "width": 960,
+      "height": 544,
+      "mode": "RGB",
+      "usedBy": [
+        "book_fire"
+      ],
+      "visualInspection": "completed on native image",
+      "sourceStatus": "published game screenshot hosted by an unofficial archive; dated launch or E3 prerelease set retained explicitly"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_37_earth_world.jpg",
+      "path": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_37_earth_world.jpg",
+      "bytes": 179692,
+      "sha256": "f21e7b14146affb5330ad1e51713b808012a77cefb0606aa5182219d2b663273",
+      "width": 960,
+      "height": 544,
+      "mode": "RGB",
+      "usedBy": [
+        "book_earth"
+      ],
+      "visualInspection": "completed on native image",
+      "sourceStatus": "published game screenshot hosted by an unofficial archive; dated launch or E3 prerelease set retained explicitly"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_31_blood_boss.jpg",
+      "path": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_31_blood_boss.jpg",
+      "bytes": 158090,
+      "sha256": "2f400be911a675a1df96affe07abc636a32173312b57c9a4e9fff991223e43e4",
+      "width": 960,
+      "height": 544,
+      "mode": "RGB",
+      "usedBy": [
+        "book_blood"
+      ],
+      "visualInspection": "completed on native image",
+      "sourceStatus": "published game screenshot hosted by an unofficial archive; dated launch or E3 prerelease set retained explicitly"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+      "path": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+      "bytes": 162926,
+      "sha256": "92143fe2c8def2311cd8317671e3d8c3317c390d6ebebf5f0f21eb026ae95b44",
+      "width": 960,
+      "height": 544,
+      "mode": "RGB",
+      "usedBy": [
+        "book_water"
+      ],
+      "visualInspection": "completed on native image",
+      "sourceStatus": "published game screenshot hosted by an unofficial archive; dated launch or E3 prerelease set retained explicitly"
+    }
+  ],
+  "prompts": [
+    {
+      "key": "book_fire_bg",
+      "stageId": "book_fire",
+      "transparent_background": false,
+      "references": [
+        "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20121016_01.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque background plate for a side-view 2D fighting-game arena. Source: SILENT HILL: BOOK OF MEMORIES, PS Vita, the Fire industrial room in the attached US launch screenshot dated 16 October 2012, image 01 only. The attachment is visual reference for this exact room and materials, NOT a request to retain its people or interface. Reconstruct the visible industrial setting as a crisp high-detail hand-painted 2D game background, wide 16:9 landscape canvas. Camera at standing combat height, looking horizontally across the room; relatively shallow perspective, not the original overhead isometric camera. Keep the blackened reddish steel paneled back wall and structural supports, the rusty long steel work cabinet at rear right with drawers and a worn dark top, and a yellow-orange glow visible beneath a heavy diamond-mesh floor grate recessed at rear left. The central and foreground combat lane must be a broad uninterrupted level strip of worn reddish steel plate, with its foot line around 82 percent canvas height. Keep all cabinet and grate details behind the combat lane. Use the attached restrained warm furnace glow and deep brown shadows; no lava, no volcano, no open flame on the fight lane. Remove every character, monster, weapon, HUD bar, icon, mini-map, pickup, blood splatter and floating number. Do not import any object from another Silent Hill game. No text, captions, logos, borders or watermarks. This is one empty room background, no multi-panel image, no collage. Fully opaque background. Preserve the source-specific cabinet, metal materials and industrial room identity; unseen depth is a restrained versus camera adaptation, no additional machines or doors."
+    },
+    {
+      "key": "book_earth_bg",
+      "stageId": "book_earth",
+      "transparent_background": false,
+      "references": [
+        "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_37_earth_world.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque background plate for a side-view 2D fighting-game arena. Source: SILENT HILL: BOOK OF MEMORIES, PS Vita E3 prerelease screenshot dated 6 June 2012, Earth World image 37 attached. The attachment is exact visual source evidence, not the retail final layout. Reconstruct only its visible mining-gallery environment as a crisp detailed hand-painted 2D game background in wide 16:9 landscape. Use a horizontal camera at standing fighter height and shallow side-on depth. Preserve the earthy olive-brown lumpy rock walls, weathered timber retaining boards and heavy vertical wooden supports, damp rough pebble floor, wooden wheel leaning at the back left, broad dark mine doorway framed with timber at the rear, and only the few plain barrels/crates evidenced at the back. A shallow murky water channel may be glimpsed behind the far-left stone lip, outside the fighting lane. The foreground combat lane is level uninterrupted rough dirt and pebbles, footing at about 82 percent canvas height, unobstructed across the full width. Everything recognizable as furniture remains at the back or outside the lane. Lighting muted olive and ochre from the original screenshot, no invented glowing crystals, fantasy ruin, minecart, rails, torches, mushrooms, lush roots or modern lights. Remove all people, monsters, guns, muzzle flashes, interface, numbers, icons and pickups. No blood splashes. No text, watermark, split-panel or collage. One empty fixed room, fully opaque. Preserve the prerelease Earth identity and visible materials, avoid adding ornate scenery or undocumented architecture."
+    },
+    {
+      "key": "book_fire_bg_correction",
+      "stageId": "book_fire",
+      "transparent_background": false,
+      "references": [
+        "/workspace/scratch/6101dce1e243/generated_images/exec-76fbbda3-6baf-4423-8f0f-418b87a02db7.png"
+      ],
+      "prompt": "Precise-object-edit. Edit this generated Fire Zone stage image only. Preserve the entire room, camera, rusty wall, furnace grate, glowing light, small stool, red tool cabinet, every relative object position, and the existing wide 16:9 framing. Remove the newly invented raised stage lip / vertical apron across the very bottom of the canvas, including every yellow-black caution stripe. In that bottom strip only, continue the same flat horizontal rusty metal floor naturally to the bottom image edge. There must be no drop, no step, no platform fascia and no warning stripes. Keep all other pixels/visual features as unchanged as possible. No characters, no text, no other additions. Fully opaque landscape game background."
+    },
+    {
+      "key": "book_blood_bg",
+      "stageId": "book_blood",
+      "transparent_background": false,
+      "references": [
+        "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_31_blood_boss.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque empty background plate for a side-view 2D fighting-game stage. Exact source: SILENT HILL: BOOK OF MEMORIES, PS Vita prerelease E3 screenshot of the Blood boss arena, 6 June 2012, image31 attached. Reconstruct ONLY the visible arena surfaces, with all humans, the large boss and all HUD/interface entirely removed. Wide16:9 landscape, detailed hand-painted 2D game finish, horizontal camera at fighter height and shallow depth suited to side-on fighting. Preserve the distinctive broad smooth undulating dark crimson-red and rust-brown arena slabs, the narrow black diagonal cross-hatched metal-mesh channels dividing those slabs at the far back, and the small low angular dark metal perimeter blocks visible at the distant edge. The red surface must read as an opaque solid walkable arena surface with mottled sheen, NOT deep liquid, NOT flowing lava, NOT a lake and NOT gore. Black/brown obscurity beyond the rear edge; do not invent a room wall or ceiling. Combat footing strip at82percent canvas height is smooth, continuous, level and unobstructed. Mesh gaps stay behind the fight lane. Keep the subdued red ochre palette and dramatic low source lighting. No people, monsters, organs, body parts, weapons, blood spray, skeletons, statues, pillars, new chains, cathedral, altar, signs, logos or readable text. No HUD, floating icons, vignette border, collage or split panels. Source-guided empty arena of this exact prerelease scene only; fully opaque background."
+    },
+    {
+      "key": "book_water_bg",
+      "stageId": "book_water",
+      "transparent_background": false,
+      "references": [
+        "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_50_water_boss.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque empty background plate for a side-view 2D fighting-game stage. Exact source: SILENT HILL: BOOK OF MEMORIES, PS Vita E3 prerelease Water boss screenshot dated6June2012, image50 attached. Reconstruct ONLY its visible empty Water arena environment, removing the central boss, all people, attacks and all interface. Wide16:9 landscape and crisp detailed hand-painted 2D finish, camera lowered to standing fighter height facing horizontally across this same shallow flooded tiled basin. Preserve the square gray-green ceramic tiles of the rear wall, the dark large round pipe opening with a thick rusty ring at rear right, the square masonry supports flanking the wall, a few broken rectangular stone/tile pieces at the far perimeter, and the dark teal water over a flat tiled floor with restrained soft reflections. Entire foreground is a continuous level shallow water-covered walkable lane with footing around82percent image height. No foreground lip or deep pit. Broken slabs and pipe stay behind lane. Use the source's cold muted turquoise and dark green lighting; remove all luminous boss reflections. No water pouring from walls, no waterfalls, no new staircases, no railings, no cave or fantasy architecture, no extra pipes, no invented fixtures. No people, monsters, weapons, splashes from absent entities, HUD, interface bars, numbers, text, logos or watermark. One empty fixed setting, not a collage or panorama of several rooms. Fully opaque."
+    },
+    {
+      "key": "book_fire_fg",
+      "stageId": "book_fire",
+      "transparent_background": true,
+      "references": [
+        "/workspace/scratch/6101dce1e243/generated_images/exec-6277f0a7-9298-4dc2-b4c6-16cac986c4c3.png"
+      ],
+      "prompt": "Create ONE separate transparent foreground overlay for the attached SILENT HILL Book of Memories Fire room background. The attachment is a placement, style and material reference; do NOT reproduce the room itself. Match the wide16:9 canvas and its1672x941 composition. Actual RGBA transparent background. Only two very narrow near-camera fragments of the SAME dark rusty vertical steel structural edges, cropped by the extreme left and extreme right canvas borders, occupy at most3percent of canvas width on each side. Their lit inward edges catch the same faint warm amber reflected furnace light as the supplied room. ALL of the middle94percent, including its floor and entire fighting space, must be completely transparent. No continuous bottom strip, floor, ground shadow, smoke, glow plane, vignette, frame border, cabinet, mesh, signs or extra object. These isolated side slivers are for a subtle separate parallax layer, not a full decorative picture frame. Detailed painted texture and crisp natural alpha edges. No text or people. Keep top/bottom beyond the two tiny edge slivers transparent too. Single landscape overlay."
+    },
+    {
+      "key": "book_earth_fg",
+      "stageId": "book_earth",
+      "transparent_background": true,
+      "references": [
+        "/workspace/scratch/6101dce1e243/generated_images/exec-0a3baa77-fa00-43bb-b66b-b8df0548c7dd.png"
+      ],
+      "prompt": "Create ONE separate transparent foreground overlay for the attached SILENT HILL Book of Memories Earth prerelease mining-gallery background. The attachment is a placement, style and material reference, not content to repeat. Wide16:9 canvas matching1672x941. Genuine RGBA transparency everywhere except TWO narrow natural irregular dark olive-brown rock face slivers cropped at the extreme left and right canvas edges, never more than4percent of the canvas width on either side. Use exactly the weathered rocky material and subdued ochre light of the room. No new timber frame, no arch across top, no hanging objects, no barrel or minewheel. The entire middle92percent and all of the fighting lane must be100percent transparent, including through the bottom edge. Keep these edge fragments low contrast and hand-painted with natural crisp alpha boundaries. Do not add ground strip, floor, ambient shadow plane, gradient, fog, photo backdrop, bounding box, text, border or watermark. A sparse gameplay parallax layer only, single image."
+    },
+    {
+      "key": "book_blood_fg",
+      "stageId": "book_blood",
+      "transparent_background": true,
+      "references": [
+        "/workspace/scratch/6101dce1e243/generated_images/exec-b75a96d5-05e9-4265-9b70-018df4e52a96.png"
+      ],
+      "prompt": "Create ONE sparse transparent foreground parallax overlay matching the attached Book of Memories Blood prerelease arena. The attached arena is placement/style reference only. Landscape16:9 canvas, match1672x941. Actual transparent RGBA background. Draw only the tiny upper tips of two dark rust-red angular metal perimeter blocks identical in material and shape to the low blocks at the rear edge of the reference, except now near-camera cropped by the bottom-left and bottom-right outer corners. Each tiny fragment occupies only the outermost4percent of width and lowest8percent of height. No object may enter the central92percent or the y0-to0.9 band. Everything else completely transparent: NO floor, red surface, mesh, shadows, glow, fog, border, blood, drips or enclosing frame. Keep the two small fragments dark and unobtrusive with crisp natural alpha edges and same hand-painted texture. No people, monsters or text. Not a replacement background; two distant edge slivers only."
+    },
+    {
+      "key": "book_water_fg",
+      "stageId": "book_water",
+      "transparent_background": true,
+      "references": [
+        "/workspace/scratch/6101dce1e243/generated_images/exec-63e77d49-d97a-483c-95a3-aa0711f02685.png"
+      ],
+      "prompt": "Create ONE separate sparse transparent foreground overlay for the attached SILENT HILL Book of Memories Water prerelease basin. The image is a style/material/placement reference only: do NOT reproduce the room. Wide16:9 canvas matching1672x941, actual RGBA transparent background. Only two very thin fragments of the same chipped green-gray ceramic-tiled masonry as the background's supports, cropped at the extreme left and extreme right edges. Each occupies at most3percent of canvas width. They are dark near-camera wall-return slivers with restrained teal reflected light. All middle94percent of canvas must be completely transparent, including the water and the floor and every part of the combat lane. No bottom ledge or continuous top beam, no new drain, pipe, railing, water, ripple, fog, glow field, shadow field, border frame, text or person. Natural irregular chipped edges with crisp alpha. A sparse gameplay foreground plane only; matching painted style, one image."
+    },
+    {
+      "key": "book_blood_bg_correction",
+      "stageId": "book_blood",
+      "transparent_background": false,
+      "references": [
+        "/workspace/scratch/6101dce1e243/generated_images/exec-b75a96d5-05e9-4265-9b70-018df4e52a96.png",
+        "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/sh_book_of_memories_screen_20120606_31_blood_boss.jpg"
+      ],
+      "prompt": "Precise-object-edit for source fidelity. Image1 is the generated empty Blood arena background to correct. Image2 is the exact Book of Memories E3 prerelease source screenshot used as reference only; never include its boss, people or interface. In image1, remove ONLY the invented clearly outlined round disk at the upper center. Fill that disk's area with the same uninterrupted mottled solid crimson arena surface as its adjacent large foreground slab, seamlessly, with no circle seam, pedestal, depression, symbol, seam outline or raised feature. Preserve all other parts of image1: mesh channels, outer blocks, reddish solid material, lighting, empty fighting lane, framing and image proportions. Do not add any objects, characters, reflections of creatures, text, HUD or gore. This small correction eliminates geometry that was not visible in the screenshot. Fully opaque16:9 background."
+    }
+  ],
+  "provenance": {
+    "generator": "integrated image_gen.imagegen",
+    "calls": 10,
+    "retainedPNG": 8,
+    "targetedCorrections": [
+      "Fire: remove invented platform lip and caution stripes.",
+      "Blood: remove extrapolated central disk."
+    ],
+    "discardedVariants": [
+      "variants/book_fire.initial-platform-draft.png",
+      "variants/book_blood.initial-disk-draft.png"
+    ],
+    "externalPixelEditing": false,
+    "nativePixelsPreserved": true,
+    "noRuntimeChanges": true,
+    "sourceGalleryURL": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm",
+    "referenceDates": {
+      "book_fire": "2012-10-16 US launch",
+      "book_earth": "2012-06-06 E3 prerelease",
+      "book_blood": "2012-06-06 E3 prerelease",
+      "book_water": "2012-06-06 E3 prerelease"
+    }
+  },
+  "qa": {
+    "visualOutputsInspected": 10,
+    "nativePNGMetadataMeasured": 8,
+    "opaqueBackgrounds": 4,
+    "genuineAlphaForegrounds": 4,
+    "browserTest": false,
+    "runtimeTest": "pending parent integration",
+    "candidateFidelity": "unverified",
+    "noAnimationClaim": true
+  },
+  "totals": {
+    "stages": 4,
+    "png": 8,
+    "bytes": 9433427
+  }
+}

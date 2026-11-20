@@ -6,7 +6,7 @@ import {resolve,relative} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {STAGES} from '../src/data.js';
 import {STAGE_BITMAPS} from '../src/stage-bitmap-manifest.js';
-import {validateStageBitmap} from '../src/stage-bitmaps.js';
+import {validateStageBitmap,stageBitmapRooms} from '../src/stage-bitmaps.js';
 
 export const MAX_STAGE_BITMAP_BYTES=24*1024*1024;
 const sourceRoot=fileURLToPath(new URL('../',import.meta.url));
@@ -33,19 +33,21 @@ export async function auditStageBitmaps({root=sourceRoot,registry=STAGE_BITMAPS,
   for(const [id,art] of Object.entries(registry)){
     const stage=known.get(id);
     if(!stage||art?.stageId!==id||stage.source!==art.source)fail('identity/source mismatch '+id);
-    try{validateStageBitmap(stage,art);}catch(error){fail(id+': '+error.message);}
-    if(stage.reference?.blocked)fail('unresolved stage '+id);
-    for(const frame of art.layers.flatMap(layer=>layer.frames)){
-      const path=resolve(physicalRoot,frame.path);
-      if(relative(physicalRoot,path).startsWith('..'))fail('outside source root '+frame.path);
-      const info=await lstat(path),physical=await realpath(path);
-      if(!info.isFile()||info.isSymbolicLink()||physical!==path||info.size<1||info.size>MAX_STAGE_BITMAP_BYTES)fail('unsafe/oversized PNG '+frame.path);
-      const bytes=await readFile(path),sha=createHash('sha256').update(bytes).digest('hex');
-      if(sha!==frame.sha256||bytes.length!==frame.bytes)fail('file metadata mismatch '+frame.path);
-      if(!decoded.has(sha))decoded.set(sha,auditStagePng(bytes,{python}));
-      const audit=decoded.get(sha);
-      if(audit.width!==frame.width||audit.height!==frame.height)fail('decoded dimensions mismatch '+frame.path);
-      paths.add('/'+frame.path);
+    for(const room of stageBitmapRooms(art)){
+      try{validateStageBitmap(stage,room);}catch(error){fail(id+': '+error.message);}
+      if(stage.reference?.blocked)fail('unresolved stage '+id);
+      for(const frame of room.layers.flatMap(layer=>layer.frames)){
+        const path=resolve(physicalRoot,frame.path);
+        if(relative(physicalRoot,path).startsWith('..'))fail('outside source root '+frame.path);
+        const info=await lstat(path),physical=await realpath(path);
+        if(!info.isFile()||info.isSymbolicLink()||physical!==path||info.size<1||info.size>MAX_STAGE_BITMAP_BYTES)fail('unsafe/oversized PNG '+frame.path);
+        const bytes=await readFile(path),sha=createHash('sha256').update(bytes).digest('hex');
+        if(sha!==frame.sha256||bytes.length!==frame.bytes)fail('file metadata mismatch '+frame.path);
+        if(!decoded.has(sha))decoded.set(sha,auditStagePng(bytes,{python}));
+        const audit=decoded.get(sha);
+        if(audit.width!==frame.width||audit.height!==frame.height)fail('decoded dimensions mismatch '+frame.path);
+        paths.add('/'+frame.path);
+      }
     }
   }
   return {stages:Object.keys(registry).length,files:paths.size,paths:[...paths].sort()};

@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "observedAt": "2026-11-20T12:25:35.466Z",
+  "commit": "8c2b56320ceb9fd5490660cb8e20a2dbf62c57bb",
+  "source": "GitHub Actions connector",
+  "workflow_runs": [
+    {
+      "id": 44715954614,
+      "name": "QA",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_number": 145,
+      "jobs_url": "https://api.github.com/repos/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44715954614/jobs",
+      "logs_url": "https://api.github.com/repos/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44715954614/logs",
+      "workflow_id": 380674611
+    },
+    {
+      "id": 44715954478,
+      "name": "HTTP browser QA",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 98,
+      "jobs_url": "https://api.github.com/repos/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44715954478/jobs",
+      "logs_url": "https://api.github.com/repos/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44715954478/logs",
+      "workflow_id": 384122035
+    }
+  ],
+  "jobs": [
+    {
+      "id": 136219286812,
+      "name": "sprite-importer",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 44715954614,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Validate raster importer",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        }
+      ]
+    },
+    {
+      "id": 136219287219,
+      "name": "test",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 44715954614,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Set up PNG validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run full QA",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5
+        },
+        {
+          "name": "Verify generated files are committed",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        }
+      ]
+    }
+  ],
+  "diagnosis": {
+    "failedTest": "retired matches retain final presentations while live matches retain every combat pose",
+    "path": "tests/stage-bitmaps.test.mjs",
+    "before": "assets/sprites/sh1_air_screamer_001.f208137d6414.png",
+    "expectedCurrent": "assets/sprites/sh1_air_screamer_001.3af1bfe6260c.png",
+    "runtimeChange": false
+  }
+}

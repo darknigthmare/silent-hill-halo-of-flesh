@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "status": "passed",
+  "baselineCommit": "fd5b6d8969a8dc7f1bdcb92ed07a28a8c1c4abd4",
+  "npmTest": {
+    "passed": true,
+    "exitCode": 0,
+    "tests": 1252,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "verifiedBuildFiles": 320,
+    "verifiedJavaScriptFiles": 42,
+    "verifiedHTMLFiles": 10,
+    "log": "validation-sprite-resume-2026-11-18/npm-test.log.gz",
+    "logSHA256": "ea9af5a0f41ff6e37c5e434dc24571060284c6ce22ccb667c425c4a6f9c9fbb1",
+    "execution": "repository working tree; no isolated-copy workaround needed"
+  },
+  "nativeEngine": {
+    "passed": true,
+    "checks": 64,
+    "failed": 0,
+    "portraitRenders": 6,
+    "duels": 4,
+    "finalDuelScreenshotsInspected": 4,
+    "portraitScreenshotsInspected": 6,
+    "browserTest": false,
+    "report": "qa-sprite-2026-11-18/summary.json",
+    "registrySHA256": "3dade53c48950a7871ca03b41b03d8f967684dbfc9d722157568ebf85947d8e5",
+    "manifestSHA256": "36609b67124a4a1c380756674ebcc022bf9598a9f9ee66826992102b516210d9"
+  },
+  "preservationReport": "sprite-resume-preservation-2026-11-18.json",
+  "gitDiffCheck": true,
+  "remoteBrowserCI": {
+    "statusAtFreeze": "pending-publication",
+    "localBrowserTest": false,
+    "baselineResult": "cancelled after the last positive report; Rite 3 regression assertion explicitly passed",
+    "baselineReport": "BROWSER_QA_COMPLETION_2026-11-18.md",
+    "workflowChange": "browser job timeout 30 to 45 minutes; all sixteen scripts and assertions preserved"
+  },
+  "documentationFinalizedAfterGate": true,
+  "scopeLimits": [
+    "No new animated clip.",
+    "No native UHD claim or certified source fidelity.",
+    "Local native Canvas validation does not certify DOM, CSS, browser input, browser decoding or service worker behavior."
+  ]
+}

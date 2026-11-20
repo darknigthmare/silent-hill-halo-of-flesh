@@ -1,0 +1,93 @@
+{
+  "status": "interrupted",
+  "passed": false,
+  "exitCode": 137,
+  "evidenceSource": "Exit code137 reported by root for its actual grouped launch; directory contents observed and preserved by this QA agent. No terminal report or success inferred.",
+  "observedAt": "2026-11-19T13:29:45.381587+00:00",
+  "command": [
+    "node",
+    "scripts/qa-stage-pass21-native.mjs",
+    "--stages=old_silent_hill,hospital_nightmare,sewer_resort,south_vale,hotel_otherworld,prison_meat_locker,grand_hotel,town_hall_hc,shepherd_house_hc,centennial_building,st_marias,shepherds_glen",
+    "--out=docs/production/vague21/qa-native"
+  ],
+  "harnessSHA256": "ac8b34f88d063a18bf8be0448bc3fe7cce754a7633bce589e785c8ebcf4311ed",
+  "originalOutputDirectory": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native",
+  "archiveDirectory": "/workspace/scratch/8edddaaaab76/stage-pass21-verification/native-grouped-interrupted",
+  "preservedFiles": [],
+  "reportPresent": false,
+  "browserTest": false,
+  "subsequentSingleProcessAttempt": {
+    "status": "failed",
+    "passed": false,
+    "reportPath": "/workspace/scratch/8edddaaaab76/stage-pass21-verification/native-single-process-interrupted/report.json",
+    "reportSHA256": "11d81702e44ebfc4e6520bbbb1d7c99242dd012092fdfd8f2f373eec52520947",
+    "processes": [
+      {
+        "stageId": "old_silent_hill",
+        "startedAt": "2026-11-19T13:30:44.448Z",
+        "completedAt": "2026-11-19T13:30:45.494Z",
+        "durationMs": 1046,
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+          "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/scripts/qa-stage-pass21-native.mjs",
+          "--stages=old_silent_hill",
+          "--out=/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/cases/old_silent_hill"
+        ],
+        "exitCode": null,
+        "signal": "SIGKILL",
+        "passed": false,
+        "report": "cases/old_silent_hill/report.json",
+        "stdout": "cases/old_silent_hill/process.stdout.log",
+        "stderr": "cases/old_silent_hill/process.stderr.log"
+      }
+    ],
+    "counts": {
+      "requestedStages": 12,
+      "completedProcesses": 1,
+      "passedProcesses": 0,
+      "stageCases": 0,
+      "captures": 0,
+      "checkExecutions": 0,
+      "passedChecks": 0,
+      "failedChecks": 0,
+      "uniqueAssets": 0,
+      "sourceFiles": 0
+    }
+  },
+  "isolatedDiagnostic": {
+    "passed": true,
+    "checks": 46,
+    "stages": [
+      "old_silent_hill"
+    ],
+    "reportPath": "/workspace/scratch/8edddaaaab76/stage-pass21-verification/native-diagnostic-128-old-silent-hill/report.json",
+    "reportSHA256": "9d14c815dc3034fb744ffbab731394501ed505125f801499bb0fadf4076c7c86",
+    "nodeExecArgv": [
+      "--max-old-space-size=128"
+    ],
+    "execYieldTimeMs": 30000,
+    "countedInCampaign": false,
+    "causality": "Heap option and exec attachment interval changed together. Success does not isolate one cause for previous SIGKILL."
+  },
+  "sequentialFinalCaseInterruption": {
+    "status": "failed",
+    "passed": false,
+    "stageId": "shepherds_glen",
+    "signal": "SIGKILL",
+    "durationMs": 1520,
+    "lastDiagnostic": {
+      "diagnostic": "stage-before",
+      "rssBytes": 188018688,
+      "heapUsedBytes": 20466248,
+      "externalBytes": 46897780,
+      "arrayBufferBytes": 2386997,
+      "stageId": "shepherds_glen"
+    },
+    "maximumSampledRSSBytes": 188018688,
+    "archiveDirectory": "/workspace/scratch/8edddaaaab76/stage-pass21-verification/native-shepherds-glen-128-interrupted",
+    "logSHA256": "d87dd9f8e1ad332ff0f39becbc72dea9ceb1c1121b65cdc65cd5061f929bd51a",
+    "partialAggregatePath": "/workspace/scratch/8edddaaaab76/stage-pass21-verification/native-batched-128-partial-report.json",
+    "partialAggregateSHA256": "729a281d90132cd75addc0a59420de39e005d754c394c425f0aed2f72604e9ef",
+    "notCountedAsPassed": true
+  }
+}

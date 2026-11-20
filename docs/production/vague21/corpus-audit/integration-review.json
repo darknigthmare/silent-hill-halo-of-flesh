@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent-corpus-audit-agent",
+  "status": "passed",
+  "scope": "Revue documentaire du corpus intégré et de ses liens ; inventaire runtime résolu par stageBitmapFor. Le XLSX est vérifié ici par présence et empreinte, avec rapprochement du rapport de production ; les rendus et recalculs sont attribués à ce rapport, sans prétendre les réexécuter.",
+  "baseCommit": "ca25d04196b73d6229cdef4dd572eb76846ca7ad",
+  "sourceResearchRevision": "2026-11-19-final-66",
+  "sourceResearchSHA256": "2ca417959e1b32e246aee53bf0e817e2df444a634ce409ba1960a682d5f1a7d5",
+  "recordCount": 66,
+  "uniqueIds": true,
+  "idsAddedComparedToResearch": [],
+  "idsRemovedComparedToResearch": [],
+  "bibleRowsEachOnce": true,
+  "coverageBeforeAddition": {
+    "covered": 15,
+    "covered-within-aggregate": 3,
+    "partially-covered": 4,
+    "absent": 40,
+    "mentioned-only": 1,
+    "edition-not-indexed": 2,
+    "absent-as-programme": 1
+  },
+  "initialAbsentCount": 41,
+  "indexedAfterIntegration": 66,
+  "recordChangesApartFromIndexedStatus": [
+    {
+      "id": "silent_hill_transmission",
+      "field": "sourceRefs",
+      "before": [
+        "turn551390543search2",
+        "turn268002175search0",
+        "turn405745206view2"
+      ],
+      "after": [
+        "turn551390543search2",
+        "turn126943592search2",
+        "turn268002175search0",
+        "turn405745206view2"
+      ]
+    },
+    {
+      "id": "silent_hill_transmission",
+      "field": "sourceUrls",
+      "before": [
+        "https://www.konami.com/games/eu/fr/topics/16705/",
+        "https://www.konami.com/games/eu/en/topics/18565/",
+        "https://www.konami.com/games/corporate/ja/news/topics/20260213s/"
+      ],
+      "after": [
+        "https://www.konami.com/games/eu/fr/topics/16705/",
+        "https://www.konami.com/games/eu/fr/topics/17897/",
+        "https://www.konami.com/games/eu/en/topics/18565/",
+        "https://www.konami.com/games/corporate/ja/news/topics/20260213s/"
+      ]
+    }
+  ],
+  "criticalStatuses": {
+    "sh1_remake_announced": {
+      "releaseYear": null,
+      "releaseDate": null,
+      "releaseStatus": "announced-in-development",
+      "announcedYear": 2025,
+      "targetedReleaseYear": null,
+      "targetedReleasePeriod": null,
+      "coveragePhase": "before-wave21"
+    },
+    "silent_hills_cancelled": {
+      "releaseYear": null,
+      "releaseDate": null,
+      "releaseStatus": "cancelled",
+      "announcedYear": 2014,
+      "targetedReleaseYear": null,
+      "targetedReleasePeriod": null,
+      "coveragePhase": "before-wave21"
+    },
+    "machine_silent_hill_escape": {
+      "releaseYear": null,
+      "releaseDate": null,
+      "releaseStatus": "published-manufacturer-catalogue",
+      "announcedYear": 2019,
+      "targetedReleaseYear": 2020,
+      "targetedReleasePeriod": "Q1",
+      "coveragePhase": "before-wave21"
+    },
+    "machine_silent_hill_return": {
+      "releaseYear": null,
+      "releaseDate": null,
+      "releaseStatus": "published-manufacturer-catalogue",
+      "announcedYear": 2019,
+      "targetedReleaseYear": 2020,
+      "targetedReleasePeriod": "Q1",
+      "coveragePhase": "before-wave21"
+    },
+    "townfall_2026": {
+      "releaseYear": 2026,
+      "releaseDate": "2026-09-24",
+      "releaseStatus": "published",
+      "announcedYear": null,
+      "targetedReleaseYear": null,
+      "targetedReleasePeriod": null,
+      "coveragePhase": "before-wave21"
+    },
+    "crossover_urban_myth_2026": {
+      "releaseYear": 2026,
+      "releaseDate": "2026-09-09",
+      "releaseStatus": "published",
+      "announcedYear": null,
+      "targetedReleaseYear": null,
+      "targetedReleasePeriod": null,
+      "coveragePhase": "before-wave21"
+    }
+  },
+  "protectedFiles": [
+    {
+      "path": "data/sources.json",
+      "unchanged": true,
+      "sha256": "a783771effa7918f62f64e99183ddf2e1768c8e804849860ebc60a7e79dc0f6f",
+      "bytes": 1952
+    },
+    {
+      "path": "data/roster.json",
+      "unchanged": true,
+      "sha256": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3",
+      "bytes": 1771325
+    },
+    {
+      "path": "data/stages.json",
+      "unchanged": true,
+      "sha256": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+      "bytes": 1351594
+    },
+    {
+      "path": "src/data.js",
+      "unchanged": true,
+      "sha256": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+      "bytes": 130148
+    },
+    {
+      "path": "src/production-reference.js",
+      "unchanged": true,
+      "sha256": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889",
+      "bytes": 1596809
+    },
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "unchanged": true,
+      "sha256": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+      "bytes": 1776905
+    }
+  ],
+  "newRuntimeIds": 0,
+  "runtimeCoverage": {
+    "method": "Imported STAGES and resolved each through stageBitmapFor with actual referencePolicy.sceneId. Counted blocked missing stages and all stored room compositions separately.",
+    "sources": 16,
+    "profiles": 230,
+    "stages": 123,
+    "active": 55,
+    "missing": 68,
+    "blockedMissing": 15,
+    "storedRoomCompositions": 57
+  },
+  "webSourcesOpened": [
+    {
+      "url": "https://www.konami.com/games/eu/fr/topics/17897/",
+      "ref": "turn547704794view0",
+      "confirmed": "Seconde Transmission, communiqué du 31/05/2024."
+    },
+    {
+      "url": "https://www.konami.com/games/eu/en/topics/18990/",
+      "ref": "turn767108716view0",
+      "confirmed": "Communiqué du 13/02/2026 avec lien vers la Transmission ; ancien état de lancement TBA non réutilisé comme statut courant."
+    },
+    {
+      "url": "https://www.konami.com/games/us/en/topics/3483/",
+      "ref": "turn767108716view1",
+      "confirmed": "Townfall disponible le 24/09/2026."
+    }
+  ],
+  "localLinks": [
+    {
+      "from": "docs/GDD_FR.md",
+      "link": "BIBLE_CORPUS_SILENT_HILL.md",
+      "exists": true,
+      "target": "docs/BIBLE_CORPUS_SILENT_HILL.md"
+    },
+    {
+      "from": "docs/GDD_FR.md",
+      "link": "BIBLE_CORPUS_SILENT_HILL.md",
+      "exists": true,
+      "target": "docs/BIBLE_CORPUS_SILENT_HILL.md"
+    },
+    {
+      "from": "docs/GDD_FR.md",
+      "link": "production/franchise-corpus.json",
+      "exists": true,
+      "target": "docs/production/franchise-corpus.json"
+    },
+    {
+      "from": "docs/GDD_FR.md",
+      "link": "production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "exists": true,
+      "target": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx"
+    },
+    {
+      "from": "docs/GDD_FR.md",
+      "link": "production/README.md",
+      "exists": true,
+      "target": "docs/production/README.md"
+    },
+    {
+      "from": "docs/SOURCES.md",
+      "link": "BIBLE_CORPUS_SILENT_HILL.md",
+      "exists": true,
+      "target": "docs/BIBLE_CORPUS_SILENT_HILL.md"
+    },
+    {
+      "from": "docs/SOURCES.md",
+      "link": "production/franchise-corpus.json",
+      "exists": true,
+      "target": "docs/production/franchise-corpus.json"
+    },
+    {
+      "from": "docs/BIBLE_CORPUS_SILENT_HILL.md",
+      "link": "production/franchise-corpus.json",
+      "exists": true,
+      "target": "docs/production/franchise-corpus.json"
+    },
+    {
+      "from": "docs/BIBLE_CORPUS_SILENT_HILL.md",
+      "link": "production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "exists": true,
+      "target": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx"
+    },
+    {
+      "from": "docs/BIBLE_CORPUS_SILENT_HILL.md",
+      "link": "production/vague21/corpus-audit/research.json",
+      "exists": true,
+      "target": "docs/production/vague21/corpus-audit/research.json"
+    },
+    {
+      "from": "docs/BIBLE_CORPUS_SILENT_HILL.md",
+      "link": "production/vague21/README.md",
+      "exists": true,
+      "target": "docs/production/vague21/README.md"
+    },
+    {
+      "from": "docs/BIBLE_CORPUS_SILENT_HILL.md",
+      "link": "production/vague21/final-audit.json",
+      "exists": true,
+      "target": "docs/production/vague21/final-audit.json"
+    }
+  ],
+  "findings": [
+    {
+      "id": "transmission-source-array-order",
+      "severity": "minor-provenance-defect",
+      "status": "resolved",
+      "file": "docs/production/franchise-corpus.json",
+      "recordId": "silent_hill_transmission",
+      "finding": "La source 2024 est en position 2 des URL, mais sa référence a été ajoutée en position 4 ; les listes parallèles ne sont plus alignées.",
+      "expectedRefs": [
+        "turn551390543search2",
+        "turn126943592search2",
+        "turn268002175search0",
+        "turn405745206view2"
+      ],
+      "observedRefs": [
+        "turn551390543search2",
+        "turn268002175search0",
+        "turn405745206view2",
+        "turn126943592search2"
+      ],
+      "remediationOwner": "parent",
+      "resolvedRefs": [
+        "turn551390543search2",
+        "turn126943592search2",
+        "turn268002175search0",
+        "turn405745206view2"
+      ],
+      "resolution": "Parent corrected sourceRefs to match the URL order 2022, 2024, 2025, 2026; independently re-read and verified."
+    },
+    {
+      "id": "pending-SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "severity": "pending-deliverable",
+      "status": "resolved",
+      "file": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "finding": "Lien documentaire prévu ; fichier absent au moment de la revue. Le parent prépare ces livrables avant le commit final.",
+      "resolution": "Classeur présent au chemin publié ; taille et SHA256 égaux au livrable validé et au rapport workbook-verification.json.",
+      "bytes": 47348,
+      "sha256": "dd67b2206c0e579f4c9bc53deaccdd9946541ea734e6d63476b80712cea8dfa0"
+    },
+    {
+      "id": "pending-README.md",
+      "severity": "pending-deliverable",
+      "status": "resolved",
+      "file": "docs/production/vague21/README.md",
+      "finding": "Lien documentaire prévu ; fichier absent au moment de la revue. Le parent prépare ces livrables avant le commit final.",
+      "resolution": "README présent au chemin relié depuis la bible ; chiffres documentaires et portée des preuves rapprochés des rapports existants.",
+      "sha256": "8b55746016fae23a581b46326a421532056ac8b2896a12d6fdb327cf4548b6e2",
+      "bytes": 8970
+    }
+  ],
+  "reviewedFileHashes": [
+    {
+      "path": "docs/production/franchise-corpus.json",
+      "sha256": "9df5b1b7d228b82559a2295b33b2ed47dabe812bc1b29f11a9ec841eaaa1ee86",
+      "bytes": 86626
+    },
+    {
+      "path": "docs/BIBLE_CORPUS_SILENT_HILL.md",
+      "sha256": "4d32d698960b8533076b25dc92e3ffce8b02457ab3c0b3d804905d2182526974",
+      "bytes": 29898
+    },
+    {
+      "path": "docs/GDD_FR.md",
+      "sha256": "1f11535616c55f6dc0b65e86935ac3653cb5618974b5c421caf8e6dda29990a4",
+      "bytes": 13523
+    },
+    {
+      "path": "docs/SOURCES.md",
+      "sha256": "8f7ff3948bb6576b5d6cfb6e82c0b0c445a79c77f12fb70d7f5cc448ad486b01",
+      "bytes": 5959
+    },
+    {
+      "path": "src/stage-bitmap-manifest.js",
+      "sha256": "7b2a5a2007e02f72a7671767db56874f8322adada9c059a36e272db690271403",
+      "bytes": 104756
+    },
+    {
+      "path": "docs/production/vague21/final-audit.json",
+      "sha256": "b2d2a6bae0a8b39b624692bcd321e2783e92c8ac8cfa3b1c7ed160b1eef8e3cb",
+      "bytes": 25129
+    },
+    {
+      "path": "docs/production/vague21/corpus-integration.json",
+      "sha256": "3abaddc47aba4f6488129b183bd50499a4aed2a74205ca2a1b52d543222c6b2e",
+      "bytes": 670
+    },
+    {
+      "path": "docs/production/vague21/README.md",
+      "sha256": "8b55746016fae23a581b46326a421532056ac8b2896a12d6fdb327cf4548b6e2",
+      "bytes": 8970
+    },
+    {
+      "path": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "sha256": "dd67b2206c0e579f4c9bc53deaccdd9946541ea734e6d63476b80712cea8dfa0",
+      "bytes": 47348
+    },
+    {
+      "path": "docs/production/vague21/workbook/workbook-verification.json",
+      "sha256": "a43ac3929433c1dffa727cc58ac88f59011b2fdd25288f366467f36800c3f922",
+      "bytes": 5302
+    }
+  ],
+  "publicationPreparation": {
+    "readOnly": true,
+    "expectedRemoteHead": "2c16796e6b99bb71f79fdfcf45b9cd2a84838581",
+    "refAndPrHeadConfirmed": true,
+    "tree": "227f202a85e02046cd81f5438116bdc86aee7071",
+    "uploadsStarted": false,
+    "awaitingFinalImmutableCommit": true
+  },
+  "workbookVerificationReference": {
+    "path": "docs/production/vague21/workbook/workbook-verification.json",
+    "sha256": "a43ac3929433c1dffa727cc58ac88f59011b2fdd25288f366467f36800c3f922",
+    "xlsxSHA256Matches": true,
+    "sourceCorpusSHA256Matches": true,
+    "producerReported": {
+      "worksheets": [
+        "Corpus",
+        "Stages"
+      ],
+      "corpusRecords": 66,
+      "stages": {
+        "total": 123,
+        "bitmapActive": 55,
+        "missing": 68,
+        "missingUnblocked": 53,
+        "referenceBlocked": 15
+      },
+      "formulaErrors": 0,
+      "exportReadback": "passed",
+      "visualReview": "passed-for-recorded-ranges"
+    },
+    "independentScope": "File existence/hash and consistency with corpus/stage counts only; workbook rendering and recalculation not repeated."
+  },
+  "localLinkScope": [
+    "docs/GDD_FR.md",
+    "docs/SOURCES.md",
+    "docs/BIBLE_CORPUS_SILENT_HILL.md"
+  ],
+  "readmeStatisticsReview": {
+    "path": "docs/production/vague21/README.md",
+    "status": "passed",
+    "observedSHA256": "8b55746016fae23a581b46326a421532056ac8b2896a12d6fdb327cf4548b6e2",
+    "scope": "Chiffres et portée documentaire seulement ; les tests natifs et les rendus ne sont pas réexécutés par cette revue. Le producteur peut encore compléter le libellé du build avant le commit.",
+    "verifiedAgainstExistingReports": {
+      "newPNG": 24,
+      "newPNGBytes": 28001765,
+      "activeStages": 55,
+      "totalStages": 123,
+      "missingStages": 68,
+      "missingUnblocked": 53,
+      "missingBlocked": 15,
+      "targetedTests": 137,
+      "auditChecks": 45,
+      "nativeCases": 12,
+      "nativeCheckExecutions": 552,
+      "nativeUniqueAssets": 26,
+      "corpusRecords": 66,
+      "initialCorpusOmissions": 41
+    },
+    "scopeStatements": [
+      "Images statiques avec parallaxe, sans revendication 1:1/UHD.",
+      "552 exécutions répétées de contrôle, pas 552 assertions distinctes.",
+      "browserTest=false, httpTest=false, aucune injection acteur.",
+      "Échecs/SIGKILL et diagnostic intermédiaire non comptés comme réussites finales.",
+      "Les succès CI cités portent seulement sur la base publiée."
+    ]
+  },
+  "canonicalCorpusManifestHashMatches": true,
+  "openFindings": 0
+}

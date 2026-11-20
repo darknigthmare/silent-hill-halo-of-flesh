@@ -1,0 +1,7 @@
+{
+  "kind": "checkout-incomplete",
+  "failedBeforeTests": true,
+  "reason": "The sparse checkout omitted tracked docs/production/research/classic.json and extended.json. npm test stopped at the production-reference build before any Node or Python tests executed.",
+  "resolution": "Materialized the original tracked research directory from the existing baseline checkout. No test, assertion or source data changed.",
+  "nextRun": "validation/gates.json"
+}

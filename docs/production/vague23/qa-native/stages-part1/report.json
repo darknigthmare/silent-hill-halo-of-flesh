@@ -1,0 +1,1220 @@
+{
+  "schema": 1,
+  "label": "stage-pass22-native",
+  "generatedAt": "2026-11-19T20:04:12.394Z",
+  "root": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh",
+  "stageIds": [
+    "ebisugaoka",
+    "book_fire"
+  ],
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "All selected stage IDs resolve exactly",
+      "passed": true
+    },
+    {
+      "name": "Existing test fighters retain combat eligibility",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "ebisugaoka: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "ebisugaoka: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "ebisugaoka: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "ebisugaoka: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "ebisugaoka: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "ebisugaoka: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "ebisugaoka: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "book_fire: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "book_fire: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "book_fire: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "book_fire: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "book_fire: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "book_fire: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "book_fire: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "book_fire: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "book_fire: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "book_fire: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "book_fire: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "book_fire: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "book_fire: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "book_fire: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "book_fire: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "book_fire: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "book_fire: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "book_fire: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "book_fire: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "book_fire: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "book_fire: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "book_fire: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "book_fire: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "book_fire: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "book_fire: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+      "bytes": 1182614,
+      "width": 1536,
+      "height": 1024,
+      "rgbaSha256": "0c4478dcf379d0ee73c21fa9a753a15f96ffec1d36fcb4541e7b1fdb8191dd80"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+      "bytes": 1697023,
+      "width": 1024,
+      "height": 1536,
+      "rgbaSha256": "3a1362834f7de8adb70fab12dbecda3baf65eba0e58d5f6fdcc012bf0c43f3b2"
+    },
+    {
+      "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+      "sha256": "4a4cf5e4c7d954f03feba3c3000340c033e09042792ac9a8746b707304e5e0be",
+      "bytes": 2369728,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "2e2763fa32d567a9fb5add8f19c733c9767db471995ec9b1a601cfafceb5c55d"
+    },
+    {
+      "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+      "sha256": "a2ee94a9cf3e884b3ab6678ad385da2cdbaeb18557572b11e0a3672f2fbd3201",
+      "bytes": 164483,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "d95b1c842e19682b55b9e9151e5f5d704f1311259f16b16a20d684160eb2359a"
+    },
+    {
+      "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+      "sha256": "41ce3e9666c526a1c3daf2fa5e30cbd4fab5bd1f4cdf4230a056bee7ea135d1d",
+      "bytes": 2469012,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "15b5b72c59a75a179671af30cf2e44b4c2f6c745007877a4232b7f209f3497e4"
+    },
+    {
+      "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+      "sha256": "9f531b56161d24a0c8174a8b180f4a15d364e50e0258e002a632227de1e0d0b6",
+      "bytes": 217813,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "03a4f384883aa15c97c5438f280cc5da660ad169b59c22eed94c218e3cf39b23"
+    }
+  ],
+  "cases": [
+    {
+      "stageId": "ebisugaoka",
+      "source": "shf",
+      "scene": "fogworld-corner-shop-main-street",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "book_fire",
+      "source": "bom",
+      "scene": "fire-zone-launch20121016-workbench-room",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    }
+  ],
+  "captures": [
+    {
+      "file": "ebisugaoka.png",
+      "stageId": "ebisugaoka",
+      "sha256": "508ff84661d41088c0c82317d4d50d855ab0a979dec23938d0665d9fd9226ecb",
+      "bytes": 1316638,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "book_fire.png",
+      "stageId": "book_fire",
+      "sha256": "18993c1a59ac313dc5f4c75b2881453c69845e7c9ac8b4f211b150dee2fbf69c",
+      "bytes": 1422154,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "258127cd42f7cdf96792779e5aea16d156a6d15a18fd8d399d469b5749b66db7",
+      "after": "258127cd42f7cdf96792779e5aea16d156a6d15a18fd8d399d469b5749b66db7"
+    },
+    "src/sprite-manifest.js": {
+      "before": "2818aa1b6d4217bf872413f8da19c9c1cf7385a00d103bc8924441dbc7bc517d",
+      "after": "2818aa1b6d4217bf872413f8da19c9c1cf7385a00d103bc8924441dbc7bc517d"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "f7d20e16e4808e56041f6413b7d033e2a109b9559578e0716fed16d6e9978248",
+      "after": "f7d20e16e4808e56041f6413b7d033e2a109b9559578e0716fed16d6e9978248"
+    },
+    "src/fight.js": {
+      "before": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+      "after": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "method": {
+    "renderer": "Actual FightEngine.update/render and the original native Canvas drawImage. Each stage is selected through its normal stage descriptor.",
+    "inputs": "Only registered InputState keydown/keyup callbacks receive synthetic native events. No actor position, facing, health, phase, presentation or clock is assigned.",
+    "decoder": "PNG encoding normalized in memory for native decoding; every decoded RGBA byte is compared before/after.",
+    "scope": "Existing fighters exercise initial stage composition, movement in both directions, release to idle, exact planes, live parallax and cache admission."
+  },
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, actual browser keyboard delivery or service workers.",
+    "No new fighter pose, attack, contact, guard, finisher, stage hazard, original timing or 1:1 artistic fidelity is certified.",
+    "Two static stage planes and their runtime parallax do not constitute a new source animation."
+  ],
+  "memoryPolicy": {
+    "nodeExecArgv": [
+      "--expose-gc"
+    ],
+    "explicitGcAfterSharpDecodeBeforeNativePreflight": true,
+    "engineLogicChanged": false
+  },
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "786e1c10f3801b0fa5ed4b79d9c0b8d64685fcd7ae0233c37a955a9e58179dd3",
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "bom_pyramid_head_129": "3ec8112c0efe5bc73ab7638fa37288f731fd4bcb68d58c40c61fa0e0ea7febde",
+    "bom_butcher_123": "0e5bf88a83144ea003cc77b282f4b136c7c6351c03e7da55dbf5b8807220ddd3"
+  },
+  "testedStageEntryHashes": {
+    "ebisugaoka": "e4e58202bd346764b781b2d58328fda12407ed645f9219a291cbd88c7f533bda",
+    "book_fire": "42c23d8ac32789d5c5ad8c47d473c7ff826f42284660eb42de588ceadeaef80a"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "passed": true,
+  "completedAt": "2026-11-19T20:04:14.946Z"
+}

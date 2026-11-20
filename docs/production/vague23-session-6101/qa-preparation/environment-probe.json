@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-11-19T17:24:05.667Z",
+  "applicationTest": false,
+  "applicationLoaded": false,
+  "httpServerStarted": false,
+  "downloads": 0,
+  "installations": 0,
+  "actorStateInjected": false,
+  "node": "v24.22.3",
+  "runtimeNode": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "runtimeModules": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules",
+  "dependencies": {
+    "@napi-rs/canvas": {
+      "available": true,
+      "version": "0.1.100"
+    },
+    "sharp": {
+      "available": true,
+      "version": "0.35.5"
+    },
+    "playwright": {
+      "available": true,
+      "version": "1.62.1"
+    },
+    "playwright-core": {
+      "available": true,
+      "version": "1.62.1"
+    }
+  },
+  "executables": {
+    "/usr/bin/chromium": true,
+    "/usr/lib/chromium/chromium": true
+  },
+  "native": {
+    "available": true,
+    "canvasCreated": true,
+    "pngEncoded": true,
+    "sharpDecoded": true,
+    "applicationTest": false,
+    "width": 8,
+    "height": 8
+  },
+  "browser": {
+    "available": false,
+    "executable": "/usr/bin/chromium",
+    "attempted": true,
+    "scope": "Single ordinary headless launch and about:blank only; no product behavior.",
+    "defaultExecutable": "/home/agent/.cache/ms-playwright/chromium-1234/chrome-linux64/chrome",
+    "defaultExecutableExists": false,
+    "error": "browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-z4TAEG --remote-debugging-pipe --no-startup-window\n<launched> pid=26\n[pid=26][err] /usr/bin/chromium: 9: [: 5225713664: unexpected operator\n[pid=26][err] [26:26:1119/182406.478190:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)\n[pid=26][err] [1119/182406.484014:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)\nCall log:\n\u001b[2m  - <launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-z4TAEG --remote-debugging-pipe --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=26\u001b[22m\n\u001b[2m  - [pid=26][err] /usr/bin/chromium: 9: [: 5225713664: unexpected operator\u001b[22m\n\u001b[2m  - [pid=26][err] [26:26:1119/182406.478190:FATAL:chrome/browser/process_singleton_posix.cc:297] Check failed: . socket() failed: Operation not permitted (1)\u001b[22m\n\u001b[2m  - [pid=26][err] [1119/182406.484014:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)\u001b[22m\n\u001b[2m  - [pid=26] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=26] <kill>\u001b[22m\n\u001b[2m  - [pid=26] <will force kill>\u001b[22m\n\u001b[2m  - [pid=26] <process did exit: exitCode=null, signal=SIGABRT>\u001b[22m\n\u001b[2m  - [pid=26] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=26] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=26] <gracefully close end>\u001b[22m\n\n    at /workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-preparation/environment-probe.mjs:57:30"
+  },
+  "completedAt": "2026-11-19T17:24:06.493Z",
+  "reportCorrections": [
+    {
+      "field": "dependencies.sharp",
+      "original": {
+        "available": false,
+        "error": "Package subpath './package.json' is not defined by \"exports\" in /opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp/package.json"
+      },
+      "corrected": {
+        "available": true,
+        "version": "0.35.5"
+      },
+      "reason": "The package exports hide package.json; requiring sharp itself and reading sharp.versions.sharp succeeds. Native decoding in the original probe also succeeded.",
+      "correctedAt": "2026-11-19T17:24:57.457Z"
+    }
+  ]
+}

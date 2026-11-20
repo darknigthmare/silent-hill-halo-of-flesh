@@ -1,0 +1,52 @@
+{
+  "schema": "sprite-following-native-qa-summary/1",
+  "date": "2026-11-17",
+  "mode": "actual FightEngine, native Canvas",
+  "browserTest": false,
+  "runs": [
+    {
+      "label": "sprite-following-main",
+      "report": "main/report.json",
+      "visualReview": "main/visual-review.json",
+      "checks": 39,
+      "failedChecks": 0,
+      "passed": true,
+      "portraits": 4,
+      "duels": 2,
+      "finalCapturesVisuallyInspected": 2,
+      "selectionPortraitCapturesVisuallyInspected": 0,
+      "registryAdjustmentRecommended": false
+    },
+    {
+      "label": "sprite-following-arcade",
+      "report": "arcade/report.json",
+      "visualReview": "arcade/visual-review.json",
+      "checks": 39,
+      "failedChecks": 0,
+      "passed": true,
+      "portraits": 4,
+      "duels": 2,
+      "finalCapturesVisuallyInspected": 2,
+      "selectionPortraitCapturesVisuallyInspected": 2,
+      "registryAdjustmentRecommended": false
+    }
+  ],
+  "totalChecks": 78,
+  "failedChecks": 0,
+  "passed": true,
+  "portraits": 8,
+  "duels": 4,
+  "finalCapturesVisuallyInspected": 4,
+  "selectionPortraitCapturesVisuallyInspected": 2,
+  "uniqueCombatIds": [
+    "sh4_walter_sullivan_072",
+    "downpour_bogeyman_115",
+    "arcade_insane_cancer_arcade"
+  ],
+  "limits": [
+    "Check count sums assertions across both runs, not unique test scenarios.",
+    "PNG bytes were verified against the manifest. Registry and manifest remained unchanged within each run; Insane Cancer was imported between runs.",
+    "Native Canvas, not a browser session. No browser flow, source animation or 1:1 fidelity certification.",
+    "The Insane Cancer source establishing full-body framing is a 120x90 native storyboard tile from a third-party Arcade model conversion; exact fine detail remains unverified."
+  ]
+}

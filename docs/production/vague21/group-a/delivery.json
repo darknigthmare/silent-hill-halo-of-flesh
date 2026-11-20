@@ -1,0 +1,1366 @@
+{
+  "schemaVersion": 1,
+  "group": "stage-pass21-a",
+  "scope": "missing-stages-only",
+  "createdAt": "2026-11-19T13:21:06.733595+00:00",
+  "deliveryState": "ready-for-integration",
+  "requestedInitially": [
+    "old_silent_hill",
+    "hospital_nightmare",
+    "sewer_resort",
+    "south_vale",
+    "hotel_otherworld",
+    "prison_meat_locker"
+  ],
+  "stages": [
+    {
+      "stageId": "old_silent_hill",
+      "source": "sh1",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "levin-street-house",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "CL_SH1_01_OLD_SILENT_HILL"
+      ],
+      "worldState": "fixed-normal",
+      "locationNote": "Rues du premier quartier de SH1 ; brouillard et neige distincts de la cendre du film.",
+      "selectedSubLocation": "SH1 original : façade de la maison à la niche, Levin Street ; porche, niche, boîte aux lettres et bande de rue immédiate.",
+      "layers": [
+        {
+          "id": "levin-street-house",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+              "sha256": "b24f46cfebac68dc73b3d227ee2186b97ba9a1ce84e62278e9eb90c38260d2fa",
+              "bytes": 1624541,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-frontage-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png",
+              "sha256": "680e79d56e0381abd08b777cfa4d9450e3cab9312ba80da4555a55d567bc98b9",
+              "bytes": 160823,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Neige blanche et brouillard de SH1 ; aucune cendre de film, personne ou silhouette lointaine.",
+        "Vue de maison utilisée pour les volumes ; seconde capture utilisée seulement pour la chaussée, la brume et la neige, sans fusion de géométries de rues.",
+        "Façade réorientée latéralement, trottoir et chaussée étendus pour le versus. Position, échelle et distance des objets non mesurées.",
+        "Le gros plan périphérique de bardage et boîte aux lettres est une adaptation de cadrage à partir de matériaux visibles, pas une seconde adresse attestée.",
+        "Deux plans statiques ; aucune chute de neige animée ou transition de rue produite."
+      ],
+      "referenceFiles": [
+        "sh1_01_house_key_a.jpg",
+        "sh1_01_a_note_doghouse_a.jpg"
+      ]
+    },
+    {
+      "stageId": "hospital_nightmare",
+      "source": "sh1",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "room204",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH1_07_NIGHTMARE_HOSPITAL"
+      ],
+      "worldState": "fixed-altered",
+      "locationNote": "Alchemilla Otherworld de SH1, avec le Bloodsucker de la chambre 204.",
+      "selectedSubLocation": "Alchemilla Otherworld SH1 : chambre 204, vue native de la plaque Hatter et du Bloodsucker ; décor livré vide.",
+      "layers": [
+        {
+          "id": "room204",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/hospital_nightmare.room204.ce097401c830.png",
+              "sha256": "ce097401c830c49c6b8e798205841730db002e4076d20b7eb69af868a7987ea3",
+              "bytes": 1919049,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-doorjambs",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png",
+              "sha256": "18e549796dbddb1fc60a8be06ac7c47210c44c24f03210074e2b4b8adaaa00a7",
+              "bytes": 296524,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Deux lits anciens, chariot à étagères, fenêtre barrée et plaque turquoise sans inscription lisible repris de la chambre 204.",
+        "Harry, Bloodsucker, tentacules et flaque sanglante retirés pour cette demande de décor sans acteur ni monstre.",
+        "Mobilier reculé et réparti sur la paroi arrière pour un plateau de duel libre ; caméra, nombre exact de divisions murales et matériau du sol non certifiés.",
+        "Motif de sol carré rouillé guidé par la capture 204 ; le preset de matériau du moteur ne constitue pas une mesure du matériau original.",
+        "Deux plans statiques ; aucune animation du Bloodsucker, poche suspendue ou variation de lumière produite."
+      ],
+      "referenceFiles": [
+        "sh1_07_plate_of_hatter_a.jpg"
+      ]
+    },
+    {
+      "stageId": "sewer_resort",
+      "source": "sh1",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "south-tunnel-pipe-bay",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH1_10_SEWERS_TO_RESORT_AREA"
+      ],
+      "worldState": "fixed-normal",
+      "locationNote": "Égouts qui conduisent à la zone touristique dans SH1.",
+      "selectedSubLocation": "SH1 : niveau supérieur, cul-de-sac du tunnel sud avec la clef de sortie, dans les égouts menant à Resort Area.",
+      "layers": [
+        {
+          "id": "south-tunnel-pipe-bay",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+              "sha256": "d8ad023bdfb37cc8541b0d4e943e9e2be772b6315db730d338adaac390281d42",
+              "bytes": 2118832,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-service-struts",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
+              "sha256": "f302d8e9f66995771b44eac9d4af591580d82b9cfb8183f88764d222b9e5e0bf",
+              "bytes": 278076,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Baie documentée de sorties de conduites vert sombre devant structures grillagées rouillées ; aucun emprunt au canal de SH3 ni au passage ultérieur vers le parc.",
+        "Harry, créature et tache de sang retirés. Eau derrière et sous la passerelle, pas de flaque sanglante ni de danger ajouté.",
+        "Caillebotis élargi en plateau latéral ; nombre, proportions et écartement précis des tuyaux et supports reconstruits, non mesurés.",
+        "Avant-plan indépendant de deux fragments de supports rouillés ; aucune grille ou conduite devant les appuis centraux.",
+        "Deux plans statiques ; aucune montée des eaux, vapeur ou animation de créature produite."
+      ],
+      "referenceFiles": [
+        "sh1_10_sewer_exit_key_a.jpg"
+      ]
+    },
+    {
+      "stageId": "south_vale",
+      "source": "sh2",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "neely-sanders-frontage",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "CL_SH2_01_EAST_SOUTH_SIDE"
+      ],
+      "worldState": "fixed-normal",
+      "locationNote": "South Vale Est de SH2 original ; préciser rue exacte et limites de parcours.",
+      "selectedSubLocation": "SH2 original : devanture de Neely’s Bar, angle nord-est Neely/Sanders, South Vale Est ; magasin contigu à gauche, trottoir et bande de chaussée immédiate.",
+      "layers": [
+        {
+          "id": "neely-sanders-frontage",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+              "sha256": "f97d2c2df42aa5076923ef67040f537d1d6cd23a669fc1bd0001cffa639f13d4",
+              "bytes": 2217344,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-street-poles",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/south_vale.near-street-poles.7e6716e17a5e.png",
+              "sha256": "7e6716e17a5e0bc7a0c501257e278f29651e0555cb2b81fd24cf6c99d4270cfa",
+              "bytes": 210049,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Brique brune, porte en bois, fenêtres couvertes de journaux, bande/auvent bleu-vert et magasin sombre attenant repris de la capture native.",
+        "James et textes lisibles retirés. Les textures de journaux restent des motifs illisibles ; aucune enseigne inventée.",
+        "Aucun sang transféré de la capture de Lindsey/Sanders, aucun secteur West South Vale ni élément du remake 2024.",
+        "Façade mise à plat et chaussée étendue pour le duel ; les fragments de poteaux proches sont une interprétation de premier plan, pas un relevé de leur nombre ou position.",
+        "Deux plans statiques ; brouillard peint, sans nouvelle animation météorologique ou interaction de véhicule."
+      ],
+      "referenceFiles": [
+        "sh2_w01_neelys_bar.jpg"
+      ]
+    },
+    {
+      "stageId": "hotel_otherworld",
+      "source": "sh2",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "last-hall-after-egg-doors",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH2_13_NIGHTMARE_HOTEL"
+      ],
+      "worldState": "fixed-altered",
+      "locationNote": "État ruiné du Lakeview après la cassette, SH2 original.",
+      "selectedSubLocation": "SH2 original après la cassette : long couloir après les portes aux œufs et le duo Pyramid Head, avant l’escalier final sous la pluie.",
+      "layers": [
+        {
+          "id": "last-hall-after-egg-doors",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+              "sha256": "23ccf794f57b3017d69a27996d78bdc358815130c1cea185c94e0ea1f932fba4",
+              "bytes": 1938212,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-panel-jambs",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png",
+              "sha256": "061fca74f43466de191d9abd002b4e7eb5ca5d961319fb91c8a998a34df2109e",
+              "bytes": 285111,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Sous-lieu retenu explicitement : couloir post-œufs documenté par la capture native, et non le hall du duo, le sous-sol inondé ou l’escalier en flammes d’Angela.",
+        "Plâtre gris usé, soubassement de bois sombre, appliques triangulaires et plafond bas à traverses réinterprétés en vue latérale ; James retiré.",
+        "Le cadrage, l’espacement des panneaux et des appliques sont reconstruits pour le versus. Ni plan coté ni matériau/physique de sol vérifiés.",
+        "Aucune inondation, incendie ou ruine spectaculaire ajoutée depuis une autre salle. La politique runtime water ne sert pas de preuve visuelle pour ce couloir précis.",
+        "Deux plans statiques ; aucune animation de fuite, poussière ou séquence des boss produite."
+      ],
+      "referenceFiles": [
+        "sh2_w13_final_boss_hallway.jpg"
+      ]
+    },
+    {
+      "stageId": "prison_meat_locker",
+      "source": "sh2",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "second-freezer",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH2_10_THE_LABYRINTH"
+      ],
+      "worldState": "fixed-normal",
+      "locationNote": "Libellé à corriger : la chambre froide du combat Eddie termine le Labyrinthe ; ne pas affirmer une salle ordinaire de Toluca Prison.",
+      "selectedSubLocation": "SH2 original : seconde chambre froide du combat Eddie à la fin du Labyrinthe ; le stageId historique est conservé, ce n’est pas une salle ordinaire de Toluca Prison.",
+      "layers": [
+        {
+          "id": "second-freezer",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+              "sha256": "5437e088da66fda0f9fd9f9ca0bf38289189ca28133bccb33a02519d1877cea1",
+              "bytes": 1710056,
+              "width": 1671,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-freezer-jambs",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.012,
+          "frames": [
+            {
+              "path": "assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
+              "sha256": "4337c644a1714b7b41e07fc6e003c1d11fde8ba1de5e4b90092d3102f285b79a",
+              "bytes": 279546,
+              "width": 1670,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Salle industrielle verdâtre, fluorescents, rails fixes et quartiers de viande animale suspendus ; Eddie, James et corps humains absents.",
+        "Quatre pièces de viande réparties au fond pour dégager le duel ; décompte et placement sont une reconstruction, pas une topologie certifiée de la salle.",
+        "Une correction ciblée a relié les quatre pièces aux crochets du rail. Le premier essai avait des suspensions interrompues et est exclu des assets livrables.",
+        "Aucun déplacement des rails, jet de vapeur ou mécanisme du remake. Sol et humidité non mesurés ; plateau versus distinct des obstacles du combat original.",
+        "Tailles natives conservées : fond 1671×941, premier plan 1670×941. Écart de largeur de 1 pixel normalisé par fit=cover ; aucune mise à l’échelle enregistrée dans les PNG.",
+        "Deux plans statiques ; aucune oscillation de viande, vapeur ou nouvelle animation produite."
+      ],
+      "referenceFiles": [
+        "sh2_w10_boss_4c_eddie.jpg"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "promptKey": "hospital_nightmare_bg",
+      "filename": "hospital_nightmare.room204.png",
+      "stageId": "hospital_nightmare",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-1b76d36e-7abe-4f77-acb5-627c6ccf2940.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/hospital_nightmare.room204.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1919049,
+      "sha256": "ce097401c830c49c6b8e798205841730db002e4076d20b7eb69af868a7987ea3",
+      "mode": "RGB",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "opaque": true,
+        "decodedAlphaRange": [
+          255,
+          255
+        ],
+        "footingLineNormalizedY": 0.825,
+        "visualFooting": "Bande de sol inférieure libre ; lits et chariot en arrière, montants proches aux extrêmes sans barre traversante."
+      },
+      "path": "assets/stages/hospital_nightmare.room204.ce097401c830.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "hospital_nightmare_fg",
+      "filename": "hospital_nightmare.near-doorjambs.png",
+      "stageId": "hospital_nightmare",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-b38b59de-3f26-491e-b217-35042095f4f0.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/hospital_nightmare.near-doorjambs.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 296524,
+      "sha256": "18e549796dbddb1fc60a8be06ac7c47210c44c24f03210074e2b4b8adaaa00a7",
+      "mode": "RGBA",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "alphaZeroFraction": 0.9037348285698306,
+        "alphaAtMost1Fraction": 0.904564903467247,
+        "centralAlphaRange": [
+          0,
+          1
+        ],
+        "footBandAlphaRange": [
+          0,
+          1
+        ],
+        "centralBoxNormalized": [
+          0.08,
+          0,
+          0.92,
+          1
+        ],
+        "footBandNormalized": [
+          0.08,
+          0.75,
+          0.92,
+          0.9
+        ],
+        "footingLineNormalizedY": 0.825,
+        "realTransparency": true,
+        "centralAlphaNote": "Central alpha 0..1/255 as measured; no claim of mathematically all-zero alpha. No central solid object or full-scene matte observed.",
+        "edgeReview": "Native PNG visually inspected; no obvious continuous matte or halo. Final engine composition review remains to be done by integrator."
+      },
+      "path": "assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "prison_meat_locker_bg_fix",
+      "filename": "prison_meat_locker.second-freezer.png",
+      "stageId": "prison_meat_locker",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-f205d5ab-084a-4e05-90a9-a04d47788141.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/prison_meat_locker.second-freezer.png",
+      "width": 1671,
+      "height": 941,
+      "bytes": 1710056,
+      "sha256": "5437e088da66fda0f9fd9f9ca0bf38289189ca28133bccb33a02519d1877cea1",
+      "mode": "RGB",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "opaque": true,
+        "decodedAlphaRange": [
+          255,
+          255
+        ],
+        "footingLineNormalizedY": 0.825,
+        "visualFooting": "Quatre suspensions continues observées après correction ; sol libre sous y=0.825, montants proches sans viande devant les combattants."
+      },
+      "path": "assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "prison_meat_locker_fg",
+      "filename": "prison_meat_locker.near-freezer-jambs.png",
+      "stageId": "prison_meat_locker",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-22161c2b-14e6-4625-8d41-442d69073959.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/prison_meat_locker.near-freezer-jambs.png",
+      "width": 1670,
+      "height": 941,
+      "bytes": 279546,
+      "sha256": "4337c644a1714b7b41e07fc6e003c1d11fde8ba1de5e4b90092d3102f285b79a",
+      "mode": "RGBA",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "alphaZeroFraction": 0.9012962385537109,
+        "alphaAtMost1Fraction": 0.9024976614252896,
+        "centralAlphaRange": [
+          0,
+          1
+        ],
+        "footBandAlphaRange": [
+          0,
+          1
+        ],
+        "centralBoxNormalized": [
+          0.08,
+          0,
+          0.92,
+          1
+        ],
+        "footBandNormalized": [
+          0.08,
+          0.75,
+          0.92,
+          0.9
+        ],
+        "footingLineNormalizedY": 0.825,
+        "realTransparency": true,
+        "centralAlphaNote": "Central alpha 0..1/255 as measured; no claim of mathematically all-zero alpha. No central solid object or full-scene matte observed.",
+        "edgeReview": "Native PNG visually inspected; no obvious continuous matte or halo. Final engine composition review remains to be done by integrator."
+      },
+      "path": "assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "old_silent_hill_bg",
+      "filename": "old_silent_hill.levin-street-house.png",
+      "stageId": "old_silent_hill",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-3090ff2a-87a1-486a-b345-5b49b2ce02a4.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/old_silent_hill.levin-street-house.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1624541,
+      "sha256": "b24f46cfebac68dc73b3d227ee2186b97ba9a1ce84e62278e9eb90c38260d2fa",
+      "mode": "RGB",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "opaque": true,
+        "decodedAlphaRange": [
+          255,
+          255
+        ],
+        "footingLineNormalizedY": 0.825,
+        "visualFooting": "Chaussée continue sous y=0.825 ; niche, marches et boîte aux lettres du fond restent au-dessus du plateau. Avant-plan limité aux bords."
+      },
+      "path": "assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "old_silent_hill_fg",
+      "filename": "old_silent_hill.near-frontage-edges.png",
+      "stageId": "old_silent_hill",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-e1234abc-5c15-4d2a-86c9-456c64415111.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/old_silent_hill.near-frontage-edges.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 160823,
+      "sha256": "680e79d56e0381abd08b777cfa4d9450e3cab9312ba80da4555a55d567bc98b9",
+      "mode": "RGBA",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "alphaZeroFraction": 0.9539804188763862,
+        "alphaAtMost1Fraction": 0.9545963013998139,
+        "centralAlphaRange": [
+          0,
+          1
+        ],
+        "footBandAlphaRange": [
+          0,
+          0
+        ],
+        "centralBoxNormalized": [
+          0.08,
+          0,
+          0.92,
+          1
+        ],
+        "footBandNormalized": [
+          0.08,
+          0.75,
+          0.92,
+          0.9
+        ],
+        "footingLineNormalizedY": 0.825,
+        "realTransparency": true,
+        "centralAlphaNote": "Central alpha 0..1/255 as measured; no claim of mathematically all-zero alpha. No central solid object or full-scene matte observed.",
+        "edgeReview": "Native PNG visually inspected; no obvious continuous matte or halo. Final engine composition review remains to be done by integrator."
+      },
+      "path": "assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "sewer_resort_bg",
+      "filename": "sewer_resort.south-tunnel-pipe-bay.png",
+      "stageId": "sewer_resort",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-9ff5ac16-5661-46db-9c3a-5223a8262701.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/sewer_resort.south-tunnel-pipe-bay.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2118832,
+      "sha256": "d8ad023bdfb37cc8541b0d4e943e9e2be772b6315db730d338adaac390281d42",
+      "mode": "RGB",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "opaque": true,
+        "decodedAlphaRange": [
+          255,
+          255
+        ],
+        "footingLineNormalizedY": 0.825,
+        "visualFooting": "Caillebotis continu à y=0.825, puisards et tuyaux en arrière ; centre et appuis non recouverts par le premier plan."
+      },
+      "path": "assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "sewer_resort_fg",
+      "filename": "sewer_resort.near-service-struts.png",
+      "stageId": "sewer_resort",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-27b77440-9876-40db-8131-fe5ea8562aea.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/sewer_resort.near-service-struts.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 278076,
+      "sha256": "f302d8e9f66995771b44eac9d4af591580d82b9cfb8183f88764d222b9e5e0bf",
+      "mode": "RGBA",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "alphaZeroFraction": 0.9186621938383782,
+        "alphaAtMost1Fraction": 0.9192583732057417,
+        "centralAlphaRange": [
+          0,
+          1
+        ],
+        "footBandAlphaRange": [
+          0,
+          1
+        ],
+        "centralBoxNormalized": [
+          0.08,
+          0,
+          0.92,
+          1
+        ],
+        "footBandNormalized": [
+          0.08,
+          0.75,
+          0.92,
+          0.9
+        ],
+        "footingLineNormalizedY": 0.825,
+        "realTransparency": true,
+        "centralAlphaNote": "Central alpha 0..1/255 as measured; no claim of mathematically all-zero alpha. No central solid object or full-scene matte observed.",
+        "edgeReview": "Native PNG visually inspected; no obvious continuous matte or halo. Final engine composition review remains to be done by integrator."
+      },
+      "path": "assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "south_vale_bg",
+      "filename": "south_vale.neely-sanders-frontage.png",
+      "stageId": "south_vale",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-6c740101-6f16-4942-bd60-0e143f12fbba.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/south_vale.neely-sanders-frontage.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2217344,
+      "sha256": "f97d2c2df42aa5076923ef67040f537d1d6cd23a669fc1bd0001cffa639f13d4",
+      "mode": "RGB",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "opaque": true,
+        "decodedAlphaRange": [
+          255,
+          255
+        ],
+        "footingLineNormalizedY": 0.825,
+        "visualFooting": "Bordure du trottoir au-dessus des appuis ; route plane libre sous y=0.825. Poteaux périphériques fins."
+      },
+      "path": "assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "south_vale_fg",
+      "filename": "south_vale.near-street-poles.png",
+      "stageId": "south_vale",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-59ed6a32-d4c5-43b5-b536-33890157af45.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/south_vale.near-street-poles.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 210049,
+      "sha256": "7e6716e17a5e0bc7a0c501257e278f29651e0555cb2b81fd24cf6c99d4270cfa",
+      "mode": "RGBA",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "alphaZeroFraction": 0.9448311630200997,
+        "alphaAtMost1Fraction": 0.9470347385708983,
+        "centralAlphaRange": [
+          0,
+          1
+        ],
+        "footBandAlphaRange": [
+          0,
+          1
+        ],
+        "centralBoxNormalized": [
+          0.08,
+          0,
+          0.92,
+          1
+        ],
+        "footBandNormalized": [
+          0.08,
+          0.75,
+          0.92,
+          0.9
+        ],
+        "footingLineNormalizedY": 0.825,
+        "realTransparency": true,
+        "centralAlphaNote": "Central alpha 0..1/255 as measured; no claim of mathematically all-zero alpha. No central solid object or full-scene matte observed.",
+        "edgeReview": "Native PNG visually inspected; no obvious continuous matte or halo. Final engine composition review remains to be done by integrator."
+      },
+      "path": "assets/stages/south_vale.near-street-poles.7e6716e17a5e.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "hotel_otherworld_bg",
+      "filename": "hotel_otherworld.last-hall-after-egg-doors.png",
+      "stageId": "hotel_otherworld",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-6a378c3d-b6f2-4b77-9b3d-ab6dfe11eeb0.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/hotel_otherworld.last-hall-after-egg-doors.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1938212,
+      "sha256": "23ccf794f57b3017d69a27996d78bdc358815130c1cea185c94e0ea1f932fba4",
+      "mode": "RGB",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "opaque": true,
+        "decodedAlphaRange": [
+          255,
+          255
+        ],
+        "footingLineNormalizedY": 0.825,
+        "visualFooting": "Sol sombre continu au tiers inférieur, panneaux et appliques lisibles en arrière ; fragments de montants proches uniquement aux bords."
+      },
+      "path": "assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    },
+    {
+      "promptKey": "hotel_otherworld_fg",
+      "filename": "hotel_otherworld.near-panel-jambs.png",
+      "stageId": "hotel_otherworld",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-97ce201f-6b45-4a2f-8e49-a2bdf2afe1f8.png",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/hotel_otherworld.near-panel-jambs.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 285111,
+      "sha256": "061fca74f43466de191d9abd002b4e7eb5ca5d961319fb91c8a998a34df2109e",
+      "mode": "RGBA",
+      "hardlinkVerified": true,
+      "visualInspection": "completed",
+      "qa": {
+        "decodedAlphaRange": [
+          0,
+          255
+        ],
+        "alphaZeroFraction": 0.9006827461369102,
+        "alphaAtMost1Fraction": 0.9012090110795296,
+        "centralAlphaRange": [
+          0,
+          1
+        ],
+        "footBandAlphaRange": [
+          0,
+          1
+        ],
+        "centralBoxNormalized": [
+          0.08,
+          0,
+          0.92,
+          1
+        ],
+        "footBandNormalized": [
+          0.08,
+          0.75,
+          0.92,
+          0.9
+        ],
+        "footingLineNormalizedY": 0.825,
+        "realTransparency": true,
+        "centralAlphaNote": "Central alpha 0..1/255 as measured; no claim of mathematically all-zero alpha. No central solid object or full-scene matte observed.",
+        "edgeReview": "Native PNG visually inspected; no obvious continuous matte or halo. Final engine composition review remains to be done by integrator."
+      },
+      "path": "assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png",
+      "preservation": "native generated PNG bytes; SHA256 and inode verified hardlink; no pixel postprocessing"
+    }
+  ],
+  "references": [
+    {
+      "stageId": "old_silent_hill",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/pics/sh1_01_house_key_a.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_01_house_key_a.jpg",
+      "sha256": "f15395822e55a62f7ac9112081355c830b5d773e437d3d35d53e550a9cc765c4",
+      "bytes": 223676,
+      "width": 1440,
+      "height": 1080,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": true,
+      "edition": "Silent Hill (1999 original)",
+      "usage": "SH1 original : façade de la maison à la niche, Levin Street ; porche, niche, boîte aux lettres et bande de rue immédiate."
+    },
+    {
+      "stageId": "old_silent_hill",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/pics/sh1_01_a_note_doghouse_a.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_01_a_note_doghouse_a.jpg",
+      "sha256": "6f9f3d712e164af6a936def011fdefa88cccac45c5755487ea01a78ff555754c",
+      "bytes": 185453,
+      "width": 1440,
+      "height": 1080,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": true,
+      "edition": "Silent Hill (1999 original)",
+      "usage": "surface/weather only, not house geometry"
+    },
+    {
+      "stageId": "hospital_nightmare",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/pics/sh1_07_plate_of_hatter_a.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_07_plate_of_hatter_a.jpg",
+      "sha256": "d9b11f11d0d7340a2f419b72bc5d61335169025b801a1ed35b639db33b8dbe2f",
+      "bytes": 312777,
+      "width": 1440,
+      "height": 1080,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": true,
+      "edition": "Silent Hill (1999 original)",
+      "usage": "Alchemilla Otherworld SH1 : chambre 204, vue native de la plaque Hatter et du Bloodsucker ; décor livré vide."
+    },
+    {
+      "stageId": "sewer_resort",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough/pics/sh1_10_sewer_exit_key_a.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_10_sewer_exit_key_a.jpg",
+      "sha256": "bab67da53dbc4b53c688418873556f861ee5e7071ae40c61e8b50ca1f0f1e21b",
+      "bytes": 213704,
+      "width": 1440,
+      "height": 1080,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": true,
+      "edition": "Silent Hill (1999 original)",
+      "usage": "SH1 : niveau supérieur, cul-de-sac du tunnel sud avec la clef de sortie, dans les égouts menant à Resort Area."
+    },
+    {
+      "stageId": "south_vale",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w01_neelys_bar.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w01_neelys_bar.jpg",
+      "sha256": "cb151ea07bc508ff3d4ed4161ce3a9059352d3aa3f029de4586cbb3439892a36",
+      "bytes": 66266,
+      "width": 700,
+      "height": 394,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": true,
+      "edition": "Silent Hill 2 (2001 original)",
+      "usage": "SH2 original : devanture de Neely’s Bar, angle nord-est Neely/Sanders, South Vale Est ; magasin contigu à gauche, trottoir et bande de chaussée immédiate."
+    },
+    {
+      "stageId": "prison_meat_locker",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w10_boss_4c_eddie.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w10_boss_4c_eddie.jpg",
+      "sha256": "ae0e15cb3a0994087bb00666c91581f7c71d8c826062dacf9276435e3cf58829",
+      "bytes": 59371,
+      "width": 700,
+      "height": 394,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": true,
+      "edition": "Silent Hill 2 (2001 original)",
+      "usage": "SH2 original : seconde chambre froide du combat Eddie à la fin du Labyrinthe ; le stageId historique est conservé, ce n’est pas une salle ordinaire de Toluca Prison."
+    },
+    {
+      "stageId": "hotel_otherworld",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_final_boss_hallway.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w13_final_boss_hallway.jpg",
+      "sha256": "fb8b53b082c3606a17f142d23d1c29d0892aff5b87f0c7bf7393e6aca325dc25",
+      "bytes": 52771,
+      "width": 700,
+      "height": 394,
+      "scope": "Long hallway after the egg doors and Pyramid Head duo, before the final rainy staircase; original SH2 post-tape hotel",
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": true,
+      "edition": "Silent Hill 2 (2001 original)",
+      "usage": "SH2 original après la cassette : long couloir après les portes aux œufs et le duo Pyramid Head, avant l’escalier final sous la pluie."
+    },
+    {
+      "stageId": "old_silent_hill",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough_01_old_silent_hill_en.htm",
+      "sha256": "05cfec2df6b2eb8c6af40965e12746f18e4ca184a683936582bb8e6cdeec5759",
+      "bytes": 34477,
+      "kind": "location-walkthrough-html",
+      "retainedAsFile": false,
+      "usage": "Reference ID and screenshot chapter/location verification; downloaded HTML content hashed during research."
+    },
+    {
+      "stageId": "hospital_nightmare",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough_07_nightmare_hospital_en.htm",
+      "sha256": "f11f4d0caa4d006b7b7ec221418b2a62c4178f7e5a9ecb2667013f31d148f420",
+      "bytes": 41212,
+      "kind": "location-walkthrough-html",
+      "retainedAsFile": false,
+      "usage": "Reference ID and screenshot chapter/location verification; downloaded HTML content hashed during research."
+    },
+    {
+      "stageId": "sewer_resort",
+      "url": "https://www.silenthillmemories.net/sh1/walkthrough_10_sewers_to_resort_area_en.htm",
+      "sha256": "acf5279438b611bae3a7ba3dd0e187f3314a116df3068a4ee8a1055f3bae77c2",
+      "bytes": 23348,
+      "kind": "location-walkthrough-html",
+      "retainedAsFile": false,
+      "usage": "Reference ID and screenshot chapter/location verification; downloaded HTML content hashed during research."
+    },
+    {
+      "stageId": "south_vale",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough_01_east_south_side_en.htm",
+      "sha256": "508ead3d7c0b151ea164957bbcc0caeaa48160a58c66761346619760714772e0",
+      "bytes": 34725,
+      "kind": "location-walkthrough-html",
+      "retainedAsFile": false,
+      "usage": "Reference ID and screenshot chapter/location verification; downloaded HTML content hashed during research."
+    },
+    {
+      "stageId": "hotel_otherworld",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough_13_nightmare_hotel_en.htm",
+      "sha256": "b65538777353ef0275a5b3c25b48f90cbb9689e222e6c0c3c0c189e5c98f7457",
+      "bytes": 44432,
+      "kind": "location-walkthrough-html",
+      "retainedAsFile": false,
+      "usage": "Reference ID and screenshot chapter/location verification; downloaded HTML content hashed during research."
+    },
+    {
+      "stageId": "prison_meat_locker",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough_10_the_labyrinth_en.htm",
+      "sha256": "d054df8432d764975bd12670b69c0c3b74ba53054fb0e417596801c8836b84fb",
+      "bytes": 68718,
+      "kind": "location-walkthrough-html",
+      "retainedAsFile": false,
+      "usage": "Reference ID and screenshot chapter/location verification; downloaded HTML content hashed during research."
+    }
+  ],
+  "prompts": {
+    "hospital_nightmare_bg": {
+      "key": "hospital_nightmare_bg",
+      "prompt": "Create ONE opaque landscape background PNG, desired 1672 x 941 pixels, for a lateral 2D fighting game. Use the supplied authentic Silent Hill (1999 PS1 original game) screenshot as the architectural/material reference for ALCHEMILLA OTHERWORLD ROOM 204, the room of the Hatter plate and Bloodsucker. This is not SH3's mirror room, not Brookhaven, and not a movie hospital. We need the EMPTY ROOM architecture only: remove Harry, tentacles, all creatures, all persons, the blood puddle, weapons and HUD. Preserve the room's rust-brown and black corroded wall panels, the dark barred window on the rear wall, the two old narrow tubular-metal hospital bedframes with grimy pale blue-green mattresses/sheets, and a small two-shelf rusted utility trolley. A small worn turquoise square plaque may remain high on the rear wall, left of the barred window, with no legible writing or invented emblem. Do not add a mirror, modern medical machines, operating theatre, light portals, glowing symbols or another hospital corridor.\nReframe the same room into a broad level side-view versus composition, mild perspective, no top-down angle: the beds and trolley are entirely in the BACK portion with bases above y=64%, leaving a continuous empty floor across the LOWER 36% of the canvas. Place beds on the rear-left and rear-right, trolley beside the rear-right bed, with no object projecting into the central fight band. The foot line for two fighters is the horizontal line y=82.5%; it must lie on a clearly walkable floor, not on a bed or ledge. Preserve the native room's mottled rusty square floor pattern without claiming exact material physics. Desaturated rust, dirty olive, faint cold illumination, readable shaded detail, textured game scenery adapted from the original rather than an unrelated photoreal modern hospital. Sparse fixed stains only, no active effects. No people, human silhouettes, creature parts, text, watermark, logos, interface, guide lines or multi-view. The full canvas is opaque. This is a source-guided versus reconstruction, not a source screenshot or fidelity certification.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_07_plate_of_hatter_a.jpg"
+      ],
+      "transparent_background": false,
+      "promptFile": "prompts-initial-backgrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "prison_meat_locker_bg": {
+      "key": "prison_meat_locker_bg",
+      "prompt": "Create ONE opaque landscape background PNG, desired 1672 x 941 pixels, for a lateral 2D fighting-game arena. Use the supplied authentic Silent Hill 2 ORIGINAL 2001 screenshot as the visual reference for the SECOND MAIN ROOM of Eddie's meat freezer at the END OF THE LABYRINTH. It is not an ordinary prison cell, not the first smaller Eddie room, and not the 2024 remake. Remove both James and Eddie and all weapons. Preserve the broad dark refrigerated room, the rigid ceiling rails and suspension hooks, plain aged green-grey industrial walls, long fluorescent ceiling fixtures, a few bulky hanging butcher's animal meat cuts, and the dim green-blue cold atmosphere from the original screenshot.\nReframe this exact setting into a level broad lateral view, shallow perspective, no tilted view. All suspended animal meat is confined to the BACK third of the room: three or four dark muted red-brown bulky abattoir cuts hanging on fixed hooks, some softly obscured by light cold haze, with their lowest points above y=64% so the entire lower 36% is clear. Do not reproduce the large near-camera central meat rack of the reference in the fighter plane. Leave the whole horizontal foot line y=82.5% on continuous flat, lightly worn green-grey flooring. Keep enough empty dark wall between hanging cuts for fighter silhouettes to read. Fixed rails overhead, no moving carcass conveyor, no steam jets, no remake fog-machine mechanics, no ice crystals or deep snow. Haze is only faint and behind the combat band. Avoid anatomical closeups: muted environmental animal meat shapes, no human bodies, no faces, no living creatures, no blood spray or bloody floor puddles. No text, number labels, signs, logos, HUD, guides, frame or montage. Detailed restrained original-game environment rendering, not a modern meat factory photograph. Entire canvas opaque; versus adaptation of a documented room, not a fidelity-certified native capture.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w10_boss_4c_eddie.jpg"
+      ],
+      "transparent_background": false,
+      "promptFile": "prompts-initial-backgrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "old_silent_hill_bg": {
+      "key": "old_silent_hill_bg",
+      "prompt": "ONE fully opaque landscape PNG background, desired 1672 x 941 pixels, for a lateral 2D fighting game. Single coherent image, no montage. Level camera and mild side-on perspective. Keep the LOWER 35% as a continuous empty walkable combat floor across the full width; the fighter footing line is y=82.5%. All architectural props must be behind the combat band with their bases above y=66%. No characters, human silhouettes, live animals, monsters, creature parts, weapons, HUD, numbers, readable text, logos, watermarks or guide marks. Grounded, detailed original-game environment reconstruction for a versus layout, not a fidelity-certified game screenshot. Use the two supplied native screenshots of Silent Hill (1999 PS1 original) on LEVIN STREET in OLD SILENT HILL. The first image is the exact HOUSE WITH THE DOGHOUSE frontage and is the architecture reference; the second shows the fog, sparse white snow and roadway surface on the same street, not a layout to merge with another neighborhood. Remove Harry, the papers and stains. Reframe a modest portion of the street facing this house: dark weathered blue-green horizontal clapboard siding on a pale grey concrete plinth, the cropped porch steps toward the left, dim small-paned windows, a small battered doghouse with a dark brown pitched roof and empty arched opening, and one dull metal roadside mailbox. Keep the house and grass verge wholly behind a shallow curb around y=64%, with the empty grey asphalt street filling the lower part of the image. Do not invent an entire city skyline or a complete roof beyond what the view reveals; let upper and side architecture fade into dense lavender-grey daytime fog. A few sparse small white snowflakes in the BACKGROUND only, not movie ash, burning embers or a winter snowdrift. No night Otherworld transition, rusty grating abyss, church, fire truck, movie sign, collapsed road in the fighting lane, cars or telephone-wire tangles. Match the bleak native blue-grey/purple palette and restrained low-frequency old-game material appearance while making the floor readable. Doghouse and mailbox remain small rear props, never central obstacles. No legible address or signs.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_01_house_key_a.jpg",
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_01_a_note_doghouse_a.jpg"
+      ],
+      "transparent_background": false,
+      "promptFile": "prompts-pending-backgrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "sewer_resort_bg": {
+      "key": "sewer_resort_bg",
+      "prompt": "ONE fully opaque landscape PNG background, desired 1672 x 941 pixels, for a lateral 2D fighting game. Single coherent image, no montage. Level camera and mild side-on perspective. Keep the LOWER 35% as a continuous empty walkable combat floor across the full width; the fighter footing line is y=82.5%. All architectural props must be behind the combat band with their bases above y=66%. No characters, human silhouettes, live animals, monsters, creature parts, weapons, HUD, numbers, readable text, logos, watermarks or guide marks. Grounded, detailed original-game environment reconstruction for a versus layout, not a fidelity-certified game screenshot. Use the supplied native Silent Hill (1999 PS1 original) screenshot of the SOUTH TUNNEL EXIT-KEY DEAD END on the UPPER LEVEL of the sewers leading to the RESORT AREA. This is not SH3's hair-dryer canal and not the later sewer passage to the amusement park. Reframe the visible terminal pipe bay laterally: a compact cluster of large corroded dull green elbow outlet pipes and open round pipe ends over a dark recessed sump, aged green-black rectangular masonry/concrete slabs at the sides, and old rusted expanded-metal lattice/service structures behind the pipes. Preserve the close oppressive proportions and the source's dark moss green, old iron and damp black palette. Extend the ribbed/grated service platform across the entire lower combat band with its top surface under y=82.5%; the water stays below and behind the walkway. Match the source grating rather than adding a modern bridge. Remove Harry, item markers, creatures and the vivid red blood patch. No new blood pool or corpse. A faint moist sheen and a few fixed dim water reflections in the rear sump are enough. No SH3 yellow-black caution stripes, cage fluorescent wall fixture, active electrical cable, flood surge, steam jets or swimming creature. Structural pipes and recesses are all behind the fighter lane. No need to show the entire route or infer unseen exits; this is the single documented pipe bay adapted to an open lateral view.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_10_sewer_exit_key_a.jpg"
+      ],
+      "transparent_background": false,
+      "promptFile": "prompts-pending-backgrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "south_vale_bg": {
+      "key": "south_vale_bg",
+      "prompt": "ONE fully opaque landscape PNG background, desired 1672 x 941 pixels, for a lateral 2D fighting game. Single coherent image, no montage. Level camera and mild side-on perspective. Keep the LOWER 35% as a continuous empty walkable combat floor across the full width; the fighter footing line is y=82.5%. All architectural props must be behind the combat band with their bases above y=66%. No characters, human silhouettes, live animals, monsters, creature parts, weapons, HUD, numbers, readable text, logos, watermarks or guide marks. Grounded, detailed original-game environment reconstruction for a versus layout, not a fidelity-certified game screenshot. Use the supplied native Silent Hill 2 ORIGINAL 2001 screenshot of the EXTERIOR OF NEELY'S BAR at the NORTHEAST CORNER OF NEELY AND SANDERS STREET in EAST SOUTH VALE. The arena covers only this bar frontage, the adjacent closed shop window at the left and the immediate sidewalk/road strip. Do not substitute West South Vale, another restaurant, a hospital, or the 2024 remake. Preserve the brown-brick facade, a plain dark wooden entry door left of center, the aged broad dark teal-blue band/awning above the bar's windows, newspaper-covered windows on the right with old wood panels below, and the neighboring large unlit shop window under a faded green striped awning on the far left. The newspaper rectangles should have indistinct worn patterning with NO legible words. Remove James, the nearby readable notices and all labels. Reframe the facade to a level lateral view; shallow curb and sidewalk around y=63-67%, then uninterrupted dark grey asphalt across the lower 33%. The curb must not cross the fighter foot line. Retain the dull street utility pole as a slim rear detail far to one edge, no central obstruction. Restrained original-game grey fog softens the facade at the far sides and upper margins, while weathered brick and boarded glass remain legible. No snow, film ash, fire, blood streaks imported from the Lindsey intersection, road crater, vehicles, bright neon, invented signage or crowds. Muted brown, slate, faded teal and fog grey.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w01_neelys_bar.jpg"
+      ],
+      "transparent_background": false,
+      "promptFile": "prompts-pending-backgrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "hotel_otherworld_bg": {
+      "key": "hotel_otherworld_bg",
+      "prompt": "ONE fully opaque landscape PNG background, desired 1672 x 941 pixels, for a lateral 2D fighting game. Single coherent image, no montage. Level camera and mild side-on perspective. Keep the LOWER 35% as a continuous empty walkable combat floor across the full width; the fighter footing line is y=82.5%. All architectural props must be behind the combat band with their bases above y=66%. No characters, human silhouettes, live animals, monsters, creature parts, weapons, HUD, numbers, readable text, logos, watermarks or guide marks. Grounded, detailed original-game environment reconstruction for a versus layout, not a fidelity-certified game screenshot. Use the supplied native Silent Hill 2 ORIGINAL 2001 screenshot of the LONG HALLWAY AFTER THE EGG DOORS AND THE PYRAMID HEAD DUO, BEFORE THE FINAL RAINY STAIRCASE, in LAKEVIEW HOTEL'S RUINED POST-VIDEOTAPE STATE. This specific hallway is the chosen sub-location. It is not the intact normal hotel, not Angela's burning staircase, not the flooded basement, and not the 2024 remake. Remove James. Preserve the tired pale-grey stained plaster above dark weathered brown wood wainscoting, plain wall divisions, a few dim triangular old wall sconces, the low flat panelled ceiling with simple transverse beams, and a worn dark continuous floor. Reframe a short segment of the visible corridor wall laterally so two fighters can stand on the open lower third; suggest the hallway receding only slightly at the outer ends. No deep central vanishing-point tunnel dominating the canvas and no new grand lobby, stairway, chandelier or fireplace. Small scratches, peeling damp patches and soot-dark age are subtle and match the reference; do not add flames, heavy charred rubble, collapsing ceiling, a dramatic pool or a new blood trail. The middle wall can remain largely bare to keep the silhouettes legible. The old wood-panel framing and faint fixtures establish the hotel corridor. Footing stays flat and clear across y=82.5%, with no door threshold or prop under the fighters. No text or supernatural symbols.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w13_final_boss_hallway.jpg"
+      ],
+      "transparent_background": false,
+      "promptFile": "prompts-pending-backgrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "prison_meat_locker_bg_fix": {
+      "key": "prison_meat_locker_bg_fix",
+      "prompt": "Targeted correction to the supplied Silent Hill 2 original second meat-freezer room background. Preserve the same 1672 x 941 canvas, camera, walls, fluorescent lamps, empty floor band, colors, haze, positions and shapes of the FOUR hanging animal meat cuts. Fix ONE concrete physical defect: each of those four meat cuts must be visibly suspended from the fixed ceiling rail. Add or align a thin dark vertical hanger/rod and a small iron hook that CONTINUOUSLY TOUCHES the top of each meat cut, with no air gap between hook and meat. Match supports to the existing meat centers around x=21%, 33%, 62% and 80%. The source contains an extra empty hook near the middle; it may remain empty. Make the connections subtly visible despite the haze, rather than moving or floating the meat. Do not change the number or shape of meat cuts, do not add a human body or any person, do not touch the lower combat floor, no moving conveyor, no text, no new scenery or other edits. Opaque single background PNG.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/prison_meat_locker.second-freezer-draft.png"
+      ],
+      "transparent_background": false,
+      "promptFile": "prompt-meat-connection-fix.json",
+      "tool": "image_gen__imagegen"
+    },
+    "hospital_nightmare_fg": {
+      "key": "hospital_nightmare_fg",
+      "prompt": "Create ONE genuinely transparent foreground/parallax PNG aligned to the supplied 1672 x 941 empty Alchemilla Otherworld ROOM 204 background from Silent Hill 1999. The reference is only for material, color, lighting, canvas and camera alignment: DO NOT duplicate its room, floor, beds, trolley, window or plaque. Output just two very narrow near-doorframe/jamb fragments at the extreme left and right, corroded dark red-brown iron and worn dirty wall paint matching the room. Restrict all visible material to x=0%-4.5% and x=95.5%-100%; no joining horizontal bar. Detailed irregular edges with restrained dull rust rim light, no thick glowing outline. The ENTIRE central region x=8%-92%, from top to bottom, must be truly alpha 0, including the foot band y=75%-90%. No floor strip, background rectangle, dark matte, haze, shadows across transparency, vignette, checkerboard, people, tentacles, bed legs, meat, text, logo or HUD. Canvas desired 1672 x 941, separate layer, useful sparse architectural framing rather than a blank image. Match the image's original-game environment style; actual clean RGBA transparency.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/hospital_nightmare.room204.png"
+      ],
+      "transparent_background": true,
+      "promptFile": "prompt-hospital-foreground.json",
+      "tool": "image_gen__imagegen"
+    },
+    "old_silent_hill_fg": {
+      "key": "old_silent_hill_fg",
+      "filename": "old_silent_hill.near-frontage-edges.png",
+      "prompt": "Create ONE standalone PNG foreground layer with GENUINE alpha transparency, same camera, landscape canvas and horizon as the supplied completed background. The supplied scene is only a lighting/material/alignment reference, not content to duplicate. Remove the entire background scene: no opaque or semitransparent full-frame matte, no floor, walls, sky, fog sheet or black rectangle. The empty area must have alpha zero, not black pixels. Only two narrow near-camera edge fragments are visible, cropped by the canvas sides. Restrict all visible objects to the outermost 4.5% of the left and right edges. Keep the entire central 8%-92% of the canvas fully transparent at every height, especially the fighter foot band y=75%-90% and its exact support line y=82.5%. No horizontal bar, arch, threshold, railing or shadow crossing the center. Soft edge antialiasing only around the fragments, no glow or halo. Match the reference's subdued color and direction of light. No actor, person, creature, silhouette, weapon, text, logo, HUD, guide or border. This is a sparse independent near plane for lateral parallax; do not render a second full scene. Target canvas 1672 x 941. Silent Hill (1999) foggy Levin Street house-with-doghouse frontage. At the far left, show only a thin near-camera cropped vertical corner of the house's weathered grey-blue clapboard siding and pale worn concrete plinth. At the far right, show only a cropped thin sliver of the dull weathered mailbox support already evidenced in the native reference; no second complete mailbox, no doghouse or steps. The edge pieces are restrained framing adaptations from these visible materials, not new street architecture. No snow flakes or translucent fog in the central alpha area. Match the purple-grey fogged lighting and unlit old timber/metal of the supplied finished background.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/old_silent_hill.levin-street-house.png",
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_01_house_key_a.jpg"
+      ],
+      "transparent_background": true,
+      "promptFile": "prompts-other-foregrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "prison_meat_locker_fg": {
+      "key": "prison_meat_locker_fg",
+      "filename": "prison_meat_locker.near-freezer-jambs.png",
+      "prompt": "Create ONE standalone PNG foreground layer with GENUINE alpha transparency, same camera, landscape canvas and horizon as the supplied completed background. The supplied scene is only a lighting/material/alignment reference, not content to duplicate. Remove the entire background scene: no opaque or semitransparent full-frame matte, no floor, walls, sky, fog sheet or black rectangle. The empty area must have alpha zero, not black pixels. Only two narrow near-camera edge fragments are visible, cropped by the canvas sides. Restrict all visible objects to the outermost 4.5% of the left and right edges. Keep the entire central 8%-92% of the canvas fully transparent at every height, especially the fighter foot band y=75%-90% and its exact support line y=82.5%. No horizontal bar, arch, threshold, railing or shadow crossing the center. Soft edge antialiasing only around the fragments, no glow or halo. Match the reference's subdued color and direction of light. No actor, person, creature, silhouette, weapon, text, logo, HUD, guide or border. This is a sparse independent near plane for lateral parallax; do not render a second full scene. Target canvas 1671 x 941, exactly the dimensions of the supplied background. Silent Hill 2 ORIGINAL 2001, the second main freezer room of the Eddie fight at the end of the Labyrinth. Show two thin cropped near-camera dark green-grey industrial wall/jamb fragments at the extreme sides, with subtle old metallic wear and dim cool fluorescent reflections. No hanging meat, hooks, rail, door leaf, knobs or room content on this layer. No steam, breath cloud, frost plume or moving mechanism. Keep the full lower middle transparent. Match the completed rear room's flat continuous combat-floor alignment without drawing any of that floor.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/prison_meat_locker.second-freezer.png",
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w10_boss_4c_eddie.jpg"
+      ],
+      "transparent_background": true,
+      "promptFile": "prompts-other-foregrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "sewer_resort_fg": {
+      "key": "sewer_resort_fg",
+      "filename": "sewer_resort.near-service-struts.png",
+      "prompt": "Create ONE standalone PNG foreground layer with GENUINE alpha transparency, same camera, landscape canvas and horizon as the supplied completed background. The supplied scene is only a lighting/material/alignment reference, not content to duplicate. Remove the entire background scene: no opaque or semitransparent full-frame matte, no floor, walls, sky, fog sheet or black rectangle. The empty area must have alpha zero, not black pixels. Only two narrow near-camera edge fragments are visible, cropped by the canvas sides. Restrict all visible objects to the outermost 4.5% of the left and right edges. Keep the entire central 8%-92% of the canvas fully transparent at every height, especially the fighter foot band y=75%-90% and its exact support line y=82.5%. No horizontal bar, arch, threshold, railing or shadow crossing the center. Soft edge antialiasing only around the fragments, no glow or halo. Match the reference's subdued color and direction of light. No actor, person, creature, silhouette, weapon, text, logo, HUD, guide or border. This is a sparse independent near plane for lateral parallax; do not render a second full scene. Target canvas 1672 x 941. Silent Hill (1999) upper south-tunnel exit-key dead-end pipe bay in the sewer leading to Resort Area. Show only two slim corroded dark-green/black vertical service strut fragments, clipped at the extreme sides, with rusty iron texture matching the original lattice supports. No chainlink mesh or pipe across the center; do not duplicate the outlet-pipe bay, sump, water or grated combat platform. No yellow hazard stripes, lamp, cable, steam, creature or modern catwalk. These sparse close structural fragments provide depth against the background's rear rusty lattice, while all fighter space stays transparent.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/sewer_resort.south-tunnel-pipe-bay.png",
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh1_10_sewer_exit_key_a.jpg"
+      ],
+      "transparent_background": true,
+      "promptFile": "prompts-other-foregrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "south_vale_fg": {
+      "key": "south_vale_fg",
+      "filename": "south_vale.near-street-poles.png",
+      "prompt": "Create ONE standalone PNG foreground layer with GENUINE alpha transparency, same camera, landscape canvas and horizon as the supplied completed background. The supplied scene is only a lighting/material/alignment reference, not content to duplicate. Remove the entire background scene: no opaque or semitransparent full-frame matte, no floor, walls, sky, fog sheet or black rectangle. The empty area must have alpha zero, not black pixels. Only two narrow near-camera edge fragments are visible, cropped by the canvas sides. Restrict all visible objects to the outermost 4.5% of the left and right edges. Keep the entire central 8%-92% of the canvas fully transparent at every height, especially the fighter foot band y=75%-90% and its exact support line y=82.5%. No horizontal bar, arch, threshold, railing or shadow crossing the center. Soft edge antialiasing only around the fragments, no glow or halo. Match the reference's subdued color and direction of light. No actor, person, creature, silhouette, weapon, text, logo, HUD, guide or border. This is a sparse independent near plane for lateral parallax; do not render a second full scene. Target canvas 1672 x 941. Silent Hill 2 ORIGINAL 2001 East South Vale, Neely's Bar at the northeast Neely/Sanders corner. Show only extremely narrow close cropped dull utility-pole fragments at the outer left and right sides, restrained near-plane interpretations of the source's street post; old brown-black wood with a little faded grey wear. Do not add a sign, wires, banners or readable papers. No facade, awning, glass, brick, sidewalk, road, curb, fog sheet, snow or blood in the layer. Match the supplied finished facade's muted fog-grey/brown lighting. No duplicate complete pole visible within the central field.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/south_vale.neely-sanders-frontage.png",
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w01_neelys_bar.jpg"
+      ],
+      "transparent_background": true,
+      "promptFile": "prompts-other-foregrounds.json",
+      "tool": "image_gen__imagegen"
+    },
+    "hotel_otherworld_fg": {
+      "key": "hotel_otherworld_fg",
+      "filename": "hotel_otherworld.near-panel-jambs.png",
+      "prompt": "Create ONE standalone PNG foreground layer with GENUINE alpha transparency, same camera, landscape canvas and horizon as the supplied completed background. The supplied scene is only a lighting/material/alignment reference, not content to duplicate. Remove the entire background scene: no opaque or semitransparent full-frame matte, no floor, walls, sky, fog sheet or black rectangle. The empty area must have alpha zero, not black pixels. Only two narrow near-camera edge fragments are visible, cropped by the canvas sides. Restrict all visible objects to the outermost 4.5% of the left and right edges. Keep the entire central 8%-92% of the canvas fully transparent at every height, especially the fighter foot band y=75%-90% and its exact support line y=82.5%. No horizontal bar, arch, threshold, railing or shadow crossing the center. Soft edge antialiasing only around the fragments, no glow or halo. Match the reference's subdued color and direction of light. No actor, person, creature, silhouette, weapon, text, logo, HUD, guide or border. This is a sparse independent near plane for lateral parallax; do not render a second full scene. Target canvas 1672 x 941. Match the supplied completed lateral background of the ORIGINAL 2001 Silent Hill 2 post-videotape Lakeview Hotel, specifically the long hallway after the egg doors and before the final rainy staircase. Show only two thin close cropped worn dark-brown wood panel/jamb strips at the extreme left and right edges; the upper ends may include very narrow weathered pale-grey plaster edges, all inside the same 4.5% edge zones. Keep these fragments simple and dim, with the same brown-grey lighting as the scene. Do not duplicate the wall, sconces, ceiling beams, dark floor, or add a door leaf, threshold, signs, chains, fire, flood or person. They are an isolated near architectural plane, leaving all middle space and the fighter floor band transparent.",
+      "referenced_image_paths": [
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/hotel_otherworld.last-hall-after-egg-doors.png",
+        "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w13_final_boss_hallway.jpg"
+      ],
+      "transparent_background": true,
+      "promptFile": "prompt-hotel-foreground.json",
+      "tool": "image_gen__imagegen"
+    }
+  },
+  "provenance": {
+    "generator": "integrated image_gen__imagegen; one output image per call",
+    "skill": "e0/imagegen",
+    "nativePixelPreservation": true,
+    "assetStorage": "hardlinks to original imagegen outputs, byte-identical SHA256",
+    "repositoryEdited": false,
+    "repoSnapshots": [
+      {
+        "path": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/AGENTS.md",
+        "sha256": "bf4ce1c34ca892b685a0d6b9762e3903854cee9f782dbb160ee30da08c651282",
+        "bytes": 2241
+      },
+      {
+        "path": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/GAMEDEV_GUIDANCE.md",
+        "sha256": "59bae548417db87371fc4295cec9a681818aa2dac8c36540c74061f40c25aa16",
+        "bytes": 3303
+      },
+      {
+        "path": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/data/stages.json",
+        "sha256": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+        "bytes": 1351594
+      },
+      {
+        "path": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/research/classic.json",
+        "sha256": "677a0580a8abc6fc816e8f4fb028b96d5df0576c8c7f12d2049b35e4eba7e9da",
+        "bytes": 591004
+      },
+      {
+        "path": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/src/stage-bitmaps.js",
+        "sha256": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+        "bytes": 9122
+      },
+      {
+        "path": "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/src/stage-bitmap-manifest.js",
+        "sha256": "53bb9214cf150b6a3ce567dcec3759daf3603a71565737dc72222afcb2e993f0",
+        "bytes": 80039
+      }
+    ],
+    "runtimePolicySnapshot": "runtime-policy-snapshot.json",
+    "reconstructionStatus": "source-guided versus adaptation; fidelity unverified; no 1:1, UHD or animation certification",
+    "sceneSelection": "All six runtime referencePolicy.sceneId values were null. scene is an explicit descriptor label for the chosen sub-room, not a fabricated runtime sceneId."
+  },
+  "qa": {
+    "assetAudit": "asset-audit.json",
+    "assetCount": 12,
+    "stageCount": 6,
+    "opaqueBackgrounds": 6,
+    "realAlphaForegrounds": 6,
+    "nativeGenerationAttempts": 13,
+    "rejectedGenerationAttempts": 1,
+    "visualInspection": "All twelve selected PNG outputs inspected; details per stage and asset.",
+    "imageDecoder": "Pillow load and metadata/alpha read only; no image save or pixel modifications",
+    "foregroundCentralRegion": "x=8..92%, all heights; maximum alpha1/255 on selected foregrounds",
+    "footingLineNormalizedY": 0.825,
+    "layers": "Two independent static PNGs per stage; background parallaxX=0, foreground parallaxX=.012",
+    "runtimeValidationReport": "validation-report.json",
+    "engineRenderExecutedHere": false,
+    "limitations": [
+      "Side-on camera, prop spacing and scales are reconstructed for versus; native screenshots are location/material evidence, not proof of pixel identity.",
+      "Sparse foreground framing is adapted from source materials and deliberately peripheral.",
+      "Meat locker native pair differs by one pixel in width (1671 vs1670); fit cover controls normalized framing.",
+      "Small alpha1/255 samples exist in otherwise transparent central regions; measured exactly, no false all-zero claim.",
+      "Engine composition, HUD readability and dynamic parallax remain for parent integration QA; no attack tests or browser run claimed."
+    ]
+  },
+  "deferred": [],
+  "rejectedCandidate": {
+    "promptKey": "prison_meat_locker_bg",
+    "filename": "prison_meat_locker.second-freezer-draft.png",
+    "stageId": "prison_meat_locker",
+    "role": "rejected-background",
+    "originalOutput": "/workspace/scratch/8edddaaaab76/generated_images/exec-b0084f91-898c-4b48-9cf8-9ec3e4fc4f50.png",
+    "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/prison_meat_locker.second-freezer-draft.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1938411,
+    "sha256": "42b628f50e2ec2393202f17f88c96e7af6e6ce12f7e51797307fbbb4007e3ad2",
+    "mode": "RGB",
+    "hardlinkVerified": true,
+    "visualInspection": "completed",
+    "qa": {
+      "opaque": true,
+      "decodedAlphaRange": [
+        255,
+        255
+      ]
+    },
+    "reason": "Visible gaps between hooks and meat; second meat piece had no continuous support. Superseded by targeted imagegen correction; do not integrate."
+  },
+  "rejectedReferenceExamples": [
+    {
+      "stageId": "south_vale",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w01_bloody_marks.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w01_bloody_marks.jpg",
+      "sha256": "92c2231361c4922897f361c6f4abad53c91fdc5b098d44fc7172ec6cf4bff138",
+      "bytes": 51999,
+      "width": 700,
+      "height": 394,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": false,
+      "edition": "Silent Hill 2 (2001 original)",
+      "reason": "Insufficient architecture for the selected sub-room or different sub-location; not fed to image generation and not used as geometry evidence."
+    },
+    {
+      "stageId": "hotel_otherworld",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_flooded_basement.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w13_flooded_basement.jpg",
+      "sha256": "2531ff937a7d34cb476b24ce5e1acd8c40e561a1530f2116e9793580fea87019",
+      "bytes": 72557,
+      "width": 700,
+      "height": 394,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": false,
+      "edition": "Silent Hill 2 (2001 original)",
+      "reason": "Insufficient architecture for the selected sub-room or different sub-location; not fed to image generation and not used as geometry evidence."
+    },
+    {
+      "stageId": "hotel_otherworld",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_reading_room_recording.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w13_reading_room_recording.jpg",
+      "sha256": "7267510a6e6d570e195d53d6c8f1ac12135a809932e6e7ba2f5f6e2330696345",
+      "bytes": 68948,
+      "width": 700,
+      "height": 394,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": false,
+      "edition": "Silent Hill 2 (2001 original)",
+      "reason": "Insufficient architecture for the selected sub-room or different sub-location; not fed to image generation and not used as geometry evidence."
+    },
+    {
+      "stageId": "hotel_otherworld",
+      "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w13_egg_door.jpg",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass21-a/references/sh2_w13_egg_door.jpg",
+      "sha256": "7990ba579024a38b132421e5c63cb05dba32ba7ff9a90ca7240098e2011fb55a",
+      "bytes": 110696,
+      "width": 700,
+      "height": 394,
+      "kind": "native-gameplay-screenshot",
+      "visuallyInspected": true,
+      "selected": false,
+      "edition": "Silent Hill 2 (2001 original)",
+      "reason": "Insufficient architecture for the selected sub-room or different sub-location; not fed to image generation and not used as geometry evidence."
+    }
+  ]
+}

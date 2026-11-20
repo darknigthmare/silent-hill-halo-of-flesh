@@ -1,0 +1,190 @@
+{
+  "wave": 8,
+  "status": "integrated-candidate",
+  "fidelity": "unverified",
+  "method": "Six images indépendantes produites sur référence, enregistrées en PNG à leur résolution native. Le moteur compose les deux plans de chaque pièce puis les combattants.",
+  "rooms": [
+    {
+      "stageId": "woodside",
+      "game": "sh2",
+      "scene": "woodside-208-clock-room",
+      "sourceGuide": "https://www.silenthillmemories.net/sh2/walkthrough_02_wood_side_apts_en.htm",
+      "sources": [
+        {
+          "url": "https://www.silenthillmemories.net/sh2/puzzles/sh2_clock_puzzle_01.jpg",
+          "sha256": "d73fc5dffa31885ad204a500f3bebeb7be81395a3892a11d6181635dc96634c6",
+          "size": [
+            700,
+            394
+          ],
+          "file": "docs/production/wave8-stages/references/sh2_clock_puzzle_01.jpg",
+          "type": "Capture de l’édition originale du jeu, publiée dans le guide Silent Hill Memories."
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w02_deadman_room_208.jpg",
+          "sha256": "fb74d661e0b41ebad2d818f36932b48c1fd292b99927e5e32795171fe963ae2b",
+          "size": [
+            700,
+            394
+          ],
+          "file": "docs/production/wave8-stages/references/sh2_w02_deadman_room_208.jpg",
+          "type": "Capture de l’édition originale du jeu, publiée dans le guide Silent Hill Memories."
+        }
+      ],
+      "notes": "Appartement 208 avant déplacement de l’horloge. Le meuble fermé forme le plan rapproché. Échelle, éclairage et cadrage latéral adaptés au duel.",
+      "assets": [
+        {
+          "path": "assets/stages/woodside.clock-room.da94acd4e920.png",
+          "sha256": "da94acd4e92079ab84490684c78ff3b3c7656c172e3bc2aac49be78ce6597e4f",
+          "bytes": 2219586,
+          "width": 1672,
+          "height": 941,
+          "alpha": {
+            "transparentPixels": 0,
+            "pixelsAbove240": 1573352,
+            "totalPixels": 1573352
+          },
+          "generationReferences": [
+            "https://www.silenthillmemories.net/sh2/puzzles/sh2_clock_puzzle_01.jpg",
+            "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w02_deadman_room_208.jpg"
+          ],
+          "prompt": "Build the empty backdrop layer of the original 2001 Silent Hill 2 Wood Side apartment 208 clock-room encounter. Preserve the rotten muted olive floral wallpaper, tall closed louvered wooden shutters at far left, scuffed gray painted dado panelling, and dirty small patterned brown floor as in the source. The 2001 room's old wooden television can be glimpsed off at the far left through the existing threshold to the adjoining sitting space. The FRONT RIGHT quarter of the back wall has a plain uninterrupted stretch of original wallpaper and panelling reserved for the grandfather clock drawn in another layer. Do not paint any clock or its shadow into this base image. The room is cramped, shabby and domestic, ceiling present, cloudy low-key light from the player's implied fixed soft spotlight. No corpse, people, blood, writing, overlays or extra set pieces. Environment plate for Silent Hill: Halo of Flesh, one 16:9 opaque edge-to-edge landscape bitmap for a two-dimensional side-on fighting stage. Use the original release's material, lighting and color cues, reconstructed for a lateral versus camera, an open floor lane roughly from 62% to 95% down the canvas, principal floor line horizontal. Low camera angle grazing the lane, headroom for HUD, no HUD, title, lettering, border or foreground framing. No fighters in the image. Highest native resolution."
+        },
+        {
+          "path": "assets/stages/woodside.grandfather-clock.bc7fec047ff5.png",
+          "sha256": "bc7fec047ff50a86de01f366d1c5fa5719ba3070986e26c011a3c07b9f079896",
+          "bytes": 1640280,
+          "width": 1024,
+          "height": 1536,
+          "alpha": {
+            "transparentPixels": 1064872,
+            "pixelsAbove240": 493174,
+            "totalPixels": 1572864
+          },
+          "generationReferences": [
+            "https://www.silenthillmemories.net/sh2/puzzles/sh2_clock_puzzle_01.jpg"
+          ],
+          "prompt": "One whole dark oak grandfather clock, identical in silhouette, finish and part count to the ORIGINAL 2001 Silent Hill 2 Wood Side Apartment 208 clock shown in the reference. Tall narrow rectangular case, a carved segmental-arched bonnet with short side projections, dusty dull brass dial inside the upper arch, a long vertical glazed panel with the brass pendulum visible, worn molding and a two-step square plinth. The real clock was a substantial but ordinary, restrained 20th-century floor clock. Eyes at middle case height, nearly straight-on with a very slight glimpse of its right side, original game palette. Its door is closed. Entire fixture, plinth to bonnet, transparent clearance all around, slightly brighter soft game lighting from upper left. True alpha isolated single prop, no floor, wall, person, lamp, clock hands spilling outside, poster, graphics or cast shadow."
+        }
+      ]
+    },
+    {
+      "stageId": "shopping_mall",
+      "game": "sh3",
+      "scene": "central-square-happy-burger",
+      "sourceGuide": "https://www.silenthillmemories.net/sh3/walkthrough_02_shopping_center_en.htm",
+      "sources": [
+        {
+          "url": "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_shopping_center_01.jpg",
+          "sha256": "e48b20a11193e3e1c2c4f59785ff6c9e24b2aefb370ffb0530272b933de3b074",
+          "size": [
+            1920,
+            1080
+          ],
+          "file": "docs/production/wave8-stages/references/sh3_02_shopping_center_01.jpg",
+          "type": "Capture de l’édition originale du jeu, publiée dans le guide Silent Hill Memories."
+        }
+      ],
+      "notes": "Salle normale de Happy Burger. Une table et ses condiments forment le plan rapproché à gauche. Répartition du mobilier et cadrage adaptés au duel.",
+      "assets": [
+        {
+          "path": "assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
+          "sha256": "2f61daa0c6a6d925ddb0d6cf7b8e08f6f314879979d628a1f4a3cb82d1d545cb",
+          "bytes": 1872785,
+          "width": 1672,
+          "height": 941,
+          "alpha": {
+            "transparentPixels": 0,
+            "pixelsAbove240": 1573352,
+            "totalPixels": 1573352
+          },
+          "generationReferences": [
+            "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_shopping_center_01.jpg"
+          ],
+          "prompt": "Build a faithful lateral view of the dining area of the NORMAL Happy Burger restaurant inside the Central Square mall in the original 2003 Silent Hill 3, based on the supplied in-game screenshot of Heather's starting table. Exact major cues are the amber-red light through horizontal wooden Venetian blinds, dark waist-high paneling beneath and short wood partition at the rear right, one broad-leaf potted palm by this partition, and worn brown wood plank flooring. Keep the lower half open for two fighters. Put just a small dark table by the far-left background window as a distant repeat of the basic dining furniture, and reserve the far RIGHT for the separate foreground table. Do not put any dining table or chairs on the right of the base image. Seen almost straight across with gentle natural depth, a quiet 2003 shopping mall, textured and uneasy, not an American 1950s diner. No red vinyl booths, neon, menu signage, characters or new story events. Soft amber horizontal slats of light. Environment plate for Silent Hill: Halo of Flesh, one 16:9 opaque edge-to-edge landscape bitmap for a two-dimensional side-on fighting stage. Use the original release's material, lighting and color cues, reconstructed for a lateral versus camera, an open floor lane roughly from 62% to 95% down the canvas, principal floor line horizontal. Low camera angle grazing the lane, headroom for HUD, no HUD, title, lettering, border or foreground framing. No fighters in the image. Highest native resolution."
+        },
+        {
+          "path": "assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
+          "sha256": "459203f86106b40cc83677ddd760f7f965b57122be9a4ea4c50bd0909a8c8c78",
+          "bytes": 887489,
+          "width": 1672,
+          "height": 941,
+          "alpha": {
+            "transparentPixels": 1082437,
+            "pixelsAbove240": 452254,
+            "totalPixels": 1573352
+          },
+          "generationReferences": [
+            "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_shopping_center_01.jpg"
+          ],
+          "prompt": "One complete small dining table from Happy Burger in the original Silent Hill 3 opening, with its brown wood board top on four simple squared dark legs, exactly like the table at which Heather sits in the supplied game frame. On the table keep the small condiment squeeze bottles / salt and pepper caddy gathered at one end and a single waxed paper cup and modest burger tray near the other end. Shallow angled view from the room at dining height, broad front long edge nearly horizontal, wood and condiment silhouettes clearly readable. Warm amber raking light from upper left filters across wooden top. One compact set-piece, all four feet and all condiment tips fit, spacious transparency around the silhouette and between the legs. No chairs, floor, people, writing, logo, checkerboard pattern, ground shadow or surrounding wall. Actual transparent alpha."
+        }
+      ]
+    },
+    {
+      "stageId": "blue_creek",
+      "game": "sh2",
+      "scene": "blue-creek-stairwell-before-drainage",
+      "sourceGuide": "https://www.silenthillmemories.net/sh2/walkthrough_03_blue_creek_apts_en.htm",
+      "sources": [
+        {
+          "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1b_pyramid_head.jpg",
+          "sha256": "e9d3be73f6e0439e4702e213c01db0ed69ab9774b041df174de6df3f2e1f66de",
+          "size": [
+            700,
+            394
+          ],
+          "file": "docs/production/wave8-stages/references/sh2_w03_boss_1b_pyramid_head.jpg",
+          "type": "Capture de l’édition originale du jeu, publiée dans le guide Silent Hill Memories."
+        },
+        {
+          "url": "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1c_pyramid_head.jpg",
+          "sha256": "678aeced631f02b5d066eb3d7e95b05110fc8c187955124645cd8665018e90a4",
+          "size": [
+            700,
+            394
+          ],
+          "file": "docs/production/wave8-stages/references/sh2_w03_boss_1c_pyramid_head.jpg",
+          "type": "Capture de l’édition originale du jeu, publiée dans le guide Silent Hill Memories."
+        }
+      ],
+      "notes": "Palier de la première rencontre avec Pyramid Head, avant drainage. Le tronçon de rampe bordant les marches forme le plan rapproché. Eau fixe et espace de combat adapté.",
+      "assets": [
+        {
+          "path": "assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
+          "sha256": "26ee99b298138af4835b555bfb0aa6598e1a28b4fdeba910d65814c27396322f",
+          "bytes": 2717731,
+          "width": 1672,
+          "height": 941,
+          "alpha": {
+            "transparentPixels": 0,
+            "pixelsAbove240": 1573352,
+            "totalPixels": 1573352
+          },
+          "generationReferences": [
+            "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1b_pyramid_head.jpg",
+            "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1c_pyramid_head.jpg"
+          ],
+          "prompt": "The original Silent Hill 2 (2001) Blue Creek Apartments stairwell landing used in the first Pyramid Head encounter, viewed sideways as a small industrial apartment stairwell. Scuffed and flaking sickly light gray painted plaster, narrow dark metal-framed green exit door across the back wall, battered gray cement landing in the original reference. The set of short descending concrete steps enters a still, shallow dark flood in the rear LEFT area, behind the dry playable strip, visibly reading as water rather than a pit. Aged dark wall pipe, dark treads, damp stains and weak dirty light. Reserve the near LEFT for a short independent handrail projected across the landing; keep the dry foreground and center open with a strip wide enough for two game characters. Modest stairwell, simple and restrained like the original, plain dark iron handrail on far wall only. No Pyramid Head, James, corpses, blade, action, signage, posters, steam or fantasy architecture. Environment plate for Silent Hill: Halo of Flesh, one 16:9 opaque edge-to-edge landscape bitmap for a two-dimensional side-on fighting stage. Use the original release's material, lighting and color cues, reconstructed for a lateral versus camera, an open floor lane roughly from 62% to 95% down the canvas, principal floor line horizontal. Low camera angle grazing the lane, headroom for HUD, no HUD, title, lettering, border or foreground framing. No fighters in the image. Highest native resolution."
+        },
+        {
+          "path": "assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
+          "sha256": "bae35a70bc4eb4f41c42220196201f1e9fd7e483ffd258ee241c02d4754f6051",
+          "bytes": 1239212,
+          "width": 1536,
+          "height": 1024,
+          "alpha": {
+            "transparentPixels": 1418055,
+            "pixelsAbove240": 132453,
+            "totalPixels": 1572864
+          },
+          "generationReferences": [
+            "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1c_pyramid_head.jpg"
+          ],
+          "prompt": "One short segment of the chipped iron stair handrail which borders the flooded landing in the original 2001 Silent Hill 2 Blue Creek Apartments boss stairwell. A single modest dark rusted tubular handrail rising diagonally from lower left to middle right, supported by two plain vertical upright posts of uneven visible length. Open design, no dense infill, no steps or floor mesh. References show plain functional iron pipes in the damp stairwell. Keep straight metal posts and original utilitarian proportions, barely warm gray highlights. Show the whole segment with its top and the feet of the two posts against transparent background, as an environmental prop seen from the side, readable at left edge of a duel. No environment, action or decorative extra rails, no floor shadow, actual transparent alpha."
+        }
+      ]
+    }
+  ],
+  "baseline": "c28c7a3b282404adbe6dd117a6a792e1c4f9e5cc"
+}

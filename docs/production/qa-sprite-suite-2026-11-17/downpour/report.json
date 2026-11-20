@@ -1,0 +1,840 @@
+{
+  "schema": 2,
+  "label": "sprite-suite-downpour",
+  "generatedAt": "2026-11-17T22:20:49.191Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserConstraintEvidence": "/workspace/scratch/862f02546e7a/silent-hill-halo-of-flesh/docs/production/qa-sprite-continuation-2026-11-17/report.json",
+  "browserBlocker": "Prior session observed system Chromium abort before page creation: process_singleton_posix.cc socket() failed: Operation not permitted. This harness does not retry Chromium.",
+  "limits": [
+    "Native Canvas renders execute the real FightEngine; these are not browser screenshots. DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "PNG files are read unchanged through the source HTTP server and verified by SHA-256. Sharp normalizes PNG encoding only in memory for native Canvas compatibility; complete decoded pixel equality is checked. Original files remain unchanged.",
+    "Minimal adapters provide storage/events and absence of gamepads. Real engine intros, updates, render and pause are used; actor positions, facing, health and poses are never manually overridden.",
+    "Left-facing display is the engine mirror, not independently established opposite-side source anatomy. Static idle candidates do not certify source animation or 1:1 fidelity.",
+    "This harness writes only QA reports and rendered screenshots; it does not rebuild manifests or modify registry, artwork, rules or engine code."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": [
+        "HALO OF FLESH — http://127.0.0.1:4237\n"
+      ]
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1723731,
+        "sha256": "23e6f56e2c49c75c0b7433f0e60aabe4935f6b6d96d2f819b1adaf4fab0c3ce0"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 465883,
+        "sha256": "3e3d10e331463b05e1e90d5e974a03050973c7dc358e9fa8918b7354a8b7c21d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 975171,
+        "sha256": "08ce5a51a4d6f828641f7b496e094d41a939ddac819eea0aaf5123bb048f231b"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 481197,
+        "sha256": "036e48ab91fa9fa8a9c0cfba3661f8584c842b62838154030709bdf376fdfc7f"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          128,
+          20,
+          914,
+          1516
+        ],
+        "expected": [
+          128,
+          20,
+          914,
+          1516
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          490,
+          134,
+          818,
+          1160
+        ],
+        "expected": [
+          490,
+          134,
+          818,
+          1160
+        ]
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png"
+        ],
+        "portrait": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png"
+        ],
+        "expected": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png"
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png"
+        ],
+        "expected": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          188,
+          66,
+          990,
+          1223
+        ],
+        "expected": [
+          188,
+          66,
+          990,
+          1223
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          411,
+          273,
+          933,
+          1021
+        ],
+        "expected": [
+          411,
+          273,
+          933,
+          1021
+        ]
+      }
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png"
+        ],
+        "portrait": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png"
+        ],
+        "expected": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png"
+      }
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png"
+        ],
+        "expected": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png"
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham/downpour_prisoner_juggernaut_110 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham/downpour_prisoner_juggernaut_110 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham/downpour_prisoner_juggernaut_110 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "downpour_anne_cunningham",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "downpour_prisoner_juggernaut_110",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "downpour_anne_cunningham/downpour_prisoner_juggernaut_110 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+          "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png"
+        ],
+        "expected": [
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+          "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png"
+        ]
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 271.1569834812156,
+          "top": 390.2270013914881,
+          "right": 379.7537504748907,
+          "bottom": 596.0541650629808
+        },
+        "visible": {
+          "left": 271.56781614323455,
+          "top": 390.63783405350705,
+          "right": 379.20597359219875,
+          "bottom": 595.5063881802888
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 867.2138025380484,
+          "top": 317.9573087362797,
+          "right": 1060.5071903142577,
+          "bottom": 596.6041112869776
+        },
+        "visible": {
+          "left": 868.8780752495286,
+          "top": 319.14607495876555,
+          "right": 1059.556177336269,
+          "bottom": 594.2265788420058
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham/downpour_prisoner_juggernaut_110 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110/downpour_anne_cunningham asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110/downpour_anne_cunningham real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110/downpour_anne_cunningham actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "downpour_prisoner_juggernaut_110",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "downpour_anne_cunningham",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110/downpour_anne_cunningham fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png"
+        ],
+        "expected": [
+          "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+          "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png"
+        ]
+      }
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 219.49284020332033,
+          "top": 317.9573087362797,
+          "right": 412.7862279795297,
+          "bottom": 596.6041112869776
+        },
+        "visible": {
+          "left": 220.44385318130907,
+          "top": 319.14607495876555,
+          "right": 411.1219552680495,
+          "bottom": 594.2265788420058
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_anne_cunningham full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 900.2462800426874,
+          "top": 390.2270013914881,
+          "right": 1008.8430470363625,
+          "bottom": 596.0541650629808
+        },
+        "visible": {
+          "left": 900.7940569253793,
+          "top": 390.63783405350705,
+          "right": 1008.4322143743435,
+          "bottom": 595.5063881802888
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "downpour_prisoner_juggernaut_110/downpour_anne_cunningham pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "81ee0dc267c57e0382bb5e79ad85646301aa07826854eb6e744703274a42fcc9",
+        "after": "81ee0dc267c57e0382bb5e79ad85646301aa07826854eb6e744703274a42fcc9"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "b10bcaf558b77a7fdcba2c2b3dca962dfb96518cc3e4888ce3e71110282b23df",
+        "after": "b10bcaf558b77a7fdcba2c2b3dca962dfb96518cc3e4888ce3e71110282b23df"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "downpour_anne_cunningham",
+      "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7022247314453125,
+      "visibleBounds": [
+        128,
+        20,
+        914,
+        1516
+      ]
+    },
+    {
+      "id": "downpour_anne_cunningham",
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.874798730187801,
+      "visibleBounds": [
+        490,
+        134,
+        818,
+        1160
+      ]
+    },
+    {
+      "id": "downpour_prisoner_juggernaut_110",
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+      "width": 1239,
+      "height": 1269,
+      "transparentFraction": 0.7460584586441059,
+      "visibleBounds": [
+        188,
+        66,
+        990,
+        1223
+      ]
+    },
+    {
+      "id": "downpour_prisoner_juggernaut_110",
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.8956576594451185,
+      "visibleBounds": [
+        411,
+        273,
+        933,
+        1021
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "downpour_anne_cunningham",
+      "facing": 1,
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "file": "portrait-downpour_anne_cunningham-right.png"
+    },
+    {
+      "id": "downpour_anne_cunningham",
+      "facing": -1,
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "file": "portrait-downpour_anne_cunningham-left.png"
+    },
+    {
+      "id": "downpour_prisoner_juggernaut_110",
+      "facing": 1,
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "file": "portrait-downpour_prisoner_juggernaut_110-right.png"
+    },
+    {
+      "id": "downpour_prisoner_juggernaut_110",
+      "facing": -1,
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "file": "portrait-downpour_prisoner_juggernaut_110-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "downpour_anne_cunningham",
+        "downpour_prisoner_juggernaut_110"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 614.6617243355541
+        }
+      },
+      "geometries": [
+        {
+          "id": "downpour_anne_cunningham",
+          "slot": 1,
+          "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+          "exterior": {
+            "left": 271.1569834812156,
+            "top": 390.2270013914881,
+            "right": 379.7537504748907,
+            "bottom": 596.0541650629808
+          },
+          "visible": {
+            "left": 271.56781614323455,
+            "top": 390.63783405350705,
+            "right": 379.20597359219875,
+            "bottom": 595.5063881802888
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 1.506388180288809,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+            "args": [
+              -64.5,
+              -210.6608055,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "downpour_prisoner_juggernaut_110",
+          "slot": 2,
+          "path": "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+          "exterior": {
+            "left": 867.2138025380484,
+            "top": 317.9573087362797,
+            "right": 1060.5071903142577,
+            "bottom": 596.6041112869776
+          },
+          "visible": {
+            "left": 868.8780752495286,
+            "top": 319.14607495876555,
+            "right": 1059.556177336269,
+            "bottom": 594.2265788420058
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.22657884200577882,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+            "args": [
+              -144.52485135038324,
+              -296.9736363636364,
+              301.09344031329846,
+              308.3838383838384
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1239,
+            "height": 1269
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+        "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png"
+      ],
+      "snapshots": [
+        "duel-downpour_anne_cunningham--downpour_prisoner_juggernaut_110-tick0.png",
+        "duel-downpour_anne_cunningham--downpour_prisoner_juggernaut_110-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "downpour_prisoner_juggernaut_110",
+        "downpour_anne_cunningham"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 614.6617243355541
+        }
+      },
+      "geometries": [
+        {
+          "id": "downpour_prisoner_juggernaut_110",
+          "slot": 1,
+          "path": "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+          "exterior": {
+            "left": 219.49284020332033,
+            "top": 317.9573087362797,
+            "right": 412.7862279795297,
+            "bottom": 596.6041112869776
+          },
+          "visible": {
+            "left": 220.44385318130907,
+            "top": 319.14607495876555,
+            "right": 411.1219552680495,
+            "bottom": 594.2265788420058
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.22657884200577882,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+            "args": [
+              -144.52485135038324,
+              -296.9736363636364,
+              301.09344031329846,
+              308.3838383838384
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1239,
+            "height": 1269
+          }
+        },
+        {
+          "id": "downpour_anne_cunningham",
+          "slot": 2,
+          "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+          "exterior": {
+            "left": 900.2462800426874,
+            "top": 390.2270013914881,
+            "right": 1008.8430470363625,
+            "bottom": 596.0541650629808
+          },
+          "visible": {
+            "left": 900.7940569253793,
+            "top": 390.63783405350705,
+            "right": 1008.4322143743435,
+            "bottom": 595.5063881802888
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 1.506388180288809,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+            "args": [
+              -64.5,
+              -210.6608055,
+              143.33333333333334,
+              215
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+        "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png"
+      ],
+      "snapshots": [
+        "duel-downpour_prisoner_juggernaut_110--downpour_anne_cunningham-tick0.png",
+        "duel-downpour_prisoner_juggernaut_110--downpour_anne_cunningham-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "art/registry.jsonSHA256": "81ee0dc267c57e0382bb5e79ad85646301aa07826854eb6e744703274a42fcc9",
+  "src/sprite-manifest.jsSHA256": "b10bcaf558b77a7fdcba2c2b3dca962dfb96518cc3e4888ce3e71110282b23df",
+  "version": "0.9.6",
+  "ids": [
+    "downpour_anne_cunningham",
+    "downpour_prisoner_juggernaut_110"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

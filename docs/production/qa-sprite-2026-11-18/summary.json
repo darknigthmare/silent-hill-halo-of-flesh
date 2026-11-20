@@ -1,0 +1,43 @@
+{
+  "schema": "sprite-native-qa-summary/1",
+  "date": "2026-11-18",
+  "mode": "actual FightEngine, native Canvas",
+  "browserTest": false,
+  "runs": [
+    {
+      "label": "sprite-20261118",
+      "report": "main/report.json",
+      "visualReview": "main/visual-review.json",
+      "checks": 64,
+      "failedChecks": 0,
+      "passed": true,
+      "portraits": 6,
+      "duels": 4,
+      "finalCapturesVisuallyInspected": 4,
+      "selectionPortraitCapturesVisuallyInspected": 6,
+      "registryAdjustmentRecommended": false
+    }
+  ],
+  "totalChecks": 64,
+  "failedChecks": 0,
+  "passed": true,
+  "portraits": 6,
+  "duels": 4,
+  "finalCapturesVisuallyInspected": 4,
+  "selectionPortraitCapturesVisuallyInspected": 6,
+  "uniqueCombatIds": [
+    "sh3_scraper_045",
+    "sh4_richard_braintree_victim_19",
+    "downpour_weeping_bat_105"
+  ],
+  "registrySHA256": "3dade53c48950a7871ca03b41b03d8f967684dbfc9d722157568ebf85947d8e5",
+  "manifestSHA256": "36609b67124a4a1c380756674ebcc022bf9598a9f9ee66826992102b516210d9",
+  "limits": [
+    "64 assertions within one run; the check count is not a count of unique gameplay scenarios.",
+    "Source PNG bytes match the manifest. Registry and manifest remained unchanged throughout this run.",
+    "Actual FightEngine with native Canvas, not browser screenshots. DOM, CSS, browser input, browser decoding and service worker behavior are outside this review.",
+    "Static one-frame idle candidates. Introductions, 120 idle updates, rendering and pause do not certify bitmap animation, new attacks or collision timing.",
+    "Opposite facing uses the engine mirror. Neither independent rear anatomy nor source fidelity 1:1 is certified.",
+    "The three Weeping Bat source pictures are front or three-quarter views; none establishes a true back view. The new lateral pose is a recomposition and its rear details remain unverified."
+  ]
+}

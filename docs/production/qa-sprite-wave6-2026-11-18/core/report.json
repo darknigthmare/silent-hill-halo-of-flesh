@@ -1,0 +1,1635 @@
+{
+  "schema": 3,
+  "label": "wave6-core",
+  "generatedAt": "2026-11-18T09:53:11.747Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4275\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1181785,
+        "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 633182,
+        "sha256": "84618d11d580a61c01c7c487dc655e6de2d9d5d022fee386f19d74728c225547"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1082304,
+        "sha256": "5f63afd9befbd853da8bfe62d9cfede4384982bb3410aea827a3e3dffe1d2775"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1089509,
+        "sha256": "38861850b609b7f2f4b638dcf87f7a03289bd05fe349711f7d8bc2f6a47f3c87"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 2021696,
+        "sha256": "bf777171674909a8e9ede653d6dc748e8242c9dabce39f35cd68513c424094e7"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1103151,
+        "sha256": "2e0fb62d4d50d56f59b1df40690cafc13e36780eff4ef4705e83b000b1918071"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_ariel_078.e3ffa353215f.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1802669,
+        "sha256": "e3ffa353215ffef85ddda2f5dc595b9a1774b0e2898c4ddbc2ca38d8dfd22261"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_ariel_078.e3ffa353215f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 321708,
+        "sha256": "5c894ecbb3545198b4c4a777d83bba9c602079b86474e49d7e0658059c500567"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          127,
+          71,
+          2107,
+          675
+        ],
+        "expected": [
+          127,
+          71,
+          2107,
+          675
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          50,
+          317,
+          1222,
+          938
+        ],
+        "expected": [
+          50,
+          317,
+          1222,
+          938
+        ]
+      }
+    },
+    {
+      "name": "sh2_creeper_025 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh2_creeper_025.f562380701ab.png"
+        ],
+        "portrait": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh2_creeper_025 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_creeper_025.84618d11d580.png"
+        ],
+        "expected": "assets/sprites/sh2_creeper_025.84618d11d580.png"
+      }
+    },
+    {
+      "name": "sh2_creeper_025 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh2_creeper_025.84618d11d580.png"
+        ],
+        "expected": "assets/sprites/sh2_creeper_025.84618d11d580.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          93,
+          65,
+          1097,
+          1284
+        ],
+        "expected": [
+          93,
+          65,
+          1097,
+          1284
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          102,
+          14,
+          1026,
+          1417
+        ],
+        "expected": [
+          102,
+          14,
+          1026,
+          1417
+        ]
+      }
+    },
+    {
+      "name": "sh1_mumbler_006 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_mumbler_006.5f63afd9befb.png"
+        ],
+        "portrait": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_mumbler_006 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_mumbler_006.38861850b609.png"
+        ],
+        "expected": "assets/sprites/sh1_mumbler_006.38861850b609.png"
+      }
+    },
+    {
+      "name": "sh1_mumbler_006 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_mumbler_006.38861850b609.png"
+        ],
+        "expected": "assets/sprites/sh1_mumbler_006.38861850b609.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          65,
+          43,
+          982,
+          1452
+        ],
+        "expected": [
+          65,
+          43,
+          982,
+          1452
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          171,
+          72,
+          999,
+          1307
+        ],
+        "expected": [
+          171,
+          72,
+          999,
+          1307
+        ]
+      }
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png"
+        ],
+        "portrait": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png"
+        ],
+        "expected": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png"
+      }
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png"
+        ],
+        "expected": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_ariel_078.e3ffa353215f.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_ariel_078.e3ffa353215f.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          153,
+          46,
+          848,
+          1436
+        ],
+        "expected": [
+          153,
+          46,
+          848,
+          1436
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          454,
+          237,
+          836,
+          1008
+        ],
+        "expected": [
+          454,
+          237,
+          836,
+          1008
+        ]
+      }
+    },
+    {
+      "name": "origins_ariel_078 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/origins_ariel_078.e3ffa353215f.png"
+        ],
+        "portrait": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "origins_ariel_078 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_ariel_078.5c894ecbb354.png"
+        ],
+        "expected": "assets/sprites/origins_ariel_078.5c894ecbb354.png"
+      }
+    },
+    {
+      "name": "origins_ariel_078 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/origins_ariel_078.5c894ecbb354.png"
+        ],
+        "expected": "assets/sprites/origins_ariel_078.5c894ecbb354.png"
+      }
+    },
+    {
+      "name": "sh2_creeper_025/sh1_mumbler_006 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh2_creeper_025/sh1_mumbler_006 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh2_creeper_025/sh1_mumbler_006 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh2_creeper_025",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_mumbler_006",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh2_creeper_025/sh1_mumbler_006 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh2_creeper_025.f562380701ab.png",
+          "assets/sprites/sh1_mumbler_006.5f63afd9befb.png"
+        ],
+        "expected": [
+          "assets/sprites/sh2_creeper_025.f562380701ab.png",
+          "assets/sprites/sh1_mumbler_006.5f63afd9befb.png"
+        ]
+      }
+    },
+    {
+      "name": "sh2_creeper_025 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 256.67167386383886,
+          "top": 549.7415119798827,
+          "right": 401.61648713813497,
+          "bottom": 594.3622041222948
+        },
+        "visible": {
+          "left": 257.90308906906773,
+          "top": 550.2485652996828,
+          "right": 401.3267423839635,
+          "bottom": 594.0000231795804
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_mumbler_006 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 880.0277978933754,
+          "top": 450.4770510052278,
+          "right": 1010.5964300682946,
+          "bottom": 607.5954934554007
+        },
+        "visible": {
+          "left": 881.4386573766014,
+          "top": 450.7335709112689,
+          "right": 1010.211650209233,
+          "bottom": 607.0824536433186
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_creeper_025/sh1_mumbler_006 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh1_mumbler_006/sh2_creeper_025 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_mumbler_006/sh2_creeper_025 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_mumbler_006/sh2_creeper_025 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_mumbler_006",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh2_creeper_025",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_mumbler_006/sh2_creeper_025 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+          "assets/sprites/sh2_creeper_025.f562380701ab.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+          "assets/sprites/sh2_creeper_025.f562380701ab.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_mumbler_006 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 269.4036004492835,
+          "top": 450.4770510052278,
+          "right": 399.9722326242028,
+          "bottom": 607.5954934554007
+        },
+        "visible": {
+          "left": 269.78838030834515,
+          "top": 450.7335709112689,
+          "right": 398.56137314097674,
+          "bottom": 607.0824536433186
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh2_creeper_025 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 878.3835433794432,
+          "top": 549.7415119798827,
+          "right": 1023.3283566537393,
+          "bottom": 594.3622041222948
+        },
+        "visible": {
+          "left": 878.6732881336146,
+          "top": 550.2485652996828,
+          "right": 1022.0969414485104,
+          "bottom": 594.0000231795804
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_mumbler_006/sh2_creeper_025 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1/origins_ariel_078 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1/origins_ariel_078 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1/origins_ariel_078 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh4_jimmy_stone_victim_1",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "origins_ariel_078",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1/origins_ariel_078 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+          "assets/sprites/origins_ariel_078.e3ffa353215f.png"
+        ],
+        "expected": [
+          "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+          "assets/sprites/origins_ariel_078.e3ffa353215f.png"
+        ]
+      }
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 254.98684300069567,
+          "top": 370.9528290055855,
+          "right": 392.14376427174466,
+          "bottom": 582.1120761628559
+        },
+        "visible": {
+          "left": 255.2840410966243,
+          "top": 372.1416213892999,
+          "right": 391.5493680798875,
+          "bottom": 581.5176799709988
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_ariel_078 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 912.0851314139192,
+          "top": 398.76601802287723,
+          "right": 1010.2631215363476,
+          "bottom": 594.5609811813204
+        },
+        "visible": {
+          "left": 912.5058942287295,
+          "top": 399.04652656608414,
+          "right": 1009.9826129931407,
+          "bottom": 593.9999640949065
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1/origins_ariel_078 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "origins_ariel_078/sh4_jimmy_stone_victim_1 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "origins_ariel_078/sh4_jimmy_stone_victim_1 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "origins_ariel_078/sh4_jimmy_stone_victim_1 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "origins_ariel_078",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh4_jimmy_stone_victim_1",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "origins_ariel_078/sh4_jimmy_stone_victim_1 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+          "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png"
+        ],
+        "expected": [
+          "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+          "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png"
+        ]
+      }
+    },
+    {
+      "name": "origins_ariel_078 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 269.7369089812305,
+          "top": 398.76601802287723,
+          "right": 367.914899103659,
+          "bottom": 594.5609811813204
+        },
+        "visible": {
+          "left": 270.0174175244374,
+          "top": 399.04652656608414,
+          "right": 367.4941362888486,
+          "bottom": 593.9999640949065
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh4_jimmy_stone_victim_1 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 887.8562662458335,
+          "top": 370.9528290055855,
+          "right": 1025.0131875168825,
+          "bottom": 582.1120761628559
+        },
+        "visible": {
+          "left": 888.4506624376907,
+          "top": 372.1416213892999,
+          "right": 1024.7159894209537,
+          "bottom": 581.5176799709988
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "origins_ariel_078/sh4_jimmy_stone_victim_1 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "a4d6d77151138e92e558590205698ce606fce9fb8e2ca101ab5403ed41beb826",
+        "after": "a4d6d77151138e92e558590205698ce606fce9fb8e2ca101ab5403ed41beb826"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "73e29fa8e8edfdcce541ab3972df2df2cee2eb6528983a57b8b8a40280bb27de",
+        "after": "73e29fa8e8edfdcce541ab3972df2df2cee2eb6528983a57b8b8a40280bb27de"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "sh2_creeper_025",
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "width": 2172,
+      "height": 724,
+      "transparentFraction": 0.6712319271898497,
+      "visibleBounds": [
+        127,
+        71,
+        2107,
+        675
+      ]
+    },
+    {
+      "id": "sh2_creeper_025",
+      "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.781355483823376,
+      "visibleBounds": [
+        50,
+        317,
+        1222,
+        938
+      ]
+    },
+    {
+      "id": "sh1_mumbler_006",
+      "path": "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+      "width": 1199,
+      "height": 1312,
+      "transparentFraction": 0.6549258528448504,
+      "visibleBounds": [
+        93,
+        65,
+        1097,
+        1284
+      ]
+    },
+    {
+      "id": "sh1_mumbler_006",
+      "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "width": 1102,
+      "height": 1428,
+      "transparentFraction": 0.6045209372315169,
+      "visibleBounds": [
+        102,
+        14,
+        1026,
+        1417
+      ]
+    },
+    {
+      "id": "sh4_jimmy_stone_victim_1",
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.657446543375651,
+      "visibleBounds": [
+        65,
+        43,
+        982,
+        1452
+      ]
+    },
+    {
+      "id": "sh4_jimmy_stone_victim_1",
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "width": 1161,
+      "height": 1355,
+      "transparentFraction": 0.7075456646039329,
+      "visibleBounds": [
+        171,
+        72,
+        999,
+        1307
+      ]
+    },
+    {
+      "id": "origins_ariel_078",
+      "path": "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+      "width": 1024,
+      "height": 1536,
+      "transparentFraction": 0.7783196767171224,
+      "visibleBounds": [
+        153,
+        46,
+        848,
+        1436
+      ]
+    },
+    {
+      "id": "origins_ariel_078",
+      "path": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9399637269191538,
+      "visibleBounds": [
+        454,
+        237,
+        836,
+        1008
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh2_creeper_025",
+      "facing": 1,
+      "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "file": "portrait-sh2_creeper_025-right.png"
+    },
+    {
+      "id": "sh2_creeper_025",
+      "facing": -1,
+      "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "file": "portrait-sh2_creeper_025-left.png"
+    },
+    {
+      "id": "sh1_mumbler_006",
+      "facing": 1,
+      "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "file": "portrait-sh1_mumbler_006-right.png"
+    },
+    {
+      "id": "sh1_mumbler_006",
+      "facing": -1,
+      "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "file": "portrait-sh1_mumbler_006-left.png"
+    },
+    {
+      "id": "sh4_jimmy_stone_victim_1",
+      "facing": 1,
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "file": "portrait-sh4_jimmy_stone_victim_1-right.png"
+    },
+    {
+      "id": "sh4_jimmy_stone_victim_1",
+      "facing": -1,
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "file": "portrait-sh4_jimmy_stone_victim_1-left.png"
+    },
+    {
+      "id": "origins_ariel_078",
+      "facing": 1,
+      "path": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "file": "portrait-origins_ariel_078-right.png"
+    },
+    {
+      "id": "origins_ariel_078",
+      "facing": -1,
+      "path": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "file": "portrait-origins_ariel_078-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "sh2_creeper_025",
+        "sh1_mumbler_006"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 625.8962785365854
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh2_creeper_025",
+          "slot": 1,
+          "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+          "exterior": {
+            "left": 256.67167386383886,
+            "top": 549.7415119798827,
+            "right": 401.61648713813497,
+            "bottom": 594.3622041222948
+          },
+          "visible": {
+            "left": 257.90308906906773,
+            "top": 550.2485652996828,
+            "right": 401.3267423839635,
+            "bottom": 594.0000231795804
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000023179580352916673,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+            "args": [
+              -69.9532994923858,
+              -49.976138071065996,
+              160.81218274111677,
+              53.60406091370559
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        },
+        {
+          "id": "sh1_mumbler_006",
+          "slot": 2,
+          "path": "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+          "exterior": {
+            "left": 880.0277978933754,
+            "top": 450.4770510052278,
+            "right": 1010.5964300682946,
+            "bottom": 607.5954934554007
+          },
+          "visible": {
+            "left": 881.4386573766014,
+            "top": 450.7335709112689,
+            "right": 1010.211650209233,
+            "bottom": 607.0824536433186
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 13.082453643318559,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+            "args": [
+              -95.41188719512193,
+              -154.95737999999997,
+              157.18597560975607,
+              171.99999999999997
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh2_creeper_025.f562380701ab.png",
+        "assets/sprites/sh1_mumbler_006.5f63afd9befb.png"
+      ],
+      "snapshots": [
+        "duel-sh2_creeper_025--sh1_mumbler_006-tick0.png",
+        "duel-sh2_creeper_025--sh1_mumbler_006-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh1_mumbler_006",
+        "sh2_creeper_025"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 625.8962785365854
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_mumbler_006",
+          "slot": 1,
+          "path": "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+          "exterior": {
+            "left": 269.4036004492835,
+            "top": 450.4770510052278,
+            "right": 399.9722326242028,
+            "bottom": 607.5954934554007
+          },
+          "visible": {
+            "left": 269.78838030834515,
+            "top": 450.7335709112689,
+            "right": 398.56137314097674,
+            "bottom": 607.0824536433186
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 13.082453643318559,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+            "args": [
+              -95.41188719512193,
+              -154.95737999999997,
+              157.18597560975607,
+              171.99999999999997
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1199,
+            "height": 1312
+          }
+        },
+        {
+          "id": "sh2_creeper_025",
+          "slot": 2,
+          "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+          "exterior": {
+            "left": 878.3835433794432,
+            "top": 549.7415119798827,
+            "right": 1023.3283566537393,
+            "bottom": 594.3622041222948
+          },
+          "visible": {
+            "left": 878.6732881336146,
+            "top": 550.2485652996828,
+            "right": 1022.0969414485104,
+            "bottom": 594.0000231795804
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000023179580352916673,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+            "args": [
+              -69.9532994923858,
+              -49.976138071065996,
+              160.81218274111677,
+              53.60406091370559
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 2172,
+            "height": 724
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+        "assets/sprites/sh2_creeper_025.f562380701ab.png"
+      ],
+      "snapshots": [
+        "duel-sh1_mumbler_006--sh2_creeper_025-tick0.png",
+        "duel-sh1_mumbler_006--sh2_creeper_025-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh4_jimmy_stone_victim_1",
+        "origins_ariel_078"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.5733922622951
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh4_jimmy_stone_victim_1",
+          "slot": 1,
+          "path": "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+          "exterior": {
+            "left": 254.98684300069567,
+            "top": 370.9528290055855,
+            "right": 392.14376427174466,
+            "bottom": 582.1120761628559
+          },
+          "visible": {
+            "left": 255.2840410966243,
+            "top": 372.1416213892999,
+            "right": 391.5493680798875,
+            "bottom": 581.5176799709988
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -12.482320029001244,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+            "args": [
+              -73.1,
+              -233.29787234042556,
+              155.53191489361703,
+              233.29787234042556
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "origins_ariel_078",
+          "slot": 2,
+          "path": "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+          "exterior": {
+            "left": 912.0851314139192,
+            "top": 398.76601802287723,
+            "right": 1010.2631215363476,
+            "bottom": 594.5609811813204
+          },
+          "visible": {
+            "left": 912.5058942287295,
+            "top": 399.04652656608414,
+            "right": 1009.9826129931407,
+            "bottom": 593.9999640949065
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.000035905093454857706,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+            "args": [
+              -73.39890710382514,
+              -205.8610339672131,
+              146.79781420765028,
+              220.19672131147541
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+        "assets/sprites/origins_ariel_078.e3ffa353215f.png"
+      ],
+      "snapshots": [
+        "duel-sh4_jimmy_stone_victim_1--origins_ariel_078-tick0.png",
+        "duel-sh4_jimmy_stone_victim_1--origins_ariel_078-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "origins_ariel_078",
+        "sh4_jimmy_stone_victim_1"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.5733922622951
+        }
+      },
+      "geometries": [
+        {
+          "id": "origins_ariel_078",
+          "slot": 1,
+          "path": "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+          "exterior": {
+            "left": 269.7369089812305,
+            "top": 398.76601802287723,
+            "right": 367.914899103659,
+            "bottom": 594.5609811813204
+          },
+          "visible": {
+            "left": 270.0174175244374,
+            "top": 399.04652656608414,
+            "right": 367.4941362888486,
+            "bottom": 593.9999640949065
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -0.000035905093454857706,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+            "args": [
+              -73.39890710382514,
+              -205.8610339672131,
+              146.79781420765028,
+              220.19672131147541
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "sh4_jimmy_stone_victim_1",
+          "slot": 2,
+          "path": "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+          "exterior": {
+            "left": 887.8562662458335,
+            "top": 370.9528290055855,
+            "right": 1025.0131875168825,
+            "bottom": 582.1120761628559
+          },
+          "visible": {
+            "left": 888.4506624376907,
+            "top": 372.1416213892999,
+            "right": 1024.7159894209537,
+            "bottom": 581.5176799709988
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -12.482320029001244,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+            "args": [
+              -73.1,
+              -233.29787234042556,
+              155.53191489361703,
+              233.29787234042556
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+        "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png"
+      ],
+      "snapshots": [
+        "duel-origins_ariel_078--sh4_jimmy_stone_victim_1-tick0.png",
+        "duel-origins_ariel_078--sh4_jimmy_stone_victim_1-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "a4d6d77151138e92e558590205698ce606fce9fb8e2ca101ab5403ed41beb826",
+  "src/sprite-manifest.jsSHA256": "73e29fa8e8edfdcce541ab3972df2df2cee2eb6528983a57b8b8a40280bb27de",
+  "version": "0.9.6",
+  "ids": [
+    "sh2_creeper_025",
+    "sh1_mumbler_006",
+    "sh4_jimmy_stone_victim_1",
+    "origins_ariel_078"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

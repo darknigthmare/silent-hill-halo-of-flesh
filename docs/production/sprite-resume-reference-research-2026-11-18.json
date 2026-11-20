@@ -1,0 +1,742 @@
+{
+  "schema": 1,
+  "date": "2026-11-18",
+  "baselineCommit": "fd5b6d8969a8dc7f1bdcb92ed07a28a8c1c4abd4",
+  "scope": "Three exact missing-profile dossiers researched during the18November continuation; durable native/inspection evidence only.",
+  "statusSource": "docs/production/sprite-status-following-2026-11-17.json",
+  "missingProfilesAtStart": 58,
+  "freshlyResearchedMissingProfileCount": 3,
+  "freshlyResearchedProfileIds": [
+    "film_missionary_revelation_177",
+    "ascension_wanderer_178",
+    "origins_memory_of_richard_grady_083"
+  ],
+  "allMissingProfilesFreshlyResearched": false,
+  "allMissingProfilesIndependentlyResearchedAgain": false,
+  "otherMissingProfilesNotFreshlyResearchedInTheseDossiers": 55,
+  "inheritedBlockerCountsAtStart": {
+    "historical-refusal-or-related-stop": 26,
+    "immaterial-form": 2,
+    "identity-or-variant-unresolved": 7,
+    "incomplete-source": 20,
+    "new-generation-refusal": 3
+  },
+  "historicalRefusalProfilesExcluded": 29,
+  "freshlyResearchedExhaustedFollowingDossiers": [],
+  "newlyClearedProfileIds": [],
+  "generationAttempted": false,
+  "profiles": [
+    {
+      "fighterId": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "source": "film",
+      "edition": "Silent Hill: Revelation (2012)",
+      "inheritedBlocker": "Final shoes/feet of the production costume have not been established; competing Mercer footwear concepts and unused early maquette remain excluded.",
+      "status": "blocked_final_footwear_still_unverified",
+      "combatRolePreserved": "scripted-encounter",
+      "generationAttemptedThisResearch": false,
+      "generationRecommended": false,
+      "newArtifactImported": false,
+      "wholeBodyReferenceCleared": false,
+      "oneToOneCertified": false,
+      "sourceChecks": [
+        {
+          "url": "https://metrofilms.com/film/silent-hill-revelation/",
+          "sourceNature": "primary-distributor-gallery",
+          "retrieval": "Public HTML and all 29 inspected SH2 thumbnails returned HTTP200; no gated professional material downloaded.",
+          "inspectedThumbnailCount": 29,
+          "otherGalleryImagesNotInspected": 3,
+          "finding": "Inspected images show human cast, nurses, mannequin scene and Pyramid Head. No Missionary final footwear was obtained.",
+          "durableArtifacts": [
+            "docs/production/references-missing-resume-2026-11-18/metro-gallery-inspection.png"
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=Zw8_w4JiIdA",
+          "sourceNature": "primary-official-production-featurette",
+          "title": "Silent Hill: Revelation 3D | Behind the Scenes | Global Road Entertainment",
+          "uploaderAccordingToPlayer": "Open Road Films",
+          "durationSeconds": 187,
+          "retrieval": "Public watch HTTP200, playability OK; four native level2 storyboard sheets were downloaded and inspected.",
+          "nativeFrameSize": [
+            160,
+            90
+          ],
+          "sampleSpacingSeconds": 2,
+          "storyboardFrameCount": 95,
+          "continuousFullResolutionVideoInspected": false,
+          "finding": "The inspected production/interview samples do not establish Missionary final shoes or whole costume.",
+          "durableArtifacts": [
+            "docs/production/references-missing-resume-2026-11-18/missionary-bts-L2-M0.jpg",
+            "docs/production/references-missing-resume-2026-11-18/missionary-bts-L2-M1.jpg",
+            "docs/production/references-missing-resume-2026-11-18/missionary-bts-L2-M2.jpg",
+            "docs/production/references-missing-resume-2026-11-18/missionary-bts-L2-M3.jpg"
+          ]
+        }
+      ],
+      "excludedSubstitutes": [
+        "Stanislav Zadachyn fan model explicitly based on multiple concepts plus improvisation; not final film evidence",
+        "SH3 Missionary / Gecco statue",
+        "cosplay",
+        "Mercer competing footwear variants and unused early maquette"
+      ],
+      "nextUsefulEvidence": "A final-film full-resolution frame or an independently public full-length photograph of the production-worn costume, with final footwear clearly visible.",
+      "originalDetailedJournal": {
+        "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/missing-reference-research-2026-11-18.json",
+        "sha256": "2004621010d98c71e9304bb03d55e693afdfd265c0f9cc952c037cc6a4ba5a41",
+        "bytes": 40039,
+        "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+      }
+    },
+    {
+      "fighterId": "ascension_wanderer_178",
+      "name": "Wanderer",
+      "source": "ascension",
+      "edition": "Silent Hill: Ascension",
+      "inheritedBlocker": "No clearly attributed whole body with legs/feet; obese veiled long-armed concept excluded.",
+      "status": "blocked_source_still_insufficient_after_root_native_review",
+      "generationAttemptedThisResearch": false,
+      "generationRecommended": false,
+      "newArtifactImported": false,
+      "wholeBodyReferenceCleared": false,
+      "oneToOneCertified": false,
+      "combatRolePreserved": "scripted-encounter",
+      "identityStatusPreserved": "identite-documentee-secondaire",
+      "roleVerification": {
+        "combatRole": "scripted-encounter",
+        "identityStatus": "identite-documentee-secondaire",
+        "proposedSuperStatus": "bloque-reference",
+        "proposedFinisherStatus": "bloque-reference",
+        "localSources": [
+          "data/roster.json",
+          "src/production-reference.js",
+          "art/provenance-art92-e.json"
+        ],
+        "permittedScopeIfSilhouetteIsAccepted": "selection/profile reference only; do not create a standalone combatant, add capabilities or change the existing role"
+      },
+      "identityAttribution": {
+        "primaryScene": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+        "primaryNamesMonster": false,
+        "primarySynopsis": "Astrid calls Brit while watching Orson at the park.",
+        "secondaryNamedSource": "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters",
+        "secondaryAuthor": "jimfish",
+        "secondaryUpdated": "2026-03-28",
+        "secondaryFinding": "The Wanderer section explicitly attributes the creature killed with a baseball bat in Please Come Home to Wanderer, and describes its armless wire-bound body. The official native scene visually matches that encounter. This supports secondary documented identity, not an official named model sheet."
+      },
+      "sourceChecks": [
+        {
+          "url": "https://www.youtube.com/watch?v=kC4QnrVE6iQ",
+          "sourceNature": "primary-official-final-scene",
+          "uploader": "Genvid Entertainment",
+          "title": "THE END OF JOY | 10/31/23 Scenes 1 - 3 | SILENT HILL: Ascension",
+          "durationSeconds": 546,
+          "retrieval": "Public watch HTTP200, playability OK; five level2 sheets downloaded, sheets1–4 inspected; native level3 sheets9–10 also inspected.",
+          "nativeDetailFrameSize": [
+            320,
+            180
+          ],
+          "detailSampleSpacingSeconds": 5,
+          "continuousFullResolutionVideoInspected": false,
+          "finding": "Armless intruder at about6:50,7:15,7:40. Distant feet are obscured by vegetation/fog; closer view clips the feet. No complete readable view cleared.",
+          "durableArtifacts": [],
+          "originalArtifactPaths": [
+            "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-L3-M9.jpg",
+            "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-L3-M10.jpg"
+          ]
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+          "sourceNature": "primary-official-final-scene",
+          "uploader": "Genvid Entertainment",
+          "title": "PLEASE COME HOME | 11/7/23 Scene 2 | SILENT HILL: Ascension",
+          "durationSeconds": 222,
+          "retrieval": "Found independently through public YouTube search. Public watch HTTP200, playability OK; five level2 sheets and four level3 sheets6–9 inspected.",
+          "nativeDetailFrameSize": [
+            320,
+            180
+          ],
+          "detailSampleSpacingSeconds": 2,
+          "continuousFullResolutionVideoInspected": false,
+          "finding": "Legs around2:24–2:26; upper body around2:28–2:30 and2:34; feet around2:32; fallen body around2:52–2:54. Root reviewed all eight native views: fallen body is complete but very dark, upper body mostly silhouette and foot supports uncertain. No generation from these references.",
+          "durableArtifacts": [
+            "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m24s.png",
+            "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m26s.png",
+            "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m28s.png",
+            "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m30s.png",
+            "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m32s.png",
+            "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m34s.png",
+            "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m52s.png",
+            "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m54s.png"
+          ],
+          "coordinateManifest": "docs/production/references-missing-resume-2026-11-18/wanderer-native-frame-coordinates.json"
+        }
+      ],
+      "ordinaryFullResolutionAttempt": {
+        "sourcePage": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+        "declaredFormat": "137 /1920x1080 metadata only",
+        "httpStatus": 200,
+        "returnedBytes": 195,
+        "actualContent": "HTML: Site Unavailable / Unable to access this site.",
+        "validMedia": false,
+        "higherResolutionFramesObtained": false,
+        "routeStopped": true,
+        "alternateClientOrChallengeSolverAttemptedAfterFailure": false,
+        "originalResultLog": {
+          "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-download-result.json",
+          "sha256": "8e9a4551035ad3da25d654fbee50f26a8630ef5258bef674b2f3bac7c832e3b1",
+          "bytes": 717,
+          "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+        },
+        "failedResponseCopied": false
+      },
+      "excludedSubstitutes": [
+        "obese veiled creature with free long arms",
+        "Fighter with clawed arms",
+        "other Silent Hill editions or hypothetical body parts"
+      ],
+      "decision": "Reference still insufficient. Preserve scripted-encounter role and blocked super/finisher; no image, abilities or autonomous-combatant change.",
+      "originalDetailedJournal": {
+        "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/missing-reference-research-2026-11-18.json",
+        "sha256": "2004621010d98c71e9304bb03d55e693afdfd265c0f9cc952c037cc6a4ba5a41",
+        "bytes": 40039,
+        "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+      }
+    },
+    {
+      "fighterId": "origins_memory_of_richard_grady_083",
+      "name": "Memory of Richard Grady",
+      "alias": "Sad Daddy",
+      "source": "origins",
+      "edition": "Silent Hill: Origins, PlayStation2 according to uploader",
+      "combatRolePreserved": "stationary-boss",
+      "status": "blocked_incomplete_upper_contour_in_obtained_native_frames",
+      "generationAttemptedThisResearch": false,
+      "generationRecommended": false,
+      "newArtifactImported": false,
+      "wholeBodyReferenceCleared": false,
+      "oneToOneCertified": false,
+      "sourceCheck": {
+        "url": "https://www.youtube.com/watch?v=g1iDk4qjLRE",
+        "sourceNature": "secondary-third-party-gameplay-recording",
+        "title": "Silent Hill: Origins  All Creature Cutscenes Fights",
+        "uploader": "David Link05",
+        "durationSeconds": 1023,
+        "requestedIntervalSeconds": [
+          603,
+          717
+        ],
+        "modificationsDisclosed": "Uploader says grain is removed, textures enhanced and brightness increased. Materials, original lighting and colors are not reliable reference evidence. Unmodified geometry is not independently certified.",
+        "geometryUseLimit": "Partial visual geometry only. Materials, original colours and lighting are not probative; unmodified geometry is not independently certified.",
+        "retrieval": {
+          "publicWatchHTTP": 200,
+          "playabilityStatus": "OK",
+          "webSearchOpen": "Generic fetch error without access-denial status; ordinary public HTML request succeeded.",
+          "nativeStoryboardLevel": 3,
+          "nativeFrameWidth": 320,
+          "nativeFrameHeight": 180,
+          "samplingIntervalSeconds": 10,
+          "inspectedSeconds": [
+            610,
+            620,
+            630,
+            640,
+            650,
+            660,
+            670,
+            680,
+            690,
+            700,
+            710
+          ],
+          "continuousVideoInspected": false,
+          "upscaled": false,
+          "colourAdjusted": false
+        },
+        "findings": [
+          {
+            "timesSeconds": [
+              610,
+              620,
+              630,
+              640,
+              650,
+              660
+            ],
+            "finding": "Human Richard hanging in the cutscene; these are not the monstrous final boss body."
+          },
+          {
+            "timesSeconds": [
+              680,
+              700
+            ],
+            "finding": "Inventory/menu screens obscure the fight."
+          },
+          {
+            "timesSeconds": [
+              670,
+              690,
+              710
+            ],
+            "finding": "Final boss visible, but its upper body/suspension outline is cut by the top frame boundary in every sampled view. Useful partial evidence of central mass, side appendages and lower extension; not an entire contour."
+          }
+        ],
+        "durableArtifacts": [
+          "docs/production/references-missing-resume-2026-11-18/sad-daddy-native-11m10s.png",
+          "docs/production/references-missing-resume-2026-11-18/sad-daddy-native-11m30s.png",
+          "docs/production/references-missing-resume-2026-11-18/sad-daddy-native-11m50s.png"
+        ],
+        "coordinateManifest": "docs/production/references-missing-resume-2026-11-18/sad-daddy-native-frame-coordinates.json"
+      },
+      "limits": [
+        "Only sampled native storyboards were inspected; intervening video frames remain unexamined.",
+        "No ordinary legs or missing upper anatomy should be invented.",
+        "Human Richard views must not complete the monstrous body.",
+        "No materials or original colors can be certified from this modified capture."
+      ],
+      "decision": "No complete upper contour in the eleven obtained native samples. This does not establish that every intervening video frame is incomplete; continuous footage was not inspected.",
+      "originalDetailedJournal": {
+        "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/sad-daddy/sad-daddy-research-2026-11-18.json",
+        "sha256": "6d459d02664a60ffe0d7e016d9aff54db5315251d3cea152661bf17f8f12d052",
+        "bytes": 10317,
+        "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+      }
+    }
+  ],
+  "accessLimits": [
+    {
+      "url": "https://www.gematsu.com/games/silent-hill-ascension",
+      "result": "HTTP403 on one public fetch; stopped immediately, no alternative route attempted for this resource. YouTube source was found independently using public YouTube search."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=kC4QnrVE6iQ",
+      "result": "Search-service open returned generic fetch error, not an access-denial status. One ordinary public HTML request succeeded HTTP200 with playability OK."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+      "result": "Ordinary video-media route returned195-byte Site Unavailable HTML, not video; stopped without additional client or challenge solver."
+    }
+  ],
+  "historicalRestrictedRoutesNotRetried": [
+    "Las Vegas Weekly relevant photograph:402",
+    "Las Vegas Sun:403",
+    "Fong ArtStation Snarler:403",
+    "blocked Facebook/Instagram tools"
+  ],
+  "durableEvidenceDirectory": "docs/production/references-missing-resume-2026-11-18",
+  "durableEvidence": [
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m24s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-02m24s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+      "kind": "native-storyboard-frame",
+      "bytes": 24097,
+      "sha256": "2d893e899f9f967893e3b342166fce35c06127b6f1f42e2eb3a9f6f38f971427",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 144,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m26s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-02m26s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+      "kind": "native-storyboard-frame",
+      "bytes": 26794,
+      "sha256": "024b576f5aafd27897782cb21bcc25aa21cb119df652508000db25697a4a34ba",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 146,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m28s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-02m28s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+      "kind": "native-storyboard-frame",
+      "bytes": 20805,
+      "sha256": "82aa2357450ca725e22ad62c70057a517a3d8b18ab5ff8124a00506f6a7f68c9",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 148,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m30s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-02m30s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+      "kind": "native-storyboard-frame",
+      "bytes": 12662,
+      "sha256": "a6dd483b5e1e859d2891e7fc2820852c0d4150f9f462a15d2c734b17317f1a3f",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 150,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m32s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-02m32s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+      "kind": "native-storyboard-frame",
+      "bytes": 9347,
+      "sha256": "1723e8f956fd64457b6098d3e4b0cbc28d6f4965bc41da79c69f2427d7f6565f",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 152,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m34s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-02m34s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+      "kind": "native-storyboard-frame",
+      "bytes": 5109,
+      "sha256": "583db649c7aba1c6917d89b31d998a7cb6737d343785eaa3b61400dd69743ab8",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 154,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m52s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-02m52s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+      "kind": "native-storyboard-frame",
+      "bytes": 20520,
+      "sha256": "1bdeee830ce0ca86e014e5eb4765ba5df3507d6e0a407e17f6848912861fdb32",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 172,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/wanderer-home-native-02m54s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-02m54s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=8WNC1piyOGc",
+      "kind": "native-storyboard-frame",
+      "bytes": 21760,
+      "sha256": "ae6f67581cf391fd8028865aa3c9e1c8f8645b92a1c53b2b90be1a8960c38333",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 174,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/sad-daddy-native-11m10s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/sad-daddy/sad-daddy-native-11m10s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=g1iDk4qjLRE",
+      "kind": "native-storyboard-frame",
+      "bytes": 53816,
+      "sha256": "1118aaf933b4c107c188cf1046afb88867432eabf2c2fe0569c061996945e1dd",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 670,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/sad-daddy-native-11m30s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/sad-daddy/sad-daddy-native-11m30s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=g1iDk4qjLRE",
+      "kind": "native-storyboard-frame",
+      "bytes": 55950,
+      "sha256": "828b9b26b28cccd0f95166b63eda9e42fea0855d0a885187213d7c850179744a",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 690,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/sad-daddy-native-11m50s.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/sad-daddy/sad-daddy-native-11m50s.png",
+      "sourcePage": "https://www.youtube.com/watch?v=g1iDk4qjLRE",
+      "kind": "native-storyboard-frame",
+      "bytes": 58762,
+      "sha256": "2a23f70a3e0f3737450ed6591a34c0644179ed31b5dc770271e8c8b59b7c6f1b",
+      "dimensions": [
+        320,
+        180
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "timeSeconds": 710,
+      "upscaled": false,
+      "colourAdjusted": false
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/missionary-bts-L2-M0.jpg",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/missionary-bts-L2-M0.jpg",
+      "sourcePage": "https://www.youtube.com/watch?v=Zw8_w4JiIdA",
+      "kind": "native-storyboard-sheet",
+      "bytes": 35958,
+      "sha256": "c79a93d771f904c53d521f529a99135df488a03e70edb48253e27d3f4779047b",
+      "dimensions": [
+        800,
+        450
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "sheetIndex": 0,
+      "frameSize": [
+        160,
+        90
+      ],
+      "grid": [
+        5,
+        5
+      ],
+      "sampleSpacingSeconds": 2,
+      "firstNominalSampleSeconds": 0,
+      "validFrameCountAccordingToStoryboard": 25,
+      "videoDurationSeconds": 187,
+      "upscaled": false,
+      "colourAdjusted": false,
+      "timingLimit": "Storyboard timestamps are nominal; the final sheet includes the terminal frame beyond the nominal video duration."
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/missionary-bts-L2-M1.jpg",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/missionary-bts-L2-M1.jpg",
+      "sourcePage": "https://www.youtube.com/watch?v=Zw8_w4JiIdA",
+      "kind": "native-storyboard-sheet",
+      "bytes": 36877,
+      "sha256": "b5b50d15aa27bfc4458ca197aa139267c1ad42e8dbad83f4b1e546b32bb23726",
+      "dimensions": [
+        800,
+        450
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "sheetIndex": 1,
+      "frameSize": [
+        160,
+        90
+      ],
+      "grid": [
+        5,
+        5
+      ],
+      "sampleSpacingSeconds": 2,
+      "firstNominalSampleSeconds": 50,
+      "validFrameCountAccordingToStoryboard": 25,
+      "videoDurationSeconds": 187,
+      "upscaled": false,
+      "colourAdjusted": false,
+      "timingLimit": "Storyboard timestamps are nominal; the final sheet includes the terminal frame beyond the nominal video duration."
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/missionary-bts-L2-M2.jpg",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/missionary-bts-L2-M2.jpg",
+      "sourcePage": "https://www.youtube.com/watch?v=Zw8_w4JiIdA",
+      "kind": "native-storyboard-sheet",
+      "bytes": 37060,
+      "sha256": "091002804d507694a6f1070bc57a06cb614835866ab7d3e60cb03d70ac98406a",
+      "dimensions": [
+        800,
+        450
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "sheetIndex": 2,
+      "frameSize": [
+        160,
+        90
+      ],
+      "grid": [
+        5,
+        5
+      ],
+      "sampleSpacingSeconds": 2,
+      "firstNominalSampleSeconds": 100,
+      "validFrameCountAccordingToStoryboard": 25,
+      "videoDurationSeconds": 187,
+      "upscaled": false,
+      "colourAdjusted": false,
+      "timingLimit": "Storyboard timestamps are nominal; the final sheet includes the terminal frame beyond the nominal video duration."
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/missionary-bts-L2-M3.jpg",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/missionary-bts-L2-M3.jpg",
+      "sourcePage": "https://www.youtube.com/watch?v=Zw8_w4JiIdA",
+      "kind": "native-storyboard-sheet",
+      "bytes": 31072,
+      "sha256": "5e6e24d3c9909da07c028aaa6059e6f16860fc2be0cb8bf008f94c527bf44841",
+      "dimensions": [
+        800,
+        360
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "sheetIndex": 3,
+      "frameSize": [
+        160,
+        90
+      ],
+      "grid": [
+        5,
+        5
+      ],
+      "sampleSpacingSeconds": 2,
+      "firstNominalSampleSeconds": 150,
+      "validFrameCountAccordingToStoryboard": 20,
+      "videoDurationSeconds": 187,
+      "upscaled": false,
+      "colourAdjusted": false,
+      "timingLimit": "Storyboard timestamps are nominal; the final sheet includes the terminal frame beyond the nominal video duration."
+    },
+    {
+      "path": "docs/production/references-missing-resume-2026-11-18/metro-gallery-inspection.png",
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/metro-gallery-inspection.png",
+      "sourcePage": "https://metrofilms.com/film/silent-hill-revelation/",
+      "kind": "derived-labelled-gallery-inspection-sheet",
+      "bytes": 2322007,
+      "sha256": "eb60231cb19f122fc474c14cb78a178a86857803d73306c5e4ebc2d4bab07e4d",
+      "dimensions": [
+        1200,
+        1760
+      ],
+      "copyVerifiedByteIdentical": true,
+      "originalUnchangedAfterCopy": true,
+      "sourceThumbnailCount": 29,
+      "isSingleNativeProductionStill": false,
+      "composition": {
+        "columns": 4,
+        "cellSize": [
+          300,
+          220
+        ],
+        "thumbnailMaximumSize": [
+          294,
+          190
+        ],
+        "thumbnailMethod": "Aspect-preserving reduction only, no enlargement; labels added for inspection."
+      },
+      "contentLimit": "This montage records inspection of 29 named SH2 gallery thumbnails. Three other gallery images were not inspected. It is not a new native film frame."
+    }
+  ],
+  "coordinateManifests": [
+    "docs/production/references-missing-resume-2026-11-18/wanderer-native-frame-coordinates.json",
+    "docs/production/references-missing-resume-2026-11-18/sad-daddy-native-frame-coordinates.json"
+  ],
+  "originalDetailedJournals": [
+    {
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/missing-reference-research-2026-11-18.json",
+      "sha256": "2004621010d98c71e9304bb03d55e693afdfd265c0f9cc952c037cc6a4ba5a41",
+      "bytes": 40039,
+      "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+    },
+    {
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/sad-daddy/sad-daddy-research-2026-11-18.json",
+      "sha256": "6d459d02664a60ffe0d7e016d9aff54db5315251d3cea152661bf17f8f12d052",
+      "bytes": 10317,
+      "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+    },
+    {
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-native-frame-extractions.json",
+      "sha256": "55a97f0031f8c24ca6b87b4e105e70a8e2de8f26e8d70314ced7ee1ff3702496",
+      "bytes": 3927,
+      "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+    },
+    {
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/download-log.json",
+      "sha256": "28868151d3de453d3e6fd095604c4ac5dd8b0373b7295baace387059603a8d82",
+      "bytes": 13258,
+      "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+    },
+    {
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-detail-downloads.json",
+      "sha256": "ae122b60fefa8fc9f9c004c94809cf72f2ff2c8a6e3c7f3d64ee1665629d23dd",
+      "bytes": 1172,
+      "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+    },
+    {
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/missionary-bts-downloads.json",
+      "sha256": "f837eeded2ef67ad3be3fe83f8ba46cc1e4ee4770174780172e8fa18952ad915",
+      "bytes": 2362,
+      "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+    },
+    {
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-downloads.json",
+      "sha256": "2dc9634579881cb3086accb34d7861c3a53ab69a155e4cdad4fe03ca4ab195cd",
+      "bytes": 2947,
+      "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+    },
+    {
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-detail-downloads.json",
+      "sha256": "23ad037ba88b0aa3f2f7e429ebd01aef68326bfa944faa31c4dd06ee78e66116",
+      "bytes": 2357,
+      "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+    },
+    {
+      "originalPath": "/workspace/scratch/eb1659a0c6b9/references-20261118-reconcile/wanderer-home-native-download-result.json",
+      "sha256": "8e9a4551035ad3da25d654fbee50f26a8630ef5258bef674b2f3bac7c832e3b1",
+      "bytes": 717,
+      "role": "Original research provenance only; this scratch file is not a durable deliverable and is not copied."
+    }
+  ],
+  "preservation": {
+    "copiedImageCount": 16,
+    "copiedImageBytes": 2772596,
+    "allCopiedImagesByteIdenticalToOriginals": true,
+    "allOriginalImagesUnchangedAfterCopy": true,
+    "reencodedDuringPersistence": false,
+    "existingRepositoryFilesModifiedByThisTask": [],
+    "registryOrSpriteAssetsModified": false,
+    "historicalLedgersOrWorkbookModified": false,
+    "excludedFromDurableBundle": [
+      "Other reference downloads",
+      "HTML and player documents",
+      "Signed or temporary media URLs",
+      "Failed video response",
+      "Original scratch-only source sheets not selected for copying"
+    ]
+  },
+  "verdict": "No missing profile cleared. Missionary final footwear remains unverified; Wanderer remains too dark/incomplete for reliable detail and foot supports; Sad Daddy upper contour is clipped in all obtained boss samples. Three dossiers were researched, not all58 missing profiles."
+}

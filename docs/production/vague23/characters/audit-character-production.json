@@ -1,0 +1,148 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "scope": "character agent production only; root owns import, gameplay QA and publication",
+  "sessionBaselineHead": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "baselineAuditPath": "docs/production/vague22/final-audit.json",
+  "baselineCoverage": {
+    "schema": 1,
+    "version": "0.9.6",
+    "total": 230,
+    "integrated": 204,
+    "missing": 26,
+    "selectionAvailable": 204,
+    "selectionMissing": 26,
+    "combatSideViewCandidates": 151,
+    "combatLegacyUnreviewed": 42,
+    "combatMissing": 37,
+    "separateSelectionAndCombat": 152,
+    "certified": 0,
+    "animatedClips": 6,
+    "presentationClips": 1,
+    "animatedPresentationClips": 0
+  },
+  "missingTriagePath": "docs/production/vague19/missing-triage.json",
+  "missingTriageCounts": {
+    "combatMissing": 37,
+    "selectionMissing": 26,
+    "combatEnabled": 18,
+    "combatDisabled": 19,
+    "categories": {
+      "historical-refusal": 20,
+      "other": 9,
+      "insufficient-visual-source": 8
+    },
+    "selectionMissingCategories": {
+      "historical-refusal": 19,
+      "other": 4,
+      "insufficient-visual-source": 3
+    },
+    "refusalKinds": {
+      "direct": 13,
+      "related-variant": 7
+    },
+    "readyAbsentPortraits": 0,
+    "readyAbsentCombatViews": 0
+  },
+  "nonRefusedCombatPriorities": [
+    {
+      "id": "film_missionary_revelation_177",
+      "needed": "Vue finale native des chaussures et appuis du même costume Revelation ; ne pas choisir arbitrairement un concept."
+    },
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "needed": "Vue latérale native montrant la longueur et la terminaison réelle du tronc Arcade."
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "needed": "Résoudre Rifle versus Shotgun sur la variante précise, puis référence complète de son arme."
+    },
+    {
+      "id": "sh4_ghost_victim_066",
+      "needed": "Décision de catalogue : catégorie collective versus individu, sans dupliquer une victime existante."
+    }
+  ],
+  "generationCalls": 8,
+  "selectedCandidates": 7,
+  "heldCandidates": 1,
+  "cancelledBeforeCall": 1,
+  "selectedCombatants": 4,
+  "selectedNoncombatants": 3,
+  "selectedIds": [
+    "sh4_greedy_worm_069",
+    "sh4_toadstool_061",
+    "sh4_whitestool_062",
+    "origins_remnant_077",
+    "bom_tremer_133",
+    "bom_wood_sapling_139",
+    "arcade_gum_head_arcade"
+  ],
+  "coverageEffectOfAgentSelection": {
+    "legacyViewsReplaced": 7,
+    "newPortraits": 0,
+    "absentCombatViewsFilled": 0,
+    "newAnimatedClips": 0,
+    "fidelityCertifications": 0,
+    "note": "These seven IDs already had portraits and static idle frame0. Dedicated authored views replace legacy images; none resolves the baseline37 absent combat or26 absent portraits."
+  },
+  "checks": [
+    {
+      "id": "sh4_greedy_worm_069",
+      "nativeSHA256Verified": true,
+      "copiedByteIdentically": true,
+      "rgbaDimensionsVerified": true,
+      "allReferencesSHA256Verified": true
+    },
+    {
+      "id": "sh4_toadstool_061",
+      "nativeSHA256Verified": true,
+      "copiedByteIdentically": true,
+      "rgbaDimensionsVerified": true,
+      "allReferencesSHA256Verified": true
+    },
+    {
+      "id": "sh4_whitestool_062",
+      "nativeSHA256Verified": true,
+      "copiedByteIdentically": true,
+      "rgbaDimensionsVerified": true,
+      "allReferencesSHA256Verified": true
+    },
+    {
+      "id": "origins_remnant_077",
+      "nativeSHA256Verified": true,
+      "copiedByteIdentically": true,
+      "rgbaDimensionsVerified": true,
+      "allReferencesSHA256Verified": true
+    },
+    {
+      "id": "bom_tremer_133",
+      "nativeSHA256Verified": true,
+      "copiedByteIdentically": true,
+      "rgbaDimensionsVerified": true,
+      "allReferencesSHA256Verified": true
+    },
+    {
+      "id": "bom_wood_sapling_139",
+      "nativeSHA256Verified": true,
+      "copiedByteIdentically": true,
+      "rgbaDimensionsVerified": true,
+      "allReferencesSHA256Verified": true
+    },
+    {
+      "id": "arcade_gum_head_arcade",
+      "nativeSHA256Verified": true,
+      "copiedByteIdentically": true,
+      "rgbaDimensionsVerified": true,
+      "allReferencesSHA256Verified": true
+    }
+  ],
+  "redPyramidDisposition": "docs/production/vague23/characters/red-pyramid-disposition.json",
+  "sourcePolicy": "Exact native-model or gameplay images mirrored by the repository-known Silent Hill Memories archive; no official-host claim. Reference bytes and URLs are retained.",
+  "limits": [
+    "No canonical1:1 certification; low-resolution sources and authored lateral reconstruction remain declared.",
+    "No new animations or combat mechanics; existing roles preserved.",
+    "The native PNGs preserve original alpha and occasional very low-alpha fringe, with measured visible framing rather than promised requested margin.",
+    "No shared manifest, runtime source, git commit or publication performed by this agent.",
+    "Root owns final source comparison, in-engine support/overlap review, import and coverage totals."
+  ]
+}

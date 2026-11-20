@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "reviewedAt": "2026-11-20T12:36:41.577862+00:00",
+  "reviewer": "root",
+  "method": "Both actual native workshop captures opened with view_image at their original720×500 dimensions. Not a browser or duel capture.",
+  "entries": [
+    {
+      "fighterId": "ascension_the_collector_183",
+      "decision": "accepted-as-candidate",
+      "automatedReport": "docs/production/vague26/qa-native/collector/ascension_the_collector_183/report.json",
+      "automatedReportSHA256": "2a391753c53e1376cc4f84f809d260cebbed6534979b0df9112ca0cd5069ebb7",
+      "assetSHA256": "d157ac2cd4c29a6b88daa57465134a6f676315e7a2c60b8c1b6575f62e314287",
+      "evidence": [
+        {
+          "path": "docs/production/vague26/qa-native/collector/ascension_the_collector_183/ascension_the_collector_183-reference-right.png",
+          "sha256": "31d37dae1506ecd71b0e4478117ded9b3e98e218ced94e659784ae099f5e5b41",
+          "facing": 1
+        },
+        {
+          "path": "docs/production/vague26/qa-native/collector/ascension_the_collector_183/ascension_the_collector_183-reference-left.png",
+          "sha256": "c566b632663e8ff402b7bc71a7de4e46046fad6ddeae3bc159d8445c54f1d3fd",
+          "facing": -1
+        }
+      ],
+      "findings": [
+        "Whole crown, cape, feet and crescent staff visible in both actual renderer orientations.",
+        "Visible sole rests on y430 workshop ground; the formerly low cape tails remain above it.",
+        "One static reference image, no duel permission or animation introduced.",
+        "RGBA transparency is clean at actual scale; brown/bronze interpretation and opposite-side mirroring remain unverified."
+      ],
+      "limits": [
+        "The alpha fringe extends approximately1.17renderpixels below the ground while visible bounds end exactly at430.",
+        "Native Canvas screenshots do not test HTTP, browser or service worker behavior.",
+        "No fidelity1:1 certification."
+      ]
+    }
+  ],
+  "capturesActuallyViewed": 2
+}

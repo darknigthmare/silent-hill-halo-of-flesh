@@ -1,0 +1,4269 @@
+{
+  "date": "2026-11-17",
+  "reviewer": "references_extended",
+  "scope": "Visual review of individual generated side-view combat candidates and import through scripts/import-sprite.py only.",
+  "certification": {
+    "fidelity1to1": false,
+    "nativeUHD": false,
+    "animated": false,
+    "inGameVisualValidation": false
+  },
+  "portraitSnapshot": "references/combat-selection-snapshot-20261117.json",
+  "entries": [
+    {
+      "fighterId": "downpour_prisoner_minion_brawler_108",
+      "source": "downpour",
+      "file": "exec-ddfc84b5-955e-4094-83fc-87e4c2018b72.png",
+      "anchorPixels": [
+        444,
+        1602
+      ],
+      "standingEquivalentPixels": 1640,
+      "referenceImages": [
+        "references/parent/downpour-brawler.png"
+      ],
+      "orientation": "Profil droit de la tête ; torse légèrement en trois quarts, garde latérale.",
+      "anatomy": "Deux bras avec poings vides, deux jambes, pieds nus, cage faciale et pantalon cohérents avec la sélection et le rendu Prima.",
+      "calibrationReason": "Ancre au centre horizontal des deux appuis estimés, sur la semelle basse (y=1602). Stature reconstruite par segments tête-cou, torse, cuisse, jambe et pied : environ 1640 px, au-dessus des 1537 px visibles car genoux fléchis et cou incliné.",
+      "limitations": [
+        "Écart de hauteur des semelles d’environ 48 px : l’appui arrière et l’appui avant ne partagent pas une ligne strictement orthographique.",
+        "Les tatouages, dents et métal fin restent une interprétation générée du rendu de petite taille."
+      ],
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit de la tête ; torse légèrement en trois quarts, garde latérale. Ancre au centre horizontal des deux appuis estimés, sur la semelle basse (y=1602). Stature reconstruite par segments tête-cou, torse, cuisse, jambe et pied : environ 1640 px, au-dessus des 1537 px visibles car genoux fléchis et cou incliné. Écart de hauteur des semelles d’environ 48 px : l’appui arrière et l’appui avant ne partagent pas une ligne strictement orthographique. Les tatouages, dents et métal fin restent une interprétation générée du rendu de petite taille. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-ddfc84b5-955e-4094-83fc-87e4c2018b72.png",
+      "inputSHA256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "calibration": {
+        "anchorPixels": [
+          444,
+          1602
+        ],
+        "anchor": [
+          0.471838,
+          0.958134
+        ],
+        "standingEquivalentPixels": 1640,
+        "bodyHeight": 0.980861,
+        "reason": "Ancre au centre horizontal des deux appuis estimés, sur la semelle basse (y=1602). Stature reconstruite par segments tête-cou, torse, cuisse, jambe et pied : environ 1640 px, au-dessus des 1537 px visibles car genoux fléchis et cou incliné.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.6779214060172167,
+        "oneFraction": 0.0071611438508356684,
+        "atLeast240Fraction": 0.3026353924614454,
+        "thresholdBounds": {
+          "1": [
+            0,
+            23,
+            927,
+            1672
+          ],
+          "2": [
+            38,
+            63,
+            874,
+            1606
+          ],
+          "16": [
+            40,
+            65,
+            872,
+            1603
+          ],
+          "32": [
+            40,
+            65,
+            872,
+            1603
+          ],
+          "128": [
+            41,
+            66,
+            871,
+            1602
+          ],
+          "240": [
+            42,
+            67,
+            871,
+            1601
+          ]
+        },
+        "significantMargins32": [
+          40,
+          65,
+          69,
+          69
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+        "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+        "bytes": 1237533,
+        "width": 941,
+        "height": 1672,
+        "facing": -1
+      },
+      "selectionSHA256Before": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "downpour_prisoner_minion_brawler_108",
+        "source": "downpour",
+        "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+        "technical": {
+          "pixelSHA256": "46d8d77832cac6af314713dd60c1cf5d4ac102614fa4fff94b80d96cd24879f6",
+          "sha256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+          "bytes": 1156056,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            40,
+            65,
+            872,
+            1603
+          ],
+          "transparentFraction": 0.69057
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "downpour_prisoner_minion_brawler_108",
+        "source": "downpour",
+        "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+        "technical": {
+          "pixelSHA256": "46d8d77832cac6af314713dd60c1cf5d4ac102614fa4fff94b80d96cd24879f6",
+          "sha256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+          "bytes": 1156056,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            40,
+            65,
+            872,
+            1603
+          ],
+          "transparentFraction": 0.69057
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "referenceURLs": [
+        "https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures"
+      ],
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-ddfc84b5-955e-4094-83fc-87e4c2018b72.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+        "/workspace/scratch/ae07d9a11c02/references/parent/downpour-brawler.png"
+      ],
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+        "bytes": 1156056,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          40,
+          65,
+          872,
+          1603
+        ],
+        "pixelSHA256": "46d8d77832cac6af314713dd60c1cf5d4ac102614fa4fff94b80d96cd24879f6",
+        "transparentFraction": 0.69057,
+        "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+        "facing": 1,
+        "anchor": [
+          0.471838,
+          0.958134
+        ],
+        "bodyHeight": 0.980861,
+        "sourceFile": "exec-ddfc84b5-955e-4094-83fc-87e4c2018b72.png",
+        "sourceSHA256": "a393e8d325499b95af68b81668fd8f360b58b597ccd8633c297880ce851e455a",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/parent/downpour-brawler.png",
+          "sha256": "900b83c4e1d2dba414092f2f55fa8177edfe0d8aea6c0eee7d56c1984ec37866",
+          "dimensions": [
+            200,
+            321
+          ],
+          "format": "PNG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "downpour_prisoner_minion_agile_109",
+      "source": "downpour",
+      "file": "exec-6ffbcbf1-c8a9-479b-b248-892cf6025be3.png",
+      "anchorPixels": [
+        444,
+        1438
+      ],
+      "standingEquivalentPixels": 1370,
+      "referenceImages": [
+        "references/parent/downpour-stabber.png"
+      ],
+      "orientation": "Profil droit de la tête et posture de combat latérale.",
+      "anatomy": "Deux bras, deux jambes, une lame tenue dans la main proche, main éloignée fermée ; cage faciale et pieds nus conservés.",
+      "calibrationReason": "Ancre entre les deux appuis de pieds, y=1438. Stature redressée estimée à 1370 px en suivant tête-cou, torse incliné et segments des jambes ; hauteur occupée accroupie de 1158 px non utilisée directement.",
+      "limitations": [
+        "Alias de profil Agile / Stabber hérité de l’identification Prima, sans changement du profil de jeu.",
+        "Lame entière ; épaisseur et détails de texture non certifiés 1:1."
+      ],
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit de la tête et posture de combat latérale. Ancre entre les deux appuis de pieds, y=1438. Stature redressée estimée à 1370 px en suivant tête-cou, torse incliné et segments des jambes ; hauteur occupée accroupie de 1158 px non utilisée directement. Alias de profil Agile / Stabber hérité de l’identification Prima, sans changement du profil de jeu. Lame entière ; épaisseur et détails de texture non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-6ffbcbf1-c8a9-479b-b248-892cf6025be3.png",
+      "inputSHA256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "calibration": {
+        "anchorPixels": [
+          444,
+          1438
+        ],
+        "anchor": [
+          0.471838,
+          0.860048
+        ],
+        "standingEquivalentPixels": 1370,
+        "bodyHeight": 0.819378,
+        "reason": "Ancre entre les deux appuis de pieds, y=1438. Stature redressée estimée à 1370 px en suivant tête-cou, torse incliné et segments des jambes ; hauteur occupée accroupie de 1158 px non utilisée directement.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.7581068953419197,
+        "oneFraction": 0.009615775745033533,
+        "atLeast240Fraction": 0.2202927253405468,
+        "thresholdBounds": {
+          "1": [
+            0,
+            23,
+            931,
+            1668
+          ],
+          "2": [
+            34,
+            275,
+            891,
+            1441
+          ],
+          "16": [
+            36,
+            280,
+            890,
+            1438
+          ],
+          "32": [
+            36,
+            280,
+            890,
+            1438
+          ],
+          "128": [
+            37,
+            281,
+            887,
+            1438
+          ],
+          "240": [
+            38,
+            282,
+            881,
+            1437
+          ]
+        },
+        "significantMargins32": [
+          36,
+          280,
+          51,
+          234
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+        "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+        "bytes": 1025593,
+        "width": 941,
+        "height": 1672,
+        "facing": 1
+      },
+      "selectionSHA256Before": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "downpour_prisoner_minion_agile_109",
+        "source": "downpour",
+        "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+        "technical": {
+          "pixelSHA256": "10bc90edaff686911c6cb1cde731fca8fee6753eb5c302b0833838affe4b108b",
+          "sha256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+          "bytes": 912424,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            36,
+            280,
+            890,
+            1438
+          ],
+          "transparentFraction": 0.77318
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "downpour_prisoner_minion_agile_109",
+        "source": "downpour",
+        "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+        "technical": {
+          "pixelSHA256": "10bc90edaff686911c6cb1cde731fca8fee6753eb5c302b0833838affe4b108b",
+          "sha256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+          "bytes": 912424,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            36,
+            280,
+            890,
+            1438
+          ],
+          "transparentFraction": 0.77318
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "referenceURLs": [
+        "https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures"
+      ],
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-6ffbcbf1-c8a9-479b-b248-892cf6025be3.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+        "/workspace/scratch/ae07d9a11c02/references/parent/downpour-stabber.png"
+      ],
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+        "bytes": 912424,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          36,
+          280,
+          890,
+          1438
+        ],
+        "pixelSHA256": "10bc90edaff686911c6cb1cde731fca8fee6753eb5c302b0833838affe4b108b",
+        "transparentFraction": 0.77318,
+        "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+        "facing": 1,
+        "anchor": [
+          0.471838,
+          0.860048
+        ],
+        "bodyHeight": 0.819378,
+        "sourceFile": "exec-6ffbcbf1-c8a9-479b-b248-892cf6025be3.png",
+        "sourceSHA256": "713f81af60dc218823bd0484e897b7ba701c15c617aad3d7b1109a770e1d2f62",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/parent/downpour-stabber.png",
+          "sha256": "e54be9e48332d9e1f8cba4f6ba5ec845ff543e1457324c94566f4ee577c93d51",
+          "dimensions": [
+            400,
+            484
+          ],
+          "format": "PNG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "downpour_shadow_107",
+      "source": "downpour",
+      "file": "exec-b2c686eb-c2e3-4001-ae67-65f9bc46a5eb.png",
+      "anchorPixels": [
+        410,
+        1541
+      ],
+      "standingEquivalentPixels": 1580,
+      "referenceImages": [
+        "references/parent/downpour-shadow.png"
+      ],
+      "orientation": "Profil droit clair, mains projetées vers l’adversaire à droite.",
+      "anatomy": "Deux bras avec mains distinctes, deux jambes, tête, pieds et pointes de doigts visibles ; robe courte, silhouette et bouche béante cohérentes.",
+      "calibrationReason": "Ancre entre les deux appuis à y=1541. Stature redressée estimée à 1580 px à partir de la chaîne tête-cou-tronc et des deux segments de jambe ; silhouette penchée visible de 1410 px.",
+      "limitations": [
+        "Pose statique nouvelle ; aucune validation du mouvement ou du lien avec le corps Doll en combat.",
+        "Motifs des jambes et détails de mains non certifiés 1:1."
+      ],
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Profil droit clair, mains projetées vers l’adversaire à droite. Ancre entre les deux appuis à y=1541. Stature redressée estimée à 1580 px à partir de la chaîne tête-cou-tronc et des deux segments de jambe ; silhouette penchée visible de 1410 px. Pose statique nouvelle ; aucune validation du mouvement ou du lien avec le corps Doll en combat. Motifs des jambes et détails de mains non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-b2c686eb-c2e3-4001-ae67-65f9bc46a5eb.png",
+      "inputSHA256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "calibration": {
+        "anchorPixels": [
+          410,
+          1541
+        ],
+        "anchor": [
+          0.435707,
+          0.921651
+        ],
+        "standingEquivalentPixels": 1580,
+        "bodyHeight": 0.944976,
+        "reason": "Ancre entre les deux appuis à y=1541. Stature redressée estimée à 1580 px à partir de la chaîne tête-cou-tronc et des deux segments de jambe ; silhouette penchée visible de 1410 px.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.754652487173881,
+        "oneFraction": 0.0062179347024696316,
+        "atLeast240Fraction": 0.22297616807936177,
+        "thresholdBounds": {
+          "1": [
+            0,
+            17,
+            923,
+            1672
+          ],
+          "2": [
+            71,
+            129,
+            889,
+            1544
+          ],
+          "16": [
+            73,
+            131,
+            886,
+            1542
+          ],
+          "32": [
+            73,
+            131,
+            886,
+            1541
+          ],
+          "128": [
+            74,
+            135,
+            885,
+            1541
+          ],
+          "240": [
+            75,
+            146,
+            885,
+            1540
+          ]
+        },
+        "significantMargins32": [
+          73,
+          131,
+          55,
+          131
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+        "sha256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+        "bytes": 901831,
+        "width": 941,
+        "height": 1672,
+        "facing": 1
+      },
+      "selectionSHA256Before": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "downpour_shadow_107",
+        "source": "downpour",
+        "path": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+        "technical": {
+          "pixelSHA256": "6b7e7a10a3124aa64c64888793c2ecc043796cd5462a31fbb62c2d786ea3c95a",
+          "sha256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+          "bytes": 909194,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            73,
+            131,
+            886,
+            1541
+          ],
+          "transparentFraction": 0.76761
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "downpour_shadow_107",
+        "source": "downpour",
+        "path": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+        "technical": {
+          "pixelSHA256": "6b7e7a10a3124aa64c64888793c2ecc043796cd5462a31fbb62c2d786ea3c95a",
+          "sha256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+          "bytes": 909194,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            73,
+            131,
+            886,
+            1541
+          ],
+          "transparentFraction": 0.76761
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "referenceURLs": [
+        "https://primagames.com/eguides/silent-hill-downpour-eguide/essentials/gameplay/creatures"
+      ],
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-b2c686eb-c2e3-4001-ae67-65f9bc46a5eb.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/downpour_shadow_107.d39788178ac5.png",
+        "/workspace/scratch/ae07d9a11c02/references/parent/downpour-shadow.png"
+      ],
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+        "bytes": 909194,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          73,
+          131,
+          886,
+          1541
+        ],
+        "pixelSHA256": "6b7e7a10a3124aa64c64888793c2ecc043796cd5462a31fbb62c2d786ea3c95a",
+        "transparentFraction": 0.76761,
+        "path": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
+        "facing": 1,
+        "anchor": [
+          0.435707,
+          0.921651
+        ],
+        "bodyHeight": 0.944976,
+        "sourceFile": "exec-b2c686eb-c2e3-4001-ae67-65f9bc46a5eb.png",
+        "sourceSHA256": "4a43797eb735287f8fb36e848e075a08550a5979120622084efb8e99f34f2183",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/parent/downpour-shadow.png",
+          "sha256": "e349d099a8b33eed909cb89caea0eb4fb624268209cbe119f61f8d12d2925ac7",
+          "dimensions": [
+            768,
+            1000
+          ],
+          "format": "PNG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "sh3_god_050",
+      "source": "sh3",
+      "file": "exec-7cd3e9e1-5056-477e-a19d-f98cb4749f26.png",
+      "anchorPixels": [
+        370,
+        1649
+      ],
+      "standingEquivalentPixels": 1440,
+      "referenceImages": [
+        "references/classic/sh3_god_model_views.jpg"
+      ],
+      "orientation": "Tête de profil droit ; torse et bassin en trois quarts latéral.",
+      "anatomy": "Deux bras longs et deux extrémités inférieures inachevées ; aucun pied humain ajouté. Rideau et crête entiers.",
+      "calibrationReason": "Ancre conventionnelle entre les deux extrémités inférieures, au point bas y=1649 ; ce n’est pas un appui de pied. Stature corporelle de référence environ 1440 px depuis la crête (y≈227) aux extrémités, avec faible correction du tronc. Le rideau montant à y=25 est exclu de cette mesure.",
+      "limitations": [
+        "Morphologie sans pieds : placement au sol conventionnel à vérifier dans la scène de combat.",
+        "Trois quarts latéral, pas un dessin orthographique strict.",
+        "Limites de référence du modèle de jeu ; aucune certification 1:1 ni conformité retail intégrale."
+      ],
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête de profil droit ; torse et bassin en trois quarts latéral. Ancre conventionnelle entre les deux extrémités inférieures, au point bas y=1649 ; ce n’est pas un appui de pied. Stature corporelle de référence environ 1440 px depuis la crête (y≈227) aux extrémités, avec faible correction du tronc. Le rideau montant à y=25 est exclu de cette mesure. Morphologie sans pieds : placement au sol conventionnel à vérifier dans la scène de combat. Trois quarts latéral, pas un dessin orthographique strict. Limites de référence du modèle de jeu ; aucune certification 1:1 ni conformité retail intégrale. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-7cd3e9e1-5056-477e-a19d-f98cb4749f26.png",
+      "inputSHA256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "calibration": {
+        "anchorPixels": [
+          370,
+          1649
+        ],
+        "anchor": [
+          0.393199,
+          0.986244
+        ],
+        "standingEquivalentPixels": 1440,
+        "bodyHeight": 0.861244,
+        "reason": "Ancre conventionnelle entre les deux extrémités inférieures, au point bas y=1649 ; ce n’est pas un appui de pied. Stature corporelle de référence environ 1440 px depuis la crête (y≈227) aux extrémités, avec faible correction du tronc. Le rideau montant à y=25 est exclu de cette mesure.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.6336833715532189,
+        "oneFraction": 0.011656005776202655,
+        "atLeast240Fraction": 0.3359070316114894,
+        "thresholdBounds": {
+          "1": [
+            0,
+            17,
+            920,
+            1672
+          ],
+          "2": [
+            50,
+            23,
+            896,
+            1654
+          ],
+          "16": [
+            52,
+            25,
+            894,
+            1649
+          ],
+          "32": [
+            52,
+            25,
+            894,
+            1649
+          ],
+          "128": [
+            53,
+            25,
+            893,
+            1649
+          ],
+          "240": [
+            54,
+            26,
+            892,
+            1648
+          ]
+        },
+        "significantMargins32": [
+          52,
+          25,
+          47,
+          23
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+        "sha256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+        "bytes": 1412579,
+        "width": 941,
+        "height": 1672,
+        "facing": 1
+      },
+      "selectionSHA256Before": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "sh3_god_050",
+        "source": "sh3",
+        "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+        "technical": {
+          "pixelSHA256": "249b53c6dfb89ba70389e336238cbfa83f9cb8ff0277c1ccf89f1bd066339f89",
+          "sha256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+          "bytes": 1411208,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            52,
+            25,
+            894,
+            1649
+          ],
+          "transparentFraction": 0.65459
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "sh3_god_050",
+        "source": "sh3",
+        "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+        "technical": {
+          "pixelSHA256": "249b53c6dfb89ba70389e336238cbfa83f9cb8ff0277c1ccf89f1bd066339f89",
+          "sha256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+          "bytes": 1411208,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            52,
+            25,
+            894,
+            1649
+          ],
+          "transparentFraction": 0.65459
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "referenceURLs": [
+        "https://gavasurface.livedoor.blog/archives/4211318.html"
+      ],
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-7cd3e9e1-5056-477e-a19d-f98cb4749f26.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+        "/workspace/scratch/ae07d9a11c02/references/classic/sh3_god_model_views.jpg"
+      ],
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+        "bytes": 1411208,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          52,
+          25,
+          894,
+          1649
+        ],
+        "pixelSHA256": "249b53c6dfb89ba70389e336238cbfa83f9cb8ff0277c1ccf89f1bd066339f89",
+        "transparentFraction": 0.65459,
+        "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+        "facing": 1,
+        "anchor": [
+          0.393199,
+          0.986244
+        ],
+        "bodyHeight": 0.861244,
+        "sourceFile": "exec-7cd3e9e1-5056-477e-a19d-f98cb4749f26.png",
+        "sourceSHA256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/classic/sh3_god_model_views.jpg",
+          "sha256": "a8540c7c6109310518a78171b49508fbecd4de39c8daaf140712aa1211cd6774",
+          "dimensions": [
+            942,
+            1280
+          ],
+          "format": "JPEG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "origins_demon_084",
+      "source": "origins",
+      "file": "exec-37da6be7-6f1d-4bb2-88e5-d9bfacc327c7.png",
+      "anchorPixels": [
+        560,
+        1003
+      ],
+      "standingEquivalentPixels": 990,
+      "referenceImages": [
+        "references/classic/origins_guide_p124_native_0.jpeg",
+        "references/classic/origins_demon_screenshot.jpg"
+      ],
+      "orientation": "Tête et corps orientés à droite, torse légèrement en trois quarts latéral.",
+      "anatomy": "Deux bras et deux jambes ; mains, pieds, cornes et projections dorsales entiers. Point lumineux sternum conservé.",
+      "calibrationReason": "Ancre entre les deux appuis, y=1003. Chaîne anatomique tête-cou-tronc-cuisse-jambe-pied environ 990 px redressée ; les projections dorsales qui montent à y=9 ne définissent pas la stature.",
+      "limitations": [
+        "Marge haute de 9 px seulement pour les projections dorsales, mais elles restent entières.",
+        "PNG natif 1536 × 1024 ; le fond brun de l’aperçu se trouve dans du RGB à alpha 0. Échantillons de fond inspectés : alpha nul ; dès alpha ≥2, les limites se resserrent au sujet.",
+        "Les sources natives sont de basse résolution ; cornes, doigts et texture ne sont pas certifiés 1:1."
+      ],
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête et corps orientés à droite, torse légèrement en trois quarts latéral. Ancre entre les deux appuis, y=1003. Chaîne anatomique tête-cou-tronc-cuisse-jambe-pied environ 990 px redressée ; les projections dorsales qui montent à y=9 ne définissent pas la stature. Marge haute de 9 px seulement pour les projections dorsales, mais elles restent entières. PNG natif 1536 × 1024 ; le fond brun de l’aperçu se trouve dans du RGB à alpha 0. Échantillons de fond inspectés : alpha nul ; dès alpha ≥2, les limites se resserrent au sujet. Les sources natives sont de basse résolution ; cornes, doigts et texture ne sont pas certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-37da6be7-6f1d-4bb2-88e5-d9bfacc327c7.png",
+      "inputSHA256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "calibration": {
+        "anchorPixels": [
+          560,
+          1003
+        ],
+        "anchor": [
+          0.364583,
+          0.979492
+        ],
+        "standingEquivalentPixels": 990,
+        "bodyHeight": 0.966797,
+        "reason": "Ancre entre les deux appuis, y=1003. Chaîne anatomique tête-cou-tronc-cuisse-jambe-pied environ 990 px redressée ; les projections dorsales qui montent à y=9 ne définissent pas la stature.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          254
+        ],
+        "zeroFraction": 0.7503083546956381,
+        "oneFraction": 0.016546249389648438,
+        "atLeast240Fraction": 0.2116387685139974,
+        "thresholdBounds": {
+          "1": [
+            0,
+            0,
+            1520,
+            1009
+          ],
+          "2": [
+            231,
+            6,
+            1152,
+            1006
+          ],
+          "16": [
+            232,
+            9,
+            1150,
+            1004
+          ],
+          "32": [
+            233,
+            9,
+            1150,
+            1004
+          ],
+          "128": [
+            233,
+            10,
+            1149,
+            1003
+          ],
+          "240": [
+            234,
+            11,
+            1143,
+            1003
+          ]
+        },
+        "significantMargins32": [
+          233,
+          9,
+          386,
+          20
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+        "sha256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+        "bytes": 1295547,
+        "width": 941,
+        "height": 1672,
+        "facing": 1
+      },
+      "selectionSHA256Before": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "origins_demon_084",
+        "source": "origins",
+        "path": "assets/sprites/origins_demon_084.abac0695168a.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+        "technical": {
+          "pixelSHA256": "dc85e787ce494c9994d8c3ae73dfe7c582b0d6a50d198da50c2f91493ff9e759",
+          "sha256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+          "bytes": 1761937,
+          "width": 1536,
+          "height": 1024,
+          "extension": "png",
+          "visibleBounds": [
+            233,
+            9,
+            1150,
+            1004
+          ],
+          "transparentFraction": 0.77828
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "origins_demon_084",
+        "source": "origins",
+        "path": "assets/sprites/origins_demon_084.abac0695168a.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+        "technical": {
+          "pixelSHA256": "dc85e787ce494c9994d8c3ae73dfe7c582b0d6a50d198da50c2f91493ff9e759",
+          "sha256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+          "bytes": 1761937,
+          "width": 1536,
+          "height": 1024,
+          "extension": "png",
+          "visibleBounds": [
+            233,
+            9,
+            1150,
+            1004
+          ],
+          "transparentFraction": 0.77828
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "referenceURLs": [
+        "https://www.silent-hill.cz/DemonSamael.jpg",
+        "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf"
+      ],
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-37da6be7-6f1d-4bb2-88e5-d9bfacc327c7.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/origins_demon_084.c23b0115c82b.png",
+        "/workspace/scratch/ae07d9a11c02/references/classic/origins_guide_p124_native_0.jpeg",
+        "/workspace/scratch/ae07d9a11c02/references/classic/origins_demon_screenshot.jpg"
+      ],
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+        "bytes": 1761937,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          233,
+          9,
+          1150,
+          1004
+        ],
+        "pixelSHA256": "dc85e787ce494c9994d8c3ae73dfe7c582b0d6a50d198da50c2f91493ff9e759",
+        "transparentFraction": 0.77828,
+        "path": "assets/sprites/origins_demon_084.abac0695168a.png",
+        "facing": 1,
+        "anchor": [
+          0.364583,
+          0.979492
+        ],
+        "bodyHeight": 0.966797,
+        "sourceFile": "exec-37da6be7-6f1d-4bb2-88e5-d9bfacc327c7.png",
+        "sourceSHA256": "abac0695168a1c06e8d25aaa2b71722c1137261f137bf6b5646fd6f2be9aeead",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/classic/origins_guide_p124_native_0.jpeg",
+          "sha256": "49953085f0ab134cc0df9c7d99e273241dbe80235f613c323b62be7d277f5b3f",
+          "dimensions": [
+            1202,
+            1533
+          ],
+          "format": "JPEG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        },
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/classic/origins_demon_screenshot.jpg",
+          "sha256": "8c4b5a2b4547ec5edf5ce079c1af171040e1a18683d269ef210088d8e6bafc0b",
+          "dimensions": [
+            323,
+            231
+          ],
+          "format": "JPEG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "bom_fire_guardian_137",
+      "source": "bom",
+      "file": "exec-0bfa753d-8403-4c86-b64e-38b9adcfd3a5.png",
+      "anchorPixels": [
+        830,
+        905
+      ],
+      "standingEquivalentPixels": 786,
+      "referenceImages": [
+        "references/extended/bom_meristation_boss.jpg",
+        "references/extended/fire_guardian.jpg"
+      ],
+      "orientation": "Tête et corps latéraux face à droite, avant-bras projetés vers l’adversaire.",
+      "anatomy": "Deux longs membres antérieurs griffus et deux membres postérieurs repliés, deux cornes ; toutes les extrémités principales restent dans le cadre.",
+      "calibrationReason": "Ancre de soutien entre membres postérieurs et avant-griffes, au point inférieur y=905. Pour cette morphologie canoniquement ramassée, la stature de référence suit le dos porteur (y≈114) aux appuis (y≈900), soit 786 px, hors cornes. Aucune posture bipède redressée n’est inventée. Calibration morphologique provisoire, à contrôler en scène.",
+      "limitations": [
+        "La source native et le portrait se complètent mais présentent des auto-occultations.",
+        "La stature de référence est celle de sa pose neutre non humaine ; un étalon debout officiel n’est pas disponible.",
+        "Cornes, petites griffes et détails du dos non certifiés 1:1."
+      ],
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête et corps latéraux face à droite, avant-bras projetés vers l’adversaire. Ancre de soutien entre membres postérieurs et avant-griffes, au point inférieur y=905. Pour cette morphologie canoniquement ramassée, la stature de référence suit le dos porteur (y≈114) aux appuis (y≈900), soit 786 px, hors cornes. Aucune posture bipède redressée n’est inventée. Calibration morphologique provisoire, à contrôler en scène. La source native et le portrait se complètent mais présentent des auto-occultations. La stature de référence est celle de sa pose neutre non humaine ; un étalon debout officiel n’est pas disponible. Cornes, petites griffes et détails du dos non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-0bfa753d-8403-4c86-b64e-38b9adcfd3a5.png",
+      "inputSHA256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "calibration": {
+        "anchorPixels": [
+          830,
+          905
+        ],
+        "anchor": [
+          0.496411,
+          0.961743
+        ],
+        "standingEquivalentPixels": 786,
+        "bodyHeight": 0.835282,
+        "reason": "Ancre de soutien entre membres postérieurs et avant-griffes, au point inférieur y=905. Pour cette morphologie canoniquement ramassée, la stature de référence suit le dos porteur (y≈114) aux appuis (y≈900), soit 786 px, hors cornes. Aucune posture bipède redressée n’est inventée. Calibration morphologique provisoire, à contrôler en scène.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.6133185707966177,
+        "oneFraction": 0.012141593235334496,
+        "atLeast240Fraction": 0.3583457484402727,
+        "thresholdBounds": {
+          "1": [
+            0,
+            14,
+            1634,
+            941
+          ],
+          "2": [
+            133,
+            19,
+            1524,
+            908
+          ],
+          "16": [
+            135,
+            22,
+            1520,
+            905
+          ],
+          "32": [
+            136,
+            22,
+            1520,
+            905
+          ],
+          "128": [
+            136,
+            23,
+            1519,
+            904
+          ],
+          "240": [
+            137,
+            24,
+            1518,
+            903
+          ]
+        },
+        "significantMargins32": [
+          136,
+          22,
+          152,
+          36
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+        "sha256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+        "bytes": 1257243,
+        "width": 1672,
+        "height": 941,
+        "facing": -1
+      },
+      "selectionSHA256Before": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "bom_fire_guardian_137",
+        "source": "bom",
+        "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+        "technical": {
+          "pixelSHA256": "b1e0219579c76697c15471b7aaeeab41187d2d7677bf96ed1c9a4b2529235d51",
+          "sha256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+          "bytes": 1453158,
+          "width": 1672,
+          "height": 941,
+          "extension": "png",
+          "visibleBounds": [
+            136,
+            22,
+            1520,
+            905
+          ],
+          "transparentFraction": 0.63296
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "bom_fire_guardian_137",
+        "source": "bom",
+        "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+        "technical": {
+          "pixelSHA256": "b1e0219579c76697c15471b7aaeeab41187d2d7677bf96ed1c9a4b2529235d51",
+          "sha256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+          "bytes": 1453158,
+          "width": 1672,
+          "height": 941,
+          "extension": "png",
+          "visibleBounds": [
+            136,
+            22,
+            1520,
+            905
+          ],
+          "transparentFraction": 0.63296
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "referenceURLs": [
+        "https://as.com/meristation/2012/10/21/analisis/1350846000_109297.html",
+        "https://www.silenthillmemories.net/sh_book_of_memories/bestiary/fire_guardian.jpg"
+      ],
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-0bfa753d-8403-4c86-b64e-38b9adcfd3a5.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+        "/workspace/scratch/ae07d9a11c02/references/extended/bom_meristation_boss.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/extended/fire_guardian.jpg"
+      ],
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+        "bytes": 1453158,
+        "width": 1672,
+        "height": 941,
+        "visibleBounds": [
+          136,
+          22,
+          1520,
+          905
+        ],
+        "pixelSHA256": "b1e0219579c76697c15471b7aaeeab41187d2d7677bf96ed1c9a4b2529235d51",
+        "transparentFraction": 0.63296,
+        "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+        "facing": 1,
+        "anchor": [
+          0.496411,
+          0.961743
+        ],
+        "bodyHeight": 0.835282,
+        "sourceFile": "exec-0bfa753d-8403-4c86-b64e-38b9adcfd3a5.png",
+        "sourceSHA256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/extended/bom_meristation_boss.jpg",
+          "sha256": "5e35cf1296e8b9b594f7b6e46cf65319ef6fb87bb16a7ab4ef3de910e1f6e641",
+          "dimensions": [
+            960,
+            544
+          ],
+          "format": "JPEG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        },
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/extended/fire_guardian.jpg",
+          "sha256": "d5d605f889746afd12360b6b40bc4bbc9fad8ec108399ffef80eb514645adace",
+          "dimensions": [
+            127,
+            127
+          ],
+          "format": "JPEG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "arcade_robbie_the_rabbit_axe",
+      "source": "arcade",
+      "file": "exec-81c594c9-a289-40d5-a571-c3da14ba244f.png",
+      "anchorPixels": [
+        440,
+        1573
+      ],
+      "standingEquivalentPixels": 1550,
+      "referenceImages": [
+        "references/arcade/robby.jpg",
+        "references/arcade/robby_screen02.jpg"
+      ],
+      "orientation": "Tête de profil droit ; corps en garde latérale, hache tenue devant le corps.",
+      "anatomy": "Deux oreilles, deux bras, deux jambes, pieds et hache entiers. Les doigts et les orteils du côté éloigné sont partiellement occultés par la vue de côté ; aucune extrémité principale n’est coupée.",
+      "calibrationReason": "Ancre au centre des deux appuis, y=1573. Stature redressée estimée à 1550 px, oreilles incluses comme silhouette de tête, avec correction modérée des genoux fléchis par rapport aux 1476 px occupés.",
+      "limitations": [
+        "Le nombre exact de dents demeure non résolu dans la référence native de faible taille ; aucune exigence d’une dent unique n’est affirmée.",
+        "Quatre orteils existent dans la sélection conservée ; la vue de côté masque les orteils internes et ne permet pas leur certification complète.",
+        "La géométrie détaillée de la hache s’appuie aussi sur un port de modèle modifié documenté dans la provenance de sélection ; elle n’est pas certifiée comme modèle retail exact."
+      ],
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Tête de profil droit ; corps en garde latérale, hache tenue devant le corps. Ancre au centre des deux appuis, y=1573. Stature redressée estimée à 1550 px, oreilles incluses comme silhouette de tête, avec correction modérée des genoux fléchis par rapport aux 1476 px occupés. Le nombre exact de dents demeure non résolu dans la référence native de faible taille ; aucune exigence d’une dent unique n’est affirmée. Quatre orteils existent dans la sélection conservée ; la vue de côté masque les orteils internes et ne permet pas leur certification complète. La géométrie détaillée de la hache s’appuie aussi sur un port de modèle modifié documenté dans la provenance de sélection ; elle n’est pas certifiée comme modèle retail exact. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-81c594c9-a289-40d5-a571-c3da14ba244f.png",
+      "inputSHA256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "calibration": {
+        "anchorPixels": [
+          440,
+          1573
+        ],
+        "anchor": [
+          0.467588,
+          0.940789
+        ],
+        "standingEquivalentPixels": 1550,
+        "bodyHeight": 0.927033,
+        "reason": "Ancre au centre des deux appuis, y=1573. Stature redressée estimée à 1550 px, oreilles incluses comme silhouette de tête, avec correction modérée des genoux fléchis par rapport aux 1476 px occupés.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.6691160020135354,
+        "oneFraction": 0.0115657526097148,
+        "atLeast240Fraction": 0.3062518749777545,
+        "thresholdBounds": {
+          "1": [
+            0,
+            19,
+            935,
+            1672
+          ],
+          "2": [
+            74,
+            94,
+            821,
+            1575
+          ],
+          "16": [
+            76,
+            96,
+            819,
+            1573
+          ],
+          "32": [
+            76,
+            97,
+            818,
+            1573
+          ],
+          "128": [
+            77,
+            98,
+            818,
+            1572
+          ],
+          "240": [
+            78,
+            99,
+            817,
+            1571
+          ]
+        },
+        "significantMargins32": [
+          76,
+          97,
+          123,
+          99
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+        "sha256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+        "bytes": 976685,
+        "width": 941,
+        "height": 1672,
+        "facing": -1
+      },
+      "selectionSHA256Before": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "arcade_robbie_the_rabbit_axe",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+        "technical": {
+          "pixelSHA256": "761193ad2dc338d66ef58dcf06d2321053d04a5270f74af02f8f55f3eff6099f",
+          "sha256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+          "bytes": 1194577,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            76,
+            97,
+            818,
+            1573
+          ],
+          "transparentFraction": 0.68612
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "arcade_robbie_the_rabbit_axe",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+        "technical": {
+          "pixelSHA256": "761193ad2dc338d66ef58dcf06d2321053d04a5270f74af02f8f55f3eff6099f",
+          "sha256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+          "bytes": 1194577,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            76,
+            97,
+            818,
+            1573
+          ],
+          "transparentFraction": 0.68612
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "referenceURLs": [
+        "https://www.silenthillmemories.net/sh_arcade/creatures/robby.jpg",
+        "https://www.silenthillmemories.net/sh_arcade/creatures/robby_screen02.jpg",
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=1976566039"
+      ],
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-81c594c9-a289-40d5-a571-c3da14ba244f.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+        "/workspace/scratch/ae07d9a11c02/references/arcade/robby.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/arcade/robby_screen02.jpg"
+      ],
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+        "bytes": 1194577,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          76,
+          97,
+          818,
+          1573
+        ],
+        "pixelSHA256": "761193ad2dc338d66ef58dcf06d2321053d04a5270f74af02f8f55f3eff6099f",
+        "transparentFraction": 0.68612,
+        "path": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+        "facing": 1,
+        "anchor": [
+          0.467588,
+          0.940789
+        ],
+        "bodyHeight": 0.927033,
+        "sourceFile": "exec-81c594c9-a289-40d5-a571-c3da14ba244f.png",
+        "sourceSHA256": "3bd102f8efdfdea506a655c7e9dc54c89e8c2f92a943b0633fb407e7437ec3be",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/arcade/robby.jpg",
+          "sha256": "94f7d0a048d762469994b230cd2fd8ea01c18aaafd17d76c732a25d4408fee98",
+          "dimensions": [
+            477,
+            376
+          ],
+          "format": "JPEG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        },
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/arcade/robby_screen02.jpg",
+          "sha256": "2878da2c5457e1682d4da5d893eb41f34f63c39590cc12e3240e0e23582cf29e",
+          "dimensions": [
+            235,
+            177
+          ],
+          "format": "JPEG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "film_armless_man_170",
+      "source": "film",
+      "file": "exec-0156d823-a916-48e1-8c1e-5d297305e2be.png",
+      "anchorPixels": [
+        420,
+        1587
+      ],
+      "standingEquivalentPixels": 1640,
+      "referenceImages": [
+        "references/films/armless_2006_costume_1.jpg"
+      ],
+      "orientation": "Corps et tête inclinés vers la droite, côté antérieur identifié par l’ouverture thoracique.",
+      "anatomy": "Deux jambes et deux pieds enveloppés ; bras enfermés dans la masse thoracique, aucun bras libre ajouté ; tête sans traits et peau réticulée cohérentes avec le costume.",
+      "calibrationReason": "Ancre entre les deux appuis à y=1587. Stature redressée estimée à 1640 px par les segments tête-cou, torse et jambes ; la hauteur visible inclinée est de 1472 px.",
+      "limitations": [
+        "Référence de costume de tournage avec petite capture du film ; l’aspect après tous les effets visuels du film n’est pas certifié.",
+        "Détails réticulés et cavité thoracique générés, non certifiés 1:1."
+      ],
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Corps et tête inclinés vers la droite, côté antérieur identifié par l’ouverture thoracique. Ancre entre les deux appuis à y=1587. Stature redressée estimée à 1640 px par les segments tête-cou, torse et jambes ; la hauteur visible inclinée est de 1472 px. Référence de costume de tournage avec petite capture du film ; l’aspect après tous les effets visuels du film n’est pas certifié. Détails réticulés et cavité thoracique générés, non certifiés 1:1. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-0156d823-a916-48e1-8c1e-5d297305e2be.png",
+      "inputSHA256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+      "nativeDimensions": [
+        941,
+        1672
+      ],
+      "calibration": {
+        "anchorPixels": [
+          420,
+          1587
+        ],
+        "anchor": [
+          0.446334,
+          0.949163
+        ],
+        "standingEquivalentPixels": 1640,
+        "bodyHeight": 0.980861,
+        "reason": "Ancre entre les deux appuis à y=1587. Stature redressée estimée à 1640 px par les segments tête-cou, torse et jambes ; la hauteur visible inclinée est de 1472 px.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.7385963217385556,
+        "oneFraction": 0.006546532498766963,
+        "atLeast240Fraction": 0.24444625233259945,
+        "thresholdBounds": {
+          "1": [
+            0,
+            37,
+            921,
+            1652
+          ],
+          "2": [
+            86,
+            112,
+            850,
+            1591
+          ],
+          "16": [
+            89,
+            115,
+            848,
+            1587
+          ],
+          "32": [
+            89,
+            115,
+            848,
+            1587
+          ],
+          "128": [
+            90,
+            115,
+            848,
+            1586
+          ],
+          "240": [
+            91,
+            116,
+            847,
+            1585
+          ]
+        },
+        "significantMargins32": [
+          89,
+          115,
+          93,
+          85
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+        "sha256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+        "bytes": 1220311,
+        "width": 941,
+        "height": 1672,
+        "facing": 1
+      },
+      "selectionSHA256Before": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "film_armless_man_170",
+        "source": "film",
+        "path": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+        "technical": {
+          "pixelSHA256": "ddda5b205fa9d77bb806b7add0c84b8cd53a7a769671441bc0bbacb0f2d72065",
+          "sha256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+          "bytes": 1026094,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            89,
+            115,
+            848,
+            1587
+          ],
+          "transparentFraction": 0.75006
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "film_armless_man_170",
+        "source": "film",
+        "path": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+        "technical": {
+          "pixelSHA256": "ddda5b205fa9d77bb806b7add0c84b8cd53a7a769671441bc0bbacb0f2d72065",
+          "sha256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+          "bytes": 1026094,
+          "width": 941,
+          "height": 1672,
+          "extension": "png",
+          "visibleBounds": [
+            89,
+            115,
+            848,
+            1587
+          ],
+          "transparentFraction": 0.75006
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "referenceURLs": [
+        "https://yourprops.com/armless-man-creature-costume-original-make-up-prosthetics-silent-hill-2006-yp827361"
+      ],
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-0156d823-a916-48e1-8c1e-5d297305e2be.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/film_armless_man_170.25e542fa86c4.png",
+        "/workspace/scratch/ae07d9a11c02/references/films/armless_2006_costume_1.jpg"
+      ],
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+        "bytes": 1026094,
+        "width": 941,
+        "height": 1672,
+        "visibleBounds": [
+          89,
+          115,
+          848,
+          1587
+        ],
+        "pixelSHA256": "ddda5b205fa9d77bb806b7add0c84b8cd53a7a769671441bc0bbacb0f2d72065",
+        "transparentFraction": 0.75006,
+        "path": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
+        "facing": 1,
+        "anchor": [
+          0.446334,
+          0.949163
+        ],
+        "bodyHeight": 0.980861,
+        "sourceFile": "exec-0156d823-a916-48e1-8c1e-5d297305e2be.png",
+        "sourceSHA256": "a103ebba3cceb4d1264c9e08bba731ed7506ac144a073b8c1fbc1e75bd70e787",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/films/armless_2006_costume_1.jpg",
+          "sha256": "4a9a8b5ede5b5e19c75ed8356ea72ae118d8fdae78984ea848894c5c1c6c1894",
+          "dimensions": [
+            800,
+            800
+          ],
+          "format": "JPEG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "film_red_pyramid_thing_return_to_silent_hill",
+      "source": "film",
+      "file": "exec-2b007f29-8a35-423f-bb4a-07c04ef36b1f.png",
+      "anchorPixels": [
+        920,
+        809
+      ],
+      "standingEquivalentPixels": 720,
+      "referenceImages": [
+        "references/parent/pyramid-return-starace.jpg"
+      ],
+      "referenceURLs": [
+        "https://www.fye.com/products/return-to-silent-hill-pyramid-head-1-6-scale-action-figure-normal-version_aec-saas81647",
+        "https://www.fye.com/cdn/shop/files/4552520-3745838_6edebc78-df90-45a3-9067-faaf4e14bc9d.jpg?v=1793204632&width=1946"
+      ],
+      "orientation": "Casque et corps orientés à droite, garde latérale ; main armée ramenée en arrière avec lame entière.",
+      "anatomy": "Deux bras, deux jambes ; casque, lame, doigts, pieds et panneaux de vêtement entiers. Détails du costume cohérents avec le portrait et la figurine Star Ace Return 2026.",
+      "calibrationReason": "Ancre entre les deux pieds au plan des semelles y=809. Stature de référence environ 720 px, casque canonique inclus, avec correction faible de la flexion et de l’écartement des jambes ; la lame n’influence pas cette stature.",
+      "limitations": [
+        "Référence issue d’une figurine sous licence Star Ace SA0164 : elle ne certifie pas tous les détails du costume final à l’écran.",
+        "Vue latérale générée ; petits perforations, boucles et texture non certifiés 1:1.",
+        "Correction de cadrage acceptée : marge significative haute 108 px et basse 132 px. Le premier PNG aux marges serrées n’a pas été importé.",
+        "Dimensions natives de la correction : 1671 × 941, sans prétention UHD."
+      ],
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Casque et corps orientés à droite, garde latérale ; main armée ramenée en arrière avec lame entière. Ancre entre les deux pieds au plan des semelles y=809. Stature de référence environ 720 px, casque canonique inclus, avec correction faible de la flexion et de l’écartement des jambes ; la lame n’influence pas cette stature. Référence issue d’une figurine sous licence Star Ace SA0164 : elle ne certifie pas tous les détails du costume final à l’écran. Vue latérale générée ; petits perforations, boucles et texture non certifiés 1:1. Correction de cadrage acceptée : marge significative haute 108 px et basse 132 px. Le premier PNG aux marges serrées n’a pas été importé. Dimensions natives de la correction : 1671 × 941, sans prétention UHD. Candidat généré non certifié 1:1 ; aucune animation complète.",
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-2b007f29-8a35-423f-bb4a-07c04ef36b1f.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+        "/workspace/scratch/ae07d9a11c02/references/parent/pyramid-return-starace.jpg"
+      ],
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-2b007f29-8a35-423f-bb4a-07c04ef36b1f.png",
+      "inputSHA256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+      "nativeDimensions": [
+        1671,
+        941
+      ],
+      "calibration": {
+        "anchorPixels": [
+          920,
+          809
+        ],
+        "anchor": [
+          0.550569,
+          0.859724
+        ],
+        "standingEquivalentPixels": 720,
+        "bodyHeight": 0.765143,
+        "reason": "Ancre entre les deux pieds au plan des semelles y=809. Stature de référence environ 720 px, casque canonique inclus, avec correction faible de la flexion et de l’écartement des jambes ; la lame n’influence pas cette stature.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.9079013057018808,
+        "oneFraction": 0.0032122644779259365,
+        "atLeast240Fraction": 0.08133369710590933,
+        "thresholdBounds": {
+          "1": [
+            140,
+            39,
+            1641,
+            909
+          ],
+          "2": [
+            396,
+            106,
+            1109,
+            811
+          ],
+          "16": [
+            397,
+            108,
+            1107,
+            809
+          ],
+          "32": [
+            397,
+            108,
+            1106,
+            809
+          ],
+          "128": [
+            398,
+            109,
+            1106,
+            808
+          ],
+          "240": [
+            400,
+            110,
+            1105,
+            807
+          ]
+        },
+        "significantMargins32": [
+          397,
+          108,
+          565,
+          132
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+        "sha256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+        "bytes": 1385665,
+        "width": 941,
+        "height": 1672,
+        "facing": -1
+      },
+      "selectionSHA256Before": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "film_red_pyramid_thing_return_to_silent_hill",
+        "source": "film",
+        "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+        "technical": {
+          "pixelSHA256": "844d35209d8e485f579cb9a83d52cb104a2745a90817c3846b09c967582e6b36",
+          "sha256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+          "bytes": 435582,
+          "width": 1671,
+          "height": 941,
+          "extension": "png",
+          "visibleBounds": [
+            397,
+            108,
+            1106,
+            809
+          ],
+          "transparentFraction": 0.91447
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "film_red_pyramid_thing_return_to_silent_hill",
+        "source": "film",
+        "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+        "technical": {
+          "pixelSHA256": "844d35209d8e485f579cb9a83d52cb104a2745a90817c3846b09c967582e6b36",
+          "sha256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+          "bytes": 435582,
+          "width": 1671,
+          "height": 941,
+          "extension": "png",
+          "visibleBounds": [
+            397,
+            108,
+            1106,
+            809
+          ],
+          "transparentFraction": 0.91447
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "activeInCombat": false,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+        "bytes": 435582,
+        "width": 1671,
+        "height": 941,
+        "visibleBounds": [
+          397,
+          108,
+          1106,
+          809
+        ],
+        "pixelSHA256": "844d35209d8e485f579cb9a83d52cb104a2745a90817c3846b09c967582e6b36",
+        "transparentFraction": 0.91447,
+        "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+        "facing": 1,
+        "anchor": [
+          0.550569,
+          0.859724
+        ],
+        "bodyHeight": 0.765143,
+        "sourceFile": "exec-2b007f29-8a35-423f-bb4a-07c04ef36b1f.png",
+        "sourceSHA256": "04809e40872a5fba589a0507b3be744d7aa6b2772f0724d7ebb1760314e4cfb4",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/parent/pyramid-return-starace.jpg",
+          "sha256": "944466566d4a14632e17b94f35f1d9721e48f56604cb516288d8c6887230a3a7",
+          "dimensions": [
+            177,
+            500
+          ],
+          "format": "JPEG",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "arcade_hummer_arcade",
+      "source": "arcade",
+      "file": "exec-95ddb254-1edd-4b79-a7d4-1ff8e7b640b1.png",
+      "anchorPixels": [
+        950,
+        817
+      ],
+      "standingEquivalentPixels": 460,
+      "orientation": "Bec dirigé vers la droite ; corps en vol latéral, deux ailes étendues avec leurs pointes entières.",
+      "anatomy": "Deux ailes anguleuses, corps central, tête claire et bec fin entiers ; aucune jambe humanoïde ajoutée.",
+      "calibrationReason": "Ancre conventionnelle sous la masse centrale du corps, y=817 ; elle ne prétend pas être un pied posé au sol. Référence morphologique en vol : hauteur du corps central environ 460 px, depuis son dos autour de y=355 jusqu’au dessous à y=815. L’étendue des ailes n’est pas utilisée comme stature.",
+      "limitations": [
+        "Ailes en trois quarts pour les rendre distinctes ; pose latérale adaptée, pas frame native extraite.",
+        "Sources entières petites ; le gros plan de jeu coupe une aile. Petites griffes et texture non certifiées.",
+        "Marge haute de l’aile proche : 20 px significatifs, aile entière.",
+        "Ancrage de vol et échelle non validés dans une scène de combat."
+      ],
+      "referenceImages": [
+        "references/followup-20261117-arcade/divulgantemorte_060.jpg",
+        "references/followup-20261117-arcade/divulgantemorte_061.jpg"
+      ],
+      "referenceURLs": [
+        "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+        "https://blogger.googleusercontent.com/img/a/AVvXsEh0CUXvae89nRVQNhiKCVPCIB2fmPjFb9MKZvm7sY_rjmcSJMNLWRLnB1dIkxSV04sD5w7jR-DjQ208u84bnorhi60FyJPhT-4m65i6AANy9yDRccJLrcdEiDUkY_3qTw_2oIRVFrYckRZo4hOg_JUk6hxhjWFwtnzJ56stZT2Xyvq5FfRjAMtK82MpCIA=w640-h476-rw",
+        "https://blogger.googleusercontent.com/img/a/AVvXsEgmGtPwHKIIbwLTyFDR3zBkGBCy7MeqLmpCjM9JeUmEDPDvfaHgU-aZ5MLC4aXMgpy7-avBvg-iRtDX3zUE_Sb6foYz23wMWbGw9lgDDxgh8-8vsumV5vezOtX9cU8S5h14xl4cWiDozf-luespdBMpGG8GpXMBhi3UuGLHtCM6L-kZL0WHiZamGXJ6Oy0=w640-h476-rw"
+      ],
+      "referenceEvidence": {
+        "fighterId": "arcade_hummer_arcade",
+        "fromStatus": "incomplete-source",
+        "toStatus": "reference-candidate-ready",
+        "generationPerformed": false,
+        "certified1to1": false,
+        "edition": "Silent Hill: The Arcade (retail game)",
+        "referenceKind": "Native gameplay screenshots published with a first-person playthrough review",
+        "references": [
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_060.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEh0CUXvae89nRVQNhiKCVPCIB2fmPjFb9MKZvm7sY_rjmcSJMNLWRLnB1dIkxSV04sD5w7jR-DjQ208u84bnorhi60FyJPhT-4m65i6AANy9yDRccJLrcdEiDUkY_3qTw_2oIRVFrYckRZo4hOg_JUk6hxhjWFwtnzJ56stZT2Xyvq5FfRjAMtK82MpCIA=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 60,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 13556,
+            "sha256": "50ee3aceee892757c09f5ebc48016fce42cfcb1f829161d2f0f61cb9f6d40674",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_061.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEgmGtPwHKIIbwLTyFDR3zBkGBCy7MeqLmpCjM9JeUmEDPDvfaHgU-aZ5MLC4aXMgpy7-avBvg-iRtDX3zUE_Sb6foYz23wMWbGw9lgDDxgh8-8vsumV5vezOtX9cU8S5h14xl4cWiDozf-luespdBMpGG8GpXMBhi3UuGLHtCM6L-kZL0WHiZamGXJ6Oy0=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 61,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 20198,
+            "sha256": "4bb40d36c93b442a40c8fe72d78b97c9a9e08f8576562742880be590a5526a71",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          }
+        ],
+        "observations": [
+          "Image060 contains multiple complete flying silhouettes, with all wing extremities and the narrow beak inside the frame.",
+          "Image061 is a close view of the underside/head/torso and broad angular wing membranes; its left wing extremity is cropped.",
+          "The Arcade HUD and continuous playthrough establish the exact edition; this is not the SH4 Hummer model."
+        ],
+        "limits": [
+          "Whole silhouettes are small, and screenshot compression obscures tiny claws and surface detail.",
+          "Close-up061 cannot establish a whole left wing alone; use060 for its outer contour.",
+          "Perspective/lighting vary; lateral combat pose is an explicit adaptation and not an extracted native frame."
+        ],
+        "promptGuidance": "Use only the Arcade batlike body, dark broad angular membranes and narrow pale beak documented by060/061. Keep entire wings and beak within a transparent canvas. Separate a selection image from a side-facing combat pose; preserve proportions and do not import the SH4 insectlike design."
+      },
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Bec dirigé vers la droite ; corps en vol latéral, deux ailes étendues avec leurs pointes entières. Ancre conventionnelle sous la masse centrale du corps, y=817 ; elle ne prétend pas être un pied posé au sol. Référence morphologique en vol : hauteur du corps central environ 460 px, depuis son dos autour de y=355 jusqu’au dessous à y=815. L’étendue des ailes n’est pas utilisée comme stature. Ailes en trois quarts pour les rendre distinctes ; pose latérale adaptée, pas frame native extraite. Sources entières petites ; le gros plan de jeu coupe une aile. Petites griffes et texture non certifiées. Marge haute de l’aile proche : 20 px significatifs, aile entière. Ancrage de vol et échelle non validés dans une scène de combat. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-95ddb254-1edd-4b79-a7d4-1ff8e7b640b1.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_060.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_061.jpg"
+      ],
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-95ddb254-1edd-4b79-a7d4-1ff8e7b640b1.png",
+      "inputSHA256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+      "nativeDimensions": [
+        1774,
+        887
+      ],
+      "calibration": {
+        "anchorPixels": [
+          950,
+          817
+        ],
+        "anchor": [
+          0.535513,
+          0.921082
+        ],
+        "standingEquivalentPixels": 460,
+        "bodyHeight": 0.518602,
+        "reason": "Ancre conventionnelle sous la masse centrale du corps, y=817 ; elle ne prétend pas être un pied posé au sol. Référence morphologique en vol : hauteur du corps central environ 460 px, depuis son dos autour de y=355 jusqu’au dessous à y=815. L’étendue des ailes n’est pas utilisée comme stature.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.7029013598654751,
+        "oneFraction": 0.010917435740350725,
+        "atLeast240Fraction": 0.27610137155886927,
+        "thresholdBounds": {
+          "1": [
+            0,
+            15,
+            1736,
+            887
+          ],
+          "2": [
+            143,
+            18,
+            1498,
+            821
+          ],
+          "16": [
+            145,
+            20,
+            1496,
+            817
+          ],
+          "32": [
+            145,
+            20,
+            1495,
+            817
+          ],
+          "128": [
+            145,
+            21,
+            1493,
+            816
+          ],
+          "240": [
+            146,
+            22,
+            1490,
+            815
+          ]
+        },
+        "significantMargins32": [
+          145,
+          20,
+          279,
+          70
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+        "bytes": 1460832,
+        "width": 1536,
+        "height": 1024,
+        "facing": 1,
+        "visibleBounds": [
+          63,
+          88,
+          1483,
+          863
+        ],
+        "pixelSHA256": "4311f6ca69c2be7d327fc2d8136524d3a493da3aa988ab2414c92de44655c73f",
+        "sourceFile": "exec-b1158687-9dd2-4aec-a288-3d180ec20dff.png",
+        "sourceSHA256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+        "origin": "conversation-image-generation",
+        "purpose": "selection"
+      },
+      "selectionSHA256Before": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "arcade_hummer_arcade",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "technical": {
+          "pixelSHA256": "b5c6a454a42775809db1d8ff8de2a5d7ddc28d6bd76bc688f85d90118d97b7cd",
+          "sha256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+          "bytes": 1053953,
+          "width": 1774,
+          "height": 887,
+          "extension": "png",
+          "visibleBounds": [
+            145,
+            20,
+            1495,
+            817
+          ],
+          "transparentFraction": 0.719
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "arcade_hummer_arcade",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "technical": {
+          "pixelSHA256": "b5c6a454a42775809db1d8ff8de2a5d7ddc28d6bd76bc688f85d90118d97b7cd",
+          "sha256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+          "bytes": 1053953,
+          "width": 1774,
+          "height": 887,
+          "extension": "png",
+          "visibleBounds": [
+            145,
+            20,
+            1495,
+            817
+          ],
+          "transparentFraction": 0.719
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+        "bytes": 1053953,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          145,
+          20,
+          1495,
+          817
+        ],
+        "pixelSHA256": "b5c6a454a42775809db1d8ff8de2a5d7ddc28d6bd76bc688f85d90118d97b7cd",
+        "transparentFraction": 0.719,
+        "path": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+        "facing": 1,
+        "anchor": [
+          0.535513,
+          0.921082
+        ],
+        "bodyHeight": 0.518602,
+        "sourceFile": "exec-95ddb254-1edd-4b79-a7d4-1ff8e7b640b1.png",
+        "sourceSHA256": "f9d82ebc84a01a2bcee36be2e86c3db5ad7a92720486689b0a8848814751fa44",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_060.jpg",
+          "sha256": "50ee3aceee892757c09f5ebc48016fce42cfcb1f829161d2f0f61cb9f6d40674",
+          "dimensions": [
+            639,
+            476
+          ],
+          "format": "WEBP",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        },
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_061.jpg",
+          "sha256": "4bb40d36c93b442a40c8fe72d78b97c9a9e08f8576562742880be590a5526a71",
+          "dimensions": [
+            639,
+            476
+          ],
+          "format": "WEBP",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "arcade_tuberculosis",
+      "source": "arcade",
+      "file": "exec-b2d6ae24-3e49-4192-a3df-c00951fb3835.png",
+      "anchorPixels": [
+        790,
+        924
+      ],
+      "standingEquivalentPixels": 1020,
+      "orientation": "Long cou et gueule orientés à droite ; torse en trois quarts latéral, queue complète vers la gauche.",
+      "anatomy": "Deux bras avec membranes et leurs deux extrémités (lame crochue proche, main griffue éloignée), deux jambes avec pieds griffus, queue pointue complète.",
+      "calibrationReason": "Ancre entre les deux appuis à y=924. Stature équivalente estimée à environ 1020 px en conservant la courbure cervicale canonique : 846 px de corps visible plus environ 175 px de redressement des jambes fortement fléchies. La queue et l’extension latérale de la lame sont exclues. Estimation de faible précision, à vérifier en scène.",
+      "limitations": [
+        "Appuis décalés verticalement d’environ 24 px ; vue en trois quarts, pas une projection strictement orthographique.",
+        "La courbure de la queue est adaptée au cadrage à partir de l’union des quatre vues, et non certifiée 1:1.",
+        "Stature estimée près de la limite de la hauteur d’image ; aucun étalon natif debout complet n’est disponible.",
+        "Le fond brun de l’aperçu est constitué de RGB à alpha 0 ; les échantillons périphériques ont été contrôlés."
+      ],
+      "referenceImages": [
+        "references/followup-20261117-arcade/divulgantemorte_081.jpg",
+        "references/followup-20261117-arcade/divulgantemorte_082.jpg",
+        "references/followup-20261117-arcade/divulgantemorte_083.jpg",
+        "references/followup-20261117-arcade/divulgantemorte_084.jpg"
+      ],
+      "referenceURLs": [
+        "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+        "https://blogger.googleusercontent.com/img/a/AVvXsEj4CQvi0s56QEhffyS3Tqy5Y77LMa3owVarIn1QPXN5S_gnWuhA8PASC8HE8hN458LqwFgeJ6RcmJ-gRVRqZFpAqVFluA7SyyrLfofe8AC_AOTgb2AXA6dO_noKiV0iDmx_bOy6qzLntfhnkFd0FuiWuvMbdD3BMvBYUZBOKoBvaGGlsus1GQNW4G2bbqk=w640-h476-rw",
+        "https://blogger.googleusercontent.com/img/a/AVvXsEj7UcP4LxSaeuug58nUeYDmu6qWSYglVtt-tXVqJ4MbbV1DlWM6LknRXlfQI8QD797zbhBOa8pmfjHgOfvi7K5-h4sGyXgnzKAa2KORsHt_11ECHcU3WiQ-RUzDpsRygK_1UZQT8nJ0BYcCj6688-zcBYjamSN9nYjeoiFt9PhCcDFU8etp5otnLPXjSh4=w640-h476-rw",
+        "https://blogger.googleusercontent.com/img/a/AVvXsEjAJL54fsS06YqP8IGdLnIOp2nUyLNXDop2bbbnP_PePyJ5j07ZVAG_uS9lBXRHt3ba0t7H07D_bk57L5wygypMTR4uIqCOWUa45xCDdp67eFewClh_JsHMmbg4X6-n44ke6ChtJ99Xp77AKkcvSWUnKha3ZXLM7OHEsxTXznWyuX5DgsaCPNSUcxfdxps=w640-h476-rw",
+        "https://blogger.googleusercontent.com/img/a/AVvXsEhr9qpkNO-eoHavPHsDct7Ltv5QXRjBRyCp7N3nWNf1gbgzxySgyAGUJWRjj1eWTakZZOZR24s-nrpYNdpgeWxMVmHg-hfy2HzSP-kipOccIty5Cj2ZweNof39tAFSDApGYq1HrWjLTCClIGTBXAmxQsbAPwP2ozpkIGKF1sn1su575W7ne81QS7k9yK7A=w640-h476-rw"
+      ],
+      "referenceEvidence": {
+        "fighterId": "arcade_tuberculosis",
+        "fromStatus": "incomplete-source",
+        "toStatus": "reference-candidate-ready",
+        "generationPerformed": false,
+        "certified1to1": false,
+        "edition": "Silent Hill: The Arcade (retail game)",
+        "referenceKind": "Native gameplay screenshots published with a first-person playthrough review",
+        "references": [
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_081.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEj4CQvi0s56QEhffyS3Tqy5Y77LMa3owVarIn1QPXN5S_gnWuhA8PASC8HE8hN458LqwFgeJ6RcmJ-gRVRqZFpAqVFluA7SyyrLfofe8AC_AOTgb2AXA6dO_noKiV0iDmx_bOy6qzLntfhnkFd0FuiWuvMbdD3BMvBYUZBOKoBvaGGlsus1GQNW4G2bbqk=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 81,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 13436,
+            "sha256": "fdbcf291ed7700b96eb55d4aa6838aad75481e832dbd5c28c8bd16fd60ba9048",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_082.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEj7UcP4LxSaeuug58nUeYDmu6qWSYglVtt-tXVqJ4MbbV1DlWM6LknRXlfQI8QD797zbhBOa8pmfjHgOfvi7K5-h4sGyXgnzKAa2KORsHt_11ECHcU3WiQ-RUzDpsRygK_1UZQT8nJ0BYcCj6688-zcBYjamSN9nYjeoiFt9PhCcDFU8etp5otnLPXjSh4=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 82,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 20134,
+            "sha256": "f987997c7fb61768b59581fc6404a204c4bc30e529b93199b5dd34141c7e1d78",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_083.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEjAJL54fsS06YqP8IGdLnIOp2nUyLNXDop2bbbnP_PePyJ5j07ZVAG_uS9lBXRHt3ba0t7H07D_bk57L5wygypMTR4uIqCOWUa45xCDdp67eFewClh_JsHMmbg4X6-n44ke6ChtJ99Xp77AKkcvSWUnKha3ZXLM7OHEsxTXznWyuX5DgsaCPNSUcxfdxps=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 83,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 14820,
+            "sha256": "595ca604cf39fab72b1a1a371ddda88b5962656cbaf07fffd289d29400e9286e",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_084.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEhr9qpkNO-eoHavPHsDct7Ltv5QXRjBRyCp7N3nWNf1gbgzxySgyAGUJWRjj1eWTakZZOZR24s-nrpYNdpgeWxMVmHg-hfy2HzSP-kipOccIty5Cj2ZweNof39tAFSDApGYq1HrWjLTCClIGTBXAmxQsbAPwP2ozpkIGKF1sn1su575W7ne81QS7k9yK7A=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 84,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 14608,
+            "sha256": "f6c30775e53feb62231d6e17ab47f8db4175ce8f174e246c1f7a047415a2ffc4",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          }
+        ],
+        "observations": [
+          "No single screenshot shows the entire posed body, but complementary views establish the named extremities of the same boss.",
+          "Image081 shows the full head, clawed left hand, right-foot extremities and terminal tail point raised at screen right.",
+          "Image083 shows the complete opposite foot and membrane edges;082 adds torso detail;084 shows the reverse of the bladed hand and membrane.",
+          "The initial whole-frame-only blocker was revised after checking the union of views."
+        ],
+        "limits": [
+          "In081 part of the low tail curve passes beneath the image edge; root and terminal point are visible, so a new side pose can adapt the curve but cannot claim exact native geometry.",
+          "All sources are compressed639x476 views with perspective and orange lighting.",
+          "Fine digits, textures and joint geometry remain uncertain; this is reference-candidate-ready only, never certified1:1.",
+          "Use the Arcade boss only, not another game creature or a generic dragon."
+        ],
+        "promptGuidance": "Reconstruct one complete Arcade Tuberculosis from all four native captures. Preserve the long reptilian head, open toothed snout, chest, asymmetric crescent-bladed right hand and clawed left hand, membranous forelimbs, long bent legs with the separately documented feet, and narrow long tail with the visible raised terminal point. A lateral fighting pose may curve the tail within frame; do not add extra horns, toes, limbs or weapons.",
+        "complementaryCoverage": {
+          "headAndTeeth": [
+            81,
+            82
+          ],
+          "torso": [
+            81,
+            82
+          ],
+          "rightBladedHand": [
+            81,
+            83,
+            84
+          ],
+          "leftClawedHand": [
+            81
+          ],
+          "wingMembranes": [
+            83,
+            84
+          ],
+          "leftFoot": [
+            83
+          ],
+          "rightFoot": [
+            81
+          ],
+          "tailRoot": [
+            81,
+            83
+          ],
+          "tailTerminalPoint": {
+            "image": 81,
+            "approximatePixel": [
+              596,
+              450
+            ],
+            "insideFrame": true
+          },
+          "tailMiddleCurve": "Partly cropped in081; complement with portions visible in083/084, adapting pose explicitly."
+        }
+      },
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Long cou et gueule orientés à droite ; torse en trois quarts latéral, queue complète vers la gauche. Ancre entre les deux appuis à y=924. Stature équivalente estimée à environ 1020 px en conservant la courbure cervicale canonique : 846 px de corps visible plus environ 175 px de redressement des jambes fortement fléchies. La queue et l’extension latérale de la lame sont exclues. Estimation de faible précision, à vérifier en scène. Appuis décalés verticalement d’environ 24 px ; vue en trois quarts, pas une projection strictement orthographique. La courbure de la queue est adaptée au cadrage à partir de l’union des quatre vues, et non certifiée 1:1. Stature estimée près de la limite de la hauteur d’image ; aucun étalon natif debout complet n’est disponible. Le fond brun de l’aperçu est constitué de RGB à alpha 0 ; les échantillons périphériques ont été contrôlés. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "backgroundSamplesRGBA": {
+        "(1450, 300)": [
+          5,
+          4,
+          2,
+          0
+        ],
+        "(300, 400)": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "(200, 900)": [
+          38,
+          26,
+          20,
+          0
+        ],
+        "(800, 100)": [
+          7,
+          6,
+          4,
+          0
+        ],
+        "(1300, 850)": [
+          54,
+          44,
+          35,
+          0
+        ],
+        "(600, 100)": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-b2d6ae24-3e49-4192-a3df-c00951fb3835.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_081.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_082.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_083.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_084.jpg"
+      ],
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-b2d6ae24-3e49-4192-a3df-c00951fb3835.png",
+      "inputSHA256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "calibration": {
+        "anchorPixels": [
+          790,
+          924
+        ],
+        "anchor": [
+          0.514323,
+          0.902344
+        ],
+        "standingEquivalentPixels": 1020,
+        "bodyHeight": 0.996094,
+        "reason": "Ancre entre les deux appuis à y=924. Stature équivalente estimée à environ 1020 px en conservant la courbure cervicale canonique : 846 px de corps visible plus environ 175 px de redressement des jambes fortement fléchies. La queue et l’extension latérale de la lame sont exclues. Estimation de faible précision, à vérifier en scène.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          254
+        ],
+        "zeroFraction": 0.7408574422200521,
+        "oneFraction": 0.026757558186848957,
+        "atLeast240Fraction": 0.21390787760416666,
+        "thresholdBounds": {
+          "1": [
+            0,
+            15,
+            1526,
+            1024
+          ],
+          "2": [
+            66,
+            76,
+            1471,
+            926
+          ],
+          "16": [
+            68,
+            78,
+            1469,
+            924
+          ],
+          "32": [
+            69,
+            78,
+            1469,
+            924
+          ],
+          "128": [
+            69,
+            79,
+            1468,
+            923
+          ],
+          "240": [
+            70,
+            80,
+            1467,
+            922
+          ]
+        },
+        "significantMargins32": [
+          69,
+          78,
+          67,
+          100
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+        "bytes": 1799232,
+        "width": 1536,
+        "height": 1024,
+        "facing": 1,
+        "visibleBounds": [
+          58,
+          27,
+          1468,
+          968
+        ],
+        "pixelSHA256": "c1a37011cf1da791561b6b53a5b2bac7036a5ee432bc5ef9725660f54c5f6206",
+        "sourceFile": "exec-1d38b07a-34af-46f5-a684-f3773f580b62.png",
+        "sourceSHA256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+        "origin": "conversation-image-generation",
+        "purpose": "selection"
+      },
+      "selectionSHA256Before": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "arcade_tuberculosis",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "technical": {
+          "pixelSHA256": "9537582494d64ea9a604ac64f41812ea290a3f36a5ad17daacc524e2e5e3df4d",
+          "sha256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+          "bytes": 1733881,
+          "width": 1536,
+          "height": 1024,
+          "extension": "png",
+          "visibleBounds": [
+            69,
+            78,
+            1469,
+            924
+          ],
+          "transparentFraction": 0.77765
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "arcade_tuberculosis",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "technical": {
+          "pixelSHA256": "9537582494d64ea9a604ac64f41812ea290a3f36a5ad17daacc524e2e5e3df4d",
+          "sha256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+          "bytes": 1733881,
+          "width": 1536,
+          "height": 1024,
+          "extension": "png",
+          "visibleBounds": [
+            69,
+            78,
+            1469,
+            924
+          ],
+          "transparentFraction": 0.77765
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "activeInCombat": false,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+        "bytes": 1733881,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          69,
+          78,
+          1469,
+          924
+        ],
+        "pixelSHA256": "9537582494d64ea9a604ac64f41812ea290a3f36a5ad17daacc524e2e5e3df4d",
+        "transparentFraction": 0.77765,
+        "path": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+        "facing": 1,
+        "anchor": [
+          0.514323,
+          0.902344
+        ],
+        "bodyHeight": 0.996094,
+        "sourceFile": "exec-b2d6ae24-3e49-4192-a3df-c00951fb3835.png",
+        "sourceSHA256": "f0f6525955eb0683333d47361f6d761580fbf963de3e768db4df1b40c7cf9d38",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_081.jpg",
+          "sha256": "fdbcf291ed7700b96eb55d4aa6838aad75481e832dbd5c28c8bd16fd60ba9048",
+          "dimensions": [
+            639,
+            476
+          ],
+          "format": "WEBP",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        },
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_082.jpg",
+          "sha256": "f987997c7fb61768b59581fc6404a204c4bc30e529b93199b5dd34141c7e1d78",
+          "dimensions": [
+            639,
+            476
+          ],
+          "format": "WEBP",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        },
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_083.jpg",
+          "sha256": "595ca604cf39fab72b1a1a371ddda88b5962656cbaf07fffd289d29400e9286e",
+          "dimensions": [
+            639,
+            476
+          ],
+          "format": "WEBP",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        },
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_084.jpg",
+          "sha256": "f6c30775e53feb62231d6e17ab47f8db4175ce8f174e246c1f7a047415a2ffc4",
+          "dimensions": [
+            639,
+            476
+          ],
+          "format": "WEBP",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    },
+    {
+      "fighterId": "arcade_tremer_arcade",
+      "source": "arcade",
+      "file": "exec-5db4f8fd-f8ab-4528-8d08-048831647a73.png",
+      "anchorPixels": [
+        1150,
+        613
+      ],
+      "standingEquivalentPixels": 480,
+      "orientation": "Corps rampant horizontal ; extrémité antérieure large et ouverture ventrale à droite, queue effilée à gauche.",
+      "anatomy": "Organisme sans membres, corps et deux extrémités entiers ; aucun pied, aile ou œil ajouté.",
+      "calibrationReason": "Ancre conventionnelle sur le dessous du corps rampant, y=613, sous sa masse centrale. Référence morphologique au repos : épaisseur maximale du corps 480 px, de y=133 à y=613. Ce profil sans membres n’a pas de stature bipède debout ; sa longueur horizontale ne remplace pas sa hauteur de référence.",
+      "limitations": [
+        "Orientation déduite de l’extrémité large et de l’ouverture ; pose latérale adaptée depuis les vues native de dessus/dessous.",
+        "Corps natif petit et éclairages différents ; texture et forme fine non certifiées 1:1.",
+        "Ancrage rampant et échelle non validés dans une scène de combat."
+      ],
+      "referenceImages": [
+        "references/followup-20261117-arcade/divulgantemorte_085.jpg",
+        "references/followup-20261117-arcade/divulgantemorte_086.jpg"
+      ],
+      "referenceURLs": [
+        "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+        "https://blogger.googleusercontent.com/img/a/AVvXsEiZyApJ0XNzIeX4pwXNuyJxOKzfnajoss8lPWJE-t1SDh4MreaTON5SAQZIejXCbTVZda0Ir9ppZ8PKk2lzV-RRBckSP1f7sVJyY7V8z7Zq_9dE6I5KGbx31ftrmgPYHFqZO-g1FwMOImRnlSJXc90SU3-PbWYlUN-8ZA_zzrbc3FhhCX_YXbDopVRpbTM=w640-h476-rw",
+        "https://blogger.googleusercontent.com/img/a/AVvXsEgDmIJNHlAKNnJQbJ3EoCXCDyuRsqlhKGqVXrcYNJYgeC7jyleopl_P471EA1-g7pRLTXFxZVSHZ6p_uhi3mMoTg9RWQbL0XuosEaJEs7nQ2RMFR4xkKeqEKWc2RFSUNaHnRl4L7H_Xn0WU87sII8Yt67WyrRcuzlrDVn6eBIWC4200dqXJAboWC7Rv9Go=w640-h476-rw"
+      ],
+      "referenceEvidence": {
+        "fighterId": "arcade_tremer_arcade",
+        "fromStatus": "incomplete-source",
+        "toStatus": "reference-candidate-ready",
+        "generationPerformed": false,
+        "certified1to1": false,
+        "edition": "Silent Hill: The Arcade (retail game)",
+        "referenceKind": "Native gameplay screenshots published with a first-person playthrough review",
+        "references": [
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_085.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEiZyApJ0XNzIeX4pwXNuyJxOKzfnajoss8lPWJE-t1SDh4MreaTON5SAQZIejXCbTVZda0Ir9ppZ8PKk2lzV-RRBckSP1f7sVJyY7V8z7Zq_9dE6I5KGbx31ftrmgPYHFqZO-g1FwMOImRnlSJXc90SU3-PbWYlUN-8ZA_zzrbc3FhhCX_YXbDopVRpbTM=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 85,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 34412,
+            "sha256": "a69039ecb671ef3b07b254aad61082c1f464c52507c2aa2ed928d02e4abe9dea",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_086.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEgDmIJNHlAKNnJQbJ3EoCXCDyuRsqlhKGqVXrcYNJYgeC7jyleopl_P471EA1-g7pRLTXFxZVSHZ6p_uhi3mMoTg9RWQbL0XuosEaJEs7nQ2RMFR4xkKeqEKWc2RFSUNaHnRl4L7H_Xn0WU87sII8Yt67WyrRcuzlrDVn6eBIWC4200dqXJAboWC7Rv9Go=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 86,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 14398,
+            "sha256": "70e570a99fe44559869b3d88a6c6001ae1dfcfd02e3fe4c8217c2255193d8310",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          }
+        ],
+        "observations": [
+          "Image085 shows a complete upright underside of the sluglike body, including its oval outline and central recessed fold.",
+          "Image086 shows several complete smooth pinkish backs and a whole side outline at right.",
+          "Both are from the Arcade prison sequence; no limbs or feet are present to reconstruct."
+        ],
+        "limits": [
+          "Very small body detail, compression and strong orange/green scene lighting.",
+          "Avoid treating the dark recessed fold as a fully documented mouth with invented teeth.",
+          "The lateral pose can preserve the simple body contour, but its texture remains candidate interpretation."
+        ],
+        "promptGuidance": "Render a single complete Arcade Tremer, a limbless compact sluglike organism. Use085 for the underside fold and086 for the smooth pinkish back and side contour. Do not invent arms, feet, teeth or a long segmented worm body. Provide a clear side-facing combat silhouette and separate selection representation."
+      },
+      "decision": "accepted-side-view-candidate",
+      "facing": 1,
+      "note": "Combat latéral droit, image statique individuelle distincte du portrait conservé. Corps rampant horizontal ; extrémité antérieure large et ouverture ventrale à droite, queue effilée à gauche. Ancre conventionnelle sur le dessous du corps rampant, y=613, sous sa masse centrale. Référence morphologique au repos : épaisseur maximale du corps 480 px, de y=133 à y=613. Ce profil sans membres n’a pas de stature bipède debout ; sa longueur horizontale ne remplace pas sa hauteur de référence. Orientation déduite de l’extrémité large et de l’ouverture ; pose latérale adaptée depuis les vues native de dessus/dessous. Corps natif petit et éclairages différents ; texture et forme fine non certifiées 1:1. Ancrage rampant et échelle non validés dans une scène de combat. Candidat généré non certifié 1:1 ; résolution native non UHD ; aucune animation complète.",
+      "viewedImages": [
+        "/workspace/scratch/ae07d9a11c02/generated_images/exec-5db4f8fd-f8ab-4528-8d08-048831647a73.png",
+        "/workspace/scratch/ae07d9a11c02/silent-hill-halo-of-flesh/assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_085.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_086.jpg"
+      ],
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-5db4f8fd-f8ab-4528-8d08-048831647a73.png",
+      "inputSHA256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+      "nativeDimensions": [
+        2172,
+        724
+      ],
+      "calibration": {
+        "anchorPixels": [
+          1150,
+          613
+        ],
+        "anchor": [
+          0.529466,
+          0.846685
+        ],
+        "standingEquivalentPixels": 480,
+        "bodyHeight": 0.662983,
+        "reason": "Ancre conventionnelle sur le dessous du corps rampant, y=613, sous sa masse centrale. Référence morphologique au repos : épaisseur maximale du corps 480 px, de y=133 à y=613. Ce profil sans membres n’a pas de stature bipède debout ; sa longueur horizontale ne remplace pas sa hauteur de référence.",
+        "estimated": true
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.6803198416816744,
+        "oneFraction": 0.0035115431966871178,
+        "atLeast240Fraction": 0.30865269171677706,
+        "thresholdBounds": {
+          "1": [
+            0,
+            0,
+            2156,
+            724
+          ],
+          "2": [
+            155,
+            131,
+            2012,
+            615
+          ],
+          "16": [
+            155,
+            133,
+            2012,
+            613
+          ],
+          "32": [
+            156,
+            133,
+            2011,
+            613
+          ],
+          "128": [
+            156,
+            134,
+            2011,
+            612
+          ],
+          "240": [
+            157,
+            135,
+            2010,
+            612
+          ]
+        },
+        "significantMargins32": [
+          156,
+          133,
+          161,
+          111
+        ]
+      },
+      "selectionSnapshot": {
+        "path": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+        "bytes": 803497,
+        "width": 1086,
+        "height": 1448,
+        "facing": -1,
+        "visibleBounds": [
+          221,
+          112,
+          778,
+          1362
+        ],
+        "pixelSHA256": "fb8a6329c5041cb5db2092266fbe7d89360a31b4610ba9e0cc5ea7b4a1a0635f",
+        "sourceFile": "exec-ba71e15c-fc0c-4c75-827e-0d6f6fe4f849.png",
+        "sourceSHA256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+        "origin": "conversation-image-generation",
+        "purpose": "selection"
+      },
+      "selectionSHA256Before": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+      "dryRunExitCode": 0,
+      "dryRun": {
+        "fighterId": "arcade_tremer_arcade",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "technical": {
+          "pixelSHA256": "a87ad5200052adb74dd59b59126fc6a7f5595bc5bab5539bfd9c5d95d829d656",
+          "sha256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+          "bytes": 938959,
+          "width": 2172,
+          "height": 724,
+          "extension": "png",
+          "visibleBounds": [
+            156,
+            133,
+            2011,
+            613
+          ],
+          "transparentFraction": 0.68667
+        },
+        "dryRun": true
+      },
+      "importExitCode": 0,
+      "import": {
+        "fighterId": "arcade_tremer_arcade",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+        "pose": "idle",
+        "frames": 1,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "side-view-candidate",
+        "portraitPath": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "technical": {
+          "pixelSHA256": "a87ad5200052adb74dd59b59126fc6a7f5595bc5bab5539bfd9c5d95d829d656",
+          "sha256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+          "bytes": 938959,
+          "width": 2172,
+          "height": 724,
+          "extension": "png",
+          "visibleBounds": [
+            156,
+            133,
+            2011,
+            613
+          ],
+          "transparentFraction": 0.68667
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "imported": true,
+      "selectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "activeInCombat": true,
+      "activeStateSource": "src/data.js:createCombatProfile(fighter).referencePolicy.combatEnabled",
+      "registeredFrame": {
+        "sha256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+        "bytes": 938959,
+        "width": 2172,
+        "height": 724,
+        "visibleBounds": [
+          156,
+          133,
+          2011,
+          613
+        ],
+        "pixelSHA256": "a87ad5200052adb74dd59b59126fc6a7f5595bc5bab5539bfd9c5d95d829d656",
+        "transparentFraction": 0.68667,
+        "path": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+        "facing": 1,
+        "anchor": [
+          0.529466,
+          0.846685
+        ],
+        "bodyHeight": 0.662983,
+        "sourceFile": "exec-5db4f8fd-f8ab-4528-8d08-048831647a73.png",
+        "sourceSHA256": "b02634efb95b26facf255cb5d5b7bba4bee01c30058549ad38b8054347f411e3",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      "registeredClip": {
+        "frames": [
+          0
+        ],
+        "ticksPerFrame": 1,
+        "loop": true
+      },
+      "referenceFileEvidence": [
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_085.jpg",
+          "sha256": "a69039ecb671ef3b07b254aad61082c1f464c52507c2aa2ed928d02e4abe9dea",
+          "dimensions": [
+            639,
+            476
+          ],
+          "format": "WEBP",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        },
+        {
+          "path": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_086.jpg",
+          "sha256": "70e570a99fe44559869b3d88a6c6001ae1dfcfd02e3fe4c8217c2255193d8310",
+          "dimensions": [
+            639,
+            476
+          ],
+          "format": "WEBP",
+          "visuallyInspected": true,
+          "pixelsModified": false
+        }
+      ]
+    }
+  ],
+  "anomalies": [
+    {
+      "fighterId": "origins_demon_084",
+      "type": "preview-rgb-alpha-discrepancy",
+      "disposition": "accepted-after-alpha-inspection",
+      "detail": "The brown RGB halo displayed in the preview belongs to alpha-zero pixels. Inspected samples: (300,300), (400,500), (600,50), (900,100), (1100,250), (600,900), (800,750) all alpha=0. At alpha >=2 the bounds shrink to [231,6,1152,1006]. Alpha-one noise exists, but there is no extended brown opaque backdrop."
+    },
+    {
+      "fighterId": "film_red_pyramid_thing_return_to_silent_hill",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-9faf9e6d-ce34-4953-9b13-d3ea8a5e219a.png",
+      "sha256": "ab96157d76ba382b7252033e6145356f02bb353963536adec3d69d12f52b17f7",
+      "type": "margins-too-tight",
+      "disposition": "initial-not-imported-replaced-by-generated-correction",
+      "visibleBounds32": [
+        225,
+        6,
+        1174,
+        932
+      ],
+      "visibleBounds2": [
+        224,
+        0,
+        1176,
+        941
+      ],
+      "dimensions": [
+        1672,
+        941
+      ],
+      "detail": "Head, long blade, two arms and two legs face right and appear complete, but helmet apex lies 6 significant pixels from top and alpha>=2 touches both vertical canvas limits. Parent requested a new image with improved margins.",
+      "acceptedCorrection": "generated_images/exec-2b007f29-8a35-423f-bb4a-07c04ef36b1f.png"
+    }
+  ],
+  "method": [
+    "Inspect new PNG locally, previous selection PNG and listed original reference images.",
+    "Assess right-facing posture, canonical main limbs, completeness, transparency and estimated anatomical calibration.",
+    "Dry-run importer before real import; no raster changes.",
+    "Verify exact portrait dictionaries and SHA256 of selection files after every import."
+  ],
+  "limitations": [
+    "Candidate static idle images only; this report does not certify 1:1 fidelity or full animation.",
+    "Image alpha measurements supplement visual review; alpha=1 edge noise can extend beyond the significant silhouette.",
+    "Body-height and anchor values are anatomical estimates, with the non-human morphology caveats documented per entry.",
+    "No application build or browser test was run by this reviewing agent.",
+    "Twelve profiles have separate selection and combat images, but only ten are active combat roles. Tuberculosis and Pyramid Return remain disabled by the existing gameplay reference policy.",
+    "The root agent owns application builds, browser checks and combat-scene validation. This image review does not claim that any of those validations have passed."
+  ],
+  "allOriginalSelectionPortraitsPreserved": {
+    "downpour_prisoner_minion_brawler_108": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "5fcf5cd7e9c97056d08eb0ea6826bc7c5a37a2562ca98be085b20746fc241180",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "downpour_prisoner_minion_agile_109": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "0dedf3f6e2e4ef2e448b17985226592db6264ec6719df45e98cbfaba330f0c36",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "downpour_shadow_107": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "d39788178ac58c825aa91e59b9a672614c1accf49f49d11629be9a23e9666844",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "sh3_god_050": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "ef8d8f24df0b6f39b8eaa923984404dc71f0fa5a287972d359d299c380f265f1",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "origins_demon_084": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "c23b0115c82ba5adf8fafe4e41dd9a40c4ee8d106c66aabb40d15b087d5cd5a9",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "bom_fire_guardian_137": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "b974f7db88ad1dd7bac300c89c5833db3c89206d09045abfd3aa2779c7140c39",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "arcade_robbie_the_rabbit_axe": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "0a7dfbbed021b024bee559dcfb19f23144dd784259e1168f20ad865a7bb1aab2",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "film_armless_man_170": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "25e542fa86c4329d62e82d054978d74229332b0e938f65d0e3b0392a3260b81f",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "film_red_pyramid_thing_return_to_silent_hill": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "9da7fb02b1a34b2bf0ada69901b97bdd81432ea4aa03a92782d89f5d305396ca",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    }
+  },
+  "summary": {
+    "reviewedFinalCombatImages": 12,
+    "importedCombatImages": 12,
+    "activeCombatRolesAmongThese": 10,
+    "inactiveCombatRolesWithImages": [
+      "film_red_pyramid_thing_return_to_silent_hill",
+      "arcade_tuberculosis"
+    ],
+    "newSelectionProfiles": 3,
+    "originalSelectionPortraitsPreserved": 9,
+    "newSelectionPortraitsPreserved": 3,
+    "totalSelectionPortraitsPreserved": 12,
+    "currentRegistryProfiles": 166,
+    "rosterProfiles": 230,
+    "currentMissingProfiles": 64,
+    "dryRunsSucceeded": 16,
+    "realImporterRunsSucceeded": 16,
+    "sameImageSelectionProvenanceRefreshes": 1,
+    "supersededGeneratedCombatImagesNotImported": 1,
+    "newGenerationStopsReported": 1,
+    "additionalPending": [],
+    "combatAnimationsAdded": 0,
+    "nativeUHDImagesAdded": 0,
+    "fidelity1to1CertifiedProfilesAdded": 0
+  },
+  "newSelections": [
+    {
+      "fighterId": "arcade_hummer_arcade",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-b1158687-9dd2-4aec-a288-3d180ec20dff.png",
+      "inputSHA256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "decision": "accepted-selection-candidate",
+      "referenceImages": [
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_060.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_061.jpg"
+      ],
+      "referencePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+      "alpha": {
+        "extrema": [
+          0,
+          254
+        ],
+        "zeroFraction": 0.7365652720133463,
+        "thresholdBounds": {
+          "1": [
+            31,
+            17,
+            1518,
+            1024
+          ],
+          "2": [
+            61,
+            86,
+            1486,
+            864
+          ],
+          "32": [
+            63,
+            88,
+            1483,
+            863
+          ],
+          "128": [
+            63,
+            89,
+            1482,
+            862
+          ],
+          "240": [
+            64,
+            90,
+            1482,
+            861
+          ]
+        },
+        "backgroundSamplesRGBA": {
+          "(500, 100)": [
+            12,
+            9,
+            7,
+            0
+          ],
+          "(900, 300)": [
+            19,
+            16,
+            13,
+            0
+          ],
+          "(300, 750)": [
+            5,
+            4,
+            3,
+            0
+          ],
+          "(1200, 750)": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "(100, 500)": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "(800, 50)": [
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "note": "Sélection individuelle Hummer, édition Silent Hill: The Arcade uniquement, distincte du futur sprite de combat. Références natives entières et gros plan du parcours DivulganteMorte : divulgantemorte_060.jpg et _061.jpg ; https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Deux ailes anguleuses entières, corps central et bec conservés. Les silhouettes entières sont petites et la grande vue coupe une aile : union des vues utilisée. Détails fins, griffes éventuelles et textures non certifiés 1:1. PNG natif 1536 × 1024, non UHD. Le halo brun de l’aperçu appartient à du RGB à alpha 0 ; aucun fond opaque importé. Usage sélection seulement, aucune animation.",
+      "dryRun": {
+        "fighterId": "arcade_hummer_arcade",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "pose": "idle",
+        "frames": 0,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "selection-only",
+        "portraitPath": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "technical": {
+          "pixelSHA256": "4311f6ca69c2be7d327fc2d8136524d3a493da3aa988ab2414c92de44655c73f",
+          "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+          "bytes": 1460832,
+          "width": 1536,
+          "height": 1024,
+          "extension": "png",
+          "visibleBounds": [
+            63,
+            88,
+            1483,
+            863
+          ],
+          "transparentFraction": 0.75552
+        },
+        "dryRun": true
+      },
+      "import": {
+        "fighterId": "arcade_hummer_arcade",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "pose": "idle",
+        "frames": 0,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "selection-only",
+        "portraitPath": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+        "technical": {
+          "pixelSHA256": "4311f6ca69c2be7d327fc2d8136524d3a493da3aa988ab2414c92de44655c73f",
+          "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+          "bytes": 1460832,
+          "width": 1536,
+          "height": 1024,
+          "extension": "png",
+          "visibleBounds": [
+            63,
+            88,
+            1483,
+            863
+          ],
+          "transparentFraction": 0.75552
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "portraitSnapshot": {
+        "portrait": {
+          "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+          "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+          "bytes": 1460832,
+          "width": 1536,
+          "height": 1024,
+          "facing": 1,
+          "visibleBounds": [
+            63,
+            88,
+            1483,
+            863
+          ],
+          "pixelSHA256": "4311f6ca69c2be7d327fc2d8136524d3a493da3aa988ab2414c92de44655c73f",
+          "sourceFile": "exec-b1158687-9dd2-4aec-a288-3d180ec20dff.png",
+          "sourceSHA256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+          "origin": "conversation-image-generation",
+          "purpose": "selection"
+        },
+        "entry": {
+          "fighterId": "arcade_hummer_arcade",
+          "source": "arcade",
+          "status": "integrated-candidate",
+          "fidelity": "unverified",
+          "origin": "conversation-image-generation",
+          "sourceFile": "exec-b1158687-9dd2-4aec-a288-3d180ec20dff.png",
+          "sourceSHA256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+          "sourceDimensions": [
+            1536,
+            1024
+          ],
+          "singleSubjectReviewed": true,
+          "notes": "Sélection individuelle Hummer, édition Silent Hill: The Arcade uniquement, distincte du futur sprite de combat. Références natives entières et gros plan du parcours DivulganteMorte : divulgantemorte_060.jpg et _061.jpg ; https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Deux ailes anguleuses entières, corps central et bec conservés. Les silhouettes entières sont petites et la grande vue coupe une aile : union des vues utilisée. Détails fins, griffes éventuelles et textures non certifiés 1:1. PNG natif 1536 × 1024, non UHD. Le halo brun de l’aperçu appartient à du RGB à alpha 0 ; aucun fond opaque importé. Usage sélection seulement, aucune animation.",
+          "mirrorPolicy": "presentation-only; opposite side not independently generated",
+          "frames": [],
+          "portrait": {
+            "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+            "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+            "bytes": 1460832,
+            "width": 1536,
+            "height": 1024,
+            "facing": 1,
+            "visibleBounds": [
+              63,
+              88,
+              1483,
+              863
+            ],
+            "pixelSHA256": "4311f6ca69c2be7d327fc2d8136524d3a493da3aa988ab2414c92de44655c73f",
+            "sourceFile": "exec-b1158687-9dd2-4aec-a288-3d180ec20dff.png",
+            "sourceSHA256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+            "origin": "conversation-image-generation",
+            "purpose": "selection"
+          },
+          "clips": {},
+          "combatView": "selection-only",
+          "selectionNotes": "Sélection individuelle Hummer, édition Silent Hill: The Arcade uniquement, distincte du futur sprite de combat. Références natives entières et gros plan du parcours DivulganteMorte : divulgantemorte_060.jpg et _061.jpg ; https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Deux ailes anguleuses entières, corps central et bec conservés. Les silhouettes entières sont petites et la grande vue coupe une aile : union des vues utilisée. Détails fins, griffes éventuelles et textures non certifiés 1:1. PNG natif 1536 × 1024, non UHD. Le halo brun de l’aperçu appartient à du RGB à alpha 0 ; aucun fond opaque importé. Usage sélection seulement, aucune animation.",
+          "animatedClips": 0
+        },
+        "portraitFileSha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f"
+      },
+      "calibrationNote": "Importer requires anchor/bodyHeight even for selection; no combat frame is stored. Placeholder-free values follow centre/body underside and central body depth (467 px), not full wing span. Combat will be calibrated independently.",
+      "currentSelectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "currentCombatAvailable": true,
+      "activeInCombat": true
+    },
+    {
+      "fighterId": "arcade_tremer_arcade",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-ba71e15c-fc0c-4c75-827e-0d6f6fe4f849.png",
+      "inputSHA256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+      "nativeDimensions": [
+        1086,
+        1448
+      ],
+      "decision": "accepted-selection-candidate",
+      "referenceImages": [
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_085.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_086.jpg"
+      ],
+      "referenceEvidence": {
+        "fighterId": "arcade_tremer_arcade",
+        "fromStatus": "incomplete-source",
+        "toStatus": "reference-candidate-ready",
+        "generationPerformed": false,
+        "certified1to1": false,
+        "edition": "Silent Hill: The Arcade (retail game)",
+        "referenceKind": "Native gameplay screenshots published with a first-person playthrough review",
+        "references": [
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_085.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEiZyApJ0XNzIeX4pwXNuyJxOKzfnajoss8lPWJE-t1SDh4MreaTON5SAQZIejXCbTVZda0Ir9ppZ8PKk2lzV-RRBckSP1f7sVJyY7V8z7Zq_9dE6I5KGbx31ftrmgPYHFqZO-g1FwMOImRnlSJXc90SU3-PbWYlUN-8ZA_zzrbc3FhhCX_YXbDopVRpbTM=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 85,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 34412,
+            "sha256": "a69039ecb671ef3b07b254aad61082c1f464c52507c2aa2ed928d02e4abe9dea",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_086.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEgDmIJNHlAKNnJQbJ3EoCXCDyuRsqlhKGqVXrcYNJYgeC7jyleopl_P471EA1-g7pRLTXFxZVSHZ6p_uhi3mMoTg9RWQbL0XuosEaJEs7nQ2RMFR4xkKeqEKWc2RFSUNaHnRl4L7H_Xn0WU87sII8Yt67WyrRcuzlrDVn6eBIWC4200dqXJAboWC7Rv9Go=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 86,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 14398,
+            "sha256": "70e570a99fe44559869b3d88a6c6001ae1dfcfd02e3fe4c8217c2255193d8310",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          }
+        ],
+        "observations": [
+          "Image085 shows a complete upright underside of the sluglike body, including its oval outline and central recessed fold.",
+          "Image086 shows several complete smooth pinkish backs and a whole side outline at right.",
+          "Both are from the Arcade prison sequence; no limbs or feet are present to reconstruct."
+        ],
+        "limits": [
+          "Very small body detail, compression and strong orange/green scene lighting.",
+          "Avoid treating the dark recessed fold as a fully documented mouth with invented teeth.",
+          "The lateral pose can preserve the simple body contour, but its texture remains candidate interpretation."
+        ],
+        "promptGuidance": "Render a single complete Arcade Tremer, a limbless compact sluglike organism. Use085 for the underside fold and086 for the smooth pinkish back and side contour. Do not invent arms, feet, teeth or a long segmented worm body. Provide a clear side-facing combat silhouette and separate selection representation."
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "zeroFraction": 0.7409114495894509,
+        "thresholdBounds": {
+          "1": [
+            0,
+            17,
+            1070,
+            1448
+          ],
+          "2": [
+            219,
+            110,
+            781,
+            1368
+          ],
+          "32": [
+            221,
+            112,
+            778,
+            1362
+          ],
+          "128": [
+            222,
+            113,
+            778,
+            1362
+          ],
+          "240": [
+            223,
+            113,
+            777,
+            1361
+          ]
+        },
+        "backgroundSamplesRGBA": {}
+      },
+      "note": "Sélection individuelle Tremer, édition Silent Hill: The Arcade. Références natives divulgantemorte_085.jpg et _086.jpg : https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Corps allongé courbe entier, dos brun rosé et ouverture ventrale conservés ; aucune jambe ou aile ajoutée. La vue sélection présente l’ouverture vers la gauche. Sources de petite taille et éclairages différents : texture et anatomie fine non certifiées 1:1. PNG natif 1086 × 1448, non UHD. Sélection uniquement ; aucun combat ni animation stockés dans cet import.",
+      "dryRun": {
+        "fighterId": "arcade_tremer_arcade",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "pose": "idle",
+        "frames": 0,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "selection-only",
+        "portraitPath": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "technical": {
+          "pixelSHA256": "fb8a6329c5041cb5db2092266fbe7d89360a31b4610ba9e0cc5ea7b4a1a0635f",
+          "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+          "bytes": 803497,
+          "width": 1086,
+          "height": 1448,
+          "extension": "png",
+          "visibleBounds": [
+            221,
+            112,
+            778,
+            1362
+          ],
+          "transparentFraction": 0.7471
+        },
+        "dryRun": true
+      },
+      "import": {
+        "fighterId": "arcade_tremer_arcade",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "pose": "idle",
+        "frames": 0,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "selection-only",
+        "portraitPath": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+        "technical": {
+          "pixelSHA256": "fb8a6329c5041cb5db2092266fbe7d89360a31b4610ba9e0cc5ea7b4a1a0635f",
+          "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+          "bytes": 803497,
+          "width": 1086,
+          "height": 1448,
+          "extension": "png",
+          "visibleBounds": [
+            221,
+            112,
+            778,
+            1362
+          ],
+          "transparentFraction": 0.7471
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "portraitSnapshot": {
+        "portrait": {
+          "path": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+          "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+          "bytes": 803497,
+          "width": 1086,
+          "height": 1448,
+          "facing": -1,
+          "visibleBounds": [
+            221,
+            112,
+            778,
+            1362
+          ],
+          "pixelSHA256": "fb8a6329c5041cb5db2092266fbe7d89360a31b4610ba9e0cc5ea7b4a1a0635f",
+          "sourceFile": "exec-ba71e15c-fc0c-4c75-827e-0d6f6fe4f849.png",
+          "sourceSHA256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+          "origin": "conversation-image-generation",
+          "purpose": "selection"
+        },
+        "entry": {
+          "fighterId": "arcade_tremer_arcade",
+          "source": "arcade",
+          "status": "integrated-candidate",
+          "fidelity": "unverified",
+          "origin": "conversation-image-generation",
+          "sourceFile": "exec-ba71e15c-fc0c-4c75-827e-0d6f6fe4f849.png",
+          "sourceSHA256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+          "sourceDimensions": [
+            1086,
+            1448
+          ],
+          "singleSubjectReviewed": true,
+          "notes": "Sélection individuelle Tremer, édition Silent Hill: The Arcade. Références natives divulgantemorte_085.jpg et _086.jpg : https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Corps allongé courbe entier, dos brun rosé et ouverture ventrale conservés ; aucune jambe ou aile ajoutée. La vue sélection présente l’ouverture vers la gauche. Sources de petite taille et éclairages différents : texture et anatomie fine non certifiées 1:1. PNG natif 1086 × 1448, non UHD. Sélection uniquement ; aucun combat ni animation stockés dans cet import.",
+          "mirrorPolicy": "presentation-only; opposite side not independently generated",
+          "frames": [],
+          "portrait": {
+            "path": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+            "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+            "bytes": 803497,
+            "width": 1086,
+            "height": 1448,
+            "facing": -1,
+            "visibleBounds": [
+              221,
+              112,
+              778,
+              1362
+            ],
+            "pixelSHA256": "fb8a6329c5041cb5db2092266fbe7d89360a31b4610ba9e0cc5ea7b4a1a0635f",
+            "sourceFile": "exec-ba71e15c-fc0c-4c75-827e-0d6f6fe4f849.png",
+            "sourceSHA256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+            "origin": "conversation-image-generation",
+            "purpose": "selection"
+          },
+          "clips": {},
+          "combatView": "selection-only",
+          "selectionNotes": "Sélection individuelle Tremer, édition Silent Hill: The Arcade. Références natives divulgantemorte_085.jpg et _086.jpg : https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Corps allongé courbe entier, dos brun rosé et ouverture ventrale conservés ; aucune jambe ou aile ajoutée. La vue sélection présente l’ouverture vers la gauche. Sources de petite taille et éclairages différents : texture et anatomie fine non certifiées 1:1. PNG natif 1086 × 1448, non UHD. Sélection uniquement ; aucun combat ni animation stockés dans cet import.",
+          "selectionProvenance": {
+            "sourceSHA256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+            "sourceDimensions": [
+              1086,
+              1448
+            ],
+            "origin": "conversation-image-generation",
+            "sourceFile": "exec-ba71e15c-fc0c-4c75-827e-0d6f6fe4f849.png"
+          },
+          "animatedClips": 0
+        },
+        "portraitFileSha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be"
+      },
+      "calibrationStored": false,
+      "calibrationNote": "The selection action requires anchor/bodyHeight arguments but stores no combat frame or calibration. A future combat image is to be calibrated independently.",
+      "currentSelectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "currentCombatAvailable": true,
+      "activeInCombat": true
+    },
+    {
+      "fighterId": "arcade_tuberculosis",
+      "inputPath": "/workspace/scratch/ae07d9a11c02/generated_images/exec-1d38b07a-34af-46f5-a684-f3773f580b62.png",
+      "inputSHA256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "decision": "accepted-selection-candidate",
+      "referenceImages": [
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_081.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_082.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_083.jpg",
+        "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_084.jpg"
+      ],
+      "referenceEvidence": {
+        "fighterId": "arcade_tuberculosis",
+        "fromStatus": "incomplete-source",
+        "toStatus": "reference-candidate-ready",
+        "generationPerformed": false,
+        "certified1to1": false,
+        "edition": "Silent Hill: The Arcade (retail game)",
+        "referenceKind": "Native gameplay screenshots published with a first-person playthrough review",
+        "references": [
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_081.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEj4CQvi0s56QEhffyS3Tqy5Y77LMa3owVarIn1QPXN5S_gnWuhA8PASC8HE8hN458LqwFgeJ6RcmJ-gRVRqZFpAqVFluA7SyyrLfofe8AC_AOTgb2AXA6dO_noKiV0iDmx_bOy6qzLntfhnkFd0FuiWuvMbdD3BMvBYUZBOKoBvaGGlsus1GQNW4G2bbqk=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 81,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 13436,
+            "sha256": "fdbcf291ed7700b96eb55d4aa6838aad75481e832dbd5c28c8bd16fd60ba9048",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_082.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEj7UcP4LxSaeuug58nUeYDmu6qWSYglVtt-tXVqJ4MbbV1DlWM6LknRXlfQI8QD797zbhBOa8pmfjHgOfvi7K5-h4sGyXgnzKAa2KORsHt_11ECHcU3WiQ-RUzDpsRygK_1UZQT8nJ0BYcCj6688-zcBYjamSN9nYjeoiFt9PhCcDFU8etp5otnLPXjSh4=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 82,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 20134,
+            "sha256": "f987997c7fb61768b59581fc6404a204c4bc30e529b93199b5dd34141c7e1d78",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_083.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEjAJL54fsS06YqP8IGdLnIOp2nUyLNXDop2bbbnP_PePyJ5j07ZVAG_uS9lBXRHt3ba0t7H07D_bk57L5wygypMTR4uIqCOWUa45xCDdp67eFewClh_JsHMmbg4X6-n44ke6ChtJ99Xp77AKkcvSWUnKha3ZXLM7OHEsxTXznWyuX5DgsaCPNSUcxfdxps=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 83,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 14820,
+            "sha256": "595ca604cf39fab72b1a1a371ddda88b5962656cbaf07fffd289d29400e9286e",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          },
+          {
+            "file": "/workspace/scratch/ae07d9a11c02/references/followup-20261117-arcade/divulgantemorte_084.jpg",
+            "url": "https://blogger.googleusercontent.com/img/a/AVvXsEhr9qpkNO-eoHavPHsDct7Ltv5QXRjBRyCp7N3nWNf1gbgzxySgyAGUJWRjj1eWTakZZOZR24s-nrpYNdpgeWxMVmHg-hfy2HzSP-kipOccIty5Cj2ZweNof39tAFSDApGYq1HrWjLTCClIGTBXAmxQsbAPwP2ozpkIGKF1sn1su575W7ne81QS7k9yK7A=w640-h476-rw",
+            "sourcePage": "https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html",
+            "imageIndex": 84,
+            "nativeFormat": "WEBP",
+            "nativeDimensions": [
+              639,
+              476
+            ],
+            "mode": "RGB",
+            "bytes": 14608,
+            "sha256": "f6c30775e53feb62231d6e17ab47f8db4175ce8f174e246c1f7a047415a2ffc4",
+            "visuallyInspected": true,
+            "pixelsModified": false,
+            "filenameExtensionMismatch": true
+          }
+        ],
+        "observations": [
+          "No single screenshot shows the entire posed body, but complementary views establish the named extremities of the same boss.",
+          "Image081 shows the full head, clawed left hand, right-foot extremities and terminal tail point raised at screen right.",
+          "Image083 shows the complete opposite foot and membrane edges;082 adds torso detail;084 shows the reverse of the bladed hand and membrane.",
+          "The initial whole-frame-only blocker was revised after checking the union of views."
+        ],
+        "limits": [
+          "In081 part of the low tail curve passes beneath the image edge; root and terminal point are visible, so a new side pose can adapt the curve but cannot claim exact native geometry.",
+          "All sources are compressed639x476 views with perspective and orange lighting.",
+          "Fine digits, textures and joint geometry remain uncertain; this is reference-candidate-ready only, never certified1:1.",
+          "Use the Arcade boss only, not another game creature or a generic dragon."
+        ],
+        "promptGuidance": "Reconstruct one complete Arcade Tuberculosis from all four native captures. Preserve the long reptilian head, open toothed snout, chest, asymmetric crescent-bladed right hand and clawed left hand, membranous forelimbs, long bent legs with the separately documented feet, and narrow long tail with the visible raised terminal point. A lateral fighting pose may curve the tail within frame; do not add extra horns, toes, limbs or weapons.",
+        "complementaryCoverage": {
+          "headAndTeeth": [
+            81,
+            82
+          ],
+          "torso": [
+            81,
+            82
+          ],
+          "rightBladedHand": [
+            81,
+            83,
+            84
+          ],
+          "leftClawedHand": [
+            81
+          ],
+          "wingMembranes": [
+            83,
+            84
+          ],
+          "leftFoot": [
+            83
+          ],
+          "rightFoot": [
+            81
+          ],
+          "tailRoot": [
+            81,
+            83
+          ],
+          "tailTerminalPoint": {
+            "image": 81,
+            "approximatePixel": [
+              596,
+              450
+            ],
+            "insideFrame": true
+          },
+          "tailMiddleCurve": "Partly cropped in081; complement with portions visible in083/084, adapting pose explicitly."
+        }
+      },
+      "alpha": {
+        "extrema": [
+          0,
+          254
+        ],
+        "zeroFraction": 0.7052256266276041,
+        "thresholdBounds": {
+          "1": [
+            0,
+            9,
+            1523,
+            1024
+          ],
+          "2": [
+            56,
+            24,
+            1471,
+            969
+          ],
+          "32": [
+            58,
+            27,
+            1468,
+            968
+          ],
+          "128": [
+            58,
+            28,
+            1468,
+            968
+          ],
+          "240": [
+            60,
+            29,
+            1467,
+            967
+          ]
+        },
+        "backgroundSamplesRGBA": {
+          "(400, 100)": [
+            7,
+            5,
+            2,
+            0
+          ],
+          "(1100, 300)": [
+            14,
+            12,
+            7,
+            0
+          ],
+          "(800, 100)": [
+            28,
+            22,
+            13,
+            0
+          ],
+          "(200, 350)": [
+            3,
+            3,
+            2,
+            0
+          ],
+          "(600, 900)": [
+            8,
+            4,
+            1,
+            0
+          ]
+        }
+      },
+      "note": "Sélection individuelle Tuberculosis, édition Silent Hill: The Arcade. Union des captures natives divulgantemorte_081.jpg à _084.jpg : https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Long cou et gueule ouverte, deux bras avec membranes, extrémité en lame crochue, main griffue opposée, deux jambes griffues et queue pointue entiers. La queue est documentée par plusieurs angles mais sa courbure a été adaptée pour tenir entière : géométrie non certifiée 1:1. Texture et petits détails générés depuis des captures de faible résolution. PNG natif 1536 × 1024, non UHD. Le halo brun de l’aperçu appartient à du RGB à alpha 0. Portrait de sélection frontal, distinct du futur combat latéral ; aucune animation.",
+      "dryRun": {
+        "fighterId": "arcade_tuberculosis",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "pose": "idle",
+        "frames": 0,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "selection-only",
+        "portraitPath": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "technical": {
+          "pixelSHA256": "c1a37011cf1da791561b6b53a5b2bac7036a5ee432bc5ef9725660f54c5f6206",
+          "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+          "bytes": 1799232,
+          "width": 1536,
+          "height": 1024,
+          "extension": "png",
+          "visibleBounds": [
+            58,
+            27,
+            1468,
+            968
+          ],
+          "transparentFraction": 0.74011
+        },
+        "dryRun": true
+      },
+      "import": {
+        "fighterId": "arcade_tuberculosis",
+        "source": "arcade",
+        "path": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "pose": "idle",
+        "frames": 0,
+        "animatedClips": 0,
+        "fidelity": "unverified",
+        "combatView": "selection-only",
+        "portraitPath": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+        "technical": {
+          "pixelSHA256": "c1a37011cf1da791561b6b53a5b2bac7036a5ee432bc5ef9725660f54c5f6206",
+          "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+          "bytes": 1799232,
+          "width": 1536,
+          "height": 1024,
+          "extension": "png",
+          "visibleBounds": [
+            58,
+            27,
+            1468,
+            968
+          ],
+          "transparentFraction": 0.74011
+        },
+        "dryRun": false,
+        "nextStep": "npm run sprites:check && npm test && npm run build"
+      },
+      "portraitSnapshot": {
+        "portrait": {
+          "path": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+          "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+          "bytes": 1799232,
+          "width": 1536,
+          "height": 1024,
+          "facing": 1,
+          "visibleBounds": [
+            58,
+            27,
+            1468,
+            968
+          ],
+          "pixelSHA256": "c1a37011cf1da791561b6b53a5b2bac7036a5ee432bc5ef9725660f54c5f6206",
+          "sourceFile": "exec-1d38b07a-34af-46f5-a684-f3773f580b62.png",
+          "sourceSHA256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+          "origin": "conversation-image-generation",
+          "purpose": "selection"
+        },
+        "entry": {
+          "fighterId": "arcade_tuberculosis",
+          "source": "arcade",
+          "status": "integrated-candidate",
+          "fidelity": "unverified",
+          "origin": "conversation-image-generation",
+          "sourceFile": "exec-1d38b07a-34af-46f5-a684-f3773f580b62.png",
+          "sourceSHA256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+          "sourceDimensions": [
+            1536,
+            1024
+          ],
+          "singleSubjectReviewed": true,
+          "notes": "Sélection individuelle Tuberculosis, édition Silent Hill: The Arcade. Union des captures natives divulgantemorte_081.jpg à _084.jpg : https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Long cou et gueule ouverte, deux bras avec membranes, extrémité en lame crochue, main griffue opposée, deux jambes griffues et queue pointue entiers. La queue est documentée par plusieurs angles mais sa courbure a été adaptée pour tenir entière : géométrie non certifiée 1:1. Texture et petits détails générés depuis des captures de faible résolution. PNG natif 1536 × 1024, non UHD. Le halo brun de l’aperçu appartient à du RGB à alpha 0. Portrait de sélection frontal, distinct du futur combat latéral ; aucune animation.",
+          "mirrorPolicy": "presentation-only; opposite side not independently generated",
+          "frames": [],
+          "portrait": {
+            "path": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+            "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+            "bytes": 1799232,
+            "width": 1536,
+            "height": 1024,
+            "facing": 1,
+            "visibleBounds": [
+              58,
+              27,
+              1468,
+              968
+            ],
+            "pixelSHA256": "c1a37011cf1da791561b6b53a5b2bac7036a5ee432bc5ef9725660f54c5f6206",
+            "sourceFile": "exec-1d38b07a-34af-46f5-a684-f3773f580b62.png",
+            "sourceSHA256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+            "origin": "conversation-image-generation",
+            "purpose": "selection"
+          },
+          "clips": {},
+          "combatView": "selection-only",
+          "selectionNotes": "Sélection individuelle Tuberculosis, édition Silent Hill: The Arcade. Union des captures natives divulgantemorte_081.jpg à _084.jpg : https://www.divulgantemorte.com/2023/09/analisemorte-silent-hill-arcade-tudo.html . Long cou et gueule ouverte, deux bras avec membranes, extrémité en lame crochue, main griffue opposée, deux jambes griffues et queue pointue entiers. La queue est documentée par plusieurs angles mais sa courbure a été adaptée pour tenir entière : géométrie non certifiée 1:1. Texture et petits détails générés depuis des captures de faible résolution. PNG natif 1536 × 1024, non UHD. Le halo brun de l’aperçu appartient à du RGB à alpha 0. Portrait de sélection frontal, distinct du futur combat latéral ; aucune animation.",
+          "selectionProvenance": {
+            "sourceSHA256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+            "sourceDimensions": [
+              1536,
+              1024
+            ],
+            "origin": "conversation-image-generation",
+            "sourceFile": "exec-1d38b07a-34af-46f5-a684-f3773f580b62.png"
+          },
+          "animatedClips": 0
+        },
+        "portraitFileSha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2"
+      },
+      "calibrationStored": false,
+      "calibrationNote": "The selection action requires anchor/bodyHeight arguments but stores no combat frame or calibration. A future combat image is to be calibrated independently.",
+      "currentSelectionPreservation": {
+        "dictionaryUnchanged": true,
+        "bytesUnchanged": true,
+        "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+        "selectionProvenanceMatchesPortrait": true,
+        "combatDistinctFromPortrait": true
+      },
+      "currentCombatAvailable": true,
+      "activeInCombat": false
+    }
+  ],
+  "generationStopsReportedByRoot": [
+    {
+      "fighterId": "arcade_numb_body_arcade",
+      "requestId": "69e384e1-616d-4d50-90f8-23ec8263d6c0",
+      "stage": "selection-generation",
+      "reason": "output/sexual",
+      "result": "No image imported; no retry or combat generation on this profile.",
+      "reportedBy": "root"
+    }
+  ],
+  "selectionProvenanceRefresh": {
+    "fighterId": "arcade_hummer_arcade",
+    "reason": "New importer derives selectionProvenance from the current portrait; refreshed pre-fix import with identical PNG and note.",
+    "dryRun": {
+      "fighterId": "arcade_hummer_arcade",
+      "source": "arcade",
+      "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+      "pose": "idle",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "combatView": "selection-only",
+      "portraitPath": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+      "technical": {
+        "pixelSHA256": "4311f6ca69c2be7d327fc2d8136524d3a493da3aa988ab2414c92de44655c73f",
+        "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+        "bytes": 1460832,
+        "width": 1536,
+        "height": 1024,
+        "extension": "png",
+        "visibleBounds": [
+          63,
+          88,
+          1483,
+          863
+        ],
+        "transparentFraction": 0.75552
+      },
+      "dryRun": true
+    },
+    "import": {
+      "fighterId": "arcade_hummer_arcade",
+      "source": "arcade",
+      "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+      "pose": "idle",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "combatView": "selection-only",
+      "portraitPath": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+      "technical": {
+        "pixelSHA256": "4311f6ca69c2be7d327fc2d8136524d3a493da3aa988ab2414c92de44655c73f",
+        "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+        "bytes": 1460832,
+        "width": 1536,
+        "height": 1024,
+        "extension": "png",
+        "visibleBounds": [
+          63,
+          88,
+          1483,
+          863
+        ],
+        "transparentFraction": 0.75552
+      },
+      "dryRun": false,
+      "nextStep": "npm run sprites:check && npm test && npm run build"
+    },
+    "portraitDictionaryUnchanged": true,
+    "portraitBytesUnchanged": true,
+    "selectionProvenance": {
+      "sourceSHA256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-b1158687-9dd2-4aec-a288-3d180ec20dff.png"
+    }
+  },
+  "allNewSelectionPortraitsPreserved": {
+    "arcade_hummer_arcade": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "488927e4b09be347f76bd53fc70a69a500cf95b7d913977451a149532ea7ec6f",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "arcade_tremer_arcade": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "f20804673e145e00a78c00a3bd326e6cfc634f306296afb7e7aaa2efbba4c1be",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    },
+    "arcade_tuberculosis": {
+      "dictionaryUnchanged": true,
+      "bytesUnchanged": true,
+      "sha256": "05377508d32c2f8d665f363069371579682a8300023e7b2d89047248520768e2",
+      "selectionProvenanceMatchesPortrait": true,
+      "combatDistinctFromPortrait": true
+    }
+  },
+  "selectionProvenanceValidation": {
+    "checkedProfiles": [
+      "downpour_prisoner_minion_brawler_108",
+      "downpour_prisoner_minion_agile_109",
+      "downpour_shadow_107",
+      "sh3_god_050",
+      "origins_demon_084",
+      "bom_fire_guardian_137",
+      "arcade_robbie_the_rabbit_axe",
+      "film_armless_man_170",
+      "film_red_pyramid_thing_return_to_silent_hill",
+      "arcade_hummer_arcade",
+      "arcade_tremer_arcade",
+      "arcade_tuberculosis"
+    ],
+    "sourceHashesAndDimensionsMatchPortraits": true,
+    "sourceFilesMatchWherePresent": true
+  },
+  "completedAtUTC": "2026-11-17T13:26:56.608890+00:00",
+  "status": "complete-imports-registry-stable",
+  "registrySHA256AtCompletion": "745375872406b138b752b31f112673e35021067cf0733f19c000e1362741b45a",
+  "activeCombatPolicy": {
+    "source": "Read-only evaluation of createCombatProfile for the exact twelve IDs; result saved in references/combat-profile-active-state-20261117.json.",
+    "imagesAvailable": 12,
+    "activeRoles": 10,
+    "unchangedDisabledRoles": [
+      "arcade_tuberculosis",
+      "film_red_pyramid_thing_return_to_silent_hill"
+    ],
+    "gameplayModifiedByReviewer": false
+  }
+}

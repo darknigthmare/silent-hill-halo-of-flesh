@@ -1,0 +1,1065 @@
+{
+  "schemaVersion": 1,
+  "group": "vague25-stages",
+  "scope": "Four new missing static stage candidates; eight independent native bitmap planes only",
+  "createdAt": "2026-11-20T09:08:43.374944+00:00",
+  "baseCommit": "941ebe70c72bd473bceff6ce59ea4438cb889629",
+  "deliveryState": "ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "apartment_roof",
+      "source": "sh3",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "sh3-daisy-villa-rooftop-missionary",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+      ],
+      "worldState": "fixed-normal",
+      "edition": "Silent Hill 3 (2003); primary gameplay video upload predates HD Collection; its platform is unreported, secondary cutscene video explicitly PC original voices.",
+      "locationScope": "Daisy Villa Apartments rooftop, Missionary encounter at night, normal-world architecture",
+      "selectedSubLocation": "Daisy Villa Apartments rooftop, Missionary encounter at night, normal-world architecture",
+      "layers": [
+        {
+          "id": "bg-daisy-rooftop",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "748257c48512168b40d5547286fc653d329ca5c8791cb700dcb7b5102fa8b3c0",
+              "bytes": 1947337,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/apartment_roof.bg-daisy-rooftop.748257c48512.png"
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "d12d3658f0a267e9283e9c9892b60f427a427d2b4b801e5ef98291e38a5f79ea",
+              "bytes": 192596,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/apartment_roof.near-edges.d12d3658f0a2.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Daisy Villa rooftop only. Native Missionary gameplay panels show square gray paving, low horizontal rails and dark utility enclosure; secondary original-PC cutscene corroborates the service doorway.",
+        "The side-on camera, enclosure spacing, material detail, diffuse visibility lighting and faint fog are authored adaptations. Dark compressed source panels do not establish hidden rooftop geometry or texture-scale fidelity.",
+        "No water tower, invented antenna, rain, storm hazard, interior apartment scene or monster was added.",
+        "One opaque static background and one sparse transparent edge foreground; no animated clip. Browser/gameplay QA deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    },
+    {
+      "stageId": "nightmare_mall",
+      "source": "sh3",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "sh3-nightmare-mall-split-worm-six-tunnels",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH3_03_NIGHTMARE_MALL"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "Silent Hill 3 (2003), PC gameplay explicitly identified by source video; secondary PC original-voice cutscene.",
+      "locationScope": "Central Square Shopping Center, underground Split Worm arena, fixed altered world, three tunnel mouths on the far wall; three opposing mouths outside this camera",
+      "selectedSubLocation": "Central Square Shopping Center, underground Split Worm arena, fixed altered world, three tunnel mouths on the far wall; three opposing mouths outside this camera",
+      "layers": [
+        {
+          "id": "bg-split-worm-arena",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "b4bb0b1e6077af9129c32442d0a7b620b64d87c5185b2be2f5c6f1ee484ac917",
+              "bytes": 2378022,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/nightmare_mall.bg-split-worm-arena.b4bb0b1e6077.png"
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "f5de5965e21f30f1ea4413ed46b48855ce20135b27c508a32c609ecd4795f81a",
+              "bytes": 268296,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/nightmare_mall.near-edges.f5de5965e21f.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Underground Split Worm arena, not the retail mall. Three mouths are shown on the far wall; the three opposing mouths lie outside the new camera. The six-tunnel arrangement is not misrepresented as six openings on one wall.",
+        "Source gameplay shows squat dark tunnel mouths, narrow supports, rusty red gallery braces and grimy square floor slabs. These recognizable motifs anchor the candidate.",
+        "Side-on camera, exact mouth dimensions, geometry outside the source view, lighting and fine textures remain authored/unverified. No Split Worm, new creature, flesh wall or new gameplay hazard was added.",
+        "One opaque static background and one sparse transparent edge foreground; no animated clip. Browser/gameplay QA deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    },
+    {
+      "stageId": "prison_hc",
+      "source": "homecoming",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "homecoming-overlook-cell-block-b-normal",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT04",
+        "EXT06"
+      ],
+      "worldState": "fixed-normal",
+      "edition": "Silent Hill: Homecoming (2008) native gameplay; video platform unreported. Exact B-cell location and normal phase corroborated by in-game map and sequence.",
+      "locationScope": "Overlook Penitentiary, Cell Block B upper catwalk by the barred cells and lever, normal phase before the later cage sequence",
+      "selectedSubLocation": "Overlook Penitentiary, Cell Block B upper catwalk by the barred cells and lever, normal phase before the later cage sequence",
+      "layers": [
+        {
+          "id": "bg-cell-block-b",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "2ccef75f92fd60c6712a2cb80e13cd4e33416cc222468f6a36d831a172164594",
+              "bytes": 2651671,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/prison_hc.bg-cell-block-b.2ccef75f92fd.png"
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "c0fefbc898af688070a160a060029ea3939c46059d042e7034320a4aa428e218",
+              "bytes": 188146,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/prison_hc.near-edges.c0fefbc898af.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Normal Cell Block B upper coursive/catwalk before the later cage sequence. Reference map panels identify Cell Wing B and nearby cells B5–B8; cell bars, lever and grating come from the adjacent gameplay sequence.",
+        "Heavy square-grid gates, cracked pale gray-green masonry, wall lever and metal-grating walkway retain observed source motifs. The short side-on section and widened continuous combat footing are adaptations.",
+        "Gate spacing, unseen interior furnishing, lighting, proportions and all fine textures are unverified reconstruction. No Downpour panopticon, Otherworld cages, prisoner, gore or monster is part of the asset.",
+        "One opaque static background and one sparse transparent edge foreground; no animated clip. Browser/gameplay QA deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    },
+    {
+      "stageId": "downpour_streets",
+      "source": "downpour",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "downpour-pearl-creek-brite-lansdale-bank-street",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT11"
+      ],
+      "worldState": "fixed-normal",
+      "edition": "Silent Hill: Downpour (2012) native gameplay; exact platform/patch unreported by source video.",
+      "locationScope": "Pearl Creek, Brite Street at Lansdale Avenue, sidewalk and bank-facing street immediately south of the Bank; normal world",
+      "selectedSubLocation": "Pearl Creek, Brite Street at Lansdale Avenue, sidewalk and bank-facing street immediately south of the Bank; normal world",
+      "layers": [
+        {
+          "id": "bg-pearl-creek",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "e6ac81c132f43e0e10d8584ad5d9a97af2cc145300c693d44ac5637253892a0c",
+              "bytes": 2232112,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/downpour_streets.bg-pearl-creek.e6ac81c132f4.png"
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "1152c97b0f1242296814cbdabf5c1d1ecaba01f89df8dad96429524f8d70065e",
+              "bytes": 272747,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/downpour_streets.near-edges.1152c97b0f12.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Pearl Creek, Brite Street near Lansdale Avenue immediately south of the Bank. The selected video panels at 02:45:40 and 02:45:50 show street/sidewalk, pale masonry Bank facade and trees; adjacent panels show dark brick/shutters/scaffold.",
+        "Selected sublocation is documented precisely; no claim that this camera recreates the entire Pearl Creek district or exact Laymond Avenue geography.",
+        "Damp asphalt is the existing rainy-versus condition. Camera, curb spacing, facade fine detail, puddles and weather moment remain authored/unverified. No dramatic rain sheet, lightning, flooding, car obstacle or new story sign was added.",
+        "One opaque static background and one sparse transparent edge foreground; no animated clip. Browser/gameplay QA deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "apartment_roof",
+      "promptKey": "apartment_roof-bg-wave25",
+      "role": "opaque-background",
+      "filename": "apartment_roof.bg-daisy-rooftop.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-d22557d7-0cc0-46ed-814a-895203ec7983.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/apartment_roof.bg-daisy-rooftop.png",
+      "path": "assets/stages/apartment_roof.bg-daisy-rooftop.748257c48512.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1947337,
+      "sha256": "748257c48512168b40d5547286fc653d329ca5c8791cb700dcb7b5102fa8b3c0",
+      "pixelSHA256": "be5fe7a6a49d6b2bf95810d4094ff631d48d4bb07d99eba535caf84b6d1482ef",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed",
+      "visualNotes": "Single empty environment, level broad footing; source-specific motifs reviewed",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "apartment_roof",
+      "promptKey": "apartment_roof-fg-wave25",
+      "role": "transparent-foreground",
+      "filename": "apartment_roof.near-edges.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-6aa87203-678d-4a7f-aef1-0e44779871c7.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/apartment_roof.near-edges.png",
+      "path": "assets/stages/apartment_roof.near-edges.d12d3658f0a2.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 192596,
+      "sha256": "d12d3658f0a267e9283e9c9892b60f427a427d2b4b801e5ef98291e38a5f79ea",
+      "pixelSHA256": "57a38e178ea06dcc83bb6fad439b66ce0b1a94b527ef50f74657e67e3b246587",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9579509226161723,
+        "semiTransparentPixels": 65925,
+        "opaqueFraction": 0.00014809146332162162,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 10,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed",
+      "visualNotes": "Only narrow edge architecture; entire fighter center visually clear; native trace-alpha retained",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "nightmare_mall",
+      "promptKey": "nightmare_mall-bg-wave25",
+      "role": "opaque-background",
+      "filename": "nightmare_mall.bg-split-worm-arena.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-72c34837-12ee-4927-a6cb-a68d4b4a13d9.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/nightmare_mall.bg-split-worm-arena.png",
+      "path": "assets/stages/nightmare_mall.bg-split-worm-arena.b4bb0b1e6077.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2378022,
+      "sha256": "b4bb0b1e6077af9129c32442d0a7b620b64d87c5185b2be2f5c6f1ee484ac917",
+      "pixelSHA256": "774564f7ab4e2b970d417a06e321f8a607272f2f2a1e1ff8c4c08b08c5a35b64",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed",
+      "visualNotes": "Single empty environment, level broad footing; source-specific motifs reviewed",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "nightmare_mall",
+      "promptKey": "nightmare_mall-fg-wave25",
+      "role": "transparent-foreground",
+      "filename": "nightmare_mall.near-edges.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-cb9af265-5273-447c-a85b-dc867fe60e02.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/nightmare_mall.near-edges.png",
+      "path": "assets/stages/nightmare_mall.near-edges.f5de5965e21f.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 268296,
+      "sha256": "f5de5965e21f30f1ea4413ed46b48855ce20135b27c508a32c609ecd4795f81a",
+      "pixelSHA256": "72786785b32d388a97e1f2a466b72c9a829a048b0355f94006a9c07bb9afa68e",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9343465416512008,
+        "semiTransparentPixels": 103245,
+        "opaqueFraction": 3.241486965408885e-05,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 64,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed",
+      "visualNotes": "Only narrow edge architecture; entire fighter center visually clear; native trace-alpha retained",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "prison_hc",
+      "promptKey": "prison_hc-bg-wave25",
+      "role": "opaque-background",
+      "filename": "prison_hc.bg-cell-block-b.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-9511f93f-f055-4fca-854c-94799d576d73.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/prison_hc.bg-cell-block-b.png",
+      "path": "assets/stages/prison_hc.bg-cell-block-b.2ccef75f92fd.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2651671,
+      "sha256": "2ccef75f92fd60c6712a2cb80e13cd4e33416cc222468f6a36d831a172164594",
+      "pixelSHA256": "df9b0a810f382448f202f370518b411cb6021ef76b400d3ff526c3ad764966bb",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed",
+      "visualNotes": "Single empty environment, level broad footing; source-specific motifs reviewed",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "prison_hc",
+      "promptKey": "prison_hc-fg-wave25",
+      "role": "transparent-foreground",
+      "filename": "prison_hc.near-edges.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-be70ce1e-9f41-43eb-8aed-a2845fd59370.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/prison_hc.near-edges.png",
+      "path": "assets/stages/prison_hc.near-edges.c0fefbc898af.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 188146,
+      "sha256": "c0fefbc898af688070a160a060029ea3939c46059d042e7034320a4aa428e218",
+      "pixelSHA256": "335e3723d47c7b51c129db55c8dee42b9ec407975edf8c5affa3c4565aee9b25",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9649010520214167,
+        "semiTransparentPixels": 55108,
+        "opaqueFraction": 7.30923531415729e-05,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 17,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed",
+      "visualNotes": "Only narrow edge architecture; entire fighter center visually clear; native trace-alpha retained",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "downpour_streets",
+      "promptKey": "downpour_streets-bg-wave25",
+      "role": "opaque-background",
+      "filename": "downpour_streets.bg-pearl-creek.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-ad723bfc-1379-4bae-87b9-585293b1a7d7.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/downpour_streets.bg-pearl-creek.png",
+      "path": "assets/stages/downpour_streets.bg-pearl-creek.e6ac81c132f4.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2232112,
+      "sha256": "e6ac81c132f43e0e10d8584ad5d9a97af2cc145300c693d44ac5637253892a0c",
+      "pixelSHA256": "c8ede07f0fa7cbf7b16d287237cdc17cb01e0fd808e7a4e7fa51c8bb7e243adc",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed",
+      "visualNotes": "Single empty environment, level broad footing; source-specific motifs reviewed",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "downpour_streets",
+      "promptKey": "downpour_streets-fg-wave25",
+      "role": "transparent-foreground",
+      "filename": "downpour_streets.near-edges.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-5d86f515-03ba-4bd5-8c43-e08913a75e2a.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/downpour_streets.near-edges.png",
+      "path": "assets/stages/downpour_streets.near-edges.1152c97b0f12.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 272747,
+      "sha256": "1152c97b0f1242296814cbdabf5c1d1ecaba01f89df8dad96429524f8d70065e",
+      "pixelSHA256": "1cd33e98b637f23b8debf4e8f86b8749ec2ed041e755b9f41ac2d367a55c6460",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.927381793775328,
+        "semiTransparentPixels": 113597,
+        "opaqueFraction": 0.00041757979142620344,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 0,
+        "nonzeroAlphaInCenter": 2,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed",
+      "visualNotes": "Only narrow edge architecture; entire fighter center visually clear; native trace-alpha retained",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "stageId": "apartment_roof",
+      "file": "sh3-roof-storyboard-L3-2.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-roof-storyboard-L3-2.jpg",
+      "path": "docs/production/vague25/stages/references/sh3-roof-storyboard-L3-2.jpg",
+      "url": "https://i.ytimg.com/sb/uIyIjNUiozk/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIXRlvoE&rs=AOn4CLB0aRvCgaXQUEMobydJtT34M7v6sw",
+      "sourcePage": "https://www.youtube.com/watch?v=uIyIjNUiozk",
+      "videoUrl": "https://www.youtube.com/watch?v=uIyIjNUiozk",
+      "firstTimestampSeconds": 90,
+      "secondsPerTile": 5,
+      "columns": 3,
+      "rows": 3,
+      "tileSize": [
+        270,
+        180
+      ],
+      "selectedPanels": "Missionary fight 01:30–02:10; multiple roof angles, square paving and low rails. Ignore character/creature.",
+      "bytes": 11904,
+      "sha256": "6cff55b8ccfc29fdadfcf7ac143bfa1d5b8f30b5a98411d4fcf0eb2d4b977e82",
+      "width": 810,
+      "height": 540,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "apartment_roof",
+      "file": "sh3-roof-storyboard-L3-3.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-roof-storyboard-L3-3.jpg",
+      "path": "docs/production/vague25/stages/references/sh3-roof-storyboard-L3-3.jpg",
+      "url": "https://i.ytimg.com/sb/uIyIjNUiozk/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIXRlvoE&rs=AOn4CLB0aRvCgaXQUEMobydJtT34M7v6sw",
+      "sourcePage": "https://www.youtube.com/watch?v=uIyIjNUiozk",
+      "videoUrl": "https://www.youtube.com/watch?v=uIyIjNUiozk",
+      "firstTimestampSeconds": 135,
+      "secondsPerTile": 5,
+      "columns": 3,
+      "rows": 3,
+      "tileSize": [
+        270,
+        180
+      ],
+      "selectedPanels": "Missionary fight 02:15–02:55; utility enclosure/vent/rail and tiled rooftop visible. Ignore character/creature.",
+      "bytes": 12702,
+      "sha256": "269cd5784a4302ad6f70fa4226646ca67ef06868d8d6c527c817839f9032851d",
+      "width": 810,
+      "height": 540,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "apartment_roof",
+      "file": "sh3-jc5SPX-storyboard-L3-18.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-jc5SPX-storyboard-L3-18.jpg",
+      "path": "docs/production/vague25/stages/references/sh3-jc5SPX-storyboard-L3-18.jpg",
+      "url": "https://i.ytimg.com/sb/jc5SPX_5u_M/storyboard3_L3/M18.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCMDdmdMG&rs=AOn4CLCcIj6HkFppg_CUmb1JXmJlFmZ5iA",
+      "sourcePage": "https://www.youtube.com/watch?v=jc5SPX_5u_M",
+      "videoUrl": "https://www.youtube.com/watch?v=jc5SPX_5u_M",
+      "firstTimestampSeconds": 1620,
+      "secondsPerTile": 10,
+      "columns": 3,
+      "rows": 3,
+      "tileSize": [
+        320,
+        180
+      ],
+      "selectedPanels": "PC cutscene 27:00–28:20; only roof panels from 27:20 onward used; 27:50 middle-right is roof approach. Indoor/black panels excluded.",
+      "bytes": 21045,
+      "sha256": "566255b6196c8d8a2b972e18eba0924649ec130b127dc35dd61a9c21317ccbca",
+      "width": 960,
+      "height": 540,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "nightmare_mall",
+      "file": "sh3-split-storyboard-L2-1.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-split-storyboard-L2-1.jpg",
+      "path": "docs/production/vague25/stages/references/sh3-split-storyboard-L2-1.jpg",
+      "url": "https://i.ytimg.com/sb/5kG7UUtjF80/storyboard3_L2/M1.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCPGagqMG&rs=AOn4CLCQMNnyCyhZAGUAEpyaq4Mlk6j0AQ",
+      "sourcePage": "https://www.youtube.com/watch?v=5kG7UUtjF80",
+      "videoUrl": "https://www.youtube.com/watch?v=5kG7UUtjF80",
+      "firstTimestampSeconds": 50.0,
+      "secondsPerTile": 2.0,
+      "columns": 5,
+      "rows": 5,
+      "tileSize": [
+        120,
+        90
+      ],
+      "selectedPanels": "PC Split Worm fight 00:50–01:38; primarily row 3 c2–c4 and row 4 c2–c4 for architecture. Ignore boss and Heather.",
+      "bytes": 24045,
+      "sha256": "94eed2d5e33c951ed2cd7fe15274a7e86eb962f87a4b02da88aa54d27a02f041",
+      "width": 600,
+      "height": 450,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "nightmare_mall",
+      "file": "sh3-split-storyboard-L2-2.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-split-storyboard-L2-2.jpg",
+      "path": "docs/production/vague25/stages/references/sh3-split-storyboard-L2-2.jpg",
+      "url": "https://i.ytimg.com/sb/5kG7UUtjF80/storyboard3_L2/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCPGagqMG&rs=AOn4CLCQMNnyCyhZAGUAEpyaq4Mlk6j0AQ",
+      "sourcePage": "https://www.youtube.com/watch?v=5kG7UUtjF80",
+      "videoUrl": "https://www.youtube.com/watch?v=5kG7UUtjF80",
+      "firstTimestampSeconds": 100.0,
+      "secondsPerTile": 2.0,
+      "columns": 5,
+      "rows": 5,
+      "tileSize": [
+        120,
+        90
+      ],
+      "selectedPanels": "PC Split Worm fight 01:40–02:28; primarily row 3 c2–c5 for tunnel mouths/gallery/slabs. Ignore boss, character and padding.",
+      "bytes": 24489,
+      "sha256": "4eda9b42842eb1f123ce2c6da03c0c38b5e6255bc37c07b110091bb3e99797a1",
+      "width": 600,
+      "height": 450,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "nightmare_mall",
+      "file": "sh3-jc5SPX-storyboard-L3-9.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-jc5SPX-storyboard-L3-9.jpg",
+      "path": "docs/production/vague25/stages/references/sh3-jc5SPX-storyboard-L3-9.jpg",
+      "url": "https://i.ytimg.com/sb/jc5SPX_5u_M/storyboard3_L3/M9.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCMDdmdMG&rs=AOn4CLCcIj6HkFppg_CUmb1JXmJlFmZ5iA",
+      "sourcePage": "https://www.youtube.com/watch?v=jc5SPX_5u_M",
+      "videoUrl": "https://www.youtube.com/watch?v=jc5SPX_5u_M",
+      "firstTimestampSeconds": 810,
+      "secondsPerTile": 10,
+      "columns": 3,
+      "rows": 3,
+      "tileSize": [
+        320,
+        180
+      ],
+      "selectedPanels": "PC cutscene 13:30–14:50; only arena introduction middle/bottom rows used for red bracing/gallery/ladder, not the earlier mall corridor.",
+      "bytes": 36875,
+      "sha256": "c8a3b7f279d4c1fcc1deba7ae9694bb51b17b1917f38d24617ff3df93ca37eae",
+      "width": 960,
+      "height": 540,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "prison_hc",
+      "file": "shh-prison-storyboard-L3-20.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/shh-prison-storyboard-L3-20.jpg",
+      "path": "docs/production/vague25/stages/references/shh-prison-storyboard-L3-20.jpg",
+      "url": "https://i.ytimg.com/sb/K3FmoTQY_m8/storyboard3_L3/M20.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCNn7wtEG&rs=AOn4CLDKlKUWdu_2rfREJ9FXfjyoHFhZLQ",
+      "sourcePage": "https://www.youtube.com/watch?v=K3FmoTQY_m8",
+      "videoUrl": "https://www.youtube.com/watch?v=K3FmoTQY_m8",
+      "firstTimestampSeconds": 1800.0,
+      "secondsPerTile": 10.0,
+      "columns": 3,
+      "rows": 3,
+      "tileSize": [
+        320,
+        180
+      ],
+      "selectedPanels": "Normal Cell Block B 30:00–31:20; top-left and bottom row show cell grid, lever and metal grating. Notes/facecam excluded.",
+      "bytes": 43101,
+      "sha256": "144eb1ebecf6454bb1210e294f099c546f758a0d315edcd0c25f8b2e8c838e10",
+      "width": 960,
+      "height": 540,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "prison_hc",
+      "file": "shh-prison-storyboard-L3-21.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/shh-prison-storyboard-L3-21.jpg",
+      "path": "docs/production/vague25/stages/references/shh-prison-storyboard-L3-21.jpg",
+      "url": "https://i.ytimg.com/sb/K3FmoTQY_m8/storyboard3_L3/M21.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCNn7wtEG&rs=AOn4CLDKlKUWdu_2rfREJ9FXfjyoHFhZLQ",
+      "sourcePage": "https://www.youtube.com/watch?v=K3FmoTQY_m8",
+      "videoUrl": "https://www.youtube.com/watch?v=K3FmoTQY_m8",
+      "firstTimestampSeconds": 1890.0,
+      "secondsPerTile": 10.0,
+      "columns": 3,
+      "rows": 3,
+      "tileSize": [
+        320,
+        180
+      ],
+      "selectedPanels": "31:30–32:50; native maps identify Cell Wing B and B5–B8; middle row shows rail/lever/catwalk. Maps are locality evidence only.",
+      "bytes": 41032,
+      "sha256": "84b6522fcd16a1e17efa716f8493b4d80af6f065eccb33bf31efee77918f9085",
+      "width": 960,
+      "height": 540,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "prison_hc",
+      "file": "shh-prison-storyboard-L3-22.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/shh-prison-storyboard-L3-22.jpg",
+      "path": "docs/production/vague25/stages/references/shh-prison-storyboard-L3-22.jpg",
+      "url": "https://i.ytimg.com/sb/K3FmoTQY_m8/storyboard3_L3/M22.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCNn7wtEG&rs=AOn4CLDKlKUWdu_2rfREJ9FXfjyoHFhZLQ",
+      "sourcePage": "https://www.youtube.com/watch?v=K3FmoTQY_m8",
+      "videoUrl": "https://www.youtube.com/watch?v=K3FmoTQY_m8",
+      "firstTimestampSeconds": 1980.0,
+      "secondsPerTile": 10.0,
+      "columns": 3,
+      "rows": 3,
+      "tileSize": [
+        320,
+        180
+      ],
+      "selectedPanels": "33:00–34:20; middle-left/middle-center show B cells and grating; lower panels approach rescue area. Facecam/maps/figures excluded.",
+      "bytes": 40132,
+      "sha256": "7e58f7d838b15be41425a002f7c61494f9cf70b4a0e2b857e6d3551282102bdf",
+      "width": 960,
+      "height": 540,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "downpour_streets",
+      "file": "sh8-pearl-storyboard-L3-110.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh8-pearl-storyboard-L3-110.jpg",
+      "path": "docs/production/vague25/stages/references/sh8-pearl-storyboard-L3-110.jpg",
+      "url": "https://i.ytimg.com/sb/JHLlmOJHUCI/storyboard3_L3/M110.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyRt7wG&rs=AOn4CLBs32hcMukiv0rTpgUWF8cdqZO9mQ",
+      "sourcePage": "https://www.youtube.com/watch?v=JHLlmOJHUCI",
+      "videoUrl": "https://www.youtube.com/watch?v=JHLlmOJHUCI",
+      "firstTimestampSeconds": 9900.0,
+      "secondsPerTile": 10.0,
+      "columns": 3,
+      "rows": 3,
+      "tileSize": [
+        320,
+        180
+      ],
+      "selectedPanels": "02:45:00–02:46:20; primary middle-center 02:45:40 and middle-right 02:45:50 street/Bank facade. Native bird-cage sequence confirms corner south of Bank. Fantasy insert/people excluded.",
+      "bytes": 35723,
+      "sha256": "e6c63d94377f7b8783346a03dc9acccc52128a3c146724a63b42163191462003",
+      "width": 960,
+      "height": 540,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    },
+    {
+      "stageId": "downpour_streets",
+      "file": "sh8-pearl-storyboard-L3-109.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh8-pearl-storyboard-L3-109.jpg",
+      "path": "docs/production/vague25/stages/references/sh8-pearl-storyboard-L3-109.jpg",
+      "url": "https://i.ytimg.com/sb/JHLlmOJHUCI/storyboard3_L3/M109.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKyRt7wG&rs=AOn4CLBs32hcMukiv0rTpgUWF8cdqZO9mQ",
+      "sourcePage": "https://www.youtube.com/watch?v=JHLlmOJHUCI",
+      "videoUrl": "https://www.youtube.com/watch?v=JHLlmOJHUCI",
+      "firstTimestampSeconds": 9810.0,
+      "secondsPerTile": 10.0,
+      "columns": 3,
+      "rows": 3,
+      "tileSize": [
+        320,
+        180
+      ],
+      "selectedPanels": "02:43:30–02:44:50; only middle-center and bottom row exterior shutter/brick/scaffold alley used as secondary material evidence; all interiors/maps/menu excluded.",
+      "bytes": 34157,
+      "sha256": "ff0af36bda3bc624a436c2853ab3abaa9ad2d32852e56e62ecb1d4c21e5fa895",
+      "width": 960,
+      "height": 540,
+      "inspected": true,
+      "sourceClaim": "Native gameplay/cutscene storyboard pixels downloaded unchanged. Panel selection manually inspected. Compression and small tile resolution limit detail; new camera and hidden geometry are not certified."
+    }
+  ],
+  "prompts": [
+    {
+      "stageId": "downpour_streets",
+      "source": "downpour",
+      "key": "downpour_streets-bg-wave25",
+      "locationScope": "Pearl Creek, Brite Street at Lansdale Avenue, sidewalk and bank-facing street immediately south of the Bank; normal world",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh8-pearl-storyboard-L3-110.jpg",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh8-pearl-storyboard-L3-109.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Create ONE wide landscape 16:9 raster background plate for a 2D side-view fighting game, using the attached native gameplay storyboard references of Silent Hill: Downpour (2012). Output a single uninterrupted empty environment, NOT a montage/contact sheet; all pixels opaque. Remove all characters, monsters, UI, subtitles, watermarks and grid boundaries. This stage is specifically Pearl Creek, the Brite Street / Lansdale Avenue corner immediately south of the Bank, NORMAL WORLD. Do not substitute Overlook, Hillside, the radio tower, another Silent Hill game or a generic horror town.\n\nReference 1 is a 3 by 3 video storyboard: use its middle-center and middle-right panels (02:45:40 and 02:45:50) as PRIMARY visual evidence. They show the broad road, worn pale raised sidewalk, thin dark street poles, barren branches, and the pale stone Bank facade with tall recessed windows and an arched central entry in the background. The middle-left and top-left panels additionally show the nearby patched dark brick building, shuttered frontage and simple scaffold at the near corner. Reference 2 is secondary MATERIAL guidance only: its bottom row and middle-center show that corner's dark brickwork, corrugated shutter, simple cross-braced scaffold, and modest loose litter. Ignore interior and menu panels. Preserve the identifiable source materials and modest urban scale; do not redesign the facade into a cathedral or a grand new city.\n\nCompose a calm side-on, eye-height arena with only shallow perspective: the Bank-facing road runs horizontally across the scene; the pale masonry facade sits across the street behind it, and a limited slice of the darker shuttered/scaffold corner can frame the far left background. Broad empty wet gray asphalt fills the bottom 28% and gives a straight horizontal fighter footing at normalized y=0.87. The entire central 86% must remain unobstructed at combat scale; no fence, car, bench, huge rubble pile, signboard or foreground prop across the lower middle. Keep any bollard/scaffold/pole and small debris mostly toward the outer edges or clearly behind the fighting plane. The two sides should feel part of the same actual streetscape, not a perfectly symmetrical invented arena. Thick gray-blue natural fog softens unseen distance. Desaturated cool concrete, dingy cream stone, charcoal brick, damp asphalt. Restrained realistic texture detail matching the supplied game environment, atmospheric low-contrast depth with readable silhouettes, no stylized line art, no poster typography.\n\nThe subtly damp road is the project's authored rainy-versus condition; do not paint dramatic rain streaks, lightning, floodwater, supernatural effects or falling hazards. No invented shop names, readable lettering or new story props. Show only architecture supported in the selected references; obscure unknown remote geometry with the source-like fog. Native detailed bitmap output, clean edges, full canvas. This is a source-guided scene adaptation with a new side-on camera, not a claim of exact 1:1 reproduction."
+    },
+    {
+      "stageId": "nightmare_mall",
+      "source": "sh3",
+      "key": "nightmare_mall-bg-wave25",
+      "locationScope": "Central Square Shopping Center, underground Split Worm arena, fixed altered world, three tunnel mouths on the far wall; three opposing mouths outside this camera",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-split-storyboard-L2-1.jpg",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-split-storyboard-L2-2.jpg",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-jc5SPX-storyboard-L3-9.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Create ONE uninterrupted wide landscape 16:9 raster background plate for a 2D side-view fighting game, guided by the supplied native Silent Hill 3 (2003 PC) gameplay images. Single empty location, opaque background, NOT a grid, contact sheet or collage. The EXACT location is the underground Split Worm arena beneath the Central Square Shopping Center in the altered Nightmare Mall. This is NOT a shopping concourse or another game's dungeon.\n\nThe first two references are 5-by-5 storyboard grids from the actual Split Worm fight. Use reference 1 row 3 columns 2–4 and row 4 columns 2–4, and reference 2 row 3 columns 2–5 for the architecture. The third reference is a 3-by-3 grid from the arena introduction: its middle and bottom rows corroborate the red-painted steel cross-braces, dirty pale panels, gallery and ladder. Ignore every person and creature, black padding and grid seams. Preserve the source design: a compact rectangular industrial pit, a low grimy gray-beige slab floor, dark squat rectangular tunnel mouths on opposed walls, narrow structural piers, a rusty dull-red steel horizontal gallery and diagonal braces above the mouths, stained concrete/infill panels and dim void above. The arena has SIX tunnels in total, arranged THREE ON EACH OPPOSING WALL. In this new side-on view show the three on the far wall; the three on the near wall lie outside the camera, do not place six side-by-side across one wall. Their dark mouths are low and broad rather than gigantic fantasy arches. No fancy sewer pipes or round tunnel rings.\n\nCamera is near fighter eye height, level, facing the long far wall almost square on, with very shallow side-wall perspective. Form an empty horizontal combat lane at the bottom of the scene: worn square concrete/stone slabs in dirty ochre-gray, extending unbroken across the entire width, broad lower 30%, footing normalized y=0.87. Midground wall openings and structural piers remain behind the fighting lane. No pits, upright rubble, monster, ladder, pole or fence across the clear middle combat floor. The source's red steel beams and diagonal braces belong behind and above the action, no decorative beam across fighter silhouettes. Keep the space limited and industrial, not a vast temple. Restrained dirty cream-gray material, dark rust-red braces, deep brown-black tunnels, muted localized dim illumination sufficient to read the floor. Detailed realistic game-environment texture with uneven stains and plausible wear from the reference, no cartoony contours, no new symbols, signs, lettering or supernatural effects. Remove ALL monsters, people, blood spray, UI, subtitles and watermark. Do not introduce meat walls, body parts, ritual ornaments, hanging figures or new lore. Source-guided static environment candidate with a new versus camera; no pretense of reconstructing hidden exact geometry."
+    },
+    {
+      "stageId": "prison_hc",
+      "source": "homecoming",
+      "key": "prison_hc-bg-wave25",
+      "locationScope": "Overlook Penitentiary, Cell Block B upper catwalk by the barred cells and lever, normal phase before the later cage sequence",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/shh-prison-storyboard-L3-20.jpg",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/shh-prison-storyboard-L3-21.jpg",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/shh-prison-storyboard-L3-22.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Create ONE uninterrupted wide landscape 16:9 raster background plate for a 2D side-view fighting game based on the attached native Silent Hill: Homecoming gameplay storyboard images. Single empty environment, opaque canvas. Never reproduce their grid/contact-sheet layout. Exact location: Overlook Penitentiary, NORMAL Cell Block B, the upper cell-side coursive/catwalk before the later Otherworld cage sequence. The maps visible in reference 2 identify Cell Wing B; use only for locality, not as artwork. No Downpour prison, panopticon, cell block A, underground water prison or invented punishment room.\n\nThe references are 3-by-3 native video storyboard grids. Primary architecture: reference 1 top-left and bottom row; reference 2 middle row; reference 3 middle-left and middle-center. Observe heavy oxidized rectangular steel square-grid cell gates, thick concrete/masonry piers, rough pale dirty gray-green walls with cracks and flaked surfaces, simple wall lever boxes, and worn rectangular metal-grating walkway panels with dull rails at the side of a dark central void. Preserve those materials and scale. Remove people, streamer face overlays, maps, inventory, text captions and every interface element. Do not copy character faces or silhouettes into stains.\n\nCompose a nearly straight side-on view along a SHORT section of Cell Block B, with the observed cell gates forming the rear wall, and the catwalk rendered as a broad level continuous empty floor across the lower 28% of the image. This width is the versus adaptation: enough empty room for fighters, feet at normalized y=0.87, no hole or sudden drop through the playing area. Keep the distant rail/drop suggestion only at outer corners, and no railing, bars, doorway jamb or object covering the central 86% in the foreground. Use a few source-like heavy grid gates separated by stout masonry bays; preserve the modest grim scale, do not build a new multi-storey grand prison hall. Cracked concrete and metal grating have physical believable worn texture, cool gray-blue ambient darkness, faint dusty illumination along the floor and walls, calm readable medium contrast. Source game environment style with detailed raster materials, not painterly concept art.\n\nNo people, prisoners, bodies, monsters, weapons, gore, hanging cages, glowing occult symbols, flesh growth, flames, pools, snow, fake warning text, signage or readable cell numbers. No overt theatrical spotlight. Light enough to distinguish fighter silhouettes against the cell bars. Full canvas with opaque background. This is a documented side-on adaptation of the normal B-cell coursive using observed materials, not a certified 1:1 reconstruction."
+    },
+    {
+      "stageId": "apartment_roof",
+      "source": "sh3",
+      "key": "apartment_roof-bg-wave25",
+      "locationScope": "Daisy Villa Apartments rooftop, Missionary encounter at night, normal-world architecture",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-roof-storyboard-L3-2.jpg",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-roof-storyboard-L3-3.jpg",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/references/sh3-jc5SPX-storyboard-L3-18.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Create ONE wide landscape 16:9 opaque raster environment plate for a 2D side-view fighting game. The attached native Silent Hill 3 gameplay storyboard images show the EXACT scene: Daisy Villa Apartments ROOFTOP during the Missionary encounter at night. A single empty uninterrupted roof environment, not a contact sheet and not an interior corridor. Remove characters, creature, interface, captions and grid seams. Original game's architecture and material character are the guide.\n\nReferences 1 and 2 each contain 3-by-3 gameplay panels, the first at 01:30–02:10 and the second at 02:15–02:55 of the Missionary video. Use all unobscured roof surfaces across these views. They establish large dirty pale gray SQUARE rooftop paving slabs, thin low metal guardrails with horizontal rails at the perimeter, dark masonry/concrete rooftop utility walls, small dark rectangular service openings or vent panels, modest service-door architecture, and very dark empty night above. Reference 3's middle-right and lower panels are cutscene evidence for the same rooftop's rough dark masonry wall and blue-black rectangular service-door frame behind Claudia. Ignore indoor apartment panels and every figure. Keep the original low utilitarian residential roof scale, NOT an industrial megastructure. Only add forms visible in these views; unknown distance remains obscured by darkness and faint gray fog.\n\nCompose a level side-on horizontal fighting area with shallow perspective and a long row of source-like gray square roof slabs extending across the lower 30% of the image, fighter footing at normalized y=0.87. Broad unbroken floor, no hole or curb in the active combat lane, no railing or foreground vertical post through the central 86% of the image. The low perimeter railing belongs BEHIND the lane, with a portion of the dark low masonry roof access/utility wall and its simple service doorway offset toward the right background. Retain an open exterior sense and black muted gray night above; this is a roof, not a fully enclosed room. Let the left background dissolve into dark fog beyond the rail instead of inventing detailed skyline geography. Floor is matte worn concrete-gray pavers with restrained subtle dampness, not flooded or mirror-glossy. No visible rain streaks, storm lightning, snow, falling debris or supernatural effects. Dim cool diffuse illumination can be slightly raised for fighter readability but keep the subdued original nighttime palette, not sunny daytime or neon.\n\nDetailed realistic raster material with chipped grout, worn dark metal and dirty masonry, restrained desaturated tones; no cartoon outlines, painterly sketch or typography. No characters, faces in shadows, bodies, monsters, weapons, blood, occult symbols, water towers, giant turbines, invented antennas or narrative props. Preserve recognizable observed architecture while acknowledging the new horizontal versus camera as an adaptation, not certified 1:1 reconstruction."
+    },
+    {
+      "stageId": "downpour_streets",
+      "source": "downpour",
+      "key": "downpour_streets-fg-wave25",
+      "locationScope": "Pearl Creek, Brite Street at Lansdale Avenue, sidewalk and bank-facing street immediately south of the Bank; normal world",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/downpour_streets.bg-pearl-creek.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Generate ONE wide landscape 16:9 transparent RGBA PNG stage foreground overlay. The attached image is the already selected background and is provided ONLY to match materials, lighting and the camera. Do NOT reproduce that background. Do NOT include ground, sky, scene, wall across the canvas, gradients, white fill, black fill, checkerboard texture, fog, shadows floating in empty space, labels, borders, text, UI, people or monsters. The output consists only of TWO disconnected very narrow pieces of source-like near-edge architecture at the far left and far right image boundary. This is a sparse foreground overlay for a fighting game, not a complete picture of the background.\n\nCRITICAL ALPHA AND COMPOSITION CONTRACT: every pixel across the central 88% of canvas, from x=0.06 to x=0.94 for the ENTIRE height y=0.0–1.0, must be fully transparent alpha zero. Keep all nontransparent architecture strictly inside x=0.00–0.045 and x=0.955–1.00. The center and the combat feet band must remain genuinely empty transparency, with no bridge, cable, branch, rail, floor strip, glow, dust or grain crossing through it. Both outer edge pieces must reach the canvas boundary so they read as cropped nearby environment, not isolated props in the middle. Keep the same wide canvas as the reference background. Actual transparent alpha, never a painted checkerboard. Sharp natural antialiased object edges; source-like high quality raster texture without outlines.\n\nFor this Pearl Creek street overlay: at the extreme LEFT show only a slim slice of weathered dark brick corner and one dull scaffold tube, cropped by the left image boundary. At the extreme RIGHT show only a slim partial weathered street-pole shaft, cropped by the right image boundary. The width of each visible fragment is at most 4% of the whole image. Match the supplied cool fog-muted brick, gray mortar and dark metal. No base spreading toward center. The poles and brick have ordinary static urban form, no invented objects or decorations. Do not add the Bank, road, tree, wet ground or fog from the reference."
+    },
+    {
+      "stageId": "prison_hc",
+      "source": "homecoming",
+      "key": "prison_hc-fg-wave25",
+      "locationScope": "Overlook Penitentiary, Cell Block B upper catwalk by the barred cells and lever, normal phase before the later cage sequence",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/prison_hc.bg-cell-block-b.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Generate ONE wide landscape 16:9 transparent RGBA PNG stage foreground overlay. The attached image is the already selected background and is provided ONLY to match materials, lighting and the camera. Do NOT reproduce that background. Do NOT include ground, sky, scene, wall across the canvas, gradients, white fill, black fill, checkerboard texture, fog, shadows floating in empty space, labels, borders, text, UI, people or monsters. The output consists only of TWO disconnected very narrow pieces of source-like near-edge architecture at the far left and far right image boundary. This is a sparse foreground overlay for a fighting game, not a complete picture of the background.\n\nCRITICAL ALPHA AND COMPOSITION CONTRACT: every pixel across the central 88% of canvas, from x=0.06 to x=0.94 for the ENTIRE height y=0.0–1.0, must be fully transparent alpha zero. Keep all nontransparent architecture strictly inside x=0.00–0.045 and x=0.955–1.00. The center and the combat feet band must remain genuinely empty transparency, with no bridge, cable, branch, rail, floor strip, glow, dust or grain crossing through it. Both outer edge pieces must reach the canvas boundary so they read as cropped nearby environment, not isolated props in the middle. Keep the same wide canvas as the reference background. Actual transparent alpha, never a painted checkerboard. Sharp natural antialiased object edges; source-like high quality raster texture without outlines.\n\nFor this normal Cell Block B overlay: at the extreme LEFT show a slim cropped near iron gate jamb with two short inward horizontal bar stubs ending before x=0.04. At the extreme RIGHT show a slim partial oxidized catwalk rail upright cropped by the boundary, again contained entirely in the last 4% of canvas width. Match the selected gray-blue oxidized steel and subdued lighting exactly. Simple narrow static pieces, no masonry wall or complete cell door. No rail spanning the image; no base extending into the combat floor; do not reproduce the grating floor, cells or walls."
+    },
+    {
+      "stageId": "apartment_roof",
+      "source": "sh3",
+      "key": "apartment_roof-fg-wave25",
+      "locationScope": "Daisy Villa Apartments rooftop, Missionary encounter at night, normal-world architecture",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/apartment_roof.bg-daisy-rooftop.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Generate ONE wide landscape 16:9 transparent RGBA PNG stage foreground overlay. The attached image is the already selected background and is provided ONLY to match materials, lighting and the camera. Do NOT reproduce that background. Do NOT include ground, sky, scene, wall across the canvas, gradients, white fill, black fill, checkerboard texture, fog, shadows floating in empty space, labels, borders, text, UI, people or monsters. The output consists only of TWO disconnected very narrow pieces of source-like near-edge architecture at the far left and far right image boundary. This is a sparse foreground overlay for a fighting game, not a complete picture of the background.\n\nCRITICAL ALPHA AND COMPOSITION CONTRACT: every pixel across the central 88% of canvas, from x=0.06 to x=0.94 for the ENTIRE height y=0.0–1.0, must be fully transparent alpha zero. Keep all nontransparent architecture strictly inside x=0.00–0.045 and x=0.955–1.00. The center and the combat feet band must remain genuinely empty transparency, with no bridge, cable, branch, rail, floor strip, glow, dust or grain crossing through it. Both outer edge pieces must reach the canvas boundary so they read as cropped nearby environment, not isolated props in the middle. Keep the same wide canvas as the reference background. Actual transparent alpha, never a painted checkerboard. Sharp natural antialiased object edges; source-like high quality raster texture without outlines.\n\nFor this Daisy Villa rooftop overlay: at the extreme LEFT show a slim cropped end of the source's old steel guardrail, only one dull vertical post and two short bar ends pointing toward the center but ending before x=0.04; keep this fragment in the lower half. At the extreme RIGHT show a slim cropped dark utilitarian door-jamb/roof-access masonry edge, reaching the right boundary. Match the supplied dark gray weathered steel and subdued cool nighttime masonry. Maximum visible fragment width 4% of the image per side. Do not add antenna, water tower, roof machinery, skyline or decorative motifs. Do not reproduce the roof slabs, background rail or utility facade. No floor strip or frame across the bottom or top."
+    },
+    {
+      "stageId": "nightmare_mall",
+      "source": "sh3",
+      "key": "nightmare_mall-fg-wave25",
+      "locationScope": "Central Square Shopping Center, underground Split Worm arena, fixed altered world, three tunnel mouths on the far wall; three opposing mouths outside this camera",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/png/nightmare_mall.bg-split-worm-arena.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Generate ONE wide landscape 16:9 transparent RGBA PNG stage foreground overlay. The attached image is the already selected background and is provided ONLY to match materials, lighting and the camera. Do NOT reproduce that background. Do NOT include ground, sky, scene, wall across the canvas, gradients, white fill, black fill, checkerboard texture, fog, shadows floating in empty space, labels, borders, text, UI, people or monsters. The output consists only of TWO disconnected very narrow pieces of source-like near-edge architecture at the far left and far right image boundary. This is a sparse foreground overlay for a fighting game, not a complete picture of the background.\n\nCRITICAL ALPHA AND COMPOSITION CONTRACT: every pixel across the central 88% of canvas, from x=0.06 to x=0.94 for the ENTIRE height y=0.0–1.0, must be fully transparent alpha zero. Keep all nontransparent architecture strictly inside x=0.00–0.045 and x=0.955–1.00. The center and the combat feet band must remain genuinely empty transparency, with no bridge, cable, branch, rail, floor strip, glow, dust or grain crossing through it. Both outer edge pieces must reach the canvas boundary so they read as cropped nearby environment, not isolated props in the middle. Keep the same wide canvas as the reference background. Actual transparent alpha, never a painted checkerboard. Sharp natural antialiased object edges; source-like high quality raster texture without outlines.\n\nFor this underground Split Worm arena overlay: at the extreme LEFT and extreme RIGHT show slim cropped rusty dark-red vertical steel brace/column fragments matching the source gallery structure. Each is at most 4% of canvas width, attached to the outer image boundary. Modest worn bolt plates and flaking dirty red paint, muted grim concrete dust. If an angled brace end is included, it must remain within that same narrow edge band and end before reaching x=0.045 or x=0.955. No top crossbar, no chain or cable across the center. Do not include any tunnel, slab floor, gallery railing across the width, wall, creature or background illumination. Only the two very narrow edge pieces on actual alpha zero canvas."
+    }
+  ],
+  "qa": {
+    "sourceAndGeneratedImagesVisuallyInspected": true,
+    "browserTest": false,
+    "engineTest": false,
+    "noPixelsRetouched": true,
+    "noAnimatedClips": true,
+    "certified1to1": false,
+    "certifiedUHD": false,
+    "alphaThreshold": "Native foreground central/footing alpha maximum <=1/255, matching prior pass; trace alpha not edited",
+    "originalPNGsPreserved": true,
+    "allGeneratedCandidatesSelected": true,
+    "correctionsPerformed": 0
+  },
+  "totals": {
+    "stages": 4,
+    "newPNG": 8,
+    "bytes": 10130927,
+    "references": 11,
+    "animatedClips": 0
+  },
+  "retainedDelivery": {
+    "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/stages/delivery.json",
+    "sha256": "c361fcb3e9f4905de4198dd9bba5a97ed0dcb1517e8ac73aeaa4088b8513f204",
+    "transformation": "Only scratch evidence path prefix remapped; all eight native outputs and eleven selected source images retained byte-for-byte. Exploratory page/API downloads not part of the source delivery."
+  }
+}

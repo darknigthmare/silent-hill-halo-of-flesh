@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "mode": "real Chromium workshop and blocked preparation",
+  "ids": [
+    "sh4_tremer_blue_063"
+  ],
+  "checks": [
+    {
+      "name": "sh4_tremer_blue_063 is a documented non-duel role",
+      "passed": true,
+      "detail": {
+        "role": "environmental-obstacle",
+        "duelEnabled": false
+      }
+    },
+    {
+      "name": "sh4_tremer_blue_063 preserves source portrait",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sh4_tremer_blue_063 keeps the normal duel link unavailable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sh4_tremer_blue_063 exact workshop frame bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sh4_tremer_blue_063 right complete idle is visible",
+      "passed": true,
+      "detail": {
+        "nativeSize": [
+          720,
+          500
+        ],
+        "corners": [
+          [
+            230.7224569143686,
+            355.3899756898744
+          ],
+          [
+            511.34709712946903,
+            429.99996356567914
+          ]
+        ],
+        "path": "/assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
+        "sign": 1,
+        "pose": "idle"
+      }
+    },
+    {
+      "name": "sh4_tremer_blue_063 left complete idle is visible",
+      "passed": true,
+      "detail": {
+        "nativeSize": [
+          720,
+          500
+        ],
+        "corners": [
+          [
+            489.2775430856314,
+            355.3899756898744
+          ],
+          [
+            208.65290287053094,
+            429.99996356567914
+          ]
+        ],
+        "path": "/assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
+        "sign": -1,
+        "pose": "idle"
+      }
+    },
+    {
+      "name": "sh4_tremer_blue_063 rejects duel launch in normal mode",
+      "passed": true,
+      "detail": "Tremer — Blue : rôle non combattant ou identité à confirmer. Consulter le dossier."
+    },
+    {
+      "name": "sh4_tremer_blue_063 rejects duel launch in diagnostic mode",
+      "passed": true,
+      "detail": "Tremer — Blue : rôle non combattant ou identité à confirmer. Consulter le dossier."
+    },
+    {
+      "name": "No browser exceptions",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "inspectors": [
+    {
+      "id": "sh4_tremer_blue_063",
+      "side": "right",
+      "file": "workshop-sh4_tremer_blue_063-right.png",
+      "frame": "assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
+      "policy": {
+        "role": "environmental-obstacle",
+        "duelEnabled": false
+      }
+    },
+    {
+      "id": "sh4_tremer_blue_063",
+      "side": "left",
+      "file": "workshop-sh4_tremer_blue_063-left.png",
+      "frame": "assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
+      "policy": {
+        "role": "environmental-obstacle",
+        "duelEnabled": false
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "153.0.8010.0",
+  "passed": true
+}

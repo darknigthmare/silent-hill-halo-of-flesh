@@ -1,0 +1,322 @@
+{
+  "schema": 1,
+  "wave": 22,
+  "group": "fighters-a",
+  "baseCommit": "80db2a9",
+  "generatedAt": "2026-11-19T15:53:44.641563+00:00",
+  "sourceScope": [
+    "sh1",
+    "sh2",
+    "sh3",
+    "sh4",
+    "origins",
+    "homecoming",
+    "shattered",
+    "downpour"
+  ],
+  "inventoryScope": {
+    "legacyProfilesReviewed": 22,
+    "trueMissingProfilesReviewed": 6
+  },
+  "counts": {
+    "direct-historical-tool-refusal": 3,
+    "related-historical-tool-refusal": 3,
+    "related-historical-tool-refusal-and-insufficient-phase-reference": 1,
+    "existing-animation-preserved": 1,
+    "dedicated-combat-view": 7,
+    "documented-role-preserved-no-forced-fighter": 8,
+    "insufficient-exact-native-reference": 2,
+    "noncombat-reference-view": 3
+  },
+  "newIdentityAdditions": 0,
+  "newPortraits": 0,
+  "selectedViews": 10,
+  "combatEligibleViews": 7,
+  "noncombatReferenceViews": 3,
+  "generationCalls": 12,
+  "selectedOutputs": 10,
+  "archivedSupersededOutputs": 2,
+  "historicalRefusalsRetried": 0,
+  "newToolRefusals": 0,
+  "certifiedOneToOne": 0,
+  "nativeAnimationProduced": 0,
+  "records": [
+    {
+      "id": "sh1_incubus_019",
+      "inventoryClass": "missing-portrait-and-view",
+      "decision": "direct-historical-tool-refusal",
+      "attemptsThisWave": 0,
+      "reason": "Refus explicite antérieur Incubus ; aucune nouvelle requête.",
+      "evidence": "historical-block-evidence.json"
+    },
+    {
+      "id": "sh2_mannequin_ambusher_023",
+      "inventoryClass": "missing-portrait-and-view",
+      "decision": "related-historical-tool-refusal",
+      "attemptsThisWave": 0,
+      "reason": "Famille Mannequin précédemment refusée ; la variante remake 2024 ne sert pas de nouvelle tentative.",
+      "evidence": "historical-block-evidence.json"
+    },
+    {
+      "id": "sh2_spider_mannequin",
+      "inventoryClass": "missing-portrait-and-view",
+      "decision": "related-historical-tool-refusal",
+      "attemptsThisWave": 0,
+      "reason": "Famille Mannequin précédemment refusée ; aucun essai Spider ni transfert d’une autre édition.",
+      "evidence": "historical-block-evidence.json"
+    },
+    {
+      "id": "sh2_mary_final_manifestation_034",
+      "inventoryClass": "missing-portrait-and-view",
+      "decision": "direct-historical-tool-refusal",
+      "attemptsThisWave": 0,
+      "reason": "Refus imagegen antérieur, requestId aab0fa5c-0b16-4cc5-b4b7-8969f7bbdc30 ; aucun nouvel appel.",
+      "evidence": "historical-block-evidence.json"
+    },
+    {
+      "id": "homecoming_amnion_hanging_form_097",
+      "inventoryClass": "missing-portrait-and-view",
+      "decision": "direct-historical-tool-refusal",
+      "attemptsThisWave": 0,
+      "reason": "Refus imagegen antérieur, requestId 618d08f4-0487-4b32-839f-f69a2983f6e2 ; aucun nouvel appel.",
+      "evidence": "historical-block-evidence.json"
+    },
+    {
+      "id": "homecoming_amnion_exposed_form_098",
+      "inventoryClass": "missing-portrait-and-view",
+      "decision": "related-historical-tool-refusal-and-insufficient-phase-reference",
+      "attemptsThisWave": 0,
+      "reason": "Même sujet Amnion précédemment refusé, et anatomie exposée de seconde phase non établie par le rendu fermé. Aucun essai ni emprunt de la première forme.",
+      "evidence": "historical-block-evidence.json"
+    },
+    {
+      "id": "sh1_air_screamer_001",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "combatant",
+      "decision": "existing-animation-preserved",
+      "attemptsThisWave": 0,
+      "reason": "Le profil possède déjà un clip idle animé à plusieurs frames. Aucune image fixe ne le remplace.",
+      "existingAnimatedClips": 1
+    },
+    {
+      "id": "sh1_grey_child_005",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "combatant",
+      "decision": "dedicated-combat-view",
+      "selectedSHA256": "04637d6607149f7b326cb6e8c1ba77d9ca866aaeec2ab0e153cc631d1fe2bd36",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "sh1_larval_stalker_007",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "noncombatant",
+      "decision": "documented-role-preserved-no-forced-fighter",
+      "attemptsThisWave": 0,
+      "reason": "Présence non combattante ou obstacle environnemental documenté ; aucune conversion en personnage de duel ni invention d’un corps autonome."
+    },
+    {
+      "id": "sh1_stalker_008",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "combatant",
+      "decision": "insufficient-exact-native-reference",
+      "attemptsThisWave": 0,
+      "reason": "Les images consultées ne fixent pas assez clairement le Stalker armé translucide de Nowhere dans son édition exacte. Le modèle Grey Child et sa seule recoloration ne suffisent pas à établir une vue 1:1."
+    },
+    {
+      "id": "sh1_bloodsucker",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "environmental-obstacle",
+      "decision": "documented-role-preserved-no-forced-fighter",
+      "attemptsThisWave": 0,
+      "reason": "Présence non combattante ou obstacle environnemental documenté ; aucune conversion en personnage de duel ni invention d’un corps autonome."
+    },
+    {
+      "id": "sh2_twin_pyramid_heads_031",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "multi-body",
+      "decision": "dedicated-combat-view",
+      "selectedSHA256": "cc8a401854b1bef30072d60078790460d7154debee55e4f3b7a5c9c7cd91ec44",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "sh2_maria_final_manifestation_033",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "combatant",
+      "decision": "related-historical-tool-refusal",
+      "attemptsThisWave": 0,
+      "reason": "Même famille de manifestation finale que Mary explicitement refusée. Le portrait Maria existant demeure ; aucun essai sous cette autre identité.",
+      "evidence": "historical-block-evidence.json"
+    },
+    {
+      "id": "sh3_glutton",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "environmental-obstacle",
+      "decision": "documented-role-preserved-no-forced-fighter",
+      "attemptsThisWave": 0,
+      "reason": "Présence non combattante ou obstacle environnemental documenté ; aucune conversion en personnage de duel ni invention d’un corps autonome."
+    },
+    {
+      "id": "sh4_toadstool_061",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "environmental-obstacle",
+      "decision": "documented-role-preserved-no-forced-fighter",
+      "attemptsThisWave": 0,
+      "reason": "Présence non combattante ou obstacle environnemental documenté ; aucune conversion en personnage de duel ni invention d’un corps autonome."
+    },
+    {
+      "id": "sh4_whitestool_062",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "environmental-obstacle",
+      "decision": "documented-role-preserved-no-forced-fighter",
+      "attemptsThisWave": 0,
+      "reason": "Présence non combattante ou obstacle environnemental documenté ; aucune conversion en personnage de duel ni invention d’un corps autonome."
+    },
+    {
+      "id": "sh4_bottom_065",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "combatant",
+      "decision": "dedicated-combat-view",
+      "selectedSHA256": "accb5684310406eac285970a57498ccbffc9659a392de2d34fb80e7663858cad",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "sh4_greedy_worm_069",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "noncombatant",
+      "decision": "documented-role-preserved-no-forced-fighter",
+      "attemptsThisWave": 0,
+      "reason": "Présence non combattante ou obstacle environnemental documenté ; aucune conversion en personnage de duel ni invention d’un corps autonome."
+    },
+    {
+      "id": "sh4_one_truth_070",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "multi-body",
+      "decision": "dedicated-combat-view",
+      "selectedSHA256": "4d7d1810724bae7085a7c38980abb615f598b1e597856bbf9eea9903b864ce66",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "origins_remnant_077",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "combatant",
+      "decision": "insufficient-exact-native-reference",
+      "attemptsThisWave": 0,
+      "reason": "La cage filaire et l’ombre sont trop petites/peu définies dans les sources natives consultées pour établir attaches, arceaux et crochets sans invention. Aucun modèle ou détail de cage ajouté. La requête publique Fandom a répondu HTTP402 ; aucun contournement de cette réponse.",
+      "evidence": [
+        "reference-downloads-1.json",
+        "reference-downloads-3.json"
+      ]
+    },
+    {
+      "id": "origins_memory_of_helen_grady_082",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "stationary-boss",
+      "decision": "dedicated-combat-view",
+      "selectedSHA256": "d6d90c5b456dcac2a1d4e7511741cf98f6419e9c9f29a993f82dc21b1d836144",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "homecoming_sepulcher_093",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "stationary-boss",
+      "decision": "dedicated-combat-view",
+      "selectedSHA256": "216a45203a5cb3e54097496fbf1dcc193e90a5a2609616275df27d9eb8eb49ce",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "homecoming_asphyxia_096",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": true,
+      "rolePreserved": "multi-body",
+      "decision": "dedicated-combat-view",
+      "selectedSHA256": "e4070a8aa13239d5ad97ddf5c60af99e74540bc7519243bcfd344b145fd9e5e7",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "shattered_raw_shock_feminine_100",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "scripted-encounter",
+      "decision": "noncombat-reference-view",
+      "selectedSHA256": "1eb3ca286521381835cc2efb442a6be7ce4117b1bbcc622878cf26d8e9e3c433",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "shattered_raw_shock_abstract_102",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "scripted-encounter",
+      "decision": "noncombat-reference-view",
+      "selectedSHA256": "5d6dde89f1b534e8de0539b117e5b870b84a690c7ea59260135fddcb0b82a4c8",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "shattered_raw_shock_atrophied_103",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "scripted-encounter",
+      "decision": "noncombat-reference-view",
+      "selectedSHA256": "a9a6071c0992eba75eb7977e0a0eddba83a1ea766044ac9764dd4de4c09ca6e8",
+      "newPortrait": false,
+      "newEngineProfile": false,
+      "existingAnimatedClips": 0
+    },
+    {
+      "id": "downpour_tormented_soul_111",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "environmental-obstacle",
+      "decision": "documented-role-preserved-no-forced-fighter",
+      "attemptsThisWave": 0,
+      "reason": "Présence non combattante ou obstacle environnemental documenté ; aucune conversion en personnage de duel ni invention d’un corps autonome."
+    },
+    {
+      "id": "downpour_wall_corpse_112",
+      "inventoryClass": "legacy-unreviewed",
+      "combatEnabledPreserved": false,
+      "rolePreserved": "environmental-obstacle",
+      "decision": "documented-role-preserved-no-forced-fighter",
+      "attemptsThisWave": 0,
+      "reason": "Présence non combattante ou obstacle environnemental documenté ; aucune conversion en personnage de duel ni invention d’un corps autonome."
+    }
+  ],
+  "limits": [
+    "Native sources are image references; generated unseen sides, poses and textures remain reconstructions.",
+    "Only raw unedited imagegen PNGs are deliverables. Alpha composites and native game captures are separate QA artifacts.",
+    "Opposite facing is a runtime mirror. Static idle frames do not supply source animation, measured frames or contact geometry."
+  ]
+}

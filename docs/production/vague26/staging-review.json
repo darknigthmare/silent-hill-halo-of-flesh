@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "check": "git diff --cached --check",
+  "rawExitCode": 2,
+  "rawFindings": [
+    "docs/production/vague26/characters/stalker/references/include_bodyprog_chara_chara.h:168: trailing whitespace.",
+    "+               "
+  ],
+  "preservedSourceException": {
+    "path": "docs/production/vague26/characters/stalker/references/include_bodyprog_chara_chara.h",
+    "sha256": "0a44649df94ffc059727b9621954b608642689d1cfa93a9ebe696e755fe498e1",
+    "line": 168,
+    "reason": "Verbatim original decompilation source retained as documentary reference. Its whitespace is preserved to keep the source SHA exact; this file is not executable project code.",
+    "bytesModified": false
+  },
+  "remainingStagedPathsCheck": {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      ".",
+      ":(exclude)docs/production/vague26/characters/stalker/references/include_bodyprog_chara_chara.h"
+    ],
+    "exitCode": 0
+  },
+  "passedWithDocumentedSourceException": true
+}

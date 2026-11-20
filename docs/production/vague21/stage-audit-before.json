@@ -1,0 +1,512 @@
+{
+  "basePublishedCommit": "2c16796e6b99bb71f79fdfcf45b9cd2a84838581",
+  "coverage": {
+    "totalStages": 123,
+    "beforeActive": 32,
+    "afterActive": 43,
+    "beforeMissing": 91,
+    "afterMissing": 80,
+    "remainingUnblocked": 65,
+    "remainingBlocked": 15,
+    "storedRoomCompositions": 45,
+    "referencedPNGCount": 84,
+    "activePNGCount": 82,
+    "historicalInactivePNGCount": 2,
+    "addedStageIds": [
+      "dark_shrine",
+      "school_shf",
+      "hinako_home",
+      "corrupted_ebisugaoka",
+      "hospital_world",
+      "artaud_theater",
+      "devils_pit",
+      "overlook",
+      "lakeside_sh3",
+      "nightmare_hospital_sh3",
+      "sewers"
+    ],
+    "addedPNGCount": 22
+  },
+  "missingStages": [
+    {
+      "id": "old_silent_hill",
+      "name": "OLD SILENT HILL",
+      "source": "sh1",
+      "blocked": false
+    },
+    {
+      "id": "nowhere",
+      "name": "NOWHERE",
+      "source": "sh1",
+      "blocked": false
+    },
+    {
+      "id": "hotel_otherworld",
+      "name": "LAKEVIEW HOTEL — OTHERWORLD",
+      "source": "sh2",
+      "blocked": false
+    },
+    {
+      "id": "apartment_roof",
+      "name": "DAISY VILLA ROOFTOP",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "cedar_grove",
+      "name": "CEDAR GROVE — FEMALE TREATMENT",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "shepherds_glen",
+      "name": "SHEPHERD’S GLEN",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "grand_hotel",
+      "name": "GRAND HOTEL",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_school",
+      "name": "MIDWICH GELÉ — COUR PAPARAZZI",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "arcade_ship",
+      "name": "LITTLE BARONESS",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "book_zone",
+      "name": "BOOK OF MEMORIES — NEXUS",
+      "source": "bom",
+      "blocked": true
+    },
+    {
+      "id": "villa",
+      "name": "KETTENSTADT VILLA",
+      "source": "shortmessage",
+      "blocked": false
+    },
+    {
+      "id": "ebisugaoka",
+      "name": "EBISUGAOKA — MAIN STREET",
+      "source": "shf",
+      "blocked": false
+    },
+    {
+      "id": "festival_square",
+      "name": "FESTIVAL SQUARE",
+      "source": "shf",
+      "blocked": true
+    },
+    {
+      "id": "book_fire",
+      "name": "FIRE ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_light",
+      "name": "LIGHT ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_water",
+      "name": "WATER ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_earth",
+      "name": "EARTH ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_blood",
+      "name": "BLOOD ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_steel",
+      "name": "STEEL ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "antique_shop",
+      "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "film_midwich",
+      "name": "MIDWICH — FILM OTHERWORLD",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "film_church",
+      "name": "CHURCH OF THE ORDER",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "film_sanctuary",
+      "name": "SANCTUARY — REVELATION",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "hope_junction",
+      "name": "HOPE’S JUNCTION",
+      "source": "ascension",
+      "blocked": false
+    },
+    {
+      "id": "stilledalen",
+      "name": "STILLEDALEN WOODS",
+      "source": "ascension",
+      "blocked": false
+    },
+    {
+      "id": "ascension_otherworld",
+      "name": "ASCENSION — OPEN GATE",
+      "source": "ascension",
+      "blocked": false
+    },
+    {
+      "id": "hospital_nightmare",
+      "name": "ALCHEMILLA — NIGHTMARE WARD",
+      "source": "sh1",
+      "blocked": false
+    },
+    {
+      "id": "central_nightmare",
+      "name": "CENTRAL SILENT HILL — OTHERWORLD",
+      "source": "sh1",
+      "blocked": false
+    },
+    {
+      "id": "sewer_resort",
+      "name": "SEWERS TO THE RESORT",
+      "source": "sh1",
+      "blocked": false
+    },
+    {
+      "id": "south_vale",
+      "name": "SOUTH VALE STREETS",
+      "source": "sh2",
+      "blocked": false
+    },
+    {
+      "id": "prison_meat_locker",
+      "name": "LABYRINTH — MEAT LOCKER",
+      "source": "sh2",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_mall",
+      "name": "CENTRAL SQUARE — NIGHTMARE MALL",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "hazel_subway",
+      "name": "HAZEL STREET SUBWAY",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "underpass_sh3",
+      "name": "UNDERPASS",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_hilltop",
+      "name": "HILLTOP CENTER — OTHERWORLD",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "outside_room_302",
+      "name": "OUTSIDE ROOM 302",
+      "source": "sh4",
+      "blocked": false
+    },
+    {
+      "id": "wish_house",
+      "name": "WISH HOUSE",
+      "source": "sh4",
+      "blocked": true
+    },
+    {
+      "id": "final_sacrament",
+      "name": "21 SACRAMENTS — FINAL CHAMBER",
+      "source": "sh4",
+      "blocked": false
+    },
+    {
+      "id": "alchemilla_origins",
+      "name": "ALCHEMILLA HOSPITAL — ORIGINS",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_theater",
+      "name": "ARTAUD THEATER — NIGHTMARE",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_hospital_hc",
+      "name": "ALCHEMILLA — HOMECOMING NIGHTMARE",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "police_station_hc",
+      "name": "SHEPHERD’S GLEN POLICE STATION",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "town_hall_hc",
+      "name": "SHEPHERD’S GLEN TOWN HALL",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "prison_hc",
+      "name": "OVERLOOK PENITENTIARY",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "shepherd_house_hc",
+      "name": "SHEPHERD HOUSE — ATTIC",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "scarlet_chamber",
+      "name": "SCARLET’S CHAMBER",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "frozen_streets",
+      "name": "SILENT HILL — FROZEN STREETS",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_hospital_sm",
+      "name": "ALCHEMILLA GELÉ — CHAMBRE ER",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_mall_sm",
+      "name": "TOLUCA MALL GELÉ — HALL GUMBALL",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "lighthouse_sm",
+      "name": "LIGHTHOUSE / THERAPY REVELATION",
+      "source": "shattered",
+      "blocked": true
+    },
+    {
+      "id": "centennial_building",
+      "name": "CENTENNIAL BUILDING",
+      "source": "downpour",
+      "blocked": false
+    },
+    {
+      "id": "st_marias",
+      "name": "ST. MARIA’S MONASTERY",
+      "source": "downpour",
+      "blocked": false
+    },
+    {
+      "id": "downpour_streets",
+      "name": "SILENT HILL — DOWNPOUR STREETS",
+      "source": "downpour",
+      "blocked": false
+    },
+    {
+      "id": "otherworld_void",
+      "name": "DOWNPOUR — VOID CHASE",
+      "source": "downpour",
+      "blocked": false
+    },
+    {
+      "id": "anne_fight",
+      "name": "FULL CIRCLE — ANNE’S CONFRONTATION",
+      "source": "downpour",
+      "blocked": true
+    },
+    {
+      "id": "arcade_city",
+      "name": "THE ARCADE — CITY / JACK’S INN",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_hospital",
+      "name": "THE ARCADE — BROOKHAVEN HOSPITAL",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_hospital_roof",
+      "name": "THE ARCADE — HOSPITAL ROOF",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_historical",
+      "name": "THE ARCADE — HISTORICAL SOCIETY",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_prison",
+      "name": "THE ARCADE — TOLUCA PRISON",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_graveyard",
+      "name": "THE ARCADE — UNDERGROUND GRAVEYARD",
+      "source": "arcade",
+      "blocked": true
+    },
+    {
+      "id": "arcade_toluca_lake",
+      "name": "THE ARCADE — TOLUCA LAKE",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_1918",
+      "name": "THE ARCADE — 1918",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_1993",
+      "name": "THE ARCADE — 1993 PHANTOM FRONT",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_mall",
+      "name": "THE ARCADE — SHOPPING MALL",
+      "source": "arcade",
+      "blocked": true
+    },
+    {
+      "id": "arcade_amusement",
+      "name": "THE ARCADE — AMUSEMENT PARK",
+      "source": "arcade",
+      "blocked": true
+    },
+    {
+      "id": "villa_rooftop",
+      "name": "KETTENSTADT VILLA — ROOFTOP",
+      "source": "shortmessage",
+      "blocked": false
+    },
+    {
+      "id": "villa_stairwell",
+      "name": "KETTENSTADT VILLA — STAIRWELL",
+      "source": "shortmessage",
+      "blocked": false
+    },
+    {
+      "id": "shimizu_residence",
+      "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+      "source": "shf",
+      "blocked": false
+    },
+    {
+      "id": "return_streets",
+      "name": "RETURN TO SILENT HILL — STREETS",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "return_brookhaven",
+      "name": "RETURN TO SILENT HILL — BROOKHAVEN",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "return_lakeview",
+      "name": "RETURN TO SILENT HILL — BURNING LAKEVIEW",
+      "source": "film",
+      "blocked": true
+    },
+    {
+      "id": "return_portrait_room",
+      "name": "RETURN TO SILENT HILL — PORTRAIT ROOM",
+      "source": "film",
+      "blocked": true
+    },
+    {
+      "id": "st_amelia_marina",
+      "name": "ST. AMELIA MARINA",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "st_amelia_residential",
+      "name": "ST. AMELIA — RESIDENTIAL DISTRICT",
+      "source": "townfall",
+      "blocked": false
+    },
+    {
+      "id": "townfall_medical",
+      "name": "ST. AMELIA MEDICAL CENTRE",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "ceg_tower",
+      "name": "CEG TOWER",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "clara_woods",
+      "name": "CLARA WOODS",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "clara_woods_different",
+      "name": "CLARA WOODS — DIFFERENT",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "alternate_facility",
+      "name": "ST. AMELIA — ALTERNATE FACILITY",
+      "source": "townfall",
+      "blocked": false
+    }
+  ]
+}

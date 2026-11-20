@@ -107,3 +107,32 @@ export function auditRaster(bytes,{python=process.env.HALO_PYTHON||(process.plat
  if(result.format!=='WEBP'||result.sha256!==createHash('sha256').update(bytes).digest('hex')||!result.alpha||result.animated||!Array.isArray(result.visibleBounds)||result.visibleBounds.length!==4||!Array.isArray(result.alphaBounds)||result.alphaBounds.length!==4||!Array.isArray(result.framingBounds)||result.framingBounds.length!==4||!/^[a-f0-9]{64}$/.test(result.pixelSHA256))fail('inconsistent WebP decoder response');
  return result;
 }
+
+
+/** Keep unreviewed historical motion frames distinct from a newly reviewed lateral idle. */
+export function validateCombatFramePurposes(art){
+  if(art.frames.some(frame=>frame?.purpose==='selection'))throw Error('selection portrait cannot be a combat frame');
+  const retained=art.retainedLegacyCombatFrames;
+  if(art.combatView!=='side-view-candidate'){
+    if(retained!==undefined)throw Error('retained motion markers require a separate side-view idle');
+    return;
+  }
+  if(retained!==undefined&&(!Array.isArray(retained)||!retained.length))throw Error('invalid retained motion markers');
+  const idle=new Set(art.clips.idle?.frames);
+  const motion=new Set(Object.entries(art.clips).filter(([key])=>key!=='idle').flatMap(([,clip])=>clip?.frames||[]));
+  const historical=new Set();
+  for(const marker of retained||[]){
+    const index=marker?.index,frame=art.frames[index];
+    if(!Number.isSafeInteger(index)||!frame||idle.has(index)||!motion.has(index)||historical.has(index)||
+      frame.purpose!==undefined||frame.view!==undefined||typeof marker.sha256!=='string'||
+      !/^[a-f0-9]{64}$/.test(marker.sha256)||marker.sha256!==frame.sha256){
+      throw Error('invalid retained historical motion frame');
+    }
+    historical.add(index);
+  }
+  for(const [index,frame] of art.frames.entries()){
+    if(!historical.has(index)&&(frame?.purpose!=='combat'||frame.view!=='side-view')){
+      throw Error('missing side-view combat purpose');
+    }
+  }
+}

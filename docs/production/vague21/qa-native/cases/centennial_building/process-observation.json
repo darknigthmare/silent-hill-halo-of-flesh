@@ -1,0 +1,27 @@
+{
+  "stageId": "centennial_building",
+  "startedAt": "2026-11-19T13:36:00.518Z",
+  "completedAt": "2026-11-19T13:36:02.198Z",
+  "durationMs": 1680,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--max-old-space-size=128",
+    "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/scripts/qa-stage-pass21-native.mjs",
+    "--stages=centennial_building",
+    "--out=/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/cases/centennial_building"
+  ],
+  "exitCode": 0,
+  "signal": null,
+  "passed": true,
+  "report": "cases/centennial_building/report.json",
+  "stdout": "cases/centennial_building/process.stdout.log",
+  "stderr": "cases/centennial_building/process.stderr.log",
+  "reportSHA256": "a54e1ab5397d64b110f025668b3a60421ec68ec58617c5fe2ca4df3e5d1e810a",
+  "checks": 46,
+  "nodeExecArgv": [
+    "--max-old-space-size=128"
+  ],
+  "harnessSHA256": "1d589b3dc17f2a7b0d7555e95fd4b85fd2d7bbeba25276a55332001a450c195c",
+  "execInitialYieldTimeMs": 30000,
+  "observationSource": "Actual child-process close event in sequential orchestrator; successful reports and capture hashes checked before recording."
+}

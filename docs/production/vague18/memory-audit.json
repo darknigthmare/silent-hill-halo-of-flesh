@@ -1,0 +1,539 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-19T08:49:01.841Z",
+  "baseCommit": "167abf6a369ab6c2329c2204e19bac79ce763ac9",
+  "method": "Read-only comparison of git base167abf6 and the integrated authored/runtime registries. No scratch paths, proposed assets, external worktrees, decoded pixel edits or budget mutations. Unique paths cost width×height×4; compressed PNG size does not determine decoded memory. Current combat-enabled roster policies define legal pairs.",
+  "inputSHA256": {
+    "art/registry.json": "3323e6e1f065322a6ee4ea73e2d80a25e7cde7646c09ae4bd0b6741271454ca2",
+    "src/sprite-manifest.js": "9287ca7cedacfa1f56ed3b862c37b4bcdad32191b1d75e58963ebf7036890e6d",
+    "src/stage-bitmap-manifest.js": "55720915707f66633fcf84a1a705bc3d42068d984ebcf6bc2cfc093d4a9ac4dd",
+    "src/sprite-system.js": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+    "src/versus.js": "79081299a045d7423fbbb2731e7bf0d7723c7221c060250a69524c745eebb440",
+    "baseSpriteRegistry": "f10b8b9305fb992a0eefb6dde1194436fde918ae2b7d608a25092da7fbfc61eb",
+    "baseStageManifest": "6beb836098c4df8f1c7872900096aa29d3690f2cde5a1d4b8e5ad8cc13138471"
+  },
+  "runtimeManifestMatchesRegistry": true,
+  "budgets": {
+    "fighterBytes": 67108864,
+    "stageBytes": 67108864,
+    "separateCaches": true
+  },
+  "integratedDelta": {
+    "newSpritePNGCount": 9,
+    "newSpritePaths": [
+      "assets/sprites/origins_faceless_nurse.761018b17f26.png",
+      "assets/sprites/origins_faceless_nurse.79e6ad63330f.png",
+      "assets/sprites/arcade_scraper_arcade.75bcf0ea854a.png",
+      "assets/sprites/arcade_scraper_arcade.17a9e16b785b.png",
+      "assets/sprites/arcade_scraper_arcade.a269b2831292.png",
+      "assets/sprites/film_lying_figure_return_to_silent_hill.5d110b145c90.png",
+      "assets/sprites/homecoming_scarlet_doll_form_094.35a3afb32f14.png",
+      "assets/sprites/homecoming_scarlet_doll_form_094.4885e2373476.png",
+      "assets/sprites/film_mannequin_monster_176.d5bc6baa191d.png"
+    ],
+    "newStagePNGCount": 4,
+    "newStagePaths": [
+      "assets/stages/midwich_nightmare.hearth.862c9df53e36.png",
+      "assets/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
+      "assets/stages/building_world.fan-stairwell.15995c474e24.png",
+      "assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png"
+    ],
+    "newStageIds": [
+      "midwich_nightmare",
+      "building_world"
+    ]
+  },
+  "coldDuels": {
+    "base": {
+      "enabledFighters": 187,
+      "totalPairsIncludingMirrors": 17578,
+      "illustrated": 14365,
+      "admitted": 14365,
+      "missingCombatArt": 3213,
+      "rejectedForBudget": 0,
+      "max": {
+        "bytes": 50343064,
+        "MiB": 48.010887145996094,
+        "ids": [
+          "sh1_air_screamer_001",
+          "origins_faceless_nurse"
+        ]
+      }
+    },
+    "integrated": {
+      "enabledFighters": 187,
+      "totalPairsIncludingMirrors": 17578,
+      "illustrated": 14365,
+      "admitted": 14365,
+      "missingCombatArt": 3213,
+      "rejectedForBudget": 0,
+      "max": {
+        "bytes": 62927768,
+        "MiB": 60.012596130371094,
+        "ids": [
+          "sh1_air_screamer_001",
+          "origins_faceless_nurse"
+        ]
+      }
+    },
+    "previouslyAdmittedIllustratedPairsChecked": 14365,
+    "regressions": []
+  },
+  "largestRelevantActors": [
+    {
+      "id": "origins_faceless_nurse",
+      "frameCount": 6,
+      "bytes": 37755200,
+      "MiB": 36.00616455078125,
+      "admitted": true
+    },
+    {
+      "id": "arcade_scraper_arcade",
+      "frameCount": 4,
+      "bytes": 25168664,
+      "MiB": 24.002708435058594,
+      "admitted": true
+    },
+    {
+      "id": "homecoming_scarlet_doll_form_094",
+      "frameCount": 3,
+      "bytes": 18874368,
+      "MiB": 18,
+      "admitted": true
+    }
+  ],
+  "nurseScraperColdPair": {
+    "frameCount": 10,
+    "bytes": 62923864,
+    "MiB": 60.008872985839844,
+    "admitted": true
+  },
+  "distinction": "A cold duo and a next-duo-plus-old-result pin union are different sets. The66MiB original unions below are expected counterexamples, not cold-duel regressions. The new gate releases only an already-visible completed result after successful global preflight; failure/retry UI and frozen-canvas behavior are checked separately by the targeted transaction tests and HTTP QA.",
+  "settledPresentationClipInventory": [],
+  "transitions": [
+    {
+      "mode": "tournament",
+      "seed": 231,
+      "queue": [
+        "homecoming_lurker_085",
+        "arcade_scraper_arcade",
+        "origins_the_butcher_081"
+      ],
+      "stages": [
+        "shepherds_glen",
+        "arcade_1918",
+        "riverside_motel"
+      ],
+      "oldPair": [
+        "origins_faceless_nurse",
+        "homecoming_lurker_085"
+      ],
+      "newPair": [
+        "origins_faceless_nurse",
+        "arcade_scraper_arcade"
+      ],
+      "remainingIds": [
+        "origins_faceless_nurse",
+        "arcade_scraper_arcade",
+        "origins_the_butcher_081"
+      ],
+      "before": {
+        "index": 0,
+        "wins": 1,
+        "status": "won",
+        "valid": true
+      },
+      "after": {
+        "index": 1,
+        "wins": 1,
+        "status": "ready",
+        "valid": true
+      },
+      "allRemainingCombatSpritesPresent": true,
+      "coldPair": {
+        "bytes": 62923864,
+        "MiB": 60.008872985839844,
+        "frames": 10,
+        "admitted": true
+      },
+      "oldResult": {
+        "bytes": 12586504,
+        "paths": [
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png"
+        ]
+      },
+      "originalPinUnion": {
+        "bytes": 69218016,
+        "MiB": 66.01144409179688,
+        "frames": 11,
+        "admitted": false
+      },
+      "completedResultGate": {
+        "retires": true,
+        "finalPinnedBytes": 62923864,
+        "admitted": true,
+        "refusalChecks": {
+          "hidden": true,
+          "unsettled": true,
+          "live": true,
+          "reversibleRound": true,
+          "activeOutro": true,
+          "destroyed": true,
+          "coldTooLarge": true
+        }
+      },
+      "separateStageCache": {
+        "nextBytes": 0,
+        "originalUnionBytes": 0,
+        "finalPinnedBytes": 0,
+        "admitted": true
+      },
+      "successSimulation": {
+        "method": "Real SpriteCache and imported retirement decision; synthetic image decoder with the integrated native dimensions. This does not execute DOM, canvas, HTTP or checkpoint writes.",
+        "oldPairLoaded": true,
+        "wholeRemainingRunPreflight": true,
+        "oldResultReadyAfterGlobal": true,
+        "retirementDecision": true,
+        "finalPinError": null,
+        "finalPreflight": true,
+        "injectedFailurePath": null,
+        "failedRollback": null,
+        "retry": null,
+        "peakDecodedAndReservedBytes": 62928240,
+        "budgetBytes": 67108864,
+        "withinBudget": true
+      },
+      "failureAndRetrySimulation": {
+        "method": "Real SpriteCache and imported retirement decision; synthetic image decoder with the integrated native dimensions. This does not execute DOM, canvas, HTTP or checkpoint writes.",
+        "oldPairLoaded": true,
+        "wholeRemainingRunPreflight": true,
+        "oldResultReadyAfterGlobal": true,
+        "retirementDecision": true,
+        "finalPinError": null,
+        "finalPreflight": false,
+        "injectedFailurePath": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+        "failedRollback": {
+          "pinnedPaths": [],
+          "emptyAfterRetirement": true
+        },
+        "retry": {
+          "ok": true,
+          "nextPairFullyReady": true
+        },
+        "peakDecodedAndReservedBytes": 62928240,
+        "budgetBytes": 67108864,
+        "withinBudget": true
+      }
+    },
+    {
+      "mode": "arcade",
+      "seed": 28,
+      "queue": [
+        "bom_wood_sapling_139",
+        "sh3_scraper_045",
+        "sh2_eddie_dombrowski_032",
+        "sh4_richard_braintree_victim_19",
+        "downpour_screamer_104",
+        "arcade_scraper_arcade",
+        "bom_wood_guardian_138"
+      ],
+      "stages": [
+        "book_wood",
+        "shopping_mall",
+        "toluca_prison",
+        "building_world",
+        "overlook",
+        "arcade_1918",
+        "book_wood"
+      ],
+      "oldPair": [
+        "origins_faceless_nurse",
+        "downpour_screamer_104"
+      ],
+      "newPair": [
+        "origins_faceless_nurse",
+        "arcade_scraper_arcade"
+      ],
+      "remainingIds": [
+        "origins_faceless_nurse",
+        "arcade_scraper_arcade",
+        "bom_wood_guardian_138"
+      ],
+      "before": {
+        "index": 4,
+        "wins": 5,
+        "status": "won",
+        "valid": true
+      },
+      "after": {
+        "index": 5,
+        "wins": 5,
+        "status": "ready",
+        "valid": true
+      },
+      "allRemainingCombatSpritesPresent": true,
+      "coldPair": {
+        "bytes": 62923864,
+        "MiB": 60.008872985839844,
+        "frames": 10,
+        "admitted": true
+      },
+      "oldResult": {
+        "bytes": 12588572,
+        "paths": [
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "assets/sprites/downpour_screamer_104.6d78871316ed.png"
+        ]
+      },
+      "originalPinUnion": {
+        "bytes": 69220084,
+        "MiB": 66.0134162902832,
+        "frames": 11,
+        "admitted": false
+      },
+      "completedResultGate": {
+        "retires": true,
+        "finalPinnedBytes": 62923864,
+        "admitted": true,
+        "refusalChecks": {
+          "hidden": true,
+          "unsettled": true,
+          "live": true,
+          "reversibleRound": true,
+          "activeOutro": true,
+          "destroyed": true,
+          "coldTooLarge": true
+        }
+      },
+      "separateStageCache": {
+        "nextBytes": 0,
+        "originalUnionBytes": 0,
+        "finalPinnedBytes": 0,
+        "admitted": true
+      },
+      "successSimulation": {
+        "method": "Real SpriteCache and imported retirement decision; synthetic image decoder with the integrated native dimensions. This does not execute DOM, canvas, HTTP or checkpoint writes.",
+        "oldPairLoaded": true,
+        "wholeRemainingRunPreflight": true,
+        "oldResultReadyAfterGlobal": true,
+        "retirementDecision": true,
+        "finalPinError": null,
+        "finalPreflight": true,
+        "injectedFailurePath": null,
+        "failedRollback": null,
+        "retry": null,
+        "peakDecodedAndReservedBytes": 62930308,
+        "budgetBytes": 67108864,
+        "withinBudget": true
+      },
+      "failureAndRetrySimulation": {
+        "method": "Real SpriteCache and imported retirement decision; synthetic image decoder with the integrated native dimensions. This does not execute DOM, canvas, HTTP or checkpoint writes.",
+        "oldPairLoaded": true,
+        "wholeRemainingRunPreflight": true,
+        "oldResultReadyAfterGlobal": true,
+        "retirementDecision": true,
+        "finalPinError": null,
+        "finalPreflight": false,
+        "injectedFailurePath": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+        "failedRollback": {
+          "pinnedPaths": [],
+          "emptyAfterRetirement": true
+        },
+        "retry": {
+          "ok": true,
+          "nextPairFullyReady": true
+        },
+        "peakDecodedAndReservedBytes": 62930308,
+        "budgetBytes": 67108864,
+        "withinBudget": true
+      }
+    },
+    {
+      "mode": "ritual",
+      "seed": 105,
+      "queue": [
+        "sh3_nurse_pipe_043",
+        "sh3_numb_body_medium",
+        "origins_two_back_080",
+        "origins_memory_of_richard_grady_083",
+        "sh4_eric_walsh_victim_10",
+        "arcade_scraper_arcade",
+        "shf_shiromuku_166",
+        "homecoming_scarlet_spider_form_095"
+      ],
+      "stages": [
+        "shopping_mall",
+        "shopping_mall",
+        "cedar_grove",
+        "riverside_motel",
+        "building_world",
+        "arcade_1918",
+        "dark_shrine",
+        "grand_hotel"
+      ],
+      "oldPair": [
+        "origins_faceless_nurse",
+        "sh4_eric_walsh_victim_10"
+      ],
+      "newPair": [
+        "origins_faceless_nurse",
+        "arcade_scraper_arcade"
+      ],
+      "remainingIds": [
+        "origins_faceless_nurse",
+        "arcade_scraper_arcade",
+        "shf_shiromuku_166",
+        "homecoming_scarlet_spider_form_095"
+      ],
+      "before": {
+        "index": 4,
+        "wins": 5,
+        "status": "won",
+        "valid": true
+      },
+      "after": {
+        "index": 5,
+        "wins": 5,
+        "status": "ready",
+        "valid": true
+      },
+      "allRemainingCombatSpritesPresent": true,
+      "coldPair": {
+        "bytes": 62923864,
+        "MiB": 60.008872985839844,
+        "frames": 10,
+        "admitted": true
+      },
+      "oldResult": {
+        "bytes": 12583808,
+        "paths": [
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png"
+        ]
+      },
+      "originalPinUnion": {
+        "bytes": 69215320,
+        "MiB": 66.00887298583984,
+        "frames": 11,
+        "admitted": false
+      },
+      "completedResultGate": {
+        "retires": true,
+        "finalPinnedBytes": 62923864,
+        "admitted": true,
+        "refusalChecks": {
+          "hidden": true,
+          "unsettled": true,
+          "live": true,
+          "reversibleRound": true,
+          "activeOutro": true,
+          "destroyed": true,
+          "coldTooLarge": true
+        }
+      },
+      "separateStageCache": {
+        "nextBytes": 0,
+        "originalUnionBytes": 12583052,
+        "finalPinnedBytes": 0,
+        "admitted": true
+      },
+      "successSimulation": {
+        "method": "Real SpriteCache and imported retirement decision; synthetic image decoder with the integrated native dimensions. This does not execute DOM, canvas, HTTP or checkpoint writes.",
+        "oldPairLoaded": true,
+        "wholeRemainingRunPreflight": true,
+        "oldResultReadyAfterGlobal": true,
+        "retirementDecision": true,
+        "finalPinError": null,
+        "finalPreflight": true,
+        "injectedFailurePath": null,
+        "failedRollback": null,
+        "retry": null,
+        "peakDecodedAndReservedBytes": 62927280,
+        "budgetBytes": 67108864,
+        "withinBudget": true
+      },
+      "failureAndRetrySimulation": {
+        "method": "Real SpriteCache and imported retirement decision; synthetic image decoder with the integrated native dimensions. This does not execute DOM, canvas, HTTP or checkpoint writes.",
+        "oldPairLoaded": true,
+        "wholeRemainingRunPreflight": true,
+        "oldResultReadyAfterGlobal": true,
+        "retirementDecision": true,
+        "finalPinError": null,
+        "finalPreflight": false,
+        "injectedFailurePath": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+        "failedRollback": {
+          "pinnedPaths": [],
+          "emptyAfterRetirement": true
+        },
+        "retry": {
+          "ok": true,
+          "nextPairFullyReady": true
+        },
+        "peakDecodedAndReservedBytes": 62927280,
+        "budgetBytes": 67108864,
+        "withinBudget": true
+      }
+    }
+  ],
+  "stages": {
+    "base": {
+      "registeredStages": 26,
+      "selectedWithBitmap": 26,
+      "declaredRooms": 28,
+      "maxSingle": {
+        "bytes": 12587560,
+        "ids": [
+          "brookhaven_sh3"
+        ]
+      },
+      "maxRetainedPair": {
+        "bytes": 25175120,
+        "ids": [
+          "brookhaven_sh3",
+          "historical_society"
+        ]
+      },
+      "rejectedSingles": 0,
+      "rejectedPairs": 0,
+      "allDeclaredRoomPairMaxBytes": 25175120
+    },
+    "integrated": {
+      "registeredStages": 28,
+      "selectedWithBitmap": 28,
+      "declaredRooms": 30,
+      "maxSingle": {
+        "bytes": 12587560,
+        "ids": [
+          "brookhaven_sh3"
+        ]
+      },
+      "maxRetainedPair": {
+        "bytes": 25175120,
+        "ids": [
+          "brookhaven_sh3",
+          "historical_society"
+        ]
+      },
+      "rejectedSingles": 0,
+      "rejectedPairs": 0,
+      "allDeclaredRoomPairMaxBytes": 25175120
+    }
+  },
+  "checks": {
+    "originalBudgetsPreserved": true,
+    "allPreviouslyAdmittedIllustratedDuelsStillAdmitted": true,
+    "allCurrentIllustratedDuelsAdmitted": true,
+    "nurseScraperColdPairAdmitted": true,
+    "allStageSelectionsAndOldNewPairsAdmitted": true,
+    "generatedTransitionsAdmittedAfterGate": true,
+    "unsafeRetirementContextsRefused": true,
+    "continuationCacheSimulationsPass": true,
+    "failureRetrySimulationsPass": true
+  },
+  "passed": true,
+  "limits": [
+    "This audit does not claim successful browser gameplay, HTTP/network recovery, canvas-pixel preservation, checkpoint durability, art fidelity or source timing.",
+    "The imported decision is exercised here; the surrounding UI gates for preflight success, lease/selection validity and displayed DOM result are verified in completed-result-retirement.test.mjs and the wave18 HTTP QA."
+  ]
+}

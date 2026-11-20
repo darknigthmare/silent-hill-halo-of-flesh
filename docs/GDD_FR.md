@@ -1,5 +1,10 @@
 # Game Design Document — SILENT HILL: HALO OF FLESH v0.7.0
 
+**Complément de corpus du 19 novembre 2026 :** la [bible des œuvres Silent Hill](BIBLE_CORPUS_SILENT_HILL.md)
+recense les jeux, éditions, récits dérivés et programmes officiels, avec leur
+statut, leurs sources et leur place dans la production. Le catalogue documentaire
+et le catalogue jouable sont suivis séparément.
+
 ## 1. Vision
 
 Un jeu de combat 2D de collection où les manifestations, boss et adversaires significatifs de *Silent Hill* s’affrontent dans des lieux issus de leurs mondes respectifs. L’organisation de produit reprend la lisibilité modulaire de CQC Versus Legacy, tandis que chaque combattant devient un dossier complet : provenance, morphologie, comportement source, adaptation, vingt mouvements, trait, affliction, IA, phases, fatalités et arène.
@@ -170,3 +175,56 @@ Tout l’audio est synthétisé en temps réel : radio, interface, impacts, gard
 6. Transitions de chute, relevée et changement de côté adaptées à chaque morphologie.
 7. Validation de lisibilité, échelle, source et droits.
 8. Intégration en sprites originaux ou extension du renderer procédural.
+
+## 14. Corpus de franchise et règle d'admission
+
+La bible couvre les œuvres principales et les branches moins représentées :
+jeux mobiles, expériences interactives, scénarios additionnels, remakes,
+compilations, films, romans, bandes dessinées et collaborations officielles.
+Le [registre détaillé](BIBLE_CORPUS_SILENT_HILL.md) distingue chaque œuvre, ses
+alias, son édition, son état de publication et les sources effectivement
+consultées. Son [équivalent structuré](production/franchise-corpus.json) et le
+[classeur Corpus / Stages](production/SILENT_HILL_CORPUS_BIBLE.xlsx) rendent les
+absences et prochaines actions filtrables.
+
+**Silent Hill Transmission** est référencé comme programme officiel de
+présentations de Konami. Ses annonces sont des preuves datées sur les œuvres
+présentées ; le nom du programme ne crée pas à lui seul un univers jouable, un
+monstre ou une arène. La même règle vaut pour les programmes promotionnels et
+les produits de collection documentés dans le registre.
+
+Un titre ajouté à la bible ne devient pas automatiquement une source du moteur.
+Les seize groupes de sources existants conservent leurs identifiants. Un jeu
+original, son remake, une adaptation filmée et une collaboration restent
+distincts dans les références, même lorsque le runtime les regroupe encore.
+Le libellé « officiel » décrit la provenance éditoriale ; il ne prouve pas une
+continuité narrative commune entre ces médias.
+
+Avant d'ajouter un combattant ou un lieu issu d'une branche nouvellement
+documentée, la production doit disposer de :
+
+1. l'œuvre, l'édition et la séquence précises ;
+2. une preuve de l'identité et de la présence du sujet ou du lieu ;
+3. vues lisibles de la silhouette ou de l'architecture nécessaires au cadrage ;
+4. une distinction entre comportement observé et adaptation versus ;
+5. références, limites et statut de validation conservés dans le dossier.
+
+Les projets annulés et les contenus non publiés gardent ce statut. Une annonce
+ne permet pas de reconstituer une campagne, un bestiaire ou des salles qui ne
+sont pas documentés. Les adaptations littéraires et les crossovers constituent
+des dossiers à étudier selon leurs propres références, sans transfert implicite
+de leurs éléments vers un autre épisode.
+
+### Suivi des stages manquants
+
+La passe courante concerne les décors absents du catalogue existant. Chaque
+livraison associe un lieu et un état précis à un fond et un premier plan
+transparent indépendants, intégrés avec leurs dimensions et pixels natifs.
+La parallaxe de deux plans fixes ne vaut pas validation d'une animation source.
+Les restrictions de lieu et de phase restent celles de la fiche du moteur.
+
+Les chiffres courants, les captures et les reports sont consignés dans le
+[suivi de production](production/README.md). L'onglet **Stages** du complément
+de bible expose les 123 lieux, la présence d'un bitmap actif, les blocages
+documentaires et la prochaine action. Le classeur historique des movesets et
+animations conserve ses annotations et sa date de référence.

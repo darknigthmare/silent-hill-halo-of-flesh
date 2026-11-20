@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "excludedFromDelivery": true,
+  "candidates": [
+    {
+      "stageId": "arcade_hospital",
+      "promptKey": "arcade-hospital-bg",
+      "generationOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-adbf1708-b405-4628-9d14-6bb38c664d52.png",
+      "sha256": "0fccb593b8c29414fe241161008c48bc836e55e3e62424a1429f879729d36388",
+      "bytes": 2102368,
+      "status": "rejected-location-unverified",
+      "reason": "The archived 2010 image09 establishes a marbled corridor but does not establish it as the exact Brookhaven Stage1 Area2 normal phase. The environment may belong to a later section. No scene transfer is permitted without direct identification. No foreground was commissioned and the image is absent from every delivery.",
+      "sourceURL": "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_20100221_09.jpg",
+      "sourcePage": "https://www.silenthillmemories.net/sh_arcade/screens_en.htm",
+      "referencePath": "docs/production/vague23/stages/references/arcade-sh_arcade_20100221_09-rejected.jpg",
+      "followup": "Use a gameplay view whose stage, floor and world phase are explicitly identifiable; the 2007 image04 shows hospital material but its exact floor/phase remains insufficiently established."
+    }
+  ],
+  "notProduced": [
+    {
+      "stageId": "book_light",
+      "reason": "No sufficiently identified exact room with a reliable full visual reference selected; gameplay thumbnail alone is insufficient."
+    },
+    {
+      "stageId": "book_steel",
+      "reason": "World identity is documented but no sufficiently identified room view was selected. No generic metal room substituted."
+    }
+  ]
+}

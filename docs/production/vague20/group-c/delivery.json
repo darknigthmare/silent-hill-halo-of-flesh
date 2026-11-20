@@ -1,0 +1,506 @@
+{
+  "schema": 1,
+  "group": "C",
+  "status": "ready-for-integration",
+  "createdAt": "2026-11-19T12:15:26.392381+00:00",
+  "assetGeneration": "built-in image_gen only",
+  "repositoryModified": false,
+  "stages": [
+    {
+      "stageId": "hospital_world",
+      "source": "sh4",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "hospital-second-floor-corridor",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH4_07_HOSPITAL_WORLD"
+      ],
+      "layers": [
+        {
+          "id": "second-floor-hall",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "stretch",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+              "sha256": "0bb80f0606449b629f834810497a61d800e7dc1d3d885568b0071ae91e250910",
+              "bytes": 2109114,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-door-jamb",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "stretch",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+              "sha256": "d94873aa3fe8d3321442db077fd37fc25f35bab8c9ba333f6b688af57c4d15bd",
+              "bytes": 288757,
+              "width": 1671,
+              "height": 941
+            }
+          ],
+          "parallaxX": 0.012
+        }
+      ],
+      "notes": "SH4 2004 Hospital World, couloir des chambres 2F. Portes closes et luminaires bas conservés ; aucun fauteuil ennemi, patient ou tête géante. Vue latérale et espacement reconstruits depuis une capture axiale imprimée ; textures, nombre de portes et largeur ne sont pas mesurés. Premier plan natif 1671×941 associé au fond 1672×941, fit stretch conservant toute la silhouette. Deux PNG statiques natifs, fond opaque et premier plan alpha indépendant. Parallaxe proposée .012. Aucun mouvement original, UHD ou rendu 1:1 certifié ; aucun changement de règles, personnage ou classeur."
+    },
+    {
+      "stageId": "artaud_theater",
+      "source": "origins",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "normal-theater-forest-set-lit",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT03",
+        "EXT_ORIGINS_THEATER_GUIDE_20261026"
+      ],
+      "layers": [
+        {
+          "id": "normal-forest-stage",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "stretch",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+              "sha256": "73ab43a7563e0aaa24a9c8b0fa8942b4201bb8e08f1c6c1b2bbf3bc6693f4b21",
+              "bytes": 2274126,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-open-curtains",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "stretch",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+              "sha256": "133f10a3b7775e1642def9f424fee9c9393544976943038a28f37373d24d545a",
+              "bytes": 377476,
+              "width": 1672,
+              "height": 941
+            }
+          ],
+          "parallaxX": 0.012
+        }
+      ],
+      "notes": "Origins 2007 Artaud : scène normale éclairée après lever du rideau, réglage de décor forestier visible dans le guide officiel. Panneaux peints, ouverture centrale et petit arbre accessoire ; aucun passage au monde forestier Otherworld. État resserré par rapport au triage initial : décor forestier installé dans le théâtre normal. Cadrage élargi, proportions et espace de duel adaptés ; aucune fusion bibliothèque/grotte/Otherworld. Matière des rideaux interprétée depuis les bords de scène. Deux PNG statiques natifs, fond opaque et premier plan alpha indépendant. Parallaxe proposée .012. Aucun mouvement original, UHD ou rendu 1:1 certifié ; aucun changement de règles, personnage ou classeur."
+    },
+    {
+      "stageId": "devils_pit",
+      "source": "downpour",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "water-wheels-cavern-dry-catwalk",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT11"
+      ],
+      "layers": [
+        {
+          "id": "upper-cavern-wheels",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "stretch",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+              "sha256": "406d6f6df55f370912c5ff5b2df6bb30f1846d5b65b59a192657c947081d0381",
+              "bytes": 2964994,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-timber-brace",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "stretch",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+              "sha256": "1858e96a1fd21deb630f02dd6a24f0947d968f041ec168380c8ca73fd304b57b",
+              "bytes": 235056,
+              "width": 1672,
+              "height": 941
+            }
+          ],
+          "parallaxX": 0.012
+        }
+      ],
+      "notes": "Downpour 2012 Devil’s Pit, Upper Caverns : chambre des roues hydrauliques/lift depuis la coursive sèche, avant départ vers Deep Mines. Déploiement latéral et espacement adaptés des captures Prima 02d-017/018. Roues, lift et conduites restent statiques ; pas de puzzle rejoué, pas d’eau sur le plateau, ni fusion avec la cave inondée, le train ou l’attraction extérieure. Deux PNG statiques natifs, fond opaque et premier plan alpha indépendant. Parallaxe proposée .012. Aucun mouvement original, UHD ou rendu 1:1 certifié ; aucun changement de règles, personnage ou classeur."
+    },
+    {
+      "stageId": "overlook",
+      "source": "downpour",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "block-a-a2-before-flooded-vision",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT11"
+      ],
+      "layers": [
+        {
+          "id": "block-a-a2-gallery",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "stretch",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+              "sha256": "da91aaa922c03b973ee7ffb7ade47a91cd2aef81244be1f813fce4526d98bdc5",
+              "bytes": 2595719,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-rusted-jambs",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "stretch",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "frames": [
+            {
+              "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+              "sha256": "29b757fe46c2e25ab7da25f70081adedcd66f951af5c5ddb081458f867433b84",
+              "bytes": 418385,
+              "width": 1672,
+              "height": 941
+            }
+          ],
+          "parallaxX": 0.012
+        }
+      ],
+      "notes": "Downpour 2012 Overlook Penitentiary, coursive Cells A2 du Block A après escalier, avant barrière de fil barbelé et vision du couloir inondé. Caméra réorientée transversalement vers la galerie opposée ; répétition des cellules, largeur et lumière adaptées, non relevées architecturalement. Aucun plan Homecoming, émeute, corps, fil électrique, pluie ou inondation. Deux PNG statiques natifs, fond opaque et premier plan alpha indépendant. Parallaxe proposée .012. Aucun mouvement original, UHD ou rendu 1:1 certifié ; aucun changement de règles, personnage ou classeur."
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "hospital_world",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/hospital_world-background.png",
+      "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "sha256": "0bb80f0606449b629f834810497a61d800e7dc1d3d885568b0071ae91e250910",
+      "bytes": 2109114,
+      "width": 1672,
+      "height": 941,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-2fca6451-a0fc-44f9-b86f-164f1bb61dee.png",
+      "postprocessing": "none",
+      "mode": "RGB"
+    },
+    {
+      "stageId": "artaud_theater",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/artaud_theater-background.png",
+      "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "sha256": "73ab43a7563e0aaa24a9c8b0fa8942b4201bb8e08f1c6c1b2bbf3bc6693f4b21",
+      "bytes": 2274126,
+      "width": 1672,
+      "height": 941,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-97d54801-1e40-442d-8ac9-3ebceb4e7b53.png",
+      "postprocessing": "none",
+      "mode": "RGB"
+    },
+    {
+      "stageId": "hospital_world",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/hospital_world-foreground.png",
+      "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "sha256": "d94873aa3fe8d3321442db077fd37fc25f35bab8c9ba333f6b688af57c4d15bd",
+      "bytes": 288757,
+      "width": 1671,
+      "height": 941,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-1bef4d34-6e5a-4202-8338-c19f785a5adc.png",
+      "postprocessing": "none",
+      "mode": "RGBA"
+    },
+    {
+      "stageId": "artaud_theater",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/artaud_theater-foreground.png",
+      "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "sha256": "133f10a3b7775e1642def9f424fee9c9393544976943038a28f37373d24d545a",
+      "bytes": 377476,
+      "width": 1672,
+      "height": 941,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-512cff31-8a76-463d-82c6-4188c19ef510.png",
+      "postprocessing": "none",
+      "mode": "RGBA"
+    },
+    {
+      "stageId": "devils_pit",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/devils_pit-background.png",
+      "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "sha256": "406d6f6df55f370912c5ff5b2df6bb30f1846d5b65b59a192657c947081d0381",
+      "bytes": 2964994,
+      "width": 1672,
+      "height": 941,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-824646e3-5d72-43a0-b0e6-1df53e1c9d4a.png",
+      "postprocessing": "none",
+      "mode": "RGB"
+    },
+    {
+      "stageId": "overlook",
+      "role": "background",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/overlook-background.png",
+      "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "sha256": "da91aaa922c03b973ee7ffb7ade47a91cd2aef81244be1f813fce4526d98bdc5",
+      "bytes": 2595719,
+      "width": 1672,
+      "height": 941,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-4850ed80-8576-4769-ba61-b5d8edb4791f.png",
+      "postprocessing": "none",
+      "mode": "RGB"
+    },
+    {
+      "stageId": "devils_pit",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/devils_pit-foreground.png",
+      "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "sha256": "1858e96a1fd21deb630f02dd6a24f0947d968f041ec168380c8ca73fd304b57b",
+      "bytes": 235056,
+      "width": 1672,
+      "height": 941,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-df58dde1-0638-464b-8e3b-f9b9ad06faf3.png",
+      "postprocessing": "none",
+      "mode": "RGBA"
+    },
+    {
+      "stageId": "overlook",
+      "role": "foreground",
+      "localPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/images/overlook-foreground.png",
+      "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "sha256": "29b757fe46c2e25ab7da25f70081adedcd66f951af5c5ddb081458f867433b84",
+      "bytes": 418385,
+      "width": 1672,
+      "height": 941,
+      "generatedPath": "/workspace/scratch/8edddaaaab76/generated_images/exec-06edb868-24e5-4a28-b148-44546963bb7a.png",
+      "postprocessing": "none",
+      "mode": "RGBA"
+    }
+  ],
+  "sources": [
+    {
+      "stageId": "hospital_world",
+      "type": "native-game-screenshot-reproduced-in-official-guide",
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_4_the_official_strategy_guide_piggyback.pdf",
+      "downloadSha256": "2022eaefcd62a6050ff523d48dcab75826d496d869635b487699a00f117d70ed",
+      "downloadBytes": 18765849,
+      "downloadRetained": false,
+      "retainedLocalPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/hospital_world-native-corridor.png",
+      "retainedSha256": "6fc2a6afc45460dbf13a862410fb3d143892b72ad12253a810b3ccab0921c2d1",
+      "pdfPageOneBased": 73,
+      "printedPage": 73,
+      "extraction": "pdftoppm render/crop only, no repainting",
+      "renderLongEdge": 1500,
+      "cropXYWH": [
+        477,
+        126,
+        395,
+        294
+      ],
+      "inspected": true
+    },
+    {
+      "stageId": "artaud_theater",
+      "type": "native-game-screenshot-reproduced-in-official-guide",
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf",
+      "downloadSha256": "f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80",
+      "downloadBytes": 30889503,
+      "downloadRetained": false,
+      "retainedLocalPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/artaud_theater-native-stage.png",
+      "retainedSha256": "f4008c6db1a823db5787754ad5fe607fbe75244a9da7d67ce537b4c8631edf72",
+      "pdfPageOneBased": 80,
+      "printedPage": 79,
+      "extraction": "pdftoppm render/crop only, no repainting",
+      "renderLongEdge": 1800,
+      "cropXYWH": [
+        590,
+        876,
+        520,
+        285
+      ],
+      "inspected": true
+    },
+    {
+      "stageId": "devils_pit",
+      "type": "native-game-screenshot-official-Prima-eguide",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02d-017.jpg",
+      "downloadSha256": "c8eb7b4fb8b89e19afc8986aab720527e3e3a87fd3de4fd65f89956b9e32a2f2",
+      "downloadBytes": 106562,
+      "retainedLocalPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02d-017.jpg",
+      "retainedSha256": "c8eb7b4fb8b89e19afc8986aab720527e3e3a87fd3de4fd65f89956b9e32a2f2",
+      "inspected": true
+    },
+    {
+      "stageId": "devils_pit",
+      "type": "native-game-screenshot-official-Prima-eguide",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02d-018.jpg",
+      "downloadSha256": "87b9b4ce89c270c65a474f3075a02c8968dbe248202664327a2cadfda0f41dec",
+      "downloadBytes": 100794,
+      "retainedLocalPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02d-018.jpg",
+      "retainedSha256": "87b9b4ce89c270c65a474f3075a02c8968dbe248202664327a2cadfda0f41dec",
+      "inspected": true
+    },
+    {
+      "stageId": "overlook",
+      "type": "native-game-screenshot-official-Prima-eguide",
+      "url": "https://primagames.com/eguides/media/files/silent-hill-downpour/02l-020.jpg",
+      "downloadSha256": "b8c3fed303f13436ebe11ceff0ee6f446f9af4a7be49be46d16538098ba99244",
+      "downloadBytes": 76410,
+      "retainedLocalPath": "/workspace/scratch/8edddaaaab76/stage-pass20-c/references/prima-02l-020.jpg",
+      "retainedSha256": "b8c3fed303f13436ebe11ceff0ee6f446f9af4a7be49be46d16538098ba99244",
+      "inspected": true
+    }
+  ],
+  "promptsFile": "/workspace/scratch/8edddaaaab76/stage-pass20-c/prompts.json",
+  "generationFile": "/workspace/scratch/8edddaaaab76/stage-pass20-c/generation.json",
+  "rasterAuditFile": "/workspace/scratch/8edddaaaab76/stage-pass20-c/raster-audit.json",
+  "totalAssetBytes": 11263627,
+  "visualReview": {
+    "allEightOutputsInspected": true,
+    "nativeSourceImagesInspectedBeforeGeneration": true,
+    "centerAndFootLanesClear": true,
+    "fgAlphaThresholdForClearRegion": 8,
+    "noAssetPixelPostprocessing": true,
+    "nativeGameplayAfterIntegration": "Not performed by this group; root performs stage-only Canvas QA."
+  },
+  "integrationNotes": [
+    "Use all 8 immutable PNGs; hard links are available and preserve SHA256.",
+    "All 4 target stage IDs were absent and unblocked at audit time; their current referencePolicy.sceneId was null.",
+    "Each descriptor chooses one exact state/room; no historical room is overwritten.",
+    "The Hospital World foreground is natively 1671×941. Other current outputs use their measured native sizes; fit stretch handles the one-pixel difference without editing.",
+    "Transparent center/foot regions contain at most tiny alpha noise; audit uses alpha>8 as visible-pixel threshold and records exact extrema.",
+    "Only stage assets/provenance/descriptors are delivered; no fighters, portraits, movesets, workbook or repository files changed."
+  ],
+  "limitations": [
+    "Vue latérale et espacement reconstruits depuis une capture axiale imprimée ; textures, nombre de portes et largeur ne sont pas mesurés. Premier plan natif 1671×941 associé au fond 1672×941, fit stretch conservant toute la silhouette.",
+    "État resserré par rapport au triage initial : décor forestier installé dans le théâtre normal. Cadrage élargi, proportions et espace de duel adaptés ; aucune fusion bibliothèque/grotte/Otherworld. Matière des rideaux interprétée depuis les bords de scène.",
+    "Déploiement latéral et espacement adaptés des captures Prima 02d-017/018. Roues, lift et conduites restent statiques ; pas de puzzle rejoué, pas d’eau sur le plateau, ni fusion avec la cave inondée, le train ou l’attraction extérieure.",
+    "Caméra réorientée transversalement vers la galerie opposée ; répétition des cellules, largeur et lumière adaptées, non relevées architecturalement. Aucun plan Homecoming, émeute, corps, fil électrique, pluie ou inondation.",
+    "Generated candidate art; camera/spacing/textures are artistic reconstruction rather than a certified 1:1 capture.",
+    "Parallax is an authored camera-relative layer shift, not a source animation or a new animated clip.",
+    "No UHD claim: native dimensions are explicitly reported."
+  ],
+  "runtimeDescriptorAudit": {
+    "passed": true,
+    "method": "validateStageBitmap + stageBitmapFor + stageBitmapFrames against in-memory merged registry; repository unchanged",
+    "checks": [
+      {
+        "stageId": "hospital_world",
+        "sourceMatched": true,
+        "rosterSceneId": null,
+        "selectedScene": "hospital-second-floor-corridor",
+        "frames": 2,
+        "wrongRoomRejected": true,
+        "descriptorAccepted": true
+      },
+      {
+        "stageId": "artaud_theater",
+        "sourceMatched": true,
+        "rosterSceneId": null,
+        "selectedScene": "normal-theater-forest-set-lit",
+        "frames": 2,
+        "wrongRoomRejected": true,
+        "descriptorAccepted": true
+      },
+      {
+        "stageId": "devils_pit",
+        "sourceMatched": true,
+        "rosterSceneId": null,
+        "selectedScene": "water-wheels-cavern-dry-catwalk",
+        "frames": 2,
+        "wrongRoomRejected": true,
+        "descriptorAccepted": true
+      },
+      {
+        "stageId": "overlook",
+        "sourceMatched": true,
+        "rosterSceneId": null,
+        "selectedScene": "block-a-a2-before-flooded-vision",
+        "frames": 2,
+        "wrongRoomRejected": true,
+        "descriptorAccepted": true
+      }
+    ]
+  }
+}

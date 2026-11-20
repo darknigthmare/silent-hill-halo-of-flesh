@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-18T08:26:58.821Z",
+  "mode": "native paintRasterPortrait",
+  "browserTest": false,
+  "assets": [
+    {
+      "id": "sh4_eileen_head_073",
+      "path": "assets/sprites/sh4_eileen_head_073.66bb06b246a6.png",
+      "width": 1254,
+      "height": 1254,
+      "bounds": [
+        129,
+        48,
+        1123,
+        1228
+      ],
+      "role": "noncombatant",
+      "preexistingRulesCombatEnabled": false
+    }
+  ],
+  "portraits": [
+    {
+      "id": "sh4_eileen_head_073",
+      "facing": 1,
+      "path": "assets/sprites/sh4_eileen_head_073.66bb06b246a6.png",
+      "file": "selection-sh4_eileen_head_073-right.png"
+    },
+    {
+      "id": "sh4_eileen_head_073",
+      "facing": -1,
+      "path": "assets/sprites/sh4_eileen_head_073.66bb06b246a6.png",
+      "file": "selection-sh4_eileen_head_073-left.png"
+    }
+  ],
+  "checks": [
+    {
+      "name": "sh4_eileen_head_073 selection-only contract",
+      "passed": true,
+      "detail": {
+        "artKind": "selection-only",
+        "combatArt": "missing",
+        "documentedRole": "noncombatant",
+        "preexistingRulesCombatEnabled": false
+      }
+    },
+    {
+      "name": "sh4_eileen_head_073 asset identity",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/sh4_eileen_head_073.66bb06b246a6.png",
+        "sha256": "66bb06b246a64aacfeaa4073184abf98fceb75c0b469e2f99a46fd329cdea226",
+        "bytes": 1528456
+      }
+    },
+    {
+      "name": "sh4_eileen_head_073 native decode adapter preserves pixels",
+      "passed": true
+    },
+    {
+      "name": "sh4_eileen_head_073 source dimensions",
+      "passed": true,
+      "detail": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "name": "sh4_eileen_head_073 complete alpha bounds and transparent exterior",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          129,
+          48,
+          1123,
+          1228
+        ],
+        "transparentFraction": 0.3811503348773558
+      }
+    },
+    {
+      "name": "sh4_eileen_head_073 selection draw right",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/sh4_eileen_head_073.66bb06b246a6.png"
+        ],
+        "dataset": {
+          "spriteId": "sh4_eileen_head_073",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "sh4_eileen_head_073 visible outline framed right",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          129,
+          48,
+          994,
+          1180
+        ],
+        "destination": [
+          -205.53898305084743,
+          -243.99999999999997,
+          411.07796610169487,
+          487.99999999999994
+        ],
+        "expectedFacing": 1
+      }
+    },
+    {
+      "name": "sh4_eileen_head_073 selection draw left",
+      "passed": true,
+      "detail": {
+        "requested": [
+          "assets/sprites/sh4_eileen_head_073.66bb06b246a6.png"
+        ],
+        "dataset": {
+          "spriteId": "sh4_eileen_head_073",
+          "artStatus": "raster",
+          "artPurpose": "selection"
+        }
+      }
+    },
+    {
+      "name": "sh4_eileen_head_073 visible outline framed left",
+      "passed": true,
+      "detail": {
+        "sourceCrop": [
+          129,
+          48,
+          994,
+          1180
+        ],
+        "destination": [
+          -205.53898305084743,
+          -243.99999999999997,
+          411.07796610169487,
+          487.99999999999994
+        ],
+        "expectedFacing": -1
+      }
+    },
+    {
+      "name": "art/registry.json stable during selection renders",
+      "passed": true
+    },
+    {
+      "name": "src/sprite-manifest.js stable during selection renders",
+      "passed": true
+    }
+  ],
+  "limits": [
+    "The native renderer uses a predecoded local image cache. This run covers selection, asset identity and combat-art exclusion.",
+    "The resulting PNGs require separate visual inspection."
+  ],
+  "hashesBefore": {
+    "art/registry.json": "a5449cbfba917526569147f32c07d76f1d3dbbdb383a1abe6e27b4e52e168f7d",
+    "src/sprite-manifest.js": "044570509678c2fccbb0605c05c3e3c86d266f2a6f5c75d0926ff7cad8a6968f"
+  },
+  "hashesAfter": {
+    "art/registry.json": "a5449cbfba917526569147f32c07d76f1d3dbbdb383a1abe6e27b4e52e168f7d",
+    "src/sprite-manifest.js": "044570509678c2fccbb0605c05c3e3c86d266f2a6f5c75d0926ff7cad8a6968f"
+  },
+  "passed": true
+}

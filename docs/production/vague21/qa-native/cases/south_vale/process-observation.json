@@ -1,0 +1,27 @@
+{
+  "stageId": "south_vale",
+  "startedAt": "2026-11-19T13:35:48.463Z",
+  "completedAt": "2026-11-19T13:35:50.583Z",
+  "durationMs": 2120,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--max-old-space-size=128",
+    "/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/scripts/qa-stage-pass21-native.mjs",
+    "--stages=south_vale",
+    "--out=/workspace/scratch/8edddaaaab76/silent-hill-halo-of-flesh/docs/production/vague21/qa-native/cases/south_vale"
+  ],
+  "exitCode": 0,
+  "signal": null,
+  "passed": true,
+  "report": "cases/south_vale/report.json",
+  "stdout": "cases/south_vale/process.stdout.log",
+  "stderr": "cases/south_vale/process.stderr.log",
+  "reportSHA256": "c4c6fe2dea2e5030df01494b38dace5e47ae0f3964976b410710014b478394e7",
+  "checks": 46,
+  "nodeExecArgv": [
+    "--max-old-space-size=128"
+  ],
+  "harnessSHA256": "1d589b3dc17f2a7b0d7555e95fd4b85fd2d7bbeba25276a55332001a450c195c",
+  "execInitialYieldTimeMs": 30000,
+  "observationSource": "Actual child-process close event in sequential orchestrator; successful reports and capture hashes checked before recording."
+}

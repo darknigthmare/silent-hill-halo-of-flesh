@@ -34,7 +34,7 @@ export function requestedSpriteClipKey(state={}){
  return presentation?.clipKey||(presentation?.contextId?`${pose}@${presentation.contextId}`:pose==='idle'&&state.weaponContext!==undefined?`idle@${state.weaponContext}`:pose);
 }
 export function sampleSpriteClip(art,state={}){
- if(!art)return null;
+ if(!art||art.combatView==='selection-only')return null;
  const requestedPose=poseFromState(state),requested=requestedSpriteClipKey(state),presentation=presentationOf(state);
  const has=key=>Object.prototype.hasOwnProperty.call(art.clips||{},key)&&(!presentation||art.clips[key]?.loop===false);
  const idle=state.weaponContext!==undefined?`idle@${state.weaponContext}`:'idle';
@@ -66,7 +66,7 @@ export function sampleSpriteClip(art,state={}){
  tick=clip.loop?tick%total:Math.min(tick,total-1);
  let index=0,elapsed=0;while(index<durations.length-1&&tick>=elapsed+durations[index])elapsed+=durations[index++];
  const frameIndex=clip.frames[index],frame=Array.isArray(art.frames)&&Number.isSafeInteger(frameIndex)&&frameIndex>=0?art.frames[frameIndex]:null;
- return frame?{requested,pose,requestedPose,requestedClipKey:requested,clipKey:pose,fallback:pose!==requested,
+ return frame&&frame.purpose!=='selection'?{requested,pose,requestedPose,requestedClipKey:requested,clipKey:pose,fallback:pose!==requested,
   fallbackReason:pose===requested?null:state.weaponContext!==undefined&&pose===idle?'missing-weapon-pose':strictContext?'missing-contextual-finisher':pose==='ko'&&finalKo?'core-ko-final-defeat':pose===requestedPose?'generic-presentation':'missing-presentation',
   frame,frameIndex,index,tick,total,ticks:durations[index]}:null;
 }

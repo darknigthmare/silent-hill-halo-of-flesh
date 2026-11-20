@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "source": "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+  "sourceSHA256": "a7928d7350d35bcd61745b886110b1c007525b41644ff30001e1c981ace49649",
+  "readOnly": true,
+  "rules": [
+    {
+      "sheet": "Corpus",
+      "range": "G9:G74",
+      "type": "containsText",
+      "operator": "containsText",
+      "text": "Absent",
+      "priority": 1,
+      "sourceDxfId": 0,
+      "patternType": "solid",
+      "fill": "#FFF0CB"
+    },
+    {
+      "sheet": "Corpus",
+      "range": "E9:E74",
+      "type": "containsText",
+      "operator": "containsText",
+      "text": "Annulé",
+      "priority": 2,
+      "sourceDxfId": 1,
+      "patternType": "solid",
+      "fill": "#F5DFDE"
+    },
+    {
+      "sheet": "Stages",
+      "range": "D9:D131",
+      "type": "containsText",
+      "operator": "containsText",
+      "text": "Absent",
+      "priority": 1,
+      "sourceDxfId": 2,
+      "patternType": "solid",
+      "fill": "#FFF0CB"
+    },
+    {
+      "sheet": "Stages",
+      "range": "E9:E131",
+      "type": "containsText",
+      "operator": "containsText",
+      "text": "Bloquée",
+      "priority": 2,
+      "sourceDxfId": 3,
+      "patternType": "solid",
+      "fill": "#F5DFDE"
+    }
+  ],
+  "method": "Original fill-only text rules reapplied through range.conditionalFormats.clear/add; no OOXML mutation."
+}

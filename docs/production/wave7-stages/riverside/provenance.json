@@ -1,0 +1,189 @@
+{
+  "stageId": "riverside_motel",
+  "source": "origins",
+  "scene": "riverside-motel-mist-guest-courtyard",
+  "name": "Silent Hill: Origins — cours des chambres du Riverside Motel, monde brumeux",
+  "baseline": "a0f319d",
+  "catalogueReferenceIds": [
+    "EXT03",
+    "EXT02"
+  ],
+  "referenceDocument": {
+    "title": "Silent Hill Origins Official Strategy Guide",
+    "publisher": "BradyGames",
+    "year": 2007,
+    "edition": "Original PSP release",
+    "sourceSha256": "f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80",
+    "cropMethod": "Recadrage aux coordonnées de pixel du raster de chaque page. Aucun redimensionnement, traitement chromatique ou reconstitution des pièces sources."
+  },
+  "limits": [
+    "Le fond compose les vues de plusieurs points des cours raccordées. Les fenêtres, pièces d’enduit, escaliers, grille et couloirs sont ancrés dans les captures. Le nombre et l’espacement des ouvertures, l’extrémité de l’escalier, la position de la caméra et le béton du plan de combat sont adaptés au versus.",
+    "Le portillon reprend le dessin du vantail réel de la cour 305–309. Angle d’ouverture, fixation au sol, proportion des traverses et position sur le bord gauche sont des adaptations. Une seule image représente le vantail à cet angle.",
+    "État de brume normal, en extérieur. Aucun passage à l’Otherworld, collision du portillon, mouvement de charnière, nouvel accès aux chambres ou nouvelle règle de terrain."
+  ],
+  "references": [
+    {
+      "id": "BRADYGAMES_ORIGINS_2007_P98",
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf#page=99",
+      "file": "docs/production/wave7-stages/riverside/brady-p98-staircase.png",
+      "sha256": "83b38585e825f52b5d8a88168419294c4cf10d2448cc27c11d8eb9b729ba4014",
+      "dimensions": [
+        282,
+        157
+      ],
+      "sourceRasterDimensions": [
+        1207,
+        1558
+      ],
+      "sourceCropXYXY": [
+        238,
+        1197,
+        520,
+        1354
+      ],
+      "printedPage": 98,
+      "pdfPage": 99,
+      "evidence": "Escalier métallique du motel et accès extérieur aux chambres dans la brume normale. Le texte situe la montée à l’arrière de la première cour."
+    },
+    {
+      "id": "BRADYGAMES_ORIGINS_2007_P100",
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf#page=101",
+      "file": "docs/production/wave7-stages/riverside/brady-p100-courtyard-gate.png",
+      "sha256": "4e7f21670cf60db47cba720617207911e93e8456cc1bf8ef915bbecc286a8b0d",
+      "dimensions": [
+        277,
+        151
+      ],
+      "sourceRasterDimensions": [
+        1207,
+        1544
+      ],
+      "sourceCropXYXY": [
+        826,
+        151,
+        1103,
+        302
+      ],
+      "printedPage": 100,
+      "pdfPage": 101,
+      "evidence": "Portillon de la cour 305–309 avant que Travis traverse le miroir de la chambre 306. Le cadre, les barres horizontales et l’étroite bande de volutes latérale sont visibles."
+    },
+    {
+      "id": "BRADYGAMES_ORIGINS_2007_P102",
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf#page=103",
+      "file": "docs/production/wave7-stages/riverside/brady-p102-exterior-room.png",
+      "sha256": "ad59a2a18e81b0c3272fb0b7ca315512fea76df5a4b30908e552188b41bd4640",
+      "dimensions": [
+        266,
+        101
+      ],
+      "sourceRasterDimensions": [
+        1203,
+        1535
+      ],
+      "sourceCropXYXY": [
+        325,
+        690,
+        591,
+        791
+      ],
+      "printedPage": 102,
+      "pdfPage": 103,
+      "evidence": "Vue de la façade et de ses fenêtres depuis une autre coursive du motel, après retour dans la brume. Cette vue documente les matériaux du même bâtiment."
+    }
+  ],
+  "layers": [
+    {
+      "id": "courtyard",
+      "stageId": "riverside_motel",
+      "layer": "background",
+      "path": "assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
+      "sha256": "20bf06773d8ad2ec71a75dc0f5885d54b91acf465f9d62b96c65f2889b2c9d8f",
+      "bytes": 2166190,
+      "width": 1672,
+      "height": 941,
+      "channels": "RGB",
+      "alpha": {
+        "range": [
+          255,
+          255
+        ],
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1573352,
+        "boundsAt128": [
+          0,
+          0,
+          1672,
+          941
+        ],
+        "cornerValues": [
+          255,
+          255,
+          255,
+          255
+        ]
+      },
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "referenceIds": [
+        "BRADYGAMES_ORIGINS_2007_P98",
+        "BRADYGAMES_ORIGINS_2007_P100",
+        "BRADYGAMES_ORIGINS_2007_P102"
+      ],
+      "prompt": "One complete wide 16:9 game stage background painting, opaque, 1672x941 if possible, empty environment for a 2D fighting game. Location is the fog-world guest courtyards of the Riverside Motel in the original 2007 PSP release of Silent Hill: Origins; the normal courtyard traversed toward rooms 305–309 before crossing the mirror. Attached are three cropped printed gameplay screenshots from the original official PSP strategy guide. Use them for architecture and palette, ignore the printed guide and person. A decaying, unpretentious low American roadside motel as it really appears in the game: chipped warm ochre and dusty salmon stucco with grubby dark skirting, plain recessed guest-room doors, small exterior multipane windows, narrow open upper-level walkway and plain metal guardrails, a straight dark metal stair flight at the far LEFT end of the courtyard leading up to that walkway. Slightly hazy pale grey light from an overcast sky, a layer of silent fog receding through the side passage. Aim for a moody, restrained 2007 survival-horror environment with the sparse shapes and readable texture of an original game location. Rich faded concrete and painted plaster detail, no overgrown greenery and no theatrical disrepair. Horizontal near-frontal lateral view of the small row of rooms, comfortably back from the facade. The stairs stand near the left side of the plate, with a few closed room doors and darkened wide rectangular windows behind the duel. Leave the very bottom left free for a separate open gate layer. For gameplay the lower 32 percent of the image is a continuous visibly walkable band of worn, slightly damp grey-brown concrete, level across the whole composition. Room and ground values are distinct and midtones stay clear for two actors, even through the fog. The guest court is not the street frontage: no commercial signage, no billboard, no pool, no cars, no reception desk, no furniture, no center gate. The gate leaf is a separate asset, so keep its near hinged doorway out of this background. No people or creatures, blood, actual written words, numbers, HUD, logos, collage, canvas border, duplicate scene or captions. Full-bleed single environment plate.",
+      "transparentBackground": false,
+      "origin": "conversation-image-generation",
+      "originalFile": "generated_images/exec-4a41afa9-e318-46e4-b0cc-fc3bb9bc8e41.png",
+      "nativeBytesPreserved": true
+    },
+    {
+      "id": "gate",
+      "stageId": "riverside_motel",
+      "layer": "foreground",
+      "path": "assets/stages/riverside_motel.gate.270f1cbab7c5.png",
+      "sha256": "270f1cbab7c5f8a4956f481c8a4d58640de2cc1a5f8b713185910e753667d2a4",
+      "bytes": 1104301,
+      "width": 1052,
+      "height": 1495,
+      "channels": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          255
+        ],
+        "fullyTransparentPixels": 1017116,
+        "fullyOpaquePixels": 2348,
+        "boundsAt128": [
+          115,
+          32,
+          936,
+          1374
+        ],
+        "cornerValues": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "rect": [
+        0.007,
+        0.5,
+        0.18125,
+        0.46
+      ],
+      "referenceIds": [
+        "BRADYGAMES_ORIGINS_2007_P100"
+      ],
+      "prompt": "Create a single isolated environment prop with true transparent alpha: one half-open rectangular iron pedestrian gate from the mist-world guest courtyard of the Riverside Motel, as seen in the original 2007 PSP game Silent Hill: Origins. Use the attached specific cropped in-game picture from the BradyGames official PSP guide, printed page 100, for the distinctive form. Copy the gate's sparse construction: simple narrow dark iron rectangular frame, five strong parallel horizontal flat bars with broad empty openings between them and one narrow upright decorative strip of repeated wrought C-scrolls running along its visible outer edge. This is a practical small motel access gate, not a mansion or cemetery gate. Do not turn it into a panel of vertical pickets; the prominent repeated bars are horizontal. Swing it open in a mild, realistic three-quarter view. Cast-iron work and small hinge posts are dark brown-black, weathered with small ochre edge highlights and subtle oxidation. Flat overcast illumination, soft PSP-era horror texture, matte restrained lighting. A simple short solid hinge upright with ground foot is attached to left edge so this single assembled gate reads as physically anchored; a view through the bars, scrollwork, and around the feet must stay fully transparent. Frame all edges of the COMPLETE prop on canvas, from its square hinge tops to the base, with a narrow clean clear margin. Camera eye-level in front of this gate, gate slightly angled away to the right so the full ladder-like pattern can be seen and foreground room court can be seen THROUGH it. In game the gate appears on the far left of a fighting arena with its base at the ground line; no gate movement or hazard. No fence extension, wall fragment, pavement, person, horizon, lantern, razor wire, pointed finials, solid panel, chain, sign, writing, border, cast shadow, stand, scene, gradient or colored backdrop. Only the one original-style open motel gate.",
+      "transparentBackground": true,
+      "origin": "conversation-image-generation",
+      "originalFile": "generated_images/exec-fcc848ee-2258-4ec2-8a0c-cab71f04014d.png",
+      "nativeBytesPreserved": true
+    }
+  ]
+}

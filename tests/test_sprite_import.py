@@ -140,4 +140,130 @@ class ImportTests(unittest.TestCase):
   with self.assertRaisesRegex(ValueError,'fighter/source'):module.import_sprite(self.args('--append','--pose','winRound'))
   self.assertEqual(path.read_bytes(),before)
 
+ def test_selection_only_profile_has_no_combat_clip(self):
+  result=module.import_sprite(self.args('--selection'))
+  a=json.loads((self.root/'art/registry.json').read_text())['assets']['a']
+  self.assertEqual(a['combatView'],'selection-only');self.assertEqual(a['frames'],[]);self.assertEqual(a['clips'],{})
+  self.assertEqual(a['portrait']['path'],result['path']);self.assertEqual(a['animatedClips'],0)
+  with self.assertRaisesRegex(ValueError,'without an idle'):module.import_sprite(self.args('--append'))
+
+ def test_reclassify_shared_idle_preserves_exact_portrait_and_png(self):
+  module.import_sprite(self.args('--facing','-1'));path=self.root/'art/registry.json'
+  before=json.loads(path.read_text())['assets']['a'];pixels=(self.root/before['portrait']['path']).read_bytes()
+  module.import_sprite(self.args('--selection-only'))
+  after=json.loads(path.read_text())['assets']['a']
+  self.assertEqual(after['portrait'],before['portrait']);self.assertEqual(after['frames'],[]);self.assertEqual(after['clips'],{})
+  self.assertEqual((self.root/after['portrait']['path']).read_bytes(),pixels)
+  self.assertEqual(after['combatView'],'selection-only')
+
+ def test_combat_idle_preserves_selection_and_replaces_only_shared_idle(self):
+  module.import_sprite(self.args('--facing','-1'));path=self.root/'art/registry.json'
+  before=json.loads(path.read_text())['assets']['a'];portrait=before['portrait'];pixels=(self.root/portrait['path']).read_bytes()
+  im=Image.open(self.image);im.putpixel((130,100),(41,23,72,255));im.save(self.image)
+  result=module.import_sprite(self.args('--combat-idle','--facing','1','--anchor-x','.4'))
+  after=json.loads(path.read_text())['assets']['a']
+  self.assertEqual(after['portrait'],portrait);self.assertEqual((self.root/portrait['path']).read_bytes(),pixels)
+  self.assertNotEqual(after['frames'][0]['path'],portrait['path']);self.assertEqual(after['frames'][0]['path'],result['path'])
+  self.assertEqual(after['combatView'],'side-view-candidate');self.assertEqual(after['frames'][0]['facing'],1)
+  self.assertEqual(after['frames'][0]['anchor'],[.4,.9]);self.assertEqual(after['clips']['idle']['frames'],[0]);self.assertEqual(after['animatedClips'],0)
+
+ def test_new_combat_requires_portrait_and_cannot_reuse_its_pixels(self):
+  with self.assertRaisesRegex(ValueError,'selection portrait first'):module.import_sprite(self.args('--combat-idle'))
+  module.import_sprite(self.args('--selection'))
+  with self.assertRaisesRegex(ValueError,'Repeated'):module.import_sprite(self.args('--combat-idle'))
+  im=Image.open(self.image);im.save(self.image,compress_level=0)
+  with self.assertRaisesRegex(ValueError,'Repeated'):module.import_sprite(self.args('--combat-idle'))
+
+ def test_selection_update_preserves_separate_combat_and_all_clips(self):
+  module.import_sprite(self.args('--selection'));im=Image.open(self.image);im.putpixel((130,100),(41,23,72,255));im.save(self.image)
+  module.import_sprite(self.args('--combat-idle'));im.putpixel((131,100),(51,33,82,255));im.save(self.image)
+  module.import_sprite(self.args('--append','--pose','walk'))
+  path=self.root/'art/registry.json';before=json.loads(path.read_text())['assets']['a']
+  im.putpixel((132,100),(61,43,92,255));self.image=self.root/'updated-selection.png';im.save(self.image)
+  module.import_sprite(self.args('--selection','--origin','artist-created'));after=json.loads(path.read_text())['assets']['a']
+  self.assertEqual(after['frames'],before['frames']);self.assertEqual(after['clips'],before['clips'])
+  self.assertEqual(after['combatView'],'side-view-candidate');self.assertNotEqual(after['portrait']['path'],before['portrait']['path'])
+  self.assertEqual(after['selectionProvenance'],dict(origin='artist-created',sourceFile=self.image.name,
+   sourceSHA256=after['portrait']['sha256'],sourceDimensions=[after['portrait']['width'],after['portrait']['height']]))
+  self.assertNotEqual(after['selectionProvenance']['sourceSHA256'],before['selectionProvenance']['sourceSHA256'])
+
+ def test_combat_provenance_uses_replaced_legacy_portrait_and_exact_historical_fallback(self):
+  module.import_sprite(self.args('--origin','scan'));path=self.root/'art/registry.json'
+  registry=json.loads(path.read_text());legacy=registry['assets']['a']
+  for key in ('origin','sourceFile','sourceSHA256'):
+   del legacy['portrait'][key];del legacy['frames'][0][key]
+  self.assertEqual(module.selection_provenance(legacy),dict(origin='scan',sourceFile=self.image.name,
+   sourceSHA256=legacy['portrait']['sha256'],sourceDimensions=[300,200]))
+  path.write_text(json.dumps(registry))
+  im=Image.open(self.image);im.putpixel((130,100),(41,23,72,255));self.image=self.root/'legacy-new-selection.png';im.save(self.image)
+  module.import_sprite(self.args('--selection','--origin','artist-created'))
+  selection=json.loads(path.read_text())['assets']['a']['portrait']
+  im.putpixel((131,100),(51,33,82,255));self.image=self.root/'legacy-new-combat.png';im.save(self.image)
+  module.import_sprite(self.args('--combat-idle','--origin','conversation-image-generation'))
+  after=json.loads(path.read_text())['assets']['a']
+  self.assertEqual(after['selectionProvenance'],dict(origin=selection['origin'],sourceFile=selection['sourceFile'],
+   sourceSHA256=selection['sha256'],sourceDimensions=[selection['width'],selection['height']]))
+  self.assertNotEqual(after['selectionProvenance']['sourceSHA256'],after['sourceSHA256'])
+
+ def test_separate_actions_do_not_discard_existing_combat_poses(self):
+  module.import_sprite(self.args());im=Image.open(self.image);im.putpixel((130,100),(41,23,72,255));im.save(self.image)
+  module.import_sprite(self.args('--append','--pose','walk'))
+  path=self.root/'art/registry.json';before=path.read_bytes()
+  with self.assertRaisesRegex(ValueError,'Repeated'):module.import_sprite(self.args('--combat-idle'))
+  with self.assertRaisesRegex(ValueError,'cannot discard'):module.import_sprite(self.args('--selection-only'))
+  self.assertEqual(path.read_bytes(),before)
+
+ def test_combat_idle_replaces_only_frame_zero_and_preserves_other_clips(self):
+  module.import_sprite(self.args('--origin','scan'))
+  path=self.root/'art/registry.json'
+  with Image.open(self.image) as image:
+   for index,pose in enumerate(('walk','hurt','ko'),start=1):
+    image.putpixel((130,100),(index,23,72,255));image.save(self.image)
+    module.import_sprite(self.args('--append','--pose',pose,'--origin','scan','--ticks',str(3+index)))
+   before=json.loads(path.read_text())['assets']['a']
+   markers=[{'index':i,'sha256':v['sha256']} for i,v in enumerate(before['frames']) if i]
+   for color in (80,81):
+    image.putpixel((131,100),(color,33,82,255));image.save(self.image)
+    result=module.import_sprite(self.args('--combat-idle','--origin','artist-created'))
+    after=json.loads(path.read_text())['assets']['a']
+    self.assertEqual(after['portrait'],before['portrait'])
+    self.assertEqual(after['selectionProvenance'],module.selection_provenance(before))
+    self.assertEqual(after['frames'][1:],before['frames'][1:])
+    self.assertEqual(after['clips'],before['clips'])
+    self.assertEqual(after['retainedLegacyCombatFrames'],markers)
+    self.assertEqual(after['origin'],'mixed')
+    self.assertEqual(after['frames'][0]['path'],result['path'])
+    self.assertNotEqual(after['frames'][0]['path'],before['frames'][0]['path'])
+    self.assertEqual(result['animatedClips'],0)
+    for frame in before['frames']:
+     self.assertEqual(sha256((self.root/frame['path']).read_bytes()).hexdigest(),frame['sha256'])
+
+ def test_combat_idle_rejects_animated_or_shared_frame_zero_without_writing(self):
+  module.import_sprite(self.args())
+  with Image.open(self.image) as image:
+   image.putpixel((130,100),(41,23,72,255));image.save(self.image)
+   module.import_sprite(self.args('--append','--pose','walk'))
+   image.putpixel((131,100),(51,33,82,255));image.save(self.image)
+  path=self.root/'art/registry.json';original=json.loads(path.read_text())
+  for pose,indices,reason in [('idle',[0,1],'single static idle'),('walk',[0,1],'shared with another clip')]:
+   with self.subTest(pose=pose):
+    registry=json.loads(json.dumps(original));registry['assets']['a']['clips'][pose]['frames']=indices
+    path.write_text(json.dumps(registry));before=path.read_bytes()
+    with self.assertRaisesRegex(ValueError,reason):module.import_sprite(self.args('--combat-idle'))
+    self.assertEqual(path.read_bytes(),before)
+
+ def test_separate_combat_cannot_be_demoted_through_its_portrait(self):
+  module.import_sprite(self.args('--selection'));im=Image.open(self.image);im.putpixel((130,100),(41,23,72,255));im.save(self.image)
+  module.import_sprite(self.args('--combat-idle'))
+  with self.assertRaisesRegex(ValueError,'reclassified'):module.import_sprite(self.args('--selection-only'))
+  with self.assertRaisesRegex(ValueError,'cannot erase'):module.import_sprite(self.args('--replace'))
+
+ def test_selection_only_pixels_cannot_be_cloned_to_another_profile(self):
+  module.import_sprite(self.args('--selection'))
+  with self.assertRaisesRegex(ValueError,'Repeated'):module.import_sprite(self.args('--selection','--fighter','b','--source','sh2'))
+
+ def test_reclassify_requires_existing_exact_portrait(self):
+  module.import_sprite(self.args());im=Image.open(self.image);im.putpixel((130,100),(41,23,72,255));im.save(self.image)
+  with self.assertRaisesRegex(ValueError,'exact existing shared portrait'):module.import_sprite(self.args('--selection-only'))
+
 if __name__=='__main__':unittest.main()

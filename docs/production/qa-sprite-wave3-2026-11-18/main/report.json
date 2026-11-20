@@ -1,0 +1,1635 @@
+{
+  "schema": 3,
+  "label": "sprite-wave3-20261118",
+  "generatedAt": "2026-11-18T07:45:31.126Z",
+  "mode": "native FightEngine visual QA",
+  "browserTest": false,
+  "browserProbe": {
+    "date": "2026-11-18",
+    "executable": "/usr/bin/chromium",
+    "attempts": 1,
+    "pageCreated": false,
+    "result": "system Chromium aborted with SIGABRT: process_singleton_posix.cc:297 socket() failed: Operation not permitted",
+    "note": "Historical environment probe, not retried by this script; no browser behavior is certified."
+  },
+  "limits": [
+    "Actual FightEngine rendered with native Canvas; DOM, CSS, browser input, browser decoding and service worker are not tested.",
+    "Source HTTP PNG bytes are checked by SHA-256. Sharp normalizes encoding only in memory; decoded pixel equality is checked. Source files are not edited.",
+    "Minimal storage/event/gamepad adapters are used. Real intros, updates, rendering and pause execute; actor positions, facing, health and poses are not overridden.",
+    "Opposite facing is the engine mirror, not an independently sourced view. One-frame idle candidates do not certify animation, attacks, collision timing or fidelity 1:1.",
+    "This script writes only reports and captures. Final captures must be visually inspected separately."
+  ],
+  "checks": [
+    {
+      "name": "Source HTTP server ready",
+      "passed": true,
+      "detail": {
+        "log": [
+          "HALO OF FLESH — http://127.0.0.1:4237\n"
+        ]
+      }
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1770782,
+        "sha256": "d944b0e329cff820bc61ffe030c7eee062a6522ac943d9967b6088ccda8c76c9"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 523293,
+        "sha256": "dfeeb64862d0e474e8c4f08362118db62010b34e3de71b2947c5e3d3e9d76cd9"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 929744,
+        "sha256": "04a662ecb2cb44c477e047dc2b1f6189a8e21746466122a76caa24b9308c19ff"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 318503,
+        "sha256": "39331afee89d29bcb858b5ac77589fef1e619a377db83c0a3c8478cfe4898f92"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1015670,
+        "sha256": "4c283a4ddf4996d5a6d90faf57c175efbeb27be5ba4b0636d71a4c945e9d1492"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 895527,
+        "sha256": "ad502d70da3d4e2a3753ce6b2d7aec22ca48f11ea08a125d55659d5df43d76cb"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1149291,
+        "sha256": "80344808d0d5dad359a4fba8057cb43c4447f5212e2778ec158e3c43d4ab0024"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact PNG HTTP bytes assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "passed": true,
+      "detail": {
+        "http": 200,
+        "mime": "image/png",
+        "bytes": 1290226,
+        "sha256": "09f3672541e8501f067bb229993ae32266594494269202739be8355f5415646d"
+      }
+    },
+    {
+      "name": "Lossless in-memory PNG adapter assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "passed": true
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          138,
+          73,
+          1668,
+          844
+        ],
+        "expected": [
+          138,
+          73,
+          1668,
+          844
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          320,
+          431,
+          944,
+          889
+        ],
+        "expected": [
+          320,
+          431,
+          944,
+          889
+        ]
+      }
+    },
+    {
+      "name": "homecoming_feral_086 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/homecoming_feral_086.d944b0e329cf.png"
+        ],
+        "portrait": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "homecoming_feral_086 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_feral_086.dfeeb64862d0.png"
+        ],
+        "expected": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png"
+      }
+    },
+    {
+      "name": "homecoming_feral_086 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_feral_086.dfeeb64862d0.png"
+        ],
+        "expected": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          75,
+          52,
+          1709,
+          851
+        ],
+        "expected": [
+          75,
+          52,
+          1709,
+          851
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          304,
+          416,
+          978,
+          850
+        ],
+        "expected": [
+          304,
+          416,
+          978,
+          850
+        ]
+      }
+    },
+    {
+      "name": "homecoming_needler_088 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/homecoming_needler_088.04a662ecb2cb.png"
+        ],
+        "portrait": "assets/sprites/homecoming_needler_088.39331afee89d.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "homecoming_needler_088 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_needler_088.39331afee89d.png"
+        ],
+        "expected": "assets/sprites/homecoming_needler_088.39331afee89d.png"
+      }
+    },
+    {
+      "name": "homecoming_needler_088 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/homecoming_needler_088.39331afee89d.png"
+        ],
+        "expected": "assets/sprites/homecoming_needler_088.39331afee89d.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          292,
+          54,
+          1205,
+          1041
+        ],
+        "expected": [
+          292,
+          54,
+          1205,
+          1041
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          345,
+          23,
+          1111,
+          1061
+        ],
+        "expected": [
+          345,
+          23,
+          1111,
+          1061
+        ]
+      }
+    },
+    {
+      "name": "sh1_night_flutter_002 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png"
+        ],
+        "portrait": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_night_flutter_002 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png"
+        ],
+        "expected": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png"
+      }
+    },
+    {
+      "name": "sh1_night_flutter_002 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png"
+        ],
+        "expected": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png"
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          101,
+          30,
+          1143,
+          1138
+        ],
+        "expected": [
+          101,
+          30,
+          1143,
+          1138
+        ]
+      }
+    },
+    {
+      "name": "Native PNG decode assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "passed": true
+    },
+    {
+      "name": "Visible alpha envelope assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "passed": true,
+      "detail": {
+        "bounds": [
+          31,
+          102,
+          1778,
+          832
+        ],
+        "expected": [
+          31,
+          102,
+          1778,
+          832
+        ]
+      }
+    },
+    {
+      "name": "sh1_floatstinger_016 idle selects one distinct combat frame",
+      "passed": true,
+      "detail": {
+        "paths": [
+          "assets/sprites/sh1_floatstinger_016.80344808d0d5.png"
+        ],
+        "portrait": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+        "clip": {
+          "frames": [
+            0
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "note": "A one-frame looping clip remains a static image."
+      }
+    },
+    {
+      "name": "sh1_floatstinger_016 portrait uses preserved selection 1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_floatstinger_016.09f3672541e8.png"
+        ],
+        "expected": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png"
+      }
+    },
+    {
+      "name": "sh1_floatstinger_016 portrait uses preserved selection -1",
+      "passed": true,
+      "detail": {
+        "status": "raster",
+        "seen": [
+          "assets/sprites/sh1_floatstinger_016.09f3672541e8.png"
+        ],
+        "expected": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png"
+      }
+    },
+    {
+      "name": "homecoming_feral_086/homecoming_needler_088 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "homecoming_feral_086/homecoming_needler_088 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "homecoming_feral_086/homecoming_needler_088 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "homecoming_feral_086",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "homecoming_needler_088",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "homecoming_feral_086/homecoming_needler_088 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+          "assets/sprites/homecoming_needler_088.04a662ecb2cb.png"
+        ],
+        "expected": [
+          "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+          "assets/sprites/homecoming_needler_088.04a662ecb2cb.png"
+        ]
+      }
+    },
+    {
+      "name": "homecoming_feral_086 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 214.63299100266562,
+          "top": 487.9780612158511,
+          "right": 437.48051661252975,
+          "bottom": 599.4018240207831
+        },
+        "visible": {
+          "left": 231.9683678539403,
+          "top": 497.14822433282967,
+          "right": 424.16493729198544,
+          "bottom": 594.0002210888642
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_needler_088 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 795.4273128816826,
+          "top": 439.53656698599264,
+          "right": 1116.0311764620149,
+          "bottom": 595.5318797131393
+        },
+        "visible": {
+          "left": 802.1264980908239,
+          "top": 441.0678093195107,
+          "right": 1114.8827447118763,
+          "bottom": 594.0006373796214
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_feral_086/homecoming_needler_088 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "homecoming_needler_088/homecoming_feral_086 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "homecoming_needler_088/homecoming_feral_086 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "homecoming_needler_088/homecoming_feral_086 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "homecoming_needler_088",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "homecoming_feral_086",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "homecoming_needler_088/homecoming_feral_086 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+          "assets/sprites/homecoming_feral_086.d944b0e329cf.png"
+        ],
+        "expected": [
+          "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+          "assets/sprites/homecoming_feral_086.d944b0e329cf.png"
+        ]
+      }
+    },
+    {
+      "name": "homecoming_needler_088 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 163.96885405556336,
+          "top": 439.53656698599264,
+          "right": 484.5727176358955,
+          "bottom": 595.5318797131393
+        },
+        "visible": {
+          "left": 165.11728580570184,
+          "top": 441.0678093195107,
+          "right": 477.8735324267542,
+          "bottom": 594.0006373796214
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_feral_086 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 842.5195139050484,
+          "top": 487.9780612158511,
+          "right": 1065.3670395149124,
+          "bottom": 599.4018240207831
+        },
+        "visible": {
+          "left": 855.8350932255927,
+          "top": 497.14822433282967,
+          "right": 1048.031662663638,
+          "bottom": 594.0002210888642
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "homecoming_needler_088/homecoming_feral_086 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh1_night_flutter_002/sh1_floatstinger_016 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_night_flutter_002/sh1_floatstinger_016 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_night_flutter_002/sh1_floatstinger_016 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_night_flutter_002",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_floatstinger_016",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_night_flutter_002/sh1_floatstinger_016 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+          "assets/sprites/sh1_floatstinger_016.80344808d0d5.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+          "assets/sprites/sh1_floatstinger_016.80344808d0d5.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_night_flutter_002 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 257.7461829774165,
+          "top": 444.5882838080173,
+          "right": 396.7448944601116,
+          "bottom": 594.7551870927965
+        },
+        "visible": {
+          "left": 258.50079053161136,
+          "top": 445.0410483405342,
+          "right": 396.2921299275947,
+          "bottom": 594.0005795386016
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_floatstinger_016 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 903.9067772116116,
+          "top": 409.88638529185164,
+          "right": 1044.8192709700559,
+          "bottom": 559.3633611020911
+        },
+        "visible": {
+          "left": 904.7096974039674,
+          "top": 410.2878453880295,
+          "right": 1044.1501708097594,
+          "bottom": 558.5604409097352
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_night_flutter_002/sh1_floatstinger_016 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_016/sh1_night_flutter_002 asset preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_floatstinger_016/sh1_night_flutter_002 real intro completes",
+      "passed": true,
+      "detail": {
+        "ticks": 228,
+        "phase": "fight"
+      }
+    },
+    {
+      "name": "sh1_floatstinger_016/sh1_night_flutter_002 actors face one another",
+      "passed": true,
+      "detail": [
+        {
+          "id": "sh1_floatstinger_016",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        },
+        {
+          "id": "sh1_night_flutter_002",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "state": {
+            "ko": false,
+            "hurt": false,
+            "phase": false,
+            "knockdown": false,
+            "dodging": false,
+            "blocking": false,
+            "crouching": false,
+            "airborne": false,
+            "moving": false,
+            "frame": 198,
+            "hitFlash": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "sh1_floatstinger_016/sh1_night_flutter_002 fight idle never draws portraits",
+      "passed": true,
+      "detail": {
+        "seen": [
+          "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+          "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png"
+        ],
+        "expected": [
+          "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+          "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png"
+        ]
+      }
+    },
+    {
+      "name": "sh1_floatstinger_016 full exterior visible in slot 0",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 235.1807595475223,
+          "top": 409.88638529185164,
+          "right": 376.09325330596647,
+          "bottom": 559.3633611020911
+        },
+        "visible": {
+          "left": 235.84985970781884,
+          "top": 410.2878453880295,
+          "right": 375.2903331136107,
+          "bottom": 558.5604409097352
+        },
+        "ground": {
+          "x": 317.1428571428571,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_night_flutter_002 full exterior visible in slot 1",
+      "passed": true,
+      "detail": {
+        "exterior": {
+          "left": 883.2551360574665,
+          "top": 444.5882838080173,
+          "right": 1022.2538475401616,
+          "bottom": 594.7551870927965
+        },
+        "visible": {
+          "left": 883.7079005899834,
+          "top": 445.0410483405342,
+          "right": 1021.4992399859668,
+          "bottom": 594.0005795386016
+        },
+        "ground": {
+          "x": 962.8571428571428,
+          "y": 594
+        }
+      }
+    },
+    {
+      "name": "sh1_floatstinger_016/sh1_night_flutter_002 pause stops simulation",
+      "passed": true
+    },
+    {
+      "name": "art/registry.json unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "e6eb54a9552e9b8eaa936ed0bccef17f6969c65c56b1f370c77111a95f8b6829",
+        "after": "e6eb54a9552e9b8eaa936ed0bccef17f6969c65c56b1f370c77111a95f8b6829"
+      }
+    },
+    {
+      "name": "src/sprite-manifest.js unchanged during QA",
+      "passed": true,
+      "detail": {
+        "before": "a36edf1f86806ac34cf4d5aab26987bcf62dccc28480a8df3e3515e035769878",
+        "after": "a36edf1f86806ac34cf4d5aab26987bcf62dccc28480a8df3e3515e035769878"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "homecoming_feral_086",
+      "path": "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.20220484030255387,
+      "visibleBounds": [
+        138,
+        73,
+        1668,
+        844
+      ]
+    },
+    {
+      "id": "homecoming_feral_086",
+      "path": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9021650654110992,
+      "visibleBounds": [
+        320,
+        431,
+        944,
+        889
+      ]
+    },
+    {
+      "id": "homecoming_needler_088",
+      "path": "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+      "width": 1774,
+      "height": 887,
+      "transparentFraction": 0.6970838962897623,
+      "visibleBounds": [
+        75,
+        52,
+        1709,
+        851
+      ]
+    },
+    {
+      "id": "homecoming_needler_088",
+      "path": "assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "width": 1254,
+      "height": 1254,
+      "transparentFraction": 0.9391440214280808,
+      "visibleBounds": [
+        304,
+        416,
+        978,
+        850
+      ]
+    },
+    {
+      "id": "sh1_night_flutter_002",
+      "path": "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+      "width": 1448,
+      "height": 1086,
+      "transparentFraction": 0.7168978867148947,
+      "visibleBounds": [
+        292,
+        54,
+        1205,
+        1041
+      ]
+    },
+    {
+      "id": "sh1_night_flutter_002",
+      "path": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+      "width": 1448,
+      "height": 1086,
+      "transparentFraction": 0.7449711547266566,
+      "visibleBounds": [
+        345,
+        23,
+        1111,
+        1061
+      ]
+    },
+    {
+      "id": "sh1_floatstinger_016",
+      "path": "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "width": 1312,
+      "height": 1199,
+      "transparentFraction": 0.7021800433287902,
+      "visibleBounds": [
+        101,
+        30,
+        1143,
+        1138
+      ]
+    },
+    {
+      "id": "sh1_floatstinger_016",
+      "path": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "width": 1810,
+      "height": 869,
+      "transparentFraction": 0.6242655239717971,
+      "visibleBounds": [
+        31,
+        102,
+        1778,
+        832
+      ]
+    }
+  ],
+  "portraits": [
+    {
+      "id": "homecoming_feral_086",
+      "facing": 1,
+      "path": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "file": "portrait-homecoming_feral_086-right.png"
+    },
+    {
+      "id": "homecoming_feral_086",
+      "facing": -1,
+      "path": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "file": "portrait-homecoming_feral_086-left.png"
+    },
+    {
+      "id": "homecoming_needler_088",
+      "facing": 1,
+      "path": "assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "file": "portrait-homecoming_needler_088-right.png"
+    },
+    {
+      "id": "homecoming_needler_088",
+      "facing": -1,
+      "path": "assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "file": "portrait-homecoming_needler_088-left.png"
+    },
+    {
+      "id": "sh1_night_flutter_002",
+      "facing": 1,
+      "path": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+      "file": "portrait-sh1_night_flutter_002-right.png"
+    },
+    {
+      "id": "sh1_night_flutter_002",
+      "facing": -1,
+      "path": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+      "file": "portrait-sh1_night_flutter_002-left.png"
+    },
+    {
+      "id": "sh1_floatstinger_016",
+      "facing": 1,
+      "path": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "file": "portrait-sh1_floatstinger_016-right.png"
+    },
+    {
+      "id": "sh1_floatstinger_016",
+      "facing": -1,
+      "path": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "file": "portrait-sh1_floatstinger_016-left.png"
+    }
+  ],
+  "duels": [
+    {
+      "pair": [
+        "homecoming_feral_086",
+        "homecoming_needler_088"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 617.5213333333334
+        }
+      },
+      "geometries": [
+        {
+          "id": "homecoming_feral_086",
+          "slot": 1,
+          "path": "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+          "exterior": {
+            "left": 214.63299100266562,
+            "top": 487.9780612158511,
+            "right": 437.48051661252975,
+            "bottom": 599.4018240207831
+          },
+          "visible": {
+            "left": 231.9683678539403,
+            "top": 497.14822433282967,
+            "right": 424.16493729198544,
+            "bottom": 594.0002210888642
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00022108886423666263,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+            "args": [
+              -104.77777777777777,
+              -108.36755555555554,
+              227.77777777777774,
+              113.88888888888887
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "homecoming_needler_088",
+          "slot": 2,
+          "path": "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+          "exterior": {
+            "left": 795.4273128816826,
+            "top": 439.53656698599264,
+            "right": 1116.0311764620149,
+            "bottom": 595.5318797131393
+          },
+          "visible": {
+            "left": 802.1264980908239,
+            "top": 441.0678093195107,
+            "right": 1114.8827447118763,
+            "bottom": 594.0006373796214
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.0006373796213665628,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+            "args": [
+              -170.06195652173912,
+              -166.48892010869562,
+              347.0652173913043,
+              173.53260869565216
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+        "assets/sprites/homecoming_needler_088.04a662ecb2cb.png"
+      ],
+      "snapshots": [
+        "duel-homecoming_feral_086--homecoming_needler_088-tick0.png",
+        "duel-homecoming_feral_086--homecoming_needler_088-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "homecoming_needler_088",
+        "homecoming_feral_086"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 617.5213333333334
+        }
+      },
+      "geometries": [
+        {
+          "id": "homecoming_needler_088",
+          "slot": 1,
+          "path": "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+          "exterior": {
+            "left": 163.96885405556336,
+            "top": 439.53656698599264,
+            "right": 484.5727176358955,
+            "bottom": 595.5318797131393
+          },
+          "visible": {
+            "left": 165.11728580570184,
+            "top": 441.0678093195107,
+            "right": 477.8735324267542,
+            "bottom": 594.0006373796214
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.0006373796213665628,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+            "args": [
+              -170.06195652173912,
+              -166.48892010869562,
+              347.0652173913043,
+              173.53260869565216
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        },
+        {
+          "id": "homecoming_feral_086",
+          "slot": 2,
+          "path": "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+          "exterior": {
+            "left": 842.5195139050484,
+            "top": 487.9780612158511,
+            "right": 1065.3670395149124,
+            "bottom": 599.4018240207831
+          },
+          "visible": {
+            "left": 855.8350932255927,
+            "top": 497.14822433282967,
+            "right": 1048.031662663638,
+            "bottom": 594.0002210888642
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.00022108886423666263,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+            "args": [
+              -104.77777777777777,
+              -108.36755555555554,
+              227.77777777777774,
+              113.88888888888887
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1774,
+            "height": 887
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+        "assets/sprites/homecoming_feral_086.d944b0e329cf.png"
+      ],
+      "snapshots": [
+        "duel-homecoming_needler_088--homecoming_feral_086-tick0.png",
+        "duel-homecoming_needler_088--homecoming_feral_086-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh1_night_flutter_002",
+        "sh1_floatstinger_016"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.7718947622726
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_night_flutter_002",
+          "slot": 1,
+          "path": "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+          "exterior": {
+            "left": 257.7461829774165,
+            "top": 444.5882838080173,
+            "right": 396.7448944601116,
+            "bottom": 594.7551870927965
+          },
+          "visible": {
+            "left": 258.50079053161136,
+            "top": 445.0410483405342,
+            "right": 396.2921299275947,
+            "bottom": 594.0005795386016
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000579538601641616,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+            "args": [
+              -104.98351254480285,
+              -160.58456774193544,
+              223.3691756272401,
+              167.52688172043008
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1448,
+            "height": 1086
+          }
+        },
+        {
+          "id": "sh1_floatstinger_016",
+          "slot": 2,
+          "path": "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+          "exterior": {
+            "left": 903.9067772116116,
+            "top": 409.88638529185164,
+            "right": 1044.8192709700559,
+            "bottom": 559.3633611020911
+          },
+          "visible": {
+            "left": 904.7096974039674,
+            "top": 410.2878453880295,
+            "right": 1044.1501708097594,
+            "bottom": 558.5604409097352
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -35.439559090264765,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+            "args": [
+              -96.90635529608006,
+              -191.87999999999997,
+              179.45621351125936,
+              163.99999999999997
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1312,
+            "height": 1199
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+        "assets/sprites/sh1_floatstinger_016.80344808d0d5.png"
+      ],
+      "snapshots": [
+        "duel-sh1_night_flutter_002--sh1_floatstinger_016-tick0.png",
+        "duel-sh1_night_flutter_002--sh1_floatstinger_016-tick120.png"
+      ],
+      "idleTicks": 120
+    },
+    {
+      "pair": [
+        "sh1_floatstinger_016",
+        "sh1_night_flutter_002"
+      ],
+      "stage": "brookhaven_sh2",
+      "phase": "fight",
+      "camera": {
+        "scale": 0.9783549783549783,
+        "x": 13.852813852813824,
+        "y": 12.857142857142883,
+        "bounds": {
+          "left": 0,
+          "right": 1280,
+          "upper": 132,
+          "lower": 612.7718947622726
+        }
+      },
+      "geometries": [
+        {
+          "id": "sh1_floatstinger_016",
+          "slot": 1,
+          "path": "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+          "exterior": {
+            "left": 235.1807595475223,
+            "top": 409.88638529185164,
+            "right": 376.09325330596647,
+            "bottom": 559.3633611020911
+          },
+          "visible": {
+            "left": 235.84985970781884,
+            "top": 410.2878453880295,
+            "right": 375.2903331136107,
+            "bottom": 558.5604409097352
+          },
+          "ground": {
+            "x": 317.1428571428571,
+            "y": 594
+          },
+          "visibleBottomMinusGround": -35.439559090264765,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+            "args": [
+              -96.90635529608006,
+              -191.87999999999997,
+              179.45621351125936,
+              163.99999999999997
+            ],
+            "tick": 348,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428527832031,
+              594
+            ],
+            "width": 1312,
+            "height": 1199
+          }
+        },
+        {
+          "id": "sh1_night_flutter_002",
+          "slot": 2,
+          "path": "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+          "exterior": {
+            "left": 883.2551360574665,
+            "top": 444.5882838080173,
+            "right": 1022.2538475401616,
+            "bottom": 594.7551870927965
+          },
+          "visible": {
+            "left": 883.7079005899834,
+            "top": 445.0410483405342,
+            "right": 1021.4992399859668,
+            "bottom": 594.0005795386016
+          },
+          "ground": {
+            "x": 962.8571428571428,
+            "y": 594
+          },
+          "visibleBottomMinusGround": 0.000579538601641616,
+          "complete": true,
+          "draw": {
+            "path": "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+            "args": [
+              -104.98351254480285,
+              -160.58456774193544,
+              223.3691756272401,
+              167.52688172043008
+            ],
+            "tick": 348,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.857177734375,
+              594
+            ],
+            "width": 1448,
+            "height": 1086
+          }
+        }
+      ],
+      "seenPaths": [
+        "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+        "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png"
+      ],
+      "snapshots": [
+        "duel-sh1_floatstinger_016--sh1_night_flutter_002-tick0.png",
+        "duel-sh1_floatstinger_016--sh1_night_flutter_002-tick120.png"
+      ],
+      "idleTicks": 120
+    }
+  ],
+  "errors": [],
+  "dependencies": {
+    "canvas": "0.1.100",
+    "sharp": "0.35.5",
+    "node": "v24.22.3"
+  },
+  "art/registry.jsonSHA256": "e6eb54a9552e9b8eaa936ed0bccef17f6969c65c56b1f370c77111a95f8b6829",
+  "src/sprite-manifest.jsSHA256": "a36edf1f86806ac34cf4d5aab26987bcf62dccc28480a8df3e3515e035769878",
+  "version": "0.9.6",
+  "ids": [
+    "homecoming_feral_086",
+    "homecoming_needler_088",
+    "sh1_night_flutter_002",
+    "sh1_floatstinger_016"
+  ],
+  "stage": {
+    "id": "brookhaven_sh2",
+    "name": "BROOKHAVEN — BASEMENT"
+  },
+  "passed": true
+}

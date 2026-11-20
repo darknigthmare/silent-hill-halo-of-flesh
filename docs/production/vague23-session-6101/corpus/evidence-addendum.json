@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "kind": "corpus-evidence-addendum",
+  "asOf": "2026-11-19",
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "branch": "art/missing-fullbody-20261117",
+  "inspectedCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "inspectedPaths": [
+    "docs/BIBLE_CORPUS_SILENT_HILL.md",
+    "docs/production/franchise-corpus.json"
+  ],
+  "inspectedRevision": "2026-11-19-final-66",
+  "inspectedRecordCount": 66,
+  "scope": "Differences utiles entre les notices existantes et des sources primaires supplémentaires, sans modification des fichiers centraux ni du classeur.",
+  "newWorks": [],
+  "runtimeAdditions": 0,
+  "centralFilesModified": false,
+  "workbookModified": false,
+  "findings": [
+    {
+      "id": "ascension-runtime-and-what-if-dates",
+      "targetRecordId": "ascension_2023",
+      "classification": "new-factual-detail",
+      "existingState": "Série interactive publiée en 2023 ; les notes n'indiquent pas les dates de fin du parcours interactif ni de la diffusion What-If. Elles signalent que la disponibilité actuelle des applications n'a pas été réauditée.",
+      "verifiedFacts": [
+        "Genvid indique que la portion interactive de la série s'est terminée le 14 avril 2024.",
+        "Genvid indique que la diffusion ultérieure What-If s'est terminée le 15 juillet 2024.",
+        "Genvid présente le parcours canonique et les épisodes terminés comme visionnables à la demande sur ascension.com."
+      ],
+      "proposedNote": "Selon Genvid, la portion interactive s'est achevée le 14/04/2024 ; la diffusion What-If s'est achevée le 15/07/2024. Les choix de ces variantes ne doivent pas être assimilés sans distinction au parcours canonique. Genvid annonce les épisodes en consultation à la demande ; leur lecture effective et la disponibilité des applications n'ont pas été testées.",
+      "sourceUrls": [
+        "https://genvid.com/silent-hill-ascension-2/"
+      ],
+      "evidenceType": "primary-publisher-statement",
+      "applicabilityLimits": [
+        "La page a été lue, mais aucun épisode n'a été intégralement visionné.",
+        "Les applications mobiles et la lecture effective sur ascension.com n'ont pas été testées.",
+        "Aucune nouvelle œuvre, issue narrative, identité de monstre ou arène n'est déduite de ces dates."
+      ]
+    },
+    {
+      "id": "arcade-direct-primary-product-source",
+      "targetRecordId": "the_arcade_2007",
+      "classification": "additional-primary-source",
+      "existingState": "L'existence de l'œuvre est actuellement appuyée par le corpus existant et une chronologie spécialisée.",
+      "verifiedFacts": [
+        "Le catalogue Konami contient une page produit SILENT HILL THE ARCADE.",
+        "La page le classe comme jeu vidéo pour un à deux joueurs.",
+        "Konami y indique la fin du service e-amusement associé."
+      ],
+      "proposedNote": "La fiche produit officielle Konami confirme l'identité du jeu, le mode un à deux joueurs et la fin du service e-amusement. Elle ne suffit pas à dater précisément la sortie initiale.",
+      "sourceUrls": [
+        "https://www.konami.com/arcadegames/products/site/am_silent_hill/"
+      ],
+      "evidenceType": "primary-manufacturer-product-page",
+      "applicabilityLimits": [
+        "Conserver la chronologie existante pour l'année de publication tant qu'aucune preuve primaire datée de lancement n'est jointe.",
+        "La page ne certifie pas la complétude du bestiaire ni du stage arcade_ship."
+      ]
+    },
+    {
+      "id": "book-of-memories-direct-primary-product-source",
+      "targetRecordId": "book_of_memories_2012",
+      "classification": "additional-primary-source",
+      "existingState": "L'existence de l'œuvre est actuellement appuyée par le corpus existant et une chronologie spécialisée.",
+      "verifiedFacts": [
+        "La fiche Konami confirme Book of Memories sur PlayStation Vita.",
+        "Elle décrit un dungeon crawler avec éléments RPG et coopération jusqu'à quatre joueurs."
+      ],
+      "proposedNote": "La fiche officielle Konami confirme le jeu PS Vita et sa coopération jusqu'à quatre joueurs. Le titre du registre reste Book of Memories au singulier ; le titre de la page anglaise comporte Books, tandis que son descriptif emploie Book.",
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/en/products/shbom/"
+      ],
+      "evidenceType": "primary-publisher-product-page",
+      "applicabilityLimits": [
+        "La date affichée sur la fiche régionale anglaise ne doit pas être substituée à une première sortie mondiale sans comparer les régions.",
+        "La fiche ne permet pas de conclure à la couverture exhaustive de l'extension de 2013, déjà indexée séparément."
+      ]
+    },
+    {
+      "id": "the-escape-mobile-primary-operator-catalogue",
+      "targetRecordId": "the_escape_mobile_2007",
+      "classification": "additional-primary-source",
+      "existingState": "La notice utilise une annonce de presse contemporaine et un communiqué Konami republié.",
+      "verifiedFacts": [
+        "Le catalogue officiel NTT DoCoMo des nouveautés i-app automne-hiver 2007 contient SILENT HILL The Escape, fourni par Konami Digital Entertainment.",
+        "La description mentionne la recherche d'une sortie et la visée au moyen de l'orientation du téléphone."
+      ],
+      "proposedNote": "Le catalogue officiel NTT DoCoMo des nouveautés i-app de l'automne-hiver 2007 atteste également le titre et son fournisseur Konami. Ce catalogue prévisionnel ne prouve pas la disponibilité effective au 19/12/2007 : les sources de lancement déjà présentes restent nécessaires.",
+      "sourceUrls": [
+        "https://www.docomo.ne.jp/binary/pdf/info/news_release/page/news_release070918_01.pdf"
+      ],
+      "sourcePage": 1,
+      "evidenceType": "primary-platform-operator-announcement",
+      "applicabilityLimits": [
+        "L'attestation porte sur une annonce/catalogue, pas sur une date de commercialisation effective.",
+        "Ne pas modifier releaseDate ni fusionner ce titre avec Silent Hill Escape de Konami Gaming.",
+        "Analyse de l'extraction textuelle du PDF ; la capture de page demandée a expiré."
+      ]
+    }
+  ],
+  "alreadyCorrect": [
+    {
+      "recordId": "silent_hill_transmission",
+      "finding": "Programme promotionnel correctement séparé des œuvres jouables ; aucune correction."
+    },
+    {
+      "recordId": "townfall_2026",
+      "finding": "Sortie le 24/09/2026 déjà documentée ; marina de St. Amelia déjà raccordée ; aucune correction."
+    },
+    {
+      "recordId": "the_short_message_2024",
+      "finding": "Œuvre et raccord villa déjà présents ; aucune nouvelle notice nécessaire."
+    },
+    {
+      "recordId": "silent_hill_f_2025",
+      "finding": "Œuvre et raccord ebisugaoka déjà présents ; aucune nouvelle notice nécessaire."
+    },
+    {
+      "recordId": "crossover_dead_by_daylight_2020",
+      "finding": "Provenance de crossover correctement séparée ; aucune nouvelle notice nécessaire."
+    },
+    {
+      "recordId": "machine_silent_hill_escape",
+      "finding": "Machine distincte du jeu mobile ; séparation annonce, lancement visé et catalogue déjà correcte."
+    },
+    {
+      "recordId": "machine_silent_hill_return",
+      "finding": "Machine distincte du film ; séparation annonce, lancement visé et catalogue déjà correcte."
+    }
+  ],
+  "nonActions": [
+    "Aucune nouvelle entrée parmi les 66 notices.",
+    "Aucune modification de la phase historique before-wave21.",
+    "Aucune promotion d'un statut documentaire en preuve de fidélité visuelle 1:1.",
+    "Aucune modification du registre runtime, du classeur historique ou du classeur Corpus / Stages."
+  ]
+}

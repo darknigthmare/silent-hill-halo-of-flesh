@@ -1,7 +1,8 @@
 /** Raster-only monster presentation. Combat geometry is deliberately unchanged. */
 import { SPRITES } from './sprite-manifest.js';
-import {poseFromState,sampleSpriteClip} from './sprite-animation.js';
+import {actorSpriteState,poseFromState,sampleSpriteClip} from './sprite-animation.js';
 import { bodyProfile } from './combat-geometry.js';
+import {hasCombatSprite,spriteUsage} from './sprite-usage.js';
 const own=(o,k)=>Object.prototype.hasOwnProperty.call(o,k);
 const clamp=(v,lo,hi)=>Math.max(lo,Math.min(hi,Number.isFinite(v)?v:lo));
 export const assetURL=path=>new URL('../'+path,import.meta.url).href;
@@ -11,16 +12,52 @@ export function spriteFor(fighter,registry=SPRITES){
   if(!art||art.fighterId!==id||typeof fighter==='object'&&fighter.source!==art.source)return null;
   return art;
 }
-export function spriteStatus(fighter){
-  const art=spriteFor(fighter);
-  return art?{kind:'candidate',label:'IMAGE INTÉGRÉE · FIDÉLITÉ À VALIDER',frames:art.frames.length,animatedClips:art.animatedClips||0}
-    :{kind:'missing',label:'SPRITE À PRODUIRE',frames:0,animatedClips:0};
+export function combatSpriteFor(fighter,registry=SPRITES){
+  const art=spriteFor(fighter,registry);return hasCombatSprite(art)?art:null;
 }
-export function spriteCoverage(fighters){
-  const missing=fighters.filter(f=>!spriteFor(f));
+/** Keep a retiring match renderable without retaining its unused attack/idle poses. */
+export function retainedCombatFrames(engine,registry=SPRITES){
+  if(!engine||engine.destroyed)return [];
+  const frames=engine.actors.flatMap(actor=>{
+    const art=combatSpriteFor(actor.data,registry);
+    // A live or reversible round may still use every combat pose.
+    if(engine.phase!=='matchEnd'||!actor.presentation)return art?.frames||[];
+    const state=actorSpriteState(actor),sample=sampleSpriteClip(art,state);
+    if(!sample)return [];
+    const idle=state.weaponContext===undefined?'idle':`idle@${state.weaponContext}`;
+    // Missing presentations hold the first idle image, even for an animated idle.
+    if(sample.fallback&&sample.pose===idle)return [sample.frame];
+    // An in-progress outro must retain its whole resolved clip, not just this tick.
+    return art.clips[sample.pose].frames.map(index=>art.frames[index]).filter(Boolean);
+  });
+  return [...new Map(frames.map(frame=>[frame.path,frame])).values()];
+}
+/** A completed, visible result can keep its canvas pixels instead of its image lease. */
+export function shouldRetireCompletedCombat(engine,nextFrames,{settled=false,resultVisible=false,
+  retainedFrames=retainedCombatFrames(engine),cache=spriteCache}={}){
+  if(!settled||!resultVisible||!engine||engine.destroyed||engine.phase!=='matchEnd'||
+    typeof engine.isPresentingOutro!=='function'||engine.isPresentingOutro())return false;
+  // A cold replacement must fit on its own. Invalid or oversized sets never
+  // justify releasing a result; only the otherwise-valid overlap does.
+  try{cache.validatePins(nextFrames);cache.validatePins(retainedFrames);}catch{return false;}
+  try{cache.validatePins([...nextFrames,...retainedFrames]);return false;}
+  catch(error){return error instanceof RangeError;}
+}
+export function spriteStatus(fighter,registry=SPRITES){
+  const art=spriteFor(fighter,registry),usage=spriteUsage(art);
+  return art?{kind:usage.combatView==='missing'?'selection-only':'candidate',
+    label:usage.combatView==='missing'?'SÉLECTION DISPONIBLE · COMBAT À PRODUIRE':usage.combatView==='side-view-candidate'?'SÉLECTION + COMBAT LATÉRAL · FIDÉLITÉ À VALIDER':'IMAGE HISTORIQUE · VUE DE COMBAT À CONTRÔLER',
+    frames:art.frames.length,animatedClips:art.animatedClips||0,...usage}
+    :{kind:'missing',label:'SÉLECTION ET COMBAT À PRODUIRE',frames:0,animatedClips:0,...usage};
+}
+export function spriteCoverage(fighters,registry=SPRITES){
+  const artFor=f=>spriteFor(f,registry),missing=fighters.filter(f=>!artFor(f)),uses=fighters.map(f=>({id:f.id,...spriteUsage(artFor(f))}));
   return {total:fighters.length,integrated:fighters.length-missing.length,missing:missing.map(f=>f.id),
-    certified:fighters.filter(f=>spriteFor(f)?.fidelity==='verified').length,
-    animatedClips:fighters.reduce((n,f)=>n+(spriteFor(f)?.animatedClips||0),0)};
+    selectionAvailable:uses.filter(e=>e.selection).length,selectionMissing:uses.filter(e=>!e.selection).map(e=>e.id),
+    combatSideViewCandidates:uses.filter(e=>e.combatView==='side-view-candidate').length,combatLegacyUnreviewed:uses.filter(e=>e.combatView==='legacy-unreviewed').length,
+    combatMissing:uses.filter(e=>e.combatView==='missing').map(e=>e.id),separateSelectionAndCombat:uses.filter(e=>e.separateSelectionAndCombat).length,
+    certified:fighters.filter(f=>artFor(f)?.fidelity==='verified').length,
+    animatedClips:fighters.reduce((n,f)=>n+(artFor(f)?.animatedClips||0),0)};
 }
 export const poseKey=poseFromState;
 export function frameFor(art,state={}){return sampleSpriteClip(art,state)?.frame||null;}
@@ -93,11 +130,11 @@ export class SpriteCache{
     }catch{finish(false,'image-unavailable');}
    }}finally{this.pumping=false;}
   }
-  async prepare(fighters,{retry=true,diagnostic=false}={}){
+  async prepare(fighters,{retry=true,diagnostic=false,registry=SPRITES}={}){
     const unique=[...new Map(fighters.filter(Boolean).map(f=>[f.id,f])).values()];
-    const missing=unique.filter(f=>!spriteFor(f));
+    const missing=unique.filter(f=>!combatSpriteFor(f,registry));
     if(missing.length&&!diagnostic)return {ok:false,missing:missing.map(f=>f.id),failed:[]};
-    const descriptors=unique.flatMap(f=>spriteFor(f)?.frames||[]);
+    const descriptors=unique.flatMap(f=>combatSpriteFor(f,registry)?.frames||[]);
     // Keep booleans, never a long-lived array of decoded images: a run may exceed the LRU budget.
     // Only its current pair is pinned and loaded again immediately before the engine starts.
     const decoded=await Promise.all(descriptors.map(f=>this.load(f,{retry}).then(Boolean)));
@@ -106,7 +143,7 @@ export class SpriteCache{
   }
 }
 export const spriteCache=new SpriteCache();
-export function pinCombatSprites(fighters){spriteCache.pin(fighters.flatMap(f=>spriteFor(f)?.frames||[]));}
+export function pinCombatSprites(fighters){spriteCache.pin(fighters.flatMap(f=>combatSpriteFor(f)?.frames||[]));}
 function drawMissing(ctx,x,y,width,height,text){
   ctx.save();ctx.fillStyle='rgba(12,15,13,.88)';ctx.fillRect(x,y,width,height);
   ctx.strokeStyle='rgba(153,126,103,.5)';ctx.lineWidth=1;ctx.strokeRect(x+.5,y+.5,width-1,height-1);
@@ -115,9 +152,9 @@ function drawMissing(ctx,x,y,width,height,text){
 }
 export function drawRasterMonster(ctx,fighter,x,y,{facing=1,state={},alpha=1,shadow=true,diagnostic=false,cache=spriteCache,registry=SPRITES}={}){
   if(!fighter)return {kind:'missing'};
-  const art=spriteFor(fighter,registry),sample=sampleSpriteClip(art,state),frame=sample?.frame,image=frame&&cache.peek(frame.path);
+  const art=combatSpriteFor(fighter,registry),selection=spriteFor(fighter,registry),sample=sampleSpriteClip(art,state),frame=sample?.frame,image=frame&&cache.peek(frame.path);
   if(!image){const p=bodyProfile(fighter,state),w=Math.max(156,p.width*p.scale),h=p.height*p.scale;
-    drawMissing(ctx,x-w/2,y-h,w,h,!art?'VISUEL À PRODUIRE':!frame?state.weaponContext?'POSE D’ARME À PRODUIRE':'POSE À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT IMAGE');
+    drawMissing(ctx,x-w/2,y-h,w,h,!art?selection?'SPRITE DE COMBAT À PRODUIRE':'VISUEL À PRODUIRE':!frame?state.weaponContext?'POSE D’ARME À PRODUIRE':'POSE À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT IMAGE');
     // Request only once. A failed file is retried by preflight, not every render frame.
     if(frame&&cache.status(frame.path)==='absent')void cache.load(frame);
     return {kind:!art||!frame?'missing':cache.status(frame.path)==='error'?'error':'loading'};
@@ -146,9 +183,9 @@ export function paintRasterPortrait(canvas,fighter,{background=true,facing=1,cac
     const image=decodedImage||(frame&&cache.peek(frame.path));
     if(image){const b=frame.visibleBounds||[0,0,frame.width,frame.height],sw=b[2]-b[0],sh=b[3]-b[1],scale=Math.max(.01,Math.min((w-12)/sw,(h-12)/sh)),dw=sw*scale,dh=sh*scale;
       ctx.save();ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.translate(w/2,h/2);ctx.scale((facing<0?-1:1)*(frame.facing??art.frames.find(f=>f.path===frame.path)?.facing??1),1);ctx.drawImage(image,b[0],b[1],sw,sh,-dw/2,-dh/2,dw,dh);ctx.restore();
-    }else drawMissing(ctx,5,5,Math.max(20,w-10),Math.max(20,h-10),!art?'SPRITE À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT');
-    if(canvas.dataset){canvas.dataset.spriteId=fighter.id;canvas.dataset.artStatus=!art?'missing':image?'raster':cache.status(frame.path);}
-    canvas.setAttribute?.('role','img');canvas.setAttribute?.('aria-label',fighter.name+' — '+spriteStatus(fighter).label);
+    }else drawMissing(ctx,5,5,Math.max(20,w-10),Math.max(20,h-10),!frame?'SÉLECTION À PRODUIRE':cache.status(frame.path)==='error'?'IMAGE INDISPONIBLE':'CHARGEMENT');
+    if(canvas.dataset){canvas.dataset.spriteId=fighter.id;canvas.dataset.artStatus=!frame?'missing':image?'raster':cache.status(frame.path);canvas.dataset.artPurpose='selection';}
+    canvas.setAttribute?.('role','img');canvas.setAttribute?.('aria-label',fighter.name+' — '+spriteStatus(fighter,registry).label);
   };
   paint();if(frame&&cache.status(frame.path)!=='ready')void cache.load(frame).then(image=>paint(image));
 }
