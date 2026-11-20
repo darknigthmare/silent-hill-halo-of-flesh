@@ -1,0 +1,1178 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "createdAt": "2026-11-20T13:01:10.125Z",
+  "passed": true,
+  "method": "SHA256 validation of each successful process, tested manifest entry, source module, asset, capture and visual-review record against the final tree. No new render or test execution is counted.",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "Run completed successfully: docs/production/vague26/qa-native/collector",
+      "passed": true
+    },
+    {
+      "name": "Successful observed process: docs/production/vague26/qa-native/collector/ascension_the_collector_183/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact QA harness: docs/production/vague26/qa-native/collector/ascension_the_collector_183/report.json",
+      "passed": true
+    },
+    {
+      "name": "Every recorded assertion passed: docs/production/vague26/qa-native/collector/ascension_the_collector_183/report.json",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite and stage hashes are present: docs/production/vague26/qa-native/collector/ascension_the_collector_183/report.json",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: ascension_the_collector_183",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: sh2_creeper_025",
+      "passed": true
+    },
+    {
+      "name": "Final tested stage: hazel_subway",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/ascension_the_collector_183.d157ac2cd4c2.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/ascension_the_collector_183.55a90d583450.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/collector/ascension_the_collector_183/selection-ascension_the_collector_183.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/collector/ascension_the_collector_183/ascension_the_collector_183-reference-right.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/collector/ascension_the_collector_183/ascension_the_collector_183-reference-left.png",
+      "passed": true
+    },
+    {
+      "name": "Each updated character has one successful process: ascension_the_collector_183",
+      "passed": true
+    },
+    {
+      "name": "Process summary counts match the underlying reports: docs/production/vague26/qa-native/collector",
+      "passed": true
+    },
+    {
+      "name": "Visual review lists accepted entries: docs/production/vague26/qa-native/collector",
+      "passed": true
+    },
+    {
+      "name": "Visual decision accepted: ascension_the_collector_183",
+      "passed": true
+    },
+    {
+      "name": "Visual decision is bound to its own process report",
+      "passed": true
+    },
+    {
+      "name": "Visual review references actual captures",
+      "passed": true
+    },
+    {
+      "name": "Visual evidence contains distinct captures",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/collector/ascension_the_collector_183/ascension_the_collector_183-reference-right.png",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/collector/ascension_the_collector_183/ascension_the_collector_183-reference-left.png",
+      "passed": true
+    },
+    {
+      "name": "Both observed orientations were visually reviewed: ascension_the_collector_183",
+      "passed": true
+    },
+    {
+      "name": "Visually reviewed active candidate is still exact: ascension_the_collector_183",
+      "passed": true
+    },
+    {
+      "name": "Run completed successfully: docs/production/vague26/qa-native/creeper",
+      "passed": true
+    },
+    {
+      "name": "Successful observed process: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact QA harness: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/report.json",
+      "passed": true
+    },
+    {
+      "name": "Every recorded assertion passed: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/report.json",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite and stage hashes are present: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/report.json",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: film_creeper_swarm_film_173",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: sh2_creeper_025",
+      "passed": true
+    },
+    {
+      "name": "Final tested stage: nightmare_theater",
+      "passed": true
+    },
+    {
+      "name": "Final tested stage: frozen_streets",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/film_creeper_swarm_film_173.1eb188e475c8.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_theater.bg-caliban-cave.8f0e3e6b78df.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_theater.near-edges.b6a4c8f79dfe.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/frozen_streets.bg-frozen-exterior.01d899430889.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/frozen_streets.near-edges.977b819041c2.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/selection-film_creeper_swarm_film_173.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-right-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-right-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-right-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-left-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-left-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-left-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Each updated character has one successful process: film_creeper_swarm_film_173",
+      "passed": true
+    },
+    {
+      "name": "Process summary counts match the underlying reports: docs/production/vague26/qa-native/creeper",
+      "passed": true
+    },
+    {
+      "name": "Visual review lists accepted entries: docs/production/vague26/qa-native/creeper",
+      "passed": true
+    },
+    {
+      "name": "Visual decision accepted: film_creeper_swarm_film_173",
+      "passed": true
+    },
+    {
+      "name": "Visual decision is bound to its own process report",
+      "passed": true
+    },
+    {
+      "name": "Visual review references actual captures",
+      "passed": true
+    },
+    {
+      "name": "Visual evidence contains distinct captures",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-right-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/film_creeper_swarm_film_173-left-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Both observed orientations were visually reviewed: film_creeper_swarm_film_173",
+      "passed": true
+    },
+    {
+      "name": "Visually reviewed active candidate is still exact: film_creeper_swarm_film_173",
+      "passed": true
+    },
+    {
+      "name": "Run completed successfully: docs/production/vague26/qa-native/stalker",
+      "passed": true
+    },
+    {
+      "name": "Successful observed process: docs/production/vague26/qa-native/stalker/sh1_stalker_008/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact QA harness: docs/production/vague26/qa-native/stalker/sh1_stalker_008/report.json",
+      "passed": true
+    },
+    {
+      "name": "Every recorded assertion passed: docs/production/vague26/qa-native/stalker/sh1_stalker_008/report.json",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite and stage hashes are present: docs/production/vague26/qa-native/stalker/sh1_stalker_008/report.json",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: sh1_stalker_008",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: sh2_creeper_025",
+      "passed": true
+    },
+    {
+      "name": "Final tested stage: nightmare_school",
+      "passed": true
+    },
+    {
+      "name": "Final tested stage: nightmare_mall_sm",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/sh1_stalker_008.7ae11fd6c58f.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/sh1_stalker_008.4cf565113e5e.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_school.bg-paparazzi-courtyard.7c088206ee69.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_school.near-edges.ee6b79600353.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_mall_sm.bg-gumball-hall.d8c394cba667.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_mall_sm.near-edges.26763553fee9.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stalker/sh1_stalker_008/selection-sh1_stalker_008.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-right-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-right-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-right-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-left-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-left-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-left-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Each updated character has one successful process: sh1_stalker_008",
+      "passed": true
+    },
+    {
+      "name": "Process summary counts match the underlying reports: docs/production/vague26/qa-native/stalker",
+      "passed": true
+    },
+    {
+      "name": "Visual review lists accepted entries: docs/production/vague26/qa-native/stalker",
+      "passed": true
+    },
+    {
+      "name": "Visual decision accepted: sh1_stalker_008",
+      "passed": true
+    },
+    {
+      "name": "Visual decision is bound to its own process report",
+      "passed": true
+    },
+    {
+      "name": "Visual review references actual captures",
+      "passed": true
+    },
+    {
+      "name": "Visual evidence contains distinct captures",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-right-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/stalker/sh1_stalker_008/sh1_stalker_008-left-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Both observed orientations were visually reviewed: sh1_stalker_008",
+      "passed": true
+    },
+    {
+      "name": "Visually reviewed active candidate is still exact: sh1_stalker_008",
+      "passed": true
+    },
+    {
+      "name": "Run completed successfully: docs/production/vague26/qa-native/stages-a",
+      "passed": true
+    },
+    {
+      "name": "Successful observed process: docs/production/vague26/qa-native/stages-a/nightmare_theater/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact QA harness: docs/production/vague26/qa-native/stages-a/nightmare_theater/report.json",
+      "passed": true
+    },
+    {
+      "name": "Every recorded assertion passed: docs/production/vague26/qa-native/stages-a/nightmare_theater/report.json",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite and stage hashes are present: docs/production/vague26/qa-native/stages-a/nightmare_theater/report.json",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: bom_pyramid_head_129",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: bom_butcher_123",
+      "passed": true
+    },
+    {
+      "name": "Final tested stage: nightmare_theater",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_theater.bg-caliban-cave.8f0e3e6b78df.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_theater.near-edges.b6a4c8f79dfe.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stages-a/nightmare_theater/nightmare_theater.png",
+      "passed": true
+    },
+    {
+      "name": "Successful observed process: docs/production/vague26/qa-native/stages-a/nightmare_school/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact QA harness: docs/production/vague26/qa-native/stages-a/nightmare_school/report.json",
+      "passed": true
+    },
+    {
+      "name": "Every recorded assertion passed: docs/production/vague26/qa-native/stages-a/nightmare_school/report.json",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite and stage hashes are present: docs/production/vague26/qa-native/stages-a/nightmare_school/report.json",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: bom_pyramid_head_129",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: bom_butcher_123",
+      "passed": true
+    },
+    {
+      "name": "Final tested stage: nightmare_school",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_school.bg-paparazzi-courtyard.7c088206ee69.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_school.near-edges.ee6b79600353.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stages-a/nightmare_school/nightmare_school.png",
+      "passed": true
+    },
+    {
+      "name": "Successful observed process: docs/production/vague26/qa-native/stages-a/nightmare_mall_sm/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact QA harness: docs/production/vague26/qa-native/stages-a/nightmare_mall_sm/report.json",
+      "passed": true
+    },
+    {
+      "name": "Every recorded assertion passed: docs/production/vague26/qa-native/stages-a/nightmare_mall_sm/report.json",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite and stage hashes are present: docs/production/vague26/qa-native/stages-a/nightmare_mall_sm/report.json",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: bom_pyramid_head_129",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: bom_butcher_123",
+      "passed": true
+    },
+    {
+      "name": "Final tested stage: nightmare_mall_sm",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_mall_sm.bg-gumball-hall.d8c394cba667.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/nightmare_mall_sm.near-edges.26763553fee9.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stages-a/nightmare_mall_sm/nightmare_mall_sm.png",
+      "passed": true
+    },
+    {
+      "name": "Process summary counts match the underlying reports: docs/production/vague26/qa-native/stages-a",
+      "passed": true
+    },
+    {
+      "name": "Visual review lists accepted entries: docs/production/vague26/qa-native/stages-a",
+      "passed": true
+    },
+    {
+      "name": "Visual decision accepted: nightmare_theater",
+      "passed": true
+    },
+    {
+      "name": "Visual decision is bound to its own process report",
+      "passed": true
+    },
+    {
+      "name": "Visual review references actual captures",
+      "passed": true
+    },
+    {
+      "name": "Visual evidence contains distinct captures",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/stages-a/nightmare_theater/nightmare_theater.png",
+      "passed": true
+    },
+    {
+      "name": "Visual decision accepted: nightmare_school",
+      "passed": true
+    },
+    {
+      "name": "Visual decision is bound to its own process report",
+      "passed": true
+    },
+    {
+      "name": "Visual review references actual captures",
+      "passed": true
+    },
+    {
+      "name": "Visual evidence contains distinct captures",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/stages-a/nightmare_school/nightmare_school.png",
+      "passed": true
+    },
+    {
+      "name": "Visual decision accepted: nightmare_mall_sm",
+      "passed": true
+    },
+    {
+      "name": "Visual decision is bound to its own process report",
+      "passed": true
+    },
+    {
+      "name": "Visual review references actual captures",
+      "passed": true
+    },
+    {
+      "name": "Visual evidence contains distinct captures",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/stages-a/nightmare_mall_sm/nightmare_mall_sm.png",
+      "passed": true
+    },
+    {
+      "name": "Run completed successfully: docs/production/vague26/qa-native/stages-b",
+      "passed": true
+    },
+    {
+      "name": "Successful observed process: docs/production/vague26/qa-native/stages-b/frozen_streets/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact QA harness: docs/production/vague26/qa-native/stages-b/frozen_streets/report.json",
+      "passed": true
+    },
+    {
+      "name": "Every recorded assertion passed: docs/production/vague26/qa-native/stages-b/frozen_streets/report.json",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite and stage hashes are present: docs/production/vague26/qa-native/stages-b/frozen_streets/report.json",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: bom_pyramid_head_129",
+      "passed": true
+    },
+    {
+      "name": "Final tested sprite: bom_butcher_123",
+      "passed": true
+    },
+    {
+      "name": "Final tested stage: frozen_streets",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source stayed read-only during process: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final renderer/gameplay module is still exact: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/frozen_streets.bg-frozen-exterior.01d899430889.png",
+      "passed": true
+    },
+    {
+      "name": "Final tested PNG is exact: assets/stages/frozen_streets.near-edges.977b819041c2.png",
+      "passed": true
+    },
+    {
+      "name": "Retained capture is exact: docs/production/vague26/qa-native/stages-b/frozen_streets/frozen_streets.png",
+      "passed": true
+    },
+    {
+      "name": "Process summary counts match the underlying reports: docs/production/vague26/qa-native/stages-b",
+      "passed": true
+    },
+    {
+      "name": "Visual review lists accepted entries: docs/production/vague26/qa-native/stages-b",
+      "passed": true
+    },
+    {
+      "name": "Visual decision accepted: frozen_streets",
+      "passed": true
+    },
+    {
+      "name": "Visual decision is bound to its own process report",
+      "passed": true
+    },
+    {
+      "name": "Visual review references actual captures",
+      "passed": true
+    },
+    {
+      "name": "Visual evidence contains distinct captures",
+      "passed": true
+    },
+    {
+      "name": "Viewed capture agrees with its own identity and report: docs/production/vague26/qa-native/stages-b/frozen_streets/frozen_streets.png",
+      "passed": true
+    },
+    {
+      "name": "All and only the updated characters were executed and visually reviewed",
+      "passed": true
+    },
+    {
+      "name": "Expected stage IDs are unique and nonempty",
+      "passed": true
+    },
+    {
+      "name": "All and only the declared added stages were executed and visually reviewed",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "kind": "characters",
+      "path": "docs/production/vague26/qa-native/collector",
+      "processes": [
+        {
+          "path": "docs/production/vague26/qa-native/collector/ascension_the_collector_183/report.json",
+          "sha256": "2a391753c53e1376cc4f84f809d260cebbed6534979b0df9112ca0cd5069ebb7",
+          "assertions": 36,
+          "captures": 3
+        }
+      ],
+      "generatedCaptures": 3,
+      "automatedChecks": 36
+    },
+    {
+      "kind": "characters",
+      "path": "docs/production/vague26/qa-native/creeper",
+      "processes": [
+        {
+          "path": "docs/production/vague26/qa-native/creeper/film_creeper_swarm_film_173/report.json",
+          "sha256": "ebd9189889ebfb886f21cffe5b80d1e64a4517d0a178e0b41a4a8a6f4ca9bff3",
+          "assertions": 72,
+          "captures": 7
+        }
+      ],
+      "generatedCaptures": 7,
+      "automatedChecks": 72
+    },
+    {
+      "kind": "characters",
+      "path": "docs/production/vague26/qa-native/stalker",
+      "processes": [
+        {
+          "path": "docs/production/vague26/qa-native/stalker/sh1_stalker_008/report.json",
+          "sha256": "20854ea9fd4c4d947badb63c49a0f83daff588d263530794835db42a8c76ed6b",
+          "assertions": 72,
+          "captures": 7
+        }
+      ],
+      "generatedCaptures": 7,
+      "automatedChecks": 72
+    },
+    {
+      "kind": "stages",
+      "path": "docs/production/vague26/qa-native/stages-a",
+      "processes": [
+        {
+          "path": "docs/production/vague26/qa-native/stages-a/nightmare_theater/report.json",
+          "sha256": "6817b010396788d33ebe5f4a67ff5619b458a15a9fd0374b0aa229c27c9bec8f",
+          "assertions": 46,
+          "captures": 1
+        },
+        {
+          "path": "docs/production/vague26/qa-native/stages-a/nightmare_school/report.json",
+          "sha256": "8b008846f938b0ece75e9fbc80d8ddea7b485443e09a142b9760f2ce53dafa0e",
+          "assertions": 46,
+          "captures": 1
+        },
+        {
+          "path": "docs/production/vague26/qa-native/stages-a/nightmare_mall_sm/report.json",
+          "sha256": "2cc2d14393d567fbf28753109ecc217008c86a2954fca5928de058a7f5b57e05",
+          "assertions": 46,
+          "captures": 1
+        }
+      ],
+      "generatedCaptures": 3,
+      "automatedChecks": 138
+    },
+    {
+      "kind": "stages",
+      "path": "docs/production/vague26/qa-native/stages-b",
+      "processes": [
+        {
+          "path": "docs/production/vague26/qa-native/stages-b/frozen_streets/report.json",
+          "sha256": "cadd604c225b0849eedcbc13f6a9af280db451108de964c9acbe12eec6eece96",
+          "assertions": 46,
+          "captures": 1
+        }
+      ],
+      "generatedCaptures": 1,
+      "automatedChecks": 46
+    }
+  ],
+  "visualReviews": [
+    {
+      "path": "docs/production/vague26/qa-native/collector/visual-review.json",
+      "sha256": "6b5f8479d820a4f5ecca09cb915d3a9b6406f8db45a094f535046ded071ef2f3",
+      "entries": 1,
+      "capturesReferenced": 2
+    },
+    {
+      "path": "docs/production/vague26/qa-native/creeper/visual-review.json",
+      "sha256": "409a632bba6283a14d39a91af73d8bdfb255f7b21322e74d77112a5e0a38b1ca",
+      "entries": 1,
+      "capturesReferenced": 2
+    },
+    {
+      "path": "docs/production/vague26/qa-native/stalker/visual-review.json",
+      "sha256": "ca88914e540fe7c7721a6ee5b685d09e0b73e587bd427bbf6a5055dba9d85b5e",
+      "entries": 1,
+      "capturesReferenced": 2
+    },
+    {
+      "path": "docs/production/vague26/qa-native/stages-a/visual-review.json",
+      "sha256": "b8d67ee1f1fb7769e4391f3778f53cd3abe6b8b82cee9a49b6e2a59691be8439",
+      "entries": 3,
+      "capturesReferenced": 3
+    },
+    {
+      "path": "docs/production/vague26/qa-native/stages-b/visual-review.json",
+      "sha256": "c20120741096b360961f21a83e3af61a0bebd3b4d6a116aaab7b80c779f99a9a",
+      "entries": 1,
+      "capturesReferenced": 1
+    }
+  ],
+  "totals": {
+    "processes": 7,
+    "successfulProcesses": 7,
+    "nativeAssertions": 364,
+    "characterCombatCases": 4,
+    "stageCases": 4,
+    "referencePreviews": 2,
+    "generatedCaptures": 21,
+    "capturesActuallyViewed": 10,
+    "charactersReviewed": 3,
+    "stagesReviewed": 4
+  },
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, browser keyboard delivery or service-worker behavior.",
+    "Whole-catalogue hashes may differ after independent imports; every entry actually used by a process and every renderer/gameplay module must still match exactly.",
+    "Visual acceptance is limited to the explicitly recorded captures; fidelity and original animation timing remain unverified."
+  ],
+  "completedAt": "2026-11-20T13:01:10.647Z"
+}

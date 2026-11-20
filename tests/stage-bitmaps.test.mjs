@@ -148,7 +148,7 @@ const settledActors=()=>[
 test('retired matches retain final presentations while live matches retain every combat pose',()=>{
   const actors=settledActors(),engine={phase:'matchEnd',actors};
   assert.deepEqual(retainedCombatFrames(engine).map(frame=>frame.path),[
-    'assets/sprites/sh1_air_screamer_001.f208137d6414.png',
+    'assets/sprites/sh1_air_screamer_001.3af1bfe6260c.png',
     'assets/sprites/sh3_numb_body_small_037.974da23966d7.png'
   ]);
   for(const phase of ['intro','fight','roundEnd']){

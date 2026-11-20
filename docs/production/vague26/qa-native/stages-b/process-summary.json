@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "purpose": "Native Canvas/FightEngine checks of explicit missing stage candidates.",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "startedAtUnix": 1795178714.8190258,
+  "durationSeconds": 3.036,
+  "stageIds": [
+    "frozen_streets"
+  ],
+  "processes": [
+    {
+      "id": "frozen_streets",
+      "command": [
+        "node",
+        "--expose-gc",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-stages-native.mjs",
+        "--stages=frozen_streets",
+        "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-native/stages-b/frozen_streets"
+      ],
+      "startedAtUnix": 1795178714.8192685,
+      "timeoutSeconds": 180,
+      "exitCode": 0,
+      "timeout": false,
+      "durationSeconds": 3.034,
+      "reportPresent": true,
+      "reportSHA256": "cadd604c225b0849eedcbc13f6a9af280db451108de964c9acbe12eec6eece96",
+      "reportPassed": true,
+      "checks": 46,
+      "cases": 1,
+      "referencePreviews": 0,
+      "captures": 1,
+      "failure": null,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "successfulProcesses": 1,
+  "checksInSuccessfulProcesses": 46,
+  "stageCasesInSuccessfulProcesses": 1,
+  "referencePreviewsInSuccessfulProcesses": 0,
+  "capturesInSuccessfulProcesses": 1,
+  "limits": [
+    "No source animation timings or one-to-one fidelity are certified.",
+    "Visual review of the captured images is a separate recorded step.",
+    "Failed or interrupted processes are retained and excluded from success counts."
+  ]
+}

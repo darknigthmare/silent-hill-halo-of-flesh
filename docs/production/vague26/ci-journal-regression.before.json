@@ -1,0 +1,154 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "createdAt": "2026-11-20T12:51:07.604083+00:00",
+  "baseRemoteCommit": "8c2b56320ceb9fd5490660cb8e20a2dbf62c57bb",
+  "scope": "Three existing profiles receive distinct static lateral PNGs; prior portraits and all existing clips remain. Collector gets its first static reference idle, not an animated clip.",
+  "imports": [
+    {
+      "fighterId": "ascension_the_collector_183",
+      "source": "ascension",
+      "path": "assets/sprites/ascension_the_collector_183.d157ac2cd4c2.png",
+      "pose": "idle",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "combatView": "side-view-candidate",
+      "portraitPath": "assets/sprites/ascension_the_collector_183.55a90d583450.png",
+      "technical": {
+        "pixelSHA256": "f9036623896139bb1c4b53e825a2443a325c58420ec51fe59764f14930bbc83c",
+        "sha256": "d157ac2cd4c29a6b88daa57465134a6f676315e7a2c60b8c1b6575f62e314287",
+        "bytes": 1796754,
+        "width": 1024,
+        "height": 1536,
+        "extension": "png",
+        "visibleBounds": [
+          59,
+          50,
+          835,
+          1452
+        ],
+        "transparentFraction": 0.72453
+      },
+      "dryRun": false,
+      "nextStep": "npm run sprites:check && npm test && npm run build",
+      "combatEnabled": false,
+      "usage": "reference-only-lateral-candidate",
+      "sourceLocalPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/characters/collector/native/collector-side-v2.png",
+      "nativePixelsPreserved": true,
+      "portraitPreserved": true,
+      "clipSemanticsPreserved": true,
+      "staticIdleAdded": true,
+      "newAnimatedClips": 0,
+      "roleUnchanged": true,
+      "reviewScope": "single-subject",
+      "reviewedSubjectCount": 1,
+      "receipt": "docs/production/vague26/receipt-collector.json",
+      "receiptSHA256": "0a089719a64e13bf45a951db348624ed0cfe65a281126cf87aff42c8ba241dab",
+      "delivery": {
+        "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/characters/collector/delivery.json",
+        "sha256": "6733211bdc8602ee80926494b702b8b926c1118fafc59bdabd5ebea000eac798"
+      }
+    },
+    {
+      "fighterId": "film_creeper_swarm_film_173",
+      "source": "film",
+      "path": "assets/sprites/film_creeper_swarm_film_173.1eb188e475c8.png",
+      "pose": "idle",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "combatView": "side-view-candidate",
+      "portraitPath": "assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
+      "technical": {
+        "pixelSHA256": "b673194706cb8124f76f38ad0f6fa57eaf24a8412988669e6fd0a4e9c85f915e",
+        "sha256": "1eb188e475c8240c3c1debf87cf12e323fefb68481468a889187b527af531c91",
+        "bytes": 762120,
+        "width": 2172,
+        "height": 724,
+        "extension": "png",
+        "visibleBounds": [
+          28,
+          250,
+          2130,
+          501
+        ],
+        "transparentFraction": 0.84795
+      },
+      "dryRun": false,
+      "nextStep": "npm run sprites:check && npm test && npm run build",
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "sourceLocalPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/film/png/film_creeper_swarm_film_173.side-three.png",
+      "nativePixelsPreserved": true,
+      "portraitPreserved": true,
+      "clipSemanticsPreserved": true,
+      "staticIdleAdded": false,
+      "newAnimatedClips": 0,
+      "roleUnchanged": true,
+      "reviewScope": "one-representative-swarm-profile-three-bodies",
+      "reviewedSubjectCount": 3,
+      "composition": "representative-swarm",
+      "sourceSubjectCountCertified": false,
+      "receipt": "docs/production/vague26/receipt-creeper.json",
+      "receiptSHA256": "29327c7af3d41d07235108feeffcc9d3fc103c859ba98d75db8ed32703c3dbe9",
+      "delivery": {
+        "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/film/integration-delivery.json",
+        "sha256": "5a52e03f255c544129d5782e3af57fb862562dd7818ef0096ff735123d9cb382"
+      }
+    },
+    {
+      "fighterId": "sh1_stalker_008",
+      "source": "sh1",
+      "path": "assets/sprites/sh1_stalker_008.7ae11fd6c58f.png",
+      "pose": "idle",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "combatView": "side-view-candidate",
+      "portraitPath": "assets/sprites/sh1_stalker_008.4cf565113e5e.png",
+      "technical": {
+        "pixelSHA256": "b49b0b58af47b491fdf3f3d7cdaf757c54e28ce598528b4bec922295e160c083",
+        "sha256": "7ae11fd6c58f4840655cb72d685530b6ec11ee2ab9c328dd7480ee880b431509",
+        "bytes": 1140962,
+        "width": 1024,
+        "height": 1536,
+        "extension": "png",
+        "visibleBounds": [
+          254,
+          124,
+          768,
+          1414
+        ],
+        "transparentFraction": 0.81214
+      },
+      "dryRun": false,
+      "nextStep": "npm run sprites:check && npm test && npm run build",
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "sourceLocalPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/characters/stalker/native/stalker-side-v2.png",
+      "nativePixelsPreserved": true,
+      "portraitPreserved": true,
+      "clipSemanticsPreserved": true,
+      "staticIdleAdded": false,
+      "newAnimatedClips": 0,
+      "roleUnchanged": true,
+      "reviewScope": "single-subject",
+      "reviewedSubjectCount": 1,
+      "receipt": "docs/production/vague26/receipt-stalker.json",
+      "receiptSHA256": "b8f6342f33d350db1b908d9be2ffe9e9e7d491b2f1fc3f58a31cac6e6ffb499a",
+      "delivery": {
+        "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/characters/stalker/delivery.json",
+        "sha256": "2351d0446a6e9533c294b46935563b68e93a003693b5d957c002100f3e48ac6f"
+      }
+    }
+  ],
+  "totals": {
+    "profiles": 3,
+    "nativeActiveCharacterPNGs": 3,
+    "newPortraits": 0,
+    "newAnimatedClips": 0,
+    "newStaticIdles": 1,
+    "combatEnabledProfiles": 2
+  }
+}

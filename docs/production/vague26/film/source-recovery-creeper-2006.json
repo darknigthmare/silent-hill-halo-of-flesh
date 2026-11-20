@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "createdAt": "2026-11-20T12:33:25.271405+00:00",
+  "fighterId": "film_creeper_swarm_film_173",
+  "edition": "Silent Hill (2006), Mr. X creature",
+  "baseRemoteCommit": "8c2b56320ceb9fd5490660cb8e20a2dbf62c57bb",
+  "newEvidenceStatus": "individual-shape-established; representative collective sample generated",
+  "sourcePage": {
+    "url": "https://www.silenthillmemories.net/creators/interviews/2006.05.10_jacobs_death_fall_en.htm",
+    "title": "Interview with Evan Jacobs, VFX Supervisor of Mr. X (Death Fall)",
+    "published": "2006-05-10",
+    "type": "Primary VFX supervisor interview and production samples, mirrored by unofficial archive"
+  },
+  "sourceAssets": [
+    {
+      "url": "https://www.silenthillmemories.net/creators/interviews/2006.05.10_evan_jacobs/10.jpg",
+      "path": "references/creeper-2006-jacobs-10.jpg",
+      "meaning": "Final-film ventral close-up provides human-like facial detailing."
+    },
+    {
+      "url": "https://www.silenthillmemories.net/creators/interviews/2006.05.10_evan_jacobs/11.jpg",
+      "path": "references/creeper-2006-jacobs-11.jpg",
+      "meaning": "Practical prop dorsal/ventral photography used as texture foundation; final face details differ."
+    },
+    {
+      "url": "https://www.silenthillmemories.net/creators/interviews/2006.05.10_evan_jacobs/Video3_Roach_walk.mov",
+      "path": "references/creeper-2006-source-walk.mov",
+      "meaning": "Production Maya side-view sample of entire insect shape; native 640x480,12frames24fps. This is a supplied production sample, not a measured retail-film cadence or new runtime clip."
+    }
+  ],
+  "referenceFiles": [
+    {
+      "file": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/film/references/creeper-2006-jacobs-10.jpg",
+      "relativePath": "references/creeper-2006-jacobs-10.jpg",
+      "sha256": "f528a3eac2eecd2b322a131eb269a80dd83d4fce62271d1d7cadf4c5728db08a",
+      "bytes": 38559,
+      "viewed": true
+    },
+    {
+      "file": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/film/references/creeper-2006-jacobs-11.jpg",
+      "relativePath": "references/creeper-2006-jacobs-11.jpg",
+      "sha256": "38b05258d67cffa2993c284ce12d609b35aacec6d49ab37c950d510c1182fdbe",
+      "bytes": 28630,
+      "viewed": true
+    },
+    {
+      "file": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/film/references/creeper-2006-source-walk.mov",
+      "relativePath": "references/creeper-2006-source-walk.mov",
+      "sha256": "965ac6fbeb199ded89a9b9f4e64c0191cc4a985f3c7b361bc91c63f5f68846a9",
+      "bytes": 595224,
+      "viewed": false
+    },
+    {
+      "file": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/film/references/creeper-2006-walk-frame000.png",
+      "relativePath": "references/creeper-2006-walk-frame000.png",
+      "sha256": "2e6453ec780621a6d4c2be7881b66a62d1f79d8b0e638f1e4a686044d9424270",
+      "bytes": 176319,
+      "viewed": true
+    }
+  ],
+  "extractedFrame": {
+    "path": "references/creeper-2006-walk-frame000.png",
+    "method": "ffmpeg -i creeper-2006-source-walk.mov -frames:v 1 creeper-2006-walk-frame000.png",
+    "sourceFrameIndex": 0,
+    "pixelTransform": "decode only, no crop, rotation, resizing or editing",
+    "viewed": true
+  },
+  "visualFindings": [
+    "Complete lateral production mesh: low domed ridged carapace, six splayed jointed legs, long tapering rear tail, human-like face under anterior shell. It faces left in the source.",
+    "Prop photograph provides weathered brown/gray shell and a wrinkled ventral torso; final-film close-up, not the earlier prop, controls facial detail.",
+    "The interview establishes large collective masses; it does not establish three individuals as a canonical count."
+  ],
+  "remainingDecision": "Resolved by preserving the previous displayed count of three as an explicitly noncanonical representative-swarm composition; importer must bind this exception to this exact ID and baseline frame SHA.",
+  "generationAttempted": true,
+  "priorRefusalForThisId": false,
+  "rolePreserved": "scripted-encounter",
+  "combatEnabled": true,
+  "superEnabled": false,
+  "noRegistryMutation": true,
+  "fidelity": "unverified",
+  "limitations": [
+    "Hidden opposite side and generated material details remain reconstructed.",
+    "Source motion sample is reference only; no new animated clip is delivered or counted."
+  ],
+  "otherSourceChecks": [
+    {
+      "url": "https://www.fxguide.com/fxfeatured/keeping_track_of_bugs_in_silent_hill/",
+      "status": "Text read through web retrieval; shell HTTP403. No direct image fetched."
+    },
+    {
+      "url": "https://www.fxguide.com/wp-content/uploads/2002/10/silent/hires.zip",
+      "status": "Published download link returned404; no guessed archive path or access bypass attempted."
+    }
+  ],
+  "generationReceipt": "receipt-creeper-swarm.json",
+  "composition": {
+    "singleSubjectReviewed": false,
+    "singleCollectiveProfileReviewed": true,
+    "subjectCount": 3,
+    "priorDisplayedSubjectCount": 3,
+    "composition": "representative-swarm",
+    "sourceSubjectCountCertified": false
+  }
+}

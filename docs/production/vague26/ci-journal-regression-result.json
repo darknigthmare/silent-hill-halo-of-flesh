@@ -1,0 +1,362 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "createdAt": "2026-11-20T13:02:27.332586+00:00",
+  "status": "targeted-validation-complete",
+  "passed": true,
+  "scope": "Diagnose all nine failures from the retained full QA run, correct only the new wave26 import journal, and rerun its nine affected consumer test files. This is not a full-suite rerun.",
+  "failedFullRun": {
+    "path": "docs/production/vague26/full-checks.json",
+    "sha256": "c8a3ff8377d057a41003febcdae9bba762e80da911d78007fc86cfc67ca10db5",
+    "log": "docs/production/vague26/full-checks.npm-test.log",
+    "logSHA256": "edeb9b25606a62e29769d310b07c64021f00803c1829389ac854055bfe864709",
+    "nodeTests": {
+      "tests": 1264,
+      "pass": 1255,
+      "fail": 9,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failureCount": 9,
+    "environmentFailureCount": 0,
+    "regressionFailureCount": 9,
+    "failures": [
+      {
+        "file": "tests/art-campaign-review.test.mjs",
+        "line": 267,
+        "column": 1,
+        "reportedName": "later source-reviewed images for Cybil and Curtis preserve their original ART92 exclusion (104.758294ms)",
+        "cause": "invalid-wave26-purpose-delivery-journal"
+      },
+      {
+        "file": "tests/gamedev-sprite-backlog.test.mjs",
+        "line": 33,
+        "column": 1,
+        "reportedName": "real sprite coverage keeps authored animated clips in the validation queue (100.688081ms)",
+        "cause": "invalid-wave26-purpose-delivery-journal"
+      },
+      {
+        "file": "tests/production-plan.test.mjs",
+        "line": 1,
+        "column": 1,
+        "reportedName": "tests/production-plan.test.mjs (1968.950828ms)",
+        "cause": "invalid-wave26-purpose-delivery-journal"
+      },
+      {
+        "file": "tests/revelation-role-decisions.test.mjs",
+        "line": 14,
+        "column": 1,
+        "reportedName": "Revelation scene identities close their role alone while keeping authored versus moves playable (731.955653ms)",
+        "cause": "invalid-wave26-purpose-delivery-journal"
+      },
+      {
+        "file": "tests/scripted-film-role-decisions.test.mjs",
+        "line": 14,
+        "column": 1,
+        "reportedName": "six reviewed film scene identities retain explicit playable versus adaptations (779.186809ms)",
+        "cause": "invalid-wave26-purpose-delivery-journal"
+      },
+      {
+        "file": "tests/source-pose-lot10.test.mjs",
+        "line": 47,
+        "column": 1,
+        "reportedName": "the plan receives all new descriptions without turning documentary delivery into produced poses or original timing (918.727038ms)",
+        "cause": "invalid-wave26-purpose-delivery-journal"
+      },
+      {
+        "file": "tests/source-pose-lot11.test.mjs",
+        "line": 50,
+        "column": 1,
+        "reportedName": "the plan exposes whole-body constraints without manufacturing images source timings or certified completion (748.146112ms)",
+        "cause": "invalid-wave26-purpose-delivery-journal"
+      },
+      {
+        "file": "tests/source-pose-lot12.test.mjs",
+        "line": 60,
+        "column": 1,
+        "reportedName": "all thirty real plan rows stay unapproved with zero invented source timing or one-to-one certification (724.16944ms)",
+        "cause": "invalid-wave26-purpose-delivery-journal"
+      },
+      {
+        "file": "tests/source-pose-specifications.test.mjs",
+        "line": 52,
+        "column": 1,
+        "reportedName": "the final plan receives all thirty descriptions without certifying or producing any core pose (632.49611ms)",
+        "cause": "invalid-wave26-purpose-delivery-journal"
+      }
+    ]
+  },
+  "rootCause": {
+    "file": "scripts/art-campaign-review.mjs",
+    "function": "readPurposeDeliveries",
+    "line": 142,
+    "message": "Invalid exact artwork delivery docs/production/sprite-wave26-imports-2026-11-20.json:imports",
+    "defect": "All three new journal entries copied raw import receipts but omitted kind and top-level sha256. Their existing SHA256 was nested under technical. The established journal reader rejects each such row before consumers can build their production plan.",
+    "environment": "No EPERM, EACCES, socket or spawn failure occurs in this retained full-QA log. The npm http-proxy configuration warning is non-fatal. Node v24.22.3 is observed here; CI is configured for Node22, but the failure is the same explicit journal validation condition."
+  },
+  "testCountDifference": {
+    "baselineFullNodeTests": 1292,
+    "observedFullNodeTests": 1264,
+    "difference": 28,
+    "affectedFile": "tests/production-plan.test.mjs",
+    "throwBeforeTestDeclarationsAtLine": 14,
+    "normalTestDeclarations": 29,
+    "fileLevelFailureCounted": 1,
+    "calculation": "1292 - 29 + 1 = 1264",
+    "explanation": "The top-level buildProductionPlan call throws before this module registers its 29 tests. Node reports one failing file instead; these tests are unreached, not reported as skipped.",
+    "expectedRecoveredFullCount": 1292,
+    "recoveredFullCountObserved": false
+  },
+  "correction": {
+    "path": "docs/production/sprite-wave26-imports-2026-11-20.json",
+    "before": {
+      "path": "docs/production/vague26/ci-journal-regression.before.json",
+      "sha256": "d8998d53d6c0775f54171daa91248ad3510373f3b016da6deb45a9832a0090b9",
+      "bytes": 6140
+    },
+    "after": {
+      "sha256": "576d035ec37fa35b8eba30907e4645831cd40d1c64f0438c6ddc2b901208234c",
+      "bytes": 27763
+    },
+    "changes": [
+      {
+        "fighterId": "ascension_the_collector_183",
+        "addedFields": [
+          "kind",
+          "sha256",
+          "bytes",
+          "width",
+          "height",
+          "sourceSHA256",
+          "singleSubjectReviewed",
+          "wholeSubjectReviewed",
+          "subjectCount",
+          "references",
+          "existingSelectionReference",
+          "certifiedOneToOne",
+          "calibration",
+          "review",
+          "limits"
+        ],
+        "existingFieldsPreserved": true
+      },
+      {
+        "fighterId": "film_creeper_swarm_film_173",
+        "addedFields": [
+          "kind",
+          "sha256",
+          "bytes",
+          "width",
+          "height",
+          "sourceSHA256",
+          "singleSubjectReviewed",
+          "wholeSubjectReviewed",
+          "subjectCount",
+          "references",
+          "existingSelectionReference",
+          "certifiedOneToOne",
+          "calibration",
+          "review",
+          "limits",
+          "singleCollectiveProfileReviewed",
+          "priorDisplayedSubjectCount",
+          "priorFrameSHA256"
+        ],
+        "existingFieldsPreserved": true
+      },
+      {
+        "fighterId": "sh1_stalker_008",
+        "addedFields": [
+          "kind",
+          "sha256",
+          "bytes",
+          "width",
+          "height",
+          "sourceSHA256",
+          "singleSubjectReviewed",
+          "wholeSubjectReviewed",
+          "subjectCount",
+          "references",
+          "existingSelectionReference",
+          "certifiedOneToOne",
+          "calibration",
+          "review",
+          "limits"
+        ],
+        "existingFieldsPreserved": true
+      }
+    ],
+    "originalReceiptProjectionPreserved": true,
+    "allExistingTopLevelJournalFieldsPreserved": true,
+    "validatorChanged": false,
+    "receiptOrDeliveryChanged": false,
+    "PNGOrRegistryChanged": false,
+    "collectiveTruthPreserved": {
+      "fighterId": "film_creeper_swarm_film_173",
+      "singleSubjectReviewed": false,
+      "singleCollectiveProfileReviewed": true,
+      "subjectCount": 3,
+      "sourceSubjectCountCertified": false
+    },
+    "method": "Add journal fields from already retained immutable selected deliveries, technical receipt descriptors and the current audited portrait/calibration. Never reclassify three bodies as one subject. Preserve exact original journal bytes separately."
+  },
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/art-campaign-review.test.mjs",
+        "tests/gamedev-sprite-backlog.test.mjs",
+        "tests/production-plan.test.mjs",
+        "tests/revelation-role-decisions.test.mjs",
+        "tests/scripted-film-role-decisions.test.mjs",
+        "tests/source-pose-lot10.test.mjs",
+        "tests/source-pose-lot11.test.mjs",
+        "tests/source-pose-lot12.test.mjs",
+        "tests/source-pose-specifications.test.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 12.16,
+      "log": "docs/production/vague26/ci-journal-regression.targeted-tests.log",
+      "logSHA256": "53aa5e1a17f666aeb363f65f89d08fe7c55ac2ba22ab2d15a6468b9098190ae6",
+      "bytes": 9643,
+      "nodeTests": {
+        "tests": 85,
+        "pass": 85,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "passed": true
+    },
+    {
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import {readPurposeDeliveries} from './scripts/art-campaign-review.mjs'; const rows=readPurposeDeliveries(process.cwd()).filter(row=>row.journal==='docs/production/sprite-wave26-imports-2026-11-20.json'); if(rows.length!==3)throw Error('Exact wave26 scope required'); console.log(JSON.stringify(rows));"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 0.738,
+      "log": "docs/production/vague26/ci-journal-regression.purpose-deliveries.log",
+      "logSHA256": "69094dcc67b1090ef23114045a4b2fe54007dbac6c1fa1bdc2ebd671068ed425",
+      "bytes": 1953,
+      "passed": true,
+      "output": "[{\"id\":\"ascension_the_collector_183\",\"source\":\"ascension\",\"file\":\"assets/sprites/ascension_the_collector_183.d157ac2cd4c2.png\",\"sha256\":\"d157ac2cd4c29a6b88daa57465134a6f676315e7a2c60b8c1b6575f62e314287\",\"bytes\":1796754,\"reviewedWithSource\":true,\"existingSelectionReference\":{\"path\":\"assets/sprites/ascension_the_collector_183.55a90d583450.png\",\"sha256\":\"55a90d583450484044baf7d7b2ccfbc162a5a8a8970dca2248c2614b44ff7911\",\"bytes\":2348793,\"width\":1024,\"height\":1536,\"facing\":1,\"visibleBounds\":[73,17,963,1519],\"pixelSHA256\":\"adb0565418a1daa94a927efbbf07cd57159cd5097810002c9ad5ba562216420d\",\"sourceFile\":\"exec-dd1f2416-f353-4380-82e9-d8dbae9b90ae.png\",\"sourceSHA256\":\"55a90d583450484044baf7d7b2ccfbc162a5a8a8970dca2248c2614b44ff7911\",\"origin\":\"conversation-image-generation\",\"purpose\":\"selection\"},\"purpose\":\"combat\",\"journal\":\"docs/production/sprite-wave26-imports-2026-11-20.json\"},{\"id\":\"film_creeper_swarm_film_173\",\"source\":\"film\",\"file\":\"assets/sprites/film_creeper_swarm_film_173.1eb188e475c8.png\",\"sha256\":\"1eb188e475c8240c3c1debf87cf12e323fefb68481468a889187b527af531c91\",\"bytes\":762120,\"reviewedWithSource\":false,\"existingSelectionReference\":{\"path\":\"assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png\",\"sha256\":\"8171253b7eed7045da6e7e09ab2059c314b34e0506e3fd0713160458951a6b57\",\"bytes\":597597,\"width\":1254,\"height\":1254,\"facing\":1},\"purpose\":\"combat\",\"journal\":\"docs/production/sprite-wave26-imports-2026-11-20.json\"},{\"id\":\"sh1_stalker_008\",\"source\":\"sh1\",\"file\":\"assets/sprites/sh1_stalker_008.7ae11fd6c58f.png\",\"sha256\":\"7ae11fd6c58f4840655cb72d685530b6ec11ee2ab9c328dd7480ee880b431509\",\"bytes\":1140962,\"reviewedWithSource\":true,\"existingSelectionReference\":{\"path\":\"assets/sprites/sh1_stalker_008.4cf565113e5e.png\",\"sha256\":\"4cf565113e5e9ada56cec266db9f5fdf2e4002f7b3ec4d25d4a4db4a389cfa66\",\"bytes\":586822,\"width\":1254,\"height\":1254,\"facing\":1},\"purpose\":\"combat\",\"journal\":\"docs/production/sprite-wave26-imports-2026-11-20.json\"}]"
+    }
+  ],
+  "protectedInputs": {
+    "art/registry.json": "4d94e3abcf4a97f4885f4be2b56ce360dbd02b477d9eb3c1d3ee24b3fb8eb1f8",
+    "data/chronicles.json": "7387b9345654d189121324c3c29068bb612c660a988fb6fd40fc86302d7f1c4d",
+    "data/combat-rules.json": "052288439869ea420162ddd1efd14018b80b6b0866d7cef95e78cb99dbcdfa9a",
+    "data/content-stats.json": "eb077befd6b1b5f34033026a90bbc0729760f0e184744eac46f43baee52e9855",
+    "data/coverage-audit.json": "a53eb073509cb51e15a28ba23237a4dd957ffbf1a006212795f040736a5118c8",
+    "data/fatalities.json": "cc34aa7607f7b9713678ea366c8e65ac8db01ee5fda117702bad5541505d724a",
+    "data/movesets.json": "bf9266c69684ecd9f361c2c628c40b1ce54ec40e10ae90bdef32b1a916bcc0ec",
+    "data/production-reference-index.json": "442b7bc08de9f39ce1404c3a47c7c749b47d263fdbae6adf8eda8dbfc595e2ed",
+    "data/roster.json": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3",
+    "data/sources.json": "a783771effa7918f62f64e99183ddf2e1768c8e804849860ebc60a7e79dc0f6f",
+    "data/sprite-coverage.json": "179e3c9d2998d51edddfca6a10d46f0c9d3585e7a7552d5db9c125dd3fc33ff5",
+    "data/stage-director.json": "b0a597ba83097720dc29364147713782b647e4c1bea7744ef7411bf1645965b7",
+    "data/stages.json": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+    "docs/BIBLE_CORPUS_SILENT_HILL.md": "4d32d698960b8533076b25dc92e3ffce8b02457ab3c0b3d804905d2182526974",
+    "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx": "cf9f9bd2a2c1f06712e0c23523f24f29f7de8ab94d3686320608261475a858dc",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871",
+    "docs/production/franchise-corpus.json": "9df5b1b7d228b82559a2295b33b2ed47dabe812bc1b29f11a9ec841eaaa1ee86",
+    "docs/production/vague26/characters/collector/delivery.json": "6733211bdc8602ee80926494b702b8b926c1118fafc59bdabd5ebea000eac798",
+    "docs/production/vague26/characters/stalker/delivery.json": "2351d0446a6e9533c294b46935563b68e93a003693b5d957c002100f3e48ac6f",
+    "docs/production/vague26/film/integration-delivery.json": "5a52e03f255c544129d5782e3af57fb862562dd7818ef0096ff735123d9cb382",
+    "docs/production/vague26/receipt-collector.json": "0a089719a64e13bf45a951db348624ed0cfe65a281126cf87aff42c8ba241dab",
+    "docs/production/vague26/receipt-creeper.json": "29327c7af3d41d07235108feeffcc9d3fc103c859ba98d75db8ed32703c3dbe9",
+    "docs/production/vague26/receipt-stalker.json": "b8f6342f33d350db1b908d9be2ffe9e9e7d491b2f1fc3f58a31cac6e6ffb499a",
+    "docs/production/workbook-verification.json": "0c825b8666970eed1f181919936217234601307eac4a37949ab8452c98a97ef5",
+    "scripts/art-campaign-review.mjs": "a9ece7b33263054da0138e84310dd93252eca35acb38206d47ddd0eed23d65d5",
+    "scripts/art-campaign-tracking.mjs": "e96af50772b4bb9d8a3bd590ee6c0f97e185ec571302624c74e1ba61044894bc",
+    "scripts/build-production-plan.mjs": "86a6c8ddbd1993dad9da2984ac9fce01391a037e1dff405c2f0a3a92f5ccfe29",
+    "service-worker.js": "59687fd371f00dee96a637d07670a63bcb65b6e7fad5dbca348f3bf59b68c228",
+    "src/archive.js": "7bdf9059c0b806d94b5d7c3902731b784edef1752a41815312c22d6fa8481669",
+    "src/chronicle-art.js": "4153c0d85753c3f6bcd8adb41a3c78fe2d88ccb47bd580d8f5e94abc40af944f",
+    "src/chronicles.js": "6b5b7f2a63def41fc119fcc44b13efb2936c028d08c34d7a777769a41d26a293",
+    "src/combat-geometry.js": "b08f368df5617a4aebb17bb19256a1f895490efc4ef7d08df3d50c4f5878edab",
+    "src/combat-reference-policy.js": "a784ca09be46e54b188e71c003ad8fd12970c8c4821bc8c5515e6a8e79751028",
+    "src/combat-resolution.js": "a2756cc770871881050a28149822f0e20f1b8ff0b825f7ab5f99099d84206334",
+    "src/command.js": "e1a8b120d07185a43a6ede09852794b2252da995815072d9d471768fd77de63f",
+    "src/data.js": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+    "src/fight.js": "0f33f8f8bdb45e3b474275aec17a7ff0ffab1f299fff2dfecb8419cffae3dd4a",
+    "src/lore-cinematics.js": "211596a8d9054ca8481e4668b9e9e91db4e46d48cb85c90a4c7c4e9ef4e96845",
+    "src/movesets.js": "03b5fcba2939438c8f1ca2f064fd31578c6255656006c6e7c4424e3eafd327f9",
+    "src/player-input.js": "0899714b23759478a1bf495ab965702b46f6d656c776346940028628e50f59d1",
+    "src/playflow-ui.js": "08a1777a188fdbda5b63ee2a1a1d9c97068aeaa03fb14f09738ca7de0ba9427b",
+    "src/presentation-sequences.js": "9432ad52191d57050a3e2d7dde98c709d8b6885be82dfcc7db80b5e8f8c11ed7",
+    "src/production-reference.js": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889",
+    "src/reference-ui.js": "855b0954b10430c0e466453384a2e1995536ca5a647d618ee9c6febb7b9bfdce",
+    "src/renderers.js": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+    "src/run-progress.js": "f7f61204681a60d2e2de0116af08d30007a7af26fb6ebc6af7d8685d414470d1",
+    "src/save-store.js": "4ee606be5c7f64e87ae5096c80afaea8820cf13e0f3c3ba12e07737abb5b1f05",
+    "src/shared.js": "6f2b1244748c36b10595ff2661926a454f3dbf64b415e434dce7885a7d55cd3e",
+    "src/sprite-animation.js": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+    "src/sprite-clip-editor.js": "c09fa26265b45dd185f19358e080d196250aba5589dcd1f84f6bed1edb85fe94",
+    "src/sprite-clips.js": "4adea577ab0f45016456999fafe381eecdb6e7d14123b30120e70f2dea6953f3",
+    "src/sprite-framing.js": "563aebcd9987de1841b4f71a58a06710bfd0dae1861dffaf6560487d4441baaf",
+    "src/sprite-inspector.js": "c8a2317d575e73571bffa1390df2ee9bcf583240d1287f406f7fd00b66d3efe1",
+    "src/sprite-manifest.js": "dde9d8e9c222c40bfedfb949cdf37a13248941b20791813bf564d837b1937818",
+    "src/sprite-poses.js": "f1489d560ca5fa88d9199bea352cf908fb7ae8126fc8b04478b491d31fc87d5c",
+    "src/sprite-system.js": "daa620eb2ed72287b765c5e7879dfa3a43dcec91d709fbfa567476c0da586a52",
+    "src/sprite-usage.js": "cce9eeb60700a40c0974709abb53a582838d27187d583bb4e800bf5922788541",
+    "src/sprite-workshop.js": "8a37492ed01b17e6cdf8cb18fb4419d26d41223dd0900e3f8bd8e1610d694c4d",
+    "src/stage-architecture.js": "c9480281740aa1b31b82e483ae3cd34519090dbb10cd3cdf6e2a571d77d19039",
+    "src/stage-bitmap-compositions.js": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+    "src/stage-bitmap-manifest.js": "fd68efc5606ab12d7783413a9622bb3f98d3c74e281df4961c8999625f59fc55",
+    "src/stage-bitmaps.js": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+    "src/stage-cinematics.js": "b05d8255b494d0c2ce8788e0f364636e5dc31a3b16e931a42b23180532877371",
+    "src/stage-director.js": "4158a522fa4f2133ed2bebb4a42852e0244054ab9dcf33c0d877a5d591e01884",
+    "src/stage-hazard-renderer.js": "b5d21d9c623e342bc3b6ba02eaa2ac68475bb6ff834f38d8c3358816ac2707cb",
+    "src/stage-lore-policy.js": "b20de47911e2577c3814217121bd1511ecefb40f555e629bcbe7b730d39624e8",
+    "src/stage-lot12-policy.js": "45be12c0627ac11a46d95aa9fbba4d506b936f71e3018b22fe91297fc6f54935",
+    "src/stage-lot12-renderer.js": "a9bb0f9397360edd1b9c70e2003aaa8e1a4b8e6b0eb30a995f1c80cbff1308d2",
+    "src/stage-reference-policy.js": "635b4c3a08ecc7256f13194c3734f1f013fea2f36440421510a83c8af5c56ec6",
+    "src/touch-controls.js": "d356deec1f6d8aceecb63aa0980a83f399ad675340ffaa8ef24e7c133b59a446",
+    "src/tournament.js": "12403baa162d626cd4befb7dfa3bfdeecdc2b79d46dd8bbb646786076f172de7",
+    "src/versus.js": "79081299a045d7423fbbb2731e7bf0d7723c7221c060250a69524c745eebb440",
+    "src/weapon-phases.js": "d488e9847e6c7bfb6496b1e68672383e68b27ff026e6ca78235934fc53890c90",
+    "tests/art-campaign-review.test.mjs": "d7ec5fe452a4d5b38a8371d7fe9c83cce5feaa0892f4a1723c30f545eec8e93e",
+    "tests/gamedev-sprite-backlog.test.mjs": "0b65868915b1c0df450fc3221e3007d258efdd5986a05404dbd8df53a2aae36f",
+    "tests/production-plan.test.mjs": "1be8043b7be15a76c8e1c10bfc38b0a509dfbf8148d782fdc1f435e54cdce8c5",
+    "tests/revelation-role-decisions.test.mjs": "ef4fbcd9fa6d1b3aec115443bc35bf9ab69de5201b3fc1cf9ed859c628eef65a",
+    "tests/scripted-film-role-decisions.test.mjs": "460b7628cb5fd982adfaaf59f817899fb7affa2e43f70b0dd36d5b823db4ba40",
+    "tests/source-pose-lot10.test.mjs": "019611691abf3f7efd12a237467e20fccd84d5658508abae9ff63470e10f5e0f",
+    "tests/source-pose-lot11.test.mjs": "ba34ab1913a6c2f7545f201f6255f90f801e383ca3638179982cfe228de0d81c",
+    "tests/source-pose-lot12.test.mjs": "88e7b161a2c86ea146355ce4c9f61e32d4594459cf0ce6d9061657c1a5d0dea4",
+    "tests/source-pose-specifications.test.mjs": "f4c3d300f22d4000f4eae193c907c1a172be0063dc4578a2e45a3dec70674e84",
+    "tests/stage-bitmaps.test.mjs": "0cef0268e159baa728dacf42790e609b6f524e3db080b0a44a16c515f41b3a44"
+  },
+  "changedProtectedInputs": [],
+  "protectedInputsUnchangedByTargetedValidation": true,
+  "unreachedByFailedFullRun": [
+    "node scripts/build.mjs --verify",
+    "python -m unittest discover -s tests -p test_*.py -v",
+    "run-full-checks.py final protected-file and tracked-diff comparisons"
+  ],
+  "fullSuiteRerunPerformed": false,
+  "nextRequiredGate": {
+    "command": [
+      "python",
+      "docs/production/vague26/run-full-checks.py",
+      "--out=docs/production/vague26/full-checks-final.json"
+    ],
+    "owner": "root",
+    "mustUseFreshOutput": true,
+    "expectedScope": "Exact npm test, its final build --verify, then full Python importer suite and preservation checks."
+  },
+  "otherRequiredGates": [
+    "CI QA Run full QA and Verify generated files are committed",
+    "CI sprite-importer Validate raster importer",
+    "HTTP browser QA existing suite and Inspect wave26 native artwork in the built HTTP app"
+  ],
+  "limits": [
+    "Passing targeted consumers does not claim full QA, Python importer tests, Chromium/HTTP tests, new artwork rendering or source fidelity certification.",
+    "The previous failed run and original malformed journal remain retained; no failure is overwritten."
+  ]
+}

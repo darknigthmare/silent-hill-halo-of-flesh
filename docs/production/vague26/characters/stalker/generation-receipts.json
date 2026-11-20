@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "createdAt": "2026-11-20T12:47:25.439383+00:00",
+  "tool": "image_gen.imagegen",
+  "fighterId": "sh1_stalker_008",
+  "imageProducingCalls": 2,
+  "selectedNativeImages": 1,
+  "archivedNativeImages": 1,
+  "refusedCalls": 0,
+  "pixelPostprocessing": false,
+  "calls": [
+    {
+      "attempt": 1,
+      "purpose": "new original-source-informed static side sprite",
+      "prompt": "prompt.json",
+      "promptSHA256": "e82c83feeae18423a7a4aec769a4e0f5796ee7763b5ca90e460e649aad9892a1",
+      "referenceFiles": [
+        "docs/production/vague26/characters/stalker/references/CLD2-frame477-back-texture.png",
+        "docs/production/vague26/characters/stalker/references/CLD2-frame477-front-texture.png",
+        "docs/production/vague26/characters/stalker/references/CLD2-frame477-right-texture.png",
+        "docs/production/vague26/characters/stalker/references/CLD2-frame477-threequarter-texture.png",
+        "docs/production/vague26/characters/stalker/references/lost-memories-103c2-stalker.jpg"
+      ],
+      "nativePath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-f45649a4-d779-4265-9d0d-9b466cf97210.png",
+      "nativeArchive": "native/stalker-side-v1.png",
+      "sha256": "4f070d500712c64d46f41edb6213cff1b418e7b92998614da2988b5856d8d575",
+      "status": "archived-quality-hold",
+      "reason": "Geometry complete and source-specific, but internal alpha median253/255 did not deliver the canonical shadow translucency."
+    },
+    {
+      "attempt": 2,
+      "purpose": "targeted internal-alpha correction of v1, no geometric change requested",
+      "prompt": "correction-prompt.json",
+      "promptSHA256": "be7b1621c3ac8fec4c86bf94fa9818dd76ffcf399b92fc9a4a1d1cb72ca00565",
+      "referenceFiles": [
+        "native/stalker-side-v1.png"
+      ],
+      "nativePath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-c44e70a4-4f07-4a20-ba08-d746813a67b2.png",
+      "nativeArchive": "native/stalker-side-v2.png",
+      "sha256": "7ae11fd6c58f4840655cb72d685530b6ec11ee2ab9c328dd7480ee880b431509",
+      "status": "selected-pending-root-runtime-QA",
+      "result": "Actual internal alpha now128–213 across most of the complete figure; all alpha32 body pixels below230. Original native output preserved exactly."
+    }
+  ]
+}

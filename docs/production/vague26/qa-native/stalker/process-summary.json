@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "wave": 26,
+  "purpose": "Native Canvas/FightEngine and workshop checks of explicit IDs.",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "startedAtUnix": 1795179194.0590885,
+  "durationSeconds": 6.051,
+  "ids": [
+    "sh1_stalker_008"
+  ],
+  "processes": [
+    {
+      "id": "sh1_stalker_008",
+      "command": [
+        "node",
+        "--expose-gc",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-characters-native.mjs",
+        "--ids=sh1_stalker_008",
+        "--stages=nightmare_school,nightmare_mall_sm",
+        "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/qa-native/stalker/sh1_stalker_008"
+      ],
+      "startedAtUnix": 1795179194.0591633,
+      "timeoutSeconds": 180,
+      "exitCode": 0,
+      "timeout": false,
+      "durationSeconds": 6.046,
+      "reportPresent": true,
+      "reportSHA256": "20854ea9fd4c4d947badb63c49a0f83daff588d263530794835db42a8c76ed6b",
+      "reportPassed": true,
+      "checks": 72,
+      "cases": 2,
+      "referencePreviews": 0,
+      "captures": 7,
+      "failure": null,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "successfulProcesses": 1,
+  "checksInSuccessfulProcesses": 72,
+  "combatCasesInSuccessfulProcesses": 2,
+  "referencePreviewsInSuccessfulProcesses": 0,
+  "capturesInSuccessfulProcesses": 7,
+  "limits": [
+    "No source animation timings or one-to-one fidelity are certified.",
+    "Visual review of the captured images is a separate recorded step.",
+    "Failed or interrupted processes are retained and excluded from success counts."
+  ]
+}

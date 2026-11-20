@@ -1,0 +1,636 @@
+{
+  "schemaVersion": 1,
+  "group": "vague26-stages-a",
+  "scope": "Three missing static stage candidates; six independent native planes only",
+  "createdAt": "2026-11-20T12:37:06.276848+00:00",
+  "baseCommit": "8c2b56320ceb9fd5490660cb8e20a2dbf62c57bb",
+  "deliveryState": "ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "nightmare_theater",
+      "source": "origins",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "origins-artaud-otherworld-caliban-cave",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT03",
+        "EXT02"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "Silent Hill: Origins (2007 PSP); official strategy guide gameplay captures, PDF page82, printed81",
+      "locationScope": "Artaud Theater, Otherworld cave beyond the stage mirror, Caliban encounter",
+      "selectedSubLocation": "Artaud Theater, Otherworld cave beyond the stage mirror, Caliban encounter",
+      "layers": [
+        {
+          "id": "bg-caliban-cave",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "8f0e3e6b78df05475bd4fac10a20c0dbf438f2ae3a719d534467609ceb8aa808",
+              "bytes": 2330809,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/nightmare_theater.bg-caliban-cave.8f0e3e6b78df.png"
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "b6a4c8f79dfea16d8cad620c1e14438b3d0b76030c1fe784a86608676db19ccd",
+              "bytes": 136621,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/nightmare_theater.near-edges.b6a4c8f79dfe.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Primary source is the official strategy guide page82, printed81, actual Caliban gameplay panels. The earlier cave-painted stage scenery is not used as the actual combat cave.",
+        "Rock wall, gravel floor and rectangular mirror exit follow the captured cave. Side-on spacing, hidden surfaces and diffuse lighting are authored adaptations.",
+        "No Caliban, Travis, symbols, page decoration, fire, new hazard or normal-world theater auditorium is included.",
+        "One opaque static background and one sparse transparent edge foreground. No new animated clip, source cadence, collision or gameplay change. In-engine QA deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Visible overlay absent from the central86percent; tiny native alpha1-2 traces are explicitly measured and preserved. Artwork audit only, no collision changes."
+      }
+    },
+    {
+      "stageId": "nightmare_school",
+      "source": "shattered",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "shsm-midwich-paparazzi-courtyard",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT09",
+        "EXT10_SM_SCHOOL_GUIDE_20261026",
+        "EXT10_SM_SCHOOL_WINDOW_20261026"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "Silent Hill: Shattered Memories (2009 Wii), walkthrough screenshot3b and its location text",
+      "locationScope": "Midwich High School, Nightmare3, courtyard at the first Paparazzi window",
+      "selectedSubLocation": "Midwich High School, Nightmare3, courtyard at the first Paparazzi window",
+      "layers": [
+        {
+          "id": "bg-paparazzi-courtyard",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "7c088206ee698b1123c09958ad6bba576afbab88331301c3ce86a49ebf597980",
+              "bytes": 2444376,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/nightmare_school.bg-paparazzi-courtyard.7c088206ee69.png"
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "ee6b796003532835ef3e5f658b13ed2a9294f6a5a2fe761106d6532e14549335",
+              "bytes": 108226,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/nightmare_school.near-edges.ee6b79600353.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "The small native screenshot3b shows the camera phone framing the courtyard window; only the background window, brickwork and low overhang are architectural evidence. The guide identifies the first Paparazzi courtyard point and red-lit window.",
+        "Phone, hand, reticle, people and puzzle are excluded. The larger wall span, window-mullion spacing, frost detail and side-on courtyard geometry are adaptations because the source is only200x150.",
+        "No frozen couple, chase, puzzle, door-unlock event, falling snow or source cadence is reproduced.",
+        "One opaque static background and one sparse transparent edge foreground. No new animated clip, source cadence, collision or gameplay change. In-engine QA deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Visible overlay absent from the central86percent; tiny native alpha1-2 traces are explicitly measured and preserved. Artwork audit only, no collision changes."
+      }
+    },
+    {
+      "stageId": "nightmare_mall_sm",
+      "source": "shattered",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "shsm-toluca-gumball-hall-frozen",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT09",
+        "EXT10_SM_MALL_GUIDE_20261026",
+        "EXT10_SM_MALL_GUMBALL_HALL_20261026"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "Silent Hill: Shattered Memories (2009 Wii), walkthrough screenshot6a and its location text",
+      "locationScope": "Toluca Mall, Nightmare5, frozen Gumball hall after Garage Access South and before thaw",
+      "selectedSubLocation": "Toluca Mall, Nightmare5, frozen Gumball hall after Garage Access South and before thaw",
+      "layers": [
+        {
+          "id": "bg-gumball-hall",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "d8c394cba667c68ba2c7dca76c22089a4b4e8be14c46ffa247245d3758727893",
+              "bytes": 2661923,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/nightmare_mall_sm.bg-gumball-hall.d8c394cba667.png"
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "26763553fee9b4bb7fbefab9c5d8b3c8514c2483c27583e22588a589f9ca68c6",
+              "bytes": 116094,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/nightmare_mall_sm.near-edges.26763553fee9.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "The native screenshot6a shows a low enclosed hall, frozen wall, angular rear/right ice and square tiled floor; its oval machine sign is intentionally an abstract frosted panel consistent with the existing stage scope.",
+        "This is the Gumball room after Garage Access South, not the previous Tookie atrium or the roof. Frozen people, dispenser, puzzle colors, toucan statue and player are absent.",
+        "The broader side-on room, unseen left extent, texture scale and ice geometry are adaptations from the200x150 source, not certified1:1.",
+        "One opaque static background and one sparse transparent edge foreground. No new animated clip, source cadence, collision or gameplay change. In-engine QA deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Visible overlay absent from the central86percent; tiny native alpha1-2 traces are explicitly measured and preserved. Artwork audit only, no collision changes."
+      }
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "nightmare_theater",
+      "promptKey": "nightmare_theater-bg-wave26",
+      "role": "opaque-background",
+      "filename": "nightmare_theater.bg.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-0f2af416-d2c5-4e25-93fe-069e7a624fb6.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/png/nightmare_theater.bg.png",
+      "path": "assets/stages/nightmare_theater.bg-caliban-cave.8f0e3e6b78df.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2330809,
+      "sha256": "8f0e3e6b78df05475bd4fac10a20c0dbf438f2ae3a719d534467609ceb8aa808",
+      "pixelSHA256": "aa76460450ba6cf74458f8a58a9cac85417f8d305f7e01698d4a4ef1a49c2d6a",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Empty source-guided scene or sparse matching edge overlay inspected; runtime QA belongs to integration. Native foreground traces of alpha 1-2 are retained, not digitally cleared.",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "nightmare_theater",
+      "promptKey": "nightmare_theater-fg-wave26",
+      "role": "transparent-foreground",
+      "filename": "nightmare_theater.near-edges.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-e17f08ec-2b56-4805-a878-32f6005eb330.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/png/nightmare_theater.near-edges.png",
+      "path": "assets/stages/nightmare_theater.near-edges.b6a4c8f79dfe.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 136621,
+      "sha256": "b6a4c8f79dfea16d8cad620c1e14438b3d0b76030c1fe784a86608676db19ccd",
+      "pixelSHA256": "802b53323c37ce70c42e9d3a40baf2ca0d12e4a68c4665699cd238196d8205d8",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9729831595218362,
+        "semiTransparentPixels": 42351,
+        "opaqueFraction": 9.915136600074237e-05,
+        "centerAlphaMax": 2,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 13,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Empty source-guided scene or sparse matching edge overlay inspected; runtime QA belongs to integration. Native foreground traces of alpha 1-2 are retained, not digitally cleared.",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "nightmare_school",
+      "promptKey": "nightmare_school-bg-wave26",
+      "role": "opaque-background",
+      "filename": "nightmare_school.bg.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-f27ca258-89a2-47aa-abe1-273b6972a9c1.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/png/nightmare_school.bg.png",
+      "path": "assets/stages/nightmare_school.bg-paparazzi-courtyard.7c088206ee69.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2444376,
+      "sha256": "7c088206ee698b1123c09958ad6bba576afbab88331301c3ce86a49ebf597980",
+      "pixelSHA256": "e4e9c1a5fd45767d9fff6dfe0af3377be108ca98e91f85e9481086718528f5d7",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Empty source-guided scene or sparse matching edge overlay inspected; runtime QA belongs to integration. Native foreground traces of alpha 1-2 are retained, not digitally cleared.",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "nightmare_school",
+      "promptKey": "nightmare_school-fg-wave26",
+      "role": "transparent-foreground",
+      "filename": "nightmare_school.near-edges.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-25ddc23d-b378-48f9-985e-37ae420ccd4f.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/png/nightmare_school.near-edges.png",
+      "path": "assets/stages/nightmare_school.near-edges.ee6b79600353.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 108226,
+      "sha256": "ee6b796003532835ef3e5f658b13ed2a9294f6a5a2fe761106d6532e14549335",
+      "pixelSHA256": "30bb80f0e5aacf95bdf9639dad67753e708bc637f0cc790f239949a557cdcbc1",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.987742730170998,
+        "semiTransparentPixels": 19255,
+        "opaqueFraction": 1.9067570384758148e-05,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 20,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Empty source-guided scene or sparse matching edge overlay inspected; runtime QA belongs to integration. Native foreground traces of alpha 1-2 are retained, not digitally cleared.",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "nightmare_mall_sm",
+      "promptKey": "nightmare_mall_sm-bg-wave26",
+      "role": "opaque-background",
+      "filename": "nightmare_mall_sm.bg.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-ddde3e76-9105-47ee-86dd-a85b5ddb184c.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/png/nightmare_mall_sm.bg.png",
+      "path": "assets/stages/nightmare_mall_sm.bg-gumball-hall.d8c394cba667.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2661923,
+      "sha256": "d8c394cba667c68ba2c7dca76c22089a4b4e8be14c46ffa247245d3758727893",
+      "pixelSHA256": "c0d50671d7c1ab305f06db4c556f64b93383f26a96587821ca54a675107b52a7",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Empty source-guided scene or sparse matching edge overlay inspected; runtime QA belongs to integration. Native foreground traces of alpha 1-2 are retained, not digitally cleared.",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "nightmare_mall_sm",
+      "promptKey": "nightmare_mall_sm-fg-wave26",
+      "role": "transparent-foreground",
+      "filename": "nightmare_mall_sm.near-edges.png",
+      "originalOutput": "/workspace/scratch/62cbb5f4a653/generated_images/exec-63a9fb5d-7360-44f1-b76b-2312f56a87c0.png",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/png/nightmare_mall_sm.near-edges.png",
+      "path": "assets/stages/nightmare_mall_sm.near-edges.26763553fee9.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 116094,
+      "sha256": "26763553fee9b4bb7fbefab9c5d8b3c8514c2483c27583e22588a589f9ca68c6",
+      "pixelSHA256": "06245905afcde95882a06971af71f3727d78c82b8f375d9b7d8e1bf3ccd20fa7",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9830057101017445,
+        "semiTransparentPixels": 26711,
+        "opaqueFraction": 1.716081334628233e-05,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 110,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Empty source-guided scene or sparse matching edge overlay inspected; runtime QA belongs to integration. Native foreground traces of alpha 1-2 are retained, not digitally cleared.",
+      "preservation": "Native imagegen PNG preserved byte-for-byte by immutable hardlink; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "stageId": "nightmare_theater",
+      "file": "origins-guide-native-page-082.jpeg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/references/origins-guide-native-page-082.jpeg",
+      "path": "docs/production/vague26/stages/references/origins-guide-native-page-082.jpeg",
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf",
+      "selectedPanels": "PDF page82, printed81, middle-left and lower two gameplay panels. Ignore monster closeup and page ornaments.",
+      "bytes": 198682,
+      "sha256": "b108e2f3c4e197f62a9cd4ead1f5299d7c6c7298ebacf2fba3fea2f52823b73c",
+      "width": 1203,
+      "height": 1542,
+      "inspected": true,
+      "sourceClaim": "Native embedded JPEG extracted from the official guide without resampling. Original PDF SHA256f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80; xref recorded separately."
+    },
+    {
+      "stageId": "nightmare_school",
+      "file": "shsm-school-courtyard-walkthrough.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/references/shsm-school-courtyard-walkthrough.jpg",
+      "path": "docs/production/vague26/stages/references/shsm-school-courtyard-walkthrough.jpg",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_3b.jpg",
+      "selectedPanels": "Architecture behind phone only; source200x150 limits full-yard reconstruction.",
+      "bytes": 7866,
+      "sha256": "2bb818a5425f0da246f266999a2196a945f528a548ea67359277933e8f02ccca",
+      "width": 200,
+      "height": 150,
+      "inspected": true,
+      "sourceClaim": "Native gameplay screenshot downloaded unchanged; source guide https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_06_nightmare_3_school_en.htm"
+    },
+    {
+      "stageId": "nightmare_mall_sm",
+      "file": "shsm-mall-gumball-walkthrough.jpg",
+      "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/references/shsm-mall-gumball-walkthrough.jpg",
+      "path": "docs/production/vague26/stages/references/shsm-mall-gumball-walkthrough.jpg",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_6a.jpg",
+      "selectedPanels": "Frozen hall architecture behind player; do not reproduce figures or machine.",
+      "bytes": 8937,
+      "sha256": "17dd833f287a7319cd8cdcf7bec1b8b700e8237d23e9ec0505e87643bf3ad2a7",
+      "width": 200,
+      "height": 150,
+      "inspected": true,
+      "sourceClaim": "Native gameplay screenshot downloaded unchanged; source guide https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_10_nightmare_5_toluca_mall_en.htm"
+    }
+  ],
+  "prompts": [
+    {
+      "stageId": "nightmare_theater",
+      "source": "origins",
+      "key": "nightmare_theater-bg-wave26",
+      "locationScope": "Artaud Theater, Otherworld cave beyond the stage mirror, Caliban encounter",
+      "references": [
+        "origins-guide-native-page-082.jpeg"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Create ONE uninterrupted wide 16:9 raster environment plate, ideally native 1672 by 941 pixels, for a 2D side-view fighting game. All pixels opaque. The reference is an official Silent Hill: Origins PSP strategy-guide page: use ONLY the actual gameplay screenshots in its middle-left and two bottom panels as visual source. Ignore all page layout, lettering, borders, the large monster closeup, the player and the monster. The setting is the OTHERWORLD CAVE beyond Artaud Theater's stage mirror where Caliban is encountered. It is NOT the ordinary theater auditorium or a generic curtain stage. Preserve the rough dark brown-gray rock enclosure, irregular gravelly earth, low murky ochre ambient illumination, cavern walls and the pale vertical rectangular mirror exit visible near one side in the gameplay panels. The cave is enclosed, quiet and empty. No stalagmite forest, lava, flames, symbols, blood pools, stage seats or hanging bodies.\n\nAdapt the observed enclosure into a level horizontal side-on arena viewed at standing eye height with shallow perspective. Rear cave wall and recessed shadowed rock contours occupy the upper 70 percent. Broad continuous stony floor fills the bottom 30 percent, with a clear straight fighter footing line at normalized y=0.87. Keep the central 86 percent entirely open across the fighting plane: no central rock pillar, obstacle, pit or raised ledge. A few small flat stones at the extreme outer edges only. The rectangular exit remains a subdued pale patch behind the combat plane near the far side, without a person or moving reflection. Suppress unseen remote geometry with soft darkness instead of inventing elaborate caverns. Desaturated earth and charcoal palette, restrained aged game-environment texture, realistic bitmap rendering, readable but subdued depth. No text, labels, UI, guide ornaments, logos, watermark, characters or creatures. This is a new source-guided camera adaptation; do not imply exact 1:1 geometry. Deliver a finished single empty landscape, not a page, montage or storyboard."
+    },
+    {
+      "stageId": "nightmare_school",
+      "source": "shattered",
+      "key": "nightmare_school-bg-wave26",
+      "locationScope": "Midwich High School, Nightmare 3, courtyard in front of the first Paparazzi window",
+      "references": [
+        "shsm-school-courtyard-walkthrough.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Create ONE uninterrupted wide 16:9 opaque raster background plate, ideally native 1672 by 941 pixels, for a 2D side-view fighting game. The provided small native gameplay reference is from Silent Hill: Shattered Memories, Wii 2009, Nightmare 3, the FIRST PAPARAZZI courtyard window at Midwich High School. Use only the school architecture visible BEHIND the phone: dark gray brickwork, the large rectangular pale-mullioned window, the low overhang above it, and local cold frost. Remove the hand, phone, camera reticle, HUD and any reflected or frozen people completely. Do not reproduce the phone as architecture. The walkthrough identifies a dim red light in this window: retain only a restrained muted red tint behind frost, with no person or couple silhouette.\n\nBuild a shallow side-on courtyard frontage with that window as the one identifiable source motif at the rear. The small reference does not establish the full courtyard, so keep the extension simple and restrained: dark brick wall sections recede softly into shadow at either side, modest accumulated ice on existing edges, no invented statues, school crest, sports equipment, snowstorm, gate maze or grand Gothic facade. The ordinary modern school wall is dark and cold, not ruined by fire. Broad continuous blue-gray frozen courtyard ground fills the bottom 28 percent; level fighter footing at normalized y=0.87. The central 86 percent is unobstructed across the entire combat plane. No rubble, fence, bench, large ice spike or step across the lower middle. Architectural ice is concentrated on the rear wall and outer margins. Clear silhouette contrast, restrained dark navy, slate gray and pale cyan palette, realistic textured bitmap with quiet icy reflections. No people, monsters, frozen figures, photo puzzle objects, interactive doors, text, signage, logo, UI or watermark. One continuous empty environment only. The widened side-on camera and hidden geometry are authored adaptations, not a certified reconstruction."
+    },
+    {
+      "stageId": "nightmare_mall_sm",
+      "source": "shattered",
+      "key": "nightmare_mall_sm-bg-wave26",
+      "locationScope": "Toluca Mall, Nightmare 5, frozen Gumball hall after Garage Access South, before thaw",
+      "references": [
+        "shsm-mall-gumball-walkthrough.jpg"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Create ONE uninterrupted wide 16:9 opaque raster background plate, ideally native 1672 by 941 pixels, for a 2D side-view fighting game. Use the supplied actual gameplay image from Silent Hill: Shattered Memories Wii 2009. This precise scene is the frozen GUMBALL HALL in Toluca Mall, Nightmare 5, after Garage Access South and BEFORE the puzzle is solved. It is NOT the earlier mall atrium with the toucan mascot, the roof, another game's mall, or a generic shopping gallery. Preserve the recognizable narrow enclosed commercial-hall character: low dark flat ceiling with a small run of short hanging icicles, frosted bluish back wall, broad faceted angular ice plates covering the rear/right wall and closed opening, and dark square tiled floor visible beneath glassy frost. Replace the small source sign with a restrained abstract blank frosted oval panel in the same rear-wall zone; no readable lettering or logo. Exclude the gum dispenser, colors of the puzzle, frozen father and daughter, Harry, all people and monsters entirely.\n\nAdapt this exact small hall into an empty side-on arena, standing-eye-level camera with shallow perspective. Keep modest room dimensions and dark charcoal/slate/cyan materials. The clustered source ice is BEHIND the playing plane, concentrated along the rear/right wall, not in the foreground. The bottom 28 percent must be a continuous level frosted tiled floor with clear straight fighter footing at normalized y=0.87. Keep the central 86 percent free from every pillar, machine, block of ice, prop, broken floor, gap or step. Let hard rear facets catch restrained cold reflected light; maintain readable subject contrast, quiet darkness and bitmap material detail. Do not invent shop fronts, mall balconies, mascot statues, escalators, neon advertisements, red stains or supernatural portals. No snow weather inside, no text, HUD, UI, watermark or guide layout. Render a single finished empty environment, not a montage or a photo-puzzle reenactment. The wider side-on camera and expanded hidden surfaces are authored adaptations; visual fidelity remains unverified."
+    },
+    {
+      "stageId": "nightmare_theater",
+      "source": "origins",
+      "key": "nightmare_theater-fg-wave26",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/png/nightmare_theater.bg.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Generate ONE standalone wide 16:9 RGBA FOREGROUND OVERLAY, native 1672 by 941 pixels, on a genuinely transparent background. Image1 is a matching background plate provided only for camera, material and lighting reference. Do NOT reproduce that background. The output must contain ONLY two extremely sparse cropped edge details in the outermost 5 percent of the LEFT and RIGHT canvas edges. Every pixel from x=0.07 through x=0.93 must have alpha0, from the very top to the very bottom. Leave the lower fighting-floor band completely empty except the very outermost 5 percent. No continuous ground strip, vignette, fog, tinted glass, translucent full-canvas wash or gray backdrop. No pixels or shadows floating in the central playing area. At least90percent of the total canvas must be transparent. Match the source image's 2D side-view camera and quiet lighting. This is an independent near parallax layer; it must not add obstacles or geometry across the combat plane. Use two thin irregular near cave-edge rock slivers, one dark brown rough edge cropped against the far left, a smaller charcoal rocky sliver cropped against far right. Very small flat stone corner at the outer bottom corners only. Subdued brown/ochre highlights matching the cave. No central arch, no stalagmites, no mirror, no floor and no backdrop. Bare mineral rock only; no flesh, creatures or characters. No text, UI, watermark, logos or opaque canvas. Produce only the sparse RGBA overlay."
+    },
+    {
+      "stageId": "nightmare_school",
+      "source": "shattered",
+      "key": "nightmare_school-fg-wave26",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/png/nightmare_school.bg.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Generate ONE standalone wide 16:9 RGBA FOREGROUND OVERLAY, native 1672 by 941 pixels, on a genuinely transparent background. Image1 is a matching background plate provided only for camera, material and lighting reference. Do NOT reproduce that background. The output must contain ONLY two extremely sparse cropped edge details in the outermost 5 percent of the LEFT and RIGHT canvas edges. Every pixel from x=0.07 through x=0.93 must have alpha0, from the very top to the very bottom. Leave the lower fighting-floor band completely empty except the very outermost 5 percent. No continuous ground strip, vignette, fog, tinted glass, translucent full-canvas wash or gray backdrop. No pixels or shadows floating in the central playing area. At least90percent of the total canvas must be transparent. Match the source image's 2D side-view camera and quiet lighting. This is an independent near parallax layer; it must not add obstacles or geometry across the combat plane. Use very thin frosted blue-gray brick-edge slivers and one or two small icicles clinging to the extreme upper left and upper right corners, entirely within the outer5percent side strips. A minute frost chip may sit at the very bottom outer corners. Match slate brick and pale cold-cyan ice. Do not repeat the window or brick wall. No central arch, no snow curtain, no floor, no ice spike, people, monsters, silhouettes or signage. No text, UI, watermark, logos or opaque canvas. Produce only the sparse RGBA overlay."
+    },
+    {
+      "stageId": "nightmare_mall_sm",
+      "source": "shattered",
+      "key": "nightmare_mall_sm-fg-wave26",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague26/stages/png/nightmare_mall_sm.bg.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Generate ONE standalone wide 16:9 RGBA FOREGROUND OVERLAY, native 1672 by 941 pixels, on a genuinely transparent background. Image1 is a matching background plate provided only for camera, material and lighting reference. Do NOT reproduce that background. The output must contain ONLY two extremely sparse cropped edge details in the outermost 5 percent of the LEFT and RIGHT canvas edges. Every pixel from x=0.07 through x=0.93 must have alpha0, from the very top to the very bottom. Leave the lower fighting-floor band completely empty except the very outermost 5 percent. No continuous ground strip, vignette, fog, tinted glass, translucent full-canvas wash or gray backdrop. No pixels or shadows floating in the central playing area. At least90percent of the total canvas must be transparent. Match the source image's 2D side-view camera and quiet lighting. This is an independent near parallax layer; it must not add obstacles or geometry across the combat plane. Use two thin translucent blue ice edge shards cropped tightly by the left and right canvas boundaries, within the outer5percent only. Restrained frosted charcoal facets with tiny cyan highlights matching the hall. Keep shards subtle, attached to unseen outer edge surfaces, not long spears. No ceiling across the image, no panel, no machine, no tile floor, no wall, no central ice, people, monster or frozen figure. No text, UI, watermark, logos or opaque canvas. Produce only the sparse RGBA overlay."
+    }
+  ],
+  "visualQA": {
+    "kind": "native-plate-inspection-only",
+    "allSixGeneratedPlatesInspected": true,
+    "notAnInEngineTest": true,
+    "noPixelPostprocessing": true,
+    "oneToOneCertified": false
+  },
+  "pendingReservedStages": [
+    "cedar_grove",
+    "antique_shop",
+    "frozen_streets"
+  ]
+}

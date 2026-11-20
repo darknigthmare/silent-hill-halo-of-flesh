@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave18-motion-result-20261119';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '816b442744b143857c9fae3c4e771ed5bd7c8b96a8377d0f99b1e61cb233aa23';
+const BITMAP_REVISION = '85d570e8c5910723aef6d12d9eb81527931b797d832492eeded80ec77220d888';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -50,6 +50,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/ascension_stinger_181.a031246ea341.png",
   "/assets/sprites/ascension_stinger_181.e179ecaa63b2.png",
   "/assets/sprites/ascension_the_collector_183.55a90d583450.png",
+  "/assets/sprites/ascension_the_collector_183.d157ac2cd4c2.png",
   "/assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
   "/assets/sprites/ascension_the_immolator_182.627713ebf694.png",
   "/assets/sprites/ascension_wanderer_178.3da19262874e.png",
@@ -132,6 +133,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
   "/assets/sprites/film_colin_the_janitor_174.e51afcfc4fe2.png",
   "/assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
+  "/assets/sprites/film_creeper_swarm_film_173.1eb188e475c8.png",
   "/assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
   "/assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
   "/assets/sprites/film_lying_figure_return_to_silent_hill.5d110b145c90.png",
@@ -249,6 +251,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_split_head_014.483ae08e94aa.png",
   "/assets/sprites/sh1_split_head_014.e48107f497d7.png",
   "/assets/sprites/sh1_stalker_008.4cf565113e5e.png",
+  "/assets/sprites/sh1_stalker_008.7ae11fd6c58f.png",
   "/assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
   "/assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
   "/assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
@@ -515,6 +518,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
   "/assets/stages/forest_world.first-visit-clearing.76588be774de.png",
   "/assets/stages/forest_world.near-bark-and-grass.5df8c21ae5bc.png",
+  "/assets/stages/frozen_streets.bg-frozen-exterior.01d899430889.png",
+  "/assets/stages/frozen_streets.near-edges.977b819041c2.png",
   "/assets/stages/grand_hotel.background.8250537eb741.png",
   "/assets/stages/grand_hotel.foreground.bc6963bb530b.png",
   "/assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
@@ -553,6 +558,12 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/nightmare_hospital_sm.psp-er-iced-exit.52b62d0305f9.png",
   "/assets/stages/nightmare_mall.bg-split-worm-arena.b4bb0b1e6077.png",
   "/assets/stages/nightmare_mall.near-edges.f5de5965e21f.png",
+  "/assets/stages/nightmare_mall_sm.bg-gumball-hall.d8c394cba667.png",
+  "/assets/stages/nightmare_mall_sm.near-edges.26763553fee9.png",
+  "/assets/stages/nightmare_school.bg-paparazzi-courtyard.7c088206ee69.png",
+  "/assets/stages/nightmare_school.near-edges.ee6b79600353.png",
+  "/assets/stages/nightmare_theater.bg-caliban-cave.8f0e3e6b78df.png",
+  "/assets/stages/nightmare_theater.near-edges.b6a4c8f79dfe.png",
   "/assets/stages/nowhere.bethor-generator-room.6c753fcbaa0a.png",
   "/assets/stages/nowhere.near-wall-edges.70fd5fb39aff.png",
   "/assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",

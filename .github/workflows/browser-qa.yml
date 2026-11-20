@@ -30,6 +30,8 @@ jobs:
         env:
           HALO_PYTHON: ${{ runner.temp }}/halo-browser-venv/bin/python
         run: npm run build && npm run qa:browser
+      - name: Inspect wave26 native artwork in the built HTTP app
+        run: node docs/production/vague26/run-ci-browser-check.mjs
       - name: Retain test report and captures only
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -50,4 +52,5 @@ jobs:
             tests/http-source-expansion/
             tests/http-cinematic-expansion/
             tests/http-art-batch4/
+            tests/http-wave26-native/
           retention-days: 14

@@ -4823,5 +4823,279 @@ export const STAGE_BITMAPS = {
       "Damp asphalt is the existing rainy-versus condition. Camera, curb spacing, facade fine detail, puddles and weather moment remain authored/unverified. No dramatic rain sheet, lightning, flooding, car obstacle or new story sign was added.",
       "One opaque static background and one sparse transparent edge foreground; no animated clip. Browser/gameplay QA deferred to root integration."
     ]
+  },
+  "nightmare_theater": {
+    "stageId": "nightmare_theater",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "origins-artaud-otherworld-caliban-cave",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT03",
+      "EXT02"
+    ],
+    "layers": [
+      {
+        "id": "bg-caliban-cave",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "8f0e3e6b78df05475bd4fac10a20c0dbf438f2ae3a719d534467609ceb8aa808",
+            "bytes": 2330809,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/nightmare_theater.bg-caliban-cave.8f0e3e6b78df.png"
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "b6a4c8f79dfea16d8cad620c1e14438b3d0b76030c1fe784a86608676db19ccd",
+            "bytes": 136621,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/nightmare_theater.near-edges.b6a4c8f79dfe.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Primary source is the official strategy guide page82, printed81, actual Caliban gameplay panels. The earlier cave-painted stage scenery is not used as the actual combat cave.",
+      "Rock wall, gravel floor and rectangular mirror exit follow the captured cave. Side-on spacing, hidden surfaces and diffuse lighting are authored adaptations.",
+      "No Caliban, Travis, symbols, page decoration, fire, new hazard or normal-world theater auditorium is included.",
+      "One opaque static background and one sparse transparent edge foreground. No new animated clip, source cadence, collision or gameplay change. In-engine QA deferred to root integration."
+    ]
+  },
+  "nightmare_school": {
+    "stageId": "nightmare_school",
+    "source": "shattered",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "shsm-midwich-paparazzi-courtyard",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT09",
+      "EXT10_SM_SCHOOL_GUIDE_20261026",
+      "EXT10_SM_SCHOOL_WINDOW_20261026"
+    ],
+    "layers": [
+      {
+        "id": "bg-paparazzi-courtyard",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "7c088206ee698b1123c09958ad6bba576afbab88331301c3ce86a49ebf597980",
+            "bytes": 2444376,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/nightmare_school.bg-paparazzi-courtyard.7c088206ee69.png"
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "ee6b796003532835ef3e5f658b13ed2a9294f6a5a2fe761106d6532e14549335",
+            "bytes": 108226,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/nightmare_school.near-edges.ee6b79600353.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The small native screenshot3b shows the camera phone framing the courtyard window; only the background window, brickwork and low overhang are architectural evidence. The guide identifies the first Paparazzi courtyard point and red-lit window.",
+      "Phone, hand, reticle, people and puzzle are excluded. The larger wall span, window-mullion spacing, frost detail and side-on courtyard geometry are adaptations because the source is only200x150.",
+      "No frozen couple, chase, puzzle, door-unlock event, falling snow or source cadence is reproduced.",
+      "One opaque static background and one sparse transparent edge foreground. No new animated clip, source cadence, collision or gameplay change. In-engine QA deferred to root integration."
+    ]
+  },
+  "nightmare_mall_sm": {
+    "stageId": "nightmare_mall_sm",
+    "source": "shattered",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "shsm-toluca-gumball-hall-frozen",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT09",
+      "EXT10_SM_MALL_GUIDE_20261026",
+      "EXT10_SM_MALL_GUMBALL_HALL_20261026"
+    ],
+    "layers": [
+      {
+        "id": "bg-gumball-hall",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "d8c394cba667c68ba2c7dca76c22089a4b4e8be14c46ffa247245d3758727893",
+            "bytes": 2661923,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/nightmare_mall_sm.bg-gumball-hall.d8c394cba667.png"
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "26763553fee9b4bb7fbefab9c5d8b3c8514c2483c27583e22588a589f9ca68c6",
+            "bytes": 116094,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/nightmare_mall_sm.near-edges.26763553fee9.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The native screenshot6a shows a low enclosed hall, frozen wall, angular rear/right ice and square tiled floor; its oval machine sign is intentionally an abstract frosted panel consistent with the existing stage scope.",
+      "This is the Gumball room after Garage Access South, not the previous Tookie atrium or the roof. Frozen people, dispenser, puzzle colors, toucan statue and player are absent.",
+      "The broader side-on room, unseen left extent, texture scale and ice geometry are adaptations from the200x150 source, not certified1:1.",
+      "One opaque static background and one sparse transparent edge foreground. No new animated clip, source cadence, collision or gameplay change. In-engine QA deferred to root integration."
+    ]
+  },
+  "frozen_streets": {
+    "stageId": "frozen_streets",
+    "source": "shattered",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "shsm-frozen-exterior-press-route",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT09"
+    ],
+    "layers": [
+      {
+        "id": "bg-frozen-exterior",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "01d8994308897cd0da97b513c13a488603377777a4696216d02c4d5427de3664",
+            "bytes": 2515046,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/frozen_streets.bg-frozen-exterior.01d899430889.png"
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "977b819041c267804d39b90d119602e79b13a9d59a6044ad7f0193054fd60216",
+            "bytes": 116749,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/frozen_streets.near-edges.977b819041c2.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The selected native screenshot38 depicts an exterior route bounded by thick ice, embedded broken masonry, a dark upper gap and a bent slender pole. It is not a normal-world snowy street.",
+      "The screenshot belongs to a gallery section dated2009-07-31; it does not certify the exact street, route chapter or a matching final-release build. This scope remains explicit.",
+      "The original slope, depth and obstructions are adapted into a flat side-on versus floor. Sideways expansion, pole placement, unseen surfaces and ice geometry are authored reconstruction, not certified1:1.",
+      "Player, Raw Shock, reticle, snowstorm, source chase and gameplay obstacles are omitted. No new collision, weather, hazard, source timing or animation is introduced.",
+      "One opaque static background plus one sparse transparent near-edge plate. Native trace alpha is preserved; in-engine QA deferred to root integration."
+    ]
   }
 };
