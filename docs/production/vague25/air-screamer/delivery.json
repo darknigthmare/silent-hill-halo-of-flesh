@@ -1,0 +1,492 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "kind": "reviewed-three-pose-animated-idle-replacement",
+  "fighterId": "sh1_air_screamer_001",
+  "source": "sh1",
+  "edition": "PlayStation 1999",
+  "selected": [
+    {
+      "fighterId": "sh1_air_screamer_001",
+      "source": "sh1",
+      "edition": "PlayStation 1999",
+      "frameIndex": 0,
+      "pose": "neutral",
+      "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-neutral.png",
+      "nativePath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-61d02910-ff44-4bb6-a351-73b62ba8045d.png",
+      "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
+      "pixelSHA256": "52bfdbf51a9ada5120c3a4dbb5030089b03fb757805adbaa12d4550c828ffd7c",
+      "bytes": 1127020,
+      "width": 1536,
+      "height": 1024,
+      "facing": 1,
+      "calibrationProposal": {
+        "anchor": [
+          0.51,
+          0.735
+        ],
+        "bodyHeight": 0.42
+      },
+      "bodyLandmarks": {
+        "beakTip": [
+          1490.0,
+          592.5
+        ],
+        "skullCrest": [
+          1164.0,
+          477.0
+        ],
+        "nearFootEnd": [
+          721.5,
+          742.0
+        ],
+        "farFootEnd": [
+          758.0,
+          751.0
+        ]
+      },
+      "bodyLandmarkSHA256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "strictRightSideReviewed": true,
+      "review": "Même Air Screamer SH1 entier en profil latéral droit ; tête/cou/corps/pattes visuellement stables, une seule paire d’ailes et de pattes, pose d’ailes distincte. Natifs inchangés, vrai canal alpha, parties entières dans le cadre.",
+      "limits": "Reconstruction latérale à partir de vues SH1 avant/arrière et d’un candidat de continuité déjà actif. Aucun turnaround source orthographique, aucune certification 1:1 ; petites variations de texture conservées. Rythme versus déjà existant, pas un cycle extrait du jeu source. QA cyclique moteur encore requise.",
+      "references": [
+        {
+          "id": "sh1_air_screamer_001",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_03.jpg",
+          "provenance": "art/reference-provenance.json",
+          "sha256": "bb1b200b16abaf050757deb9351a21fb2c8bfc7610c483506afaa654a4400bc4",
+          "size": [
+            1600,
+            1200
+          ],
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/sh1_art_cre_03.jpg",
+          "bytes": 98115,
+          "matchesWave8Bytes": true,
+          "httpStatus": 200
+        },
+        {
+          "id": "sh1_air_screamer_001",
+          "url": "https://www.silenthillmemories.net/sh1/screens/pics/sh1_screen_10.jpg",
+          "provenance": "art/reference-provenance.json",
+          "sha256": "5022391a2b271231ac20ebfc7c80b1a369aac71327b2c7a31eae3b9268abd7dd",
+          "size": [
+            1024,
+            768
+          ],
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/sh1_screen_10.jpg",
+          "bytes": 76504,
+          "matchesWave8Bytes": true,
+          "httpStatus": 200
+        },
+        {
+          "role": "continuity candidate, not original-game source",
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/existing-walk-frame3.png",
+          "repositoryPath": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+          "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+          "bytes": 932472
+        }
+      ],
+      "directInputReferences": [
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/sh1_art_cre_03.jpg",
+          "sha256": "bb1b200b16abaf050757deb9351a21fb2c8bfc7610c483506afaa654a4400bc4"
+        },
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/sh1_screen_10.jpg",
+          "sha256": "5022391a2b271231ac20ebfc7c80b1a369aac71327b2c7a31eae3b9268abd7dd"
+        },
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/existing-walk-frame3.png",
+          "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01"
+        }
+      ],
+      "promptId": "sh1_air_screamer_001-idle-neutral",
+      "prompt": "Use case: stylized-concept. Asset type: one native transparent raster animation frame for the existing Silent Hill Combat project.\nPrimary request: Silent Hill 1 (PlayStation, 1999) Air Screamer, one entire creature in a STRICT RIGHT-FACING LATERAL FLIGHT PROFILE, NEUTRAL/MID-STROKE wing pose, for frame 0 of a coherent 3-pose wingbeat. This is a visual reconstruction candidate, not a claimed exact game extraction.\nInput roles: image 1 is the original SH1 frontal creature artwork, governing its leathery brown mottled material, long tapering head/beak, skeletal build, two membranous wings and two short hanging hind legs. Image 2 is original SH1 gameplay rear view, supporting the same identity, not its camera. Image 3 is the project's already-used lateral glide frame and is the PRIMARY CONTINUITY reference for the EXACT head/neck/torso/hind-leg shape, proportions, side, texture and wing planform. Reproduce the SAME creature as image 3, not a new interpretation.\nFraming: landscape canvas approximately 1536 x 1024, transparent RGBA. Camera exactly level from the side; head and long pointed beak point horizontally RIGHT; body axis horizontal. One body, one head, two wings, two small bent dangling hind legs. Keep the entire head, beak tip, both wing tips and both feet within canvas with generous clear alpha margins. Place the torso/wing-root around x=55%, y=52%, beak tip around x=89%, y=54%, feet around y=68%, wing tips extending left near x=12%. Leave extra empty room above AND below for the later high and low wing poses.\nPose: keep image 3's lateral body/head/neck and both legs fixed, but bring the near wing down into a neutral midstroke position, both leathery wings extended back/left in a shallow nearly horizontal sweep, slightly separated only so both can be read. Do not adopt the original artwork's frontal symmetrical wingspan. Match image 3's skin markings, bony wing spars, pointed scalloped membrane edge, lean torso and long shallow curved beak. Do not add feathers, horns, teeth, eyes, tail spikes, fingers, an extra tail or additional limbs. Preserve ambiguous original anatomy rather than decorating it.\nMedium/lighting: detailed native raster cutout, muted brown/ochre/gray flesh leather as image 3, stable gentle neutral lighting. No arena, floor, shadow, glow, checkerboard, border, text, labels, particles or contact sheet. Only ONE whole subject. True alpha transparency, no translucent haze outside the silhouette.",
+      "transparentBackgroundRequested": true,
+      "technical": {
+        "pixelSHA256": "52bfdbf51a9ada5120c3a4dbb5030089b03fb757805adbaa12d4550c828ffd7c",
+        "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
+        "bytes": 1127020,
+        "width": 1536,
+        "height": 1024,
+        "extension": "png",
+        "visibleBounds": [
+          62,
+          400,
+          1492,
+          753
+        ],
+        "transparentFraction": 0.88418,
+        "frameIndex": 0,
+        "nativePath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-61d02910-ff44-4bb6-a351-73b62ba8045d.png",
+        "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-neutral.png",
+        "mode": "RGBA",
+        "alphaZeroFraction": 0.8749904632568359,
+        "alphaOnePixels": 9849,
+        "alphaBBox2": [
+          61,
+          398,
+          1493,
+          754
+        ],
+        "alphaSamples": {
+          "(10, 10)": 0,
+          "(1200, 350)": 0,
+          "(1450, 650)": 0,
+          "(800, 850)": 0
+        }
+      }
+    },
+    {
+      "fighterId": "sh1_air_screamer_001",
+      "source": "sh1",
+      "edition": "PlayStation 1999",
+      "frameIndex": 1,
+      "pose": "wings-up",
+      "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-up.png",
+      "nativePath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-055749e5-c53a-4a7e-a49c-a8bddc29b0b9.png",
+      "sha256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4",
+      "pixelSHA256": "06db926b975321d9c46e6fa4d6e54a673d61622106fa28f755305bdbf209b4fa",
+      "bytes": 1330497,
+      "width": 1536,
+      "height": 1024,
+      "facing": 1,
+      "calibrationProposal": {
+        "anchor": [
+          0.51,
+          0.735
+        ],
+        "bodyHeight": 0.42
+      },
+      "bodyLandmarks": {
+        "beakTip": [
+          1489.0,
+          592.0
+        ],
+        "skullCrest": [
+          1165.0,
+          477.0
+        ],
+        "nearFootEnd": [
+          723.0,
+          741.0
+        ],
+        "farFootEnd": [
+          758.5,
+          751.0
+        ]
+      },
+      "bodyLandmarkSHA256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "strictRightSideReviewed": true,
+      "review": "Même Air Screamer SH1 entier en profil latéral droit ; tête/cou/corps/pattes visuellement stables, une seule paire d’ailes et de pattes, pose d’ailes distincte. Natifs inchangés, vrai canal alpha, parties entières dans le cadre.",
+      "limits": "Reconstruction latérale à partir de vues SH1 avant/arrière et d’un candidat de continuité déjà actif. Aucun turnaround source orthographique, aucune certification 1:1 ; petites variations de texture conservées. Rythme versus déjà existant, pas un cycle extrait du jeu source. QA cyclique moteur encore requise.",
+      "references": [
+        {
+          "id": "sh1_air_screamer_001",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_03.jpg",
+          "provenance": "art/reference-provenance.json",
+          "sha256": "bb1b200b16abaf050757deb9351a21fb2c8bfc7610c483506afaa654a4400bc4",
+          "size": [
+            1600,
+            1200
+          ],
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/sh1_art_cre_03.jpg",
+          "bytes": 98115,
+          "matchesWave8Bytes": true,
+          "httpStatus": 200
+        },
+        {
+          "id": "sh1_air_screamer_001",
+          "url": "https://www.silenthillmemories.net/sh1/screens/pics/sh1_screen_10.jpg",
+          "provenance": "art/reference-provenance.json",
+          "sha256": "5022391a2b271231ac20ebfc7c80b1a369aac71327b2c7a31eae3b9268abd7dd",
+          "size": [
+            1024,
+            768
+          ],
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/sh1_screen_10.jpg",
+          "bytes": 76504,
+          "matchesWave8Bytes": true,
+          "httpStatus": 200
+        },
+        {
+          "role": "continuity candidate, not original-game source",
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/existing-walk-frame3.png",
+          "repositoryPath": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+          "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+          "bytes": 932472
+        }
+      ],
+      "directInputReferences": [
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-neutral.png",
+          "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0"
+        }
+      ],
+      "promptId": "sh1_air_screamer_001-idle-wings-up",
+      "prompt": "Use case: precise-object-edit. Asset type: one separate native RGBA animation frame for Silent Hill Combat.\nInput image 1 is the EXACT EDIT TARGET and the neutral frame of the Silent Hill 1 Air Screamer. Edit only the articulation and membranes of its TWO WINGS to make the specified adjacent wingbeat pose. Preserve the same individual creature, camera, texture, material, lighting, head, beak, neck, torso, pelvis, two bent hind legs, feet and their exact pixel positions/scale as closely as possible. In particular the rightward beak tip, ridged skull, torso and feet must remain stationary relative to the canvas. Do not translate, rotate, zoom, recenter, re-pose or redesign the body. Keep the SAME 1536 x 1024 canvas and complete right-facing STRICT LATERAL silhouette. Original project source is SH1 PlayStation 1999, not a different game's creature.\nKeep each wing's same bony spars, pointed scalloped leathery membrane edge, brown mottled pattern and plausible membrane area while changing only its pose at the existing joints/roots. Exactly two wings and two legs; retain natural overlapping far-side wing, not a frontal symmetric wingspan. No new limb, feather, crest, horn, teeth, eye, tail or tail spike. Both wing tips and all body parts must remain fully inside the canvas with clear transparency around them. No environment, floor, shadow, glow, haze, text, checkerboard, sheet or duplicate figure. Preserve TRUE alpha transparency; the brown/black preview background around the original is invisible RGB beneath alpha zero, not something to paint. Output only ONE full creature cutout.\nTarget wing pose: UPSTROKE/HIGH WINGS. Raise BOTH membranous wings conspicuously above their fixed body roots, in a synchronized wingbeat, while they continue to sweep back toward the LEFT. The near wing should occupy the upper-left region and its leading spar rise above the torso, far wing slightly behind it. The wing tips must stay clear of the upper border, roughly y=15–22% of the same canvas. Keep the entire head/body/legs and beak absolutely in their neutral-frame positions. The only visual change should be the wings moving upward; do not make the torso bob or the head tilt.",
+      "transparentBackgroundRequested": true,
+      "technical": {
+        "pixelSHA256": "06db926b975321d9c46e6fa4d6e54a673d61622106fa28f755305bdbf209b4fa",
+        "sha256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4",
+        "bytes": 1330497,
+        "width": 1536,
+        "height": 1024,
+        "extension": "png",
+        "visibleBounds": [
+          86,
+          140,
+          1490,
+          752
+        ],
+        "transparentFraction": 0.85205,
+        "frameIndex": 1,
+        "nativePath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-055749e5-c53a-4a7e-a49c-a8bddc29b0b9.png",
+        "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-up.png",
+        "mode": "RGBA",
+        "alphaZeroFraction": 0.8444741566975912,
+        "alphaOnePixels": 7882,
+        "alphaBBox2": [
+          85,
+          138,
+          1491,
+          753
+        ],
+        "alphaSamples": {
+          "(10, 10)": 0,
+          "(1200, 350)": 0,
+          "(1450, 650)": 0,
+          "(800, 850)": 0
+        }
+      }
+    },
+    {
+      "fighterId": "sh1_air_screamer_001",
+      "source": "sh1",
+      "edition": "PlayStation 1999",
+      "frameIndex": 2,
+      "pose": "wings-down",
+      "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-down.png",
+      "nativePath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-7762a513-6de8-4b08-9775-2c27686077ee.png",
+      "sha256": "3b30a8c6cdae02716cec44551d348e02259dbd2aa9bce787ad1db6d58dc4bfc6",
+      "pixelSHA256": "c832165f49213c64bbceaa0f48d83c52b163564decf1f4117450ced9df337be1",
+      "bytes": 1241850,
+      "width": 1536,
+      "height": 1024,
+      "facing": 1,
+      "calibrationProposal": {
+        "anchor": [
+          0.51,
+          0.735
+        ],
+        "bodyHeight": 0.42
+      },
+      "bodyLandmarks": {
+        "beakTip": [
+          1488.0,
+          593.0
+        ],
+        "skullCrest": [
+          1163.5,
+          477.0
+        ],
+        "nearFootEnd": [
+          723.17,
+          740.0
+        ],
+        "farFootEnd": [
+          759.5,
+          750.0
+        ]
+      },
+      "bodyLandmarkSHA256": "3b30a8c6cdae02716cec44551d348e02259dbd2aa9bce787ad1db6d58dc4bfc6",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "strictRightSideReviewed": true,
+      "review": "Même Air Screamer SH1 entier en profil latéral droit ; tête/cou/corps/pattes visuellement stables, une seule paire d’ailes et de pattes, pose d’ailes distincte. Natifs inchangés, vrai canal alpha, parties entières dans le cadre.",
+      "limits": "Reconstruction latérale à partir de vues SH1 avant/arrière et d’un candidat de continuité déjà actif. Aucun turnaround source orthographique, aucune certification 1:1 ; petites variations de texture conservées. Rythme versus déjà existant, pas un cycle extrait du jeu source. QA cyclique moteur encore requise.",
+      "references": [
+        {
+          "id": "sh1_air_screamer_001",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_03.jpg",
+          "provenance": "art/reference-provenance.json",
+          "sha256": "bb1b200b16abaf050757deb9351a21fb2c8bfc7610c483506afaa654a4400bc4",
+          "size": [
+            1600,
+            1200
+          ],
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/sh1_art_cre_03.jpg",
+          "bytes": 98115,
+          "matchesWave8Bytes": true,
+          "httpStatus": 200
+        },
+        {
+          "id": "sh1_air_screamer_001",
+          "url": "https://www.silenthillmemories.net/sh1/screens/pics/sh1_screen_10.jpg",
+          "provenance": "art/reference-provenance.json",
+          "sha256": "5022391a2b271231ac20ebfc7c80b1a369aac71327b2c7a31eae3b9268abd7dd",
+          "size": [
+            1024,
+            768
+          ],
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/sh1_screen_10.jpg",
+          "bytes": 76504,
+          "matchesWave8Bytes": true,
+          "httpStatus": 200
+        },
+        {
+          "role": "continuity candidate, not original-game source",
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/references/existing-walk-frame3.png",
+          "repositoryPath": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+          "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+          "bytes": 932472
+        }
+      ],
+      "directInputReferences": [
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-neutral.png",
+          "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0"
+        }
+      ],
+      "promptId": "sh1_air_screamer_001-idle-wings-down",
+      "prompt": "Use case: precise-object-edit. Asset type: one separate native RGBA animation frame for Silent Hill Combat.\nInput image 1 is the EXACT EDIT TARGET and the neutral frame of the Silent Hill 1 Air Screamer. Edit only the articulation and membranes of its TWO WINGS to make the specified adjacent wingbeat pose. Preserve the same individual creature, camera, texture, material, lighting, head, beak, neck, torso, pelvis, two bent hind legs, feet and their exact pixel positions/scale as closely as possible. In particular the rightward beak tip, ridged skull, torso and feet must remain stationary relative to the canvas. Do not translate, rotate, zoom, recenter, re-pose or redesign the body. Keep the SAME 1536 x 1024 canvas and complete right-facing STRICT LATERAL silhouette. Original project source is SH1 PlayStation 1999, not a different game's creature.\nKeep each wing's same bony spars, pointed scalloped leathery membrane edge, brown mottled pattern and plausible membrane area while changing only its pose at the existing joints/roots. Exactly two wings and two legs; retain natural overlapping far-side wing, not a frontal symmetric wingspan. No new limb, feather, crest, horn, teeth, eye, tail or tail spike. Both wing tips and all body parts must remain fully inside the canvas with clear transparency around them. No environment, floor, shadow, glow, haze, text, checkerboard, sheet or duplicate figure. Preserve TRUE alpha transparency; the brown/black preview background around the original is invisible RGB beneath alpha zero, not something to paint. Output only ONE full creature cutout.\nTarget wing pose: DOWNSTROKE/LOW WINGS. Lower BOTH membranous wings conspicuously below their fixed body roots, in a synchronized wingbeat, while they continue to sweep back toward the LEFT. The near wing should occupy the lower-left region and its leading spar descend below the torso, far wing slightly behind it. The wing tips must stay clear of the lower border, roughly y=80–88% of the same canvas. It is natural for the descending wing root to overlap some of the torso; keep the two unchanged feet readable beneath or beside it without moving them. Keep the entire head/body/legs and beak absolutely in their neutral-frame positions. The only visual change should be the wings moving downward; do not make the torso bob or the head tilt.",
+      "transparentBackgroundRequested": true,
+      "technical": {
+        "pixelSHA256": "c832165f49213c64bbceaa0f48d83c52b163564decf1f4117450ced9df337be1",
+        "sha256": "3b30a8c6cdae02716cec44551d348e02259dbd2aa9bce787ad1db6d58dc4bfc6",
+        "bytes": 1241850,
+        "width": 1536,
+        "height": 1024,
+        "extension": "png",
+        "visibleBounds": [
+          47,
+          434,
+          1490,
+          897
+        ],
+        "transparentFraction": 0.8768,
+        "frameIndex": 2,
+        "nativePath": "/workspace/scratch/62cbb5f4a653/generated_images/exec-7762a513-6de8-4b08-9775-2c27686077ee.png",
+        "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-down.png",
+        "mode": "RGBA",
+        "alphaZeroFraction": 0.8622213999430338,
+        "alphaOnePixels": 18103,
+        "alphaBBox2": [
+          46,
+          432,
+          1491,
+          899
+        ],
+        "alphaSamples": {
+          "(10, 10)": 0,
+          "(1200, 350)": 0,
+          "(1450, 650)": 0,
+          "(800, 850)": 0
+        }
+      }
+    }
+  ],
+  "replacedFrameIndices": [
+    0,
+    1,
+    2
+  ],
+  "baseline": {
+    "path": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/baseline.json",
+    "sha256": "f1547bb8163db4eb29848009e9504f1c1e85c3df8395e0375373fd7fd4665016"
+  },
+  "preservedClips": {
+    "idle": {
+      "frames": [
+        0,
+        1,
+        0,
+        2
+      ],
+      "ticksPerFrame": 6,
+      "frameTicks": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "loop": true
+    },
+    "walk": {
+      "frames": [
+        3
+      ],
+      "ticksPerFrame": 6,
+      "loop": true
+    }
+  },
+  "preservedAnimatedClips": 1,
+  "allowedEntryMetadataChanges": {
+    "combatView": "side-view-candidate",
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 3,
+        "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01"
+      }
+    ]
+  },
+  "metadataRationale": "The existing validateCombatFramePurposes requires this exact legacy marker to retain the old frame3 deeply unchanged after classifying the three reviewed idle frames as side-view candidates. No validator or static importer is relaxed. Notes, source provenance, portrait, frame3 and every other entry field remain unchanged.",
+  "animationReview": {
+    "nativePoseConsistencyReviewed": true,
+    "peerReviewPassed": true,
+    "engineCycleQARequired": true,
+    "engineCycleQACompleted": false,
+    "nativeDimensions": [
+      1536,
+      1024
+    ],
+    "commonCalibration": {
+      "anchor": [
+        0.51,
+        0.735
+      ],
+      "bodyHeight": 0.42
+    },
+    "calibrationMethod": "One fixed anchor under the pelvis ([783.36,752.64] native pixels), one standing-equivalent height 430.08 pixels for every pose. This preserves the body scale independently of wing extension; projected lateral width is close to the unchanged walk frame. Native body landmarks provide measurable evidence and must be projected by actual rendering in cyclic QA.",
+    "bodyLandmarksFile": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/body-landmarks.json",
+    "bodyLandmarksFileSHA256": "de6f7240fe8d306c58db8f76aa426168e5f0d5b334bc03e7e3b3226c544cf68d",
+    "maximumNativeBodyLandmarkShiftFromNeutralPixels": 2.605551764981817,
+    "headAlphaMaskIoUAgainstNeutral": {
+      "1": 0.9905031598577201,
+      "2": 0.9710410930967676
+    },
+    "nativePixelsIdenticalAcrossPoses": false,
+    "textureVariation": "Small texture variations and subpixel/1–2 pixel outline differences remain; no per-pixel identity is claimed. Native textures were not processed.",
+    "peerReview": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/peer-review.json",
+    "cyclicGate": "Run the actual idle sequence 0,1,0,2 for at least two complete 24-tick cycles; preserve six ticks per step, walk frame3 on movement and return to idle, both facings, body landmark stability and unchanged portrait. Do not claim qualified cyclic consistency from static review alone."
+  },
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "calls": 3,
+    "correctionCalls": 0,
+    "strategy": "Generate neutral first from inspected source and continuity references, then independently edit only wings to high and low poses from the neutral native PNG.",
+    "allNativeOutputsPreserved": true,
+    "nativeBytesUnmodified": true,
+    "nativeFilesTotalBytes": 3699367,
+    "promptSet": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/prompts.json",
+    "promptSetSHA256": "be56048ba71566d0f74542fc4ffc09870b49815b231f2c714bc1b70eea3aff8e",
+    "alphaReview": "Brown/black preview halo is hidden RGB beneath alpha zero; inspected far-background alpha samples are all zero. Alpha>=2 bounds tightly follow the whole subject, with a few alpha1 antialiasing traces retained. No procedural edit or needless imagegen correction."
+  },
+  "import": {
+    "helper": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/import-air-screamer-idle.py",
+    "default": "dry-run; explicit --apply required by integrator after review",
+    "staticImporterUnchanged": true,
+    "registryNotModifiedByAuthor": true
+  },
+  "limits": [
+    "Unverified reconstruction candidate; no source-exact side view or 1:1 claim.",
+    "Timing is the original project clip, not a newly measured SH1 animation.",
+    "Left facing is a presentation mirror, not independently sourced anatomy.",
+    "The immutable historical walk image may differ in texture/pose from the new idle; actual movement transition remains part of post-import QA.",
+    "Only three idle frames change. No attack, impact, guard, finisher, source role or gameplay ability is authored."
+  ]
+}

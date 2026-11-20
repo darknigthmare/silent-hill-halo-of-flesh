@@ -1,0 +1,373 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "createdAt": "2026-11-20T09:48:32.495751+00:00",
+  "purpose": "Withdraw the unpublished low-wing candidate held by visual QA, then use the original strict importer for its corrected delivery.",
+  "fighterId": "sh1_air_screamer_001",
+  "complete": true,
+  "baselineTree": "12bb301c51be56fccd8a2ffd9834468f2f56a9b8",
+  "priorImportReceipt": {
+    "path": "docs/production/vague25/receipt-air-screamer.json",
+    "sha256": "62c052a349b35486f4b464c180f7848e30370996cb72a7fbf3e47b21b0b2f746"
+  },
+  "baseline": {
+    "path": "docs/production/vague25/air-screamer/baseline.json",
+    "sha256": "f1547bb8163db4eb29848009e9504f1c1e85c3df8395e0375373fd7fd4665016"
+  },
+  "beforeRegistrySHA256": "f70e6b434c6fb8952306fa7189bb8125238cbcdb33409cdd9e0cbf668951299c",
+  "restoredRegistrySHA256": "d2838f358934afd8c8b0aad633142dc52a5b3ee2f256d50ca0ebfd01a648ba0b",
+  "withdrawnEntry": {
+    "fighterId": "sh1_air_screamer_001",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-842f8fbf-2dd2-4562-a39a-398e17fae002.png",
+    "sourceSHA256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+    "sourceDimensions": [
+      1774,
+      887
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Reconstruction candidate depuis les vues avant et arrière SH1 de Silent Hill Memories ; poses et temps de lecture originaux du projet, aucune certification 1:1. Ancien candidat conservé hors registre actif.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
+        "bytes": 1127020,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          62,
+          400,
+          1492,
+          753
+        ],
+        "pixelSHA256": "52bfdbf51a9ada5120c3a4dbb5030089b03fb757805adbaa12d4550c828ffd7c",
+        "transparentFraction": 0.88418,
+        "path": "assets/sprites/sh1_air_screamer_001.3af1bfe6260c.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.735
+        ],
+        "bodyHeight": 0.42,
+        "sourceFile": "exec-61d02910-ff44-4bb6-a351-73b62ba8045d.png",
+        "sourceSHA256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      {
+        "sha256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4",
+        "bytes": 1330497,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          86,
+          140,
+          1490,
+          752
+        ],
+        "pixelSHA256": "06db926b975321d9c46e6fa4d6e54a673d61622106fa28f755305bdbf209b4fa",
+        "transparentFraction": 0.85205,
+        "path": "assets/sprites/sh1_air_screamer_001.54bc7ba84975.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.735
+        ],
+        "bodyHeight": 0.42,
+        "sourceFile": "exec-055749e5-c53a-4a7e-a49c-a8bddc29b0b9.png",
+        "sourceSHA256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      {
+        "sha256": "3b30a8c6cdae02716cec44551d348e02259dbd2aa9bce787ad1db6d58dc4bfc6",
+        "bytes": 1241850,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          47,
+          434,
+          1490,
+          897
+        ],
+        "pixelSHA256": "c832165f49213c64bbceaa0f48d83c52b163564decf1f4117450ced9df337be1",
+        "transparentFraction": 0.8768,
+        "path": "assets/sprites/sh1_air_screamer_001.3b30a8c6cdae.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.735
+        ],
+        "bodyHeight": 0.42,
+        "sourceFile": "exec-7762a513-6de8-4b08-9775-2c27686077ee.png",
+        "sourceSHA256": "3b30a8c6cdae02716cec44551d348e02259dbd2aa9bce787ad1db6d58dc4bfc6",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view"
+      },
+      {
+        "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+        "bytes": 932472,
+        "width": 2172,
+        "height": 724,
+        "visibleBounds": [
+          137,
+          20,
+          2068,
+          657
+        ],
+        "pixelSHA256": "e58e8acbf2f8765a5860209f8ac2b1e7ad978a17884ddd53c71e18f716301b2b",
+        "transparentFraction": 0.75044,
+        "path": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.9
+        ],
+        "bodyHeight": 0.8,
+        "sourceFile": "exec-e13fb987-1f9d-4deb-a323-b2b673f0edeb.png",
+        "sourceSHA256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_air_screamer_001.4ea98b63b6fc.png",
+      "sha256": "4ea98b63b6fce38f6e5c3d96be72951ad88b7cd2fb9db87d77e8ad22a99c6943",
+      "bytes": 1791506,
+      "width": 1536,
+      "height": 1024,
+      "facing": 1,
+      "visibleBounds": [
+        15,
+        41,
+        1518,
+        924
+      ],
+      "pixelSHA256": "7aceae431a625936c274d2dafdc8936cb6d25fd5aaf922bc065f9831ec314452",
+      "sourceFile": "sh1_air_screamer_001-selection.png",
+      "sourceSHA256": "4ea98b63b6fce38f6e5c3d96be72951ad88b7cd2fb9db87d77e8ad22a99c6943",
+      "origin": "conversation-image-generation",
+      "purpose": "selection"
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0,
+          1,
+          0,
+          2
+        ],
+        "ticksPerFrame": 6,
+        "frameTicks": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "loop": true
+      },
+      "walk": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 6,
+        "loop": true
+      }
+    },
+    "animatedClips": 1,
+    "selectionNotes": "Illustration de sélection en pied. Air Screamer.",
+    "selectionProvenance": {
+      "sourceSHA256": "4ea98b63b6fce38f6e5c3d96be72951ad88b7cd2fb9db87d77e8ad22a99c6943",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "sh1_air_screamer_001-selection.png"
+    },
+    "combatView": "side-view-candidate",
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 3,
+        "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01"
+      }
+    ]
+  },
+  "restoredEntry": {
+    "fighterId": "sh1_air_screamer_001",
+    "source": "sh1",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "sourceFile": "exec-842f8fbf-2dd2-4562-a39a-398e17fae002.png",
+    "sourceSHA256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+    "sourceDimensions": [
+      1774,
+      887
+    ],
+    "singleSubjectReviewed": true,
+    "notes": "Reconstruction candidate depuis les vues avant et arrière SH1 de Silent Hill Memories ; poses et temps de lecture originaux du projet, aucune certification 1:1. Ancien candidat conservé hors registre actif.",
+    "mirrorPolicy": "presentation-only; opposite side not independently generated",
+    "frames": [
+      {
+        "sha256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+        "bytes": 627900,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          40,
+          234,
+          1747,
+          673
+        ],
+        "pixelSHA256": "6e7a9f90879bb5c30f01e766a8b3d8726990697e79cdb5b54295a914085d92ae",
+        "transparentFraction": 0.84725,
+        "path": "assets/sprites/sh1_air_screamer_001.f208137d6414.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.77
+        ],
+        "bodyHeight": 0.58,
+        "sourceFile": "exec-842f8fbf-2dd2-4562-a39a-398e17fae002.png",
+        "sourceSHA256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9",
+        "bytes": 707307,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          86,
+          60,
+          1724,
+          786
+        ],
+        "pixelSHA256": "893cb8cad4e52faf2ab9d15fa2e41817e7266eab534a619674f0d48d73a94e12",
+        "transparentFraction": 0.82684,
+        "path": "assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.9
+        ],
+        "bodyHeight": 0.58,
+        "sourceFile": "exec-c077a414-e5ab-4b8a-bea2-e53663c8a88c.png",
+        "sourceSHA256": "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780",
+        "bytes": 716893,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          52,
+          222,
+          1736,
+          760
+        ],
+        "pixelSHA256": "43f59f945e95788c00b9e065f217dcf321b0d20eff7432e1dbd7830cb88c0848",
+        "transparentFraction": 0.82392,
+        "path": "assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
+        "facing": 1,
+        "anchor": [
+          0.54,
+          0.705
+        ],
+        "bodyHeight": 0.58,
+        "sourceFile": "exec-8f429514-4016-414a-9594-f9abdb569045.png",
+        "sourceSHA256": "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780",
+        "origin": "conversation-image-generation"
+      },
+      {
+        "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+        "bytes": 932472,
+        "width": 2172,
+        "height": 724,
+        "visibleBounds": [
+          137,
+          20,
+          2068,
+          657
+        ],
+        "pixelSHA256": "e58e8acbf2f8765a5860209f8ac2b1e7ad978a17884ddd53c71e18f716301b2b",
+        "transparentFraction": 0.75044,
+        "path": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+        "facing": 1,
+        "anchor": [
+          0.51,
+          0.9
+        ],
+        "bodyHeight": 0.8,
+        "sourceFile": "exec-e13fb987-1f9d-4deb-a323-b2b673f0edeb.png",
+        "sourceSHA256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+        "origin": "conversation-image-generation"
+      }
+    ],
+    "portrait": {
+      "path": "assets/sprites/sh1_air_screamer_001.4ea98b63b6fc.png",
+      "sha256": "4ea98b63b6fce38f6e5c3d96be72951ad88b7cd2fb9db87d77e8ad22a99c6943",
+      "bytes": 1791506,
+      "width": 1536,
+      "height": 1024,
+      "facing": 1,
+      "visibleBounds": [
+        15,
+        41,
+        1518,
+        924
+      ],
+      "pixelSHA256": "7aceae431a625936c274d2dafdc8936cb6d25fd5aaf922bc065f9831ec314452",
+      "sourceFile": "sh1_air_screamer_001-selection.png",
+      "sourceSHA256": "4ea98b63b6fce38f6e5c3d96be72951ad88b7cd2fb9db87d77e8ad22a99c6943",
+      "origin": "conversation-image-generation",
+      "purpose": "selection"
+    },
+    "clips": {
+      "idle": {
+        "frames": [
+          0,
+          1,
+          0,
+          2
+        ],
+        "ticksPerFrame": 6,
+        "frameTicks": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "loop": true
+      },
+      "walk": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 6,
+        "loop": true
+      }
+    },
+    "animatedClips": 1,
+    "selectionNotes": "Illustration de sélection en pied. Air Screamer.",
+    "selectionProvenance": {
+      "sourceSHA256": "4ea98b63b6fce38f6e5c3d96be72951ad88b7cd2fb9db87d77e8ad22a99c6943",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "sh1_air_screamer_001-selection.png"
+    }
+  },
+  "otherEntriesUnchanged": true,
+  "rasterFilesTouched": 0,
+  "lockAndRegistryWideCAS": true
+}

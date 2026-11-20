@@ -1,0 +1,215 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "reviewDate": "2026-11-20",
+  "sourceGallery": "https://www.silenthillmemories.net/sh_townfall/art_en.htm",
+  "sourceInventory": "docs/production/vague25/townfall/references/source-inventory.json",
+  "scope": "Verified source delivery for five lateral candidate upgrades; no output accepted or runtime source modified by this review.",
+  "filesVerified": 8,
+  "allHTTP200": true,
+  "allNativeSHA256MatchART92": true,
+  "allDecoded": true,
+  "allVisuallyInspected": true,
+  "historicalRefusalAudit": {
+    "exactProfileIds": [
+      "townfall_lunger",
+      "townfall_sorrowful",
+      "townfall_fallen",
+      "townfall_widow",
+      "townfall_the_weight"
+    ],
+    "ownRefusalsFound": [],
+    "scope": "Existing direct-ID records in art/*.json and related archived production blocks; no new generation was requested by this audit."
+  },
+  "historyCorrection": "The older ART144 lack-of-named-source conclusions are superseded by ART92-e named-model/concept references, retrieved again with identical hashes. Do not reclassify these five as having no named references.",
+  "profiles": [
+    {
+      "fighterId": "townfall_lunger",
+      "source": "townfall",
+      "historicalEvidence": {
+        "path": "art/provenance-art92-e.json",
+        "pointer": "/candidateEntries/1"
+      },
+      "references": [
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall/references/creature_lunger_03.jpg",
+          "repositoryPath": "docs/production/vague25/townfall/references/creature_lunger_03.jpg",
+          "url": "https://www.silenthillmemories.net/sh_townfall/art/pics/creature_lunger_03.jpg",
+          "role": "primary whole silhouette"
+        },
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall/references/creature_lunger_04.jpg",
+          "repositoryPath": "docs/production/vague25/townfall/references/creature_lunger_04.jpg",
+          "url": "https://www.silenthillmemories.net/sh_townfall/art/pics/creature_lunger_04.jpg",
+          "role": "secondary detail only"
+        }
+      ],
+      "sourceClassification": "Named final game model with upper-body detail",
+      "runtime": {
+        "role": "combatant",
+        "combatEnabled": true,
+        "superEnabled": true
+      },
+      "morphologyObserved": [
+        "Whole thin upright body and two bare feet in image03.",
+        "Forearms restrained across torso with numerous dark webbing straps; no free hands or held axe.",
+        "Asymmetric flesh-and-blade head continuous with long neck; image04 corroborates head and straps but crops lower legs."
+      ],
+      "limits": [
+        "Primary03 defines the whole form; detail04 is not a whole-body source.",
+        "No measured side or independent opposite-side view; lateral volume is a reconstruction."
+      ],
+      "decision": "eligible-for-first-reviewed-lateral-candidate",
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "townfall_sorrowful",
+      "source": "townfall",
+      "historicalEvidence": {
+        "path": "art/provenance-art92-e.json",
+        "pointer": "/candidateEntries/2"
+      },
+      "references": [
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall/references/creature_sorrowful_07.jpg",
+          "repositoryPath": "docs/production/vague25/townfall/references/creature_sorrowful_07.jpg",
+          "url": "https://www.silenthillmemories.net/sh_townfall/art/pics/creature_sorrowful_07.jpg",
+          "role": "primary whole silhouette"
+        },
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall/references/creature_sorrowful_08.jpg",
+          "repositoryPath": "docs/production/vague25/townfall/references/creature_sorrowful_08.jpg",
+          "url": "https://www.silenthillmemories.net/sh_townfall/art/pics/creature_sorrowful_08.jpg",
+          "role": "secondary detail only"
+        }
+      ],
+      "sourceClassification": "Named final game model with upper-body detail",
+      "runtime": {
+        "role": "combatant",
+        "combatEnabled": true,
+        "superEnabled": true
+      },
+      "morphologyObserved": [
+        "Whole upright body in image07 with fingers, thin legs and two feet.",
+        "Hands held close to central chest seam; short fine tube with colored connectors appears near the torso.",
+        "Featureless folded face and irregular ridged surface; image08 shows another upper-body pose."
+      ],
+      "limits": [
+        "Keep the small source tube rather than inventing an extended attacking whip or detached projectile.",
+        "The lower body is documented by07;08 crops lower limbs.",
+        "No measured side or independent opposite-side view."
+      ],
+      "decision": "eligible-for-first-reviewed-lateral-candidate",
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "townfall_fallen",
+      "source": "townfall",
+      "historicalEvidence": {
+        "path": "art/provenance-art92-e.json",
+        "pointer": "/candidateEntries/3"
+      },
+      "references": [
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall/references/creature_fallen_04.jpg",
+          "repositoryPath": "docs/production/vague25/townfall/references/creature_fallen_04.jpg",
+          "url": "https://www.silenthillmemories.net/sh_townfall/art/pics/creature_fallen_04.jpg",
+          "role": "primary whole silhouette"
+        }
+      ],
+      "sourceClassification": "Named final concept; not an extracted final retail model",
+      "runtime": {
+        "role": "combatant",
+        "combatEnabled": true,
+        "superEnabled": true
+      },
+      "morphologyObserved": [
+        "Complete pale upright figure with straight legs and both feet.",
+        "Long thin torso, raised shoulders, elbows opened and bent fingers.",
+        "Small dark hanging filaments near head and torso; finite complete silhouette above a presentation puddle."
+      ],
+      "limits": [
+        "The visual source is upright despite the historical corpus poseRig='rampant'; do not invent quadrupedal anatomy from the name or corpus summary.",
+        "Preserve the concept-only status.",
+        "No measured side view or backside; do not import the source pedestal/puddle as character anatomy."
+      ],
+      "decision": "eligible-for-first-reviewed-lateral-candidate",
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "townfall_widow",
+      "source": "townfall",
+      "historicalEvidence": {
+        "path": "art/provenance-art92-e.json",
+        "pointer": "/candidateEntries/4"
+      },
+      "references": [
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall/references/creature_widow_03.jpg",
+          "repositoryPath": "docs/production/vague25/townfall/references/creature_widow_03.jpg",
+          "url": "https://www.silenthillmemories.net/sh_townfall/art/pics/creature_widow_03.jpg",
+          "role": "primary whole silhouette"
+        }
+      ],
+      "sourceClassification": "Named final game model",
+      "runtime": {
+        "role": "unverified",
+        "combatEnabled": false,
+        "superEnabled": false
+      },
+      "morphologyObserved": [
+        "Whole leaning figure with both bare feet visible.",
+        "Pale hooded or enveloped head, ragged gray wrapping/clothing, loose strips and attached photograph-like rectangles.",
+        "A small broken wooden stick held low, fully in frame."
+      ],
+      "limits": [
+        "No black veil, generic knife or offensive stance inferred from prose.",
+        "Workshop/reference-only candidate; combat remains disabled.",
+        "No measured lateral/backside view; paper imagery is not independently legible or certified."
+      ],
+      "decision": "eligible-for-first-reviewed-lateral-candidate",
+      "oneToOneCertified": false
+    },
+    {
+      "fighterId": "townfall_the_weight",
+      "source": "townfall",
+      "historicalEvidence": {
+        "path": "art/provenance-art92-e.json",
+        "pointer": "/candidateEntries/5"
+      },
+      "references": [
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall/references/creature_the_weight_08.jpg",
+          "repositoryPath": "docs/production/vague25/townfall/references/creature_the_weight_08.jpg",
+          "url": "https://www.silenthillmemories.net/sh_townfall/art/pics/creature_the_weight_08.jpg",
+          "role": "primary whole silhouette"
+        },
+        {
+          "localPath": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/townfall/references/creature_the_weight_06.jpg",
+          "repositoryPath": "docs/production/vague25/townfall/references/creature_the_weight_06.jpg",
+          "url": "https://www.silenthillmemories.net/sh_townfall/art/pics/creature_the_weight_06.jpg",
+          "role": "secondary detail only"
+        }
+      ],
+      "sourceClassification": "Named final pursuing model; secondary concept studies",
+      "runtime": {
+        "role": "scripted-encounter",
+        "combatEnabled": true,
+        "superEnabled": false
+      },
+      "morphologyObserved": [
+        "Whole upright final model08 with massive dark form behind an oval head, merged arms, dark trousers and two shoes.",
+        "Small oval head differs from the huge surrounding mass.",
+        "Image06 is a concept sheet with eight A–H head alternatives and a left figure, not a final model turnaround."
+      ],
+      "limits": [
+        "Final model08 takes priority over all divergent A–H studies in06.",
+        "Do not import the long dripping filament shown only in06, alternate final phase03, chains, stones or equipment absent from08.",
+        "Keep existing scripted-encounter role, combatEnabled=true and superEnabled=false.",
+        "No measured lateral/backside view."
+      ],
+      "decision": "eligible-for-first-reviewed-lateral-candidate",
+      "oneToOneCertified": false
+    }
+  ]
+}

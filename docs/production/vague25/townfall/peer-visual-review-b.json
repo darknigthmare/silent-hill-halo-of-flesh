@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "reviewer": "audit_previous_work",
+  "reviewDate": "2026-11-20T09:27:29.083838+00:00",
+  "method": "Independent native PNG/reference comparison with view_image.",
+  "limits": "Lateral reconstruction; no exact source side orthography or opposite-side proof. RGB beneath zero alpha is not treated as a rendered halo. No image mutation.",
+  "entries": [
+    {
+      "fighterId": "townfall_widow",
+      "image": "docs/production/vague25/townfall-b/png/townfall_widow.side.png",
+      "sha256": "10672c611252e4fe098cc415c7e9185267e5b547bbd51454cfa757a614eaa37e",
+      "source": "docs/production/vague25/townfall/references/creature_widow_03.jpg",
+      "sourceSHA256": "df08b2bb30f1d8e8d7fdd22d2e4319e6f1e937b32573bf0f2e655b2aac4e8d85",
+      "nativeImageViewed": true,
+      "nativeSourceViewed": true,
+      "verdict": "accepted-candidate",
+      "observation": "Profil droit entier ; enveloppe de tête pâle, photos, bandelettes, morceau de bois et pieds conservés. Rôle unverified inchangé."
+    },
+    {
+      "fighterId": "townfall_the_weight",
+      "image": "docs/production/vague25/townfall-b/png/townfall_the_weight.side.png",
+      "sha256": "7b899f339ae7b92c7abe9fe2775615c0a9f49c35b6d255b6837b203f7006b000",
+      "source": "docs/production/vague25/townfall/references/creature_the_weight_08.jpg",
+      "sourceSHA256": "0eeea5dfd671eec85497eafcc9418b1fa064c367f650f843ecd7ddf2a246227b",
+      "nativeImageViewed": true,
+      "nativeSourceViewed": true,
+      "verdict": "accepted-candidate",
+      "observation": "Profil droit entier de la phase poursuivante 08 ; tête ovale et grande masse dorsale, bras fusionnés, pantalon et chaussures conservés. Pas de tête alternative A–H, perfusion ou chaîne ajoutée."
+    }
+  ]
+}

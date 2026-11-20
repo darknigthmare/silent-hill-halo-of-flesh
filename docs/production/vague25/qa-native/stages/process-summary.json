@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "purpose": "Native Canvas/FightEngine checks of explicit missing stage candidates.",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "startedAtUnix": 1795165839.9141629,
+  "durationSeconds": 8.236,
+  "stageIds": [
+    "apartment_roof",
+    "nightmare_mall",
+    "prison_hc",
+    "downpour_streets"
+  ],
+  "processes": [
+    {
+      "id": "apartment_roof",
+      "command": [
+        "node",
+        "--expose-gc",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-stages-native.mjs",
+        "--stages=apartment_roof",
+        "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/stages/apartment_roof"
+      ],
+      "startedAtUnix": 1795165839.9143496,
+      "timeoutSeconds": 180,
+      "exitCode": 0,
+      "timeout": false,
+      "durationSeconds": 2.283,
+      "reportPresent": true,
+      "reportSHA256": "6311aa8d12fc878ad0b633a0e7bd98dac5d444ec189ca33eb5d6c2c4448ba23f",
+      "reportPassed": true,
+      "checks": 46,
+      "cases": 1,
+      "referencePreviews": 0,
+      "captures": 1,
+      "failure": null,
+      "passed": true
+    },
+    {
+      "id": "nightmare_mall",
+      "command": [
+        "node",
+        "--expose-gc",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-stages-native.mjs",
+        "--stages=nightmare_mall",
+        "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/stages/nightmare_mall"
+      ],
+      "startedAtUnix": 1795165842.1982558,
+      "timeoutSeconds": 180,
+      "exitCode": 0,
+      "timeout": false,
+      "durationSeconds": 1.924,
+      "reportPresent": true,
+      "reportSHA256": "afb4c3b06c8ecf344e2f3c7fe24ea475452d367455a1cb4e6d7fb59eec0cfa4a",
+      "reportPassed": true,
+      "checks": 46,
+      "cases": 1,
+      "referencePreviews": 0,
+      "captures": 1,
+      "failure": null,
+      "passed": true
+    },
+    {
+      "id": "prison_hc",
+      "command": [
+        "node",
+        "--expose-gc",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-stages-native.mjs",
+        "--stages=prison_hc",
+        "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/stages/prison_hc"
+      ],
+      "startedAtUnix": 1795165844.1230533,
+      "timeoutSeconds": 180,
+      "exitCode": 0,
+      "timeout": false,
+      "durationSeconds": 1.92,
+      "reportPresent": true,
+      "reportSHA256": "2d7874571a68c649f9e20da29b252cabded7b29c9f85f4f265d251f2fbf4d14a",
+      "reportPassed": true,
+      "checks": 46,
+      "cases": 1,
+      "referencePreviews": 0,
+      "captures": 1,
+      "failure": null,
+      "passed": true
+    },
+    {
+      "id": "downpour_streets",
+      "command": [
+        "node",
+        "--expose-gc",
+        "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-stages-native.mjs",
+        "--stages=downpour_streets",
+        "--out=/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/stages/downpour_streets"
+      ],
+      "startedAtUnix": 1795165846.0441544,
+      "timeoutSeconds": 180,
+      "exitCode": 0,
+      "timeout": false,
+      "durationSeconds": 2.103,
+      "reportPresent": true,
+      "reportSHA256": "9158801ea5d5eed76f830dceb25e0d8c110deff0c55155b87def75eb56b2058c",
+      "reportPassed": true,
+      "checks": 46,
+      "cases": 1,
+      "referencePreviews": 0,
+      "captures": 1,
+      "failure": null,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "successfulProcesses": 4,
+  "checksInSuccessfulProcesses": 184,
+  "stageCasesInSuccessfulProcesses": 4,
+  "referencePreviewsInSuccessfulProcesses": 0,
+  "capturesInSuccessfulProcesses": 4,
+  "limits": [
+    "No source animation timings or one-to-one fidelity are certified.",
+    "Visual review of the captured images is a separate recorded step.",
+    "Failed or interrupted processes are retained and excluded from success counts."
+  ]
+}

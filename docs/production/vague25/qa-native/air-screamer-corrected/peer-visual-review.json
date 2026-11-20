@@ -1,0 +1,297 @@
+{
+  "schema": 1,
+  "label": "wave25-air-screamer-peer-final-visual-review-corrected",
+  "reviewer": "/root/generate_shf_missing",
+  "reviewedAt": "2026-11-20T09:54:03.946745+00:00",
+  "scope": "Direct view_image inspection of exactly six idle pose captures (0,1,2 in each facing) and two retained walk captures from the corrected actual native FightEngine run. Separate from harness author primary review; this reviewer authored the generated candidate images.",
+  "report": {
+    "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected/report.json",
+    "sha256": "ec1b8d51156f3feceef903bf20b58845176ce16f620d3d92f62cd95afe3169c4",
+    "passed": true,
+    "assertions": 295
+  },
+  "passed": true,
+  "verdict": "accepted-for-candidate-integration-and-publication",
+  "blockingFindings": [],
+  "technicalCadencePassed": true,
+  "bodyAndIdentityConsistencyPassed": true,
+  "wholeSubjectFramingPassed": true,
+  "groundClearancePassed": true,
+  "walkToIdleVisualTransitionAccepted": true,
+  "captures": [
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected/sh1_air_screamer_001-right-walk-static-frame3.png",
+      "file": "sh1_air_screamer_001-right-walk-static-frame3.png",
+      "sha256": "46ba74afb1f3f897a05c89ddb419b8357b831558f0923dc4e1e7679aff5ee143",
+      "bytes": 1205210,
+      "width": 1280,
+      "height": 720,
+      "viewedWithViewImage": true,
+      "frameIndex": 3,
+      "facing": 1,
+      "nativeSpritePath": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+      "verdict": "accepted-candidate-presentation",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "bodyIdentityCoherent": true,
+      "scaleUndistorted": true,
+      "transparentCutoutCleanInActualScene": true,
+      "notes": "Ancien glide entier, à largeur et taille corporelle comparables. La tête et les ailes ont une articulation légèrement différente et les pieds sont un peu plus bas que dans le nouvel idle ; le raccord reste lisible pour ce profil volant, sans rupture d’identité ni grossissement.",
+      "groundClearance": {
+        "registeredGroundPlaneScreenY": 594,
+        "visibleBottomScreenY": 568.1445775417901,
+        "framingBottomScreenY": 568.9340856953665,
+        "visibleClearanceScreenPixels": 25.855422458209887,
+        "framingClearanceScreenPixels": 25.065914304633452
+      }
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected/sh1_air_screamer_001-right-idle-frame0-tick0.png",
+      "file": "sh1_air_screamer_001-right-idle-frame0-tick0.png",
+      "sha256": "f2716cd533c922ec3b6ad34867504334fd405b9a42c15c32c14cafd569cde41d",
+      "bytes": 1195841,
+      "width": 1280,
+      "height": 720,
+      "viewedWithViewImage": true,
+      "frameIndex": 0,
+      "facing": 1,
+      "nativeSpritePath": "assets/sprites/sh1_air_screamer_001.3af1bfe6260c.png",
+      "verdict": "accepted-candidate-presentation",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "bodyIdentityCoherent": true,
+      "scaleUndistorted": true,
+      "transparentCutoutCleanInActualScene": true,
+      "notes": "Profil entier et neutre clairement lisible. Le bec, le cou et les deux pattes restent cohérents avec les poses haute et basse. Aucun halo opaque ni bord coupé.",
+      "groundClearance": {
+        "registeredGroundPlaneScreenY": 594,
+        "visibleBottomScreenY": 563.221821890954,
+        "framingBottomScreenY": 564.2850731989697,
+        "visibleClearanceScreenPixels": 30.778178109046053,
+        "framingClearanceScreenPixels": 29.714926801030288
+      }
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected/sh1_air_screamer_001-right-idle-frame1-tick6.png",
+      "file": "sh1_air_screamer_001-right-idle-frame1-tick6.png",
+      "sha256": "41b121b8d5a89759091a71cde91eb90c4e7384476997c067f286ad1f9b166431",
+      "bytes": 1212325,
+      "width": 1280,
+      "height": 720,
+      "viewedWithViewImage": true,
+      "frameIndex": 1,
+      "facing": 1,
+      "nativeSpritePath": "assets/sprites/sh1_air_screamer_001.54bc7ba84975.png",
+      "verdict": "accepted-candidate-presentation",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "bodyIdentityCoherent": true,
+      "scaleUndistorted": true,
+      "transparentCutoutCleanInActualScene": true,
+      "notes": "Les deux ailes sont nettement hautes, entières et séparées par leur profondeur. Le corps et les pattes gardent la même échelle ; aucune remontée propre au corps ni inversion de côté.",
+      "groundClearance": {
+        "registeredGroundPlaneScreenY": 594,
+        "visibleBottomScreenY": 562.867404788282,
+        "framingBottomScreenY": 563.5762389936259,
+        "visibleClearanceScreenPixels": 31.132595211718012,
+        "framingClearanceScreenPixels": 30.423761006374093
+      }
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected/sh1_air_screamer_001-right-idle-frame2-tick18.png",
+      "file": "sh1_air_screamer_001-right-idle-frame2-tick18.png",
+      "sha256": "69eee82f4c0f1564ea763ad02f2fa0c83fa6ca8d3257c38d798fa25e5c642f1c",
+      "bytes": 1201746,
+      "width": 1280,
+      "height": 720,
+      "viewedWithViewImage": true,
+      "frameIndex": 2,
+      "facing": 1,
+      "nativeSpritePath": "assets/sprites/sh1_air_screamer_001.88d752b48e9f.png",
+      "verdict": "accepted-candidate-presentation",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "bodyIdentityCoherent": true,
+      "scaleUndistorted": true,
+      "transparentCutoutCleanInActualScene": true,
+      "notes": "La correction conserve les deux ailes descendantes et leurs pointes complètes. La pointe basse effleure visuellement la zone proche du sol tout en restant au-dessus de son plan ; plus de traversée du sol. Corps et pieds cohérents avec0/1.",
+      "groundClearance": {
+        "registeredGroundPlaneScreenY": 594,
+        "visibleBottomScreenY": 592.6384414127248,
+        "framingBottomScreenY": 592.9928585153967,
+        "visibleClearanceScreenPixels": 1.3615585872752263,
+        "framingClearanceScreenPixels": 1.0071414846032667
+      }
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected/sh1_air_screamer_001-left-walk-static-frame3.png",
+      "file": "sh1_air_screamer_001-left-walk-static-frame3.png",
+      "sha256": "866e8a57736c86e3dd9949e04706905e4f52228af44b44314fc911950736c8a2",
+      "bytes": 1204618,
+      "width": 1280,
+      "height": 720,
+      "viewedWithViewImage": true,
+      "frameIndex": 3,
+      "facing": -1,
+      "nativeSpritePath": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+      "verdict": "accepted-candidate-presentation",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "bodyIdentityCoherent": true,
+      "scaleUndistorted": true,
+      "transparentCutoutCleanInActualScene": true,
+      "notes": "Ancien glide entier, à largeur et taille corporelle comparables. La tête et les ailes ont une articulation légèrement différente et les pieds sont un peu plus bas que dans le nouvel idle ; le raccord reste lisible pour ce profil volant, sans rupture d’identité ni grossissement.",
+      "groundClearance": {
+        "registeredGroundPlaneScreenY": 594,
+        "visibleBottomScreenY": 568.1445775417901,
+        "framingBottomScreenY": 568.9340856953665,
+        "visibleClearanceScreenPixels": 25.855422458209887,
+        "framingClearanceScreenPixels": 25.065914304633452
+      }
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected/sh1_air_screamer_001-left-idle-frame0-tick0.png",
+      "file": "sh1_air_screamer_001-left-idle-frame0-tick0.png",
+      "sha256": "ef28b7bf9c54971e7cff89602bcd1de51d085fca233f412822d6b861dc57132d",
+      "bytes": 1195189,
+      "width": 1280,
+      "height": 720,
+      "viewedWithViewImage": true,
+      "frameIndex": 0,
+      "facing": -1,
+      "nativeSpritePath": "assets/sprites/sh1_air_screamer_001.3af1bfe6260c.png",
+      "verdict": "accepted-candidate-presentation",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "bodyIdentityCoherent": true,
+      "scaleUndistorted": true,
+      "transparentCutoutCleanInActualScene": true,
+      "notes": "Profil entier et neutre clairement lisible. Le bec, le cou et les deux pattes restent cohérents avec les poses haute et basse. Aucun halo opaque ni bord coupé.",
+      "groundClearance": {
+        "registeredGroundPlaneScreenY": 594,
+        "visibleBottomScreenY": 563.221821890954,
+        "framingBottomScreenY": 564.2850731989697,
+        "visibleClearanceScreenPixels": 30.778178109046053,
+        "framingClearanceScreenPixels": 29.714926801030288
+      }
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected/sh1_air_screamer_001-left-idle-frame1-tick6.png",
+      "file": "sh1_air_screamer_001-left-idle-frame1-tick6.png",
+      "sha256": "eb9dcab02cac18970882f9602e9df287dcd3fb7e6c8ebb658670cd65c0b1de6a",
+      "bytes": 1210814,
+      "width": 1280,
+      "height": 720,
+      "viewedWithViewImage": true,
+      "frameIndex": 1,
+      "facing": -1,
+      "nativeSpritePath": "assets/sprites/sh1_air_screamer_001.54bc7ba84975.png",
+      "verdict": "accepted-candidate-presentation",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "bodyIdentityCoherent": true,
+      "scaleUndistorted": true,
+      "transparentCutoutCleanInActualScene": true,
+      "notes": "Les deux ailes sont nettement hautes, entières et séparées par leur profondeur. Le corps et les pattes gardent la même échelle ; aucune remontée propre au corps ni inversion de côté.",
+      "groundClearance": {
+        "registeredGroundPlaneScreenY": 594,
+        "visibleBottomScreenY": 562.867404788282,
+        "framingBottomScreenY": 563.5762389936259,
+        "visibleClearanceScreenPixels": 31.132595211718012,
+        "framingClearanceScreenPixels": 30.423761006374093
+      }
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-corrected/sh1_air_screamer_001-left-idle-frame2-tick18.png",
+      "file": "sh1_air_screamer_001-left-idle-frame2-tick18.png",
+      "sha256": "4763286d2bd69596457f564fe9e2d378729e1bf97253dbcbdd0f46c781d78dfb",
+      "bytes": 1197412,
+      "width": 1280,
+      "height": 720,
+      "viewedWithViewImage": true,
+      "frameIndex": 2,
+      "facing": -1,
+      "nativeSpritePath": "assets/sprites/sh1_air_screamer_001.88d752b48e9f.png",
+      "verdict": "accepted-candidate-presentation",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "bodyIdentityCoherent": true,
+      "scaleUndistorted": true,
+      "transparentCutoutCleanInActualScene": true,
+      "notes": "La correction conserve les deux ailes descendantes et leurs pointes complètes. La pointe basse effleure visuellement la zone proche du sol tout en restant au-dessus de son plan ; plus de traversée du sol. Corps et pieds cohérents avec0/1.",
+      "groundClearance": {
+        "registeredGroundPlaneScreenY": 594,
+        "visibleBottomScreenY": 592.6384414127248,
+        "framingBottomScreenY": 592.9928585153967,
+        "visibleClearanceScreenPixels": 1.3615585872752263,
+        "framingClearanceScreenPixels": 1.0071414846032667
+      }
+    }
+  ],
+  "bodyConsistency": {
+    "commonIdleAnchor": [
+      0.51,
+      0.745
+    ],
+    "commonIdleBodyHeight": 0.42,
+    "nativeDimensions": [
+      1536,
+      1024
+    ],
+    "maximumProjectedBodyLandmarkDeltaWorldPixels": 0.9754100131970875,
+    "observation": "Tête, cou, bassin et pattes stables entre neutre/haute/basse. L’écart horizontal des captures suit la vitesse résiduelle réelle de l’acteur ; les repères compensés de cette translation restent stables. Pas de pompage de taille selon l’amplitude des ailes."
+  },
+  "groundClearanceResolution": {
+    "nativeCorrectedFrame2SHA256": "88d752b48e9fa4aa0104527a898c14fe7f44d5eee1f8e74262b668a65e1973ac",
+    "bothFacingsAgree": true,
+    "groundScreenY": 594,
+    "minimumVisibleClearanceScreenPixels": 1.3615585872752263,
+    "minimumFramingClearanceScreenPixels": 1.0071414846032667,
+    "testToleranceScreenPixels": 2,
+    "toleranceRelaxed": false,
+    "actualCrossingRequiredByTolerance": false,
+    "observation": "La frange reste effectivement au-dessus du sol d’environ1.007pixel ; le résultat n’utilise pas les2pixels de tolérance pour accepter une intersection. La marge est faible mais positive, vérifiée dans les deux orientations. L’ancien défaut de24–25pixels sous le sol est résolu dans ce rendu."
+  },
+  "cycleEvidence": {
+    "duels": 2,
+    "cyclesPerFacing": 2,
+    "ticksPerCycle": 24,
+    "observedSequencePerFacing": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      1,
+      0,
+      2
+    ],
+    "ticksPerStep": 6,
+    "walkFrameIndex": 3,
+    "walkAnimated": false,
+    "evidenceOrigin": "Actual engine report; this review separately inspected the still captures, not a continuous video."
+  },
+  "transitionReview": {
+    "accepted": true,
+    "historicalWalkFrameUnchanged": true,
+    "historicalWalkSHA256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01",
+    "idleFootMarkersAboveLowestVisibleWalkFootScreenPixels": {
+      "minimum": 5.631589856180085,
+      "maximum": 9.175760882899453,
+      "comparison": "Each reviewed idle foot landmark compared with the lowest visible boundary of the retained walk (the foot region), not a source-exact per-joint correspondence."
+    },
+    "observation": "Le passage glide→idle conserve la silhouette étirée, la largeur générale et la lecture latérale. Le nouvel idle flotte légèrement plus haut : ses repères de pieds se situent environ5.632–9.176pixels au-dessus du pied le plus bas du glide. Ce petit changement de pose reste visuellement acceptable pour le flyer, avec une variation d’inclinaison du bec et des ailes déjà déclarée. Aucun saut majeur de taille, recadrage ou changement d’identité n’a été constaté.",
+    "limits": "Discrete legacy/new pose transition accepted at candidate level; continuous or original-game-exact motion is not certified."
+  },
+  "supersedesVisualClearanceDecision": {
+    "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/peer-visual-review.json",
+    "status": "Prior hold remains preserved as historical evidence; this new review accepts the corrected run."
+  },
+  "limitations": [
+    "Actual native Canvas renders were inspected; no browser/DOM/HTTP or physical-keyboard test is claimed.",
+    "Source fidelity stays unverified. Left view is a presentation mirror, and the existing authored cadence is not source-game timing.",
+    "No attack/contact/guard/finisher behavior is evaluated here.",
+    "The primary selection-portrait capture was outside this eight-capture peer scope; its preservation is established by the engine report and the separate primary review."
+  ],
+  "mutations": "Only this new peer-visual-review.json file was written; native images, registry, source code and primary visual-review.json remain untouched."
+}

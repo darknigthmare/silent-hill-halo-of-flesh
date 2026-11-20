@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "reviewer": "/root/generate_ascension_missing",
+  "reviewedAt": "2026-11-20T08:58:30.334188+00:00",
+  "method": "Native generated images compared visually against the explicitly named source artwork; read-only alpha/pixel samples. No runtime test by this worker.",
+  "entries": [
+    {
+      "fighterId": "sh1_larval_stalker_007",
+      "decision": "accepted-as-candidate",
+      "source": "sh1",
+      "edition": "Silent Hill original, PlayStation 1999; regional capture not established",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "facing": 1,
+      "review": "Complete quiet right-facing shadow silhouette: elongated featureless head, narrow torso, two drooping arms, two small legs and foot tips. The targeted imagegen correction changes pale mist to dark charcoal material with genuine translucent interior. No face, clothing, weapon, muscular detail or source-room texture appears.",
+      "limits": [
+        "The original scene is oblique; the new side thickness is inferred and the capture region remains unspecified.",
+        "Opacity and blur are authored, not measured from the 1999 renderer; visibility against the atelier background requires integration review.",
+        "A soft shadow has no exact hard sole. The anchor and body envelope are provisional presentation calibration.",
+        "No combat enabling, source animation, original timing or one-to-one fidelity is claimed.",
+        "Requested 12 percent padding is not met vertically; all readable head/limb tips remain inside the canvas."
+      ],
+      "calibrationProposal": {
+        "facing": 1,
+        "anchor": [
+          0.44,
+          0.9270833333333334
+        ],
+        "bodyHeight": 0.8444010416666666,
+        "basis": "Provisional midpoint of two foot tips and alpha32 envelope; soft-edged passive shadow, root to check in atelier."
+      }
+    },
+    {
+      "fighterId": "downpour_wall_corpse_112",
+      "decision": "accepted-as-candidate",
+      "source": "downpour",
+      "edition": "Silent Hill: Downpour, retail 2012, fixed wall form",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "facing": 1,
+      "review": "Complete source-style naturally abbreviated torso, tilted wrapped head, near short upper-arm end, and complete original-style flat metal supports. Lateral torso and face point right. No legs, hands, cage or wheels added; the far upper-arm end is naturally occluded.",
+      "limits": [
+        "The original detailed source is oblique; hidden support depth and exact far-side surface marks are reconstructed.",
+        "The result does not measure source scale or certify strict geometric equivalence.",
+        "Requested 12 percent margins were not reached: about 5.9 percent minimum, but all readable exterior tips remain inside the native canvas.",
+        "One static reference candidate; environmental role stays outside combat."
+      ],
+      "calibrationProposal": {
+        "facing": 1,
+        "anchor": [
+          0.49,
+          0.9412955465587044
+        ],
+        "bodyHeight": 0.8825910931174089,
+        "basis": "Provisional natural lower-torso tip anchor; complete visible native envelope. Root to verify in atelier."
+      }
+    },
+    {
+      "fighterId": "downpour_tormented_soul_111",
+      "decision": "accepted-as-candidate",
+      "source": "downpour",
+      "edition": "Silent Hill: Downpour, retail 2012, cage-bound passive environmental form",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "facing": 1,
+      "review": "Complete upright rectangular cage containing one fixed torso-like effigy with stretched membrane attachments. Head and torso read in right profile. Entire upper/lower lattice and corner posts fit; open gaps have genuine alpha zero. No walking limbs, separate victim or Wall Corpse metal blades added.",
+      "limits": [
+        "Only a 300 by 300 native render is available: lateral cage depth, concealed attachments and fine surface marks remain inferred, not verified.",
+        "Requested 12 percent padding was not met vertically: about 8.3 percent, with the entire cage still inside the canvas.",
+        "The regularized cage projection is a new presentation angle, not a measured model extraction.",
+        "One static atelier reference; no combat enabling, new movement or original timing is claimed."
+      ],
+      "calibrationProposal": {
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.9173177083333334
+        ],
+        "bodyHeight": 0.8313802083333334,
+        "basis": "Provisional center of cage base on guide line, using full exterior envelope. Root to verify in atelier."
+      }
+    }
+  ],
+  "certifiedOneToOne": false,
+  "rootPeerReviewPending": true
+}

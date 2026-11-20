@@ -4554,5 +4554,274 @@ export const STAGE_BITMAPS = {
       "Joueurs, armes, HUD, glows et particules de combat exclus. Aucun danger, mouvement ou collision ne se déduit du décor.",
       "Deux PNG natifs indépendants ; premier plan à véritable alpha limité aux extrêmes, aucun pixel repeint ou redimensionné."
     ]
+  },
+  "apartment_roof": {
+    "stageId": "apartment_roof",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "sh3-daisy-villa-rooftop-missionary",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+    ],
+    "layers": [
+      {
+        "id": "bg-daisy-rooftop",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "748257c48512168b40d5547286fc653d329ca5c8791cb700dcb7b5102fa8b3c0",
+            "bytes": 1947337,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/apartment_roof.bg-daisy-rooftop.748257c48512.png"
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "d12d3658f0a267e9283e9c9892b60f427a427d2b4b801e5ef98291e38a5f79ea",
+            "bytes": 192596,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/apartment_roof.near-edges.d12d3658f0a2.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Daisy Villa rooftop only. Native Missionary gameplay panels show square gray paving, low horizontal rails and dark utility enclosure; secondary original-PC cutscene corroborates the service doorway.",
+      "The side-on camera, enclosure spacing, material detail, diffuse visibility lighting and faint fog are authored adaptations. Dark compressed source panels do not establish hidden rooftop geometry or texture-scale fidelity.",
+      "No water tower, invented antenna, rain, storm hazard, interior apartment scene or monster was added.",
+      "One opaque static background and one sparse transparent edge foreground; no animated clip. Browser/gameplay QA deferred to root integration."
+    ]
+  },
+  "nightmare_mall": {
+    "stageId": "nightmare_mall",
+    "source": "sh3",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "sh3-nightmare-mall-split-worm-six-tunnels",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH3_03_NIGHTMARE_MALL"
+    ],
+    "layers": [
+      {
+        "id": "bg-split-worm-arena",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "b4bb0b1e6077af9129c32442d0a7b620b64d87c5185b2be2f5c6f1ee484ac917",
+            "bytes": 2378022,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/nightmare_mall.bg-split-worm-arena.b4bb0b1e6077.png"
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "f5de5965e21f30f1ea4413ed46b48855ce20135b27c508a32c609ecd4795f81a",
+            "bytes": 268296,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/nightmare_mall.near-edges.f5de5965e21f.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Underground Split Worm arena, not the retail mall. Three mouths are shown on the far wall; the three opposing mouths lie outside the new camera. The six-tunnel arrangement is not misrepresented as six openings on one wall.",
+      "Source gameplay shows squat dark tunnel mouths, narrow supports, rusty red gallery braces and grimy square floor slabs. These recognizable motifs anchor the candidate.",
+      "Side-on camera, exact mouth dimensions, geometry outside the source view, lighting and fine textures remain authored/unverified. No Split Worm, new creature, flesh wall or new gameplay hazard was added.",
+      "One opaque static background and one sparse transparent edge foreground; no animated clip. Browser/gameplay QA deferred to root integration."
+    ]
+  },
+  "prison_hc": {
+    "stageId": "prison_hc",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "homecoming-overlook-cell-block-b-normal",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT04",
+      "EXT06"
+    ],
+    "layers": [
+      {
+        "id": "bg-cell-block-b",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "2ccef75f92fd60c6712a2cb80e13cd4e33416cc222468f6a36d831a172164594",
+            "bytes": 2651671,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/prison_hc.bg-cell-block-b.2ccef75f92fd.png"
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "c0fefbc898af688070a160a060029ea3939c46059d042e7034320a4aa428e218",
+            "bytes": 188146,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/prison_hc.near-edges.c0fefbc898af.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Normal Cell Block B upper coursive/catwalk before the later cage sequence. Reference map panels identify Cell Wing B and nearby cells B5–B8; cell bars, lever and grating come from the adjacent gameplay sequence.",
+      "Heavy square-grid gates, cracked pale gray-green masonry, wall lever and metal-grating walkway retain observed source motifs. The short side-on section and widened continuous combat footing are adaptations.",
+      "Gate spacing, unseen interior furnishing, lighting, proportions and all fine textures are unverified reconstruction. No Downpour panopticon, Otherworld cages, prisoner, gore or monster is part of the asset.",
+      "One opaque static background and one sparse transparent edge foreground; no animated clip. Browser/gameplay QA deferred to root integration."
+    ]
+  },
+  "downpour_streets": {
+    "stageId": "downpour_streets",
+    "source": "downpour",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "downpour-pearl-creek-brite-lansdale-bank-street",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT11"
+    ],
+    "layers": [
+      {
+        "id": "bg-pearl-creek",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "e6ac81c132f43e0e10d8584ad5d9a97af2cc145300c693d44ac5637253892a0c",
+            "bytes": 2232112,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/downpour_streets.bg-pearl-creek.e6ac81c132f4.png"
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "1152c97b0f1242296814cbdabf5c1d1ecaba01f89df8dad96429524f8d70065e",
+            "bytes": 272747,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/downpour_streets.near-edges.1152c97b0f12.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Pearl Creek, Brite Street near Lansdale Avenue immediately south of the Bank. The selected video panels at 02:45:40 and 02:45:50 show street/sidewalk, pale masonry Bank facade and trees; adjacent panels show dark brick/shutters/scaffold.",
+      "Selected sublocation is documented precisely; no claim that this camera recreates the entire Pearl Creek district or exact Laymond Avenue geography.",
+      "Damp asphalt is the existing rainy-versus condition. Camera, curb spacing, facade fine detail, puddles and weather moment remain authored/unverified. No dramatic rain sheet, lightning, flooding, car obstacle or new story sign was added.",
+      "One opaque static background and one sparse transparent edge foreground; no animated clip. Browser/gameplay QA deferred to root integration."
+    ]
   }
 };

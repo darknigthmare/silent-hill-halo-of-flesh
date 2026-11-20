@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "createdAt": "2026-11-20T09:11:46.605009+00:00",
+  "reviewer": "root",
+  "method": "All four full native FightEngine screenshots viewed after the real render, with source delivery notes consulted. No compositing, crop, color or alpha edits.",
+  "capturesViewed": 4,
+  "acceptedStages": 4,
+  "heldStages": 0,
+  "entries": [
+    {
+      "stageId": "apartment_roof",
+      "capturePath": "docs/production/vague25/qa-native/stages/apartment_roof/apartment_roof.png",
+      "captureSHA256": "ec9c655f3f869098492ab907da9075fda415f5ee129840b12032de4506104276",
+      "reportPath": "docs/production/vague25/qa-native/stages/apartment_roof/report.json",
+      "reportSHA256": "6311aa8d12fc878ad0b633a0e7bd98dac5d444ec189ca33eb5d6c2c4448ba23f",
+      "viewed": true,
+      "accepted": true,
+      "notes": "The paving supports both existing fighters visibly; low railing and utility room remain readable. Sparse foreground stays at the edges; no obstruction of bodies or HUD text.",
+      "scope": "Actual FightEngine native Canvas frame; original input callbacks separately exercised right/left movement and observed exact parallax.",
+      "oneToOneCertified": false
+    },
+    {
+      "stageId": "nightmare_mall",
+      "capturePath": "docs/production/vague25/qa-native/stages/nightmare_mall/nightmare_mall.png",
+      "captureSHA256": "b1ece4819507ae4b52baddbde512a0acacc458f450a73b87319993a4b14998ea",
+      "reportPath": "docs/production/vague25/qa-native/stages/nightmare_mall/report.json",
+      "reportSHA256": "afb4c3b06c8ecf344e2f3c7fe24ea475452d367455a1cb4e6d7fb59eec0cfa4a",
+      "viewed": true,
+      "accepted": true,
+      "notes": "Three separate dark tunnel mouths remain visible on the far wall with rusty gallery supports. Both fighters stand on the broad tiled foreground. No monster or erroneous additional mouths appear.",
+      "scope": "Actual FightEngine native Canvas frame; original input callbacks separately exercised right/left movement and observed exact parallax.",
+      "oneToOneCertified": false
+    },
+    {
+      "stageId": "prison_hc",
+      "capturePath": "docs/production/vague25/qa-native/stages/prison_hc/prison_hc.png",
+      "captureSHA256": "99be00920d61016e6df726587389842303d63051a1c299d63c508cb4c2c10f97",
+      "reportPath": "docs/production/vague25/qa-native/stages/prison_hc/report.json",
+      "reportSHA256": "2d7874571a68c649f9e20da29b252cabded7b29c9f85f4f265d251f2fbf4d14a",
+      "viewed": true,
+      "accepted": true,
+      "notes": "Square-grid barred cells and lever are visible behind the grating catwalk. Both feet sit on the walkway; no opaque foreground patch masks the fight space.",
+      "scope": "Actual FightEngine native Canvas frame; original input callbacks separately exercised right/left movement and observed exact parallax.",
+      "oneToOneCertified": false
+    },
+    {
+      "stageId": "downpour_streets",
+      "capturePath": "docs/production/vague25/qa-native/stages/downpour_streets/downpour_streets.png",
+      "captureSHA256": "eef495f788b033f3f420af94229b948264b5ab85187be787410f2d03bab39802",
+      "reportPath": "docs/production/vague25/qa-native/stages/downpour_streets/report.json",
+      "reportSHA256": "9158801ea5d5eed76f830dceb25e0d8c110deff0c55155b87def75eb56b2058c",
+      "viewed": true,
+      "accepted": true,
+      "notes": "Bank facade, curb, bare tree and scaffold corner remain visible through light fog. Both fighters sit on the damp asphalt. Edge foreground preserves the center and HUD readability.",
+      "scope": "Actual FightEngine native Canvas frame; original input callbacks separately exercised right/left movement and observed exact parallax.",
+      "oneToOneCertified": false
+    }
+  ],
+  "limits": [
+    "Native Canvas, not Chromium. Browser and HTTP are separate CI gates.",
+    "New lateral camera and hidden architecture are adapted, with source details bounded by small compressed gameplay reference panels.",
+    "Two static raster layers with runtime parallax do not create an animated source clip."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "calls": [
+    {
+      "fighterId": "downpour_tormented_soul_111",
+      "source": "downpour",
+      "role": "environmental-obstacle",
+      "prompt": "Use case: stylized-concept. Asset: one complete static side-view reference of the Tormented Soul from the released Silent Hill: Downpour (2012).\nThe supplied native bestiary render is the sole identity reference. Recreate the SAME passive cage-bound creature as a single connected subject: a tall narrow rectangular rusted iron cage with four corner posts, its complete top and bottom rectangular lattice, and the one fixed torso-like effigy suspended inside by the pale stretched membranes visible in the source. Preserve the tilted wrapped head, narrow worn central mass, irregular tapering natural bottom, and the visible membranes joining it to the bars. No independent standing person, no legs, no outstretched fighting arms, no new weapon or extra anatomy. Do not substitute the related Wall Corpse.\nCamera and pose: strict right-facing lateral view, camera perpendicular to the SIDE of the cage; head and chest direction read toward the RIGHT. Parallel vertical posts and clear side depth, no frontal or three-quarter display. The effigy remains passively fixed in its cage, not walking or attacking. The source is low-resolution: preserve the broad source shapes and restrained aged gray/brown materials; leave unclear small detail simple instead of inventing markings or additional wounds.\nComposition: the ENTIRE cage and its single enclosed creature, every outer bar and support end, fully visible on true transparent RGBA background with at least 12 percent clear margin on all sides. Uniform readable source-style game-render lighting. One isolated subject only. No room, wall, floor, cast shadow, text, UI, duplicate, contact scene or separate victim. This is a source-guided static dossier candidate, not a new combat form or a 1:1-certified extraction.",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/production/wave25-classics/references/downpour-tormented-soul-model.png"
+      ],
+      "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-761d157f-e1a1-462f-88b2-9c6e621a10c3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "transparent_background": true,
+      "tool": "image_gen.imagegen",
+      "status": "generated"
+    },
+    {
+      "fighterId": "downpour_wall_corpse_112",
+      "source": "downpour",
+      "role": "environmental-obstacle",
+      "prompt": "Use case: stylized-concept. Asset: one complete native RGBA side-view static reference of the Wall Corpse, original released Silent Hill: Downpour (2012), fixed wall form.\nInput image 1 is the original detailed creature render; image 2 is its native bestiary model. Use them as identity and material references. Reproduce the SAME complete torso-shaped wall creature: tilted smooth wrapped head with its existing dark facial opening, very narrow neck, two short rounded upper-arm ends, ribbed worn torso narrowing to its natural closed lower end, and all of its original flat rusted metal support blades protruding behind and through the torso. Preserve the actual source contour, aged mottled colors and existing surface marks. The natural complete exterior ends at this short torso. Do not append legs, hands, long arms, a pelvis, a standing person, a cage or wheels. Do not turn it into the related Tormented Soul.\nCamera: strict lateral side profile facing RIGHT, viewing the side of the head and torso squarely rather than the chest from front or three-quarter. The creature remains fixed in its original wall-mounted posture, with its whole back support arrangement visible and intact. No new injury, attack or victim.\nFraming: one isolated connected subject on a TRUE transparent RGBA canvas, entire head, short arm ends, lower torso tip and every metal support tip fully inside with at least 12 percent empty transparent margin on each edge. Match the native game-render surface and readable even lighting. No wall, floor, scenery, cast shadow, checkerboard, text, UI, border or second subject. Static source-guided candidate only; hidden depth is not a certified source measurement.",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/production/wave25-classics/references/downpour-wall-corpse-art.png",
+        "/workspace/scratch/62cbb5f4a653/production/wave25-classics/references/downpour-wall-corpse-model.png"
+      ],
+      "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-4b181a3f-9fe5-4c94-99e8-d3656b39e813.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "transparent_background": true,
+      "tool": "image_gen.imagegen",
+      "status": "generated"
+    },
+    {
+      "fighterId": "sh1_larval_stalker_007",
+      "source": "sh1",
+      "prompt": "Use case: precise-object-edit. Image 1 is the edit target: the new full-body RIGHT-side Larval Stalker candidate. Image 2 is the original Silent Hill 1999 source appearance. Correct ONLY the shadow material and edge treatment in image 1 to match the dark source apparition.\nThe current target looks like luminous pale-gray mist. The original Larval Stalker is a neutral near-black shadow with a mostly transparent interior, not a glowing white ghost. Make the visible silhouette and soft outline genuinely dark charcoal-black RGB, roughly #080808 to #202020, with translucent interior and soft alpha falloff. Remove all pale bloom, milky white highlights and luminous halo. Preserve actual transparency inside the vague shadow; do not replace it with a solid opaque gray sculpture. Do not copy the green room or floor from image 2 into the body.\nPreserve the target's exact whole silhouette and strict right-facing side posture: elongated smooth featureless head with no face or hair, narrow torso, exactly two drooping arms, exactly two little legs and feet. Keep every tip, full head, body and feet in frame with the existing margins. No clothing, weapon, facial features, muscle detail, extra limb or new anatomy. Preserve the transparent RGBA backdrop; no scenery, room, floor, cast shadow, checkerboard, label or second subject. One isolated passive original Larval Stalker. All changes are to color/material/alpha, not pose or anatomy.",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/production/wave25-classics/png/sh1_larval_stalker_007.side.png",
+        "/workspace/scratch/62cbb5f4a653/production/wave25-classics/references/sh1-larval-stalker-art.jpg"
+      ],
+      "intent": "targeted-material-correction",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-cb907bff-291e-45dd-b382-210e2a1972b0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "tool": "image_gen.imagegen",
+      "status": "generated"
+    },
+    {
+      "fighterId": "sh1_larval_stalker_007",
+      "source": "sh1",
+      "role": "noncombatant",
+      "prompt": "Use case: stylized-concept. Asset: one full-body side-view static reference for Silent Hill: Halo of Flesh.\nSubject: the harmless Larval Stalker shadow apparition from original Silent Hill, PlayStation, 1999. Both supplied images depict this same original shadow in the school room; they are identity references only, not background references. Preserve its very elongated rounded featureless head, narrow little torso, two long drooping arms and two small separated legs/feet. Render the same vague dark neutral gray-black translucent shadow material, with soft indistinct edges and substantial actual transparency inside the silhouette. There is no visible face, hair, clothing, weapon, colored glow, or defined muscular anatomy.\nPose and camera: quiet passive standing, strict lateral side profile facing RIGHT. The camera looks squarely at its side, not its front or a three-quarter turn. Keep both arm ends and both small foot tips legible through gentle natural overlap without adding limbs. Its noncombatant identity stays passive.\nFraming: one isolated whole apparition only on a true transparent RGBA canvas. Full head, arms, legs and feet inside the frame with at least 12 percent clear margin on every side. Center the complete silhouette. No wall or floor texture inside the transparent body, no scenery, ground plane, cast shadow, checkerboard, lettering, border or second figure. Do not reproduce the green room shown in the reference. Retain only neutral dark shadow pixels and alpha. Source-guided lateral reconstruction, no claim of exact source geometry or animation.",
+      "references": [
+        "/workspace/scratch/62cbb5f4a653/production/wave25-classics/references/sh1-larval-stalker-art.jpg",
+        "/workspace/scratch/62cbb5f4a653/production/wave25-classics/references/sh1-larval-stalker-model.png"
+      ],
+      "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-df9bc9f6-e7e2-40f6-8bc3-f01bd040bd93.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "transparent_background": true,
+      "tool": "image_gen.imagegen",
+      "status": "generated"
+    }
+  ],
+  "originalOutputsRetained": true,
+  "noSafetyRetry": true
+}

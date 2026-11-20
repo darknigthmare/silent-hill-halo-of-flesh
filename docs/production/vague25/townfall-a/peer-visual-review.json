@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "reviewer": "audit_previous_work",
+  "reviewDate": "2026-11-20T09:18:00.435386+00:00",
+  "method": "Native PNG and native reference viewed independently with view_image; shape, phase, accessories and profile assessed. No image mutation.",
+  "scope": "Second visual reading only; not source-pixel identity, opposite-side validation, animation or timing certification. RGB beneath zero alpha is not treated as a rendered halo.",
+  "entries": [
+    {
+      "fighterId": "townfall_lunger",
+      "image": "png/townfall_lunger.side.png",
+      "sha256": "37603e93fe906d453be9e35e350afc2f76942a0ce39145d7a486706f4e9f1657",
+      "source": "docs/production/vague25/townfall/references/creature_lunger_03.jpg",
+      "sourceSHA256": "80e75cc49ba0acbfddb99abc5a2981070eb0f3d40035c8c924b4653fe5fb7204",
+      "nativeImageViewed": true,
+      "nativeSourceViewed": true,
+      "verdict": "accepted-candidate",
+      "observation": "Profil droit entier ; tête-lame continue, petit bord arrière et bras bridés conservés, deux pieds visibles. Aucun outil libre ajouté.",
+      "limits": "Marge haute serrée (visible alpha>=8 commence à y=8), pointe entière ; détails fins et trajet des sangles reconstruits."
+    },
+    {
+      "fighterId": "townfall_sorrowful",
+      "image": "png/townfall_sorrowful.side.png",
+      "sha256": "da9c9af13265cabbd381c9fdd365086b363eeefd520f28d46f4132581d03a181",
+      "source": "docs/production/vague25/townfall/references/creature_sorrowful_07.jpg",
+      "sourceSHA256": "14634501d37e8df25edbdf0cf8e6e5242fe0eb9cc0a928c64c5bd790849c2df6",
+      "nativeImageViewed": true,
+      "nativeSourceViewed": true,
+      "verdict": "accepted-candidate",
+      "observation": "Profil droit entier ; tête sillonnée, mains au sternum, petite tubulure à raccords bleu/rouge, vêtement bas et deux pieds préservés.",
+      "limits": "Tube court conservé comme accessoire, sans fouet ni projectile ; côté opposé non documenté."
+    },
+    {
+      "fighterId": "townfall_fallen",
+      "image": "png/townfall_fallen.side.png",
+      "sha256": "e793ad83817d6d9003512addf00bdefd37fb873dcdeecd5ce845fad2139ba0a3",
+      "source": "docs/production/vague25/townfall/references/creature_fallen_04.jpg",
+      "sourceSHA256": "64b61c09e1bacf1be59dc6c9b75a31bc110ecd899889b1c993524849b21821fc",
+      "nativeImageViewed": true,
+      "nativeSourceViewed": true,
+      "verdict": "accepted-candidate",
+      "observation": "Figure debout comme le concept final ; deux pieds vers la droite, épaule proche dominante, torse latéral lisible, deux bras et petits filaments entiers ; aucun socle ou eau.",
+      "limits": "La visibilité des deux avant-bras n’inverse pas le profil global. Source concept finale, non modèle commercial ; poseRig rampant ancien non suivi."
+    }
+  ]
+}

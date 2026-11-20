@@ -17,111 +17,117 @@ export const SPRITES = {
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
-        "bytes": 627900,
-        "width": 1774,
-        "height": 887,
+        "sha256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
+        "bytes": 1127020,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          40,
-          234,
-          1747,
-          673
+          62,
+          400,
+          1492,
+          753
         ],
-        "pixelSHA256": "6e7a9f90879bb5c30f01e766a8b3d8726990697e79cdb5b54295a914085d92ae",
-        "transparentFraction": 0.84725,
-        "path": "assets/sprites/sh1_air_screamer_001.f208137d6414.png",
+        "pixelSHA256": "52bfdbf51a9ada5120c3a4dbb5030089b03fb757805adbaa12d4550c828ffd7c",
+        "transparentFraction": 0.88418,
+        "path": "assets/sprites/sh1_air_screamer_001.3af1bfe6260c.png",
         "facing": 1,
         "anchor": [
-          0.54,
-          0.77
+          0.51,
+          0.745
         ],
-        "bodyHeight": 0.58,
-        "sourceFile": "exec-842f8fbf-2dd2-4562-a39a-398e17fae002.png",
-        "sourceSHA256": "f208137d6414b32cbd23ddbf7afb6433e1b4d55151884a1bb10a97ae0b049ef4",
+        "bodyHeight": 0.42,
+        "sourceFile": "exec-61d02910-ff44-4bb6-a351-73b62ba8045d.png",
+        "sourceSHA256": "3af1bfe6260c6f2662713fec5022ffd55716f841bdcee80600772699b2bbb9b0",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          34,
-          39,
-          1750,
-          843
+          0,
+          61,
+          1516,
+          1006
         ],
         "framingBounds": [
-          34,
-          229,
-          1750,
-          676
+          60,
+          398,
+          1494,
+          756
         ]
       },
       {
-        "sha256": "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9",
-        "bytes": 707307,
-        "width": 1774,
-        "height": 887,
+        "sha256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4",
+        "bytes": 1330497,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
           86,
-          60,
-          1724,
-          786
+          140,
+          1490,
+          752
         ],
-        "pixelSHA256": "893cb8cad4e52faf2ab9d15fa2e41817e7266eab534a619674f0d48d73a94e12",
-        "transparentFraction": 0.82684,
-        "path": "assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
+        "pixelSHA256": "06db926b975321d9c46e6fa4d6e54a673d61622106fa28f755305bdbf209b4fa",
+        "transparentFraction": 0.85205,
+        "path": "assets/sprites/sh1_air_screamer_001.54bc7ba84975.png",
         "facing": 1,
         "anchor": [
-          0.54,
-          0.9
+          0.51,
+          0.745
         ],
-        "bodyHeight": 0.58,
-        "sourceFile": "exec-c077a414-e5ab-4b8a-bea2-e53663c8a88c.png",
-        "sourceSHA256": "9b5e20f622b474497cb343e41f5e477b3d61b417167932e6edfa7d7fc36fdda9",
+        "bodyHeight": 0.42,
+        "sourceFile": "exec-055749e5-c53a-4a7e-a49c-a8bddc29b0b9.png",
+        "sourceSHA256": "54bc7ba84975bf451c9a0e0e390826a65bffb73cbdecf9cf9c57fbee68dc64a4",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          81,
-          29,
-          1746,
-          871
+          41,
+          30,
+          1518,
+          988
         ],
         "framingBounds": [
-          81,
-          57,
-          1727,
-          789
+          82,
+          132,
+          1493,
+          754
         ]
       },
       {
-        "sha256": "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780",
-        "bytes": 716893,
-        "width": 1774,
-        "height": 887,
+        "sha256": "88d752b48e9fa4aa0104527a898c14fe7f44d5eee1f8e74262b668a65e1973ac",
+        "bytes": 1179554,
+        "width": 1536,
+        "height": 1024,
         "visibleBounds": [
-          52,
-          222,
-          1736,
-          760
+          49,
+          433,
+          1491,
+          836
         ],
-        "pixelSHA256": "43f59f945e95788c00b9e065f217dcf321b0d20eff7432e1dbd7830cb88c0848",
-        "transparentFraction": 0.82392,
-        "path": "assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
+        "pixelSHA256": "236087716138042b121e923bcc81bfc8a72a48cd7862a733ffa1d9c810f64c3c",
+        "transparentFraction": 0.89102,
+        "path": "assets/sprites/sh1_air_screamer_001.88d752b48e9f.png",
         "facing": 1,
         "anchor": [
-          0.54,
-          0.705
+          0.51,
+          0.745
         ],
-        "bodyHeight": 0.58,
-        "sourceFile": "exec-8f429514-4016-414a-9594-f9abdb569045.png",
-        "sourceSHA256": "49a50bf77b97787c1d9f66ffa6288b62f511c0bcd13bd18f4e0fd3cb7e55c780",
+        "bodyHeight": 0.42,
+        "sourceFile": "exec-32a4148c-0aa0-4ffd-bb45-b3da70d921b3.png",
+        "sourceSHA256": "88d752b48e9fa4aa0104527a898c14fe7f44d5eee1f8e74262b668a65e1973ac",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          25,
-          30,
-          1756,
-          854
+          47,
+          21,
+          1512,
+          992
         ],
         "framingBounds": [
-          50,
-          219,
-          1741,
-          760
+          48,
+          432,
+          1493,
+          837
         ]
       },
       {
@@ -228,7 +234,14 @@ export const SPRITES = {
       ],
       "origin": "conversation-image-generation",
       "sourceFile": "sh1_air_screamer_001-selection.png"
-    }
+    },
+    "combatView": "side-view-candidate",
+    "retainedLegacyCombatFrames": [
+      {
+        "index": 3,
+        "sha256": "5adcb14c1e7f53938c4604dafeafc339317b0ab484578ae6e3ede23f1317ef01"
+      }
+    ]
   },
   "film_red_pyramid_film_175": {
     "fighterId": "film_red_pyramid_film_175",
@@ -11451,51 +11464,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-c9ebabfc-f8f0-4565-88d5-b148bd69848d.png",
-    "sourceSHA256": "f686cf003576204d6f2b7794243f5f00bc9e2f71d839ca0fea28d00f2149ee31",
+    "sourceFile": "sh1_larval_stalker_007.side-dark.png",
+    "sourceSHA256": "38b87a127acd4e9642d1b34e87f6f72bc6561bc29ceb9686458d7cf4a34b462c",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Larval Stalker SH1 1999 non hostile ; contour sombre translucide complet sans visage ni arme. Correction imagegen retirant la texture murale accidentelle de la première sortie ; densité alpha et proportions de l’ombre restent non mesurées. Pose passive, rôle moteur inchangé. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+    "notes": "Complete quiet right-facing shadow silhouette: elongated featureless head, narrow torso, two drooping arms, two small legs and foot tips. The targeted imagegen correction changes pale mist to dark charcoal material with genuine translucent interior. No face, clothing, weapon, muscular detail or source-room texture appears. The original scene is oblique; the new side thickness is inferred and the capture region remains unspecified. Opacity and blur are authored, not measured from the 1999 renderer; visibility against the atelier background requires integration review. A soft shadow has no exact hard sole. The anchor and body envelope are provisional presentation calibration. No combat enabling, source animation, original timing or one-to-one fidelity is claimed. Requested 12 percent padding is not met vertically; all readable head/limb tips remain inside the canvas. Vue latérale de référence dans l’atelier ; profil hors duel dans son œuvre, rôle existant inchangé.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "f686cf003576204d6f2b7794243f5f00bc9e2f71d839ca0fea28d00f2149ee31",
-        "bytes": 302136,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "38b87a127acd4e9642d1b34e87f6f72bc6561bc29ceb9686458d7cf4a34b462c",
+        "bytes": 1099822,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          460,
-          219,
-          842,
-          1055
+          268,
+          126,
+          721,
+          1425
         ],
-        "alphaBounds": [
-          0,
-          20,
-          1240,
-          1234
-        ],
-        "framingBounds": [
-          453,
-          217,
-          850,
-          1062
-        ],
-        "pixelSHA256": "660764a10368d72f2445320897df2434834b8f6b41063a3b2de05b366674cd32",
-        "transparentFraction": 0.90641,
-        "path": "assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
+        "pixelSHA256": "e135e03c2a44b6b4c6d22bd88b625c8df0b9012d8692a94a65fb17f79b2e6aa0",
+        "transparentFraction": 0.79574,
+        "path": "assets/sprites/sh1_larval_stalker_007.38b87a127acd.png",
         "facing": 1,
         "anchor": [
-          0.51914,
-          0.84131
+          0.44,
+          0.9270833333333334
         ],
-        "bodyHeight": 0.66667,
-        "sourceFile": "exec-c9ebabfc-f8f0-4565-88d5-b148bd69848d.png",
-        "sourceSHA256": "f686cf003576204d6f2b7794243f5f00bc9e2f71d839ca0fea28d00f2149ee31",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.8444010416666666,
+        "sourceFile": "sh1_larval_stalker_007.side-dark.png",
+        "sourceSHA256": "38b87a127acd4e9642d1b34e87f6f72bc6561bc29ceb9686458d7cf4a34b462c",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1008,
+          1536
+        ],
+        "framingBounds": [
+          121,
+          0,
+          851,
+          1536
+        ]
       }
     ],
     "portrait": {
@@ -11535,7 +11550,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Une seule image fixe candidate entière, idle non bouclé ; aucune animation, mesure de timings ou certification de fidélité 1:1. Larval Stalker SH1 1999 non hostile ; contour sombre translucide complet sans visage ni arme. Correction imagegen retirant la texture murale accidentelle de la première sortie ; densité alpha et proportions de l’ombre restent non mesurées. Pose passive, rôle moteur inchangé. Orientation et ancrage de présentation non mesurés ; contrôle des marges alpha sans certification des 20 % demandés.",
+    "selectionProvenance": {
+      "sourceSHA256": "f686cf003576204d6f2b7794243f5f00bc9e2f71d839ca0fea28d00f2149ee31",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-c9ebabfc-f8f0-4565-88d5-b148bd69848d.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Complete quiet right-facing shadow silhouette: elongated featureless head, narrow torso, two drooping arms, two small legs and foot tips. The targeted imagegen correction changes pale mist to dark charcoal material with genuine translucent interior. No face, clothing, weapon, muscular detail or source-room texture appears. The original scene is oblique; the new side thickness is inferred and the capture region remains unspecified. Opacity and blur are authored, not measured from the 1999 renderer; visibility against the atelier background requires integration review. A soft shadow has no exact hard sole. The anchor and body envelope are provisional presentation calibration. No combat enabling, source animation, original timing or one-to-one fidelity is claimed. Requested 12 percent padding is not met vertically; all readable head/limb tips remain inside the canvas. Vue latérale de référence dans l’atelier ; profil hors duel dans son œuvre, rôle existant inchangé."
   },
   "sh1_stalker_008": {
     "fighterId": "sh1_stalker_008",
@@ -13318,50 +13345,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-7d838258-316e-4973-a540-3008a290dd17.png",
-    "sourceSHA256": "d44d778f85735c37bb1b8c575512c78f3d22738f5dc1524d1458d54d3fab55db",
+    "sourceFile": "downpour_tormented_soul_111.side.png",
+    "sourceSHA256": "b55119719e9d86f293ca59a2a192c28d0f0fd02111429d7d980d3137b4d87395",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Référence native unique de faible résolution et description de la cage ; microdétails et vues cachées non vérifiés.",
+    "notes": "Complete upright rectangular cage containing one fixed torso-like effigy with stretched membrane attachments. Head and torso read in right profile. Entire upper/lower lattice and corner posts fit; open gaps have genuine alpha zero. No walking limbs, separate victim or Wall Corpse metal blades added. Only a 300 by 300 native render is available: lateral cage depth, concealed attachments and fine surface marks remain inferred, not verified. Requested 12 percent padding was not met vertically: about 8.3 percent, with the entire cage still inside the canvas. The regularized cage projection is a new presentation angle, not a measured model extraction. One static atelier reference; no combat enabling, new movement or original timing is claimed. Vue latérale de référence dans l’atelier ; profil hors duel dans son œuvre, rôle existant inchangé.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "d44d778f85735c37bb1b8c575512c78f3d22738f5dc1524d1458d54d3fab55db",
-        "bytes": 1553476,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "b55119719e9d86f293ca59a2a192c28d0f0fd02111429d7d980d3137b4d87395",
+        "bytes": 1795901,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          343,
-          71,
-          949,
-          1181
+          244,
+          133,
+          778,
+          1408
         ],
-        "pixelSHA256": "6f7985906d08f1c32ced6c3bf46e51763d15485ac5aca96a0d06830032ff6889",
-        "transparentFraction": 0.66188,
-        "path": "assets/sprites/downpour_tormented_soul_111.d44d778f8573.png",
+        "pixelSHA256": "50cad5a68ad05bcc0626d01fae44f03aab8bfe86526d03c7e901a995721a7925",
+        "transparentFraction": 0.72968,
+        "path": "assets/sprites/downpour_tormented_soul_111.b55119719e9d.png",
         "facing": 1,
         "anchor": [
-          0.515152,
-          0.941786
+          0.5,
+          0.9173177083333334
         ],
-        "bodyHeight": 0.885167,
-        "sourceFile": "exec-7d838258-316e-4973-a540-3008a290dd17.png",
-        "sourceSHA256": "d44d778f85735c37bb1b8c575512c78f3d22738f5dc1524d1458d54d3fab55db",
+        "bodyHeight": 0.8313802083333334,
+        "sourceFile": "downpour_tormented_soul_111.side.png",
+        "sourceSHA256": "b55119719e9d86f293ca59a2a192c28d0f0fd02111429d7d980d3137b4d87395",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
+          17,
           0,
-          23,
-          1238,
-          1254
+          1010,
+          1536
         ],
         "framingBounds": [
-          336,
-          64,
-          952,
-          1190
+          239,
+          127,
+          787,
+          1412
         ]
       }
     ],
@@ -13402,7 +13431,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Référence native unique de faible résolution et description de la cage ; microdétails et vues cachées non vérifiés.",
+    "selectionProvenance": {
+      "sourceSHA256": "d44d778f85735c37bb1b8c575512c78f3d22738f5dc1524d1458d54d3fab55db",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-7d838258-316e-4973-a540-3008a290dd17.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Complete upright rectangular cage containing one fixed torso-like effigy with stretched membrane attachments. Head and torso read in right profile. Entire upper/lower lattice and corner posts fit; open gaps have genuine alpha zero. No walking limbs, separate victim or Wall Corpse metal blades added. Only a 300 by 300 native render is available: lateral cage depth, concealed attachments and fine surface marks remain inferred, not verified. Requested 12 percent padding was not met vertically: about 8.3 percent, with the entire cage still inside the canvas. The regularized cage projection is a new presentation angle, not a measured model extraction. One static atelier reference; no combat enabling, new movement or original timing is claimed. Vue latérale de référence dans l’atelier ; profil hors duel dans son œuvre, rôle existant inchangé."
   },
   "downpour_wall_corpse_112": {
     "fighterId": "downpour_wall_corpse_112",
@@ -13410,50 +13451,52 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-199cc470-9e03-4488-949b-a3e1f3b3cfa0.png",
-    "sourceSHA256": "e72426541b83aed3793356d3cfe18a924667f23ab6091a21d0f98cd0ff225cf5",
+    "sourceFile": "downpour_wall_corpse_112.side.png",
+    "sourceSHA256": "7e0f9e050ef66d850009f68d05590ca207f101261ef6a88950bf67a847c3b0d6",
     "sourceDimensions": [
-      1254,
-      1254
+      1062,
+      1482
     ],
     "singleSubjectReviewed": true,
-    "notes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+    "notes": "Complete source-style naturally abbreviated torso, tilted wrapped head, near short upper-arm end, and complete original-style flat metal supports. Lateral torso and face point right. No legs, hands, cage or wheels added; the far upper-arm end is naturally occluded. The original detailed source is oblique; hidden support depth and exact far-side surface marks are reconstructed. The result does not measure source scale or certify strict geometric equivalence. Requested 12 percent margins were not reached: about 5.9 percent minimum, but all readable exterior tips remain inside the native canvas. One static reference candidate; environmental role stays outside combat. Vue latérale de référence dans l’atelier ; profil hors duel dans son œuvre, rôle existant inchangé.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "e72426541b83aed3793356d3cfe18a924667f23ab6091a21d0f98cd0ff225cf5",
-        "bytes": 869164,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "7e0f9e050ef66d850009f68d05590ca207f101261ef6a88950bf67a847c3b0d6",
+        "bytes": 1046602,
+        "width": 1062,
+        "height": 1482,
         "visibleBounds": [
-          345,
-          128,
-          1026,
-          1133
+          119,
+          87,
+          948,
+          1395
         ],
-        "pixelSHA256": "cdf14aa9b61c710c5123cb780b27f40390cd596d4750c9449166118f513ccc77",
-        "transparentFraction": 0.8151,
-        "path": "assets/sprites/downpour_wall_corpse_112.e72426541b83.png",
+        "pixelSHA256": "925198410525b1d7b3b3ea54e694784f55ea479ab5952ea41bd749aaf36e44b8",
+        "transparentFraction": 0.74797,
+        "path": "assets/sprites/downpour_wall_corpse_112.7e0f9e050ef6.png",
         "facing": 1,
         "anchor": [
-          0.546651,
-          0.903509
+          0.49,
+          0.9412955465587044
         ],
-        "bodyHeight": 0.801435,
-        "sourceFile": "exec-199cc470-9e03-4488-949b-a3e1f3b3cfa0.png",
-        "sourceSHA256": "e72426541b83aed3793356d3cfe18a924667f23ab6091a21d0f98cd0ff225cf5",
+        "bodyHeight": 0.8825910931174089,
+        "sourceFile": "downpour_wall_corpse_112.side.png",
+        "sourceSHA256": "7e0f9e050ef66d850009f68d05590ca207f101261ef6a88950bf67a847c3b0d6",
         "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
-          25,
-          47,
-          1218,
-          1254
+          0,
+          49,
+          1040,
+          1412
         ],
         "framingBounds": [
-          339,
-          125,
-          1028,
-          1136
+          112,
+          81,
+          951,
+          1405
         ]
       }
     ],
@@ -13494,7 +13537,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "ART144 B : silhouette extérieure entière revue, image isolée avec alpha réel. Une seule image idle statique, non bouclée ; aucune animation ni durée native mesurée. Rôle/capacités existants inchangés. Fidélité non vérifiée, aucune certification 1:1. Rendus natifs comparés ; pose nouvelle et détails cachés ne constituent pas une extraction du modèle commercial.",
+    "selectionProvenance": {
+      "sourceSHA256": "e72426541b83aed3793356d3cfe18a924667f23ab6091a21d0f98cd0ff225cf5",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-199cc470-9e03-4488-949b-a3e1f3b3cfa0.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Complete source-style naturally abbreviated torso, tilted wrapped head, near short upper-arm end, and complete original-style flat metal supports. Lateral torso and face point right. No legs, hands, cage or wheels added; the far upper-arm end is naturally occluded. The original detailed source is oblique; hidden support depth and exact far-side surface marks are reconstructed. The result does not measure source scale or certify strict geometric equivalence. Requested 12 percent margins were not reached: about 5.9 percent minimum, but all readable exterior tips remain inside the native canvas. One static reference candidate; environmental role stays outside combat. Vue latérale de référence dans l’atelier ; profil hors duel dans son œuvre, rôle existant inchangé."
   },
   "bom_air_screamer_121": {
     "fighterId": "bom_air_screamer_121",
@@ -14760,51 +14815,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-138dad7e-8858-4b83-9769-a49a50b5bfa9.png",
-    "sourceSHA256": "4673bf2f00b4e1c70a67c2acb7cb41f61fcd23b5bc013342d9bfb20cf89d3952",
+    "sourceFile": "bom_blood_baby_144.side-corrected.png",
+    "sourceSHA256": "19b2d9dc8731f5fdb49e1f885fb2006d079a54d4455070a50a11183f9efcd445",
     "sourceDimensions": [
-      1254,
-      1254
+      1180,
+      1333
     ],
     "singleSubjectReviewed": true,
-    "notes": "Modèle texturé de production face/dos et portrait retail concordants. Créature canonique non humaine avec crâne fendu, langue et mâchoire verticale, bras asymétriques, griffes et pieds entiers ; aucune réidentification en humain adulte, aucune substitution de Mother ou Blood Mama. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté.",
+    "notes": "Corrected right-facing side profile follows the primary model silhouette: hood-shaped head, side-visible opening and tongue, large near right arm with bands, smaller far arm, narrow legs and both complete feet. Initial three-quarter output is archived and not active. One depicted individual; existing multi-body runtime role and disabled super are preserved. The textured primary model and gray profile guide the shape, but fine surface detail and limb offset remain reconstructed. Far foot is slightly higher in the native authored stance. No new swarm depiction, source animation, original timing or one-to-one fidelity is certified. Requested 10 percent padding is not reached on every side; measured minimum alpha8 padding is 4.95 percent, with no readable silhouette cut. Low-alpha native noise is retained byte-for-byte; no trim, rescale, recoloring or alpha cleanup was applied.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "4673bf2f00b4e1c70a67c2acb7cb41f61fcd23b5bc013342d9bfb20cf89d3952",
-        "bytes": 913484,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "19b2d9dc8731f5fdb49e1f885fb2006d079a54d4455070a50a11183f9efcd445",
+        "bytes": 627600,
+        "width": 1180,
+        "height": 1333,
         "visibleBounds": [
-          164,
-          119,
-          1095,
-          1175
+          409,
+          67,
+          805,
+          1248
         ],
-        "alphaBounds": [
-          25,
-          29,
-          1250,
-          1254
-        ],
-        "framingBounds": [
-          160,
-          110,
-          1098,
-          1177
-        ],
-        "pixelSHA256": "68edd7f0888da1c1e5eb88054cf7bee55348da801b7135b01a09d9ece4320a53",
-        "transparentFraction": 0.77741,
-        "path": "assets/sprites/bom_blood_baby_144.4673bf2f00b4.png",
+        "pixelSHA256": "2ab5dace54f16955f7ba06d2b6e9ec91ba37d9828182e281892ad18b2f9395b3",
+        "transparentFraction": 0.85192,
+        "path": "assets/sprites/bom_blood_baby_144.19b2d9dc8731.png",
         "facing": 1,
         "anchor": [
-          0.501993620414673,
-          0.9370015948963317
+          0.46271186440677964,
+          0.9362340585146287
         ],
-        "bodyHeight": 0.8421052631578947,
-        "sourceFile": "exec-138dad7e-8858-4b83-9769-a49a50b5bfa9.png",
-        "sourceSHA256": "4673bf2f00b4e1c70a67c2acb7cb41f61fcd23b5bc013342d9bfb20cf89d3952",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.8859714928732183,
+        "sourceFile": "bom_blood_baby_144.side-corrected.png",
+        "sourceSHA256": "19b2d9dc8731f5fdb49e1f885fb2006d079a54d4455070a50a11183f9efcd445",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          21,
+          17,
+          1166,
+          1303
+        ],
+        "framingBounds": [
+          405,
+          62,
+          808,
+          1253
+        ]
       }
     ],
     "portrait": {
@@ -14844,7 +14901,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Modèle texturé de production face/dos et portrait retail concordants. Créature canonique non humaine avec crâne fendu, langue et mâchoire verticale, bras asymétriques, griffes et pieds entiers ; aucune réidentification en humain adulte, aucune substitution de Mother ou Blood Mama. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté.",
+    "selectionProvenance": {
+      "sourceSHA256": "4673bf2f00b4e1c70a67c2acb7cb41f61fcd23b5bc013342d9bfb20cf89d3952",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-138dad7e-8858-4b83-9769-a49a50b5bfa9.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Corrected right-facing side profile follows the primary model silhouette: hood-shaped head, side-visible opening and tongue, large near right arm with bands, smaller far arm, narrow legs and both complete feet. Initial three-quarter output is archived and not active. One depicted individual; existing multi-body runtime role and disabled super are preserved. The textured primary model and gray profile guide the shape, but fine surface detail and limb offset remain reconstructed. Far foot is slightly higher in the native authored stance. No new swarm depiction, source animation, original timing or one-to-one fidelity is certified. Requested 10 percent padding is not reached on every side; measured minimum alpha8 padding is 4.95 percent, with no readable silhouette cut. Low-alpha native noise is retained byte-for-byte; no trim, rescale, recoloring or alpha cleanup was applied."
   },
   "shortmessage_sakura_head_150": {
     "fighterId": "shortmessage_sakura_head_150",
@@ -15700,51 +15769,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-cd8f5df2-4255-4055-8a2c-daa4fcd32b25.png",
-    "sourceSHA256": "152fcdc0539315f97ffb2a771a2495e6d7cf987cb9abf6229d6d4a5e16edae32",
+    "sourceFile": "shf_rinko_like_entity_163.initial.png",
+    "sourceSHA256": "28d00975acf2f3153b8960209cd161478d126473d52fb0da9acd4f4df2136d2a",
     "sourceDimensions": [
-      1254,
-      1254
+      1060,
+      1484
     ],
     "singleSubjectReviewed": true,
-    "notes": "Rinko-Like Entity : forme de prêtre vêtue, coiffe haute, cheveux jusqu’au sol, robe violette, surface surnaturelle sombre à lumière orange et chaîne abaissée. Identité/âge incertains maintenus ; pas de relabel adulte et aucun visage humain ou gore ajouté ; les spawns scolaires séparés ne sont pas utilisés. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté.",
+    "notes": "Right-facing full lateral figure retains the tall ceremonial hat, orange face, violet robe, extremely long hair, full low chain and complete visible shoe. The far shoe is naturally occluded by the robe and near leg; no extra leg is invented. Source concept includes a profile but surface details, chain drape and hidden-side geometry remain reconstructed. Fine low-alpha hair fringe and chain lie slightly below the visible shoe sole. No source timing or one-to-one fidelity is certified. Requested 10 percent padding is not reached on every side; measured minimum alpha8 padding is 4.58 percent, with no readable silhouette cut. Low-alpha native noise is retained byte-for-byte; no trim, rescale, recoloring or alpha cleanup was applied.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "152fcdc0539315f97ffb2a771a2495e6d7cf987cb9abf6229d6d4a5e16edae32",
-        "bytes": 1070701,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "28d00975acf2f3153b8960209cd161478d126473d52fb0da9acd4f4df2136d2a",
+        "bytes": 971100,
+        "width": 1060,
+        "height": 1484,
         "visibleBounds": [
           91,
-          42,
-          1170,
-          1217
+          79,
+          966,
+          1414
         ],
-        "alphaBounds": [
-          0,
-          0,
-          1244,
-          1254
-        ],
-        "framingBounds": [
-          75,
-          38,
-          1174,
-          1224
-        ],
-        "pixelSHA256": "f0581ea0fdbaea334b25f53cdedbcd26c20f55795faab474ddd39245cba8792e",
-        "transparentFraction": 0.7606,
-        "path": "assets/sprites/shf_rinko_like_entity_163.152fcdc05393.png",
+        "pixelSHA256": "afeaea9a26fe5bd2b2c2bead28c0055a1fb1b4a89d6bfa37cde830eb3b7f0fd0",
+        "transparentFraction": 0.76837,
+        "path": "assets/sprites/shf_rinko_like_entity_163.28d00975acf2.png",
         "facing": 1,
         "anchor": [
-          0.61,
-          0.970494417862839
+          0.6264150943396226,
+          0.9454177897574124
         ],
-        "bodyHeight": 0.9370015948963317,
-        "sourceFile": "exec-cd8f5df2-4255-4055-8a2c-daa4fcd32b25.png",
-        "sourceSHA256": "152fcdc0539315f97ffb2a771a2495e6d7cf987cb9abf6229d6d4a5e16edae32",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.8921832884097035,
+        "sourceFile": "shf_rinko_like_entity_163.initial.png",
+        "sourceSHA256": "28d00975acf2f3153b8960209cd161478d126473d52fb0da9acd4f4df2136d2a",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          31,
+          1046,
+          1484
+        ],
+        "framingBounds": [
+          87,
+          76,
+          970,
+          1426
+        ]
       }
     ],
     "portrait": {
@@ -15784,7 +15855,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Rinko-Like Entity : forme de prêtre vêtue, coiffe haute, cheveux jusqu’au sol, robe violette, surface surnaturelle sombre à lumière orange et chaîne abaissée. Identité/âge incertains maintenus ; pas de relabel adulte et aucun visage humain ou gore ajouté ; les spawns scolaires séparés ne sont pas utilisés. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté.",
+    "selectionProvenance": {
+      "sourceSHA256": "152fcdc0539315f97ffb2a771a2495e6d7cf987cb9abf6229d6d4a5e16edae32",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-cd8f5df2-4255-4055-8a2c-daa4fcd32b25.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Right-facing full lateral figure retains the tall ceremonial hat, orange face, violet robe, extremely long hair, full low chain and complete visible shoe. The far shoe is naturally occluded by the robe and near leg; no extra leg is invented. Source concept includes a profile but surface details, chain drape and hidden-side geometry remain reconstructed. Fine low-alpha hair fringe and chain lie slightly below the visible shoe sole. No source timing or one-to-one fidelity is certified. Requested 10 percent padding is not reached on every side; measured minimum alpha8 padding is 4.58 percent, with no readable silhouette cut. Low-alpha native noise is retained byte-for-byte; no trim, rescale, recoloring or alpha cleanup was applied."
   },
   "shf_hinako_s_father_164": {
     "fighterId": "shf_hinako_s_father_164",
@@ -15792,51 +15875,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-b4ee0f60-a69c-44ac-9cdd-c0b56a3f959f.png",
-    "sourceSHA256": "ba8ac5bd4d54270587e7770432bf2290d67652af34f415e810a537ae7c383772",
+    "sourceFile": "shf_hinako_s_father_164.side-corrected.png",
+    "sourceSHA256": "b4c4498e2d50e07e8e57f5f21c45c69ee59300b45cf2fe45d0092a8fd407af46",
     "sourceDimensions": [
-      1254,
-      1254
+      1219,
+      1290
     ],
     "singleSubjectReviewed": true,
-    "notes": "Père de Hinako : grande forme monstrueuse avant, masse ronde, veste navy, deux petits appuis, appendice courbe et lame de cuisine entiers. Ni le petit croquis humain ni la mère du portrait double ne sont importés. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté.",
+    "notes": "The orientation correction provides a right-facing lateral silhouette with the huge rounded mass, navy fabric, one complete blade and two small visible supports. The far curved appendage is naturally occluded in profile. Initial three-quarter output is archived and not active. Original source supplies front/back views only: exact lateral thickness is inferred. The near blade tip extends about 30 native pixels below the near foot sole, retaining a dragging low blade; foot anchor is measured on the shoe rather than weapon. Both supports are inside the canvas, with a small far-foot height difference in the authored image. No exact geometry, original timing or one-to-one fidelity is certified. Requested 10 percent padding is not reached on every side; measured minimum alpha8 padding is 5.74 percent, with no readable silhouette cut. Low-alpha native noise is retained byte-for-byte; no trim, rescale, recoloring or alpha cleanup was applied.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "ba8ac5bd4d54270587e7770432bf2290d67652af34f415e810a537ae7c383772",
-        "bytes": 1305773,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "b4c4498e2d50e07e8e57f5f21c45c69ee59300b45cf2fe45d0092a8fd407af46",
+        "bytes": 1544952,
+        "width": 1219,
+        "height": 1290,
         "visibleBounds": [
-          50,
-          239,
-          1175,
-          1034
+          160,
+          75,
+          1000,
+          1169
         ],
+        "pixelSHA256": "4a49a27ca03617d8cf6c081801ece041271caed7ec212d4840e52ecdb17208a2",
+        "transparentFraction": 0.64983,
+        "path": "assets/sprites/shf_hinako_s_father_164.b4c4498e2d50.png",
+        "facing": 1,
+        "anchor": [
+          0.43232157506152585,
+          0.8829457364341086
+        ],
+        "bodyHeight": 0.8255813953488372,
+        "sourceFile": "shf_hinako_s_father_164.side-corrected.png",
+        "sourceSHA256": "b4c4498e2d50e07e8e57f5f21c45c69ee59300b45cf2fe45d0092a8fd407af46",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
         "alphaBounds": [
           0,
           17,
-          1234,
-          1254
+          1191,
+          1290
         ],
         "framingBounds": [
-          47,
-          237,
-          1177,
-          1039
-        ],
-        "pixelSHA256": "b4d80547fc4cce30e8e97d2a83d95ac93d7eda2d631e09f5c5d7801045e968c4",
-        "transparentFraction": 0.7176,
-        "path": "assets/sprites/shf_hinako_s_father_164.ba8ac5bd4d54.png",
-        "facing": 1,
-        "anchor": [
-          0.48843700159489634,
-          0.8245614035087719
-        ],
-        "bodyHeight": 0.6339712918660287,
-        "sourceFile": "exec-b4ee0f60-a69c-44ac-9cdd-c0b56a3f959f.png",
-        "sourceSHA256": "ba8ac5bd4d54270587e7770432bf2290d67652af34f415e810a537ae7c383772",
-        "origin": "conversation-image-generation"
+          157,
+          66,
+          1003,
+          1178
+        ]
       }
     ],
     "portrait": {
@@ -15876,7 +15961,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Père de Hinako : grande forme monstrueuse avant, masse ronde, veste navy, deux petits appuis, appendice courbe et lame de cuisine entiers. Ni le petit croquis humain ni la mère du portrait double ne sont importés. Reconstruction statique générée depuis des références natives examinées ; fidélité unverified, aucun pixel original livré, aucune animation ni mesure de timing, pas de certification 1:1. La rotation et le miroir éventuel servent seulement la présentation 2D ; côté opposé non attesté.",
+    "selectionProvenance": {
+      "sourceSHA256": "ba8ac5bd4d54270587e7770432bf2290d67652af34f415e810a537ae7c383772",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-b4ee0f60-a69c-44ac-9cdd-c0b56a3f959f.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "The orientation correction provides a right-facing lateral silhouette with the huge rounded mass, navy fabric, one complete blade and two small visible supports. The far curved appendage is naturally occluded in profile. Initial three-quarter output is archived and not active. Original source supplies front/back views only: exact lateral thickness is inferred. The near blade tip extends about 30 native pixels below the near foot sole, retaining a dragging low blade; foot anchor is measured on the shoe rather than weapon. Both supports are inside the canvas, with a small far-foot height difference in the authored image. No exact geometry, original timing or one-to-one fidelity is certified. Requested 10 percent padding is not reached on every side; measured minimum alpha8 padding is 5.74 percent, with no readable silhouette cut. Low-alpha native noise is retained byte-for-byte; no trim, rescale, recoloring or alpha cleanup was applied."
   },
   "shf_shiromuku_166": {
     "fighterId": "shf_shiromuku_166",
@@ -17976,51 +18073,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-31b14256-a28a-4911-91ee-4f8b8e914319.png",
-    "sourceSHA256": "c53d378bc7dfbe2f610f25320f4f4c2da37f8d6485b73ad014ffa2d9ad434632",
+    "sourceFile": "townfall_lunger.side.png",
+    "sourceSHA256": "37603e93fe906d453be9e35e350afc2f76942a0ce39145d7a486706f4e9f1657",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Lunger : modèle final en jeu03 et détail04 nommés dans la nouvelle galerie. Corps maigre entier, tête asymétrique, bras liés et deux pieds conservés ; aucune hache tenue ni poing libre ajouté. Posture de présentation 2D, détails fins des sangles non mesurés. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "notes": "Profil droit entier de Lunger, debout : tête organique asymétrique à bord noir intégré, deux bras repliés retenus par les sangles, doigts retenus près du torse, deux jambes minces et deux pieds complets dirigés à droite. Aucun poing libre, arme tenue, membre supplémentaire ou fond opaque visible. La lecture latérale du torse est étroite et cohérente avec les pieds. Les trajets et le nombre précis des sangles/boucles ne sont pas mesurés ; leur construction latérale reste approximative. Marges verticales très réduites (8 px au-dessus et 19 px au-dessous du seuil alpha8) : les extrémités sont entières, mais la cible de marge généreuse du prompt n’est pas atteinte. Un bruit alpha1 existe au bord ; aucun sujet visible ne touche ce bord. Reconstruction statique guidée par les références ; aucun profil source exact, côté opposé, modèle tournant ou timing original disponible. Le côté caché, l’épaisseur, les surfaces et les petites asymétries sont reconstruits. Fidélité unverified, sans certification 1:1. Le miroir est une présentation uniquement. Les ancres et hauteurs sont des propositions à contrôler dans le moteur ; elles ne certifient pas l’échelle canonique. Aucun nouveau portrait, clip animé ou changement de rôle.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "c53d378bc7dfbe2f610f25320f4f4c2da37f8d6485b73ad014ffa2d9ad434632",
-        "bytes": 713338,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "37603e93fe906d453be9e35e350afc2f76942a0ce39145d7a486706f4e9f1657",
+        "bytes": 1345683,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          362,
-          13,
-          933,
-          1241
+          350,
+          8,
+          610,
+          1517
         ],
-        "alphaBounds": [
-          0,
-          10,
-          1236,
-          1246
-        ],
-        "framingBounds": [
-          354,
-          10,
-          936,
-          1244
-        ],
-        "pixelSHA256": "b5ab9ab5b4d0e7345bdd143addbc4c8f9b2540dc58659e8968d62123f8bbb88b",
-        "transparentFraction": 0.84988,
-        "path": "assets/sprites/townfall_lunger.c53d378bc7df.png",
+        "pixelSHA256": "c52abcfbee9eea36f26b804ac187f325463088315adb858a8f5792495829aa63",
+        "transparentFraction": 0.87243,
+        "path": "assets/sprites/townfall_lunger.37603e93fe90.png",
         "facing": 1,
         "anchor": [
-          0.516347687400319,
-          0.9896331738437002
+          0.48,
+          0.9876302083333334
         ],
-        "bodyHeight": 0.9792663476874003,
-        "sourceFile": "exec-31b14256-a28a-4911-91ee-4f8b8e914319.png",
-        "sourceSHA256": "c53d378bc7dfbe2f610f25320f4f4c2da37f8d6485b73ad014ffa2d9ad434632",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.982421875,
+        "sourceFile": "townfall_lunger.side.png",
+        "sourceSHA256": "37603e93fe906d453be9e35e350afc2f76942a0ce39145d7a486706f4e9f1657",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          994,
+          1519
+        ],
+        "framingBounds": [
+          346,
+          0,
+          616,
+          1519
+        ]
       }
     ],
     "portrait": {
@@ -18060,7 +18159,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Lunger : modèle final en jeu03 et détail04 nommés dans la nouvelle galerie. Corps maigre entier, tête asymétrique, bras liés et deux pieds conservés ; aucune hache tenue ni poing libre ajouté. Posture de présentation 2D, détails fins des sangles non mesurés. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "selectionProvenance": {
+      "sourceSHA256": "c53d378bc7dfbe2f610f25320f4f4c2da37f8d6485b73ad014ffa2d9ad434632",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-31b14256-a28a-4911-91ee-4f8b8e914319.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit entier de Lunger, debout : tête organique asymétrique à bord noir intégré, deux bras repliés retenus par les sangles, doigts retenus près du torse, deux jambes minces et deux pieds complets dirigés à droite. Aucun poing libre, arme tenue, membre supplémentaire ou fond opaque visible. La lecture latérale du torse est étroite et cohérente avec les pieds. Les trajets et le nombre précis des sangles/boucles ne sont pas mesurés ; leur construction latérale reste approximative. Marges verticales très réduites (8 px au-dessus et 19 px au-dessous du seuil alpha8) : les extrémités sont entières, mais la cible de marge généreuse du prompt n’est pas atteinte. Un bruit alpha1 existe au bord ; aucun sujet visible ne touche ce bord. Reconstruction statique guidée par les références ; aucun profil source exact, côté opposé, modèle tournant ou timing original disponible. Le côté caché, l’épaisseur, les surfaces et les petites asymétries sont reconstruits. Fidélité unverified, sans certification 1:1. Le miroir est une présentation uniquement. Les ancres et hauteurs sont des propositions à contrôler dans le moteur ; elles ne certifient pas l’échelle canonique. Aucun nouveau portrait, clip animé ou changement de rôle."
   },
   "townfall_sorrowful": {
     "fighterId": "townfall_sorrowful",
@@ -18068,51 +18179,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-5a13fcd7-553b-4fb2-9a82-34a746405b9e.png",
-    "sourceSHA256": "c27ab7f2cf5c09a14fdb0bbfdcf9386345cbd7e59eaa6f234c9b18beb81df273",
+    "sourceFile": "townfall_sorrowful.side.png",
+    "sourceSHA256": "da9c9af13265cabbd381c9fdd365086b363eeefd520f28d46f4132581d03a181",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Sorrowful : modèle final en jeu07 et détail08 nommés. Tête, mains rapprochées du torse, petit cordon thoracique et deux pieds complets conservés ; pas de projectile ou nouvelle blessure. Microtexture et trajet fin du cordon non certifiés. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "notes": "Profil droit entier de Sorrowful : tête à sillons asymétriques, deux mains rapprochées du sternum, petit tube translucide à raccords bleu et rouge, vêtement pelvien gris, deux jambes et deux pieds superposés mais complets. Le torse montre son côté étroit ; le petit tube ne devient pas un fouet. Aucun membre supplémentaire ou extrémité coupée observé. Le trajet exact de la petite tubulure, les plis et le masquage du bras/jambe éloignés sont reconstruits. Marges réelles supérieures/inférieures de 26/71 px au seuil alpha8, inférieures à la cible généreuse demandée. Reconstruction statique guidée par les références ; aucun profil source exact, côté opposé, modèle tournant ou timing original disponible. Le côté caché, l’épaisseur, les surfaces et les petites asymétries sont reconstruits. Fidélité unverified, sans certification 1:1. Le miroir est une présentation uniquement. Les ancres et hauteurs sont des propositions à contrôler dans le moteur ; elles ne certifient pas l’échelle canonique. Aucun nouveau portrait, clip animé ou changement de rôle.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "c27ab7f2cf5c09a14fdb0bbfdcf9386345cbd7e59eaa6f234c9b18beb81df273",
-        "bytes": 708797,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "da9c9af13265cabbd381c9fdd365086b363eeefd520f28d46f4132581d03a181",
+        "bytes": 1239200,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          374,
-          32,
-          887,
-          1217
+          369,
+          26,
+          626,
+          1465
         ],
-        "alphaBounds": [
-          25,
-          30,
-          1226,
-          1236
-        ],
-        "framingBounds": [
-          371,
-          30,
-          889,
-          1223
-        ],
-        "pixelSHA256": "afb8bc32c4dd24eed584c8e802f8db2173a5e5f663c4c4e007116d546f95f71c",
-        "transparentFraction": 0.84534,
-        "path": "assets/sprites/townfall_sorrowful.c27ab7f2cf5c.png",
+        "pixelSHA256": "78aa50c472e5b6f10fced48d6ed7c1de16b628f7ffbe9e14b831e1de7e1ce3b1",
+        "transparentFraction": 0.87791,
+        "path": "assets/sprites/townfall_sorrowful.da9c9af13265.png",
         "facing": 1,
         "anchor": [
-          0.5027910685805422,
-          0.970494417862839
+          0.48,
+          0.9537760416666666
         ],
-        "bodyHeight": 0.9449760765550239,
-        "sourceFile": "exec-5a13fcd7-553b-4fb2-9a82-34a746405b9e.png",
-        "sourceSHA256": "c27ab7f2cf5c09a14fdb0bbfdcf9386345cbd7e59eaa6f234c9b18beb81df273",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.9368489583333334,
+        "sourceFile": "townfall_sorrowful.side.png",
+        "sourceSHA256": "da9c9af13265cabbd381c9fdd365086b363eeefd520f28d46f4132581d03a181",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          69,
+          17,
+          980,
+          1496
+        ],
+        "framingBounds": [
+          366,
+          17,
+          629,
+          1470
+        ]
       }
     ],
     "portrait": {
@@ -18152,7 +18265,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Sorrowful : modèle final en jeu07 et détail08 nommés. Tête, mains rapprochées du torse, petit cordon thoracique et deux pieds complets conservés ; pas de projectile ou nouvelle blessure. Microtexture et trajet fin du cordon non certifiés. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "selectionProvenance": {
+      "sourceSHA256": "c27ab7f2cf5c09a14fdb0bbfdcf9386345cbd7e59eaa6f234c9b18beb81df273",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-5a13fcd7-553b-4fb2-9a82-34a746405b9e.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit entier de Sorrowful : tête à sillons asymétriques, deux mains rapprochées du sternum, petit tube translucide à raccords bleu et rouge, vêtement pelvien gris, deux jambes et deux pieds superposés mais complets. Le torse montre son côté étroit ; le petit tube ne devient pas un fouet. Aucun membre supplémentaire ou extrémité coupée observé. Le trajet exact de la petite tubulure, les plis et le masquage du bras/jambe éloignés sont reconstruits. Marges réelles supérieures/inférieures de 26/71 px au seuil alpha8, inférieures à la cible généreuse demandée. Reconstruction statique guidée par les références ; aucun profil source exact, côté opposé, modèle tournant ou timing original disponible. Le côté caché, l’épaisseur, les surfaces et les petites asymétries sont reconstruits. Fidélité unverified, sans certification 1:1. Le miroir est une présentation uniquement. Les ancres et hauteurs sont des propositions à contrôler dans le moteur ; elles ne certifient pas l’échelle canonique. Aucun nouveau portrait, clip animé ou changement de rôle."
   },
   "townfall_fallen": {
     "fighterId": "townfall_fallen",
@@ -18160,51 +18285,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-2602cea2-363c-413a-8fd7-6e4290de7541.png",
-    "sourceSHA256": "50be585d8b6ee7cf801b43b44c6c44c1d03d39bebbab7454e9da36d056de9de6",
+    "sourceFile": "townfall_fallen.side.png",
+    "sourceSHA256": "e793ad83817d6d9003512addf00bdefd37fb873dcdeecd5ce845fad2139ba0a3",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "Fallen : silhouette entière tirée du concept04 explicitement décrit comme final, et non d’un rendu commercial en jeu. La tête, les membres et les petits filaments suivent ce concept ; leurs surfaces et la rotation de présentation restent approximatives. Le statut de concept est conservé, sans certification du modèle final filmé. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "notes": "Profil droit entier de Fallen, DEBOUT comme dans le concept final 04 : épaules contractées, tête terminale creuse, torse maigre, deux bras aux doigts recourbés, deux jambes longues et deux pieds complets, deux petits filaments sombres entièrement cadrés. Le dos et le torse restent latéraux malgré les deux avant-bras portés vers l’avant. Pas de quadrupédie, socle ou flaque ajoutés. Source : concept final, pas rendu du modèle commercial certifié. La contraction des épaules et le dos vus de côté sont reconstruits ; le statut concept est conservé. Marges réelles de 66/86 px au seuil alpha8, inférieures à la cible généreuse demandée. Reconstruction statique guidée par les références ; aucun profil source exact, côté opposé, modèle tournant ou timing original disponible. Le côté caché, l’épaisseur, les surfaces et les petites asymétries sont reconstruits. Fidélité unverified, sans certification 1:1. Le miroir est une présentation uniquement. Les ancres et hauteurs sont des propositions à contrôler dans le moteur ; elles ne certifient pas l’échelle canonique. Aucun nouveau portrait, clip animé ou changement de rôle.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "50be585d8b6ee7cf801b43b44c6c44c1d03d39bebbab7454e9da36d056de9de6",
-        "bytes": 674148,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "e793ad83817d6d9003512addf00bdefd37fb873dcdeecd5ce845fad2139ba0a3",
+        "bytes": 1285236,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          257,
-          31,
-          996,
-          1222
+          334,
+          67,
+          738,
+          1449
         ],
-        "alphaBounds": [
-          49,
-          27,
-          1216,
-          1224
-        ],
-        "framingBounds": [
-          252,
-          27,
-          999,
-          1224
-        ],
-        "pixelSHA256": "b22ae1b188496127ccc70eb26a50a400a3a06e6a7183bcd7acc6ffb68fb3b3ff",
-        "transparentFraction": 0.83441,
-        "path": "assets/sprites/townfall_fallen.50be585d8b6e.png",
+        "pixelSHA256": "439165acc9dc9e3f064106c4e48ed4c28bda797115c947a4cd3aa8da4cb1d54e",
+        "transparentFraction": 0.86923,
+        "path": "assets/sprites/townfall_fallen.e793ad83817d.png",
         "facing": 1,
         "anchor": [
-          0.4996012759170654,
-          0.9744816586921851
+          0.49,
+          0.943359375
         ],
-        "bodyHeight": 0.9497607655502392,
-        "sourceFile": "exec-2602cea2-363c-413a-8fd7-6e4290de7541.png",
-        "sourceSHA256": "50be585d8b6ee7cf801b43b44c6c44c1d03d39bebbab7454e9da36d056de9de6",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.8997395833333334,
+        "sourceFile": "townfall_fallen.side.png",
+        "sourceSHA256": "e793ad83817d6d9003512addf00bdefd37fb873dcdeecd5ce845fad2139ba0a3",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          33,
+          32,
+          1004,
+          1456
+        ],
+        "framingBounds": [
+          328,
+          63,
+          740,
+          1455
+        ]
       }
     ],
     "portrait": {
@@ -18244,7 +18371,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Fallen : silhouette entière tirée du concept04 explicitement décrit comme final, et non d’un rendu commercial en jeu. La tête, les membres et les petits filaments suivent ce concept ; leurs surfaces et la rotation de présentation restent approximatives. Le statut de concept est conservé, sans certification du modèle final filmé. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "selectionProvenance": {
+      "sourceSHA256": "50be585d8b6ee7cf801b43b44c6c44c1d03d39bebbab7454e9da36d056de9de6",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-2602cea2-363c-413a-8fd7-6e4290de7541.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "Profil droit entier de Fallen, DEBOUT comme dans le concept final 04 : épaules contractées, tête terminale creuse, torse maigre, deux bras aux doigts recourbés, deux jambes longues et deux pieds complets, deux petits filaments sombres entièrement cadrés. Le dos et le torse restent latéraux malgré les deux avant-bras portés vers l’avant. Pas de quadrupédie, socle ou flaque ajoutés. Source : concept final, pas rendu du modèle commercial certifié. La contraction des épaules et le dos vus de côté sont reconstruits ; le statut concept est conservé. Marges réelles de 66/86 px au seuil alpha8, inférieures à la cible généreuse demandée. Reconstruction statique guidée par les références ; aucun profil source exact, côté opposé, modèle tournant ou timing original disponible. Le côté caché, l’épaisseur, les surfaces et les petites asymétries sont reconstruits. Fidélité unverified, sans certification 1:1. Le miroir est une présentation uniquement. Les ancres et hauteurs sont des propositions à contrôler dans le moteur ; elles ne certifient pas l’échelle canonique. Aucun nouveau portrait, clip animé ou changement de rôle."
   },
   "townfall_widow": {
     "fighterId": "townfall_widow",
@@ -18252,51 +18391,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-66d55fec-6785-4efd-94f2-800ba35cfe7c.png",
-    "sourceSHA256": "853146bb99d2309fe4a171ee57527067221de0118ca92ce6f0fbee5b840441d5",
+    "sourceFile": "townfall_widow.side.png",
+    "sourceSHA256": "10672c611252e4fe098cc415c7e9185267e5b547bbd51454cfa757a614eaa37e",
     "sourceDimensions": [
-      1254,
-      1254
+      1086,
+      1448
     ],
     "singleSubjectReviewed": true,
-    "notes": "Widow : modèle final en jeu03 nommé, silhouette entière avec couvre-chef pâle, vêtement gris déchiqueté, bandes, petit élément de bois et pieds. L’image native prévaut sur la description générale évoquant un voile noir. Pose naturelle de cette image ; rôle unverified et combat désactivé conservés, sans posture de boxe ni pattern inventé. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "notes": "One complete slender Widow facing right in a strict lateral silhouette. Pale rounded face-covering draped hood, original gray ragged wraps, hanging rectangular photo/paper pieces and trailing cloth bands retained. One short flat wood strip held low, two attached arms, two complete bare legs and feet. No black funeral veil, knife or invented weapon. Whole hood, wood, bands, fingertips, heels and toes inside the canvas. Model03 is a named whole-body three-quarter source, not a measured lateral turnaround. The new profile and more level resting foot presentation reconstruct unseen depth and pose; hood folds, covered face outline, strip/photo placement and exact anatomy remain unverified. Widow remains unverified and outside duel; this image does not establish attacks, mobility, a combat pattern or super. A 20% empty margin was requested; actual minimum visible padding is 10.77%. No readable extremity is clipped. Native trace alpha is preserved. One static candidate only, no animated clip, no source timing, no UHD or 1:1 certification. Vue latérale de référence dans l’atelier ; profil hors duel dans son œuvre, rôle existant inchangé.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "853146bb99d2309fe4a171ee57527067221de0118ca92ce6f0fbee5b840441d5",
-        "bytes": 958754,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "10672c611252e4fe098cc415c7e9185267e5b547bbd51454cfa757a614eaa37e",
+        "bytes": 520415,
+        "width": 1086,
+        "height": 1448,
         "visibleBounds": [
-          126,
-          57,
-          1052,
-          1227
+          254,
+          211,
+          688,
+          1292
         ],
-        "alphaBounds": [
-          0,
-          19,
-          1236,
-          1254
-        ],
-        "framingBounds": [
-          123,
-          53,
-          1061,
-          1230
-        ],
-        "pixelSHA256": "2b2b1710aa7dff816daeb86f941cfb230cfaa920367be41fc00a495972bea0d3",
-        "transparentFraction": 0.78339,
-        "path": "assets/sprites/townfall_widow.853146bb99d2.png",
+        "pixelSHA256": "8c0e2546958fa07ac3f2d33926569f642d6307e15540a22e0d38b4cf9c744f95",
+        "transparentFraction": 0.88767,
+        "path": "assets/sprites/townfall_widow.10672c611252.png",
         "facing": 1,
         "anchor": [
-          0.4696969696969697,
-          0.9784688995215312
+          0.4889502762430939,
+          0.8908839779005525
         ],
-        "bodyHeight": 0.9330143540669856,
-        "sourceFile": "exec-66d55fec-6785-4efd-94f2-800ba35cfe7c.png",
-        "sourceSHA256": "853146bb99d2309fe4a171ee57527067221de0118ca92ce6f0fbee5b840441d5",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.7451657458563536,
+        "sourceFile": "townfall_widow.side.png",
+        "sourceSHA256": "10672c611252e4fe098cc415c7e9185267e5b547bbd51454cfa757a614eaa37e",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          33,
+          23,
+          1064,
+          1424
+        ],
+        "framingBounds": [
+          249,
+          207,
+          695,
+          1299
+        ]
       }
     ],
     "portrait": {
@@ -18336,7 +18477,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "Widow : modèle final en jeu03 nommé, silhouette entière avec couvre-chef pâle, vêtement gris déchiqueté, bandes, petit élément de bois et pieds. L’image native prévaut sur la description générale évoquant un voile noir. Pose naturelle de cette image ; rôle unverified et combat désactivé conservés, sans posture de boxe ni pattern inventé. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "selectionProvenance": {
+      "sourceSHA256": "853146bb99d2309fe4a171ee57527067221de0118ca92ce6f0fbee5b840441d5",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-66d55fec-6785-4efd-94f2-800ba35cfe7c.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "One complete slender Widow facing right in a strict lateral silhouette. Pale rounded face-covering draped hood, original gray ragged wraps, hanging rectangular photo/paper pieces and trailing cloth bands retained. One short flat wood strip held low, two attached arms, two complete bare legs and feet. No black funeral veil, knife or invented weapon. Whole hood, wood, bands, fingertips, heels and toes inside the canvas. Model03 is a named whole-body three-quarter source, not a measured lateral turnaround. The new profile and more level resting foot presentation reconstruct unseen depth and pose; hood folds, covered face outline, strip/photo placement and exact anatomy remain unverified. Widow remains unverified and outside duel; this image does not establish attacks, mobility, a combat pattern or super. A 20% empty margin was requested; actual minimum visible padding is 10.77%. No readable extremity is clipped. Native trace alpha is preserved. One static candidate only, no animated clip, no source timing, no UHD or 1:1 certification. Vue latérale de référence dans l’atelier ; profil hors duel dans son œuvre, rôle existant inchangé."
   },
   "townfall_the_weight": {
     "fighterId": "townfall_the_weight",
@@ -18344,51 +18497,53 @@ export const SPRITES = {
     "status": "integrated-candidate",
     "fidelity": "unverified",
     "origin": "conversation-image-generation",
-    "sourceFile": "exec-4c7f4b9b-8b50-4c15-b155-616ebc44aeb6.png",
-    "sourceSHA256": "d6c2834ffe6d6ce1ba611e527152da09c7283bd17e9cfd602896e7996ba21be3",
+    "sourceFile": "townfall_the_weight.side.png",
+    "sourceSHA256": "7b899f339ae7b92c7abe9fe2775615c0a9f49c35b6d255b6837b203f7006b000",
     "sourceDimensions": [
-      1254,
-      1254
+      1024,
+      1536
     ],
     "singleSubjectReviewed": true,
-    "notes": "The Weight : modèle final en jeu08 entier, détail matériel06. Masse sombre enveloppée, petite tête ovale, bras fusionnés et pantalon/chaussures conservés. Aucune chaîne/pierre de la description générale ni perfusion de l’autre état final03 transférée. Présentation du poursuivant, rôle scripted-encounter conservé ; face cachée et phase finale non vérifiées. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "notes": "One complete model08 pursuer in a strict right-facing lateral silhouette. Asymmetric folded upper mass and absorbed arms, small ridged oval head in front, narrow waist, two dark trouser legs and two complete lace-up canvas shoes retained. No separate fists, extra heads, chains, rocks, weapons or IV equipment. Upper mass, head and both shoes have clear complete contours. Model08 dominates the body and outfit. Concept06 is secondary fold/material evidence only; its A–H head alternatives and long falling filament were excluded. Model03 final-encounter form was not used. The side camera, concealed lobe geometry, exact lobe continuity and material detail are reconstructed and not certified. Scripted-encounter role, existing duel enablement and disabled super are unchanged. The preview halo is RGB under alpha zero, with sampled isolated trace alpha1 pixels; no correction or cleanup was warranted or performed. A 20% empty margin was requested; actual minimum visible padding is 14.84%. No readable extremity is clipped. Native trace alpha is preserved. One static candidate only, no animated clip, no source timing, no UHD or 1:1 certification.",
     "mirrorPolicy": "presentation-only; opposite side not independently generated",
     "frames": [
       {
-        "sha256": "d6c2834ffe6d6ce1ba611e527152da09c7283bd17e9cfd602896e7996ba21be3",
-        "bytes": 914571,
-        "width": 1254,
-        "height": 1254,
+        "sha256": "7b899f339ae7b92c7abe9fe2775615c0a9f49c35b6d255b6837b203f7006b000",
+        "bytes": 1315627,
+        "width": 1024,
+        "height": 1536,
         "visibleBounds": [
-          335,
-          46,
-          955,
-          1208
+          280,
+          280,
+          751,
+          1308
         ],
-        "alphaBounds": [
-          0,
-          42,
-          1226,
-          1212
-        ],
-        "framingBounds": [
-          331,
-          42,
-          961,
-          1212
-        ],
-        "pixelSHA256": "ff81206bd52dd2bc98a6031e6a90dbc74c43aec19f3f6f6edd13a9be557f4e48",
-        "transparentFraction": 0.7792,
-        "path": "assets/sprites/townfall_the_weight.d6c2834ffe6d.png",
+        "pixelSHA256": "89965940a33e90bf5c89a9e6b7e14d8ab5889e39c473c645f595b368d5edcf88",
+        "transparentFraction": 0.84003,
+        "path": "assets/sprites/townfall_the_weight.7b899f339ae7.png",
         "facing": 1,
         "anchor": [
-          0.5143540669856459,
-          0.9633173843700159
+          0.4375,
+          0.8515625
         ],
-        "bodyHeight": 0.9266347687400319,
-        "sourceFile": "exec-4c7f4b9b-8b50-4c15-b155-616ebc44aeb6.png",
-        "sourceSHA256": "d6c2834ffe6d6ce1ba611e527152da09c7283bd17e9cfd602896e7996ba21be3",
-        "origin": "conversation-image-generation"
+        "bodyHeight": 0.6692708333333334,
+        "sourceFile": "townfall_the_weight.side.png",
+        "sourceSHA256": "7b899f339ae7b92c7abe9fe2775615c0a9f49c35b6d255b6837b203f7006b000",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          73,
+          119,
+          944,
+          1464
+        ],
+        "framingBounds": [
+          276,
+          275,
+          754,
+          1312
+        ]
       }
     ],
     "portrait": {
@@ -18428,7 +18583,19 @@ export const SPRITES = {
         "loop": false
       }
     },
-    "animatedClips": 0
+    "animatedClips": 0,
+    "selectionNotes": "The Weight : modèle final en jeu08 entier, détail matériel06. Masse sombre enveloppée, petite tête ovale, bras fusionnés et pantalon/chaussures conservés. Aucune chaîne/pierre de la description générale ni perfusion de l’autre état final03 transférée. Présentation du poursuivant, rôle scripted-encounter conservé ; face cachée et phase finale non vérifiées. Reconstruction statique générée, fidélité unverified ; aucune certification 1:1, aucun pixel original livré, aucune animation source ni mesure de timing. Un seul frame idle non loop, ticksPerFrame1 ; côté opposé non attesté. Les marges connectées réelles sont archivées ; la cible12% n’est pas atteinte sur tous les côtés, sans extrémité coupée.",
+    "selectionProvenance": {
+      "sourceSHA256": "d6c2834ffe6d6ce1ba611e527152da09c7283bd17e9cfd602896e7996ba21be3",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "origin": "conversation-image-generation",
+      "sourceFile": "exec-4c7f4b9b-8b50-4c15-b155-616ebc44aeb6.png"
+    },
+    "combatView": "side-view-candidate",
+    "combatNotes": "One complete model08 pursuer in a strict right-facing lateral silhouette. Asymmetric folded upper mass and absorbed arms, small ridged oval head in front, narrow waist, two dark trouser legs and two complete lace-up canvas shoes retained. No separate fists, extra heads, chains, rocks, weapons or IV equipment. Upper mass, head and both shoes have clear complete contours. Model08 dominates the body and outfit. Concept06 is secondary fold/material evidence only; its A–H head alternatives and long falling filament were excluded. Model03 final-encounter form was not used. The side camera, concealed lobe geometry, exact lobe continuity and material detail are reconstructed and not certified. Scripted-encounter role, existing duel enablement and disabled super are unchanged. The preview halo is RGB under alpha zero, with sampled isolated trace alpha1 pixels; no correction or cleanup was warranted or performed. A 20% empty margin was requested; actual minimum visible padding is 14.84%. No readable extremity is clipped. Native trace alpha is preserved. One static candidate only, no animated clip, no source timing, no UHD or 1:1 certification."
   },
   "downpour_prisoner_minion_brawler_108": {
     "fighterId": "downpour_prisoner_minion_brawler_108",

@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "repository": "darknigthmare/silent-hill-halo-of-flesh",
+  "commit": "ebca8aa25d943692ae78837ea81b07cc229eeea5",
+  "checkedAt": "2026-11-20T09:24:26.385Z",
+  "source": "GitHub connector commit workflow runs and workflow run jobs",
+  "runs": [
+    {
+      "id": 44704790116,
+      "name": "QA",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 144,
+      "jobs_url": "https://api.github.com/repos/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44704790116/jobs",
+      "logs_url": "https://api.github.com/repos/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44704790116/logs",
+      "workflow_id": 380674611,
+      "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44704790116"
+    },
+    {
+      "id": 44704790113,
+      "name": "HTTP browser QA",
+      "status": "completed",
+      "conclusion": "success",
+      "run_number": 97,
+      "jobs_url": "https://api.github.com/repos/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44704790113/jobs",
+      "logs_url": "https://api.github.com/repos/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44704790113/logs",
+      "workflow_id": 384122035,
+      "url": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/44704790113"
+    }
+  ],
+  "httpJobs": [
+    {
+      "id": 136181752439,
+      "name": "browser",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 44704790113,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install the pinned test-only dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Install the corresponding Chromium on this CI runner",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Set up PNG validation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Build and test the actual HTTP interface",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Retain test report and captures only",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

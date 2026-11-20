@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "id": "sh1_air_screamer_001-idle-wings-down-ground-clearance-correction",
+  "frameIndex": 2,
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: precise-object-edit. Asset type: a corrected native transparent PNG of ONE whole Silent Hill 1 Air Screamer animation pose.\nThe input image is the exact edit target, the already-reviewed RIGHT-FACING STRICT LATERAL LOW-WINGS frame. Make ONE narrowly targeted correction for ground clearance: lift the lowest distal part of the downstroke wings, especially the large near-wing tip and its trailing membrane edge, upward by approximately 90–100 pixels on this SAME 1536 x 1024 canvas. The current near-wing lowest point is around y=897; the corrected ENTIRE creature silhouette must end at or ABOVE y=810. Aim for the lowest wing tip/membrane edge around y=795–805, leaving all rows below y=810 completely alpha-transparent. This is essential for the game floor at y≈830.\nPerform the lift by a small anatomically coherent upward bend/rotation of the existing distal wing section at its existing joints, smoothly changing the membrane contour while retaining the complete pointed tips and scalloped edge. NO flat cropping, amputated tips, rectangular erasure, squeezed canvas, uniform rescaling, pasted mask or straight cut. Preserve the existing wing anatomy and material. The wings must still read unmistakably as the LOW/downstroke pose, below the body roots and below the neutral wing level. The far wing is already mostly clear of the lower limit; change only what is needed for a coherent pair. Keep roots, number of wings, spars, textures and membrane character consistent.\nINVARIANTS: same canvas dimensions 1536 x 1024, camera, framing, subject scale and rightward side view. Preserve the head, long beak, skull, neck, torso, pelvis, both bent hind legs and both feet in their exact present positions. Do not shift the whole creature upward. Keep the beak tip near (1488,593), skull crest near (1164,477), near foot end near (723,740), far foot end near (760,750). Do not repaint or redesign the rest of the body. Exactly one head, one torso, two wings, two legs; no added or removed anatomy, extra tail, feathers, horns, teeth, eyes or objects.\nTransparent RGBA output. Keep native color, mottled brown leather, lighting and material. The brown/black halo in the input preview is RGB hidden under zero alpha; keep background truly transparent, without glow or haze. No floor, ground line, shadow, text, coordinate labels, checkerboard, grid, panel or second subject. Output just the complete corrected creature, with all wing tips preserved and sufficient transparent margin BELOW the low wings.",
+  "referenced_image_paths": [
+    "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-down.png"
+  ],
+  "transparent_background": true,
+  "output_hint": "Generated images are saved to /workspace/scratch/62cbb5f4a653/generated_images as /workspace/scratch/62cbb5f4a653/generated_images/exec-32a4148c-0aa0-4ffd-bb45-b3da70d921b3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "sha256": "88d752b48e9fa4aa0104527a898c14fe7f44d5eee1f8e74262b668a65e1973ac",
+  "nativeFile": "exec-32a4148c-0aa0-4ffd-bb45-b3da70d921b3.png",
+  "localPath": "/workspace/scratch/62cbb5f4a653/production/wave25-air-screamer/png/air-screamer.idle-wings-down.corrected.png",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "bytes": 1179554,
+  "nativePixelsUnchanged": true,
+  "technicalMetadata": "native-png-audit-corrected.json",
+  "review": {
+    "bodyIdentityAndLandmarksStable": true,
+    "wholeSubjectPreserved": true,
+    "targetMaxNativeY": 810,
+    "observedVisibleBoundsMaxYExclusive": 836,
+    "observedAlpha2BoundsMaxYExclusive": 837,
+    "groundClearanceTargetMet": false,
+    "selectedForFinalDelivery": false,
+    "note": "One requested targeted imagegen correction moved the lowest wing by about61pixels, less than90–100requested. It still crosses the approximate floor by a few pixels at the fixed original calibration. Root informed; no second correction or calibration mutation performed at this point."
+  }
+}

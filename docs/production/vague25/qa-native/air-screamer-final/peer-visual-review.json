@@ -1,0 +1,319 @@
+{
+  "schema": 1,
+  "label": "wave25-air-screamer-peer-visual-review-before-distal-wing-correction",
+  "reviewer": "/root/generate_shf_missing",
+  "reviewedAt": "2026-11-20T09:40:43.789366+00:00",
+  "report": {
+    "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/report.json",
+    "sha256": "d030e37f872085b64c8601ae23132caa3e9061f36f0259a325602ae153b45f9b",
+    "passed": true,
+    "assertions": 293
+  },
+  "scope": "Actual view_image inspection of the six right/left idle captures and both right/left historical glide captures. Separate from the harness author primary review; this reviewer authored the native candidate images.",
+  "passed": false,
+  "technicalCadencePassed": true,
+  "bodyAndIdentityConsistencyPassed": true,
+  "wholeSubjectFramingPassed": true,
+  "groundClearancePassed": false,
+  "captures": [
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-right-walk-static-frame3.png",
+      "file": "sh1_air_screamer_001-right-walk-static-frame3.png",
+      "sha256": "46ba74afb1f3f897a05c89ddb419b8357b831558f0923dc4e1e7679aff5ee143",
+      "bytes": 1205210,
+      "viewedWithViewImage": true,
+      "facing": 1,
+      "frameIndex": 3,
+      "pose": "walk",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "transparentCutoutCleanInActualScene": true,
+      "anatomyAndIdentityCoherent": true,
+      "bodyScaleAndFeetStable": true,
+      "visibleBounds": [
+        135.05568526828816,
+        400.50567959907147,
+        643.2357667869535,
+        568.1445775417901
+      ],
+      "exteriorBounds": [
+        134.79251588376275,
+        399.7161714454951,
+        644.8147830941061,
+        568.9340856953665
+      ],
+      "registeredGroundPlaneScreenY": 594,
+      "visibleGroundClearancePixels": 25.855422458209887,
+      "fringeGroundClearancePixels": 25.065914304633452,
+      "verdict": "accepted-for-candidate-integration",
+      "notes": "Historical glide remains the same recognizable creature with comparable width and foot height; slight lower beak posture and asymmetric wing pose are retained legacy differences."
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-right-idle-frame0-tick0.png",
+      "file": "sh1_air_screamer_001-right-idle-frame0-tick0.png",
+      "sha256": "5273820438d7fae531b7a2df5b69a9e826d8f1558ff0a51d6a6714c0ac3231bc",
+      "bytes": 1196161,
+      "viewedWithViewImage": true,
+      "facing": 1,
+      "frameIndex": 0,
+      "pose": "idle",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "transparentCutoutCleanInActualScene": true,
+      "anatomyAndIdentityCoherent": true,
+      "bodyScaleAndFeetStable": true,
+      "visibleBounds": [
+        140.72973814274278,
+        441.74181577912043,
+        647.546194963614,
+        566.8510530223145
+      ],
+      "exteriorBounds": [
+        140.02090393739888,
+        441.03298157377657,
+        648.2550291689578,
+        567.9143043303303
+      ],
+      "registeredGroundPlaneScreenY": 594,
+      "visibleGroundClearancePixels": 27.148946977685455,
+      "fringeGroundClearancePixels": 26.08569566966969,
+      "verdict": "accepted-for-candidate-integration",
+      "notes": "Head, neck, legs and body read consistently; full wing/beak/foot tips remain inside the native scene."
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-right-idle-frame1-tick6.png",
+      "file": "sh1_air_screamer_001-right-idle-frame1-tick6.png",
+      "sha256": "81bd70c050573b9af129e595535126ae066c5f2e86510543fdd6c26f0307aa44",
+      "bytes": 1212730,
+      "viewedWithViewImage": true,
+      "facing": 1,
+      "frameIndex": 1,
+      "pose": "idle",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "transparentCutoutCleanInActualScene": true,
+      "anatomyAndIdentityCoherent": true,
+      "bodyScaleAndFeetStable": true,
+      "visibleBounds": [
+        179.89743073577552,
+        349.5933690844166,
+        677.4990428871763,
+        566.4966359196426
+      ],
+      "exteriorBounds": [
+        178.47976232508776,
+        346.7580322630411,
+        678.5622941951922,
+        567.2054701249865
+      ],
+      "registeredGroundPlaneScreenY": 594,
+      "visibleGroundClearancePixels": 27.503364080357414,
+      "fringeGroundClearancePixels": 26.794529875013495,
+      "verdict": "accepted-for-candidate-integration",
+      "notes": "Head, neck, legs and body read consistently; full wing/beak/foot tips remain inside the native scene."
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-right-idle-frame2-tick18.png",
+      "file": "sh1_air_screamer_001-right-idle-frame2-tick18.png",
+      "sha256": "b3bdb2b4e33baf0edc783a18fa806b78d11e7fa2a4ed0ca665fad4f1f32a7eb0",
+      "bytes": 1203930,
+      "viewedWithViewImage": true,
+      "facing": 1,
+      "frameIndex": 2,
+      "pose": "idle",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "transparentCutoutCleanInActualScene": true,
+      "anatomyAndIdentityCoherent": true,
+      "bodyScaleAndFeetStable": true,
+      "visibleBounds": [
+        209.0167530870387,
+        453.7919972699664,
+        720.440632242645,
+        617.8871158070735
+      ],
+      "exteriorBounds": [
+        208.66233598436673,
+        452.7287459619505,
+        721.149466447989,
+        618.9503671150894
+      ],
+      "registeredGroundPlaneScreenY": 594,
+      "visibleGroundClearancePixels": -23.887115807073542,
+      "fringeGroundClearancePixels": -24.95036711508942,
+      "verdict": "needs-distal-wing-ground-clearance-correction",
+      "notes": "Both low-wing tips are complete, but the lowest distal membrane extends about24visible pixels below the registered ground plane; not an alpha halo or a body-scale change."
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-left-walk-static-frame3.png",
+      "file": "sh1_air_screamer_001-left-walk-static-frame3.png",
+      "sha256": "866e8a57736c86e3dd9949e04706905e4f52228af44b44314fc911950736c8a2",
+      "bytes": 1204618,
+      "viewedWithViewImage": true,
+      "facing": -1,
+      "frameIndex": 3,
+      "pose": "walk",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "transparentCutoutCleanInActualScene": true,
+      "anatomyAndIdentityCoherent": true,
+      "bodyScaleAndFeetStable": true,
+      "visibleBounds": [
+        636.7642942482028,
+        400.50567959907147,
+        1144.944375766868,
+        568.1445775417901
+      ],
+      "exteriorBounds": [
+        635.1852779410501,
+        399.7161714454951,
+        1145.2075451513936,
+        568.9340856953665
+      ],
+      "registeredGroundPlaneScreenY": 594,
+      "visibleGroundClearancePixels": 25.855422458209887,
+      "fringeGroundClearancePixels": 25.065914304633452,
+      "verdict": "accepted-for-candidate-integration",
+      "notes": "Historical glide remains the same recognizable creature with comparable width and foot height; slight lower beak posture and asymmetric wing pose are retained legacy differences."
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-left-idle-frame0-tick0.png",
+      "file": "sh1_air_screamer_001-left-idle-frame0-tick0.png",
+      "sha256": "710e2d6c4c9e3222dc52daf34ff36f53bc0cb491782676f6eff78e5130e78c87",
+      "bytes": 1195999,
+      "viewedWithViewImage": true,
+      "facing": -1,
+      "frameIndex": 0,
+      "pose": "idle",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "transparentCutoutCleanInActualScene": true,
+      "anatomyAndIdentityCoherent": true,
+      "bodyScaleAndFeetStable": true,
+      "visibleBounds": [
+        632.4537745188079,
+        441.74181577912043,
+        1139.2702313396792,
+        566.8510530223145
+      ],
+      "exteriorBounds": [
+        631.7449403134641,
+        441.03298157377657,
+        1139.9790655450229,
+        567.9143043303303
+      ],
+      "registeredGroundPlaneScreenY": 594,
+      "visibleGroundClearancePixels": 27.148946977685455,
+      "fringeGroundClearancePixels": 26.08569566966969,
+      "verdict": "accepted-for-candidate-integration",
+      "notes": "Head, neck, legs and body read consistently; full wing/beak/foot tips remain inside the native scene."
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-left-idle-frame1-tick6.png",
+      "file": "sh1_air_screamer_001-left-idle-frame1-tick6.png",
+      "sha256": "707622d09dc7c84aaba2801e253016779f01f085991bded634b1858f21a9e55a",
+      "bytes": 1211326,
+      "viewedWithViewImage": true,
+      "facing": -1,
+      "frameIndex": 1,
+      "pose": "idle",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "transparentCutoutCleanInActualScene": true,
+      "anatomyAndIdentityCoherent": true,
+      "bodyScaleAndFeetStable": true,
+      "visibleBounds": [
+        602.5009876304018,
+        349.5933690844166,
+        1100.1025997818026,
+        566.4966359196426
+      ],
+      "exteriorBounds": [
+        601.437736322386,
+        346.7580322630411,
+        1101.5202681924904,
+        567.2054701249865
+      ],
+      "registeredGroundPlaneScreenY": 594,
+      "visibleGroundClearancePixels": 27.503364080357414,
+      "fringeGroundClearancePixels": 26.794529875013495,
+      "verdict": "accepted-for-candidate-integration",
+      "notes": "Head, neck, legs and body read consistently; full wing/beak/foot tips remain inside the native scene."
+    },
+    {
+      "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague25/qa-native/air-screamer-final/sh1_air_screamer_001-left-idle-frame2-tick18.png",
+      "file": "sh1_air_screamer_001-left-idle-frame2-tick18.png",
+      "sha256": "18ec06765e5ff17e94e71cead62f8e112461326a8fc93c1d592c8330ee534279",
+      "bytes": 1199486,
+      "viewedWithViewImage": true,
+      "facing": -1,
+      "frameIndex": 2,
+      "pose": "idle",
+      "wholeSubjectVisible": true,
+      "strictLateralPresentation": true,
+      "transparentCutoutCleanInActualScene": true,
+      "anatomyAndIdentityCoherent": true,
+      "bodyScaleAndFeetStable": true,
+      "visibleBounds": [
+        559.5594593100893,
+        453.7919972699664,
+        1070.9833384656956,
+        617.8871158070735
+      ],
+      "exteriorBounds": [
+        558.8506251047454,
+        452.7287459619505,
+        1071.3377555683676,
+        618.9503671150894
+      ],
+      "registeredGroundPlaneScreenY": 594,
+      "visibleGroundClearancePixels": -23.887115807073542,
+      "fringeGroundClearancePixels": -24.95036711508942,
+      "verdict": "needs-distal-wing-ground-clearance-correction",
+      "notes": "Both low-wing tips are complete, but the lowest distal membrane extends about24visible pixels below the registered ground plane; not an alpha halo or a body-scale change."
+    }
+  ],
+  "cycleEvidence": {
+    "duels": 2,
+    "cyclesPerFacing": 2,
+    "ticksPerCycle": 24,
+    "observedSequencePerFacing": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      1,
+      0,
+      2
+    ],
+    "observedTicksPerStep": 6,
+    "walkFrameIndex": 3,
+    "walkAnimated": false,
+    "maximumProjectedBodyLandmarkDeltaWorldPixels": 0.9438824520652009,
+    "interpretation": "Frame-to-frame horizontal displacement in screenshots follows real residual actor velocity. Body landmarks relative to the actor remain stable; no per-pose scale pumping was observed."
+  },
+  "transitionReview": {
+    "verdict": "coherent-at-candidate-level",
+    "findings": "The immutable walk frame has a somewhat lower beak posture and different wing articulation, but comparable overall lateral width, same identity and near-matching feet/hover height. No clipping, accidental mirror inversion or gross scale change was observed. This is a discrete pose switch; continuous original-game motion is not certified."
+  },
+  "correctionRequired": {
+    "frameIndices": [
+      2
+    ],
+    "reason": "In both facing captures the visible lower wing ends at617.887px, antialias exterior618.950px, with registered floor/actor ground plane594px. Raise only the distal downstroke wing geometry; keep both other PNGs, common calibration and body landmarks unchanged.",
+    "noAnchorChange": true,
+    "noProceduralPixelEdit": true,
+    "rootDecision": "Root elected targeted imagegen correction before publication; all originals and this failed clearance evidence remain preserved."
+  },
+  "limits": [
+    "Native Canvas is not browser/DOM/HTTP/actual physical keyboard validation.",
+    "Idle cadence is authored versus timing, not certified timing from the original game. walk[3] is one retained static image, not a multi-frame animation.",
+    "Landmarks are manually selected silhouette points and their projection cannot certify canonical anatomy or hidden geometry.",
+    "The six named idle pose captures still require manual review for cropping, identity, angle and apparent body stability.",
+    "No attack/contact/guard/finisher behavior, role changes or one-to-one fidelity are asserted.",
+    "Eight still images were inspected; cadence evidence comes from the actual engine report, not a newly viewed video.",
+    "No browser/HTTP check, attack/contact/guard/finisher validation, source-exact anatomy or 1:1 fidelity is claimed."
+  ],
+  "mutations": "Only this new peer-visual-review.json file was written. Native assets, registry, code and primary visual-review.json were not edited."
+}

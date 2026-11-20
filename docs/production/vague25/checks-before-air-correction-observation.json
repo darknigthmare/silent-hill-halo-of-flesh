@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "wave": 25,
+  "createdAt": "2026-11-20T09:41:19.067841+00:00",
+  "reason": "Air low-wing pose was held at manual review; all prior validation files remain preserved under explicit pre-correction names.",
+  "testLog": "docs/production/vague25/targeted-character-tests-before-air-correction.spec.log",
+  "testLogSHA256": "ea4c2c1e1de482286858caea2d36e183794b56a3b870e178bd7002386cbe8633",
+  "observedSummary": {
+    "tests": 159,
+    "pass": 159,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "reporter": "Node default spec reporter, despite the provisional .tap filename.",
+  "orchestrationError": "The wrapper expected TAP # summary lines and raised IndexError when parsing the spec reporter. It had not recorded the Node child exit code; the wrapper itself exited1. Final verification will explicitly use --test-reporter=tap and a fresh output after the artwork correction.",
+  "stageSuitesUnaffected": true
+}
