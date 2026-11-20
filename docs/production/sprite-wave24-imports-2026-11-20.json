@@ -1,0 +1,979 @@
+{
+  "schema": 1,
+  "wave": 24,
+  "date": "2026-11-20",
+  "baseLocalCommit": "54404d2280f6feee9530e95c42ffcb711a597e19",
+  "scope": "Fourteen separate side-view candidates, seven recovered and seven new/corrected. Existing portraits, source roles, prior poses and clips retained.",
+  "imports": [
+    {
+      "fighterId": "shf_kashimashi_151",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_kashimashi_151.5de22a7d23d1.png",
+      "sha256": "5de22a7d23d11091895e737c0f65c3605596646bb7493a85cca599cb7c09ea72",
+      "bytes": 1148631,
+      "width": 1179,
+      "height": 1334,
+      "sourceSHA256": "5de22a7d23d11091895e737c0f65c3605596646bb7493a85cca599cb7c09ea72",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_kashimashi_01.png",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_kashimashi_01.png",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_kashimashi_01.png",
+          "relativePath": "references/shf-silent_hill_f_art_monster_kashimashi_01.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kashimashi_01.png",
+          "sha256": "78592beefc3774ea3146f678c88cf0fb17350f5ec3aba8c28792453c3ef18b0e",
+          "bytes": 160727,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_kashimashi_02.png",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_kashimashi_02.png",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_kashimashi_02.png",
+          "relativePath": "references/shf-silent_hill_f_art_monster_kashimashi_02.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kashimashi_02.png",
+          "sha256": "4f77abeeaf8c4ae86d4caa840b0ab1bb5c9567bc389fa70009445fc9f2f2ce43",
+          "bytes": 330585,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-kashimashi.png",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-kashimashi.png",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-kashimashi.png",
+          "relativePath": "references/shf-kashimashi.png",
+          "url": "https://www.silenthillmemories.net/shf/monsters/kashimashi.png",
+          "sha256": "910c20b161863044e95ce61b1359d4a8a67fb1a78675f17a2fe8c4e35930d46a",
+          "bytes": 299212,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_kashimashi_151.3f2710657644.png",
+        "sha256": "3f2710657644f962c1f8b7405a4e059bfc0c6fd0db1a7cc2e61ae0ba81b2834b",
+        "bytes": 1141422,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.356234096692112,
+          0.9145427286356822
+        ],
+        "bodyHeight": 0.8710644677661169
+      },
+      "provenance": "docs/production/vague24/recovered-native/integration-delivery.json",
+      "provenanceSHA256": "5c3011a3b799a848973ffd5a53a42d6dbdf5e8647162810f06810f3ba939c7c8",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-recovered-seven.json",
+        "sha256": "8c06c4811dd046099c6be937b93dfb8cc762508742936618888a9e63bc5527df"
+      },
+      "review": "Right-facing full-body silhouette retains the bent torso, long black hair, three exterior arms, lowered original knife and two complete feet visible in the native references.",
+      "limits": "The bent torso and hidden-side geometry are authored reconstructions. No source timing or exact anatomy is certified. Requested generous padding is not met on all sides: minimum visible padding is 4.35%; every readable extremity remains inside the native canvas. Low-alpha noise up to 1 can reach canvas edges; no trimming, recoloring, rescaling or background cleanup was applied."
+    },
+    {
+      "fighterId": "shf_irohihi_154",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_irohihi_154.19d51bfaaa12.png",
+      "sha256": "19d51bfaaa12d84c5fa270617fc955d65426ad5ad6fab0032ad5a40533443441",
+      "bytes": 1441716,
+      "width": 1312,
+      "height": 1199,
+      "sourceSHA256": "19d51bfaaa12d84c5fa270617fc955d65426ad5ad6fab0032ad5a40533443441",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-irohihi.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-irohihi.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-irohihi.jpg",
+          "relativePath": "references/shf-irohihi.jpg",
+          "url": "https://www.silenthillmemories.net/shf/monsters/irohihi.jpg",
+          "sha256": "e1a504da17f97b078c8ed3542b334e8291ca54dbe8b66d1b7f8ea86930598799",
+          "bytes": 79411,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_irohihi_04.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_irohihi_04.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_irohihi_04.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_irohihi_04.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_irohihi_04.jpg",
+          "sha256": "e15d9ee2d0f52b322837fad988066981323b8dc3e5777c0bd560bbe658be5d0d",
+          "bytes": 325152,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_irohihi_05.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_irohihi_05.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_irohihi_05.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_irohihi_05.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_irohihi_05.jpg",
+          "sha256": "a5cc1ea0e2fb22c7be114f2923588f8144ce4d82cfa8c7e816ab70c59dfa58fd",
+          "bytes": 304493,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_irohihi_154.28e17594542d.png",
+        "sha256": "28e17594542d86387562c0d7fe88c6a1703429ed2f0baff5230abce50bf3e774",
+        "bytes": 1446223,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.4573170731707317,
+          0.969140950792327
+        ],
+        "bodyHeight": 0.926605504587156
+      },
+      "provenance": "docs/production/vague24/recovered-native/integration-delivery.json",
+      "provenanceSHA256": "5c3011a3b799a848973ffd5a53a42d6dbdf5e8647162810f06810f3ba939c7c8",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-recovered-seven.json",
+        "sha256": "8c06c4811dd046099c6be937b93dfb8cc762508742936618888a9e63bc5527df"
+      },
+      "review": "Right-facing natural crouched/resting form matches the plain-body art sheet: curved spine, long folded legs, extended forearms and fingers, and pink cranial filaments. No floral-overgrown variant or extended tongue is mixed in.",
+      "limits": "Source-native posture is low and crouched. Height is a provisional native-idle envelope calibration, not a canonical standing-equivalent measurement; review at gameplay scale before accepting final animation calibration. Requested generous padding is not met on all sides: minimum visible padding is 3.09%; every readable extremity remains inside the native canvas. Low-alpha noise up to 1 can reach canvas edges; no trimming, recoloring, rescaling or background cleanup was applied."
+    },
+    {
+      "fighterId": "shf_kamugara_157",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_kamugara_157.6236f540f7f3.png",
+      "sha256": "6236f540f7f38a59f414591812c4534d6409da99906e136a0e6d62c52f38319e",
+      "bytes": 1421112,
+      "width": 1024,
+      "height": 1536,
+      "sourceSHA256": "6236f540f7f38a59f414591812c4534d6409da99906e136a0e6d62c52f38319e",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_kamugara_04.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_kamugara_04.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_kamugara_04.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_kamugara_04.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kamugara_04.jpg",
+          "sha256": "16577a6f0e5de894c6ee14e0cbed658d0344b1baa0f4a7d2138d86f0995283e9",
+          "bytes": 264976,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-kamugara.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-kamugara.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-kamugara.jpg",
+          "relativePath": "references/shf-kamugara.jpg",
+          "url": "https://www.silenthillmemories.net/shf/monsters/kamugara.jpg",
+          "sha256": "352e778c8839f0fd6f01b736a03c65c6d1f2cabba0b4aaeb95f3310191136477",
+          "bytes": 42251,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_kamugara_157.c71b154fd6db.png",
+        "sha256": "c71b154fd6dbf71aa521eb1cd444ac24d65356c0af443a9a225599876d44e663",
+        "bytes": 616732,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.517578125,
+          0.970703125
+        ],
+        "bodyHeight": 0.9361979166666666
+      },
+      "provenance": "docs/production/vague24/recovered-native/integration-delivery.json",
+      "provenanceSHA256": "5c3011a3b799a848973ffd5a53a42d6dbdf5e8647162810f06810f3ba939c7c8",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-recovered-seven.json",
+        "sha256": "8c06c4811dd046099c6be937b93dfb8cc762508742936618888a9e63bc5527df"
+      },
+      "review": "Clean right-facing profile preserves the bald cavernous head, gaunt body, hip wrapping, collar and lock, wrist and ankle shackles, dangling chain ends and branches. Whole hands and feet are visible.",
+      "limits": "Hidden-side geometry and exact surface markings are reconstructed. Standing idle only; no source movement timings or 1:1 certification. Requested generous padding is not met on all sides: minimum visible padding is 2.93%; every readable extremity remains inside the native canvas. Low-alpha noise up to 1 can reach canvas edges; no trimming, recoloring, rescaling or background cleanup was applied."
+    },
+    {
+      "fighterId": "shf_harai_katashiro_158",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_harai_katashiro_158.78f3f9a74cfb.png",
+      "sha256": "78f3f9a74cfbd18aae1e3db50e4a4010b78ba4964ab2f18661fb8d9329a104a9",
+      "bytes": 1557471,
+      "width": 1024,
+      "height": 1536,
+      "sourceSHA256": "78f3f9a74cfbd18aae1e3db50e4a4010b78ba4964ab2f18661fb8d9329a104a9",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-harai_katashiro.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-harai_katashiro.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-harai_katashiro.jpg",
+          "relativePath": "references/shf-harai_katashiro.jpg",
+          "url": "https://www.silenthillmemories.net/shf/monsters/harai_katashiro.jpg",
+          "sha256": "e176dfed196aa4b3602160868da9dd437b0bb5d59f9f4368f57971a7cbf20998",
+          "bytes": 23809,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_harai_katashiro_04.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_harai_katashiro_04.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_harai_katashiro_04.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_harai_katashiro_04.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_harai_katashiro_04.jpg",
+          "sha256": "02023c32ab98f0604a2777e936f10038bcb1c4e4348c9e51bed08ca362d71283",
+          "bytes": 279737,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_harai_katashiro_05.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_harai_katashiro_05.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_harai_katashiro_05.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_harai_katashiro_05.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_harai_katashiro_05.jpg",
+          "sha256": "2339efb6f44c5a61a4b98d479d8e509fd2bd3e120b1c76ed8a31c1ebbdf1a3e8",
+          "bytes": 209355,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_harai_katashiro_158.9cd0b864b7bd.png",
+        "sha256": "9cd0b864b7bdc88090e19f8b4522e65838240f2cd061bfd0eb37f25ae7ad1e6e",
+        "bytes": 647418,
+        "width": 1254,
+        "height": 1254,
+        "facing": -1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.44189453125,
+          0.94921875
+        ],
+        "bodyHeight": 0.8932291666666666
+      },
+      "provenance": "docs/production/vague24/recovered-native/integration-delivery.json",
+      "provenanceSHA256": "5c3011a3b799a848973ffd5a53a42d6dbdf5e8647162810f06810f3ba939c7c8",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-recovered-seven.json",
+        "sha256": "8c06c4811dd046099c6be937b93dfb8cc762508742936618888a9e63bc5527df"
+      },
+      "review": "Right-facing whole ceramic doll form retains the Okame-style mask, white hair with twigs, colored forearms, ball-joint hips, original curved knife and two tapered blade legs.",
+      "limits": "Source-guided side reconstruction with far-side overlap. No certification of hidden joints or exact blade dimensions; one static idle only. Requested generous padding is not met on all sides: minimum visible padding is 5.08%; every readable extremity remains inside the native canvas. Low-alpha noise up to 1 can reach canvas edges; no trimming, recoloring, rescaling or background cleanup was applied."
+    },
+    {
+      "fighterId": "shf_drum_monster_161",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_drum_monster_161.0d55bc93f1b5.png",
+      "sha256": "0d55bc93f1b5ed123cf5211b1a1b8aae3b1d734bdb53b44754e70fcb543de6dc",
+      "bytes": 2066732,
+      "width": 1536,
+      "height": 1024,
+      "sourceSHA256": "0d55bc93f1b5ed123cf5211b1a1b8aae3b1d734bdb53b44754e70fcb543de6dc",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_drum_monster_01.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_drum_monster_01.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_drum_monster_01.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_drum_monster_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_drum_monster_01.jpg",
+          "sha256": "d6868d72df8e54f72013e8eceb12522f99ac35708672226b3c9ecf2c4d770292",
+          "bytes": 345205,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-tank_dark.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-tank_dark.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-tank_dark.jpg",
+          "relativePath": "references/shf-tank_dark.jpg",
+          "url": "https://www.silenthillmemories.net/shf/monsters/tank_dark.jpg",
+          "sha256": "f7f1130d32f04376cea0c1a53d342ac19d44930a36a7b57bdafb7e0fbb4fadfe",
+          "bytes": 30859,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_drum_monster_161.e7aefe55a14b.png",
+        "sha256": "e7aefe55a14b33d32a033f964b6eaf737a694c8f9cf949b63134cac918afd512",
+        "bytes": 1189285,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.400390625,
+          0.9541015625
+        ],
+        "bodyHeight": 0.9140625
+      },
+      "provenance": "docs/production/vague24/recovered-native/integration-delivery.json",
+      "provenanceSHA256": "5c3011a3b799a848973ffd5a53a42d6dbdf5e8647162810f06810f3ba939c7c8",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-recovered-seven.json",
+        "sha256": "8c06c4811dd046099c6be937b93dfb8cc762508742936618888a9e63bc5527df"
+      },
+      "review": "Whole right-facing drum body preserves top membranes, mouth drum with tomoe pattern, flower/root surface, rope and bells, spiked club arm and twisted bachi arm. Both feet and complete arm tips are visible.",
+      "limits": "Native front/back sheets require an authored side projection. Exact concealed drum surfaces are inferred, not certified; no animated strike or sound event is added. Requested generous padding is not met on all sides: minimum visible padding is 4.00%; every readable extremity remains inside the native canvas. Low-alpha noise up to 1 can reach canvas edges; no trimming, recoloring, rescaling or background cleanup was applied."
+    },
+    {
+      "fighterId": "shf_shiromuku_166",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_shiromuku_166.23edbb28573f.png",
+      "sha256": "23edbb28573fc53b98259ced31116db536c1f158dd6a8779a849fec6ad7380f3",
+      "bytes": 920004,
+      "width": 1160,
+      "height": 1356,
+      "sourceSHA256": "23edbb28573fc53b98259ced31116db536c1f158dd6a8779a849fec6ad7380f3",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_shiromuku_01.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_shiromuku_01.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_shiromuku_01.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_shiromuku_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shiromuku_01.jpg",
+          "sha256": "1412c6cecde4d392c72befd0910248c927ee9447f89aed36b7f2fb908a57a796",
+          "bytes": 292935,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_shiromuku_02.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_shiromuku_02.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_shiromuku_02.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_shiromuku_02.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shiromuku_02.jpg",
+          "sha256": "371e112daddc8811b26ca55f84601b3c2b5972d98af60464e379e94cd56ad90a",
+          "bytes": 315832,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-shiromuku.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-shiromuku.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-shiromuku.jpg",
+          "relativePath": "references/shf-shiromuku.jpg",
+          "url": "https://www.silenthillmemories.net/shf/bosses/shiromuku.jpg",
+          "sha256": "b39b12546d2a36937bc2d9d5ff74ff49c61ec3159335257cd539507dddf2979a",
+          "bytes": 34394,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_shiromuku_166.25d31075e81d.png",
+        "sha256": "25d31075e81d8d72f354c857ebbd13db3168a5fa524088085d3ecfa0ab88b2f1",
+        "bytes": 656358,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.603448275862069,
+          0.9557522123893806
+        ],
+        "bodyHeight": 0.9137168141592921
+      },
+      "provenance": "docs/production/vague24/recovered-native/integration-delivery.json",
+      "provenanceSHA256": "5c3011a3b799a848973ffd5a53a42d6dbdf5e8647162810f06810f3ba939c7c8",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-recovered-seven.json",
+        "sha256": "8c06c4811dd046099c6be937b93dfb8cc762508742936618888a9e63bc5527df"
+      },
+      "review": "Whole right-facing base form matches the leftmost artbook form: tall wataboshi, patterned mask, layered ivory wedding kimono, tassels, two original small hands, full sleeves and trailing train.",
+      "limits": "Base form only. Giant transformed arms, attack forms and animation are not supplied. Feet are deliberately not invented; anchor y uses the complete resting hem. Requested generous padding is not met on all sides: minimum visible padding is 4.20%; every readable extremity remains inside the native canvas. Low-alpha noise up to 1 can reach canvas edges; no trimming, recoloring, rescaling or background cleanup was applied."
+    },
+    {
+      "fighterId": "sh1_bloodsucker",
+      "source": "sh1",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+      "sha256": "c1a8f6c3471e7cf2f36c1a33fe6beea37a96912b2a96f5462d4344393b083e55",
+      "bytes": 443341,
+      "width": 1254,
+      "height": 1254,
+      "sourceSHA256": "c1a8f6c3471e7cf2f36c1a33fe6beea37a96912b2a96f5462d4344393b083e55",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/sh1_art_cre_08.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/sh1_art_cre_08.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/sh1_art_cre_08.jpg",
+          "relativePath": "references/sh1_art_cre_08.jpg",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_08.jpg",
+          "sha256": "fc7a03abc396cd278770151fa5008d080131cd2f7f5ea9ebf6ba01352a019739",
+          "bytes": 119372,
+          "historicalSourceRecord": "art/provenance-art144-a.json / sh1_bloodsucker",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+        "sha256": "04acbc6820b32ad83ff5d7f9e2fd10dbeed469d7dcbce379a2b2b26b40f9efe0",
+        "bytes": 556729,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": false,
+      "usage": "reference-only-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.30303030303030304,
+          0.7057416267942583
+        ],
+        "bodyHeight": 0.44178628389154706
+      },
+      "provenance": "docs/production/vague24/recovered-native/integration-delivery.json",
+      "provenanceSHA256": "5c3011a3b799a848973ffd5a53a42d6dbdf5e8647162810f06810f3ba939c7c8",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-recovered-seven.json",
+        "sha256": "8c06c4811dd046099c6be937b93dfb8cc762508742936618888a9e63bc5527df"
+      },
+      "review": "One complete connected source entity with exactly three mottled brown jointed tubes and three distinct circular mouths, directed right from a small common base. No invented walking body, limbs or additional tube.",
+      "limits": "Reference-only lateral dossier. Preserve environmental-obstacle and combatEnabled=false: the SH1 room-204 puzzle creature does not acquire a duel kit or locomotion. Source-side projection and finer texture remain unverified. Low-alpha noise up to 1 can reach canvas edges; no trimming, recoloring, rescaling or background cleanup was applied."
+    },
+    {
+      "fighterId": "shf_ara_abare_153",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_ara_abare_153.a60d35cd3f99.png",
+      "sha256": "a60d35cd3f99e047b44d85f567b26194468853f9e6f8a4060f03363e55b9816d",
+      "bytes": 2521581,
+      "width": 1498,
+      "height": 1050,
+      "sourceSHA256": "a60d35cd3f99e047b44d85f567b26194468853f9e6f8a4060f03363e55b9816d",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_ara-abare_01.png",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_ara-abare_01.png",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_ara-abare_01.png",
+          "relativePath": "references/shf-silent_hill_f_art_monster_ara-abare_01.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ara-abare_01.png",
+          "sha256": "6e7a307420905a82b49afa9ab675e58e9d014513a3b80abf7c2af359beb53646",
+          "bytes": 767943,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_ara-abare_02.png",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_ara-abare_02.png",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_ara-abare_02.png",
+          "relativePath": "references/shf-silent_hill_f_art_monster_ara-abare_02.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_ara-abare_02.png",
+          "sha256": "e6c4e6fd25c5fd4bcfefce5198718e18fb3b84e2013eae3d5ec24d7f4d7e0034",
+          "bytes": 759368,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_ara_abare_153.a11358a86425.png",
+        "sha256": "a11358a86425baef9b66cfe5dda6d3bbcc2dcccdc8b33cbd42d85b6fe8b0c54a",
+        "bytes": 1633800,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.3437917222963952,
+          0.9657142857142857
+        ],
+        "bodyHeight": 0.9438095238095238
+      },
+      "provenance": "docs/production/vague24/corrections-delivery.json",
+      "provenanceSHA256": "6a1d626d0ca04e2bfc36b5b7311f119ed9be8c0ede597e0ff2144a51b0feb4eb",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-corrections.json",
+        "sha256": "da23cb5b8fc94153ab5dc3248e5298ec96a1d4bbb8d6661f7e0ad71e7b392f43"
+      },
+      "review": "Exactly two native lower supports now visible; the third foot has been removed. One connected whole right-facing creature, floral crown, knife and opposite curled tubular arm retained.",
+      "limits": "Head projection and concealed floral details remain reconstructed; native margins are smaller than requested, but all readable extremities fit."
+    },
+    {
+      "fighterId": "shf_tsukumogami_167",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_tsukumogami_167.14916362c716.png",
+      "sha256": "14916362c716b08cbbd930feabf26843b93f9c98dccdee21f84cfc1c92ed8a6c",
+      "bytes": 2211494,
+      "width": 1024,
+      "height": 1536,
+      "sourceSHA256": "14916362c716b08cbbd930feabf26843b93f9c98dccdee21f84cfc1c92ed8a6c",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_tsukumogami_02.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_tsukumogami_02.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_tsukumogami_02.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_tsukumogami_02.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_tsukumogami_02.jpg",
+          "sha256": "e400c6158a7348e7b38ff4b908a4f9c9949b1f78589b8888594d265e39ecfe79",
+          "bytes": 399438,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_tsukumogami_01.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_tsukumogami_01.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-silent_hill_f_art_monster_tsukumogami_01.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_tsukumogami_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_tsukumogami_01.jpg",
+          "sha256": "218b5ecb26668131fcfccef2aa34ae645d5349bc6794d64eedd545457374baae",
+          "bytes": 333764,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-tsukumogami.jpg",
+          "path": "/workspace/scratch/72f88359ddb9/silent-hill-halo-of-flesh/docs/production/vague24/recovered-native/references/shf-tsukumogami.jpg",
+          "repositoryPath": "docs/production/vague24/recovered-native/references/shf-tsukumogami.jpg",
+          "relativePath": "references/shf-tsukumogami.jpg",
+          "url": "https://www.silenthillmemories.net/shf/bosses/tsukumogami.jpg",
+          "sha256": "32d426cddfb1d1318ed58e3956919b862b9311af2a024dce4cc5012d328435f4",
+          "bytes": 57049,
+          "historicalSourceRecord": "/workspace/scratch/halo-wave23-fighters-b/references/manifest.json",
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_tsukumogami_167.e8130e444254.png",
+        "sha256": "e8130e4442548fcd861d4364d08cd43f946600f61bcd834bd5158ede5960b212",
+        "bytes": 1678239,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.517578125,
+          0.9759114583333334
+        ],
+        "bodyHeight": 0.958984375
+      },
+      "provenance": "docs/production/vague24/corrections-delivery.json",
+      "provenanceSHA256": "6a1d626d0ca04e2bfc36b5b7311f119ed9be8c0ede597e0ff2144a51b0feb4eb",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-corrections.json",
+        "sha256": "da23cb5b8fc94153ab5dc3248e5298ec96a1d4bbb8d6661f7e0ad71e7b392f43"
+      },
+      "review": "Exactly eight separate articulated hands are visible, four on each side of the single robe-clad body; missing far-side lowest arm restored. Full profile faces right with complete feet, masks and hair.",
+      "limits": "The side reconstruction remains unverified; phase weapons and source animation are not supplied. All readable extremities fit inside native image."
+    },
+    {
+      "fighterId": "ascension_stinger_181",
+      "source": "ascension",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/ascension_stinger_181.e179ecaa63b2.png",
+      "sha256": "e179ecaa63b22df9a8746bb750c82df5db97657526ab46fdbfb88dd3b6cf9314",
+      "bytes": 890389,
+      "width": 1199,
+      "height": 1312,
+      "sourceSHA256": "e179ecaa63b22df9a8746bb750c82df5db97657526ab46fdbfb88dd3b6cf9314",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/ascension-new/references/sh_ascension_art_monster_09.jfif",
+          "relativePath": "references/sh_ascension_art_monster_09.jfif",
+          "url": "https://www.silenthillmemories.net/sh_ascension/art/pics/sh_ascension_art_monster_09.jfif",
+          "provenance": "Official Silent Hill: Ascension concept sheet bearing Konami copyright, retained from prior session through Silent Hill Memories mirror. Visually inspected this session; original source bytes copied unchanged.",
+          "sha256": "798ed87e9629174b102824d2f79b3327aed2a1b524765fac3783e02cda31e641"
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/ascension_stinger_181.a031246ea341.png",
+        "sha256": "a031246ea3417f7455e4bfeecbb718337d5b24c6700f5f208004b4ef53cf1fce",
+        "bytes": 462521,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.58,
+          0.935976
+        ],
+        "bodyHeight": 0.847561
+      },
+      "provenance": "docs/production/vague24/ascension-new/delivery.json",
+      "provenanceSHA256": "6cba6dd80568b9bd0bd04c435793d9db4a922ad2dc18a3aa27ceb326e48dbda4",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-ascension.json",
+        "sha256": "4c093dbcbfac8f3c5c86bc8c794237f9e33d0df694e0bf463ddd1c30747862ca"
+      },
+      "review": "Profil droit en pied inspect\u00e9 : quatre bras termin\u00e9s par quatre crochets lisibles, deux jambes et masque p\u00e2le ferm\u00e9. Les membranes sont partiellement repli\u00e9es et \u00e9tag\u00e9es pour une lecture lat\u00e9rale.",
+      "limits": "Reconstruction lat\u00e9rale depuis une planche concept promotionnelle. L\u2019attribution du concept au Stinger reste candidate dans le registre historique ; g\u00e9om\u00e9trie masqu\u00e9e, disposition exacte des membranes et orientation du masque non certifi\u00e9es. Une seule pose statique. Fid\u00e9lit\u00e9 1:1 non valid\u00e9e. Portrait ant\u00e9rieur \u00e0 pr\u00e9server."
+    },
+    {
+      "fighterId": "ascension_the_immolator_182",
+      "source": "ascension",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
+      "sha256": "3e9055f1a6f0cdf908ad25d164aa5a53ce94f223fbea4c7749f441b51c1f18c4",
+      "bytes": 1281605,
+      "width": 1254,
+      "height": 1254,
+      "sourceSHA256": "3e9055f1a6f0cdf908ad25d164aa5a53ce94f223fbea4c7749f441b51c1f18c4",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/ascension-new/references/sh_ascension_art_monster_10.jfif",
+          "relativePath": "references/sh_ascension_art_monster_10.jfif",
+          "url": "https://www.silenthillmemories.net/sh_ascension/art/pics/sh_ascension_art_monster_10.jfif",
+          "provenance": "Official Silent Hill: Ascension concept sheet bearing Konami copyright, retained from prior session through Silent Hill Memories mirror. Visually inspected this session; original source bytes copied unchanged.",
+          "sha256": "20fbcc29f51433a3d14ee51d3a47b282d83cb2674ce316a1d0f0cdd1cbb07c64"
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/ascension_the_immolator_182.627713ebf694.png",
+        "sha256": "627713ebf6946af104b483cea44166160c3fa8670741ff601387bcd84bae15c2",
+        "bytes": 812808,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.49,
+          0.85008
+        ],
+        "bodyHeight": 0.722488
+      },
+      "provenance": "docs/production/vague24/ascension-new/delivery.json",
+      "provenanceSHA256": "6cba6dd80568b9bd0bd04c435793d9db4a922ad2dc18a3aa27ceb326e48dbda4",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-ascension.json",
+        "sha256": "4c093dbcbfac8f3c5c86bc8c794237f9e33d0df694e0bf463ddd1c30747862ca"
+      },
+      "review": "Profil droit entier apr\u00e8s correction cibl\u00e9e de la premi\u00e8re vue trop trois-quarts. Deux poings et deux pieds restent visibles, cage-brasier et flammes compl\u00e8tes, r\u00e9servoir dorsal et tuyaux conserv\u00e9s.",
+      "limits": "Reconstruction lat\u00e9rale \u00e0 partir du concept promotionnel ; pr\u00e9cision des tuyaux, des attaches, de la forme de cage et de l\u2019angle du r\u00e9servoir non certifi\u00e9e. La premi\u00e8re variante trop trois-quarts est conserv\u00e9e hors import. Une seule pose statique. Fid\u00e9lit\u00e9 1:1 non valid\u00e9e. Portrait ant\u00e9rieur \u00e0 pr\u00e9server."
+    },
+    {
+      "fighterId": "shf_shichibi_168",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_shichibi_168.490006f1c119.png",
+      "sha256": "490006f1c1190215818afe36fac8218425a4756ea0b88fa2c27e84096a0398a7",
+      "bytes": 1480080,
+      "width": 1672,
+      "height": 941,
+      "sourceSHA256": "490006f1c1190215818afe36fac8218425a4756ea0b88fa2c27e84096a0398a7",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/shf-new/references/shf-silent_hill_f_art_monster_shichibi_01.jpg",
+          "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/shf-new/references/shf-silent_hill_f_art_monster_shichibi_01.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_shichibi_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_shichibi_01.jpg",
+          "sha256": "5d394e3f7753b014fc90d90a2209334eae576f01a5a41cf94c2eb81e93c6f5e5",
+          "bytes": 263700,
+          "role": "native official concept/model reference mirrored by Silent Hill Memories",
+          "referenceInspectedBeforeGeneration": true,
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_shichibi_168.332222c595ae.png",
+        "sha256": "332222c595aed3a03602f3b8a673f66f33601395d775fe9aa49c1d666ce17763",
+        "bytes": 1396560,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.6489234449760766,
+          0.9362380446333688
+        ],
+        "bodyHeight": 0.9171094580233794
+      },
+      "provenance": "docs/production/vague24/shf-new/delivery.json",
+      "provenanceSHA256": "b361d187f07db8ac7b6b0d91d3e4754d8726aa59876631cf1d6881b133357d7e",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-shf-new.json",
+        "sha256": "baac013fc75fab737962cda76a113f6879c0cd7ef218a17b9269fdb93910788c"
+      },
+      "review": "Whole connected golden fox form in right-facing lateral idle. Long narrow muzzle, upright ears, red eye, cream chest mane, four complete leg supports (near/far front legs overlap), pale shoulder ribbons and golden tail fan retained. Every readable outer extremity stays inside the image.",
+      "limits": "This is the golden fully furred artwork phase, not the red patched phase. Tail fan overlap and rear root-to-tip continuity are reconstructed and not certified. The original airborne art was adapted into a static four-foot idle; source timing and exact hidden geometry remain unverified. Requested 10% padding is not met: minimum visible padding is 1.91%. Readable extremities remain inside the canvas. Low-alpha noise up to 1-2 reaches some borders; native pixels are retained without trimming, background cleanup, rescaling or recoloring."
+    },
+    {
+      "fighterId": "shf_kyubi_169",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_kyubi_169.9e78e93583b4.png",
+      "sha256": "9e78e93583b48c0aff743dc8ab7a9e0e34c40a0d202ab7e18bdb0e418629f298",
+      "bytes": 1561826,
+      "width": 1774,
+      "height": 887,
+      "sourceSHA256": "9e78e93583b48c0aff743dc8ab7a9e0e34c40a0d202ab7e18bdb0e418629f298",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/shf-new/references/shf-silent_hill_f_art_monster_kyubi_01.jpg",
+          "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/shf-new/references/shf-silent_hill_f_art_monster_kyubi_01.jpg",
+          "relativePath": "references/shf-silent_hill_f_art_monster_kyubi_01.jpg",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_kyubi_01.jpg",
+          "sha256": "04a909c649314795b2803686e92f4d7833715f23c3b4734d10aad6a00aa59e7b",
+          "bytes": 327367,
+          "role": "native official concept/model reference mirrored by Silent Hill Memories",
+          "referenceInspectedBeforeGeneration": true,
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_kyubi_169.abb1af2fa71c.png",
+        "sha256": "abb1af2fa71c8286ecc7ac212d6d9e55eaafaca2656eea15c119a9b2a08639d2",
+        "bytes": 1374694,
+        "width": 1254,
+        "height": 1254,
+        "facing": 1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.6200676437429538,
+          0.9537767756482526
+        ],
+        "bodyHeight": 0.9346110484780158
+      },
+      "provenance": "docs/production/vague24/shf-new/delivery.json",
+      "provenanceSHA256": "b361d187f07db8ac7b6b0d91d3e4754d8726aa59876631cf1d6881b133357d7e",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-shf-new.json",
+        "sha256": "baac013fc75fab737962cda76a113f6879c0cd7ef218a17b9269fdb93910788c"
+      },
+      "review": "Whole connected black fox form in right-facing lateral idle, four readable leg supports, narrow muzzle, tall pointed ears, blue eye/mouth, pale cool-blue shoulder ribbons and complete fringed black tail fan. It follows the dedicated Kyubi reference and is not a recolor of the Shichibi output.",
+      "limits": "Tail fan root-to-tip continuity and exact count through overlapping depth cannot be certified from this static lateral reconstruction. The source airborne art was adapted into a standing idle. Hidden geometry and original timings are unverified. Requested 10% padding is not met: minimum visible padding is 1.92%. Readable extremities remain inside the canvas. Low-alpha noise up to 1-2 reaches some borders; native pixels are retained without trimming, background cleanup, rescaling or recoloring."
+    },
+    {
+      "fighterId": "shf_oi_omoi_159",
+      "source": "shf",
+      "kind": "distinct-combat-idle",
+      "path": "assets/sprites/shf_oi_omoi_159.4c0a30dbe658.png",
+      "sha256": "4c0a30dbe6580d43e53ccd8cf416502b708ce62eb30b0f988593747a4fdf5a4d",
+      "bytes": 1164174,
+      "width": 908,
+      "height": 1733,
+      "sourceSHA256": "4c0a30dbe6580d43e53ccd8cf416502b708ce62eb30b0f988593747a4fdf5a4d",
+      "singleSubjectReviewed": true,
+      "wholeSubjectReviewed": true,
+      "subjectCount": 1,
+      "references": [
+        {
+          "file": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/shf-new/references/shf-silent_hill_f_art_monster_oi-omoi_01.png",
+          "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/shf-new/references/shf-silent_hill_f_art_monster_oi-omoi_01.png",
+          "relativePath": "references/shf-silent_hill_f_art_monster_oi-omoi_01.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_oi-omoi_01.png",
+          "sha256": "efff3b61da9ae881885061a54c13655c0262edc0f533377fe0defafe2adc7037",
+          "bytes": 132279,
+          "role": "native official concept/model reference mirrored by Silent Hill Memories",
+          "referenceInspectedBeforeGeneration": true,
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        },
+        {
+          "file": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/shf-new/references/shf-silent_hill_f_art_monster_oi-omoi_02.png",
+          "path": "/workspace/scratch/62cbb5f4a653/silent-hill-halo-of-flesh/docs/production/vague24/shf-new/references/shf-silent_hill_f_art_monster_oi-omoi_02.png",
+          "relativePath": "references/shf-silent_hill_f_art_monster_oi-omoi_02.png",
+          "url": "https://www.silenthillmemories.net/shf/art/pics/silent_hill_f_art_monster_oi-omoi_02.png",
+          "sha256": "27e27043573ed9276f6344f135e7e82bf43b569cc152ed5c254ea3a3fa25b52d",
+          "bytes": 372632,
+          "role": "native official concept/model reference mirrored by Silent Hill Memories",
+          "referenceInspectedBeforeGeneration": true,
+          "retrievedAgainThisSession": false,
+          "copiedExact": true
+        }
+      ],
+      "existingSelectionReference": {
+        "path": "assets/sprites/shf_oi_omoi_159.5b5945b00b18.png",
+        "sha256": "5b5945b00b180b41d7dfa20fd1c14e22dc0f8dd2ee0390d2eeba10ad8377bbaa",
+        "bytes": 858562,
+        "width": 1254,
+        "height": 1254,
+        "facing": -1
+      },
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "animatedClips": 0,
+      "combatEnabled": true,
+      "usage": "combat-lateral-candidate",
+      "roleUnchanged": true,
+      "calibration": {
+        "facing": 1,
+        "anchor": [
+          0.4790748898678414,
+          0.9786497403346798
+        ],
+        "bodyHeight": 0.9457587997691864
+      },
+      "provenance": "docs/production/vague24/shf-new/delivery.json",
+      "provenanceSHA256": "b361d187f07db8ac7b6b0d91d3e4754d8726aa59876631cf1d6881b133357d7e",
+      "importReceipt": {
+        "path": "docs/production/vague24/receipt-shf-new.json",
+        "sha256": "baac013fc75fab737962cda76a113f6879c0cd7ef218a17b9269fdb93910788c"
+      },
+      "review": "One connected artificial doll assemblage facing right, with multiple attached bob-haired ceramic doll heads and interlocked miniature articulated limbs, blue floral skirt, pale ruffled hem, exactly two main supporting jointed legs, white socks and complete black Mary Jane shoes. A targeted edit closes the main chest using crossed/interlocked doll arms, replacing the open rib-like panel in the first draft.",
+      "limits": "The complex arrangement of small doll limbs and obscured head placements is authored from the two supplied model references, not extracted geometry. Minor local limb placement differs from the three-quarter source; no exact 1:1 certification is claimed. The original draft is retained only as an inactive variant. Requested 10% padding is not met: minimum visible padding is 2.14%. Readable extremities remain inside the canvas. Low-alpha noise up to 1-2 reaches some borders; native pixels are retained without trimming, background cleanup, rescaling or recoloring."
+    }
+  ]
+}

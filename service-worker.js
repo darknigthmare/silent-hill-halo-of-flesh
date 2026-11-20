@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave18-motion-result-20261119';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '721e2f1c01c9c8296e5f5485052005c370bfd70dc42083dce19c961aa38cfe40';
+const BITMAP_REVISION = '4804522765951df9ce4e82832215b095470dadeeca57cf870d09c6fb6eafe666';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -48,7 +48,9 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/ascension_snarler_180.88e712963625.png",
   "/assets/sprites/ascension_stilledalen_stinger_184.214630045589.png",
   "/assets/sprites/ascension_stinger_181.a031246ea341.png",
+  "/assets/sprites/ascension_stinger_181.e179ecaa63b2.png",
   "/assets/sprites/ascension_the_collector_183.55a90d583450.png",
+  "/assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
   "/assets/sprites/ascension_the_immolator_182.627713ebf694.png",
   "/assets/sprites/ascension_wanderer_178.3da19262874e.png",
   "/assets/sprites/ascension_wanderer_178.488439c222a8.png",
@@ -205,6 +207,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
   "/assets/sprites/sh1_air_screamer_001.f208137d6414.png",
   "/assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+  "/assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
   "/assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
   "/assets/sprites/sh1_creeper_009.57fcc90186ee.png",
   "/assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
@@ -405,21 +408,32 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
   "/assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
   "/assets/sprites/shf_ara_abare_153.a11358a86425.png",
+  "/assets/sprites/shf_ara_abare_153.a60d35cd3f99.png",
   "/assets/sprites/shf_ayakakashi_152.250241616ae2.png",
   "/assets/sprites/shf_ayakakashi_152.f63b174d67b2.png",
+  "/assets/sprites/shf_drum_monster_161.0d55bc93f1b5.png",
   "/assets/sprites/shf_drum_monster_161.e7aefe55a14b.png",
+  "/assets/sprites/shf_harai_katashiro_158.78f3f9a74cfb.png",
   "/assets/sprites/shf_harai_katashiro_158.9cd0b864b7bd.png",
   "/assets/sprites/shf_hinako_s_father_164.ba8ac5bd4d54.png",
+  "/assets/sprites/shf_irohihi_154.19d51bfaaa12.png",
   "/assets/sprites/shf_irohihi_154.28e17594542d.png",
+  "/assets/sprites/shf_kamugara_157.6236f540f7f3.png",
   "/assets/sprites/shf_kamugara_157.c71b154fd6db.png",
   "/assets/sprites/shf_kashimashi_151.3f2710657644.png",
+  "/assets/sprites/shf_kashimashi_151.5de22a7d23d1.png",
+  "/assets/sprites/shf_kyubi_169.9e78e93583b4.png",
   "/assets/sprites/shf_kyubi_169.abb1af2fa71c.png",
+  "/assets/sprites/shf_oi_omoi_159.4c0a30dbe658.png",
   "/assets/sprites/shf_oi_omoi_159.5b5945b00b18.png",
   "/assets/sprites/shf_rinko_like_entity_163.152fcdc05393.png",
   "/assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
   "/assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
   "/assets/sprites/shf_shichibi_168.332222c595ae.png",
+  "/assets/sprites/shf_shichibi_168.490006f1c119.png",
+  "/assets/sprites/shf_shiromuku_166.23edbb28573f.png",
   "/assets/sprites/shf_shiromuku_166.25d31075e81d.png",
+  "/assets/sprites/shf_tsukumogami_167.14916362c716.png",
   "/assets/sprites/shf_tsukumogami_167.e8130e444254.png",
   "/assets/sprites/shortmessage_sakura_head_150.19576d20cace.png",
   "/assets/sprites/shortmessage_sakura_head_150.ab2505f26e95.png",
