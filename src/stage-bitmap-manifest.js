@@ -4141,5 +4141,418 @@ export const STAGE_BITMAPS = {
       "Camera orientation, widening and scale reconstructed for versus. Hidden geometry and pixel fidelity are unverified; no1:1 or UHD certification.",
       "Foreground return edges are a restrained camera adaptation of observed room materials; no new furniture."
     ]
+  },
+  "ebisugaoka": {
+    "stageId": "ebisugaoka",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "fogworld-corner-shop-main-street",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT32"
+    ],
+    "layers": [
+      {
+        "id": "fogworld-corner-shop",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "4a4cf5e4c7d954f03feba3c3000340c033e09042792ac9a8746b707304e5e0be",
+            "bytes": 2369728,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png"
+          }
+        ]
+      },
+      {
+        "id": "near-timber-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "a2ee94a9cf3e884b3ab6678ad385da2cdbaeb18557572b11e0a3672f2fbd3201",
+            "bytes": 164483,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Two official PlayStation images of the same shop were inspected at 1920-pixel width: timber facade, tile eaves, lattice windows, balcony, worn sign, bench, red cylindrical postbox and overhead wires.",
+      "Only normal Fog World is delivered. Existing versus-transition policy is preserved; no floral Otherworld frame or automatic transition is invented.",
+      "The straight-on camera and wider road are versus adaptations. Sign lettering and hidden details remain unverified.",
+      "Two independent static PNG planes with differential horizontal parallax. No new animation, hazard, collision or finisher logic.",
+      "Foreground timber returns are restrained camera framing from attested materials, not a measured original street boundary."
+    ]
+  },
+  "book_fire": {
+    "stageId": "book_fire",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "fire-zone-launch20121016-workbench-room",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT21",
+      "EXT9_BOM_FIRE_VIEW_01_20261026",
+      "EXT9_BOM_FIRE_VIEW_02_20261026"
+    ],
+    "layers": [
+      {
+        "id": "launch-fire-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "41ce3e9666c526a1c3daf2fa5e30cbd4fab5bd1f4cdf4230a056bee7ea135d1d",
+            "bytes": 2469012,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png"
+          }
+        ]
+      },
+      {
+        "id": "near-iron-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "9f531b56161d24a0c8174a8b180f4a15d364e50e0258e002a632227de1e0d0b6",
+            "bytes": 217813,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Launch screenshot 20121016_01 fixes the retail room: drawer workbench, small table, iron wall panels, grates and underfloor warm illumination. The second launch screenshot only confirms materials.",
+      "Ranko Prozo portfolio Fire World 01 provides clearer material/kit reference. Its exact layout and the unrelated shooting-range Fire World 02 were not substituted for the retail room.",
+      "No player, creature, weapon, HUD, collectible, attack fire, lava or new pit imported. The low frontal camera and widened solid fight lane are declared versus adaptations.",
+      "Two independent static PNG planes with differential horizontal parallax. No new animation, hazard, collision or finisher logic.",
+      "Foreground narrow iron returns are restrained camera framing from attested materials; native output is not certified 1:1 or UHD."
+    ]
+  },
+  "book_earth": {
+    "stageId": "book_earth",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "earth-gallery-e3-20120606-view37",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT21",
+      "EXT9_BOM_EARTH_VIEW_37_20261026"
+    ],
+    "layers": [
+      {
+        "id": "earth-gallery-timber-wall",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "9388cd040cd54c7fa58f1e83570dfa528463820e2bc9807a418d9fc228330773",
+            "bytes": 2306208,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/book_earth.earth-gallery-timber-wall.9388cd040cd5.png"
+          }
+        ]
+      },
+      {
+        "id": "near-earth-timber-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "e57d980721fcb5dd830c76ba6b0ae7c37797ce0b5d28b92e347ff881a1870a79",
+            "bytes": 224867,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/book_earth.near-earth-timber-edges.e57d980721fc.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La policy existante demande explicitement cette préversion du 6 juin 2012. Aucun état final commercial n’est revendiqué.",
+      "La conversion de caméra plongeante en caméra de combat latérale, la largeur et les parties cachées sont des adaptations non certifiées.",
+      "Le mur de soutènement bois-pierre, l’entrée sombre, les planches, les récipients et l’éclairage olive proviennent de la capture précise ; personnages, armes, HUD, surbrillance du seau, sang et effets de combat exclus.",
+      "Deux PNG natifs indépendants ; premier plan à vrai alpha limité aux extrêmes. Aucun pixel repeint ou redimensionné.",
+      "Le décor ne valide pas les collisions, dangers, animations ou la fidélité1:1 ; importer comme candidat statique et vérifier dans le moteur."
+    ]
+  },
+  "book_water": {
+    "stageId": "book_water",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "water-rooftop-dlc-gallery20130315-view37",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT21"
+    ],
+    "layers": [
+      {
+        "id": "water-rooftop-lattice",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "3e1e5c015f1fd84146ce2bbce365c085963d13ba67c60eeb35eb87991a4755de",
+            "bytes": 2244718,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/book_water.water-rooftop-lattice.3e1e5c015f1f.png"
+          }
+        ]
+      },
+      {
+        "id": "near-rooftop-steel-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "d593738b8364466c6ddf0831e86b9cca7f4655741f8c2bca5f6d7da13216ebd7",
+            "bytes": 219517,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/book_water.near-rooftop-steel-edges.d593738b8364.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La capture de jeu postérieure à la sortie fixe la pièce. Le portfolio du créateur corrobore l’identité Water World et les matériaux, sans être pris pour un plan retail exact.",
+      "La galerie est datée du15mars2013 ; son nom de fichier contient20130115. Les deux informations sont conservées sans réécrire la provenance.",
+      "Le décor est un toit technique sombre avec grilles à croisillons, portes métalliques et ventilations ; aucune salle inondée, rune ou piscine n’est déduite du nom Water.",
+      "La perspective, la largeur et la profondeur des appareils sont adaptées à une arène latérale. Aucun personnage, flamme de torche, reflet de combat, arme ou HUD n’est importé.",
+      "Deux PNG natifs indépendants ; premier plan à alpha véritable sur les seuls extrêmes. Pas de retouche, redimensionnement ni preuve de fidélité1:1.",
+      "Candidat statique pour intégration et vérification moteur par le responsable principal."
+    ]
+  },
+  "arcade_city": {
+    "stageId": "arcade_city",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "city-jacks-inn-fog-forecourt-opening",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT13",
+      "EXT15"
+    ],
+    "layers": [
+      {
+        "id": "jacks-inn-fog-forecourt",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "0df4f76b667367ba07d41713728021fa83794b18f81c32a23e41b3457f45f00d",
+            "bytes": 2179945,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png"
+          }
+        ]
+      },
+      {
+        "id": "near-concrete-pillar-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "dc85c4de41ae8bc67bf1e1f13a3aae8e793a7bb9d8368be0aa326e8733448114",
+            "bytes": 162212,
+            "width": 1671,
+            "height": 941,
+            "path": "assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Le début du parcours City est documenté à Jack’s Inn ; seules l’entrée couverte et la rue brumeuse visibles dans ces deux images sont adaptées.",
+      "La brume masque les détails absents des captures. Aucun motel étendu, véhicule, boutique ou nouvelle rue n’est reconstitué.",
+      "Figures, monstres, texte d’interface, viseur, munitions, score et sous-titres retirés. L’enseigne reste illisible.",
+      "L’élargissement et le cadrage latéral sont des adaptations non certifiées. L’auvent appartient au décor de fond ; la géométrie de l’arène reste extérieure, sans changement moteur.",
+      "Deux PNG natifs indépendants, alpha réel aux extrêmes et centre libre. Aucun pixel retouché."
+    ]
+  },
+  "book_blood": {
+    "stageId": "book_blood",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "blood-platform-e3-20120606-view22",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT21"
+    ],
+    "layers": [
+      {
+        "id": "blood-platform-ribbed-door",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "sha256": "f3b31605cd4ea24d73c987630a74f72e39048ac5ff8bf87b36b5935bb94b86bd",
+            "bytes": 1989996,
+            "width": 1672,
+            "height": 941,
+            "path": "assets/stages/book_blood.blood-platform-ribbed-door.f3b31605cd4e.png"
+          }
+        ]
+      },
+      {
+        "id": "near-dry-structural-ribs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "sha256": "476ef774e0637e2523b4dce7db64b5e9562ea5f180ded8705faa8718ae87ffb5",
+            "bytes": 181436,
+            "width": 1672,
+            "height": 940,
+            "path": "assets/stages/book_blood.near-dry-structural-ribs.476ef774e063.png"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "État de préversion du6juin2012 explicitement conservé, conformément à la policyBORD DES PLATEFORMES BLOOD ; aucune fidélité à une pièce commerciale finale n’est revendiquée.",
+      "Seules la porte rectangulaire, la structure, le disque intégré et la plateforme de la capture22 sont repris. La largeur et la caméra latérale sont adaptées au versus.",
+      "La surface rouge est traitée comme matière solide sèche. Aucun sang liquide, écoulement, éclaboussure, effet, corps, organe, autel ou signe graphique n’est ajouté.",
+      "Joueurs, armes, HUD, glows et particules de combat exclus. Aucun danger, mouvement ou collision ne se déduit du décor.",
+      "Deux PNG natifs indépendants ; premier plan à véritable alpha limité aux extrêmes, aucun pixel repeint ou redimensionné."
+    ]
   }
 };

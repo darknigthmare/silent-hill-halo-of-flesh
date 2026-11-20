@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "reviewedAt": "2026-11-19T20:16:29.843Z",
+  "scope": "Independent read-only character integration review after all eight imports and sprite rebuild; no new render or image generation.",
+  "baselineCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Exactly the eight approved registry entries changed",
+      "passed": true,
+      "detail": [
+        "sh4_toadstool_061",
+        "sh4_whitestool_062",
+        "bom_wood_sapling_139",
+        "arcade_gum_head_arcade",
+        "sh3_glutton",
+        "bom_tremer_133",
+        "sh4_greedy_worm_069",
+        "origins_remnant_077"
+      ]
+    },
+    {
+      "name": "Registered IDs unchanged",
+      "passed": true,
+      "detail": {
+        "registered": 204
+      }
+    },
+    {
+      "name": "All historical portrait metadata preserved",
+      "passed": true,
+      "detail": {
+        "reviewed": 204,
+        "drift": []
+      }
+    },
+    {
+      "name": "All historical clips and animation counts preserved",
+      "passed": true,
+      "detail": {
+        "reviewed": 204,
+        "drift": []
+      }
+    },
+    {
+      "name": "All registered identities and sources preserved",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Each approved replacement retains one static idle frame",
+      "passed": true
+    },
+    {
+      "name": "All 230 runtime definitions and derived selected roles preserved",
+      "passed": true,
+      "detail": {
+        "rosterCount": 230,
+        "selectedCombatants": 4,
+        "selectedReferenceOnly": 4,
+        "drift": []
+      }
+    },
+    {
+      "name": "Protected gameplay and source files unchanged",
+      "passed": true,
+      "detail": {
+        "count": 58,
+        "drift": []
+      }
+    },
+    {
+      "name": "Runtime sprite manifest matches registry outside recomputed raster fields",
+      "passed": true
+    },
+    {
+      "name": "Four immutable completed receipts match the eight selected deliveries",
+      "passed": true,
+      "detail": [
+        "characters-extra-import-part1.json",
+        "characters-import-part1.json",
+        "characters-import-part2.json",
+        "characters-import-part3.json"
+      ]
+    },
+    {
+      "name": "All eight imported PNGs match native bytes, SHA256, dimensions and RGBA",
+      "passed": true,
+      "detail": {
+        "images": 8
+      }
+    },
+    {
+      "name": "Film and Arcade Pyramid entries and referenced PNGs remain unchanged",
+      "passed": true,
+      "detail": [
+        "film_red_pyramid_film_175",
+        "arcade_red_pyramid_thing_arcade"
+      ]
+    },
+    {
+      "name": "Coverage matches eight legacy replacements with no absent assets or clips added",
+      "passed": true
+    }
+  ],
+  "auditScriptReview": {
+    "path": "docs/production/vague23/audit-final.mjs",
+    "sha256": "c2aab6b33b84b2c5d520353a690051bc69c3cd19fa595f2f632ef88ef539ba64",
+    "status": "Earlier gaps resolved in the reviewed patch; no additional blocking character defect identified.",
+    "resolved": [
+      "Explicit eight-ID scope",
+      "Immutable delivery input SHA and selected-vs-receipt set",
+      "Native source bytes and role/source checks",
+      "Runtime/registry consistency outside five recomputed raster fields"
+    ]
+  },
+  "limits": [
+    "No visual fidelity or1:1 certification from this semantic review; native render QA belongs to root/integration reviewer.",
+    "Remnant shadowScale=0 was only a proposal: the property is absent from baseline/runtime and was not applied. The native ellipse remains. Root reports no detached duplicate shadow visible in its render; README corrected accordingly.",
+    "Stage final scope and full cache-admission audit remain outside this character-only review."
+  ]
+}

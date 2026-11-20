@@ -1,0 +1,526 @@
+{
+  "schemaVersion": 1,
+  "kind": "stage-native-gameplay-visual-review",
+  "createdAt": "2026-11-19T17:50:08.286789+00:00",
+  "outcome": "native-engine-checks-passed-with-documented-visual-limitations",
+  "scope": "Four imported wave23 Book of Memories stage candidates, one process per arena, no regeneration or source edits.",
+  "method": {
+    "engine": "Actual FightEngine.update/render with native Canvas; lossless in-memory decoding adapter.",
+    "visualInspection": "All four saved gameplay PNGs opened individually with view_image and inspected at 1280 × 720.",
+    "captureCondition": "Normal intro progressed to live fight; existing BOM Pyramid Head and Butcher at captured frame 229.",
+    "movement": "Original registered InputState callbacks accepted ArrowRight and ArrowLeft, each held for 18 ticks; release returned P1 to grounded idle.",
+    "motionEvidence": "Engine state and traced drawImage geometry in reports. Only one static gameplay capture per arena was visually reviewed; no video review claimed.",
+    "browserTest": false,
+    "httpTest": false,
+    "actorStateInjected": false,
+    "harness": "docs/production/vague23/qa-stages-native.mjs",
+    "harnessSHA256": "5e4cee0ced1cb66ce3ab5b7ceb1d46e82057bfad275ccd973f0cb10b39b047d2",
+    "executedHarness": "docs/production/vague23/qa-native/executed/qa-stages-native-5e4cee0ced1c.mjs"
+  },
+  "totals": {
+    "stages": 4,
+    "nativePlanes": 8,
+    "processes": 4,
+    "processesExitedZero": 4,
+    "assertionExecutions": 184,
+    "captures": 4,
+    "failedAssertions": 0,
+    "errors": 0
+  },
+  "sharedFindings": [
+    "Les deux plans exacts du stage sont dessinés ; les rapports ne signalent ni décor substitué ni portrait de sélection utilisé en combat.",
+    "Le moteur conserve la ligne de sol y=594. P1 revient à x≈310, idle, grounded=true, à la frame 285 pour chaque cas.",
+    "Chaque déplacement contrôlé de P1 mesure 63,9 px ; le fond reste fixe et le premier plan se décale de ∓0,3834 px, conformément à la formule déclarée.",
+    "Les quatre captures montrent les corps, les pieds et les armes visibles aux positions testées. Les avant-plans sont confinés aux bords ou aux angles.",
+    "Deux plans fixes et une translation de parallaxe ne constituent pas une animation originale. Aucune fidélité 1:1, caméra originale ou résolution UHD n’est certifiée."
+  ],
+  "reviewLimits": [
+    "Cette preuve concerne le moteur Canvas natif et les quatre captures 1280 × 720. Elle ne couvre pas navigateur, HTTP, DOM/CSS, service worker, autres résolutions ou parcours complets des limites de caméra.",
+    "L’inspection du contact au sol porte sur les deux poses idle capturées ; les assertions de mouvement ne sont pas une inspection visuelle de tous les pieds pendant une animation.",
+    "Fire utilise une capture PS Vita de lancement US datée 2012-10-16. Earth, Blood et Water utilisent des captures PS Vita E3 de préversion datées 2012-06-06 ; aucune équivalence avec la version finale n’est affirmée.",
+    "Les valeurs scene sont celles de la livraison de référence ; les runtimeSceneId restent null et aucune politique runtime n’a été modifiée pour ces vérifications."
+  ],
+  "frozenDelivery": {
+    "path": "docs/production/vague23/stages/delivery.json",
+    "sha256": "32e6bb58c9e9f862323e27d146bb4be3496e1b26c362f4801a0bdd846701ffcd",
+    "unchanged": true,
+    "assets": [
+      {
+        "stageId": "book_fire",
+        "role": "opaque-background",
+        "localPath": "docs/production/vague23/stages/images/book_fire.fire-room.png",
+        "activePath": "assets/stages/book_fire.fire-room.7f1236bf6694.png",
+        "sha256": "7f1236bf66946438ebbb93b74dc948bfc29bea058e7c43ead125437c2607d9f1",
+        "nativeCopyUnchanged": true,
+        "activeCopyMatchesNative": true
+      },
+      {
+        "stageId": "book_fire",
+        "role": "transparent-foreground",
+        "localPath": "docs/production/vague23/stages/images/book_fire.near-steel-edges.png",
+        "activePath": "assets/stages/book_fire.near-steel-edges.e238137c6bfd.png",
+        "sha256": "e238137c6bfd31443ff58eaf97e743c60baae68de92666308d3801b9fc80b800",
+        "nativeCopyUnchanged": true,
+        "activeCopyMatchesNative": true
+      },
+      {
+        "stageId": "book_earth",
+        "role": "opaque-background",
+        "localPath": "docs/production/vague23/stages/images/book_earth.earth-gallery.png",
+        "activePath": "assets/stages/book_earth.earth-gallery.d68ff2b3d5a6.png",
+        "sha256": "d68ff2b3d5a6e89a9947e6e2a4fe197761e5ffac3fd0d4d19580d6e07303f150",
+        "nativeCopyUnchanged": true,
+        "activeCopyMatchesNative": true
+      },
+      {
+        "stageId": "book_earth",
+        "role": "transparent-foreground",
+        "localPath": "docs/production/vague23/stages/images/book_earth.near-rock-edges.png",
+        "activePath": "assets/stages/book_earth.near-rock-edges.e2f163225507.png",
+        "sha256": "e2f16322550789968fbf16abb53e0b324881bc85f65d1fe83aa832d493257638",
+        "nativeCopyUnchanged": true,
+        "activeCopyMatchesNative": true
+      },
+      {
+        "stageId": "book_blood",
+        "role": "opaque-background",
+        "localPath": "docs/production/vague23/stages/images/book_blood.blood-arena.png",
+        "activePath": "assets/stages/book_blood.blood-arena.a2f0bf8241d3.png",
+        "sha256": "a2f0bf8241d3a7b77f2379654bdf58f79881af710a65603bf6090614f7ba8c14",
+        "nativeCopyUnchanged": true,
+        "activeCopyMatchesNative": true
+      },
+      {
+        "stageId": "book_blood",
+        "role": "transparent-foreground",
+        "localPath": "docs/production/vague23/stages/images/book_blood.near-perimeter-edges.png",
+        "activePath": "assets/stages/book_blood.near-perimeter-edges.472f222bec21.png",
+        "sha256": "472f222bec2101e6b073da623df1bd2189a98950306bba970e96a47747459f96",
+        "nativeCopyUnchanged": true,
+        "activeCopyMatchesNative": true
+      },
+      {
+        "stageId": "book_water",
+        "role": "opaque-background",
+        "localPath": "docs/production/vague23/stages/images/book_water.water-basin.png",
+        "activePath": "assets/stages/book_water.water-basin.12604eb0cf73.png",
+        "sha256": "12604eb0cf73963d8fbcb1222129f0b984bc417f6be3514712d6ecd5188f06cf",
+        "nativeCopyUnchanged": true,
+        "activeCopyMatchesNative": true
+      },
+      {
+        "stageId": "book_water",
+        "role": "transparent-foreground",
+        "localPath": "docs/production/vague23/stages/images/book_water.near-tile-edges.png",
+        "activePath": "assets/stages/book_water.near-tile-edges.9db746e9832f.png",
+        "sha256": "9db746e9832ff87bbbb4cce22e73ef6d21f563fb6903ab10b534ce676f8d978a",
+        "nativeCopyUnchanged": true,
+        "activeCopyMatchesNative": true
+      }
+    ]
+  },
+  "cases": [
+    {
+      "stageId": "book_fire",
+      "scene": "vita-launch-fire-industrial-room-20121016-01",
+      "runtimeSceneId": null,
+      "passed": true,
+      "assertionExecutions": 46,
+      "processExitCode": 0,
+      "signalNumber": null,
+      "evidence": {
+        "report": "docs/production/vague23/qa-native/cases/book_fire/report.json",
+        "reportSHA256": "8ed9115f6c9fb161924ae78c11554e8c0bec20a9577124b7ce649935d8ef7d06",
+        "processObservation": "docs/production/vague23/qa-native/cases/book_fire/process-observation.json",
+        "processLog": "docs/production/vague23/qa-native/cases/book_fire/process.txt",
+        "logSHA256": "3c23b196d8645a65070ae6f378402c1df10abbc1ebf4c1aa2b551592ee88ea7d",
+        "capture": "docs/production/vague23/qa-native/cases/book_fire/book_fire.png",
+        "captureSHA256": "a4667e24d97e5012f5f001fbc2e4ff3e1faaa63907ec8629fbead2bf045f1174",
+        "captureDimensions": [
+          1280,
+          720
+        ],
+        "captureFrame": 229
+      },
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285,
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ],
+      "visualReview": {
+        "grounding": "Les deux paires de pieds sont visibles sur les plaques continues du couloir inférieur, à proximité de la ligne de sol y=594. Aucun seuil, vide ou obstacle peint ne traverse les appuis aux deux positions capturées.",
+        "foreground": "Les montants de métal restent sur les bords gauche et droit. Aucun montant ne coupe les silhouettes, les semelles ou les armes dans la capture.",
+        "camera": "La paroi verticale, le meuble rouge et la grille chaude restent en arrière des combattants. La lecture latérale du couloir est claire, malgré la profondeur reconstruite du sol.",
+        "limits": [
+          "La lumière chaude et les reflets sont peints dans le fond statique. La géométrie élargie est une adaptation de la capture de lancement, sans validation 1:1."
+        ]
+      },
+      "fidelity": "unverified",
+      "staticPlanes": 2,
+      "originalAnimationCertified": false,
+      "originalCameraCertified": false
+    },
+    {
+      "stageId": "book_earth",
+      "scene": "vita-e3-earth-gallery-20120606-37",
+      "runtimeSceneId": null,
+      "passed": true,
+      "assertionExecutions": 46,
+      "processExitCode": 0,
+      "signalNumber": null,
+      "evidence": {
+        "report": "docs/production/vague23/qa-native/cases/book_earth/report.json",
+        "reportSHA256": "baf7a54c9018a5c4018b349385527ed29c460fba6118d64f469f9b3833aba438",
+        "processObservation": "docs/production/vague23/qa-native/cases/book_earth/process-observation.json",
+        "processLog": "docs/production/vague23/qa-native/cases/book_earth/process.txt",
+        "logSHA256": "ea1a4cc703231e11fd6a3cdfee063eba5befc03630d8b16790c1ecd71ae787a5",
+        "capture": "docs/production/vague23/qa-native/cases/book_earth/book_earth.png",
+        "captureSHA256": "27b23fa625e74732e439fb6251a12aee5228ccaa586d75902ae52596ab725ead",
+        "captureDimensions": [
+          1280,
+          720
+        ],
+        "captureFrame": 229
+      },
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285,
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ],
+      "visualReview": {
+        "grounding": "Les deux combattants reposent visuellement sur la surface rocheuse continue et gardent leurs semelles visibles. Les petits cailloux peints ne masquent pas les appuis.",
+        "foreground": "Les roches proches encadrent les bords. Le couloir entre les combattants, les armes et les pieds reste dégagé dans cette capture.",
+        "camera": "Les poutres, la roue et les caisses composent un fond vertical lisible. Le couloir conserve une profondeur modérée, sans obstacle élevé entre les combattants.",
+        "limits": [
+          "La surface rocheuse est visuellement dense. Le cadrage et la largeur sont reconstruits depuis une capture E3 de préversion, sans certification de la version finale."
+        ]
+      },
+      "fidelity": "unverified",
+      "staticPlanes": 2,
+      "originalAnimationCertified": false,
+      "originalCameraCertified": false
+    },
+    {
+      "stageId": "book_blood",
+      "scene": "vita-e3-blood-arena-20120606-31",
+      "runtimeSceneId": null,
+      "passed": true,
+      "assertionExecutions": 46,
+      "processExitCode": 0,
+      "signalNumber": null,
+      "evidence": {
+        "report": "docs/production/vague23/qa-native/cases/book_blood/report.json",
+        "reportSHA256": "252b1777b4278301fc3da31ff0cb01500acf562f1134628c42f129e883487b31",
+        "processObservation": "docs/production/vague23/qa-native/cases/book_blood/process-observation.json",
+        "processLog": "docs/production/vague23/qa-native/cases/book_blood/process.txt",
+        "logSHA256": "e9e1e62548e9f9972a9a6d680f6f4c17baa4d3af94eb75280de14687c59bf6f7",
+        "capture": "docs/production/vague23/qa-native/cases/book_blood/book_blood.png",
+        "captureSHA256": "b4eaebd2981cd89911af51003e996b53439970245e1c2e5e0d4f932cfc16934f",
+        "captureDimensions": [
+          1280,
+          720
+        ],
+        "captureFrame": 229
+      },
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285,
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ],
+      "visualReview": {
+        "grounding": "Les semelles restent lisibles sur la large surface rouge opaque. Les divisions de grille passent derrière les positions de combat capturées et ne forment pas de trou sous les pieds.",
+        "foreground": "Les fragments de bordure proches occupent les angles inférieurs et les marges ; ils ne recouvrent ni acteur ni arme dans la capture.",
+        "camera": "Un surplomb subsiste : les grilles diagonales convergentes occupent l’arrière du sol et aucune paroi frontale ne ferme le décor. La perspective est plus plongeante que celle des trois autres stages ; les combattants latéraux restent lisibles sur la bande inférieure.",
+        "limits": [
+          "Le léger surplomb constitue une limite d’adaptation au combat latéral et reste visible en jeu. Cette QA ne le transforme pas en caméra originale certifiée.",
+          "Les surfaces rouges, leurs reflets et les grilles sont statiques. Le boss original a été retiré de la reconstruction issue de la préversion E3."
+        ]
+      },
+      "fidelity": "unverified",
+      "staticPlanes": 2,
+      "originalAnimationCertified": false,
+      "originalCameraCertified": false
+    },
+    {
+      "stageId": "book_water",
+      "scene": "vita-e3-water-basin-20120606-50",
+      "runtimeSceneId": null,
+      "passed": true,
+      "assertionExecutions": 46,
+      "processExitCode": 0,
+      "signalNumber": null,
+      "evidence": {
+        "report": "docs/production/vague23/qa-native/cases/book_water/report.json",
+        "reportSHA256": "6d6e5598a70dc9ab12a9dc690833291ba47233616bcdb429850ecd56b9a2903a",
+        "processObservation": "docs/production/vague23/qa-native/cases/book_water/process-observation.json",
+        "processLog": "docs/production/vague23/qa-native/cases/book_water/process.txt",
+        "logSHA256": "8b0290fb27cc2d9293276419a2ece1151eb9d773732f71e1b7d174693b84f631",
+        "capture": "docs/production/vague23/qa-native/cases/book_water/book_water.png",
+        "captureSHA256": "9edadd6e8113caafe8694edf5912218934add76ef6b60454c0eebb47cb77dd10",
+        "captureDimensions": [
+          1280,
+          720
+        ],
+        "captureFrame": 229
+      },
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285,
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ],
+      "visualReview": {
+        "grounding": "Les semelles sont visibles au niveau du sol du moteur, devant les carreaux représentés sous l’eau. La capture ne montre ni immersion des pieds ni contact liquide dynamique.",
+        "foreground": "Les montants carrelés restent aux extrémités. Les pieds, les armes et l’espace central entre les combattants restent visibles.",
+        "camera": "Le mur carrelé, les supports et la grande ouverture circulaire sont nettement à l’arrière. La perspective du dallage guide le regard vers le mur et conserve un couloir frontal dégagé.",
+        "limits": [
+          "L’eau et les reflets sont peints dans une image fixe : aucune vague animée, éclaboussure, immersion ou physique d’eau n’est attestée. Le type de sol existant du moteur est inchangé.",
+          "La disposition est reconstruite depuis la capture E3 de préversion ; elle ne certifie pas l’arène de la version finale."
+        ]
+      },
+      "fidelity": "unverified",
+      "staticPlanes": 2,
+      "originalAnimationCertified": false,
+      "originalCameraCertified": false
+    }
+  ]
+}

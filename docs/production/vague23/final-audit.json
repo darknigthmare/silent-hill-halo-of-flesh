@@ -1,0 +1,3963 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "createdAt": "2026-11-19T20:18:45.669Z",
+  "baseCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "baseTree": "c0e55d65c1bc29d41ad9e5f10eb40e65335740ac",
+  "method": "Read-only semantic and SHA256 comparison with the published base; byte-identical generated assets; real validatePins on unique decoded width×height×4 descriptors. This audit does not render or certify artistic fidelity.",
+  "checks": [
+    {
+      "name": "No repeated profile or stage across incremental imports",
+      "passed": true
+    },
+    {
+      "name": "Exactly the eight visually selected profiles were imported",
+      "passed": true
+    },
+    {
+      "name": "Exactly the six reviewed missing stages were imported",
+      "passed": true
+    },
+    {
+      "name": "Every character import completed",
+      "passed": true
+    },
+    {
+      "name": "Immutable character delivery: characters-extra-import-part1.json",
+      "passed": true
+    },
+    {
+      "name": "Selected native source and receipt agree: sh3_glutton",
+      "passed": true
+    },
+    {
+      "name": "Recorded source and role agree with runtime: sh3_glutton",
+      "passed": true
+    },
+    {
+      "name": "Immutable character delivery: characters-import-part1.json",
+      "passed": true
+    },
+    {
+      "name": "Selected native source and receipt agree: sh4_greedy_worm_069",
+      "passed": true
+    },
+    {
+      "name": "Recorded source and role agree with runtime: sh4_greedy_worm_069",
+      "passed": true
+    },
+    {
+      "name": "Selected native source and receipt agree: sh4_toadstool_061",
+      "passed": true
+    },
+    {
+      "name": "Recorded source and role agree with runtime: sh4_toadstool_061",
+      "passed": true
+    },
+    {
+      "name": "Selected native source and receipt agree: sh4_whitestool_062",
+      "passed": true
+    },
+    {
+      "name": "Recorded source and role agree with runtime: sh4_whitestool_062",
+      "passed": true
+    },
+    {
+      "name": "Immutable character delivery: characters-import-part2.json",
+      "passed": true
+    },
+    {
+      "name": "Selected native source and receipt agree: origins_remnant_077",
+      "passed": true
+    },
+    {
+      "name": "Recorded source and role agree with runtime: origins_remnant_077",
+      "passed": true
+    },
+    {
+      "name": "Selected native source and receipt agree: bom_tremer_133",
+      "passed": true
+    },
+    {
+      "name": "Recorded source and role agree with runtime: bom_tremer_133",
+      "passed": true
+    },
+    {
+      "name": "Selected native source and receipt agree: bom_wood_sapling_139",
+      "passed": true
+    },
+    {
+      "name": "Recorded source and role agree with runtime: bom_wood_sapling_139",
+      "passed": true
+    },
+    {
+      "name": "Immutable character delivery: characters-import-part3.json",
+      "passed": true
+    },
+    {
+      "name": "Selected native source and receipt agree: arcade_gum_head_arcade",
+      "passed": true
+    },
+    {
+      "name": "Recorded source and role agree with runtime: arcade_gum_head_arcade",
+      "passed": true
+    },
+    {
+      "name": "Completed preserving stage import: stages-import-part1.json",
+      "passed": true
+    },
+    {
+      "name": "Immutable stage delivery: /workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/delivery-part1.json",
+      "passed": true
+    },
+    {
+      "name": "Selected stage delivery matches receipt: stages-import-part1.json",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+      "passed": true
+    },
+    {
+      "name": "Completed preserving stage import: stages-import-part2.json",
+      "passed": true
+    },
+    {
+      "name": "Immutable stage delivery: /workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/delivery-part2.json",
+      "passed": true
+    },
+    {
+      "name": "Selected stage delivery matches receipt: stages-import-part2.json",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/book_earth.earth-gallery-timber-wall.9388cd040cd5.png",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/book_earth.near-earth-timber-edges.e57d980721fc.png",
+      "passed": true
+    },
+    {
+      "name": "Completed preserving stage import: stages-import-part3.json",
+      "passed": true
+    },
+    {
+      "name": "Immutable stage delivery: /workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/delivery-part3.json",
+      "passed": true
+    },
+    {
+      "name": "Selected stage delivery matches receipt: stages-import-part3.json",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/book_water.water-rooftop-lattice.3e1e5c015f1f.png",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/book_water.near-rooftop-steel-edges.d593738b8364.png",
+      "passed": true
+    },
+    {
+      "name": "Completed preserving stage import: stages-import-part4.json",
+      "passed": true
+    },
+    {
+      "name": "Immutable stage delivery: /workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/delivery-part4.json",
+      "passed": true
+    },
+    {
+      "name": "Selected stage delivery matches receipt: stages-import-part4.json",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/book_blood.blood-platform-ribbed-door.f3b31605cd4e.png",
+      "passed": true
+    },
+    {
+      "name": "Retained native stage source: assets/stages/book_blood.near-dry-structural-ribs.476ef774e063.png",
+      "passed": true
+    },
+    {
+      "name": "Generated sprite manifest matches authored registry outside recalculated raster fields",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/chronicles.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/combat-rules.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/content-stats.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/coverage-audit.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/fatalities.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/movesets.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/production-reference-index.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/roster.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/sources.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/stage-director.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: data/stages.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/archive.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/chronicle-art.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/chronicles.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/combat-geometry.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/combat-reference-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/combat-resolution.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/command.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/data.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/lore-cinematics.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/movesets.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/player-input.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/playflow-ui.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/presentation-sequences.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/production-reference.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/reference-ui.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/run-progress.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/save-store.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/shared.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-clip-editor.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-clips.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-framing.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-inspector.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-poses.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-usage.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/sprite-workshop.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-architecture.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-cinematics.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-director.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-hazard-renderer.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-lore-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-lot12-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-lot12-renderer.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/stage-reference-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/touch-controls.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/tournament.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/versus.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: src/weapon-phases.js",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: docs/production/workbook-verification.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: docs/production/franchise-corpus.json",
+      "passed": true
+    },
+    {
+      "name": "Protected source unchanged: docs/BIBLE_CORPUS_SILENT_HILL.md",
+      "passed": true
+    },
+    {
+      "name": "All 230 runtime definitions are unchanged",
+      "passed": true
+    },
+    {
+      "name": "No new or deleted character IDs",
+      "passed": true
+    },
+    {
+      "name": "Exactly the delivered character entries changed",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_air_screamer_001",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: film_red_pyramid_film_175",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_memory_of_alessa_049",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_lying_figure_020",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_bubble_head_nurse_024",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_creeper_025",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_split_head_014",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_floatstinger_016",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_numb_body_small_037",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_groaner_003",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_wormhead_004",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_hanged_scratcher_011",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_hummer_055",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_closer_036",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_night_flutter_002",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_pendulum_039",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_twin_victim_059",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_slurper_042",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_romper_010",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_double_head_040",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_insane_cancer_041",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_sniffer_dog_male_053",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_patient_060",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_bottom_065",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_gum_head_new_type_058",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_mumbler_006",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_creeper_009",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_puppet_nurse_012",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_puppet_doctor_013",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_twinfeeler_015",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_sniffer_dog_female_054",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_gum_head_old_type_057",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_toadstool_061",
+      "passed": true
+    },
+    {
+      "name": "Only static idle frame replaced: sh4_toadstool_061",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_whitestool_062",
+      "passed": true
+    },
+    {
+      "name": "Only static idle frame replaced: sh4_whitestool_062",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_tremer_blue_063",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_tremer_red_064",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_wheelchair_068",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_numb_body_large_038",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_nurse_revolver_044",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_scraper_045",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_missionary_047",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_leonard_wolf_048",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_jimmy_stone_victim_1",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_cynthia_velasquez_victim_16",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_richard_braintree_victim_19",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_walter_sullivan_072",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_red_pyramid_thing_great_knife_029",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_red_pyramid_thing_spear_030",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_eddie_dombrowski_032",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_straight_jacket_074",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_carrion_076",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_faceless_nurse",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_the_butcher_081",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_caliban_079",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_lurker_085",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_feral_086",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_needler_088",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_schism_089",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_weeping_bat_105",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_siam_090",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_screamer_104",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_anne_cunningham",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_swarm",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_bogeyman_115",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_ariel_078",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_two_back_080",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_nurse",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_smog_087",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_incubator_018",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_order_soldier_091",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_prisoner_juggernaut_110",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_lying_figure_crawling_021",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_scarlet_spider_form_095",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_asphyxia_096",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_steve_garland_victim_4",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_eric_walsh_victim_10",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_sharon_blake_victim_13",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_wall_man_056",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_one_truth_070",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_man_with_the_coat_067",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_sepulcher_093",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_wood_sapling_139",
+      "passed": true
+    },
+    {
+      "name": "Only static idle frame replaced: bom_wood_sapling_139",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_gum_head_arcade",
+      "passed": true
+    },
+    {
+      "name": "Only static idle frame replaced: arcade_gum_head_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_scraper_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_red_pyramid_thing_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_robbie_the_rabbit_chainsaw",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_grey_child_005",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_larval_stalker_007",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_stalker_008",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_bloodsucker",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_mandarin_026",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_abstract_daddy_028",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_twin_pyramid_heads_031",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_maria_final_manifestation_033",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_closer_church_variant",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_numb_body_medium",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_glutton",
+      "passed": true
+    },
+    {
+      "name": "Only static idle frame replaced: sh3_glutton",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_peter_walls_victim_12",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_memory_of_helen_grady_082",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_bogeyman_092",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shattered_raw_shock_feminine_100",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shattered_raw_shock_diseased_101",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shattered_raw_shock_abstract_102",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shattered_raw_shock_atrophied_103",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_doll_106",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_tormented_soul_111",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_wall_corpse_112",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_air_screamer_121",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_bogeyman_122",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_butcher_123",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_double_head_124",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_insane_cancer_126",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_needler_127",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_nurse_128",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_pyramid_head_129",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_schism_130",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_straight_jacket_131",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_swarm_132",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_tremer_133",
+      "passed": true
+    },
+    {
+      "name": "Only static idle frame replaced: bom_tremer_133",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_blood_baby_144",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shortmessage_sakura_head_150",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_kashimashi_151",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_ara_abare_153",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_irohihi_154",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_kamugara_157",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_harai_katashiro_158",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_oi_omoi_159",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_drum_monster_161",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_rinko_like_entity_163",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_hinako_s_father_164",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_shiromuku_166",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_tsukumogami_167",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_shichibi_168",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_kyubi_169",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: film_creeper_swarm_film_173",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: film_lying_figure_return_to_silent_hill",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: ascension_stinger_181",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: ascension_the_immolator_182",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_split_worm_046",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_greedy_worm_069",
+      "passed": true
+    },
+    {
+      "name": "Only static idle frame replaced: sh4_greedy_worm_069",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_remnant_077",
+      "passed": true
+    },
+    {
+      "name": "Only static idle frame replaced: origins_remnant_077",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_scarlet_doll_form_094",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shattered_raw_shock_base_099",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_light_guardian_140",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_water_guardian_141",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_earth_guardian_142",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_gray_child_147",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_raw_shock_148",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: film_mannequin_monster_176",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: townfall_lunger",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: townfall_sorrowful",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: townfall_fallen",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: townfall_widow",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: townfall_the_weight",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_prisoner_minion_brawler_108",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_prisoner_minion_agile_109",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_shadow_107",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_god_050",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_robbie_the_rabbit_axe",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_demon_084",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_fire_guardian_137",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: film_armless_man_170",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: film_red_pyramid_thing_return_to_silent_hill",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_hummer_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_tremer_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_tuberculosis",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: ascension_fighter_179",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_mama_117",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_split_worm_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_double_head_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_steel_guardian_146",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_insane_cancer_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: film_bubble_head_nurse_return_to_silent_hill",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: film_creeper_return_to_silent_hill",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: ascension_snarler_180",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_eileen_head_073",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: ascension_wanderer_178",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_creeper_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_toadstool_arcade",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_wood_guardian_138",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: ascension_the_collector_183",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_ghost_125",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_joseph_schreiber_victim_15",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_sakuko_like_entity_162",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_greedy_worm_arcade_119",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_void_113",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: ascension_stilledalen_stinger_184",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: origins_memory_of_richard_grady_083",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_monocle_man_114",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: downpour_wheelman_116",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_sewer_creature_052",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: homecoming_curtis_ackers",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh1_monster_cybil_017",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: arcade_phantom_118",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_jasper_gein_victim_17",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_toby_archbolt_victim_14",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_flesh_lip_027",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh2_mannequin_022",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: pt_lisa_149",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh3_nurse_pipe_043",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: bom_flesh_lips_134",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: shf_ayakakashi_152",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: sh4_andrew_desalvo_victim_18",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and animated clips preserved: film_colin_the_janitor_174",
+      "passed": true
+    },
+    {
+      "name": "Existing stage entries and historical room variants preserved",
+      "passed": true
+    },
+    {
+      "name": "Exactly the delivered missing stages were added",
+      "passed": true
+    },
+    {
+      "name": "New stages were absent and are now selectable",
+      "passed": true
+    },
+    {
+      "name": "Service worker changes confined to generated asset/revision blocks",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/sprites/sh3_glutton.13d4153c810d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/sprites/sh4_toadstool_061.c420453d2412.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/sprites/origins_remnant_077.066fb3aaa887.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/sprites/bom_tremer_133.a9b464909542.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/sprites/bom_wood_sapling_139.fb78edc7ace1.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/sprites/arcade_gum_head_arcade.99f8227fc72a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/book_earth.earth-gallery-timber-wall.9388cd040cd5.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/book_earth.near-earth-timber-edges.e57d980721fc.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/book_water.water-rooftop-lattice.3e1e5c015f1f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/book_water.near-rooftop-steel-edges.d593738b8364.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/book_blood.blood-platform-ribbed-door.f3b31605cd4e.png",
+      "passed": true
+    },
+    {
+      "name": "Exact native PNG: assets/stages/book_blood.near-dry-structural-ribs.476ef774e063.png",
+      "passed": true
+    },
+    {
+      "name": "Every previously referenced PNG remains byte-identical",
+      "passed": true,
+      "detail": {
+        "files": 536
+      }
+    },
+    {
+      "name": "Coverage and static-pose accounting agree",
+      "passed": true
+    },
+    {
+      "name": "Existing independent 64 MiB budgets preserved",
+      "passed": true
+    },
+    {
+      "name": "No previously admitted illustrated duel exceeds its cache budget",
+      "passed": true
+    },
+    {
+      "name": "Active and historical stage pairs fit the existing cache",
+      "passed": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sprites/sh3_glutton.13d4153c810d.png",
+      "bytes": 1497938,
+      "sha256": "13d4153c810d71779beac6a0c7b3a6cbefbd73f18dde89af6a96b77155dfc07d",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+      "bytes": 1596643,
+      "sha256": "a40c72b3344f3e66bc1b144a4823a30a783fffa7a2614510afd33459b42ed001",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "assets/sprites/sh4_toadstool_061.c420453d2412.png",
+      "bytes": 1070813,
+      "sha256": "c420453d24121dc076747d818aa0406db6861d7221afec6ca8632c847240a035",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+      "bytes": 1682872,
+      "sha256": "0b358ca3be803594ecaa3402cdde51423a89f64a3232227926431498ba67ffe8",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "assets/sprites/origins_remnant_077.066fb3aaa887.png",
+      "bytes": 223796,
+      "sha256": "066fb3aaa8877f51b9cdeba00669452f97140aef60dea066ba6609ec66f3716e",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "assets/sprites/bom_tremer_133.a9b464909542.png",
+      "bytes": 338449,
+      "sha256": "a9b464909542b97197c608cf616b5fd8d961963f9a396eaa42cf22f9ac5c26c6",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "assets/sprites/bom_wood_sapling_139.fb78edc7ace1.png",
+      "bytes": 552540,
+      "sha256": "fb78edc7ace1899f080169312bd8e3b3f07116d3c51c67eb70ec0c166033bcfc",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "assets/sprites/arcade_gum_head_arcade.99f8227fc72a.png",
+      "bytes": 777500,
+      "sha256": "99f8227fc72a91fbf647672bad80e7fdabfc0f3553d230070b54cec9259c967b",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+      "bytes": 2369728,
+      "sha256": "4a4cf5e4c7d954f03feba3c3000340c033e09042792ac9a8746b707304e5e0be",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+      "bytes": 164483,
+      "sha256": "a2ee94a9cf3e884b3ab6678ad385da2cdbaeb18557572b11e0a3672f2fbd3201",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+      "bytes": 2469012,
+      "sha256": "41ce3e9666c526a1c3daf2fa5e30cbd4fab5bd1f4cdf4230a056bee7ea135d1d",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+      "bytes": 217813,
+      "sha256": "9f531b56161d24a0c8174a8b180f4a15d364e50e0258e002a632227de1e0d0b6",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/book_earth.earth-gallery-timber-wall.9388cd040cd5.png",
+      "bytes": 2306208,
+      "sha256": "9388cd040cd54c7fa58f1e83570dfa528463820e2bc9807a418d9fc228330773",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/book_earth.near-earth-timber-edges.e57d980721fc.png",
+      "bytes": 224867,
+      "sha256": "e57d980721fcb5dd830c76ba6b0ae7c37797ce0b5d28b92e347ff881a1870a79",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/book_water.water-rooftop-lattice.3e1e5c015f1f.png",
+      "bytes": 2244718,
+      "sha256": "3e1e5c015f1fd84146ce2bbce365c085963d13ba67c60eeb35eb87991a4755de",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/book_water.near-rooftop-steel-edges.d593738b8364.png",
+      "bytes": 219517,
+      "sha256": "d593738b8364466c6ddf0831e86b9cca7f4655741f8c2bca5f6d7da13216ebd7",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png",
+      "bytes": 2179945,
+      "sha256": "0df4f76b667367ba07d41713728021fa83794b18f81c32a23e41b3457f45f00d",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png",
+      "bytes": 162212,
+      "sha256": "dc85c4de41ae8bc67bf1e1f13a3aae8e793a7bb9d8368be0aa326e8733448114",
+      "width": 1671,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/book_blood.blood-platform-ribbed-door.f3b31605cd4e.png",
+      "bytes": 1989996,
+      "sha256": "f3b31605cd4ea24d73c987630a74f72e39048ac5ff8bf87b36b5935bb94b86bd",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/stages/book_blood.near-dry-structural-ribs.476ef774e063.png",
+      "bytes": 181436,
+      "sha256": "476ef774e0637e2523b4dce7db64b5e9562ea5f180ded8705faa8718ae87ffb5",
+      "width": 1672,
+      "height": 940
+    }
+  ],
+  "coverage": {
+    "sprites": {
+      "schema": 1,
+      "version": "0.9.6",
+      "total": 230,
+      "integrated": 204,
+      "missing": 26,
+      "selectionAvailable": 204,
+      "selectionMissing": 26,
+      "combatSideViewCandidates": 159,
+      "combatLegacyUnreviewed": 34,
+      "combatMissing": 37,
+      "separateSelectionAndCombat": 160,
+      "certified": 0,
+      "animatedClips": 6,
+      "presentationClips": 1,
+      "animatedPresentationClips": 0
+    },
+    "newCharacters": {
+      "total": 8,
+      "combatCandidates": 4,
+      "referenceOnly": 4,
+      "ids": [
+        "sh3_glutton",
+        "sh4_greedy_worm_069",
+        "sh4_toadstool_061",
+        "sh4_whitestool_062",
+        "origins_remnant_077",
+        "bom_tremer_133",
+        "bom_wood_sapling_139",
+        "arcade_gum_head_arcade"
+      ],
+      "combatIds": [
+        "origins_remnant_077",
+        "bom_tremer_133",
+        "bom_wood_sapling_139",
+        "arcade_gum_head_arcade"
+      ],
+      "referenceOnlyIds": [
+        "sh3_glutton",
+        "sh4_greedy_worm_069",
+        "sh4_toadstool_061",
+        "sh4_whitestool_062"
+      ],
+      "newPortraits": 0,
+      "newAnimatedClips": 0
+    },
+    "stages": {
+      "total": 123,
+      "beforeActive": 65,
+      "afterActive": 71,
+      "remaining": 52,
+      "remainingUnblocked": 37,
+      "blocked": 15,
+      "added": 6,
+      "ids": [
+        "ebisugaoka",
+        "book_fire",
+        "book_earth",
+        "book_water",
+        "arcade_city",
+        "book_blood"
+      ],
+      "storedCompositions": 73,
+      "referencedPNG": 140,
+      "activePNG": 138
+    }
+  },
+  "memory": {
+    "budgets": {
+      "fighters": 67108864,
+      "stages": 67108864
+    },
+    "fighterPairs": {
+      "enabledFighters": 187,
+      "total": 17578,
+      "illustrated": 14365,
+      "admitted": 14365,
+      "missing": 3213,
+      "rejected": 0,
+      "previouslyAdmitted": 14365,
+      "regressions": [],
+      "maxDecodedBytes": 62927768
+    },
+    "activeStagePairs": {
+      "sets": 71,
+      "pairsIncludingSelf": 2556,
+      "maxDecodedBytes": 25175120,
+      "rejections": 0
+    },
+    "allStoredRoomPairs": {
+      "sets": 73,
+      "pairsIncludingSelf": 2701,
+      "maxDecodedBytes": 25175120,
+      "rejections": 0
+    }
+  },
+  "passed": true,
+  "missingStages": [
+    {
+      "id": "apartment_roof",
+      "name": "DAISY VILLA ROOFTOP",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "cedar_grove",
+      "name": "CEDAR GROVE — FEMALE TREATMENT",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_school",
+      "name": "MIDWICH GELÉ — COUR PAPARAZZI",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "arcade_ship",
+      "name": "LITTLE BARONESS",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "book_zone",
+      "name": "BOOK OF MEMORIES — NEXUS",
+      "source": "bom",
+      "blocked": true
+    },
+    {
+      "id": "festival_square",
+      "name": "FESTIVAL SQUARE",
+      "source": "shf",
+      "blocked": true
+    },
+    {
+      "id": "book_light",
+      "name": "LIGHT ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "book_steel",
+      "name": "STEEL ZONE",
+      "source": "bom",
+      "blocked": false
+    },
+    {
+      "id": "antique_shop",
+      "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "film_midwich",
+      "name": "MIDWICH — FILM OTHERWORLD",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "film_church",
+      "name": "CHURCH OF THE ORDER",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "film_sanctuary",
+      "name": "SANCTUARY — REVELATION",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "hope_junction",
+      "name": "HOPE’S JUNCTION",
+      "source": "ascension",
+      "blocked": false
+    },
+    {
+      "id": "stilledalen",
+      "name": "STILLEDALEN WOODS",
+      "source": "ascension",
+      "blocked": false
+    },
+    {
+      "id": "ascension_otherworld",
+      "name": "ASCENSION — OPEN GATE",
+      "source": "ascension",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_mall",
+      "name": "CENTRAL SQUARE — NIGHTMARE MALL",
+      "source": "sh3",
+      "blocked": false
+    },
+    {
+      "id": "wish_house",
+      "name": "WISH HOUSE",
+      "source": "sh4",
+      "blocked": true
+    },
+    {
+      "id": "final_sacrament",
+      "name": "21 SACRAMENTS — FINAL CHAMBER",
+      "source": "sh4",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_theater",
+      "name": "ARTAUD THEATER — NIGHTMARE",
+      "source": "origins",
+      "blocked": false
+    },
+    {
+      "id": "police_station_hc",
+      "name": "SHEPHERD’S GLEN POLICE STATION",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "prison_hc",
+      "name": "OVERLOOK PENITENTIARY",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "scarlet_chamber",
+      "name": "SCARLET’S CHAMBER",
+      "source": "homecoming",
+      "blocked": false
+    },
+    {
+      "id": "frozen_streets",
+      "name": "SILENT HILL — FROZEN STREETS",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "nightmare_mall_sm",
+      "name": "TOLUCA MALL GELÉ — HALL GUMBALL",
+      "source": "shattered",
+      "blocked": false
+    },
+    {
+      "id": "lighthouse_sm",
+      "name": "LIGHTHOUSE / THERAPY REVELATION",
+      "source": "shattered",
+      "blocked": true
+    },
+    {
+      "id": "downpour_streets",
+      "name": "SILENT HILL — DOWNPOUR STREETS",
+      "source": "downpour",
+      "blocked": false
+    },
+    {
+      "id": "otherworld_void",
+      "name": "DOWNPOUR — VOID CHASE",
+      "source": "downpour",
+      "blocked": false
+    },
+    {
+      "id": "anne_fight",
+      "name": "FULL CIRCLE — ANNE’S CONFRONTATION",
+      "source": "downpour",
+      "blocked": true
+    },
+    {
+      "id": "arcade_hospital",
+      "name": "THE ARCADE — BROOKHAVEN HOSPITAL",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_hospital_roof",
+      "name": "THE ARCADE — HOSPITAL ROOF",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_historical",
+      "name": "THE ARCADE — HISTORICAL SOCIETY",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_prison",
+      "name": "THE ARCADE — TOLUCA PRISON",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_graveyard",
+      "name": "THE ARCADE — UNDERGROUND GRAVEYARD",
+      "source": "arcade",
+      "blocked": true
+    },
+    {
+      "id": "arcade_toluca_lake",
+      "name": "THE ARCADE — TOLUCA LAKE",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_1918",
+      "name": "THE ARCADE — 1918",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_1993",
+      "name": "THE ARCADE — 1993 PHANTOM FRONT",
+      "source": "arcade",
+      "blocked": false
+    },
+    {
+      "id": "arcade_mall",
+      "name": "THE ARCADE — SHOPPING MALL",
+      "source": "arcade",
+      "blocked": true
+    },
+    {
+      "id": "arcade_amusement",
+      "name": "THE ARCADE — AMUSEMENT PARK",
+      "source": "arcade",
+      "blocked": true
+    },
+    {
+      "id": "villa_rooftop",
+      "name": "KETTENSTADT VILLA — ROOFTOP",
+      "source": "shortmessage",
+      "blocked": false
+    },
+    {
+      "id": "villa_stairwell",
+      "name": "KETTENSTADT VILLA — STAIRWELL",
+      "source": "shortmessage",
+      "blocked": false
+    },
+    {
+      "id": "shimizu_residence",
+      "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+      "source": "shf",
+      "blocked": false
+    },
+    {
+      "id": "return_streets",
+      "name": "RETURN TO SILENT HILL — STREETS",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "return_brookhaven",
+      "name": "RETURN TO SILENT HILL — BROOKHAVEN",
+      "source": "film",
+      "blocked": false
+    },
+    {
+      "id": "return_lakeview",
+      "name": "RETURN TO SILENT HILL — BURNING LAKEVIEW",
+      "source": "film",
+      "blocked": true
+    },
+    {
+      "id": "return_portrait_room",
+      "name": "RETURN TO SILENT HILL — PORTRAIT ROOM",
+      "source": "film",
+      "blocked": true
+    },
+    {
+      "id": "st_amelia_marina",
+      "name": "ST. AMELIA MARINA",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "st_amelia_residential",
+      "name": "ST. AMELIA — RESIDENTIAL DISTRICT",
+      "source": "townfall",
+      "blocked": false
+    },
+    {
+      "id": "townfall_medical",
+      "name": "ST. AMELIA MEDICAL CENTRE",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "ceg_tower",
+      "name": "CEG TOWER",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "clara_woods",
+      "name": "CLARA WOODS",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "clara_woods_different",
+      "name": "CLARA WOODS — DIFFERENT",
+      "source": "townfall",
+      "blocked": true
+    },
+    {
+      "id": "alternate_facility",
+      "name": "ST. AMELIA — ALTERNATE FACILITY",
+      "source": "townfall",
+      "blocked": false
+    }
+  ],
+  "missingCombat": [
+    {
+      "id": "sh1_incubus_019",
+      "name": "Incubus",
+      "source": "sh1",
+      "game": "SILENT HILL",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh2_mannequin_ambusher_023",
+      "name": "Mannequin — Ambusher",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh2_mary_final_manifestation_034",
+      "name": "Mary — Final Manifestation",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh2_prisoner_035",
+      "name": "Prisoner",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh2_spider_mannequin",
+      "name": "Spider Mannequin",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh2_mandarin_floor_form",
+      "name": "Mandarin — Floor Form",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "source": "sh3",
+      "game": "SILENT HILL 3",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh3_sewer_creature_052",
+      "name": "Sewer Creature",
+      "source": "sh3",
+      "game": "SILENT HILL 3",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh4_ghost_victim_066",
+      "name": "Ghost — Victim",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh4_sacrificed_walter_071",
+      "name": "Sacrificed Walter",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh4_eileen_head_073",
+      "name": "Eileen Head",
+      "source": "sh4",
+      "game": "SILENT HILL 4: THE ROOM",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "homecoming_amnion_hanging_form_097",
+      "name": "Amnion — Hanging Form",
+      "source": "homecoming",
+      "game": "SILENT HILL: HOMECOMING",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "homecoming_amnion_exposed_form_098",
+      "name": "Amnion — Exposed Form",
+      "source": "homecoming",
+      "game": "SILENT HILL: HOMECOMING",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "downpour_void_113",
+      "name": "Void",
+      "source": "downpour",
+      "game": "SILENT HILL: DOWNPOUR",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "downpour_monocle_man_114",
+      "name": "Monocle Man",
+      "source": "downpour",
+      "game": "SILENT HILL: DOWNPOUR",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "arcade_greedy_worm_arcade_119",
+      "name": "Greedy Worm — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "arcade_numb_body_arcade",
+      "name": "Numb Body — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "arcade_nurse_arcade",
+      "name": "Nurse — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "arcade_toadstool_arcade",
+      "name": "Toadstool — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "arcade_robbie_the_rabbit_shotgun",
+      "name": "Robbie the Rabbit — Shotgun",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "bom_mother_135",
+      "name": "Mother",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "bom_valtiel_136",
+      "name": "Valtiel",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "bom_blood_guardian_143",
+      "name": "Blood Guardian",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "bom_blood_mama_145",
+      "name": "Blood Mama",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_corruptor_155",
+      "name": "Corruptor",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_hatcher_156",
+      "name": "Hatcher",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_dark_hatcher_160",
+      "name": "Dark Hatcher",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_hinako_s_mother_165",
+      "name": "Hinako’s Mother",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "film_dark_nurse_171",
+      "name": "Dark Nurse",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "film_grey_child_film_172",
+      "name": "Grey Child — Film",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "film_colin_the_janitor_174",
+      "name": "Colin the Janitor",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "film_missionary_revelation_177",
+      "name": "Missionary — Revelation",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "film_bubble_head_nurse_return_to_silent_hill",
+      "name": "Bubble Head Nurse — Return to Silent Hill",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "film_creeper_return_to_silent_hill",
+      "name": "Creeper — Return to Silent Hill",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "film_fused_mattress_manifestation_return",
+      "name": "Fused Mattress Manifestation — Return",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "missing",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "not-assessed",
+      "selection": false,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "ascension_the_collector_183",
+      "name": "The Collector",
+      "source": "ascension",
+      "game": "SILENT HILL: ASCENSION",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "ascension_stilledalen_stinger_184",
+      "name": "Stilledalen Stinger",
+      "source": "ascension",
+      "game": "SILENT HILL: ASCENSION",
+      "status": "integrated-candidate",
+      "frames": 0,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "missing",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    }
+  ],
+  "legacyViews": [
+    {
+      "id": "sh1_air_screamer_001",
+      "name": "Air Screamer",
+      "source": "sh1",
+      "game": "SILENT HILL",
+      "status": "integrated-candidate",
+      "frames": 4,
+      "animatedClips": 1,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": true,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh1_larval_stalker_007",
+      "name": "Larval Stalker",
+      "source": "sh1",
+      "game": "SILENT HILL",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh1_stalker_008",
+      "name": "Stalker",
+      "source": "sh1",
+      "game": "SILENT HILL",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh1_bloodsucker",
+      "name": "Bloodsucker",
+      "source": "sh1",
+      "game": "SILENT HILL",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "sh2_maria_final_manifestation_033",
+      "name": "Maria — Final Manifestation",
+      "source": "sh2",
+      "game": "SILENT HILL 2",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "downpour_tormented_soul_111",
+      "name": "Tormented Soul",
+      "source": "downpour",
+      "game": "SILENT HILL: DOWNPOUR",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "downpour_wall_corpse_112",
+      "name": "Wall Corpse",
+      "source": "downpour",
+      "game": "SILENT HILL: DOWNPOUR",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "arcade_red_pyramid_thing_arcade",
+      "name": "Red Pyramid Thing — Arcade",
+      "source": "arcade",
+      "game": "SILENT HILL: THE ARCADE",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "bom_swarm_132",
+      "name": "Swarm",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "bom_blood_baby_144",
+      "name": "Blood Baby",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "bom_gray_child_147",
+      "name": "Gray Child",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "bom_raw_shock_148",
+      "name": "Raw Shock",
+      "source": "bom",
+      "game": "SILENT HILL: BOOK OF MEMORIES",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_kashimashi_151",
+      "name": "Kashimashi",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_ara_abare_153",
+      "name": "Ara-abare",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_irohihi_154",
+      "name": "Irohihi",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_kamugara_157",
+      "name": "Kamugara",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_harai_katashiro_158",
+      "name": "Harai Katashiro",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_oi_omoi_159",
+      "name": "Oi-omoi",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_drum_monster_161",
+      "name": "Drum Monster",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_rinko_like_entity_163",
+      "name": "Rinko-Like Entity",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_hinako_s_father_164",
+      "name": "Hinako’s Father",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_shiromuku_166",
+      "name": "Shiromuku",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_tsukumogami_167",
+      "name": "Tsukumogami",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_shichibi_168",
+      "name": "Shichibi",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "shf_kyubi_169",
+      "name": "Kyubi",
+      "source": "shf",
+      "game": "SILENT HILL f",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "film_creeper_swarm_film_173",
+      "name": "Creeper Swarm — Film",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "film_red_pyramid_film_175",
+      "name": "Red Pyramid — Film",
+      "source": "film",
+      "game": "SILENT HILL — FILM UNIVERSE",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "ascension_stinger_181",
+      "name": "Stinger",
+      "source": "ascension",
+      "game": "SILENT HILL: ASCENSION",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "ascension_the_immolator_182",
+      "name": "The Immolator",
+      "source": "ascension",
+      "game": "SILENT HILL: ASCENSION",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "townfall_lunger",
+      "name": "Lunger",
+      "source": "townfall",
+      "game": "SILENT HILL: TOWNFALL",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "townfall_sorrowful",
+      "name": "Sorrowful",
+      "source": "townfall",
+      "game": "SILENT HILL: TOWNFALL",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "townfall_fallen",
+      "name": "Fallen",
+      "source": "townfall",
+      "game": "SILENT HILL: TOWNFALL",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "townfall_widow",
+      "name": "Widow",
+      "source": "townfall",
+      "game": "SILENT HILL: TOWNFALL",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    },
+    {
+      "id": "townfall_the_weight",
+      "name": "The Weight",
+      "source": "townfall",
+      "game": "SILENT HILL: TOWNFALL",
+      "status": "integrated-candidate",
+      "frames": 1,
+      "animatedClips": 0,
+      "fidelity": "unverified",
+      "selection": true,
+      "combatView": "legacy-unreviewed",
+      "separateSelectionAndCombat": false,
+      "presentations": {
+        "present": [],
+        "missing": [
+          "intro",
+          "winRound",
+          "loseRound",
+          "winMatch",
+          "loseMatch",
+          "outro",
+          "finisher",
+          "finished",
+          "taunt"
+        ],
+        "animated": 0
+      }
+    }
+  ]
+}

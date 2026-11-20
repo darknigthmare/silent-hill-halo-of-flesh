@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-19T20:19:16.587Z",
+  "report": "report.json",
+  "reportSHA256": "bfdd1c9a16a197bb25d6b9efc3fa50b849094693c38f9bb65d17e3c6de44194a",
+  "passed": true,
+  "method": "Visual inspection of all three exact native FightEngine captures plus recorded input-driven parallax evidence.",
+  "inspected": [
+    "book_water.png",
+    "arcade_city.png",
+    "book_blood.png"
+  ],
+  "technicalResult": {
+    "passed": true,
+    "checks": 108,
+    "cases": 3,
+    "captures": 3
+  },
+  "testedSpriteEntryMatches": {
+    "bom_pyramid_head_129": true,
+    "bom_butcher_123": true
+  },
+  "testedStageEntryMatches": {
+    "book_water": true,
+    "arcade_city": true,
+    "book_blood": true
+  },
+  "findings": [
+    "Water Zone: rooftop lattice, two doors, vents and tiled floor stay distinct; near steel edges leave the fighting area clear.",
+    "Arcade City: foggy forecourt, concrete overhang, central pole and pavement remain readable. Foreground pillars stay at the margins.",
+    "Blood Zone: ribbed doorway, circular platform, dry structural ribs and reddish floor remain legible; no foreground element covers either fighter.",
+    "Both unchanged Book of Memories test fighters and weapons remain complete and grounded in each scene, without HUD occlusion.",
+    "All three stages draw their exact authored two-plane composition; original left/right input callbacks produce the expected fixed-background and signed-foreground parallax."
+  ],
+  "parallax": [
+    {
+      "stageId": "book_water",
+      "scene": "water-rooftop-dlc-gallery20130315-view37",
+      "events": [
+        {
+          "direction": "right",
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "arcade_city",
+      "scene": "city-jacks-inn-fog-forecourt-opening",
+      "events": [
+        {
+          "direction": "right",
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "book_blood",
+      "scene": "blood-platform-e3-20120606-view22",
+      "events": [
+        {
+          "direction": "right",
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, actual browser keyboard delivery or service workers.",
+    "Two static planes and runtime parallax do not constitute original source animation or certify 1:1 artistic fidelity.",
+    "No stage hazard, fighter attack, contact, guard or finisher is claimed."
+  ],
+  "fidelity": "unverified"
+}

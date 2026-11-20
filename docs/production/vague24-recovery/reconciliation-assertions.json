@@ -1,0 +1,1604 @@
+{
+  "schema": 1,
+  "wave": 24,
+  "generatedAt": "2026-11-19T22:22:32.004Z",
+  "purpose": "Verify exact recovery bytes, the two selected B entries, retained A art, and untouched gameplay/source contracts.",
+  "sourceCommits": {
+    "A": "aa97ffba2c6ca0b6d6bdc61ee1c17dc091933231",
+    "B": "c0eea6d1185cee0575c407aaf1e5854e9077db10",
+    "archive": "6757168e36aaf9e99d5889197da05a28abd7c698"
+  },
+  "checks": [
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6101-original-state/README.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6101-original-state/art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/sprites/bom_gray_child_147.b8eaa81de9d2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/sprites/bom_raw_shock_148.a881f09b463e.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/sprites/bom_tremer_133.d6f54ebac80d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/sprites/bom_wood_sapling_139.c26ab2d65518.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/sprites/sh4_whitestool_062.5f6ad30d02b8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/stages/book_blood.blood-arena.a2f0bf8241d3.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/stages/book_blood.near-perimeter-edges.472f222bec21.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/stages/book_earth.earth-gallery.d68ff2b3d5a6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/stages/book_earth.near-rock-edges.e2f163225507.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/stages/book_fire.fire-room.7f1236bf6694.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/stages/book_fire.near-steel-edges.e238137c6bfd.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/stages/book_water.near-tile-edges.9db746e9832f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: assets/stages/book_water.water-basin.12604eb0cf73.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6101-original-state/data/sprite-coverage.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6101-original-state/docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6101-original-state/docs/production/sprite-wave23-imports-2026-11-19.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/RAPPORT_VAGUE23_PERSONNAGES_STAGES.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/README.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/aggregate-native.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/audit-final.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/baseline-pr6.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/capture-baseline.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/character-import-preflight-http-source.log",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/character-import.log",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/NATIVE_QA.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/README.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/build-delivery.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/delivery.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/native-png-audit.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/native-process-summary.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/native-visual-review.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/png/bom_gray_child_147.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/png/bom_raw_shock_148.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/png/bom_tremer_133.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/png/bom_wood_sapling_139.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/png/sh4_toadstool_061.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/png/sh4_whitestool_062.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/prompt-whitestool-alpha-repair.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/prompts-first.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/prompts-second.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/prompts-third.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/qa/bom_gray_child_147.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/qa/bom_raw_shock_148.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/qa/bom_tremer_133.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/qa/bom_wood_sapling_139.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/qa/sh4_toadstool_061.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/qa/sh4_whitestool_062-alpha-repair1.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/qa/sh4_whitestool_062.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/reference-catalog.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/reference-download-list.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/reference-download-results.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-gray-child.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-gray29.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-gray30.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-raw-shock.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-raw27.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-raw28.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-raw34.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-tremer.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-wood-retail16.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-wood-sapling.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-wood53.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/bom-wood54.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/origins-remnant.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/sh4-toadstool.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/references/sh4-whitestool.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/render-qa.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/run-native-qa.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/variants/sh4_whitestool_062-alpha-repair1.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/characters/visual-review.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/corpus/README.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/corpus/evidence-addendum.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/fighter-integration-bom-sh4.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/final-audit.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/import-character-delivery.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/integrate-stage-deliveries.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/prepare-corpus-input.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-characters-native.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-left-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/bom_gray_child_147-right-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_gray_child_147/selection-bom_gray_child_147.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-left-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/bom_raw_shock_148-right-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_raw_shock_148/selection-bom_raw_shock_148.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-left-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-left-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-left-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-right-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-right-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/bom_tremer_133-right-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_tremer_133/selection-bom_tremer_133.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-left-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-movement-released-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/bom_wood_sapling_139-right-movement-static-idle.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/bom_wood_sapling_139/selection-bom_wood_sapling_139.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_blood/book_blood.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_blood/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_blood/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_blood/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_earth/book_earth.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_earth/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_earth/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_earth/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_fire/book_fire.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_fire/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_fire/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_fire/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_water/book_water.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_water/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_water/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/book_water/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/selection-sh4_toadstool_061.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/sh4_toadstool_061-reference-left.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_toadstool_061/sh4_toadstool_061-reference-right.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/process-observation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/process.txt",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/selection-sh4_whitestool_062.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/sh4_whitestool_062-reference-left.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/cases/sh4_whitestool_062/sh4_whitestool_062-reference-right.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/executed/qa-characters-native-e5e7ede8084a.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/executed/qa-stages-native-5e4cee0ced1c.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/parent-visual-review.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-native/report.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-preparation/README.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-preparation/environment-probe.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-preparation/environment-probe.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-preparation/probe-dxf-export.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-preparation/read-source-conditional-formats.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-preparation/source-inspection.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-preparation/verify-workbook-package.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-preparation/workbook-package-check.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-preparation/workbook-package-selfcheck.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa-stages-native.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa/final-audit.log",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa/gates.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa/npm-test.log",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/qa/test-art.log",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/scope-baseline.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stage-import.log",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stage-integration-bom.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/NATIVE_GAMEPLAY_REVIEW.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/README.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/assemble_delivery.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/delivery.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/images/book_blood.blood-arena.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/images/book_blood.near-perimeter-edges.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/images/book_earth.earth-gallery.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/images/book_earth.near-rock-edges.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/images/book_fire.fire-room.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/images/book_fire.near-steel-edges.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/images/book_water.near-tile-edges.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/images/book_water.water-basin.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/native-gameplay-visual-review.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/native-process-summary.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/native-visual-review.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/outputs.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/prompt-blood-correction.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/prompts-bg-first.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/prompts-bg-second.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/prompts-fg-first.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/prompts-fg-second.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/raster-audit.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/reference-inventory.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/downloads-bom.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/downloads-initial.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/sh3_03_moon_door.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/sh3_09_daisy_villa_apartments_01.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/sh3_boss_missionary.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/sh3_boss_split_worm.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20120606_31_blood_boss.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20120606_37_earth_world.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20121016_01.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/sh_book_of_memories_screen_20121016_02.jpg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/references/silent-hill-the-short-message-BIG.jpeg",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/run-native-qa.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/stage-specs.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/validation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/variants/book_blood.initial-disk-draft.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/stages/variants/book_fire.initial-platform-draft.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/update-workbook.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook-edit.log",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook-inspect.log",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/before.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/book-zones-after.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/book-zones-before.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/conditional-format-api-help.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/conditional-format-api-probe.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/conditional-format-preservation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/conditional-format-resolution.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/edit-inspection.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/inspect-inspection.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/package-preservation-initial-export.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/package-preservation.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/prepared-input.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/stages-after-summary.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/stages-before.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/workbook-verification-initial-export.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/workbook/workbook-verification.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23-session-6101/write-import-journal.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6101-original-state/service-worker.js",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6101-original-state/src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6101-original-state/src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/previous-local-file-audit.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/README.md",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/fighters-a/close-part4.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/fighters-a/close-scope.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/fighters-a/fetch-sources.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/fighters-a/finalize-metadata.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/fighters-a/write-review-eight.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/fighters-a/write-review-final.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/fighters-b/review-native.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/recovery-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/central-guide-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/evidence-inventory-provisional.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/finalize_evidence.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/frozen-guide-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/hc-guide-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/homecoming-official-source.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/nowhere-guide-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/nowhere.generator-room-draft.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/other-guide-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/outputs.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompt-central-nightmare-bg.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompt-central-nightmare-fg.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompt-nightmare-hospital-sm-bg.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompt-nightmare-hospital-sm-fg.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompt-nowhere-bg.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompt-nowhere-fg.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompt-villa-bg.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompt-villa-fg.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompts-current.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/prompts.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/reference-crops-origins.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-cedar.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-central.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-hc-official.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-hc-small.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-hc.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-nowhere.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-origins.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-sh3.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-sh4.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-shsm-er-cells.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-shsm-hospital-video.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-shsm-hospital.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-sm-official.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-sm-pgg.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-sm-storyboard.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/references-sm.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/runtime-policy-replacements.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/runtime-policy-snapshot.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/sh3-guide-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/shsm-hospital-guide-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/shsm-puzzle-original-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/shsm-walkthrough-original-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/sm-guide-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/sm-official-screenshots-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/ss-guide-index.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague23/recovered-wave22/stages/stage-specs.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/aggregate-native.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/audit-final.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/capture-baseline.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/import-character-delivery.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/integrate-stage-deliveries.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/prepare-publication.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/qa-characters-native.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/qa-stages-native.mjs",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/read-publication.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/run-native-cases.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/run-validation-gates.py",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/loose-wave23-scripts/scope-baseline.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/rejected/arcade-hospital-unverified-location.png",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6d8d-publication-inventory.json",
+      "passed": true
+    },
+    {
+      "name": "Exact retained recovery bytes: docs/production/vague24-recovery/session-6101-publication-manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Only the two unique B registry entries change from A",
+      "passed": true,
+      "detail": [
+        "bom_gray_child_147",
+        "bom_raw_shock_148"
+      ]
+    },
+    {
+      "name": "All existing profile IDs remain",
+      "passed": true
+    },
+    {
+      "name": "Every A sprite remains byte-identical",
+      "passed": true,
+      "detail": {
+        "files": 416
+      }
+    },
+    {
+      "name": "Historical portrait and clip semantics preserved: bom_gray_child_147",
+      "passed": true
+    },
+    {
+      "name": "Recovered profile is a static, separate candidate: bom_gray_child_147",
+      "passed": true
+    },
+    {
+      "name": "Historical portrait and clip semantics preserved: bom_raw_shock_148",
+      "passed": true
+    },
+    {
+      "name": "Recovered profile is a static, separate candidate: bom_raw_shock_148",
+      "passed": true
+    },
+    {
+      "name": "A source/evidence retained without rewriting: src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "A source/evidence retained without rewriting: docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "passed": true
+    },
+    {
+      "name": "A source/evidence retained without rewriting: docs/production/sprite-wave23-imports-2026-11-19.json",
+      "passed": true
+    },
+    {
+      "name": "A source/evidence retained without rewriting: docs/production/vague23/final-audit.json",
+      "passed": true
+    },
+    {
+      "name": "A source/evidence retained without rewriting: docs/production/vague23/RAPPORT_VAGUE23_PERSONNAGES_STAGES.md",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/chronicles.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/combat-rules.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/content-stats.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/coverage-audit.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/fatalities.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/movesets.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/production-reference-index.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/roster.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/sources.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/stage-director.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: data/stages.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/archive.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/chronicle-art.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/chronicles.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/combat-geometry.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/combat-reference-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/combat-resolution.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/command.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/data.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/lore-cinematics.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/movesets.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/player-input.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/playflow-ui.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/presentation-sequences.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/production-reference.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/reference-ui.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/run-progress.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/save-store.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/shared.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/sprite-clip-editor.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/sprite-clips.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/sprite-framing.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/sprite-inspector.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/sprite-poses.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/sprite-usage.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/sprite-workshop.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-architecture.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-cinematics.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-director.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-hazard-renderer.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-lore-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-lot12-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-lot12-renderer.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/stage-reference-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/touch-controls.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/tournament.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/versus.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: src/weapon-phases.js",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: docs/production/workbook-verification.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: docs/production/franchise-corpus.json",
+      "passed": true
+    },
+    {
+      "name": "Protected roster/gameplay/source unchanged: docs/BIBLE_CORPUS_SILENT_HILL.md",
+      "passed": true
+    },
+    {
+      "name": "Recovery journal has exactly two entries",
+      "passed": true
+    },
+    {
+      "name": "Recovered native PNG and journal agree: bom_raw_shock_148",
+      "passed": true
+    },
+    {
+      "name": "New provenance is self-contained and intact: bom_raw_shock_148",
+      "passed": true
+    },
+    {
+      "name": "Recovered native PNG and journal agree: bom_gray_child_147",
+      "passed": true
+    },
+    {
+      "name": "New provenance is self-contained and intact: bom_gray_child_147",
+      "passed": true
+    },
+    {
+      "name": "Recovered union coverage",
+      "passed": true,
+      "detail": {
+        "schema": 1,
+        "version": "0.9.6",
+        "total": 230,
+        "integrated": 204,
+        "missing": 26,
+        "selectionAvailable": 204,
+        "selectionMissing": 26,
+        "combatSideViewCandidates": 161,
+        "combatLegacyUnreviewed": 32,
+        "combatMissing": 37,
+        "separateSelectionAndCombat": 162,
+        "certified": 0,
+        "animatedClips": 6,
+        "presentationClips": 1,
+        "animatedPresentationClips": 0
+      }
+    },
+    {
+      "name": "Recovered candidates fit current duel cache with every illustrated opponent",
+      "passed": true,
+      "detail": {
+        "checkedPairs": 338
+      }
+    }
+  ],
+  "historicalTestsRerun": false,
+  "newImageGeneration": false,
+  "limits": [
+    "No browser, visual gameplay or full project suite is run by this verifier.",
+    "The original A and B QA reports retain their original dates and scopes.",
+    "Native images remain static candidates with unverified fidelity."
+  ],
+  "passed": true,
+  "recovery": {
+    "sessionBChangedFilesPreserved": 233,
+    "wave22ArchiveFilesPreserved": 57,
+    "looseProductionFilesPreserved": 12,
+    "allMappedFiles": 305,
+    "bytes": 86465727,
+    "nativeBActiveImagesRetained": 14,
+    "uniqueBViewsToActivate": 2,
+    "overlappingBImagesRetainedInactive": 12,
+    "rejectedAImagesRetainedInactive": 1
+  },
+  "coverage": {
+    "schema": 1,
+    "version": "0.9.6",
+    "total": 230,
+    "integrated": 204,
+    "missing": 26,
+    "selectionAvailable": 204,
+    "selectionMissing": 26,
+    "combatSideViewCandidates": 161,
+    "combatLegacyUnreviewed": 32,
+    "combatMissing": 37,
+    "separateSelectionAndCombat": 162,
+    "certified": 0,
+    "animatedClips": 6,
+    "presentationClips": 1,
+    "animatedPresentationClips": 0
+  }
+}

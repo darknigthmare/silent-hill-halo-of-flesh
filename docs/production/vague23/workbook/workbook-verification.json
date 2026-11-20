@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "createdAt": "2026-11-19T20:18:46.417Z",
+  "authoring": "@oai/artifact-tool",
+  "source": {
+    "path": "docs/production/vague23/baseline/SILENT_HILL_CORPUS_BIBLE_before_wave23.xlsx",
+    "sha256": "a7928d7350d35bcd61745b886110b1c007525b41644ff30001e1c981ace49649",
+    "originalPath": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx"
+  },
+  "sourceHashes": {
+    "docs/production/franchise-corpus.json": "9df5b1b7d228b82559a2295b33b2ed47dabe812bc1b29f11a9ec841eaaa1ee86",
+    "src/data.js": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+    "src/production-reference.js": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889",
+    "src/stage-bitmap-manifest.js": "d2dcf8f8b63ff37f15bbdc8f6c50acaf5fbbf53f6359521ec45c240c7248542b",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871"
+  },
+  "preparedInputSHA256": "3fd95d20df4d11068da2f9de71d75e6707c9ad14a7cebb2da7a1c8fa71054d43",
+  "updatedStages": [
+    {
+      "id": "arcade_city",
+      "row": 11,
+      "cells": [
+        "D11",
+        "G11",
+        "J11"
+      ],
+      "previousBitmap": "Absent",
+      "bitmap": "Actif",
+      "paths": [
+        "assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png",
+        "assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png"
+      ],
+      "originalHeight": 36,
+      "rowHeight": 62
+    },
+    {
+      "id": "book_blood",
+      "row": 21,
+      "cells": [
+        "D21",
+        "G21",
+        "J21"
+      ],
+      "previousBitmap": "Absent",
+      "bitmap": "Actif",
+      "paths": [
+        "assets/stages/book_blood.blood-platform-ribbed-door.f3b31605cd4e.png",
+        "assets/stages/book_blood.near-dry-structural-ribs.476ef774e063.png"
+      ],
+      "originalHeight": 36,
+      "rowHeight": 62
+    },
+    {
+      "id": "book_earth",
+      "row": 22,
+      "cells": [
+        "D22",
+        "G22",
+        "J22"
+      ],
+      "previousBitmap": "Absent",
+      "bitmap": "Actif",
+      "paths": [
+        "assets/stages/book_earth.earth-gallery-timber-wall.9388cd040cd5.png",
+        "assets/stages/book_earth.near-earth-timber-edges.e57d980721fc.png"
+      ],
+      "originalHeight": 88,
+      "rowHeight": 114
+    },
+    {
+      "id": "book_fire",
+      "row": 23,
+      "cells": [
+        "D23",
+        "G23",
+        "J23"
+      ],
+      "previousBitmap": "Absent",
+      "bitmap": "Actif",
+      "paths": [
+        "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+        "assets/stages/book_fire.near-iron-edges.9f531b56161d.png"
+      ],
+      "originalHeight": 88,
+      "rowHeight": 114
+    },
+    {
+      "id": "book_water",
+      "row": 26,
+      "cells": [
+        "D26",
+        "G26",
+        "J26"
+      ],
+      "previousBitmap": "Absent",
+      "bitmap": "Actif",
+      "paths": [
+        "assets/stages/book_water.water-rooftop-lattice.3e1e5c015f1f.png",
+        "assets/stages/book_water.near-rooftop-steel-edges.d593738b8364.png"
+      ],
+      "originalHeight": 36,
+      "rowHeight": 62
+    },
+    {
+      "id": "ebisugaoka",
+      "row": 46,
+      "cells": [
+        "D46",
+        "G46",
+        "J46"
+      ],
+      "previousBitmap": "Absent",
+      "bitmap": "Actif",
+      "paths": [
+        "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+        "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png"
+      ],
+      "originalHeight": 36,
+      "rowHeight": 49
+    }
+  ],
+  "counts": {
+    "corpus": 66,
+    "active": 71,
+    "openMissing": 37,
+    "blocked": 15,
+    "stages": 123
+  },
+  "corpusUnchanged": true,
+  "stageOrderUnchanged": true,
+  "formulasPreserved": true,
+  "nativeTablesPreserved": true,
+  "representativeRecalculation": "passed-and-restored",
+  "exportReadback": "passed",
+  "visualReview": "passed",
+  "xlsx": {
+    "path": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+    "bytes": 48152,
+    "sha256": "cf9f9bd2a2c1f06712e0c23523f24f29f7de8ab94d3686320608261475a858dc"
+  },
+  "formulaErrors": 0,
+  "readbackSummary": {
+    "corpus": 66,
+    "active": 71,
+    "openMissing": 37,
+    "blocked": 15,
+    "stages": 123
+  },
+  "renderedViews": [
+    {
+      "sheet": "Stages",
+      "range": "A1:H12",
+      "file": "after-stages-preview.png",
+      "sha256": "ba8e1c06d4817b179b92415fa9b7986061662ba930f880c8d32ff248a8f59e42",
+      "bytes": 109550
+    },
+    {
+      "sheet": "Stages",
+      "range": "A11:J11",
+      "file": "after-stage-row-11.png",
+      "sha256": "9da55512b3537f5f91bc509d7570b0ddaf7a19808f65f005e8bbd75e7f215b79",
+      "bytes": 48329
+    },
+    {
+      "sheet": "Stages",
+      "range": "A21:J21",
+      "file": "after-stage-row-21.png",
+      "sha256": "3be4be22797900f7d84583e3293c4ad6ad5b3bdfe8fcdbe86bcc064605044bdf",
+      "bytes": 42518
+    },
+    {
+      "sheet": "Stages",
+      "range": "A22:J22",
+      "file": "after-stage-row-22.png",
+      "sha256": "08b61b24fe9a4b8fd6287554f9c0d48dc7cdb5af306ab4d0caaa8f5fe752b8a4",
+      "bytes": 79963
+    },
+    {
+      "sheet": "Stages",
+      "range": "A23:J23",
+      "file": "after-stage-row-23.png",
+      "sha256": "e6864bb2d13861b898dcdebe036ffae2bc829ca5f0271fa4e4a002cd8ad769c3",
+      "bytes": 84888
+    },
+    {
+      "sheet": "Stages",
+      "range": "A26:J26",
+      "file": "after-stage-row-26.png",
+      "sha256": "a4273c98c8ff99f5cb9cbc5ce980c79626b9fba6f51a12362ca974048eeb89fe",
+      "bytes": 43083
+    },
+    {
+      "sheet": "Stages",
+      "range": "A46:J46",
+      "file": "after-stage-row-46.png",
+      "sha256": "59f3910ef07b6f79d10273bab7ee43678c6cb440913399dfeaa5f86811cd284a",
+      "bytes": 42539
+    }
+  ],
+  "visualReviewEvidence": "visual-review.json",
+  "structureReview": "passed",
+  "structureReviewEvidence": "structure-review.json",
+  "builderSHA256": "ad0d714e46a60f8ddc0ca065a85bdbe3f02e5fdb1499dccd91afcc5db4fd7f98",
+  "verifierSHA256": "8164688ba2d1db53715cbfe0c7f29cb920a732bf006f78ef5e1625167b25e452",
+  "mainWorkbookUpdated": true,
+  "publishedAt": "2026-11-19T20:22:31.193435+00:00"
+}

@@ -1,0 +1,3188 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-19T17:35:23.242Z",
+  "preparerSHA256": "9ed7724de3912f5753cd55cb9a12ae2b7d49559be8eaef953e6b510119196977",
+  "sourcePaths": [
+    "docs/production/franchise-corpus.json",
+    "src/data.js",
+    "src/production-reference.js",
+    "src/stage-bitmap-manifest.js",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx"
+  ],
+  "sourceHashes": {
+    "docs/production/franchise-corpus.json": "9df5b1b7d228b82559a2295b33b2ed47dabe812bc1b29f11a9ec841eaaa1ee86",
+    "src/data.js": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+    "src/production-reference.js": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889",
+    "src/stage-bitmap-manifest.js": "a3e0ff06e26ff3ebc66bb1c1d86c7a7093c93b927d22ad9bd8ec9897d49ddbe6",
+    "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx": "4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871"
+  },
+  "sourceMeta": {
+    "sh1": {
+      "label": "SILENT HILL",
+      "year": 1999,
+      "short": "SH1",
+      "stage": "midwich"
+    },
+    "sh2": {
+      "label": "SILENT HILL 2",
+      "year": 2001,
+      "short": "SH2",
+      "stage": "woodside"
+    },
+    "sh3": {
+      "label": "SILENT HILL 3",
+      "year": 2003,
+      "short": "SH3",
+      "stage": "shopping_mall"
+    },
+    "sh4": {
+      "label": "SILENT HILL 4: THE ROOM",
+      "year": 2004,
+      "short": "SH4",
+      "stage": "room_302"
+    },
+    "origins": {
+      "label": "SILENT HILL: ORIGINS",
+      "year": 2007,
+      "short": "0RIGINS",
+      "stage": "cedar_grove"
+    },
+    "homecoming": {
+      "label": "SILENT HILL: HOMECOMING",
+      "year": 2008,
+      "short": "HC",
+      "stage": "shepherds_glen"
+    },
+    "shattered": {
+      "label": "SILENT HILL: SHATTERED MEMORIES",
+      "year": 2009,
+      "short": "SM",
+      "stage": "nightmare_school"
+    },
+    "downpour": {
+      "label": "SILENT HILL: DOWNPOUR",
+      "year": 2012,
+      "short": "DP",
+      "stage": "overlook"
+    },
+    "arcade": {
+      "label": "SILENT HILL: THE ARCADE",
+      "year": 2007,
+      "short": "ARCADE",
+      "stage": "arcade_ship"
+    },
+    "bom": {
+      "label": "SILENT HILL: BOOK OF MEMORIES",
+      "year": 2012,
+      "short": "BOM",
+      "stage": "book_zone"
+    },
+    "pt": {
+      "label": "P.T.",
+      "year": 2014,
+      "short": "P.T.",
+      "stage": "looping_hall"
+    },
+    "shortmessage": {
+      "label": "SILENT HILL: THE SHORT MESSAGE",
+      "year": 2024,
+      "short": "TSM",
+      "stage": "villa"
+    },
+    "shf": {
+      "label": "SILENT HILL f",
+      "year": 2025,
+      "short": "SH f",
+      "stage": "ebisugaoka"
+    },
+    "film": {
+      "label": "SILENT HILL — FILM UNIVERSE",
+      "year": 2006,
+      "short": "FILMS",
+      "stage": "film_midwich"
+    },
+    "ascension": {
+      "label": "SILENT HILL: ASCENSION",
+      "year": 2023,
+      "short": "ASC",
+      "stage": "hope_junction"
+    },
+    "townfall": {
+      "label": "SILENT HILL: TOWNFALL",
+      "year": 2026,
+      "short": "TOWNFALL",
+      "stage": "st_amelia_marina"
+    }
+  },
+  "fighterIds": [
+    "sh1_air_screamer_001",
+    "sh1_night_flutter_002",
+    "sh1_groaner_003",
+    "sh1_wormhead_004",
+    "sh1_grey_child_005",
+    "sh1_mumbler_006",
+    "sh1_larval_stalker_007",
+    "sh1_stalker_008",
+    "sh1_creeper_009",
+    "sh1_romper_010",
+    "sh1_hanged_scratcher_011",
+    "sh1_puppet_nurse_012",
+    "sh1_puppet_doctor_013",
+    "sh1_split_head_014",
+    "sh1_twinfeeler_015",
+    "sh1_floatstinger_016",
+    "sh1_monster_cybil_017",
+    "sh1_incubator_018",
+    "sh1_incubus_019",
+    "sh1_bloodsucker",
+    "sh2_lying_figure_020",
+    "sh2_lying_figure_crawling_021",
+    "sh2_mannequin_022",
+    "sh2_mannequin_ambusher_023",
+    "sh2_bubble_head_nurse_024",
+    "sh2_creeper_025",
+    "sh2_mandarin_026",
+    "sh2_flesh_lip_027",
+    "sh2_abstract_daddy_028",
+    "sh2_red_pyramid_thing_great_knife_029",
+    "sh2_red_pyramid_thing_spear_030",
+    "sh2_twin_pyramid_heads_031",
+    "sh2_eddie_dombrowski_032",
+    "sh2_maria_final_manifestation_033",
+    "sh2_mary_final_manifestation_034",
+    "sh2_prisoner_035",
+    "sh2_spider_mannequin",
+    "sh2_mandarin_floor_form",
+    "sh3_closer_036",
+    "sh3_closer_church_variant",
+    "sh3_numb_body_small_037",
+    "sh3_numb_body_medium",
+    "sh3_numb_body_large_038",
+    "sh3_pendulum_039",
+    "sh3_double_head_040",
+    "sh3_insane_cancer_041",
+    "sh3_slurper_042",
+    "sh3_nurse_pipe_043",
+    "sh3_nurse_revolver_044",
+    "sh3_scraper_045",
+    "sh3_split_worm_046",
+    "sh3_missionary_047",
+    "sh3_leonard_wolf_048",
+    "sh3_memory_of_alessa_049",
+    "sh3_god_050",
+    "sh3_valtiel_051",
+    "sh3_sewer_creature_052",
+    "sh3_glutton",
+    "sh4_sniffer_dog_male_053",
+    "sh4_sniffer_dog_female_054",
+    "sh4_hummer_055",
+    "sh4_wall_man_056",
+    "sh4_gum_head_old_type_057",
+    "sh4_gum_head_new_type_058",
+    "sh4_twin_victim_059",
+    "sh4_patient_060",
+    "sh4_toadstool_061",
+    "sh4_whitestool_062",
+    "sh4_tremer_blue_063",
+    "sh4_tremer_red_064",
+    "sh4_bottom_065",
+    "sh4_ghost_victim_066",
+    "sh4_jimmy_stone_victim_1",
+    "sh4_steve_garland_victim_4",
+    "sh4_eric_walsh_victim_10",
+    "sh4_peter_walls_victim_12",
+    "sh4_sharon_blake_victim_13",
+    "sh4_toby_archbolt_victim_14",
+    "sh4_joseph_schreiber_victim_15",
+    "sh4_cynthia_velasquez_victim_16",
+    "sh4_jasper_gein_victim_17",
+    "sh4_andrew_desalvo_victim_18",
+    "sh4_richard_braintree_victim_19",
+    "sh4_man_with_the_coat_067",
+    "sh4_wheelchair_068",
+    "sh4_greedy_worm_069",
+    "sh4_one_truth_070",
+    "sh4_sacrificed_walter_071",
+    "sh4_walter_sullivan_072",
+    "sh4_eileen_head_073",
+    "origins_straight_jacket_074",
+    "origins_faceless_nurse",
+    "origins_carrion_076",
+    "origins_remnant_077",
+    "origins_ariel_078",
+    "origins_caliban_079",
+    "origins_two_back_080",
+    "origins_the_butcher_081",
+    "origins_memory_of_helen_grady_082",
+    "origins_memory_of_richard_grady_083",
+    "origins_demon_084",
+    "homecoming_lurker_085",
+    "homecoming_feral_086",
+    "homecoming_smog_087",
+    "homecoming_needler_088",
+    "homecoming_schism_089",
+    "homecoming_siam_090",
+    "homecoming_order_soldier_091",
+    "homecoming_nurse",
+    "homecoming_swarm",
+    "homecoming_curtis_ackers",
+    "homecoming_bogeyman_092",
+    "homecoming_sepulcher_093",
+    "homecoming_scarlet_doll_form_094",
+    "homecoming_scarlet_spider_form_095",
+    "homecoming_asphyxia_096",
+    "homecoming_amnion_hanging_form_097",
+    "homecoming_amnion_exposed_form_098",
+    "shattered_raw_shock_base_099",
+    "shattered_raw_shock_feminine_100",
+    "shattered_raw_shock_diseased_101",
+    "shattered_raw_shock_abstract_102",
+    "shattered_raw_shock_atrophied_103",
+    "downpour_screamer_104",
+    "downpour_weeping_bat_105",
+    "downpour_doll_106",
+    "downpour_shadow_107",
+    "downpour_prisoner_minion_brawler_108",
+    "downpour_prisoner_minion_agile_109",
+    "downpour_prisoner_juggernaut_110",
+    "downpour_tormented_soul_111",
+    "downpour_wall_corpse_112",
+    "downpour_void_113",
+    "downpour_monocle_man_114",
+    "downpour_bogeyman_115",
+    "downpour_wheelman_116",
+    "downpour_anne_cunningham",
+    "arcade_mama_117",
+    "arcade_phantom_118",
+    "arcade_greedy_worm_arcade_119",
+    "arcade_split_worm_arcade",
+    "arcade_tremer_arcade",
+    "arcade_double_head_arcade",
+    "arcade_insane_cancer_arcade",
+    "arcade_hummer_arcade",
+    "arcade_numb_body_arcade",
+    "arcade_nurse_arcade",
+    "arcade_gum_head_arcade",
+    "arcade_red_pyramid_thing_arcade",
+    "arcade_creeper_arcade",
+    "arcade_scraper_arcade",
+    "arcade_toadstool_arcade",
+    "arcade_tuberculosis",
+    "arcade_robbie_the_rabbit_axe",
+    "arcade_robbie_the_rabbit_chainsaw",
+    "arcade_robbie_the_rabbit_shotgun",
+    "bom_air_screamer_121",
+    "bom_bogeyman_122",
+    "bom_butcher_123",
+    "bom_double_head_124",
+    "bom_ghost_125",
+    "bom_insane_cancer_126",
+    "bom_needler_127",
+    "bom_nurse_128",
+    "bom_pyramid_head_129",
+    "bom_schism_130",
+    "bom_straight_jacket_131",
+    "bom_swarm_132",
+    "bom_tremer_133",
+    "bom_flesh_lips_134",
+    "bom_mother_135",
+    "bom_valtiel_136",
+    "bom_fire_guardian_137",
+    "bom_wood_guardian_138",
+    "bom_wood_sapling_139",
+    "bom_light_guardian_140",
+    "bom_water_guardian_141",
+    "bom_earth_guardian_142",
+    "bom_blood_guardian_143",
+    "bom_blood_baby_144",
+    "bom_blood_mama_145",
+    "bom_steel_guardian_146",
+    "bom_gray_child_147",
+    "bom_raw_shock_148",
+    "pt_lisa_149",
+    "shortmessage_sakura_head_150",
+    "shf_kashimashi_151",
+    "shf_ayakakashi_152",
+    "shf_ara_abare_153",
+    "shf_irohihi_154",
+    "shf_corruptor_155",
+    "shf_hatcher_156",
+    "shf_kamugara_157",
+    "shf_harai_katashiro_158",
+    "shf_oi_omoi_159",
+    "shf_dark_hatcher_160",
+    "shf_drum_monster_161",
+    "shf_sakuko_like_entity_162",
+    "shf_rinko_like_entity_163",
+    "shf_hinako_s_father_164",
+    "shf_hinako_s_mother_165",
+    "shf_shiromuku_166",
+    "shf_tsukumogami_167",
+    "shf_shichibi_168",
+    "shf_kyubi_169",
+    "film_armless_man_170",
+    "film_dark_nurse_171",
+    "film_grey_child_film_172",
+    "film_creeper_swarm_film_173",
+    "film_colin_the_janitor_174",
+    "film_red_pyramid_film_175",
+    "film_mannequin_monster_176",
+    "film_missionary_revelation_177",
+    "film_lying_figure_return_to_silent_hill",
+    "film_bubble_head_nurse_return_to_silent_hill",
+    "film_creeper_return_to_silent_hill",
+    "film_red_pyramid_thing_return_to_silent_hill",
+    "film_fused_mattress_manifestation_return",
+    "ascension_wanderer_178",
+    "ascension_fighter_179",
+    "ascension_snarler_180",
+    "ascension_stinger_181",
+    "ascension_the_immolator_182",
+    "ascension_the_collector_183",
+    "ascension_stilledalen_stinger_184",
+    "townfall_lunger",
+    "townfall_sorrowful",
+    "townfall_fallen",
+    "townfall_widow",
+    "townfall_the_weight"
+  ],
+  "stageIds": [
+    "midwich",
+    "alchemilla",
+    "old_silent_hill",
+    "nowhere",
+    "lakeside_amusement",
+    "woodside",
+    "blue_creek",
+    "brookhaven_sh2",
+    "toluca_prison",
+    "labyrinth",
+    "hotel_otherworld",
+    "shopping_mall",
+    "brookhaven_sh3",
+    "church",
+    "apartment_roof",
+    "sewers",
+    "room_302",
+    "subway_world",
+    "water_prison",
+    "apartment_world",
+    "hospital_world",
+    "cedar_grove",
+    "riverside_motel",
+    "shepherds_glen",
+    "grand_hotel",
+    "nightmare_school",
+    "overlook",
+    "arcade_ship",
+    "book_zone",
+    "looping_hall",
+    "villa",
+    "ebisugaoka",
+    "dark_shrine",
+    "school_shf",
+    "hinako_home",
+    "festival_square",
+    "book_fire",
+    "book_wood",
+    "book_light",
+    "book_water",
+    "book_earth",
+    "book_blood",
+    "book_steel",
+    "antique_shop",
+    "church_hc",
+    "underground_hc",
+    "film_midwich",
+    "film_hospital",
+    "film_church",
+    "film_sanctuary",
+    "hope_junction",
+    "stilledalen",
+    "ascension_otherworld",
+    "hospital_nightmare",
+    "midwich_nightmare",
+    "central_nightmare",
+    "sewer_resort",
+    "south_vale",
+    "brookhaven_roof",
+    "historical_society",
+    "prison_meat_locker",
+    "lakeview",
+    "baldwin_mansion",
+    "nightmare_mall",
+    "hazel_subway",
+    "underpass_sh3",
+    "hilltop_center",
+    "nightmare_hilltop",
+    "nightmare_hospital_sh3",
+    "lakeside_sh3",
+    "forest_world",
+    "building_world",
+    "outside_room_302",
+    "wish_house",
+    "final_sacrament",
+    "alchemilla_origins",
+    "artaud_theater",
+    "nightmare_theater",
+    "nightmare_hospital_hc",
+    "police_station_hc",
+    "town_hall_hc",
+    "prison_hc",
+    "shepherd_house_hc",
+    "scarlet_chamber",
+    "curtis_shop",
+    "frozen_streets",
+    "nightmare_hospital_sm",
+    "nightmare_mall_sm",
+    "lighthouse_sm",
+    "devils_pit",
+    "centennial_building",
+    "st_marias",
+    "downpour_streets",
+    "otherworld_void",
+    "anne_fight",
+    "arcade_city",
+    "arcade_hospital",
+    "arcade_hospital_roof",
+    "arcade_historical",
+    "arcade_prison",
+    "arcade_graveyard",
+    "arcade_toluca_lake",
+    "arcade_1918",
+    "arcade_1993",
+    "arcade_mall",
+    "arcade_amusement",
+    "villa_rooftop",
+    "villa_stairwell",
+    "dark_shrine_corridors",
+    "shimizu_residence",
+    "dark_shrine_main",
+    "corrupted_ebisugaoka",
+    "return_streets",
+    "return_brookhaven",
+    "return_lakeview",
+    "return_portrait_room",
+    "st_amelia_marina",
+    "st_amelia_residential",
+    "townfall_medical",
+    "ceg_tower",
+    "clara_woods",
+    "clara_woods_different",
+    "alternate_facility"
+  ],
+  "stageRows": [
+    {
+      "id": "arcade_1918",
+      "name": "THE ARCADE — 1918",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "1918/1993 est une séquence associée au Phantom, pas deux lieux géographiques.",
+      "sort": 0
+    },
+    {
+      "id": "arcade_1993",
+      "name": "THE ARCADE — 1993 PHANTOM FRONT",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Même séquence finale1918/1993; Phantom Front est une désignation éditoriale.",
+      "sort": 0
+    },
+    {
+      "id": "arcade_city",
+      "name": "THE ARCADE — CITY / JACK’S INN",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT13",
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://silenthill.fandom.com/wiki/Silent_Hill%3A_The_Arcade",
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Stage1-1 City; Jack’s Inn documenté comme départ par entrée de parcours.",
+      "sort": 0
+    },
+    {
+      "id": "arcade_historical",
+      "name": "THE ARCADE — HISTORICAL SOCIETY",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Stage2-1 Historical Society.",
+      "sort": 0
+    },
+    {
+      "id": "arcade_hospital",
+      "name": "THE ARCADE — BROOKHAVEN HOSPITAL",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Stage1-2 Brookhaven; premier combat Pyramid Head.",
+      "sort": 0
+    },
+    {
+      "id": "arcade_hospital_roof",
+      "name": "THE ARCADE — HOSPITAL ROOF",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT15",
+        "EXT18"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm",
+        "https://silenthill.fandom.com/wiki/Tuberculosis"
+      ],
+      "paths": [],
+      "note": "Stage1-3 Brookhaven2/toit de Tuberculosis.",
+      "sort": 0
+    },
+    {
+      "id": "arcade_prison",
+      "name": "THE ARCADE — TOLUCA PRISON",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Stage2-2 Toluca Prison; rencontre Split Worm.",
+      "sort": 0
+    },
+    {
+      "id": "arcade_ship",
+      "name": "LITTLE BARONESS",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT13",
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://silenthill.fandom.com/wiki/Silent_Hill%3A_The_Arcade",
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Little Baroness; conserver l’époque et le point de vue du bateau choisi.",
+      "sort": 0
+    },
+    {
+      "id": "arcade_toluca_lake",
+      "name": "THE ARCADE — TOLUCA LAKE",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Stage3-1 Toluca Lake.",
+      "sort": 0
+    },
+    {
+      "id": "ascension_otherworld",
+      "name": "ASCENSION — OPEN GATE",
+      "source": "ascension",
+      "sourceLabel": "SILENT HILL: ASCENSION",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT58",
+        "EXT60"
+      ],
+      "sourceUrls": [
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters",
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/the-story-so-far-recap"
+      ],
+      "paths": [],
+      "note": "Seuil collecté/ouvert par le Collector; OPEN GATE est un titre d’arène du projet.",
+      "sort": 0
+    },
+    {
+      "id": "hope_junction",
+      "name": "HOPE’S JUNCTION",
+      "source": "ascension",
+      "sourceLabel": "SILENT HILL: ASCENSION",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "versus-transition",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT57",
+        "EXT60"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/topics/17178/",
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/the-story-so-far-recap"
+      ],
+      "paths": [],
+      "note": "Hope’s Junction en Pennsylvanie; choisir quartier et branche canonique.",
+      "sort": 0
+    },
+    {
+      "id": "stilledalen",
+      "name": "STILLEDALEN WOODS",
+      "source": "ascension",
+      "sourceLabel": "SILENT HILL: ASCENSION",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "versus-transition",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT57",
+        "EXT60"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/topics/17178/",
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/the-story-so-far-recap"
+      ],
+      "paths": [],
+      "note": "Stilledalen en Norvège; forêt, ferme et village ne sont pas interchangeables.",
+      "sort": 0
+    },
+    {
+      "id": "book_light",
+      "name": "LIGHT ZONE",
+      "source": "bom",
+      "sourceLabel": "SILENT HILL: BOOK OF MEMORIES",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT21"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Zone Light attestée dans Book of Memories; salle procédurale précise à choisir.",
+      "sort": 0
+    },
+    {
+      "id": "book_steel",
+      "name": "STEEL ZONE",
+      "source": "bom",
+      "sourceLabel": "SILENT HILL: BOOK OF MEMORIES",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT21"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Zone Steel attestée dans Book of Memories; salle procédurale précise à choisir.",
+      "sort": 0
+    },
+    {
+      "id": "downpour_streets",
+      "name": "SILENT HILL — DOWNPOUR STREETS",
+      "source": "downpour",
+      "sourceLabel": "SILENT HILL: DOWNPOUR",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "PEARL CREEK SOUS LA PLUIE",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT11"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh8/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Rues Downpour; la pluie constitue une condition de scène, pas un pouvoir de tous les monstres.",
+      "sort": 0
+    },
+    {
+      "id": "otherworld_void",
+      "name": "DOWNPOUR — VOID CHASE",
+      "source": "downpour",
+      "sourceLabel": "SILENT HILL: DOWNPOUR",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT10"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh8/monsters_en.htm"
+      ],
+      "paths": [],
+      "note": "Poursuites du Void; une arène versus fixe serait une adaptation.",
+      "sort": 0
+    },
+    {
+      "id": "film_church",
+      "name": "CHURCH OF THE ORDER",
+      "source": "film",
+      "sourceLabel": "SILENT HILL — FILM UNIVERSE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "NEF AVANT L’INTRUSION",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT49"
+      ],
+      "sourceUrls": [
+        "https://www.imdb.com/title/tt0384537/plotsummary/"
+      ],
+      "paths": [],
+      "note": "Eglise du film2006 et communauté Christabella; distinguer sa secte des versions jeux.",
+      "sort": 0
+    },
+    {
+      "id": "film_midwich",
+      "name": "MIDWICH — FILM OTHERWORLD",
+      "source": "film",
+      "sourceLabel": "SILENT HILL — FILM UNIVERSE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT49"
+      ],
+      "sourceUrls": [
+        "https://www.imdb.com/title/tt0384537/plotsummary/"
+      ],
+      "paths": [],
+      "note": "Ecole Midwich du film2006; sanitaires Colin et couloir Pyramid distincts.",
+      "sort": 0
+    },
+    {
+      "id": "film_sanctuary",
+      "name": "SANCTUARY — REVELATION",
+      "source": "film",
+      "sourceLabel": "SILENT HILL — FILM UNIVERSE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT50",
+        "EXT51"
+      ],
+      "sourceUrls": [
+        "https://metrofilms.com/media/SILENT%2BHILL%2BREVELATION%2B_DP.2f567193-6530-47a3-8d88-0812d7e85589.pdf",
+        "https://cinemovie.tv/index.php/behind-the-scenes/silent-hill-revelation-3d-movie-production-notes"
+      ],
+      "paths": [],
+      "note": "Sanctuaire du duel final de Revelation2012; séparer église2006.",
+      "sort": 0
+    },
+    {
+      "id": "return_brookhaven",
+      "name": "RETURN TO SILENT HILL — BROOKHAVEN",
+      "source": "film",
+      "sourceLabel": "SILENT HILL — FILM UNIVERSE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT55",
+        "EXT56"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Return_to_Silent_Hill",
+        "https://podscripts.co/podcasts/the-flop-house/return-to-silent-hill-with-steven-kostanski?show_ads=true"
+      ],
+      "paths": [],
+      "note": "Hôpital film2026; plans de nurses et lit plafond à relever séparément.",
+      "sort": 0
+    },
+    {
+      "id": "return_streets",
+      "name": "RETURN TO SILENT HILL — STREETS",
+      "source": "film",
+      "sourceLabel": "SILENT HILL — FILM UNIVERSE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT55"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Return_to_Silent_Hill"
+      ],
+      "paths": [],
+      "note": "Rues Return to Silent Hill2026; pas copie automatique2006.",
+      "sort": 0
+    },
+    {
+      "id": "police_station_hc",
+      "name": "SHEPHERD’S GLEN POLICE STATION",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "CELLULE AVANT LIBÉRATION",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT06"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Commissariat de Shepherd’s Glen.",
+      "sort": 0
+    },
+    {
+      "id": "prison_hc",
+      "name": "OVERLOOK PENITENTIARY",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "CELL BLOCK B NORMAL",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT04",
+        "EXT06"
+      ],
+      "sourceUrls": [
+        "https://silenthillheaven.com/shh/shh_enemies/",
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Nom à corriger : Overlook Penitentiary; même établissement nommé dans le guide Homecoming.",
+      "sort": 0
+    },
+    {
+      "id": "scarlet_chamber",
+      "name": "SCARLET’S CHAMBER",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT05",
+        "EXT06"
+      ],
+      "sourceUrls": [
+        "https://silenthillheaven.com/shh/shh_bosses/",
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Arène de Scarlet en Hell Descent; Scarlet’s Chamber est un nom éditorial.",
+      "sort": 0
+    },
+    {
+      "id": "antique_shop",
+      "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+      "source": "origins",
+      "sourceLabel": "SILENT HILL: ORIGINS",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "green-lion-inner-passage",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT02",
+        "EXT_ORIGINS_THEATER_GUIDE_20261026",
+        "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
+      ],
+      "sourceUrls": [
+        "https://silenthillheaven.com/sh0/sh0_bosses/",
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh0/walkthrough/sh0_15.jpg"
+      ],
+      "paths": [],
+      "note": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire.",
+      "sort": 0
+    },
+    {
+      "id": "cedar_grove",
+      "name": "CEDAR GROVE — FEMALE TREATMENT",
+      "source": "origins",
+      "sourceLabel": "SILENT HILL: ORIGINS",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "female-treatment-mirror",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT03",
+        "EXT02",
+        "EXT_ORIGINS_THEATER_GUIDE_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh0/maps_en.htm",
+        "https://silenthillheaven.com/sh0/sh0_bosses/",
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée.",
+      "sort": 0
+    },
+    {
+      "id": "nightmare_theater",
+      "name": "ARTAUD THEATER — NIGHTMARE",
+      "source": "origins",
+      "sourceLabel": "SILENT HILL: ORIGINS",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT03",
+        "EXT02"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh0/maps_en.htm",
+        "https://silenthillheaven.com/sh0/sh0_bosses/"
+      ],
+      "paths": [],
+      "note": "Variation Otherworld d’Artaud; même théâtre, géométrie d’arène à reconstruire.",
+      "sort": 0
+    },
+    {
+      "id": "apartment_roof",
+      "name": "DAISY VILLA ROOFTOP",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "CL_SH3_09_DAISY_VILLA_APARTMENTS"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_09_daisy_villa_apartments_en.htm"
+      ],
+      "paths": [],
+      "note": "Toit Daisy Villa du combat Missionary de SH3.",
+      "sort": 0
+    },
+    {
+      "id": "nightmare_mall",
+      "name": "CENTRAL SQUARE — NIGHTMARE MALL",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "CL_SH3_03_NIGHTMARE_MALL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_03_nightmare_mall_en.htm"
+      ],
+      "paths": [],
+      "note": "Centre commercial Otherworld de SH3, comprenant l’arène souterraine de Split Worm.",
+      "sort": 0
+    },
+    {
+      "id": "final_sacrament",
+      "name": "21 SACRAMENTS — FINAL CHAMBER",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "CL_SH4_13_OUTSIDE_ROOM_302"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_13_outside_room_302_en.htm"
+      ],
+      "paths": [],
+      "note": "Chambre finale SH4 : Walter mobile, Conjurer fixé et Eileen soumis au rituel.",
+      "sort": 0
+    },
+    {
+      "id": "frozen_streets",
+      "name": "SILENT HILL — FROZEN STREETS",
+      "source": "shattered",
+      "sourceLabel": "SILENT HILL: SHATTERED MEMORIES",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT09"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Rues dans les séquences gelées SM; cadre d’itinéraire à choisir.",
+      "sort": 0
+    },
+    {
+      "id": "nightmare_mall_sm",
+      "name": "TOLUCA MALL GELÉ — HALL GUMBALL",
+      "source": "shattered",
+      "sourceLabel": "SILENT HILL: SHATTERED MEMORIES",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "HALL GUMBALL · AVANT DÉGEL",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT09",
+        "EXT10_SM_MALL_GUIDE_20261026",
+        "EXT10_SM_MALL_GUMBALL_HALL_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_10_nightmare_5_toluca_mall_en.htm",
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_6a.jpg"
+      ],
+      "paths": [],
+      "note": "Toluca Mall, Nightmare5 : hall du Gumball Shake Up après Garage Access South, avant la résolution du puzzle. La capture 6a montre le hall glacé et l’enseigne de la machine ; le guide distingue cette pièce de la statue de Tookie rencontrée auparavant. Le versus retient le bâti et un panneau abstrait givré ; ni machine interactive, personnages gelés, couleurs du puzzle, Tookie ou portes libérées ne sont produits. Aucun rythme de givre n’est mesuré.",
+      "sort": 0
+    },
+    {
+      "id": "nightmare_school",
+      "name": "MIDWICH GELÉ — COUR PAPARAZZI",
+      "source": "shattered",
+      "sourceLabel": "SILENT HILL: SHATTERED MEMORIES",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "COUR GELÉE · PUZZLE PAPARAZZI",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT09",
+        "EXT10_SM_SCHOOL_GUIDE_20261026",
+        "EXT10_SM_SCHOOL_WINDOW_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_06_nightmare_3_school_en.htm",
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_3b.jpg"
+      ],
+      "paths": [],
+      "note": "Midwich High School, Nightmare3 : cour du premier point de photographie Paparazzi. Le guide situe une grande fenêtre éclairée en rouge ; la petite capture 3b montre surtout le téléphone cadrant cette fenêtre et ne relève pas toute la cour. Le versus retient le bâti et une ambiance glacée locale ; il ne rejoue ni couple, quête photo, poursuite ou ouverture finale. Aucun mouvement de givre original ni géométrie complète ne sont mesurés.",
+      "sort": 0
+    },
+    {
+      "id": "ebisugaoka",
+      "name": "EBISUGAOKA — MAIN STREET",
+      "source": "shf",
+      "sourceLabel": "SILENT HILL f",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "versus-transition",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT32"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/products/silenthill_f/"
+      ],
+      "paths": [],
+      "note": "Ebisugaoka; Japon années1960, rue exacte à fixer.",
+      "sort": 0
+    },
+    {
+      "id": "shimizu_residence",
+      "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+      "source": "shf",
+      "sourceLabel": "SILENT HILL f",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "RESIDENCE I · SALLE À MANGER",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT34",
+        "EXT41",
+        "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+        "EXT10_SHF_RESIDENCE_DINING_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/shf/bosses_en.htm",
+        "https://automaton-media.com/en/tips/silent-hill-f-how-to-defeat-the-mother-and-father-bosses/",
+        "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/11_yellowed_calendar_a.jpg"
+      ],
+      "paths": [],
+      "note": "Shimizu ResidenceI : salle à manger du Yellowed Calendar, avec tatamis, table basse ronde, coussins et vaisselle. Cette pièce se distingue du corridor retenu pour hinako_home, sans créer une autre adresse. Elle n’est pas fusionnée avec la rencontre des parents, une variante ultérieure ou une scène de repas animée ; caméra et géométrie ne sont pas mesurées.",
+      "sort": 0
+    },
+    {
+      "id": "villa_rooftop",
+      "name": "KETTENSTADT VILLA — ROOFTOP",
+      "source": "shortmessage",
+      "sourceLabel": "SILENT HILL: THE SHORT MESSAGE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT30"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_the_short_message/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Toit de la Villa; préserver rôle narratif, finisher mortel environnemental non automatique.",
+      "sort": 0
+    },
+    {
+      "id": "villa_stairwell",
+      "name": "KETTENSTADT VILLA — STAIRWELL",
+      "source": "shortmessage",
+      "sourceLabel": "SILENT HILL: THE SHORT MESSAGE",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT30"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_the_short_message/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Escaliers de la Villa, sous-lieu du complexe.",
+      "sort": 0
+    },
+    {
+      "id": "alternate_facility",
+      "name": "ST. AMELIA — ALTERNATE FACILITY",
+      "source": "townfall",
+      "sourceLabel": "SILENT HILL: TOWNFALL",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT64"
+      ],
+      "sourceUrls": [
+        "https://www.pcgamer.com/games/horror/silent-hill-townfall-open-the-auxiliary-lines/"
+      ],
+      "paths": [],
+      "note": "Centre de commande/auxiliary room documenté; nom Alternate Facility est éditorial à rapprocher du plan exact.",
+      "sort": 0
+    },
+    {
+      "id": "st_amelia_residential",
+      "name": "ST. AMELIA — RESIDENTIAL DISTRICT",
+      "source": "townfall",
+      "sourceLabel": "SILENT HILL: TOWNFALL",
+      "bitmap": "Absent",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Documenter le sous-lieu et sa phase, puis produire les plans manquants.",
+      "referenceIds": [
+        "EXT61",
+        "EXT63"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/products/shtf/",
+        "https://www.theguardian.com/games/2026/sep/21/silent-hill-townfall-review-screen-burn"
+      ],
+      "paths": [],
+      "note": "Quartiers résidentiels de St Amelia; rue et enseignes à repérer.",
+      "sort": 0
+    },
+    {
+      "id": "arcade_amusement",
+      "name": "THE ARCADE — AMUSEMENT PARK",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Parc d’attractions non retrouvé dans le parcours consulté; Robbie ne prouve pas un parc jouable.",
+      "referenceIds": [
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Parc d’attractions non retrouvé dans le parcours consulté; Robbie ne prouve pas un parc jouable.",
+      "sort": 1
+    },
+    {
+      "id": "arcade_graveyard",
+      "name": "THE ARCADE — UNDERGROUND GRAVEYARD",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Le guide nomme Stage2-3 Under Ground Basement; terme Underground Graveyard du projet à corroborer.",
+      "referenceIds": [
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Le guide nomme Stage2-3 Under Ground Basement; terme Underground Graveyard du projet à corroborer.",
+      "sort": 1
+    },
+    {
+      "id": "arcade_mall",
+      "name": "THE ARCADE — SHOPPING MALL",
+      "source": "arcade",
+      "sourceLabel": "SILENT HILL: THE ARCADE",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Centre commercial non retrouvé dans le parcours consulté; ne pas qualifier d’arène canonique Arcade.",
+      "referenceIds": [
+        "EXT15"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ],
+      "paths": [],
+      "note": "Centre commercial non retrouvé dans le parcours consulté; ne pas qualifier d’arène canonique Arcade.",
+      "sort": 1
+    },
+    {
+      "id": "book_zone",
+      "name": "BOOK OF MEMORIES — NEXUS",
+      "source": "bom",
+      "sourceLabel": "SILENT HILL: BOOK OF MEMORIES",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Nexus est appellation de hub du projet; sept zones sont attestées, Nexus comme lieu canon reste à prouver.",
+      "referenceIds": [
+        "EXT21"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Nexus est appellation de hub du projet; sept zones sont attestées, Nexus comme lieu canon reste à prouver.",
+      "sort": 1
+    },
+    {
+      "id": "anne_fight",
+      "name": "FULL CIRCLE — ANNE’S CONFRONTATION",
+      "source": "downpour",
+      "sourceLabel": "SILENT HILL: DOWNPOUR",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Confrontation finale Anne/Murphy; point de vue et issue dépendent du scénario.",
+      "referenceIds": [
+        "EXT11"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh8/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Confrontation finale Anne/Murphy; point de vue et issue dépendent du scénario.",
+      "sort": 1
+    },
+    {
+      "id": "return_lakeview",
+      "name": "RETURN TO SILENT HILL — BURNING LAKEVIEW",
+      "source": "film",
+      "sourceLabel": "SILENT HILL — FILM UNIVERSE",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Lakeview du film2026 : variation brûlée et scène à vérifier précisément.",
+      "referenceIds": [
+        "EXT55"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Return_to_Silent_Hill"
+      ],
+      "paths": [],
+      "note": "Lakeview du film2026 : variation brûlée et scène à vérifier précisément.",
+      "sort": 1
+    },
+    {
+      "id": "return_portrait_room",
+      "name": "RETURN TO SILENT HILL — PORTRAIT ROOM",
+      "source": "film",
+      "sourceLabel": "SILENT HILL — FILM UNIVERSE",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Portrait Room est nom éditorial; localisation et rapport à l’entité lit à confirmer.",
+      "referenceIds": [
+        "EXT55",
+        "EXT56"
+      ],
+      "sourceUrls": [
+        "https://en.wikipedia.org/wiki/Return_to_Silent_Hill",
+        "https://podscripts.co/podcasts/the-flop-house/return-to-silent-hill-with-steven-kostanski?show_ads=true"
+      ],
+      "paths": [],
+      "note": "Portrait Room est nom éditorial; localisation et rapport à l’entité lit à confirmer.",
+      "sort": 1
+    },
+    {
+      "id": "wish_house",
+      "name": "WISH HOUSE",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Wish House existe avant puis après l’incendie ; l’état du stage doit être choisi explicitement.",
+      "referenceIds": [
+        "CL_SH4_03_FOREST_WORLD",
+        "CL_SH4_09_FOREST_WORLD_2ND_TIME"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_03_forest_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough_09_forest_world_2nd_time_en.htm"
+      ],
+      "paths": [],
+      "note": "Wish House existe avant puis après l’incendie ; l’état du stage doit être choisi explicitement.",
+      "sort": 1
+    },
+    {
+      "id": "lighthouse_sm",
+      "name": "LIGHTHOUSE / THERAPY REVELATION",
+      "source": "shattered",
+      "sourceLabel": "SILENT HILL: SHATTERED MEMORIES",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Phare et révélation thérapeutique sont des lieux/plans différents; l’intitulé actuel les fusionne.",
+      "referenceIds": [
+        "EXT09"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_en.htm"
+      ],
+      "paths": [],
+      "note": "Phare et révélation thérapeutique sont des lieux/plans différents; l’intitulé actuel les fusionne.",
+      "sort": 1
+    },
+    {
+      "id": "festival_square",
+      "name": "FESTIVAL SQUARE",
+      "source": "shf",
+      "sourceLabel": "SILENT HILL f",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Place de festival : nom éditorial non confirmé par référence consultée.",
+      "referenceIds": [
+        "EXT32"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/products/silenthill_f/"
+      ],
+      "paths": [],
+      "note": "Place de festival : nom éditorial non confirmé par référence consultée.",
+      "sort": 1
+    },
+    {
+      "id": "ceg_tower",
+      "name": "CEG TOWER",
+      "source": "townfall",
+      "sourceLabel": "SILENT HILL: TOWNFALL",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Tour de bureaux documentée par critique; nom CEG et étage exact à relever.",
+      "referenceIds": [
+        "EXT63"
+      ],
+      "sourceUrls": [
+        "https://www.theguardian.com/games/2026/sep/21/silent-hill-townfall-review-screen-burn"
+      ],
+      "paths": [],
+      "note": "Tour de bureaux documentée par critique; nom CEG et étage exact à relever.",
+      "sort": 1
+    },
+    {
+      "id": "clara_woods",
+      "name": "CLARA WOODS",
+      "source": "townfall",
+      "sourceLabel": "SILENT HILL: TOWNFALL",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Clara Woods : nom non corroboré par sources lues.",
+      "referenceIds": [
+        "EXT61"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/products/shtf/"
+      ],
+      "paths": [],
+      "note": "Clara Woods : nom non corroboré par sources lues.",
+      "sort": 1
+    },
+    {
+      "id": "clara_woods_different",
+      "name": "CLARA WOODS — DIFFERENT",
+      "source": "townfall",
+      "sourceLabel": "SILENT HILL: TOWNFALL",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Variante Different dépend du lieu Clara Woods non confirmé ici.",
+      "referenceIds": [
+        "EXT61"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/products/shtf/"
+      ],
+      "paths": [],
+      "note": "Variante Different dépend du lieu Clara Woods non confirmé ici.",
+      "sort": 1
+    },
+    {
+      "id": "st_amelia_marina",
+      "name": "ST. AMELIA MARINA",
+      "source": "townfall",
+      "sourceLabel": "SILENT HILL: TOWNFALL",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : St Amelia attestée; appellation Marina et quai précis à relever dans la version commerciale.",
+      "referenceIds": [
+        "EXT61"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/products/shtf/"
+      ],
+      "paths": [],
+      "note": "St Amelia attestée; appellation Marina et quai précis à relever dans la version commerciale.",
+      "sort": 1
+    },
+    {
+      "id": "townfall_medical",
+      "name": "ST. AMELIA MEDICAL CENTRE",
+      "source": "townfall",
+      "sourceLabel": "SILENT HILL: TOWNFALL",
+      "bitmap": "Absent",
+      "reference": "Bloquée",
+      "scene": "unresolved",
+      "action": "Résoudre la référence : Medical Centre : nom du catalogue à corroborer dans carte/plan primaire.",
+      "referenceIds": [
+        "EXT61"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/products/shtf/"
+      ],
+      "paths": [],
+      "note": "Medical Centre : nom du catalogue à corroborer dans carte/plan primaire.",
+      "sort": 1
+    },
+    {
+      "id": "book_blood",
+      "name": "BLOOD ZONE",
+      "source": "bom",
+      "sourceLabel": "SILENT HILL: BOOK OF MEMORIES",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT21"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/book_blood.blood-arena.a2f0bf8241d3.png",
+        "assets/stages/book_blood.near-perimeter-edges.472f222bec21.png"
+      ],
+      "note": "Zone Blood attestée dans Book of Memories; salle procédurale précise à choisir.",
+      "sort": 2
+    },
+    {
+      "id": "book_earth",
+      "name": "EARTH ZONE",
+      "source": "bom",
+      "sourceLabel": "SILENT HILL: BOOK OF MEMORIES",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT21",
+        "EXT9_BOM_EARTH_VIEW_37_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_37_earth_world.jpg"
+      ],
+      "paths": [
+        "assets/stages/book_earth.earth-gallery.d68ff2b3d5a6.png",
+        "assets/stages/book_earth.near-rock-edges.e2f163225507.png"
+      ],
+      "note": "Zone Earth attestée dans Book of Memories; salle procédurale précise à choisir. Lot9 : la vue de galerie datée6juin2012 montre une pièce sombre avec matériaux terreux, bois et récipients. Il s’agit d’une préversion ; ni pièce finale, ni disposition, mouvement ou physique de la version commerciale ne sont confirmés. Aucun personnage, arme, HUD ou danger ne doit être importé.",
+      "sort": 2
+    },
+    {
+      "id": "book_fire",
+      "name": "FIRE ZONE",
+      "source": "bom",
+      "sourceLabel": "SILENT HILL: BOOK OF MEMORIES",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT21",
+        "EXT9_BOM_FIRE_VIEW_01_20261026",
+        "EXT9_BOM_FIRE_VIEW_02_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_01.jpg",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_02.jpg"
+      ],
+      "paths": [
+        "assets/stages/book_fire.fire-room.7f1236bf6694.png",
+        "assets/stages/book_fire.near-steel-edges.e238137c6bfd.png"
+      ],
+      "note": "Zone Fire attestée dans Book of Memories; salle procédurale précise à choisir. Lot9 : deux vues de la galerie datée16octobre2012 montrent des sols et parois industriels, grilles et lueurs chaudes. Elles guident un cadre de salle adapté au versus sans identifier toute la géométrie procédurale ; personnages, HUD, attaques et dangers des captures sont exclus.",
+      "sort": 2
+    },
+    {
+      "id": "book_water",
+      "name": "WATER ZONE",
+      "source": "bom",
+      "sourceLabel": "SILENT HILL: BOOK OF MEMORIES",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT21"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/book_water.water-basin.12604eb0cf73.png",
+        "assets/stages/book_water.near-tile-edges.9db746e9832f.png"
+      ],
+      "note": "Zone Water attestée dans Book of Memories; salle procédurale précise à choisir.",
+      "sort": 2
+    },
+    {
+      "id": "book_wood",
+      "name": "WOOD ZONE",
+      "source": "bom",
+      "sourceLabel": "SILENT HILL: BOOK OF MEMORIES",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT21",
+        "EXT9_BOM_WOOD_VIEW_06_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_book_of_memories/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_06.jpg"
+      ],
+      "paths": [
+        "assets/stages/book_wood.wood-clearing.badc47213490.png",
+        "assets/stages/book_wood.bare-bough.58fbcd47b401.png"
+      ],
+      "note": "Zone Wood attestée dans Book of Memories; salle procédurale précise à choisir. Lot9 : la vue de galerie datée16octobre2012 montre une arène terreuse avec branches nues et pierres près du Wood Guardian. Le prototype peut reprendre les matériaux visibles sans importer le boss, ses rejetons, leur zone de contact ou une disposition procédurale prétendue fixe.",
+      "sort": 2
+    },
+    {
+      "id": "centennial_building",
+      "name": "CENTENNIAL BUILDING",
+      "source": "downpour",
+      "sourceLabel": "SILENT HILL: DOWNPOUR",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT11"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh8/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/centennial_building.background.c8a81a276b6a.png",
+        "assets/stages/centennial_building.foreground.9ddcc6285a36.png"
+      ],
+      "note": "Centennial Building; séparer archives et salles administratives.",
+      "sort": 2
+    },
+    {
+      "id": "devils_pit",
+      "name": "DEVIL’S PIT",
+      "source": "downpour",
+      "sourceLabel": "SILENT HILL: DOWNPOUR",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT11"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh8/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+        "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png"
+      ],
+      "note": "Devil’s Pit; préciser attraction, mine ou arrivée ferroviaire. Vue retenue : cavité intérieure des roues hydrauliques/lift, depuis la coursive sèche ; poutres et conduites de l’illustration du puzzle Water Wheels. Gouttes de traverse proposées pour le versus ; attraction extérieure, cave inondée adjacente et trajet de train hors cadre, aucun puzzle ou pompe automatique.",
+      "sort": 2
+    },
+    {
+      "id": "overlook",
+      "name": "OVERLOOK PENITENTIARY",
+      "source": "downpour",
+      "sourceLabel": "SILENT HILL: DOWNPOUR",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "BLOCK A AVANT INONDATION",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT11"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh8/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+        "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png"
+      ],
+      "note": "Overlook Penitentiary version Downpour; ne pas reprendre le plan de Homecoming. Vue retenue : coursive BlockA de la prison normale Downpour, avant la cellule transformée en couloir inondé. Ombres des barreaux proposées pour le versus ; tours extérieures, showers/crime scene, workshop flooding et PrisonHC séparés.",
+      "sort": 2
+    },
+    {
+      "id": "st_marias",
+      "name": "ST. MARIA’S MONASTERY",
+      "source": "downpour",
+      "sourceLabel": "SILENT HILL: DOWNPOUR",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT11"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh8/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/st_marias.background.e8b396a71baf.png",
+        "assets/stages/st_marias.foreground.5ea59966acd3.png"
+      ],
+      "note": "St Maria’s Monastery; cadrage de chapelle, théâtre ou orphelinat à fixer.",
+      "sort": 2
+    },
+    {
+      "id": "film_hospital",
+      "name": "HÔPITAL DU FILM — CHAMBRE D’ALESSA",
+      "source": "film",
+      "sourceLabel": "SILENT HILL — FILM UNIVERSE",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "CHAMBRE D’ALESSA · FILM 2006",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT49",
+        "EXT9_FILM2006_ALESSA_ROOM_46_20261026",
+        "EXT9_FILM2006_ALESSA_ROOM_81_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.imdb.com/title/tt0384537/plotsummary/",
+        "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_46.jpg",
+        "https://www.silenthillmemories.net/shm/photos/pics/sh_the_movie_81.jpg"
+      ],
+      "paths": [
+        "assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+        "assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png"
+      ],
+      "note": "Film Silent Hill de Christophe Gans2006 : chambre hospitalière d’Alessa, lit sous voile de tente médicale, parois carrelées abîmées et grille de sol visibles dans deux photos concordantes. Aucune preuve n’attribue le nom Brookhaven à cette pièce ; le catalogue conserve cet ancien libellé historique sans le transférer à la scène choisie. Pièce distincte du couloir des Dark Nurses ; aucune personne, apparition, attaque ou séquence de soin importée. Mouvement du voile, caméra et géométrie restent des adaptations à comparer, sans fidélité1:1 certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "church_hc",
+      "name": "CHURCH OF THE HOLY WAY — NEF",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "holy-way-main-hall-before-glass-break",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT07",
+        "EXT06",
+        "EXT11_REF_CHURCH_HC_ROOM_2_20261028",
+        "EXT11_REF_CHURCH_HC_ROOM_3_20261028"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh5/notes_en.htm",
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_100.jpg",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_12b.jpg"
+      ],
+      "paths": [
+        "assets/stages/church_hc.holy-way-nave.03a8aefbef40.png",
+        "assets/stages/church_hc.candle-stand.31cb771411d7.png"
+      ],
+      "note": "Nef et fond à orgue de Church of the Holy Way, avant la rupture de la fenêtre du chevalier ; pas confessionnal ou église du film. Le guide décrit la fenêtre, les plaques et le pentagone à la base de l’orgue ; les images montrent les cierges et le panneau. Tuyaux supérieurs non reconstruits faute de vue native attribuée. Cadres, teintes et ombres sont abstraits, sans dessin du chevalier ou Halo lisible, Siam, chute du vitrail ou activation du puzzle. La galerie seule ne certifie pas édition et instant de jeu.",
+      "sort": 2
+    },
+    {
+      "id": "curtis_shop",
+      "name": "CURTIS — COMPTOIR DE L’ATELIER",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "junkyard-counter-first-exchange",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT06",
+        "EXT11_REF_CURTIS_SHOP_ROOM_2_20261028",
+        "EXT11_REF_CURTIS_SHOP_ROOM_3_20261028"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens_en.htm",
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_095.jpg"
+      ],
+      "paths": [
+        "assets/stages/curtis_shop.workshop.910767824f6e.png",
+        "assets/stages/curtis_shop.sales-counter.003f99674bac.png"
+      ],
+      "note": "Comptoir de l’atelier où Curtis est assis lors de l’échange initial du pistolet ; distinct du combat ultérieur en Room321 Underground. La vue native montre le comptoir de bois, pendule ronde, livres et fenêtre à planches. Aucun corps ou siège occupé n’est rejoué, aucune ampoule ou machine rotative inventée. Chaîne générique antérieure non attestée dans ce cadrage retirée du rendu. Lumière et perspective frontale versus, non géométrie mesurée.",
+      "sort": 2
+    },
+    {
+      "id": "grand_hotel",
+      "name": "GRAND HOTEL",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "ATRIUM SANS SEPULCHER",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT06",
+        "EXT05"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://silenthillheaven.com/shh/shh_bosses/"
+      ],
+      "paths": [
+        "assets/stages/grand_hotel.background.8250537eb741.png",
+        "assets/stages/grand_hotel.foreground.bc6963bb530b.png"
+      ],
+      "note": "Grand Hotel et rencontre Sepulcher; ne pas reproduire Lakeview.",
+      "sort": 2
+    },
+    {
+      "id": "nightmare_hospital_hc",
+      "name": "ALCHEMILLA — HOMECOMING NIGHTMARE",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "RÊVE CLINIQUE AVANT LE MIROIR",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT06"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/nightmare_hospital_hc.gate2a.faf8d083f23c.png",
+        "assets/stages/nightmare_hospital_hc.near-wall-edges.e7c5e101d745.png"
+      ],
+      "note": "Cauchemar Alchemilla de Homecoming, avant le réveil d’Alex.",
+      "sort": 2
+    },
+    {
+      "id": "shepherd_house_hc",
+      "name": "SHEPHERD HOUSE — ATTIC",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT06"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+        "assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png"
+      ],
+      "note": "Grenier Shepherd House; état Otherworld dépend de l’étape. Vue retenue : grenier normal avant la conversation avec Lillian et la transformation ; séparer l’état Otherworld du chapitre08. Charpente/poussière sont une interprétation graphique de la proposition versus, pas une géométrie mesurée ; pas de masques/médailles/horloge de l’état altéré importés.",
+      "sort": 2
+    },
+    {
+      "id": "shepherds_glen",
+      "name": "SHEPHERD’S GLEN",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "PANNEAU DE LA RENCONTRE ELLE",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT06"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/shepherds_glen.background.12de6f58dc06.png",
+        "assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png"
+      ],
+      "note": "Ville de Shepherd’s Glen; cadrage de rue à définir.",
+      "sort": 2
+    },
+    {
+      "id": "town_hall_hc",
+      "name": "SHEPHERD’S GLEN TOWN HALL",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT06"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+        "assets/stages/town_hall_hc.foreground.a42274c88402.png"
+      ],
+      "note": "Town Hall de Shepherd’s Glen; plans publics et passage de retour distincts. Vue retenue : premier passage normal, salle centrale publique avec podium et livre d’histoire derrière ; sous-sol et cérémonie de retour hors cadre. Lueur du pupitre proposée pour le versus, sans action du Founders Key.",
+      "sort": 2
+    },
+    {
+      "id": "underground_hc",
+      "name": "UNDERGROUND — ANTICHAMBRE DES FAMILLES",
+      "source": "homecoming",
+      "sourceLabel": "SILENT HILL: HOMECOMING",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "founding-families-antechamber",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT06",
+        "EXT11_REF_UNDERGROUND_HC_ROOM_2_20261028",
+        "EXT11_REF_UNDERGROUND_HC_ROOM_3_20261028"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13c.jpg",
+        "https://www.silenthillmemories.net/sh5/walkthrough/shh_walkthrough_13d.jpg"
+      ],
+      "paths": [
+        "assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+        "assets/stages/underground_hc.near-jambs.a49721844afa.png"
+      ],
+      "note": "Antichambre Founding Families Puzzle, après la confrontation Curtis et avant la salle Amnion ; sans hôpital du rêve, salle de torture ou boss. Quatre tablettes couvertes et porte à deux anneaux documentées. Espacement, couverture et lumière de fond reconstruits ; aucune inscription familiale copiée, résolution du puzzle, vapeur de conduite, lampe chirurgicale ou membre mécanique d’Amnion.",
+      "sort": 2
+    },
+    {
+      "id": "alchemilla_origins",
+      "name": "ALCHEMILLA HOSPITAL — ORIGINS",
+      "source": "origins",
+      "sourceLabel": "SILENT HILL: ORIGINS",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "versus-transition",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT03",
+        "EXT01"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh0/maps_en.htm",
+        "https://www.silenthillmemories.net/sh0/creatures_en.htm"
+      ],
+      "paths": [
+        "assets/stages/alchemilla_origins.elevator-landing.d7a48880728c.png",
+        "assets/stages/alchemilla_origins.near-wall-edges.88e0d0800459.png"
+      ],
+      "note": "Alchemilla Hospital dans Origins; garder plans2007 et miroir propre à cette œuvre.",
+      "sort": 2
+    },
+    {
+      "id": "artaud_theater",
+      "name": "ARTAUD THEATER",
+      "source": "origins",
+      "sourceLabel": "SILENT HILL: ORIGINS",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "SCÈNE NORMALE · PROJECTEURS ACTIVÉS",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT03",
+        "EXT01",
+        "EXT_ORIGINS_THEATER_GUIDE_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh0/maps_en.htm",
+        "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+        "https://www.silenthillmemories.net/sh0/walkthrough_en.htm"
+      ],
+      "paths": [
+        "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+        "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png"
+      ],
+      "note": "Artaud Theater, Origins : plateau normal après pose et activation des quatre ampoules du catwalk, puis lever du rideau depuis Curtain Control. Le guide distingue ensuite les configurations commandées par leviers et le passage du grand miroir, dont l’état menant au combat Caliban ; le prototype ne fusionne pas ces états. Éclairage fixe de la scène documenté, balayage cyclique et caméra du versus non mesurés.",
+      "sort": 2
+    },
+    {
+      "id": "riverside_motel",
+      "name": "RIVERSIDE MOTEL",
+      "source": "origins",
+      "sourceLabel": "SILENT HILL: ORIGINS",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT03",
+        "EXT02"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh0/maps_en.htm",
+        "https://silenthillheaven.com/sh0/sh0_bosses/"
+      ],
+      "paths": [
+        "assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
+        "assets/stages/riverside_motel.gate.270f1cbab7c5.png"
+      ],
+      "note": "Riverside Motel; cuisine du Butcher et chambre500 de Richard sont des sous-lieux distincts.",
+      "sort": 2
+    },
+    {
+      "id": "looping_hall",
+      "name": "P.T. — COULOIR ÉCLAIRÉ",
+      "source": "pt",
+      "sourceLabel": "P.T.",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "lit-beige-hall-unidentified-loop",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT27",
+        "EXT28",
+        "EXT11_REF_LOOPING_HALL_ROOM_1_20261028",
+        "EXT11_REF_LOOPING_HALL_ROOM_2_20261028",
+        "EXT11_REF_LOOPING_HALL_ROOM_3_20261028",
+        "EXT11_REF_LOOPING_HALL_ROOM_4_20261028"
+      ],
+      "sourceUrls": [
+        "https://silenthill.fandom.com/wiki/P.T.",
+        "https://www.gamespot.com/articles/pt-video-shows-lisas-terrifying-hidden-movements/1100-6475012/",
+        "https://www.silenthillmemories.net/silent_hills/screens_en.htm",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_02.jpg",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_03.jpg",
+        "https://www.silenthillmemories.net/silent_hills/screens/pics/silent_hills_pt_screen_20140814_04.jpg"
+      ],
+      "paths": [
+        "assets/stages/looping_hall.hallway.b48a0819aed4.png",
+        "assets/stages/looping_hall.radio-cabinet.b16069870543.png"
+      ],
+      "note": "Couloir P.T. éclairé, murs beige et plancher sombre, photographié le14août2014 ; numéro de boucle non déterminable. Reconstruction frontale versus de ses deux tronçons, sans réinitialisation de topologie. Trois vues natives inspectées : appliques et plinthes, lanterne et porte fermée, poste RADIO sur meuble. Aucun téléphone entier ou vibration attestée ; pas photographie de couple reproduite, Lisa, phase rouge, réfrigérateur suspendu, son capturé ou boucle source simulée.",
+      "sort": 2
+    },
+    {
+      "id": "alchemilla",
+      "name": "ALCHEMILLA HOSPITAL",
+      "source": "sh1",
+      "sourceLabel": "SILENT HILL",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH1_06_ALCHEMILLA_HOSPITAL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh1/walkthrough_06_alchemilla_hospital_en.htm"
+      ],
+      "paths": [
+        "assets/stages/alchemilla.waiting-room.2ef1639ee034.png"
+      ],
+      "note": "Alchemilla de SH1, état hospitalier initial ; ne pas employer les couloirs de Brookhaven.",
+      "sort": 2
+    },
+    {
+      "id": "central_nightmare",
+      "name": "CENTRAL SILENT HILL — OTHERWORLD",
+      "source": "sh1",
+      "sourceLabel": "SILENT HILL",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH1_09_NIGHTMARE_CENTRAL_SILENT_HILL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh1/walkthrough_09_nightmare_central_silent_hill_en.htm"
+      ],
+      "paths": [
+        "assets/stages/central_nightmare.floatstinger-roof.a166c86064f4.png",
+        "assets/stages/central_nightmare.near-roof-edges.d6d18810f03e.png"
+      ],
+      "note": "Centre Otherworld de SH1 : galerie commerciale et toit associés à deux états du boss insecte.",
+      "sort": 2
+    },
+    {
+      "id": "hospital_nightmare",
+      "name": "ALCHEMILLA — NIGHTMARE WARD",
+      "source": "sh1",
+      "sourceLabel": "SILENT HILL",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH1_07_NIGHTMARE_HOSPITAL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh1/walkthrough_07_nightmare_hospital_en.htm"
+      ],
+      "paths": [
+        "assets/stages/hospital_nightmare.room204.ce097401c830.png",
+        "assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png"
+      ],
+      "note": "Alchemilla Otherworld de SH1, avec le Bloodsucker de la chambre 204.",
+      "sort": 2
+    },
+    {
+      "id": "lakeside_amusement",
+      "name": "LAKESIDE AMUSEMENT PARK",
+      "source": "sh1",
+      "sourceLabel": "SILENT HILL",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "MANÈGE DE CYBIL · SH1",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH1_14_LAKESIDE_AMUSEMENT_PARK"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh1/walkthrough_14_lakeside_amusement_park_en.htm"
+      ],
+      "paths": [
+        "assets/stages/lakeside_amusement.platform.e002db685c30.png",
+        "assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png"
+      ],
+      "note": "Parc de SH1 et manège de Cybil ; distinguer explicitement le parc de SH3. Vue retenue : manège de Cybil SH1 original, distinct du Happy Carousel SH3. Rotation de fond lente et un cheval fixe sont une proposition versus ; pas Cybil, gaz/énigme 12 chevaux SH3, grande roue extérieure dans la même vue. Sculptures/caméra interprétées, matériau/humidité non déterminés.",
+      "sort": 2
+    },
+    {
+      "id": "midwich",
+      "name": "MIDWICH ELEMENTARY",
+      "source": "sh1",
+      "sourceLabel": "SILENT HILL",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH1_02_MIDWICH_ELEMENTARY_SCHOOL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh1/walkthrough_02_midwich_elementary_school_en.htm"
+      ],
+      "paths": [
+        "assets/stages/midwich.courtyard.c9728428d63d.png"
+      ],
+      "note": "École de SH1 avant la traversée de l’horloge ; séparer de Nightmare School.",
+      "sort": 2
+    },
+    {
+      "id": "midwich_nightmare",
+      "name": "MIDWICH — NIGHTMARE SCHOOL",
+      "source": "sh1",
+      "sourceLabel": "SILENT HILL",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH1_03_NIGHTMARE_SCHOOL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh1/walkthrough_03_nightmare_school_en.htm"
+      ],
+      "paths": [
+        "assets/stages/midwich_nightmare.hearth.862c9df53e36.png",
+        "assets/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png"
+      ],
+      "note": "École Otherworld de SH1 ; la chaufferie mène à Split Head. Vue retenue : arène de la chaufferie Otherworld, foyer ouvert central entouré de grilles, documenté dans captures sh1_boss_split_head_lizard/sh1_b01_01. Braises lumineuses contenues proposées pour le versus ; ni casiers/classes, sirène répétée, pluie de braises ou Split Head ajouté. Passage de duel devant le foyer et caméra adaptés, collisions non certifiées.",
+      "sort": 2
+    },
+    {
+      "id": "nowhere",
+      "name": "NOWHERE",
+      "source": "sh1",
+      "sourceLabel": "SILENT HILL",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH1_15_NOWHERE"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh1/walkthrough_15_nowhere_en.htm"
+      ],
+      "paths": [
+        "assets/stages/nowhere.bethor-generator-room.6c753fcbaa0a.png",
+        "assets/stages/nowhere.near-wall-edges.70fd5fb39aff.png"
+      ],
+      "note": "Espace composite sans carte de SH1 ; choisir les salles exactes avant assemblage.",
+      "sort": 2
+    },
+    {
+      "id": "old_silent_hill",
+      "name": "OLD SILENT HILL",
+      "source": "sh1",
+      "sourceLabel": "SILENT HILL",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH1_01_OLD_SILENT_HILL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh1/walkthrough_01_old_silent_hill_en.htm"
+      ],
+      "paths": [
+        "assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+        "assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png"
+      ],
+      "note": "Rues du premier quartier de SH1 ; brouillard et neige distincts de la cendre du film.",
+      "sort": 2
+    },
+    {
+      "id": "sewer_resort",
+      "name": "SEWERS TO THE RESORT",
+      "source": "sh1",
+      "sourceLabel": "SILENT HILL",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH1_10_SEWERS_TO_RESORT_AREA"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh1/walkthrough_10_sewers_to_resort_area_en.htm"
+      ],
+      "paths": [
+        "assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+        "assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png"
+      ],
+      "note": "Égouts qui conduisent à la zone touristique dans SH1.",
+      "sort": 2
+    },
+    {
+      "id": "baldwin_mansion",
+      "name": "BALDWIN MANSION",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_BFAW02_BALDWIN_MANSION"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_bfaw02_baldwin_mansion_en.htm"
+      ],
+      "paths": [
+        "assets/stages/baldwin_mansion.closed-lounge-landing.5fa7f85bcd25.png",
+        "assets/stages/baldwin_mansion.near-timber-jambs.de3ae2125a5e.png"
+      ],
+      "note": "Manoir de Born from a Wish, campagne Maria de SH2 original. Vue retenue : palier devant la porte du Lounge d’Ernest, gardée fermée ; la bougie attestée au grenier ne doit pas être transportée ici. Réaction du battant = adaptation versus après impact local, sans corps.",
+      "sort": 2
+    },
+    {
+      "id": "blue_creek",
+      "name": "BLUE CREEK — PALIER DE L’ESCALIER",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "blue-creek-stairwell-before-drainage",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_03_BLUE_CREEK_APTS",
+        "EXT12_REF_BLUE_CREEK_ROOM_2_20261101",
+        "EXT12_REF_BLUE_CREEK_ROOM_3_20261101"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_03_blue_creek_apts_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1b_pyramid_head.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w03_boss_1c_pyramid_head.jpg"
+      ],
+      "paths": [
+        "assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
+        "assets/stages/blue_creek.landing-rail.bae35a70bc4e.png"
+      ],
+      "note": "Palier de la rencontre Pyramid Head avant drainage ; marches vers l’eau au fond, duel sur un plateau sec adapté. Les vues montrent garde-corps, porte fermée et parois dégradées. Le guide confirme eau puis drainage, sans hauteur native mesurée. Le boss et sa sirène ne sont pas rejoués. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "brookhaven_roof",
+      "name": "BROOKHAVEN — ROOFTOP",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "TOIT AVANT LA CHUTE",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_05_BROOKHAVEN_HOSPITAL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_05_brookhaven_hospital_en.htm"
+      ],
+      "paths": [
+        "assets/stages/brookhaven_roof.before-fall.52cd844d609c.png"
+      ],
+      "note": "Toit de Brookhaven dans SH2 original ; évènement Pyramid Head lié au récit.",
+      "sort": 2
+    },
+    {
+      "id": "brookhaven_sh2",
+      "name": "BROOKHAVEN — BASEMENT",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_06_NIGHTMARE_HOSPITAL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_06_nightmare_hospital_en.htm"
+      ],
+      "paths": [
+        "assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+        "assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png"
+      ],
+      "note": "SH2 original2001 : extrémité du couloir Otherworld B1 de Brookhaven, devant l’ascenseur pendant la poursuite de Pyramid Head. Le guide décrit une cutscène puis la remontée vers le premier étage ; la capture de cabine montre l’état après fermeture. Le maintien des portes entrouvertes avant cette fermeture est une suspension adaptée au versus, sans capture prouvant cette ouverture ni cycle original mesuré. Aucun trajet vers le lobby, décès de Maria ou poursuivant n’est rejoué automatiquement. Dimensions, caméra et battement des portes restent à comparer aux captures originales.",
+      "sort": 2
+    },
+    {
+      "id": "historical_society",
+      "name": "SILENT HILL HISTORICAL SOCIETY",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_08_HISTORICAL_SOCIETY"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_08_historical_society_en.htm"
+      ],
+      "paths": [
+        "assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
+        "assets/stages/historical_society.damaged-display-case.f5ef90a939da.png"
+      ],
+      "note": "Bâtiment et descente de la Historical Society de SH2 original. Vue retenue : salles d’exposition du musée ; reflet de vitrage en proposition versus, sans reproduire ni animer le contenu d’un tableau officiel, escalier/puits séparés.",
+      "sort": 2
+    },
+    {
+      "id": "hotel_otherworld",
+      "name": "LAKEVIEW HOTEL — OTHERWORLD",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_13_NIGHTMARE_HOTEL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_13_nightmare_hotel_en.htm"
+      ],
+      "paths": [
+        "assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+        "assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png"
+      ],
+      "note": "État ruiné du Lakeview après la cassette, SH2 original.",
+      "sort": 2
+    },
+    {
+      "id": "labyrinth",
+      "name": "LABYRINTHE — COMMANDE BOX OF FACES",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "labyrinth-box-of-faces-control",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_10_THE_LABYRINTH",
+        "EXT12_REF_LABYRINTH_ROOM_2_20261101",
+        "EXT12_REF_LABYRINTH_ROOM_3_20261101"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_10_the_labyrinth_en.htm",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_01.jpg",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_box_of_faces_puzzle_02.jpg"
+      ],
+      "paths": [
+        "assets/stages/labyrinth.control-chamber.60453a15467d.png",
+        "assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png"
+      ],
+      "note": "Pièce de commande BoxofFaces de SH2original, cube immobile avant manipulation ; hors salleAbstractDaddy et couloir des cordes. Cube à visage, pied circulaire sur table et panneaux perforés documentés. Le visage reste abstrait sans portrait copié ; aucune rotation automatique, crâne complet ou reconfiguration des collisions. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "lakeview",
+      "name": "LAKEVIEW HOTEL — LOBBY",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "AVANT LA CASSETTE",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_12_LAKE_VIEW_HOTEL",
+        "EXT_SH2_LAKEVIEW_PC44_20261025",
+        "EXT_SH2_LAKEVIEW_MUSICBOX_20261025"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_12_lake_view_hotel_en.htm",
+        "https://www.silenthillmemories.net/sh2/screens/pics/sh2_screenshot_pc_44.jpg",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_music_box_player_puzzle_01.jpg"
+      ],
+      "paths": [
+        "assets/stages/lakeview.lobby.7bc2120c786c.png"
+      ],
+      "note": "Vue retenue : lobby intact du Lake View original, avant le visionnage de la cassette en312 (normal-lobby-before-video). Le guide situe le meuble musical près de l’escalier ; deux vues montrent portes vitrées, boiseries et tapis rouge. Ce cadrage de pièce est documenté, sans trancher l’interprétation globale Fog/Memory de l’hôtel. Dimensions, échelle, caméra et sol masqué restent à comparer ; leur adaptation au versus ne vaut pas mesure du jeu. Réception adjacente, piano du restaurant, TV/cassette de312 et transformation Nightmare restent hors cadre. Les anciennes propositions de transition/cassette sont conservées au dossier et inactives dans cette scène ; aucune transition automatique n’est validée. Aucune clôture artistique ni certification1:1.",
+      "sort": 2
+    },
+    {
+      "id": "prison_meat_locker",
+      "name": "LABYRINTH — MEAT LOCKER",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "CHAMBRE FROIDE · SECONDE SALLE",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_10_THE_LABYRINTH"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_10_the_labyrinth_en.htm"
+      ],
+      "paths": [
+        "assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+        "assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png"
+      ],
+      "note": "Libellé à corriger : la chambre froide du combat Eddie termine le Labyrinthe ; ne pas affirmer une salle ordinaire de Toluca Prison.",
+      "sort": 2
+    },
+    {
+      "id": "south_vale",
+      "name": "SOUTH VALE STREETS",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_01_EAST_SOUTH_SIDE"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_01_east_south_side_en.htm"
+      ],
+      "paths": [
+        "assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+        "assets/stages/south_vale.near-street-poles.7e6716e17a5e.png"
+      ],
+      "note": "South Vale Est de SH2 original ; préciser rue exacte et limites de parcours.",
+      "sort": 2
+    },
+    {
+      "id": "toluca_prison",
+      "name": "TOLUCA — COUR DU GIBET",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "toluca-courtyard-scaffold",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_09_TOLUCA_PRISON",
+        "EXT12_REF_TOLUCA_PRISON_ROOM_2_20261101"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_09_toluca_prison_en.htm",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w09_scaffold.jpg"
+      ],
+      "paths": [
+        "assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
+        "assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png"
+      ],
+      "note": "Cour de TolucaPrison devant le panneau du gibet, avant placement des trois plaques ; hors blocs de cellules. Vue sombre montrant façade de bois et panneau : motifs illisibles abstraits. Haut du gibet et corde hors lumière non reconstruits ; aucune exécution, cellule ou victime ajoutée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "woodside",
+      "name": "WOOD SIDE — APPARTEMENT 208",
+      "source": "sh2",
+      "sourceLabel": "SILENT HILL 2",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "woodside-208-clock-room",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH2_02_WOOD_SIDE_APTS",
+        "EXT12_REF_WOODSIDE_ROOM_2_20261101",
+        "EXT12_REF_WOODSIDE_ROOM_3_20261101"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh2/walkthrough_02_wood_side_apts_en.htm",
+        "https://www.silenthillmemories.net/sh2/puzzles/sh2_clock_puzzle_01.jpg",
+        "https://www.silenthillmemories.net/sh2/walkthrough/sh2_w02_deadman_room_208.jpg"
+      ],
+      "paths": [
+        "assets/stages/woodside.clock-room.da94acd4e920.png",
+        "assets/stages/woodside.grandfather-clock.bc7fec047ff5.png"
+      ],
+      "note": "Appartement208 de Wood Side, état initial, avant déplacement de l’horloge ; hors307, piscine et lampe du mannequin. Horloge haute fermée, volets à lattes et téléviseur documentés. CadreTV sans corps, sang, texte ou image copié ; aiguilles fixes et aucun puzzle résolu. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "brookhaven_sh3",
+      "name": "BROOKHAVEN — FLOODED ROOM",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_12_NIGHTMARE_HOSPITAL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_12_nightmare_hospital_en.htm"
+      ],
+      "paths": [
+        "assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
+        "assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png"
+      ],
+      "note": "Salle d’eau du boss Leonard sous Brookhaven Otherworld, SH3.",
+      "sort": 2
+    },
+    {
+      "id": "church",
+      "name": "CHURCH — CHAPELLE INITIALE",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "sh3-chapel-before-altar-departure",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_14_CHURCH",
+        "EXT12_REF_CHURCH_ROOM_2_20261101",
+        "EXT12_REF_CHURCH_ROOM_3_20261101"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_14_church_en.htm",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_eye_of_night_tarot_card.jpg",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_14_church_map_location.jpg"
+      ],
+      "paths": [
+        "assets/stages/church.initial-chapel.1b637d5146cd.png",
+        "assets/stages/church.candle-stand.53fb59eeefa2.png"
+      ],
+      "note": "Chapelle initiale avec autel, cierges et vitraux ; hors bibliothèque, couloirs mémoire et fosse du dieu. Autel en bois, cierges et triple vitrage documentés. Verres colorés abstraits sans figures ou texte religieux copié. Pas page tournée d’un livre non identifié, orgue ou invocation. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "hazel_subway",
+      "name": "HAZEL STREET SUBWAY",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_04_SUBWAY_STATION"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_04_subway_station_en.htm"
+      ],
+      "paths": [
+        "assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+        "assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png"
+      ],
+      "note": "Station Hazel Street de SH3 ; danger des voies distinct du métro SH4.",
+      "sort": 2
+    },
+    {
+      "id": "hilltop_center",
+      "name": "HILLTOP CENTER",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_07_HILLTOP_CENTER"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_07_hilltop_center_en.htm"
+      ],
+      "paths": [
+        "assets/stages/hilltop_center.monica-reception.8153762e19e6.png",
+        "assets/stages/hilltop_center.near-cabinet-edges.e64c163eeca2.png"
+      ],
+      "note": "Hilltop Center initial de SH3 ; bureaux, commerces et objets de travail. Store attesté dans le bureau/réception de Monica’s Dance Studio, capture sh3_07_hilltop_center_map_location.jpg ; la vue retient cette pièce normale, sans atelier ni baignoire/Otherworld. Oscillation = proposition versus.",
+      "sort": 2
+    },
+    {
+      "id": "lakeside_sh3",
+      "name": "LAKESIDE AMUSEMENT PARK — SH3",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "AVANT LA TRANSITION DU CARROUSEL",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_13_LAKESIDE_AMUSEMENT_PARK"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_13_lakeside_amusement_park_en.htm"
+      ],
+      "paths": [
+        "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+        "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png"
+      ],
+      "note": "Parc de SH3 et carrousel de Memory of Alessa ; distinct du boss Cybil de SH1. Vue retenue : Happy Carousel SH3 AVANT sa transition et Memory of Alessa ; trois sculptures visibles sur mâts fixes interprètent une partie des douze chevaux. Va-et-vient proposé, ni gaz nocif/puzzle/Alessa ou Cybil ajouté. Plateau couvert distinct du béton humide extérieur ; physique et caméra non certifiées.",
+      "sort": 2
+    },
+    {
+      "id": "nightmare_hilltop",
+      "name": "HILLTOP CENTER — OTHERWORLD",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_08_NIGHTMARE_HILLTOP_CENTER"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_08_nightmare_hilltop_center_en.htm"
+      ],
+      "paths": [
+        "assets/stages/nightmare_hilltop.gallery-painting.2a9fc04c0043.png",
+        "assets/stages/nightmare_hilltop.near-wall-edges.cfcaac8fc270.png"
+      ],
+      "note": "Hilltop Otherworld de SH3, avec le Glutton comme obstacle de progression.",
+      "sort": 2
+    },
+    {
+      "id": "nightmare_hospital_sh3",
+      "name": "BROOKHAVEN — NIGHTMARE HOSPITAL",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_12_NIGHTMARE_HOSPITAL"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_12_nightmare_hospital_en.htm"
+      ],
+      "paths": [
+        "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+        "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png"
+      ],
+      "note": "Brookhaven Otherworld de SH3 ; salle au miroir isolée du bassin Leonard.",
+      "sort": 2
+    },
+    {
+      "id": "sewers",
+      "name": "SEWER CHANNEL",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "APRÈS LE SÈCHE-CHEVEUX",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_05_UNDERPASS"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_05_underpass_en.htm"
+      ],
+      "paths": [
+        "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+        "assets/stages/sewers.near-basin-edges.5698b0266f8c.png"
+      ],
+      "note": "Canal du piège Sewer Creature dans SH3 ; garder la créature majoritairement sous l’eau. Vue retenue : passerelle du canal APRÈS usage du sèche-cheveux, car le câble n’est installé qu’à ce moment. Eau sous la passerelle, sans ennemi vivant réintroduit ni courant électrique jouable. Vibrations du câble/remous proposés, pas plateau de duel inondé.",
+      "sort": 2
+    },
+    {
+      "id": "shopping_mall",
+      "name": "CENTRAL SQUARE — HAPPY BURGER",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "central-square-happy-burger",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_02_SHOPPING_CENTER",
+        "EXT_SH3_MALL_BAKERY_20261025",
+        "EXT_SH3_MALL_TONGS_VIEW_20261025",
+        "EXT_SH3_MALL_TONGS_MAP_20261025",
+        "EXT12_REF_SHOPPING_MALL_ROOM_2_20261101"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_02_shopping_center_en.htm",
+        "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_06.jpg",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_tongs_a.jpg",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_tongs_b.jpg",
+        "https://www.silenthillmemories.net/sh3/walkthrough/pics/sh3_02_shopping_center_01.jpg"
+      ],
+      "paths": [
+        "assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
+        "assets/stages/shopping_mall.happy-burger-table.459203f86106.png"
+      ],
+      "note": "Happy Burger normal de CentralSquare, table et stores de la rencontre Douglas ; aucun client ni personnage rejoué. Table, condiments, deux chaises, stores et lambris visibles. Pas grille de boutique, vitrine cassée, présentoir animé ou façade d’une autre salle. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "underpass_sh3",
+      "name": "UNDERPASS",
+      "source": "sh3",
+      "sourceLabel": "SILENT HILL 3",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH3_05_UNDERPASS"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh3/walkthrough_05_underpass_en.htm"
+      ],
+      "paths": [
+        "assets/stages/underpass_sh3.map-room.da4cf2791272.png",
+        "assets/stages/underpass_sh3.near-wall-edges.a65261780188.png"
+      ],
+      "note": "Couloirs et locaux techniques avant le canal de SH3 ; sous-zone distincte du stage sewers.",
+      "sort": 2
+    },
+    {
+      "id": "apartment_world",
+      "name": "APARTMENT WORLD — BUREAU105",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "south-ashfield-room105-desk",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH4_06_APARTMENT_WORLD",
+        "EXT12_REF_APARTMENT_WORLD_ROOM_2_20261101",
+        "EXT12_REF_APARTMENT_WORLD_ROOM_3_20261101"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_06_apartment_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_a.jpg",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/06_apartment_keys_b.jpg"
+      ],
+      "paths": [
+        "assets/stages/apartment_world.office.6001d447c296.png",
+        "assets/stages/apartment_world.tubular-chair.0558fe1037f5.png"
+      ],
+      "note": "Bureau du conciergeRoom105 au premier passage ApartmentWorld, près de la table aux clés ; hors couloir302 et appartementRichard. Bureau, chaise tubulaire et partition à barreaux visibles. Pas poupée, cordon, occupant, document lisible ou serrure du puzzle reproduite. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "building_world",
+      "name": "BUILDING WORLD",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "ESCALIER B12–B15 · PREMIER PASSAGE",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH4_05_BUILDING_WORLD"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_05_building_world_en.htm"
+      ],
+      "paths": [
+        "assets/stages/building_world.fan-stairwell.15995c474e24.png",
+        "assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png"
+      ],
+      "note": "Building World de SH4, assemblage de toits et commerces.",
+      "sort": 2
+    },
+    {
+      "id": "forest_world",
+      "name": "FOREST WORLD",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH4_03_FOREST_WORLD"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_03_forest_world_en.htm"
+      ],
+      "paths": [
+        "assets/stages/forest_world.first-visit-clearing.76588be774de.png",
+        "assets/stages/forest_world.near-bark-and-grass.5df8c21ae5bc.png"
+      ],
+      "note": "Forêt du premier passage SH4 ; séparer de Wish House brûlée au retour. Vue retenue : sentier/clairière arborée du premier passage, sans façade Wish House ni incendie du retour ; vent des herbes et branches proposé pour le versus.",
+      "sort": 2
+    },
+    {
+      "id": "hospital_world",
+      "name": "HOSPITAL WORLD",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH4_07_HOSPITAL_WORLD"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_07_hospital_world_en.htm"
+      ],
+      "paths": [
+        "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+        "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png"
+      ],
+      "note": "Hôpital de SH4 aux chambres d’étage variables ; ne pas réutiliser un plan Brookhaven. Vue retenue : couloir des chambres au 2e étage, sans chambre de tête géante ni lits. Le fauteuil abstrait de fond est la proposition versus ; les Wheelchairs sont des ennemis dans SH4, leurs dégâts/IA ne sont pas importés par cette piste décorative. Aucun réarrangement des pièces actives.",
+      "sort": 2
+    },
+    {
+      "id": "outside_room_302",
+      "name": "OUTSIDE ROOM 302",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-altered",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH4_13_OUTSIDE_ROOM_302"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_13_outside_room_302_en.htm"
+      ],
+      "paths": [
+        "assets/stages/outside_room_302.door105.1a96e575d9fd.png",
+        "assets/stages/outside_room_302.near-wall-edges.0fafe322dcde.png"
+      ],
+      "note": "Dernier parcours autour de 302 dans SH4, altéré après les retours.",
+      "sort": 2
+    },
+    {
+      "id": "room_302",
+      "name": "ROOM302 — ENTRÉE ENCHAÎNÉE",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "room302-first-entry-door",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH4_01_ROOM_302",
+        "EXT12_REF_ROOM_302_ROOM_2_20261101",
+        "EXT12_REF_ROOM_302_ROOM_3_20261101"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_01_room_302_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_front_door.jpg",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/01_memo_01_first_letter.jpg"
+      ],
+      "paths": [
+        "assets/stages/room_302.entrance.6535cc934c6c.png",
+        "assets/stages/room_302.chair.739650b60353.png"
+      ],
+      "note": "Entrée de Room302 au premier passage, porte enchaînée fermée et kitchenette adjacente ; hors salle de bain et hantises ultérieures. Porte et chaînes, plafonnier rond, réfrigérateur et placards visibles. Pas inscription copiée, voix, apparition ou trou de salle de bain déplacé dans l’entrée. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "subway_world",
+      "name": "SUBWAY WORLD",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH4_02_SUBWAY_WORLD"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_02_subway_world_en.htm"
+      ],
+      "paths": [
+        "assets/stages/subway_world.lynch-platform.db4c6baf4c38.png",
+        "assets/stages/subway_world.near-platform-uprights.6fac368c5db5.png"
+      ],
+      "note": "Subway World de SH4 ; trains traversables et escalator avec Wallmen. Vue retenue : premier passage, quai Lynch Street et voitures arrêtées aux portes commandées par bouton rouge ; ni escalator/Wallmen, ni arrivée du train de Hazel Street SH3. Le cycle visuel du panneau est une proposition versus, pas un automatisme du récit.",
+      "sort": 2
+    },
+    {
+      "id": "water_prison",
+      "name": "WATER PRISON — SURVEILLANCE2F",
+      "source": "sh4",
+      "sourceLabel": "SILENT HILL 4: THE ROOM",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "water-prison-2f-surveillance",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "CL_SH4_04_WATER_PRISON_WORLD",
+        "EXT12_REF_WATER_PRISON_ROOM_2_20261101"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh4/walkthrough_04_water_prison_world_en.htm",
+        "https://www.silenthillmemories.net/sh4/walkthrough/pics/04_revolving_prison_cells.jpg"
+      ],
+      "paths": [
+        "assets/stages/water_prison.surveillance-room.5f3849f04407.png",
+        "assets/stages/water_prison.valve-pedestal.7711109d1342.png"
+      ],
+      "note": "Salle centrale de surveillance2F au premier passage, avant rotation de la vanne ; hors roue hydrauliqueB2 et vanne de toit. Volant sur piédestal, œilletons circulaires et puits à échelle de la salle photographiée. Aucun gardien, cellule/étage tournant ou roue B2 ; accès en profondeur hors sol de duel. Lumière, caméra et proportions composées pour le versus ; aucun minutage, volume ou mouvement original mesuré, fidélité1:1 non certifiée.",
+      "sort": 2
+    },
+    {
+      "id": "nightmare_hospital_sm",
+      "name": "ALCHEMILLA GELÉ — CHAMBRE ER",
+      "source": "shattered",
+      "sourceLabel": "SILENT HILL: SHATTERED MEMORIES",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "CHAMBRE ER · AVANT DÉGEL",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT09",
+        "EXT10_SM_HOSPITAL_GUIDE_20261026",
+        "EXT10_SM_HOSPITAL_ROOM_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_en.htm",
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_08_nightmare_4_hospital_en.htm",
+        "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough/walkthrough_puzzle_5a.jpg"
+      ],
+      "paths": [
+        "assets/stages/nightmare_hospital_sm.psp-er-iced-exit.52b62d0305f9.png",
+        "assets/stages/nightmare_hospital_sm.near-wall-edges.e3eb42c05e84.png"
+      ],
+      "note": "Alchemilla, Nightmare4 : chambre accessible après l’entrée aux urgences, pendant le puzzle radio et avant la libération de la porte glacée. La capture 5a montre la pièce sombre, des lits et la porte obstruée ; la localisation et le puzzle sont établis par le guide. Le versus ne rejoue ni père/enfant gelés, radio, chanson ou bris de glace. La lumière froide adaptée n’atteste pas une séparation vitrée ou un rideau animé.",
+      "sort": 2
+    },
+    {
+      "id": "corrupted_ebisugaoka",
+      "name": "EBISUGAOKA — PARVIS SHIMIZU",
+      "source": "shf",
+      "sourceLabel": "SILENT HILL f",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "PARTIE 5 · DEVANT LA RÉSIDENCE",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT32",
+        "EXT_SHF_EBISUGAOKA5_20261025",
+        "EXT10_SHF_RESIDENCE_FORECOURT_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/products/silenthill_f/",
+        "https://www.silenthillmemories.net/shf/walkthrough_10_ebisugaoka_part_5_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/10_shimizu_residence.jpg"
+      ],
+      "paths": [
+        "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+        "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png"
+      ],
+      "note": "Ebisugaoka partie5 : parvis immédiatement devant Shimizu Residence, avec flore rouge, brouillard, façade, pots et bicyclette visibles. Corrupted Procession reste un libellé éditorial ; la capture ne prouve ni procession, ni croissance instantanée des fleurs, vent, terrain ralentissant ou état uniforme de toute Ebisugaoka. Le mouvement d’ambiance du versus reste une adaptation locale.",
+      "sort": 2
+    },
+    {
+      "id": "dark_shrine",
+      "name": "DARK SHRINE — PARVIS DE SHRINE VAULT",
+      "source": "shf",
+      "sourceLabel": "SILENT HILL f",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "PARVIS AVANT SHRINE VAULT",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT33",
+        "EXT34",
+        "EXT10_SHF_SHRINE_PATH_GUIDE_20261026",
+        "EXT10_SHF_SHRINE_HOKORA_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/shf/monsters_en.htm",
+        "https://www.silenthillmemories.net/shf/bosses_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough_02_dark_shrine_path_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/02_shrine_vault.jpg"
+      ],
+      "paths": [
+        "assets/stages/dark_shrine.background.2664d35ea297.png",
+        "assets/stages/dark_shrine.foreground.2abdd42961b5.png"
+      ],
+      "note": "Dark Shrine Path : parvis extérieur devant la porte encore fermée du Shrine Vault. Le petit Hokora à gauche porte une corde et des papiers shide, près des lanternes et des marches. Ce cadrage ne fusionne pas les corridors, Main Hall ou Treasure Hall ; oscillation et éclairage du versus restent adaptés, sans vent ou mouvement original mesuré.",
+      "sort": 2
+    },
+    {
+      "id": "dark_shrine_corridors",
+      "name": "DARK SHRINE — AUTEL INARI",
+      "source": "shf",
+      "sourceLabel": "SILENT HILL f",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "inari-altar-before-replacement",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT34",
+        "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_1_20261028",
+        "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_2_20261028",
+        "EXT11_REF_DARK_SHRINE_CORRIDORS_ROOM_3_20261028"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/shf/bosses_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough_04_dark_shrine_corridors_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/04_altar.jpg",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/04_inari_sculpture_a.jpg"
+      ],
+      "paths": [
+        "assets/stages/dark_shrine_corridors.inari-altar.c91ff918e575.png",
+        "assets/stages/dark_shrine_corridors.lacquer-shelf.fb67e770ed74.png"
+      ],
+      "note": "Petite salle de l’autel à statue manquante dans Dark Shrine Corridors, avant de restituer Inari ; hors arène Sakuko. La statue trouvée dans une autre pièce reste absente du socle retenu. Bougies, meuble et lueur rouge sont les seuls motifs ; aucun kusarigama, suzu de Sakuko, chaîne de décor, Halo ou symbole inventé.",
+      "sort": 2
+    },
+    {
+      "id": "dark_shrine_main",
+      "name": "DARK SHRINE — PREMIÈRE CHAMBRE RITUELLE",
+      "source": "shf",
+      "sourceLabel": "SILENT HILL f",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "first-ritual-chamber-threshold",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT34",
+        "EXT11_REF_DARK_SHRINE_MAIN_ROOM_1_20261028",
+        "EXT11_REF_DARK_SHRINE_MAIN_ROOM_2_20261028",
+        "EXT11_REF_DARK_SHRINE_MAIN_ROOM_3_20261028"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/shf/bosses_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough_09_dark_shrine_main_hall_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/09_crimson_water_puzzle_1a.jpg",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/09_crimson_water_puzzle_1b.jpg"
+      ],
+      "paths": [
+        "assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
+        "assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png"
+      ],
+      "note": "Seuil de la première chambre rituelle illustré par l’indice Crimson Water 1 ; hors jardin de cloches, seconde chambre et combat Rinko. L’image de l’indice appartient au parcours New Game+ ; l’état de porte, les deux braseros et les panneaux sont retenus sans importer le jardin ou ses cloches. Flamme et mouvement authored ; aucun corps, poupée activée, purification, inscription ou finisher de récit.",
+      "sort": 2
+    },
+    {
+      "id": "hinako_home",
+      "name": "SHIMIZU RESIDENCE I — CORRIDOR D’ENTRÉE",
+      "source": "shf",
+      "sourceLabel": "SILENT HILL f",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "RESIDENCE I · ENTRÉE",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT34",
+        "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+        "EXT10_SHF_RESIDENCE_ENTRY_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/shf/bosses_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough_11_shimizu_residence_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/11_shimizu_residence_i_exit.jpg"
+      ],
+      "paths": [
+        "assets/stages/hinako_home.background.90570edd1d72.png",
+        "assets/stages/hinako_home.foreground.e1ab86dcc94a.png"
+      ],
+      "note": "Shimizu ResidenceI : corridor d’entrée/sortie avec plancher de bois et porte coulissante à panneaux translucides, cadré par la vue de fin de cette visite. Il s’agit de la même résidence que shimizu_residence, ici dans une pièce différente ; aucune seconde maison n’est inventée. Ni passage de porte, ouverture ou transition vers ResidenceII ne sont automatiquement rejoués.",
+      "sort": 2
+    },
+    {
+      "id": "school_shf",
+      "name": "EBISUGAOKA SCHOOL — BUREAU DU PERSONNEL",
+      "source": "shf",
+      "sourceLabel": "SILENT HILL f",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "BUREAU AU COFFRET DE CLÉS",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT32",
+        "EXT10_SHF_SCHOOL_GUIDE_20261026",
+        "EXT10_SHF_STAFF_ROOM_20261026"
+      ],
+      "sourceUrls": [
+        "https://www.konami.com/games/eu/fr/products/silenthill_f/",
+        "https://www.silenthillmemories.net/shf/walkthrough_06_ebisugaoka_middle_school_en.htm",
+        "https://www.silenthillmemories.net/shf/walkthrough/pics/06_key_to_the_back_mountains_a.jpg"
+      ],
+      "paths": [
+        "assets/stages/school_shf.background.360ffba8283b.png",
+        "assets/stages/school_shf.foreground.a50d69a51274.png"
+      ],
+      "note": "Ebisugaoka Middle School : bureau du personnel au coffret de la Key to the Back Mountains. La capture montre un tableau mural de service à droite du coffret, une armoire et du bois au sol ; il ne s’agit pas d’une salle de classe ou d’un couloir à rideaux. Ne pas importer Hinako, la clé, sa prise, son arme ou des ennemis. Animation, caméra et dimensions restent à produire ou comparer.",
+      "sort": 2
+    },
+    {
+      "id": "villa",
+      "name": "KETTENSTADT VILLA",
+      "source": "shortmessage",
+      "sourceLabel": "SILENT HILL: THE SHORT MESSAGE",
+      "bitmap": "Actif",
+      "reference": "Ouverte",
+      "scene": "fixed-normal",
+      "action": "Poursuivre la revue de fidélité et les animations propres au lieu.",
+      "referenceIds": [
+        "EXT30",
+        "EXT31"
+      ],
+      "sourceUrls": [
+        "https://www.silenthillmemories.net/sh_the_short_message/walkthrough_en.htm",
+        "https://blog.playstation.com/2024/01/31/silent-hill-the-short-message-now-available-free-on-ps5-new-silent-hill-2-remake-trailer-revealed/"
+      ],
+      "paths": [
+        "assets/stages/villa.apartment214-door.263d6a61f2f4.png",
+        "assets/stages/villa.near-wall-edges.4d500efc075f.png"
+      ],
+      "note": "Complexe abandonné The Villa dans Kettenstadt; couloirs et appartements à différencier.",
+      "sort": 2
+    }
+  ]
+}

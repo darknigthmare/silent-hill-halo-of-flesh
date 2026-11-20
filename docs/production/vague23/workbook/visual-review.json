@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "reviewedAt": "2026-11-19T20:22:31.192873+00:00",
+  "passed": true,
+  "workbookSHA256": "cf9f9bd2a2c1f06712e0c23523f24f29f7de8ab94d3686320608261475a858dc",
+  "inspected": [
+    "after-stages-preview.png",
+    "after-stage-row-11.png",
+    "after-stage-row-21.png",
+    "after-stage-row-22.png",
+    "after-stage-row-23.png",
+    "after-stage-row-26.png",
+    "after-stage-row-46.png"
+  ],
+  "findings": [
+    "Summary displays 71 active bitmaps, 37 open missing locations, 15 blocked references and 123 total stages.",
+    "All six newly active rows were inspected. Status, next action and exact PNG paths fit their existing columns without visible clipping. Longer Earth and Fire notes and reference URLs wrap within the retained row heights.",
+    "The existing alternating table style, headers, conditional absent markers and status dropdowns remain visible.",
+    "Corpus contents and the source row order remain unchanged; this update does not certify animation or 1:1 fidelity."
+  ],
+  "limitations": [
+    "Workbook visual review covers its summary and the six changed rows; unchanged rows are protected by cell/native-feature comparison."
+  ]
+}

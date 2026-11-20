@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "status": "all-six-delivered-for-root-integration",
+  "tool": "integrated-imagegen",
+  "deliveries": [
+    "delivery-part1.json",
+    "delivery-part2.json",
+    "delivery-part3.json",
+    "delivery-part4.json"
+  ],
+  "totalStages": 6,
+  "totalNativePNG": 12,
+  "totalPNGBytes": 14729935,
+  "referenceImageRecords": 11,
+  "stageIds": [
+    "ebisugaoka",
+    "book_fire",
+    "book_earth",
+    "book_water",
+    "arcade_city",
+    "book_blood"
+  ],
+  "checks": {
+    "uniqueStageIds": true,
+    "uniqueAssetPaths": true,
+    "nativeBytesMatchGeneratedOriginals": true,
+    "sha256AndSizesMatch": true,
+    "declaredDimensionsMatch": true,
+    "twoDistinctStaticLayersPerStage": true,
+    "allBackgroundsOpaque": true,
+    "foregroundCenterAlphaMaxAtMost1": true,
+    "foregroundFootBandAlphaMaxAtMost1": true,
+    "sourceAndOutputImagesVisuallyInspected": true
+  },
+  "limitations": {
+    "runtimeTestsByThisSubagent": false,
+    "browserTestsByThisSubagent": false,
+    "noPixelsEdited": true,
+    "fidelity1to1Certified": false,
+    "UHDCertified": false,
+    "animationClipsGenerated": 0,
+    "sharedManifestsEditedByThisSubagent": false
+  },
+  "nativeDimensionExceptions": [
+    {
+      "stageId": "arcade_city",
+      "role": "transparent-foreground",
+      "width": 1671,
+      "height": 941
+    },
+    {
+      "stageId": "book_blood",
+      "role": "transparent-foreground",
+      "width": 1672,
+      "height": 940
+    }
+  ],
+  "rejectedCandidateRecord": "rejected-candidates.json"
+}

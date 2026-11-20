@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "stages",
+  "id": "book_water",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-stages-native.mjs",
+    "--out=/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_water",
+    "--stages=book_water"
+  ],
+  "startedAt": "2026-11-19T17:46:26.148174+00:00",
+  "completedAt": "2026-11-19T17:46:28.344525+00:00",
+  "durationSeconds": 2.197,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "5e4cee0ced1cb66ce3ab5b7ceb1d46e82057bfad275ccd973f0cb10b39b047d2",
+  "executedHarness": "executed/qa-stages-native-5e4cee0ced1c.mjs",
+  "reportSHA256": "6d6e5598a70dc9ab12a9dc690833291ba47233616bcdb429850ecd56b9a2903a",
+  "log": "process.txt",
+  "logSHA256": "8b0290fb27cc2d9293276419a2ece1151eb9d773732f71e1b7d174693b84f631",
+  "passed": true
+}

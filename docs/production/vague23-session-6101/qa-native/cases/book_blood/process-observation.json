@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "kind": "stages",
+  "id": "book_blood",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1",
+    "/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-stages-native.mjs",
+    "--out=/workspace/scratch/6101dce1e243/silent-hill-halo-of-flesh/docs/production/vague23/qa-native/cases/book_blood",
+    "--stages=book_blood"
+  ],
+  "startedAt": "2026-11-19T17:46:23.700062+00:00",
+  "completedAt": "2026-11-19T17:46:26.146746+00:00",
+  "durationSeconds": 2.447,
+  "exitCode": 0,
+  "signalNumber": null,
+  "nodeExecArgv": [
+    "--expose-gc",
+    "--max-old-space-size=128",
+    "--max-semi-space-size=1"
+  ],
+  "harnessSHA256": "5e4cee0ced1cb66ce3ab5b7ceb1d46e82057bfad275ccd973f0cb10b39b047d2",
+  "executedHarness": "executed/qa-stages-native-5e4cee0ced1c.mjs",
+  "reportSHA256": "252b1777b4278301fc3da31ff0cb01500acf562f1134628c42f129e883487b31",
+  "log": "process.txt",
+  "logSHA256": "e9e1e62548e9f9972a9a6d680f6f4c17baa4d3af94eb75280de14687c59bf6f7",
+  "passed": true
+}

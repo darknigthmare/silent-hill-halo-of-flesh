@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-19T20:17:32.842Z",
+  "report": "report.json",
+  "reportSHA256": "10e4a2b669c4079f4133da8e1842f8bf7c6474a6739c9818f09792c31d13c2d4",
+  "passed": true,
+  "method": "Visual inspection of all six actual native FightEngine captures, both orientations at idle, during input-driven movement and after release.",
+  "inspected": [
+    "arcade_gum_head_arcade-right-idle.png",
+    "arcade_gum_head_arcade-right-movement-static-idle.png",
+    "arcade_gum_head_arcade-right-movement-released-idle.png",
+    "arcade_gum_head_arcade-left-idle.png",
+    "arcade_gum_head_arcade-left-movement-static-idle.png",
+    "arcade_gum_head_arcade-left-movement-released-idle.png"
+  ],
+  "technicalResult": {
+    "passed": true,
+    "checks": 64,
+    "cases": 2,
+    "captures": 7
+  },
+  "testedSpriteEntryMatches": {
+    "arcade_gum_head_arcade": true,
+    "sh2_creeper_025": true
+  },
+  "testedStageEntryMatches": {
+    "book_earth": true
+  },
+  "findings": [
+    "Gum Head Arcade appears complete from head to toes in both orientations, including fingers and the extended rear leg. No clipping, placeholder or portrait substitution is visible.",
+    "The calibrated feet stay on the existing floor plane. Both movement sequences translate the unchanged static idle image and release it back to idle.",
+    "Earth Zone background and foreground stay legible; the fighter remains clear of the HUD and near timber edges."
+  ],
+  "limitations": [
+    "Native Canvas only; Chromium, DOM/CSS, HTTP, browser keyboard delivery and service workers remain outside scope.",
+    "This is one static lateral image mirrored for the opposite side. No native walk animation, attack/contact/guard/finisher matrix, original timing or unseen reverse-side detail is verified.",
+    "Technical and framing checks do not certify 1:1 source fidelity. The preserved selection portrait is hash-checked and saved separately, but is not among these six visually inspected fight captures."
+  ],
+  "fidelity": "unverified"
+}

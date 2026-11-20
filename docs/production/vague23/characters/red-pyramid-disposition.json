@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "recordedAt": "2026-11-19T20:10:46Z",
+  "action": "stop-all-red-pyramid-generation-for-wave23",
+  "source": "parent instruction received during character production",
+  "reportedRefusal": {
+    "fighterId": "film_red_pyramid_film_175",
+    "requestId": "15d589f4-eb36-45f9-a620-971a58114c38",
+    "status": "moderation_blocked",
+    "reason": "violence",
+    "outputProduced": false,
+    "reportedBy": "/root"
+  },
+  "arcadeExistingCandidate": {
+    "fighterId": "arcade_red_pyramid_thing_arcade",
+    "sha256": "e41007997119ce432441041651725d6cca8293b5ea65d95b03bff7ba6d9eb4b1",
+    "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/candidates/arcade_red_pyramid_thing_arcade.e41007997119.png",
+    "generatedFile": "/workspace/scratch/6d8d28552d08/generated_images/exec-902182e9-0cc8-4794-ad0f-bdab89edb478.png",
+    "generatedBeforeStop": true,
+    "disposition": "held-not-selected-not-importable",
+    "reason": "three-quarter frontal instead of required profile; parent subsequently prohibited Red Pyramid retries and variants for this wave"
+  },
+  "preparedCorrection": {
+    "promptPath": "docs/production/vague23/characters/prompt-pyramid-correction.json",
+    "callStarted": false,
+    "imagegenRequestIssued": false,
+    "resultProduced": false,
+    "disposition": "cancelled-before-call-do-not-execute"
+  },
+  "retryCountAfterStop": 0
+}

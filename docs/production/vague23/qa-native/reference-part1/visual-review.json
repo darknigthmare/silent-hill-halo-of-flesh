@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-19T20:03:21.615200+00:00",
+  "report": "report.json",
+  "method": "Visual inspection of all eight native workshop captures, both orientations of four reference-only profiles.",
+  "inspected": [
+    "sh4_greedy_worm_069-reference-right.png",
+    "sh4_greedy_worm_069-reference-left.png",
+    "sh4_toadstool_061-reference-right.png",
+    "sh4_toadstool_061-reference-left.png",
+    "sh4_whitestool_062-reference-right.png",
+    "sh4_whitestool_062-reference-left.png",
+    "sh3_glutton-reference-right.png",
+    "sh3_glutton-reference-left.png"
+  ],
+  "findings": [
+    "All four dedicated source silhouettes are visible in full in both orientations; no clipping or placeholder is visible.",
+    "Visible subject bases align with the inspector ground guide; neither preserved portraits nor unrelated images substitute for the lateral candidates.",
+    "Opposite orientations are presentation mirrors. The four existing source roles remain outside duels.",
+    "Greedy Worm, Toadstool and Whitestool appear around 99–104 pixels high under the unchanged inspector scale; Glutton appears about 275 pixels high. These are existing presentation sizes, not measurements of canonical dimensions."
+  ],
+  "technicalResult": {
+    "passed": true,
+    "checks": 84,
+    "captures": 12,
+    "workshopViews": 8,
+    "duelCases": 0
+  },
+  "limitations": [
+    "Native Canvas workshop rendering only; no HTTP, Chromium, DOM/CSS or real browser inputs exercised.",
+    "No duel, attack, contact, guard, finisher or animation test is claimed for these four non-combat profiles.",
+    "This inspection verifies presentation and framing, not 1:1 fidelity, canonical dimensions or unseen reverse-side detail."
+  ],
+  "fidelity": "unverified"
+}

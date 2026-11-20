@@ -1,0 +1,85 @@
+[
+  {
+    "stageId": "ebisugaoka",
+    "scene": "fogworld-corner-shop-main-street",
+    "source": "shf",
+    "ceiling": false,
+    "bgLayer": "fogworld-corner-shop",
+    "fgLayer": "near-timber-edges",
+    "bgFile": "exec-2cf8ecc7-d0c5-4814-8cf2-8af813318795.png",
+    "fgFile": "exec-e91ed001-780c-4ed6-bf9e-7df944069d9d.png",
+    "bgKey": "ebisugaoka-bg",
+    "fgKey": "ebisugaoka-fg",
+    "worldState": "normal-art-with-existing-versus-transition-policy",
+    "edition": "SILENT HILL f, released game promotional imagery, Fog World only",
+    "locationScope": "Ebisugaoka, wooden corner shop on the main street; fixed frontage from two official PlayStation views in the same normal phase.",
+    "refs": [
+      {
+        "file": "ebisugaoka-fogworld-hq.jpg",
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/silent-hill-f-slider-fogworld-02-16sep25?wid=1920&fmt=jpeg",
+        "page": "https://www.playstation.com/en-us/games/silent-hill-f/",
+        "type": "official-publisher-platform-screenshot",
+        "role": "primary architecture"
+      },
+      {
+        "file": "ebisugaoka-street-hq.jpg",
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/silent-hill-f-screenshot-05-ps5-11mar25?wid=1920&fmt=jpeg",
+        "page": "https://www.playstation.com/en-us/games/silent-hill-f/",
+        "type": "official-publisher-platform-screenshot",
+        "role": "same shop frontage confirmation"
+      }
+    ],
+    "notes": [
+      "Two official PlayStation images of the same shop were inspected at 1920-pixel width: timber facade, tile eaves, lattice windows, balcony, worn sign, bench, red cylindrical postbox and overhead wires.",
+      "Only normal Fog World is delivered. Existing versus-transition policy is preserved; no floral Otherworld frame or automatic transition is invented.",
+      "The straight-on camera and wider road are versus adaptations. Sign lettering and hidden details remain unverified.",
+      "Two independent static PNG planes with differential horizontal parallax. No new animation, hazard, collision or finisher logic.",
+      "Foreground timber returns are restrained camera framing from attested materials, not a measured original street boundary."
+    ]
+  },
+  {
+    "stageId": "book_fire",
+    "scene": "fire-zone-launch20121016-workbench-room",
+    "source": "bom",
+    "ceiling": true,
+    "bgLayer": "launch-fire-room",
+    "fgLayer": "near-iron-edges",
+    "bgFile": "exec-57720cc8-d25f-4906-b782-c03787ecc07d.png",
+    "fgFile": "exec-5d8bc3c5-edc1-4c31-9ef9-8350c1d0eb32.png",
+    "bgKey": "book-fire-bg",
+    "fgKey": "book-fire-fg",
+    "worldState": "fixed-altered",
+    "edition": "SILENT HILL: Book of Memories, PS Vita US launch imagery dated 2012-10-16",
+    "locationScope": "Fire Zone industrial workbench room in the 16 October 2012 launch screenshot; foreground grates remain behind a solid adapted combat lane.",
+    "refs": [
+      {
+        "file": "book-fire-launch01.jpg",
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_01.jpg",
+        "page": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm",
+        "type": "publisher-launch-screenshot-preserved-by-fan-archive",
+        "role": "primary retail room"
+      },
+      {
+        "file": "book-fire-launch02.jpg",
+        "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_02.jpg",
+        "page": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm",
+        "type": "publisher-launch-screenshot-preserved-by-fan-archive",
+        "role": "material comparison only; no second room merged"
+      },
+      {
+        "file": "book-fire-room01.jpg",
+        "url": "https://images.squarespace-cdn.com/content/v1/65cf6b927541f12375eaf30b/9accda26-87ed-43ef-a3c6-abf7d49a32be/ranko-prozo-fire-world-01.jpg",
+        "page": "https://www.rankoprozo.com/portfolio-1/silent-hill-book-of-memories",
+        "type": "environment-artist-portfolio",
+        "role": "supporting Fire material kit; no claim this exact artist room is retail"
+      }
+    ],
+    "notes": [
+      "Launch screenshot 20121016_01 fixes the retail room: drawer workbench, small table, iron wall panels, grates and underfloor warm illumination. The second launch screenshot only confirms materials.",
+      "Ranko Prozo portfolio Fire World 01 provides clearer material/kit reference. Its exact layout and the unrelated shooting-range Fire World 02 were not substituted for the retail room.",
+      "No player, creature, weapon, HUD, collectible, attack fire, lava or new pit imported. The low frontal camera and widened solid fight lane are declared versus adaptations.",
+      "Two independent static PNG planes with differential horizontal parallax. No new animation, hazard, collision or finisher logic.",
+      "Foreground narrow iron returns are restrained camera framing from attested materials; native output is not certified 1:1 or UHD."
+    ]
+  }
+]

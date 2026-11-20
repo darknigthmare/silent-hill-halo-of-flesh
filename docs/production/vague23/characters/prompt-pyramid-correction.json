@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "wave": 23,
+  "tool": "image_gen.imagegen",
+  "job": {
+    "id": "arcade_red_pyramid_thing_arcade",
+    "source": "arcade",
+    "referenceFiles": [
+      "/workspace/scratch/6d8d28552d08/generated_images/exec-902182e9-0cc8-4794-ad0f-bdab89edb478.png",
+      "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/pyramid-arcade.jpg",
+      "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/pyramid-arcade-game1.jpg",
+      "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/characters/references/pyramid-arcade-game2.jpg"
+    ],
+    "role": "combatant",
+    "derivedFrom": "/workspace/scratch/6d8d28552d08/generated_images/exec-902182e9-0cc8-4794-ad0f-bdab89edb478.png",
+    "prompt": "Use case: reference-based image edit. Edit reference 1, keeping its identity, exact Arcade-specific tall narrow rusty helmet, bare weathered arms, coarse dark brown long apron, dark footwear and single large low cleaver. References 2, 3 and 4 are original Silent Hill: The Arcade model/gameplay identity references, do not replace its costume with film or SH2 designs. Output one complete creature on genuine transparent RGBA, no environment, text, UI, grid, border, watermark or extra subject.\nCHANGE ONLY THE POSE AND VIEW: convert the current three-quarter/front view into an unmistakable full 90-degree SIDE PROFILE facing RIGHT, a classic 2D fighter side elevation. Camera sees the creature's LEFT SIDE; chest surface turned away, torso sagittal direction points to screen right, no frontal sternum, no facing the viewer. The long pointed front plate of its tall narrow Arcade helmet extends toward the RIGHT; show the narrow helmet SIDE plane, not the front plate square-on. Both feet point RIGHT, a grounded staggered stance with one foot ahead. Both hands readable separated in silhouette; right hand keeps the great knife held low behind the body, the entire long blade trailing to the LEFT. Free hand modestly bent in front. Keep body proportions, barklike coarse apron texture, weathered arms and unique helmet peak. No new spikes, straps, armor, gore, weapons, attachments or anatomy. Include the whole helmet peak, entire sword tip, both hands, complete hem and both feet. Scale the whole subject DOWN so its complete silhouette including weapon fits in central 60% of a square canvas, with generous 20% transparent margins on ALL sides. Quiet neutral light. No generic ground shadow. This is a pose/view correction of the Arcade character, not a new redesign.",
+    "limits": "One native Arcade render and two gameplay frames define the narrow helmet and large blade. Lateral helmet geometry, lower footwear, pose and texture remain interpreted; no film or SH2 costume transfer, no native animation or1:1 claim. Profile correction was generated from the first authored candidate plus the three original source images; camera rotation is interpreted, not an independent canonical side-view proof."
+  },
+  "status": "cancelled-before-call",
+  "imagegenRequestIssued": false,
+  "doNotExecute": true,
+  "reason": "Parent stop-all-Red-Pyramid generation instruction after Film variant refusal; no correction call was issued."
+}

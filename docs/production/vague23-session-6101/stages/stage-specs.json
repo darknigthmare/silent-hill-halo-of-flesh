@@ -1,0 +1,87 @@
+[
+  {
+    "stageId": "book_fire",
+    "scene": "vita-launch-fire-industrial-room-20121016-01",
+    "edition": "PS Vita — US launch screenshot, 2012-10-16",
+    "ceiling": true,
+    "sourceFiles": [
+      "sh_book_of_memories_screen_20121016_01.jpg",
+      "sh_book_of_memories_screen_20121016_02.jpg"
+    ],
+    "primaryInput": "sh_book_of_memories_screen_20121016_01.jpg",
+    "locationScope": "Book of Memories, Fire : salle industrielle de la capture de lancement US du 16 octobre 2012, image 01. La seconde vue corrobore les matériaux ; elle ne sert pas à importer une autre pièce.",
+    "support": "Plaques d’acier continues au premier plan. Grille à lueur chaude et meuble d’atelier restent en arrière du couloir de combat.",
+    "observations": [
+      "La capture01 montre le meuble d’atelier rouge à tiroirs, une petite table/assise voisine, des parois métalliques et une grille de sol lumineuse.",
+      "La sortie retenue garde ces motifs et dégage un sol horizontal. Une révision imagegen a supprimé le rebord de plateforme et les bandes jaunes/noires apparus au bas de la première sortie.",
+      "La nouvelle orientation de caméra, la largeur, l’échelle des panneaux et le reste du sol sont des adaptations versus ; le plan procédural entier n’est pas connu."
+    ],
+    "limits": [
+      "Pas de lave, brasier ajouté, Guardian, personnage, arme, HUD ni danger de terrain déduit de l’image.",
+      "Le premier plan est une transposition des chants d’acier observés, pas une séparation mesurée des couches originales."
+    ]
+  },
+  {
+    "stageId": "book_earth",
+    "scene": "vita-e3-earth-gallery-20120606-37",
+    "edition": "PS Vita — E3 prerelease screenshot, 2012-06-06",
+    "ceiling": true,
+    "sourceFiles": [
+      "sh_book_of_memories_screen_20120606_37_earth_world.jpg"
+    ],
+    "primaryInput": "sh_book_of_memories_screen_20120606_37_earth_world.jpg",
+    "locationScope": "Book of Memories, Earth : galerie à soutènements de bois et récipients de la capture E3 du 6 juin 2012, image37 ; version précommerciale uniquement.",
+    "support": "Terre et cailloux au premier plan ; roues, caisses, tonneau et soutènements sont derrière les combattants.",
+    "observations": [
+      "La source native montre un sol pierreux humide, des soutènements horizontaux en bois, une ouverture dans le mur, deux roues et des récipients ; une zone verdâtre est visible à gauche.",
+      "La sortie reprend les matériaux et une roue au fond ; elle reconstruit la vue frontale et laisse un plateau vide sans armes, corps ni interface.",
+      "L’ouverture, le plafond rocheux et la largeur latérale sont une reconstruction de caméra, pas la preuve du plan complet ou de la version commerciale."
+    ],
+    "limits": [
+      "Préversion explicitement conservée ; aucun état final commercial, géométrie, physique ni animation d’origine certifié.",
+      "Le bord rocheux proche est une adaptation de cadrage des matériaux visibles, pas un ajout de piège ou de mécanique."
+    ]
+  },
+  {
+    "stageId": "book_blood",
+    "scene": "vita-e3-blood-arena-20120606-31",
+    "edition": "PS Vita — E3 prerelease screenshot, 2012-06-06",
+    "ceiling": false,
+    "sourceFiles": [
+      "sh_book_of_memories_screen_20120606_31_blood_boss.jpg"
+    ],
+    "primaryInput": "sh_book_of_memories_screen_20120606_31_blood_boss.jpg",
+    "locationScope": "Book of Memories, Blood : plateforme de l’arène Blood Guardian illustrée à l’E3 le 6 juin 2012, image31 ; boss entièrement exclu du décor.",
+    "support": "Grande surface rouge opaque et continue au niveau des pieds ; canaux grillagés maintenus en retrait. Aucun écoulement ni dommage passif.",
+    "observations": [
+      "La source montre de larges surfaces rouges séparées par du métal quadrillé sombre ; le Guardian masque une partie de la plateforme centrale.",
+      "La sortie garde les plaques rouges, les canaux grillagés et les petits blocs de périphérie, sans le boss, sans personnages, organes ni interface. Une correction imagegen a retiré le disque central qui avait été extrapolé par le premier essai.",
+      "Le cadrage demeure en plongée douce ; la largeur, les divisions du plateau et le nombre de blocs périphériques sont une reconstruction de la partie occultée. Ils ne sont pas certifiés comme plan d’origine."
+    ],
+    "limits": [
+      "Préversion uniquement. Les surfaces rouges ne prouvent ni liquide, ni marée, ni lave, ni comportement animé.",
+      "La reprise des extrémités de blocs dans les deux coins du premier plan est une adaptation de caméra ; la plupart du calque est transparent."
+    ]
+  },
+  {
+    "stageId": "book_water",
+    "scene": "vita-e3-water-basin-20120606-50",
+    "edition": "PS Vita — E3 prerelease screenshot, 2012-06-06",
+    "ceiling": true,
+    "sourceFiles": [
+      "sh_book_of_memories_screen_20120606_50_water_boss.jpg"
+    ],
+    "primaryInput": "sh_book_of_memories_screen_20120606_50_water_boss.jpg",
+    "locationScope": "Book of Memories, Water : bassin carrelé de l’arène Water Guardian illustrée à l’E3 le 6 juin 2012, image50 ; boss exclu.",
+    "support": "Plan carrelé continu sous une eau peu profonde, sans rupture au premier plan. Débris et ouverture de conduit restent au fond.",
+    "observations": [
+      "La capture native montre le bassin sombre, du carrelage vert-gris, des montants maçonnés, une ouverture circulaire à droite et quelques débris plats.",
+      "Le fond retenu reprend ces motifs et les reflets bleutés ; les personnages, le Guardian et les reflets de leurs silhouettes ont disparu.",
+      "La vue frontale, la largeur et les dimensions du conduit sont réinterprétées pour le versus ; la source masque une partie du mur derrière le boss."
+    ],
+    "limits": [
+      "Préversion uniquement. Aucune cascade, arrivée d’eau, noyade, collision ni animation de ruissellement n’est ajoutée.",
+      "Les champs de reflet font partie d’un PNG statique ; aucune animation de la source n’est comptée."
+    ]
+  }
+]

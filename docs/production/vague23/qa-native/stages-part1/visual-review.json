@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-19T20:04:39.174Z",
+  "report": "report.json",
+  "passed": true,
+  "checks": 77,
+  "captures": 2,
+  "testedStageEntryMatches": {
+    "ebisugaoka": true,
+    "book_fire": true
+  },
+  "inspected": [
+    "ebisugaoka.png",
+    "book_fire.png"
+  ],
+  "findings": [
+    "Both exact new background/foreground pairs are drawn by the actual FightEngine with the existing Book of Memories test fighters.",
+    "Ebisugaoka: timber shop frontage, fog and street depth remain readable; edge timber planes do not cover the fighters or HUD.",
+    "Fire Zone: workbench, metallic wall and glowing floor grates remain readable; foreground metal edges stay at screen margins.",
+    "Both fighters are complete, remain on the authored ground plane and use their combat idles rather than their selection portraits.",
+    "Both stages passed actual left/right input-driven parallax with the fixed background and moving foreground."
+  ],
+  "parallax": [
+    {
+      "stageId": "ebisugaoka",
+      "scene": "fogworld-corner-shop-main-street",
+      "events": [
+        {
+          "direction": "right",
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ]
+    },
+    {
+      "stageId": "book_fire",
+      "scene": "fire-zone-launch20121016-workbench-room",
+      "events": [
+        {
+          "direction": "right",
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, actual browser keyboard delivery or service workers.",
+    "No new fighter pose, attack, contact, guard, finisher, stage hazard, original timing or 1:1 artistic fidelity is certified.",
+    "Two static stage planes and their runtime parallax do not constitute a new source animation."
+  ],
+  "fidelity": "unverified"
+}

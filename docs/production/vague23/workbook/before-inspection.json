@@ -1,0 +1,103 @@
+{
+  "sourceSHA256": "a7928d7350d35bcd61745b886110b1c007525b41644ff30001e1c981ace49649",
+  "inspection": {
+    "recordCount": 5,
+    "truncated": false,
+    "metadata": {
+      "revision": "duf1pn",
+      "target": {
+        "id": "wb/xr28x4",
+        "beforeLines": 0,
+        "afterLines": 0
+      },
+      "kind": {
+        "requested": "workbook,sheet,table",
+        "tokens": [
+          "workbook",
+          "sheet",
+          "table"
+        ]
+      },
+      "include": {
+        "tokens": []
+      },
+      "exclude": {
+        "tokens": []
+      },
+      "notices": []
+    }
+  },
+  "tables": [
+    {
+      "sheet": "Corpus",
+      "tables": [
+        {
+          "name": "CorpusSilentHill",
+          "style": "TableStyleLight1",
+          "showFilterButton": true
+        }
+      ]
+    },
+    {
+      "sheet": "Stages",
+      "tables": [
+        {
+          "name": "StagesSilentHill",
+          "style": "TableStyleLight1",
+          "showFilterButton": true
+        }
+      ]
+    }
+  ],
+  "stagesSummary": {
+    "active": 65,
+    "openMissing": 43,
+    "blocked": 15
+  },
+  "formulas": {
+    "Corpus": [
+      [
+        "",
+        "=COUNTA(A9:A74)",
+        "",
+        "",
+        "=COUNTIF(G9:G74,\"Absent\")+COUNTIF(G9:G74,\"Programme absent\")",
+        "",
+        "",
+        "=COUNTIF(C9:C74,\"Présentation officielle\")+COUNTIF(C9:C74,\"Émission éditeur\")"
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ],
+    "Stages": [
+      [
+        "",
+        "=COUNTIF(D9:D131,\"Actif\")",
+        "",
+        "",
+        "=COUNTIFS(D9:D131,\"Absent\",E9:E131,\"Ouverte\")",
+        "",
+        "",
+        "=COUNTIF(E9:E131,\"Bloquée\")"
+      ],
+      [
+        "",
+        "=COUNTA(A9:A131)",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    ]
+  }
+}

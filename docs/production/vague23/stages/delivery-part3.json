@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "group": "vague23-stages",
+  "scope": "New native static bitmap candidates for existing missing stages only",
+  "createdAt": "2026-11-19T20:14:35.683707+00:00",
+  "baseCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "deliveryState": "ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "book_water",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "water-rooftop-dlc-gallery20130315-view37",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT21"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "PS Vita post-release DLC promotional screenshot; gallery labelled 2013-03-15, source filename 20130115_37",
+      "locationScope": "Water World rooftop equipment room, screenshot37; low concrete boundary, diamond-lattice panels, two metal doors, capped vents",
+      "selectedSubLocation": "Water World rooftop equipment room, screenshot37; low concrete boundary, diamond-lattice panels, two metal doors, capped vents",
+      "layers": [
+        {
+          "id": "water-rooftop-lattice",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "3e1e5c015f1fd84146ce2bbce365c085963d13ba67c60eeb35eb87991a4755de",
+              "bytes": 2244718,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/book_water.water-rooftop-lattice.3e1e5c015f1f.png"
+            }
+          ]
+        },
+        {
+          "id": "near-rooftop-steel-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "d593738b8364466c6ddf0831e86b9cca7f4655741f8c2bca5f6d7da13216ebd7",
+              "bytes": 219517,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/book_water.near-rooftop-steel-edges.d593738b8364.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "La capture de jeu postérieure à la sortie fixe la pièce. Le portfolio du créateur corrobore l’identité Water World et les matériaux, sans être pris pour un plan retail exact.",
+        "La galerie est datée du15mars2013 ; son nom de fichier contient20130115. Les deux informations sont conservées sans réécrire la provenance.",
+        "Le décor est un toit technique sombre avec grilles à croisillons, portes métalliques et ventilations ; aucune salle inondée, rune ou piscine n’est déduite du nom Water.",
+        "La perspective, la largeur et la profondeur des appareils sont adaptées à une arène latérale. Aucun personnage, flamme de torche, reflet de combat, arme ou HUD n’est importé.",
+        "Deux PNG natifs indépendants ; premier plan à alpha véritable sur les seuls extrêmes. Pas de retouche, redimensionnement ni preuve de fidélité1:1.",
+        "Candidat statique pour intégration et vérification moteur par le responsable principal."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "book_water",
+      "promptKey": "book-water-bg",
+      "role": "opaque-background",
+      "filename": "book_water.water-rooftop-lattice.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-98925cd5-c58c-4a1b-8715-be8735fb2d58.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/book_water.water-rooftop-lattice.png",
+      "path": "assets/stages/book_water.water-rooftop-lattice.3e1e5c015f1f.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2244718,
+      "sha256": "3e1e5c015f1fd84146ce2bbce365c085963d13ba67c60eeb35eb87991a4755de",
+      "pixelSHA256": "f093c9f898c41ab725367f162f6e635d603b4872a8599503e9ed8ead2dfa9aaa",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "book_water",
+      "promptKey": "book-water-fg",
+      "role": "transparent-foreground",
+      "filename": "book_water.near-rooftop-steel-edges.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-40ec6e39-dee9-4be7-abbc-8400de09efaa.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/book_water.near-rooftop-steel-edges.png",
+      "path": "assets/stages/book_water.near-rooftop-steel-edges.d593738b8364.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 219517,
+      "sha256": "d593738b8364466c6ddf0831e86b9cca7f4655741f8c2bca5f6d7da13216ebd7",
+      "pixelSHA256": "ce36475a20a4350fd5ab234a17c3e31fff951238ba578f31c514c8483e7b8e92",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9438733354011054,
+        "semiTransparentPixels": 87942,
+        "opaqueFraction": 0.00023198877301455745,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 0
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "stageId": "book_water",
+      "file": "book-dlc-37.jpg",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20130115_37.jpg",
+      "page": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm",
+      "type": "archived-publisher-gameplay-screenshot",
+      "role": "Primary exact post-release rooftop room view; gallery date and filename differ and are both retained",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/book-dlc-37.jpg",
+      "path": "docs/production/vague23/stages/references/book-dlc-37.jpg",
+      "bytes": 200709,
+      "sha256": "ca5a264234395a6bbbb0695ab8a232044a7819ea4a58ea624bfa0f44bfde4b1e",
+      "width": 960,
+      "height": 544,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    },
+    {
+      "stageId": "book_water",
+      "file": "book-water-world.jpg",
+      "url": "https://images.squarespace-cdn.com/content/v1/65cf6b927541f12375eaf30b/f9e0b7c3-0d8e-4179-adbf-49220cb811b5/ranko-prozo-water-world.jpg",
+      "page": "https://www.rankoprozo.com/portfolio-1/silent-hill-book-of-memories",
+      "type": "environment-artist-portfolio",
+      "role": "Water World identity and material corroboration only; its skyline, crates and tarps are not merged into the primary room",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/book-water-world.jpg",
+      "path": "docs/production/vague23/stages/references/book-water-world.jpg",
+      "bytes": 297906,
+      "sha256": "4f5b001a2ff0f167953511b8ffc8e6c182223a031656d03c69c35990de7cc1c1",
+      "width": 1900,
+      "height": 1080,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    }
+  ],
+  "prompts": [
+    {
+      "stageId": "book_water",
+      "key": "book-water-bg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/stage-research/book-dlc-37.jpg",
+        "/workspace/scratch/6d8d28552d08/stage-research/book-water-world.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque background plate for a 2D side-on fighting-game stage. Deliver a single landscape 16:9 PNG, ideally 1672×941, at native output resolution. High-quality detailed painted game environment, sober realistic materials, faithful to the attached exact Silent Hill references. No UI, title, watermark, frame, characters, enemies, humans, silhouettes, blood effects or invented symbols. This is a scene adaptation for a fixed combat camera, not a claim of exact original geometry. Keep the ground in the bottom 30% as an unobstructed horizontal fighting lane; the feet baseline is at about 87% of image height. No camera roll, no fisheye, no high aerial/isometric view. Do not place large foreground objects across the center; the separate foreground will be produced later.\nExact scope: SILENT HILL: BOOK OF MEMORIES, PS Vita, Water World rooftop room shown in the post-release DLC promotional gameplay screenshot number37, archived in the 15 March 2013 gallery (filename20130115_37). Image1 is the primary precise room geometry. Image2 is the actual environment artist's Water World material reference ONLY; do not merge its city skyline, crates or tarps into this room. Recompose only Image1's enclosed rooftop equipment area from chest height in a shallow side-on perspective. The rear boundary is a low stained grey concrete base topped by tall black crossing diamond-lattice steel security panels, interrupted by the two narrow plain rusty-brown metal doors visible in the screenshot. Near the rear left is a squat round domed metal exhaust ventilator on a short square base. Farther right are one smaller cylindrical cap on a brick pedestal and one box-shaped ventilating unit with a circular top grille, all moved only in projected depth behind the fighting lane. Concrete roof floor is flat dark bluish grey, gently damp with restrained mottled reflections and small pale debris close to the far wall. Dim desaturated slate-blue ambient light, blackened metal, muted reddish rust, cool heavy night-grey air. Let only a thin unobtrusive overcast sky band above the tall lattice be visible; no skyline is established by the primary shot. Match the source's functional rooftop scale, door forms, lattice rhombi and capped vents without ornamental redesign. Do not reproduce people, sword, torch, orange flames, sparks, silhouettes, impacts, HUD or dropped items. No pools, flooded dungeon, water temple, bridge, runes, statues, shrine, chainlink diamond wire, railings across the fightlane, rooftop bosses, extra architectural features or dramatic lightning."
+    },
+    {
+      "stageId": "book_water",
+      "key": "book-water-fg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/generated_images/exec-98925cd5-c58c-4a1b-8715-be8735fb2d58.png",
+        "/workspace/scratch/6d8d28552d08/stage-research/book-dlc-37.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Asset type: separate transparent foreground overlay for a 2D fighting-game stage. Create one landscape16:9 native RGBA PNG, same1672×941 composition as Image1, on a genuinely transparent background. Image1 is the completed Water rooftop background, use only for matching palette, perspective, lighting and scale; Image2 is the original post-release Book of Memories rooftop reference. Draw ONLY two very narrow near-camera dark steel support edges, one hugging the very left edge and one hugging the very right, each restricted to the outermost4% of canvas width. The edge texture is cold charcoal black metal, small rusty flecks, damp slate-blue highlights, matching the existing rooftop fence supports. Keep the inner contours fully within x0–5% and95–100% at all heights. Everything between x7% and93% must be fully transparent from top to bottom, including the entire central floor and fighter foot band. No crossing diamond lattice, rail, top beam, connecting frame, floor strip, stage scene, fog sheet, sky, shadows, plants, debris, machines, doors, vents, people, text or graphic overlay. Do not paint black, grey, white, checkerboard or matte into empty space. At least90% of the image should remain transparent in the actual alpha channel. Preserve native antialiased thin edge detail. This asset is a sparse isolated edge overlay, not a second image of the room."
+    }
+  ],
+  "qa": {
+    "sourceAndGeneratedImagesVisuallyInspected": true,
+    "browserTest": false,
+    "engineTest": false,
+    "noPixelsRetouched": true,
+    "noAnimatedClips": true,
+    "certified1to1": false,
+    "certifiedUHD": false
+  },
+  "totals": {
+    "stages": 1,
+    "newPNG": 2,
+    "bytes": 2464235,
+    "references": 2
+  }
+}

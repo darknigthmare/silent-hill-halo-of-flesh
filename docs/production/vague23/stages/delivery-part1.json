@@ -1,0 +1,471 @@
+{
+  "schemaVersion": 1,
+  "group": "vague23-stages",
+  "scope": "New native static bitmap candidates for existing missing stages only",
+  "createdAt": "2026-11-19T20:01:51.532415+00:00",
+  "baseCommit": "cffb58bbcb78c2bdb1381965ea0efb3e5fb54994",
+  "deliveryState": "ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "ebisugaoka",
+      "source": "shf",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "fogworld-corner-shop-main-street",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT32"
+      ],
+      "worldState": "normal-art-with-existing-versus-transition-policy",
+      "edition": "SILENT HILL f, released game promotional imagery, Fog World only",
+      "locationScope": "Ebisugaoka, wooden corner shop on the main street; fixed frontage from two official PlayStation views in the same normal phase.",
+      "selectedSubLocation": "Ebisugaoka, wooden corner shop on the main street; fixed frontage from two official PlayStation views in the same normal phase.",
+      "layers": [
+        {
+          "id": "fogworld-corner-shop",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "4a4cf5e4c7d954f03feba3c3000340c033e09042792ac9a8746b707304e5e0be",
+              "bytes": 2369728,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png"
+            }
+          ]
+        },
+        {
+          "id": "near-timber-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "a2ee94a9cf3e884b3ab6678ad385da2cdbaeb18557572b11e0a3672f2fbd3201",
+              "bytes": 164483,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Two official PlayStation images of the same shop were inspected at 1920-pixel width: timber facade, tile eaves, lattice windows, balcony, worn sign, bench, red cylindrical postbox and overhead wires.",
+        "Only normal Fog World is delivered. Existing versus-transition policy is preserved; no floral Otherworld frame or automatic transition is invented.",
+        "The straight-on camera and wider road are versus adaptations. Sign lettering and hidden details remain unverified.",
+        "Two independent static PNG planes with differential horizontal parallax. No new animation, hazard, collision or finisher logic.",
+        "Foreground timber returns are restrained camera framing from attested materials, not a measured original street boundary."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    },
+    {
+      "stageId": "book_fire",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "fire-zone-launch20121016-workbench-room",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT21",
+        "EXT9_BOM_FIRE_VIEW_01_20261026",
+        "EXT9_BOM_FIRE_VIEW_02_20261026"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "SILENT HILL: Book of Memories, PS Vita US launch imagery dated 2012-10-16",
+      "locationScope": "Fire Zone industrial workbench room in the 16 October 2012 launch screenshot; foreground grates remain behind a solid adapted combat lane.",
+      "selectedSubLocation": "Fire Zone industrial workbench room in the 16 October 2012 launch screenshot; foreground grates remain behind a solid adapted combat lane.",
+      "layers": [
+        {
+          "id": "launch-fire-room",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "sha256": "41ce3e9666c526a1c3daf2fa5e30cbd4fab5bd1f4cdf4230a056bee7ea135d1d",
+              "bytes": 2469012,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png"
+            }
+          ]
+        },
+        {
+          "id": "near-iron-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "sha256": "9f531b56161d24a0c8174a8b180f4a15d364e50e0258e002a632227de1e0d0b6",
+              "bytes": 217813,
+              "width": 1672,
+              "height": 941,
+              "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Launch screenshot 20121016_01 fixes the retail room: drawer workbench, small table, iron wall panels, grates and underfloor warm illumination. The second launch screenshot only confirms materials.",
+        "Ranko Prozo portfolio Fire World 01 provides clearer material/kit reference. Its exact layout and the unrelated shooting-range Fire World 02 were not substituted for the retail room.",
+        "No player, creature, weapon, HUD, collectible, attack fire, lava or new pit imported. The low frontal camera and widened solid fight lane are declared versus adaptations.",
+        "Two independent static PNG planes with differential horizontal parallax. No new animation, hazard, collision or finisher logic.",
+        "Foreground narrow iron returns are restrained camera framing from attested materials; native output is not certified 1:1 or UHD."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Artwork/alpha audit only; no collision or gameplay changes"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "ebisugaoka",
+      "promptKey": "ebisugaoka-bg",
+      "role": "opaque-background",
+      "filename": "ebisugaoka.fogworld-corner-shop.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-2cf8ecc7-d0c5-4814-8cf2-8af813318795.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/ebisugaoka.fogworld-corner-shop.png",
+      "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2369728,
+      "sha256": "4a4cf5e4c7d954f03feba3c3000340c033e09042792ac9a8746b707304e5e0be",
+      "pixelSHA256": "2e2763fa32d567a9fb5add8f19c733c9767db471995ec9b1a601cfafceb5c55d",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "ebisugaoka",
+      "promptKey": "ebisugaoka-fg",
+      "role": "transparent-foreground",
+      "filename": "ebisugaoka.near-timber-edges.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-e91ed001-780c-4ed6-bf9e-7df944069d9d.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/ebisugaoka.near-timber-edges.png",
+      "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 164483,
+      "sha256": "a2ee94a9cf3e884b3ab6678ad385da2cdbaeb18557572b11e0a3672f2fbd3201",
+      "pixelSHA256": "d95b1c842e19682b55b9e9151e5f5d704f1311259f16b16a20d684160eb2359a",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9602040738499713,
+        "semiTransparentPixels": 62366,
+        "opaqueFraction": 0.00015698966283450875,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "book_fire",
+      "promptKey": "book-fire-bg",
+      "role": "opaque-background",
+      "filename": "book_fire.launch-fire-room.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-57720cc8-d25f-4906-b782-c03787ecc07d.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/book_fire.launch-fire-room.png",
+      "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2469012,
+      "sha256": "41ce3e9666c526a1c3daf2fa5e30cbd4fab5bd1f4cdf4230a056bee7ea135d1d",
+      "pixelSHA256": "15b5b72c59a75a179671af30cf2e44b4c2f6c745007877a4232b7f209f3497e4",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "book_fire",
+      "promptKey": "book-fire-fg",
+      "role": "transparent-foreground",
+      "filename": "book_fire.near-iron-edges.png",
+      "originalOutput": "/workspace/scratch/6d8d28552d08/generated_images/exec-5d8bc3c5-edc1-4c31-9ef9-8350c1d0eb32.png",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/book_fire.near-iron-edges.png",
+      "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 217813,
+      "sha256": "9f531b56161d24a0c8174a8b180f4a15d364e50e0258e002a632227de1e0d0b6",
+      "pixelSHA256": "03a4f384883aa15c97c5438f280cc5da660ad169b59c22eed94c218e3cf39b23",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9450409062943321,
+        "semiTransparentPixels": 86267,
+        "opaqueFraction": 0.00012902389293686345,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1
+      },
+      "visualInspection": "completed",
+      "preservation": "Original imagegen PNG copied byte-for-byte; no crop, resize, recolor or alpha editing",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "stageId": "ebisugaoka",
+      "file": "ebisugaoka-fogworld-hq.jpg",
+      "url": "https://gmedia.playstation.com/is/image/SIEPDC/silent-hill-f-slider-fogworld-02-16sep25?wid=1920&fmt=jpeg",
+      "page": "https://www.playstation.com/en-us/games/silent-hill-f/",
+      "type": "official-publisher-platform-screenshot",
+      "role": "primary architecture",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/ebisugaoka-fogworld-hq.jpg",
+      "path": "docs/production/vague23/stages/references/ebisugaoka-fogworld-hq.jpg",
+      "bytes": 262931,
+      "sha256": "37029778605322a90ccd1ac2443c62e40f6f6e7901fee81f712479b0d8d59bed",
+      "width": 1920,
+      "height": 1073,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    },
+    {
+      "stageId": "ebisugaoka",
+      "file": "ebisugaoka-street-hq.jpg",
+      "url": "https://gmedia.playstation.com/is/image/SIEPDC/silent-hill-f-screenshot-05-ps5-11mar25?wid=1920&fmt=jpeg",
+      "page": "https://www.playstation.com/en-us/games/silent-hill-f/",
+      "type": "official-publisher-platform-screenshot",
+      "role": "same shop frontage confirmation",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/ebisugaoka-street-hq.jpg",
+      "path": "docs/production/vague23/stages/references/ebisugaoka-street-hq.jpg",
+      "bytes": 245389,
+      "sha256": "5cf9cd810edb0c925b43bff139f9d9654906220700734ab5bd0f1616f39177da",
+      "width": 1920,
+      "height": 1080,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    },
+    {
+      "stageId": "book_fire",
+      "file": "book-fire-launch01.jpg",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_01.jpg",
+      "page": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm",
+      "type": "publisher-launch-screenshot-preserved-by-fan-archive",
+      "role": "primary retail room",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/book-fire-launch01.jpg",
+      "path": "docs/production/vague23/stages/references/book-fire-launch01.jpg",
+      "bytes": 173779,
+      "sha256": "39441bb698a9f311de162264ba47c3b8e5284abaf9609e5f74a6b8f5cda8e0f3",
+      "width": 960,
+      "height": 544,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    },
+    {
+      "stageId": "book_fire",
+      "file": "book-fire-launch02.jpg",
+      "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20121016_02.jpg",
+      "page": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots_en.htm",
+      "type": "publisher-launch-screenshot-preserved-by-fan-archive",
+      "role": "material comparison only; no second room merged",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/book-fire-launch02.jpg",
+      "path": "docs/production/vague23/stages/references/book-fire-launch02.jpg",
+      "bytes": 239307,
+      "sha256": "626219e788febaffe8a6c93462d64815c25e67a3d18ccbbbc6ebc94c4bef793b",
+      "width": 960,
+      "height": 544,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    },
+    {
+      "stageId": "book_fire",
+      "file": "book-fire-room01.jpg",
+      "url": "https://images.squarespace-cdn.com/content/v1/65cf6b927541f12375eaf30b/9accda26-87ed-43ef-a3c6-abf7d49a32be/ranko-prozo-fire-world-01.jpg",
+      "page": "https://www.rankoprozo.com/portfolio-1/silent-hill-book-of-memories",
+      "type": "environment-artist-portfolio",
+      "role": "supporting Fire material kit; no claim this exact artist room is retail",
+      "localPath": "/workspace/scratch/6d8d28552d08/silent-hill-halo-of-flesh/docs/production/vague23/stages/references/book-fire-room01.jpg",
+      "path": "docs/production/vague23/stages/references/book-fire-room01.jpg",
+      "bytes": 363138,
+      "sha256": "3e28b6251719c56ecac87ea583011aa0be43449827a123544070466d3ed8eebf",
+      "width": 1900,
+      "height": 1080,
+      "inspected": true,
+      "sourceClaim": "Observed reference imagery; fine details, new camera and hidden geometry remain unverified"
+    }
+  ],
+  "prompts": [
+    {
+      "stageId": "ebisugaoka",
+      "key": "ebisugaoka-bg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/stage-research/ebisugaoka-fogworld-hq.jpg",
+        "/workspace/scratch/6d8d28552d08/stage-research/ebisugaoka-street-hq.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque background plate for a 2D side-on fighting-game stage. Deliver a single landscape 16:9 PNG, ideally 1672×941, at native output resolution. High-quality detailed painted game environment, sober realistic materials, faithful to the attached exact Silent Hill references. No UI, title, watermark, frame, characters, enemies, humans, silhouette, blood effects or invented symbols. This is a scene adaptation for a fixed combat camera, not a claim of exact original geometry. Keep the ground in the bottom 30% as an unobstructed horizontal fighting lane; the feet baseline is at about 87% of image height. No camera roll, no fisheye, no high aerial/isometric view. Do not place large foreground objects across the center; the separate foreground will be produced later.\nExact scope: SILENT HILL f, normal Fog World Ebisugaoka main street, the wooden corner shop seen in both official PlayStation screenshots. Images 1 and 2 are visual references for the SAME shop and same normal phase; use Image 1 as primary architecture and Image 2 only to clarify the frontage. Recompose this one storefront and its immediate neighbors as a side-facing combat backdrop: dark weathered timber two-story building, tile eaves, latticed upper windows and small balcony, faded rectangular shop sign, glazed lower shopfront, red cylindrical postbox to the left of the entrance, low wooden bench, slim utility pole and overhead power wires, adjoining slatted wall and distant side alley right. Grey cloudy daytime with a little low fog; wet granular grey road and restrained small puddles. Match roofline, facade proportions, postbox design, wood tone, dull blue-grey atmosphere and spacing as closely as the sources show. Use a wide nearly straight-on camera opposite this facade, with just enough depth at the right alley. The sign lettering must remain worn and indistinct; do not add readable invented words. Do not mix the red floral Otherworld, shrine, school, or Shimizu residence into this street. No flowers, vines, creatures, modern vehicles, road signs or extra props."
+    },
+    {
+      "stageId": "ebisugaoka",
+      "key": "ebisugaoka-fg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/generated_images/exec-2cf8ecc7-d0c5-4814-8cf2-8af813318795.png",
+        "/workspace/scratch/6d8d28552d08/stage-research/ebisugaoka-fogworld-hq.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Asset type: one 2D fighting-game FOREGROUND OVERLAY with TRUE TRANSPARENT RGBA alpha. Output a single 16:9 image, same 1672×941 canvas as input 1. Image 1 is the completed opaque backdrop for exact scale, color and material matching only. Produce only a sparse close foreground edge plane; REMOVE EVERYTHING ELSE to true transparency. Almost the entire canvas, including all pixels between x=0.07 and x=0.93 from top to bottom, MUST be fully transparent. No opaque black/white background, no painted checkerboard, no scene, sky, road, floor strip, central object, furniture, characters, monsters, text, logo or watermark. Keep all visible material strictly in the outermost 5% at the far left and far right, irregular slim vertical cropped edge silhouettes with clean alpha. Do not show a complete rectangular frame. Foreground edges are a modest fixed-camera adaptation of attested wall materials, not a new room. Lower central foot-band y=0.72..0.95 is completely empty transparent.\nExact material: the dark weathered timber vertical siding/door-jamb edges of Ebisugaoka's wooden corner-shop street in normal Fog World. At far left, a slim shadowed vertical timber post cut by the image edge, dark grey-brown weathered grain; at far right an even thinner cut edge of the same timber siding with one subtle seam. Cold grey outdoor light. The two narrow strips should sit at the extreme canvas edges and be understated. No roof, lantern, wires, mailbox, flowers, greenery or new props. Preserve wide unobstructed view of the backdrop after compositing."
+    },
+    {
+      "stageId": "book_fire",
+      "key": "book-fire-bg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/stage-research/book-fire-launch01.jpg",
+        "/workspace/scratch/6d8d28552d08/stage-research/book-fire-room01.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: one opaque background plate for a 2D side-on fighting-game stage. Deliver a single landscape 16:9 PNG, ideally 1672×941, at native output resolution. High-quality detailed painted game environment, sober realistic materials, faithful to the attached exact Silent Hill references. No UI, title, watermark, frame, characters, enemies, humans, silhouette, blood effects or invented symbols. This is a scene adaptation for a fixed combat camera, not a claim of exact original geometry. Keep the ground in the bottom 30% as an unobstructed horizontal fighting lane; the feet baseline is at about 87% of image height. No camera roll, no fisheye, no high aerial/isometric view. Do not place large foreground objects across the center; the separate foreground will be produced later.\nExact scope: SILENT HILL: BOOK OF MEMORIES, Fire Zone, industrial room documented by the October 16 2012 launch screenshot (Image 1). Image 1 is the primary retail scene and Image 2 is the environment artist's material/kit reference only; do NOT copy a different room arrangement wholesale. Create the same compact rust-red workshop/fire room with close-panelled iron walls, horizontal and vertical pipes, solid rusty floor plates alternating with narrow grated channels, warm orange light glowing from BELOW the rear grates, a heavy workbench/drawer cabinet against the rear wall and a simple worn industrial table at the rear left. Reorient the camera to a nearly straight-on horizontal versus view at low chest height, widen the visible floor modestly and keep the entire bottom third solid and level for combat. Preserve the dark iron/orange palette, construction seams, rivets, grates and worn metal surfaces from the retail screenshot; orange light is illumination, no new flames or lava. Fully remove every player, monster, weapon, fire attack, HUD, map, health bar, damage numeral, and collectible. Do not import the shooting range/targets/ammunition from the artist's other Fire image, nor other elemental worlds. Keep gaps behind the combat lane only, no pit or stairs crossing the fighting floor."
+    },
+    {
+      "stageId": "book_fire",
+      "key": "book-fire-fg",
+      "references": [
+        "/workspace/scratch/6d8d28552d08/generated_images/exec-57720cc8-d25f-4906-b782-c03787ecc07d.png",
+        "/workspace/scratch/6d8d28552d08/stage-research/book-fire-launch01.jpg"
+      ],
+      "prompt": "Use case: background-extraction. Asset type: one 2D fighting-game FOREGROUND OVERLAY with TRUE TRANSPARENT RGBA alpha. Output a single 16:9 image, same 1672×941 canvas as input 1. Image 1 is the completed opaque backdrop for exact scale, color and material matching only. Produce only a sparse close foreground edge plane; REMOVE EVERYTHING ELSE to true transparency. Almost the entire canvas, including all pixels between x=0.07 and x=0.93 from top to bottom, MUST be fully transparent. No opaque black/white background, no painted checkerboard, no scene, sky, road, floor strip, central object, furniture, characters, monsters, text, logo or watermark. Keep all visible material strictly in the outermost 5% at the far left and far right, irregular slim vertical cropped edge silhouettes with clean alpha. Do not show a complete rectangular frame. Foreground edges are a modest fixed-camera adaptation of attested wall materials, not a new room. Lower central foot-band y=0.72..0.95 is completely empty transparent.\nExact material: Fire Zone's rusted industrial iron wall returns, flange seams and slim pipe edge. At the extreme left draw one very narrow cropped shadowed rusted metal wall return, and at the extreme right a slim dark iron edge with a few small rivets. Warm low orange rim light, same iron texture as the backdrop. Keep each within its outermost 5% of canvas width. No railing across the bottom, no floor, no flames, embers, smoke, gears, machinery, doorway outline or additional props. Sparse true-alpha edge overlay only."
+    }
+  ],
+  "qa": {
+    "sourceAndGeneratedImagesVisuallyInspected": true,
+    "browserTest": false,
+    "engineTest": false,
+    "noPixelsRetouched": true,
+    "noAnimatedClips": true,
+    "certified1to1": false,
+    "certifiedUHD": false
+  },
+  "totals": {
+    "stages": 2,
+    "newPNG": 4,
+    "bytes": 5221036,
+    "references": 5
+  }
+}
