@@ -1,0 +1,293 @@
+{
+  "schema": "halo-wave27-character-delivery-v1",
+  "date": "2026-11-24",
+  "baseCommit": "fbd109d39ac843620e6c0fde1284480bc51a66d3",
+  "entries": [
+    {
+      "key": "lying-figure-neutral-special",
+      "path": "docs/production/vague27/characters/lying-figure-neutral-special.png",
+      "sourcePath": "/workspace/scratch/0f50864dcd65/generated_images/exec-0eb7e60b-9439-4c7c-9779-f2cfe9adc513.png",
+      "bytes": 1467004,
+      "sha256": "10a8df3e32702516e8c8a190e7b4b4b872b6223056ed846fe61b4ff23cef3566",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alphaBoundsByThreshold": {
+        "0": [
+          0,
+          0,
+          1516,
+          1009
+        ],
+        "8": [
+          418,
+          0,
+          979,
+          1003
+        ],
+        "32": [
+          418,
+          5,
+          979,
+          1002
+        ],
+        "128": [
+          418,
+          6,
+          979,
+          1002
+        ],
+        "240": [
+          419,
+          7,
+          978,
+          1001
+        ]
+      },
+      "fullyTransparentFraction": 0.8098983764648438,
+      "alphaNearZeroFraction": 0.8219610850016276,
+      "fighterId": "sh2_lying_figure_020",
+      "source": "sh2",
+      "pose": "neutralSpecial",
+      "origin": "conversation-image-generation",
+      "generationTool": "built-in image_gen.imagegen",
+      "generationSucceeded": true,
+      "generationRequestId": null,
+      "promptPath": "docs/production/vague27/characters/lying-figure-neutral-special.prompt.json",
+      "promptFileSHA256": "ca0e429837bd3214a6b8d394786df8ea470c04b057aa58acb99357b4f0e8aeb9",
+      "promptSHA256": "de96b9000c363754d94306f0e8bdb9e70c0c9c402b0d38ae8b319b08f99740d8",
+      "references": [
+        {
+          "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+          "role": "edit-target-existing-generated-combat-idle",
+          "sha256": "af82da95d655904b849a170323269e33bd3336142a49cc182430af84a2f59b32",
+          "inspectedThisWave": true
+        },
+        {
+          "path": "art/reference-provenance-parallel.json",
+          "role": "historical-original-SH2-source-ledger",
+          "inspectedThisWave": "text-only",
+          "note": "Original image URLs in this ledger could not be fetched by web tool in this wave; no new original-image observation is claimed.",
+          "sha256": "5acdeb82712593116571868a8abee432ba4dd033cb9926cbba668430ea603c8a"
+        },
+        {
+          "path": "src/combat-reference-policy.js",
+          "role": "existing-neutralSpecial-thoracic-jet-behaviour",
+          "sha256": "a784ca09be46e54b188e71c003ad8fd12970c8c4821bc8c5515e6a8e79751028"
+        },
+        {
+          "path": "scripts/source-pose-specifications.mjs",
+          "role": "existing-SH2-standing-envelope-and-two-legs-contract",
+          "sha256": "f566ab75449bc4c5e3b2acf69c9f444d491b9139103125e5ff6a449f94c3fb70"
+        }
+      ],
+      "anchor": [
+        0.455,
+        0.978516
+      ],
+      "bodyHeight": 0.94,
+      "facing": 1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "importMode": "append",
+      "singleSubjectReviewed": true,
+      "visualReview": {
+        "fullBody": true,
+        "facesRight": true,
+        "newPoseDistinctFromIdle": true,
+        "noAdditionalActors": true,
+        "nativeAlpha": true,
+        "staticFrame": true,
+        "sourceTimingMeasured": false,
+        "newAnimatedClip": false,
+        "existingIdentityPreservedCandidate": true,
+        "notes": "Deux pieds complets, bras prisonniers, torse redressé/bracé vers la droite. Aucun jet peint dans le PNG personnage. Marge supérieure serrée (5 px au seuil alpha32) mais silhouette entière. Fine lueur alpha résiduelle héritée de la présentation de référence."
+      },
+      "calibrationNote": "Hauteur équivalente et ligne d’appui héritées de la caméra de l’idle; centre des pieds ajusté à x=.455. Valeurs versus estimées à contrôler en jeu. Contrôle Canvas natif vague27 passé dans les deux orientations; silhouettes entières et retour idle normal.",
+      "importerDryRun": {
+        "exitCode": 0,
+        "passed": true,
+        "applied": false,
+        "resultingFrames": 2,
+        "resultingAnimatedClips": 0,
+        "expectedAssetPath": "assets/sprites/sh2_lying_figure_020.10a8df3e3270.png"
+      },
+      "status": "imported-and-native-runtime-reviewed",
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "runtimeQA": {
+        "report": "docs/production/vague27/characters/qa-native/report.json",
+        "visualReview": "docs/production/vague27/characters/visual-review.json",
+        "orientationsTested": [
+          "right",
+          "left"
+        ],
+        "ordinaryInputCallbacks": true,
+        "actorStateInjected": false,
+        "nativeCanvasPassed": true,
+        "browserTest": false,
+        "httpTest": false
+      }
+    },
+    {
+      "key": "double-head-forward-special",
+      "path": "docs/production/vague27/characters/double-head-forward-special.png",
+      "sourcePath": "/workspace/scratch/0f50864dcd65/generated_images/exec-141e910a-ae46-46f9-9827-2230fa920974.png",
+      "bytes": 1294609,
+      "sha256": "a971470e7e5b04231d6ebe27511525d1e4165b1577cfb2e1888c523ccd324f11",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "alphaBoundsByThreshold": {
+        "0": [
+          0,
+          18,
+          1734,
+          871
+        ],
+        "8": [
+          47,
+          91,
+          1698,
+          834
+        ],
+        "32": [
+          47,
+          91,
+          1698,
+          834
+        ],
+        "128": [
+          48,
+          92,
+          1697,
+          833
+        ],
+        "240": [
+          49,
+          93,
+          1696,
+          831
+        ]
+      },
+      "fullyTransparentFraction": 0.6605102641308949,
+      "alphaNearZeroFraction": 0.6748003543606828,
+      "fighterId": "sh3_double_head_040",
+      "source": "sh3",
+      "pose": "forwardSpecial",
+      "origin": "conversation-image-generation",
+      "generationTool": "built-in image_gen.imagegen",
+      "generationSucceeded": true,
+      "generationRequestId": null,
+      "promptPath": "docs/production/vague27/characters/double-head-forward-special.prompt.json",
+      "promptFileSHA256": "afd0b20636f8683db69f5e47b8a6a7abfb5c86385823fa6e10f9d0beb498d16b",
+      "promptSHA256": "63219e21f3fd9de9336af0b8608ceb6c6293a4cc7c4e1cca24daa72118634649",
+      "references": [
+        {
+          "path": "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+          "role": "edit-target-existing-generated-combat-idle",
+          "sha256": "8c3f9985c31e57bd4d85678702b7aa23c207ea7dffa686a9ceda8a2a80dd4df9",
+          "inspectedThisWave": true
+        },
+        {
+          "path": "docs/production/wave6-references/sh3/sh3_double_head_model.jpg",
+          "role": "original-SH3-model-anatomy-reference",
+          "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_03_double_head.jpg",
+          "sha256": "c73b760fb02bb99555a90edbc8638eaab474657326be518c021da9ea98c76bd6",
+          "inspectedThisWave": true,
+          "note": "Original 2003 model render archived by Silent Hill Memories. Original model reference, not a frame of the new side-view lunge."
+        },
+        {
+          "path": "docs/production/wave6-references/sh3/sources.json",
+          "role": "historical-reference-identification",
+          "sha256": "3ca5f5d48f1971e79c9d98cfeb5b31065e0656a1ea5a266238f1d2824ff639d8"
+        },
+        {
+          "path": "src/combat-reference-policy.js",
+          "role": "existing-forwardSpecial-short-jumping-bite-contract",
+          "sha256": "a784ca09be46e54b188e71c003ad8fd12970c8c4821bc8c5515e6a8e79751028"
+        }
+      ],
+      "anchor": [
+        0.44,
+        0.928974
+      ],
+      "bodyHeight": 0.955,
+      "facing": 1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "importMode": "append",
+      "singleSubjectReviewed": true,
+      "visualReview": {
+        "fullBody": true,
+        "facesRight": true,
+        "newPoseDistinctFromIdle": true,
+        "noAdditionalActors": true,
+        "nativeAlpha": true,
+        "staticFrame": true,
+        "sourceTimingMeasured": false,
+        "newAnimatedClip": false,
+        "existingIdentityPreservedCandidate": true,
+        "notes": "Quatre pattes et museau entiers; lunge de profil droit, pattes avant projetées, gueule ouverte. Un cou et un bloc de tête; l’ouverture exacte des deux lobes de mâchoire d’origine reste interprétée dans ce profil. Pas d’adversaire ni projectile."
+      },
+      "calibrationNote": "Même toile et échelle d’apparence que l’idle; ancre logique et hauteur équivalente conservées pour le mouvement aérien du moteur. Valeurs versus estimées à contrôler en jeu. Contrôle Canvas natif vague27 passé dans les deux orientations; silhouettes entières et retour idle normal.",
+      "importerDryRun": {
+        "exitCode": 0,
+        "passed": true,
+        "applied": false,
+        "resultingFrames": 5,
+        "resultingAnimatedClips": 0,
+        "expectedAssetPath": "assets/sprites/sh3_double_head_040.a971470e7e5b.png"
+      },
+      "status": "imported-and-native-runtime-reviewed",
+      "fidelity": "unverified",
+      "certifiedOneToOne": false,
+      "runtimeQA": {
+        "report": "docs/production/vague27/characters/qa-native/report.json",
+        "visualReview": "docs/production/vague27/characters/visual-review.json",
+        "orientationsTested": [
+          "right",
+          "left"
+        ],
+        "ordinaryInputCallbacks": true,
+        "actorStateInjected": false,
+        "nativeCanvasPassed": true,
+        "browserTest": false,
+        "httpTest": false
+      }
+    }
+  ],
+  "counts": {
+    "newIndependentPNG": 2,
+    "newStaticAttackPoses": 2,
+    "newCharacters": 0,
+    "newSelectionPortraits": 0,
+    "newAnimatedClips": 0,
+    "certifiedOneToOne": 0
+  },
+  "globalRegistryModifiedByThisAgent": false,
+  "sourceImagePixelsModifiedLocally": false,
+  "limitations": [
+    "Les deux nouvelles images sont des poses candidates statiques, pas des animations complètes.",
+    "Le jeu original documente les types d’attaque; angles exacts et cadence de ces vues latérales ne sont pas relevés sur une séquence source.",
+    "Les dimensions natives sont 1536×1024 et 1774×887; aucune UHD/4K native revendiquée.",
+    "Les deux imports effectués par l’intégrateur ont été contrôlés dans le moteur Canvas natif. Le test navigateur HTTP et la publication restent suivis par l’intégrateur."
+  ],
+  "runtimeQA": {
+    "report": "docs/production/vague27/characters/qa-native/report.json",
+    "visualReview": "docs/production/vague27/characters/visual-review.json",
+    "checks": 134,
+    "checksPassed": 134,
+    "cases": 4,
+    "captures": 12,
+    "visuallyInspectedCaptures": 6,
+    "passed": true,
+    "browserTest": false,
+    "httpTest": false,
+    "actorStateInjected": false
+  }
+}

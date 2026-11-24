@@ -174,6 +174,7 @@ async function runVerification() {
     'index.html','offline.html','404.html','styles.css','modules/unified-versus.html','modules/chronicles.html','modules/archive.html',
     'modules/versus.css','modules/chronicles.css','modules/archive.css','src/command.js','src/versus.js',
     'src/chronicles.js','src/archive.js','src/fight.js','src/renderers.js','src/data.js','src/shared.js',
+    'src/projectile-bitmaps.js','src/projectile-bitmap-manifest.js',
     'data/roster.json','data/stages.json','data/chronicles.json','data/sources.json','data/content-stats.json','data/combat-rules.json','data/coverage-audit.json','data/fatalities.json','data/movesets.json','data/stage-director.json','src/movesets.js','src/stage-director.js'
   ];
   for(const path of required)assert(await exists(join(project,path)),`Fichier requis absent: ${path}`);

@@ -5097,5 +5097,209 @@ export const STAGE_BITMAPS = {
       "Player, Raw Shock, reticle, snowstorm, source chase and gameplay obstacles are omitted. No new collision, weather, hazard, source timing or animation is introduced.",
       "One opaque static background plus one sparse transparent near-edge plate. Native trace alpha is preserved; in-engine QA deferred to root integration."
     ]
+  },
+  "police_station_hc": {
+    "stageId": "police_station_hc",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "homecoming-police-first-cell-closed",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT06"
+    ],
+    "layers": [
+      {
+        "id": "bg-closed-police-cell",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+            "sha256": "c2252eb70f95c5446ed23bc321341bb402e98fb649527869e226de481b3ef404",
+            "bytes": 2292574,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+            "sha256": "3f61e32a58fe968ace34fc2fee74691c72783dae687eb67726cba4a0cefe9f26",
+            "bytes": 162026,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Exact sub-location checked in actual Homecoming gameplay: the first closed police cell, before Wheeler releases Alex. No hospital or Overlook prison is substituted.",
+      "The historical lot9 URL sh5_screen_060.jpg was inspected and rejected: it shows Joshua behind bars and Alex in a hospital gown in the opening hospital, not the police cell. See source-review.json.",
+      "The gray steel barred enclosure, worn gray-green walls, closed gate and damaged concrete follow the captured cell. The lateral camera, complete wall span, regularized gate proportions and expanded clear floor are authored adaptations from 320×180 source frames.",
+      "No Alex, Wheeler, weapon, flashlight beam, Schism, released/open cell door, blood or new hazard is baked into the art.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "villa_rooftop": {
+    "stageId": "villa_rooftop",
+    "source": "shortmessage",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "tsm-villa-rooftop-first-visit-fog",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT30"
+    ],
+    "layers": [
+      {
+        "id": "bg-first-visit-mural",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+            "sha256": "66bead27729a3836b129c88c90b8e97248d43e86ef14f31ff8181a2e36847461",
+            "bytes": 2117664,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+            "sha256": "360e02276096be24f755261ec670adbb6490aae1f989eb7b4ef3bb2d98424ff0",
+            "bytes": 93530,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The first rooftop visit in fog supplies the mural, memorial flowers, concrete wall, parapet and restrained metal railing. The later clear-sky ending is not used as the selected phase.",
+      "The painted human motif belongs to Maya’s wall mural. It is static artwork, not a living actor or an additional combatant. Anita, the phone and subtitles are absent.",
+      "The wall painting, roof proportions, flower arrangement, lighting and newly widened side-on camera remain authored interpretations of 320×180 source frames; mural brushwork and full roof geometry are not certified 1:1.",
+      "The foreground has no open drop, jump sequence, body, automatic lethal finisher, lightning or petal storm. Existing narrative-only safety policy and fixed-normal fog phase remain unchanged.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "villa_stairwell": {
+    "stageId": "villa_stairwell",
+    "source": "shortmessage",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "tsm-villa-rooftop-access-stairwell",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT30"
+    ],
+    "layers": [
+      {
+        "id": "bg-rooftop-access-stairs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+            "sha256": "363247f2f6cdc060f2a41411bdc1383ded0dd542d2bfeab47419720b3752dd8c",
+            "bytes": 2318515,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+            "sha256": "6f87a6aba1001187e7e0adbf60e99d2fb5d1d63f5aa3f3a584c53f9347ff18b3",
+            "bytes": 236240,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Source frames isolate the ordinary gray-green concrete stair chamber beyond the Otherworld maze doorway: straight worn steps, two-tone teal walls, thin wall rail, low ceiling and paneled roof-access door.",
+      "Paper-covered maze walls, chain-link gates and the phone seen before the doorway are excluded. No monster or pursuit animation is baked into the normal stairwell.",
+      "The source camera looks up the stairs. This plate deliberately adapts it to a lateral elevation with an expanded horizontal lower landing; step count, full side-wall profile, door size and hidden surfaces remain unverified.",
+      "All steps and the rail remain behind the clear fighter floor. No new collision, falling hazard, door slam, moving shadow or automatic finisher is introduced.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
   }
 };

@@ -2,6 +2,7 @@ import {actorSpriteState,advanceSpriteClock} from './sprite-animation.js';
 import {combatFraming} from './sprite-framing.js';
 import { AFFLICTIONS, STAGE_HAZARDS, createCombatProfile, getRitualModifier } from './data.js';
 import { drawHitboxOverlay, drawMonster, drawStage } from './renderers.js';
+import {drawProjectileBitmap,prepareProjectileBitmaps} from './projectile-bitmaps.js';
 import { stageEventDefinition, stageHazardDeck, stageTerrainProfile, stageShiftStyle } from './stage-director.js';
 import { bodyBox, bodyProfile, bodyPushRadius, hasGroundContact, moveBox, overlaps, hazardVolumes, hazardTouches, hazardCounterplay } from './combat-geometry.js';
 import { drawHazardObjects } from './stage-hazard-renderer.js';
@@ -449,6 +450,8 @@ export class FightEngine {
     addEventListener('blur', this.onFocusLoss);
     globalThis.document?.addEventListener('visibilitychange', this.onVisibilityChange);
     this.phaseTimer = this.beginPresentations('intro', this.actors.map(() => ({ key: 'intro', role: 'participant' })), this.phaseTimer, true);
+    // Artwork is optional and prewarms during the intro; failures retain the visible fallback.
+    void prepareProjectileBitmaps(this.actors.map(actor=>actor.data));
   }
 
   start() {
@@ -2873,6 +2876,7 @@ export class FightEngine {
 
   renderProjectiles(context) {
     for (const projectile of this.projectiles) {
+      if(drawProjectileBitmap(context,projectile).kind==='raster')continue;
       context.save();
       context.globalCompositeOperation = 'screen';
       const gradient = context.createRadialGradient(projectile.x, projectile.y, 1, projectile.x, projectile.y, projectile.radius * 2.5);

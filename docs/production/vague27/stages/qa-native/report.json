@@ -1,0 +1,1750 @@
+{
+  "schema": 1,
+  "label": "stage-pass27-native",
+  "generatedAt": "2026-11-24T14:03:07.653Z",
+  "root": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh",
+  "stageIds": [
+    "police_station_hc",
+    "villa_rooftop",
+    "villa_stairwell"
+  ],
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "All selected stage IDs resolve exactly",
+      "passed": true
+    },
+    {
+      "name": "Existing test fighters retain combat eligibility",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/villa_rooftop.near-edges.360e02276096.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/villa_rooftop.near-edges.360e02276096.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "police_station_hc: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "police_station_hc: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "police_station_hc: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "police_station_hc: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "police_station_hc: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "police_station_hc: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "police_station_hc: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "villa_rooftop: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "villa_rooftop: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "villa_rooftop: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "villa_rooftop: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "villa_rooftop: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "villa_rooftop: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "villa_rooftop: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "villa_stairwell: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "villa_stairwell: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "villa_stairwell: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "villa_stairwell: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "villa_stairwell: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "villa_stairwell: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "villa_stairwell: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/villa_rooftop.near-edges.360e02276096.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+      "bytes": 1182614,
+      "width": 1536,
+      "height": 1024,
+      "rgbaSha256": "0c4478dcf379d0ee73c21fa9a753a15f96ffec1d36fcb4541e7b1fdb8191dd80"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+      "bytes": 1697023,
+      "width": 1024,
+      "height": 1536,
+      "rgbaSha256": "3a1362834f7de8adb70fab12dbecda3baf65eba0e58d5f6fdcc012bf0c43f3b2"
+    },
+    {
+      "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+      "sha256": "c2252eb70f95c5446ed23bc321341bb402e98fb649527869e226de481b3ef404",
+      "bytes": 2292574,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "ba002c8122656f5d56d72d0daa4dd2ee79727d26884ffad9884d75846a307125"
+    },
+    {
+      "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+      "sha256": "3f61e32a58fe968ace34fc2fee74691c72783dae687eb67726cba4a0cefe9f26",
+      "bytes": 162026,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "e497f56e7a7125ad50ea0225b5052b8268090951aef0690f8f5da6e547fe304c"
+    },
+    {
+      "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+      "sha256": "66bead27729a3836b129c88c90b8e97248d43e86ef14f31ff8181a2e36847461",
+      "bytes": 2117664,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "f564de5b4091584c2c8c1094faea18380d8002a148239910d66d93740eb0a553"
+    },
+    {
+      "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+      "sha256": "360e02276096be24f755261ec670adbb6490aae1f989eb7b4ef3bb2d98424ff0",
+      "bytes": 93530,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "47c1b8a2f175f4c159eec9a3a5039874535b45b5705d88c4580cf24ce25e1fa2"
+    },
+    {
+      "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+      "sha256": "363247f2f6cdc060f2a41411bdc1383ded0dd542d2bfeab47419720b3752dd8c",
+      "bytes": 2318515,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "75d6e086cc083c1d6d5271375bb3b8e7f0d2284d33c693ecd65525d92313487d"
+    },
+    {
+      "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+      "sha256": "6f87a6aba1001187e7e0adbf60e99d2fb5d1d63f5aa3f3a584c53f9347ff18b3",
+      "bytes": 236240,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "b9894ca5cf17a08574adaf79c60e27e0a3e5cc1fa10a25f0412b884021cfa4b9"
+    }
+  ],
+  "cases": [
+    {
+      "stageId": "police_station_hc",
+      "source": "homecoming",
+      "scene": "homecoming-police-first-cell-closed",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "villa_rooftop",
+      "source": "shortmessage",
+      "scene": "tsm-villa-rooftop-first-visit-fog",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "villa_stairwell",
+      "source": "shortmessage",
+      "scene": "tsm-villa-rooftop-access-stairwell",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    }
+  ],
+  "captures": [
+    {
+      "file": "police_station_hc.png",
+      "stageId": "police_station_hc",
+      "sha256": "255aa58b8a58b9cd83b3795048ef32e094b746d51cee252ea5a0d59c1b304277",
+      "bytes": 1219378,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "villa_rooftop.png",
+      "stageId": "villa_rooftop",
+      "sha256": "eb654d44eb7a79c8c5976c705bfa4105f5278540906b941cf8f04098d9ae9f66",
+      "bytes": 1178544,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "villa_stairwell.png",
+      "stageId": "villa_stairwell",
+      "sha256": "d7c6e2857cc445cc419db1b1a3a93afda2aae97d288072cbdb6d7cb1e82f0b72",
+      "bytes": 1243594,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "aeb087a3cd9518b5ec717989d2d94fc153df56c289e9ab3f136b59caea6dc282",
+      "after": "aeb087a3cd9518b5ec717989d2d94fc153df56c289e9ab3f136b59caea6dc282"
+    },
+    "src/sprite-manifest.js": {
+      "before": "44df0d033087a81e2160bb0cd02add3eb43bf27343205911fd53614fd8a9bdaa",
+      "after": "44df0d033087a81e2160bb0cd02add3eb43bf27343205911fd53614fd8a9bdaa"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "c963cc4cde20946451ad3ad121050aae47c1bed0c082b69360e614d51b492991",
+      "after": "c963cc4cde20946451ad3ad121050aae47c1bed0c082b69360e614d51b492991"
+    },
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "method": {
+    "renderer": "Actual FightEngine.update/render and the original native Canvas drawImage. Each stage is selected through its normal stage descriptor.",
+    "inputs": "Only registered InputState keydown/keyup callbacks receive synthetic native events. No actor position, facing, health, phase, presentation or clock is assigned.",
+    "decoder": "PNG encoding normalized in memory for native decoding; every decoded RGBA byte is compared before/after.",
+    "scope": "Existing fighters exercise initial stage composition, movement in both directions, release to idle, exact planes, live parallax and cache admission."
+  },
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, actual browser keyboard delivery or service workers.",
+    "No new fighter pose, attack, contact, guard, finisher, stage hazard, original timing or 1:1 artistic fidelity is certified.",
+    "Two static stage planes and their runtime parallax do not constitute a new source animation."
+  ],
+  "memoryPolicy": {
+    "nodeExecArgv": [
+      "--expose-gc"
+    ],
+    "explicitGcAfterSharpDecodeBeforeNativePreflight": true,
+    "engineLogicChanged": false
+  },
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "43c565a0f9c5887b043e8852a01bc3c4cd358677652be4f884c0cc2623e14d35",
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "bom_pyramid_head_129": "3ec8112c0efe5bc73ab7638fa37288f731fd4bcb68d58c40c61fa0e0ea7febde",
+    "bom_butcher_123": "0e5bf88a83144ea003cc77b282f4b136c7c6351c03e7da55dbf5b8807220ddd3"
+  },
+  "testedStageEntryHashes": {
+    "police_station_hc": "12186bfe99aa53c2ccd98074aff851e979bf688b68323ab5ba7d6a4a0c3ec92e",
+    "villa_rooftop": "8b289d5230dc379b588b66883efaef3d015f8f7a53e7ab5f4fb1a97f021e9e40",
+    "villa_stairwell": "b017b7109fd39e884471982dcd1e1fc6c1c1befa4083d1f6c982307a9cb29f57"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "passed": true,
+  "completedAt": "2026-11-24T14:03:11.427Z"
+}

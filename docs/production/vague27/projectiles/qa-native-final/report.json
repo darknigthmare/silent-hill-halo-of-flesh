@@ -1,0 +1,932 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-24T13:55:12.608Z",
+  "label": "wave27-native-projectiles",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "projectileStateInjected": false,
+  "method": "Actual FightEngine.update/render with ordinary local training/freeMeter options and original key callbacks. Native Canvas is not Chromium.",
+  "decoder": "Original file hashes verified; PNG encoding normalized only in memory for native Canvas, with decoded RGBA equality checked. Project files remain byte-identical.",
+  "limits": [
+    "Static PNG candidates only; no native animation or 1:1 visual fidelity is certified.",
+    "Source observations establish attack kind; original texture, timing and trajectory are not reproduced by these images.",
+    "The six scenes exercise normal emission and artwork in both player slots; they are not a complete hit/guard gameplay matrix."
+  ],
+  "checks": [
+    {
+      "name": "native bytes assets/sprites/sh1_incubator_018.45c7c84b1960.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/sprites/sh1_incubator_018.45c7c84b1960.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/sprites/sh3_god_050.f6f8f72ed323.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/sprites/sh3_god_050.f6f8f72ed323.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/stages/midwich.courtyard.c9728428d63d.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/stages/midwich.courtyard.c9728428d63d.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_incubator_018-right projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right normal keydown",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right normal keyup",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right special accepted",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right cache budget respected",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_incubator_018-left projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left normal keydown",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left normal keyup",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left special accepted",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-left cache budget respected",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020-right projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right normal keydown",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right normal keyup",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right special accepted",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-right cache budget respected",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh2_lying_figure_020-left projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left normal keydown",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left normal keyup",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left special accepted",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020-left cache budget respected",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_god_050-right projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right normal keydown",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right normal keyup",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right special accepted",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right flame bright baseline touches real floor",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-right cache budget respected",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh3_god_050-left projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left normal keydown",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left normal keyup",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left special accepted",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left flame bright baseline touches real floor",
+      "passed": true
+    },
+    {
+      "name": "sh3_god_050-left cache budget respected",
+      "passed": true
+    }
+  ],
+  "captures": [
+    {
+      "file": "sh1_incubator_018-right.png",
+      "sha256": "bdeb6749c7efa03fb44bbe3fd1b23589726ef70f4207b477c221e45a43ae6c6a",
+      "bytes": 886179,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "sh1_incubator_018-left.png",
+      "sha256": "d66da50d854a07f97e340e8d560c7c0da5badefa1f18d1abeca18784a471b8bf",
+      "bytes": 878577,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "sh2_lying_figure_020-right.png",
+      "sha256": "0a7ebf299ea316c0c06253d650073d309c7d4443022ffd091a8fa0535e252380",
+      "bytes": 912185,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "sh2_lying_figure_020-left.png",
+      "sha256": "737be55f0c230ea22342d3419c675aae42b62526e6895cc58bbf28b1dc70b1c7",
+      "bytes": 905607,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "sh3_god_050-right.png",
+      "sha256": "d430f1a30542334b2565eaebcc1c8b28569eb9c1173d0b4b59306d9982b28283",
+      "bytes": 926328,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "sh3_god_050-left.png",
+      "sha256": "a4945cd6d333154e7f275165cbc9cb4af85567265928e0204b44f7e3422e2550",
+      "bytes": 917995,
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sprites/sh1_incubator_018.45c7c84b1960.png",
+      "sha256": "45c7c84b1960c38f87f1d8819ec0aaca731e02cafa1f000adebcfd2c2c028331",
+      "bytes": 518856,
+      "width": 1086,
+      "height": 1448,
+      "rawRGBAHash": "8087ffe6118b933e3aa644a7181de8698b2ca9390b1dbd33f8a3b7b83294f6ff",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "sha256": "af82da95d655904b849a170323269e33bd3336142a49cc182430af84a2f59b32",
+      "bytes": 1468686,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "02ea6ffbc2cae76632074f1ae3c3e1fef292fb673716e598e611822dc3d06fc7",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+      "sha256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+      "bytes": 1411208,
+      "width": 941,
+      "height": 1672,
+      "rawRGBAHash": "60a2605fc751bc8a0b0fb334595ffd0011b2090a40835335952530d0c7f22527",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "bytes": 1181785,
+      "width": 2172,
+      "height": 724,
+      "rawRGBAHash": "28b59b2a1bb4f2e01c42a53ce514d38088004343a42db9d7658d97fbe9a05d81",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/midwich.courtyard.c9728428d63d.png",
+      "sha256": "c9728428d63d6950b27b5ec791cfcce4854c3aaf0ba781cf735b51c7725844c2",
+      "bytes": 1628967,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "4930104c9a55a4287968078c50c65d181afc0c8610a6632756fd2c51975a1978",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "sha256": "bc62471eecc380da70aaa1bf78e59c342094d9ea7597eaaff5090ba4812f7ffd",
+      "bytes": 1025146,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "4d86d8ada6413107f0f92104698aa03037ed53aa0503df8806310025331084e2",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "sha256": "947604e7ff5ab1dad111a9b0000585de8ed007e8ad07fd632fbfee515039cf51",
+      "bytes": 1389718,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "d7416ae9a34f9fb986da80112e02029448c8de4a5c6d6ed11c3eeca5b2615e4b",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+      "sha256": "8b645595b188a85e2286d44ad7b51ae46a4201a3ebab01342dad7485b65a96b8",
+      "bytes": 1258820,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "44c4b850842984a2dcd32837c5767b4e60089ea08ad7473daad1b74f9a2feef7",
+      "adapterLossless": true
+    }
+  ],
+  "scenes": [
+    {
+      "fighterId": "sh1_incubator_018",
+      "playerIndex": 0,
+      "key": "KeyI",
+      "sourceId": "sh1_incubator_blue_lightning",
+      "initialShot": {
+        "x": 424.51,
+        "y": 434.071,
+        "life": 59,
+        "vx": 12,
+        "groundY": null,
+        "radius": 12
+      },
+      "finalShot": {
+        "x": 484.51,
+        "y": 434.071,
+        "life": 54,
+        "vx": 12,
+        "vy": 0,
+        "health": [
+          1566,
+          760
+        ]
+      },
+      "placement": {
+        "x": 484.51,
+        "y": 434.071,
+        "width": 144,
+        "height": 38.37188872620791,
+        "flip": 1,
+        "source": [
+          89,
+          340,
+          1366,
+          364
+        ],
+        "localX": -72,
+        "localY": -19.185944363103953
+      },
+      "draw": {
+        "path": "assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+        "args": [
+          89,
+          340,
+          1366,
+          364,
+          -72,
+          -19.185944363103953,
+          144,
+          38.37188872620791
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          487.8756103515625,
+          437.5326843261719
+        ],
+        "frame": 249
+      },
+      "capture": "sh1_incubator_018-right.png",
+      "cacheBytes": 6291456,
+      "cacheReservedBytes": 0
+    },
+    {
+      "fighterId": "sh1_incubator_018",
+      "playerIndex": 1,
+      "key": "KeyH",
+      "sourceId": "sh1_incubator_blue_lightning",
+      "initialShot": {
+        "x": 855.49,
+        "y": 434.071,
+        "life": 59,
+        "vx": -12,
+        "groundY": null,
+        "radius": 12
+      },
+      "finalShot": {
+        "x": 795.49,
+        "y": 434.071,
+        "life": 54,
+        "vx": -12,
+        "vy": 0,
+        "health": [
+          760,
+          1566
+        ]
+      },
+      "placement": {
+        "x": 795.49,
+        "y": 434.071,
+        "width": 144,
+        "height": 38.37188872620791,
+        "flip": -1,
+        "source": [
+          89,
+          340,
+          1366,
+          364
+        ],
+        "localX": -72,
+        "localY": -19.185944363103953
+      },
+      "draw": {
+        "path": "assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+        "args": [
+          89,
+          340,
+          1366,
+          364,
+          -72,
+          -19.185944363103953,
+          144,
+          38.37188872620791
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          792.1243896484375,
+          437.5326843261719
+        ],
+        "frame": 249
+      },
+      "capture": "sh1_incubator_018-left.png",
+      "cacheBytes": 6291456,
+      "cacheReservedBytes": 0
+    },
+    {
+      "fighterId": "sh2_lying_figure_020",
+      "playerIndex": 0,
+      "key": "KeyI",
+      "sourceId": "sh2_lying_figure_acid",
+      "initialShot": {
+        "x": 358,
+        "y": 475.75,
+        "life": 59,
+        "vx": 12,
+        "groundY": null,
+        "radius": 14.16
+      },
+      "finalShot": {
+        "x": 418,
+        "y": 475.75,
+        "life": 54,
+        "vx": 12,
+        "vy": 0,
+        "health": [
+          880,
+          760
+        ]
+      },
+      "placement": {
+        "x": 418,
+        "y": 475.75,
+        "width": 148.63565762004177,
+        "height": 56.64,
+        "flip": 1,
+        "source": [
+          140,
+          273,
+          1257,
+          479
+        ],
+        "localX": -74.31782881002088,
+        "localY": -28.32
+      },
+      "draw": {
+        "path": "assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+        "args": [
+          140,
+          273,
+          1257,
+          479,
+          -74.31782881002088,
+          -28.32,
+          148.63565762004177,
+          56.64
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          422.8052062988281,
+          478.3095397949219
+        ],
+        "frame": 249
+      },
+      "capture": "sh2_lying_figure_020-right.png",
+      "cacheBytes": 12582912,
+      "cacheReservedBytes": 0
+    },
+    {
+      "fighterId": "sh2_lying_figure_020",
+      "playerIndex": 1,
+      "key": "KeyH",
+      "sourceId": "sh2_lying_figure_acid",
+      "initialShot": {
+        "x": 922,
+        "y": 475.75,
+        "life": 59,
+        "vx": -12,
+        "groundY": null,
+        "radius": 14.16
+      },
+      "finalShot": {
+        "x": 862,
+        "y": 475.75,
+        "life": 54,
+        "vx": -12,
+        "vy": 0,
+        "health": [
+          760,
+          880
+        ]
+      },
+      "placement": {
+        "x": 862,
+        "y": 475.75,
+        "width": 148.63565762004177,
+        "height": 56.64,
+        "flip": -1,
+        "source": [
+          140,
+          273,
+          1257,
+          479
+        ],
+        "localX": -74.31782881002088,
+        "localY": -28.32
+      },
+      "draw": {
+        "path": "assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+        "args": [
+          140,
+          273,
+          1257,
+          479,
+          -74.31782881002088,
+          -28.32,
+          148.63565762004177,
+          56.64
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          857.19482421875,
+          478.3095397949219
+        ],
+        "frame": 249
+      },
+      "capture": "sh2_lying_figure_020-left.png",
+      "cacheBytes": 12582912,
+      "cacheReservedBytes": 0
+    },
+    {
+      "fighterId": "sh3_god_050",
+      "playerIndex": 0,
+      "key": "KeyI",
+      "sourceId": "sh3_god_ground_flame",
+      "initialShot": {
+        "x": 420.51,
+        "y": 582,
+        "life": 59,
+        "vx": 8,
+        "groundY": 582,
+        "radius": 12
+      },
+      "finalShot": {
+        "x": 460.51,
+        "y": 582,
+        "life": 54,
+        "vx": 8,
+        "vy": 0,
+        "health": [
+          1566,
+          760
+        ]
+      },
+      "placement": {
+        "x": 460.51,
+        "y": 594,
+        "width": 144,
+        "height": 44.44574780058651,
+        "flip": 1,
+        "source": [
+          73,
+          369,
+          1364,
+          421
+        ],
+        "localX": -72,
+        "localY": -40.50158357771261
+      },
+      "draw": {
+        "path": "assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+        "args": [
+          73,
+          369,
+          1364,
+          421,
+          -72,
+          -40.50158357771261,
+          144,
+          44.44574780058651
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          464.39508056640625,
+          594
+        ],
+        "frame": 249
+      },
+      "capture": "sh3_god_050-right.png",
+      "cacheBytes": 18874368,
+      "cacheReservedBytes": 0
+    },
+    {
+      "fighterId": "sh3_god_050",
+      "playerIndex": 1,
+      "key": "KeyH",
+      "sourceId": "sh3_god_ground_flame",
+      "initialShot": {
+        "x": 859.49,
+        "y": 582,
+        "life": 59,
+        "vx": -8,
+        "groundY": 582,
+        "radius": 12
+      },
+      "finalShot": {
+        "x": 819.49,
+        "y": 582,
+        "life": 54,
+        "vx": -8,
+        "vy": 0,
+        "health": [
+          760,
+          1566
+        ]
+      },
+      "placement": {
+        "x": 819.49,
+        "y": 594,
+        "width": 144,
+        "height": 44.44574780058651,
+        "flip": -1,
+        "source": [
+          73,
+          369,
+          1364,
+          421
+        ],
+        "localX": -72,
+        "localY": -40.50158357771261
+      },
+      "draw": {
+        "path": "assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+        "args": [
+          73,
+          369,
+          1364,
+          421,
+          -72,
+          -40.50158357771261,
+          144,
+          44.44574780058651
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          815.60498046875,
+          594
+        ],
+        "frame": 249
+      },
+      "capture": "sh3_god_050-left.png",
+      "cacheBytes": 18874368,
+      "cacheReservedBytes": 0
+    }
+  ],
+  "sourceHashes": {
+    "src/fight.js": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+    "src/projectile-bitmaps.js": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
+    "src/projectile-bitmap-manifest.js": "3b88631dbca967ff63d92a77e97dd17f5609f7ebc973b45d085aad94dc61cf2e",
+    "src/sprite-manifest.js": "dde9d8e9c222c40bfedfb949cdf37a13248941b20791813bf564d837b1937818",
+    "src/stage-bitmap-manifest.js": "fd68efc5606ab12d7783413a9622bb3f98d3c74e281df4961c8999625f59fc55"
+  },
+  "success": true
+}

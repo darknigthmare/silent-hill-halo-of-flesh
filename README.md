@@ -1,5 +1,24 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Attaques, projectiles et stages — 24 novembre 2026, vague 27
+
+**11 PNG indépendants ajoutés : deux poses d’attaque, trois effets de projectile
+et six plans pour trois arènes.** Lying Figure possède sa pose de jet thoracique
+et Double Head sa pose de bond/morsure. Les effets d’acide, d’électricité bleue
+et de feu au sol remplacent le rendu générique pour leurs trois profils exacts
+et dix commandes existantes, avec repli visuel en cas d’échec de chargement.
+
+La cellule du commissariat de Homecoming, le toit et l’escalier de The Short
+Message portent la couverture à **82 arènes sur 123**. Les **204 portraits,
+190 vues latérales et six clips animés** restent distincts de ces ajouts statiques.
+Les anciens assets, règles de combat et classeurs sont conservés.
+
+[Livraison et vérifications](docs/production/vague27/README.md) ·
+[Inventaire des manquants](docs/production/vague27/remaining-assets.json) ·
+[Audit de conservation](docs/production/vague27/summary.json).
+Les scènes et effets sont des adaptations visuelles documentées ; aucune
+fidélité 1:1 ou animation originale n’est certifiée.
+
 ## Personnages et stages manquants — 19 novembre 2026, vague 22
 
 **16 vues latérales dédiées et 10 stages sont ajoutés : 151 vues candidates et

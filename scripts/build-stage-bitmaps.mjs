@@ -55,8 +55,11 @@ export async function auditStageBitmaps({root=sourceRoot,registry=STAGE_BITMAPS,
 
 export async function bitmapRevision(root=sourceRoot){
   const hash=createHash('sha256');
-  for(const name of ['src/sprite-manifest.js','src/stage-bitmap-manifest.js']){
-    hash.update(name+'\0');hash.update(await readFile(resolve(root,name)));hash.update('\0');
+  for(const name of ['src/sprite-manifest.js','src/stage-bitmap-manifest.js','src/projectile-bitmap-manifest.js']){
+    let contents;
+    try{contents=await readFile(resolve(root,name));}
+    catch(error){if(name==='src/projectile-bitmap-manifest.js'&&error.code==='ENOENT')continue;throw error;}
+    hash.update(name+'\0');hash.update(contents);hash.update('\0');
   }
   return hash.digest('hex');
 }

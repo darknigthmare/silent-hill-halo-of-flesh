@@ -1,3 +1,12 @@
+## 0.9.6 — Vague 27, 24 novembre 2026
+
+- Deux poses d’attaque indépendantes pour Lying Figure SH2 et Double Head SH3, avec portraits, idles et clips antérieurs conservés.
+- Trois effets PNG dédiés aux projectiles de Lying Figure, Incubator et God ; liaison exacte profil/édition/commande, cache séparé de 32 Mio et repli visuel sur chargement manquant ou défaillant.
+- Trois arènes à deux plans : première cellule du commissariat de Homecoming, toit et escalier normal de The Short Message. Couverture : 82/123 arènes.
+- Correction documentée d’une ancienne référence de commissariat qui montrait en réalité l’ouverture d’Alchemilla.
+- Aucun changement de dégâts, trajectoires, permissions, roster ou classeurs. Les onze images sont des candidats statiques ; aucun nouveau clip animé ou certificat 1:1.
+- Voir [le dossier de la vague 27](docs/production/vague27/README.md) pour les preuves, les tests et les manquants.
+
 ## 0.9.5 — Transitions, pause multi-manettes et récupération des sauvegardes
 
 - Appuis tactiles brefs conservés entre deux ticks : impulsion distincte du maintien, sans garde réactivée.

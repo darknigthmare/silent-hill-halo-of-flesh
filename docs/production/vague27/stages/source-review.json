@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-24T14:02:03.270059+00:00",
+  "scope": "Source selection for three missing stage candidates; previous production dossiers remain untouched",
+  "selectedStages": [
+    "police_station_hc",
+    "villa_rooftop",
+    "villa_stairwell"
+  ],
+  "exactPixelsAreOfficialPublication": false,
+  "sourceClass": "Actual canonical-game pixels in public unofficial gameplay recordings; lossless native storyboard-cell crops",
+  "sourceDimensions": [
+    320,
+    180
+  ],
+  "oneToOneCertified": false,
+  "sourceLimitations": [
+    "Source resolution establishes room identity and broad motifs, not exact mesh geometry, full lighting, brushwork, floor scale or material detail.",
+    "All three side-on cameras and enlarged clear lower floor areas are authored adaptations.",
+    "Still frames do not certify source motion cadence; the delivery adds static planes only."
+  ],
+  "rejectedHistoricalPoliceSource": {
+    "legacyDossier": "docs/production/batches/lot9-stages.json",
+    "url": "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_060.jpg",
+    "sha256": "8a223ca07178093bd8058bc23d18b80aac150214680f0601c19f1b7372823e57",
+    "inspected": true,
+    "observed": "Alex wears his hospital gown and Joshua, holding Robbie, stands behind bars. This is the opening Alchemilla hospital sequence, not the first police-cell encounter with Wheeler.",
+    "disposition": "Excluded from all vague27 prompts and source references. Preserve the older dossier as historical; use the documented actual cell footage for this delivery.",
+    "replacementUrls": [
+      "https://www.youtube.com/watch?v=7ozGzBI6oT4&t=6450s",
+      "https://www.youtube.com/watch?v=7ozGzBI6oT4&t=6510s",
+      "https://www.youtube.com/watch?v=7ozGzBI6oT4&t=6520s"
+    ]
+  },
+  "otherReferenceLimits": [
+    {
+      "stageId": "villa_rooftop",
+      "note": "Official Konami release screenshots were inspected, but none supplied the required roof view. The first-visit gameplay is the architectural source; clear-sky ending footage is excluded from phase selection."
+    },
+    {
+      "stageId": "villa_stairwell",
+      "note": "Chase clips are used only for the normal concrete stair chamber visible beyond the maze exit. Paper-covered Otherworld corridors and phone/hand overlays are excluded."
+    },
+    {
+      "stageId": "police_station_hc",
+      "note": "The small walkthrough thumbnail shh_walkthrough_04a.jpg shows the already-released corridor; it is not the main architecture source."
+    }
+  ],
+  "validation": {
+    "nativeOutputsPreserved": true,
+    "independentBackgroundForeground": true,
+    "existingManifestsChanged": false,
+    "existingArtworkReplaced": false,
+    "inEngineQA": "passed-native-FightEngine-108-checks",
+    "inEngineQAReport": "docs/production/vague27/stages/qa-native/report.json",
+    "visualReview": "docs/production/vague27/stages/qa-native/visual-review.json"
+  }
+}

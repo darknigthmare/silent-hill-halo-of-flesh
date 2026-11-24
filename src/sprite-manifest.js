@@ -596,6 +596,44 @@ export const SPRITES = {
           1114,
           1009
         ]
+      },
+      {
+        "sha256": "10a8df3e32702516e8c8a190e7b4b4b872b6223056ed846fe61b4ff23cef3566",
+        "bytes": 1467004,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          418,
+          5,
+          979,
+          1002
+        ],
+        "pixelSHA256": "d853afefaca5dd9cc39f17ff60c96d0643d5956a7cff3fcdc90604f98ee50c36",
+        "transparentFraction": 0.82232,
+        "path": "assets/sprites/sh2_lying_figure_020.10a8df3e3270.png",
+        "facing": 1,
+        "anchor": [
+          0.455,
+          0.978516
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "lying-figure-neutral-special.png",
+        "sourceSHA256": "10a8df3e32702516e8c8a190e7b4b4b872b6223056ed846fe61b4ff23cef3566",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1516,
+          1009
+        ],
+        "framingBounds": [
+          416,
+          0,
+          982,
+          1009
+        ]
       }
     ],
     "portrait": {
@@ -630,6 +668,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralSpecial": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -3593,6 +3638,44 @@ export const SPRITES = {
           1202,
           984
         ]
+      },
+      {
+        "sha256": "a971470e7e5b04231d6ebe27511525d1e4165b1577cfb2e1888c523ccd324f11",
+        "bytes": 1294609,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          47,
+          91,
+          1698,
+          834
+        ],
+        "pixelSHA256": "acd5b0e14467df1653b390a35e33558af767a37ebbda237fa4e4f05e489f5704",
+        "transparentFraction": 0.6753,
+        "path": "assets/sprites/sh3_double_head_040.a971470e7e5b.png",
+        "facing": 1,
+        "anchor": [
+          0.44,
+          0.928974
+        ],
+        "bodyHeight": 0.955,
+        "sourceFile": "double-head-forward-special.png",
+        "sourceSHA256": "a971470e7e5b04231d6ebe27511525d1e4165b1577cfb2e1888c523ccd324f11",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          18,
+          1734,
+          871
+        ],
+        "framingBounds": [
+          45,
+          86,
+          1700,
+          837
+        ]
       }
     ],
     "portrait": {
@@ -3648,6 +3731,13 @@ export const SPRITES = {
       "ko": {
         "frames": [
           3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          4
         ],
         "ticksPerFrame": 1,
         "loop": false

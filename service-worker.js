@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave18-motion-result-20261119';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '85d570e8c5910723aef6d12d9eb81527931b797d832492eeded80ec77220d888';
+const BITMAP_REVISION = '73ab6602e16c35972703635f559ff4184c638b79211f79d211fc5c2954073016';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -269,6 +269,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
   "/assets/sprites/sh2_flesh_lip_027.0965d0e5994d.png",
   "/assets/sprites/sh2_flesh_lip_027.15f2f56aa578.png",
+  "/assets/sprites/sh2_lying_figure_020.10a8df3e3270.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
   "/assets/sprites/sh2_lying_figure_020.af82da95d655.png",
   "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
@@ -295,6 +296,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_double_head_040.6d8c0b112533.png",
   "/assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
   "/assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+  "/assets/sprites/sh3_double_head_040.a971470e7e5b.png",
   "/assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
   "/assets/sprites/sh3_glutton.13d4153c810d.png",
   "/assets/sprites/sh3_glutton.90c14e5d4c7d.png",
@@ -572,6 +574,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/outside_room_302.near-wall-edges.0fafe322dcde.png",
   "/assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
   "/assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+  "/assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+  "/assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
   "/assets/stages/prison_hc.bg-cell-block-b.2ccef75f92fd.png",
   "/assets/stages/prison_hc.near-edges.c0fefbc898af.png",
   "/assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
@@ -609,12 +613,21 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/underpass_sh3.near-wall-edges.a65261780188.png",
   "/assets/stages/villa.apartment214-door.263d6a61f2f4.png",
   "/assets/stages/villa.near-wall-edges.4d500efc075f.png",
+  "/assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+  "/assets/stages/villa_rooftop.near-edges.360e02276096.png",
+  "/assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+  "/assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
   "/assets/stages/water_prison.surveillance-room.5f3849f04407.png",
   "/assets/stages/water_prison.valve-pedestal.7711109d1342.png",
   "/assets/stages/woodside.clock-room.da94acd4e920.png",
   "/assets/stages/woodside.corridor.c6ac083599d0.png",
   "/assets/stages/woodside.grandfather-clock.bc7fec047ff5.png",
   // STAGE_BITMAP_ASSETS_END
+  // PROJECTILE_BITMAP_ASSETS_BEGIN
+  "/assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+  "/assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+  "/assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+  // PROJECTILE_BITMAP_ASSETS_END
   '/',
   '/index.html',
   '/offline.html',
@@ -651,6 +664,8 @@ const ESSENTIAL_SHELL = [
   '/src/sprite-usage.js',
   '/src/stage-bitmaps.js',
   '/src/stage-bitmap-manifest.js',
+  '/src/projectile-bitmaps.js',
+  '/src/projectile-bitmap-manifest.js',
   '/src/stage-bitmap-compositions.js',
   '/src/sprite-animation.js',
   '/src/sprite-poses.js',
