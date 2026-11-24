@@ -1,5 +1,4 @@
 /** Successive batch-4 through batch-12 HTTP candidate-art inspection; the CI suite/path stay stable. No original footage or played campaign is claimed. */
-import {chromium} from 'playwright-core';
 import {spawn} from 'node:child_process';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
@@ -59,6 +58,40 @@ for(const id of resolvedHistorical){
 }
 const twinId='sh4_twin_victim_059',twinTaunt='taunt@'+twinId+':taunt';
 const required=[...batch4,...batch5,...batch6,...batch7,...batch8,...batch9,...batch11,...batch12];
+function subjectClipContract(id){
+  const laterClips = {
+    origins_faceless_nurse: {guard: [1], walk: [0,2,3,2], neutralSpecial: [4,5,4,0]},
+    arcade_scraper_arcade: {walk: [0,1,2,1], guard: [3]},
+    homecoming_scarlet_doll_form_094: {walk: [0,1,2,1]},
+    sh3_nurse_revolver_044: {guard: [1]},
+    homecoming_nurse: {hurt: [1]},
+    homecoming_scarlet_spider_form_095: {walk: [0,1,2,1]},
+    // Wave27/28 append one exact static attack after the three batch10 poses.
+    sh3_double_head_040: {forwardSpecial: [4]},
+    sh1_groaner_003: {forwardSpecial: [4]},
+    sh3_closer_036: {forwardSpecial: [4]},
+    sh3_numb_body_small_037: {forwardSpecial: [4]}
+  }[id] || {};
+  const expectedClips = {idle: [0], ...laterClips};
+  if(id===twinId)expectedClips[twinTaunt]=[1];
+  if(batch10.includes(id))batch10Poses.forEach((pose,index)=>{expectedClips[pose]=[index+1];});
+  return {laterClips,expectedClips};
+}
+function checkSubjectClipContract({id,art,fighter}){
+  const {laterClips,expectedClips}=subjectClipContract(id),exactSource=id.split('_')[0];
+  const exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004,origins:2007,homecoming:2008,downpour:2012,arcade:2007,bom:2012}[exactSource];
+  const expectedIndices=new Set(Object.values(expectedClips).flat());
+  const animatedCount=Object.values(expectedClips).filter(indices=>new Set(indices).size>1).length;
+  check(id+': exact source owns every declared frame and clip',
+    art.fighterId===id&&art.source===exactSource&&fighter.source===exactSource&&fighter.year===exactYear
+    &&art.status==='integrated-candidate'&&art.fidelity==='unverified'
+    &&art.frames.length===expectedIndices.size&&new Set(art.frames.map(frame=>frame.pixelSHA256)).size===expectedIndices.size
+    &&art.animatedClips===animatedCount&&Object.keys(art.clips).length===Object.keys(expectedClips).length
+    &&Object.entries(expectedClips).every(([pose,indices])=>
+      JSON.stringify(art.clips[pose]?.frames)===JSON.stringify(indices)
+      &&(pose==='idle'||art.clips[pose].loop===(pose==='walk'&&new Set(indices).size>1))),art);
+  return {laterClips,expectedClips};
+}
 const sceneContracts={woodside:{source:'sh2',scene:'original-pc-corridor'},alchemilla:{source:'sh1',scene:'normal-waiting-room'},lakeview:{source:'sh2',scene:'normal-lobby-before-video'},shopping_mall:{source:'sh3',scene:'normal-helens-bakery'},brookhaven_roof:{source:'sh2',scene:'original-roof-before-fall',ceiling:false}};
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],assets:[],fixtures:[
   'Production HTTP manifests and PNGs are used without route substitutions. Four exact profiles from each of batches 4, 5, 6 and 7, then three SH4 profiles from batch 8 and twenty-four exact profiles from batch 9, are required and inspected through the actual workshop controls; a missing import fails the suite. The six historical batch-9 blockers remain archived. Subsequent deliveries require a source-reviewed exact-ID record.',
@@ -83,8 +116,20 @@ async function verifyFile(frame,label){
   check(label+': exact registered PNG bytes arrive over HTTP',response.ok&&response.headers.get('content-type')?.includes('image/png')&&bytes.length===frame.bytes&&createHash('sha256').update(bytes).digest('hex')===frame.sha256);
 }
 
+// Check the same strict inventory contract for every subject without starting
+// Chromium, HTTP, a canvas, or the screenshot/report directory.
+if(process.argv.includes('--metadata-only')){
+  const {ROSTER}=await import('../src/data.js');
+  const subjects=required.map(id=>({id,art:SPRITES[id],fighter:ROSTER.find(f=>f.id===id)}));
+  check('all '+required.length+' required exact-ID candidates are registered',subjects.every(s=>s.art&&s.fighter));
+  const contracts=subjects.map(subject=>({id:subject.id,...checkSubjectClipContract(subject),frames:subject.art.frames.length,animatedClips:subject.art.animatedClips}));
+  console.log(JSON.stringify({mode:'metadata-only',passed:true,subjects:subjects.length,checks:report.checks.length,contracts},null,2));
+  process.exit(0);
+}
+
 await mkdir(out,{recursive:true});
 try{
+  const {chromium}=await import('playwright-core');
   if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4195',...(source?[]:['--dist'])],{cwd:root,stdio:'ignore'});
   let ready=false;for(let n=0;n<60;n++){try{if((await fetch(base)).ok){ready=true;break;}}catch{}await new Promise(resolve=>setTimeout(resolve,100));}check('HTTP server ready',ready);
   browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});report.browser=browser.version();
@@ -148,35 +193,15 @@ try{
   for(const subject of registry.subjects){
     const {id,art,fighter}=subject;
     const isBatch8=batch8.includes(id),isBatch9=batch9.includes(id),isBatch10=batch10.includes(id),isBatch11=batch11.includes(id),isBatch12=batch12.includes(id);
-    const exactSource=id.split('_')[0],exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004,origins:2007,homecoming:2008,downpour:2012,arcade:2007,bom:2012}[exactSource];
     const isTwin=id===twinId;
-    const laterClips = {
-      origins_faceless_nurse: {guard: [1], walk: [0,2,3,2], neutralSpecial: [4,5,4,0]},
-      arcade_scraper_arcade: {walk: [0,1,2,1], guard: [3]},
-      homecoming_scarlet_doll_form_094: {walk: [0,1,2,1]},
-      sh3_nurse_revolver_044: {guard: [1]},
-      homecoming_nurse: {hurt: [1]},
-      homecoming_scarlet_spider_form_095: {walk: [0,1,2,1]}
-    }[id] || {};
-    const expectedClips = {idle: [0], ...laterClips};
-    if (isTwin) expectedClips[twinTaunt] = [1];
-    if (isBatch10) batch10Poses.forEach((pose, index) => { expectedClips[pose] = [index + 1]; });
-    const expectedIndices = new Set(Object.values(expectedClips).flat());
-    const animatedCount = Object.values(expectedClips).filter(indices => new Set(indices).size > 1).length;
-    check(id+': exact source owns every declared frame and clip',
-      art.fighterId === id && art.source === exactSource && fighter.source === exactSource && fighter.year === exactYear
-      && art.status === 'integrated-candidate' && art.fidelity === 'unverified'
-      && art.frames.length === expectedIndices.size && new Set(art.frames.map(frame=>frame.pixelSHA256)).size === expectedIndices.size
-      && art.animatedClips === animatedCount && Object.keys(art.clips).length === Object.keys(expectedClips).length
-      && Object.entries(expectedClips).every(([pose, indices]) =>
-        JSON.stringify(art.clips[pose]?.frames) === JSON.stringify(indices)
-        && (pose === 'idle' || art.clips[pose].loop === (pose === 'walk' && new Set(indices).size > 1))), art);
+    const {laterClips}=checkSubjectClipContract(subject);
     await selectSubject(page,id,fighter.source);
     check(id+': real inspector paints its loaded bitmap and disables animation playback',await page.locator('.sprite-inspector').count()===1&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='0');
     for(const [frameIndex,frame] of art.frames.entries()){
     await verifyFile(frame,id+'/image-'+frameIndex);
-    if(frameIndex>0&&Object.keys(laterClips).length){
-      const [pose, indices]=Object.entries(laterClips).find(([, sequence])=>sequence.includes(frameIndex));
+    const laterFrame=frameIndex>0&&Object.entries(laterClips).find(([,sequence])=>sequence.includes(frameIndex));
+    if(laterFrame){
+      const [pose, indices]=laterFrame;
       await page.selectOption('[data-inspect=pose]',pose);
       const clip=art.clips[pose];
       const tick=indices.slice(0,indices.indexOf(frameIndex)).reduce((sum,_,i)=>sum+(clip.frameTicks?.[i]??clip.ticksPerFrame),0);
@@ -194,7 +219,7 @@ try{
       check(id+': exact pointing context uses its distinct static image and no playback animation',await page.locator('#spriteDetail canvas').getAttribute('data-pose')===twinTaunt&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='1'&&await page.locator('[data-inspect=play]').isDisabled()&&!/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
       await shot(page,'inspector-pointing-'+id);
     }
-    if(isBatch10&&frameIndex>0){
+    if(isBatch10&&frameIndex>0&&frameIndex<=batch10Poses.length){
       const pose=batch10Poses[frameIndex-1];
       await page.selectOption('[data-inspect=pose]',pose);
       await page.waitForFunction(({id,pose,index,path})=>{const canvas=document.querySelector('#spriteDetail canvas');return canvas?.dataset.spriteId===id&&canvas.dataset.artStatus==='raster'&&canvas.dataset.pose===pose&&canvas.dataset.frameIndex===String(index)&&__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path);},{id,pose,index:frameIndex,path:frame.path});

@@ -1,0 +1,1208 @@
+{
+  "schema": "halo-wave28-historical-clip-contract-followup-v1",
+  "recordedAt": "2026-11-24T15:56:10.468Z",
+  "failedCI": {
+    "repository": "darknigthmare/silent-hill-halo-of-flesh",
+    "pullRequest": 11,
+    "head": "e6b89195760e6fc676d5b924edf63d47c4a52ac3",
+    "runId": 45425629280,
+    "runNumber": 105,
+    "jobId": 138556711263,
+    "jobName": "browser",
+    "jobURL": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/45425629280/job/138556711263",
+    "failedStep": 7,
+    "stepName": "Build and test the actual HTTP interface",
+    "failure": "Error: sh1_groaner_003: exact source owns every declared frame and clip",
+    "decodedWholeJobLogLines": {
+      "failedCheck": 93436,
+      "failedCheckResult": 93437,
+      "errorSummary": 94205,
+      "exitCodeOne": 94208
+    },
+    "newArtworkSteps": [
+      {
+        "wave": 26,
+        "step": 8,
+        "conclusion": "skipped"
+      },
+      {
+        "wave": 27,
+        "step": 9,
+        "conclusion": "skipped"
+      },
+      {
+        "wave": 28,
+        "step": 10,
+        "conclusion": "skipped"
+      }
+    ]
+  },
+  "cause": "The historical batch10 contract expected exactly idle/walk/hurt/ko. Wave27/28 appended a fifth independent frame and forwardSpecial to four of this harness's eighty subjects.",
+  "changedFile": {
+    "path": "scripts/http-qa-art-batch4.mjs",
+    "beforeSHA256": "955bb74edbb1f089298feafc407f3ce1541e47de7136318025363e4f8f311aa9",
+    "afterSHA256": "188294ffc4f7d60c1f5635880bf4e79c9772b5dd2e7b619be0f5f2075f41aaab",
+    "bytes": 57319
+  },
+  "changes": [
+    "Explicit forwardSpecial:[4] contracts for Groaner SH1, Closer SH3, Numb Body Small SH3 and Double Head SH3. No acceptance of arbitrary extra clips or frames.",
+    "The same checkSubjectClipContract helper validates the live HTTP manifest and the metadata-only Node invocation.",
+    "Only destructure a later-frame lookup when it returns a matching clip; historical frames1..3 of those four subjects are not in the new forwardSpecial sequence.",
+    "Limit the existing batch10 walk/hurt/ko preview and contact-geometry branch to frame indices1..3. The appended attack is selected through its explicit later clip.",
+    "Load playwright-core only in the actual browser path. --metadata-only performs no browser import, HTTP server start, canvas operation or screenshot-directory write."
+  ],
+  "preservedInvariants": [
+    "exact fighter ID",
+    "exact work/source and year",
+    "integrated-candidate/unverified status",
+    "exact total frame count",
+    "all frame pixel hashes distinct",
+    "exact clip-key count",
+    "exact per-clip frame sequences",
+    "exact animated-clip count",
+    "existing non-idle loop rules",
+    "existing HTTP file hashes and byte lengths",
+    "batch10 walk/hurt/ko contact and scale checks"
+  ],
+  "validation": {
+    "syntax": {
+      "command": "node --check scripts/http-qa-art-batch4.mjs",
+      "exitCode": 0
+    },
+    "metadata": {
+      "command": "node scripts/http-qa-art-batch4.mjs --metadata-only",
+      "exitCode": 0,
+      "passed": true,
+      "subjects": 80,
+      "checks": 81,
+      "contracts": [
+        {
+          "id": "sh1_groaner_003",
+          "laterClips": {
+            "forwardSpecial": [
+              4
+            ]
+          },
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "forwardSpecial": [
+              4
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 5,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_split_head_014",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 4,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_floatstinger_016",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_numb_body_small_037",
+          "laterClips": {
+            "forwardSpecial": [
+              4
+            ]
+          },
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "forwardSpecial": [
+              4
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 5,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_wormhead_004",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 4,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_hanged_scratcher_011",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_closer_036",
+          "laterClips": {
+            "forwardSpecial": [
+              4
+            ]
+          },
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "forwardSpecial": [
+              4
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 5,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_hummer_055",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 4,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_night_flutter_002",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_pendulum_039",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_twin_victim_059",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "taunt@sh4_twin_victim_059:taunt": [
+              1
+            ]
+          },
+          "frames": 2,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_slurper_042",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 4,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_romper_010",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 4,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_double_head_040",
+          "laterClips": {
+            "forwardSpecial": [
+              4
+            ]
+          },
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "forwardSpecial": [
+              4
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 5,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_insane_cancer_041",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_sniffer_dog_male_053",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_patient_060",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_bottom_065",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_gum_head_new_type_058",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_mumbler_006",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_creeper_009",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_puppet_nurse_012",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_puppet_doctor_013",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_twinfeeler_015",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_sniffer_dog_female_054",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "walk": [
+              1
+            ],
+            "hurt": [
+              2
+            ],
+            "ko": [
+              3
+            ]
+          },
+          "frames": 4,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_gum_head_old_type_057",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_toadstool_061",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_whitestool_062",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_tremer_blue_063",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_tremer_red_064",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_wheelchair_068",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_numb_body_large_038",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_nurse_revolver_044",
+          "laterClips": {
+            "guard": [
+              1
+            ]
+          },
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "guard": [
+              1
+            ]
+          },
+          "frames": 2,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_scraper_045",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_missionary_047",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh3_leonard_wolf_048",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_jimmy_stone_victim_1",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_cynthia_velasquez_victim_16",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_richard_braintree_victim_19",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_walter_sullivan_072",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh2_red_pyramid_thing_great_knife_029",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh2_red_pyramid_thing_spear_030",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh2_eddie_dombrowski_032",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "origins_straight_jacket_074",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "origins_faceless_nurse",
+          "laterClips": {
+            "guard": [
+              1
+            ],
+            "walk": [
+              0,
+              2,
+              3,
+              2
+            ],
+            "neutralSpecial": [
+              4,
+              5,
+              4,
+              0
+            ]
+          },
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "guard": [
+              1
+            ],
+            "walk": [
+              0,
+              2,
+              3,
+              2
+            ],
+            "neutralSpecial": [
+              4,
+              5,
+              4,
+              0
+            ]
+          },
+          "frames": 6,
+          "animatedClips": 2
+        },
+        {
+          "id": "origins_carrion_076",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "origins_ariel_078",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "origins_caliban_079",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "origins_two_back_080",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "origins_the_butcher_081",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_lurker_085",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_feral_086",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_smog_087",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_needler_088",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_schism_089",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_siam_090",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_order_soldier_091",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_nurse",
+          "laterClips": {
+            "hurt": [
+              1
+            ]
+          },
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "hurt": [
+              1
+            ]
+          },
+          "frames": 2,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_scarlet_spider_form_095",
+          "laterClips": {
+            "walk": [
+              0,
+              1,
+              2,
+              1
+            ]
+          },
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "walk": [
+              0,
+              1,
+              2,
+              1
+            ]
+          },
+          "frames": 3,
+          "animatedClips": 1
+        },
+        {
+          "id": "homecoming_asphyxia_096",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_swarm",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "downpour_screamer_104",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "downpour_weeping_bat_105",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "downpour_prisoner_juggernaut_110",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "downpour_bogeyman_115",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "downpour_anne_cunningham",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh1_incubator_018",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh2_lying_figure_crawling_021",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_steve_garland_victim_4",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_eric_walsh_victim_10",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_sharon_blake_victim_13",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_wall_man_056",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_one_truth_070",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "sh4_man_with_the_coat_067",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "homecoming_sepulcher_093",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "bom_wood_sapling_139",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "arcade_gum_head_arcade",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "arcade_scraper_arcade",
+          "laterClips": {
+            "walk": [
+              0,
+              1,
+              2,
+              1
+            ],
+            "guard": [
+              3
+            ]
+          },
+          "expectedClips": {
+            "idle": [
+              0
+            ],
+            "walk": [
+              0,
+              1,
+              2,
+              1
+            ],
+            "guard": [
+              3
+            ]
+          },
+          "frames": 4,
+          "animatedClips": 1
+        },
+        {
+          "id": "arcade_red_pyramid_thing_arcade",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        },
+        {
+          "id": "arcade_robbie_the_rabbit_chainsaw",
+          "laterClips": {},
+          "expectedClips": {
+            "idle": [
+              0
+            ]
+          },
+          "frames": 1,
+          "animatedClips": 0
+        }
+      ]
+    },
+    "preliminaryAttempt": "An initial metadata invocation could not resolve playwright-core in the local executor; moving that optional dependency into the actual browser path made the requested metadata check independent of Chromium/Playwright. Final commands above both passed."
+  },
+  "otherNewPoseScope": {
+    "notSubjectsOfHistoricalHarness": [
+      "sh2_lying_figure_020",
+      "bom_fire_guardian_137"
+    ],
+    "remainingCoverage": "These are covered by the dedicated wave27/wave28 HTTP harnesses; their first CI attempts were skipped and have not been certified by this follow-up."
+  },
+  "globalSourceHashes": {
+    "art/registry.json": {
+      "before": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd",
+      "after": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd"
+    },
+    "src/sprite-manifest.js": {
+      "before": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92",
+      "after": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065",
+      "after": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065"
+    },
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28",
+      "after": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/projectile-bitmaps.js": {
+      "before": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
+      "after": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410"
+    },
+    "src/projectile-bitmap-manifest.js": {
+      "before": "2019ff64722e6724b369d05ba1d8c116d2d4321061f9f0f47c9b3e9d42759c50",
+      "after": "2019ff64722e6724b369d05ba1d8c116d2d4321061f9f0f47c9b3e9d42759c50"
+    }
+  },
+  "limits": [
+    "No Chromium or HTTP rerun performed by this agent.",
+    "No new art, image edits, engine edits, manifest edits, workflow edits, publication or GitHub rerun performed by this agent.",
+    "A passing metadata contract does not certify rendering, original animation/timing or fidelity1:1.",
+    "The parent owns the separate workflow change and subsequent publication; this file documents only the historical harness repair."
+  ]
+}
