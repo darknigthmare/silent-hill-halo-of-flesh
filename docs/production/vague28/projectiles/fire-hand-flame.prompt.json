@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "wave": 28,
+  "assetId": "bom_fire_guardian_hand_flame",
+  "method": "built-in image generation",
+  "mode": "reference-guided effect reconstruction",
+  "prompt": "Use case: precise-object-edit. Asset type: ONE independent transparent projectile-effect sprite for the hand flamethrower of Fire Guardian in Silent Hill: Book of Memories. All three supplied images are original gameplay reference frames for the observed effect palette and its irregular plume, NOT composition targets. Reconstruct only ONE isolated flamethrower plume, rotated into a clean horizontal side-view for a 2D fighting game: thin emission origin on the LEFT, expanding irregularly toward a broader billowing RIGHT tip. Preserve the observed brilliant WHITE hot core, vivid pink-magenta intermediate flame and VIOLET fringe; this attack is not orange/yellow ground fire. Ragged organic lobed flame contours, energetic small curls and a few connected wisps; detailed game-art treatment, readable as one coherent short flame stream. Entire effect fits inside a wide image with generous fully transparent margin on all sides, alpha-faded fringe. Native transparent RGBA background, no opaque backdrop or checkerboard. No hand, no creature, no face, no body, no weapon, no floor, no cast shadow, no scenery, no ring, no magic glyph, no aura disc, no double stream, no separate variant panels, no text, no UI, no watermark. Exactly one effect in this image. The original screenshot angle is adapted to the game's existing horizontal projectile; retain its visual identity rather than adding a new fireball.",
+  "referenceInputs": [
+    "references/fire-01h27m30s-native.png",
+    "references/fire-01h27m50s-native.png",
+    "references/fire-01h29m10s-native.png"
+  ],
+  "transparent_background": true,
+  "fidelity": "unverified",
+  "limits": [
+    "Source frames are native 160×90 video thumbnails. Color and attack kind observed; exact texture, plume contours, timing and horizontal presentation are reconstructed."
+  ]
+}

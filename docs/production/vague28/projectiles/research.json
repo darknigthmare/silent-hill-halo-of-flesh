@@ -1,0 +1,337 @@
+{
+  "schema": 1,
+  "wave": 28,
+  "researchedAt": "2026-11-24T14:29:02.926118+00:00",
+  "status": "two-integrated-candidates-one-blocked",
+  "generatedByThisAgent": false,
+  "baseline": "docs/production/vague27/remaining-assets.json",
+  "scope": "Independent bitmap candidates for existing exact projectile slots only; no trajectory, damage, cadence, phases, character assets or global registry changes.",
+  "fidelity": "unverified",
+  "nativeAnimationMeasured": false,
+  "candidates": [
+    {
+      "id": "bom_earth_guardian_rock",
+      "fighterId": "bom_earth_guardian_142",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "exactSlots": [
+        "neutralSpecial"
+      ],
+      "excludedSlots": {
+        "downSpecial": "ground shockwave, not a thrown rock",
+        "super": "ground-punch shockwave, not a thrown rock",
+        "desperation": "ground-punch shockwave, not a thrown rock"
+      },
+      "referenceIds": [
+        "EXT24",
+        "EXT20",
+        "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_1_20261101",
+        "EXT12_REF_BOM_EARTH_GUARDIAN_142_VIEW_2_20261101"
+      ],
+      "observedVisual": "Separate levitating irregular brown/olive stone boulders are visible in E3 2012 gameplay images; they are distinct from the guardian head and articulated hands. Produce one rock, not the full group.",
+      "primaryEvidence": [
+        {
+          "id": "earth-e3-2012-48",
+          "path": "docs/production/vague28/projectiles/references/earth-e3-2012-48.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_48_earth_boss.jpg",
+          "width": 960,
+          "height": 544,
+          "sha256": "d909e485a7861f121b1d1e52b1e7efcf3d0b9bb3a64ced1a64bd05d99433affd",
+          "bytes": 169136,
+          "type": "promotional-gameplay-screenshot",
+          "editionLimit": "E3 2012 pre-release, final retail pixels not certified",
+          "copiedFrom": "docs/production/vague22/characters-b/references/bom-earth-48.jpg"
+        },
+        {
+          "id": "earth-e3-2012-49",
+          "path": "docs/production/vague28/projectiles/references/earth-e3-2012-49.jpg",
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/screenshots/pics/sh_book_of_memories_screen_20120606_49_earth_boss.jpg",
+          "width": 960,
+          "height": 544,
+          "sha256": "27b013e4c4eb1a28dfcae8af1663c0e1d53fc0e7bd90c07a088fa81febe95d5c",
+          "bytes": 182943,
+          "type": "promotional-gameplay-screenshot",
+          "editionLimit": "E3 2012 pre-release, final retail pixels not certified",
+          "copiedFrom": "docs/production/vague22/characters-b/references/bom-earth-49.jpg"
+        }
+      ],
+      "textEvidence": [
+        {
+          "url": "https://silenthill.fandom.com/wiki/Earth_Guardian",
+          "access": "indexed text inspected; direct page unavailable",
+          "supports": "Ranged boulder emission, distinct from fist-ground shockwave."
+        },
+        {
+          "url": "https://gamefaqs.gamespot.com/boards/632693-silent-hill-book-of-memories/66351696",
+          "access": "indexed player walkthrough inspected",
+          "supports": "One then three/six launched rocks; sequence is evidence of attack kind only, not a request to change the versus projectile count."
+        }
+      ],
+      "proposedPresentation": {
+        "heightInRadii": 3,
+        "anchor": "center",
+        "composite": "source-over",
+        "facing": 1
+      },
+      "prompt": "One independent game projectile: a single irregular levitating brown-olive stone boulder, based on the separate foreground boulder in the supplied Book of Memories E3 2012 screenshots. Coarse weathered stratified rock, lumpy faceted silhouette, restrained brown/olive highlights. Entire solitary boulder centered with transparent margins. No face, jaw, hand, fingers, limbs, crystals, lava, glow, trail, ground, scenery, UI or duplicate rocks. Native RGBA transparent background. Side-on versus adaptation of the evidenced rock.",
+      "limits": [
+        "Promotional pre-release E3 2012 imagery; retail material identity not certified.",
+        "Side-view reconstruction and gameplay scale remain versus presentation choices.",
+        "No source trajectory, velocity, rotation, phase count or animation measured."
+      ],
+      "generatedAsset": {
+        "producer": "root-agent",
+        "receipt": "docs/production/vague28/projectiles/earth-rock.receipt.json",
+        "path": "docs/production/vague28/projectiles/png/earth-rock.png",
+        "sha256": "f8fb0ce119d0dd8350095ee410ee0e904ef843344bb3a59a91a63fb4d54eb7ce",
+        "nativeWidth": 1254,
+        "nativeHeight": 1254,
+        "integrationStatus": "integrated-native-rendering-reviewed-fidelity-unverified"
+      }
+    },
+    {
+      "id": "bom_fire_guardian_hand_flame",
+      "fighterId": "bom_fire_guardian_137",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "exactSlots": [
+        "neutralSpecial",
+        "super",
+        "desperation"
+      ],
+      "referenceIds": [
+        "EXT22",
+        "EXT20"
+      ],
+      "observedVisual": "The emitted hand-flame appears as a bright white irregular core with pink-magenta lobes and violet fringes, distinct from the orange environment/body fire. The 01:27:50 view shows one stream; 01:29:10 shows a double emission. Only one independent stream is requested for each existing versus shot.",
+      "primaryEvidence": [
+        {
+          "id": "fire-01h27m30s",
+          "path": "docs/production/vague28/projectiles/references/fire-01h27m30s-native.png",
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=5250",
+          "seconds": 5250,
+          "nativeWidth": 160,
+          "nativeHeight": 90,
+          "sourceSheet": "bom-L2-M21.jpg",
+          "sourceSheetSHA256": "7715434d67a4d756bbafd1f5d084402b591022d7b207108b8436bc3d10e5f0ad",
+          "nativeCrop": [
+            0,
+            0,
+            160,
+            90
+          ],
+          "sha256": "1626098ec3eee3c35be1fcc8c1c1ea36f5301a16a29e7a024ca2967398522842",
+          "bytes": 28565
+        },
+        {
+          "id": "fire-01h27m50s",
+          "path": "docs/production/vague28/projectiles/references/fire-01h27m50s-native.png",
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=5270",
+          "seconds": 5270,
+          "nativeWidth": 160,
+          "nativeHeight": 90,
+          "sourceSheet": "bom-L2-M21.jpg",
+          "sourceSheetSHA256": "7715434d67a4d756bbafd1f5d084402b591022d7b207108b8436bc3d10e5f0ad",
+          "nativeCrop": [
+            320,
+            0,
+            160,
+            90
+          ],
+          "sha256": "9849e3d433da9f951cf9d0bc5ad19b94cba36ab059ff7165f0d255f3f40c105d",
+          "bytes": 28093
+        },
+        {
+          "id": "fire-01h29m10s",
+          "path": "docs/production/vague28/projectiles/references/fire-01h29m10s-native.png",
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=5350",
+          "seconds": 5350,
+          "nativeWidth": 160,
+          "nativeHeight": 90,
+          "sourceSheet": "bom-L2-M21.jpg",
+          "sourceSheetSHA256": "7715434d67a4d756bbafd1f5d084402b591022d7b207108b8436bc3d10e5f0ad",
+          "nativeCrop": [
+            0,
+            180,
+            160,
+            90
+          ],
+          "sha256": "2c55d0f08f210e3a792fa13ebc032b6d7dd4400d65372681dee6016753ef4f4f",
+          "bytes": 28461
+        }
+      ],
+      "textEvidence": [
+        {
+          "url": "https://www.silenthillmemories.net/sh_book_of_memories/bestiary_en.htm",
+          "access": "page opened and inspected",
+          "supports": "Fire projected from mouth and hands; image chosen here depicts the hand attack."
+        },
+        {
+          "url": "https://silenthill.fandom.com/wiki/Fire_Guardian",
+          "access": "indexed text inspected; direct page unavailable",
+          "supports": "Hand flamethrower and separate body explosion/ring."
+        },
+        {
+          "url": "https://www.playstationtrophies.org/game/silent-hill-book-of-memories/trophy/54807-fireman.html",
+          "access": "indexed guide inspected",
+          "supports": "One beam then two at low health; no count change proposed."
+        }
+      ],
+      "proposedPresentation": {
+        "heightInRadii": 3,
+        "anchor": "center",
+        "composite": "screen",
+        "facing": 1
+      },
+      "prompt": "One independent horizontal hand-emitted flamethrower plume matching the supplied Book of Memories gameplay frames: irregular white-hot lobed core, vivid pink-magenta flame, violet fringes, narrow origin on the left and wider billowing tip on the right. One connected stream with natural uneven flame wisps and transparent margins, native RGBA. No creature, hand, mouth, body explosion, ring, UI, scene, duplicated jet or orange ground fire. Preserve the observed white/magenta/violet impression; do not add invented symbols or lightning forks.",
+      "limits": [
+        "Evidence is a public video native storyboard preview at 160x90, sampled every ten seconds.",
+        "Broad color and stream shape observed; no exact contour, RGB palette, temporal cycle or original-resolution texture certified.",
+        "Horizontal independent traveling sprite is a versus rendering adaptation; the original hand jet is not newly implemented as a continuous beam."
+      ],
+      "generatedAsset": {
+        "producer": "root-agent",
+        "receipt": "docs/production/vague28/projectiles/fire-hand-flame.receipt.json",
+        "path": "docs/production/vague28/projectiles/png/fire-hand-flame.png",
+        "sha256": "650230316e42961747e64890138308c4ff93c4241ba1d701e52bba034d4ef370",
+        "nativeWidth": 2172,
+        "nativeHeight": 724,
+        "integrationStatus": "integrated-native-rendering-reviewed-fidelity-unverified"
+      }
+    },
+    {
+      "id": "bom_steel_guardian_blade",
+      "fighterId": "bom_steel_guardian_146",
+      "source": "bom",
+      "status": "blocked-insufficient-projectile-silhouette",
+      "exactSlots": [
+        "neutralSpecial",
+        "super",
+        "desperation"
+      ],
+      "referenceIds": [
+        "EXT25",
+        "EXT26",
+        "EXT20"
+      ],
+      "observedVisual": "Three gameplay recordings were inspected. The native 160x90 longplay previews and 101x180 vertical previews do not resolve an isolated projectile blade contour. Wing-hanging blades, the boss crown and the player Steel Sword must not be substituted by inference. No third image is proposed in wave28.",
+      "primaryEvidence": [
+        {
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=51490",
+          "videoId": "ruh4O2ZO7aA",
+          "rangeInspectedSeconds": [
+            51500,
+            51940
+          ],
+          "nativePreview": [
+            160,
+            90
+          ],
+          "status": "attack scene inspected; projectile contour unresolved"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=bNMOoT9_jaY",
+          "videoId": "bNMOoT9_jaY",
+          "nativePreview": [
+            160,
+            90
+          ],
+          "status": "dedicated boss recording inspected; projectile contour unresolved",
+          "caveat": "Uploader states original game audio was lost and subtitles were added; only game imagery is used."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=qqqs-WKiCsg",
+          "videoId": "qqqs-WKiCsg",
+          "nativePreview": [
+            101,
+            180
+          ],
+          "rangeInspectedSeconds": [
+            [
+              54,
+              70
+            ],
+            [
+              108,
+              124
+            ]
+          ],
+          "status": "vertical recording inspected; game occupies about half of native preview; projectile contour unresolved",
+          "evidenceRecords": "docs/production/vague28/projectiles/references/steel-negative-evidence.json"
+        }
+      ],
+      "textEvidence": [
+        {
+          "url": "https://silenthill.fandom.com/wiki/Steel_Guardian",
+          "access": "indexed text inspected; direct page unavailable",
+          "supports": "Telepathically controlled Steel Blades."
+        },
+        {
+          "url": "https://gamefaqs.gamespot.com/boards/632693-silent-hill-book-of-memories/66351696",
+          "access": "indexed player walkthrough inspected",
+          "supports": "Individual swords, burst formation and closing ring described; no new burst or ring mechanics requested."
+        }
+      ],
+      "proposedPresentation": {
+        "heightInRadii": 2,
+        "anchor": "center",
+        "composite": "source-over",
+        "facing": 1,
+        "status": "unused-provisional-no-image-generated"
+      },
+      "prompt": null,
+      "limits": [
+        "Do not generate a generic sword, a body wing or an unverified ornate silhouette as this projectile.",
+        "No original animation, rotating behavior or homing update is proposed."
+      ],
+      "accessLimit": "Ordinary public video stream retrieval returned HTTP 403. No further stream or mirror attempts are planned.",
+      "decision": "Closed without generation for wave28; retain procedural fallback and the missing-asset entry."
+    }
+  ],
+  "reserveCandidate": {
+    "id": "sh1_floatstinger_acid",
+    "fighterId": "sh1_floatstinger_016",
+    "source": "sh1",
+    "exactSlots": [
+      "neutralSpecial",
+      "airSpecial",
+      "super",
+      "desperation"
+    ],
+    "referenceIds": [
+      "CL_SH1_BOSSES",
+      "CL_SH1_CREATURES"
+    ],
+    "status": "behavior-only-reserve",
+    "urlsInspected": [
+      "https://www.silenthillmemories.net/sh1/bosses_en.htm"
+    ],
+    "videoLocated": "https://www.youtube.com/watch?v=m1f2MjuD5MQ",
+    "visualStatus": "Video embed was located but not inspected; color, texture and isolated spit shape are not established. No generation recommended yet."
+  },
+  "excludedExistingEffects": [
+    "sh1_incubator_blue_lightning",
+    "sh2_lying_figure_acid",
+    "sh3_god_ground_flame"
+  ],
+  "qaPreparation": {
+    "script": "docs/production/vague28/projectiles/qa-native.mjs",
+    "cases": "Two integrated candidates, two orientations each: Earth neutralSpecial and Fire neutralSpecial; four scenes total.",
+    "executionStatus": "completed-after-cache-fix",
+    "captures": "Four in-flight views, plus two Fire first-emission views with passive hand/plume coordinates."
+  },
+  "researchClosedAt": "2026-11-24T14:36:07.924984+00:00",
+  "validation": {
+    "status": "native-rendering-verified-with-anatomical-ambiguity",
+    "report": "docs/production/vague28/projectiles/qa-native-after-cache-fix/report.json",
+    "reportSHA256": "8c6e3d798456d6f7aeac562424b1108762e5b78f5020fd4ebfaaa7735dd13144",
+    "review": "docs/production/vague28/projectiles/qa-native-after-cache-fix/visual-review.md",
+    "checksPassed": 79,
+    "scenes": 4,
+    "captures": 6,
+    "browserTest": false,
+    "httpTest": false,
+    "fidelity": "unverified",
+    "anatomicalLimit": "Fire upper-fold landmark is near the plume origin; actual fingertip connection remains unverified and first emission can read as breath beside the snout."
+  }
+}

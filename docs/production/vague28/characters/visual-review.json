@@ -1,0 +1,349 @@
+{
+  "schema": "halo-wave28-character-visual-review-v1",
+  "reviewedAt": "2026-11-24T14:58:58.079858+00:00",
+  "status": "final-eight-case-native-review-passed",
+  "nativeCanvasOnly": true,
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "initialPass": {
+    "report": "docs/production/vague28/characters/qa-native/report.json",
+    "reportSHA256": "6f178e5833324ea78aa17726c43895ecf5647e5d608bfea3248e833595af306b",
+    "passed": true,
+    "checks": 294,
+    "cases": 8,
+    "captures": 8,
+    "capturesVisuallyInspected": 8,
+    "opponentId": "sh2_creeper_025",
+    "harnessPath": "docs/production/vague28/characters/qa-native/qa-attacks-native-original.mjs",
+    "harnessSHA256": "f735f4e84f3b68332d5e27a064372adbf647f9bc52ffa7dfe06ff1bf42d4fe1d",
+    "visualReview": "docs/production/vague28/characters/qa-native/visual-review-initial.json",
+    "visualReviewSHA256": "7170484203dae28412113ee08d9cc4a70d1731e4715c35f5c0a06480912b62ef",
+    "retainedUnchanged": true
+  },
+  "finalPass": {
+    "report": "docs/production/vague28/characters/qa-native-final/report.json",
+    "reportSHA256": "83a99493fdd5b8d14e300e6f0281798e29fce3ef821dc61e43322908ba9b1ea5",
+    "harnessPath": "docs/production/vague28/characters/qa-attacks-native.mjs",
+    "harnessSHA256": "b4a27a0c3e85a076172e6c721a80bd7d3d86e7bf171b9d1f0d7c39a4235a5053",
+    "passed": true,
+    "checks": 334,
+    "cases": 8,
+    "captures": 8,
+    "capturesVisuallyInspected": 8,
+    "opponentId": "origins_faceless_nurse",
+    "completedAt": "2026-11-24T14:57:14.143Z",
+    "cacheMaxBytes": 75497472,
+    "exactActorIdsVerified": true,
+    "naturalIdleRecoveryPassed": true
+  },
+  "finalSourceHashes": {
+    "art/registry.json": {
+      "before": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd",
+      "after": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd"
+    },
+    "src/sprite-manifest.js": {
+      "before": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92",
+      "after": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065",
+      "after": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065"
+    },
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28",
+      "after": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/projectile-bitmaps.js": {
+      "before": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
+      "after": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410"
+    },
+    "src/projectile-bitmap-manifest.js": {
+      "before": "2019ff64722e6724b369d05ba1d8c116d2d4321061f9f0f47c9b3e9d42759c50",
+      "after": "2019ff64722e6724b369d05ba1d8c116d2d4321061f9f0f47c9b3e9d42759c50"
+    }
+  },
+  "sourceHashesStillCurrentAtReview": true,
+  "captures": [
+    {
+      "path": "docs/production/vague28/characters/qa-native-final/sh1_groaner_003-right-attack-active.png",
+      "sha256": "e41ae3d4a9d7338762e13b18c7f05970d40ec58394ef04baf365b16856fd38c9",
+      "fighterId": "sh1_groaner_003",
+      "opponentId": "origins_faceless_nurse",
+      "facing": 1,
+      "pose": "forwardSpecial",
+      "inspected": true,
+      "wholeSilhouetteVisible": true,
+      "visibleOpaqueRectangle": false,
+      "visibleExtraneousHalo": false,
+      "observation": "Silhouette entière en bond vers l’adversaire, quatre pattes, queue et museau contenus dans la vue. Pose distincte de l’idle et miroir cohérent; aucune boîte opaque visible."
+    },
+    {
+      "path": "docs/production/vague28/characters/qa-native-final/sh1_groaner_003-left-attack-active.png",
+      "sha256": "5c389e3cd026aac001b2253100ba498a9e89f09636edb4ed998cf8e4fc297d84",
+      "fighterId": "sh1_groaner_003",
+      "opponentId": "origins_faceless_nurse",
+      "facing": -1,
+      "pose": "forwardSpecial",
+      "inspected": true,
+      "wholeSilhouetteVisible": true,
+      "visibleOpaqueRectangle": false,
+      "visibleExtraneousHalo": false,
+      "observation": "Silhouette entière en bond vers l’adversaire, quatre pattes, queue et museau contenus dans la vue. Pose distincte de l’idle et miroir cohérent; aucune boîte opaque visible."
+    },
+    {
+      "path": "docs/production/vague28/characters/qa-native-final/sh3_closer_036-right-attack-active.png",
+      "sha256": "1b346d2146f2ad5a68ed958a9aa61c8f68ca91507106045a929185cf39b170ef",
+      "fighterId": "sh3_closer_036",
+      "opponentId": "origins_faceless_nurse",
+      "facing": 1,
+      "pose": "forwardSpecial",
+      "inspected": true,
+      "wholeSilhouetteVisible": true,
+      "visibleOpaqueRectangle": false,
+      "visibleExtraneousHalo": false,
+      "observation": "Deux pieds au sol, un bras matelassé tendu vers l’adversaire et l’autre abaissé. Aucun halo brun ni rectangle opaque visible autour du corps dans la composition native."
+    },
+    {
+      "path": "docs/production/vague28/characters/qa-native-final/sh3_closer_036-left-attack-active.png",
+      "sha256": "c2c4dd7effc08b0e84004771cfe7dc086f85496b12e5feb32cb0b516581892bb",
+      "fighterId": "sh3_closer_036",
+      "opponentId": "origins_faceless_nurse",
+      "facing": -1,
+      "pose": "forwardSpecial",
+      "inspected": true,
+      "wholeSilhouetteVisible": true,
+      "visibleOpaqueRectangle": false,
+      "visibleExtraneousHalo": false,
+      "observation": "Deux pieds au sol, un bras matelassé tendu vers l’adversaire et l’autre abaissé. Aucun halo brun ni rectangle opaque visible autour du corps dans la composition native."
+    },
+    {
+      "path": "docs/production/vague28/characters/qa-native-final/sh3_numb_body_small_037-right-attack-active.png",
+      "sha256": "e626f04076dfe8328970aa013282aa32860f725fd5ee01da4ee801874944d8d6",
+      "fighterId": "sh3_numb_body_small_037",
+      "opponentId": "origins_faceless_nurse",
+      "facing": 1,
+      "pose": "forwardSpecial",
+      "inspected": true,
+      "wholeSilhouetteVisible": true,
+      "visibleOpaqueRectangle": false,
+      "visibleExtraneousHalo": false,
+      "observation": "Heurt frontal en suspension, deux jambes repliées et pieds entiers. Aucun halo rose ni rectangle opaque visible dans la composition native. La marque au sol est séparée de la silhouette."
+    },
+    {
+      "path": "docs/production/vague28/characters/qa-native-final/sh3_numb_body_small_037-left-attack-active.png",
+      "sha256": "a2a2e8dbcba2374fcae4a6ced48ce8feefca48efaa8b9bc7b0c6cc173e57bbae",
+      "fighterId": "sh3_numb_body_small_037",
+      "opponentId": "origins_faceless_nurse",
+      "facing": -1,
+      "pose": "forwardSpecial",
+      "inspected": true,
+      "wholeSilhouetteVisible": true,
+      "visibleOpaqueRectangle": false,
+      "visibleExtraneousHalo": false,
+      "observation": "Heurt frontal en suspension, deux jambes repliées et pieds entiers. Aucun halo rose ni rectangle opaque visible dans la composition native. La marque au sol est séparée de la silhouette."
+    },
+    {
+      "path": "docs/production/vague28/characters/qa-native-final/bom_fire_guardian_137-right-attack-active.png",
+      "sha256": "7484d5cb6e33ade31e04878d70032fd32f71764b7a5e49c868f7c74fe55b765f",
+      "fighterId": "bom_fire_guardian_137",
+      "opponentId": "origins_faceless_nurse",
+      "facing": 1,
+      "pose": "neutralSpecial",
+      "inspected": true,
+      "wholeSilhouetteVisible": true,
+      "visibleOpaqueRectangle": false,
+      "visibleExtraneousHalo": false,
+      "observation": "Corps ramassé entier, cornes et quatre membres visibles. Main relevée immédiatement sous le bec; le jet magenta séparé du PNG personnage démarre près de la griffe puis vise l’adversaire. Aucun rectangle opaque visible. Ce placement versus ne résout pas les angles fins de la source vidéo à 160×90.",
+      "passiveEmissionObservation": {
+        "handReferenceNative": [
+          985,
+          490
+        ],
+        "handViewport": [
+          373.60340416960827,
+          443.79426385277407
+        ],
+        "plumeTipNative": [
+          174,
+          467
+        ],
+        "plumeTipViewport": [
+          371.14116017992905,
+          443.97550987325064
+        ],
+        "deltaViewport": [
+          -2.462243989679223,
+          0.18124602047657845
+        ],
+        "note": "Approximate visible-edge landmarks measured passively; no acceptance tolerance, original-source timing claim or actor/projectile state modification."
+      }
+    },
+    {
+      "path": "docs/production/vague28/characters/qa-native-final/bom_fire_guardian_137-left-attack-active.png",
+      "sha256": "e8ce58ef2d1c7d1b217f8180318d6588340daa064a83a3f4ff92573072d27043",
+      "fighterId": "bom_fire_guardian_137",
+      "opponentId": "origins_faceless_nurse",
+      "facing": -1,
+      "pose": "neutralSpecial",
+      "inspected": true,
+      "wholeSilhouetteVisible": true,
+      "visibleOpaqueRectangle": false,
+      "visibleExtraneousHalo": false,
+      "observation": "Corps ramassé entier, cornes et quatre membres visibles. Main relevée immédiatement sous le bec; le jet magenta séparé du PNG personnage démarre près de la griffe puis vise l’adversaire. Aucun rectangle opaque visible. Ce placement versus ne résout pas les angles fins de la source vidéo à 160×90.",
+      "passiveEmissionObservation": {
+        "handReferenceNative": [
+          985,
+          490
+        ],
+        "handViewport": [
+          906.3966263479698,
+          443.79426385277407
+        ],
+        "plumeTipNative": [
+          174,
+          467
+        ],
+        "plumeTipViewport": [
+          908.8588703376491,
+          443.97550987325064
+        ],
+        "deltaViewport": [
+          2.4622439896793367,
+          0.18124602047657845
+        ],
+        "note": "Approximate visible-edge landmarks measured passively; no acceptance tolerance, original-source timing claim or actor/projectile state modification."
+      }
+    }
+  ],
+  "combatCacheCases": [
+    {
+      "label": "sh1_groaner_003-right",
+      "actors": [
+        "sh1_groaner_003",
+        "origins_faceless_nurse"
+      ],
+      "maxBytes": 75497472,
+      "pinnedFrameCount": 11,
+      "pinnedDecodedBytes": 69213696,
+      "exceedsPrevious64MiB": true,
+      "residentDecodedBytes": 69213696,
+      "reservedBytes": 0
+    },
+    {
+      "label": "sh1_groaner_003-left",
+      "actors": [
+        "origins_faceless_nurse",
+        "sh1_groaner_003"
+      ],
+      "maxBytes": 75497472,
+      "pinnedFrameCount": 11,
+      "pinnedDecodedBytes": 69213696,
+      "exceedsPrevious64MiB": true,
+      "residentDecodedBytes": 69213696,
+      "reservedBytes": 0
+    },
+    {
+      "label": "sh3_closer_036-right",
+      "actors": [
+        "sh3_closer_036",
+        "origins_faceless_nurse"
+      ],
+      "maxBytes": 75497472,
+      "pinnedFrameCount": 11,
+      "pinnedDecodedBytes": 69207920,
+      "exceedsPrevious64MiB": true,
+      "residentDecodedBytes": 69207920,
+      "reservedBytes": 0
+    },
+    {
+      "label": "sh3_closer_036-left",
+      "actors": [
+        "origins_faceless_nurse",
+        "sh3_closer_036"
+      ],
+      "maxBytes": 75497472,
+      "pinnedFrameCount": 11,
+      "pinnedDecodedBytes": 69207920,
+      "exceedsPrevious64MiB": true,
+      "residentDecodedBytes": 69207920,
+      "reservedBytes": 0
+    },
+    {
+      "label": "sh3_numb_body_small_037-right",
+      "actors": [
+        "sh3_numb_body_small_037",
+        "origins_faceless_nurse"
+      ],
+      "maxBytes": 75497472,
+      "pinnedFrameCount": 11,
+      "pinnedDecodedBytes": 69208304,
+      "exceedsPrevious64MiB": true,
+      "residentDecodedBytes": 69208304,
+      "reservedBytes": 0
+    },
+    {
+      "label": "sh3_numb_body_small_037-left",
+      "actors": [
+        "origins_faceless_nurse",
+        "sh3_numb_body_small_037"
+      ],
+      "maxBytes": 75497472,
+      "pinnedFrameCount": 11,
+      "pinnedDecodedBytes": 69208304,
+      "exceedsPrevious64MiB": true,
+      "residentDecodedBytes": 69208304,
+      "reservedBytes": 0
+    },
+    {
+      "label": "bom_fire_guardian_137-right",
+      "actors": [
+        "bom_fire_guardian_137",
+        "origins_faceless_nurse"
+      ],
+      "maxBytes": 75497472,
+      "pinnedFrameCount": 8,
+      "pinnedDecodedBytes": 50334488,
+      "exceedsPrevious64MiB": false,
+      "residentDecodedBytes": 69207464,
+      "reservedBytes": 0
+    },
+    {
+      "label": "bom_fire_guardian_137-left",
+      "actors": [
+        "origins_faceless_nurse",
+        "bom_fire_guardian_137"
+      ],
+      "maxBytes": 75497472,
+      "pinnedFrameCount": 8,
+      "pinnedDecodedBytes": 50334488,
+      "exceedsPrevious64MiB": false,
+      "residentDecodedBytes": 69207464,
+      "reservedBytes": 0
+    }
+  ],
+  "noImageCorrectionsRequiredAfterComposition": true,
+  "limits": [
+    "Native Canvas with synthetic event delivery is not a browser, HTTP or physical keyboard test.",
+    "Static attack frames do not certify an animated clip or original cadence.",
+    "Left-facing is engine mirroring, not a separately sourced anatomy.",
+    "This checks rendering, input route and recovery; not a full collision/guard/damage/finisher matrix.",
+    "Inspection visuelle des huit images actives; retour idle vérifié par le harnais sans capture supplémentaire.",
+    "Les points griffe/plume sont des repères natifs approximatifs projetés par les vrais drawImage; aucune tolérance de fidélité originale n’en est déduite."
+  ],
+  "retainedEvidenceCounts": {
+    "passes": 2,
+    "initialCaptures": 8,
+    "finalCaptures": 8,
+    "captureFilesTotal": 16,
+    "uniqueFinalScenarios": 8
+  }
+}

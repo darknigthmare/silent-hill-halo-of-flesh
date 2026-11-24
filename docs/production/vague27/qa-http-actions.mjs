@@ -26,6 +26,9 @@ const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(
 let browser,server;
 await mkdir(out,{recursive:true});
 try{
+  let occupied=false;
+  try{await fetch(base,{signal:AbortSignal.timeout(800)});occupied=true;}catch{}
+  check('Dedicated HTTP test port is unused',!occupied);
   server=spawn(process.execPath,['scripts/server.mjs',String(port),'--dist'],{cwd:root,stdio:'ignore'});
   let ready=false;let serverError=null;server.on('error',error=>{serverError=error;});
   for(let i=0;i<100;i++){
@@ -34,6 +37,7 @@ try{
     await new Promise(done=>setTimeout(done,100));
   }
   check('Dedicated dist HTTP server ready',ready);
+  check('Our dedicated server remains alive',!serverError&&server.exitCode===null);
   browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
   report.browser=browser.version();
   for(const sample of cases)for(const player of [0,1]){
@@ -109,6 +113,7 @@ try{
       check(label+': exact HTTP bytes '+path,responses.some(row=>row.path===path&&row.status===200&&row.bytes===frame.bytes&&row.sha256===frame.sha256));
       const draw=actual.draws[path];
       check(label+': actual game draw '+path,draw&&draw.width===frame.width&&draw.height===frame.height,draw);
+      check(label+': expected artwork painted in captured frame '+path,draw.engineFrame===actual.captureEvidence.frame,{drawFrame:draw.engineFrame,capturedFrame:actual.captureEvidence.frame});
       check(label+': expected orientation '+path,Math.sign(draw.matrix[0])===(player===0?1:-1)*(frame.facing||1));
     }
     const png=Buffer.from(actual.capture.split(',')[1],'base64'),file=label+'.png';

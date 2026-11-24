@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave18-motion-result-20261119';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '73ab6602e16c35972703635f559ff4184c638b79211f79d211fc5c2954073016';
+const BITMAP_REVISION = '3b19ac68c0e000f627c2fde20ae7944892aabbb85c79b751a40e022d31f933aa';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -67,6 +67,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/bom_double_head_124.7b4030beb9da.png",
   "/assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
   "/assets/sprites/bom_earth_guardian_142.99401861091a.png",
+  "/assets/sprites/bom_fire_guardian_137.00774213127e.png",
   "/assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
   "/assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
   "/assets/sprites/bom_flesh_lips_134.050b9881b5ca.png",
@@ -223,6 +224,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_groaner_003.9ab82a90231f.png",
   "/assets/sprites/sh1_groaner_003.b1df281db9ab.png",
   "/assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+  "/assets/sprites/sh1_groaner_003.f117d3d26288.png",
   "/assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
   "/assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
   "/assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
@@ -289,6 +291,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_closer_036.83102a051acb.png",
   "/assets/sprites/sh3_closer_036.a571dd362666.png",
   "/assets/sprites/sh3_closer_036.e00beefd711f.png",
+  "/assets/sprites/sh3_closer_036.e9ec336a3114.png",
   "/assets/sprites/sh3_closer_036.f18918ff7e87.png",
   "/assets/sprites/sh3_closer_church_variant.15f7c0d43d4d.png",
   "/assets/sprites/sh3_closer_church_variant.3d7aee839083.png",
@@ -321,6 +324,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
   "/assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
   "/assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+  "/assets/sprites/sh3_numb_body_small_037.e3c4ec010cf6.png",
   "/assets/sprites/sh3_nurse_pipe_043.0d75f277d7e2.png",
   "/assets/sprites/sh3_nurse_pipe_043.1ae39140fef8.png",
   "/assets/sprites/sh3_nurse_pipe_043.3f1dfb8fbec6.png",
@@ -469,6 +473,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
   "/assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png",
   "/assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png",
+  "/assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+  "/assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
   "/assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
   "/assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
   "/assets/stages/baldwin_mansion.closed-lounge-landing.5fa7f85bcd25.png",
@@ -518,6 +524,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
   "/assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
   "/assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+  "/assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+  "/assets/stages/final_sacrament.near-edges.8be13402fce8.png",
   "/assets/stages/forest_world.first-visit-clearing.76588be774de.png",
   "/assets/stages/forest_world.near-bark-and-grass.5df8c21ae5bc.png",
   "/assets/stages/frozen_streets.bg-frozen-exterior.01d899430889.png",
@@ -584,6 +592,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/riverside_motel.gate.270f1cbab7c5.png",
   "/assets/stages/room_302.chair.739650b60353.png",
   "/assets/stages/room_302.entrance.6535cc934c6c.png",
+  "/assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+  "/assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
   "/assets/stages/school_shf.background.360ffba8283b.png",
   "/assets/stages/school_shf.foreground.a50d69a51274.png",
   "/assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
@@ -624,6 +634,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/woodside.grandfather-clock.bc7fec047ff5.png",
   // STAGE_BITMAP_ASSETS_END
   // PROJECTILE_BITMAP_ASSETS_BEGIN
+  "/assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+  "/assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
   "/assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
   "/assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
   "/assets/projectiles/sh3_god_ground_flame.8b645595b188.png",

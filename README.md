@@ -1,5 +1,28 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Poses, gardiens et arènes — 24 novembre 2026, vague 28
+
+**12 PNG indépendants ajoutés : quatre poses d’attaque, deux effets de projectile
+et six plans pour trois arènes.** Groaner, Closer, Numb Body Small et le gardien
+de Feu gagnent une pose propre à leur commande. Le rocher du gardien de Terre
+et le jet blanc/magenta/violet du gardien de Feu ont leurs images séparées.
+
+La chambre finale de SH4, la salle de Scarlet et le toit de l’hôpital d’Arcade
+portent la couverture à **85 arènes sur 123**. Le cache des combattants passe
+à **72 Mio** pour permettre les duels avec Faceless Nurse et toutes leurs
+frames natives. Les caches des arènes et projectiles gardent leurs bornes.
+
+**1 301 tests Node et 522 contrôles Canvas natifs passent**, avec dix-sept
+captures finales inspectées. Les 683 anciens assets et les règles/classeurs
+protégés sont préservés. La QA HTTP préparée attend la publication autorisée.
+
+[Livraison et limites](docs/production/vague28/README.md) ·
+[Vérifications finales](docs/production/vague28/verification.json) ·
+[Manquants](docs/production/vague28/remaining-assets.json) ·
+[Clips à compléter](docs/production/vague28/pose-backlog.json).
+Les **204 portraits, 190 vues latérales et six clips animés** restent des
+catégories distinctes. Aucune fidélité 1:1 n’est certifiée.
+
 ## Attaques, projectiles et stages — 24 novembre 2026, vague 27
 
 **11 PNG indépendants ajoutés : deux poses d’attaque, trois effets de projectile

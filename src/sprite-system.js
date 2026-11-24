@@ -142,7 +142,11 @@ export class SpriteCache{
     return {ok:!failed.length&&(diagnostic||!missing.length),missing:missing.map(f=>f.id),failed};
   }
 }
-export const spriteCache=new SpriteCache();
+// Native attack frames bring Faceless Nurse pairings to about 66 MiB. Keep every
+// required frame resident within a bounded 72 MiB combat lease; other caches
+// retain their independent limits and the generic cache still defaults to 64 MiB.
+export const COMBAT_SPRITE_BUDGET=72*1024*1024;
+export const spriteCache=new SpriteCache({maxBytes:COMBAT_SPRITE_BUDGET});
 export function pinCombatSprites(fighters){spriteCache.pin(fighters.flatMap(f=>combatSpriteFor(f)?.frames||[]));}
 function drawMissing(ctx,x,y,width,height,text){
   ctx.save();ctx.fillStyle='rgba(12,15,13,.88)';ctx.fillRect(x,y,width,height);

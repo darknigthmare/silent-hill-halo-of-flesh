@@ -34,6 +34,8 @@ jobs:
         run: node docs/production/vague26/run-ci-browser-check.mjs
       - name: Inspect wave27 attacks, projectiles and stages in the built HTTP app
         run: node docs/production/vague27/run-ci-browser-check.mjs
+      - name: Inspect wave28 attacks, projectiles and stages in the built HTTP app
+        run: node docs/production/vague28/run-ci-browser-check.mjs
       - name: Retain test report and captures only
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -57,4 +59,6 @@ jobs:
             tests/http-wave26-native/
             tests/http-wave27-actions/
             tests/http-wave27-stages/
+            tests/http-wave28-actions/
+            tests/http-wave28-stages/
           retention-days: 14

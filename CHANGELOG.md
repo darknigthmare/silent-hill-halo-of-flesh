@@ -1,3 +1,13 @@
+## 0.9.6 — Vague 28, 24 novembre 2026
+
+- Quatre poses d’attaque statiques : Groaner SH1, Closer et Numb Body Small SH3, Fire Guardian de Book of Memories ; portraits et frames antérieurs conservés.
+- Deux effets séparés pour le rocher d’Earth Guardian et le jet blanc/magenta/violet de Fire Guardian ; quatre commandes supplémentaires couvertes, aucune nouvelle règle de combat.
+- Trois arènes à deux plans : chambre finale SH4, salle de Scarlet et toit d’hôpital Arcade. Couverture : 85/123 arènes.
+- Correction des duels refusés contre Faceless Nurse : cache combat borné à 72 Mio, conservation de toutes les frames natives ; caches des décors et projectiles inchangés.
+- 1 301 tests Node et 522 contrôles natifs réussis, dix-sept captures finales inspectées. Les 683 anciens assets et dix-sept fichiers de règles/classeurs protégés sont inchangés.
+- Harnais HTTP préparés pour treize scènes ; contrôles de serveur, fraîcheur des dessins et IDs d’acteurs corrigés. Aucun résultat HTTP non exécuté n’est revendiqué.
+- Douze PNG actifs, une variante Fire archivée hors jeu, aucun nouveau personnage ou clip animé. Fidélité 1:1 non certifiée ; voir [la livraison et les limites](docs/production/vague28/README.md).
+
 ## 0.9.6 — Vague 27, 24 novembre 2026
 
 - Deux poses d’attaque indépendantes pour Lying Figure SH2 et Double Head SH3, avec portraits, idles et clips antérieurs conservés.

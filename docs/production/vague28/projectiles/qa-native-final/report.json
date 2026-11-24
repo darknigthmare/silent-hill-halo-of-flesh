@@ -1,0 +1,920 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-24T14:46:08.584Z",
+  "label": "wave28-native-projectiles",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "projectileStateInjected": false,
+  "method": "Actual FightEngine.update/render with ordinary local training/freeMeter options and original key callbacks. Native Canvas is not Chromium.",
+  "decoder": "Original file hashes verified; PNG encoding normalized only in memory for native Canvas, with decoded RGBA equality checked. Project files remain byte-identical.",
+  "limits": [
+    "Static PNG candidates only; no native animation or 1:1 visual fidelity is certified.",
+    "Source observations establish attack kind; original texture, timing and trajectory are not reproduced by these images.",
+    "The four scenes exercise normal emission and artwork in both player slots; they are not a complete hit/guard gameplay matrix."
+  ],
+  "checks": [
+    {
+      "name": "native bytes assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/sprites/bom_fire_guardian_137.00774213127e.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/sprites/bom_fire_guardian_137.00774213127e.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/stages/midwich.courtyard.c9728428d63d.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/stages/midwich.courtyard.c9728428d63d.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+      "passed": true
+    },
+    {
+      "name": "lossless native decoder adapter assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right exact source and slot registered",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_earth_guardian_142-right projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right normal keydown",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right normal keyup",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right special accepted",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-right cache budget respected",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left exact source and slot registered",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_earth_guardian_142-left projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left normal keydown",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left normal keyup",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left special accepted",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "bom_earth_guardian_142-left cache budget respected",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right exact source and slot registered",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_fire_guardian_137-right projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right normal keydown",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right normal keyup",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right special accepted",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right emission uses final hand pose",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right emission paints exact projectile",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right passive emission coordinates finite",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-right cache budget respected",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left exact source and slot registered",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "bom_fire_guardian_137-left projectile prewarm",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left intro ended normally",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left normal keydown",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left normal keyup",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left special accepted",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left real shot emitted",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left emission uses final hand pose",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left emission paints exact projectile",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left passive emission coordinates finite",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left actual flight advances",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left drawing leaves flight and health unchanged",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left exact PNG painted by engine",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left bitmap follows emitted direction",
+      "passed": true
+    },
+    {
+      "name": "bom_fire_guardian_137-left cache budget respected",
+      "passed": true
+    }
+  ],
+  "captures": [
+    {
+      "file": "bom_earth_guardian_142-right.png",
+      "sha256": "bfe2222d7c492594174762f93e207fcb5c752032dd8d7a7bcbb41c7569a42d61",
+      "bytes": 1010249,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "bom_earth_guardian_142-left.png",
+      "sha256": "68d2b825d0add8313fc6e6db80a270ae2a79f852b87acb432fd4fed16d49c93b",
+      "bytes": 1004765,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "bom_fire_guardian_137-right-emission.png",
+      "sha256": "c19828286b6bc699ef627fee5c39388a1e9d1b2474e261dfbca23f76d5bdf04b",
+      "bytes": 1019987,
+      "width": 1280,
+      "height": 720,
+      "phase": "first-rendered-projectile"
+    },
+    {
+      "file": "bom_fire_guardian_137-right.png",
+      "sha256": "5ad5902086d324dc8c7b9faa3931898231232a3cb76ef9afd16f77a9118b9416",
+      "bytes": 1021238,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "file": "bom_fire_guardian_137-left-emission.png",
+      "sha256": "a296fd1145df5ff75abd4c486820154cacb78e1ab7071ad629c5732400f10c0a",
+      "bytes": 1013689,
+      "width": 1280,
+      "height": 720,
+      "phase": "first-rendered-projectile"
+    },
+    {
+      "file": "bom_fire_guardian_137-left.png",
+      "sha256": "d360400c11199f9b07f1922f7d6e1746be562d65e8ce9305250005d3e81ecae3",
+      "bytes": 1014669,
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+      "sha256": "8ab48e12d5690e041c54e154106fe29cf291cda0f76cd8bd5f855dc522c6d201",
+      "bytes": 1349165,
+      "width": 1774,
+      "height": 887,
+      "rawRGBAHash": "7252e8fa4c50fc195721bedd5e8dc92f2120251b7a8cb0c1554324837f195ea3",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+      "sha256": "711e8bf0b8c7e36a137f08cca7bd0a1000dc6f620e38613b329f551b3519ae5c",
+      "bytes": 1453158,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "d1e9f1dc2c6734b29599182b203941ca0a3fcca5856f4cfd4c0bb0e1bbdf296f",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+      "sha256": "00774213127eda405fc48e3778efc044fce17132471d95abcf498513f5ec7d5e",
+      "bytes": 1365051,
+      "width": 1670,
+      "height": 941,
+      "rawRGBAHash": "0e9b8f2bae3ded6649ebc400652cc02034b1d0aa3845ccb875d8f7819e6ddf85",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "bytes": 1181785,
+      "width": 2172,
+      "height": 724,
+      "rawRGBAHash": "28b59b2a1bb4f2e01c42a53ce514d38088004343a42db9d7658d97fbe9a05d81",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/midwich.courtyard.c9728428d63d.png",
+      "sha256": "c9728428d63d6950b27b5ec791cfcce4854c3aaf0ba781cf735b51c7725844c2",
+      "bytes": 1628967,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "4930104c9a55a4287968078c50c65d181afc0c8610a6632756fd2c51975a1978",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "sha256": "bc62471eecc380da70aaa1bf78e59c342094d9ea7597eaaff5090ba4812f7ffd",
+      "bytes": 1025146,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "4d86d8ada6413107f0f92104698aa03037ed53aa0503df8806310025331084e2",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "sha256": "947604e7ff5ab1dad111a9b0000585de8ed007e8ad07fd632fbfee515039cf51",
+      "bytes": 1389718,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "d7416ae9a34f9fb986da80112e02029448c8de4a5c6d6ed11c3eeca5b2615e4b",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+      "sha256": "8b645595b188a85e2286d44ad7b51ae46a4201a3ebab01342dad7485b65a96b8",
+      "bytes": 1258820,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "44c4b850842984a2dcd32837c5767b4e60089ea08ad7473daad1b74f9a2feef7",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+      "sha256": "f8fb0ce119d0dd8350095ee410ee0e904ef843344bb3a59a91a63fb4d54eb7ce",
+      "bytes": 1370319,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "2bb6be75095254edb5527a45d05226f63da93345d991c80dfad10659229f9a60",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+      "sha256": "650230316e42961747e64890138308c4ff93c4241ba1d701e52bba034d4ef370",
+      "bytes": 1220634,
+      "width": 2172,
+      "height": 724,
+      "rawRGBAHash": "67d80fed52267fcd94bd8016640aad100b6fbda943d2549a6e90b3fdccb5e4c8",
+      "adapterLossless": true
+    }
+  ],
+  "scenes": [
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "playerIndex": 0,
+      "key": "KeyI",
+      "sourceId": "bom_earth_guardian_rock",
+      "initialShot": {
+        "x": 378.23199999999997,
+        "y": 426.08500000000004,
+        "life": 59,
+        "vx": 12,
+        "groundY": null,
+        "radius": 12
+      },
+      "finalShot": {
+        "x": 438.23199999999997,
+        "y": 426.08500000000004,
+        "life": 54,
+        "vx": 12,
+        "vy": 0,
+        "health": [
+          1566,
+          760
+        ]
+      },
+      "placement": {
+        "x": 438.23199999999997,
+        "y": 426.08500000000004,
+        "width": 36.20909970958374,
+        "height": 36,
+        "flip": 1,
+        "source": [
+          105,
+          111,
+          1039,
+          1033
+        ],
+        "localX": -18.10454985479187,
+        "localY": -18
+      },
+      "draw": {
+        "path": "assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+        "args": [
+          105,
+          111,
+          1039,
+          1033,
+          -18.10454985479187,
+          -18,
+          36.20909970958374,
+          36
+        ],
+        "matrix": [
+          0.976021945476532,
+          0,
+          0,
+          0.976021945476532,
+          448.4158935546875,
+          430.11126708984375
+        ],
+        "frame": 249
+      },
+      "capture": "bom_earth_guardian_142-right.png",
+      "emissionObservation": null,
+      "cacheBytes": 6290064,
+      "cacheReservedBytes": 0
+    },
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "playerIndex": 1,
+      "key": "KeyH",
+      "sourceId": "bom_earth_guardian_rock",
+      "initialShot": {
+        "x": 901.768,
+        "y": 426.08500000000004,
+        "life": 59,
+        "vx": -12,
+        "groundY": null,
+        "radius": 12
+      },
+      "finalShot": {
+        "x": 841.768,
+        "y": 426.08500000000004,
+        "life": 54,
+        "vx": -12,
+        "vy": 0,
+        "health": [
+          760,
+          1566
+        ]
+      },
+      "placement": {
+        "x": 841.768,
+        "y": 426.08500000000004,
+        "width": 36.20909970958374,
+        "height": 36,
+        "flip": -1,
+        "source": [
+          105,
+          111,
+          1039,
+          1033
+        ],
+        "localX": -18.10454985479187,
+        "localY": -18
+      },
+      "draw": {
+        "path": "assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+        "args": [
+          105,
+          111,
+          1039,
+          1033,
+          -18.10454985479187,
+          -18,
+          36.20909970958374,
+          36
+        ],
+        "matrix": [
+          -0.976021945476532,
+          0,
+          0,
+          0.976021945476532,
+          831.5840454101562,
+          430.11126708984375
+        ],
+        "frame": 249
+      },
+      "capture": "bom_earth_guardian_142-left.png",
+      "emissionObservation": null,
+      "cacheBytes": 6290064,
+      "cacheReservedBytes": 0
+    },
+    {
+      "fighterId": "bom_fire_guardian_137",
+      "playerIndex": 0,
+      "key": "KeyI",
+      "sourceId": "bom_fire_guardian_hand_flame",
+      "initialShot": {
+        "x": 420.51,
+        "y": 434.071,
+        "life": 35,
+        "vx": 8,
+        "groundY": null,
+        "radius": 12
+      },
+      "finalShot": {
+        "x": 460.51,
+        "y": 434.071,
+        "life": 30,
+        "vx": 8,
+        "vy": 0,
+        "health": [
+          1566,
+          760
+        ]
+      },
+      "placement": {
+        "x": 460.51,
+        "y": 434.071,
+        "width": 111.8048780487805,
+        "height": 36,
+        "flip": 1,
+        "source": [
+          164,
+          47,
+          1910,
+          615
+        ],
+        "localX": -55.90243902439025,
+        "localY": -18
+      },
+      "draw": {
+        "path": "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+        "args": [
+          164,
+          47,
+          1910,
+          615,
+          -55.90243902439025,
+          -18,
+          111.8048780487805,
+          36
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          464.39508056640625,
+          437.5326843261719
+        ],
+        "frame": 249
+      },
+      "capture": "bom_fire_guardian_137-right.png",
+      "emissionObservation": {
+        "reference": {
+          "fighterId": "bom_fire_guardian_137",
+          "posePath": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+          "poseWidth": 1670,
+          "poseHeight": 941,
+          "handNativePoint": [
+            985,
+            490
+          ],
+          "handNativeBounds": [
+            875,
+            470,
+            1100,
+            575
+          ],
+          "plumeNativePoint": [
+            174,
+            467
+          ],
+          "method": "Approximate points visually identified on the unchanged native PNGs. World positions use the actual drawImage arguments and Canvas matrices. No distance threshold or source-fidelity assertion."
+        },
+        "frame": 244,
+        "actorDraw": {
+          "path": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+          "args": [
+            -306.6900270315652,
+            -334.80385012486806,
+            617.814728182021,
+            348.1219516283124
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            317.1428527832031,
+            594
+          ],
+          "frame": 244
+        },
+        "projectileDraw": {
+          "path": "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+          "args": [
+            164,
+            47,
+            1910,
+            615,
+            -55.90243902439025,
+            -18,
+            111.8048780487805,
+            36
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            425.2608947753906,
+            437.5326843261719
+          ],
+          "frame": 244
+        },
+        "handWorld": {
+          "x": 373.60340416960827,
+          "y": 443.79426385277407
+        },
+        "plumeOriginWorld": {
+          "x": 371.14116017992905,
+          "y": 443.97550987325064
+        },
+        "delta": {
+          "x": -2.462243989679223,
+          "y": 0.18124602047657845,
+          "distance": 2.468905746408731
+        },
+        "capture": "bom_fire_guardian_137-right-emission.png"
+      },
+      "cacheBytes": 12580176,
+      "cacheReservedBytes": 0
+    },
+    {
+      "fighterId": "bom_fire_guardian_137",
+      "playerIndex": 1,
+      "key": "KeyH",
+      "sourceId": "bom_fire_guardian_hand_flame",
+      "initialShot": {
+        "x": 859.49,
+        "y": 434.071,
+        "life": 35,
+        "vx": -8,
+        "groundY": null,
+        "radius": 12
+      },
+      "finalShot": {
+        "x": 819.49,
+        "y": 434.071,
+        "life": 30,
+        "vx": -8,
+        "vy": 0,
+        "health": [
+          760,
+          1566
+        ]
+      },
+      "placement": {
+        "x": 819.49,
+        "y": 434.071,
+        "width": 111.8048780487805,
+        "height": 36,
+        "flip": -1,
+        "source": [
+          164,
+          47,
+          1910,
+          615
+        ],
+        "localX": -55.90243902439025,
+        "localY": -18
+      },
+      "draw": {
+        "path": "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+        "args": [
+          164,
+          47,
+          1910,
+          615,
+          -55.90243902439025,
+          -18,
+          111.8048780487805,
+          36
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          815.60498046875,
+          437.5326843261719
+        ],
+        "frame": 249
+      },
+      "capture": "bom_fire_guardian_137-left.png",
+      "emissionObservation": {
+        "reference": {
+          "fighterId": "bom_fire_guardian_137",
+          "posePath": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+          "poseWidth": 1670,
+          "poseHeight": 941,
+          "handNativePoint": [
+            985,
+            490
+          ],
+          "handNativeBounds": [
+            875,
+            470,
+            1100,
+            575
+          ],
+          "plumeNativePoint": [
+            174,
+            467
+          ],
+          "method": "Approximate points visually identified on the unchanged native PNGs. World positions use the actual drawImage arguments and Canvas matrices. No distance threshold or source-fidelity assertion."
+        },
+        "frame": 244,
+        "actorDraw": {
+          "path": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+          "args": [
+            -306.6900270315652,
+            -334.80385012486806,
+            617.814728182021,
+            348.1219516283124
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            962.857177734375,
+            594
+          ],
+          "frame": 244
+        },
+        "projectileDraw": {
+          "path": "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+          "args": [
+            164,
+            47,
+            1910,
+            615,
+            -55.90243902439025,
+            -18,
+            111.8048780487805,
+            36
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            854.7391357421875,
+            437.5326843261719
+          ],
+          "frame": 244
+        },
+        "handWorld": {
+          "x": 906.3966263479698,
+          "y": 443.79426385277407
+        },
+        "plumeOriginWorld": {
+          "x": 908.8588703376491,
+          "y": 443.97550987325064
+        },
+        "delta": {
+          "x": 2.4622439896793367,
+          "y": 0.18124602047657845,
+          "distance": 2.468905746408845
+        },
+        "capture": "bom_fire_guardian_137-left-emission.png"
+      },
+      "cacheBytes": 12580176,
+      "cacheReservedBytes": 0
+    }
+  ],
+  "sourceHashes": {
+    "src/fight.js": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+    "src/projectile-bitmaps.js": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
+    "src/projectile-bitmap-manifest.js": "2019ff64722e6724b369d05ba1d8c116d2d4321061f9f0f47c9b3e9d42759c50",
+    "src/sprite-manifest.js": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92",
+    "src/stage-bitmap-manifest.js": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065"
+  },
+  "success": true
+}

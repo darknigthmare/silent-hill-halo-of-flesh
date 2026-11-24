@@ -1422,6 +1422,44 @@ export const SPRITES = {
           1238,
           1203
         ]
+      },
+      {
+        "sha256": "e3c4ec010cf6ce6dc278250ee897b7d32a0c2303794d2bb6dc5c37b77a306102",
+        "bytes": 1414204,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          254,
+          160,
+          1293,
+          778
+        ],
+        "pixelSHA256": "f49b98efd305b91877129fc7cc9f3b78d3c2cb6017be97bc782a43b56809e1d9",
+        "transparentFraction": 0.8291,
+        "path": "assets/sprites/sh3_numb_body_small_037.e3c4ec010cf6.png",
+        "facing": -1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "numb-body-small-forward-special.png",
+        "sourceSHA256": "e3c4ec010cf6ce6dc278250ee897b7d32a0c2303794d2bb6dc5c37b77a306102",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          75,
+          9,
+          1348,
+          990
+        ],
+        "framingBounds": [
+          252,
+          157,
+          1296,
+          784
+        ]
       }
     ],
     "portrait": {
@@ -1477,6 +1515,13 @@ export const SPRITES = {
       "ko": {
         "frames": [
           3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          4
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -1671,6 +1716,44 @@ export const SPRITES = {
           1233,
           1115
         ]
+      },
+      {
+        "sha256": "f117d3d2628812c52ded0aee68fc8f007546283b9fba067002fe0ebe5aa6c993",
+        "bytes": 1072016,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          58,
+          53,
+          1709,
+          823
+        ],
+        "pixelSHA256": "e0632a51e4f2030d0bb9257e145ea22b2068c31111e8e99c6879cbd90793444e",
+        "transparentFraction": 0.74294,
+        "path": "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "groaner-forward-special.png",
+        "sourceSHA256": "f117d3d2628812c52ded0aee68fc8f007546283b9fba067002fe0ebe5aa6c993",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          55,
+          49,
+          1712,
+          826
+        ],
+        "framingBounds": [
+          55,
+          49,
+          1712,
+          826
+        ]
       }
     ],
     "portrait": {
@@ -1726,6 +1809,13 @@ export const SPRITES = {
       "ko": {
         "frames": [
           3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          4
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -2524,6 +2614,44 @@ export const SPRITES = {
           1172,
           1187
         ]
+      },
+      {
+        "sha256": "e9ec336a3114b5128213c96825011b96b13d7b7967af64fc6bc8b4e22e3ff44b",
+        "bytes": 1885967,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          53,
+          44,
+          1500,
+          991
+        ],
+        "pixelSHA256": "851f91a945f32ed2ed7ef5169a2357d229230a4177ce795d3dd87ed773dc86e0",
+        "transparentFraction": 0.72324,
+        "path": "assets/sprites/sh3_closer_036.e9ec336a3114.png",
+        "facing": -1,
+        "anchor": [
+          0.62,
+          0.966797
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "closer-forward-special.png",
+        "sourceSHA256": "e9ec336a3114b5128213c96825011b96b13d7b7967af64fc6bc8b4e22e3ff44b",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          17,
+          1536,
+          1024
+        ],
+        "framingBounds": [
+          50,
+          40,
+          1503,
+          993
+        ]
       }
     ],
     "portrait": {
@@ -2579,6 +2707,13 @@ export const SPRITES = {
       "ko": {
         "frames": [
           3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          4
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -19409,6 +19544,44 @@ export const SPRITES = {
           1531,
           909
         ]
+      },
+      {
+        "sha256": "00774213127eda405fc48e3778efc044fce17132471d95abcf498513f5ec7d5e",
+        "bytes": 1365051,
+        "width": 1670,
+        "height": 941,
+        "visibleBounds": [
+          132,
+          20,
+          1423,
+          907
+        ],
+        "pixelSHA256": "2b0d46b99dfbfb9f0cc2cda544fa77f04f276dd0c7cb370000705c2e9a2bda29",
+        "transparentFraction": 0.64397,
+        "path": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+        "facing": 1,
+        "anchor": [
+          0.496411,
+          0.961743
+        ],
+        "bodyHeight": 0.835282,
+        "sourceFile": "fire-guardian-neutral-special.png",
+        "sourceSHA256": "00774213127eda405fc48e3778efc044fce17132471d95abcf498513f5ec7d5e",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          129,
+          17,
+          1490,
+          911
+        ],
+        "framingBounds": [
+          129,
+          17,
+          1427,
+          909
+        ]
       }
     ],
     "portrait": {
@@ -19446,6 +19619,13 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": true
+      },
+      "neutralSpecial": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0,

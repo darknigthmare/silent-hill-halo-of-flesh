@@ -1,0 +1,13 @@
+{
+  "key": "fire-guardian-neutral-special-correction",
+  "fighterId": "bom_fire_guardian_137",
+  "source": "bom",
+  "pose": "neutralSpecial",
+  "referencePaths": [
+    "/workspace/scratch/0f50864dcd65/generated_images/exec-363c8636-2c77-4f48-8d31-6cb7510feb68.png"
+  ],
+  "prompt": "Use case: precise-object-edit. Correct only the already RAISED casting forearm and its hooked claw hand in this single transparent Fire Guardian combat sprite. Preserve the character identity, all textures/colors, head and both horns, crouched torso, both hind legs, the other low supporting forearm, framing, scale, camera and true transparency. The lifted hand is currently too far to the RIGHT and too LOW for the game's existing projectile origin. Move the whole raised claw-hand cluster approximately 150 pixels LEFT and 75 pixels UP on the same 1672x941 canvas, bending that forearm more tightly at the elbow while keeping its shoulder attachment. Target the center of the claw-hand cluster at approximately x1090,y475, just below the snout. The visible leading claw tips should end around x1170,y490, leaving empty transparent space to the right. Preserve exactly the same pair of hooked claws and long organic forearm shape; do not add or duplicate any arm, finger, hand, claw, bone or limb. Keep the whole character unchanged elsewhere, especially the lowered supporting arm and both feet. Exactly one character, with all anatomy uncropped. DO NOT draw any flame, energy, smoke, glow or projectile. No background, ground, shadow, text or panel. This is a positional correction to the single raised hand for a static versus pose, not a new attack or source timing claim.",
+  "generationTool": "built-in image_gen.imagegen",
+  "transparentBackground": true,
+  "reason": "Initial raised hand center ~1235,550 displaced from versus emission zone ~1105,475; fix only raised arm pose."
+}

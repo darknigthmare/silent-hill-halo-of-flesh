@@ -1,0 +1,203 @@
+{
+  "schema": 1,
+  "wave": 28,
+  "createdAt": "2026-11-24T14:35:52.397Z",
+  "input": {
+    "path": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/projectiles/integration-delivery.json",
+    "sha256": "e4d24f44ac0930dad92e92ae470e085e08506c684d9195de3fea38754ab99ad5"
+  },
+  "effects": [
+    {
+      "id": "bom_earth_guardian_rock",
+      "fighterId": "bom_earth_guardian_142",
+      "source": "bom",
+      "slots": [
+        "neutralSpecial"
+      ]
+    },
+    {
+      "id": "bom_fire_guardian_hand_flame",
+      "fighterId": "bom_fire_guardian_137",
+      "source": "bom",
+      "slots": [
+        "neutralSpecial",
+        "super",
+        "desperation"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+      "sha256": "f8fb0ce119d0dd8350095ee410ee0e904ef843344bb3a59a91a63fb4d54eb7ce",
+      "bytes": 1370319,
+      "width": 1254,
+      "height": 1254,
+      "framingBounds": [
+        105,
+        111,
+        1144,
+        1144
+      ],
+      "pixelSHA256": "8b3fb151ac03dae31553aa35e20c79672de41c8bdafdd52437e806791ce0b0e2",
+      "localSource": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/projectiles/png/earth-rock.png",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+      "sha256": "650230316e42961747e64890138308c4ff93c4241ba1d701e52bba034d4ef370",
+      "bytes": 1220634,
+      "width": 2172,
+      "height": 724,
+      "framingBounds": [
+        164,
+        47,
+        2074,
+        662
+      ],
+      "pixelSHA256": "be52e7332c020a0b6b74ee654e441f895d9bf0cf15968fe09d3e0a0a6110ab16",
+      "localSource": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/projectiles/png/fire-hand-flame.png",
+      "transfer": "hardlink-original",
+      "pixelsModified": false
+    }
+  ],
+  "audit": {
+    "effects": 5,
+    "fighters": 5,
+    "slots": 14,
+    "files": 5,
+    "animatedClips": 0,
+    "certified": 0,
+    "paths": [
+      "/assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+      "/assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+      "/assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "/assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "/assets/projectiles/sh3_god_ground_flame.8b645595b188.png"
+    ],
+    "entries": [
+      {
+        "id": "sh1_incubator_blue_lightning",
+        "fighterId": "sh1_incubator_018",
+        "source": "sh1",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          89,
+          340,
+          1455,
+          704
+        ],
+        "transparentFraction": 0.92096,
+        "pixelSHA256": "54cbdc52c47510ed0e324b1256df828c4ab35cc49af005676b24892ebe31bc3a",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "sh2_lying_figure_acid",
+        "fighterId": "sh2_lying_figure_020",
+        "source": "sh2",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          140,
+          273,
+          1397,
+          752
+        ],
+        "transparentFraction": 0.82366,
+        "pixelSHA256": "beeae8203ddedf86cdd3669d3794f843f07fb3aa61e8e058ad787e7a06e3739a",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "sh3_god_ground_flame",
+        "fighterId": "sh3_god_050",
+        "source": "sh3",
+        "slots": [
+          "neutralSpecial",
+          "downSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          73,
+          369,
+          1437,
+          790
+        ],
+        "transparentFraction": 0.85545,
+        "pixelSHA256": "36d8de1ac179ae58abc56d13861a6fa2c254a0d3c3a51bc87fa7196bad8f17ec",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "bom_earth_guardian_rock",
+        "fighterId": "bom_earth_guardian_142",
+        "source": "bom",
+        "slots": [
+          "neutralSpecial"
+        ],
+        "frame": "assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+        "width": 1254,
+        "height": 1254,
+        "framingBounds": [
+          105,
+          111,
+          1144,
+          1144
+        ],
+        "transparentFraction": 0.56881,
+        "pixelSHA256": "8b3fb151ac03dae31553aa35e20c79672de41c8bdafdd52437e806791ce0b0e2",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "bom_fire_guardian_hand_flame",
+        "fighterId": "bom_fire_guardian_137",
+        "source": "bom",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+        "width": 2172,
+        "height": 724,
+        "framingBounds": [
+          164,
+          47,
+          2074,
+          662
+        ],
+        "transparentFraction": 0.64084,
+        "pixelSHA256": "be52e7332c020a0b6b74ee654e441f895d9bf0cf15968fe09d3e0a0a6110ab16",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      }
+    ]
+  },
+  "existingEffectsPreserved": true,
+  "protectedScopeUnchanged": true
+}

@@ -1,0 +1,447 @@
+{
+  "schema": 1,
+  "wave": 28,
+  "createdAt": "2026-11-24T15:09:42.799Z",
+  "passed": true,
+  "native": {
+    "checks": 522,
+    "scenes": 15,
+    "captures": 17,
+    "suites": [
+      {
+        "name": "characters",
+        "report": "docs/production/vague28/characters/qa-native-final/report.json",
+        "reportSHA256": "83a99493fdd5b8d14e300e6f0281798e29fce3ef821dc61e43322908ba9b1ea5",
+        "checks": 334,
+        "scenes": 8,
+        "captures": [
+          {
+            "path": "docs/production/vague28/characters/qa-native-final/sh1_groaner_003-right-attack-active.png",
+            "sha256": "e41ae3d4a9d7338762e13b18c7f05970d40ec58394ef04baf365b16856fd38c9",
+            "bytes": 1499448
+          },
+          {
+            "path": "docs/production/vague28/characters/qa-native-final/sh1_groaner_003-left-attack-active.png",
+            "sha256": "5c389e3cd026aac001b2253100ba498a9e89f09636edb4ed998cf8e4fc297d84",
+            "bytes": 1498254
+          },
+          {
+            "path": "docs/production/vague28/characters/qa-native-final/sh3_closer_036-right-attack-active.png",
+            "sha256": "1b346d2146f2ad5a68ed958a9aa61c8f68ca91507106045a929185cf39b170ef",
+            "bytes": 1527408
+          },
+          {
+            "path": "docs/production/vague28/characters/qa-native-final/sh3_closer_036-left-attack-active.png",
+            "sha256": "c2c4dd7effc08b0e84004771cfe7dc086f85496b12e5feb32cb0b516581892bb",
+            "bytes": 1527084
+          },
+          {
+            "path": "docs/production/vague28/characters/qa-native-final/sh3_numb_body_small_037-right-attack-active.png",
+            "sha256": "e626f04076dfe8328970aa013282aa32860f725fd5ee01da4ee801874944d8d6",
+            "bytes": 1500260
+          },
+          {
+            "path": "docs/production/vague28/characters/qa-native-final/sh3_numb_body_small_037-left-attack-active.png",
+            "sha256": "a2a2e8dbcba2374fcae4a6ced48ce8feefca48efaa8b9bc7b0c6cc173e57bbae",
+            "bytes": 1500103
+          },
+          {
+            "path": "docs/production/vague28/characters/qa-native-final/bom_fire_guardian_137-right-attack-active.png",
+            "sha256": "7484d5cb6e33ade31e04878d70032fd32f71764b7a5e49c868f7c74fe55b765f",
+            "bytes": 1554730
+          },
+          {
+            "path": "docs/production/vague28/characters/qa-native-final/bom_fire_guardian_137-left-attack-active.png",
+            "sha256": "e8ce58ef2d1c7d1b217f8180318d6588340daa064a83a3f4ff92573072d27043",
+            "bytes": 1567991
+          }
+        ],
+        "sources": [
+          {
+            "path": "art/registry.json",
+            "sha256": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd"
+          },
+          {
+            "path": "src/sprite-manifest.js",
+            "sha256": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92"
+          },
+          {
+            "path": "src/stage-bitmap-manifest.js",
+            "sha256": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065"
+          },
+          {
+            "path": "src/fight.js",
+            "sha256": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+          },
+          {
+            "path": "src/sprite-animation.js",
+            "sha256": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+          },
+          {
+            "path": "src/sprite-system.js",
+            "sha256": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+          },
+          {
+            "path": "src/projectile-bitmaps.js",
+            "sha256": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410"
+          },
+          {
+            "path": "src/projectile-bitmap-manifest.js",
+            "sha256": "2019ff64722e6724b369d05ba1d8c116d2d4321061f9f0f47c9b3e9d42759c50"
+          }
+        ],
+        "harness": {
+          "path": "docs/production/vague28/characters/qa-attacks-native.mjs",
+          "sha256": "b4a27a0c3e85a076172e6c721a80bd7d3d86e7bf171b9d1f0d7c39a4235a5053"
+        }
+      },
+      {
+        "name": "projectiles",
+        "report": "docs/production/vague28/projectiles/qa-native-after-cache-fix/report.json",
+        "reportSHA256": "8c6e3d798456d6f7aeac562424b1108762e5b78f5020fd4ebfaaa7735dd13144",
+        "checks": 79,
+        "scenes": 4,
+        "captures": [
+          {
+            "path": "docs/production/vague28/projectiles/qa-native-after-cache-fix/bom_earth_guardian_142-right.png",
+            "sha256": "d5888cbd8d6d4b217c9857250fcc7a3a69c469b6f22e5fded4fdb81cd1b76427",
+            "bytes": 1010349
+          },
+          {
+            "path": "docs/production/vague28/projectiles/qa-native-after-cache-fix/bom_earth_guardian_142-left.png",
+            "sha256": "f6d62d4053929dee2c71090239468b98624457c55c3f11adbd8b3324c00b57be",
+            "bytes": 1005125
+          },
+          {
+            "path": "docs/production/vague28/projectiles/qa-native-after-cache-fix/bom_fire_guardian_137-right-emission.png",
+            "sha256": "c19828286b6bc699ef627fee5c39388a1e9d1b2474e261dfbca23f76d5bdf04b",
+            "bytes": 1019987
+          },
+          {
+            "path": "docs/production/vague28/projectiles/qa-native-after-cache-fix/bom_fire_guardian_137-right.png",
+            "sha256": "7b8d8ee9aa958d2c66c1cec9f5c48a651d060cf2f3b510d130de462d6468076c",
+            "bytes": 1021529
+          },
+          {
+            "path": "docs/production/vague28/projectiles/qa-native-after-cache-fix/bom_fire_guardian_137-left-emission.png",
+            "sha256": "a296fd1145df5ff75abd4c486820154cacb78e1ab7071ad629c5732400f10c0a",
+            "bytes": 1013689
+          },
+          {
+            "path": "docs/production/vague28/projectiles/qa-native-after-cache-fix/bom_fire_guardian_137-left.png",
+            "sha256": "903878ae98000320cea95c96a4daabfcfcec575925bbc08910e6ecd3753c2216",
+            "bytes": 1014974
+          }
+        ],
+        "sources": [
+          {
+            "path": "src/data.js",
+            "sha256": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35"
+          },
+          {
+            "path": "src/movesets.js",
+            "sha256": "03b5fcba2939438c8f1ca2f064fd31578c6255656006c6e7c4424e3eafd327f9"
+          },
+          {
+            "path": "src/combat-reference-policy.js",
+            "sha256": "a784ca09be46e54b188e71c003ad8fd12970c8c4821bc8c5515e6a8e79751028"
+          },
+          {
+            "path": "src/production-reference.js",
+            "sha256": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889"
+          },
+          {
+            "path": "src/weapon-phases.js",
+            "sha256": "d488e9847e6c7bfb6496b1e68672383e68b27ff026e6ca78235934fc53890c90"
+          },
+          {
+            "path": "src/stage-director.js",
+            "sha256": "4158a522fa4f2133ed2bebb4a42852e0244054ab9dcf33c0d877a5d591e01884"
+          },
+          {
+            "path": "src/stage-lore-policy.js",
+            "sha256": "b20de47911e2577c3814217121bd1511ecefb40f555e629bcbe7b730d39624e8"
+          },
+          {
+            "path": "src/stage-cinematics.js",
+            "sha256": "b05d8255b494d0c2ce8788e0f364636e5dc31a3b16e931a42b23180532877371"
+          },
+          {
+            "path": "src/stage-lot12-renderer.js",
+            "sha256": "a9bb0f9397360edd1b9c70e2003aaa8e1a4b8e6b0eb30a995f1c80cbff1308d2"
+          },
+          {
+            "path": "src/stage-lot12-policy.js",
+            "sha256": "45be12c0627ac11a46d95aa9fbba4d506b936f71e3018b22fe91297fc6f54935"
+          },
+          {
+            "path": "src/stage-reference-policy.js",
+            "sha256": "635b4c3a08ecc7256f13194c3734f1f013fea2f36440421510a83c8af5c56ec6"
+          },
+          {
+            "path": "src/sprite-manifest.js",
+            "sha256": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92"
+          },
+          {
+            "path": "src/sprite-system.js",
+            "sha256": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+          },
+          {
+            "path": "src/sprite-animation.js",
+            "sha256": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+          },
+          {
+            "path": "src/sprite-poses.js",
+            "sha256": "f1489d560ca5fa88d9199bea352cf908fb7ae8126fc8b04478b491d31fc87d5c"
+          },
+          {
+            "path": "src/combat-geometry.js",
+            "sha256": "b08f368df5617a4aebb17bb19256a1f895490efc4ef7d08df3d50c4f5878edab"
+          },
+          {
+            "path": "src/sprite-usage.js",
+            "sha256": "cce9eeb60700a40c0974709abb53a582838d27187d583bb4e800bf5922788541"
+          },
+          {
+            "path": "src/stage-bitmaps.js",
+            "sha256": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+          },
+          {
+            "path": "src/stage-bitmap-manifest.js",
+            "sha256": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065"
+          },
+          {
+            "path": "src/projectile-bitmap-manifest.js",
+            "sha256": "2019ff64722e6724b369d05ba1d8c116d2d4321061f9f0f47c9b3e9d42759c50"
+          },
+          {
+            "path": "src/projectile-bitmaps.js",
+            "sha256": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410"
+          },
+          {
+            "path": "src/fight.js",
+            "sha256": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+          },
+          {
+            "path": "src/sprite-framing.js",
+            "sha256": "563aebcd9987de1841b4f71a58a06710bfd0dae1861dffaf6560487d4441baaf"
+          },
+          {
+            "path": "src/renderers.js",
+            "sha256": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+          },
+          {
+            "path": "src/shared.js",
+            "sha256": "6f2b1244748c36b10595ff2661926a454f3dbf64b415e434dce7885a7d55cd3e"
+          },
+          {
+            "path": "src/save-store.js",
+            "sha256": "4ee606be5c7f64e87ae5096c80afaea8820cf13e0f3c3ba12e07737abb5b1f05"
+          },
+          {
+            "path": "src/stage-architecture.js",
+            "sha256": "c9480281740aa1b31b82e483ae3cd34519090dbb10cd3cdf6e2a571d77d19039"
+          },
+          {
+            "path": "src/stage-bitmap-compositions.js",
+            "sha256": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+          },
+          {
+            "path": "src/stage-hazard-renderer.js",
+            "sha256": "b5d21d9c623e342bc3b6ba02eaa2ac68475bb6ff834f38d8c3358816ac2707cb"
+          },
+          {
+            "path": "src/combat-resolution.js",
+            "sha256": "a2756cc770871881050a28149822f0e20f1b8ff0b825f7ab5f99099d84206334"
+          },
+          {
+            "path": "src/player-input.js",
+            "sha256": "0899714b23759478a1bf495ab965702b46f6d656c776346940028628e50f59d1"
+          },
+          {
+            "path": "src/presentation-sequences.js",
+            "sha256": "9432ad52191d57050a3e2d7dde98c709d8b6885be82dfcc7db80b5e8f8c11ed7"
+          },
+          {
+            "path": "src/sprite-clips.js",
+            "sha256": "4adea577ab0f45016456999fafe381eecdb6e7d14123b30120e70f2dea6953f3"
+          },
+          {
+            "path": "src/lore-cinematics.js",
+            "sha256": "211596a8d9054ca8481e4668b9e9e91db4e46d48cb85c90a4c7c4e9ef4e96845"
+          },
+          {
+            "path": "docs/production/vague28/projectiles/qa-native.mjs",
+            "sha256": "aee1eca71f0e174797850a97864afe85e8c68ac26ce57344a794dc3087d02d4b"
+          }
+        ],
+        "harness": {
+          "path": "docs/production/vague28/projectiles/qa-native.mjs",
+          "sha256": "aee1eca71f0e174797850a97864afe85e8c68ac26ce57344a794dc3087d02d4b"
+        }
+      },
+      {
+        "name": "stages",
+        "report": "docs/production/vague28/stages/qa-native-final/report.json",
+        "reportSHA256": "49ac5373150316838aca322899d463128d75e381ad0398e41b94687ceb67485d",
+        "checks": 109,
+        "scenes": 3,
+        "captures": [
+          {
+            "path": "docs/production/vague28/stages/qa-native-final/final_sacrament.png",
+            "sha256": "940afba03caad4a79dcaeaf591e06eb6fe80868ff4c7036d1ab0bc6ea1c8bbd9",
+            "bytes": 1062205
+          },
+          {
+            "path": "docs/production/vague28/stages/qa-native-final/scarlet_chamber.png",
+            "sha256": "56ebc897793414aeec98065f7ad888c6a1dea7ab8dc4d99791eb27db3992c05b",
+            "bytes": 1104329
+          },
+          {
+            "path": "docs/production/vague28/stages/qa-native-final/arcade_hospital_roof.png",
+            "sha256": "5ae52a7e3e9459db24b85c5d284644e2981e6600ea1eda648c676b5e6972c9d0",
+            "bytes": 1416253
+          }
+        ],
+        "sources": [
+          {
+            "path": "art/registry.json",
+            "sha256": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd"
+          },
+          {
+            "path": "src/sprite-manifest.js",
+            "sha256": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92"
+          },
+          {
+            "path": "src/stage-bitmap-manifest.js",
+            "sha256": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065"
+          },
+          {
+            "path": "src/sprite-system.js",
+            "sha256": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+          },
+          {
+            "path": "src/fight.js",
+            "sha256": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+          },
+          {
+            "path": "src/renderers.js",
+            "sha256": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+          },
+          {
+            "path": "src/stage-bitmaps.js",
+            "sha256": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+          },
+          {
+            "path": "src/stage-bitmap-compositions.js",
+            "sha256": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+          }
+        ],
+        "harness": {
+          "path": "docs/production/vague28/stages/qa-native-final.mjs",
+          "sha256": "f5e0e321f9d5211ae5f5c3b23ef4bcb1edf9a7d78fb5ab5c868619526781c03e"
+        }
+      }
+    ]
+  },
+  "node": {
+    "tests": 1301,
+    "passed": 1301,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": "npm run verify",
+      "log": "docs/production/vague28/verify-final.txt",
+      "scope": "Generated data and package before the cache-only code correction; all final PNGs present.",
+      "exitCode": 0,
+      "logSHA256": "fdfb91b92f0a0c3c0406aebcd0e2c84b52c9df2f5195f7a0164c467cc33c7baf"
+    },
+    {
+      "command": "node scripts/build.mjs --verify-only",
+      "log": "docs/production/vague28/build-after-cache-fix.txt",
+      "scope": "Final package, including the cache correction.",
+      "exitCode": 0,
+      "logSHA256": "834a8765d16b96fd35ef740977b059a2ad9dbcab9e6b03f2636d98605e823d77"
+    },
+    {
+      "command": "node --test --test-concurrency=2",
+      "log": "docs/production/vague28/node-tests-final.txt",
+      "scope": "Final full Node suite: 1301 passed, 0 failed.",
+      "exitCode": 0,
+      "logSHA256": "1dbe87064612ce645e12be7180823fdbb4bd832d89f9bcab5f21531b96a70b3b"
+    },
+    {
+      "command": "node --test tests/native-attack-budget.test.mjs tests/sprites.test.mjs tests/stage-bitmaps.test.mjs tests/completed-result-retirement.test.mjs",
+      "log": "docs/production/vague28/cache-fix-tests.txt",
+      "scope": "66 targeted tests, included again in the full Node suite; not additional tests.",
+      "exitCode": 0,
+      "logSHA256": "0a211833077149be0af53b3e4b2a21cb8a9f884f8f9b913d0a15bb0339b9ead2"
+    }
+  ],
+  "memory": {
+    "report": "docs/production/vague28/cache-admission.json",
+    "sha256": "ba9d500697df2c648cdef20fa091a7bb4c85d3a05e8efdbcb499b8e9caf7b317",
+    "fighters": {
+      "budgetBytes": 75497472,
+      "pairsChecked": 999,
+      "maximumDecodedBytes": 69213696,
+      "maximumPair": [
+        "origins_faceless_nurse",
+        "sh1_groaner_003"
+      ]
+    },
+    "stages": {
+      "budgetBytes": 67108864,
+      "pairsChecked": 258,
+      "maximumDecodedBytes": 25174376,
+      "maximumPair": [
+        "brookhaven_sh3:leonard-basin-below-c4",
+        "final_sacrament:sh4-final-sacraments-stone-perimeter"
+      ]
+    },
+    "projectiles": {
+      "budgetBytes": 33554432,
+      "pairsChecked": 9,
+      "maximumDecodedBytes": 12581568,
+      "maximumPair": [
+        "bom_fire_guardian_137",
+        "sh1_incubator_018"
+      ]
+    }
+  },
+  "preservation": {
+    "report": "docs/production/vague28/summary.json",
+    "sha256": "5b1c56aa1d117d4de866420b7f287e1582efa57eba546fea0c4c62e1b9bab5fb",
+    "oldAssetsByteIdentical": 683,
+    "protectedRulesAndWorkbooks": 17
+  },
+  "poseBacklog": {
+    "report": "docs/production/vague28/pose-backlog.json",
+    "sha256": "e36c8df90b84e469bad0c0bc2c9eca562856993dae1ca8871a1d051fd7650ce7",
+    "profiles": 165,
+    "commands": {
+      "catalogueSlots": 3300,
+      "enabled": 3088,
+      "disabledExcluded": 212,
+      "presentEnabled": 7,
+      "missingEnabled": 3081,
+      "enabledOnlyIdleAliases": 0,
+      "presentDisabled": 0
+    },
+    "note": "Documentary clip-key census; not new runtime tests or a count of required animation frames."
+  },
+  "http": {
+    "state": "not-run",
+    "reason": "Local Chromium is blocked by socket() Operation not permitted; remote workflow awaits publication.",
+    "preparedScenes": 13,
+    "runner": "docs/production/vague28/run-ci-browser-check.mjs"
+  },
+  "limits": [
+    "Final native runs only: earlier diagnostic captures are preserved but not added to these counts.",
+    "Native Canvas and input callbacks do not validate Chromium, HTTP, browser events or service workers.",
+    "Admission pair counts are not played matches.",
+    "No source timing, complete animation cycle or 1:1 fidelity is certified.",
+    "The full Python workbook suite previously stopped with exit 137 in wave27; it was not rerun here."
+  ]
+}

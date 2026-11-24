@@ -1,0 +1,38 @@
+{
+  "schema": "halo-wave28-character-prompt-v1",
+  "key": "fire-guardian-neutral-special",
+  "fighterId": "bom_fire_guardian_137",
+  "source": "bom",
+  "edition": "Silent Hill: Book of Memories, original 2012 PS Vita",
+  "pose": "neutralSpecial",
+  "facing": 1,
+  "generationTool": "built-in image_gen.imagegen",
+  "transparentBackground": true,
+  "referenceImages": [
+    {
+      "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+      "role": "edit-target-existing-combat-idle"
+    },
+    {
+      "path": "docs/production/vague28/projectiles/references/fire-01h27m50s-native.png",
+      "role": "low-resolution-original-game-hand-casting-reference"
+    },
+    {
+      "path": "docs/production/vague28/projectiles/references/fire-01h29m10s-native.png",
+      "role": "low-resolution-original-game-hand-casting-reference"
+    }
+  ],
+  "prompt": "Use case: identity-preserve. Asset type: ONE transparent full-body side-view attack sprite for an existing game character. Edit image 1, the exact existing Fire Guardian from Silent Hill: Book of Memories (2012). Keep its entire low crouching body, ribbed domed back, purple-brown material, bony skull and hooked beak, exactly two long swept horns, both bent hind legs and the same long clawed forearms. Preserve the exact existing side camera facing screen RIGHT, body scale and position. Change ONLY the nearer long forearm into a casting gesture: lift and bend it at the elbow, holding its existing hooked claw hand forward at mid-torso height toward the right, with the palm/leading edge near pixel x1105, y475 on the original 1672x941 canvas. This is approximately 66% canvas width and 50% canvas height. Leave space in front of that hand for a SEPARATELY rendered projectile, but paint NO projectile here. Keep the other arm low in its existing supporting pose. Do not stand the creature upright or expose/reinvent hidden rear anatomy. All four limbs, both horns, the hooked beak and every existing claw must remain fully inside the frame. Images 2 and 3 are low-resolution original-game action references ONLY: they establish a forward hand-casting action, not fine fingers or exact joint angles. DO NOT copy their flames, magenta light, environment, other characters, text or HUD. This sprite contains ONLY the creature: zero flame, fire, sparks, energy ball, smoke, glow or attack trail anywhere. No human hand or extra fingers; preserve the existing claw topology. Match image 1's neutral material lighting without new effects. Keep the same wide canvas and same crouched body placement, with transparent padding around the whole subject. Actual transparent alpha background, no floor, shadow plane, checkerboard, labels, border or sprite sheet. One character and one static authored versus pose, not a recovered animation frame or a claim of source timing.",
+  "emissionCalibrationRequest": {
+    "runtimeBodyHeight": 290.78,
+    "engineOriginRelative": [
+      102.51,
+      -159.929
+    ],
+    "nativeTargetHandPixel": [
+      1105,
+      475
+    ],
+    "note": "Versus rendering alignment only, not a measured original-source joint coordinate."
+  }
+}

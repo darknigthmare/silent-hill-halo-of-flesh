@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-24T14:35:52.342533+00:00",
+  "result": "passed-with-source-fidelity-limitations",
+  "reviewer": "stage-audit-agent",
+  "scope": "Three actual native FightEngine renders after root integration; static-stage composition review only",
+  "reportPath": "docs/production/vague28/stages/qa-native/report.json",
+  "reportSHA256": "519ea150a45f195965660aa7269072f6f6e01cbfe7db4fcc2e7e1c58d0c498bf",
+  "allCapturesInspected": true,
+  "oneToOneCertified": false,
+  "nativeGeneratedPixelsPreserved": true,
+  "testFighters": [
+    "bom_pyramid_head_129",
+    "bom_butcher_123"
+  ],
+  "checksPassed": 108,
+  "cases": [
+    {
+      "stageId": "final_sacrament",
+      "capture": "final_sacrament.png",
+      "captureSHA256": "940afba03caad4a79dcaeaf591e06eb6fe80868ff4c7036d1ab0bc6ea1c8bbd9",
+      "inspected": true,
+      "footingClear": true,
+      "centralOverlayAbsentVisibly": true,
+      "actorAndWeaponReadability": "acceptable",
+      "observations": [
+        "The empty stone lane is continuous under both fighters; the red basin and cropped metal ring mechanism remain behind the footing.",
+        "The rear painted stela motifs remain distinguishable as static wall/monument art, not extra combatants; no source actor is baked into the plate.",
+        "Gray fighter silhouettes and large weapons remain legible against the muted burgundy and stone. The dome/oculus is partially covered by the existing HUD, without concealing combat.",
+        "Side camera, stela repetition, dome dimensions and device placement remain authored and unverified."
+      ]
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "capture": "scarlet_chamber.png",
+      "captureSHA256": "56ebc897793414aeec98065f7ad888c6a1dea7ab8dc4d99791eb27db3992c05b",
+      "inspected": true,
+      "footingClear": true,
+      "centralOverlayAbsentVisibly": true,
+      "actorAndWeaponReadability": "acceptable",
+      "observations": [
+        "The rusted metal floor and grid shadows remain visible beneath both fighters; the horizontal lane contains no foreground obstruction.",
+        "Rear rails and diagonal braces sit behind the actors. Dark upper wall supports source-room atmosphere while actor edges and weapons remain readable.",
+        "The sparse rusted side posts do not enter the central combat region; there are no dolls, hanging organic sacks or unproven ceiling cables.",
+        "The camera, repeated rail spacing, grate dimensions and light pattern remain interpreted from native 320×180 reference cells."
+      ]
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "capture": "arcade_hospital_roof.png",
+      "captureSHA256": "5ae52a7e3e9459db24b85c5d284644e2981e6600ea1eda648c676b5e6972c9d0",
+      "inspected": true,
+      "footingClear": true,
+      "centralOverlayAbsentVisibly": true,
+      "actorAndWeaponReadability": "acceptable",
+      "observations": [
+        "The normal gray phase remains visible: pale fog, square slabs, concrete curb and chain-link bays with angled upper panels.",
+        "Both actors and their feet remain clearly readable against the neutral gray floor. Extreme-edge post fragments do not cover the play area.",
+        "No orange boss lighting, actors from the original game, rooftop collapse or foreground fall opening is baked into the art.",
+        "The intact horizontal fighting span, facade and regularized fence spacing remain authored adaptations rather than a measured reconstruction."
+      ]
+    }
+  ],
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, actual browser keyboard delivery or service workers.",
+    "No new fighter pose, attack, contact, guard, finisher, stage hazard, original timing or 1:1 artistic fidelity is certified.",
+    "Two static stage planes and their runtime parallax do not constitute a new source animation.",
+    "The small source images do not establish exact 1:1 camera geometry or texture reproduction. Visual review confirms usable composition and selected scene motifs only."
+  ]
+}

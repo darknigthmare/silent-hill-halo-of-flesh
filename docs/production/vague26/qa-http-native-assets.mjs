@@ -113,8 +113,9 @@ try{
     await page.goto(url,{waitUntil:'domcontentloaded'});
     await page.locator('#launch').click();
     await page.waitForFunction(id=>window.__HALO_QA__?.engine?.stage.id===id&&__HALO_QA__.engine.phase==='fight'&&!__HALO_QA__.engine.paused,id,{timeout:30000});
-    const actual=await page.evaluate(()=>({stageId:__HALO_QA__.engine.stage.id,phase:__HALO_QA__.engine.phase,actors:__HALO_QA__.engine.actors.map(actor=>({id:actor.id,x:actor.x,y:actor.y,facing:actor.facing})),pins:[...__HALO_QA__.stageAssetCache.pins].map(path=>({path,status:__HALO_QA__.stageAssetCache.status(path)})),draws:Object.values(window.__wave26Draws).filter(draw=>draw.canvas==='game')}));
+    const actual=await page.evaluate(()=>({stageId:__HALO_QA__.engine.stage.id,phase:__HALO_QA__.engine.phase,actors:__HALO_QA__.engine.actors.map(actor=>({id:actor.data.id,x:actor.x,y:actor.y,facing:actor.facing})),pins:[...__HALO_QA__.stageAssetCache.pins].map(path=>({path,status:__HALO_QA__.stageAssetCache.status(path)})),draws:Object.values(window.__wave26Draws).filter(draw=>draw.canvas==='game')}));
     check(id+': normal UI launch starts the intended stage',actual.stageId===id&&actual.phase==='fight');
+    check(id+': intended fighters remain selected',actual.actors.length===2&&actual.actors[0].id==='bom_pyramid_head_129'&&actual.actors[1].id==='bom_butcher_123',actual.actors);
     for(const frame of frames){
       check(id+': actual game canvas draws native plane '+frame.path,actual.draws.some(draw=>draw.path==='/'+frame.path&&draw.naturalWidth===frame.width&&draw.naturalHeight===frame.height));
       check(id+': plane remains ready in the live cache '+frame.path,actual.pins.some(pin=>pin.path===frame.path&&pin.status==='ready'));

@@ -5301,5 +5301,211 @@ export const STAGE_BITMAPS = {
       "All steps and the rail remain behind the clear fighter floor. No new collision, falling hazard, door slam, moving shadow or automatic finisher is introduced.",
       "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
     ]
+  },
+  "final_sacrament": {
+    "stageId": "final_sacrament",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "sh4-final-sacraments-stone-perimeter",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH4_13_OUTSIDE_ROOM_302"
+    ],
+    "layers": [
+      {
+        "id": "bg-final-chamber",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+            "sha256": "2969dd7f3a9b7975805512bc1d1cda0b3ac32b2877e604dd7cda7e652cb789f8",
+            "bytes": 1900848,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+            "sha256": "8be13402fce8c77a68ba15cdb1fd911ca907b69f927340c45800616073a681ac",
+            "bytes": 167783,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The source screenshot and exact final-chamber gameplay establish cracked gray stone, a circular red basin, rounded-top ritual stelae, gray supports, a shallow ribbed dome and a circular oculus.",
+      "The red human images on the rear stelae are static painted motifs from the observed monuments. Henry, Walter, Eileen and the Conjurer are all excluded from this environment plate.",
+      "The tangent camera and broadened foreground stone walkway are authored fighting-view adaptations. Stela count and repeated painted motif, dome curvature, oculus size, full room diameter and reduced/cropped ring mechanism remain unverified; this does not certify the original mesh or original ritual layout.",
+      "The basin and inert ring mechanism stay behind the clear footing. No narrative progression, actor, moving ritual, new collision or hazard is implemented.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "scarlet_chamber": {
+    "stageId": "scarlet_chamber",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "homecoming-hell-descent-scarlet-arena",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT05",
+      "EXT06"
+    ],
+    "layers": [
+      {
+        "id": "bg-hell-descent-arena",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+            "sha256": "6c36d0eabd2b8cf8f50980dede104ea3b440612f27793377d99f67f2c7bd49cc",
+            "bytes": 2007545,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+            "sha256": "75ae6b391b5fb32a5ad1ac8e35bba7fbca4fe1f3409c0a7d76e2f9c4a48de37d",
+            "bytes": 150931,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The selected frames show the actual Scarlet arena: rust-dark metal floor/grating, low amber light, rectangular grid shadows and rear metal rail sections with angular braces.",
+      "The historical lot9 images sh5_screen_137.jpg and sh5_screen_138.jpg depict Sepulcher, not Scarlet; the earlier dossier already records that limitation. They are excluded. No hanging ceiling cables are inferred from that misattribution.",
+      "The side-on full wall span, regularized rail spacing, widened floor, exact grate dimensions and lighting arrangement are authored adaptations from 320×180 gameplay frames and remain unverified.",
+      "No Alex, Fitch, Scarlet, doll fragment, hanging organic sack, mirror, cable effect or invented machine is baked into the background. Existing gameplay and reference policy remain untouched.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "arcade_hospital_roof": {
+    "stageId": "arcade_hospital_roof",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "arcade-brookhaven-roof-normal-fog",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT15",
+      "EXT18"
+    ],
+    "layers": [
+      {
+        "id": "bg-normal-fog-roof",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+            "sha256": "071cecc9c301e939558348823f5a3ff878cc7b7b167d636ea35ad44b1e2a5b6d",
+            "bytes": 2745020,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+            "sha256": "167557416ab0b321f017bfbe076044c05082b037510641a970a01469e88f4d5d",
+            "bytes": 176304,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The gray phase gameplay frames establish the actual square rooftop slabs, low concrete boundary and chain-link fence. The 2007 roof screenshot supplies the rectangular fence bays and inward-angled top panels only.",
+      "The orange boss-presentation color is intentionally excluded from the selected fixed-normal gray-fog phase. The 2010.02.21 gallery image 08 was rejected because its on-screen label identifies Stage 3 Area 1 Toluca Lake, not this roof.",
+      "The lateral camera, regularized fence spacing, continuous intact walking strip and clipped access-room facade are authored adaptations. Whole-roof geometry, tile sizes and exact fence bay count remain unverified.",
+      "No Eric, Tina, Emilie, Tuberculosis, dead creature, cone, rooftop hole, collapse, orange transition or new weather/hazard event is embedded in the art.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
   }
 };

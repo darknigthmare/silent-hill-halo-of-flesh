@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "wave": 28,
+  "createdAt": "2026-11-24T14:58:03.843091+00:00",
+  "passed": true,
+  "checks": 109,
+  "report": {
+    "path": "docs/production/vague28/stages/qa-native-final/report.json",
+    "sha256": "49ac5373150316838aca322899d463128d75e381ad0398e41b94687ceb67485d"
+  },
+  "harness": {
+    "path": "docs/production/vague28/stages/qa-native-final.mjs",
+    "sha256": "f5e0e321f9d5211ae5f5c3b23ef4bcb1edf9a7d78fb5ab5c868619526781c03e"
+  },
+  "visualReview": {
+    "path": "docs/production/vague28/stages/qa-native-final/visual-review.json",
+    "sha256": "3f9ccb2ff46f1d3fe87a4b96cfd8df3b7e3c504431bb71fd48f64d465b772de2"
+  },
+  "runtimeCacheBudgets": {
+    "combatSpriteBytes": 75497472,
+    "stageBitmapBytes": 67108864
+  },
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd",
+      "after": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd"
+    },
+    "src/sprite-manifest.js": {
+      "before": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92",
+      "after": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065",
+      "after": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28",
+      "after": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "testedSpriteEntryHashes": {
+    "bom_pyramid_head_129": "3ec8112c0efe5bc73ab7638fa37288f731fd4bcb68d58c40c61fa0e0ea7febde",
+    "bom_butcher_123": "0e5bf88a83144ea003cc77b282f4b136c7c6351c03e7da55dbf5b8807220ddd3"
+  },
+  "testedStageEntryHashes": {
+    "final_sacrament": "baebe2a95b2a0d011bd5bc81b9246f981527e458c41969a408c62ad9a5ddd1c3",
+    "scarlet_chamber": "c7d64a5de0f7a641f28b866fb8ee68c6eecdb040243aae6469ed528a5077cbe8",
+    "arcade_hospital_roof": "7856fe191ddf4f40f1fb3c0f71b7ee01365d218c75324adc4506d30af6bb40b7"
+  },
+  "assets": [
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+      "bytes": 1182614,
+      "width": 1536,
+      "height": 1024,
+      "rgbaSha256": "0c4478dcf379d0ee73c21fa9a753a15f96ffec1d36fcb4541e7b1fdb8191dd80"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+      "bytes": 1697023,
+      "width": 1024,
+      "height": 1536,
+      "rgbaSha256": "3a1362834f7de8adb70fab12dbecda3baf65eba0e58d5f6fdcc012bf0c43f3b2"
+    },
+    {
+      "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+      "sha256": "2969dd7f3a9b7975805512bc1d1cda0b3ac32b2877e604dd7cda7e652cb789f8",
+      "bytes": 1900848,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "500d1b91f063b8354b55309e83657c08d4b3ac0d6b5e7c02b2cae19c43881f0b"
+    },
+    {
+      "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+      "sha256": "8be13402fce8c77a68ba15cdb1fd911ca907b69f927340c45800616073a681ac",
+      "bytes": 167783,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "488d15cb032733aca99e821ce6810b8fe50a8f33aaf7368c4fdad0c8ddabf29f"
+    },
+    {
+      "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+      "sha256": "6c36d0eabd2b8cf8f50980dede104ea3b440612f27793377d99f67f2c7bd49cc",
+      "bytes": 2007545,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "a1f33f59f8079a463f27f61cfc2ba79f231c7add147e18dc6d5d66e20d1bc5c0"
+    },
+    {
+      "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+      "sha256": "75ae6b391b5fb32a5ad1ac8e35bba7fbca4fe1f3409c0a7d76e2f9c4a48de37d",
+      "bytes": 150931,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "e0a8fe1bf92797dd7656d00ee443ef9b3f56f7816c5cc6409919cb41390f63c3"
+    },
+    {
+      "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+      "sha256": "071cecc9c301e939558348823f5a3ff878cc7b7b167d636ea35ad44b1e2a5b6d",
+      "bytes": 2745020,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "5a20de0651d29632fe03258950253aa7eae79f03a616e73905e583767ac5a9ab"
+    },
+    {
+      "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+      "sha256": "167557416ab0b321f017bfbe076044c05082b037510641a970a01469e88f4d5d",
+      "bytes": 176304,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "e4fd8b94173ea260634ab506fd4906cb5541e1d7cccc9ef4a95d4f0361bc818d"
+    }
+  ],
+  "captures": [
+    {
+      "file": "final_sacrament.png",
+      "stageId": "final_sacrament",
+      "sha256": "940afba03caad4a79dcaeaf591e06eb6fe80868ff4c7036d1ab0bc6ea1c8bbd9",
+      "bytes": 1062205,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "scarlet_chamber.png",
+      "stageId": "scarlet_chamber",
+      "sha256": "56ebc897793414aeec98065f7ad888c6a1dea7ab8dc4d99791eb27db3992c05b",
+      "bytes": 1104329,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "arcade_hospital_roof.png",
+      "stageId": "arcade_hospital_roof",
+      "sha256": "5ae52a7e3e9459db24b85c5d284644e2981e6600ea1eda648c676b5e6972c9d0",
+      "bytes": 1416253,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    }
+  ],
+  "preservedInitialEvidence": {
+    "reportSHA256": "519ea150a45f195965660aa7269072f6f6e01cbfe7db4fcc2e7e1c58d0c498bf",
+    "visualReviewSHA256": "ded5eb77e876e901ea8593915f1deda92e32707e311702cd6d4c1db075597e38",
+    "harnessSHA256": "b8eacf3abfed48c3fa9a5e4b44db9f3e5b59baafcfb4e3d4c6d5ba5373dc89b0",
+    "allThreeCaptureBytesUnchanged": true
+  },
+  "oneToOneCertified": false
+}
