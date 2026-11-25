@@ -4065,6 +4065,44 @@ export const SPRITES = {
           1426,
           1038
         ]
+      },
+      {
+        "sha256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9",
+        "bytes": 1830946,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          52,
+          169,
+          1496,
+          913
+        ],
+        "pixelSHA256": "59f1891e71a753e57bd78ee65512a9648119111c6e239147d756f5bf5007d2d7",
+        "transparentFraction": 0.75952,
+        "path": "assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+        "facing": 1,
+        "anchor": [
+          0.44,
+          0.891602
+        ],
+        "bodyHeight": 0.92,
+        "sourceFile": "exec-932c9bf4-9bd1-4496-8d83-914b19762f1d.png",
+        "sourceSHA256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          7,
+          1536,
+          1024
+        ],
+        "framingBounds": [
+          49,
+          161,
+          1504,
+          916
+        ]
       }
     ],
     "portrait": {
@@ -4099,6 +4137,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -4595,6 +4640,44 @@ export const SPRITES = {
           2110,
           633
         ]
+      },
+      {
+        "sha256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9",
+        "bytes": 697798,
+        "width": 2172,
+        "height": 724,
+        "visibleBounds": [
+          219,
+          130,
+          1891,
+          609
+        ],
+        "pixelSHA256": "131d4ca5c5ef46c26e3a7ba99c37d1100f82ab7ecbaa46e9f06e4d85483eb4fd",
+        "transparentFraction": 0.85509,
+        "path": "assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.84116
+        ],
+        "bodyHeight": 0.88,
+        "sourceFile": "exec-94f88139-245f-42d8-8aa3-b6ae55836283.png",
+        "sourceSHA256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          126,
+          35,
+          2027,
+          699
+        ],
+        "framingBounds": [
+          217,
+          127,
+          1897,
+          611
+        ]
       }
     ],
     "portrait": {
@@ -4629,6 +4712,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -7331,6 +7421,44 @@ export const SPRITES = {
           1132,
           1096
         ]
+      },
+      {
+        "sha256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61",
+        "bytes": 819038,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          121,
+          359,
+          1124,
+          972
+        ],
+        "pixelSHA256": "d887de8c70c3087ca78ca13b08f6df97bec3f25b4243b766578f2466256e346c",
+        "transparentFraction": 0.78754,
+        "path": "assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+        "facing": -1,
+        "anchor": [
+          0.46,
+          0.77512
+        ],
+        "bodyHeight": 0.79,
+        "sourceFile": "exec-f62d1e73-34d6-47cb-983e-d35d27675d26.png",
+        "sourceSHA256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          55,
+          55,
+          1240,
+          1180
+        ],
+        "framingBounds": [
+          118,
+          353,
+          1127,
+          981
+        ]
       }
     ],
     "portrait": {
@@ -7365,6 +7493,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false

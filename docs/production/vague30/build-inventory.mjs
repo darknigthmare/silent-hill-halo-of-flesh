@@ -17,8 +17,38 @@ const protectedPaths=['src/fight.js','src/combat-resolution.js','src/combat-refe
 const protectedFiles=protectedPaths.map(path=>({path,baseline:git('rev-parse',baseline+':'+path).trim(),current:git('hash-object',path).trim()}));
 if(protectedFiles.some(e=>e.baseline!==e.current))throw Error('Protected combat/routing code changed');
 const workbookPaths=git('ls-tree','-r','--name-only',baseline,'docs/production').split('\n').filter(path=>path.endsWith('.xlsx')&&!path.slice('docs/production/'.length).includes('/'));
-const workbooks=workbookPaths.map(path=>({path,baseline:git('rev-parse',baseline+':'+path).trim(),current:git('hash-object',path).trim()}));
-if(workbooks.some(e=>e.baseline!==e.current))throw Error('Workbook changed without the required refresh QA');
+const workbookQAPath='docs/production/vague30/workbooks/validation.json';
+const workbookQA=JSON.parse(await readFile(workbookQAPath,'utf8'));
+if(workbookQA.passed!==true||workbookQA.baselineCommit!==baseline||
+ !workbookQA.detailedChecks?.allHistoricalPayloadsByteIdentical||
+ !workbookQA.detailedChecks?.jsonSourceReconciliation||
+ !workbookQA.detailedChecks?.counterFormulasAndCachedValuesCorrect||
+ !workbookQA.detailedChecks?.independentReviewPassed)throw Error('Required workbook refresh QA is absent or incomplete');
+if(JSON.stringify(workbookQA.workbooks.map(e=>e.path).sort())!==JSON.stringify([...workbookPaths].sort()))throw Error('Workbook receipt paths differ from the baseline pair');
+const workbookSourcePaths=['docs/combat-guide/requirements.json','docs/combat-guide/associations.json','docs/combat-guide/status.json'];
+if(JSON.stringify(Object.keys(workbookQA.sourceHashes).sort())!==JSON.stringify(workbookSourcePaths.sort()))throw Error('Incomplete workbook source receipts');
+for(const [path,expected] of Object.entries(workbookQA.sourceHashes)){
+ const actual=createHash('sha256').update(await readFile(path)).digest('hex');
+ if(actual!==expected)throw Error('Workbook source changed after validation: '+path);
+}
+const workbooks=[];
+for(const path of workbookPaths){
+ const receipt=workbookQA.workbooks.find(entry=>entry.path===path),bytes=await readFile(path);
+ const current=git('hash-object',path).trim(),sha256=createHash('sha256').update(bytes).digest('hex');
+ const original=execFileSync('git',['show',baseline+':'+path],{maxBuffer:8*1024*1024});
+ if(current!==receipt.gitBlobSha||sha256!==receipt.sha256||bytes.length!==receipt.bytes||
+  createHash('sha256').update(original).digest('hex')!==receipt.baselineSha256||
+  receipt.allHistoricalPayloadsByteIdentical!==true||receipt.allExistingStylesByteIdentical!==true||
+  receipt.guideFormulasVerified!==12)throw Error('Workbook differs from its reviewed receipt: '+path);
+ const preservation=JSON.parse(await readFile(receipt.preservationReport,'utf8'));
+ if(preservation.status!=='passed'||preservation.afterSha256!==sha256||preservation.beforeSha256!==receipt.baselineSha256||
+  preservation.historicalSheets.length!==receipt.historicalSheetsPreserved||
+  preservation.historicalSheets.reduce((sum,sheet)=>sum+sheet.formulas,0)!==receipt.historicalFormulasPreserved||
+  preservation.historicalSheets.reduce((sum,sheet)=>sum+sheet.cells,0)!==receipt.historicalCellsPreserved)throw Error('Workbook preservation report differs from the receipt: '+path);
+ workbooks.push({path,baseline:git('rev-parse',baseline+':'+path).trim(),current,sha256,
+  historicalSheetsPreserved:receipt.historicalSheetsPreserved,historicalFormulasPreserved:receipt.historicalFormulasPreserved,
+  historicalCellsPreserved:receipt.historicalCellsPreserved,preservationReport:receipt.preservationReport,renderMode:receipt.renderMode});
+}
 const paths=new Set();
 const categories={character:[],projectile:[],stage:[],story:[]};
 const newPaths=(await readFile(new URL('./assets.json',import.meta.url),'utf8'));
@@ -39,11 +69,12 @@ for(const fighter of ROSTER){
  }
 }
 const status=JSON.parse(await readFile('docs/combat-guide/status.json','utf8'));
+for(const key of ['guideSections','moduleDecisions','associations'])if(workbookQA.counts[key]!==status.counts[key])throw Error('Workbook counter differs from current bible: '+key);
 const report={
  schemaVersion:1,wave:30,baselineCommit:baseline,asOf:'2026-11-25',
  counts:status.counts,delivered:categories,
- preservation:{historicalAssetFiles:unchangedAssets.length,allHistoricalAssetsIdentical:true,protectedFiles,workbooks,workbooksRefreshed:false,
-  workbookNote:'Les deux classeurs conservent leur état validé du commit9c426d7. Le rafraîchissement des onglets exige le runtime Artifact Tool et sa revue ; indisponible après coupure. Les JSON et Markdown de la bible sont à jour.'},
+ preservation:{historicalAssetFiles:unchangedAssets.length,allHistoricalAssetsIdentical:true,protectedFiles,workbooks,workbooksRefreshed:true,workbookQA:workbookQAPath,
+  workbookNote:'Les deux feuilles du guide de chaque classeur concordent avec les JSON courants. Les fichiers livrés correspondent exactement aux reçus de rafraîchissement Artifact Tool ; les 13 feuilles historiques et leurs 87 formules sont préservées. Le grand classeur a été relu par projection temporaire de parties identiques au fichier final, sans suppression de feuilles dans le livrable.'},
  remaining:{
   portraits:ROSTER.filter(f=>!SPRITES[f.id]?.portrait?.path).map(f=>({id:f.id,source:f.source})),
   combatBases:ROSTER.filter(f=>!SPRITES[f.id]?.frames?.length).map(f=>({id:f.id,source:f.source})),

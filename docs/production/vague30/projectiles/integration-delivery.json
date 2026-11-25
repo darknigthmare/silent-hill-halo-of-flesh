@@ -315,8 +315,16 @@
     "nativeReportRecovered": false,
     "nativeCapturesRecovered": 0,
     "nativeResultsSource": "Résultats de commande effectivement reçus avant la panne : 152 checks, 4 scenes, 8 captures, success true.",
-    "visualReviewSource": "Cinq captures effectivement affichées et inspectées avant panne ; aucune capture binaire publiée par cette récupération.",
-    "httpQa": "not-run-yet",
-    "upcomingScript": "qa-http-projectiles.mjs"
-  }
+    "visualReviewSource": "Historique natif : cinq captures effectivement affichées avant panne, binaires non récupérés. Preuve indépendante HTTP : neuf captures récupérées, empreintes/dimensions vérifiées et images relues individuellement.",
+    "httpQa": "passed-138-checks-nine-captures-visually-reviewed",
+    "referenceCopiesRecovered": 5,
+    "referenceRecoverySource": "references/source-files.json : cinq images vérifiées à l’octet après le retour de l’executor, sans redimensionnement ni régénération.",
+    "httpReportRecovered": true,
+    "httpCapturesRecovered": 9,
+    "httpReport": "../qa-http/http-wave30-projectiles/report.json",
+    "executedScript": "qa-http-projectiles.mjs"
+  },
+  "httpValidation": "validation.json",
+  "httpVisualReview": "qa-http-review.md",
+  "httpValidationSection": "httpQa"
 }

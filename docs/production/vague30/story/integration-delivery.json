@@ -38,5 +38,13 @@
   "sourceImagesInspectedBeforeGeneration": true,
   "localImagesVisuallyReviewed": true,
   "environmentInterruptedBeforeFullRuntimeQA": true,
-  "ciEvidence": "See ../README.md after publication"
+  "ciEvidence": "validation.json",
+  "postRecoveryHTTP": {
+    "passed": true,
+    "checks": 12,
+    "visuallyReviewedCaptures": 3,
+    "fullStoryPlayed": false,
+    "report": "qa-http-review.md",
+    "workflowRunId": 45660199560
+  }
 }

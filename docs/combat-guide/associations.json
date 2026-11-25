@@ -1,31 +1,32 @@
 {
   "schemaVersion": 1,
   "asOf": "2026-11-25",
-  "baselineCommit": "ce3c73f8e1fcaae515053dbca9458a3f5d9c0219",
+  "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
   "sourceFile": "docs/combat-guide/source/Combat_Games_Guide_General_v1.0.txt",
   "sourceSHA256": "4844584616072ac0d52d37c2fab4365e1ec489240f17a721ee216e223b0355b7",
-  "note": "Associations de conception et inventaire observé ; aucune nouvelle validation artistique ou de gameplay. Les chemins bitmap sont vérifiés dans l’index Git, même dans un checkout partiel.",
+  "note": "Associations de conception et inventaire observé. Ce générateur contrôle les liens ; les audits PNG et revues de la vague30 sont documentés séparément. Aucune fidélité 1:1 déduite de la présence d’un fichier.",
   "sourceHashes": {
     "src/data.js": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
     "src/movesets.js": "03b5fcba2939438c8f1ca2f064fd31578c6255656006c6e7c4424e3eafd327f9",
     "src/combat-reference-policy.js": "a784ca09be46e54b188e71c003ad8fd12970c8c4821bc8c5515e6a8e79751028",
-    "src/production-reference.js": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889",
+    "src/production-reference.js": "684e9dd63870a2969fdfb371716f43b833e360c405ba26b1aa589ad9b63cb603",
     "src/tournament.js": "12403baa162d626cd4befb7dfa3bfdeecdc2b79d46dd8bbb646786076f172de7",
     "src/run-progress.js": "f7f61204681a60d2e2de0116af08d30007a7af26fb6ebc6af7d8685d414470d1",
     "src/lore-cinematics.js": "211596a8d9054ca8481e4668b9e9e91db4e46d48cb85c90a4c7c4e9ef4e96845",
     "src/chronicle-art.js": "4153c0d85753c3f6bcd8adb41a3c78fe2d88ccb47bd580d8f5e94abc40af944f",
-    "src/sprite-manifest.js": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92",
+    "src/story-art.js": "55259818fcf22f8a40b6c4813c67b8d1269f035d9da1627d938655d231246f2d",
+    "src/sprite-manifest.js": "6ca52227f1a5daba5f7b17657ae4b9b74c0d476c763d1606de2d7670e0563b69",
     "src/stage-director.js": "4158a522fa4f2133ed2bebb4a42852e0244054ab9dcf33c0d877a5d591e01884",
     "src/stage-lore-policy.js": "b20de47911e2577c3814217121bd1511ecefb40f555e629bcbe7b730d39624e8",
-    "src/stage-reference-policy.js": "635b4c3a08ecc7256f13194c3734f1f013fea2f36440421510a83c8af5c56ec6",
-    "src/stage-bitmap-manifest.js": "cdd9a0722d57d93a0842508d544348c076385d0efba4a7d6a1edb78103388686",
-    "src/projectile-bitmap-manifest.js": "a6d7347c09fdb77c8d54f1e1ff380dd350c719cb74760540ad9480f96183e9b4",
+    "src/stage-reference-policy.js": "e2b619df092772a7dc5a633bbe0aa1238a37aa4383255a33c51894a9e7afb1a1",
+    "src/stage-bitmap-manifest.js": "5a3b0139736116125a2de50b7a9cb7f1a135f314ca09a632c335653930197544",
+    "src/projectile-bitmap-manifest.js": "dbae4eca2bdc03b4e0da0542f70a20a67963a6ed3a3e3742fdf56a6db11c05d7",
     "src/projectile-bitmaps.js": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
-    "art/registry.json": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd",
+    "art/registry.json": "6e8472e40e2b6a5a435fdb987060277f530e012e7be5cb3ef17a5b4022428468",
     "data/roster.json": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3",
     "data/movesets.json": "bf9266c69684ecd9f361c2c628c40b1ce54ec40e10ae90bdef32b1a916bcc0ec",
-    "data/fatalities.json": "cc34aa7607f7b9713678ea366c8e65ac8db01ee5fda117702bad5541505d724a",
-    "data/stages.json": "80933c7da94724969a9130d6f1f9f5dc46340ee80d30d3f88f440b1d85e64055",
+    "data/fatalities.json": "3c578941a4741c8fc7919f3fb1c44ccbd3db2402a1f238e621973d82b0f3a214",
+    "data/stages.json": "76f589f0bd6ab69ff67ad206b59cfd1f7f085a80f32546d2e99bd169dbe433b5",
     "data/chronicles.json": "7387b9345654d189121324c3c29068bb612c660a988fb6fd40fc86302d7f1c4d",
     "docs/production/franchise-corpus.json": "9df5b1b7d228b82559a2295b33b2ed47dabe812bc1b29f11a9ec841eaaa1ee86"
   },
@@ -135,6 +136,23 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": {
+            "source": "sh1",
+            "stageId": "old_silent_hill",
+            "status": "integrated-candidate",
+            "fidelity": "unverified",
+            "composition": "original-compatible",
+            "illustrations": [
+              {
+                "moment": "intro",
+                "path": "assets/stories/sh1_air_screamer_001.intro.7ed088410461.png"
+              },
+              {
+                "moment": "ending",
+                "path": "assets/stories/sh1_air_screamer_001.ending.2aa5dbd07554.png"
+              }
+            ]
+          },
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -288,6 +306,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -437,6 +456,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -590,6 +610,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -743,6 +764,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -895,6 +917,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -1042,6 +1065,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -1168,6 +1192,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -1319,6 +1344,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -1356,7 +1382,8 @@
           "combatView": "side-view-candidate",
           "portraitPath": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
           "framePaths": [
-            "assets/sprites/sh1_creeper_009.57fcc90186ee.png"
+            "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+            "assets/sprites/sh1_creeper_009.ad0fea884c6d.png"
           ],
           "animatedClipsDeclared": 0,
           "validationThisPass": "links-only; no visual review"
@@ -1469,6 +1496,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -1622,6 +1650,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -1772,6 +1801,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -1922,6 +1952,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -2072,6 +2103,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -2231,6 +2263,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -2387,6 +2420,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -2539,6 +2573,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -2694,6 +2729,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -2835,7 +2871,9 @@
           "super",
           "desperation"
         ],
-        "projectileArtworkIds": [],
+        "projectileArtworkIds": [
+          "sh1_incubus_red_lightning"
+        ],
         "finisherFile": "data/fatalities.json",
         "finisherIds": [
           "sh1_incubus_019_signature",
@@ -2848,6 +2886,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -2994,6 +3033,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -3129,6 +3169,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -3282,6 +3323,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -3433,6 +3475,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -3582,6 +3625,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -3729,6 +3773,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -3879,6 +3924,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -4029,6 +4075,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -4180,6 +4227,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -4334,6 +4382,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -4486,6 +4535,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -4637,6 +4687,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -4784,6 +4835,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -4938,6 +4990,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -5091,6 +5144,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -5244,6 +5298,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -5390,6 +5445,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -5516,6 +5572,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -5660,6 +5717,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -5787,6 +5845,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -5940,6 +5999,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -6092,6 +6152,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -6246,6 +6307,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -6396,6 +6458,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -6545,6 +6608,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -6695,6 +6759,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -6847,6 +6912,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -6997,6 +7063,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -7149,6 +7216,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -7306,6 +7374,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -7457,6 +7526,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -7604,6 +7674,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -7758,6 +7829,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -7912,6 +7984,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -8063,6 +8136,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -8224,6 +8298,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -8370,6 +8445,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -8492,6 +8568,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -8615,6 +8692,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -8742,6 +8820,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -8781,7 +8860,8 @@
           "combatView": "side-view-candidate",
           "portraitPath": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
           "framePaths": [
-            "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png"
+            "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+            "assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png"
           ],
           "animatedClipsDeclared": 0,
           "validationThisPass": "links-only; no visual review"
@@ -8892,6 +8972,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -9046,6 +9127,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -9198,6 +9280,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -9346,6 +9429,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -9494,6 +9578,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -9643,6 +9728,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -9793,6 +9879,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -9939,6 +10026,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -10063,6 +10151,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -10188,6 +10277,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -10313,6 +10403,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -10441,6 +10532,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -10589,6 +10681,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -10733,6 +10826,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -10881,6 +10975,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -11029,6 +11124,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -11177,6 +11273,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -11325,6 +11422,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -11473,6 +11571,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -11621,6 +11720,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -11750,6 +11850,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -11896,6 +11997,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -12042,6 +12144,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -12187,6 +12290,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -12336,6 +12440,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -12483,6 +12588,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -12608,6 +12714,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -12736,6 +12843,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -12883,6 +12991,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -13014,6 +13123,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -13162,6 +13272,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -13280,7 +13391,9 @@
           "super",
           "desperation"
         ],
-        "projectileArtworkIds": [],
+        "projectileArtworkIds": [
+          "origins_straight_jacket_acid_ball"
+        ],
         "finisherFile": "data/fatalities.json",
         "finisherIds": [
           "origins_straight_jacket_074_signature",
@@ -13293,6 +13406,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -13444,6 +13558,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -13600,6 +13715,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -13637,7 +13753,8 @@
           "combatView": "side-view-candidate",
           "portraitPath": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
           "framePaths": [
-            "assets/sprites/origins_carrion_076.cc08ebd145bb.png"
+            "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+            "assets/sprites/origins_carrion_076.cf48a4b03cea.png"
           ],
           "animatedClipsDeclared": 0,
           "validationThisPass": "links-only; no visual review"
@@ -13747,6 +13864,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -13896,6 +14014,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -14046,6 +14165,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -14197,6 +14317,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -14345,6 +14466,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -14496,6 +14618,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -14651,6 +14774,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -14803,6 +14927,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -14955,6 +15080,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -15107,6 +15233,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -15260,6 +15387,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -15411,6 +15539,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -15559,6 +15688,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -15707,6 +15837,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -15855,6 +15986,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -16004,6 +16136,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -16152,6 +16285,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -16299,6 +16433,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -16448,6 +16583,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -16576,6 +16712,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -16727,6 +16864,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -16880,6 +17018,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -17037,6 +17176,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -17189,6 +17329,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -17341,6 +17482,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -17485,6 +17627,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 0,
           "encounters": [],
@@ -17612,6 +17755,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 0,
           "encounters": [],
@@ -17739,6 +17883,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 0,
           "encounters": [],
@@ -17864,6 +18009,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 0,
           "encounters": [],
@@ -17989,6 +18135,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 0,
           "encounters": [],
@@ -18119,6 +18266,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -18269,6 +18417,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -18416,6 +18565,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -18540,6 +18690,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -18687,6 +18838,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -18834,6 +18986,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -18982,6 +19135,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -19127,6 +19281,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -19254,6 +19409,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -19379,6 +19535,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -19504,6 +19661,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -19619,7 +19777,9 @@
         "projectileMoveKeys": [
           "neutralSpecial"
         ],
-        "projectileArtworkIds": [],
+        "projectileArtworkIds": [
+          "downpour_bogeyman_ground_shockwave"
+        ],
         "finisherFile": "data/fatalities.json",
         "finisherIds": [
           "downpour_bogeyman_115_signature",
@@ -19632,6 +19792,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -19784,6 +19945,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -19936,6 +20098,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -20084,6 +20247,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -20231,6 +20395,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -20377,6 +20542,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -20522,6 +20688,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -20668,6 +20835,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -20814,6 +20982,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -20960,6 +21129,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -21106,6 +21276,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -21252,6 +21423,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -21397,6 +21569,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -21542,6 +21715,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -21689,6 +21863,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -21835,6 +22010,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -21982,6 +22158,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -22130,6 +22307,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -22253,6 +22431,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -22377,6 +22556,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -22522,6 +22702,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -22671,6 +22852,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -22818,6 +23000,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -22969,6 +23152,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -23120,6 +23304,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -23269,6 +23454,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -23417,6 +23603,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -23566,6 +23753,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -23714,6 +23902,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -23863,6 +24052,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -24011,6 +24201,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -24160,6 +24351,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -24313,6 +24505,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -24458,6 +24651,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -24607,6 +24801,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -24752,6 +24947,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -24899,6 +25095,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -25023,6 +25220,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -25156,6 +25354,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -25305,6 +25504,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -25450,6 +25650,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -25598,6 +25799,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -25747,6 +25949,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -25902,6 +26105,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -26047,6 +26251,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -26191,6 +26396,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -26339,6 +26545,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -26490,6 +26697,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -26635,6 +26843,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -26780,6 +26989,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -26927,6 +27137,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 0,
           "encounters": [],
@@ -27055,6 +27266,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 0,
           "encounters": [],
@@ -27181,6 +27393,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -27329,6 +27542,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -27477,6 +27691,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -27623,6 +27838,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -27769,6 +27985,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -27893,6 +28110,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -28016,6 +28234,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -28166,6 +28385,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -28311,6 +28531,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -28456,6 +28677,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -28580,6 +28802,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -28725,6 +28948,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -28874,6 +29098,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -29021,6 +29246,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -29168,6 +29394,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -29311,6 +29538,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -29457,6 +29685,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -29602,6 +29831,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -29748,6 +29978,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -29895,6 +30126,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -30044,6 +30276,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -30191,6 +30424,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -30337,6 +30571,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -30488,6 +30723,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -30637,6 +30873,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -30791,6 +31028,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -30944,6 +31182,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -31089,6 +31328,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -31213,6 +31453,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -31335,6 +31576,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -31457,6 +31699,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -31585,6 +31828,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -31709,6 +31953,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -31858,6 +32103,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -32006,6 +32252,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -32154,6 +32401,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -32306,6 +32554,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 3,
           "encounters": [
@@ -32450,6 +32699,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -32577,6 +32827,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -32701,6 +32952,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 3,
           "encounters": [
@@ -32843,6 +33095,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 3,
           "encounters": [
@@ -32985,6 +33238,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 3,
           "encounters": [
@@ -33125,6 +33379,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": false,
           "rawCandidateChapterCount": 4,
           "encounters": [],
@@ -33251,6 +33506,7 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
+          "artwork": null,
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 3,
           "encounters": [
@@ -39321,7 +39577,7 @@
     {
       "kind": "stage",
       "id": "arcade_prison",
-      "name": "THE ARCADE — TOLUCA PRISON",
+      "name": "THE ARCADE — TOLUCA PRISON · OTHERWORLD",
       "source": "arcade",
       "guideSections": [
         "02",
@@ -39339,10 +39595,12 @@
         "27"
       ],
       "targetFile": "data/stages.json",
-      "observedStatus": "sans bitmap de stage ; fixed-normal",
+      "observedStatus": "bitmap candidat référencé ; fixed-altered",
       "details": {
         "referenceIds": [
-          "EXT15"
+          "EXT15",
+          "V30_ARCADE_KONAMI_2010_05",
+          "V30_ARCADE_ROUTE_MAPS"
         ],
         "locationStatus": "lieu-documente-secondaire",
         "assignedFighterIds": [
@@ -39358,8 +39616,11 @@
         "finisherAuthored": false,
         "presentation": {
           "referenceTrackIds": [],
-          "framePaths": [],
-          "status": "missing",
+          "framePaths": [
+            "assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+            "assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png"
+          ],
+          "status": "integrated-candidate",
           "fidelity": "unverified"
         },
         "interactions": [],
@@ -39443,10 +39704,11 @@
         "27"
       ],
       "targetFile": "data/stages.json",
-      "observedStatus": "sans bitmap de stage ; fixed-normal",
+      "observedStatus": "bitmap candidat référencé ; fixed-normal",
       "details": {
         "referenceIds": [
-          "EXT15"
+          "EXT15",
+          "V30_ARCADE_KONAMI_2010_08"
         ],
         "locationStatus": "lieu-documente-secondaire",
         "assignedFighterIds": [],
@@ -39459,8 +39721,11 @@
             "arcade_toluca_lake:reference:1",
             "arcade_toluca_lake:reference:2"
           ],
-          "framePaths": [],
-          "status": "missing",
+          "framePaths": [
+            "assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+            "assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png"
+          ],
+          "status": "integrated-candidate",
           "fidelity": "unverified"
         },
         "interactions": [],
@@ -39844,7 +40109,7 @@
     {
       "kind": "stage",
       "id": "shimizu_residence",
-      "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+      "name": "SHIMIZU RESIDENCE II — SALLE À MANGER",
       "source": "shf",
       "guideSections": [
         "02",
@@ -39862,7 +40127,7 @@
         "27"
       ],
       "targetFile": "data/stages.json",
-      "observedStatus": "sans bitmap de stage ; fixed-normal",
+      "observedStatus": "bitmap candidat référencé ; fixed-normal",
       "details": {
         "referenceIds": [
           "EXT34",
@@ -39881,8 +40146,11 @@
             "shimizu_residence:reference:1",
             "shimizu_residence:reference:4"
           ],
-          "framePaths": [],
-          "status": "missing",
+          "framePaths": [
+            "assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+            "assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png"
+          ],
+          "status": "integrated-candidate",
           "fidelity": "unverified"
         },
         "interactions": [],
@@ -43827,6 +44095,108 @@
         "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
         "validationThisPass": "owner-slot-file-links-only"
       }
+    },
+    {
+      "kind": "projectile",
+      "id": "downpour_bogeyman_ground_shockwave",
+      "name": "Bogeyman — downpour_bogeyman_ground_shockwave",
+      "source": "downpour",
+      "guideSections": [
+        "02",
+        "05",
+        "16",
+        "17",
+        "18",
+        "25",
+        "27"
+      ],
+      "targetFile": "src/projectile-bitmap-manifest.js",
+      "observedStatus": "integrated-candidate ; unverified ; image fixe",
+      "details": {
+        "fighterId": "downpour_bogeyman_115",
+        "slots": [
+          "neutralSpecial"
+        ],
+        "effectiveSlots": [
+          "neutralSpecial"
+        ],
+        "referenceIds": [
+          "EXT65"
+        ],
+        "path": "assets/projectiles/downpour_bogeyman_ground_shockwave.bda8c72700c2.png",
+        "validationThisPass": "owner-slot-file-links-only"
+      }
+    },
+    {
+      "kind": "projectile",
+      "id": "origins_straight_jacket_acid_ball",
+      "name": "Straight-Jacket — origins_straight_jacket_acid_ball",
+      "source": "origins",
+      "guideSections": [
+        "02",
+        "05",
+        "16",
+        "17",
+        "18",
+        "25",
+        "27"
+      ],
+      "targetFile": "src/projectile-bitmap-manifest.js",
+      "observedStatus": "integrated-candidate ; unverified ; image fixe",
+      "details": {
+        "fighterId": "origins_straight_jacket_074",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "effectiveSlots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "referenceIds": [
+          "EXT01"
+        ],
+        "path": "assets/projectiles/origins_straight_jacket_acid_ball.095acfc1796e.png",
+        "validationThisPass": "owner-slot-file-links-only"
+      }
+    },
+    {
+      "kind": "projectile",
+      "id": "sh1_incubus_red_lightning",
+      "name": "Incubus — sh1_incubus_red_lightning",
+      "source": "sh1",
+      "guideSections": [
+        "02",
+        "05",
+        "16",
+        "17",
+        "18",
+        "25",
+        "27"
+      ],
+      "targetFile": "src/projectile-bitmap-manifest.js",
+      "observedStatus": "integrated-candidate ; unverified ; image fixe",
+      "details": {
+        "fighterId": "sh1_incubus_019",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "effectiveSlots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "referenceIds": [
+          "CL_SH1_BOSSES",
+          "CL_SH1_CREATURES"
+        ],
+        "path": "assets/projectiles/sh1_incubus_red_lightning.8bec1740b774.png",
+        "validationThisPass": "owner-slot-file-links-only"
+      }
     }
   ],
   "issues": [
@@ -43856,7 +44226,7 @@
     }
   ],
   "verification": {
-    "assetPathCount": 686,
+    "assetPathCount": 700,
     "missingAssetPaths": [],
     "method": "Git tracked path or local file; no PNG decoding"
   }

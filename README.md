@@ -2,14 +2,14 @@
 
 ## Production fixe — vague30, 25 novembre 2026
 
-[Lot de quatorze images, intégration et limites](docs/production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. Les associations de bible sont régénérées ; les deux classeurs conservent leur dernier état validé en attendant le retour du runtime d’édition. [Inventaire restant](docs/production/vague30/inventory.json). Aucun nouveau cycle animé ni certification1:1.
+[Lot de quatorze images, intégration et limites](docs/production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. La bible et les deux classeurs sont rafraîchis : 445 associations, 93 arènes illustrées et 31 commandes projectile couvertes. Les feuilles historiques et leurs formules sont préservées. [Inventaire restant](docs/production/vague30/inventory.json). Aucun nouveau cycle animé ni certification 1:1.
 
 ## Guide général intégré à la bible — 25 novembre 2026
 
 Les **30 rubriques** du guide Combat Games v1.0 sont maintenant associées au
 contexte du jeu : manifestations, rôles hors duel, movesets, Dénouements,
 campagnes, illustrations, boss, arènes et production fixe. Les exigences sont
-reliées à **442 entrées existantes** par identifiant, sans confondre conception,
+reliées à **445 entrées existantes** par identifiant, sans confondre conception,
 fichier produit, admission runtime et validation.
 
 [Intégration complète](docs/COMBAT_GAMES_GUIDE_INTEGRATION.md) ·
@@ -21,7 +21,7 @@ Les deux classeurs existants possèdent les feuilles **Guide combat** et
 **Associations guide**. Le guide source est conservé à l'identique ; les
 feuilles historiques et leurs formules sont préservées. La campagne globale
 « Le Registre des absences » et ses nouvelles scènes sont de la conception
-à implémenter. Cette passe n'ajoute ni PNG ni animation.
+à implémenter. L’intégration initiale du guide n’ajoutait ni PNG ni animation ; la vague 30 ci-dessus fournit maintenant 14 images fixes.
 
 Actualiser les liens avec `npm run bible:guide`, puis vérifier avec
 `npm run bible:check`. Les décisions sur les modules distinguent notamment

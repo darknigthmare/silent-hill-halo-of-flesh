@@ -11044,7 +11044,7 @@
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Corridor d’entrée à plancher bois, distinct de la salle à manger tatami de ResidenceI et des étatsResidenceII/III. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      "description": "Corridor d’entrée à plancher bois de Residence I, distinct de la salle à manger tatami retenue dans Residence II et des états ultérieurs de la maison. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
     },
     "visibility": {
       "fog": 0,
@@ -11304,7 +11304,7 @@
       "alteredPhaseLabel": "RESIDENCE I · ENTRÉE",
       "terrainPresentation": {
         "name": "PLANCHER DU CORRIDOR",
-        "description": "Corridor d’entrée à plancher bois, distinct de la salle à manger tatami de ResidenceI et des étatsResidenceII/III. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        "description": "Corridor d’entrée à plancher bois de Residence I, distinct de la salle à manger tatami retenue dans Residence II et des états ultérieurs de la maison. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
       },
       "weather": "none",
       "interior": true,
@@ -31352,7 +31352,7 @@
   },
   {
     "id": "arcade_prison",
-    "name": "THE ARCADE — TOLUCA PRISON",
+    "name": "THE ARCADE — TOLUCA PRISON · OTHERWORLD",
     "source": "arcade",
     "family": "prison",
     "sky": [
@@ -31386,8 +31386,8 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Stage2-2 Toluca Prison; rencontre Split Worm.",
-      "canonicalBasis": "EXT15",
+      "premise": "The Arcade, Stage 2 Area 2 : corridor à cellules de la branche Otherworld, documenté par la capture Konami Europe du 21 février 2010 (05). Barreaux, rouille rouge/brun et éclairage cyan sont repris pour une scène fixe. La salle de Split Worm et le parcours normal ne sont pas confondus avec ce cadrage. L’état altéré est fixe ; aucun seuil de précision, embranchement, plafond de combat ou nouveau danger n’en est déduit.",
+      "canonicalBasis": "EXT15 ; V30_ARCADE_KONAMI_2010_05 ; V30_ARCADE_ROUTE_MAPS",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
@@ -31419,9 +31419,9 @@
       "radioScale": 1.12,
       "overlay": "rust",
       "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
-      "startOtherworld": false,
+      "startOtherworld": true,
       "enabled": false,
-      "referenceState": "fixed-normal"
+      "referenceState": "fixed-altered"
     },
     "director": {
       "cadence": 309,
@@ -31468,7 +31468,7 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "arcade_prison:rust:steel:fixed-normal::"
+      "signature": "arcade_prison:rust:steel:fixed-altered::"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -31509,10 +31509,12 @@
       "blocked": false,
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "THE ARCADE — TOLUCA PRISON",
-      "correctedName": null,
-      "locationNote": "Stage2-2 Toluca Prison; rencontre Split Worm.",
+      "correctedName": "THE ARCADE — TOLUCA PRISON · OTHERWORLD",
+      "locationNote": "The Arcade, Stage 2 Area 2 : corridor à cellules de la branche Otherworld, documenté par la capture Konami Europe du 21 février 2010 (05). Barreaux, rouille rouge/brun et éclairage cyan sont repris pour une scène fixe. La salle de Split Worm et le parcours normal ne sont pas confondus avec ce cadrage. L’état altéré est fixe ; aucun seuil de précision, embranchement, plafond de combat ou nouveau danger n’en est déduit.",
       "referenceIds": [
-        "EXT15"
+        "EXT15",
+        "V30_ARCADE_KONAMI_2010_05",
+        "V30_ARCADE_ROUTE_MAPS"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -31564,10 +31566,13 @@
     },
     "referenceTracks": [],
     "referencePolicy": {
-      "worldState": "fixed-normal",
+      "worldState": "fixed-altered",
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": true,
+      "sceneId": "toluca-prison-otherworld-cell-corridor",
+      "normalPhaseLabel": "STAGE 2 AREA 2 · OTHERWORLD",
+      "alteredPhaseLabel": "STAGE 2 AREA 2 · OTHERWORLD",
       "weather": "flicker",
       "interior": true,
       "baselineMotion": true,
@@ -31908,8 +31913,8 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Stage3-1 Toluca Lake.",
-      "canonicalBasis": "EXT15",
+      "premise": "The Arcade, Stage 3 Area 1 : quai de Toluca Lake légendé dans la capture Konami Europe du 21 février 2010 (08), avec piliers de pierre, garde-corps, lampadaires globes et brume. La caméra frontale et l’extension latérale servent au duel. Cette scène ne prétend pas être le pont du Little Baroness ni une restitution métrique du parcours.",
+      "canonicalBasis": "EXT15 ; V30_ARCADE_KONAMI_2010_08",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
@@ -32042,9 +32047,10 @@
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "THE ARCADE — TOLUCA LAKE",
       "correctedName": null,
-      "locationNote": "Stage3-1 Toluca Lake.",
+      "locationNote": "The Arcade, Stage 3 Area 1 : quai de Toluca Lake légendé dans la capture Konami Europe du 21 février 2010 (08), avec piliers de pierre, garde-corps, lampadaires globes et brume. La caméra frontale et l’extension latérale servent au duel. Cette scène ne prétend pas être le pont du Little Baroness ni une restitution métrique du parcours.",
       "referenceIds": [
-        "EXT15"
+        "EXT15",
+        "V30_ARCADE_KONAMI_2010_08"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -32153,6 +32159,9 @@
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": true,
+      "sceneId": "arcade-stage3-area1-lakeside-quay",
+      "normalPhaseLabel": "STAGE 3 AREA 1 · QUAI DU LAC",
+      "alteredPhaseLabel": "STAGE 3 AREA 1 · QUAI DU LAC",
       "weather": "water",
       "interior": false,
       "baselineMotion": true,
@@ -34254,7 +34263,7 @@
   },
   {
     "id": "shimizu_residence",
-    "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+    "name": "SHIMIZU RESIDENCE II — SALLE À MANGER",
     "source": "shf",
     "family": "house",
     "sky": [
@@ -34281,7 +34290,7 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Shimizu ResidenceI : salle à manger du Yellowed Calendar, avec tatamis, table basse ronde, coussins et vaisselle. Cette pièce se distingue du corridor retenu pour hinako_home, sans créer une autre adresse. Elle n’est pas fusionnée avec la rencontre des parents, une variante ultérieure ou une scène de repas animée ; caméra et géométrie ne sont pas mesurées.",
+      "premise": "Shimizu Residence II : salle à manger du Yellowed Calendar sur le parcours Ending 1, après le souvenir familial, avec tatamis, table basse ronde, coussins et vaisselle. Le New Game+ peut placer le calendrier dans d’autres pièces. Cette scène se distingue du corridor de Residence I retenu pour hinako_home, sans créer une autre adresse. Aucun repas, protagoniste, parent ou calendrier lisible n’est rejoué ; caméra latérale et largeur de duel sont des adaptations, non une géométrie mesurée.",
       "canonicalBasis": "EXT34 ; EXT41 ; EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026 ; EXT10_SHF_RESIDENCE_DINING_20261026",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -34295,7 +34304,7 @@
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Salle à manger à table ronde du calendrier jauni, voie initiale ; pas cuisine ni corridor à plancher bois. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      "description": "Salle à manger à table ronde du calendrier jauni, Residence II, parcours Ending 1 après le souvenir ; pas cuisine ni corridor d’entrée de Residence I. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
     },
     "visibility": {
       "fog": 0,
@@ -34415,8 +34424,8 @@
       "blocked": false,
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "SHIMIZU RESIDENCE",
-      "correctedName": "SHIMIZU RESIDENCE I — SALLE À MANGER",
-      "locationNote": "Shimizu ResidenceI : salle à manger du Yellowed Calendar, avec tatamis, table basse ronde, coussins et vaisselle. Cette pièce se distingue du corridor retenu pour hinako_home, sans créer une autre adresse. Elle n’est pas fusionnée avec la rencontre des parents, une variante ultérieure ou une scène de repas animée ; caméra et géométrie ne sont pas mesurées.",
+      "correctedName": "SHIMIZU RESIDENCE II — SALLE À MANGER",
+      "locationNote": "Shimizu Residence II : salle à manger du Yellowed Calendar sur le parcours Ending 1, après le souvenir familial, avec tatamis, table basse ronde, coussins et vaisselle. Le New Game+ peut placer le calendrier dans d’autres pièces. Cette scène se distingue du corridor de Residence I retenu pour hinako_home, sans créer une autre adresse. Aucun repas, protagoniste, parent ou calendrier lisible n’est rejoué ; caméra latérale et largeur de duel sont des adaptations, non une géométrie mesurée.",
       "referenceIds": [
         "EXT34",
         "EXT41",
@@ -34500,7 +34509,7 @@
         "implementedElement": "Vaisselle sur la table ronde de la salle à manger",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
-        "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+        "locationScope": "Shimizu Residence II, salle à manger du calendrier jauni, parcours Ending 1 après le souvenir, SHf2025",
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Table ronde basse et vaisselle observées ; léger frémissement versus. Aucun objet de cuisine, calendrier lisible, boss ou confrontation importé."
       },
       {
@@ -34535,7 +34544,7 @@
         "implementedElement": "Les deux reflets de vaisselle se rapprochent des rebords immobiles",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
-        "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+        "locationScope": "Shimizu Residence II, salle à manger du calendrier jauni, parcours Ending 1 après le souvenir, SHf2025",
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les deux reflets de vaisselle se rapprochent des rebords immobiles. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus."
       }
     ],
@@ -34544,12 +34553,13 @@
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": false,
+      "sceneId": "shf-residence-ii-dining-yellowed-calendar",
       "terrainRules": false,
-      "normalPhaseLabel": "RESIDENCE I · SALLE À MANGER",
-      "alteredPhaseLabel": "RESIDENCE I · SALLE À MANGER",
+      "normalPhaseLabel": "RESIDENCE II · SALLE À MANGER",
+      "alteredPhaseLabel": "RESIDENCE II · SALLE À MANGER",
       "terrainPresentation": {
         "name": "TATAMI DE LA SALLE À MANGER",
-        "description": "Salle à manger à table ronde du calendrier jauni, voie initiale ; pas cuisine ni corridor à plancher bois. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        "description": "Salle à manger à table ronde du calendrier jauni, Residence II, parcours Ending 1 après le souvenir ; pas cuisine ni corridor d’entrée de Residence I. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
       },
       "weather": "none",
       "interior": true,

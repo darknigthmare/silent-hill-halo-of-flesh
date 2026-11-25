@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-25",
-  "binaryReferenceCopiesRecovered": false,
-  "recoveryNote": "Les références visuelles ci-dessous ont été consultées et leur métadonnées relevées avant la panne de l’executor. Les copies binaires locales ne sont pas récupérées dans ce lot GitHub. Les URL et empreintes sont préservées ; aucune présence de fichier image de référence dans ce commit n’est affirmée.",
+  "binaryReferenceCopiesRecovered": true,
+  "recoveryNote": "Les cinq images de référence conservées dans recovery/projectiles/references ont été rétablies à l’octet après le retour de l’executor. SHA-256, taille et dimensions ont été vérifiés pour la capture Prima, les deux planches de storyboard et leurs deux découpes natives. Les PDF et pages HTML ne sont pas copiés. Les captures de QA native restent indisponibles ; cette récupération concerne uniquement les références visuelles.",
   "sources": [
     {
       "id": "downpour-prima-guide",
@@ -24,12 +24,13 @@
       "height": 392,
       "bytes": 71093,
       "observedSHA256": "c11a11208e9589d734528fe31b57f56ae2a6d5b8454f93dae0740f777cea979c",
-      "binaryRecovered": false,
+      "binaryRecovered": true,
       "observation": "Poussière gris-brun, débris modestes et fissures linéaires au sol.",
       "limits": [
         "Perspective du jeu source transposée en vue latérale",
         "Aucune mesure exacte de contour ou palette RGB"
-      ]
+      ],
+      "path": "downpour-prima-02i-084.jpg"
     },
     {
       "id": "origins-official-guide",
@@ -79,13 +80,15 @@
       "observedSheetSHA256": "a58058a436dd2857072745104478cd9061e697570ebcca080370838039c3212a",
       "observedNativeCropSHA256": "c67eae1896a443324cb359733c89d9b96a8e5d15c7428e5048c45efdf87fc17b",
       "observedNativeCropBytes": 23683,
-      "binaryRecovered": false,
+      "binaryRecovered": true,
       "resized": false,
       "observation": "Rencontre avec le Straight-Jacket et contexte d’attaque visibles ; contour isolé du crachat non certifiable.",
       "limits": [
         "Capture trop sombre et trop petite pour attester la texture",
         "La palette jaune est fondée sur la description secondaire, pas une mesure sur cette miniature"
-      ]
+      ],
+      "path": "origins-355s-native.png",
+      "sourceSheet": "origins-sheet-7.jpg"
     },
     {
       "id": "incubus-guide",
@@ -117,13 +120,100 @@
       "observedSheetSHA256": "3aaa062e3736549e24094ce35a19695541913c322f1be77d7dd54616cad1820a",
       "observedNativeCropSHA256": "9cb0113b81c219233bc3931839d3252d760f43d37bd8d8d6932343e781e5643c",
       "observedNativeCropBytes": 25786,
-      "binaryRecovered": false,
+      "binaryRecovered": true,
       "resized": false,
       "observation": "Fines branches de foudre, cœur clair et bord rouge-orangé.",
       "limits": [
         "Orientation horizontale dans le versus reconstruite",
         "Tracé, halo, cadence et texture exacte non certifiés"
-      ]
+      ],
+      "path": "incubus-184s-native.png",
+      "sourceSheet": "incubus-sheet-10.jpg"
+    }
+  ],
+  "files": [
+    {
+      "id": "downpour-prima-02i-084",
+      "url": "https://primagames.com/eguides/media/_w/700/files/silent-hill-downpour/02i-084.jpg",
+      "path": "downpour-prima-02i-084.jpg",
+      "sha256": "c11a11208e9589d734528fe31b57f56ae2a6d5b8454f93dae0740f777cea979c",
+      "bytes": 71093,
+      "width": 700,
+      "height": 392
+    },
+    {
+      "id": "origins-storyboard",
+      "url": "https://www.youtube.com/watch?v=-LV9LrDb81I",
+      "title": "Let's Play Silent Hill Origins 04 - Straight-Jacket Fight & To the Butcher's Shop",
+      "author": "Quadraxis14",
+      "sheetUrl": "https://i.ytimg.com/sb/-LV9LrDb81I/storyboard3_L3/M7.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCP_Kiq8G&sigh=rs$AOn4CLDuyooyaEk5cll467DQ9_yba6KXhQ",
+      "sheetIndex": 7,
+      "path": "origins-sheet-7.jpg",
+      "sha256": "a58058a436dd2857072745104478cd9061e697570ebcca080370838039c3212a",
+      "bytes": 17561,
+      "frameWidth": 240,
+      "frameHeight": 180,
+      "columns": 3,
+      "rows": 3,
+      "intervalMilliseconds": 5000,
+      "width": 720,
+      "height": 540
+    },
+    {
+      "id": "incubus-storyboard",
+      "url": "https://www.youtube.com/watch?v=VYrT1-Z4N6Y",
+      "title": "Silent Hill 1 - Final Boss: Incubus (Nowhere)",
+      "author": "Silent Hill Memories",
+      "sheetUrl": "https://i.ytimg.com/sb/VYrT1-Z4N6Y/storyboard3_L3/M10.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCPujwsUG&sigh=rs$AOn4CLBmUFWRI-V3Jhyho6DbHBqjx27oaw",
+      "sheetIndex": 10,
+      "path": "incubus-sheet-10.jpg",
+      "sha256": "3aaa062e3736549e24094ce35a19695541913c322f1be77d7dd54616cad1820a",
+      "bytes": 13550,
+      "frameWidth": 320,
+      "frameHeight": 180,
+      "columns": 3,
+      "rows": 3,
+      "intervalMilliseconds": 2000,
+      "width": 960,
+      "height": 540
+    },
+    {
+      "id": "origins-native-frame",
+      "path": "origins-355s-native.png",
+      "url": "https://www.youtube.com/watch?v=-LV9LrDb81I&t=355",
+      "sourceSheet": "origins-sheet-7.jpg",
+      "sourceSheetSha256": "a58058a436dd2857072745104478cd9061e697570ebcca080370838039c3212a",
+      "nominalSeconds": 355,
+      "nativeCropXYXY": [
+        480,
+        360,
+        720,
+        540
+      ],
+      "width": 240,
+      "height": 180,
+      "sha256": "c67eae1896a443324cb359733c89d9b96a8e5d15c7428e5048c45efdf87fc17b",
+      "bytes": 23683,
+      "resized": false
+    },
+    {
+      "id": "incubus-native-frame",
+      "path": "incubus-184s-native.png",
+      "url": "https://www.youtube.com/watch?v=VYrT1-Z4N6Y&t=184",
+      "sourceSheet": "incubus-sheet-10.jpg",
+      "sourceSheetSha256": "3aaa062e3736549e24094ce35a19695541913c322f1be77d7dd54616cad1820a",
+      "nominalSeconds": 184,
+      "nativeCropXYXY": [
+        640,
+        0,
+        960,
+        180
+      ],
+      "width": 320,
+      "height": 180,
+      "sha256": "9cb0113b81c219233bc3931839d3252d760f43d37bd8d8d6932343e781e5643c",
+      "bytes": 25786,
+      "resized": false
     }
   ]
 }

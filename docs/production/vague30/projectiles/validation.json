@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "wave": 30,
   "date": "2026-11-25",
-  "status": "native-checks-passed-partial-visual-review-http-rerun-pending",
+  "status": "native-checks-passed-http-checks-passed-http-visual-review-complete",
   "effects": 3,
   "activeRoutes": 7,
   "registryEffects": 11,
@@ -41,29 +41,102 @@
     "notes": [
       "Bogeyman: pale dusty effect is low, correctly anchored, leading lobe mirrors with emitted direction; separated after 12 ticks, no rectangular background.",
       "Origins right emission: compact yellow ball readable ahead of torso at existing projectile origin; fixed actor pose not newly animated, anatomical emission point not source-certified."
-    ]
+    ],
+    "scope": "historical-native-captures-before-outage",
+    "note": "La revue native historique reste à 5/8 et ses binaires sont perdus. La revue HTTP indépendante de neuf captures est consignée dans httpQa.visualReview."
   },
   "incubus": {
     "combatArtPresent": false,
     "normalCombatAdmissionStillBlocked": true,
-    "isolatedRendererQaComplete": false,
+    "isolatedRendererQaComplete": true,
     "assetNativeInspected": true,
-    "notes": "Only autonomous lightning art; no character render, anatomy, rejected prompt reuse or admission bypass."
+    "notes": "Only autonomous lightning art; no character render, anatomy, rejected prompt reuse or admission bypass.",
+    "isolatedRendererQaEvidence": "httpQa : Chromium HTTP, six fixtures et une capture relue ; le blocage du corps reste vérifié."
   },
   "pixelsTransformed": false,
   "animatedClipsAdded": 0,
   "certifiedFidelity": 0,
-  "pending": [
-    "Relire les nouvelles captures du contrôle HTTP lorsqu’il aura effectivement été exécuté",
-    "Contrôler le rendu isolé de l’éclair et conserver le blocage d’admission Incubus",
-    "Récupérer les rapports et captures de CI avant de déclarer ce contrôle HTTP réussi"
-  ],
   "evidenceAvailability": {
     "nativeReportRecovered": false,
     "nativeCapturesRecovered": 0,
     "nativeResultsSource": "Résultats de commande effectivement reçus avant la panne : 152 checks, 4 scenes, 8 captures, success true.",
-    "visualReviewSource": "Cinq captures effectivement affichées et inspectées avant panne ; aucune capture binaire publiée par cette récupération.",
-    "httpQa": "not-run-yet",
-    "upcomingScript": "qa-http-projectiles.mjs"
-  }
+    "visualReviewSource": "Historique natif : cinq captures effectivement affichées avant panne, binaires non récupérés. Preuve indépendante HTTP : neuf captures récupérées, empreintes/dimensions vérifiées et images relues individuellement.",
+    "httpQa": "passed-138-checks-nine-captures-visually-reviewed",
+    "referenceCopiesRecovered": 5,
+    "referenceRecoverySource": "references/source-files.json : cinq images vérifiées à l’octet après le retour de l’executor, sans redimensionnement ni régénération.",
+    "httpReportRecovered": true,
+    "httpCapturesRecovered": 9,
+    "httpReport": "../qa-http/http-wave30-projectiles/report.json",
+    "executedScript": "qa-http-projectiles.mjs"
+  },
+  "httpQa": {
+    "command": "node docs/production/vague30/projectiles/qa-http-projectiles.mjs --port=4291 --out=tests/http-wave30-projectiles",
+    "completed": true,
+    "passed": 138,
+    "failed": 0,
+    "normalCases": 4,
+    "isolatedCases": 1,
+    "isolatedFixtures": 6,
+    "captures": 9,
+    "browser": "143.0.7499.4",
+    "browserTest": true,
+    "httpTest": true,
+    "offlineTest": false,
+    "startedAt": "2026-11-25T17:07:22.850Z",
+    "completedAt": "2026-11-25T17:07:42.083Z",
+    "report": "../qa-http/http-wave30-projectiles/report.json",
+    "review": "qa-http-review.md",
+    "provenance": {
+      "commit": "a1f434ea1d53eb933879442b05f1971c767c197f",
+      "runId": 45660199560,
+      "jobId": 139367652764,
+      "artifactId": 15045286963,
+      "runUrl": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/45660199560",
+      "jobUrl": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/45660199560/job/139367652764",
+      "artifactUrl": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/45660199560/artifacts/15045286963",
+      "artifactZipSha256": "6ada019a87812fefec31116529ffb13ff44024066a0f383ad1942a65ec86ae65",
+      "artifactZipSha256Source": "Empreinte du ZIP consignée lors de la récupération par le coordinateur ; neuf captures extraites revérifiées ici contre report.json.",
+      "reportSha256": "2ef25414ae2c15ace5d9b650823f08efdefbdfc7045b3702b5eddb8744ff081c"
+    },
+    "extractedCaptureHashesVerified": true,
+    "extractedCaptureDimensionsVerified": true,
+    "sourceHashesUnchangedDuringQa": true,
+    "sourceHashesMatchRestoredWorktree": true,
+    "visualReview": {
+      "completed": [
+        "downpour_bogeyman_115-right-emission.png",
+        "downpour_bogeyman_115-right-flight.png",
+        "downpour_bogeyman_115-left-emission.png",
+        "downpour_bogeyman_115-left-flight.png",
+        "origins_straight_jacket_074-right-emission.png",
+        "origins_straight_jacket_074-right-flight.png",
+        "origins_straight_jacket_074-left-emission.png",
+        "origins_straight_jacket_074-left-flight.png",
+        "sh1_incubus_red_lightning-isolated.png"
+      ],
+      "remaining": [],
+      "nativeDimensions": [
+        1280,
+        720
+      ],
+      "reviewMethod": "Chaque PNG a été affiché et inspecté séparément à sa résolution native, sans montage, redimensionnement ni retouche.",
+      "result": "no-blocking-visual-defect-observed"
+    },
+    "limits": [
+      "Deux profils admis : neutralSpecial joué dans les deux orientations par commandes ordinaires ; super et desperation contrôlés comme descripteurs, sans prétendre les avoir joués.",
+      "Incubus : six fixtures isolées pour trois routes et deux orientations ; aucune application de combat, aucun corps ni admission forcée.",
+      "Illustrations fixes non certifiées 1:1 ; aucun nouveau clip animé, synchronisme anatomique de crachat ou de frappe au sol certifié.",
+      "Chromium headless, service workers bloqués ; aucune preuve de cache hors ligne, matrice complète de coups/gardes ou couverture de tous les stages."
+    ]
+  },
+  "resolvedPending": {
+    "items": [
+      "Relire les nouvelles captures du contrôle HTTP lorsqu’il aura effectivement été exécuté",
+      "Contrôler le rendu isolé de l’éclair et conserver le blocage d’admission Incubus",
+      "Récupérer les rapports et captures de CI avant de déclarer ce contrôle HTTP réussi"
+    ],
+    "resolvedBy": "httpQa + qa-http-review.md",
+    "historicalNativeCaptureRecoveryStillUnavailable": true
+  },
+  "pending": []
 }

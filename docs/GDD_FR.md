@@ -2,7 +2,7 @@
 
 ## Production fixe — vague30, 25 novembre 2026
 
-[Lot de quatorze images, intégration et limites](production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. Les associations de bible sont régénérées ; les deux classeurs conservent leur dernier état validé en attendant le retour du runtime d’édition. [Inventaire restant](production/vague30/inventory.json). Aucun nouveau cycle animé ni certification1:1.
+[Lot de quatorze images, intégration et limites](production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. La bible et les deux classeurs sont rafraîchis : 445 associations, 93 arènes illustrées et 31 commandes projectile couvertes. Les feuilles historiques et leurs formules sont préservées. [Inventaire restant](production/vague30/inventory.json). Aucun nouveau cycle animé ni certification 1:1.
 
 **Intégration du 25 novembre 2026 :** le [guide commun de combat](COMBAT_GAMES_GUIDE_INTEGRATION.md)
 complète ce document avec la [matrice des 30 rubriques](combat-guide/MATRICE.md),

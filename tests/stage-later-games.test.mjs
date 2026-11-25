@@ -62,7 +62,7 @@ test('unblocking the original Lakeview lobby cannot revive fire finishers, gener
  for(const prop of ['fire','firelight','portraits','crtv','television']){assert.ok(!selected.props.includes(prop));assert.ok(!selected.layers.includes(prop));}
 });
 
-test('only the documented original Lakeview lobby gets neutral presentation labels without changing any terrain profile',()=>{
+test('Lakeview and the documented Arcade rooms keep scoped labels without changing any terrain profile',()=>{
  const terrains=structuredClone(STAGE_TERRAINS),lake=stage('lakeview'),reference={...STAGE_REFERENCES.lakeview,locationStatus:'lieu-documente'};
  const selected=applyStageReferencePolicy(lake,reference);
  assert.equal(selected.referencePolicy.normalPhaseLabel,'AVANT LA CASSETTE');assert.equal(selected.referencePolicy.terrainPresentation.name,'TAPIS DU LOBBY');
@@ -73,5 +73,25 @@ test('only the documented original Lakeview lobby gets neutral presentation labe
   const projected=applyStageReferencePolicy(other,{...reference,id:other.id,source:other.source});assert.equal(projected.referencePolicy.normalPhaseLabel,undefined);assert.equal(projected.referencePolicy.terrainPresentation,undefined);
  }
  const unresolved=applyStageReferencePolicy(lake,{...reference,locationStatus:'etat-narratif-a-preciser'});assert.equal(unresolved.referencePolicy.normalPhaseLabel,undefined);assert.equal(unresolved.referencePolicy.terrainPresentation,undefined);
- for(const location of STAGES.filter(s=>!['woodside','toluca_prison','labyrinth','room_302','water_prison','apartment_world','church','dark_shrine','hinako_home','shimizu_residence','school_shf','corrupted_ebisugaoka','nightmare_school','nightmare_hospital_sm','nightmare_mall_sm','lakeview','shopping_mall','midwich_nightmare','sewers','lakeside_amusement','lakeside_sh3','prison_meat_locker','brookhaven_sh2','brookhaven_roof','building_world','artaud_theater','blue_creek','nightmare_mall','grand_hotel','police_station_hc','prison_hc','overlook','downpour_streets','book_fire','book_wood','book_earth','book_blood','film_church','nightmare_hospital_hc','film_hospital','shepherds_glen','cedar_grove','antique_shop','church_hc','underground_hc','dark_shrine_corridors','dark_shrine_main','looping_hall','curtis_shop'].includes(s.id))){assert.equal(location.referencePolicy.normalPhaseLabel,undefined,location.id);assert.equal(location.referencePolicy.terrainPresentation,undefined,location.id);}
+ const arcadeRooms={
+  arcade_prison:{source:'arcade',state:'fixed-altered',scene:'toluca-prison-otherworld-cell-corridor',label:'STAGE 2 AREA 2 · OTHERWORLD',terrain:'steel'},
+  arcade_toluca_lake:{source:'arcade',state:'fixed-normal',scene:'arcade-stage3-area1-lakeside-quay',label:'STAGE 3 AREA 1 · QUAI DU LAC',terrain:'flooded'}
+ };
+ // Keep the earlier set of scoped rooms unchanged. Only these two newly
+ // documented Arcade rooms replace the old undefined-label expectation.
+ for(const location of STAGES.filter(s=>!['woodside','toluca_prison','labyrinth','room_302','water_prison','apartment_world','church','dark_shrine','hinako_home','shimizu_residence','school_shf','corrupted_ebisugaoka','nightmare_school','nightmare_hospital_sm','nightmare_mall_sm','lakeview','shopping_mall','midwich_nightmare','sewers','lakeside_amusement','lakeside_sh3','prison_meat_locker','brookhaven_sh2','brookhaven_roof','building_world','artaud_theater','blue_creek','nightmare_mall','grand_hotel','police_station_hc','prison_hc','overlook','downpour_streets','book_fire','book_wood','book_earth','book_blood','film_church','nightmare_hospital_hc','film_hospital','shepherds_glen','cedar_grove','antique_shop','church_hc','underground_hc','dark_shrine_corridors','dark_shrine_main','looping_hall','curtis_shop'].includes(s.id))){
+  const expected=arcadeRooms[location.id];
+  if(expected){
+   assert.equal(location.source,expected.source,location.id);
+   assert.equal(location.referencePolicy.worldState,expected.state,location.id);
+   assert.equal(location.referencePolicy.sceneId,expected.scene,location.id);
+   assert.equal(location.referencePolicy.normalPhaseLabel,expected.label,location.id);
+   assert.equal(location.referencePolicy.alteredPhaseLabel,expected.label,location.id);
+   assert.equal(location.shift.enabled,false,location.id);
+   assert.equal(location.shift.startOtherworld,expected.state==='fixed-altered',location.id);
+   assert.deepEqual(location.terrain,{id:expected.terrain,...STAGE_TERRAINS[expected.terrain]},location.id);
+  }else assert.equal(location.referencePolicy.normalPhaseLabel,undefined,location.id);
+  assert.equal(location.referencePolicy.terrainPresentation,undefined,location.id);
+ }
+ assert.deepEqual(STAGE_TERRAINS,terrains);
 });

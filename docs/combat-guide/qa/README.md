@@ -1,5 +1,11 @@
 # Vérification du guide de combat intégré
 
+## Actualisation — vague 30
+
+Le [rapport de la vague 30](../../production/vague30/README.md) et la [validation des classeurs](../../production/vague30/workbooks/validation.json) portent l’état courant : **445 associations**, dont **11 projectiles**, et **700 chemins d’image présents**. Les deux feuilles de guide sont rafraîchies dans chaque XLSX ; les **13 feuilles historiques, 252 822 cellules et 87 formules** sont conservées. Les contrôles de cette mise à jour, ses empreintes et ses rendus sont séparés des preuves initiales ci-dessous.
+
+## Rapport historique de l’intégration initiale
+
 Contrôle du 25 novembre 2026. La référence d’inventaire est le commit
 `ce3c73f8e1fcaae515053dbca9458a3f5d9c0219` du projet Silent Hill: Halo of Flesh.
 

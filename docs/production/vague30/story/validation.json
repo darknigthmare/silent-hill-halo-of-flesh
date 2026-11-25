@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "wave": 30,
+  "asOf": "2026-11-25",
+  "passed": true,
+  "provenance": {
+    "sourceCommit": "a1f434ea1d53eb933879442b05f1971c767c197f",
+    "workflowRunId": 45660199560,
+    "jobId": 139367652764,
+    "artifactId": 15045286963,
+    "runUrl": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/45660199560",
+    "artifactSHA256": "6ada019a87812fefec31116529ffb13ff44024066a0f383ad1942a65ec86ae65",
+    "sourceBuild": "The CI run imports the three reviewed poses and generates derived data from this source commit. Final publication retains the exact resulting registry and assets; this is not a claim that all generated files were already present in the source commit."
+  },
+  "report": "docs/production/vague30/qa-http/http-wave30-story/report.json",
+  "reportSHA256": "a927b97c5bf9f1ea09d56bacef366af8a4bcd55079d8ed82ec619f0ff2ee141e",
+  "checks": 12,
+  "failedChecks": 0,
+  "browserErrors": 0,
+  "captures": [
+    {
+      "path": "docs/production/vague30/qa-http/http-wave30-story/selection-intro.png",
+      "file": "selection-intro.png",
+      "scope": "normal-story-selection",
+      "bytes": 330738,
+      "sha256": "640ef8d95fe3a1c9cf2dc7ad5128ab92fec842b64b32068d9687da06d070a41c",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/production/vague30/qa-http/http-wave30-story/first-chapter-intro.png",
+      "file": "first-chapter-intro.png",
+      "scope": "normal-first-chapter",
+      "bytes": 84558,
+      "sha256": "89db0db4a0be6d28ed11b45e8f4145fa9b17de6b4094a2c37f7ba013b6bd555d",
+      "visuallyInspected": true
+    },
+    {
+      "path": "docs/production/vague30/qa-http/http-wave30-story/ending-component.png",
+      "file": "ending-component.png",
+      "scope": "isolated-production-component-not-played-ending",
+      "bytes": 313459,
+      "sha256": "684c97f1331ccf21141e7463921d2c8a889bb3ccf65dae8cc8ce5abf5fd4bd24",
+      "visuallyInspected": true
+    }
+  ],
+  "visualReviewComplete": true,
+  "visualReviewScope": "Each retained image displayed individually at its native dimensions.",
+  "visualBlockingIssues": [],
+  "review": "qa-http-review.md",
+  "newAnimations": 0,
+  "fidelityCertified": false,
+  "ordinaryGameplayCases": 2,
+  "isolatedComponentCases": 1,
+  "completeStoryPlayed": false,
+  "observations": [
+    "Selection preview retains the whole airborne subject and legible caption.",
+    "First-chapter panel retains the illustration and a readable title and caption, then yields to fighting.",
+    "Ending fixture displays the same empty street without the creature and its ending caption."
+  ],
+  "limits": [
+    "The ending image is an isolated production-component fixture, not a completed four-fight story.",
+    "The rival scene and global campaign are not implemented.",
+    "The compositions are original-compatible and static; textures may differ slightly between images.",
+    "Service workers blocked; offline updates not exercised."
+  ]
+}

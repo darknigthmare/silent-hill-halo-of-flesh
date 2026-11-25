@@ -5,7 +5,7 @@
 Le [guide général de combat est intégré au contexte de Halo of Flesh](COMBAT_GAMES_GUIDE_INTEGRATION.md).
 Ses [30 rubriques](combat-guide/MATRICE.md) sont reliées aux profils, aux commandes,
 aux Dénouements, aux lieux, aux Chroniques et aux registres d'images existants.
-Les deux classeurs reçoivent les feuilles **Guide combat** et **Associations guide**.
+Les deux classeurs contiennent les feuilles **Guide combat** et **Associations guide**, rafraîchies à **445 associations** pour la [vague 30](production/vague30/README.md). La couverture actuelle atteint **93 arènes illustrées sur 123** ; les états datés ci-dessous restent historiques.
 Le [chapitre narratif](combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) distingue récits
 individuels, Chroniques et campagne globale originale ; les
 [fiches A–J](combat-guide/FICHES_ET_VALIDATION.md) fixent les champs et critères.
@@ -191,11 +191,11 @@ Les apparitions dans Dead by Daylight, Bomberman, Dark Deception et le mini-jeu 
 
 ## Raccord au projet et travail restant
 
-La [passe de stages 21](production/vague21/README.md) intègre **12 nouveaux lieux et 24 PNG**, portant le registre à **55 arènes bitmap sur 123**. Les **68 absences** restantes, dont **15 références bloquées**, figurent dans l’onglet Stages et dans [l’inventaire courant](production/vague21/final-audit.json). Ces chiffres concernent les décors du jeu, indépendamment des 66 entrées du corpus documentaire.
+Dans l’état historique du 19 novembre 2026, la [passe de stages 21](production/vague21/README.md) intègre **12 nouveaux lieux et 24 PNG**, portant le registre à **55 arènes bitmap sur 123**. Les **68 absences** restantes, dont **15 références bloquées**, figurent dans l’onglet Stages et dans [l’inventaire de cette passe](production/vague21/final-audit.json). Ces chiffres concernent les décors du jeu, indépendamment des 66 entrées du corpus documentaire.
 
 Le registre de franchise complète `docs/GDD_FR.md` et `docs/SOURCES.md`. Il doit rester séparé de `data/sources.json`, qui configure les packs exécutables et leurs stages par défaut. L’indexation d’un programme, d’un roman ou d’un coffret ne doit pas créer un faux pack jouable.
 
-Le complément de classeur **Corpus / Stages** reprend les IDs stables, la nature, le statut de publication, les liens runtime, la qualité de preuve et la prochaine étude. La colonne « Couverture avant ajout » préserve la réalité de l’audit. Le classeur de production historique conserve ses onze onglets et son contenu ; son empreinte observée est :
+Le complément de classeur **Corpus / Stages** reprend les IDs stables, la nature, le statut de publication, les liens runtime, la qualité de preuve et la prochaine étude. La colonne « Couverture avant ajout » préserve la réalité de l’audit. Le classeur de production historique conserve ses onze onglets et son contenu ; son empreinte observée lors de cet audit historique est :
 
 ```text
 4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871

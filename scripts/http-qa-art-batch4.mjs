@@ -70,7 +70,11 @@ function subjectClipContract(id){
     sh3_double_head_040: {forwardSpecial: [4]},
     sh1_groaner_003: {forwardSpecial: [4]},
     sh3_closer_036: {forwardSpecial: [4]},
-    sh3_numb_body_small_037: {forwardSpecial: [4]}
+    sh3_numb_body_small_037: {forwardSpecial: [4]},
+    // Wave30 appends one exact static pose after the preserved idle.
+    sh4_sniffer_dog_male_053: {forwardSpecial: [1]},
+    origins_carrion_076: {forwardSpecial: [1]},
+    sh1_creeper_009: {walk: [1]}
   }[id] || {};
   const expectedClips = {idle: [0], ...laterClips};
   if(id===twinId)expectedClips[twinTaunt]=[1];

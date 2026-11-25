@@ -105,5 +105,140 @@
     }
   },
   "noFinalRuntimeCertification": true,
-  "noVisualOneToOneCertification": true
+  "noVisualOneToOneCertification": true,
+  "postRecoveryHttpValidation": {
+    "recordedAt": "2026-11-25",
+    "status": "http-passed-visual-reviewed-with-scope-limits",
+    "historyNote": "The top-level executorUnavailable, browserValidation, interruptedChecks, pending and pre-reconciliation snapshot are preserved as the historical outage-time record. This later entry supersedes that record only for the HTTP execution and visual review described here.",
+    "sourceCommit": "a1f434ea1d53eb933879442b05f1971c767c197f",
+    "githubActions": {
+      "runId": "45660199560",
+      "jobId": "139367652764",
+      "artifactId": "15045286963",
+      "runUrl": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/45660199560",
+      "artifactZipSHA256": "6ada019a87812fefec31116529ffb13ff44024066a0f383ad1942a65ec86ae65",
+      "artifactZipSHA256Provenance": "Communicated by root after download; this review reverified extracted report, summary and capture bytes, not the ZIP."
+    },
+    "execution": {
+      "passed": true,
+      "build": "dist",
+      "browser": "143.0.7499.4",
+      "startedAt": "2026-11-25T17:07:43.270Z",
+      "completedAt": "2026-11-25T17:07:57.082Z",
+      "harness": "docs/production/vague28/qa-http-stages.mjs",
+      "wrapper": "docs/production/vague30/stages/qa-http-stages.mjs",
+      "harnessReportWave": 28,
+      "wrapperWave": 30,
+      "checks": 37,
+      "failedChecks": 0,
+      "browserErrors": 0,
+      "stageCount": 3,
+      "nativePlanesDrawn": 6,
+      "exactNativeHttpResponses": 6,
+      "captureCount": 3,
+      "actorStateInjected": false,
+      "assetSubstitution": false,
+      "sourceFilesUnchangedDuringHarness": 9
+    },
+    "extractedEvidence": {
+      "verifiedLocally": true,
+      "files": [
+        {
+          "path": "docs/production/vague30/qa-http/http-wave30-stages/shimizu_residence-http-fight.png",
+          "bytes": 1336168,
+          "sha256": "3b579e285a4b689e1dd04f9d17d4871ea10e1806289fcb1cd19c6080ae95e76b"
+        },
+        {
+          "path": "docs/production/vague30/qa-http/http-wave30-stages/arcade_toluca_lake-http-fight.png",
+          "bytes": 1119565,
+          "sha256": "3f02d75302905a9cdd62d64de7c682b3b4eebd72ea61f9509e2cc2245aac2a00"
+        },
+        {
+          "path": "docs/production/vague30/qa-http/http-wave30-stages/arcade_prison-http-fight.png",
+          "bytes": 1621045,
+          "sha256": "1bfc270aaa078899a903032cd2eb21433c42ccf61402829a562474cc0e77a017"
+        },
+        {
+          "path": "docs/production/vague30/qa-http/http-wave30-stages/report.json",
+          "bytes": 22020,
+          "sha256": "a4f29f9cbfb4e12942a366026bf48c9211be08ecc10d8f80e776b6a02415645e"
+        },
+        {
+          "path": "docs/production/vague30/qa-http/http-wave30-stages/wave30-summary.json",
+          "bytes": 1988,
+          "sha256": "d8db7a0cef6f1d42b9dfcf1c25b13c323cca4bd3d340617c9f279cec79e905f0"
+        }
+      ]
+    },
+    "sourceAndGeneratedBuild": {
+      "explanation": "The source commit identifies checkout input. npm run build regenerates production references before the HTTP job. The wrapper verifies source/dist equality of its four audited modules. The tested production-reference.js is a generated derivative and is not byte-identical to that path in the source commit.",
+      "sourceCommitComparison": [
+        {
+          "path": "src/stage-bitmap-manifest.js",
+          "sha256": "5a3b0139736116125a2de50b7a9cb7f1a135f314ca09a632c335653930197544",
+          "matches": true
+        },
+        {
+          "path": "src/stage-reference-policy.js",
+          "sha256": "e2b619df092772a7dc5a633bbe0aa1238a37aa4383255a33c51894a9e7afb1a1",
+          "matches": true
+        },
+        {
+          "path": "src/production-reference.js",
+          "sha256": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889",
+          "matches": false
+        },
+        {
+          "path": "src/data.js",
+          "sha256": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+          "matches": true
+        }
+      ],
+      "testedProductionReferenceSHA256": "684e9dd63870a2969fdfb371716f43b833e360c405ba26b1aa589ad9b63cb603",
+      "sourceDistEqualityVerifiedByWrapper": true
+    },
+    "visualReview": {
+      "report": "docs/production/vague30/stages/qa-http-review.md",
+      "imagesInspectedIndividually": true,
+      "captureDimensions": {
+        "width": 1440,
+        "height": 982
+      },
+      "disposition": "accepted-in-observed-start-position-scope",
+      "findings": [
+        {
+          "stageId": "shimizu_residence",
+          "displayedPhaseLabel": "RESIDENCE II · SALLE À MANGER",
+          "bothPlanesVisible": true,
+          "floorSupportsActorsAtCapturedPositions": true,
+          "foregroundOccludesActorsAtCapturedPositions": false,
+          "note": "Low round table and furniture remain behind the fighting area; near cushion is at the lower left."
+        },
+        {
+          "stageId": "arcade_toluca_lake",
+          "displayedPhaseLabel": "STAGE 3 AREA 1 · QUAI DU LAC",
+          "bothPlanesVisible": true,
+          "floorSupportsActorsAtCapturedPositions": true,
+          "foregroundOccludesActorsAtCapturedPositions": false,
+          "note": "Paved quay, rails, stone posts and lamps remain readable against fog; near post stays at lower right. EAU STAGNANTE is the retained terrain HUD label, not a literal description of the paved floor."
+        },
+        {
+          "stageId": "arcade_prison",
+          "displayedPhaseLabel": "STAGE 2 AREA 2 · OTHERWORLD",
+          "bothPlanesVisible": true,
+          "floorSupportsActorsAtCapturedPositions": true,
+          "foregroundOccludesActorsAtCapturedPositions": false,
+          "note": "Cell bars and red/turquoise corrosion are visible; the near jamb remains at the left edge. The busy floor reduces local leg contrast but does not prevent identification at the captured positions. CAILLEBOTIS MÉTALLIQUE is the retained terrain label."
+        }
+      ]
+    },
+    "scopeLimits": [
+      "Captures show the ordinary opening FIGHT announcement; part of each central background is temporarily covered.",
+      "No movement to arena edges, time-dependent parallax, all viewport sizes, full match collision behavior, attack timing or Dénouement behavior is certified by these still captures.",
+      "Fresh headless Chromium contexts block service workers; no offline or service-worker update claim.",
+      "No new gameplay hazard, ceiling or geometry change is authorized.",
+      "All three stage scenes remain documented candidate adaptations with unverified 1:1 source fidelity.",
+      "The original outage-time validation record remains intact; full project validation is tracked separately by root."
+    ]
+  }
 }

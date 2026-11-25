@@ -24,54 +24,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  prepare:
-    name: Generate and audit the wave30 sources
-    if: github.head_ref == 'art/missing-assets-wave27-20261124'
-    runs-on: ubuntu-24.04
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
-          persist-credentials: false
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
-        with:
-          node-version: 22
-      - name: Set up native PNG validation
-        run: |
-          python3 -m venv "$RUNNER_TEMP/halo-wave30-venv"
-          "$RUNNER_TEMP/halo-wave30-venv/bin/python" -m pip install 'Pillow==11.3.0'
-          echo "HALO_PYTHON=$RUNNER_TEMP/halo-wave30-venv/bin/python" >> "$GITHUB_ENV"
-      - name: Import and verify the three reviewed poses
-        run: |
-          "$HALO_PYTHON" docs/production/vague30/characters/import-reviewed.py
-          "$HALO_PYTHON" docs/production/vague30/characters/import-reviewed.py --check
-      - name: Generate and verify current runtime data and bible
-        run: |
-          npm run verify
-          npm run bible:guide
-          npm run bible:check
-      - name: Targeted story, projectile and stage regression checks
-        run: node --test tests/story-art.test.mjs tests/combat-guide.test.mjs tests/projectile-bitmaps.test.mjs tests/stage-bitmaps.test.mjs tests/stage-reference-policy.test.mjs tests/stage-wave30.test.mjs
-      - name: Inventory and preservation audit
-        run: node docs/production/vague30/build-inventory.mjs
-      - name: Export only generated project files for review
-        if: always()
-        run: node docs/production/vague30/export-ci-files.mjs
-      - name: Retain generated evidence
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: wave30-derived-review
-          path: |
-            docs/production/vague30/inventory.json
-            docs/production/vague30/characters/import-receipts.json
-            docs/production/vague30/characters/registry-preservation.json
-            docs/combat-guide/associations.json
-            docs/combat-guide/status.json
-          retention-days: 30
-
   artwork:
     name: Play wave30 artwork over HTTP
     if: github.head_ref == 'art/missing-assets-wave27-20261124'
@@ -95,11 +47,9 @@ jobs:
           python3 -m venv "$RUNNER_TEMP/halo-wave30-venv"
           "$RUNNER_TEMP/halo-wave30-venv/bin/python" -m pip install 'Pillow==11.3.0'
           echo "HALO_PYTHON=$RUNNER_TEMP/halo-wave30-venv/bin/python" >> "$GITHUB_ENV"
-      - name: Build reviewed artwork
+      - name: Build the committed artwork
         id: build
-        run: |
-          "$HALO_PYTHON" docs/production/vague30/characters/import-reviewed.py
-          npm run build
+        run: npm run build
       - name: Inspect three poses in both orientations
         if: ${{ !cancelled() && steps.build.outcome == 'success' }}
         run: node docs/production/vague30/characters/qa-http.mjs
@@ -112,9 +62,6 @@ jobs:
       - name: Inspect individual story artwork and boundaries
         if: ${{ !cancelled() && steps.build.outcome == 'success' }}
         run: node docs/production/vague30/story/qa-http.mjs
-      - name: Export only rendered review evidence
-        if: always()
-        run: node docs/production/vague30/export-review-files.mjs
       - name: Retain reports and captures
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

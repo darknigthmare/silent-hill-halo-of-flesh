@@ -342,7 +342,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | THE ARCADE — BROOKHAVEN HOSPITAL | ARCADE | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 2 boucles | PROTOCOLE TERMINAL — à produire |
 | THE ARCADE — HOSPITAL ROOF | ARCADE | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 4 boucles | PROTOCOLE TERMINAL — à produire |
 | THE ARCADE — HISTORICAL SOCIETY | ARCADE | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| THE ARCADE — TOLUCA PRISON | ARCADE | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 2 boucles | CELLULE DU JUGEMENT — à produire |
+| THE ARCADE — TOLUCA PRISON · OTHERWORLD | ARCADE | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 2 boucles | CELLULE DU JUGEMENT — à produire |
 | THE ARCADE — UNDERGROUND GRAVEYARD | ARCADE | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | THE ARCADE — TOLUCA LAKE | ARCADE | EAU STAGNANTE | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | THE ARCADE — 1918 | ARCADE | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | GRILLE DE ROUILLE — à produire |
@@ -352,7 +352,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | KETTENSTADT VILLA — ROOFTOP | TSM | PÉTALES ET VRILLES | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | KETTENSTADT VILLA — STAIRWELL | TSM | BÉTON SEC | fixed-normal — aucune bascule | 1 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | DARK SHRINE — AUTEL INARI | SH f | PLANCHER DEVANT L’AUTEL | fixed-altered — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | SCELLEMENT DU SANCTUAIRE — à produire |
-| SHIMIZU RESIDENCE I — SALLE À MANGER | SH f | TATAMI DE LA SALLE À MANGER | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| SHIMIZU RESIDENCE II — SALLE À MANGER | SH f | TATAMI DE LA SALLE À MANGER | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | DARK SHRINE — PREMIÈRE CHAMBRE RITUELLE | SH f | PLANCHER DU SEUIL RITUEL | fixed-altered — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | SCELLEMENT DU SANCTUAIRE — à produire |
 | EBISUGAOKA — PARVIS SHIMIZU | SH f | PARVIS DEVANT SHIMIZU | fixed-altered — aucune bascule | 0 | 0 | 4 éléments de fiche / 0 boucles | PROCESSION FINALE — à produire |
 | RETURN TO SILENT HILL — STREETS | FILMS | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | CHUTE DANS LA BRUME — à produire |

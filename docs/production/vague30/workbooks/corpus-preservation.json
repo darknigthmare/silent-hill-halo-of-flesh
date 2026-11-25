@@ -1,0 +1,129 @@
+{
+  "method": "Artifact Tool authors, recalculates and renders the donor. This stdlib-only adapter transfers its reviewed cells while preserving every unrelated ZIP payload byte.",
+  "beforeSha256": "2beb816b68a85a9893f5daf16b92e111e91ef658018327ac739be9564afbef46",
+  "donorSha256": "f4eeb49e7cf5cd23c05e0a6f83ff536291ea347bd2353d733cf83424a3fec08f",
+  "afterSha256": "0920c3234e747fb5c63ec0b2f97650b5dccbe51f476584e153ad961aad379ba4",
+  "inputHashes": {
+    "requirements": "4abbe9eb132c49a5db728001d29847a8e2fe552bff3d6a3ebfc04430b0dcbdb3",
+    "associations": "f0c0744d908c207bbd1b45c2405e741303982c7f1705ef6c7b99f3ddb88e35b5",
+    "changeLog": "360b785db616b9ee126ed5fd00718ab8bd8b3ffba52f265559b0fa32a4fa4c06"
+  },
+  "sheetNames": [
+    "Corpus",
+    "Stages",
+    "Guide combat",
+    "Associations guide"
+  ],
+  "sections": 30,
+  "modules": 10,
+  "associations": 445,
+  "changedParts": [
+    "xl/tables/table5.xml",
+    "xl/worksheets/sheet3.xml",
+    "xl/worksheets/sheet4.xml"
+  ],
+  "byteIdenticalParts": 17,
+  "historicalSheets": [
+    {
+      "sheet": "Corpus",
+      "part": "xl/worksheets/sheet1.xml",
+      "sha256": "70ecb8223de0384ac2e0d616ce49235d06ff0dd3c5f77162e1e37c1f0274bce3",
+      "cells": 962,
+      "formulas": 3,
+      "conditionalFormats": 2,
+      "validations": 0
+    },
+    {
+      "sheet": "Stages",
+      "part": "xl/worksheets/sheet2.xml",
+      "sha256": "1b7eeed76ea1b663bbc4a5426a73473e798b1290b6ee01696af7e91a5f0884c0",
+      "cells": 1310,
+      "formulas": 4,
+      "conditionalFormats": 2,
+      "validations": 2
+    }
+  ],
+  "sourceCellsChangedOrAdded": 35,
+  "associationCounterFormulasUpdated": 6,
+  "rowHeightsIncreased": [
+    {
+      "sheet": "Guide combat",
+      "row": 17,
+      "before": 80,
+      "after": 122
+    },
+    {
+      "sheet": "Guide combat",
+      "row": 19,
+      "before": 66,
+      "after": 80
+    },
+    {
+      "sheet": "Guide combat",
+      "row": 23,
+      "before": 80,
+      "after": 94
+    },
+    {
+      "sheet": "Guide combat",
+      "row": 26,
+      "before": 66,
+      "after": 80
+    }
+  ],
+  "appendedRows": [
+    {
+      "sheet": "Associations guide",
+      "row": 451
+    },
+    {
+      "sheet": "Associations guide",
+      "row": 452
+    },
+    {
+      "sheet": "Associations guide",
+      "row": 453
+    }
+  ],
+  "preservedByteExactly": [
+    "all historical worksheets",
+    "all historical tables",
+    "styles",
+    "shared strings",
+    "workbook metadata",
+    "all relationships",
+    "Guide combat tables",
+    "content types",
+    "theme",
+    "other ZIP parts"
+  ],
+  "preservedGuideFeatures": [
+    "all unchanged cells",
+    "all existing style indices",
+    "column widths",
+    "frozen panes",
+    "validations",
+    "conditional formats",
+    "existing comments and hyperlinks",
+    "native table identities"
+  ],
+  "formulaValues": {
+    "Guide combat": {
+      "B4": 30,
+      "B5": 4,
+      "E4": 10,
+      "E5": 1,
+      "H4": 2,
+      "H5": 2
+    },
+    "Associations guide": {
+      "B4": 445,
+      "B5": 123,
+      "E4": 230,
+      "E5": 15,
+      "H4": 66,
+      "H5": 11
+    }
+  },
+  "status": "passed"
+}

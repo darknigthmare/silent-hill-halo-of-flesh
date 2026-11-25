@@ -14,7 +14,7 @@ Les trois PNG ont été générés avec ImageGen, puis inspectés avec leurs ré
 
 Il s'agit de trois images fixes, une par fichier et par clip. Aucun personnage, portrait, modèle de base ou cycle animé supplémentaire n'est revendiqué. Les portraits et idles existants restent les références antérieures. Aucun sujet ou parent ayant fait l'objet d'un refus explicite n'a été réessayé.
 
-**État à la préparation de ce dossier : import reproductible et QA en attente d'exécution CI.** Les résultats de CI doivent être joints avant de considérer l'intégration vérifiée. Ce document décrit ce qui est préparé ; il ne transforme pas une vérification non exécutée en réussite.
+**État après reprise : import exécuté, conservation vérifiée et QA HTTP réussie.** Les 114 contrôles, six cas ordinaires et douze captures relues sont documentés dans [la revue HTTP](qa-http-review.md). Le registre résultant conserve les 201 autres propriétaires et tous les contenus antérieurs des trois profils.
 
 ## Reprise reproductible
 
@@ -44,14 +44,14 @@ Le harness HTTP reprend la méthode de vague 28 : application construite, assets
 
 Il prépare six cas, soit les trois propriétaires dans les deux orientations. Pour Sniffer et Carrion, il attend la phase active du forwardSpecial. Pour Creeper, il vérifie que l'entrée directionnelle produit la marche au sol. Il contrôle les octets HTTP, le PNG réellement dessiné, les orientations, l'appui au pixel près et le retour à l'idle d'origine après relâchement. Le hurt encore absent reste signalé comme fallback explicite. Il retient douze captures du canvas natif 1280 × 720 et un rapport dans `tests/http-wave30-characters/`.
 
-Les captures doivent encore être inspectées visuellement après une exécution réussie. La validation HTTP et les calculs d'appui ne certifient ni l'anatomie source ni la fidélité 1:1. Le test bloque les service workers et ne couvre donc pas les mises à jour hors ligne.
+Les douze captures ont été inspectées individuellement après l’exécution réussie. Le Creeper conserve un contraste faible contre la grille sombre, consigné dans la revue. La validation HTTP et les calculs d’appui ne certifient ni l’anatomie source ni la fidélité 1:1. Le test bloque les service workers et ne couvre donc pas les mises à jour hors ligne.
 
 ## Sources et limites
 
-Les prompts exacts sont dans `prompts.json`. Les URLs, empreintes des références téléchargées, PNG d'idle utilisés, bornes inspectées et limites propres à chaque sujet sont dans `source-review.json`. Les deux images Carrion montrent la même pose et ne comptent pas comme deux angles indépendants. La vue de source du Creeper est dorsale ; son adaptation latérale reste celle du profil déjà établi. Le mâle Sniffer conserve ses oreilles, sa fourrure jaune et sa langue rouge ; les vues femelles ou de variante indéterminée sont exclues.
+Les prompts exacts sont dans `prompts.json`. Les quatre images source ont été récupérées à l’octet et sont conservées avec leurs empreintes dans [references/sources.json](references/sources.json). Les URLs, empreintes des références téléchargées, PNG d'idle utilisés, bornes inspectées et limites propres à chaque sujet sont dans `source-review.json`. Les deux images Carrion montrent la même pose et ne comptent pas comme deux angles indépendants. La vue de source du Creeper est dorsale ; son adaptation latérale reste celle du profil déjà établi. Le mâle Sniffer conserve ses oreilles, sa fourrure jaune et sa langue rouge ; les vues femelles ou de variante indéterminée sont exclues.
 
 Une prévisualisation de Sniffer avait montré des couleurs dans des pixels entièrement transparents. La composition native Canvas sur fonds clair et sombre a confirmé l'absence de halo visible ; aucun nettoyage alpha ni nouvelle génération n'a été appliqué. Les PNG livrés ne sont ni recadrés, ni redimensionnés, ni recolorés, ni recompressés.
 
 ## Classeurs
 
-Les deux XLSX de la bible restent aux objets Git de la baseline. Le rafraîchissement des onglets Guide combat et Associations guide est différé : le runtime Artifact Tool et la compétence Spreadsheets de l'environnement sont indisponibles. Aucune exception permettant de remplacer l'authoring Artifact Tool par openpyxl n'a pu être confirmée. `workbook-handoff.json` consigne leurs objets Git et la procédure de reprise. Les JSON du guide pourront être actualisés séparément ; cela ne signifie pas que les onglets ont été rafraîchis.
+Les deux classeurs ont été rafraîchis avec Artifact Tool, puis les deux feuilles du guide ont été reportées dans les paquets d’origine en préservant exactement les parties historiques. Les 13 feuilles historiques cumulées, leurs 252 822 cellules et 87 formules sont conservées. La [validation des classeurs](../workbooks/validation.json) décrit la concordance avec les JSON, les caches de formules et la portée du rendu par projection du grand classeur. Le [handoff historique](workbook-handoff.json) garde la trace de l’interruption et de sa résolution.

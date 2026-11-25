@@ -3,7 +3,7 @@
   "wave": 30,
   "asOf": "2026-11-25",
   "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
-  "status": "images-reviewed; registry-import-and-gameplay-QA-pending-CI",
+  "status": "images-reviewed; imported; HTTP-QA-passed-and-visually-reviewed",
   "generation": {
     "tool": "built-in image_gen.imagegen",
     "calls": 3,
@@ -62,7 +62,8 @@
           "width": 2720,
           "height": 2212,
           "downloadHTTP": 200,
-          "inspected": true
+          "inspected": true,
+          "localPath": "docs/production/vague30/characters/references/sniffer-male-model.jpg"
         },
         {
           "role": "behavior",
@@ -94,8 +95,8 @@
           911
         ]
       },
-      "technicalStatus": "Independent pre-import PNG inspection recorded; full importer RGBA audit will be recalculated in CI.",
-      "runtimeStatus": "Not yet verified in gameplay after import."
+      "technicalStatus": "Exact importer RGBA audit and baseline preservation passed; see import-receipts.json and registry-preservation.json.",
+      "runtimeStatus": "Ordinary HTTP gameplay in both orientations and return to baseline idle passed; retained captures individually reviewed; see qa-http-review.md."
     },
     {
       "id": "origins_carrion_076",
@@ -136,7 +137,8 @@
           "sha256": "023829fe3b2e062cc98770071392fc52fe50912cb23d65c21fec5f9f59874a25",
           "bytes": 5404,
           "downloadHTTP": 200,
-          "inspected": true
+          "inspected": true,
+          "localPath": "docs/production/vague30/characters/references/carrion-render.jpg"
         },
         {
           "role": "source-model-duplicate-pose",
@@ -144,7 +146,8 @@
           "sha256": "faeaa9bdad3dada219cc020a9002e97bab746407d85b9175c910760e968d51cc",
           "bytes": 180981,
           "downloadHTTP": 200,
-          "inspected": true
+          "inspected": true,
+          "localPath": "docs/production/vague30/characters/references/carrion-source-model.png"
         },
         {
           "role": "behavior",
@@ -171,8 +174,8 @@
           971
         ]
       },
-      "technicalStatus": "Independent pre-import PNG inspection recorded; full importer RGBA audit will be recalculated in CI.",
-      "runtimeStatus": "Not yet verified in gameplay after import."
+      "technicalStatus": "Exact importer RGBA audit and baseline preservation passed; see import-receipts.json and registry-preservation.json.",
+      "runtimeStatus": "Ordinary HTTP gameplay in both orientations and return to baseline idle passed; retained captures individually reviewed; see qa-http-review.md."
     },
     {
       "id": "sh1_creeper_009",
@@ -215,7 +218,8 @@
           "width": 1600,
           "height": 1200,
           "downloadHTTP": 200,
-          "inspected": true
+          "inspected": true,
+          "localPath": "docs/production/vague30/characters/references/creeper-sh1-model.jpg"
         },
         {
           "role": "behavior",
@@ -242,8 +246,8 @@
           607
         ]
       },
-      "technicalStatus": "Independent pre-import PNG inspection recorded; full importer RGBA audit will be recalculated in CI.",
-      "runtimeStatus": "Not yet verified in gameplay after import."
+      "technicalStatus": "Exact importer RGBA audit and baseline preservation passed; see import-receipts.json and registry-preservation.json.",
+      "runtimeStatus": "Ordinary HTTP gameplay in both orientations and return to baseline idle passed; retained captures individually reviewed; see qa-http-review.md."
     }
   ],
   "limits": [
@@ -257,5 +261,6 @@
     "prompts": "docs/production/vague30/characters/prompts.json",
     "plan": "docs/production/vague30/characters/import-plan.json",
     "importer": "docs/production/vague30/characters/import-reviewed.py"
-  }
+  },
+  "httpEvidence": "qa-http-review.md"
 }

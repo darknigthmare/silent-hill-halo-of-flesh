@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "reviewedOn": "2026-11-25",
-  "recovery": "Provenance reconstructed from preserved session records; source screenshots are not rehosted.",
+  "recovery": "Three inspected native reference screenshots recovered from the restored executor cache and copied byte-for-byte into references/. All three file hashes are now recorded; image pixels were not modified.",
   "sources": [
     {
       "id": "V30_SHF_DINING_CALENDAR",
@@ -20,7 +20,10 @@
       "sha256": "a987b1ee81a5b9ace9795ee61326ba968e9b4eff3b23854d9eb94d68331a3db9",
       "bytes": 547548,
       "width": 1920,
-      "height": 1080
+      "height": 1080,
+      "localPath": "references/11_yellowed_calendar_a.jpg",
+      "pixelsModified": false,
+      "copyVerified": true
     },
     {
       "id": "V30_SHF_RESIDENCE_GUIDE",
@@ -50,8 +53,10 @@
       "bytes": 41311,
       "width": 640,
       "height": 480,
-      "sha256": null,
-      "sha256Recovery": "Measured locally but value not retained after executor loss; not fabricated. URL and original screenshot inspection are retained."
+      "sha256": "613aa015c59a4c3573eab9f3ce5dc670d80f004e0e4496ac6c6886a8a8d272af",
+      "localPath": "references/sh_arcade_20100221_08.jpg",
+      "pixelsModified": false,
+      "copyVerified": true
     },
     {
       "id": "V30_ARCADE_KONAMI_2010_05",
@@ -70,8 +75,10 @@
       "bytes": 79358,
       "width": 640,
       "height": 480,
-      "sha256": null,
-      "sha256Recovery": "Measured locally but value not retained after executor loss; not fabricated. URL and original screenshot inspection are retained."
+      "sha256": "4d20e47241548c60115ddecfa27292f2b32826c614a014b381533c5bdf7fa0ff",
+      "localPath": "references/sh_arcade_20100221_05.jpg",
+      "pixelsModified": false,
+      "copyVerified": true
     },
     {
       "id": "V30_ARCADE_SCREEN_GALLERY",
@@ -109,5 +116,6 @@
         "Traduction secondaire ; condition de branche non implémentée ; point de capture n°05 non certifié."
       ]
     }
-  ]
+  ],
+  "referencesRestoredOn": "2026-11-25"
 }

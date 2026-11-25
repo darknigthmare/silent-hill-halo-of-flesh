@@ -14,7 +14,7 @@ Généré depuis [requirements.json](requirements.json). Les décisions « reten
 | SHCG-07 | Présentation et relations entre personnages | P1 | partial | Écrire les confrontations significatives avec statut de relation et connaissances compatibles avec l'édition. |
 | SHCG-08 | Histoire individuelle de chaque personnage | P1 | partial | Remplacer progressivement les textes génériques par des routes sourcées ; vérifier les cas admis sans adversaire de la même œuvre. |
 | SHCG-09 | Campagne globale distincte | P1 | documented-only | Implémenter un chapitre représentatif après validation des fiches, puis sauvegarde, reprise et parcours complet. |
-| SHCG-10 | Illustrations et cinématiques narratives | P1 | partial | Lier chaque plan au sujet, à l'édition, au stage et à un fichier PNG seulement après production et revue. |
+| SHCG-10 | Illustrations et cinématiques narratives | P1 | partial | Produire la scène de rivalité après revue des deux silhouettes et du lieu exact, puis poursuivre les autres récits ; garder les briefs distincts des images présentes. |
 | SHCG-11 | Boss, machines et Boss Rush | P1 | partial | Établir une fiche de rencontre par boss : annonces, fenêtres, contre-jeu par morphologie et résultat. |
 | SHCG-12 | Modes de jeu | P0 | partial | Valider pour chaque mode sélection, entrée, partie, résultat, revanche, sortie et reprise. |
 | SHCG-13 | Arènes : lieux, composition et lisibilité | P1 | partial | Compléter les décors fixes manquants et la revue des repères avant d'ajouter des couches de parallaxe. |
@@ -168,9 +168,9 @@ Généré depuis [requirements.json](requirements.json). Les décisions « reten
 
 **Adaptation :** Enrichir les Récits de manifestation existants : situation, déclencheur, épreuves motivées, rival, revers et conséquence. Les dossiers hors duel reçoivent une lecture narrative adaptée, sans combats forcés.
 
-**Existant :** storyPlan produit une structure par profil et filtre les groupes source, pas toutes les éditions fines. Admission au combat et présence d'adversaires sont des conditions séparées. Les textes dérivés ne constituent pas des campagnes individuelles détaillées.
+**Existant :** storyPlan produit une structure par profil et filtre les groupes source, pas toutes les éditions fines. Admission au combat et présence d'adversaires sont des conditions séparées. Les textes dérivés ne constituent pas des campagnes individuelles détaillées. Le récit SH1 d’Air Screamer possède désormais une introduction et une conclusion fixes associées à sa sélection, à son premier chapitre et à son achèvement ; sa file de rencontres est conservée.
 
-**Fichiers associés :** [src/tournament.js](../../src/tournament.js) · [src/run-progress.js](../../src/run-progress.js) · [docs/TOURNAMENT_STORY.md](../../docs/TOURNAMENT_STORY.md) · [docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md](../../docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md)
+**Fichiers associés :** [src/tournament.js](../../src/tournament.js) · [src/run-progress.js](../../src/run-progress.js) · [docs/TOURNAMENT_STORY.md](../../docs/TOURNAMENT_STORY.md) · [docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md](../../docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) · [src/story-art.js](../../src/story-art.js) · [src/versus.js](../../src/versus.js)
 
 **Validation attendue :**
 
@@ -196,9 +196,9 @@ Généré depuis [requirements.json](requirements.json). Les décisions « reten
 
 **Adaptation :** Produire des images qui racontent l'intro, la rivalité et la conséquence de l'outro. Texte séparé, état du décor et asymétries suivis. Les scènes à plusieurs acteurs sont distinctes des sprites isolés.
 
-**Existant :** Illustrations de Chroniques déclarées dans chronicle-art ; les nouvelles scènes de campagne sont des briefs et restent à produire.
+**Existant :** 48 illustrations de Chroniques sont conservées. Deux PNG individuels d’Air Screamer sont produits et liés dans story-art : passage devant la maison de Levin Street puis même rue vide. La scène de rivalité et les scènes de campagne restent des briefs.
 
-**Fichiers associés :** [src/chronicle-art.js](../../src/chronicle-art.js) · [docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md](../../docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) · [docs/combat-guide/FICHES_ET_VALIDATION.md](../../docs/combat-guide/FICHES_ET_VALIDATION.md)
+**Fichiers associés :** [src/chronicle-art.js](../../src/chronicle-art.js) · [docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md](../../docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) · [docs/combat-guide/FICHES_ET_VALIDATION.md](../../docs/combat-guide/FICHES_ET_VALIDATION.md) · [src/story-art.js](../../src/story-art.js) · [docs/production/vague30/story/README.md](../../docs/production/vague30/story/README.md)
 
 **Validation attendue :**
 
@@ -252,7 +252,7 @@ Généré depuis [requirements.json](requirements.json). Les décisions « reten
 
 **Adaptation :** Séparer présentation, interactions, dangers et transitions. La brume, les lumières et la radio n'autorisent pas à elles seules un danger. Les états normal/Otherworld ne sont pas universellement interchangeables.
 
-**Existant :** Directeur, reducedMotion, pistes et listes d'événements autorisés présents ; les quatre axes ne possèdent pas encore un contrat de réglages totalement indépendant.
+**Existant :** Directeur, reducedMotion, pistes et listes d'événements autorisés présents ; les quatre axes ne possèdent pas encore un contrat de réglages totalement indépendant. Les scènes Shimizu Residence II, quai de Toluca Lake et corridor Otherworld de Toluca Prison disposent de deux plans fixes chacune ; plafond peint et décor ne créent pas de règle de plafond.
 
 **Fichiers associés :** [data/stage-director.json](../../data/stage-director.json) · [src/stage-director.js](../../src/stage-director.js) · [src/stage-lore-policy.js](../../src/stage-lore-policy.js) · [src/stage-reference-policy.js](../../src/stage-reference-policy.js) · [src/stage-bitmaps.js](../../src/stage-bitmaps.js)
 
@@ -294,9 +294,9 @@ Généré depuis [requirements.json](requirements.json). Les décisions « reten
 
 **Adaptation :** Sprites 2D UHD, un sujet exploitable par image, vue de combat latérale entière, alpha réel pour les détourages, ligne de sol et armes visibles. Fidélité 1:1 désigne l'identité et les références, pas le ratio carré.
 
-**Existant :** Registre, provenance, ancrages, cadres et statut candidat présents ; aucune fidélité visuelle n'est certifiée par ce guide.
+**Existant :** Registre, provenance, ancrages, cadres et statut candidat présents ; aucune fidélité visuelle n'est certifiée par ce guide. La vague 30 ajoute 14 PNG fixes candidats : 3 poses, 3 effets, 6 plans de décor et 2 images de récit ; zéro nouvelle animation.
 
-**Fichiers associés :** [art/registry.json](../../art/registry.json) · [src/sprite-manifest.js](../../src/sprite-manifest.js) · [scripts/build-sprites.mjs](../../scripts/build-sprites.mjs) · [docs/SPRITE_AUTHORING_v0.9.3.md](../../docs/SPRITE_AUTHORING_v0.9.3.md)
+**Fichiers associés :** [art/registry.json](../../art/registry.json) · [src/sprite-manifest.js](../../src/sprite-manifest.js) · [scripts/build-sprites.mjs](../../scripts/build-sprites.mjs) · [docs/SPRITE_AUTHORING_v0.9.3.md](../../docs/SPRITE_AUTHORING_v0.9.3.md) · [docs/production/vague30/README.md](../../docs/production/vague30/README.md)
 
 **Validation attendue :**
 

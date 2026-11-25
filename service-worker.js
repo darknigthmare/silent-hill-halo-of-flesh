@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave18-motion-result-20261119';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'ff9c788b1b0616ae914c268834935f70acbc02bc5fa6b7662bc1aca2fa52b772';
+const BITMAP_REVISION = 'ad2f8817d6fa268bcaaf42f748838529403862643b23cbb0fbc14b9789c04f75';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -183,6 +183,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/origins_caliban_079.1cbb09623aa2.png",
   "/assets/sprites/origins_caliban_079.f7c29928e5e8.png",
   "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+  "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
   "/assets/sprites/origins_carrion_076.fc6703575ef3.png",
   "/assets/sprites/origins_demon_084.abac0695168a.png",
   "/assets/sprites/origins_demon_084.c23b0115c82b.png",
@@ -216,6 +217,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
   "/assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
   "/assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+  "/assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
   "/assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
   "/assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
   "/assets/sprites/sh1_grey_child_005.04637d660714.png",
@@ -389,6 +391,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+  "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
   "/assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
   "/assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
   "/assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
@@ -477,6 +480,10 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
   "/assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
   "/assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+  "/assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+  "/assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+  "/assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+  "/assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
   "/assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
   "/assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
   "/assets/stages/baldwin_mansion.closed-lounge-landing.5fa7f85bcd25.png",
@@ -614,6 +621,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png",
   "/assets/stages/shepherds_glen.background.12de6f58dc06.png",
   "/assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png",
+  "/assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+  "/assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
   "/assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
   "/assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
   "/assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
@@ -647,9 +656,12 @@ const ESSENTIAL_SHELL = [
   "/assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
   "/assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
   "/assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+  "/assets/projectiles/downpour_bogeyman_ground_shockwave.bda8c72700c2.png",
   "/assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+  "/assets/projectiles/origins_straight_jacket_acid_ball.095acfc1796e.png",
   "/assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
   "/assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+  "/assets/projectiles/sh1_incubus_red_lightning.8bec1740b774.png",
   "/assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
   "/assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
   // PROJECTILE_BITMAP_ASSETS_END
@@ -708,6 +720,8 @@ const ESSENTIAL_SHELL = [
   '/src/chronicle-art.js',
   '/src/story-art.js',
   // STORY_ART_ASSETS_BEGIN
+  "/assets/stories/sh1_air_screamer_001.ending.2aa5dbd07554.png",
+  "/assets/stories/sh1_air_screamer_001.intro.7ed088410461.png",
   // STORY_ART_ASSETS_END
   '/assets/chronicles/room_21.rival.55558b472462.webp',
   '/assets/chronicles/loop_204863.intro.d11a1e1dfecc.webp',

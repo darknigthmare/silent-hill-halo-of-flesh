@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "wave": 30,
+  "passed": true,
+  "build": "dist",
+  "stageIds": [
+    "shimizu_residence",
+    "arcade_toluca_lake",
+    "arcade_prison"
+  ],
+  "harness": "docs/production/vague28/qa-http-stages.mjs",
+  "harnessReportWave": 28,
+  "harnessReportSHA256": "a4f29f9cbfb4e12942a366026bf48c9211be08ecc10d8f80e776b6a02415645e",
+  "harnessReport": "report.json",
+  "sourceHashes": {
+    "src/stage-bitmap-manifest.js": "5a3b0139736116125a2de50b7a9cb7f1a135f314ca09a632c335653930197544",
+    "src/stage-reference-policy.js": "e2b619df092772a7dc5a633bbe0aa1238a37aa4383255a33c51894a9e7afb1a1",
+    "src/production-reference.js": "684e9dd63870a2969fdfb371716f43b833e360c405ba26b1aa589ad9b63cb603",
+    "src/data.js": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35"
+  },
+  "completedAt": "2026-11-25T17:07:57.120Z",
+  "captures": [
+    {
+      "file": "shimizu_residence-http-fight.png",
+      "sha256": "3b579e285a4b689e1dd04f9d17d4871ea10e1806289fcb1cd19c6080ae95e76b",
+      "bytes": 1336168,
+      "width": 1440,
+      "height": 982,
+      "stageId": "shimizu_residence",
+      "purpose": "actual-browser-FightEngine"
+    },
+    {
+      "file": "arcade_toluca_lake-http-fight.png",
+      "sha256": "3f02d75302905a9cdd62d64de7c682b3b4eebd72ea61f9509e2cc2245aac2a00",
+      "bytes": 1119565,
+      "width": 1440,
+      "height": 982,
+      "stageId": "arcade_toluca_lake",
+      "purpose": "actual-browser-FightEngine"
+    },
+    {
+      "file": "arcade_prison-http-fight.png",
+      "sha256": "1bfc270aaa078899a903032cd2eb21433c42ccf61402829a562474cc0e77a017",
+      "bytes": 1621045,
+      "width": 1440,
+      "height": 982,
+      "stageId": "arcade_prison",
+      "purpose": "actual-browser-FightEngine"
+    }
+  ],
+  "checks": 37,
+  "limits": [
+    "The original wave28 harness report is preserved unchanged.",
+    "No offline or service-worker update claim.",
+    "Static stage imports; no source animation, combat timing or 1:1 fidelity certified."
+  ]
+}

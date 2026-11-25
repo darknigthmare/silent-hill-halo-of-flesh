@@ -23,11 +23,11 @@ restrictions de rôle du moteur restent la base de chaque association.
 | [Classeur de production](production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) | Feuilles historiques conservées, plus Guide combat et Associations guide. |
 | [Classeur Corpus / Stages](production/SILENT_HILL_CORPUS_BIBLE.xlsx) | Même correspondance du guide auprès du corpus éditorial et des lieux. |
 
-Les feuilles Guide combat et Associations guide des deux classeurs restent à leur état validé du commit9c426d7. Le runtime d’édition Artifact Tool est indisponible après la coupure de l’environnement ; leur rafraîchissement pour la vague30 est différé. Les JSON et Markdown liés ci-dessus portent l’inventaire courant. Les feuilles historiques, formules et annotations sont conservées.
+Les feuilles **Guide combat** et **Associations guide** des deux classeurs sont rafraîchies pour la vague 30 et concordent avec les JSON courants : 30 rubriques, dix décisions de module et 445 associations. Les 13 feuilles historiques cumulées, 252 822 cellules et 87 formules restent intactes. La [validation des classeurs](production/vague30/workbooks/validation.json) détaille les empreintes, la conservation, les caches recalculés et les rendus ; le grand classeur a été relu au moyen d’une projection temporaire dont les parties retenues sont identiques au fichier final.
 
 ### Production fixe — vague30
 
-Quatorze PNG candidats sont ajoutés : trois poses de profils existants, trois effets, six plans pour trois arènes et deux images du récit individuel d’Air Screamer. La couverture cible de cette passe est93arènes/123 et31commandes projectile/86, vérifiée par [l’inventaire calculé](production/vague30/inventory.json). Aucun nouveau cycle animé.
+Quatorze PNG candidats sont ajoutés : trois poses de profils existants, trois effets, six plans pour trois arènes et deux images du récit individuel d’Air Screamer. La couverture calculée de cette passe est de **93 arènes sur 123** et **31 commandes projectile sur 86**, vérifiée par [l’inventaire calculé](production/vague30/inventory.json). Aucun nouveau cycle animé.
 
 Les références de Shimizu sont corrigées vers Residence II pour la salle à manger, en conservant le corridor de Residence I séparé. Le corridor de prison The Arcade est fixé dans son état Otherworld ; son plafond peint ne crée pas de plafond de combat. Les [sources, contrôles, limites et états de publication](production/vague30/README.md) accompagnent les nouveaux fichiers.
 

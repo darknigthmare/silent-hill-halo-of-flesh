@@ -1,0 +1,734 @@
+{
+  "schema": 1,
+  "wave": 28,
+  "startedAt": "2026-11-25T17:07:43.270Z",
+  "passed": true,
+  "browserTest": true,
+  "httpTest": true,
+  "actorStateInjected": false,
+  "assetSubstitution": false,
+  "build": "dist",
+  "scope": "Actual dist HTTP app; real native PNG requests, browser decode, workshop right/left UI, static playback and role restrictions, and ordinary launch of each added arena.",
+  "checks": [
+    {
+      "name": "Dedicated HTTP test port is unused",
+      "passed": true
+    },
+    {
+      "name": "Original dist HTTP server responds",
+      "passed": true
+    },
+    {
+      "name": "Our dedicated server remains alive",
+      "passed": true
+    },
+    {
+      "name": "shimizu_residence: normal UI launch starts the intended stage",
+      "passed": true
+    },
+    {
+      "name": "shimizu_residence: intended fighters remain selected",
+      "passed": true,
+      "detail": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "facing": 1
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 966.45,
+          "y": 594,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "name": "shimizu_residence: actual game canvas draws native plane assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+      "passed": true
+    },
+    {
+      "name": "shimizu_residence: plane remains ready in the live cache assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+      "passed": true
+    },
+    {
+      "name": "shimizu_residence: actual game canvas draws native plane assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
+      "passed": true
+    },
+    {
+      "name": "shimizu_residence: plane remains ready in the live cache assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
+      "passed": true
+    },
+    {
+      "name": "HTTP serves exact native PNG /assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+          "status": 200,
+          "bytes": 2492364,
+          "sha256": "20363814e1395109e6bbb7a172fec8e414389d8aeba926da547f7daade15e44c"
+        }
+      ]
+    },
+    {
+      "name": "HTTP serves exact native PNG /assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
+          "status": 200,
+          "bytes": 107930,
+          "sha256": "5472ecd1cb2f006046fd082b8f7d7ee734671d6ba6550ff4124fab0b01b1f666"
+        }
+      ]
+    },
+    {
+      "name": "arcade_toluca_lake: normal UI launch starts the intended stage",
+      "passed": true
+    },
+    {
+      "name": "arcade_toluca_lake: intended fighters remain selected",
+      "passed": true,
+      "detail": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "facing": 1
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 963.8230000000001,
+          "y": 594,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "name": "arcade_toluca_lake: actual game canvas draws native plane assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_toluca_lake: plane remains ready in the live cache assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_toluca_lake: actual game canvas draws native plane assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_toluca_lake: plane remains ready in the live cache assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
+      "passed": true
+    },
+    {
+      "name": "HTTP serves exact native PNG /assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+          "status": 200,
+          "bytes": 2063352,
+          "sha256": "f7eaebf61af49d6d59be23d756852ae50b8a0f3c4c24da67b9272ecf0f50a319"
+        }
+      ]
+    },
+    {
+      "name": "HTTP serves exact native PNG /assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
+          "status": 200,
+          "bytes": 181651,
+          "sha256": "d8482b1428658d29d3f003d3c57a27074ce3e68397f36bafecbb2d95dff23d12"
+        }
+      ]
+    },
+    {
+      "name": "arcade_prison: normal UI launch starts the intended stage",
+      "passed": true
+    },
+    {
+      "name": "arcade_prison: intended fighters remain selected",
+      "passed": true,
+      "detail": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "facing": 1
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 966.521,
+          "y": 594,
+          "facing": -1
+        }
+      ]
+    },
+    {
+      "name": "arcade_prison: actual game canvas draws native plane assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_prison: plane remains ready in the live cache assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_prison: actual game canvas draws native plane assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_prison: plane remains ready in the live cache assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+      "passed": true
+    },
+    {
+      "name": "HTTP serves exact native PNG /assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+          "status": 200,
+          "bytes": 2611057,
+          "sha256": "0d6c58e355084cbe05de70b836cc7466ac7a3445f15443c831eafbd159d7c5b8"
+        }
+      ]
+    },
+    {
+      "name": "HTTP serves exact native PNG /assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+          "status": 200,
+          "bytes": 194035,
+          "sha256": "42f7a995d42d31c533f991d34434ddc653dbf92eba52ef96defcd453822d418d"
+        }
+      ]
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP QA leaves source unchanged art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA leaves source unchanged src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA leaves source unchanged src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA leaves source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA leaves source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA leaves source unchanged src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA leaves source unchanged src/sprite-workshop.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA leaves source unchanged src/sprite-inspector.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA leaves source unchanged src/versus.js",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "shimizu_residence-http-fight.png",
+      "sha256": "3b579e285a4b689e1dd04f9d17d4871ea10e1806289fcb1cd19c6080ae95e76b",
+      "bytes": 1336168,
+      "width": 1440,
+      "height": 982,
+      "stageId": "shimizu_residence",
+      "purpose": "actual-browser-FightEngine"
+    },
+    {
+      "file": "arcade_toluca_lake-http-fight.png",
+      "sha256": "3f02d75302905a9cdd62d64de7c682b3b4eebd72ea61f9509e2cc2245aac2a00",
+      "bytes": 1119565,
+      "width": 1440,
+      "height": 982,
+      "stageId": "arcade_toluca_lake",
+      "purpose": "actual-browser-FightEngine"
+    },
+    {
+      "file": "arcade_prison-http-fight.png",
+      "sha256": "1bfc270aaa078899a903032cd2eb21433c42ccf61402829a562474cc0e77a017",
+      "bytes": 1621045,
+      "width": 1440,
+      "height": 982,
+      "stageId": "arcade_prison",
+      "purpose": "actual-browser-FightEngine"
+    }
+  ],
+  "characters": [],
+  "stages": [
+    {
+      "id": "shimizu_residence",
+      "entrySHA256": "45a5c7d54fd8f79aa51f82b7f40274db51f3307ab16f5f17c3e9d9d41623d12d",
+      "stageId": "shimizu_residence",
+      "phase": "fight",
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "facing": 1
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 966.45,
+          "y": 594,
+          "facing": -1
+        }
+      ],
+      "pins": [
+        {
+          "path": "assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+          "status": "ready"
+        },
+        {
+          "path": "assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
+          "status": "ready"
+        }
+      ],
+      "draws": [
+        {
+          "path": "/assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+          "canvas": "game",
+          "args": [
+            0,
+            0.25,
+            1672,
+            940.5,
+            0,
+            0,
+            1280,
+            720
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            13.852813720703125,
+            12.857142448425293
+          ],
+          "naturalWidth": 1672,
+          "naturalHeight": 941
+        },
+        {
+          "path": "/assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
+          "canvas": "game",
+          "args": [
+            0,
+            0.25,
+            1672,
+            940.5,
+            0.02129999999999939,
+            0,
+            1280,
+            720
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            13.852813720703125,
+            12.857142448425293
+          ],
+          "naturalWidth": 1672,
+          "naturalHeight": 941
+        },
+        {
+          "path": "/assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+          "canvas": "game",
+          "args": [
+            -184.29650447918496,
+            -299.2951769066625,
+            511.9347346644027,
+            341.2898231096018
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            317.1428607702255,
+            594.0000067949295
+          ],
+          "naturalWidth": 1536,
+          "naturalHeight": 1024
+        },
+        {
+          "path": "/assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+          "canvas": "game",
+          "args": [
+            -71.6301929017753,
+            -235.90493217246848,
+            164.66711011902368,
+            247.0006651785355
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            959.3840062151612,
+            594.0000067949295
+          ],
+          "naturalWidth": 1024,
+          "naturalHeight": 1536
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
+          "status": 200,
+          "bytes": 107930,
+          "sha256": "5472ecd1cb2f006046fd082b8f7d7ee734671d6ba6550ff4124fab0b01b1f666"
+        },
+        {
+          "path": "/assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+          "status": 200,
+          "bytes": 2492364,
+          "sha256": "20363814e1395109e6bbb7a172fec8e414389d8aeba926da547f7daade15e44c"
+        }
+      ]
+    },
+    {
+      "id": "arcade_toluca_lake",
+      "entrySHA256": "b318efed2ab31589531bc74f4160727b050d33bd9b0453074be5bcda9cb42138",
+      "stageId": "arcade_toluca_lake",
+      "phase": "fight",
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "facing": 1
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 963.8230000000001,
+          "y": 594,
+          "facing": -1
+        }
+      ],
+      "pins": [
+        {
+          "path": "assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+          "status": "ready"
+        },
+        {
+          "path": "assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
+          "status": "ready"
+        }
+      ],
+      "draws": [
+        {
+          "path": "/assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+          "canvas": "game",
+          "args": [
+            0,
+            0.25,
+            1672,
+            940.5,
+            0,
+            0,
+            1280,
+            720
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            13.852813720703125,
+            12.857142448425293
+          ],
+          "naturalWidth": 1672,
+          "naturalHeight": 941
+        },
+        {
+          "path": "/assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
+          "canvas": "game",
+          "args": [
+            0,
+            0.25,
+            1672,
+            940.5,
+            0.0370619999999991,
+            0,
+            1280,
+            720
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            13.852813720703125,
+            12.857142448425293
+          ],
+          "naturalWidth": 1672,
+          "naturalHeight": 941
+        },
+        {
+          "path": "/assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+          "canvas": "game",
+          "args": [
+            -184.29650447918496,
+            -299.2951769066625,
+            511.9347346644027,
+            341.2898231096018
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            317.1428607702255,
+            594.0000067949295
+          ],
+          "naturalWidth": 1536,
+          "naturalHeight": 1024
+        },
+        {
+          "path": "/assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+          "canvas": "game",
+          "args": [
+            -71.6301929017753,
+            -235.90493217246848,
+            164.66711011902368,
+            247.0006651785355
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            956.8138538015046,
+            594.0000067949295
+          ],
+          "naturalWidth": 1024,
+          "naturalHeight": 1536
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
+          "status": 200,
+          "bytes": 181651,
+          "sha256": "d8482b1428658d29d3f003d3c57a27074ce3e68397f36bafecbb2d95dff23d12"
+        },
+        {
+          "path": "/assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+          "status": 200,
+          "bytes": 2063352,
+          "sha256": "f7eaebf61af49d6d59be23d756852ae50b8a0f3c4c24da67b9272ecf0f50a319"
+        }
+      ]
+    },
+    {
+      "id": "arcade_prison",
+      "entrySHA256": "63841f0edc59988ef563e05288135a97540459fe32f4387605daf22e20765a5c",
+      "stageId": "arcade_prison",
+      "phase": "fight",
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "facing": 1
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 966.521,
+          "y": 594,
+          "facing": -1
+        }
+      ],
+      "pins": [
+        {
+          "path": "assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+          "status": "ready"
+        },
+        {
+          "path": "assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+          "status": "ready"
+        }
+      ],
+      "draws": [
+        {
+          "path": "/assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+          "canvas": "game",
+          "args": [
+            0,
+            0.25,
+            1672,
+            940.5,
+            0,
+            0,
+            1280,
+            720
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            13.852813720703125,
+            12.857142448425293
+          ],
+          "naturalWidth": 1672,
+          "naturalHeight": 941
+        },
+        {
+          "path": "/assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+          "canvas": "game",
+          "args": [
+            0,
+            0.25,
+            1672,
+            940.5,
+            0.02087400000000059,
+            0,
+            1280,
+            720
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            13.852813720703125,
+            12.857142448425293
+          ],
+          "naturalWidth": 1672,
+          "naturalHeight": 941
+        },
+        {
+          "path": "/assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+          "canvas": "game",
+          "args": [
+            -184.29650447918496,
+            -299.2951769066625,
+            511.9347346644027,
+            341.2898231096018
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            317.1428607702255,
+            594.0000067949295
+          ],
+          "naturalWidth": 1536,
+          "naturalHeight": 1024
+        },
+        {
+          "path": "/assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+          "canvas": "game",
+          "args": [
+            -71.6301929017753,
+            -235.90493217246848,
+            164.66711011902368,
+            247.0006651785355
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            959.4534536549763,
+            594.0000067949295
+          ],
+          "naturalWidth": 1024,
+          "naturalHeight": 1536
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+          "status": 200,
+          "bytes": 194035,
+          "sha256": "42f7a995d42d31c533f991d34434ddc653dbf92eba52ef96defcd453822d418d"
+        },
+        {
+          "path": "/assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+          "status": 200,
+          "bytes": 2611057,
+          "sha256": "0d6c58e355084cbe05de70b836cc7466ac7a3445f15443c831eafbd159d7c5b8"
+        }
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "6e8472e40e2b6a5a435fdb987060277f530e012e7be5cb3ef17a5b4022428468",
+      "after": "6e8472e40e2b6a5a435fdb987060277f530e012e7be5cb3ef17a5b4022428468"
+    },
+    "src/sprite-manifest.js": {
+      "before": "6ca52227f1a5daba5f7b17657ae4b9b74c0d476c763d1606de2d7670e0563b69",
+      "after": "6ca52227f1a5daba5f7b17657ae4b9b74c0d476c763d1606de2d7670e0563b69"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "5a3b0139736116125a2de50b7a9cb7f1a135f314ca09a632c335653930197544",
+      "after": "5a3b0139736116125a2de50b7a9cb7f1a135f314ca09a632c335653930197544"
+    },
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28",
+      "after": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/sprite-workshop.js": {
+      "before": "8a37492ed01b17e6cdf8cb18fb4419d26d41223dd0900e3f8bd8e1610d694c4d",
+      "after": "8a37492ed01b17e6cdf8cb18fb4419d26d41223dd0900e3f8bd8e1610d694c4d"
+    },
+    "src/sprite-inspector.js": {
+      "before": "c8a2317d575e73571bffa1390df2ee9bcf583240d1287f406f7fd00b66d3efe1",
+      "after": "c8a2317d575e73571bffa1390df2ee9bcf583240d1287f406f7fd00b66d3efe1"
+    },
+    "src/versus.js": {
+      "before": "11518048bf1d327347e56ed548c718c3e70bb318c3db5296ce6a873a8ee89b55",
+      "after": "11518048bf1d327347e56ed548c718c3e70bb318c3db5296ce6a873a8ee89b55"
+    }
+  },
+  "limits": [
+    "Headless Chromium with fresh contexts and service workers blocked. No offline/update service-worker assertion.",
+    "Stage launches use two existing combat-enabled fighters; reference-only profiles remain in their workshop.",
+    "No attack timing, source animation or 1:1 fidelity is certified."
+  ],
+  "harnessSHA256": "cd978b73b2e4ec6553df256288bb7ac05be420be8566266cf54eec5e2544beb4",
+  "browser": "143.0.7499.4",
+  "completedAt": "2026-11-25T17:07:57.082Z"
+}

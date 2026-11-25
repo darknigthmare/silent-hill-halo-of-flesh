@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "wave": 30,
+  "asOf": "2026-11-25",
+  "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "assets": "assets.json",
+  "inventory": "inventory.json",
+  "workbooks": "workbooks/validation.json",
+  "localNodeSuite": {
+    "tests": 1318,
+    "passed": 1318,
+    "failed": 0,
+    "command": "node --test --test-concurrency=2 tests/*.test.mjs",
+    "logSHA256": "f890da9745739d70e838a7ef1550667e1d54ea8ada165973a83031747c10d118",
+    "scope": "Full local suite after generated-data refresh and historical stage-contract corrections; final source-commit CI is recorded separately in PR11."
+  },
+  "httpEvidence": {
+    "sourceCommit": "a1f434ea1d53eb933879442b05f1971c767c197f",
+    "runId": 45660199560,
+    "jobId": 139367652764,
+    "artifactId": 15045286963,
+    "artifactSHA256": "6ada019a87812fefec31116529ffb13ff44024066a0f383ad1942a65ec86ae65",
+    "checks": 301,
+    "captures": 27,
+    "allReportsPassed": true,
+    "allCapturedFilesSHA256Verified": true,
+    "allCapturesVisuallyReviewed": true,
+    "reports": [
+      {
+        "domain": "characters",
+        "report": "docs/production/vague30/qa-http/http-wave30-characters/report.json",
+        "reportSHA256": "0a193ae6f5fdb759aff8062d5c4efb736f3e64d9b5cab334897fd7677301bb42",
+        "checks": 114,
+        "captures": 12,
+        "allCapturesByteVerified": true,
+        "visualReview": "docs/production/vague30/characters/qa-http-review.md"
+      },
+      {
+        "domain": "projectiles",
+        "report": "docs/production/vague30/qa-http/http-wave30-projectiles/report.json",
+        "reportSHA256": "2ef25414ae2c15ace5d9b650823f08efdefbdfc7045b3702b5eddb8744ff081c",
+        "checks": 138,
+        "captures": 9,
+        "allCapturesByteVerified": true,
+        "visualReview": "docs/production/vague30/projectiles/qa-http-review.md"
+      },
+      {
+        "domain": "stages",
+        "report": "docs/production/vague30/qa-http/http-wave30-stages/report.json",
+        "reportSHA256": "a4f29f9cbfb4e12942a366026bf48c9211be08ecc10d8f80e776b6a02415645e",
+        "checks": 37,
+        "captures": 3,
+        "allCapturesByteVerified": true,
+        "visualReview": "docs/production/vague30/stages/qa-http-review.md"
+      },
+      {
+        "domain": "story",
+        "report": "docs/production/vague30/qa-http/http-wave30-story/report.json",
+        "reportSHA256": "a927b97c5bf9f1ea09d56bacef366af8a4bcd55079d8ed82ec619f0ff2ee141e",
+        "checks": 12,
+        "captures": 3,
+        "allCapturesByteVerified": true,
+        "visualReview": "docs/production/vague30/story/qa-http-review.md"
+      }
+    ],
+    "provenance": "The source run imported reviewed poses and generated derived data before building. See reports for exact tested byte hashes. Final publication CI tests the committed registry directly."
+  },
+  "limits": [
+    "Static artwork candidates; no new animation or 1:1 certification.",
+    "Incubus remains blocked for normal combat; its effect was tested in isolation.",
+    "Ending-component fixture does not mean the whole four-fight story was played.",
+    "Service workers blocked in HTTP tests.",
+    "Historical stage/guide snapshots are preserved and explicitly dated."
+  ]
+}

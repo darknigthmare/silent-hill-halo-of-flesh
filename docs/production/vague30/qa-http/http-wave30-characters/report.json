@@ -1,0 +1,1719 @@
+{
+  "schema": 1,
+  "wave": 30,
+  "startedAt": "2026-11-25T17:06:52.272Z",
+  "passed": true,
+  "checks": [
+    {
+      "name": "sh4_sniffer_dog_male_053: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "Dedicated HTTP test port is unused",
+      "passed": true
+    },
+    {
+      "name": "Dedicated dist HTTP server ready",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: intended owner painted",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+        "args": [
+          -73.53260869565217,
+          -99.33609239130433,
+          167.11956521739128,
+          111.41304347826086
+        ],
+        "width": 1536,
+        "height": 1024,
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          393.44845919477666,
+          594.0000067949295
+        ],
+        "engineFrame": 168,
+        "fighterId": "sh4_sniffer_dog_male_053",
+        "state": "attack",
+        "grounded": true,
+        "x": 387.99375999999995,
+        "y": 594,
+        "facing": 1,
+        "moveKey": "forwardSpecial",
+        "lastMoveKey": "forwardSpecial",
+        "attackFrame": 13,
+        "startup": 13,
+        "active": 10
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: intended attack accepted through ordinary keyboard",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: captured attack is active",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+        "args": [
+          -73.53260869565217,
+          -99.33609239130433,
+          167.11956521739128,
+          111.41304347826086
+        ],
+        "width": 1536,
+        "height": 1024,
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          393.44845919477666,
+          594.0000067949295
+        ],
+        "engineFrame": 168,
+        "fighterId": "sh4_sniffer_dog_male_053",
+        "state": "attack",
+        "grounded": true,
+        "x": 387.99375999999995,
+        "y": 594,
+        "facing": 1,
+        "moveKey": "forwardSpecial",
+        "lastMoveKey": "forwardSpecial",
+        "attackFrame": 13,
+        "startup": 13,
+        "active": 10
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: exact HTTP bytes /assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+          "status": 200,
+          "bytes": 1830946,
+          "sha256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9"
+        }
+      ]
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: exact HTTP bytes /assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+          "status": 200,
+          "bytes": 1683958,
+          "sha256": "4af1facfd8a4a8aa1ff8f80a2676a2259a2636884e50a3e58d971cb938019891"
+        }
+      ]
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: action expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: action painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 168,
+        "capturedFrame": 168
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: action expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: action ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": -0.00004874320651993003,
+        "nativePixels": -0.000047688159350884404
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: action actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: recovered expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: recovered painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 207,
+        "capturedFrame": 207
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: recovered expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: recovered ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": 0.00003696581195811177,
+        "nativePixels": 0.00003616568660645006
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: recovered actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-right: release returns to the original idle",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: intended owner painted",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+        "args": [
+          -73.53260869565217,
+          -99.33609239130433,
+          167.11956521739128,
+          111.41304347826086
+        ],
+        "width": 1536,
+        "height": 1024,
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          905.6233875453472,
+          594.0000067949295
+        ],
+        "engineFrame": 168,
+        "fighterId": "sh4_sniffer_dog_male_053",
+        "state": "attack",
+        "grounded": true,
+        "x": 911.5,
+        "y": 594,
+        "facing": -1,
+        "moveKey": "forwardSpecial",
+        "lastMoveKey": "forwardSpecial",
+        "attackFrame": 13,
+        "startup": 13,
+        "active": 10
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: intended attack accepted through ordinary keyboard",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: captured attack is active",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+        "args": [
+          -73.53260869565217,
+          -99.33609239130433,
+          167.11956521739128,
+          111.41304347826086
+        ],
+        "width": 1536,
+        "height": 1024,
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          905.6233875453472,
+          594.0000067949295
+        ],
+        "engineFrame": 168,
+        "fighterId": "sh4_sniffer_dog_male_053",
+        "state": "attack",
+        "grounded": true,
+        "x": 911.5,
+        "y": 594,
+        "facing": -1,
+        "moveKey": "forwardSpecial",
+        "lastMoveKey": "forwardSpecial",
+        "attackFrame": 13,
+        "startup": 13,
+        "active": 10
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: exact HTTP bytes /assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+          "status": 200,
+          "bytes": 1830946,
+          "sha256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9"
+        }
+      ]
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: exact HTTP bytes /assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+          "status": 200,
+          "bytes": 1683958,
+          "sha256": "4af1facfd8a4a8aa1ff8f80a2676a2259a2636884e50a3e58d971cb938019891"
+        }
+      ]
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: action expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: action painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 168,
+        "capturedFrame": 168
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: action expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: action ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": -0.00004874320651993003,
+        "nativePixels": -0.000047688159350884404
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: action actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: recovered expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: recovered painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 207,
+        "capturedFrame": 207
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: recovered expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: recovered ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": 0.00003696581195811177,
+        "nativePixels": 0.00003616568660645006
+      }
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: recovered actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh4_sniffer_dog_male_053-left: release returns to the original idle",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-right: intended owner painted",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+        "args": [
+          -59.683544303797476,
+          -100.5693670886076,
+          129.74683544303798,
+          129.74683544303798
+        ],
+        "width": 1254,
+        "height": 1254,
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          371.8328987667828,
+          594.0000067949295
+        ],
+        "engineFrame": 165,
+        "fighterId": "origins_carrion_076",
+        "state": "attack",
+        "grounded": true,
+        "x": 365.90000000000015,
+        "y": 594,
+        "facing": 1,
+        "moveKey": "forwardSpecial",
+        "lastMoveKey": "forwardSpecial",
+        "attackFrame": 13,
+        "startup": 13,
+        "active": 10
+      }
+    },
+    {
+      "name": "origins_carrion_076-right: intended attack accepted through ordinary keyboard",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-right: captured attack is active",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+        "args": [
+          -59.683544303797476,
+          -100.5693670886076,
+          129.74683544303798,
+          129.74683544303798
+        ],
+        "width": 1254,
+        "height": 1254,
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          371.8328987667828,
+          594.0000067949295
+        ],
+        "engineFrame": 165,
+        "fighterId": "origins_carrion_076",
+        "state": "attack",
+        "grounded": true,
+        "x": 365.90000000000015,
+        "y": 594,
+        "facing": 1,
+        "moveKey": "forwardSpecial",
+        "lastMoveKey": "forwardSpecial",
+        "attackFrame": 13,
+        "startup": 13,
+        "active": 10
+      }
+    },
+    {
+      "name": "origins_carrion_076-right: exact HTTP bytes /assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+          "status": 200,
+          "bytes": 819038,
+          "sha256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61"
+        }
+      ]
+    },
+    {
+      "name": "origins_carrion_076-right: exact HTTP bytes /assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "status": 200,
+          "bytes": 1151214,
+          "sha256": "cc08ebd145bb6b24be79b95cf9745116349e167fb617e0115737017a427628a5"
+        }
+      ]
+    },
+    {
+      "name": "origins_carrion_076-right: action expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-right: action painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 165,
+        "capturedFrame": 165
+      }
+    },
+    {
+      "name": "origins_carrion_076-right: action expected orientation",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-right: action ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": -0.00004966386045168747,
+        "nativePixels": -0.00004858888571952647
+      }
+    },
+    {
+      "name": "origins_carrion_076-right: action actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-right: recovered expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-right: recovered painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 204,
+        "capturedFrame": 204
+      }
+    },
+    {
+      "name": "origins_carrion_076-right: recovered expected orientation",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-right: recovered ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": -0.000050677830927270406,
+        "nativePixels": -0.000049580908794514784
+      }
+    },
+    {
+      "name": "origins_carrion_076-right: recovered actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-right: release returns to the original idle",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-left: intended owner painted",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+        "args": [
+          -59.683544303797476,
+          -100.5693670886076,
+          129.74683544303798,
+          129.74683544303798
+        ],
+        "width": 1254,
+        "height": 1254,
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          908.1670866349814,
+          594.0000067949295
+        ],
+        "engineFrame": 166,
+        "fighterId": "origins_carrion_076",
+        "state": "attack",
+        "grounded": true,
+        "x": 914.1000000000006,
+        "y": 594,
+        "facing": -1,
+        "moveKey": "forwardSpecial",
+        "lastMoveKey": "forwardSpecial",
+        "attackFrame": 13,
+        "startup": 13,
+        "active": 10
+      }
+    },
+    {
+      "name": "origins_carrion_076-left: intended attack accepted through ordinary keyboard",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-left: captured attack is active",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+        "args": [
+          -59.683544303797476,
+          -100.5693670886076,
+          129.74683544303798,
+          129.74683544303798
+        ],
+        "width": 1254,
+        "height": 1254,
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          908.1670866349814,
+          594.0000067949295
+        ],
+        "engineFrame": 166,
+        "fighterId": "origins_carrion_076",
+        "state": "attack",
+        "grounded": true,
+        "x": 914.1000000000006,
+        "y": 594,
+        "facing": -1,
+        "moveKey": "forwardSpecial",
+        "lastMoveKey": "forwardSpecial",
+        "attackFrame": 13,
+        "startup": 13,
+        "active": 10
+      }
+    },
+    {
+      "name": "origins_carrion_076-left: exact HTTP bytes /assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+          "status": 200,
+          "bytes": 819038,
+          "sha256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61"
+        }
+      ]
+    },
+    {
+      "name": "origins_carrion_076-left: exact HTTP bytes /assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "status": 200,
+          "bytes": 1151214,
+          "sha256": "cc08ebd145bb6b24be79b95cf9745116349e167fb617e0115737017a427628a5"
+        }
+      ]
+    },
+    {
+      "name": "origins_carrion_076-left: action expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-left: action painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 166,
+        "capturedFrame": 166
+      }
+    },
+    {
+      "name": "origins_carrion_076-left: action expected orientation",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-left: action ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": -0.00004966386045168747,
+        "nativePixels": -0.00004858888571952647
+      }
+    },
+    {
+      "name": "origins_carrion_076-left: action actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-left: recovered expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-left: recovered painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 205,
+        "capturedFrame": 205
+      }
+    },
+    {
+      "name": "origins_carrion_076-left: recovered expected orientation",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-left: recovered ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": -0.000050677830927270406,
+        "nativePixels": -0.000049580908794514784
+      }
+    },
+    {
+      "name": "origins_carrion_076-left: recovered actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "origins_carrion_076-left: release returns to the original idle",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-right: intended owner painted",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+        "args": [
+          -90.00000000000001,
+          -50.46960000000001,
+          180.00000000000003,
+          60.00000000000001
+        ],
+        "width": 2172,
+        "height": 724,
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          324.1380929807692,
+          594.0000067949295
+        ],
+        "engineFrame": 155,
+        "fighterId": "sh1_creeper_009",
+        "state": "walk",
+        "grounded": true,
+        "x": 317.15,
+        "y": 594,
+        "facing": 1,
+        "moveKey": null,
+        "lastMoveKey": null,
+        "attackFrame": null,
+        "startup": null,
+        "active": null
+      }
+    },
+    {
+      "name": "sh1_creeper_009-right: ordinary directional input produces a grounded walk",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-right: walk advances toward the opponent",
+      "passed": true,
+      "detail": {
+        "startX": 310,
+        "drawX": 317.15
+      }
+    },
+    {
+      "name": "sh1_creeper_009-right: exact HTTP bytes /assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+          "status": 200,
+          "bytes": 697798,
+          "sha256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9"
+        }
+      ]
+    },
+    {
+      "name": "sh1_creeper_009-right: exact HTTP bytes /assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+          "status": 200,
+          "bytes": 938605,
+          "sha256": "57fcc90186ee7b8cacc9d74744764126677b28ff8c880e11acce0d1326693574"
+        }
+      ]
+    },
+    {
+      "name": "sh1_creeper_009-right: action expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-right: action painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 155,
+        "capturedFrame": 155
+      }
+    },
+    {
+      "name": "sh1_creeper_009-right: action expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-right: action ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": 0.000013259668513398992,
+        "nativePixels": 0.000012972662862225327
+      }
+    },
+    {
+      "name": "sh1_creeper_009-right: action actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-right: recovered expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-right: recovered painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 160,
+        "capturedFrame": 160
+      }
+    },
+    {
+      "name": "sh1_creeper_009-right: recovered expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-right: recovered ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": -0.0000020836621956732415,
+        "nativePixels": -0.0000020385613076162857
+      }
+    },
+    {
+      "name": "sh1_creeper_009-right: recovered actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-right: release returns to the original idle",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-left: intended owner painted",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+        "args": [
+          -90.00000000000001,
+          -50.46960000000001,
+          180.00000000000003,
+          60.00000000000001
+        ],
+        "width": 2172,
+        "height": 724,
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          955.861892420995,
+          594.0000067949295
+        ],
+        "engineFrame": 152,
+        "fighterId": "sh1_creeper_009",
+        "state": "walk",
+        "grounded": true,
+        "x": 962.85,
+        "y": 594,
+        "facing": -1,
+        "moveKey": null,
+        "lastMoveKey": null,
+        "attackFrame": null,
+        "startup": null,
+        "active": null
+      }
+    },
+    {
+      "name": "sh1_creeper_009-left: ordinary directional input produces a grounded walk",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-left: walk advances toward the opponent",
+      "passed": true,
+      "detail": {
+        "startX": 970,
+        "drawX": 962.85
+      }
+    },
+    {
+      "name": "sh1_creeper_009-left: exact HTTP bytes /assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+          "status": 200,
+          "bytes": 697798,
+          "sha256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9"
+        }
+      ]
+    },
+    {
+      "name": "sh1_creeper_009-left: exact HTTP bytes /assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+          "status": 200,
+          "bytes": 938605,
+          "sha256": "57fcc90186ee7b8cacc9d74744764126677b28ff8c880e11acce0d1326693574"
+        }
+      ]
+    },
+    {
+      "name": "sh1_creeper_009-left: action expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-left: action painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 152,
+        "capturedFrame": 152
+      }
+    },
+    {
+      "name": "sh1_creeper_009-left: action expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-left: action ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": 0.000013259668513398992,
+        "nativePixels": 0.000012972662862225327
+      }
+    },
+    {
+      "name": "sh1_creeper_009-left: action actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-left: recovered expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-left: recovered painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 156,
+        "capturedFrame": 156
+      }
+    },
+    {
+      "name": "sh1_creeper_009-left: recovered expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-left: recovered ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": -0.0000020836621956732415,
+        "nativePixels": -0.0000020385613076162857
+      }
+    },
+    {
+      "name": "sh1_creeper_009-left: recovered actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh1_creeper_009-left: release returns to the original idle",
+      "passed": true
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "label": "sh4_sniffer_dog_male_053-right",
+      "player": 0,
+      "fighterId": "sh4_sniffer_dog_male_053",
+      "source": "sh4",
+      "pose": "forwardSpecial",
+      "startX": 310,
+      "captures": [
+        {
+          "kind": "action",
+          "file": "sh4_sniffer_dog_male_053-right-action.png",
+          "bytes": 1481353,
+          "sha256": "9d578e063b2d91f5d99ad7b3811ccb701ed9cecfc926d782ce256d1f8ae249b2"
+        },
+        {
+          "kind": "recovered",
+          "file": "sh4_sniffer_dog_male_053-right-recovered.png",
+          "bytes": 1484084,
+          "sha256": "025fefe926c1f4a8b07c6f0a4bc0e7709d0eec6982e246aea7b82cfda6dc2e28"
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+          "status": 200,
+          "bytes": 1683958,
+          "sha256": "4af1facfd8a4a8aa1ff8f80a2676a2259a2636884e50a3e58d971cb938019891"
+        },
+        {
+          "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+          "status": 200,
+          "bytes": 1830946,
+          "sha256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9"
+        }
+      ],
+      "evidence": {
+        "action": {
+          "draw": {
+            "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+            "args": [
+              -73.53260869565217,
+              -99.33609239130433,
+              167.11956521739128,
+              111.41304347826086
+            ],
+            "width": 1536,
+            "height": 1024,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              393.44845919477666,
+              594.0000067949295
+            ],
+            "engineFrame": 168,
+            "fighterId": "sh4_sniffer_dog_male_053",
+            "state": "attack",
+            "grounded": true,
+            "x": 387.99375999999995,
+            "y": 594,
+            "facing": 1,
+            "moveKey": "forwardSpecial",
+            "lastMoveKey": "forwardSpecial",
+            "attackFrame": 13,
+            "startup": 13,
+            "active": 10
+          },
+          "frame": 168,
+          "phase": "fight",
+          "fighterId": "sh4_sniffer_dog_male_053",
+          "state": "attack",
+          "grounded": true,
+          "lastMoveKey": "forwardSpecial",
+          "x": 387.99375999999995,
+          "y": 594,
+          "facing": 1
+        },
+        "recovered": {
+          "draw": {
+            "path": "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+            "args": [
+              -72.48931623931625,
+              -110.57688611111112,
+              157.5854700854701,
+              113.8888888888889
+            ],
+            "width": 1475,
+            "height": 1066,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              456.0488472137149,
+              594.0000067949295
+            ],
+            "engineFrame": 207,
+            "fighterId": "sh4_sniffer_dog_male_053",
+            "state": "idle",
+            "grounded": true,
+            "x": 451.9791170260928,
+            "y": 594,
+            "facing": 1,
+            "moveKey": null,
+            "lastMoveKey": "forwardSpecial",
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 207,
+          "phase": "fight",
+          "fighterId": "sh4_sniffer_dog_male_053",
+          "state": "idle",
+          "grounded": true,
+          "lastMoveKey": "forwardSpecial",
+          "x": 451.9791170260928,
+          "y": 594,
+          "facing": 1
+        }
+      }
+    },
+    {
+      "label": "sh4_sniffer_dog_male_053-left",
+      "player": 1,
+      "fighterId": "sh4_sniffer_dog_male_053",
+      "source": "sh4",
+      "pose": "forwardSpecial",
+      "startX": 970,
+      "captures": [
+        {
+          "kind": "action",
+          "file": "sh4_sniffer_dog_male_053-left-action.png",
+          "bytes": 1481335,
+          "sha256": "3558052186d262f6fbd995505a0bedac11804219438a0062f1fb8200d4213e37"
+        },
+        {
+          "kind": "recovered",
+          "file": "sh4_sniffer_dog_male_053-left-recovered.png",
+          "bytes": 1484893,
+          "sha256": "fa2b597fbc5d701d83c25cec8c323a1ef41826a18c7f944b87a52069a20b241a"
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+          "status": 200,
+          "bytes": 1683958,
+          "sha256": "4af1facfd8a4a8aa1ff8f80a2676a2259a2636884e50a3e58d971cb938019891"
+        },
+        {
+          "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+          "status": 200,
+          "bytes": 1830946,
+          "sha256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9"
+        }
+      ],
+      "evidence": {
+        "action": {
+          "draw": {
+            "path": "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+            "args": [
+              -73.53260869565217,
+              -99.33609239130433,
+              167.11956521739128,
+              111.41304347826086
+            ],
+            "width": 1536,
+            "height": 1024,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              905.6233875453472,
+              594.0000067949295
+            ],
+            "engineFrame": 168,
+            "fighterId": "sh4_sniffer_dog_male_053",
+            "state": "attack",
+            "grounded": true,
+            "x": 911.5,
+            "y": 594,
+            "facing": -1,
+            "moveKey": "forwardSpecial",
+            "lastMoveKey": "forwardSpecial",
+            "attackFrame": 13,
+            "startup": 13,
+            "active": 10
+          },
+          "frame": 168,
+          "phase": "fight",
+          "fighterId": "sh4_sniffer_dog_male_053",
+          "state": "attack",
+          "grounded": true,
+          "lastMoveKey": "forwardSpecial",
+          "x": 911.5,
+          "y": 594,
+          "facing": -1
+        },
+        "recovered": {
+          "draw": {
+            "path": "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+            "args": [
+              -72.48931623931625,
+              -110.57688611111112,
+              157.5854700854701,
+              113.8888888888889
+            ],
+            "width": 1475,
+            "height": 1066,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              843.022999526409,
+              594.0000067949295
+            ],
+            "engineFrame": 207,
+            "fighterId": "sh4_sniffer_dog_male_053",
+            "state": "idle",
+            "grounded": true,
+            "x": 847.514642973907,
+            "y": 594,
+            "facing": -1,
+            "moveKey": null,
+            "lastMoveKey": "forwardSpecial",
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 207,
+          "phase": "fight",
+          "fighterId": "sh4_sniffer_dog_male_053",
+          "state": "idle",
+          "grounded": true,
+          "lastMoveKey": "forwardSpecial",
+          "x": 847.514642973907,
+          "y": 594,
+          "facing": -1
+        }
+      }
+    },
+    {
+      "label": "origins_carrion_076-right",
+      "player": 0,
+      "fighterId": "origins_carrion_076",
+      "source": "origins",
+      "pose": "forwardSpecial",
+      "startX": 310,
+      "captures": [
+        {
+          "kind": "action",
+          "file": "origins_carrion_076-right-action.png",
+          "bytes": 1476484,
+          "sha256": "e7206ff8916895800273dec7d65bd8776c907fe8e77e67902b35c504e10ba328"
+        },
+        {
+          "kind": "recovered",
+          "file": "origins_carrion_076-right-recovered.png",
+          "bytes": 1477499,
+          "sha256": "107eb07493ea7a109f9f9b225f2dfd09c96c7f121f26707063d98a2aa17e289b"
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+          "status": 200,
+          "bytes": 819038,
+          "sha256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61"
+        },
+        {
+          "path": "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "status": 200,
+          "bytes": 1151214,
+          "sha256": "cc08ebd145bb6b24be79b95cf9745116349e167fb617e0115737017a427628a5"
+        }
+      ],
+      "evidence": {
+        "action": {
+          "draw": {
+            "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+            "args": [
+              -59.683544303797476,
+              -100.5693670886076,
+              129.74683544303798,
+              129.74683544303798
+            ],
+            "width": 1254,
+            "height": 1254,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              371.8328987667828,
+              594.0000067949295
+            ],
+            "engineFrame": 165,
+            "fighterId": "origins_carrion_076",
+            "state": "attack",
+            "grounded": true,
+            "x": 365.90000000000015,
+            "y": 594,
+            "facing": 1,
+            "moveKey": "forwardSpecial",
+            "lastMoveKey": "forwardSpecial",
+            "attackFrame": 13,
+            "startup": 13,
+            "active": 10
+          },
+          "frame": 165,
+          "phase": "fight",
+          "fighterId": "origins_carrion_076",
+          "state": "attack",
+          "grounded": true,
+          "lastMoveKey": "forwardSpecial",
+          "x": 365.90000000000015,
+          "y": 594,
+          "facing": 1
+        },
+        "recovered": {
+          "draw": {
+            "path": "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+            "args": [
+              -58.9375,
+              -111.16432499999999,
+              128.125,
+              128.125
+            ],
+            "width": 1254,
+            "height": 1254,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              431.6510599245121,
+              594.0000067949295
+            ],
+            "engineFrame": 204,
+            "fighterId": "origins_carrion_076",
+            "state": "idle",
+            "grounded": true,
+            "x": 427.0415633804891,
+            "y": 594,
+            "facing": 1,
+            "moveKey": null,
+            "lastMoveKey": "forwardSpecial",
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 204,
+          "phase": "fight",
+          "fighterId": "origins_carrion_076",
+          "state": "idle",
+          "grounded": true,
+          "lastMoveKey": "forwardSpecial",
+          "x": 427.0415633804891,
+          "y": 594,
+          "facing": 1
+        }
+      }
+    },
+    {
+      "label": "origins_carrion_076-left",
+      "player": 1,
+      "fighterId": "origins_carrion_076",
+      "source": "origins",
+      "pose": "forwardSpecial",
+      "startX": 970,
+      "captures": [
+        {
+          "kind": "action",
+          "file": "origins_carrion_076-left-action.png",
+          "bytes": 1476457,
+          "sha256": "1cf6bc049f9da430b3634831b6a9cb5f0152373853fbdcc34fd437d950615320"
+        },
+        {
+          "kind": "recovered",
+          "file": "origins_carrion_076-left-recovered.png",
+          "bytes": 1477612,
+          "sha256": "75f8d93b41e5bdd0f7b211806d034e822b8454b040afcd46da4baaf6ca89253b"
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+          "status": 200,
+          "bytes": 819038,
+          "sha256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61"
+        },
+        {
+          "path": "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+          "status": 200,
+          "bytes": 1151214,
+          "sha256": "cc08ebd145bb6b24be79b95cf9745116349e167fb617e0115737017a427628a5"
+        }
+      ],
+      "evidence": {
+        "action": {
+          "draw": {
+            "path": "/assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+            "args": [
+              -59.683544303797476,
+              -100.5693670886076,
+              129.74683544303798,
+              129.74683544303798
+            ],
+            "width": 1254,
+            "height": 1254,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              908.1670866349814,
+              594.0000067949295
+            ],
+            "engineFrame": 166,
+            "fighterId": "origins_carrion_076",
+            "state": "attack",
+            "grounded": true,
+            "x": 914.1000000000006,
+            "y": 594,
+            "facing": -1,
+            "moveKey": "forwardSpecial",
+            "lastMoveKey": "forwardSpecial",
+            "attackFrame": 13,
+            "startup": 13,
+            "active": 10
+          },
+          "frame": 166,
+          "phase": "fight",
+          "fighterId": "origins_carrion_076",
+          "state": "attack",
+          "grounded": true,
+          "lastMoveKey": "forwardSpecial",
+          "x": 914.1000000000006,
+          "y": 594,
+          "facing": -1
+        },
+        "recovered": {
+          "draw": {
+            "path": "/assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+            "args": [
+              -58.9375,
+              -111.16432499999999,
+              128.125,
+              128.125
+            ],
+            "width": 1254,
+            "height": 1254,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              848.348955334277,
+              594.0000067949295
+            ],
+            "engineFrame": 205,
+            "fighterId": "origins_carrion_076",
+            "state": "idle",
+            "grounded": true,
+            "x": 852.9584366195124,
+            "y": 594,
+            "facing": -1,
+            "moveKey": null,
+            "lastMoveKey": "forwardSpecial",
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 205,
+          "phase": "fight",
+          "fighterId": "origins_carrion_076",
+          "state": "idle",
+          "grounded": true,
+          "lastMoveKey": "forwardSpecial",
+          "x": 852.9584366195124,
+          "y": 594,
+          "facing": -1
+        }
+      }
+    },
+    {
+      "label": "sh1_creeper_009-right",
+      "player": 0,
+      "fighterId": "sh1_creeper_009",
+      "source": "sh1",
+      "pose": "walk",
+      "startX": 310,
+      "captures": [
+        {
+          "kind": "action",
+          "file": "sh1_creeper_009-right-action.png",
+          "bytes": 1473110,
+          "sha256": "da2d0923ef63445173cb061e79dc2da0fd28e694824547ef2c4132b6989b6fea"
+        },
+        {
+          "kind": "recovered",
+          "file": "sh1_creeper_009-right-recovered.png",
+          "bytes": 1472981,
+          "sha256": "a45092c7f5d8f9c02257bd43b76f62cbf37c2743ddbf797fdd47b6855a44d224"
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+          "status": 200,
+          "bytes": 697798,
+          "sha256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9"
+        },
+        {
+          "path": "/assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+          "status": 200,
+          "bytes": 938605,
+          "sha256": "57fcc90186ee7b8cacc9d74744764126677b28ff8c880e11acce0d1326693574"
+        }
+      ],
+      "evidence": {
+        "action": {
+          "draw": {
+            "path": "/assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+            "args": [
+              -90.00000000000001,
+              -50.46960000000001,
+              180.00000000000003,
+              60.00000000000001
+            ],
+            "width": 2172,
+            "height": 724,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              324.1380929807692,
+              594.0000067949295
+            ],
+            "engineFrame": 155,
+            "fighterId": "sh1_creeper_009",
+            "state": "walk",
+            "grounded": true,
+            "x": 317.15,
+            "y": 594,
+            "facing": 1,
+            "moveKey": null,
+            "lastMoveKey": null,
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 155,
+          "phase": "fight",
+          "fighterId": "sh1_creeper_009",
+          "state": "walk",
+          "grounded": true,
+          "lastMoveKey": null,
+          "x": 317.15,
+          "y": 594,
+          "facing": 1
+        },
+        "recovered": {
+          "draw": {
+            "path": "/assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+            "args": [
+              -85.66530612244898,
+              -46.956817959183674,
+              161.6326530612245,
+              53.87755102040816
+            ],
+            "width": 2172,
+            "height": 724,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              345.7102412946224,
+              594.0000067949295
+            ],
+            "engineFrame": 160,
+            "fighterId": "sh1_creeper_009",
+            "state": "idle",
+            "grounded": true,
+            "x": 339.1994169905151,
+            "y": 594,
+            "facing": 1,
+            "moveKey": null,
+            "lastMoveKey": null,
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 160,
+          "phase": "fight",
+          "fighterId": "sh1_creeper_009",
+          "state": "idle",
+          "grounded": true,
+          "lastMoveKey": null,
+          "x": 339.1994169905151,
+          "y": 594,
+          "facing": 1
+        }
+      }
+    },
+    {
+      "label": "sh1_creeper_009-left",
+      "player": 1,
+      "fighterId": "sh1_creeper_009",
+      "source": "sh1",
+      "pose": "walk",
+      "startX": 970,
+      "captures": [
+        {
+          "kind": "action",
+          "file": "sh1_creeper_009-left-action.png",
+          "bytes": 1472615,
+          "sha256": "32a47d30481d63e6d4bfc193c3d6eaa77d5c6e80e767f8f1e5999b6760da60e3"
+        },
+        {
+          "kind": "recovered",
+          "file": "sh1_creeper_009-left-recovered.png",
+          "bytes": 1472771,
+          "sha256": "e03c34f3fbe52bae04f954e47e47619769d88589be09b5cfb8e9be062e9dcb6b"
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+          "status": 200,
+          "bytes": 697798,
+          "sha256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9"
+        },
+        {
+          "path": "/assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+          "status": 200,
+          "bytes": 938605,
+          "sha256": "57fcc90186ee7b8cacc9d74744764126677b28ff8c880e11acce0d1326693574"
+        }
+      ],
+      "evidence": {
+        "action": {
+          "draw": {
+            "path": "/assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+            "args": [
+              -90.00000000000001,
+              -50.46960000000001,
+              180.00000000000003,
+              60.00000000000001
+            ],
+            "width": 2172,
+            "height": 724,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              955.861892420995,
+              594.0000067949295
+            ],
+            "engineFrame": 152,
+            "fighterId": "sh1_creeper_009",
+            "state": "walk",
+            "grounded": true,
+            "x": 962.85,
+            "y": 594,
+            "facing": -1,
+            "moveKey": null,
+            "lastMoveKey": null,
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 152,
+          "phase": "fight",
+          "fighterId": "sh1_creeper_009",
+          "state": "walk",
+          "grounded": true,
+          "lastMoveKey": null,
+          "x": 962.85,
+          "y": 594,
+          "facing": -1
+        },
+        "recovered": {
+          "draw": {
+            "path": "/assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+            "args": [
+              -85.66530612244898,
+              -46.956817959183674,
+              161.6326530612245,
+              53.87755102040816
+            ],
+            "width": 2172,
+            "height": 724,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              941.2849763176855,
+              594.0000067949295
+            ],
+            "engineFrame": 156,
+            "fighterId": "sh1_creeper_009",
+            "state": "idle",
+            "grounded": true,
+            "x": 947.9505830094848,
+            "y": 594,
+            "facing": -1,
+            "moveKey": null,
+            "lastMoveKey": null,
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 156,
+          "phase": "fight",
+          "fighterId": "sh1_creeper_009",
+          "state": "idle",
+          "grounded": true,
+          "lastMoveKey": null,
+          "x": 947.9505830094848,
+          "y": 594,
+          "facing": -1
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "method": "Built HTTP app, fresh browser contexts, ordinary UI and keyboard. Passive drawImage observer and captures from the actual game canvas. No actor, camera, clock, image or module substitution.",
+  "limits": [
+    "Single static poses; no animation, source timing or 1:1 fidelity certification.",
+    "Both orientations use the existing engine mirror, not independently observed source-side geometry.",
+    "Service workers are blocked; this test does not cover offline updates.",
+    "Automated HTTP and placement checks require separate visual inspection of the retained gameplay captures."
+  ],
+  "browser": "143.0.7499.4",
+  "completedAt": "2026-11-25T17:07:22.142Z"
+}
