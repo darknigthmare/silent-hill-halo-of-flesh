@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave18-motion-result-20261119';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '3b19ac68c0e000f627c2fde20ae7944892aabbb85c79b751a40e022d31f933aa';
+const BITMAP_REVISION = 'ff9c788b1b0616ae914c268834935f70acbc02bc5fa6b7662bc1aca2fa52b772';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -473,6 +473,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
   "/assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png",
   "/assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png",
+  "/assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+  "/assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
   "/assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
   "/assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
   "/assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
@@ -487,6 +489,10 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/book_earth.near-earth-timber-edges.e57d980721fc.png",
   "/assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
   "/assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+  "/assets/stages/book_light.bg-light-room.87045d14aba8.png",
+  "/assets/stages/book_light.near-edges.857bd9e0632c.png",
+  "/assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+  "/assets/stages/book_steel.near-edges.10d39edce2a8.png",
   "/assets/stages/book_water.near-rooftop-steel-edges.d593738b8364.png",
   "/assets/stages/book_water.water-rooftop-lattice.3e1e5c015f1f.png",
   "/assets/stages/book_wood.bare-bough.58fbcd47b401.png",
@@ -522,8 +528,12 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/downpour_streets.near-edges.1152c97b0f12.png",
   "/assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
   "/assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+  "/assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+  "/assets/stages/film_church.near-edges.5a7bfb3b6111.png",
   "/assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
   "/assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+  "/assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+  "/assets/stages/film_midwich.near-edges.2a676412e457.png",
   "/assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
   "/assets/stages/final_sacrament.near-edges.8be13402fce8.png",
   "/assets/stages/forest_world.first-visit-clearing.76588be774de.png",
@@ -634,8 +644,11 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/woodside.grandfather-clock.bc7fec047ff5.png",
   // STAGE_BITMAP_ASSETS_END
   // PROJECTILE_BITMAP_ASSETS_BEGIN
+  "/assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
   "/assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
   "/assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+  "/assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+  "/assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
   "/assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
   "/assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
   "/assets/projectiles/sh3_god_ground_flame.8b645595b188.png",

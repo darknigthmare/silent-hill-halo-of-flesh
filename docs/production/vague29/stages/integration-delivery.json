@@ -1,0 +1,885 @@
+{
+  "schemaVersion": 1,
+  "group": "vague29-stages",
+  "scope": "Four missing static stages; eight independent native PNG planes",
+  "createdAt": "2026-11-25T08:26:51.295997+00:00",
+  "baseCommit": "2af87b6a1a8740a0759ce7c8c2746be19c48f4af",
+  "deliveryState": "ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "book_light",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "bom-light-zone8-window-room",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT21"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012), Zone 8 Light World gameplay",
+      "locationScope": "Rectangular Light World room: stone window wall and rose-brown tiled floor",
+      "selectedSubLocation": "Rectangular Light World room: stone window wall and rose-brown tiled floor",
+      "layers": [
+        {
+          "id": "bg-light-room",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+              "sha256": "87045d14aba8b9d1ba01eb983cfb85ad4ece2aab6e282fb3af4ce0c87a4cbfe7",
+              "bytes": 2775424,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+              "sha256": "857bd9e0632c5246653b699c0b4c1f94c6aa0bccc70646f8bfa4c2ef144fad9d",
+              "bytes": 224290,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Gameplay sheets establish dark ochre/pale aged stone, rectangular paneling, narrow white windows and rose-brown square floor slabs. The screenshot grids are source evidence only, not delivered artwork.",
+        "The lateral camera, widened continuous floor, regularized window count, wall spacing and tiny foreground stone trims are authored versus adaptations. No exact procedural room seed, dimensions or hidden geometry is certified.",
+        "No other elemental zone, new rune, character, enemy, attack, interface or collectible is painted into this room. The small rear stone slab remains behind the fighting line.",
+        "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes.",
+        "Ceiling support for contextual finishers is not established by these references; preserve the previous ineligibility rather than infer a usable support from the painted interior."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "No foreground pixels above alpha1 in center or footing; native alpha1 traces preserved."
+      }
+    },
+    {
+      "stageId": "book_steel",
+      "source": "bom",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "bom-steel-zone19-gear-room",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT21"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "Silent Hill: Book of Memories (PS Vita, 2012), Zone 19 Steel World gameplay and Miguel Rico original environment props",
+      "locationScope": "Steel World industrial room with closed tread-plate door and inert floor gear motif",
+      "selectedSubLocation": "Steel World industrial room with closed tread-plate door and inert floor gear motif",
+      "layers": [
+        {
+          "id": "bg-steel-room",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+              "sha256": "2b13c6afe6538ebeeefbfb4bb26cf7cf5ce4721f2a6247a9de3dfbd0948863b9",
+              "bytes": 2890608,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+              "sha256": "10d39edce2a8460d4d41c42d09ca83369c7517b9fc19bab292e3f7e942112c84",
+              "bytes": 219189,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Gameplay sheets establish green-gray industrial rooms, bright rectangular wall lights and large floor-disc motifs. Miguel Rico source renders corroborate the tread-plate double door and toothed three-spoke disc.",
+        "The camera, wall-panel arrangement, door placement, gear diameter, lamp spacing and continuous clear floor are authored adaptations of observed materials and motifs; source topology and procedural room layout remain unverified.",
+        "The floor motif is inert art, not a moving trap or new machine. No extra rune, pipe network, character, weapon or UI is introduced.",
+        "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes.",
+        "Ceiling support for contextual finishers is not established by these references; preserve the previous ineligibility rather than infer a usable support from the painted interior."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "No foreground pixels above alpha1 in center or footing; native alpha1 traces preserved."
+      }
+    },
+    {
+      "stageId": "film_midwich",
+      "source": "film",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "film2006-midwich-otherworld-upper-gallery",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT49"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "Silent Hill (Christophe Gans, 2006), transformed upper Midwich gallery, film frame reproduced by Film Mining 101",
+      "locationScope": "Upper Midwich Otherworld gallery with circular amber geometric window, exposed beams and grated walkway",
+      "selectedSubLocation": "Upper Midwich Otherworld gallery with circular amber geometric window, exposed beams and grated walkway",
+      "layers": [
+        {
+          "id": "bg-otherworld-gallery",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+              "sha256": "7ca015c73e2d2e9dfc9669cbc450aa2fac279d4f25724ac5b42f3a3f77871d5b",
+              "bytes": 2185175,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+              "sha256": "2a676412e457f67268b2965fdd8b6d406994e433e41e513df34717db657cbe59",
+              "bytes": 219196,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "The actual film frame shows Rose in the transformed upper gallery, the circular amber glazed geometric window, dark rectangular bays, overhead beams and rusty gallery metal. The bathroom, courtyard and game versions of Midwich are excluded.",
+        "The foreground walkway is widened and its near railing omitted to leave a clear versus plane; the source corridor depth and exact width are not reconstructed 1:1.",
+        "The window motif, wall symmetry and beam repetition are interpreted at the new camera. No person, creature, gore, new chain or collapsing floor is baked into the image.",
+        "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "No foreground pixels above alpha1 in center or footing; native alpha1 traces preserved."
+      }
+    },
+    {
+      "stageId": "film_church",
+      "source": "film",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "film2006-church-rear-nave-before-intrusion",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT49"
+      ],
+      "worldState": "fixed-normal",
+      "edition": "Silent Hill (Christophe Gans, 2006), protected church nave before final intrusion, film frame reproduced by Film Mining 101",
+      "locationScope": "Normal-state nave facing the rear entrance: pale square pillars, timber paneling, ring lamps and candles",
+      "selectedSubLocation": "Normal-state nave facing the rear entrance: pale square pillars, timber paneling, ring lamps and candles",
+      "layers": [
+        {
+          "id": "bg-protected-rear-nave",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+              "sha256": "04be564b44c6dd1a6da6cd32531c946b5e695b97f4895a11f138101218e86c77",
+              "bytes": 1944865,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+              "sha256": "5a7bfb3b61114f27b0e6bffa357b76d94bc8e16567a94b140e01b75ac7ed56ec",
+              "bytes": 84961,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "The source film frame shows the congregation facing the rear entrance. Square pale columns, brown timber paneling, raised rear doors, conical ring lamps and small candles are retained while all people are removed.",
+        "The camera is lowered/regularized for versus, the clear floor broadened and pews moved to the rear outer margins. Exact pew count, pillar spacing, door proportions and illumination remain unverified.",
+        "Fixed-normal pre-intrusion phase is preserved: no pit, barbed wire, Alessa bed, bodies, blood, 2012 sanctuary or game-chapel imagery. No new hazard or transformation is implemented.",
+        "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "No foreground pixels above alpha1 in center or footing; native alpha1 traces preserved."
+      }
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "book_light",
+      "promptKey": "book_light-bg-wave29",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-547c901c-0d32-43c1-96ea-b50c568015cd.png",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/stages/book_light.bg-light-room.87045d14aba8.png",
+      "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2775424,
+      "sha256": "87045d14aba8b9d1ba01eb983cfb85ad4ece2aab6e282fb3af4ce0c87a4cbfe7",
+      "pixelSHA256": "ab8a84532d7903053c15d40a0fa1704935b91b63373ede7c3945eb9ca3554fc9",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Eight native outputs visually inspected: empty environments, correct intended state, one plane per file, foreground confined to edges. No in-engine test claimed.",
+      "preservation": "Original PNG bytes, unchanged. Hardlink preserves source bytes; no crop, resize, recolor, alpha repair or re-encoding.",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "book_light",
+      "promptKey": "book_light-fg-wave29",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-99c5a429-70a8-4d5a-91bf-2f2209dc4d30.png",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/stages/book_light.near-edges.857bd9e0632c.png",
+      "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 224290,
+      "sha256": "857bd9e0632c5246653b699c0b4c1f94c6aa0bccc70646f8bfa4c2ef144fad9d",
+      "pixelSHA256": "c17445f6e16741d352b3612d032778ca8ac8c19e9d1c6cf824ccb9f81426a686",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.952658400663043,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Eight native outputs visually inspected: empty environments, correct intended state, one plane per file, foreground confined to edges. No in-engine test claimed.",
+      "preservation": "Original PNG bytes, unchanged. Hardlink preserves source bytes; no crop, resize, recolor, alpha repair or re-encoding.",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "book_steel",
+      "promptKey": "book_steel-bg-wave29",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-f55164e8-d083-4309-b509-1a92eeeeef3a.png",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+      "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2890608,
+      "sha256": "2b13c6afe6538ebeeefbfb4bb26cf7cf5ce4721f2a6247a9de3dfbd0948863b9",
+      "pixelSHA256": "c79a94c1848f5ed2a4240cca63e9d34182655ee1a08187b163829bdd6c871f42",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Eight native outputs visually inspected: empty environments, correct intended state, one plane per file, foreground confined to edges. No in-engine test claimed.",
+      "preservation": "Original PNG bytes, unchanged. Hardlink preserves source bytes; no crop, resize, recolor, alpha repair or re-encoding.",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "book_steel",
+      "promptKey": "book_steel-fg-wave29",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-57e67366-3c5d-4a7c-b253-ffe5c169ad81.png",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/stages/book_steel.near-edges.10d39edce2a8.png",
+      "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 219189,
+      "sha256": "10d39edce2a8460d4d41c42d09ca83369c7517b9fc19bab292e3f7e942112c84",
+      "pixelSHA256": "626fc347bc5672ab3524453991c0b52fa8dcc6c3817211d8b0f99f5ee96149da",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9525776812817475,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Eight native outputs visually inspected: empty environments, correct intended state, one plane per file, foreground confined to edges. No in-engine test claimed.",
+      "preservation": "Original PNG bytes, unchanged. Hardlink preserves source bytes; no crop, resize, recolor, alpha repair or re-encoding.",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "film_midwich",
+      "promptKey": "film_midwich-bg-wave29",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-7a77bacf-6fc6-40ff-8a08-b327a1eb50ee.png",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+      "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2185175,
+      "sha256": "7ca015c73e2d2e9dfc9669cbc450aa2fac279d4f25724ac5b42f3a3f77871d5b",
+      "pixelSHA256": "17b8a396189b49c7e13e5b204f6a31e9c4f3dd0c19baf5b151d9090b5710a6e7",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Eight native outputs visually inspected: empty environments, correct intended state, one plane per file, foreground confined to edges. No in-engine test claimed.",
+      "preservation": "Original PNG bytes, unchanged. Hardlink preserves source bytes; no crop, resize, recolor, alpha repair or re-encoding.",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "film_midwich",
+      "promptKey": "film_midwich-fg-wave29",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-e889541d-db70-4163-84cf-cc8a51c54786.png",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/stages/film_midwich.near-edges.2a676412e457.png",
+      "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 219196,
+      "sha256": "2a676412e457f67268b2965fdd8b6d406994e433e41e513df34717db657cbe59",
+      "pixelSHA256": "fe791cb0c164e8bc9031704a6144ff3078f27dc9845f005dc255ecdee5efcda2",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9490298420188235,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Eight native outputs visually inspected: empty environments, correct intended state, one plane per file, foreground confined to edges. No in-engine test claimed.",
+      "preservation": "Original PNG bytes, unchanged. Hardlink preserves source bytes; no crop, resize, recolor, alpha repair or re-encoding.",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "film_church",
+      "promptKey": "film_church-bg-wave29",
+      "role": "opaque-background",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-8d218a18-c1a8-4028-8c38-10b1e7bca4a6.png",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+      "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1944865,
+      "sha256": "04be564b44c6dd1a6da6cd32531c946b5e695b97f4895a11f138101218e86c77",
+      "pixelSHA256": "1bb2336225a49588ba4410d21a10e23c254c68f306d611807c88f6f125481e54",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Eight native outputs visually inspected: empty environments, correct intended state, one plane per file, foreground confined to edges. No in-engine test claimed.",
+      "preservation": "Original PNG bytes, unchanged. Hardlink preserves source bytes; no crop, resize, recolor, alpha repair or re-encoding.",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "film_church",
+      "promptKey": "film_church-fg-wave29",
+      "role": "transparent-foreground",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-07a73e54-867f-473c-81bd-5168bdf26e7b.png",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+      "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 84961,
+      "sha256": "5a7bfb3b61114f27b0e6bffa357b76d94bc8e16567a94b140e01b75ac7ed56ec",
+      "pixelSHA256": "9c9b36394362dc48c519b7c49a9af4836f394d6347c989739858af84ad82c022",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9885925082244786,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 0,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Eight native outputs visually inspected: empty environments, correct intended state, one plane per file, foreground confined to edges. No in-engine test claimed.",
+      "preservation": "Original PNG bytes, unchanged. Hardlink preserves source bytes; no crop, resize, recolor, alpha repair or re-encoding.",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "file": "light-sheet-6.jpg",
+      "sourceUrl": "https://www.youtube.com/watch?v=74LFqaqrGmI",
+      "type": "native-gameplay-storyboard",
+      "level": 3,
+      "sheet": 6,
+      "grid": [
+        3,
+        3
+      ],
+      "cellSize": [
+        320,
+        180
+      ],
+      "intervalSeconds": 10,
+      "firstTimeSeconds": 540,
+      "scope": "Light Zone8",
+      "note": "Gameplay reference only. HUD/actors/menus not reproduced; native low-resolution source limits exact reconstruction.",
+      "sha256": "7b4f6a5f1d8e8babeca926e48e7b76ff7cefec884912941a4d3463d4fc4befde",
+      "bytes": 60401,
+      "inspected": true,
+      "consultedAt": "2026-11-25"
+    },
+    {
+      "file": "light-sheet-10.jpg",
+      "sourceUrl": "https://www.youtube.com/watch?v=74LFqaqrGmI",
+      "type": "native-gameplay-storyboard",
+      "level": 3,
+      "sheet": 10,
+      "grid": [
+        3,
+        3
+      ],
+      "cellSize": [
+        320,
+        180
+      ],
+      "intervalSeconds": 10,
+      "firstTimeSeconds": 900,
+      "scope": "Light Zone8",
+      "note": "Gameplay reference only. HUD/actors/menus not reproduced; native low-resolution source limits exact reconstruction.",
+      "sha256": "6ec5e5973134d5db0c2f94b3515f27c45465d1573dfcb2bf84e254fa2f8be2f0",
+      "bytes": 61626,
+      "inspected": true,
+      "consultedAt": "2026-11-25"
+    },
+    {
+      "file": "steel-sheet-1.jpg",
+      "sourceUrl": "https://www.youtube.com/watch?v=9IT7wJ_ttoc",
+      "type": "native-gameplay-storyboard",
+      "level": 2,
+      "sheet": 1,
+      "grid": [
+        5,
+        5
+      ],
+      "cellSize": [
+        160,
+        90
+      ],
+      "intervalSeconds": 10,
+      "firstTimeSeconds": 250,
+      "scope": "Steel Zone19",
+      "note": "Gameplay reference only. HUD/actors/menus not reproduced; native low-resolution source limits exact reconstruction.",
+      "sha256": "8770a6ed3440eaff12674f8d99f907da8a41c245cfc1ff75b59e9521911e771e",
+      "bytes": 59737,
+      "inspected": true,
+      "consultedAt": "2026-11-25"
+    },
+    {
+      "file": "steel-sheet-3.jpg",
+      "sourceUrl": "https://www.youtube.com/watch?v=9IT7wJ_ttoc",
+      "type": "native-gameplay-storyboard",
+      "level": 2,
+      "sheet": 3,
+      "grid": [
+        5,
+        5
+      ],
+      "cellSize": [
+        160,
+        90
+      ],
+      "intervalSeconds": 10,
+      "firstTimeSeconds": 750,
+      "scope": "Steel Zone19",
+      "note": "Gameplay reference only. HUD/actors/menus not reproduced; native low-resolution source limits exact reconstruction.",
+      "sha256": "ab906e06b8d48d4d617c61f8926f03eeba4ccac7ba96892bb61b7101a8cb14ea",
+      "bytes": 64045,
+      "inspected": true,
+      "consultedAt": "2026-11-25"
+    },
+    {
+      "file": "rico-07.jpg",
+      "sourceUrl": "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_rico_07.jpg",
+      "catalogueUrl": "https://www.silenthillmemories.net/sh_book_of_memories/arts_en.htm",
+      "type": "original-artist-environment-render-reproduced-by-archive",
+      "artist": "Miguel Rico",
+      "scope": "Tread-plate double door",
+      "note": "Original prop/material corroboration; does not establish full in-game room geometry.",
+      "sha256": "e6cfba032015b14a100e37042d94d4e1040c4735b610ede9344b4df3e961e39f",
+      "bytes": 392725,
+      "inspected": true,
+      "consultedAt": "2026-11-25"
+    },
+    {
+      "file": "rico-09.jpg",
+      "sourceUrl": "https://www.silenthillmemories.net/sh_book_of_memories/arts/pics/sh_bom_art_20160221_rico_09.jpg",
+      "catalogueUrl": "https://www.silenthillmemories.net/sh_book_of_memories/arts_en.htm",
+      "type": "original-artist-environment-render-reproduced-by-archive",
+      "artist": "Miguel Rico",
+      "scope": "Three-spoke toothed disc",
+      "note": "Original prop/material corroboration; does not establish full in-game room geometry.",
+      "sha256": "664a613cb71b05fb2d921a65e29f3b8e0a0e9c33361e09eaa1fa3140cc9363e8",
+      "bytes": 758869,
+      "inspected": true,
+      "consultedAt": "2026-11-25"
+    },
+    {
+      "file": "film-source-034.png",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/608dfe2b1aa87260966bfacf/528e3105-2258-4de1-9ec6-d2ad67df5561/vlcsnap-2024-07-19-21h41m12s837.png",
+      "catalogueUrl": "https://www.filmmining101.com/production-design/silent-hill?itemId=42d94ueuquec2yyi905annxzlz0opm",
+      "type": "film-frame-reproduction",
+      "edition": "Silent Hill (2006)",
+      "scope": "Midwich upper gallery, Otherworld",
+      "note": "Filename timestamp belongs to screenshot creation, NOT an asserted film timecode. Native frame with letterboxing preserved as reference; output is empty and reframed.",
+      "sha256": "8c883277e294bb9377b4c9f21f20fe4b6fdbe03b9bb6ecee9e9288c2057bd8c5",
+      "bytes": 760625,
+      "inspected": true,
+      "consultedAt": "2026-11-25"
+    },
+    {
+      "file": "film-source-046.png",
+      "sourceUrl": "https://images.squarespace-cdn.com/content/v1/608dfe2b1aa87260966bfacf/d4a2b892-593d-4c67-b318-c5fc06441505/vlcsnap-2024-07-19-21h55m40s722.png",
+      "catalogueUrl": "https://www.filmmining101.com/production-design/silent-hill?itemId=42d94ueuquec2yyi905annxzlz0opm",
+      "type": "film-frame-reproduction",
+      "edition": "Silent Hill (2006)",
+      "scope": "Church rear nave before final intrusion",
+      "note": "Filename timestamp belongs to screenshot creation, NOT an asserted film timecode. Native frame with letterboxing preserved as reference; output is empty and reframed.",
+      "sha256": "8465ddda9dbed898059c91c6c9f093bfae78a886a503101049cea70257282c89",
+      "bytes": 1138699,
+      "inspected": true,
+      "consultedAt": "2026-11-25"
+    }
+  ],
+  "prompts": [
+    {
+      "key": "book_light-bg-wave29",
+      "prompt": "Use case: stylized-concept. Asset type: ONE static opaque background plane for a 2D side-view fighting game. Generate a detailed 16:9 landscape environment, ideally 3840x2160 native if supported. The subject is the LIGHT ZONE of Silent Hill: Book of Memories (PS Vita, 2012), specifically a rectangular interior room seen in the attached gameplay references. These attached images are grids of gameplay reference frames; the output MUST be ONE uninterrupted room, not a grid, not a collage, no interface. Use the second reference sheet rows 2-3 and first reference sheet row 2 for the visual vocabulary: aged pale stone/gold-brown rectangular wall panels with dark pilasters, bright tall narrow whitish window openings, worn large square stone floor slabs with restrained dusty rose tint and dark seams, occasional shallow raised rectangular stone slab behind the play area. Keep the architectural identity, materials and colors observed in the actual game. Do not import forest, blood-world flesh, industrial gears or new occult symbols. The LIGHT ZONE is not an immaculate white fantasy temple; retain the old dark earth-brown stone, soot and sparse bright windows. Compose a side-on eye-level near-orthographic 2D fighting view across this room, shallow perspective only. A long empty continuous floor fills the bottom 28 percent, with the foot line at normalized y=0.87. Back wall and two to three window/pilaster bays behind it; visual detail must stay behind the fight lane. Central 86 percent remains unobstructed. No top-down camera. Dim ambient light with narrow white window glow, readable silhouettes, restrained realistic textured raster finish. Remove every character, enemy, health bar, minimap, menu, artifact, glowing attack or HUD from reference. No statues shaped like people, bones, graffiti text, logos, captions, border or watermark. No foreground framing elements. No new hazard or action. This output is a source-guided new fighting-camera adaptation, not an assertion of exact source geometry.",
+      "references": [
+        "references/light-sheet-6.jpg",
+        "references/light-sheet-10.jpg"
+      ],
+      "transparent_background": false
+    },
+    {
+      "key": "book_light-fg-wave29",
+      "name": "book_light.fg",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/png/book_light.bg.png"
+      ],
+      "prompt": "Create ONE transparent 16:9 foreground overlay at 1672x941 matching the supplied LIGHT ZONE background from Silent Hill Book of Memories. It is an independent parallax plane for the same side-view fighting stage. The supplied image is ONLY the background palette/material reference, do NOT reproduce it. Actual alpha-transparent canvas. Show only tiny near-camera fragments of its worn dark ochre stone pilasters clipped against the extreme left and extreme right canvas edges, each less than 5 percent of image width, stopping before the bottom 18 percent. Subtle irregular chipped edges and realistic material matching reference. The entire central 88 percent and the entire bottom 18 percent MUST be fully alpha transparent, no wash, dust, fog, glows, shadow rectangle or scene painted there. Do not draw floor, wall, windows, bench, any whole pillar, any character or symbols. Sparse edge trim only, one image, no grid, text or border. Keep all pixels outside these tiny side slivers transparent. No solid or checkered backdrop. Detailed raster texture, not vector shapes."
+    },
+    {
+      "key": "book_steel-bg-wave29",
+      "name": "book_steel.bg",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/references/steel-sheet-1.jpg",
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/references/steel-sheet-3.jpg",
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/references/rico-07.jpg",
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/references/rico-09.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Generate ONE static opaque 16:9 landscape background plate for a 2D side-view fighting game. Exact subject: STEEL ZONE, Zone19 in Silent Hill: Book of Memories (PS Vita 2012), based on the supplied gameplay storyboard sheets and original Miguel Rico metal props. First two refs are grids ONLY FOR REFERENCE, output one seamless uninterrupted room, no montage. The native gameplay shows green-gray industrial metal room panels and dirty metal floor, large circular gear-shaped floor inserts, riveted rectangular wall framing, dull bright oblong/rectangular light panels and industrial doors; preserve this subdued green-gray and oxidized steel appearance. Third ref supplies the diamond-tread double-panel steel door material, fourth ref the three-spoked toothed disc motif. Do not copy text, humans, monsters, HUD, attacks, maps, menu or the black gaps between reference cells. Create a level SIDE-ON fighting camera, NOT isometric/top-down. Compose one modest industrial room with rear wall of rectangular riveted dark steel panels, one closed diamond-tread double door offset left, dim narrow institutional white light panels and very restrained green cast. A large three-spoked gear motif appears as an INERT inset into the rear floor behind the fighter footing, partly foreshortened, based on original source prop. No invented giant rotating machine, sci-fi screens, pipes everywhere or symbol runes. Wide continuous unbroken worn metal floor occupies lower 28 percent, a straight empty footing at y=0.87, with central86 percent unobstructed. Keep source room's ordinary low-ceiling utilitarian scale. Detailed realistic raster textures, enough diffuse light to read fighter silhouettes, no glossy modern spaceship finish. No characters, bodies, weapons, projectiles, fire, glowing magic, readable text, logos, watermarks, frame or collage. A source-guided fighting-camera adaptation; do not invent hidden lore."
+    },
+    {
+      "key": "book_steel-fg-wave29",
+      "name": "book_steel.fg",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/png/book_steel.bg.png"
+      ],
+      "prompt": "Create ONE independent alpha-transparent 16:9 foreground overlay at 1672x941 for the supplied Steel Zone Silent Hill Book of Memories side-view background. The reference is only for material, palette and scale; do NOT reproduce the scene. Very sparse near-edge details: a narrow clipped riveted steel upright at the extreme left edge, another at the extreme right edge, each no wider than4 percent of the canvas, with dark oxidized blue-green steel and worn rivets matching the supplied background. Their bottom ends stop above y=0.80. Do not render the floor, door, gear, ceiling or any entire room. The central90 percent and entire lower18 percent must remain completely alpha transparent with no shadow, fog or wash. No top/bottom border, no translucent rectangle, no checkered or black background. One uninterrupted transparent raster overlay, no grid, text, icon, person, weapon or UI. Keep actual alpha transparency in all empty space."
+    },
+    {
+      "key": "film_church-bg-wave29",
+      "name": "film_church.bg",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/references/film-source-046.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE static opaque16:9 landscape background for a 2D side-view fighting stage,1672x941. EXACT setting: church interior from SILENT HILL film2006, NORMAL protected phase BEFORE the final intrusion, facing the rear entrance as in this supplied film frame. Use the actual frame's architecture and palette. Keep its tall pale rectangular square-section columns, dark timber wainscot paneling, rear heavy wooden doors and shallow steps, high wooden gallery/beam, warm circular ring pendant lamps with conical tops and cross/circle iron ornament, sparse small candle flames along the walls. Ordinary dark brown wooden pews may be kept only well back at the outer margins. Preserve the film2006 restrained amber-brown sanctuary style; do not substitute Silent Hill3 chapel or Homecoming church. REMOVE ALL congregation, Rose/Cybil and other people. Compose a nearly side-on room with broad level continuous dark worn wooden floor across the bottom28 percent, foot line y=0.87. The source rear door and small steps stay behind the fighting lane. Keep the central86 percent foreground empty and clear for fighters; no pew, candle stand or column in front of this strip. Show no religious figures or new mural not visible in this reference. The square pillars and lamps are the key architecture. No final-intrusion hole, barbed wire, broken floor, bodies, gore, Alessa bed, flames except tiny ordinary candle points, no occult spell or supernatural transformation. Maintain a quiet low-contrast amber interior with readable silhouettes, detailed realistic worn wood and chalky pillars. No characters, text, logo, watermark, border, cinematic black bars, collage or UI. One empty continuous environment. Original side-on camera and widened clear floor are an authored adaptation with fidelity unverified."
+    },
+    {
+      "key": "film_church-fg-wave29",
+      "name": "film_church.fg",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/png/film_church.bg.png"
+      ],
+      "prompt": "Create ONE independent alpha-transparent wide16:9 foreground overlay,1672x941, to match this Silent Hill film2006 church NORMAL-state rear-nave background. Reference supplied only for material and palette; do not reproduce the scene. Show a very narrow partial dark aged wooden pew-back edge clipped at the extreme left canvas boundary and another at the extreme right, each confined entirely within outer4 percent of canvas. Positioned around y=55-76 percent, not across the floor. Their modest carved rounded tops and worn dark brown varnish match the small pews visible far back in reference. Keep it sparse and subtle. Central90 percent and entire bottom18 percent MUST be completely alpha transparent, as must all remaining empty space. No wall, pillar, hanging lamp, floor, candle, character, text, icon, barbed wire, black/checkered backdrop or fog wash. No border across the top or bottom. Realistic raster wood fragments only, two clipped edge slivers, one image, native actual alpha transparency."
+    },
+    {
+      "key": "film_midwich-bg-wave29",
+      "name": "film_midwich.bg",
+      "transparent_background": false,
+      "referenced_image_paths": [
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/references/film-source-034.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create ONE static opaque wide16:9 detailed background plate for a lateral 2D fighting stage, 1672x941. EXACT subject: the UPPER MIDWICH CORRIDOR in its already-transformed OTHERWORLD state from Silent Hill film2006, using this attached film frame as architectural source. The reference depicts a narrow rust-dark grated gallery with rectangular wall/window bays, exposed crossbeams above, and a circular amber glazed Brethren-symbol window at the distant end. It is NOT a game version of Midwich and NOT the bathroom, courtyard, hospital or Revelation. Reframe the same source corridor into a slightly widened near-side-on empty fighting gallery. Keep the circular amber window with its dark concentric ring and geometric metal pattern at the center rear wall, flanked by the reference's repeated heavy rectangular dark wall/window bays. Rough dark oxidized brown-red metal, stained cracked wall infill, high shadowy exposed beams, dim amber light. The room feels a school stripped to its industrial skeleton, not an ornate fantasy cathedral. Bottom28 percent is one continuous level rusty metal-grating walkway, with clear foot line at y=0.87 and no hole through the fighting lane. Existing source gallery rails may appear only at the distant/outermost corners, never in front of the central86 percent. No guardrail across the fighter plane, no post through the middle. Remove the person and every trace of her silhouette. No monsters, bugs, corpses, wires, blood spray, weapons, UI, readable text, logos or watermarks. Exclude cinematic black bars. Full frame atmosphere with enough soft light to read fighter silhouettes while preserving dark brown palette. No invented wall decorations, lockers, desk, ceiling fan or grand new architecture. Detailed realistic raster surfaces, shallow perspective. A documented source-guided new versus camera, not a claim that the widened walkway reproduces original geometry."
+    },
+    {
+      "key": "film_midwich-fg-wave29",
+      "name": "film_midwich.fg",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/stages/png/film_midwich.bg.png"
+      ],
+      "prompt": "Create ONE independent alpha-transparent wide16:9 foreground overlay,1672x941, for the supplied Silent Hill film2006 Midwich Otherworld background. The reference is only material and palette, DO NOT copy the wall, circular window, floor or whole environment. Show only extremely narrow cropped rusty rectangular iron gallery-post edges at far left and far right, each confined to outer4 percent of canvas width and ending by80 percent of height. Rust-brown chipped metal, dark grime, a few visible bolts, matching source. One static sparse edge overlay for parallax. Central90 percent and entire lower18 percent stay completely alpha-transparent with no tint, shadow, fog or black fill. No horizontal railing across scene, no top/bottom frame, no complete beam, chains, characters, bugs, wire, weapons, text or UI. Clean natural textured edges, actual transparent background not black or checkerboard. Only two tiny edge fragments, no new props."
+    }
+  ],
+  "visualQA": {
+    "kind": "native-plate-inspection-only",
+    "allEightGeneratedPlatesInspected": true,
+    "notAnInEngineTest": true,
+    "noPixelPostprocessing": true,
+    "oneToOneCertified": false
+  },
+  "sourceReviewPath": "docs/production/vague29/stages/source-review.json"
+}

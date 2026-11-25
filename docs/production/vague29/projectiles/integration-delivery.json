@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "wave": 29,
+  "effects": [
+    {
+      "id": "sh1_floatstinger_acid_cloud",
+      "fighterId": "sh1_floatstinger_016",
+      "source": "sh1",
+      "slots": [
+        "neutralSpecial",
+        "airSpecial",
+        "super",
+        "desperation"
+      ],
+      "referenceIds": [
+        "CL_SH1_BOSSES",
+        "CL_SH1_CREATURES"
+      ],
+      "presentation": {
+        "heightInRadii": 3,
+        "anchor": "center",
+        "composite": "source-over",
+        "facing": 1
+      },
+      "notes": [
+        "Original Silent Hill Floatstinger gameplay repost shows a diffuse olive-green/brown mottled acid emission; the caption is not source evidence for precise chemistry.",
+        "Reference is a public 498x370 gameplay GIF with a caption, not an original-resolution capture or certified platform master.",
+        "Broad palette and cloudy material observed; isolated side-view contour, texture, scale and direction are versus presentation choices.",
+        "One static PNG reused only by the existing Floatstinger projectile slots; no new move, trajectory, timing, phase count or animation inferred.",
+        "Source evidence, exact prompts and native output receipts: docs/production/vague29/projectiles/."
+      ],
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "frame": {
+        "path": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+        "sha256": "9d0dee3a72ce64b1e06d39acd8298fd832f81603e934bd9d9887064bf525fd83",
+        "bytes": 1517372,
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          135,
+          225,
+          1399,
+          798
+        ]
+      }
+    },
+    {
+      "id": "homecoming_asphyxia_toxic_plume",
+      "fighterId": "homecoming_asphyxia_096",
+      "source": "homecoming",
+      "slots": [
+        "neutralSpecial",
+        "super",
+        "desperation"
+      ],
+      "referenceIds": [
+        "EXT05",
+        "EXT06"
+      ],
+      "presentation": {
+        "heightInRadii": 3,
+        "anchor": "center",
+        "composite": "source-over",
+        "facing": 1
+      },
+      "notes": [
+        "Silent Hill Homecoming Asphyxia gameplay previews at approximately 03:15 and 03:50 show a dark charcoal/brown irregular mouth emission.",
+        "Reference is public native 320x180 YouTube storyboard imagery sampled every five seconds; exact RGB palette, fine contour and original texture are not certified.",
+        "The generated smoke is a detailed static interpretation of the visible dark effect; side-view orientation, full plume volume and scale are versus presentation choices.",
+        "One static PNG reused only by the existing Asphyxia projectile slots; no poison gameplay, new move, timing or animation added.",
+        "Source evidence, exact prompts and native output receipts: docs/production/vague29/projectiles/."
+      ],
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "frame": {
+        "path": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+        "sha256": "fa3fd7e4a76aa79b7139a6239c9daf2330d40ca9da9d458fd2e0b98d33ed96cf",
+        "bytes": 1237462,
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          77,
+          293,
+          1466,
+          751
+        ]
+      }
+    },
+    {
+      "id": "ascension_immolator_fire_jet",
+      "fighterId": "ascension_the_immolator_182",
+      "source": "ascension",
+      "slots": [
+        "neutralSpecial",
+        "super",
+        "desperation"
+      ],
+      "referenceIds": [
+        "EXT58",
+        "EXT57"
+      ],
+      "presentation": {
+        "heightInRadii": 3,
+        "anchor": "center",
+        "composite": "screen",
+        "facing": 1
+      },
+      "notes": [
+        "Official Genvid Entertainment UNBLINKING scene, airdate 2024-01-24 scene 2, shows the Immolator fire emission; previews near 01:46 and 01:48 support a yellow/orange irregular flame stream with brown-orange smoke.",
+        "Reference is public native 320x180 YouTube storyboard imagery sampled every two seconds; no full-resolution frame or exact original texture certified.",
+        "Horizontal isolated flame volume, detailed wisps, placement and scale are versus presentation choices; the source scene jet is not newly implemented as a continuous beam.",
+        "One static PNG reused only by the existing Immolator projectile slots; no new power, trajectory, timing or animation added.",
+        "Source evidence, exact prompts and native output receipts: docs/production/vague29/projectiles/."
+      ],
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "frame": {
+        "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+        "sha256": "a05b1938f04cae8fbe24969e0c69501501febe16b4a25ba78b29993a2f142b88",
+        "bytes": 1168665,
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          153,
+          349,
+          1387,
+          686
+        ]
+      }
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "sha256": "9d0dee3a72ce64b1e06d39acd8298fd832f81603e934bd9d9887064bf525fd83",
+      "bytes": 1517372,
+      "width": 1536,
+      "height": 1024,
+      "framingBounds": [
+        135,
+        225,
+        1399,
+        798
+      ],
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "nativeSource": "/workspace/scratch/f1e7a4940467/generated_images/exec-f09dfb1d-f716-473e-ba59-495f78f8e7c4.png",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "sha256": "fa3fd7e4a76aa79b7139a6239c9daf2330d40ca9da9d458fd2e0b98d33ed96cf",
+      "bytes": 1237462,
+      "width": 1536,
+      "height": 1024,
+      "framingBounds": [
+        77,
+        293,
+        1466,
+        751
+      ],
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "nativeSource": "/workspace/scratch/f1e7a4940467/generated_images/exec-2785abeb-5ec2-4277-b471-abb7ea113230.png",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "sha256": "a05b1938f04cae8fbe24969e0c69501501febe16b4a25ba78b29993a2f142b88",
+      "bytes": 1168665,
+      "width": 1536,
+      "height": 1024,
+      "framingBounds": [
+        153,
+        349,
+        1387,
+        686
+      ],
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "nativeSource": "/workspace/scratch/f1e7a4940467/generated_images/exec-4d97468f-41a9-4394-a9e6-26203187767e.png",
+      "pixelsModified": false
+    }
+  ],
+  "notes": [
+    "Three independent static native PNG effects, ten existing move-slot routes. No runtime manifest or gameplay file changed by this delivery script.",
+    "Candidate fidelity remains unverified. Source precision and final-image interpretation limits are documented in research.json and README.md.",
+    "Twinfeeler and Origins Straight-Jacket were investigated but excluded because the inspected references did not expose a sufficiently clear emission.",
+    "Imagegen output files copied byte-for-byte. Source crops were made only to isolate native storyboard preview frames; no generated output was retouched, resized, redrawn or assembled.",
+    "Independent runtime visual QA is required after root integration. These receipts cover file integrity, static alpha, metadata and compatible registry routes."
+  ]
+}

@@ -5507,5 +5507,343 @@ export const STAGE_BITMAPS = {
       "No Eric, Tina, Emilie, Tuberculosis, dead creature, cone, rooftop hole, collapse, orange transition or new weather/hazard event is embedded in the art.",
       "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
     ]
+  },
+  "arcade_hospital": {
+    "stageId": "arcade_hospital",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "arcade-brookhaven-normal-corridor",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT15"
+    ],
+    "layers": [
+      {
+        "id": "bg-normal-corridor",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+            "sha256": "2409645c1f049ec526510e8e509b6a72d1537c02707ea9804fb9f7ebddac2c8c",
+            "bytes": 2503138,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-door-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+            "sha256": "c002d07614874ddf839a232d4c73d7100b8caf142c5041092f3f9db814b7c1ad",
+            "bytes": 409647,
+            "width": 1671,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Original 2007 Arcade hospital screenshots sh_arcade_04.jpg and sh_arcade_19.jpg establish the normal corridor: worn gray-cream plaster, dark lower wall panels, wooden door trim, green-gray doorways and mottled square floor tiles.",
+      "The lateral wall span, two door openings, closed door, wall vent, ceiling light and continuous widened fighting lane are authored extensions. Room dimensions, exact doorway count, lighting placement and tile geometry are not measured from the original game.",
+      "The normal corridor remains separate from the orange Otherworld fan room. No nurses, actors, weapons, UI, hazards or automatic transformations are baked into either plane.",
+      "Native background is 1672 by 941 and native foreground is 1671 by 941; each uses its actual dimensions with cover fit. No resizing, recoloring, crop or alpha cleanup was applied. Trace alpha 1 pixels in the clear foreground center are preserved.",
+      "One opaque background and one independent transparent foreground; static candidates, not an animation or a 1:1 certification."
+    ]
+  },
+  "book_light": {
+    "stageId": "book_light",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "bom-light-zone8-window-room",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT21"
+    ],
+    "layers": [
+      {
+        "id": "bg-light-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+            "sha256": "87045d14aba8b9d1ba01eb983cfb85ad4ece2aab6e282fb3af4ce0c87a4cbfe7",
+            "bytes": 2775424,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+            "sha256": "857bd9e0632c5246653b699c0b4c1f94c6aa0bccc70646f8bfa4c2ef144fad9d",
+            "bytes": 224290,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Gameplay sheets establish dark ochre/pale aged stone, rectangular paneling, narrow white windows and rose-brown square floor slabs. The screenshot grids are source evidence only, not delivered artwork.",
+      "The lateral camera, widened continuous floor, regularized window count, wall spacing and tiny foreground stone trims are authored versus adaptations. No exact procedural room seed, dimensions or hidden geometry is certified.",
+      "No other elemental zone, new rune, character, enemy, attack, interface or collectible is painted into this room. The small rear stone slab remains behind the fighting line.",
+      "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes.",
+      "Ceiling support for contextual finishers is not established by these references; preserve the previous ineligibility rather than infer a usable support from the painted interior."
+    ]
+  },
+  "book_steel": {
+    "stageId": "book_steel",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "bom-steel-zone19-gear-room",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT21"
+    ],
+    "layers": [
+      {
+        "id": "bg-steel-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+            "sha256": "2b13c6afe6538ebeeefbfb4bb26cf7cf5ce4721f2a6247a9de3dfbd0948863b9",
+            "bytes": 2890608,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+            "sha256": "10d39edce2a8460d4d41c42d09ca83369c7517b9fc19bab292e3f7e942112c84",
+            "bytes": 219189,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Gameplay sheets establish green-gray industrial rooms, bright rectangular wall lights and large floor-disc motifs. Miguel Rico source renders corroborate the tread-plate double door and toothed three-spoke disc.",
+      "The camera, wall-panel arrangement, door placement, gear diameter, lamp spacing and continuous clear floor are authored adaptations of observed materials and motifs; source topology and procedural room layout remain unverified.",
+      "The floor motif is inert art, not a moving trap or new machine. No extra rune, pipe network, character, weapon or UI is introduced.",
+      "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes.",
+      "Ceiling support for contextual finishers is not established by these references; preserve the previous ineligibility rather than infer a usable support from the painted interior."
+    ]
+  },
+  "film_midwich": {
+    "stageId": "film_midwich",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "film2006-midwich-otherworld-upper-gallery",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT49"
+    ],
+    "layers": [
+      {
+        "id": "bg-otherworld-gallery",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+            "sha256": "7ca015c73e2d2e9dfc9669cbc450aa2fac279d4f25724ac5b42f3a3f77871d5b",
+            "bytes": 2185175,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+            "sha256": "2a676412e457f67268b2965fdd8b6d406994e433e41e513df34717db657cbe59",
+            "bytes": 219196,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The actual film frame shows Rose in the transformed upper gallery, the circular amber glazed geometric window, dark rectangular bays, overhead beams and rusty gallery metal. The bathroom, courtyard and game versions of Midwich are excluded.",
+      "The foreground walkway is widened and its near railing omitted to leave a clear versus plane; the source corridor depth and exact width are not reconstructed 1:1.",
+      "The window motif, wall symmetry and beam repetition are interpreted at the new camera. No person, creature, gore, new chain or collapsing floor is baked into the image.",
+      "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes."
+    ]
+  },
+  "film_church": {
+    "stageId": "film_church",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "film2006-church-rear-nave-before-intrusion",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT49"
+    ],
+    "layers": [
+      {
+        "id": "bg-protected-rear-nave",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+            "sha256": "04be564b44c6dd1a6da6cd32531c946b5e695b97f4895a11f138101218e86c77",
+            "bytes": 1944865,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+            "sha256": "5a7bfb3b61114f27b0e6bffa357b76d94bc8e16567a94b140e01b75ac7ed56ec",
+            "bytes": 84961,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The source film frame shows the congregation facing the rear entrance. Square pale columns, brown timber paneling, raised rear doors, conical ring lamps and small candles are retained while all people are removed.",
+      "The camera is lowered/regularized for versus, the clear floor broadened and pews moved to the rear outer margins. Exact pew count, pillar spacing, door proportions and illumination remain unverified.",
+      "Fixed-normal pre-intrusion phase is preserved: no pit, barbed wire, Alessa bed, bodies, blood, 2012 sanctuary or game-chapel imagery. No new hazard or transformation is implemented.",
+      "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes."
+    ]
   }
 };

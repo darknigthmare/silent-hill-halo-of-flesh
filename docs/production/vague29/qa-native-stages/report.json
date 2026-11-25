@@ -1,0 +1,2293 @@
+{
+  "schema": 1,
+  "label": "stage-pass28-native-final",
+  "generatedAt": "2026-11-25T08:16:04.554Z",
+  "root": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh",
+  "stageIds": [
+    "book_light",
+    "book_steel",
+    "film_midwich",
+    "film_church"
+  ],
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "All selected stage IDs resolve exactly",
+      "passed": true
+    },
+    {
+      "name": "Existing test fighters retain combat eligibility",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/book_light.bg-light-room.87045d14aba8.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/book_light.bg-light-room.87045d14aba8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/book_light.near-edges.857bd9e0632c.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/book_light.near-edges.857bd9e0632c.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/book_steel.near-edges.10d39edce2a8.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/book_steel.near-edges.10d39edce2a8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/film_midwich.near-edges.2a676412e457.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/film_midwich.near-edges.2a676412e457.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+      "passed": true
+    },
+    {
+      "name": "book_light: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "book_light: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "book_light: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "book_light: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "book_light: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "book_light: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "book_light: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "book_light: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "book_light: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "book_light: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "book_light: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "book_light: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "book_light: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "book_light: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "book_light: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "book_light: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "book_light: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "book_light: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "book_light: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "book_light: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "book_light: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "book_light: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "book_light: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "book_light: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "book_light: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "book_steel: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "book_steel: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "book_steel: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "book_steel: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "book_steel: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "book_steel: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "book_steel: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "book_steel: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "book_steel: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "book_steel: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "book_steel: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "book_steel: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "book_steel: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "book_steel: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "book_steel: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "book_steel: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "book_steel: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "book_steel: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "book_steel: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "book_steel: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "book_steel: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "book_steel: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "book_steel: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "book_steel: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "book_steel: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "film_midwich: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "film_midwich: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "film_midwich: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "film_midwich: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "film_midwich: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "film_midwich: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "film_midwich: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "film_church: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "film_church: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "film_church: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "film_church: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "film_church: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "film_church: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "film_church: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "film_church: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "film_church: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "film_church: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "film_church: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "film_church: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "film_church: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "film_church: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "film_church: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "film_church: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "film_church: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "film_church: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "film_church: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "film_church: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "film_church: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "film_church: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "film_church: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "film_church: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "film_church: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/book_light.bg-light-room.87045d14aba8.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/book_light.near-edges.857bd9e0632c.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/book_steel.near-edges.10d39edce2a8.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/film_midwich.near-edges.2a676412e457.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+      "bytes": 1182614,
+      "width": 1536,
+      "height": 1024,
+      "rgbaSha256": "0c4478dcf379d0ee73c21fa9a753a15f96ffec1d36fcb4541e7b1fdb8191dd80"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+      "bytes": 1697023,
+      "width": 1024,
+      "height": 1536,
+      "rgbaSha256": "3a1362834f7de8adb70fab12dbecda3baf65eba0e58d5f6fdcc012bf0c43f3b2"
+    },
+    {
+      "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+      "sha256": "87045d14aba8b9d1ba01eb983cfb85ad4ece2aab6e282fb3af4ce0c87a4cbfe7",
+      "bytes": 2775424,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "ab8a84532d7903053c15d40a0fa1704935b91b63373ede7c3945eb9ca3554fc9"
+    },
+    {
+      "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+      "sha256": "857bd9e0632c5246653b699c0b4c1f94c6aa0bccc70646f8bfa4c2ef144fad9d",
+      "bytes": 224290,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "c17445f6e16741d352b3612d032778ca8ac8c19e9d1c6cf824ccb9f81426a686"
+    },
+    {
+      "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+      "sha256": "2b13c6afe6538ebeeefbfb4bb26cf7cf5ce4721f2a6247a9de3dfbd0948863b9",
+      "bytes": 2890608,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "c79a94c1848f5ed2a4240cca63e9d34182655ee1a08187b163829bdd6c871f42"
+    },
+    {
+      "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+      "sha256": "10d39edce2a8460d4d41c42d09ca83369c7517b9fc19bab292e3f7e942112c84",
+      "bytes": 219189,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "626fc347bc5672ab3524453991c0b52fa8dcc6c3817211d8b0f99f5ee96149da"
+    },
+    {
+      "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+      "sha256": "7ca015c73e2d2e9dfc9669cbc450aa2fac279d4f25724ac5b42f3a3f77871d5b",
+      "bytes": 2185175,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "17b8a396189b49c7e13e5b204f6a31e9c4f3dd0c19baf5b151d9090b5710a6e7"
+    },
+    {
+      "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+      "sha256": "2a676412e457f67268b2965fdd8b6d406994e433e41e513df34717db657cbe59",
+      "bytes": 219196,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "fe791cb0c164e8bc9031704a6144ff3078f27dc9845f005dc255ecdee5efcda2"
+    },
+    {
+      "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+      "sha256": "04be564b44c6dd1a6da6cd32531c946b5e695b97f4895a11f138101218e86c77",
+      "bytes": 1944865,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "1bb2336225a49588ba4410d21a10e23c254c68f306d611807c88f6f125481e54"
+    },
+    {
+      "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+      "sha256": "5a7bfb3b61114f27b0e6bffa357b76d94bc8e16567a94b140e01b75ac7ed56ec",
+      "bytes": 84961,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "9c9b36394362dc48c519b7c49a9af4836f394d6347c989739858af84ad82c022"
+    }
+  ],
+  "cases": [
+    {
+      "stageId": "book_light",
+      "source": "bom",
+      "scene": "bom-light-zone8-window-room",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "book_steel",
+      "source": "bom",
+      "scene": "bom-steel-zone19-gear-room",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "film_midwich",
+      "source": "film",
+      "scene": "film2006-midwich-otherworld-upper-gallery",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "film_church",
+      "source": "film",
+      "scene": "film2006-church-rear-nave-before-intrusion",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    }
+  ],
+  "captures": [
+    {
+      "file": "book_light.png",
+      "stageId": "book_light",
+      "sha256": "7d3bda9b4b35378d8e6e90d60f25bd791944d8de3471cc1200cb3dd47dc6c72c",
+      "bytes": 1539007,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "book_steel.png",
+      "stageId": "book_steel",
+      "sha256": "f27ff027bc7add43c68e6da6cfd4476b09dc4e0db84e73b48c9a5ad6eb61c4ab",
+      "bytes": 1579350,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "film_midwich.png",
+      "stageId": "film_midwich",
+      "sha256": "7e962ab7cf572b002df6888de898cfebeac7e36fcf01de6332425c3585cf0967",
+      "bytes": 1268675,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "film_church.png",
+      "stageId": "film_church",
+      "sha256": "7919b1e8798bafa9e6977cda0bc5e1a1a0d9d00b0586d0e8a4f009372e9ef11e",
+      "bytes": 1083190,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd",
+      "after": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd"
+    },
+    "src/sprite-manifest.js": {
+      "before": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92",
+      "after": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "6074859699efa3f52d8f0373005047f5cb8270bae8ab49a2cd0020b77a73ae95",
+      "after": "6074859699efa3f52d8f0373005047f5cb8270bae8ab49a2cd0020b77a73ae95"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28",
+      "after": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "method": {
+    "renderer": "Actual FightEngine.update/render and the original native Canvas drawImage. Each stage is selected through its normal stage descriptor.",
+    "inputs": "Only registered InputState keydown/keyup callbacks receive synthetic native events. No actor position, facing, health, phase, presentation or clock is assigned.",
+    "decoder": "PNG encoding normalized in memory for native decoding; every decoded RGBA byte is compared before/after.",
+    "scope": "Existing fighters exercise initial stage composition, movement in both directions, release to idle, exact planes, live parallax and cache admission."
+  },
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, actual browser keyboard delivery or service workers.",
+    "No new fighter pose, attack, contact, guard, finisher, stage hazard, original timing or 1:1 artistic fidelity is certified.",
+    "Two static stage planes and their runtime parallax do not constitute a new source animation."
+  ],
+  "memoryPolicy": {
+    "nodeExecArgv": [
+      "--expose-gc"
+    ],
+    "explicitGcAfterSharpDecodeBeforeNativePreflight": true,
+    "engineLogicChanged": false
+  },
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "f5e0e321f9d5211ae5f5c3b23ef4bcb1edf9a7d78fb5ab5c868619526781c03e",
+  "version": "0.9.6",
+  "runtimeCacheBudgets": {
+    "combatSpriteBytes": 75497472,
+    "stageBitmapBytes": 67108864
+  },
+  "predecessorEvidence": "docs/production/vague28/stages/qa-native/report.json",
+  "testedSpriteEntryHashes": {
+    "bom_pyramid_head_129": "3ec8112c0efe5bc73ab7638fa37288f731fd4bcb68d58c40c61fa0e0ea7febde",
+    "bom_butcher_123": "0e5bf88a83144ea003cc77b282f4b136c7c6351c03e7da55dbf5b8807220ddd3"
+  },
+  "testedStageEntryHashes": {
+    "book_light": "a2963b8de47c6f9a914fac393b5ffe174ea762063f1ecaefba3f0f5c36aa454c",
+    "book_steel": "af3cb8df8d6da231972dca22014fae8a28b06568d6c3907b71443348cd8cae00",
+    "film_midwich": "8fbee283b9140b04a1ae87feb78786c747595ec33f31890172db448698c4a219",
+    "film_church": "644a6368467c2c015cea60486d06b16280e2dd87a877a13a2a1bd282172d0f2f"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "passed": true,
+  "completedAt": "2026-11-25T08:16:09.526Z"
+}

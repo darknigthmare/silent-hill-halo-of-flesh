@@ -1,0 +1,9 @@
+{"diagnostic":"harness-start","rssBytes":40828928,"heapUsedBytes":8884520,"externalBytes":4019740,"arrayBufferBytes":146615,"execArgv":["--expose-gc"]}
+file:///workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague28/stages/qa-native-final.mjs:20
+try{await access(join(out,'report.json'));throw Error('Existing evidence is preserved. Choose a fresh --out directory.');}catch(error){if(error.code!=='ENOENT')throw error;}
+                                                ^
+
+Error: Existing evidence is preserved. Choose a fresh --out directory.
+    at file:///workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague28/stages/qa-native-final.mjs:20:49
+
+Node.js v24.22.3
