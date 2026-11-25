@@ -7,13 +7,37 @@ import {storyArtwork} from '../../../../src/story-art.js';
 import {storyPlan} from '../../../../src/tournament.js';
 const port=4293,base='http://127.0.0.1:'+port,out='tests/http-wave30-story',id='sh1_air_screamer_001';
 const art=storyArtwork(id),digest=bytes=>createHash('sha256').update(bytes).digest('hex');
-const report={schemaVersion:1,wave:30,passed:false,checks:[],captures:[],errors:[],
+const report={schemaVersion:1,wave:30,passed:false,checks:[],captures:[],errors:[],layoutSnapshots:[],
  method:'Actual built HTTP app: ordinary story selection, first-chapter launch, return to selection, owner switch through roster controls and explicit checkpoint resume. Ending rendered separately through the production story helper and setChronicleImage; no completed run injected into the game.',
  limits:['The entire four-fight story is not played to completion.','Ending component checks do not establish a played campaign result.','Headless Chromium; service workers blocked, offline update not exercised.','Static original-compatible compositions, no1:1 certification.']};
 const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(detail===undefined?{}:{detail})});if(!passed)throw Error(name);};
-let server,browser;
+let server,browser,page;
 await mkdir(out,{recursive:true});
 async function capture(page,selector,file,scope){const bytes=await page.locator(selector).screenshot();await writeFile(out+'/'+file,bytes);report.captures.push({file,scope,bytes:bytes.length,sha256:digest(bytes)});}
+async function captureViewport(page,file,scope){const bytes=await page.screenshot({fullPage:false,timeout:10000});await writeFile(out+'/'+file,bytes);report.captures.push({file,scope,bytes:bytes.length,sha256:digest(bytes)});}
+async function observeSelectionLayout(page,label){
+ const selectors=['#selectScreen','#modePanel','.story-preview','#runCheckpoint','.select-body','.center','.filters','.roster-wrap','#roster','.fighter-card[data-id="bom_air_screamer_121"]','.pager','.setup'];
+ const snapshot=await page.evaluate(({selectors,label})=>{
+   const describe=element=>element?{tag:element.tagName,id:element.id,className:typeof element.className==='string'?element.className:'',fighterId:element.closest('.fighter-card')?.dataset.id||null}:null;
+   const elements=selectors.map(selector=>{
+     const element=document.querySelector(selector);if(!element)return {selector,missing:true};
+     const rect=element.getBoundingClientRect(),style=getComputedStyle(element);
+     let left=Math.max(0,rect.left),top=Math.max(0,rect.top),right=Math.min(innerWidth,rect.right),bottom=Math.min(innerHeight,rect.bottom);
+     for(let ancestor=element.parentElement;ancestor;ancestor=ancestor.parentElement){
+       const bounds=ancestor.getBoundingClientRect(),ancestorStyle=getComputedStyle(ancestor);
+       if(/^(auto|scroll|hidden|clip)$/.test(ancestorStyle.overflowX)){left=Math.max(left,bounds.left+ancestor.clientLeft);right=Math.min(right,bounds.left+ancestor.clientLeft+ancestor.clientWidth);}
+       if(/^(auto|scroll|hidden|clip)$/.test(ancestorStyle.overflowY)){top=Math.max(top,bounds.top+ancestor.clientTop);bottom=Math.min(bottom,bounds.top+ancestor.clientTop+ancestor.clientHeight);}
+     }
+     const visible=right>left&&bottom>top?{left,top,right,bottom,width:right-left,height:bottom-top}:null;
+     return {selector,rect:{x:rect.x,y:rect.y,width:rect.width,height:rect.height},clientHeight:element.clientHeight,scrollHeight:element.scrollHeight,clientWidth:element.clientWidth,scrollWidth:element.scrollWidth,scrollTop:element.scrollTop,scrollLeft:element.scrollLeft,
+       style:{display:style.display,overflowX:style.overflowX,overflowY:style.overflowY,minHeight:style.minHeight,flex:style.flex,flexShrink:style.flexShrink},
+       hitAtCenter:describe(document.elementFromPoint(rect.x+rect.width/2,rect.y+rect.height/2)),visibleIntersection:visible,
+       hitAtVisibleCenter:visible?describe(document.elementFromPoint((left+right)/2,(top+bottom)/2)):null};
+   });
+   return {label,viewport:{width:innerWidth,height:innerHeight,devicePixelRatio},pageScroll:{x:scrollX,y:scrollY},selectedPlayerId:window.__HALO_QA__?.selection?.p1?.id||null,elements};
+ },{selectors,label});
+ report.layoutSnapshots.push(snapshot);
+}
 try{
  let occupied=false;try{await fetch(base,{signal:AbortSignal.timeout(500)});occupied=true;}catch{}
  check('Dedicated HTTP port unused',!occupied);
@@ -23,7 +47,7 @@ try{
  browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
  report.browser=browser.version();
  const context=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1100}});
- const page=await context.newPage();page.on('pageerror',error=>report.errors.push(String(error)));
+ page=await context.newPage();page.on('pageerror',error=>report.errors.push(String(error)));
  const responses=[],pending=[];
  page.on('response',response=>{const path=new URL(response.url()).pathname;const frame=[art.intro,art.ending].find(f=>'/'+f.path===path);if(frame)pending.push(response.body().then(bytes=>responses.push({path,status:response.status(),bytes:bytes.length,sha256:digest(bytes)})));});
  await page.goto(base+'/modules/unified-versus.html?qa=1&mode=story&p1='+id,{waitUntil:'domcontentloaded'});
@@ -49,7 +73,13 @@ try{
  await page.locator('#slotP1').click();
  await page.locator('#sourceFilter').selectOption('bom');
  await page.locator('#search').fill('Air Screamer');
- await page.locator('.fighter-card[data-id="'+otherId+'"]').click();
+ const otherCard=page.locator('.fighter-card[data-id="'+otherId+'"]');
+ await observeSelectionLayout(page,'before-owner-switch-scroll');
+ await otherCard.scrollIntoViewIfNeeded();
+ await observeSelectionLayout(page,'before-owner-switch-click');
+ await captureViewport(page,'owner-switch-layout.png','actual-viewport-before-normal-owner-switch');
+ await otherCard.click();
+ await observeSelectionLayout(page,'after-owner-switch-click');
  const switched=await page.evaluate(()=>({
    playerId:window.__HALO_QA__.selection.p1.id,
    opponentId:window.__HALO_QA__.selection.p2.id,
@@ -88,5 +118,11 @@ try{
  check('Introduction fetched byte-for-byte over HTTP',responses.some(r=>r.path==='/'+art.intro.path&&r.status===200&&r.bytes===art.intro.bytes&&r.sha256===art.intro.sha256),responses);
  check('No unhandled browser errors',report.errors.length===0,report.errors);
  report.passed=true;
-}catch(error){report.failure=String(error.stack||error);process.exitCode=1;}
+}catch(error){
+ report.failure=String(error.stack||error);process.exitCode=1;
+ if(page&&!page.isClosed()){
+   try{await observeSelectionLayout(page,'failure');}catch(diagnosticError){(report.diagnosticErrors||=[]).push('layout: '+String(diagnosticError));}
+   try{await captureViewport(page,'failure-viewport.png','actual-viewport-after-failure');}catch(diagnosticError){(report.diagnosticErrors||=[]).push('capture: '+String(diagnosticError));}
+ }
+}
 finally{await browser?.close();server?.kill('SIGTERM');await writeFile(out+'/report.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({scope:'wave30-story',passed:report.passed,checks:report.checks.length,captures:report.captures.length,failure:report.failure}));}
