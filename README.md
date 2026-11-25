@@ -1,5 +1,28 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Guide général intégré à la bible — 25 novembre 2026
+
+Les **30 rubriques** du guide Combat Games v1.0 sont maintenant associées au
+contexte du jeu : manifestations, rôles hors duel, movesets, Dénouements,
+campagnes, illustrations, boss, arènes et production fixe. Les exigences sont
+reliées à **442 entrées existantes** par identifiant, sans confondre conception,
+fichier produit, admission runtime et validation.
+
+[Intégration complète](docs/COMBAT_GAMES_GUIDE_INTEGRATION.md) ·
+[Matrice et critères](docs/combat-guide/MATRICE.md) ·
+[Campagne et Dénouements](docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) ·
+[État des lieux calculé](docs/combat-guide/ETAT_DES_LIEUX.md).
+
+Les deux classeurs existants possèdent les feuilles **Guide combat** et
+**Associations guide**. Le guide source est conservé à l'identique ; les
+feuilles historiques et leurs formules sont préservées. La campagne globale
+« Le Registre des absences » et ses nouvelles scènes sont de la conception
+à implémenter. Cette passe n'ajoute ni PNG ni animation.
+
+Actualiser les liens avec `npm run bible:guide`, puis vérifier avec
+`npm run bible:check`. Les décisions sur les modules distinguent notamment
+animations différées, local existant et réseau à décider.
+
 ## Poses, gardiens et arènes — 24 novembre 2026, vague 28
 
 **12 PNG indépendants ajoutés : quatre poses d’attaque, deux effets de projectile

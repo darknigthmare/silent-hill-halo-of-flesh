@@ -202,6 +202,31 @@ class WorkbookUpdateTests(unittest.TestCase):
             UPDATE.update_workbook(plan, self.source, report_path, output, plan)
         self.assertFalse(output.exists())
 
+    def test_only_the_exact_trailing_guide_extension_is_accepted_and_preserved(self):
+        previous, report = tiny_workbook(self.source)
+        validator = UPDATE.load_validator()
+        baseline_names = ['Synthèse', *UPDATE.TABLES]
+        self.assertTrue(validator.valid_sheet_scope(baseline_names))
+        self.assertTrue(validator.valid_sheet_scope([*baseline_names, 'Guide combat', 'Associations guide']))
+        workbook = UPDATE.WorkbookEditor(self.source)
+        guide_cell = ET.fromstring(f'<x:root xmlns:x="{MAIN}">' + cell('A1', 'keep cached value', 'HYPERLINK("https://example.invalid","document")') + '</x:root>')[0]
+        guide_sheet = {'cells': {'A1': guide_cell}, 'documentary': 'preserve without recalculation'}
+        workbook.sheets['Guide combat'] = deepcopy(guide_sheet)
+        workbook.sheets['Associations guide'] = deepcopy(guide_sheet)
+        before = deepcopy([workbook.sheets[name]['documentary'] for name in ['Guide combat', 'Associations guide']])
+        UPDATE.apply_plan(workbook, deepcopy(previous), previous, report)
+        formulas = UPDATE.FormulaEvaluator(workbook).recalculate()
+        self.assertEqual(len(formulas), 4, 'Only production formulas belong to this updater')
+        self.assertEqual(before, [workbook.sheets[name]['documentary'] for name in ['Guide combat', 'Associations guide']])
+        for name in ['Guide combat', 'Associations guide']:
+            self.assertEqual(ET.tostring(workbook.sheets[name]['cells']['A1']), ET.tostring(guide_cell))
+        for extras in [('Guide combat',), ('Associations guide', 'Guide combat'), ('Unrelated',), ('Guide combat', 'Associations guide', 'Extra')]:
+            self.assertFalse(validator.valid_sheet_scope([*baseline_names, *extras]))
+            candidate = UPDATE.WorkbookEditor(self.source)
+            candidate.sheets.update({name: deepcopy(guide_sheet) for name in extras})
+            with self.subTest(extras=extras), self.assertRaisesRegex(ValueError, 'Worksheet scope/order changed'):
+                UPDATE.apply_plan(candidate, deepcopy(previous), previous, report)
+
     def test_source_append_updates_only_trailing_cells_table_ranges_and_one_count_formula(self):
         fixture, report, previous = self.actual_baseline()
         payload = (json.dumps(previous, ensure_ascii=False, indent=2) + '\n').encode()

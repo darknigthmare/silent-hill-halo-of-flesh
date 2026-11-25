@@ -1,5 +1,23 @@
 # Bible du corpus — Silent Hill
 
+## Guide de combat associé — 25 novembre 2026
+
+Le [guide général de combat est intégré au contexte de Halo of Flesh](COMBAT_GAMES_GUIDE_INTEGRATION.md).
+Ses [30 rubriques](combat-guide/MATRICE.md) sont reliées aux profils, aux commandes,
+aux Dénouements, aux lieux, aux Chroniques et aux registres d'images existants.
+Les deux classeurs reçoivent les feuilles **Guide combat** et **Associations guide**.
+Le [chapitre narratif](combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) distingue récits
+individuels, Chroniques et campagne globale originale ; les
+[fiches A–J](combat-guide/FICHES_ET_VALIDATION.md) fixent les champs et critères.
+
+L'[état des lieux calculé](combat-guide/ETAT_DES_LIEUX.md) sépare ce qui est
+catalogué, admis au combat, raccordé aux fichiers ou encore à concevoir.
+Cette association ne change pas les dates et observations de l'audit de corpus
+ci-dessous. Les sources éditoriales restent distinctes des preuves visuelles
+et des adaptations de gameplay.
+
+## Audit historique du corpus
+
 **Audit documentaire au 19 novembre 2026 — version `2026-11-19-final-66`.**
 
 Cette bible indexe **66 œuvres, éditions, programmes et supports** dans le périmètre convenu. Elle complète les **16 groupes de sources du moteur** du projet. Elle ne signifie ni 66 jeux supplémentaires, ni 66 nouveaux bestiaires à produire. Le [registre structuré](production/franchise-corpus.json), le [classeur Corpus / Stages](production/SILENT_HILL_CORPUS_BIBLE.xlsx) et le [dossier de recherche](production/vague21/corpus-audit/research.json) donnent les alias, références, liens avec le moteur et prochaines études.

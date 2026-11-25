@@ -17,6 +17,13 @@ TABLES = {'Combattants': 'fighters', 'Mouvements': 'moves', 'Finishers': 'finish
           'Présentations': 'presentations', 'Clips': 'poses', 'Arènes': 'stages',
           'Animations arènes': 'stageAnimations', 'Actions': 'tasks',
           'Gestes référencés': 'observations', 'Sources': 'sources'}
+GUIDE_SHEETS = ('Guide combat', 'Associations guide')
+
+
+def valid_sheet_scope(names):
+    """Allow the historical workbook, or its exact additive guide extension."""
+    baseline = ['Synthèse', *TABLES]
+    return names == baseline or names == [*baseline, *GUIDE_SHEETS]
 
 
 def read_json(path):
@@ -78,7 +85,7 @@ def verify(plan_path, workbook_path):
         book = ET.fromstring(z.read('xl/workbook.xml'))
         relations = {r.get('Id'): r.get('Target') for r in ET.fromstring(z.read('xl/_rels/workbook.xml.rels'))}
         sheets = book.findall('s:sheets/s:sheet', NS)
-        assert [s.get('name') for s in sheets] == ['Synthèse', *TABLES], 'Worksheet order/scope mismatch'
+        assert valid_sheet_scope([s.get('name') for s in sheets]), 'Worksheet order/scope mismatch'
 
         def value(cell):
             if cell is None:
@@ -106,6 +113,20 @@ def verify(plan_path, workbook_path):
             errors = [(name, address, value(c)) for address, c in cells.items() if c.get('t') == 'e']
             report['errors'].extend(errors)
             assert not errors, f'Cached Excel errors: {errors[:3]}'
+            if name in GUIDE_SHEETS:
+                pane = xml.find('s:sheetViews/s:sheetView/s:pane', NS)
+                assert pane is not None and pane.get('xSplit') == '2' and pane.get('ySplit') == '8', f'Guide frozen panes: {name}'
+                expected_tables = 2 if name == 'Guide combat' else 1
+                assert len(xml.findall('s:tableParts/s:tablePart', NS)) == expected_tables, f'Guide tables: {name}'
+                if name == 'Guide combat':
+                    assert [value(cells.get(f'A{i}')) for i in range(9,39)] == [f'SHCG-{i:02d}' for i in range(30)], 'Guide section coverage/order mismatch'
+                    assert value(cells.get('B4')) == 30, 'Guide section total mismatch'
+                else:
+                    ids = [value(c) for address,c in cells.items() if re.fullmatch(r'B[0-9]+', address) and int(address[1:]) >= 9]
+                    assert ids and all(isinstance(identifier, str) and identifier for identifier in ids), 'Guide associations missing IDs'
+                    assert value(cells.get('B4')) == len(ids), 'Guide association total mismatch'
+                report.setdefault('guideSheets', {})[name] = {'documentary': True, 'nativeTables': expected_tables}
+                continue
             if name == 'Synthèse':
                 formulas = [c for c in cells.values() if c.find('s:f', NS) is not None]
                 report['summaryFormulas'] = len(formulas)

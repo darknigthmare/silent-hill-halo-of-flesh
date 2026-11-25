@@ -548,6 +548,10 @@ class FormulaEvaluator:
     def recalculate(self):
         results = []
         for name, sheet in self.workbook.sheets.items():
+            # These appended documentary sheets own their own counts. Updating
+            # production cells must preserve their formulas and caches exactly.
+            if name in ('Guide combat', 'Associations guide'):
+                continue
             for address, cell in sheet['cells'].items():
                 formula = cell.findtext('s:f', None, NS)
                 if formula is not None:
@@ -559,7 +563,8 @@ class FormulaEvaluator:
 
 def apply_plan(workbook, plan, previous_plan, previous_report):
     expected_sheets = ['Synthèse', *TABLES]
-    if list(workbook.sheets) != expected_sheets or set(previous_report['sheets']) != set(TABLES):
+    with_guide = [*expected_sheets, 'Guide combat', 'Associations guide']
+    if list(workbook.sheets) not in (expected_sheets, with_guide) or set(previous_report['sheets']) != set(TABLES):
         raise ValueError('Worksheet scope/order changed')
     for name, table in TABLES.items():
         layout = previous_report['sheets'][name]
