@@ -29,8 +29,6 @@ jobs:
     if: github.head_ref == 'art/missing-assets-wave27-20261124'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
-    env:
-      HALO_PYTHON: ${{ runner.temp }}/halo-wave30-venv/bin/python
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -43,7 +41,8 @@ jobs:
       - name: Set up native PNG validation
         run: |
           python3 -m venv "$RUNNER_TEMP/halo-wave30-venv"
-          "$HALO_PYTHON" -m pip install 'Pillow==11.3.0'
+          "$RUNNER_TEMP/halo-wave30-venv/bin/python" -m pip install 'Pillow==11.3.0'
+          echo "HALO_PYTHON=$RUNNER_TEMP/halo-wave30-venv/bin/python" >> "$GITHUB_ENV"
       - name: Import and verify the three reviewed poses
         run: |
           "$HALO_PYTHON" docs/production/vague30/characters/import-reviewed.py
@@ -78,8 +77,6 @@ jobs:
     if: github.head_ref == 'art/missing-assets-wave27-20261124'
     runs-on: ubuntu-24.04
     timeout-minutes: 25
-    env:
-      HALO_PYTHON: ${{ runner.temp }}/halo-wave30-venv/bin/python
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -96,7 +93,8 @@ jobs:
       - name: Set up native PNG validation
         run: |
           python3 -m venv "$RUNNER_TEMP/halo-wave30-venv"
-          "$HALO_PYTHON" -m pip install 'Pillow==11.3.0'
+          "$RUNNER_TEMP/halo-wave30-venv/bin/python" -m pip install 'Pillow==11.3.0'
+          echo "HALO_PYTHON=$RUNNER_TEMP/halo-wave30-venv/bin/python" >> "$GITHUB_ENV"
       - name: Build reviewed artwork
         id: build
         run: |
