@@ -296,7 +296,7 @@ const LOT10_ENVIRONMENT = Object.freeze({
       "lanterns",
       "portraits"
     ],
-    "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+    "name": "SHIMIZU RESIDENCE II — SALLE À MANGER",
     "source": "shf",
     "automaticFinishers": false,
     "disableAnimations": true
@@ -380,6 +380,7 @@ const LOT10_ENVIRONMENT = Object.freeze({
 // Corrections refer to the exact ID/media. Similar names never transfer a rule.
 const ENVIRONMENT = Object.freeze({
   old_silent_hill: {weather:'snow'},
+  arcade_prison: {source:'arcade',name:'THE ARCADE — TOLUCA PRISON · OTHERWORLD',worldState:'fixed-altered'},
   church_hc: {name:'CHURCH OF THE HOLY WAY',weather:'dust'},
   prison_hc: {name:'OVERLOOK PENITENTIARY'},
   prison_meat_locker: {name:'LABYRINTH — MEAT LOCKER',weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['cells','watchtower','chains']},
@@ -591,19 +592,20 @@ const SCENE_PRESENTATION_BASE = Object.freeze({
       "alteredPhaseLabel": "RESIDENCE I · ENTRÉE",
       "terrainPresentation": {
         "name": "PLANCHER DU CORRIDOR",
-        "description": "Corridor d’entrée à plancher bois, distinct de la salle à manger tatami de ResidenceI et des étatsResidenceII/III. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        "description": "Corridor d’entrée à plancher bois de Residence I, distinct de la salle à manger tatami retenue dans Residence II et des états ultérieurs de la maison. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
       }
     }
   },
   "shimizu_residence": {
     "source": "shf",
     "policy": {
+      "sceneId": "shf-residence-ii-dining-yellowed-calendar",
       "terrainRules": false,
-      "normalPhaseLabel": "RESIDENCE I · SALLE À MANGER",
-      "alteredPhaseLabel": "RESIDENCE I · SALLE À MANGER",
+      "normalPhaseLabel": "RESIDENCE II · SALLE À MANGER",
+      "alteredPhaseLabel": "RESIDENCE II · SALLE À MANGER",
       "terrainPresentation": {
         "name": "TATAMI DE LA SALLE À MANGER",
-        "description": "Salle à manger à table ronde du calendrier jauni, voie initiale ; pas cuisine ni corridor à plancher bois. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        "description": "Salle à manger à table ronde du calendrier jauni, Residence II, parcours Ending 1 après le souvenir ; pas cuisine ni corridor d’entrée de Residence I. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
       }
     }
   },
@@ -697,7 +699,19 @@ const SCENE_PRESENTATION_BASE = Object.freeze({
   lakeside_sh3:{source:'sh3',policy:{normalPhaseLabel:'AVANT LA TRANSITION DU CARROUSEL',terrainRules:false,terrainPresentation:{name:'PLATEAU DU HAPPY CAROUSEL',description:'Happy Carousel avant sa transition ; chevaux de fond fixés à leurs mâts. Aucun poison ou obstacle ajouté ; humidité, physique et caméra non certifiées 1:1.'}}},
 });
 
-const SCENE_PRESENTATION = Object.freeze({...SCENE_PRESENTATION_BASE,...LOT12_SCENE_PRESENTATION});
+const SCENE_PRESENTATION = Object.freeze({
+  ...SCENE_PRESENTATION_BASE,...LOT12_SCENE_PRESENTATION,
+  arcade_prison: {source:'arcade',policy:{
+    sceneId:'toluca-prison-otherworld-cell-corridor',
+    normalPhaseLabel:'STAGE 2 AREA 2 · OTHERWORLD',
+    alteredPhaseLabel:'STAGE 2 AREA 2 · OTHERWORLD'
+  }},
+  arcade_toluca_lake: {source:'arcade',policy:{
+    sceneId:'arcade-stage3-area1-lakeside-quay',
+    normalPhaseLabel:'STAGE 3 AREA 1 · QUAI DU LAC',
+    alteredPhaseLabel:'STAGE 3 AREA 1 · QUAI DU LAC'
+  }}
+});
 
 const LOT9_REFERENCE_TRACKS = Object.freeze({
   blueStairRailReply:{"name":"Rampe fixée au-dessus de l’escalier noyé","layer":"background","replaces":[],"stageId":"blue_creek","source":"sh2","locationScope":"Palier nord Blue Creek, duel SH2 original avant drainage","limits":"Rampe et eau de la vue originale ; vibration et goutte proposées pour le versus. Aucun drainage, départ de Pyramid Head, chute ou niveau mesuré."},
@@ -771,7 +785,7 @@ const LOT10_REFERENCE_TRACKS = Object.freeze({
     "replaces": [],
     "stageId": "shimizu_residence",
     "source": "shf",
-    "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+    "locationScope": "Shimizu Residence II, salle à manger du calendrier jauni, parcours Ending 1 après le souvenir, SHf2025",
     "limits": "Table ronde basse et vaisselle observées ; léger frémissement versus. Aucun objet de cuisine, calendrier lisible, boss ou confrontation importé."
   },
   "schoolStaffChalkDust": {
@@ -880,7 +894,7 @@ const LOT10_REFERENCE_TRACKS = Object.freeze({
     "replaces": [],
     "stageId": "shimizu_residence",
     "source": "shf",
-    "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+    "locationScope": "Shimizu Residence II, salle à manger du calendrier jauni, parcours Ending 1 après le souvenir, SHf2025",
     "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les deux reflets de vaisselle se rapprochent des rebords immobiles. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
     "trigger": "match-phase",
     "matchRecipe": {

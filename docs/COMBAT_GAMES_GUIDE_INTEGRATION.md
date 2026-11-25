@@ -2,7 +2,7 @@
 
 **Révision du 25 novembre 2026.** Référence commune :
 [Combat Games, version 1.0](combat-guide/source/Combat_Games_Guide_General_v1.0.txt).
-État du moteur inspecté : `ce3c73f8e1fcaae515053dbca9458a3f5d9c0219`.
+Référence de comparaison : `9c426d7e230eaec464203acb9b43b63a420acf30`. Inventaire courant régénéré pour la vague30.
 
 Ce chapitre applique les **30 rubriques** du guide au jeu existant. Il complète
 le [GDD](GDD_FR.md), la [bible du corpus](BIBLE_CORPUS_SILENT_HILL.md) et les deux
@@ -15,7 +15,7 @@ restrictions de rôle du moteur restent la base de chaque association.
 | --- | --- |
 | [Matrice des 30 rubriques](combat-guide/MATRICE.md) | Adaptation Silent Hill, état constaté, fichiers concernés, prochaine action et critères de validation. |
 | [Exigences structurées](combat-guide/requirements.json) | Source des 30 rubriques et de dix décisions sur les modules ; alimente les feuilles « Guide combat ». |
-| [Associations structurées](combat-guide/associations.json) | 442 entrées reliées : profils, lieux, Chroniques, œuvres et projectiles ; actions et Dénouements accessibles sous leur propriétaire exact. |
+| [Associations structurées](combat-guide/associations.json) | 445 entrées reliées : profils, lieux, Chroniques, œuvres et projectiles ; actions et Dénouements accessibles sous leur propriétaire exact. |
 | [Campagne, récits et Dénouements](combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) | Conception narrative distincte, exemples de récits, scènes fixes, compatibilité des conclusions et écarts de lieux. |
 | [Fiches et validation](combat-guide/FICHES_ET_VALIDATION.md) | Dix modèles A–J raccordés aux schémas existants ; définitions de terminé. |
 | [État des lieux calculé](combat-guide/ETAT_DES_LIEUX.md) | Dénominateurs, couverture observée, limites et prochaines corrections ; données dans [status.json](combat-guide/status.json). |
@@ -23,9 +23,13 @@ restrictions de rôle du moteur restent la base de chaque association.
 | [Classeur de production](production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) | Feuilles historiques conservées, plus Guide combat et Associations guide. |
 | [Classeur Corpus / Stages](production/SILENT_HILL_CORPUS_BIBLE.xlsx) | Même correspondance du guide auprès du corpus éditorial et des lieux. |
 
-Les nouvelles feuilles utilisent les mêmes JSON. Les chiffres des anciennes
-feuilles et des anciens rapports restent datés de leur audit : cette intégration
-ne transforme pas une preuve de novembre antérieure en recette du présent commit.
+Les feuilles Guide combat et Associations guide des deux classeurs restent à leur état validé du commit9c426d7. Le runtime d’édition Artifact Tool est indisponible après la coupure de l’environnement ; leur rafraîchissement pour la vague30 est différé. Les JSON et Markdown liés ci-dessus portent l’inventaire courant. Les feuilles historiques, formules et annotations sont conservées.
+
+### Production fixe — vague30
+
+Quatorze PNG candidats sont ajoutés : trois poses de profils existants, trois effets, six plans pour trois arènes et deux images du récit individuel d’Air Screamer. La couverture cible de cette passe est93arènes/123 et31commandes projectile/86, vérifiée par [l’inventaire calculé](production/vague30/inventory.json). Aucun nouveau cycle animé.
+
+Les références de Shimizu sont corrigées vers Residence II pour la salle à manger, en conservant le corridor de Residence I séparé. Le corridor de prison The Arcade est fixé dans son état Otherworld ; son plafond peint ne crée pas de plafond de combat. Les [sources, contrôles, limites et états de publication](production/vague30/README.md) accompagnent les nouveaux fichiers.
 
 La régénération se fait avec `npm run bible:guide`, puis le contrôle avec
 `npm run bible:check`. Le générateur vérifie les IDs, les propriétaires, les
@@ -254,9 +258,9 @@ nouvelles feuilles ajoutent la correspondance, pas un statut de réussite
 globale. Une image de sélection ne remplit pas la case sprite de combat ;
 un montage de Dénouement écrit ne remplit pas la case animation finale.
 
-Les comptages sont publiés par unité. Le total de 442 correspond uniquement
+Les comptages sont publiés par unité. Le total de 445 correspond uniquement
 aux **entrées d'association**. Les 4 600 emplacements d'actions sont reliés sous
-leurs 230 propriétaires ; les 48 images de Chroniques sont des chemins
+leurs 230 propriétaires ; les 48 images de Chroniques et les deux images individuelles d’Air Screamer sont des chemins
 référencés ; aucune addition de ces unités ne représente une complétude du jeu.
 
 ## 9. Ordre de travail résultant
@@ -278,7 +282,7 @@ référencés ; aucune addition de ces unités ne représente une complétude du
 Utiliser le guide commun avec cette intégration, le GDD et les politiques de
 référence du dépôt. Examiner les données, registres et modes réels avant de
 compter un manque. Conserver les identifiants, les éditions, les restrictions
-des manifestations et la phase de sprites fixes. Écrire les campagnes,+rivalités, Dénouements et illustrations avec leur statut d'adaptation ou de
+des manifestations et la phase de sprites fixes. Écrire les campagnes, rivalités, Dénouements et illustrations avec leur statut d'adaptation ou de
 création originale. Les créatures silencieuses ne reçoivent pas de psychologie
 ou de dialogues ajoutés par défaut.
 

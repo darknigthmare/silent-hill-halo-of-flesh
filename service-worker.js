@@ -706,6 +706,9 @@ const ESSENTIAL_SHELL = [
   '/src/versus.js',
   '/src/chronicles.js',
   '/src/chronicle-art.js',
+  '/src/story-art.js',
+  // STORY_ART_ASSETS_BEGIN
+  // STORY_ART_ASSETS_END
   '/assets/chronicles/room_21.rival.55558b472462.webp',
   '/assets/chronicles/loop_204863.intro.d11a1e1dfecc.webp',
   '/assets/chronicles/loop_204863.ending.414d839e6067.webp',

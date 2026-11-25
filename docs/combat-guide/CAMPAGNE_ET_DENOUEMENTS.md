@@ -1,7 +1,7 @@
 # Silent Hill: Halo of Flesh — Campagne, récits et Dénouements
 
 **Révision : 25 novembre 2026.** Association des sections 06 à 11, 24 à 27 du
-guide général au contexte réel du projet. État observé : `ce3c73f`.
+guide général au contexte réel du projet. Référence de comparaison : `9c426d7`. Mise à jour de production fixe : vague30.
 
 Ce chapitre complète le [GDD](../GDD_FR.md), la
 [bible du corpus](../BIBLE_CORPUS_SILENT_HILL.md) et les
@@ -191,9 +191,9 @@ de lieu ; leur association héritée n'est pas une preuve.
 
 | Brief fixe | Composition et information à raconter | Continuité / état de production |
 | --- | --- | --- |
-| `SHC_ILL_AIR_INTRO` | Plan large d'`old_silent_hill`, aile passant dans le ciel puis sujet entier sur un appui. La rue précise et l'appui doivent être cadrés à partir des références de ce lieu. L'image annonce la menace aérienne. | SH1, proportions du sujet et détails urbains à contrôler ; aucun PNJ inventé ; image à produire. |
+| `SHC_ILL_AIR_INTRO` | Maison, niche et boîte aux lettres de Levin Street dans `old_silent_hill` ; Air Screamer entier en vol, ailes déployées, neige et brume. L’image annonce la présence aérienne. | PNG produit et lié au profil SH1, à la sélection et au premier chapitre ; composition originale candidate, fidélité non certifiée. [Fichier et sources](../production/vague30/story/README.md). |
 | `SHC_ILL_AIR_RIVAL` | Chaufferie de `midwich_nightmare`, foyer et grilles visibles ; Air Screamer dans le volume supérieur, Split Head au sol. Les deux silhouettes expliquent le conflit de portée. | Composition multi-sujets autorisée pour cette illustration ; sprites séparés pour le moteur ; duel original ; image à produire. |
-| `SHC_ILL_AIR_OUTRO` | Retour à la rue de l'intro, éclaircie limitée dans la brume et silhouette quittant le champ. La menace n'est plus au centre, mais le lieu subsiste. | Aucun message de délivrance de la ville ; même appui, météo et palette ; image à produire. |
+| `SHC_ILL_AIR_OUTRO` | Même façade, niche, marches, neige et brume après le départ complet de la créature. La rue vide porte la conséquence. | PNG produit et lié à l’achèvement du récit ; aucune éclaircie ni délivrance ajoutée. L’introduction et la conclusion restent deux images fixes. [Fichier et sources](../production/vague30/story/README.md). |
 
 **Dénouement Signature proposé : « Dernier passage ».** Piqué de contact,
 renversement compatible avec la cible, puis sortie dans la brume ; la coupe

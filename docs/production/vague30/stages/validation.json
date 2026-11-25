@@ -1,0 +1,109 @@
+{
+  "schema": 2,
+  "wave": 30,
+  "date": "2026-11-25",
+  "baseHead": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "status": "partial-validation-recorded",
+  "executorUnavailable": true,
+  "completedBeforeOutage": {
+    "nativePNGAudit": {
+      "tool": "auditStageBitmaps",
+      "passed": true,
+      "stages": 3,
+      "files": 6,
+      "checks": [
+        "regular file paths",
+        "SHA-256 and byte count",
+        "native dimensions",
+        "Pillow PNG decoding",
+        "nonanimated PNGs"
+      ]
+    },
+    "oldManifestPreserved": {
+      "passed": true,
+      "entries": 90,
+      "method": "Node assert.deepEqual against git show HEAD:src/stage-bitmap-manifest.js"
+    },
+    "selectedStages": {
+      "passed": true,
+      "addedStages": 3,
+      "totalActive": 93,
+      "totalStageIds": 123,
+      "note": "Observed before root phase-label reconciliation."
+    },
+    "geometryContract": {
+      "passed": true,
+      "shimizu_residence": true,
+      "arcade_toluca_lake": false,
+      "arcade_prison": false
+    },
+    "alphaInspection": {
+      "passed": true,
+      "backgrounds": "three RGB opaque PNGs",
+      "foregrounds": "three RGBA PNGs with alpha extrema 0..255",
+      "pixelEditing": false
+    }
+  },
+  "recoveryChecks": {
+    "base64ByteCounts": {
+      "passed": true,
+      "total": 7650389
+    },
+    "remoteBaselineManifestPreserved": {
+      "before": 90,
+      "after": 93,
+      "previousEntriesUnchanged": true
+    },
+    "newScriptsParse": {
+      "parsed": true,
+      "method": "V8 parse after removing static import declarations and replacing import.meta with an inert identifier; no imports or test code executed",
+      "executed": false
+    },
+    "preparedMarkdownLinks": {
+      "passed": true,
+      "checked": 9,
+      "scope": "relative links resolved against prepared blob paths; no filesystem or browser execution"
+    }
+  },
+  "browserValidation": {
+    "status": "not-run",
+    "captures": [],
+    "reason": "Executor became unavailable before HTTP/Chromium QA of these stages."
+  },
+  "interruptedChecks": [
+    {
+      "name": "relative Markdown link scan",
+      "status": "not-completed",
+      "reason": "exec-server transport disconnected"
+    },
+    {
+      "name": "git diff --check",
+      "status": "not-completed",
+      "reason": "exec-server transport disconnected"
+    }
+  ],
+  "pending": [
+    "Root reconciliation of Shimizu Residence II and fixed Otherworld prison policies, with matching scene IDs.",
+    "Build and generated-data/service-worker refresh by root.",
+    "Run node --test tests/stage-wave30.test.mjs on the published source.",
+    "Run the new HTTP wrapper against a fresh dist and retain actual report/captures.",
+    "Run HTTP wrapper on dedicated port4292, then final full project gates and review actual captures."
+  ],
+  "snapshotBeforePolicyReconciliation": {
+    "shimizu_residence": {
+      "worldState": "fixed-normal",
+      "normalPhaseLabel": "RESIDENCE I · SALLE À MANGER",
+      "policyScene": null
+    },
+    "arcade_prison": {
+      "worldState": "fixed-normal",
+      "policyScene": null
+    },
+    "arcade_toluca_lake": {
+      "worldState": "fixed-normal",
+      "policyScene": null
+    }
+  },
+  "noFinalRuntimeCertification": true,
+  "noVisualOneToOneCertification": true
+}

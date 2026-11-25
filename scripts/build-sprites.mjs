@@ -80,5 +80,7 @@ await writeFile(workerPath,worker.replace(/  \/\/ SPRITE_ASSETS_BEGIN[\s\S]*?  \
 
 const {buildProjectileBitmaps}=await import('./build-projectile-bitmaps.mjs');
 await buildProjectileBitmaps();
+const {buildStoryArtwork}=await import('./build-story-art.mjs');
+await buildStoryArtwork();
 const {buildStageBitmaps}=await import('./build-stage-bitmaps.mjs');
 await buildStageBitmaps();

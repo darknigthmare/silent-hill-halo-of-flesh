@@ -12,6 +12,7 @@ import { STAGE_BITMAPS } from '../src/stage-bitmap-manifest.js';
 import { PROJECTILE_BITMAPS } from '../src/projectile-bitmap-manifest.js';
 import { projectileBitmapFor } from '../src/projectile-bitmaps.js';
 import { chronicleArtwork } from '../src/chronicle-art.js';
+import { storyArtwork } from '../src/story-art.js';
 import { cinematicSummary } from '../src/lore-cinematics.js';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -41,6 +42,7 @@ export function buildGuideAssociations() {
     const policy = combatReferencePolicy(fighter);
     const profile = profiles.get(fighter.id);
     const story = storyPlan(fighter.id);
+    const storyArt = storyArtwork(fighter.id);
     const art = SPRITES[fighter.id];
     const assignedStage = stages.get(fighter.stageId);
     if (assignedStage?.source !== fighter.source) issues.push({type: 'profile-stage-source-mismatch', id: fighter.id, assignedStageId: fighter.stageId, effectiveStageId: stageIdFor(fighter), action: 'Relire le raccord de lieu et d’édition ; le repli runtime ne prouve pas sa fidélité narrative.'});
@@ -69,6 +71,7 @@ export function buildGuideAssociations() {
         authoredFinisherIds: fighter.fatalities.filter(f => cinematicSummary(f.id).authored).map(f => f.id),
         story: {
           format: story.format, generated: true,
+          artwork: storyArt ? {source:storyArt.source,stageId:storyArt.stageId,status:storyArt.status,fidelity:storyArt.fidelity,composition:storyArt.composition,illustrations:['intro','rival','ending'].filter(moment=>storyArt[moment]).map(moment=>({moment,path:storyArt[moment].path}))} : null,
           hasPlayableEncounters: Boolean(policy.combatEnabled && story.queue.length),
           rawCandidateChapterCount: story.chapters.length,
           encounters: policy.combatEnabled ? story.chapters.map(c => ({fighterId: c.fighterId, stageId: c.stageId, rival: c.rival})) : [],
@@ -157,10 +160,10 @@ export function buildGuideAssociations() {
     });
   }
 
-  const assetPaths = unique(records.flatMap(r => r.kind === 'profile' ? [r.details.assets.portraitPath, ...r.details.assets.framePaths] : r.kind === 'stage' ? r.details.presentation.framePaths : r.kind === 'chronicle' ? r.details.illustrations.map(i => i.path) : r.kind === 'projectile' ? [r.details.path] : []).filter(Boolean));
+  const assetPaths = unique(records.flatMap(r => r.kind === 'profile' ? [r.details.assets.portraitPath, ...r.details.assets.framePaths, ...(r.details.story.artwork?.illustrations || []).map(i=>i.path)] : r.kind === 'stage' ? r.details.presentation.framePaths : r.kind === 'chronicle' ? r.details.illustrations.map(i => i.path) : r.kind === 'projectile' ? [r.details.path] : []).filter(Boolean));
   const missingAssetPaths = assetPaths.filter(path => !files.has(path) && !existsSync(resolve(ROOT, path)));
-  const sourcePaths = ['src/data.js', 'src/movesets.js', 'src/combat-reference-policy.js', 'src/production-reference.js', 'src/tournament.js', 'src/run-progress.js', 'src/lore-cinematics.js', 'src/chronicle-art.js', 'src/sprite-manifest.js', 'src/stage-director.js', 'src/stage-lore-policy.js', 'src/stage-reference-policy.js', 'src/stage-bitmap-manifest.js', 'src/projectile-bitmap-manifest.js', 'src/projectile-bitmaps.js', 'art/registry.json', 'data/roster.json', 'data/movesets.json', 'data/fatalities.json', 'data/stages.json', 'data/chronicles.json', 'docs/production/franchise-corpus.json'];
-  const metadata = {schemaVersion: 1, asOf: requirements.asOf, baselineCommit: requirements.baselineCommit, sourceFile: requirements.sourceFile, sourceSHA256: digest(requirements.sourceFile), note: 'Associations de conception et inventaire observé ; aucune nouvelle validation artistique ou de gameplay. Les chemins bitmap sont vérifiés dans l’index Git, même dans un checkout partiel.'};
+  const sourcePaths = ['src/data.js', 'src/movesets.js', 'src/combat-reference-policy.js', 'src/production-reference.js', 'src/tournament.js', 'src/run-progress.js', 'src/lore-cinematics.js', 'src/chronicle-art.js', 'src/story-art.js', 'src/sprite-manifest.js', 'src/stage-director.js', 'src/stage-lore-policy.js', 'src/stage-reference-policy.js', 'src/stage-bitmap-manifest.js', 'src/projectile-bitmap-manifest.js', 'src/projectile-bitmaps.js', 'art/registry.json', 'data/roster.json', 'data/movesets.json', 'data/fatalities.json', 'data/stages.json', 'data/chronicles.json', 'docs/production/franchise-corpus.json'];
+  const metadata = {schemaVersion: 1, asOf: requirements.asOf, baselineCommit: requirements.baselineCommit, sourceFile: requirements.sourceFile, sourceSHA256: digest(requirements.sourceFile), note: 'Associations de conception et inventaire observé. Ce générateur contrôle les liens ; les audits PNG et revues de la vague30 sont documentés séparément. Aucune fidélité 1:1 déduite de la présence d’un fichier.'};
   const associations = {...metadata, sourceHashes: Object.fromEntries(sourcePaths.map(path => [path, digest(path)])), records,
     issues: [...issues, {type: 'aggregate-film-source', id: 'film', action: 'Le filtre par groupe source ne garantit pas une route propre à chaque film ; contrôler édition, rival et stage avant validation narrative.'}],
     verification: {assetPathCount: assetPaths.length, missingAssetPaths, method: 'Git tracked path or local file; no PNG decoding'}};
@@ -183,6 +186,8 @@ export function buildGuideAssociations() {
       enabledMoveSlots: sum(profileRecords.map(r => r.details.enabledMoveKeys.length)),
       disabledMoveSlots: sum(profileRecords.map(r => r.details.disabledMoveKeys.length)),
       generatedStories: profileRecords.length,
+      individualStoriesWithArtwork: profileRecords.filter(r=>r.details.story.artwork).length,
+      individualStoryIllustrationFiles: unique(profileRecords.flatMap(r=>(r.details.story.artwork?.illustrations || []).map(i=>i.path))).length,
       storiesWithPlayableEncounters: profileRecords.filter(r => r.details.story.hasPlayableEncounters).length,
       chronicles: CHRONICLES.length, chroniclesWithPlayableEncounters: chronicleRecords.filter(r => r.details.playableFighterIds.length).length,
       chronicleEncounters: sum(chronicleRecords.map(r => r.details.playableFighterIds.length)),
@@ -206,7 +211,9 @@ export function buildGuideAssociations() {
       stagesWithAllowedHazards: STAGES.filter(s => s.director?.hazardDeck?.length).length,
       stagesWithOtherworldShift: STAGES.filter(s => s.shift?.enabled === true).length,
       crossStageRuntimeLinks: 0,
-      newSpritesProducedThisPass: 0, newAnimationsProducedThisPass: 0
+      newSpritesProducedThisPass: requirements.currentPass?.staticCharacterPoses || 0,
+      newStaticImagesProducedThisPass: requirements.currentPass?.staticImages || 0,
+      newAnimationsProducedThisPass: requirements.currentPass?.newAnimations || 0
     },
     definitions: {
       combatEnabled: 'Admission par la politique du moteur ; distincte de la finition des assets et de la recette jouée.',
@@ -214,10 +221,10 @@ export function buildGuideAssociations() {
       generatedStories: 'Structures dérivées des textes de moveset et du catalogue ; pas 230 campagnes détaillées.',
       playableStories: 'combatEnabled vrai ET file d’adversaires non vide ; les dossiers n’ajoutent aucun combat.',
       authoredFinishers: 'Chorégraphies définies dans lore-cinematics ; pas un compte de séquences bitmap finalisées.',
-      visualCandidates: 'Registres et chemins présents ; les visuels ne sont pas relus pendant cette intégration documentaire.',
+      visualCandidates: 'Registres et chemins présents ; les audits et revues artistiques restent attribués à leurs rapports et ne certifient pas 1:1.',
       stageTransitions: 'Une bascule Otherworld garde le même ID de stage ; elle ne compte pas comme une liaison entre deux arènes.'
     },
-    currentPass: {lore: 'references-preserved-not-recertified', design: 'guide-associated', assets: 'no-new-art', integration: 'documentation-and-workbooks', validation: 'structural-checks-only', publication: 'recorded-separately-after-push'}
+    currentPass: {...requirements.currentPass, publication:'recorded-separately-after-push'}
   };
   return {requirements, associations, status, ids, stages};
 }
@@ -244,6 +251,7 @@ export function validateGuideAssociations({requirements, associations, status, i
       if (d.enabledMoveKeys.length + d.disabledMoveKeys.length !== d.moveKeys.length) errors.push(`Move status mismatch: ${record.id}`);
       if (!d.combatEnabled && (d.story.hasPlayableEncounters || d.story.encounters.length)) errors.push(`Noncombat story enabled: ${record.id}`);
       if (d.story.rivalId && !ids.has(d.story.rivalId)) errors.push(`Unknown rival: ${record.id}`);
+      if (d.story.artwork && (d.story.artwork.source!==record.source || stages.get(d.story.artwork.stageId)?.source!==record.source)) errors.push(`Story artwork source mismatch: ${record.id}`);
       for (const encounter of d.story.encounters) if (!ids.has(encounter.fighterId) || !stages.has(encounter.stageId)) errors.push(`Invalid encounter: ${record.id}`);
     }
     if (record.kind === 'chronicle') {
@@ -270,7 +278,7 @@ export function validateGuideAssociations({requirements, associations, status, i
 
 function markdownOutputs({requirements, associations, status}) {
   const counts = status.counts;
-  const legend = 'État observé dans le code et les registres au commit de référence. Les fichiers image sont reliés par chemin Git ; ils ne sont pas relus visuellement dans cette passe.\n';
+  const legend = 'État calculé dans le code et les registres courants, comparé au commit de référence. Le contrôle des chemins est distinct des audits PNG, des recettes jouées et de la certification de fidélité.\n';
   const matrix = '# Correspondance des 30 rubriques\n\nGénéré depuis [requirements.json](requirements.json). Les décisions « retenue » portent sur la cible de conception, pas sur une promesse d’implémentation terminée.\n\n' +
     mdTable(['ID', 'Rubrique', 'Priorité', 'État observé', 'Prochaine action'], requirements.sections.map(s => [s.id, s.title, s.priority, s.implementationStatus, s.nextAction])) +
     '\n## Décisions sur les modules\n\n' + mdTable(['Module', 'Décision', 'Priorité', 'Justification'], requirements.moduleDecisions.map(m => [m.name, m.decision, m.priority, m.reason])) +
@@ -290,6 +298,7 @@ function markdownOutputs({requirements, associations, status}) {
     ['Montages de Dénouement de sujet écrits', counts.fighterFinishersAuthored, counts.fighterFinisherDefinitions, 'Chorégraphies ; pas animations ou images finales'],
     ['Montages de Dénouement de lieu écrits', counts.stageFinishersAuthored, counts.stageFinisherDefinitions, 'Même distinction entre timeline et production'],
     ['Illustrations de Chroniques référencées', counts.chronicleIllustrationFiles, 'inventaire connu', 'Ne couvre pas automatiquement les nouveaux briefs'],
+    ['Illustrations de récits individuels', counts.individualStoryIllustrationFiles, `${counts.individualStoriesWithArtwork} récit(s)`, 'Intro et conclusion fixes ; campagne globale distincte'],
     ['Liaisons entre stages implémentées', counts.crossStageRuntimeLinks, 'cible à définir', 'Les bascules Otherworld restent le même stage']
   ];
   const bilan = '# État du guide et des associations\n\n' + legend + `\nRéférence : \`${requirements.baselineCommit}\`, ${requirements.asOf}. Générateur : [build-combat-guide.mjs](../../scripts/build-combat-guide.mjs).\n\n` +
@@ -297,7 +306,7 @@ function markdownOutputs({requirements, associations, status}) {
     '\n## Associations\n\n' + mdTable(['Catégorie', 'Entrées reliées'], Object.entries(counts.associationsByKind)) +
     `\n**${counts.associations} entrées** reliées. ${associations.verification.assetPathCount} chemins d’images contrôlés dans l’index Git. Les clés de commande sont associées sous leur profil, sans leur inventer un nouvel identifiant runtime.\n\n` +
     '## Écarts de raccord observés\n\n' + mdTable(['Type', 'Sujet', 'Action'], associations.issues.map(i => [i.type, i.id, i.action])) +
-    '\n## Livraison de cette passe\n\nLe guide, les exigences, les associations, les fiches, la campagne conçue et les feuilles documentaires sont les livrables. Aucun nouveau sprite, aucune animation ni nouvelle mécanique runtime ne sont produits par cette passe. Les anciennes preuves restent datées de leur exécution. La publication et ses vérifications sont enregistrées séparément après le commit.\n';
+    `\n## Livraison de cette passe\n\n${counts.newStaticImagesProducedThisPass} images fixes candidates : trois poses, trois effets, six plans de décor et deux illustrations individuelles. ${counts.newAnimationsProducedThisPass} nouvelle animation. Le récit d’Air Screamer reçoit ses images sans changer sa file de rencontres. Les scènes Shimizu Residence II et prison Otherworld sont corrigées dans les références. Les audits, limites, classeurs et résultats de publication sont consignés dans [la vague30](../production/vague30/README.md). Les preuves anciennes restent datées de leur exécution.\n`;
   return {'MATRICE.md': matrix, 'ETAT_DES_LIEUX.md': bilan};
 }
 

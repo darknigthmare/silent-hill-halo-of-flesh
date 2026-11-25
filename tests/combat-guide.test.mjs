@@ -73,5 +73,20 @@ test('presentation shifts and authored finisher timelines are counted in their o
   assert.ok(stageRecords.some(r => r.details.otherworldShiftEnabled));
   assert.ok(stageRecords.every(r => r.details.connectedStageIds.length === 0));
   assert.ok(result.status.counts.fighterFinishersAuthored < result.status.counts.fighterFinisherDefinitions);
-  assert.equal(result.status.currentPass.assets, 'no-new-art');
+  assert.equal(result.status.currentPass.assets, '14-static-candidates');
+  assert.equal(result.status.counts.newAnimationsProducedThisPass, 0);
+  assert.equal(result.status.counts.newStaticImagesProducedThisPass, 14);
+});
+
+test('individual narrative art belongs to its exact profile and extends the image inventory', () => {
+  const art=byId.get('sh1_air_screamer_001').details.story.artwork;
+  assert.equal(art.source,'sh1');assert.equal(art.stageId,'old_silent_hill');
+  assert.deepEqual(art.illustrations.map(i=>i.moment),['intro','ending']);
+  assert.equal(byId.get('bom_air_screamer_121').details.story.artwork,null);
+  assert.equal(result.status.counts.individualStoriesWithArtwork,1);
+  assert.equal(result.status.counts.individualStoryIllustrationFiles,2);
+  assert.equal(result.status.counts.associations,445);
+  const corrupt=structuredClone(result);
+  corrupt.associations.records.find(r=>r.id==='sh1_air_screamer_001'&&r.kind==='profile').details.story.artwork.source='bom';
+  assert.ok(validateGuideAssociations(corrupt).some(e=>e.includes('Story artwork source mismatch')));
 });

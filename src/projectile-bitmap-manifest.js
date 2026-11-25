@@ -337,5 +337,128 @@ export const PROJECTILE_BITMAPS = {
         686
       ]
     }
+  },
+  "downpour_bogeyman_ground_shockwave": {
+    "id": "downpour_bogeyman_ground_shockwave",
+    "fighterId": "downpour_bogeyman_115",
+    "source": "downpour",
+    "slots": [
+      "neutralSpecial"
+    ],
+    "referenceIds": [
+      "EXT65"
+    ],
+    "presentation": {
+      "heightInRadii": 4,
+      "anchor": "ground",
+      "groundBaseline": 0.735,
+      "facing": 1,
+      "composite": "source-over"
+    },
+    "notes": [
+      "La capture Prima 02i-084 montre une traînée de poussière gris-brun et des fissures au sol pendant les ondes du Bogeyman ; seul neutralSpecial est associé.",
+      "La vague basse vue de côté et la ligne de contact native à y = 0,735 × 724 px sont des choix de présentation du versus ; aucune modification du déplacement, des collisions ou des dégâts.",
+      "Un PNG fixe autonome ; aucun marteau, personnage, halo magique, cycle animé ou continuité originale mesurée.",
+      "Sources, prompt exact et limites : docs/production/vague30/projectiles/."
+    ],
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "frame": {
+      "path": "assets/projectiles/downpour_bogeyman_ground_shockwave.bda8c72700c2.png",
+      "sha256": "bda8c72700c2169dbc19d59434c02b46af15a7bd08e71873dba7733d628fa2b2",
+      "bytes": 835104,
+      "width": 2172,
+      "height": 724,
+      "framingBounds": [
+        192,
+        163,
+        1947,
+        567
+      ]
+    }
+  },
+  "origins_straight_jacket_acid_ball": {
+    "id": "origins_straight_jacket_acid_ball",
+    "fighterId": "origins_straight_jacket_074",
+    "source": "origins",
+    "slots": [
+      "neutralSpecial",
+      "super",
+      "desperation"
+    ],
+    "referenceIds": [
+      "EXT01"
+    ],
+    "presentation": {
+      "heightInRadii": 3,
+      "anchor": "center",
+      "facing": 1,
+      "composite": "source-over"
+    },
+    "notes": [
+      "Le guide officiel Origins documente le crachat corrosif à distance ; le guide de jeu secondaire décrit des boules jaunes. La miniature native consultée reste trop petite pour certifier un contour ou une palette RGB.",
+      "Boule jaune-ocre compacte reconstruite en un PNG fixe, avec une courte traîne ; microtexture, contour, taille et orientation latérale restent une adaptation visuelle du versus.",
+      "Association aux seuls neutralSpecial, super et desperation déjà actifs de ce profil Origins. Aucun transfert vers la Lying Figure SH2 ou le Straight-Jacket de Book of Memories.",
+      "Sources, prompt exact et limites : docs/production/vague30/projectiles/."
+    ],
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "frame": {
+      "path": "assets/projectiles/origins_straight_jacket_acid_ball.095acfc1796e.png",
+      "sha256": "095acfc1796ec28de7b132fac8736880c28584f87aca2d8a8438365f60467779",
+      "bytes": 768278,
+      "width": 1774,
+      "height": 887,
+      "framingBounds": [
+        340,
+        110,
+        1472,
+        706
+      ]
+    }
+  },
+  "sh1_incubus_red_lightning": {
+    "id": "sh1_incubus_red_lightning",
+    "fighterId": "sh1_incubus_019",
+    "source": "sh1",
+    "slots": [
+      "neutralSpecial",
+      "super",
+      "desperation"
+    ],
+    "referenceIds": [
+      "CL_SH1_BOSSES",
+      "CL_SH1_CREATURES"
+    ],
+    "presentation": {
+      "heightInRadii": 4,
+      "anchor": "center",
+      "facing": 1,
+      "composite": "screen"
+    },
+    "notes": [
+      "La vidéo du combat SH1 à 3:04 montre des branches de foudre rouge-orangée à cœur clair ; le guide distingue ces décharges de la foudre bleue d’Incubator.",
+      "Effet électrique autonome généré séparément, sans corps, ailes ou élément anatomique. Le blocage antérieur du personnage n’est pas levé par cet effet.",
+      "Orientation horizontale, contour détaillé, amplitude lumineuse et échelle sont des choix du versus ; aucun tracé exact, cycle animé ou timing original certifié.",
+      "Sources, prompt exact et limites : docs/production/vague30/projectiles/."
+    ],
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "frame": {
+      "path": "assets/projectiles/sh1_incubus_red_lightning.8bec1740b774.png",
+      "sha256": "8bec1740b774c557bd13c75dd31ee08c4aa46615d7aa2d3a42c5c798eadf8ec3",
+      "bytes": 887253,
+      "width": 2172,
+      "height": 724,
+      "framingBounds": [
+        39,
+        120,
+        2136,
+        634
+      ]
+    }
   }
 };

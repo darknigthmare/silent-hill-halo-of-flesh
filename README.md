@@ -1,5 +1,9 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Production fixe — vague30, 25 novembre 2026
+
+[Lot de quatorze images, intégration et limites](docs/production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. Les associations de bible sont régénérées ; les deux classeurs conservent leur dernier état validé en attendant le retour du runtime d’édition. [Inventaire restant](docs/production/vague30/inventory.json). Aucun nouveau cycle animé ni certification1:1.
+
 ## Guide général intégré à la bible — 25 novembre 2026
 
 Les **30 rubriques** du guide Combat Games v1.0 sont maintenant associées au

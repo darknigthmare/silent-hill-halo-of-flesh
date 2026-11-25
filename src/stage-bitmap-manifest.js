@@ -5845,5 +5845,207 @@ export const STAGE_BITMAPS = {
       "Fixed-normal pre-intrusion phase is preserved: no pit, barbed wire, Alessa bed, bodies, blood, 2012 sanctuary or game-chapel imagery. No new hazard or transformation is implemented.",
       "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes."
     ]
+  },
+  "shimizu_residence": {
+    "stageId": "shimizu_residence",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "shf-residence-ii-dining-yellowed-calendar",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+      "EXT10_SHF_RESIDENCE_DINING_20261026"
+    ],
+    "layers": [
+      {
+        "id": "bg-residence-ii-dining",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+            "sha256": "20363814e1395109e6bbb7a172fec8e414389d8aeba926da547f7daade15e44c",
+            "bytes": 2492364,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-floor-cushion",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
+            "sha256": "5472ecd1cb2f006046fd082b8f7d7ee734671d6ba6550ff4124fab0b01b1f666",
+            "bytes": 107930,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Vue de la table du Yellowed Calendar dans Shimizu Residence II, voie menant à Ending 1, après le souvenir. Les anciennes mentions Residence I du projet sont corrigées séparément ; ID de stage conservé.",
+      "La capture native montre tatami à bordures vertes, table basse ronde, pot, bols, bouteille, coussins, siège bas à dossier quadrillé et meuble audiovisuel sombre. La caméra frontale, les panneaux, l’étendue du sol, le nombre/placement des meubles et les appareils radio/TV sont reconstruits ou interprétés pour le versus, sans mesure 1:1.",
+      "Ni personnage, souvenir rejoué, combat des parents, calendrier lisible, autre pièce, transition de résidence, nouvelle animation ou nouveau danger. Un fond opaque et un coussin rapproché avec alpha, chacun fixe et indépendant.",
+      "geometry.ceiling=true conserve le support précédemment déduit de la couche rooms. Collisions, sol de combat, paramètres physiques et identifiant inchangés."
+    ]
+  },
+  "arcade_toluca_lake": {
+    "stageId": "arcade_toluca_lake",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "arcade-stage3-area1-lakeside-quay",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT15"
+    ],
+    "layers": [
+      {
+        "id": "bg-stage3-quay",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+            "sha256": "f7eaebf61af49d6d59be23d756852ae50b8a0f3c4c24da67b9272ecf0f50a319",
+            "bytes": 2063352,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-stone-pier",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
+            "sha256": "d8482b1428658d29d3f003d3c57a27074ce3e68397f36bafecbb2d95dff23d12",
+            "bytes": 181651,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La capture native distribuée dans la galerie Konami Europe 2010 porte explicitement STAGE 3 AREA 1 / Toluca Lake. Piliers carrés en pierre, couvre-murs, garde-corps sombre, réverbère à globe et brouillard pâle déterminent cette vue.",
+      "Les acteurs/UI sont retirés ; la caméra latérale, la répétition des piliers, le nombre des lampes, le dessin du dallage et la largeur du quai sont une adaptation versus. Le fond brumeux ne certifie pas une vue complète du lac ni une géométrie 1:1.",
+      "Aucun pont du Little Baroness, état 1918/1993, décor de Silent Hill 2, animation de mer, chute ou nouveau danger. Un fond opaque et un fragment de pilier rapproché avec alpha, chacun fixe et indépendant.",
+      "geometry.ceiling=false conserve l’absence de support de plafond. Les règles, collisions et ID sont inchangés."
+    ]
+  },
+  "arcade_prison": {
+    "stageId": "arcade_prison",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "toluca-prison-otherworld-cell-corridor",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT15"
+    ],
+    "layers": [
+      {
+        "id": "bg-otherworld-cell-corridor",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+            "sha256": "0d6c58e355084cbe05de70b836cc7466ac7a3445f15443c831eafbd159d7c5b8",
+            "bytes": 2611057,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-cell-jamb",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+            "sha256": "42f7a995d42d31c533f991d34434ddc653dbf92eba52ef96defcd453822d418d",
+            "bytes": 194035,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La capture native Konami Europe 2010 n°05 montre des cellules à barreaux, murs rouge sombre et surfaces turquoise/cyan. Son rattachement au corridor Otherworld de Toluca Prison recoupe le catalogue Stage 2 Area 2 et la branche Otherworld documentée par la carte ; le point exact du parcours n’est pas mesuré.",
+      "Vue frontale élargie pour le versus : trois portes, entraxes, plafond, éclairage et étendue du sol reconstruits depuis la vue oblique partiellement masquée. Ni cour de prison SH2, ni salle du Split Worm, ni numéro de cellule inventé comme fait canonique.",
+      "État visuel Otherworld fixe, sans transition, monstres, projectiles, eau montante ou danger neuf. Un fond opaque et un jambage rapproché avec alpha, chacun fixe et indépendant.",
+      "geometry.ceiling=false conserve le contrat antérieur, car les motifs procéduraux cells/chains/watchtower/bars/lights ne fournissaient aucun plafond autorisé. Le plafond peint n’accorde aucune prise ni Dénouement supplémentaire."
+    ]
   }
 };
