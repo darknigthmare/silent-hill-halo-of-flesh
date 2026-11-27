@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "wave": 33,
+  "task": "bodyHeight standing-equivalent calibration domain",
+  "repositoryRoot": "/workspace/scratch/4cb8973fa173/silent-hill-halo-of-flesh",
+  "restoredAfterExecutorRestart": true,
+  "contract": {
+    "bodyHeight": {
+      "minimum": 0.05,
+      "maximum": 4,
+      "inclusive": true,
+      "meaning": "standing-equivalent reference height / full canvas height; horizontal poses may exceed 1"
+    },
+    "anchor": {
+      "minimum": 0,
+      "maximum": 1,
+      "inclusive": true
+    },
+    "finiteNumbersOnly": true,
+    "preciseInspectorExport": true,
+    "sourceOneToOneCertification": false
+  },
+  "modifiedSourceFiles": [
+    "scripts/import-sprite.py",
+    "scripts/apply-sprite-calibration.py",
+    "scripts/build-sprites.mjs",
+    "scripts/merge-art-campaign.mjs",
+    "scripts/audit-sprite-references.mjs",
+    "scripts/http-qa-art-batch4.mjs",
+    "src/sprite-system.js",
+    "src/projectile-origin.js",
+    "src/sprite-inspector.js",
+    "docs/SPRITE_PIPELINE_v0.9.1.md"
+  ],
+  "modifiedTestFiles": [
+    "tests/test_sprite_import.py",
+    "tests/test_calibration.py",
+    "tests/sprite-presentation.test.mjs",
+    "tests/projectile-origin.test.mjs",
+    "tests/merge-art-campaign.test.mjs"
+  ],
+  "executedAfterRestoration": {
+    "testRuns": [
+      {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_sprite_import.py",
+          "-v"
+        ],
+        "cwd": "/workspace/scratch/4cb8973fa173/silent-hill-halo-of-flesh",
+        "startedAt": "2026-11-27T09:58:27.811355+00:00",
+        "completedAt": "2026-11-27T09:58:28.490020+00:00",
+        "exitCode": 0,
+        "testCount": 47,
+        "passed": true,
+        "log": "docs/production/vague33/qa/body-height-domain/python-import-restored.log",
+        "logBytes": 6405,
+        "logSHA256": "30f690dbf9d322e4fac07e1468cd940cf9c3c89f73b1bf3fc483b81bf8debf4d"
+      },
+      {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_calibration.py",
+          "-v"
+        ],
+        "cwd": "/workspace/scratch/4cb8973fa173/silent-hill-halo-of-flesh",
+        "startedAt": "2026-11-27T09:58:27.819003+00:00",
+        "completedAt": "2026-11-27T09:58:28.064492+00:00",
+        "exitCode": 0,
+        "testCount": 18,
+        "passed": true,
+        "log": "docs/production/vague33/qa/body-height-domain/python-calibration-restored.log",
+        "logBytes": 2277,
+        "logSHA256": "16e08c0f93a5af1bcaf1b2a538e87a74640b298a99e9f5c510efe1e1211f8003"
+      }
+    ],
+    "totalTests": 65,
+    "failedTests": 0,
+    "allPassed": true,
+    "javascriptSyntaxCheck": {
+      "passed": true,
+      "checkCount": 10,
+      "path": "docs/production/vague33/qa/body-height-domain/javascript-syntax-restored.json",
+      "sha256": "cd463afbb0750a92619a829f0ed22941219b7a16d819e8509c1e1ebb582d20eb"
+    },
+    "javascriptRuntimeTestsExecuted": false
+  },
+  "earlierExecutionBeforeRestart": {
+    "status": "Observed successful execution before loss of the temporary working tree; historical evidence only, not a validation of the restored snapshot.",
+    "cwd": "/tmp/halo-active-repo",
+    "totalTests": 121,
+    "failedTests": 0,
+    "commands": [
+      {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_sprite_import.py",
+          "-v"
+        ],
+        "tests": 47,
+        "exitCode": 0
+      },
+      {
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_calibration.py",
+          "-v"
+        ],
+        "tests": 18,
+        "exitCode": 0
+      },
+      {
+        "command": [
+          "node",
+          "--test",
+          "tests/sprite-presentation.test.mjs",
+          "tests/projectile-origin.test.mjs",
+          "tests/merge-art-campaign.test.mjs"
+        ],
+        "tests": 56,
+        "exitCode": 0
+      }
+    ],
+    "logAvailability": "The earlier raw tool outputs were observed in this conversation. No TAP output or missing raw log has been reconstructed."
+  },
+  "writeIncident": {
+    "kind": "ENOSPC while restoring first test file",
+    "affectedFile": "tests/test_sprite_import.py",
+    "partialBytes": 20480,
+    "resolution": "Full original reference verified from cache, patch reapplied in memory, then all five test files written through temporary files and atomic replacement.",
+    "originalReferenceSHA256": "dba3b8fe82b9b2cc832558eeeb658e20ac9375b7cdb0a4d6fc00007629bec711",
+    "restoredBytes": 21275,
+    "restoredSHA256": "65608ba2bc7c7148a81608638467a7706aa26fedce7e23cabc3ef8ea27a693ec"
+  },
+  "limits": [
+    "Production registry, sprite manifest, plans, physical bodies, collision rules and attack ranges were not changed by this task.",
+    "No raster absence was bypassed in tests. The coordinator will synchronize sources into the complete runtime cache before executing the full JavaScript suite.",
+    "This receipt reports only the commands actually executed; syntax checks do not count as runtime test cases.",
+    "No commit, branch update or blob upload was performed by this restoration task."
+  ],
+  "receiptWrittenAt": "2026-11-27T09:59:41.634786+00:00",
+  "sourceSnapshots": [
+    {
+      "path": "scripts/import-sprite.py",
+      "sha256": "87faa816fa22d7b58cd9ccb1820277b47c3a4b98615fd188681076c9f349aca9",
+      "bytes": 26496
+    },
+    {
+      "path": "scripts/apply-sprite-calibration.py",
+      "sha256": "9b32a1e9f5e05a1c3507fe63521a4ea1c3b58d3c0526f46de10009ebd27572d2",
+      "bytes": 5598
+    },
+    {
+      "path": "scripts/build-sprites.mjs",
+      "sha256": "27240493fcb4e762af12d51e5569305634ae3cca973759f0cdf032a6734b273a",
+      "bytes": 8390
+    },
+    {
+      "path": "scripts/merge-art-campaign.mjs",
+      "sha256": "fd0ab7e4b4ea5a21a670428718456b32518a4ae2397bca9b814ab95737d372ea",
+      "bytes": 10887
+    },
+    {
+      "path": "scripts/audit-sprite-references.mjs",
+      "sha256": "82c2a4e4aa3c6394c863fef7feaec6744ff7dc7d30e98d8b84294c445885c98d",
+      "bytes": 17296
+    },
+    {
+      "path": "scripts/http-qa-art-batch4.mjs",
+      "sha256": "277aa7650aa18b28e975fb1afe2315a7fc9923f515232fa77a49c18b8fbe2ebd",
+      "bytes": 59013
+    },
+    {
+      "path": "src/sprite-system.js",
+      "sha256": "3ca55d2c87d8985a1cabe006c56f921483c009d020efaa776f80377c6ee4d9d2",
+      "bytes": 15219
+    },
+    {
+      "path": "src/projectile-origin.js",
+      "sha256": "fbd270103ddd12d9072bdbd2ac3f9e588c48be4d11a8017ab44387cd05cd43cb",
+      "bytes": 3607
+    },
+    {
+      "path": "src/sprite-inspector.js",
+      "sha256": "df76a22884a4bbd185ef19274a342d75997e28bfbd62a99de0ec98a2aaebdce6",
+      "bytes": 15096
+    },
+    {
+      "path": "docs/SPRITE_PIPELINE_v0.9.1.md",
+      "sha256": "ffa2f4850f1cdd3034b3d6dd5bbfa781c655c66bf363680eb232a5d3c5025321",
+      "bytes": 10693
+    },
+    {
+      "path": "tests/test_sprite_import.py",
+      "sha256": "65608ba2bc7c7148a81608638467a7706aa26fedce7e23cabc3ef8ea27a693ec",
+      "bytes": 21275
+    },
+    {
+      "path": "tests/test_calibration.py",
+      "sha256": "05865222855391c10ba89274d64a5d1f9032a9ebf4861e52d2d570b02a86729f",
+      "bytes": 7105
+    },
+    {
+      "path": "tests/sprite-presentation.test.mjs",
+      "sha256": "09b4c4d4af7dd362806aa1e8f5b16a19b5450de9da9861d9c1f7f99161f7b3f9",
+      "bytes": 10767
+    },
+    {
+      "path": "tests/projectile-origin.test.mjs",
+      "sha256": "80652898323892cb485c66f9f8efe76be02833ce1c80ad6f91c60c346527604a",
+      "bytes": 11382
+    },
+    {
+      "path": "tests/merge-art-campaign.test.mjs",
+      "sha256": "4a65853a57ddb2002a9dc83aae494012c8a7f40de9b89d428d24321ee8dd5dec",
+      "bytes": 6065
+    }
+  ]
+}

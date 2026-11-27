@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Apply an exported, exact-hash calibration without changing images or collision rules.
 Dry run by default. --apply publishes the registry atomically under the importer lock.
+Anchors are finite 0..1; bodyHeight is finite 0.05..4, the standing-equivalent
+reference height divided by canvas height. Horizontal poses may require more than 1.
 """
 import argparse
 import importlib.util
@@ -58,7 +60,7 @@ def apply_packet(root, packet, apply=False):
             return type(value) in (int, float) and math.isfinite(value)
         if not isinstance(anchor, list) or len(anchor) != 2 or not all(finite(n) and 0 <= n <= 1 for n in anchor):
             raise ValueError('Invalid anchor')
-        if not finite(entry['bodyHeight']) or not .05 <= entry['bodyHeight'] <= 1 or type(entry['facing']) is not int or entry['facing'] not in (-1, 1):
+        if not finite(entry['bodyHeight']) or not .05 <= entry['bodyHeight'] <= 4 or type(entry['facing']) is not int or entry['facing'] not in (-1, 1):
             raise ValueError('Invalid calibration or native direction')
         # Confirm this is still the actual file, not just matching untrusted JSON metadata.
         if not re.fullmatch(r'assets/sprites/[a-z0-9_.-]+\.(png|webp)', frame['path']):

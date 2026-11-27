@@ -77,6 +77,14 @@ jobs:
         env:
           HALO_PYTHON: ${{ runner.temp }}/halo-browser-venv/bin/python
         run: npm run build
+      - name: Inspect wave33 static poses, scene, support and crawling contact
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          node docs/production/vague33/qa/http-poses.mjs --out=tests/http-wave33-characters
+          node docs/production/vague33/qa/http-stage.mjs --out=tests/http-wave33-stage
+          node docs/production/vague33/qa/http-calibration.mjs --phase=after --out=tests/http-wave33-calibration
+          node docs/production/vague33/qa/http-crawling-contact.mjs --expect-aligned --out=tests/http-wave33-contact
+          node docs/production/vague33/qa/http-crawling-combat.mjs --out=tests/http-wave33-combat
       - name: Inspect wave32 static poses, exact stage scenes and individual stories
         if: ${{ !cancelled() && steps.build.outcome == 'success' }}
         run: |
@@ -103,7 +111,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: http-wave26-28-and31-32
+          name: http-wave26-28-and31-33
           path: |
             tests/http-wave26-native/
             tests/http-wave27-actions/
@@ -116,4 +124,9 @@ jobs:
             tests/http-wave32-stages/
             tests/http-wave32-story/
             tests/http-wave32-origins/
+            tests/http-wave33-characters/
+            tests/http-wave33-stage/
+            tests/http-wave33-calibration/
+            tests/http-wave33-contact/
+            tests/http-wave33-combat/
           retention-days: 14

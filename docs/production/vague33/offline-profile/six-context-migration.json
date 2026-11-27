@@ -1,0 +1,115 @@
+{
+  "schema": 1,
+  "scope": "Six historical HTTP recipes: migrate only offline-capable contexts to the shared disposable normal-profile helper",
+  "writtenAt": "2026-11-27T10:18:44.551260+00:00",
+  "helper": "scripts/qa-offline-profile.mjs",
+  "helperSHA256": "6ad1393721eebc22bb69737ec5d79fffb6c170bd0c6a075191feb6f4dd6c8026",
+  "optionsContract": "Flat launchPersistentContext options; {browser, context, close} confirmed with helper author",
+  "files": [
+    {
+      "path": "scripts/http-qa-sprites.mjs",
+      "beforeSHA256": "a75e22e98aed494434f83087293ee9cefe3a0e59943e4d12c5117ab0c91d59e8",
+      "afterSHA256": "a361890435972fc93a49fd5ac973ed969e709d2f02f5c874d239b76fd0b2f8a0",
+      "nodeCheckExitCode": 0,
+      "workerBlockingContextsUnchanged": true,
+      "controllerWaitTimeoutMilliseconds": 30000,
+      "controllerWaitCount": 1,
+      "offlineSwitchCountUnchanged": true,
+      "screenshotCallCountUnchanged": true,
+      "persistentProfileScope": "primary context; page closes at the former context teardown, profile stays owned by finally",
+      "cleanup": "report persistence precedes finally cleanup; cleanup also runs if report write fails"
+    },
+    {
+      "path": "scripts/http-qa-art-v092.mjs",
+      "beforeSHA256": "c03b2bf760c080472afd10deabd94191d63599815c67bd41b2ccfbdef0aaa06c",
+      "afterSHA256": "35c2c863ec829914669722933710ac88c5d22371d6bb24800c03d0376f7f9a02",
+      "nodeCheckExitCode": 0,
+      "workerBlockingContextsUnchanged": true,
+      "controllerWaitTimeoutMilliseconds": 30000,
+      "controllerWaitCount": 1,
+      "offlineSwitchCountUnchanged": true,
+      "screenshotCallCountUnchanged": true,
+      "persistentProfileScope": "primary context; page closes at the former context teardown, profile stays owned by finally",
+      "cleanup": "report persistence precedes finally cleanup; cleanup also runs if report write fails"
+    },
+    {
+      "path": "scripts/http-qa-clips-v093.mjs",
+      "beforeSHA256": "d17944b67b5f0a2c1d713c8500c569d3ac47265ede3d8878c10378df1c9169d3",
+      "afterSHA256": "27ed3c7e6b2e31a62462e642dba4dde3ca012d8368ae3b8058cf5804eb3a2a4d",
+      "nodeCheckExitCode": 0,
+      "workerBlockingContextsUnchanged": true,
+      "controllerWaitTimeoutMilliseconds": 30000,
+      "controllerWaitCount": 1,
+      "offlineSwitchCountUnchanged": true,
+      "screenshotCallCountUnchanged": true,
+      "persistentProfileScope": "primary context; page closes at the former context teardown, profile stays owned by finally",
+      "cleanup": "report persistence precedes finally cleanup; cleanup also runs if report write fails"
+    },
+    {
+      "path": "scripts/http-qa-recovery-v094.mjs",
+      "beforeSHA256": "f5aa36a4ee8a6e0d26dc918208e76cf38e27a056246df0eba8fe9b23086cc7ea",
+      "afterSHA256": "01e4fffdbdb5152c55845fe16860c22fa359d9a3df457aef71a0d4bf78c466fb",
+      "nodeCheckExitCode": 0,
+      "workerBlockingContextsUnchanged": true,
+      "controllerWaitTimeoutMilliseconds": 30000,
+      "controllerWaitCount": 1,
+      "offlineSwitchCountUnchanged": true,
+      "screenshotCallCountUnchanged": true,
+      "persistentProfileScope": "final offline context only; original worker-blocking browser unchanged",
+      "cleanup": "report persistence precedes finally cleanup; cleanup also runs if report write fails"
+    },
+    {
+      "path": "scripts/http-qa-boundaries-v095.mjs",
+      "beforeSHA256": "c9ceb9564c3bbcfa97962b610529cdd63f481741d928518f5e49237fcc8f286c",
+      "afterSHA256": "70356cbe17ed6cfc5e028107e5fc102357cd6e68c6ee9a4f92484426f6772b46",
+      "nodeCheckExitCode": 0,
+      "workerBlockingContextsUnchanged": true,
+      "controllerWaitTimeoutMilliseconds": 30000,
+      "controllerWaitCount": 1,
+      "offlineSwitchCountUnchanged": true,
+      "screenshotCallCountUnchanged": true,
+      "persistentProfileScope": "final offline context only; original worker-blocking browser unchanged",
+      "cleanup": "report persistence precedes finally cleanup; cleanup also runs if report write fails"
+    },
+    {
+      "path": "scripts/http-qa-presentations.mjs",
+      "beforeSHA256": "f5ca591e8e5d0b01f5aca1b5ad622d407505ab1211dff77d3d27a12aa8e22823",
+      "afterSHA256": "8f2a642c5a534648372931ffc4604ec7ccbe9e27d02beee692c9d22641883331",
+      "nodeCheckExitCode": 0,
+      "workerBlockingContextsUnchanged": true,
+      "controllerWaitTimeoutMilliseconds": 30000,
+      "controllerWaitCount": 1,
+      "offlineSwitchCountUnchanged": true,
+      "screenshotCallCountUnchanged": true,
+      "persistentProfileScope": "final offline context only; original worker-blocking browser unchanged",
+      "cleanup": "report persistence precedes finally cleanup; cleanup also runs if report write fails"
+    }
+  ],
+  "syntaxChecksPassed": 6,
+  "browserRunsExecuted": 0,
+  "globalSuitesExecuted": 0,
+  "applicationCodeChanged": false,
+  "quotaChanged": false,
+  "serviceWorkerCodeChanged": false,
+  "qa33ValidationSHA256": "bfcf363a12ecf358585290075c64fc2abe8917a3ddc7a5f4cdbf1d796c0800ee",
+  "qa33ValidationModified": false,
+  "patch": "docs/production/vague33/offline-profile/six-context-migration.patch",
+  "limits": [
+    "Static syntax checks and patch review only; the six complete browser recipes were not rerun by this task.",
+    "Existing assertions, fixtures, UI actions, image/network fault scenarios and 30-second service-worker controller waits are preserved.",
+    "The helper lifecycle is supplied and reviewed separately by lore_sources; this receipt does not replace its runtime validation."
+  ],
+  "manualDiffReview": {
+    "passed": true,
+    "reviewedAt": "2026-11-27T10:19:10.227942+00:00",
+    "assertionsAndScenarioTextUnchanged": true,
+    "changesConfinedTo": [
+      "helper import and ownership variable",
+      "offline-capable context creation",
+      "page closure instead of persistent context closure before final cleanup",
+      "report-preserving finally cleanup"
+    ],
+    "workerBlockingContextLinesByteIdentical": true,
+    "allSixControllerWaitsStill30000Milliseconds": true
+  }
+}

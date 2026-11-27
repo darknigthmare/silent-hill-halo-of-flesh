@@ -61,6 +61,24 @@ class ImportTests(unittest.TestCase):
   with self.assertRaises(ValueError):module.import_sprite(a)
  def test_nan_calibration_rejected(self):
   with self.assertRaises(ValueError):module.import_sprite(self.args('--anchor-x','nan'))
+ def test_body_height_domain_is_preserved_by_import(self):
+  raw=self.image.read_bytes()
+  for value in (.05,2.5,4):
+   with self.subTest(value=value):
+    result=module.import_sprite(self.args('--replace','--body-height',str(value)))
+    frame=json.loads((self.root/'art/registry.json').read_text())['assets']['a']['frames'][0]
+    self.assertEqual(frame['bodyHeight'],value);self.assertEqual(frame['anchor'],[.5,.9])
+    self.assertEqual((self.root/result['path']).read_bytes(),raw)
+ def test_body_height_outside_finite_domain_is_rejected_without_writing(self):
+  before=(self.root/'art/registry.json').read_bytes()
+  for value in (.049,4.001,float('nan'),float('inf'),-float('inf'),True,None,'2'):
+   with self.subTest(value=value):
+    args=self.args();args.body_height=value
+    with self.assertRaises(ValueError):module.import_sprite(args)
+    self.assertEqual((self.root/'art/registry.json').read_bytes(),before)
+  for value in (-.01,1.01,float('inf'),True):
+   args=self.args();args.anchor_y=value
+   with self.subTest(anchor=value),self.assertRaises(ValueError):module.import_sprite(args)
  def test_neutral_provenance_is_not_claimed_as_generated(self):
   module.import_sprite(self.args());a=json.loads((self.root/'art/registry.json').read_text())['assets']['a']
   self.assertEqual(a['origin'],'external-unspecified');self.assertEqual(a['frames'][0]['origin'],'external-unspecified')

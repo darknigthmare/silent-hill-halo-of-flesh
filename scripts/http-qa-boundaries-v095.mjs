@@ -1,5 +1,6 @@
 /** Real HTTP UI, with explicitly injected pad/Storage fixtures, not physical-device certification. */
 import {chromium} from 'playwright-core';
+import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
 import {spawn} from 'node:child_process';
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
@@ -7,7 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {VERSION} from '../src/data.js';
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-boundaries-v095');
 await mkdir(out,{recursive:true});
-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4180';let server,browser;
+const base=process.env.QA_BASE_URL||'http://127.0.0.1:4180';let server,browser,offlineProfile;
 const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
  'Standard gamepad objects replace navigator.getGamepads for simultaneous Start and API-denial cases; no physical controller is claimed.',
  'Storage.prototype.setItem is temporarily made to reject only control writes; this is not a physical storage-quota measurement.',
@@ -160,13 +161,17 @@ try {
     }
   }
   await context.close();
-  const offline=await browser.newContext(),off=await offline.newPage();off.on('pageerror',e=>report.errors.push(e.message));
+  offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
+  const offline=offlineProfile.context,off=await offline.newPage();off.on('pageerror',e=>report.errors.push(e.message));
   await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
   await offline.setOffline(true);await off.goto(versus);await off.waitForFunction(()=>!!window.__HALO_QA__);
   await off.selectOption('#mode','local');await off.click('#launch');await off.waitForFunction(()=>__HALO_QA__.engine?.phase==='fight');
   await off.click('#pauseBtn');await off.click('[data-pause=controls]');
   const accepted=await off.evaluate(()=>__HALO_QA__.engine.togglePause(false));
   check('resume guard is also active with offline modules',accepted===false&&await off.evaluate(()=>__HALO_QA__.engine.paused));await shot(off,'06-offline-modal-guard');
-  await offline.close();check('no unhandled browser exceptions',report.errors.length===0);
+  await off.close();check('no unhandled browser exceptions',report.errors.length===0);
 } catch(error){report.failure=String(error);process.exitCode=1;}
-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
+finally{
+ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
+ finally{try{await offlineProfile?.close();}finally{try{await browser?.close();}finally{server?.kill('SIGTERM');}}}
+}

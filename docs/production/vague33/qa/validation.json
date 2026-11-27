@@ -1,0 +1,951 @@
+{
+  "schema": 1,
+  "wave": 33,
+  "writtenAt": "2026-11-27T10:15:21.608528+00:00",
+  "status": "passed-with-explicit-fidelity-and-coverage-limits",
+  "passed": true,
+  "scope": {
+    "newStaticCharacterPoses": 8,
+    "poseOrientations": 2,
+    "poseCases": 16,
+    "newStageLayers": 2,
+    "stageIds": [
+      "arcade_historical"
+    ],
+    "newAnimatedClips": 0,
+    "certifiedOneToOne": false,
+    "fidelityStatus": "source-informed candidates and versus integration; not certified 1:1"
+  },
+  "recoveryBoundary": {
+    "freshFinalRunsStartedAt": "2026-11-27T10:06:30.121Z",
+    "freshFinalRunsCompletedAt": "2026-11-27T10:09:18.470Z",
+    "freshFinalBuildChecks": 486,
+    "freshFinalBuildCaptures": 43,
+    "additionalPreservedBeforeCalibrationChecks": 13,
+    "additionalPreservedBeforeCalibrationCaptures": 2,
+    "totalRetainedCaptures": 45,
+    "historicalLostCrawlingScreenshotsCounted": 0,
+    "note": "Only retained files whose bytes and SHA256 were verified are counted. The pre-restart crawling observation is historical diagnosis, not surviving image proof."
+  },
+  "build": {
+    "passed": true,
+    "command": "node scripts/build.mjs --verify --out-dir=/tmp/halo-wave33-build",
+    "runtimeCache": "/tmp/halo-active-repo",
+    "output": "/tmp/halo-wave33-build",
+    "buildFilesIncludingManifest": 831,
+    "javascriptFilesChecked": 49,
+    "htmlFilesChecked": 10,
+    "fighters": 230,
+    "stages": 123,
+    "chronicles": 15,
+    "manifest": {
+      "path": "docs/production/vague33/qa/build-manifest.json",
+      "bytes": 159141,
+      "sha256": "950edb346c581f208b97dc98c8c81cc6675c83f3905fc1b0853edf83638c3f55"
+    },
+    "log": {
+      "path": "docs/production/vague33/qa/build.log",
+      "bytes": 206,
+      "sha256": "b0333eaf220e963b019d157ecd3613cfaeef7ddbf0aee88ca570091af009698e"
+    },
+    "sourceReceipt": {
+      "path": "docs/production/vague33/qa/build-source-receipt.json",
+      "bytes": 29876,
+      "sha256": "117c3ddcb6d98e9df73dd2c932e266dfd4d1762ed2bf7c878e0d9c9d68f7d8ce"
+    },
+    "verifiedDistributedNonRasterFiles": 79,
+    "assetReuseReceipt": {
+      "path": "docs/production/vague33/qa/runtime-cache-reuse.json",
+      "bytes": 331,
+      "sha256": "6404521e157c7a552af422a81ec7622d8be266b23422e2a81bc4d453a919bd74"
+    },
+    "verifiedIdenticalAssetFiles": 751,
+    "assetServingDirectoryIsReal": true
+  },
+  "tests": {
+    "node": {
+      "scope": "Full Node suite executed by coordinator after restoration",
+      "passed": 1364,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "log": {
+        "path": "docs/production/vague33/qa/node-tests.tap",
+        "bytes": 142164,
+        "sha256": "371e87cefd06e53c1ea38d9f153fb67fe1853e8b1ee7d6d61d0058be2aa1060b"
+      }
+    },
+    "python": {
+      "scope": "Targeted sprite importer and calibration tests executed after restoration; not the complete Python suite",
+      "passed": 65,
+      "failed": 0,
+      "runs": [
+        {
+          "command": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_sprite_import.py",
+            "-v"
+          ],
+          "passed": true,
+          "testCount": 47,
+          "log": {
+            "path": "docs/production/vague33/qa/body-height-domain/python-import-restored.log",
+            "bytes": 6405,
+            "sha256": "30f690dbf9d322e4fac07e1468cd940cf9c3c89f73b1bf3fc483b81bf8debf4d"
+          }
+        },
+        {
+          "command": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_calibration.py",
+            "-v"
+          ],
+          "passed": true,
+          "testCount": 18,
+          "log": {
+            "path": "docs/production/vague33/qa/body-height-domain/python-calibration-restored.log",
+            "bytes": 2277,
+            "sha256": "16e08c0f93a5af1bcaf1b2a538e87a74640b298a99e9f5c510efe1e1211f8003"
+          }
+        }
+      ],
+      "receipt": {
+        "path": "docs/production/vague33/qa/body-height-domain/test-receipt.json",
+        "bytes": 7965,
+        "sha256": "6ede07f5f9e2487a88c2f69017d4ac82f0566e99aa7f18aa14281396ed4cc9ed"
+      }
+    }
+  },
+  "browser": {
+    "version": "158.0.8127.0",
+    "executable": "/tmp/chromium",
+    "runtime": "Playwright against the real verified HTTP build",
+    "serviceWorkers": "blocked in these five recipes",
+    "ordinaryUiAndKeyboard": true,
+    "actorStateInjected": false,
+    "imageOrClockOrCameraSubstitution": false,
+    "observation": "Passive native canvas drawImage / strokeRect observations and actual game captures. Separate ordinary UI switches enable training hitboxes."
+  },
+  "recipes": [
+    {
+      "name": "characters",
+      "passed": true,
+      "checks": 391,
+      "cases": 16,
+      "captures": 32,
+      "startedAt": "2026-11-27T10:06:30.121Z",
+      "completedAt": "2026-11-27T10:07:56.503Z",
+      "report": {
+        "path": "docs/production/vague33/qa/characters/report.json",
+        "bytes": 226196,
+        "sha256": "e017c889054da3a967cdfd0337f3537ef6c517a2d558a3677df954c06ace9835"
+      },
+      "harness": {
+        "path": "docs/production/vague33/qa/http-poses.mjs",
+        "bytes": 21512,
+        "sha256": "907dafc3d00fb221fb94732229666364d99dcba61beff0a65a32c46ba814c0b1"
+      },
+      "unhandledPageErrors": 0,
+      "protectedSourceEquality": [
+        {
+          "path": "art/registry.json",
+          "sha256": "b1758af2d9dc77aad8543746981839b86cd0fe90e66909f0d994eeaf58a28228",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/sprite-manifest.js",
+          "sha256": "11dd35fe64e0c6f60a5ed1e16b6fc7f6782de53bb67f1126c7fc89c8f908c951",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/stage-bitmap-manifest.js",
+          "sha256": "6926c23a22351bdf38927e058c4d64bdebbe784a8c873c8564cd87d9217d7c40",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/stage-reference-policy.js",
+          "sha256": "63cbde9063fe4c9035df9342c8fb8bd7fc05195d6cf2933b0c7187b1213a6ae1",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/fight.js",
+          "sha256": "0e1cc83391476cf913d0df078d1d618f1162ea3f1f7741fcfcedf7f0d80dfccb",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/renderers.js",
+          "sha256": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/sprite-system.js",
+          "sha256": "3ca55d2c87d8985a1cabe006c56f921483c009d020efaa776f80377c6ee4d9d2",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/versus.js",
+          "sha256": "58f1e80d6bd83a0b8d6d880738c19f6bf73c7851ca9a74f77e989f69f7073ac5",
+          "beforeAfterAndCurrentEqual": true
+        }
+      ]
+    },
+    {
+      "name": "stage",
+      "passed": true,
+      "checks": 21,
+      "cases": 1,
+      "captures": 1,
+      "startedAt": "2026-11-27T10:07:57.402Z",
+      "completedAt": "2026-11-27T10:08:04.135Z",
+      "report": {
+        "path": "docs/production/vague33/qa/stage/report.json",
+        "bytes": 12151,
+        "sha256": "dd2551f517c62d096a253da86cc06098d847c1717fbfe4a9cdce2cbd8d0108c0"
+      },
+      "harness": {
+        "path": "docs/production/vague33/qa/http-stage.mjs",
+        "bytes": 8797,
+        "sha256": "89d7cc062c9770b4f63dd332716d2e30fd2202beb63ec6f53478a9274711ca09"
+      },
+      "unhandledPageErrors": 0,
+      "protectedSourceEquality": [
+        {
+          "path": "src/stage-bitmap-manifest.js",
+          "sha256": "6926c23a22351bdf38927e058c4d64bdebbe784a8c873c8564cd87d9217d7c40",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/stage-reference-policy.js",
+          "sha256": "63cbde9063fe4c9035df9342c8fb8bd7fc05195d6cf2933b0c7187b1213a6ae1",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/stage-bitmaps.js",
+          "sha256": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/fight.js",
+          "sha256": "0e1cc83391476cf913d0df078d1d618f1162ea3f1f7741fcfcedf7f0d80dfccb",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/renderers.js",
+          "sha256": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+          "beforeAfterAndCurrentEqual": true
+        },
+        {
+          "path": "src/data.js",
+          "sha256": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+          "beforeAfterAndCurrentEqual": true
+        }
+      ]
+    },
+    {
+      "name": "calibration-after",
+      "passed": true,
+      "checks": 13,
+      "cases": 2,
+      "captures": 2,
+      "startedAt": "2026-11-27T10:08:04.688Z",
+      "completedAt": "2026-11-27T10:08:15.287Z",
+      "report": {
+        "path": "docs/production/vague33/qa/calibration-after/report.json",
+        "bytes": 6357,
+        "sha256": "70dcf5fc1d67e3dea70fccc008434ab544b9495715a14887c53100b195f35eca"
+      },
+      "harness": {
+        "path": "docs/production/vague33/qa/http-calibration.mjs",
+        "bytes": 6927,
+        "sha256": "6dd612ad026e5a6d5794442e171812ea2ccc6daca563ad3a1fdecb7f290127b4"
+      },
+      "unhandledPageErrors": 0,
+      "protectedSourceEquality": []
+    },
+    {
+      "name": "crawling-contact",
+      "passed": true,
+      "checks": 14,
+      "cases": 2,
+      "captures": 2,
+      "startedAt": "2026-11-27T10:08:15.756Z",
+      "completedAt": "2026-11-27T10:08:28.623Z",
+      "report": {
+        "path": "docs/production/vague33/qa/crawling-contact/report.json",
+        "bytes": 12940,
+        "sha256": "da31a5655457f71795a1cd09680569241e7e2107e2b5df3fd898a3d449d78f84"
+      },
+      "harness": {
+        "path": "docs/production/vague33/qa/http-crawling-contact.mjs",
+        "bytes": 9110,
+        "sha256": "4da35a1e9a4b95ee4984324fde60dfd0e97fb64d19dfebae8b82f25b391d86e2"
+      },
+      "unhandledPageErrors": 0,
+      "protectedSourceEquality": []
+    },
+    {
+      "name": "crawling-combat",
+      "passed": true,
+      "checks": 47,
+      "cases": 6,
+      "captures": 6,
+      "startedAt": "2026-11-27T10:08:29.110Z",
+      "completedAt": "2026-11-27T10:09:18.470Z",
+      "report": {
+        "path": "docs/production/vague33/qa/crawling-combat/report.json",
+        "bytes": 68654,
+        "sha256": "ec15b78d63ee274862a3613996f5aa3e3a2c790b9b84c322e75045b3f2df850a"
+      },
+      "harness": {
+        "path": "docs/production/vague33/qa/http-crawling-combat.mjs",
+        "bytes": 12626,
+        "sha256": "148ea2c6aa0d509cdec571a48de4f97b020a8c870f361ca40b11fcae6da2d109"
+      },
+      "unhandledPageErrors": 0,
+      "protectedSourceEquality": []
+    }
+  ],
+  "errorCoverage": {
+    "unhandledPageErrorsObserved": 0,
+    "allFivePageErrorListsEmpty": true,
+    "expectedImageResponsesRecorded": 34,
+    "allRecordedExpectedImageResponsesHTTP200": true,
+    "expectedImageSHA256AndByteChecksPassed": true,
+    "mediumOriginalPNGHTTPChecksPassed": true,
+    "consoleErrorCollection": "not instrumented by these five recipes",
+    "globalRequestFailureCollection": "not instrumented by these five recipes",
+    "globalConsoleAndNetworkErrorAbsenceCertified": false,
+    "note": "Zero pageerror and exact expected PNG HTTP bytes are supported. A blanket absence of console errors or unrelated network errors is not asserted."
+  },
+  "mediumIdleCalibration": {
+    "pngBytesUnchanged": true,
+    "oldAnchorY": 1,
+    "newAnchorY": 0.8818359375,
+    "beforeReport": {
+      "path": "docs/production/vague33/qa/calibration-before/report.json",
+      "bytes": 6422,
+      "sha256": "26a519801d6698c5c632d38432d7d2c985de0959b74e5c4dc0d2d3e6af14b90e"
+    },
+    "afterReport": {
+      "path": "docs/production/vague33/qa/calibration-after/report.json",
+      "bytes": 6357,
+      "sha256": "70dcf5fc1d67e3dea70fccc008434ab544b9495715a14887c53100b195f35eca"
+    },
+    "orientations": [
+      {
+        "orientation": "right",
+        "beforeOffsetWorld": -23.880957031250006,
+        "beforeOffsetCanvasPixels": -23.36405348901754,
+        "afterOffsetWorld": 0,
+        "afterOffsetCanvasPixels": 0
+      },
+      {
+        "orientation": "left",
+        "beforeOffsetWorld": -23.880957031250006,
+        "beforeOffsetCanvasPixels": -23.36405348901754,
+        "afterOffsetWorld": 0,
+        "afterOffsetCanvasPixels": 0
+      }
+    ],
+    "note": "Negative before offset is the visible support above the engine floor. The final idle support is exactly at the floor in both orientations. The special pose remains intentionally airborne."
+  },
+  "crawlingCalibration": {
+    "allThreeFramesBodyHeight": 2.94,
+    "allThreeFramesAnchorX": 0.4,
+    "pngBytesUnchanged": true,
+    "frameCalibrationRecord": {
+      "path": "docs/production/vague33/crawling-calibration.json",
+      "bytes": 3640,
+      "sha256": "f108c0cda4929547f4af4e9be9e1f9097bdc191e394e9c719952a07796297e9f"
+    },
+    "nativeHeadFrontPoint": [
+      60,
+      496.5
+    ],
+    "nativeHeadFrontMeasurement": "Alpha >= 32 first front column x=60, y=488..505, midpoint; bound to the exact recorded light PNG.",
+    "contact": [
+      {
+        "orientation": "right",
+        "capturedFrame": 255,
+        "frontPointWorld": {
+          "x": 376.98962678994246,
+          "y": 584.682080843387
+        },
+        "hitBoxWorld": {
+          "x": 328.368,
+          "y": 538.71232,
+          "w": 55,
+          "h": 56.416
+        },
+        "frontWithinHit": true,
+        "marginInsideHitFrontWorld": 6.378373210057532,
+        "inkWidthWorld": 165.32059232532788,
+        "inkBottomWorld": 594
+      },
+      {
+        "orientation": "left",
+        "capturedFrame": 255,
+        "frontPointWorld": {
+          "x": 903.0103732100575,
+          "y": 584.682080843387
+        },
+        "hitBoxWorld": {
+          "x": 896.632,
+          "y": 538.71232,
+          "w": 55,
+          "h": 56.416
+        },
+        "frontWithinHit": true,
+        "marginInsideHitFrontWorld": 6.378373210057589,
+        "inkWidthWorld": 165.320592325328,
+        "inkBottomWorld": 594
+      }
+    ],
+    "combat": [
+      {
+        "case": "right-hit",
+        "damageObserved": 29,
+        "healthBefore": 1290,
+        "healthAtHit": 1261,
+        "guardBefore": 122,
+        "guardAtHit": 122,
+        "lastHitKey": "neutralLight",
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "perfectGuards": 0,
+        "idleRecovered": true,
+        "actionCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ]
+      },
+      {
+        "case": "right-low-guard",
+        "damageObserved": 4,
+        "healthBefore": 1290,
+        "healthAtHit": 1286,
+        "guardBefore": 122,
+        "guardAtHit": 111,
+        "lastHitKey": "neutralLight-guard-chip",
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "perfectGuards": 0,
+        "idleRecovered": true,
+        "actionCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ]
+      },
+      {
+        "case": "right-standing-guard",
+        "damageObserved": 29,
+        "healthBefore": 1290,
+        "healthAtHit": 1261,
+        "guardBefore": 122,
+        "guardAtHit": 122,
+        "lastHitKey": "neutralLight",
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "perfectGuards": 0,
+        "idleRecovered": true,
+        "actionCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ]
+      },
+      {
+        "case": "left-hit",
+        "damageObserved": 29,
+        "healthBefore": 1290,
+        "healthAtHit": 1261,
+        "guardBefore": 122,
+        "guardAtHit": 122,
+        "lastHitKey": "neutralLight",
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "perfectGuards": 0,
+        "idleRecovered": true,
+        "actionCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ]
+      },
+      {
+        "case": "left-low-guard",
+        "damageObserved": 4,
+        "healthBefore": 1290,
+        "healthAtHit": 1286,
+        "guardBefore": 122,
+        "guardAtHit": 111,
+        "lastHitKey": "neutralLight-guard-chip",
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "perfectGuards": 0,
+        "idleRecovered": true,
+        "actionCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ]
+      },
+      {
+        "case": "left-standing-guard",
+        "damageObserved": 29,
+        "healthBefore": 1290,
+        "healthAtHit": 1261,
+        "guardBefore": 122,
+        "guardAtHit": 122,
+        "lastHitKey": "neutralLight",
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "perfectGuards": 0,
+        "idleRecovered": true,
+        "actionCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleCanvasWorldSize": [
+          179.89795918367346,
+          59.96598639455782
+        ]
+      }
+    ],
+    "moveContractDifferences": [
+      {
+        "field": "level",
+        "before": "mid",
+        "after": "low"
+      }
+    ],
+    "baseMoveDamage": 31,
+    "reach": 55,
+    "startup": 5,
+    "active": 3,
+    "recovery": 9,
+    "profilePreservationRecord": {
+      "path": "docs/production/vague33/combat-profile-preservation.json",
+      "bytes": 561,
+      "sha256": "664bea452e4673b5d43d427681c991b44073152caae143d3218bc6c84ac12a6a"
+    },
+    "note": "Observed health damage 29 is against the selected Book of Memories Butcher profile with existing combat rules; it is not a change to base move damage 31. Low guard causes 4 health and 11 guard loss; standing guard leaves the full observed 29 health loss. The historical body/hurtbox/push envelope is unchanged and remains a noncertified versus adaptation."
+  },
+  "visualReview": {
+    "completed": true,
+    "freshCapturesInspected": 43,
+    "additionalBeforeCapturesInspected": 2,
+    "method": "Each full retained image opened with the local image viewer; no claim depends on a generated contact sheet or a lost image.",
+    "characterNotes": {
+      "sh1_night_flutter_002": "Both orientations inspected: grounded walk and forward light pose remain fully visible, and the original idle returns. These are static source-informed candidates, not animation certification.",
+      "sh3_numb_body_medium": "Both orientations inspected: one support foot during walk, deliberately lifted feet during neutralSpecial, then the corrected idle foot meets the shared floor baseline. The airborne pose is not counted as grounded contact.",
+      "sh2_lying_figure_020": "Both orientations inspected: the portrait poses remain at a comparable standing height, keep their feet at the floor, and recover the existing idle. Body fullness varies between authored poses; original-game anatomy and dimensions are unverified.",
+      "sh2_lying_figure_crawling_021": "Both orientations inspected: low horizontal silhouette, visible grounded support and coherent canvas scale across walk, light and idle. The existing upright body/hurtbox still extends above the prone raster and does not certify source collision."
+    },
+    "stageNotes": "Normal Historical Society gallery inspected: four paintings, olive wallpaper and dark wood panelling; near door jambs frame the sides without hiding the fighters. The scene uses a reconstructed neutral versus floor and has no procedural old hazard overlay.",
+    "contactNotes": "Both native HIT rectangles contain the reviewed prone head-front point at ground level. Existing tall HURT rectangles are visibly retained and are explicitly not certified to the prone artwork.",
+    "combatNotes": "Six captures inspected. The low guard shrinks the target hurtbox and reduces measured damage; standing guard does not stop the low strike. The opponent still uses existing static guard/hit presentation, so this does not certify complete reaction animation.",
+    "presentationNotes": "Some early pose captures retain the engine round/FIGHT title; fighters and their relevant supports remain unobscured, and recorded fighter presentation flags are false.",
+    "catalog": [
+      {
+        "path": "docs/production/vague33/qa/characters/sh1_night_flutter_002-walk-right-action.png",
+        "bytes": 1478624,
+        "sha256": "538d5c2f078579c20e12038023023aa4cc9cfd8cb89e89902ec3d12722eb6dc7",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh1_night_flutter_002-walk-right-recovered.png",
+        "bytes": 1479026,
+        "sha256": "c7d1413b93987f0699e0296ceac4d58a602dae1d3c9c42924d8c3d15081c2a1f",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh1_night_flutter_002-walk-left-action.png",
+        "bytes": 1478159,
+        "sha256": "0cb7e8d635724b32114f0519459b644857bbf6c8cfd4753a12657ace3ac879db",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh1_night_flutter_002-walk-left-recovered.png",
+        "bytes": 1479550,
+        "sha256": "5eac6e5d47aed77c21bf572eb043a992cc678b47e49e64b13358f24074121964",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh1_night_flutter_002-neutralLight-right-action.png",
+        "bytes": 1483925,
+        "sha256": "19cc6e1bcf7837023c6956e6862ac8738c09f7cb33bc3198427dff3ee5bd3bed",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh1_night_flutter_002-neutralLight-right-recovered.png",
+        "bytes": 1478405,
+        "sha256": "0228ffabe0135759606f6727897a7810bece754a710a6cfbc10e806a315b90f4",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh1_night_flutter_002-neutralLight-left-action.png",
+        "bytes": 1483961,
+        "sha256": "09efb13a5ed924ccecae2b2399e3feb8d47bdbd07c348634b338735e5c71d38b",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh1_night_flutter_002-neutralLight-left-recovered.png",
+        "bytes": 1478294,
+        "sha256": "41ef2a8bba3068f3b71fdc388cded13f201e56aa03bf7bd00019153ad3593908",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh3_numb_body_medium-walk-right-action.png",
+        "bytes": 1486313,
+        "sha256": "94a8cdebb71d9d9753e78d3b1356fd5de5ee067ca6792683aef6e592592c5e88",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh3_numb_body_medium-walk-right-recovered.png",
+        "bytes": 1487599,
+        "sha256": "4584e16352fe8aae086bea524f63eb5069f70e08706280ce4979c920668a4975",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh3_numb_body_medium-walk-left-action.png",
+        "bytes": 1486067,
+        "sha256": "263d1cf6e117a529c37b09c32fd6e5dae11031ca0b26e1c64634ddac9864ed0f",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh3_numb_body_medium-walk-left-recovered.png",
+        "bytes": 1486243,
+        "sha256": "5e40d12e626318c1b1b88b273709ff7996391600c1bb8a359cb065493aa30733",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh3_numb_body_medium-neutralSpecial-right-action.png",
+        "bytes": 1490778,
+        "sha256": "b7bfc9dd55daee464b9d628390520300a4d7aef08062ddcc2f239944811f8dd7",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh3_numb_body_medium-neutralSpecial-right-recovered.png",
+        "bytes": 1487352,
+        "sha256": "66545b8004c6b12927b6e6f2c49ba75f24023d7b1fb05a7b3592128d969c00eb",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh3_numb_body_medium-neutralSpecial-left-action.png",
+        "bytes": 1490817,
+        "sha256": "3fe2e2f13bfc992702082292d5e2076e7209f88ca711ce9db74208c7b1f9cf47",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh3_numb_body_medium-neutralSpecial-left-recovered.png",
+        "bytes": 1487292,
+        "sha256": "a5bc1470ec9aa3a3bd8b3ca6c30b0a57a5c5c34c393f9e68e3e90d424de5b82e",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_020-walk-right-action.png",
+        "bytes": 1491591,
+        "sha256": "6d453572fd0f01cd4ebeb166af6bdc47d94ee57fe9f4266a8690364e5edb0e55",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_020-walk-right-recovered.png",
+        "bytes": 1485323,
+        "sha256": "14bd8e56437de7f504eaf55120f9c257f8e1ed089d94335719f123b42a94c87f",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_020-walk-left-action.png",
+        "bytes": 1492113,
+        "sha256": "bae8adccf95a0494e3fa056b024ab62aa8baf5f9bf824a9b22088b9fb7a97e88",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_020-walk-left-recovered.png",
+        "bytes": 1485844,
+        "sha256": "d6a5671e347fac5b6d646fa160cc9d19de58f6bb3ad834ba7af02b2375d95cad",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_020-neutralLight-right-action.png",
+        "bytes": 1489484,
+        "sha256": "6e4c155ed77251690a3f05aa67307d78c154148f51fcaa737128b19998a2265a",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_020-neutralLight-right-recovered.png",
+        "bytes": 1485825,
+        "sha256": "5f7542985305f592fb9ee87a443ed9dcb65212cb4f1032770199e49f2b530b79",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_020-neutralLight-left-action.png",
+        "bytes": 1490344,
+        "sha256": "07f399deb1df399df300b37095ef1111e9b5b4e5152afe6b9d4097778432ed9a",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_020-neutralLight-left-recovered.png",
+        "bytes": 1486422,
+        "sha256": "09dbef67ccef9213211b9de51058c611c63172b36c83f61b0fa13e21a0d0d95a",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_crawling_021-walk-right-action.png",
+        "bytes": 1476119,
+        "sha256": "e108b166312a18f1a0992d59685bc280997fcc1398ed01ab16659fb7f0ded380",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_crawling_021-walk-right-recovered.png",
+        "bytes": 1475869,
+        "sha256": "d4cb7b9243d9bbe68886d70fe6f2ed33748572d335136e2644178b73b7f3177e",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_crawling_021-walk-left-action.png",
+        "bytes": 1476401,
+        "sha256": "9e37b06655200d0ef69e9aa4e3f24e7179c1e39c6ad44c1fc0c93c6b29eebfcd",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_crawling_021-walk-left-recovered.png",
+        "bytes": 1476985,
+        "sha256": "a5ddf1bd346ddc16120638b1183ebbe4426fa03bb7b7be3eab8ad7dcf5c332cd",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_crawling_021-neutralLight-right-action.png",
+        "bytes": 1476445,
+        "sha256": "7f044bd1d57e72ce865cdfd709fbe88dc7460146a2a2e32e3a96c11d92cffe99",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_crawling_021-neutralLight-right-recovered.png",
+        "bytes": 1476136,
+        "sha256": "fa1a1935e59f080dcdbb71787baa8a8111f58ed91d5619622acc4167df3bfc92",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_crawling_021-neutralLight-left-action.png",
+        "bytes": 1476467,
+        "sha256": "7f057594094b224cf4571eb001d4b67117a10be25d11cfde1842dfb56079124a",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/characters/sh2_lying_figure_crawling_021-neutralLight-left-recovered.png",
+        "bytes": 1476369,
+        "sha256": "1123a162eeb4b8ef76994ba4871537d8ae9b528349b571237cb9bd6a398f4e28",
+        "recipe": "characters",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/stage/arcade_historical-http-fight.png",
+        "bytes": 1240121,
+        "sha256": "0d631b5b321a88f7bdcdbc32e22a852ec339ee7cb8938b534bc293d6626555e6",
+        "recipe": "stage",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/calibration-after/numb-medium-idle-after-right.png",
+        "bytes": 1155221,
+        "sha256": "4b8c532dfde748c0a1c5ed3575ea1bf3bfc1fa28bd7ff0f00ab3db9852edb245",
+        "recipe": "calibration-after",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/calibration-after/numb-medium-idle-after-left.png",
+        "bytes": 1155818,
+        "sha256": "a6268501f8515fba5df43703807a5d013ee524473ec672debef9402fcd375209",
+        "recipe": "calibration-after",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/crawling-contact/crawling-neutral-light-contact-right.png",
+        "bytes": 1431411,
+        "sha256": "49dc06756e665e5202cda051104b8d0318e1681aec369c5436261a9fce6fc527",
+        "recipe": "crawling-contact",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/crawling-contact/crawling-neutral-light-contact-left.png",
+        "bytes": 1423527,
+        "sha256": "9a0b6a851ee694f4ed9902474183f00d0b5221a4c4436d3a9f3aa6d3cb32a25d",
+        "recipe": "crawling-contact",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/crawling-combat/crawling-right-hit.png",
+        "bytes": 1429075,
+        "sha256": "f0c6e00f80ab50f231090d4ef07d763ac29d6e7f58afd80a49d18bf135f28579",
+        "recipe": "crawling-combat",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/crawling-combat/crawling-right-low-guard.png",
+        "bytes": 1438304,
+        "sha256": "c135550a99fc7a37989a0dc28e179943c13c59182383575971aa65253bedf026",
+        "recipe": "crawling-combat",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/crawling-combat/crawling-right-standing-guard.png",
+        "bytes": 1428940,
+        "sha256": "b58b37c093ab7546a812004f0f3a0d4d6f0af1a27e5744cda592e5fdab5bdd7a",
+        "recipe": "crawling-combat",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/crawling-combat/crawling-left-hit.png",
+        "bytes": 1420864,
+        "sha256": "79d9e2958ab04d157cfd83c84a57cd6753958a0a9b83ead0be08a109c277a695",
+        "recipe": "crawling-combat",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/crawling-combat/crawling-left-low-guard.png",
+        "bytes": 1432914,
+        "sha256": "45302d992be9b31651e852b16bd6d920ee79c6de5bb8074c35ea268822c9485a",
+        "recipe": "crawling-combat",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/crawling-combat/crawling-left-standing-guard.png",
+        "bytes": 1420469,
+        "sha256": "c1fa4202c6a9ff7d1534cbddeee3372e1d8e8247603e508a7c47ccc4b31400ce",
+        "recipe": "crawling-combat",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": true
+      },
+      {
+        "path": "docs/production/vague33/qa/calibration-before/numb-medium-idle-before-right.png",
+        "bytes": 1158139,
+        "sha256": "cc23bf089e1e9d4b5e2757b8db8e19417f1e67c2b8b8bbbee293f4964a687231",
+        "recipe": "calibration-before",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": false
+      },
+      {
+        "path": "docs/production/vague33/qa/calibration-before/numb-medium-idle-before-left.png",
+        "bytes": 1158117,
+        "sha256": "1a25ea0244eedb2ec6fff7f4a0c346b835565e73c9b39463068b6b5b8b8022da",
+        "recipe": "calibration-before",
+        "visualReview": "inspected-full-retained-image",
+        "freshFinalBuild": false
+      }
+    ]
+  },
+  "limits": [
+    "Eight single static poses and two stage layers add no certified animation or 1:1 fidelity. Original-game anatomy, camera, scale and timings remain unmeasured.",
+    "Opposite orientations use the current engine mirror; they are not separately sourced reverse views.",
+    "The crawling image calibration and exact neutralLight level change do not replace its historical upright body/hurtbox/push envelope.",
+    "The five browser recipes block service workers and do not certify offline updates, a completed match, gamepad operation, performance, interruption coverage or remote CI.",
+    "Night Flutter, Numb Body Medium and standing Lying Figure action rendering were checked in both orientations; their attacks did not receive the six contact/guard cases reserved for the corrected crawling move.",
+    "No blanket zero console/network-error assertion is made; only unhandled page errors and the specified expected image HTTP responses were instrumented.",
+    "The Lying Figure story route remains blocked by the exact missing sh2_mannequin_ambusher_023 art from the prior wave; these local art/dojo recipes do not validate that route. Illustrated story scenes are not a completed playable route.",
+    "Pre-restart crawling screenshots are lost and excluded. Their documented historical diagnosis is not counted as current retained proof."
+  ]
+}

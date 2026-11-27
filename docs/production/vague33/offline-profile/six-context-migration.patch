@@ -1,0 +1,249 @@
+--- a/scripts/http-qa-sprites.mjs
++++ b/scripts/http-qa-sprites.mjs
+@@ -1,5 +1,6 @@
+ /** Real HTTP/PWA raster checks; isolated local UI tests are reported separately. */
+ import {chromium} from 'playwright-core';
++import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
+ import {spawn} from 'node:child_process';
+ import {mkdir,writeFile,readFile} from 'node:fs/promises';
+ import {resolve} from 'node:path';
+@@ -13,7 +14,7 @@
+ const artCount=Object.keys(SPRITES).length;
+ const combatIds=Object.keys(SPRITES).filter(id=>hasCombatSprite(SPRITES[id])),combatCount=combatIds.length;
+ const missingArtFighter=ROSTER.find(f=>!hasCombatSprite(SPRITES[f.id])&&createCombatProfile(f).referencePolicy.combatEnabled);
+-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4175';let server,browser;
++const base=process.env.QA_BASE_URL||'http://127.0.0.1:4175';let server,browser,offlineProfile;
+ const assert=(name,ok)=>{report.checks.push({name,passed:!!ok});if(!ok)throw Error(name);};
+ const shot=async(page,name)=>{await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');};
+ const ready=page=>page.waitForFunction(()=>document.querySelector('#p1Portrait')?.dataset.artStatus==='raster'&&document.querySelector('#p2Portrait')?.dataset.artStatus==='raster');
+@@ -25,8 +26,8 @@
+  let available=false;for(let i=0;i<80;i++){try{if((await fetch(base)).ok){available=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}assert('static build HTTP server starts',available);
+  const files=new Map(Object.values(SPRITES).flatMap(art=>[...art.frames,art.portrait]).filter(Boolean).map(frame=>[frame.path,frame]));
+  for(const frame of files.values()){const response=await fetch(base+'/'+frame.path),bytes=Buffer.from(await response.arrayBuffer());assert('HTTP exact raster digest: '+frame.path,response.ok&&response.headers.get('content-type').startsWith('image/')&&createHash('sha256').update(bytes).digest('hex')===frame.sha256);}
+- browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});report.browser=await browser.version();
+- const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await pageIn(context);
++ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined,viewport:{width:1440,height:1000}});browser=offlineProfile.browser;report.browser=await browser.version();
++ const context=offlineProfile.context,page=await pageIn(context);
+  await page.goto(base+'/modules/unified-versus.html?qa=1');await ready(page);assert('both exact-ID candidate portraits decode from HTTP',true);
+  assert('catalogue remains 30 per page',await page.locator('#roster > *').count()===30);await shot(page,'01-selection');
+  await page.check('#artReadyOnly');
+@@ -79,11 +80,14 @@
+  await page.goto(base+'/modules/unified-versus.html?qa=1&p1=film_red_pyramid_film_175&p2=sh1_air_screamer_001');await ready(page);
+  await page.evaluate(()=>{__HALO_QA__.assetCache.maxBytes=1536*1024*4;});await page.click('#launch');await page.waitForFunction(()=>!document.querySelector('#launch').disabled);
+  assert('aggregate combat memory budget blocks launch before a new engine',await page.evaluate(()=>!__HALO_QA__.engine&&__HALO_QA__.assetCache.bytes<=__HALO_QA__.assetCache.maxBytes));
+- await context.close();
++ await page.close();
+  const faults=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1000}}),bad=await pageIn(faults);await faults.route('**/assets/sprites/**',route=>route.abort());
+  await bad.goto(base+'/modules/unified-versus.html?qa=1');await bad.click('#launch');await bad.waitForFunction(()=>!document.querySelector('#launch').disabled);assert('image failure never starts an invisible normal fight',await bad.evaluate(()=>!__HALO_QA__.engine));await faults.unroute('**/assets/sprites/**');await bad.click('#launch');await bad.waitForFunction(()=>!!__HALO_QA__.engine);assert('explicit retry recovers from an image load error',true);await faults.close();
+  const delayed=await browser.newContext({serviceWorkers:'block'}),slow=await pageIn(delayed);await delayed.route('**/assets/sprites/**',async route=>{await new Promise(r=>setTimeout(r,600));await route.continue();});
+  await slow.goto(base+'/modules/unified-versus.html?qa=1',{waitUntil:'domcontentloaded'});await slow.waitForFunction(()=>!!window.__HALO_QA__);await slow.click('#launch');await slow.fill('#search',missingArtFighter.name);await slow.locator(`#roster [data-id="${missingArtFighter.id}"]`).click();await slow.waitForTimeout(900);assert('stale preflight cannot launch a newly changed selection',await slow.evaluate(()=>!__HALO_QA__.engine));await delayed.close();
+  assert('no uncaught JavaScript exceptions',report.errors.length===0);
+ }catch(error){report.failure=String(error);process.exitCode=1;}
+-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
++finally{
++ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
++ finally{try{await offlineProfile?.close();}finally{server?.kill('SIGTERM');}}
++}
+--- a/scripts/http-qa-art-v092.mjs
++++ b/scripts/http-qa-art-v092.mjs
+@@ -1,12 +1,13 @@
+ /** HTTP inspection and staged camera cases, not campaigns played by a human. */
+ import {chromium} from 'playwright-core';
++import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
+ import {spawn} from 'node:child_process';
+ import {mkdir,writeFile} from 'node:fs/promises';
+ import {resolve} from 'node:path';
+ import {fileURLToPath} from 'node:url';
+ import {VERSION} from '../src/data.js';
+ const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-art-v092');await mkdir(out,{recursive:true});
+-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4177';let server,browser;
++const base=process.env.QA_BASE_URL||'http://127.0.0.1:4177';let server,browser,offlineProfile;
+ const STATIC_SUBJECT='film_red_pyramid_film_175',ANIMATED_SUBJECT='sh1_air_screamer_001';
+ const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:['Direct actor placement at both stage edges and synthetic world amounts exercise only the render envelope; they do not certify or enable a fixed-stage transition. The genuine stage and complete world state are restored for the capture.']};
+ const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
+@@ -19,8 +20,8 @@
+ try{
+  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4177','--dist'],{cwd:root,stdio:'ignore'});
+  let ready=false;for(let n=0;n<60;n++){try{if((await fetch(base)).ok){ready=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}check('static server ready',ready);
+- browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});report.browser=browser.version();
+- const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
++ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined,viewport:{width:1440,height:1000}});browser=offlineProfile.browser;report.browser=browser.version();
++ const context=offlineProfile.context,page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
+  await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');
+  check('live inspector mounts using actual loaded bitmap',await page.locator('.sprite-inspector').count()===1);
+  check('single-frame image does not claim an animated clip',await page.locator('[data-inspect=play]').isDisabled());
+@@ -80,6 +81,9 @@
+  // No wall-clock dependency in presentation: pausing cannot consume clip ticks.
+  const frozen=await page.evaluate(()=>JSON.stringify(__HALO_QA__.engine.actors.map(a=>a.spriteClock)));await page.waitForTimeout(100);check('stopped simulation does not advance pose clocks through rendering',await page.evaluate(()=>JSON.stringify(__HALO_QA__.engine.actors.map(a=>a.spriteClock)))===frozen);
+  await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});await context.setOffline(true);await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');check('inspector and supporting modules work offline',await page.locator('.sprite-inspector').count()===1&&await page.locator('[data-inspect=play]').isDisabled());await shot(page,'04-offline-inspector');
+- await context.close();check('no unhandled page exception',report.errors.length===0);
++ await page.close();check('no unhandled page exception',report.errors.length===0);
+ }catch(error){report.failure=String(error);process.exitCode=1;}
+-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
++finally{
++ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
++ finally{try{await offlineProfile?.close();}finally{server?.kill('SIGTERM');}}
++}
+--- a/scripts/http-qa-clips-v093.mjs
++++ b/scripts/http-qa-clips-v093.mjs
+@@ -1,12 +1,13 @@
+ /** Real browser/HTTP tests of editing existing raster timelines, not generated animation art. */
+ import {chromium} from 'playwright-core';
++import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
+ import {spawn} from 'node:child_process';
+ import {mkdir,readFile,writeFile} from 'node:fs/promises';
+ import {resolve} from 'node:path';
+ import {fileURLToPath} from 'node:url';
+ import {VERSION} from '../src/data.js';
+ const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-clips-v093');await mkdir(out,{recursive:true});
+-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4178';let server,browser;
++const base=process.env.QA_BASE_URL||'http://127.0.0.1:4178';let server,browser,offlineProfile;
+ const STATIC_SUBJECT='film_red_pyramid_film_175',ANIMATED_SUBJECT='sh1_air_screamer_001';
+ const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:['Two repeated steps referencing the same real PNG test static-vs-animation accounting; no new artwork is created.']};
+ const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
+@@ -19,8 +20,8 @@
+ try{
+  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4178','--dist'],{cwd:root,stdio:'ignore'});
+  let ready=false;for(let n=0;n<60;n++){try{if((await fetch(base)).ok){ready=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}check('static HTTP server starts',ready);
+- browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});report.browser=browser.version();
+- const context=await browser.newContext({viewport:{width:1440,height:1040}}),page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
++ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined,viewport:{width:1440,height:1040}});browser=offlineProfile.browser;report.browser=browser.version();
++ const context=offlineProfile.context,page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
+  await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');
+  check('one disposable editor mounts beside the real bitmap',await page.locator('.clip-editor').count()===1);
+  const before=await page.evaluate(async()=>({art:JSON.stringify((await import('/src/sprite-manifest.js')).SPRITES),storage:JSON.stringify({...localStorage})}));
+@@ -55,10 +56,13 @@
+  check('filter reset keeps the dossier on the visible first page',await page.evaluate(()=>[...document.querySelectorAll('.sprite-card')].some(c=>c.dataset.id===document.querySelector('#spriteDetail canvas').dataset.spriteId)));
+  check('filter navigation leaves exactly one live editor',await page.locator('.clip-editor').count()===1);
+  await page.setViewportSize({width:430,height:932});await page.locator('.clip-editor summary').click();await page.click('[data-clip=add]');await page.locator('[data-clip=export]').scrollIntoViewIfNeeded();check('timeline controls fit the mobile viewport',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await shot(page,'02-mobile-editor');
+- await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});await context.setOffline(true);await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');await page.locator('.clip-editor summary').click();await page.click('[data-clip=add]');check('new authoring modules and controls work completely offline',await page.locator('[data-clip-frame]').count()===2&&await page.locator('[data-clip-frame="1"] option').count()===1);await shot(page,'03-offline-editor');await context.close();
++ await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});await context.setOffline(true);await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');await page.locator('.clip-editor summary').click();await page.click('[data-clip=add]');check('new authoring modules and controls work completely offline',await page.locator('[data-clip-frame]').count()===2&&await page.locator('[data-clip-frame="1"] option').count()===1);await shot(page,'03-offline-editor');await page.close();
+  const failureContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1040}}),failed=await failureContext.newPage();failed.on('pageerror',e=>report.errors.push(e.message));
+  await failed.route('**/assets/sprites/**',route=>route.abort('failed'));await failed.goto(base+'/modules/sprite-workshop.html');await selectSubject(failed,STATIC_SUBJECT,'film',false);await failed.locator('[data-inspect=retry]').waitFor({state:'visible'});
+  check('failed inspector load says the frame is not displayed',/IMAGE INDISPONIBLE/.test(await failed.locator('[data-inspect=status]').textContent()));await failed.unroute('**/assets/sprites/**');await failed.click('[data-inspect=retry]');await failed.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');check('explicit retry recovers the inspector without reloading the page',await failed.locator('[data-inspect=retry]').isHidden());await shot(failed,'04-recovered-inspector');await failureContext.close();
+  check('no unhandled browser exceptions',report.errors.length===0);
+ }catch(error){report.failure=String(error);process.exitCode=1;}
+-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
++finally{
++ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
++ finally{try{await offlineProfile?.close();}finally{server?.kill('SIGTERM');}}
++}
+--- a/scripts/http-qa-recovery-v094.mjs
++++ b/scripts/http-qa-recovery-v094.mjs
+@@ -1,12 +1,13 @@
+ /** Actual HTTP UI regression tests. Failure injection/checkpoint fixtures are not played campaigns. */
+ import {chromium} from 'playwright-core';
++import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
+ import {spawn} from 'node:child_process';
+ import {mkdir,readFile,writeFile} from 'node:fs/promises';
+ import {resolve} from 'node:path';
+ import {fileURLToPath} from 'node:url';
+ import {VERSION} from '../src/data.js';
+ const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-recovery-v094');await mkdir(out,{recursive:true});
+-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4179';let server,browser;
++const base=process.env.QA_BASE_URL||'http://127.0.0.1:4179';let server,browser,offlineProfile;
+ const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
+  'A prepared won checkpoint, deciding KO and prior-round score isolate retry/continuation transactions. Finishers are disabled and real intro/round-result/outro ticks produce the engine match callback and the result screen; no campaign victory is claimed.',
+  'SpriteCache.prepare is temporarily made to fail for the pause retry test. No production file is changed.',
+@@ -87,9 +88,13 @@
+  await page.click('[data-inspect=reset]');await page.fill('[data-inspect=anchorX]','0.61');await page.locator('[data-inspect=anchorX]').dispatchEvent('change');const pending=page.waitForEvent('download');await page.click('[data-inspect=export]');const download=await pending;await download.saveAs(resolve(out,'calibration-v2.json'));const packet=JSON.parse(await readFile(resolve(out,'calibration-v2.json'),'utf8'));
+  check('calibration export includes the previous exact anchors as a concurrency guard',packet.schema===2&&packet.fighterId==='film_red_pyramid_film_175'&&packet.frames.length===1&&packet.previousFrames[0].anchor[0]!==.61&&packet.frames[0].anchor[0]===.61&&packet.previousFrames[0].sha256===packet.frames[0].sha256);await shot(page,'04-preserved-drafts');
+  await page.setViewportSize({width:430,height:932});check('updated editor controls stay within mobile viewport',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await shot(page,'05-mobile-recovery');await context.close();
+- const offlineContext=await browser.newContext(),off=await offlineContext.newPage();off.on('pageerror',e=>report.errors.push(e.message));await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
++ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
++ const offlineContext=offlineProfile.context,off=await offlineContext.newPage();off.on('pageerror',e=>report.errors.push(e.message));await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
+  await off.evaluate(async()=>{await Promise.all((await caches.keys()).map(k=>caches.delete(k)));});await offlineContext.setOffline(true);const response=await off.goto(base+'/definitely-uncached-v094');
+- check('empty offline cache returns a real 503 instead of a rejected navigation',response.status()===503&&/Archive hors ligne indisponible/.test(await off.textContent('body')));await shot(off,'06-empty-offline-fallback');await offlineContext.close();
++ check('empty offline cache returns a real 503 instead of a rejected navigation',response.status()===503&&/Archive hors ligne indisponible/.test(await off.textContent('body')));await shot(off,'06-empty-offline-fallback');await off.close();
+  check('no unhandled browser exceptions in recovery scenarios',report.errors.length===0);
+ }catch(error){report.failure=String(error);process.exitCode=1;}
+-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
++finally{
++ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
++ finally{try{await offlineProfile?.close();}finally{try{await browser?.close();}finally{server?.kill('SIGTERM');}}}
++}
+--- a/scripts/http-qa-boundaries-v095.mjs
++++ b/scripts/http-qa-boundaries-v095.mjs
+@@ -1,5 +1,6 @@
+ /** Real HTTP UI, with explicitly injected pad/Storage fixtures, not physical-device certification. */
+ import {chromium} from 'playwright-core';
++import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
+ import {spawn} from 'node:child_process';
+ import {mkdir,readFile,writeFile} from 'node:fs/promises';
+ import {resolve} from 'node:path';
+@@ -7,7 +8,7 @@
+ import {VERSION} from '../src/data.js';
+ const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-boundaries-v095');
+ await mkdir(out,{recursive:true});
+-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4180';let server,browser;
++const base=process.env.QA_BASE_URL||'http://127.0.0.1:4180';let server,browser,offlineProfile;
+ const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
+  'Standard gamepad objects replace navigator.getGamepads for simultaneous Start and API-denial cases; no physical controller is claimed.',
+  'Storage.prototype.setItem is temporarily made to reject only control writes; this is not a physical storage-quota measurement.',
+@@ -160,13 +161,17 @@
+     }
+   }
+   await context.close();
+-  const offline=await browser.newContext(),off=await offline.newPage();off.on('pageerror',e=>report.errors.push(e.message));
++  offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
++  const offline=offlineProfile.context,off=await offline.newPage();off.on('pageerror',e=>report.errors.push(e.message));
+   await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
+   await offline.setOffline(true);await off.goto(versus);await off.waitForFunction(()=>!!window.__HALO_QA__);
+   await off.selectOption('#mode','local');await off.click('#launch');await off.waitForFunction(()=>__HALO_QA__.engine?.phase==='fight');
+   await off.click('#pauseBtn');await off.click('[data-pause=controls]');
+   const accepted=await off.evaluate(()=>__HALO_QA__.engine.togglePause(false));
+   check('resume guard is also active with offline modules',accepted===false&&await off.evaluate(()=>__HALO_QA__.engine.paused));await shot(off,'06-offline-modal-guard');
+-  await offline.close();check('no unhandled browser exceptions',report.errors.length===0);
++  await off.close();check('no unhandled browser exceptions',report.errors.length===0);
+ } catch(error){report.failure=String(error);process.exitCode=1;}
+-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
++finally{
++ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
++ finally{try{await offlineProfile?.close();}finally{try{await browser?.close();}finally{server?.kill('SIGTERM');}}}
++}
+--- a/scripts/http-qa-presentations.mjs
++++ b/scripts/http-qa-presentations.mjs
+@@ -1,5 +1,6 @@
+ /** Real HTTP integration of prepared presentation scenes; this is not a played campaign or an art review. */
+ import {chromium} from 'playwright-core';
++import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
+ import {spawn} from 'node:child_process';
+ import {mkdir,writeFile} from 'node:fs/promises';
+ import {resolve} from 'node:path';
+@@ -11,7 +12,7 @@
+ const keys=['intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished','taunt'];
+ const versus=base+'/modules/unified-versus.html?qa=1&p1=sh1_air_screamer_001&p2=film_red_pyramid_film_175';
+ await mkdir(out,{recursive:true});
+-let server,browser;
++let server,browser,offlineProfile;
+ const pages=[];
+ const report={version:VERSION,base,checks:[],errors:[],captures:[],scenes:{},fixtures:[
+  'Local round knockouts, decisive score states and simulation advancement are prepared through the explicit ?qa=1 bridge. No fight or campaign is claimed as played.',
+@@ -211,19 +212,21 @@
+  check('presentation authoring controls fit the mobile viewport',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await shot(page,'05-workshop-mobile');
+  await context.close();
+ 
+- const offline=await browser.newContext({viewport:{width:1280,height:900}}),off=await newPage(offline);
++ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined,viewport:{width:1280,height:900}});
++ const offline=offlineProfile.context,off=await newPage(offline);
+  await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
+  await offline.setOffline(true);await off.goto(base+'/modules/sprite-workshop.html');await selectStaticWorkshopSubject(off);
+  const modules=await off.evaluate(async()=>{const [poses,sequences]=await Promise.all([import('/src/sprite-poses.js'),import('/src/presentation-sequences.js')]);return {keys:poses.PRESENTATION_KEYS,durationFunction:typeof sequences.presentationDuration,actorFunction:typeof sequences.createActorPresentation};});
+  check('both new presentation modules import entirely offline',JSON.stringify(modules.keys)===JSON.stringify(keys)&&modules.durationFunction==='function'&&modules.actorFunction==='function',modules);
+  await off.goto(versus);await off.waitForFunction(()=>!!window.__HALO_QA__);await off.selectOption('#mode','local');await quietRules(off);await off.click('#launch');await off.waitForFunction(()=>__HALO_QA__.engine?.phase==='intro');await off.click('#pauseBtn');
+  check('offline combat preserves synchronized intro and real pause',await off.evaluate(()=>{const e=__HALO_QA__.engine;return e.paused&&e.actors.every(a=>a.presentation?.key==='intro')&&e.actors[0].presentation.frame===e.actors[1].presentation.frame;}));
+- await shot(off,'06-offline-presentations');await offline.close();
++ await shot(off,'06-offline-presentations');await off.close();
+  check('no unhandled JavaScript browser exceptions',report.errors.length===0,report.errors);
+ }catch(error){report.failure=String(error);process.exitCode=1;}
+ finally{
+  for(const page of pages)if(!page.isClosed()){try{await restore(page);}catch{/* A navigated or closed isolated realm owns no persistent fixture. */}}
+- report.passed=!report.failure&&!report.errors.length;
+- await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
+- await browser?.close();server?.kill('SIGTERM');
+-}
++ try{
++  report.passed=!report.failure&&!report.errors.length;
++  await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
++ }finally{try{await offlineProfile?.close();}finally{try{await browser?.close();}finally{server?.kill('SIGTERM');}}}
++}

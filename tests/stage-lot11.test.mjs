@@ -104,6 +104,6 @@ test('lot11 preserves historical artifacts separately from the currently enabled
   assert.equal(bitmap.source,room.source);
   assert.equal(bitmap.scene,room.referencePolicy.sceneId);
  }
- assert.equal(STAGES.reduce((n,s)=>n+s.referenceTracks.length,0),159);assert.equal(STAGES.reduce((n,s)=>n+s.animations.length,0),64);assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
+ assert.equal(STAGES.reduce((n,s)=>n+s.referenceTracks.length,0),159);assert.equal(STAGES.reduce((n,s)=>n+s.animations.length,0),63);assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
  const waiting=stage('alchemilla');for(const key of['ward','curtains','monitor','beds'])assert.ok(![...waiting.props,...waiting.layers].includes(key));assert.match(stage('artaud_theater').referencePolicy.normalPhaseLabel,/SCÈNE NORMALE/);assert.equal(stage('hinako_home').referencePolicy.sceneId,undefined);
 });

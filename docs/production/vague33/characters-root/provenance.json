@@ -1,0 +1,39 @@
+{
+  "wave": 33,
+  "origin": "conversation-image-generation",
+  "sourceGame": "Silent Hill 2 (2001) original",
+  "selectedAttempts": [
+    "lying-standing-walk",
+    "lying-standing-light",
+    "lying-crawling-walk",
+    "lying-crawling-light"
+  ],
+  "rejectedAttempts": [
+    "lying-standing-walk-cutout",
+    "lying-standing-light-cutout"
+  ],
+  "selectionReason": "Original PNGs are clean on native alpha review with white and blue-grey backgrounds. Cutout revisions alter texture and are not selected. No pixels edited after generation.",
+  "references": [
+    {
+      "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "role": "existing owner-specific sprite and material continuity"
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+      "role": "existing owner-specific sprite and material continuity"
+    },
+    {
+      "path": "docs/production/vague32/story/references/lying-figure-original-model.jpg",
+      "role": "original model anatomy reference for standing variant"
+    }
+  ],
+  "nativeAlphaReview": true,
+  "timingsMeasured": false,
+  "certifiedOneToOne": false,
+  "limits": [
+    "Single still per action, no animation cycle.",
+    "Original-game restrained torso and two legs; no free arms or new weapons.",
+    "Short body-impact poses are versus presentation adaptations; source frame chronology not measured.",
+    "Mirror is a presentation mechanism; opposite view not separately drawn."
+  ]
+}

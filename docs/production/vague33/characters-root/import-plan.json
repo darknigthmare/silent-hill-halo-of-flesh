@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "wave": 33,
+  "baselineCommit": "4f7d2e89c106ad4a00752bcb4c9b046ee3043b18",
+  "counts": {
+    "newProfiles": 0,
+    "newPortraits": 0,
+    "newCombatBases": 0,
+    "newStaticPoses": 4,
+    "newAnimatedClips": 0
+  },
+  "plans": [
+    {
+      "id": "sh2_lying_figure_020",
+      "source": "sh2",
+      "edition": "Silent Hill 2 (2001), original; not the 2024 remake",
+      "pose": "walk",
+      "frameIndex": 2,
+      "sourceFile": "assets/sprites/sh2_lying_figure_020.93aa7fbaf7fb.png",
+      "originalSourceFile": "exec-b43afc4e-2a88-4d0d-9a4e-a5498eeae448.png",
+      "sha256": "93aa7fbaf7fb92e655859ad7fc51b7b91cbe5bcb1a4d0852098d8843c1da021f",
+      "path": "assets/sprites/sh2_lying_figure_020.93aa7fbaf7fb.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1652824,
+      "visibleBounds": [
+        51,
+        295,
+        973,
+        1295
+      ],
+      "pixelSHA256": "fd18be592d76a80ad298c0eb38768cb935dfa371d21e455f1a39359da0fb172f",
+      "transparentFraction": 0.75491,
+      "anchor": [
+        0.5,
+        0.8430989583333334
+      ],
+      "bodyHeight": 0.6266666666666666,
+      "facing": 1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "origin": "conversation-image-generation",
+      "singleSubjectReviewed": true,
+      "fidelity": "unverified",
+      "status": "integrated-static-candidate; unverified-fidelity",
+      "nativeGameplayReviewed": true,
+      "sourceTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "anchorRationale": "Vertical support from lowest alpha32 pixel; bodyHeight compensates portrait-canvas height to retain the previous standing world/pixel scale. Horizontal placement is checked in native gameplay; source geometry is not certified.",
+      "originalGeneratedPath": "/workspace/scratch/cbea9ddcab84/generated_images/exec-b43afc4e-2a88-4d0d-9a4e-a5498eeae448.png",
+      "measurementMethod": "inspect_image: alpha<16 for transparentFraction; RGB under alpha0 zeroed for pixelSHA256; visibleBounds alpha>=32.",
+      "nativeGameplayEvidence": {
+        "report": "../qa/characters/report.json",
+        "orientations": [
+          "right",
+          "left"
+        ],
+        "actionAndRecoveryCaptured": true,
+        "visualReview": "43 final screenshots reviewed across five native HTTP recipes; character recipe includes 32 screenshots for 16 cases."
+      }
+    },
+    {
+      "id": "sh2_lying_figure_020",
+      "source": "sh2",
+      "edition": "Silent Hill 2 (2001), original; not the 2024 remake",
+      "pose": "neutralLight",
+      "frameIndex": 3,
+      "sourceFile": "assets/sprites/sh2_lying_figure_020.c9679896cf00.png",
+      "originalSourceFile": "exec-efedbe97-2bcd-4646-93f7-b74944ddc4fe.png",
+      "sha256": "c9679896cf006e1babfcaee776ee4a9c2fd8f5341129778a17a98a4ffb7c47a3",
+      "path": "assets/sprites/sh2_lying_figure_020.c9679896cf00.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1494720,
+      "visibleBounds": [
+        63,
+        360,
+        982,
+        1302
+      ],
+      "pixelSHA256": "95f4482162265760000ec6fd3d37056ed9302bcb267a379584a55a784c90a41c",
+      "transparentFraction": 0.78794,
+      "anchor": [
+        0.6,
+        0.84765625
+      ],
+      "bodyHeight": 0.6266666666666666,
+      "facing": 1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "origin": "conversation-image-generation",
+      "singleSubjectReviewed": true,
+      "fidelity": "unverified",
+      "status": "integrated-static-candidate; unverified-fidelity",
+      "nativeGameplayReviewed": true,
+      "sourceTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "anchorRationale": "Vertical support from lowest alpha32 pixel; bodyHeight compensates portrait-canvas height to retain the previous standing world/pixel scale. Horizontal placement is checked in native gameplay; source geometry is not certified.",
+      "originalGeneratedPath": "/workspace/scratch/cbea9ddcab84/generated_images/exec-efedbe97-2bcd-4646-93f7-b74944ddc4fe.png",
+      "measurementMethod": "inspect_image: alpha<16 for transparentFraction; RGB under alpha0 zeroed for pixelSHA256; visibleBounds alpha>=32.",
+      "nativeGameplayEvidence": {
+        "report": "../qa/characters/report.json",
+        "orientations": [
+          "right",
+          "left"
+        ],
+        "actionAndRecoveryCaptured": true,
+        "visualReview": "43 final screenshots reviewed across five native HTTP recipes; character recipe includes 32 screenshots for 16 cases."
+      }
+    },
+    {
+      "id": "sh2_lying_figure_crawling_021",
+      "source": "sh2",
+      "edition": "Silent Hill 2 (2001), original; not the 2024 remake",
+      "pose": "walk",
+      "frameIndex": 1,
+      "sourceFile": "assets/sprites/sh2_lying_figure_crawling_021.70eb5478e000.png",
+      "originalSourceFile": "exec-c05499b6-a009-4ab2-9971-cfa9ad37795b.png",
+      "sha256": "70eb5478e00089733d5c402ede0d8d399c8d6e8a538565039582faa4cf588f67",
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.70eb5478e000.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 1092380,
+      "visibleBounds": [
+        60,
+        123,
+        2143,
+        563
+      ],
+      "pixelSHA256": "b15208ccca2a9b2b9c031b2b778087e764c7e9c9434c16bb3e162a3d114a5bc7",
+      "transparentFraction": 0.70441,
+      "anchor": [
+        0.4,
+        0.7776243093922652
+      ],
+      "bodyHeight": 2.94,
+      "facing": -1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "origin": "conversation-image-generation",
+      "singleSubjectReviewed": true,
+      "fidelity": "unverified",
+      "status": "integrated-static-candidate; unverified-fidelity",
+      "nativeGameplayReviewed": true,
+      "sourceTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "anchorRationale": "Same world/pixel scale across three prone poses; standing-equivalent reference may exceed horizontal canvas. Front matched to low contact band, source dimensions unmeasured.",
+      "originalGeneratedPath": "/workspace/scratch/cbea9ddcab84/generated_images/exec-c05499b6-a009-4ab2-9971-cfa9ad37795b.png",
+      "measurementMethod": "inspect_image: alpha<16 for transparentFraction; RGB under alpha0 zeroed for pixelSHA256; visibleBounds alpha>=32.",
+      "nativeGameplayEvidence": {
+        "report": "../qa/characters/report.json",
+        "orientations": [
+          "right",
+          "left"
+        ],
+        "actionAndRecoveryCaptured": true,
+        "visualReview": "43 final screenshots reviewed across five native HTTP recipes; character recipe includes 32 screenshots for 16 cases."
+      }
+    },
+    {
+      "id": "sh2_lying_figure_crawling_021",
+      "source": "sh2",
+      "edition": "Silent Hill 2 (2001), original; not the 2024 remake",
+      "pose": "neutralLight",
+      "frameIndex": 2,
+      "sourceFile": "assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+      "originalSourceFile": "exec-34588643-8f78-42a6-a872-1317635b0cdf.png",
+      "sha256": "fdf3d62f02cb232b40beaa77fafb41e7ffcaf19112e9e73f1fb6667293cfc321",
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 1307158,
+      "visibleBounds": [
+        60,
+        115,
+        2056,
+        609
+      ],
+      "pixelSHA256": "c7c446a13af336af48b499f8553735e78d41dae158c6b9ee791be6843395728c",
+      "transparentFraction": 0.63149,
+      "anchor": [
+        0.4,
+        0.8411602209944752
+      ],
+      "bodyHeight": 2.94,
+      "facing": -1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "origin": "conversation-image-generation",
+      "singleSubjectReviewed": true,
+      "fidelity": "unverified",
+      "status": "integrated-static-candidate; unverified-fidelity",
+      "nativeGameplayReviewed": true,
+      "sourceTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "anchorRationale": "Same world/pixel scale across three prone poses; standing-equivalent reference may exceed horizontal canvas. Front matched to low contact band, source dimensions unmeasured.",
+      "originalGeneratedPath": "/workspace/scratch/cbea9ddcab84/generated_images/exec-34588643-8f78-42a6-a872-1317635b0cdf.png",
+      "measurementMethod": "inspect_image: alpha<16 for transparentFraction; RGB under alpha0 zeroed for pixelSHA256; visibleBounds alpha>=32.",
+      "nativeGameplayEvidence": {
+        "report": "../qa/characters/report.json",
+        "orientations": [
+          "right",
+          "left"
+        ],
+        "actionAndRecoveryCaptured": true,
+        "visualReview": "43 final screenshots reviewed across five native HTTP recipes; character recipe includes 32 screenshots for 16 cases."
+      }
+    }
+  ]
+}

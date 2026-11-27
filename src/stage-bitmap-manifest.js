@@ -6320,5 +6320,73 @@ export const STAGE_BITMAPS = {
       "Fond opaque et bord de neige au premier plan sont deux PNG fixes. Dimensions, frontalité, usure et végétation de bord reconstruits ; plaque limitée au mot LIGHTHOUSE, détails inférieurs illisibles.",
       "Neige statique et parallaxe de caméra discrète ; aucune animation météo ou prise de glace, faisceau, eau, scène de révélation, danger ou appui de plafond. Anciennes propositions composites conservées en attente."
     ]
+  },
+  "arcade_historical": {
+    "stageId": "arcade_historical",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "historical-society-normal-gallery-before-descent",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT15",
+      "V33_ARCADE_HISTORICAL_GALLERY_2050_2100",
+      "V33_ARCADE_HISTORICAL_CROSSCHECK_1830_1840"
+    ],
+    "layers": [
+      {
+        "id": "bg-normal-gallery",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+            "sha256": "e670dbd8ffbac0aa3b3443b6100f16748c456f95f4b4cb37992d5d7ba74382c2",
+            "bytes": 2246551,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-door-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
+            "sha256": "eb9c53adb93795aac66395022a420d04d1221e22be5266454a08f415119e11df",
+            "bytes": 210099,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Galerie normale de la Historical Society dans The Arcade (Stage 2 Area 1), avant la descente vers la prison. Deux parcours filmés documentent papier peint jaune olive, boiseries et ordre des quatre cadres ; sources et horodatages dans docs/production/vague33/stages/source-review.json.",
+      "Fond opaque et montants de porte transparents sont deux PNG fixes distincts. Détails des œuvres, textures, sol et projection latérale reconstruits : références de faible résolution, aucune certification 1:1.",
+      "Pas de transition, clignotement des portraits, personnage, chute de gravats, fatalité automatique ni plafond jouable. Les propositions anciennes restent en attente ; physique de sol neutre."
+    ]
   }
 };

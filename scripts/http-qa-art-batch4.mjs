@@ -78,6 +78,11 @@ function subjectClipContract(id){
     // Wave30 appends one exact static pose after the preserved idle; wave32
     // adds the Sniffer male walk/light without changing its forwardSpecial.
     sh4_sniffer_dog_male_053: {forwardSpecial: [1], walk: [2], neutralLight: [3]},
+    // Wave33 adds exact-owner stills; negative probes remain explicit.
+    sh1_night_flutter_002: {walk: [1], neutralLight: [2]},
+    sh3_numb_body_medium: {walk: [1], neutralSpecial: [2]},
+    sh2_lying_figure_020: {neutralSpecial: [1], walk: [2], neutralLight: [3]},
+    sh2_lying_figure_crawling_021: {walk: [1], neutralLight: [2]},
     origins_carrion_076: {forwardSpecial: [1]},
     sh1_creeper_009: {walk: [1]}
   }[id] || {};
@@ -246,7 +251,7 @@ try{
       check(id+': '+pose+' is its own non-looping one-image still, playback stays disabled',await page.locator('[data-inspect=play]').isDisabled()&&!/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
       const geometry=await page.evaluate(async({id,pose,frame})=>{const {ROSTER}=await import('/src/data.js'),{rasterPlacement}=await import('/src/sprite-system.js'),{bodyProfile}=await import('/src/combat-geometry.js'),{previewSpriteState}=await import('/src/sprite-inspector.js');const fighter=ROSTER.find(f=>f.id===id),state=previewSpriteState(pose,0),p=rasterPlacement(fighter,frame,0,0,1,state),body=bodyProfile(fighter,state);return {id,pose,anchor:[...frame.anchor],bodyHeight:frame.bodyHeight,standingEquivalentHeight:body.height*body.scale,visibleHeight:(frame.visibleBounds[3]-frame.visibleBounds[1])*p.height/frame.height,visibleBottom:p.y+frame.visibleBounds[3]*p.height/frame.height,expectedBottom:-(body.bottom||0)*body.scale,finite:Object.values(p).filter(v=>typeof v==='number').every(Number.isFinite)};},{id,pose,frame});
       (report.poseGeometryBatch10??=[]).push(geometry);
-      check(id+': '+pose+' keeps its own finite standing-equivalent scale and actual alpha contact',geometry.finite&&Math.abs(geometry.visibleBottom-geometry.expectedBottom)<.02&&frame.bodyHeight>0&&frame.bodyHeight<=1,geometry);
+      check(id+': '+pose+' keeps its own finite standing-equivalent scale and actual alpha contact',geometry.finite&&Math.abs(geometry.visibleBottom-geometry.expectedBottom)<.02&&Number.isFinite(frame.bodyHeight)&&frame.bodyHeight>=.05&&frame.bodyHeight<=4,geometry);
       if(pose==='ko')check(id+': collapsed KO was not normalized to full standing silhouette height',geometry.visibleHeight<geometry.standingEquivalentHeight&&frame.bodyHeight>(frame.visibleBounds[3]-frame.visibleBounds[1])/frame.height,geometry);
       await shot(page,'batch10-inspector-'+pose+'-'+id);
     }

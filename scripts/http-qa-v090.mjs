@@ -1,25 +1,34 @@
 /** Real HTTP browser smoke, for an authorized CI/local runner. No proxy or policy changes. */
 import {chromium} from 'playwright-core';
 import {spawn} from 'node:child_process';
-import {mkdir,writeFile} from 'node:fs/promises';
+import {mkdir,rename,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {checkWave14} from './qa-wave14-browser.mjs';
+import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
 import {VERSION} from '../src/data.js';
-const root=resolve(new URL('../',import.meta.url).pathname),out=resolve(root,'tests/http-v090');
+const root=resolve(new URL('../',import.meta.url).pathname),out=resolve(root,process.env.QA_OUTPUT_DIR||'tests/http-v090');
 await mkdir(out,{recursive:true});
 const report={version:VERSION,kind:'http-browser-smoke',assertions:[],errors:[],fixtures:['Prepared deciding KO, prior-round score and actor stats, with finishers disabled, advance through real intro/round-result/outro ticks and the engine match callback for checkpoint QA only; no played victory is claimed.','explicit art diagnostic for legacy chronicle/checkpoint regressions; not a completed-art campaign'],captures:[]};
 const base=process.env.QA_BASE_URL||'http://127.0.0.1:4173';
-let server,browser;
+let server,browser,offlineProfile,page,workerSession;
+// The real offline catalogue exceeds an incognito context's memory-backed quota.
+// Use a disposable normal profile; this still caches and serves every real asset.
+report.serviceWorker={profile:'temporary-persistent',errors:[],versions:[]};
 const assert=(name,ok)=>{report.assertions.push({name,passed:!!ok});if(!ok)throw Error(name);};
 const capture=async(page,name)=>{await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');};
 try{
   if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4173','--dist'],{cwd:root,stdio:'ignore'});
   let available=false;for(let i=0;i<80;i++){try{if((await fetch(base)).ok){available=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}
   assert('HTTP server starts',available);
-  browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
-  report.browser=await browser.version();
+  offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,viewport:{width:1440,height:1000},executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
+  const {context}=offlineProfile;browser=offlineProfile.browser;report.browser=browser.version();
   await checkWave14(browser,base,out,report,assert);
-  const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();
+  page=context.pages()[0]||await context.newPage();
+  workerSession=await context.newCDPSession(page);
+  workerSession.on('ServiceWorker.workerErrorReported',event=>report.serviceWorker.errors.push(event.errorMessage));
+  workerSession.on('ServiceWorker.workerVersionUpdated',event=>report.serviceWorker.versions.push(...event.versions.map(({versionId,status,runningStatus,scriptURL})=>({versionId,status,runningStatus,scriptURL}))));
+  await workerSession.send('ServiceWorker.enable');
+  report.serviceWorker.quotaAtStart=await workerSession.send('Storage.getUsageAndQuota',{origin:new URL(base).origin});
   page.on('pageerror',error=>report.errors.push(error.message));page.on('dialog',dialog=>dialog.accept());
   await page.goto(base);await page.waitForSelector('.command-item');
   assert('shell menu renders',await page.locator('.command-item').count()>=7);
@@ -42,7 +51,9 @@ try{
   await capture(page,'01-http-pause');await page.keyboard.press('Escape');
   assert('Escape restores canvas focus',await page.evaluate(()=>!__HALO_QA__.engine.paused&&document.activeElement.id==='game'));
   await page.goto(base+'/modules/chronicles.html');await page.click('#launchRoute');
-  await page.waitForSelector('#artDiagnostic');await page.waitForTimeout(250);await page.check('#artDiagnostic');await page.click('#launch');await page.waitForSelector('#fightScreen:not(.hidden)');
+  // The input exists before module initialization, which resets its checked state.
+  // Wait for the roster built by init before selecting the explicit diagnostic.
+  await page.waitForSelector('#artDiagnostic');await page.locator('#roster > button').first().waitFor();await page.waitForTimeout(250);await page.check('#artDiagnostic');await page.click('#launch');await page.waitForSelector('#fightScreen:not(.hidden)');
   assert('chronicle launched from its real menu',await page.evaluate(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1')).mode==='chronicle'));
   const checkpoint=await page.evaluate(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1')));
   // Prepare a deciding KO; the engine creates its terminal state and result together.
@@ -60,11 +71,12 @@ try{
   assert('prepared checkpoint victory reaches a coherent engine match end',completed);
   await page.locator('#continueRun').waitFor({state:'visible'});await page.click('#continueRun');
   await page.goto(base);await page.locator('[data-mode="continue"]').first().click();
-  await frame.locator('#artDiagnostic').waitFor();await page.waitForTimeout(250);await frame.locator('#artDiagnostic').check();await frame.locator('#resumeCheckpoint').click();await frame.locator('#fightScreen:not(.hidden)').waitFor();
+  await frame.locator('#artDiagnostic').waitFor();await frame.locator('#roster > button').first().waitFor();await page.waitForTimeout(250);await frame.locator('#artDiagnostic').check();await frame.locator('#resumeCheckpoint').click();await frame.locator('#fightScreen:not(.hidden)').waitFor();
   const resumed=await page.evaluate(()=>JSON.parse(localStorage.getItem('sh-halo-of-flesh-run-v1')));
   assert('shell Continue resumes exact checkpoint at encounter two',resumed.id===checkpoint.id&&resumed.index===1&&resumed.wins===1);
   await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
   assert('service worker controls real HTTP page',await page.evaluate(()=>!!navigator.serviceWorker.controller));
+  report.serviceWorker.quotaAfterInstall=await workerSession.send('Storage.getUsageAndQuota',{origin:new URL(base).origin});
   await context.setOffline(true);await page.reload();await page.waitForSelector('.command-item');
   assert('cached shell reloads offline',await page.locator('.command-item').count()>=7);
   await capture(page,'02-offline-shell');await context.setOffline(false);
@@ -73,9 +85,21 @@ try{
   assert('mobile-size controls dialog fits screen',await page.locator('.controls-dialog').evaluate(d=>d.getBoundingClientRect().right<=innerWidth+1));
   await capture(page,'03-http-mobile-controls');
   assert('no JavaScript page exceptions',report.errors.length===0);
-}catch(error){report.failure=String(error);process.exitCode=1;}
+  assert('no service worker installation errors',report.serviceWorker.errors.length===0);
+}catch(error){
+  report.failure=String(error);process.exitCode=1;
+  if(page&&!page.isClosed()){
+    report.failureState=await Promise.all(page.frames().map(frame=>frame.evaluate(()=>({url:location.href,roster:document.querySelectorAll('#roster > button').length,artDiagnostic:document.querySelector('#artDiagnostic')?.checked,launchDisabled:document.querySelector('#launch')?.disabled,spriteStatus:document.querySelector('#spriteLaunchStatus')?.textContent,announcements:[...document.querySelectorAll('[role="status"],[role="alert"]')].map(element=>element.textContent),fightVisible:!!document.querySelector('#fightScreen:not(.hidden)')})).catch(diagnosticError=>({diagnosticFailure:String(diagnosticError)}))));
+    await capture(page,'99-http-failure').catch(captureError=>{report.failureCaptureError=String(captureError);});
+  }
+}
 finally{
-  report.passed=!report.failure&&report.errors.length===0;
-  await writeFile(resolve(out,'http-report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
+  if(page&&!page.isClosed())report.serviceWorker.finalState=await page.evaluate(async()=>({controlled:!!navigator.serviceWorker.controller,registrations:(await navigator.serviceWorker.getRegistrations()).map(registration=>({scope:registration.scope,installing:registration.installing?.state||null,waiting:registration.waiting?.state||null,active:registration.active?.state||null}))})).catch(error=>({diagnosticFailure:String(error)}));
   await browser?.close();server?.kill('SIGTERM');
+  report.passed=!report.failure&&report.errors.length===0&&report.serviceWorker.errors.length===0;
+  const destination=resolve(out,'http-report.json'),temporary=destination+'.tmp';
+  await writeFile(temporary,JSON.stringify(report,null,2)+'\n');await rename(temporary,destination);
+  // Retain the isolated profile if saving the evidence failed; otherwise remove it.
+  await offlineProfile?.close();
+  console.log(JSON.stringify(report,null,2));
 }

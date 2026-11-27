@@ -1,0 +1,342 @@
+{
+  "kind": "service-worker-install-diagnostic",
+  "startedAt": "2026-11-27T10:11:49.568Z",
+  "build": "/tmp/halo-wave33-build",
+  "unchangedProductCode": true,
+  "executablePath": "/tmp/chromium",
+  "workerErrors": [
+    {
+      "errorMessage": {
+        "errorMessage": "Failed to register a ServiceWorker for scope ('http://127.0.0.1:4310/') with script ('http://127.0.0.1:4310/service-worker.js'): ServiceWorker failed to install: ServiceWorker failed to handle event (event.waitUntil Promise rejected)",
+        "registrationId": "0",
+        "versionId": "0",
+        "sourceURL": "",
+        "lineNumber": -1,
+        "columnNumber": -1
+      },
+      "elapsedMs": 6371
+    },
+    {
+      "errorMessage": {
+        "errorMessage": "Uncaught (in promise) QuotaExceededError: Quota exceeded.",
+        "registrationId": "0",
+        "versionId": "0",
+        "sourceURL": "http://127.0.0.1:4310/service-worker.js",
+        "lineNumber": 0,
+        "columnNumber": -1
+      },
+      "elapsedMs": 6381
+    }
+  ],
+  "workerVersions": [
+    {
+      "versions": [],
+      "elapsedMs": 414
+    },
+    {
+      "versions": [
+        {
+          "versionId": "0",
+          "registrationId": "0",
+          "scriptURL": "http://127.0.0.1:4310/service-worker.js",
+          "runningStatus": "stopped",
+          "status": "new",
+          "scriptLastModified": 0,
+          "scriptResponseTime": 0,
+          "controlledClients": []
+        }
+      ],
+      "elapsedMs": 1116
+    },
+    {
+      "versions": [
+        {
+          "versionId": "0",
+          "registrationId": "0",
+          "scriptURL": "http://127.0.0.1:4310/service-worker.js",
+          "runningStatus": "stopped",
+          "status": "new",
+          "scriptLastModified": 0,
+          "scriptResponseTime": 1795774310.707865,
+          "controlledClients": []
+        }
+      ],
+      "elapsedMs": 1143
+    },
+    {
+      "versions": [
+        {
+          "versionId": "0",
+          "registrationId": "0",
+          "scriptURL": "http://127.0.0.1:4310/service-worker.js",
+          "runningStatus": "starting",
+          "status": "new",
+          "scriptLastModified": 0,
+          "scriptResponseTime": 1795774310.707865,
+          "controlledClients": []
+        }
+      ],
+      "elapsedMs": 1143
+    },
+    {
+      "versions": [
+        {
+          "versionId": "0",
+          "registrationId": "0",
+          "scriptURL": "http://127.0.0.1:4310/service-worker.js",
+          "runningStatus": "starting",
+          "status": "new",
+          "scriptLastModified": 0,
+          "scriptResponseTime": 1795774310.707865,
+          "controlledClients": [],
+          "targetId": "53FC30F68E939A9B9F95267C30D9BFE3"
+        }
+      ],
+      "elapsedMs": 1143
+    },
+    {
+      "versions": [
+        {
+          "versionId": "0",
+          "registrationId": "0",
+          "scriptURL": "http://127.0.0.1:4310/service-worker.js",
+          "runningStatus": "starting",
+          "status": "installing",
+          "scriptLastModified": 0,
+          "scriptResponseTime": 1795774310.707865,
+          "controlledClients": [],
+          "targetId": "53FC30F68E939A9B9F95267C30D9BFE3"
+        }
+      ],
+      "elapsedMs": 1167
+    },
+    {
+      "versions": [
+        {
+          "versionId": "0",
+          "registrationId": "0",
+          "scriptURL": "http://127.0.0.1:4310/service-worker.js",
+          "runningStatus": "running",
+          "status": "installing",
+          "scriptLastModified": 0,
+          "scriptResponseTime": 1795774310.707865,
+          "controlledClients": [],
+          "targetId": "53FC30F68E939A9B9F95267C30D9BFE3"
+        }
+      ],
+      "elapsedMs": 1167
+    },
+    {
+      "versions": [
+        {
+          "versionId": "0",
+          "registrationId": "0",
+          "scriptURL": "http://127.0.0.1:4310/service-worker.js",
+          "runningStatus": "running",
+          "status": "redundant",
+          "scriptLastModified": 0,
+          "scriptResponseTime": 1795774310.707865,
+          "controlledClients": [],
+          "targetId": "53FC30F68E939A9B9F95267C30D9BFE3"
+        }
+      ],
+      "elapsedMs": 6372
+    }
+  ],
+  "requestFailures": [],
+  "httpFailures": [],
+  "snapshots": [
+    {
+      "elapsedMs": 1688,
+      "controlled": false,
+      "registrations": [
+        {
+          "scope": "http://127.0.0.1:4310/",
+          "installing": "installing",
+          "waiting": null,
+          "active": null
+        }
+      ],
+      "caches": [
+        {
+          "name": "halo-of-flesh-static-v0.9.6-wave30-story-selection-20261125-a9c327b0e1bcdbe0807654f20d8d22212c9a11fdf648d98cdfd72cb4d4478bdd",
+          "entries": 30
+        }
+      ],
+      "estimate": {
+        "quota": 10771275726,
+        "usage": 33857486,
+        "usageDetails": {
+          "caches": 33857486
+        }
+      }
+    },
+    {
+      "elapsedMs": 2725,
+      "controlled": false,
+      "registrations": [
+        {
+          "scope": "http://127.0.0.1:4310/",
+          "installing": "installing",
+          "waiting": null,
+          "active": null
+        }
+      ],
+      "caches": [
+        {
+          "name": "halo-of-flesh-static-v0.9.6-wave30-story-selection-20261125-a9c327b0e1bcdbe0807654f20d8d22212c9a11fdf648d98cdfd72cb4d4478bdd",
+          "entries": 142
+        }
+      ],
+      "estimate": {
+        "quota": 10894918619,
+        "usage": 157500379,
+        "usageDetails": {
+          "caches": 157500379
+        }
+      }
+    },
+    {
+      "elapsedMs": 3879,
+      "controlled": false,
+      "registrations": [
+        {
+          "scope": "http://127.0.0.1:4310/",
+          "installing": "installing",
+          "waiting": null,
+          "active": null
+        }
+      ],
+      "caches": [
+        {
+          "name": "halo-of-flesh-static-v0.9.6-wave30-story-selection-20261125-a9c327b0e1bcdbe0807654f20d8d22212c9a11fdf648d98cdfd72cb4d4478bdd",
+          "entries": 197
+        }
+      ],
+      "estimate": {
+        "quota": 10947485429,
+        "usage": 210067189,
+        "usageDetails": {
+          "caches": 210067189
+        }
+      }
+    },
+    {
+      "elapsedMs": 4936,
+      "controlled": false,
+      "registrations": [
+        {
+          "scope": "http://127.0.0.1:4310/",
+          "installing": "installing",
+          "waiting": null,
+          "active": null
+        }
+      ],
+      "caches": [
+        {
+          "name": "halo-of-flesh-static-v0.9.6-wave30-story-selection-20261125-a9c327b0e1bcdbe0807654f20d8d22212c9a11fdf648d98cdfd72cb4d4478bdd",
+          "entries": 282
+        }
+      ],
+      "estimate": {
+        "quota": 11048663889,
+        "usage": 311245649,
+        "usageDetails": {
+          "caches": 311245649
+        }
+      }
+    },
+    {
+      "elapsedMs": 5990,
+      "controlled": false,
+      "registrations": [
+        {
+          "scope": "http://127.0.0.1:4310/",
+          "installing": "installing",
+          "waiting": null,
+          "active": null
+        }
+      ],
+      "caches": [
+        {
+          "name": "halo-of-flesh-static-v0.9.6-wave30-story-selection-20261125-a9c327b0e1bcdbe0807654f20d8d22212c9a11fdf648d98cdfd72cb4d4478bdd",
+          "entries": 423
+        }
+      ],
+      "estimate": {
+        "quota": 11227457645,
+        "usage": 490039405,
+        "usageDetails": {
+          "caches": 490039405
+        }
+      }
+    },
+    {
+      "elapsedMs": 7035,
+      "controlled": false,
+      "registrations": [],
+      "caches": [
+        {
+          "name": "halo-of-flesh-static-v0.9.6-wave30-story-selection-20261125-a9c327b0e1bcdbe0807654f20d8d22212c9a11fdf648d98cdfd72cb4d4478bdd",
+          "entries": 463
+        }
+      ],
+      "estimate": {
+        "quota": 11275251114,
+        "usage": 537832874,
+        "usageDetails": {
+          "caches": 537832874
+        }
+      }
+    }
+  ],
+  "browser": "158.0.8127.0",
+  "quotaBefore": {
+    "usage": 0,
+    "quota": 535133991,
+    "overrideActive": false,
+    "usageBreakdown": [
+      {
+        "storageType": "file_systems",
+        "usage": 0
+      },
+      {
+        "storageType": "indexeddb",
+        "usage": 0
+      },
+      {
+        "storageType": "cache_storage",
+        "usage": 0
+      },
+      {
+        "storageType": "service_workers",
+        "usage": 0
+      }
+    ]
+  },
+  "quotaAfter": {
+    "usage": 537832874,
+    "quota": 535133991,
+    "overrideActive": false,
+    "usageBreakdown": [
+      {
+        "storageType": "file_systems",
+        "usage": 0
+      },
+      {
+        "storageType": "indexeddb",
+        "usage": 0
+      },
+      {
+        "storageType": "cache_storage",
+        "usage": 537832874
+      },
+      {
+        "storageType": "service_workers",
+        "usage": 0
+      }
+    ]
+  },
+  "controlled": false,
+  "finishedAt": "2026-11-27T10:11:56.749Z"
+}

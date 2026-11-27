@@ -74,6 +74,7 @@ test('Lakeview and the documented Arcade rooms keep scoped labels without changi
  }
  const unresolved=applyStageReferencePolicy(lake,{...reference,locationStatus:'etat-narratif-a-preciser'});assert.equal(unresolved.referencePolicy.normalPhaseLabel,undefined);assert.equal(unresolved.referencePolicy.terrainPresentation,undefined);
  const arcadeRooms={
+  arcade_historical:{source:'arcade',state:'fixed-normal',scene:'historical-society-normal-gallery-before-descent',label:'STAGE 2 AREA 1 · GALERIE NORMALE',terrain:'wetConcrete',neutral:true},
   arcade_prison:{source:'arcade',state:'fixed-altered',scene:'toluca-prison-otherworld-cell-corridor',label:'STAGE 2 AREA 2 · OTHERWORLD',terrain:'steel'},
   arcade_toluca_lake:{source:'arcade',state:'fixed-normal',scene:'arcade-stage3-area1-lakeside-quay',label:'STAGE 3 AREA 1 · QUAI DU LAC',terrain:'flooded'}
  };
@@ -90,9 +91,16 @@ test('Lakeview and the documented Arcade rooms keep scoped labels without changi
    assert.equal(location.referencePolicy.alteredPhaseLabel,expected.label,location.id);
    assert.equal(location.shift.enabled,false,location.id);
    assert.equal(location.shift.startOtherworld,expected.state==='fixed-altered',location.id);
-   assert.deepEqual(location.terrain,{id:expected.terrain,...STAGE_TERRAINS[expected.terrain]},location.id);
+   if(expected.neutral){
+    assert.equal(location.terrain.id,expected.terrain);assert.equal(location.referencePolicy.terrainRules,false);
+    assert.equal(location.referencePolicy.terrainPresentation.name,'GALERIE AVANT LA DESCENTE');
+    assert.equal(location.referencePolicy.automaticFinishers,false);
+    assert.deepEqual(location.director.events,[]);assert.deepEqual(location.director.hazardDeck,[]);
+    assert.deepEqual(location.animations,[]);assert.equal(location.weather,'none');
+    for(const key of ['moveScale','jumpScale','dodgeScale','friction','knockbackScale','guardRegenScale'])assert.equal(location.terrain[key],STAGE_TERRAINS.concrete[key]);
+   }else assert.deepEqual(location.terrain,{id:expected.terrain,...STAGE_TERRAINS[expected.terrain]},location.id);
   }else assert.equal(location.referencePolicy.normalPhaseLabel,undefined,location.id);
-  assert.equal(location.referencePolicy.terrainPresentation,undefined,location.id);
+  if(!expected?.neutral)assert.equal(location.referencePolicy.terrainPresentation,undefined,location.id);
  }
  assert.deepEqual(STAGE_TERRAINS,terrains);
 });

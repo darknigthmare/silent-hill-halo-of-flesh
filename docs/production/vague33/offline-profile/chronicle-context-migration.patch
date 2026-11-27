@@ -1,0 +1,59 @@
+--- a/scripts/http-qa-chronicle-art.mjs
++++ b/scripts/http-qa-chronicle-art.mjs
+@@ -2,6 +2,7 @@
+ import { spawn } from 'node:child_process';
+ import { fileURLToPath } from 'node:url';
+ import { chromium } from 'playwright-core';
++import { launchOfflineQaProfile } from './qa-offline-profile.mjs';
+ import { mkdir, readFile, writeFile } from 'node:fs/promises';
+ import { resolve } from 'node:path';
+ import { combatSpriteFor } from '../src/sprite-system.js';
+@@ -80,7 +81,7 @@
+   return chromium.launch({ headless: true, executablePath: process.env.QA_BROWSER_EXECUTABLE || undefined, args: ['--disable-accelerated-2d-canvas'] });
+ }
+ 
+-let browser, server;
++let browser, server, offlineProfile;
+ try {
+   if (!process.env.QA_BASE_URL) {
+     const project = fileURLToPath(new URL('../', import.meta.url));
+@@ -261,8 +262,9 @@
+     await browser.close();
+     browser = null;
+   }
+-  browser = await launchBrowser();
+-  const offline = await browser.newContext();
++  offlineProfile = await launchOfflineQaProfile(chromium, { headless: true, executablePath: process.env.QA_BROWSER_EXECUTABLE || undefined, args: ['--disable-accelerated-2d-canvas'] });
++  browser = offlineProfile.browser;
++  const offline = offlineProfile.context;
+   const tab = await offline.newPage();
+   tab.on('pageerror', error => report.errors.push(String(error)));
+   await tab.goto(base);
+@@ -300,15 +302,21 @@
+     check('offline route retains authored text and expected artwork / ' + route.id,
+       await tab.locator('#routeIntro').textContent() === route.intro && await tab.locator('#routeOutro').textContent() === route.outro && await hero.isVisible() === Boolean(chronicleArtwork(route.id)));
+   }
+-  await offline.close();
++  await offlineProfile.close();
+   check('no unhandled browser exceptions', !report.errors.length);
+ } catch (error) {
+   report.failure = String(error);
+   process.exitCode = 1;
+ } finally {
+   report.passed = !report.failure && !report.errors.length;
+-  await writeFile(resolve(output, 'report.json'), JSON.stringify(report, null, 2) + '\n');
+-  console.log(JSON.stringify({ passed: report.passed, checks: report.checks.length, errors: report.errors, failure: report.failure }));
+-  await browser?.close();
+-  server?.kill();
+-}
++  try {
++    await writeFile(resolve(output, 'report.json'), JSON.stringify(report, null, 2) + '\n');
++    console.log(JSON.stringify({ passed: report.passed, checks: report.checks.length, errors: report.errors, failure: report.failure }));
++  } finally {
++    try { await browser?.close(); }
++    finally {
++      try { await offlineProfile?.close(); }
++      finally { server?.kill(); }
++    }
++  }
++}

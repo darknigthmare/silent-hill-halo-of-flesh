@@ -27015,7 +27015,7 @@
     },
     {
       "id": "arcade_historical",
-      "name": "THE ARCADE — HISTORICAL SOCIETY",
+      "name": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY",
       "source": "arcade",
       "lore": {
         "premise": "Stage2-1 Historical Society.",
@@ -27025,14 +27025,14 @@
       },
       "terrain": {
         "id": "wetConcrete",
-        "name": "BÉTON TREMPÉ",
-        "moveScale": 0.96,
-        "jumpScale": 0.96,
-        "dodgeScale": 1.06,
-        "friction": 0.9,
-        "knockbackScale": 1.08,
-        "guardRegenScale": 0.96,
-        "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+        "name": "GALERIE AVANT LA DESCENTE",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Galerie de la Historical Society de The Arcade avant la descente : papier peint jaune olive, boiseries sombres et quatre cadres repérés dans deux captures de jeu. Sol, détails des tableaux et largeur reconstruits pour le versus ; physique neutre, géométrie et fidélité 1:1 non certifiées."
       },
       "shift": {
         "style": "rust",
@@ -27050,15 +27050,7 @@
       },
       "events": [],
       "hazards": [],
-      "animations": [
-        {
-          "id": "lightFlicker",
-          "phase": "both",
-          "layer": "midground",
-          "intensity": 1,
-          "cadence": "irregular"
-        }
-      ],
+      "animations": [],
       "interactions": [],
       "choreography": [],
       "reference": {
@@ -27068,7 +27060,7 @@
         "blocked": false,
         "locationStatus": "lieu-documente-secondaire",
         "catalogueName": "THE ARCADE — HISTORICAL SOCIETY",
-        "correctedName": null,
+        "correctedName": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY",
         "locationNote": "Stage2-1 Historical Society.",
         "referenceIds": [
           "EXT15"
@@ -27125,8 +27117,16 @@
         "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
-        "automaticFinishers": true,
-        "weather": "dust",
+        "automaticFinishers": false,
+        "sceneId": "historical-society-normal-gallery-before-descent",
+        "terrainRules": false,
+        "normalPhaseLabel": "STAGE 2 AREA 1 · GALERIE NORMALE",
+        "alteredPhaseLabel": "STAGE 2 AREA 1 · GALERIE NORMALE",
+        "terrainPresentation": {
+          "name": "GALERIE AVANT LA DESCENTE",
+          "description": "Galerie de la Historical Society de The Arcade avant la descente : papier peint jaune olive, boiseries sombres et quatre cadres repérés dans deux captures de jeu. Sol, détails des tableaux et largeur reconstruits pour le versus ; physique neutre, géométrie et fidélité 1:1 non certifiées."
+        },
+        "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
@@ -27164,6 +27164,16 @@
             "kind": "animation",
             "id": "shadowPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
@@ -27222,6 +27232,16 @@
             "kind": "animation",
             "id": "shadowPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       }

@@ -61,7 +61,16 @@ export function spriteCoverage(fighters,registry=SPRITES){
 }
 export const poseKey=poseFromState;
 export function frameFor(art,state={}){return sampleSpriteClip(art,state)?.frame||null;}
+/** bodyHeight is standing-equivalent reference height / full canvas height.
+ * Horizontal poses may exceed 1; this calibrates artwork, not collision or source scale.
+ */
+export function validSpriteCalibration(frame){
+  return !!frame&&[-1,1].includes(frame.facing)&&Array.isArray(frame.anchor)&&frame.anchor.length===2&&
+    frame.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1)&&
+    Number.isFinite(frame.bodyHeight)&&frame.bodyHeight>=.05&&frame.bodyHeight<=4;
+}
 export function rasterPlacement(fighter,frame,x,y,facing=1,state){
+  if(!validSpriteCalibration(frame))throw new RangeError('Invalid sprite calibration: anchors 0..1, bodyHeight 0.05..4, facing -1 or 1.');
   const body=bodyProfile(fighter,state),scale=body.height*body.scale/(frame.height*frame.bodyHeight);
   const width=frame.width*scale,height=frame.height*scale,flip=(facing<0?-1:1)*frame.facing;
   const localX=-frame.anchor[0]*width,localY=-frame.anchor[1]*height-(body.bottom||0)*body.scale;

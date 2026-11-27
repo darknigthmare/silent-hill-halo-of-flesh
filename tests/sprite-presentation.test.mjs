@@ -4,7 +4,8 @@ import {actorSpriteState,advanceSpriteClock,sampleSpriteClip,poseFromState} from
 import {combatFraming,visibleSpriteBox,toScreen} from '../src/sprite-framing.js';
 import {calibrationPacket} from '../src/sprite-inspector.js';
 import {getFighter} from '../src/data.js';
-import {spriteFor} from '../src/sprite-system.js';
+import {spriteFor,rasterPlacement,validSpriteCalibration} from '../src/sprite-system.js';
+import {bodyProfile} from '../src/combat-geometry.js';
 import {PRESENTATION_KEYS} from '../src/sprite-poses.js';
 const film=getFighter('film_red_pyramid_film_175'),air=getFighter('sh1_air_screamer_001');
 const actor=()=>({data:film,x:310,y:594,facing:1,state:'idle',grounded:true});
@@ -27,6 +28,36 @@ test('the authored flight loop advances only for idle and cannot animate a missi
 });
 test('inherited clip names never resolve as a real pose',()=>assert.equal(sampleSpriteClip(spriteFor(film),{moveKey:'constructor'}).pose,'idle'));
 test('calibration export preserves exact original image identities',()=>{const a=spriteFor(film),draft=structuredClone(a);draft.frames[0].anchor=[.6,.91];const p=calibrationPacket(film,a,draft);assert.equal(p.kind,'halo-sprite-calibration');assert.equal(p.frames[0].sha256,a.frames[0].sha256);assert.deepEqual(p.frames[0].anchor,[.6,.91]);assert.notDeepEqual(a.frames[0].anchor,p.frames[0].anchor);});
+test('standing-equivalent ratios 0.05..4 survive calibration export and keep horizontal placement finite',()=>{
+ const original=spriteFor(film),before=structuredClone(original),physical=structuredClone(bodyProfile(film));
+ for(const bodyHeight of [.05,2.3456789,2.5,4]){
+  const draft=structuredClone(original);Object.assign(draft.frames[0],{bodyHeight,anchor:[0,1]});
+  const packet=JSON.parse(JSON.stringify(calibrationPacket(film,original,draft)));
+  assert.equal(packet.frames[0].bodyHeight,bodyHeight);assert.deepEqual(packet.frames[0].anchor,[0,1]);
+  const frame={...draft.frames[0],width:2172,height:724};
+  assert.equal(validSpriteCalibration(frame),true);
+  for(const facing of [-1,1]){
+   const placement=rasterPlacement(film,frame,310,594,facing);
+   assert.ok(Object.values(placement).every(Number.isFinite));
+   assert.ok(Math.abs(placement.width/placement.height-3)<1e-12);
+   assert.ok(Math.abs(placement.height*bodyHeight-physical.height*physical.scale)<1e-8);
+  }
+ }
+ assert.deepEqual(original,before);assert.deepEqual(bodyProfile(film),physical);
+});
+test('calibration export and placement reject nonfinite or out-of-domain ratios and anchors',()=>{
+ const original=spriteFor(film);
+ for(const patch of [
+  ...[.049,4.001,NaN,Infinity,-Infinity,true,null,'2'].map(bodyHeight=>({bodyHeight})),
+  ...[[-.01,.5],[.5,1.01],[NaN,.5],[.5,Infinity],[true,.5]].map(anchor=>({anchor})),
+  {facing:0}
+ ]){
+  const draft=structuredClone(original);Object.assign(draft.frames[0],patch);
+  assert.equal(validSpriteCalibration(draft.frames[0]),false);
+  assert.throws(()=>calibrationPacket(film,original,draft),RangeError);
+  assert.throws(()=>rasterPlacement(film,draft.frames[0],310,594),RangeError);
+ }
+});
 for(const data of [film,air])for(const facing of [-1,1])for(const x of [80,1200])test(`camera fits entire ${data.id} at ${x} facing ${facing}`,()=>{
  const a={data,x,y:594,facing,grounded:true},before=structuredClone(a),cam=combatFraming([a]);
  for(const f of spriteFor(data).frames){const b=toScreen(visibleSpriteBox(data,f,x,594,facing),cam);assert.ok(b.x>=-1e-8&&b.x+b.w<=1280+1e-8);assert.ok(b.y>=132-1e-8&&b.y+b.h<=694+1e-8);}

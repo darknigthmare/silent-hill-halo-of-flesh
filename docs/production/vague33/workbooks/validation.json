@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-27",
+  "status": "passed",
+  "baselineCommit": "4f7d2e89c106ad4a00752bcb4c9b046ee3043b18",
+  "baselineTree": "453e9a5f8b74e4e5c4dd0e306294b4c79e8867eb",
+  "guideSections": 68,
+  "associations": 445,
+  "imagePathsPresent": 729,
+  "newImagePaths": 10,
+  "imageAvailability": {
+    "persistentSourceMirror": 10,
+    "regenerableBaselineCache": 719,
+    "cacheRoot": "/tmp/halo-active-repo",
+    "newImagesAllPersistent": true
+  },
+  "stageBitmapCandidates": 98,
+  "sourceTexts": 3,
+  "historicalSheetsPreserved": 13,
+  "historicalCellsPreserved": 252822,
+  "historicalFormulasPreserved": 87,
+  "workbookSourceCellsComparedEach": 3971,
+  "workbookFormulaCachesComparedEach": 12,
+  "sourceCellsChangedEach": 2,
+  "workbooks": [
+    {
+      "path": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "sha256": "83ab4f1667f6ee97460e6bf04b3b2961619d11a766d6e56b6ba53f0e6f4ec09c",
+      "sourceCellsCompared": 3971,
+      "formulaCachesCompared": 12,
+      "historicalSheetsPreserved": 2,
+      "sections": 68,
+      "associations": 445,
+      "status": "passed"
+    },
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "sha256": "b10a1b1fb5ac44e24e9f4d88d4979b25d2e44266989c546e07a7471d34fd4a40",
+      "sourceCellsCompared": 3971,
+      "formulaCachesCompared": 12,
+      "historicalSheetsPreserved": 11,
+      "sections": 68,
+      "associations": 445,
+      "status": "passed"
+    }
+  ],
+  "renderChecks": [
+    {
+      "scope": "full-corpus-workbook",
+      "path": "docs/production/vague33/workbooks/render-corpus",
+      "checksPassed": 5,
+      "previewsVerified": 4
+    },
+    {
+      "scope": "exact-guide-payload-projection",
+      "path": "docs/production/vague33/workbooks/render-production",
+      "checksPassed": 5,
+      "previewsVerified": 4
+    }
+  ],
+  "formulaRecalculation": "Artifact Tool donor recalculated; decision and extension status changed and restored; formula error scan found zero entries.",
+  "visualReview": "Reviewed at normal readable zoom: guide summary, Historical Society association row, retained extension layout, and historical Corpus/Synthèse opening views. Other historical worksheet payloads verified byte-for-byte.",
+  "limits": "Native Excel desktop was not run. The large workbook uses an exact-payload temporary rendering projection; the full delivered workbook is preserved. No runtime feature, animation or 1:1 fidelity certification follows from this workbook verification."
+}

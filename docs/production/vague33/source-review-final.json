@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 2,
+  "wave": 33,
+  "date": "2026-11-27",
+  "reviewer": "/root/lore_sources",
+  "scope": "Revue documentaire bornée des identités, sources, affirmations et calibrations. La mise à jour vérifie les plans et le registre d’auteur courants ; elle ne certifie ni fidélité 1:1 ni QA runtime finale.",
+  "verdict": "acceptable-as-static-candidates-with-documented-limitations",
+  "majorInconsistencies": [],
+  "certifiedOneToOne": false,
+  "sourceTimingMeasured": false,
+  "runtimeQaExecutedByThisReview": false,
+  "runtimeQaConclusion": "QA finale en cours ailleurs ; aucun rapport runtime après les dernières corrections n’a été relu ou déclaré réussi par cette revue.",
+  "reviewContinuity": "Les références visuelles et les huit SHA256 de PNG ont été contrôlés lors de la revue initiale avant le redémarrage. La présente reprise est une relecture documentaire et des métadonnées ; elle ne prétend pas avoir répété ces contrôles binaires ou la comparaison aux jeux source.",
+  "identityChecks": [
+    {
+      "id": "sh1_night_flutter_002",
+      "source": "sh1",
+      "work": "Silent Hill (1999), original PS1",
+      "poses": [
+        "walk",
+        "neutralLight"
+      ],
+      "result": "IDs et œuvre cohérents. Aucun remplacement par Air Screamer ; référence régionale exacte non établie."
+    },
+    {
+      "id": "sh3_numb_body_medium",
+      "source": "sh3",
+      "work": "Silent Hill 3 (2003), original",
+      "poses": [
+        "walk",
+        "neutralSpecial"
+      ],
+      "result": "ID Medium conservé ; anatomie de famille et existence des tailles distinguées de dimensions Medium non mesurées. Aucun substitut Small/Large/Arcade."
+    },
+    {
+      "id": "sh2_lying_figure_020",
+      "source": "sh2",
+      "work": "Silent Hill 2 (2001), original",
+      "poses": [
+        "walk",
+        "neutralLight"
+      ],
+      "result": "Propriétaire debout distinct ; remake explicitement exclu."
+    },
+    {
+      "id": "sh2_lying_figure_crawling_021",
+      "source": "sh2",
+      "work": "Silent Hill 2 (2001), original",
+      "poses": [
+        "walk",
+        "neutralLight"
+      ],
+      "result": "Propriétaire rampant distinct ; geste d'impact présenté comme adaptation versus."
+    },
+    {
+      "id": "arcade_historical",
+      "source": "arcade",
+      "work": "Silent Hill: The Arcade",
+      "layers": [
+        "bg-normal-gallery",
+        "near-door-jambs"
+      ],
+      "result": "Galerie normale avant descente ; images du musée SH2 explicitement exclues."
+    }
+  ],
+  "sourceClassification": [
+    {
+      "group": "Night Flutter et Numb Body",
+      "evidence": "Illustrations de modèles originaux archivées sur Silent Hill Memories ; guides de comportement secondaires ; traductions de Lost Memories par un site non officiel.",
+      "assessment": "La provenance sépare contenu de l'œuvre, hébergement non officiel, guide secondaire et traduction. Aucun de ces sites n'est présenté comme domaine officiel Konami.",
+      "limits": "Les illustrations ne sont pas des séquences de gameplay. La référence Numb Body n'identifie pas indépendamment le modèle Medium.",
+      "urls": [
+        "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_10.jpg",
+        "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_02_numb_body.jpg",
+        "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+        "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+        "https://www.silenthillmemories.net/lost_memories/guide/026-027_en.htm",
+        "https://www.silenthillmemories.net/lost_memories/guide/068-069_en.htm"
+      ]
+    },
+    {
+      "group": "Night Flutter neutralLight",
+      "evidence": "Recherche locale antérieure citant une décompilation communautaire épinglée et commande activée du moteur.",
+      "assessment": "La provenance signale l'échec de lecture distante de cette vague et ne revendique pas de vérification fraîche du code source officiel.",
+      "limits": "L'intitulé de la commande ne prouve ni la pose générée exacte ni son chronométrage.",
+      "url": "https://github.com/shdecompilations/silent-hill-decomp/blob/8a16aab925373696eaec2935dfe4f4c012b139e8/include/maps/characters/air_screamer.h"
+    },
+    {
+      "group": "Lying Figure",
+      "evidence": "Anciennes images propres aux deux propriétaires, plus rendu original de la variante debout déjà archivé en vague32.",
+      "assessment": "La filiation vague32 décrit l'archive non officielle. Les sprites existants servent à la continuité, sans constituer une seconde preuve canonique.",
+      "limits": "Les quatre poses ne reconstituent pas des frames d'attaque chronométrées ; aucune preuve indépendante de la face opposée.",
+      "url": "https://www.silenthillmemories.net/sh2/arts/pics/sh2_art_monster_04_lying_figure.jpg",
+      "inheritedSourceRecord": "docs/production/vague32/story/references/sources.json"
+    },
+    {
+      "group": "Galerie The Arcade",
+      "evidence": "Cellules de storyboard de deux vidéos de gameplay tierces ; carte et catalogue secondaires pour identifier la scène.",
+      "assessment": "Les captures montrent directement l'œuvre à travers un enregistrement tiers ; elles ne sont pas présentées comme une publication Konami. L'archive promotionnelle inspectée est explicitement exclue des preuves de cette galerie.",
+      "limits": "Prévisualisations de 320 × 180 et 160 × 90, espacées de dix secondes. Première exécution PC/JConfig ; borne, région, build exact et vidéo continue non établis.",
+      "urls": [
+        "https://www.youtube.com/watch?v=jovQIyOwE8A&t=1250s",
+        "https://www.youtube.com/watch?v=jovQIyOwE8A&t=1260s",
+        "https://www.youtube.com/watch?v=9MZN4w35ZVc&t=1110s",
+        "https://www.youtube.com/watch?v=9MZN4w35ZVc&t=1120s",
+        "https://www.silenthillmemories.net/sh_arcade/stages_en.htm"
+      ]
+    }
+  ],
+  "arcadeVisualCrosscheck": {
+    "viewedDuringInitialReview": [
+      "docs/production/vague33/stages/references/museum-gallery-wall-1260.png",
+      "docs/production/vague33/stages/references/museum-crosscheck-1120.png",
+      "docs/production/vague33/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png"
+    ],
+    "finding": "Les grandes catégories visibles concordent : papier peint jaune/olive, soubassement sombre, quatre cadres dont un étroit vertical. Le résultat agrandit et recompose la galerie pour le combat.",
+    "excludedClaims": [
+      "pixels et sujets exacts des peintures",
+      "légendes",
+      "texture et sol exacts",
+      "dimensions de salle",
+      "caméra native",
+      "déclenchement ou animation de scène"
+    ],
+    "adaptationDisclosure": "Le README et source-review.json déclarent la reprojection latérale, le bas sombre inventé pour l'arène et les jambages repoussés aux marges.",
+    "currentRuntimeValidation": false
+  },
+  "staticIntegrationChecks": {
+    "poseCount": 8,
+    "authoringRegistryCompared": true,
+    "planFieldsCompared": [
+      "id",
+      "source",
+      "path",
+      "sha256",
+      "width",
+      "height",
+      "anchor",
+      "bodyHeight",
+      "facing",
+      "frameIndex",
+      "pixelSHA256",
+      "transparentFraction"
+    ],
+    "allComparedFieldsMatch": true,
+    "exactPoseClips": "Huit clips d’une seule frame, ticksPerFrame:1, loop:false.",
+    "newAnimatedClips": 0,
+    "fidelityState": "unverified pour les quatre propriétaires",
+    "initialPngHashesChecked": 8,
+    "currentPngBytesRechecked": false,
+    "limits": "L’accord entre registre et plans ne constitue pas une recette de jeu ni une preuve de fidélité source."
+  },
+  "calibration": {
+    "domain": {
+      "bodyHeight": [
+        0.05,
+        4
+      ],
+      "anchors": [
+        0,
+        1
+      ],
+      "finiteNumbersOnly": true,
+      "meaning": "Hauteur debout équivalente / hauteur complète du canevas ; une pose horizontale peut nécessiter plus de 1.",
+      "testReceipt": "qa/body-height-domain/test-receipt.json"
+    },
+    "nightFlutter": {
+      "idleDimensions": [
+        1448,
+        1086
+      ],
+      "newPoseDimensions": [
+        1536,
+        1024
+      ],
+      "bodyHeight": 0.93,
+      "newWorldUnitsPerPixelDividedByIdle": 1.060546875,
+      "walkVisibleHeightDividedByIdle": 0.9971504559270516,
+      "neutralLightVisibleHeightDividedByIdle": 0.9939269091945289,
+      "method": "Calcul statique avec scale = body.height * body.scale / (frame.height * frame.bodyHeight), même bodyProfile, et bornes alpha déclarées.",
+      "assessment": "Aucune revendication d'échelle 1:1 n'a été trouvée. Garder bodyHeight:0.93 malgré le changement de canevas ne conserve pas exactement le facteur monde/pixel ; il augmente d'environ 6,05 %. Les hauteurs visibles proches proviennent aussi du cadrage et de la pose, sans prouver les proportions du modèle source.",
+      "sourceScaleCertified": false
+    },
+    "lyingStanding": {
+      "oldHeightTimesBodyHeight": 962.56,
+      "newHeightTimesBodyHeight": 962.56,
+      "assessment": "La compensation 1024 × 0.94 = 1536 × 0.6266666666666666 conserve le facteur de rendu monde/pixel de l'ancienne frame, pas une taille physique mesurée du jeu original."
+    },
+    "numbIdle": {
+      "currentAnchorY": 0.8818359375,
+      "supportY": 903,
+      "canvasHeight": 1024,
+      "bodyHeight": 1,
+      "originalPngSHA256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+      "record": "idle-anchor-correction.json",
+      "afterCorrectionRuntimeVerifiedByThisReview": false
+    },
+    "numbSpecial": "anchorY:1 reste un appui virtuel des pieds levés ; il est distinct du nouvel appui idle. La recette finale de contact n’est pas attestée ici.",
+    "crawling": {
+      "fighterId": "sh2_lying_figure_crawling_021",
+      "bodyHeightBefore": 0.98,
+      "bodyHeightAfter": 2.94,
+      "anchorXBefore": 0.5,
+      "anchorXAfter": 0.4,
+      "dimensions": [
+        2172,
+        724
+      ],
+      "worldPixelScaleMultiplier": 0.3333333333333333,
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle",
+          "supportY": 611,
+          "anchorY": 0.8439226519337016
+        },
+        {
+          "index": 1,
+          "pose": "walk",
+          "supportY": 563,
+          "anchorY": 0.7776243093922652
+        },
+        {
+          "index": 2,
+          "pose": "neutralLight",
+          "supportY": 609,
+          "anchorY": 0.8411602209944752
+        }
+      ],
+      "record": "crawling-calibration.json",
+      "sourceDimensionsMeasured": false,
+      "sourceOneToOneCertified": false,
+      "runtimeAfterVerifiedByThisReview": false
+    }
+  },
+  "profilePreservation": {
+    "record": "combat-profile-preservation.json",
+    "recordStatus": "passed",
+    "profilesChecked": 230,
+    "unchangedProfiles": 229,
+    "changedProfile": "sh2_lying_figure_crawling_021",
+    "changedFields": [
+      "moves.neutralLight.level",
+      "moveset.moves.neutralLight.level"
+    ],
+    "levelBefore": "mid",
+    "levelAfter": "low",
+    "unchangedValues": {
+      "reach": 55,
+      "damage": 31,
+      "startup": 5,
+      "active": 3,
+      "recovery": 9
+    },
+    "assessment": "La comparaison documentaire des profils isole le niveau de la commande courte. Elle n’atteste pas les contacts, la garde ou le rendu après correction."
+  },
+  "findings": [
+    {
+      "id": "V33-SOURCE-01",
+      "severity": "minor",
+      "status": "resolved-verified",
+      "initialFinding": "Le README des personnages décrivait encore des chemins futurs et l’ancien idle flottant.",
+      "resolution": "Les deux README décrivent désormais les poses intégrées ; l’idle Medium est documenté à 903/1024, et le rampant à bodyHeight: 2.94 / anchorX: 0.4 avec neutralLight basse. La QA finale reste distincte."
+    },
+    {
+      "id": "V33-SOURCE-02",
+      "severity": "minor",
+      "status": "resolved-verified",
+      "initialFinding": "Les métriques de pixels brutes et canoniques portaient des noms ambigus.",
+      "resolution": "Les deux plans précisent le protocole canonique ; les quatre poses Night Flutter/Numb Body conservent séparément nativeDecodedPixelSHA256 et nativeZeroAlphaFraction. Les valeurs canoniques ont été comparées au registre."
+    }
+  ],
+  "findingSummary": {
+    "majorOpen": 0,
+    "minorOpen": 0,
+    "minorResolvedVerified": 2
+  },
+  "limits": [
+    "Les modèles archivés, guides secondaires, traductions et vidéos tierces ne sont pas des mesures exhaustives des jeux originaux.",
+    "La comparaison documentaire de 230 profils conserve les paramètres de portée, dégâts et temps ; elle n’est pas une validation du résultat runtime.",
+    "La correction d’échelle du rampant reste une décision versus. Aucun cycle, chronométrage source, anatomie opposée indépendante ou certificat 1:1 n’est ajouté.",
+    "Le README général, le registre, les plans, les métriques et les assets ne sont pas modifiés par cette mise à jour documentaire."
+  ],
+  "updatedAt": "2026-11-27T10:04:06.146183+00:00",
+  "baselineCommitDeclaredByPlans": "4f7d2e89c106ad4a00752bcb4c9b046ee3043b18",
+  "runtimeRecordsObserved": {
+    "idleAfter": "pending",
+    "crawlingAfter": "pending repeat after recovery",
+    "finalRuntimeReportsRead": false
+  },
+  "currentDocumentSnapshots": [
+    {
+      "path": "art/registry.json",
+      "sha256": "b1758af2d9dc77aad8543746981839b86cd0fe90e66909f0d994eeaf58a28228"
+    },
+    {
+      "path": "docs/production/vague33/characters/import-plan.json",
+      "sha256": "42b94bae2cfc5ca800b32c707894ffd6a93726a0da507392627d74147e5fdd62"
+    },
+    {
+      "path": "docs/production/vague33/characters-root/import-plan.json",
+      "sha256": "f7a7047cbc3241ad2b8d195433f352459a531af4e219dbef09b1225e0e5086b9"
+    },
+    {
+      "path": "docs/production/vague33/idle-anchor-correction.json",
+      "sha256": "4a416d74c9459aebc61a6275abd45e37bcc50911cfadd4e8acd32354d8627bf8"
+    },
+    {
+      "path": "docs/production/vague33/crawling-calibration.json",
+      "sha256": "f5053b6e85e97b41e540a47efea52acd99b8b79291c01f8cfc6dce2f21a9c77d"
+    },
+    {
+      "path": "docs/production/vague33/combat-profile-preservation.json",
+      "sha256": "664bea452e4673b5d43d427681c991b44073152caae143d3218bc6c84ac12a6a"
+    },
+    {
+      "path": "docs/production/vague33/characters/README.md",
+      "sha256": "2880b6076996b3d7b7ad87306d5cd6138f3ccd473cc9d42c91e2595c13f30ed5"
+    },
+    {
+      "path": "docs/production/vague33/characters-root/README.md",
+      "sha256": "84712556862ea54fdfb221beb21996d5d0de1920867acd7439d25fba16f83096"
+    }
+  ],
+  "coordinatorRuntimeFollowup": {
+    "status": "passed within documented technical scope",
+    "report": "qa/validation.json",
+    "freshNativeHttpChecks": 486,
+    "freshNativeCaptures": 43,
+    "allFreshCapturesVisuallyReviewed": true,
+    "scope": "Added after the independent documentary review; does not alter that review’s limited execution claims.",
+    "certifiedOneToOne": false
+  }
+}

@@ -45,6 +45,17 @@ test('candidate accounts for one exact new profile without claiming animation or
  assert.equal(report.candidates,1);assert.equal(report.blocked,143);
  assert.deepEqual(Object.keys(report.assets),['subject_0']);assert.equal(report.assets.subject_0,asset);
 });
+test('campaign calibration accepts 0.05..4 without relaxing finite anchor limits',()=>{
+ for(const bodyHeight of [.05,2.5,4]){
+  const f=fixture(),a=candidate(f);a.frames[0].bodyHeight=bodyHeight;
+  assert.equal(check(f).assets.subject_0.frames[0].bodyHeight,bodyHeight);
+ }
+ for(const patch of [...[.049,4.001,NaN,Infinity,-Infinity,true].map(bodyHeight=>({bodyHeight})),
+  {anchor:[0,1.01]},{anchor:[-.01,1]},{anchor:[0,NaN]}]){
+  const f=fixture();Object.assign(candidate(f).frames[0],patch);
+  assert.throws(()=>check(f),/facing and scale/);
+ }
+});
 test('the92-profile continuation uses its real uneven groups and cannot reuse the previous baseline',()=>{
  const f=fixture('art92'),report=check(f);
  assert.equal(report.requested,92);assert.equal(report.blocked,92);

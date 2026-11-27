@@ -28,28 +28,28 @@
   "sourceHashes": {
     "src/data.js": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
     "src/movesets.js": "03b5fcba2939438c8f1ca2f064fd31578c6255656006c6e7c4424e3eafd327f9",
-    "src/combat-reference-policy.js": "a784ca09be46e54b188e71c003ad8fd12970c8c4821bc8c5515e6a8e79751028",
+    "src/combat-reference-policy.js": "e9c5b5211ca91b452e7c0bcbcfec060434ef5323b6f3e643d9d46fd86b1cf99f",
     "src/production-reference.js": "c4f51568b4e77ccf4d89b9abcb8a6a426615f837c7548b99e6cafbda915268e9",
     "src/tournament.js": "12403baa162d626cd4befb7dfa3bfdeecdc2b79d46dd8bbb646786076f172de7",
     "src/run-progress.js": "f7f61204681a60d2e2de0116af08d30007a7af26fb6ebc6af7d8685d414470d1",
     "src/lore-cinematics.js": "211596a8d9054ca8481e4668b9e9e91db4e46d48cb85c90a4c7c4e9ef4e96845",
     "src/chronicle-art.js": "4153c0d85753c3f6bcd8adb41a3c78fe2d88ccb47bd580d8f5e94abc40af944f",
     "src/story-art.js": "a41bfee50b89fde14674cb516ae0c1ff2778520ba9b973d01bf6d69a6a9e996d",
-    "src/sprite-manifest.js": "310bbb92bd6811dbb0f894a60d481f07554bbf05f5ada8382c22625ccc79683e",
+    "src/sprite-manifest.js": "11dd35fe64e0c6f60a5ed1e16b6fc7f6782de53bb67f1126c7fc89c8f908c951",
     "src/stage-director.js": "4158a522fa4f2133ed2bebb4a42852e0244054ab9dcf33c0d877a5d591e01884",
     "src/stage-lore-policy.js": "b20de47911e2577c3814217121bd1511ecefb40f555e629bcbe7b730d39624e8",
-    "src/stage-reference-policy.js": "462eebaea80b740ac6da5d1eb3e57176c564441efb5deb086e81a90494f5ad8e",
-    "src/stage-bitmap-manifest.js": "dbd63fc0775d102eae856f35a83b78092e01f9c4fc54fa0334f9837c479af00b",
+    "src/stage-reference-policy.js": "63cbde9063fe4c9035df9342c8fb8bd7fc05195d6cf2933b0c7187b1213a6ae1",
+    "src/stage-bitmap-manifest.js": "6926c23a22351bdf38927e058c4d64bdebbe784a8c873c8564cd87d9217d7c40",
     "src/projectile-bitmap-manifest.js": "dbae4eca2bdc03b4e0da0542f70a20a67963a6ed3a3e3742fdf56a6db11c05d7",
     "src/projectile-bitmaps.js": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
-    "art/registry.json": "839dc3525980b8b37671cd0dbaea4266e620a56332f0e1ea7340a5adec896eb3",
+    "art/registry.json": "b1758af2d9dc77aad8543746981839b86cd0fe90e66909f0d994eeaf58a28228",
     "data/roster.json": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3",
-    "data/movesets.json": "bf9266c69684ecd9f361c2c628c40b1ce54ec40e10ae90bdef32b1a916bcc0ec",
-    "data/fatalities.json": "012e106b18e0442f13606a52158e87b4bdcce9f5d78b2b8f39874ffeff1d6859",
-    "data/stages.json": "4b65e91537e7fb9c90a5340f492778c66743dd95d85c24a9ace8a0d677768520",
+    "data/movesets.json": "3dfc39e470497ec69a1705b1ebab371817d5d54a7cf81aaa03b951cf6c168316",
+    "data/fatalities.json": "4cb4d628263b035bda53753cd33cdf94c62549dff0a6ff474728d8b07f020c23",
+    "data/stages.json": "f9affce1bb0aea4b354fe6d35be4e9bbaa057196f1d0738e68222c23d159f0d1",
     "data/chronicles.json": "7387b9345654d189121324c3c29068bb612c660a988fb6fd40fc86302d7f1c4d",
     "docs/production/franchise-corpus.json": "9df5b1b7d228b82559a2295b33b2ed47dabe812bc1b29f11a9ec841eaaa1ee86",
-    "docs/combat-guide/requirements.json": "2ad55b76bc9c34d2852d4e0e49592bf83183d380c76a0518e62afdbf5cea2431",
+    "docs/combat-guide/requirements.json": "c25e2dd77a916ff801838abe2eb3378a01bc45f797b24c1962642fccc3ae6d11",
     "docs/combat-guide/extensions/requirements.json": "5e0c9afe228240c23d93f6da78722901b7b32118c683c30247937c1320ca4894",
     "docs/combat-guide/extensions/examples.json": "cef5f0f4f4d8fac3b78355a5fe8e3def5996f485700a7d432ff96e01c0f296df"
   },
@@ -432,7 +432,9 @@
           "combatView": "side-view-candidate",
           "portraitPath": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
           "framePaths": [
-            "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png"
+            "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+            "assets/sprites/sh1_night_flutter_002.5d491df4df34.png",
+            "assets/sprites/sh1_night_flutter_002.5a75d9448b27.png"
           ],
           "animatedClipsDeclared": 0,
           "validationThisPass": "links-only; no visual review"
@@ -3888,7 +3890,9 @@
           "portraitPath": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
           "framePaths": [
             "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
-            "assets/sprites/sh2_lying_figure_020.10a8df3e3270.png"
+            "assets/sprites/sh2_lying_figure_020.10a8df3e3270.png",
+            "assets/sprites/sh2_lying_figure_020.93aa7fbaf7fb.png",
+            "assets/sprites/sh2_lying_figure_020.c9679896cf00.png"
           ],
           "animatedClipsDeclared": 0,
           "validationThisPass": "links-only; no visual review"
@@ -4082,7 +4086,9 @@
           "combatView": "side-view-candidate",
           "portraitPath": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
           "framePaths": [
-            "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png"
+            "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+            "assets/sprites/sh2_lying_figure_crawling_021.70eb5478e000.png",
+            "assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png"
           ],
           "animatedClipsDeclared": 0,
           "validationThisPass": "links-only; no visual review"
@@ -7672,7 +7678,9 @@
           "combatView": "side-view-candidate",
           "portraitPath": "assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
           "framePaths": [
-            "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png"
+            "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+            "assets/sprites/sh3_numb_body_medium.0eaa4f8c7d95.png",
+            "assets/sprites/sh3_numb_body_medium.98b9a1267c64.png"
           ],
           "animatedClipsDeclared": 0,
           "validationThisPass": "links-only; no visual review"
@@ -48165,7 +48173,7 @@
     {
       "kind": "stage",
       "id": "arcade_historical",
-      "name": "THE ARCADE — HISTORICAL SOCIETY",
+      "name": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY",
       "source": "arcade",
       "guideSections": [
         "02",
@@ -48200,7 +48208,7 @@
         "65"
       ],
       "targetFile": "data/stages.json",
-      "observedStatus": "sans bitmap de stage ; fixed-normal",
+      "observedStatus": "bitmap candidat référencé ; fixed-normal",
       "details": {
         "referenceIds": [
           "EXT15"
@@ -48219,8 +48227,11 @@
         "finisherAuthored": false,
         "presentation": {
           "referenceTrackIds": [],
-          "framePaths": [],
-          "status": "missing",
+          "framePaths": [
+            "assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+            "assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png"
+          ],
+          "status": "integrated-candidate",
           "fidelity": "unverified"
         },
         "interactions": [],
@@ -53827,7 +53838,7 @@
     }
   ],
   "verification": {
-    "assetPathCount": 719,
+    "assetPathCount": 729,
     "missingAssetPaths": [],
     "method": "Git tracked path or local file; no PNG decoding"
   }

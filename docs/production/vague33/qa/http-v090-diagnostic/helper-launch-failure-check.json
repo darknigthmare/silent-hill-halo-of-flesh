@@ -1,0 +1,14 @@
+{
+  "kind": "helper-launch-failure-cleanup-check",
+  "recordedAt": "2026-11-27T10:26:44.040947+00:00",
+  "realBrowserLaunched": false,
+  "fixture": "The injected launch method throws a known Error before browser creation.",
+  "checks": {
+    "originalErrorPreserved": true,
+    "ownedProfileDirectoryRemoved": true
+  },
+  "testProcessExitCode": 1,
+  "result": "Both assertions completed successfully; the subsequent evidence write failed with ENOSPC. This receipt restores those observed results without rerunning the checks or fabricating a successful process exit.",
+  "originalWriteFailure": "ENOSPC: no space left on device, write",
+  "persistentReceiptNowWritten": true
+}

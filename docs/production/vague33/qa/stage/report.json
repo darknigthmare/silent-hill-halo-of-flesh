@@ -1,0 +1,370 @@
+{
+  "schema": 1,
+  "wave": 33,
+  "startedAt": "2026-11-27T10:07:57.402Z",
+  "passed": true,
+  "build": "/tmp/halo-wave33-build",
+  "checks": [
+    {
+      "name": "Dedicated HTTP port unused",
+      "passed": true
+    },
+    {
+      "name": "Built HTTP app ready",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: exact reviewed source scene and planes",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: ordinary UI starts the intended source scene",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: normal static scene has no inherited motion or phase change",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: old terrain, hazards, events and automatic finishers disabled",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: painted architecture adds no ceiling support",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: exact ordinary fighters retained",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: native plane decoded and painted assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: native plane ready and pinned assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: exact HTTP bytes assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+          "status": 200,
+          "bytes": 2246551,
+          "sha256": "e670dbd8ffbac0aa3b3443b6100f16748c456f95f4b4cb37992d5d7ba74382c2"
+        }
+      ]
+    },
+    {
+      "name": "arcade_historical: native plane decoded and painted assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: native plane ready and pinned assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_historical: exact HTTP bytes assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
+          "status": 200,
+          "bytes": 210099,
+          "sha256": "eb9c53adb93795aac66395022a420d04d1221e22be5266454a08f415119e11df"
+        }
+      ]
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "HTTP QA preserves source src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA preserves source src/stage-reference-policy.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA preserves source src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA preserves source src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA preserves source src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "HTTP QA preserves source src/data.js",
+      "passed": true
+    }
+  ],
+  "captures": [
+    {
+      "stageId": "arcade_historical",
+      "file": "arcade_historical-http-fight.png",
+      "bytes": 1240121,
+      "sha256": "0d631b5b321a88f7bdcdbc32e22a852ec339ee7cb8938b534bc293d6626555e6",
+      "purpose": "actual-browser-FightEngine"
+    }
+  ],
+  "stages": [
+    {
+      "id": "arcade_historical",
+      "entrySHA256": "8688a36bbc296e336f85223532a3549954e7ce047fc214a929c2227ca889110c",
+      "stageId": "arcade_historical",
+      "scene": "historical-society-normal-gallery-before-descent",
+      "policy": {
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "sceneId": "historical-society-normal-gallery-before-descent",
+        "terrainRules": false,
+        "normalPhaseLabel": "STAGE 2 AREA 1 · GALERIE NORMALE",
+        "alteredPhaseLabel": "STAGE 2 AREA 1 · GALERIE NORMALE",
+        "terrainPresentation": {
+          "name": "GALERIE AVANT LA DESCENTE",
+          "description": "Galerie de la Historical Society de The Arcade avant la descente : papier peint jaune olive, boiseries sombres et quatre cadres repérés dans deux captures de jeu. Sol, détails des tableaux et largeur reconstruits pour le versus ; physique neutre, géométrie et fidélité 1:1 non certifiées."
+        },
+        "weather": "none",
+        "interior": true,
+        "baselineMotion": true,
+        "suppression": [
+          {
+            "kind": "event",
+            "id": "corridorCollapse",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "sirenCall",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "event",
+            "id": "powerFailure",
+            "reason": "Occurrence locale ou danger non retenu par la fiche exacte."
+          },
+          {
+            "kind": "hazard",
+            "id": "roadCollapse",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "hazard",
+            "id": "fallingDebris",
+            "reason": "Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts."
+          },
+          {
+            "kind": "animation",
+            "id": "portraitBlink",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "shadowPass",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
+          }
+        ],
+        "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
+        "renderedProposalIds": [],
+        "pendingProposalIds": [
+          "arcade_historical:reference:1",
+          "arcade_historical:reference:2",
+          "arcade_historical:reference:3",
+          "arcade_historical:reference:4"
+        ]
+      },
+      "weather": "none",
+      "shiftEnabled": false,
+      "referenceTracks": [],
+      "stageAnimations": [],
+      "liveHazards": 0,
+      "phase": "fight",
+      "frame": 242,
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "facing": 1
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 970,
+          "y": 594,
+          "facing": -1
+        }
+      ],
+      "pins": [
+        {
+          "path": "assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+          "status": "ready"
+        },
+        {
+          "path": "assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
+          "status": "ready"
+        }
+      ],
+      "draws": [
+        {
+          "path": "/assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+          "args": [
+            0,
+            0.25,
+            1672,
+            940.5,
+            0,
+            0,
+            1280,
+            720
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            13.852813720703125,
+            12.857142448425293
+          ],
+          "width": 1672,
+          "height": 941,
+          "engineFrame": 242
+        },
+        {
+          "path": "/assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
+          "args": [
+            0,
+            0.25,
+            1672,
+            940.5,
+            0,
+            0,
+            1280,
+            720
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            13.852813720703125,
+            12.857142448425293
+          ],
+          "width": 1672,
+          "height": 941,
+          "engineFrame": 242
+        },
+        {
+          "path": "/assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+          "args": [
+            -184.29650447918496,
+            -299.2951769066625,
+            511.9347346644027,
+            341.2898231096018
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            317.1428607702255,
+            594.0000067949295
+          ],
+          "width": 1536,
+          "height": 1024,
+          "engineFrame": 242
+        },
+        {
+          "path": "/assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+          "args": [
+            -71.6301929017753,
+            -235.90493217246848,
+            164.66711011902368,
+            247.0006651785355
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            962.8571544885635,
+            594.0000067949295
+          ],
+          "width": 1024,
+          "height": 1536,
+          "engineFrame": 242
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
+          "status": 200,
+          "bytes": 210099,
+          "sha256": "eb9c53adb93795aac66395022a420d04d1221e22be5266454a08f415119e11df"
+        },
+        {
+          "path": "/assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+          "status": 200,
+          "bytes": 2246551,
+          "sha256": "e670dbd8ffbac0aa3b3443b6100f16748c456f95f4b4cb37992d5d7ba74382c2"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "src/stage-bitmap-manifest.js": {
+      "before": "6926c23a22351bdf38927e058c4d64bdebbe784a8c873c8564cd87d9217d7c40",
+      "after": "6926c23a22351bdf38927e058c4d64bdebbe784a8c873c8564cd87d9217d7c40"
+    },
+    "src/stage-reference-policy.js": {
+      "before": "63cbde9063fe4c9035df9342c8fb8bd7fc05195d6cf2933b0c7187b1213a6ae1",
+      "after": "63cbde9063fe4c9035df9342c8fb8bd7fc05195d6cf2933b0c7187b1213a6ae1"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/fight.js": {
+      "before": "0e1cc83391476cf913d0df078d1d618f1162ea3f1f7741fcfcedf7f0d80dfccb",
+      "after": "0e1cc83391476cf913d0df078d1d618f1162ea3f1f7741fcfcedf7f0d80dfccb"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/data.js": {
+      "before": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+      "after": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35"
+    }
+  },
+  "method": "Normal HTTP UI launch, native image responses and passive canvas draw observation. Local mode and infinite timer are the only chosen match options; the scene policy suppresses old terrain, events and automatic finishers.",
+  "limits": [
+    "Source-anchored lateral reconstruction; source camera and 1:1 fidelity remain unverified.",
+    "Service workers blocked; no offline/update or completed match assertion.",
+    "Static scene adds no animation, collision or source-timed sequence."
+  ],
+  "harnessSHA256": "89d7cc062c9770b4f63dd332716d2e30fd2202beb63ec6f53478a9274711ca09",
+  "browser": "158.0.8127.0",
+  "completedAt": "2026-11-27T10:08:04.135Z"
+}

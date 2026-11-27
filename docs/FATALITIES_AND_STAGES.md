@@ -1,6 +1,6 @@
 # Fatalités, arènes dédiées et animations — v0.9.6
 
-Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 64 boucles et jouent 159 éléments visuels partiels issus des fiches, 26 événements et 26 interactions.
+Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 63 boucles et jouent 159 éléments visuels partiels issus des fiches, 26 événements et 26 interactions.
 
 Les montages déplacent les acteurs et synchronisent les effets, la caméra et le son du prototype. Les images propres à chaque action restent à produire ; un montage écrit ne constitue pas un clip bitmap ni une certification 1:1.
 
@@ -341,7 +341,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | THE ARCADE — CITY / JACK’S INN | ARCADE | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | CHUTE DANS LA BRUME — à produire |
 | THE ARCADE — BROOKHAVEN HOSPITAL | ARCADE | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 2 boucles | PROTOCOLE TERMINAL — à produire |
 | THE ARCADE — HOSPITAL ROOF | ARCADE | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 4 boucles | PROTOCOLE TERMINAL — à produire |
-| THE ARCADE — HISTORICAL SOCIETY | ARCADE | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY | ARCADE | GALERIE AVANT LA DESCENTE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | THE ARCADE — TOLUCA PRISON · OTHERWORLD | ARCADE | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 2 boucles | CELLULE DU JUGEMENT — à produire |
 | THE ARCADE — UNDERGROUND GRAVEYARD | ARCADE | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | THE ARCADE — TOLUCA LAKE | ARCADE | EAU STAGNANTE | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |

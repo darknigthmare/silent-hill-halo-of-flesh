@@ -6,7 +6,7 @@
  */
 import {SPRITES} from './sprite-manifest.js';
 import {actorSpriteState,sampleSpriteClip} from './sprite-animation.js';
-import {combatSpriteFor,rasterPlacement} from './sprite-system.js';
+import {combatSpriteFor,rasterPlacement,validSpriteCalibration} from './sprite-system.js';
 import {bodyBox} from './combat-geometry.js';
 
 export const PROJECTILE_ORIGIN_REFERENCES=Object.freeze({
@@ -39,9 +39,7 @@ export function spriteProjectileOrigin(actor,move,{registry=SPRITES}={}){
   if(!sample||sample.fallback||sample.pose!==move.key||sample.frameIndex!==reference.frameIndex||
     frame.path!==reference.path||frame.sha256!==reference.sha256||
     frame.width!==reference.width||frame.height!==reference.height||frame.facing!==reference.facing||
-    !Array.isArray(frame.anchor)||frame.anchor.length!==2||
-    !frame.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1)||
-    !Number.isFinite(frame.bodyHeight)||frame.bodyHeight<.05||frame.bodyHeight>1)return null;
+    !validSpriteCalibration(frame))return null;
 
   const placement=rasterPlacement(actor.data,frame,actor.x,actor.y,actor.facing,state);
   const [mx,my]=reference.muzzlePixels;

@@ -92,6 +92,20 @@ test('muzzle projection follows actor translation and renderer calibration witho
   const p=rasterPlacement(a.data,art.frames[1],a.x,a.y,a.facing,actorSpriteState(a));
   approx(calibrated.x,a.x+p.flip*(p.localX+997*p.scale));approx(calibrated.y,a.y+p.localY+261*p.scale);
 });
+test('muzzle projection accepts the full finite calibration domain and rejects values outside it',()=>{
+  const e=make(EDDIE),a=e.actors[0];fire(e);const move=a.profile.moves.neutralSpecial;
+  const art=structuredClone(SPRITES[EDDIE]),registry={[EDDIE]:art},frame=art.frames[1];
+  for(const bodyHeight of [.05,2.5,4]){
+    frame.bodyHeight=bodyHeight;
+    const origin=spriteProjectileOrigin(a,move,{registry});assert.ok(origin);
+    const p=rasterPlacement(a.data,frame,a.x,a.y,a.facing,actorSpriteState(a));
+    assert.ok(Number.isFinite(origin.x)&&Number.isFinite(origin.y));
+    approx(origin.x,a.x+p.flip*(p.localX+997*p.scale));approx(origin.y,a.y+p.localY+261*p.scale);
+  }
+  for(const bodyHeight of [.049,4.001,NaN,Infinity,-Infinity,true]){
+    frame.bodyHeight=bodyHeight;assert.equal(spriteProjectileOrigin(a,move,{registry}),null);
+  }
+});
 
 for(const id of [WALTER,EDDIE])for(const side of [0,1])test(id+' preserves real hit, guard and recovery in orientation '+(side?-1:1),()=>{
   for(const guard of [false,true]){

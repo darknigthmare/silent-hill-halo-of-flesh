@@ -1,12 +1,13 @@
 /** Real browser/HTTP tests of editing existing raster timelines, not generated animation art. */
 import {chromium} from 'playwright-core';
+import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
 import {spawn} from 'node:child_process';
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {VERSION} from '../src/data.js';
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-clips-v093');await mkdir(out,{recursive:true});
-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4178';let server,browser;
+const base=process.env.QA_BASE_URL||'http://127.0.0.1:4178';let server,browser,offlineProfile;
 const STATIC_SUBJECT='film_red_pyramid_film_175',ANIMATED_SUBJECT='sh1_air_screamer_001';
 const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:['Two repeated steps referencing the same real PNG test static-vs-animation accounting; no new artwork is created.']};
 const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
@@ -19,8 +20,8 @@ async function selectSubject(page,id,source,requireRaster=true){
 try{
  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4178','--dist'],{cwd:root,stdio:'ignore'});
  let ready=false;for(let n=0;n<60;n++){try{if((await fetch(base)).ok){ready=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}check('static HTTP server starts',ready);
- browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});report.browser=browser.version();
- const context=await browser.newContext({viewport:{width:1440,height:1040}}),page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
+ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined,viewport:{width:1440,height:1040}});browser=offlineProfile.browser;report.browser=browser.version();
+ const context=offlineProfile.context,page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
  await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');
  check('one disposable editor mounts beside the real bitmap',await page.locator('.clip-editor').count()===1);
  const before=await page.evaluate(async()=>({art:JSON.stringify((await import('/src/sprite-manifest.js')).SPRITES),storage:JSON.stringify({...localStorage})}));
@@ -55,10 +56,13 @@ try{
  check('filter reset keeps the dossier on the visible first page',await page.evaluate(()=>[...document.querySelectorAll('.sprite-card')].some(c=>c.dataset.id===document.querySelector('#spriteDetail canvas').dataset.spriteId)));
  check('filter navigation leaves exactly one live editor',await page.locator('.clip-editor').count()===1);
  await page.setViewportSize({width:430,height:932});await page.locator('.clip-editor summary').click();await page.click('[data-clip=add]');await page.locator('[data-clip=export]').scrollIntoViewIfNeeded();check('timeline controls fit the mobile viewport',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await shot(page,'02-mobile-editor');
- await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});await context.setOffline(true);await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');await page.locator('.clip-editor summary').click();await page.click('[data-clip=add]');check('new authoring modules and controls work completely offline',await page.locator('[data-clip-frame]').count()===2&&await page.locator('[data-clip-frame="1"] option').count()===1);await shot(page,'03-offline-editor');await context.close();
+ await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});await context.setOffline(true);await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');await page.locator('.clip-editor summary').click();await page.click('[data-clip=add]');check('new authoring modules and controls work completely offline',await page.locator('[data-clip-frame]').count()===2&&await page.locator('[data-clip-frame="1"] option').count()===1);await shot(page,'03-offline-editor');await page.close();
  const failureContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1040}}),failed=await failureContext.newPage();failed.on('pageerror',e=>report.errors.push(e.message));
  await failed.route('**/assets/sprites/**',route=>route.abort('failed'));await failed.goto(base+'/modules/sprite-workshop.html');await selectSubject(failed,STATIC_SUBJECT,'film',false);await failed.locator('[data-inspect=retry]').waitFor({state:'visible'});
  check('failed inspector load says the frame is not displayed',/IMAGE INDISPONIBLE/.test(await failed.locator('[data-inspect=status]').textContent()));await failed.unroute('**/assets/sprites/**');await failed.click('[data-inspect=retry]');await failed.waitForFunction(()=>document.querySelector('#spriteDetail canvas')?.dataset.artStatus==='raster');check('explicit retry recovers the inspector without reloading the page',await failed.locator('[data-inspect=retry]').isHidden());await shot(failed,'04-recovered-inspector');await failureContext.close();
  check('no unhandled browser exceptions',report.errors.length===0);
 }catch(error){report.failure=String(error);process.exitCode=1;}
-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
+finally{
+ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
+ finally{try{await offlineProfile?.close();}finally{server?.kill('SIGTERM');}}
+}

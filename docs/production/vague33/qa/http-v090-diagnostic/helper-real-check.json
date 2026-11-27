@@ -1,0 +1,126 @@
+{
+  "kind": "real-offline-profile-helper-check",
+  "startedAt": "2026-11-27T10:18:29.827Z",
+  "checks": [
+    {
+      "name": "HTTP server ready",
+      "passed": true
+    },
+    {
+      "name": "Real service worker becomes controlling",
+      "passed": true
+    },
+    {
+      "name": "Real shell reloads offline",
+      "passed": true
+    },
+    {
+      "name": "No worker installation errors",
+      "passed": true
+    }
+  ],
+  "workerErrors": [],
+  "legacyChronicleSequence": {
+    "beforeDiagnostic": {
+      "url": "http://127.0.0.1:4312/modules/unified-versus.html?preset=chronicle&p1=sh1_air_screamer_001&p2=sh1_grey_child_005&queue=sh1_grey_child_005%2Csh1_split_head_014%2Csh1_incubus_019&stages=midwich%2Clakeside_amusement%2Cnowhere&route=fog_of_alessa&autostart=1",
+      "roster": 30,
+      "artDiagnostic": false,
+      "launchDisabled": true,
+      "status": "Vérification des images du contact…",
+      "announcements": [
+        "Vérification des images du contact…",
+        "",
+        "",
+        ""
+      ],
+      "fightVisible": false
+    },
+    "afterClick": {
+      "url": "http://127.0.0.1:4312/modules/unified-versus.html?preset=chronicle&p1=sh1_air_screamer_001&p2=sh1_grey_child_005&queue=sh1_grey_child_005%2Csh1_split_head_014%2Csh1_incubus_019&stages=midwich%2Clakeside_amusement%2Cnowhere&route=fog_of_alessa&autostart=1",
+      "roster": 30,
+      "artDiagnostic": true,
+      "launchDisabled": true,
+      "status": "Vérification des images du contact…",
+      "announcements": [
+        "Vérification des images du contact…",
+        "Sprites à produire : 1. Incubus. Aucun parcours ni tentative modifié.",
+        "Sprites à produire : 1. Incubus. Aucun parcours ni tentative modifié.",
+        ""
+      ],
+      "fightVisible": false
+    },
+    "fightOpened": true,
+    "finalState": {
+      "url": "http://127.0.0.1:4312/modules/unified-versus.html?preset=chronicle&p1=sh1_air_screamer_001&p2=sh1_grey_child_005&queue=sh1_grey_child_005%2Csh1_split_head_014%2Csh1_incubus_019&stages=midwich%2Clakeside_amusement%2Cnowhere&route=fog_of_alessa&autostart=1",
+      "roster": 30,
+      "artDiagnostic": true,
+      "launchDisabled": false,
+      "status": "",
+      "announcements": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "fightVisible": true
+    }
+  },
+  "sourceBuild": "/tmp/halo-wave33-build",
+  "browser": "158.0.8127.0",
+  "quotaAtStart": {
+    "usage": 0,
+    "quota": 3142739558,
+    "overrideActive": false,
+    "usageBreakdown": [
+      {
+        "storageType": "file_systems",
+        "usage": 0
+      },
+      {
+        "storageType": "indexeddb",
+        "usage": 0
+      },
+      {
+        "storageType": "cache_storage",
+        "usage": 0
+      },
+      {
+        "storageType": "service_workers",
+        "usage": 0
+      }
+    ]
+  },
+  "quotaAfterInstall": {
+    "usage": 858291249,
+    "quota": 3142739558,
+    "overrideActive": false,
+    "usageBreakdown": [
+      {
+        "storageType": "file_systems",
+        "usage": 0
+      },
+      {
+        "storageType": "indexeddb",
+        "usage": 0
+      },
+      {
+        "storageType": "cache_storage",
+        "usage": 858237184
+      },
+      {
+        "storageType": "service_workers",
+        "usage": 54065
+      }
+    ]
+  },
+  "cacheCounts": [
+    {
+      "name": "halo-of-flesh-static-v0.9.6-wave30-story-selection-20261125-a9c327b0e1bcdbe0807654f20d8d22212c9a11fdf648d98cdfd72cb4d4478bdd",
+      "entries": 798
+    }
+  ],
+  "offlineController": true,
+  "passed": true,
+  "finishedAt": "2026-11-27T10:18:39.985Z",
+  "elapsedMs": 10158
+}

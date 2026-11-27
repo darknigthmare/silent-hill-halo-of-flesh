@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave30-story-selection-20261125';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'd3d90b695927db56f4338a7dfee91a3d39b3e39554ee77964565b79158ec98e4';
+const BITMAP_REVISION = 'a9c327b0e1bcdbe0807654f20d8d22212c9a11fdf648d98cdfd72cb4d4478bdd';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -241,6 +241,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_mumbler_006.38861850b609.png",
   "/assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
   "/assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+  "/assets/sprites/sh1_night_flutter_002.5a75d9448b27.png",
+  "/assets/sprites/sh1_night_flutter_002.5d491df4df34.png",
   "/assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
   "/assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
   "/assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
@@ -278,9 +280,13 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_flesh_lip_027.15f2f56aa578.png",
   "/assets/sprites/sh2_lying_figure_020.10a8df3e3270.png",
   "/assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+  "/assets/sprites/sh2_lying_figure_020.93aa7fbaf7fb.png",
   "/assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+  "/assets/sprites/sh2_lying_figure_020.c9679896cf00.png",
   "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+  "/assets/sprites/sh2_lying_figure_crawling_021.70eb5478e000.png",
   "/assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+  "/assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
   "/assets/sprites/sh2_mandarin_026.04d4be93badc.png",
   "/assets/sprites/sh2_mandarin_026.75cacc76973e.png",
   "/assets/sprites/sh2_mannequin_022.8c4e65209cd8.png",
@@ -322,8 +328,10 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
   "/assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
   "/assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+  "/assets/sprites/sh3_numb_body_medium.0eaa4f8c7d95.png",
   "/assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
   "/assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+  "/assets/sprites/sh3_numb_body_medium.98b9a1267c64.png",
   "/assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
   "/assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
   "/assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
@@ -485,6 +493,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
   "/assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png",
   "/assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png",
+  "/assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+  "/assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
   "/assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
   "/assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
   "/assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",

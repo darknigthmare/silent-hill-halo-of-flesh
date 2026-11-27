@@ -1,12 +1,13 @@
 /** Actual HTTP UI regression tests. Failure injection/checkpoint fixtures are not played campaigns. */
 import {chromium} from 'playwright-core';
+import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
 import {spawn} from 'node:child_process';
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {VERSION} from '../src/data.js';
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-recovery-v094');await mkdir(out,{recursive:true});
-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4179';let server,browser;
+const base=process.env.QA_BASE_URL||'http://127.0.0.1:4179';let server,browser,offlineProfile;
 const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:[
  'A prepared won checkpoint, deciding KO and prior-round score isolate retry/continuation transactions. Finishers are disabled and real intro/round-result/outro ticks produce the engine match callback and the result screen; no campaign victory is claimed.',
  'SpriteCache.prepare is temporarily made to fail for the pause retry test. No production file is changed.',
@@ -87,9 +88,13 @@ try{
  await page.click('[data-inspect=reset]');await page.fill('[data-inspect=anchorX]','0.61');await page.locator('[data-inspect=anchorX]').dispatchEvent('change');const pending=page.waitForEvent('download');await page.click('[data-inspect=export]');const download=await pending;await download.saveAs(resolve(out,'calibration-v2.json'));const packet=JSON.parse(await readFile(resolve(out,'calibration-v2.json'),'utf8'));
  check('calibration export includes the previous exact anchors as a concurrency guard',packet.schema===2&&packet.fighterId==='film_red_pyramid_film_175'&&packet.frames.length===1&&packet.previousFrames[0].anchor[0]!==.61&&packet.frames[0].anchor[0]===.61&&packet.previousFrames[0].sha256===packet.frames[0].sha256);await shot(page,'04-preserved-drafts');
  await page.setViewportSize({width:430,height:932});check('updated editor controls stay within mobile viewport',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await shot(page,'05-mobile-recovery');await context.close();
- const offlineContext=await browser.newContext(),off=await offlineContext.newPage();off.on('pageerror',e=>report.errors.push(e.message));await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
+ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
+ const offlineContext=offlineProfile.context,off=await offlineContext.newPage();off.on('pageerror',e=>report.errors.push(e.message));await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
  await off.evaluate(async()=>{await Promise.all((await caches.keys()).map(k=>caches.delete(k)));});await offlineContext.setOffline(true);const response=await off.goto(base+'/definitely-uncached-v094');
- check('empty offline cache returns a real 503 instead of a rejected navigation',response.status()===503&&/Archive hors ligne indisponible/.test(await off.textContent('body')));await shot(off,'06-empty-offline-fallback');await offlineContext.close();
+ check('empty offline cache returns a real 503 instead of a rejected navigation',response.status()===503&&/Archive hors ligne indisponible/.test(await off.textContent('body')));await shot(off,'06-empty-offline-fallback');await off.close();
  check('no unhandled browser exceptions in recovery scenarios',report.errors.length===0);
 }catch(error){report.failure=String(error);process.exitCode=1;}
-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
+finally{
+ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
+ finally{try{await offlineProfile?.close();}finally{try{await browser?.close();}finally{server?.kill('SIGTERM');}}}
+}

@@ -1,0 +1,467 @@
+{
+  "wave": 33,
+  "startedAt": "2026-11-27T10:08:15.756Z",
+  "passed": true,
+  "alignmentPassed": true,
+  "build": "/tmp/halo-wave33-build",
+  "frame": {
+    "sha256": "fdf3d62f02cb232b40beaa77fafb41e7ffcaf19112e9e73f1fb6667293cfc321",
+    "bytes": 1307158,
+    "width": 2172,
+    "height": 724,
+    "visibleBounds": [
+      60,
+      115,
+      2056,
+      609
+    ],
+    "pixelSHA256": "c7c446a13af336af48b499f8553735e78d41dae158c6b9ee791be6843395728c",
+    "transparentFraction": 0.63149,
+    "path": "assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+    "facing": -1,
+    "anchor": [
+      0.4,
+      0.8411602209944752
+    ],
+    "bodyHeight": 2.94,
+    "sourceFile": "exec-34588643-8f78-42a6-a872-1317635b0cdf.png",
+    "sourceSHA256": "fdf3d62f02cb232b40beaa77fafb41e7ffcaf19112e9e73f1fb6667293cfc321",
+    "origin": "conversation-image-generation",
+    "purpose": "combat",
+    "view": "side-view",
+    "alphaBounds": [
+      37,
+      38,
+      2058,
+      708
+    ],
+    "framingBounds": [
+      55,
+      112,
+      2058,
+      613
+    ]
+  },
+  "checks": [
+    {
+      "name": "Measured front belongs to exact reviewed native PNG",
+      "passed": true
+    },
+    {
+      "name": "Dedicated port unused",
+      "passed": true
+    },
+    {
+      "name": "Built HTTP app ready",
+      "passed": true
+    },
+    {
+      "name": "Native Dojo hitbox option active on side 0",
+      "passed": true
+    },
+    {
+      "name": "Exact owner and attack on side 0",
+      "passed": true
+    },
+    {
+      "name": "Native pose and hit rectangle share captured active frame on side 0",
+      "passed": true
+    },
+    {
+      "name": "Head front lies inside native HIT on side 0",
+      "passed": true,
+      "detail": {
+        "frontWorld": 376.98962678994246,
+        "hitFrontWorld": 383.368,
+        "frontBeyondHitWorld": -6.378373210057532,
+        "frontPointWorld": {
+          "x": 376.98962678994246,
+          "y": 584.682080843387
+        },
+        "frontWithinHit": true,
+        "hitBoxWorld": {
+          "x": 328.368,
+          "y": 538.71232,
+          "w": 55,
+          "h": 56.416
+        },
+        "inkBoundsWorld": {
+          "left": 211.66903446461458,
+          "right": 376.98962678994246,
+          "top": 553.0839816589619,
+          "bottom": 594
+        }
+      }
+    },
+    {
+      "name": "Ground support retained on side 0",
+      "passed": true
+    },
+    {
+      "name": "Native Dojo hitbox option active on side 1",
+      "passed": true
+    },
+    {
+      "name": "Exact owner and attack on side 1",
+      "passed": true
+    },
+    {
+      "name": "Native pose and hit rectangle share captured active frame on side 1",
+      "passed": true
+    },
+    {
+      "name": "Head front lies inside native HIT on side 1",
+      "passed": true,
+      "detail": {
+        "frontWorld": 903.0103732100575,
+        "hitFrontWorld": 896.632,
+        "frontBeyondHitWorld": -6.378373210057589,
+        "frontPointWorld": {
+          "x": 903.0103732100575,
+          "y": 584.682080843387
+        },
+        "frontWithinHit": true,
+        "hitBoxWorld": {
+          "x": 896.632,
+          "y": 538.71232,
+          "w": 55,
+          "h": 56.416
+        },
+        "inkBoundsWorld": {
+          "left": 903.0103732100575,
+          "right": 1068.3309655353855,
+          "top": 553.0839816589619,
+          "bottom": 594
+        }
+      }
+    },
+    {
+      "name": "Ground support retained on side 1",
+      "passed": true
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "player": 0,
+      "draw": {
+        "path": "/assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+        "args": [
+          -71.95918367346938,
+          -50.44100236779794,
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428607702255,
+          594.0000067949295
+        ],
+        "engineFrame": 255,
+        "actor": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "grounded": true
+        },
+        "attack": {
+          "key": "neutralLight",
+          "frame": 6,
+          "startup": 5,
+          "active": 3,
+          "move": {
+            "key": "neutralLight",
+            "input": "L",
+            "name": "Percussion du corps rampant — coup bref",
+            "button": "light",
+            "category": "normal",
+            "stance": "standing",
+            "startup": 5,
+            "active": 3,
+            "recovery": 9,
+            "damage": 31,
+            "reach": 55,
+            "level": "low",
+            "meter": 6,
+            "knockback": 0,
+            "travel": 0,
+            "verticalTravel": 0,
+            "requiresAir": false,
+            "requiresGround": true,
+            "airControl": 0,
+            "hits": 1,
+            "hitInterval": 4,
+            "projectile": false,
+            "projectileCount": 1,
+            "projectileSpeed": 14.48112,
+            "projectileScale": 1,
+            "projectileArc": 0,
+            "projectileGravity": 0,
+            "projectileLife": 82,
+            "homing": 0,
+            "armorFrames": 0,
+            "invulnFrames": 0,
+            "guardDamage": 1,
+            "unblockable": false,
+            "knockdown": false,
+            "launch": 0,
+            "teleport": null,
+            "trap": false,
+            "aura": false,
+            "counterStance": false,
+            "trigger": null,
+            "sideSwitch": false,
+            "hardKnockdown": false,
+            "groundBounce": false,
+            "armorBreak": false,
+            "meterGain": 0,
+            "effect": null,
+            "cancelInto": [
+              "forwardLight",
+              "neutralHeavy",
+              "neutralSpecial"
+            ],
+            "canonicalBasis": "Percussion rampante : Se déplace rapidement couché au sol, bras enfermés dans la chair, et percute James depuis ce rampement.",
+            "fidelity": "behavior-composite",
+            "tags": [
+              "humanoid",
+              "rushdown",
+              "normal",
+              "reference-policy",
+              "versus-timing"
+            ],
+            "referenceIds": [
+              "CL_SH2_ENEMIES",
+              "CL_SH2_CREATURES"
+            ],
+            "referenceStatus": "observed-behavior-versus-transposition",
+            "sourceTimingMeasured": false,
+            "enabled": true,
+            "disabledReason": null
+          }
+        }
+      },
+      "hit": {
+        "args": [
+          328.368,
+          538.71232,
+          55,
+          56.416
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          13.852813720703125,
+          12.857142448425293
+        ],
+        "engineFrame": 255
+      },
+      "capturedFrame": 255,
+      "measurement": {
+        "frontWorld": 376.98962678994246,
+        "hitFrontWorld": 383.368,
+        "frontBeyondHitWorld": -6.378373210057532,
+        "frontPointWorld": {
+          "x": 376.98962678994246,
+          "y": 584.682080843387
+        },
+        "frontWithinHit": true,
+        "hitBoxWorld": {
+          "x": 328.368,
+          "y": 538.71232,
+          "w": 55,
+          "h": 56.416
+        },
+        "inkBoundsWorld": {
+          "left": 211.66903446461458,
+          "right": 376.98962678994246,
+          "top": 553.0839816589619,
+          "bottom": 594
+        }
+      }
+    },
+    {
+      "player": 1,
+      "draw": {
+        "path": "/assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+        "args": [
+          -71.95918367346938,
+          -50.44100236779794,
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.8571544885635,
+          594.0000067949295
+        ],
+        "engineFrame": 255,
+        "actor": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "grounded": true
+        },
+        "attack": {
+          "key": "neutralLight",
+          "frame": 5,
+          "startup": 5,
+          "active": 3,
+          "move": {
+            "key": "neutralLight",
+            "input": "L",
+            "name": "Percussion du corps rampant — coup bref",
+            "button": "light",
+            "category": "normal",
+            "stance": "standing",
+            "startup": 5,
+            "active": 3,
+            "recovery": 9,
+            "damage": 31,
+            "reach": 55,
+            "level": "low",
+            "meter": 6,
+            "knockback": 0,
+            "travel": 0,
+            "verticalTravel": 0,
+            "requiresAir": false,
+            "requiresGround": true,
+            "airControl": 0,
+            "hits": 1,
+            "hitInterval": 4,
+            "projectile": false,
+            "projectileCount": 1,
+            "projectileSpeed": 14.48112,
+            "projectileScale": 1,
+            "projectileArc": 0,
+            "projectileGravity": 0,
+            "projectileLife": 82,
+            "homing": 0,
+            "armorFrames": 0,
+            "invulnFrames": 0,
+            "guardDamage": 1,
+            "unblockable": false,
+            "knockdown": false,
+            "launch": 0,
+            "teleport": null,
+            "trap": false,
+            "aura": false,
+            "counterStance": false,
+            "trigger": null,
+            "sideSwitch": false,
+            "hardKnockdown": false,
+            "groundBounce": false,
+            "armorBreak": false,
+            "meterGain": 0,
+            "effect": null,
+            "cancelInto": [
+              "forwardLight",
+              "neutralHeavy",
+              "neutralSpecial"
+            ],
+            "canonicalBasis": "Percussion rampante : Se déplace rapidement couché au sol, bras enfermés dans la chair, et percute James depuis ce rampement.",
+            "fidelity": "behavior-composite",
+            "tags": [
+              "humanoid",
+              "rushdown",
+              "normal",
+              "reference-policy",
+              "versus-timing"
+            ],
+            "referenceIds": [
+              "CL_SH2_ENEMIES",
+              "CL_SH2_CREATURES"
+            ],
+            "referenceStatus": "observed-behavior-versus-transposition",
+            "sourceTimingMeasured": false,
+            "enabled": true,
+            "disabledReason": null
+          }
+        }
+      },
+      "hit": {
+        "args": [
+          896.632,
+          538.71232,
+          55,
+          56.416
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          13.852813720703125,
+          12.857142448425293
+        ],
+        "engineFrame": 255
+      },
+      "capturedFrame": 255,
+      "measurement": {
+        "frontWorld": 903.0103732100575,
+        "hitFrontWorld": 896.632,
+        "frontBeyondHitWorld": -6.378373210057589,
+        "frontPointWorld": {
+          "x": 903.0103732100575,
+          "y": 584.682080843387
+        },
+        "frontWithinHit": true,
+        "hitBoxWorld": {
+          "x": 896.632,
+          "y": 538.71232,
+          "w": 55,
+          "h": 56.416
+        },
+        "inkBoundsWorld": {
+          "left": 903.0103732100575,
+          "right": 1068.3309655353855,
+          "top": 553.0839816589619,
+          "bottom": 594
+        }
+      }
+    }
+  ],
+  "captures": [
+    {
+      "file": "crawling-neutral-light-contact-right.png",
+      "bytes": 1431411,
+      "sha256": "49dc06756e665e5202cda051104b8d0318e1681aec369c5436261a9fce6fc527"
+    },
+    {
+      "file": "crawling-neutral-light-contact-left.png",
+      "bytes": 1423527,
+      "sha256": "9a0b6a851ee694f4ed9902474183f00d0b5221a4c4436d3a9f3aa6d3cb32a25d"
+    }
+  ],
+  "errors": [],
+  "method": "Ordinary training UI and HITBOXES checkbox, then ordinary light input. Passive observation of native drawImage and red strokeRect calls, with actual canvas captures. No custom overlay or engine state injection.",
+  "limits": [
+    "The first alpha>=32 front column is bound to the exact reviewed PNG; anatomy still requires visual review.",
+    "The unchanged historical humanoid hurtbox remains versus adaptation, not measured original-game geometry.",
+    "This contact observation does not certify 1:1 timing, scale or animation."
+  ],
+  "harnessSHA256": "4da35a1e9a4b95ee4984324fde60dfd0e97fb64d19dfebae8b82f25b391d86e2",
+  "frontMeasurement": {
+    "nativePoint": [
+      60,
+      496.5
+    ],
+    "method": "Alpha>=32 first front column x60, y488..505; midpoint retained as a reproducible head-front support point."
+  },
+  "browser": "158.0.8127.0",
+  "completedAt": "2026-11-27T10:08:28.623Z"
+}

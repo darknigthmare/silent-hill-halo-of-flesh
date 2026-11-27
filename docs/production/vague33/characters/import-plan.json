@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "wave": 33,
+  "baselineCommit": "4f7d2e89c106ad4a00752bcb4c9b046ee3043b18",
+  "counts": {
+    "newProfiles": 0,
+    "newPortraits": 0,
+    "newCombatBases": 0,
+    "newStaticPoses": 4,
+    "newAnimatedClips": 0
+  },
+  "plans": [
+    {
+      "id": "sh1_night_flutter_002",
+      "source": "sh1",
+      "edition": "Silent Hill (1999), original PS1; regional model view unspecified",
+      "pose": "walk",
+      "frameIndex": 1,
+      "sourceFile": "docs/production/vague33/characters/night-flutter-walk.png",
+      "originalSourceFile": "exec-89c4d28d-1c6d-41ce-bb8f-cda4875050bb.png",
+      "originalGeneratedPath": "/workspace/scratch/cbea9ddcab84/generated_images/exec-89c4d28d-1c6d-41ce-bb8f-cda4875050bb.png",
+      "sha256": "5d491df4df348a91517cb050b4d42de4e33d371e1c0ef62bb5a16a1692f9e8b5",
+      "path": "assets/sprites/sh1_night_flutter_002.5d491df4df34.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1635589,
+      "visibleBounds": [
+        356,
+        44,
+        1282,
+        972
+      ],
+      "pixelSHA256": "d6b5a0a249d8f1aea10c4d0a114fdddfc524f0192bb34ad912153c815a412a77",
+      "transparentFraction": 0.76384,
+      "anchor": [
+        0.47,
+        0.94921875
+      ],
+      "bodyHeight": 0.93,
+      "facing": 1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "origin": "conversation-image-generation",
+      "singleSubjectReviewed": true,
+      "fidelity": "unverified",
+      "status": "integrated-static-candidate; unverified-fidelity",
+      "anchorRationale": "Lowest supporting foot at alpha >= 32; x anchor preserves existing owner presentation convention.",
+      "nativeGameplayReviewed": true,
+      "sourceTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "nativeDecodedPixelSHA256": "b8e57ebdf23d73cd3a603bd59091d7f1759ca830e678ddef0f08f2d93d4b90c6",
+      "nativeZeroAlphaFraction": 0.751393,
+      "measurementMethod": "inspect_image: alpha<16 for transparentFraction; RGB under alpha0 zeroed for pixelSHA256; visibleBounds alpha>=32.",
+      "nativeGameplayEvidence": {
+        "report": "../qa/characters/report.json",
+        "orientations": [
+          "right",
+          "left"
+        ],
+        "actionAndRecoveryCaptured": true,
+        "visualReview": "43 final screenshots reviewed across five native HTTP recipes; character recipe includes 32 screenshots for 16 cases."
+      }
+    },
+    {
+      "id": "sh1_night_flutter_002",
+      "source": "sh1",
+      "edition": "Silent Hill (1999), original PS1; regional model view unspecified",
+      "pose": "neutralLight",
+      "frameIndex": 2,
+      "sourceFile": "docs/production/vague33/characters/night-flutter-neutral-light.png",
+      "originalSourceFile": "exec-e24b89d4-699f-4c0a-89d6-095e5898b912.png",
+      "originalGeneratedPath": "/workspace/scratch/cbea9ddcab84/generated_images/exec-e24b89d4-699f-4c0a-89d6-095e5898b912.png",
+      "sha256": "5a75d9448b276c676259c07257276363a3fc545f21f3ff07bb276be2d19f4de4",
+      "path": "assets/sprites/sh1_night_flutter_002.5a75d9448b27.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1960020,
+      "visibleBounds": [
+        147,
+        58,
+        1485,
+        983
+      ],
+      "pixelSHA256": "9e99da2d21073644c387794aa852cd433263cff6d781bcdcd1b2f020036806fb",
+      "transparentFraction": 0.67535,
+      "anchor": [
+        0.47,
+        0.95996094
+      ],
+      "bodyHeight": 0.93,
+      "facing": 1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "origin": "conversation-image-generation",
+      "singleSubjectReviewed": true,
+      "fidelity": "unverified",
+      "status": "integrated-static-candidate; unverified-fidelity",
+      "anchorRationale": "Lowest supporting foot at alpha >= 32; x anchor preserves existing owner presentation convention.",
+      "nativeGameplayReviewed": true,
+      "sourceTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "nativeDecodedPixelSHA256": "0dac28074433d6cc729ac2fe3bcf0ee0d4012421b76a0bef87e4135478157b4e",
+      "nativeZeroAlphaFraction": 0.663011,
+      "measurementMethod": "inspect_image: alpha<16 for transparentFraction; RGB under alpha0 zeroed for pixelSHA256; visibleBounds alpha>=32.",
+      "nativeGameplayEvidence": {
+        "report": "../qa/characters/report.json",
+        "orientations": [
+          "right",
+          "left"
+        ],
+        "actionAndRecoveryCaptured": true,
+        "visualReview": "43 final screenshots reviewed across five native HTTP recipes; character recipe includes 32 screenshots for 16 cases."
+      }
+    },
+    {
+      "id": "sh3_numb_body_medium",
+      "source": "sh3",
+      "edition": "Silent Hill 3 (2003) original; medium-sized project profile, source size not measured",
+      "pose": "walk",
+      "frameIndex": 1,
+      "sourceFile": "docs/production/vague33/characters/numb-body-medium-walk.png",
+      "originalSourceFile": "exec-81bd62b6-c5e4-4d95-bbb7-4fc175c43e88.png",
+      "originalGeneratedPath": "/workspace/scratch/cbea9ddcab84/generated_images/exec-81bd62b6-c5e4-4d95-bbb7-4fc175c43e88.png",
+      "sha256": "0eaa4f8c7d95bac684f3a483e71bcf85c49bfe53fa93071b5d2584a06f26dfd8",
+      "path": "assets/sprites/sh3_numb_body_medium.0eaa4f8c7d95.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1656508,
+      "visibleBounds": [
+        158,
+        111,
+        1191,
+        918
+      ],
+      "pixelSHA256": "4af5ac1a6d7e788eb0490ff94bf191e626bc0d0eaa85f46db7b00f6cb4014dc5",
+      "transparentFraction": 0.78256,
+      "anchor": [
+        0.5,
+        0.89648438
+      ],
+      "bodyHeight": 1.0,
+      "facing": 1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "origin": "conversation-image-generation",
+      "singleSubjectReviewed": true,
+      "fidelity": "unverified",
+      "status": "integrated-static-candidate; unverified-fidelity",
+      "anchorRationale": "Lowest supporting foot at alpha >= 32; x anchor preserves existing owner presentation convention.",
+      "nativeGameplayReviewed": true,
+      "sourceTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "nativeDecodedPixelSHA256": "4262e89d96d0a39a613580d25f9d2fd692143a06c61a279b69595ed6d38c262d",
+      "nativeZeroAlphaFraction": 0.774131,
+      "measurementMethod": "inspect_image: alpha<16 for transparentFraction; RGB under alpha0 zeroed for pixelSHA256; visibleBounds alpha>=32.",
+      "nativeGameplayEvidence": {
+        "report": "../qa/characters/report.json",
+        "orientations": [
+          "right",
+          "left"
+        ],
+        "actionAndRecoveryCaptured": true,
+        "visualReview": "43 final screenshots reviewed across five native HTTP recipes; character recipe includes 32 screenshots for 16 cases."
+      }
+    },
+    {
+      "id": "sh3_numb_body_medium",
+      "source": "sh3",
+      "edition": "Silent Hill 3 (2003) original; medium-sized project profile, source size not measured",
+      "pose": "neutralSpecial",
+      "frameIndex": 2,
+      "sourceFile": "docs/production/vague33/characters/numb-body-medium-neutral-special.png",
+      "originalSourceFile": "exec-42cb7d15-4761-441f-a7ec-8da73204f23d.png",
+      "originalGeneratedPath": "/workspace/scratch/cbea9ddcab84/generated_images/exec-42cb7d15-4761-441f-a7ec-8da73204f23d.png",
+      "sha256": "98b9a1267c64dc02f4da5912b07eb57427bf4bd780bc6be2a8a31b0298bc0978",
+      "path": "assets/sprites/sh3_numb_body_medium.98b9a1267c64.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1702791,
+      "visibleBounds": [
+        259,
+        125,
+        1423,
+        879
+      ],
+      "pixelSHA256": "cce45504221a254603f73a985fe8a900e2a758de74e625c1655b6b57c3d3455e",
+      "transparentFraction": 0.77208,
+      "anchor": [
+        0.5,
+        1.0
+      ],
+      "bodyHeight": 1.0,
+      "facing": 1,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "origin": "conversation-image-generation",
+      "singleSubjectReviewed": true,
+      "fidelity": "unverified",
+      "status": "integrated-static-candidate; unverified-fidelity",
+      "anchorRationale": "Virtual airborne support at lower canvas edge; both feet lifted. Preserves frontal lobe within the existing versus contact band.",
+      "nativeGameplayReviewed": true,
+      "sourceTimingMeasured": false,
+      "certifiedOneToOne": false,
+      "nativeDecodedPixelSHA256": "5cb128eca5dbb16c7bd18496b75dc53461de47e43f6bfafc00ce9400097aeacf",
+      "nativeZeroAlphaFraction": 0.760734,
+      "measurementMethod": "inspect_image: alpha<16 for transparentFraction; RGB under alpha0 zeroed for pixelSHA256; visibleBounds alpha>=32.",
+      "nativeGameplayEvidence": {
+        "report": "../qa/characters/report.json",
+        "orientations": [
+          "right",
+          "left"
+        ],
+        "actionAndRecoveryCaptured": true,
+        "visualReview": "43 final screenshots reviewed across five native HTTP recipes; character recipe includes 32 screenshots for 16 cases."
+      }
+    }
+  ]
+}

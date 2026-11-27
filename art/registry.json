@@ -455,6 +455,58 @@
           "origin": "conversation-image-generation",
           "purpose": "combat",
           "view": "side-view"
+        },
+        {
+          "sha256": "93aa7fbaf7fb92e655859ad7fc51b7b91cbe5bcb1a4d0852098d8843c1da021f",
+          "bytes": 1652824,
+          "width": 1024,
+          "height": 1536,
+          "visibleBounds": [
+            51,
+            295,
+            973,
+            1295
+          ],
+          "pixelSHA256": "fd18be592d76a80ad298c0eb38768cb935dfa371d21e455f1a39359da0fb172f",
+          "transparentFraction": 0.75491,
+          "path": "assets/sprites/sh2_lying_figure_020.93aa7fbaf7fb.png",
+          "facing": 1,
+          "anchor": [
+            0.5,
+            0.8430989583333334
+          ],
+          "bodyHeight": 0.6266666666666666,
+          "sourceFile": "exec-b43afc4e-2a88-4d0d-9a4e-a5498eeae448.png",
+          "sourceSHA256": "93aa7fbaf7fb92e655859ad7fc51b7b91cbe5bcb1a4d0852098d8843c1da021f",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        },
+        {
+          "sha256": "c9679896cf006e1babfcaee776ee4a9c2fd8f5341129778a17a98a4ffb7c47a3",
+          "bytes": 1494720,
+          "width": 1024,
+          "height": 1536,
+          "visibleBounds": [
+            63,
+            360,
+            982,
+            1302
+          ],
+          "pixelSHA256": "95f4482162265760000ec6fd3d37056ed9302bcb267a379584a55a784c90a41c",
+          "transparentFraction": 0.78794,
+          "path": "assets/sprites/sh2_lying_figure_020.c9679896cf00.png",
+          "facing": 1,
+          "anchor": [
+            0.6,
+            0.84765625
+          ],
+          "bodyHeight": 0.6266666666666666,
+          "sourceFile": "exec-efedbe97-2bcd-4646-93f7-b74944ddc4fe.png",
+          "sourceSHA256": "c9679896cf006e1babfcaee776ee4a9c2fd8f5341129778a17a98a4ffb7c47a3",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -479,6 +531,20 @@
           ],
           "ticksPerFrame": 1,
           "loop": false
+        },
+        "walk": {
+          "frames": [
+            2
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "neutralLight": {
+          "frames": [
+            3
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
         }
       },
       "animatedClips": 0,
@@ -493,7 +559,7 @@
         "sourceFile": "exec-45dffa0d-d14e-4b95-a7e1-222fc5b16d45.png"
       },
       "combatView": "side-view-candidate",
-      "combatNotes": "Lying Figure debout du jeu de 2001, gainée et penchée vers la droite, deux pieds en appui. Image fixe candidate, fidélité non certifiée."
+      "combatNotes": "Lying Figure debout du jeu de 2001, gainée et penchée vers la droite, deux pieds en appui. Image fixe candidate, fidélité non certifiée. Vague 33 : deux poses fixes individuelles supplémentaires ; aucun cycle animé ni timing original mesuré. Fidélité 1:1 non certifiée."
     },
     "sh2_bubble_head_nurse_024": {
       "fighterId": "sh2_bubble_head_nurse_024",
@@ -2083,6 +2149,58 @@
           "origin": "conversation-image-generation",
           "purpose": "combat",
           "view": "side-view"
+        },
+        {
+          "sha256": "5d491df4df348a91517cb050b4d42de4e33d371e1c0ef62bb5a16a1692f9e8b5",
+          "bytes": 1635589,
+          "width": 1536,
+          "height": 1024,
+          "visibleBounds": [
+            356,
+            44,
+            1282,
+            972
+          ],
+          "pixelSHA256": "d6b5a0a249d8f1aea10c4d0a114fdddfc524f0192bb34ad912153c815a412a77",
+          "transparentFraction": 0.76384,
+          "path": "assets/sprites/sh1_night_flutter_002.5d491df4df34.png",
+          "facing": 1,
+          "anchor": [
+            0.47,
+            0.94921875
+          ],
+          "bodyHeight": 0.93,
+          "sourceFile": "night-flutter-walk.png",
+          "sourceSHA256": "5d491df4df348a91517cb050b4d42de4e33d371e1c0ef62bb5a16a1692f9e8b5",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        },
+        {
+          "sha256": "5a75d9448b276c676259c07257276363a3fc545f21f3ff07bb276be2d19f4de4",
+          "bytes": 1960020,
+          "width": 1536,
+          "height": 1024,
+          "visibleBounds": [
+            147,
+            58,
+            1485,
+            983
+          ],
+          "pixelSHA256": "9e99da2d21073644c387794aa852cd433263cff6d781bcdcd1b2f020036806fb",
+          "transparentFraction": 0.67535,
+          "path": "assets/sprites/sh1_night_flutter_002.5a75d9448b27.png",
+          "facing": 1,
+          "anchor": [
+            0.47,
+            0.95996094
+          ],
+          "bodyHeight": 0.93,
+          "sourceFile": "night-flutter-neutral-light.png",
+          "sourceSHA256": "5a75d9448b276c676259c07257276363a3fc545f21f3ff07bb276be2d19f4de4",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
         }
       ],
       "portrait": {
@@ -2100,6 +2218,20 @@
           ],
           "ticksPerFrame": 1,
           "loop": false
+        },
+        "walk": {
+          "frames": [
+            1
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "neutralLight": {
+          "frames": [
+            2
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
         }
       },
       "animatedClips": 0,
@@ -2114,7 +2246,7 @@
         "sourceFile": "exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png"
       },
       "combatView": "side-view-candidate",
-      "combatNotes": "Garde sur deux jambes, profil droit ; ailes repliées comme sur le modèle original PS1, aucun vol extrapolé. Portrait conservé ; image fixe candidate, fidélité non certifiée."
+      "combatNotes": "Garde sur deux jambes, profil droit ; ailes repliées comme sur le modèle original PS1, aucun vol extrapolé. Portrait conservé ; image fixe candidate, fidélité non certifiée. Vague 33 : deux poses fixes individuelles supplémentaires ; aucun cycle animé ni timing original mesuré. Fidélité 1:1 non certifiée."
     },
     "sh3_pendulum_039": {
       "fighterId": "sh3_pendulum_039",
@@ -7260,12 +7392,64 @@
           "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
           "facing": -1,
           "anchor": [
-            0.5,
-            0.843923
+            0.4,
+            0.8439226519337016
           ],
-          "bodyHeight": 0.98,
+          "bodyHeight": 2.94,
           "sourceFile": "exec-bdf7056b-da0c-46a9-8f4c-aa7b96073e4e.png",
           "sourceSHA256": "2a35fe388a6bd2d01b62c188acfc8ab0e0b56e92a3263a25da7e25ad00d5d1df",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        },
+        {
+          "sha256": "70eb5478e00089733d5c402ede0d8d399c8d6e8a538565039582faa4cf588f67",
+          "bytes": 1092380,
+          "width": 2172,
+          "height": 724,
+          "visibleBounds": [
+            60,
+            123,
+            2143,
+            563
+          ],
+          "pixelSHA256": "b15208ccca2a9b2b9c031b2b778087e764c7e9c9434c16bb3e162a3d114a5bc7",
+          "transparentFraction": 0.70441,
+          "path": "assets/sprites/sh2_lying_figure_crawling_021.70eb5478e000.png",
+          "facing": -1,
+          "anchor": [
+            0.4,
+            0.7776243093922652
+          ],
+          "bodyHeight": 2.94,
+          "sourceFile": "exec-c05499b6-a009-4ab2-9971-cfa9ad37795b.png",
+          "sourceSHA256": "70eb5478e00089733d5c402ede0d8d399c8d6e8a538565039582faa4cf588f67",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        },
+        {
+          "sha256": "fdf3d62f02cb232b40beaa77fafb41e7ffcaf19112e9e73f1fb6667293cfc321",
+          "bytes": 1307158,
+          "width": 2172,
+          "height": 724,
+          "visibleBounds": [
+            60,
+            115,
+            2056,
+            609
+          ],
+          "pixelSHA256": "c7c446a13af336af48b499f8553735e78d41dae158c6b9ee791be6843395728c",
+          "transparentFraction": 0.63149,
+          "path": "assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+          "facing": -1,
+          "anchor": [
+            0.4,
+            0.8411602209944752
+          ],
+          "bodyHeight": 2.94,
+          "sourceFile": "exec-34588643-8f78-42a6-a872-1317635b0cdf.png",
+          "sourceSHA256": "fdf3d62f02cb232b40beaa77fafb41e7ffcaf19112e9e73f1fb6667293cfc321",
           "origin": "conversation-image-generation",
           "purpose": "combat",
           "view": "side-view"
@@ -7286,6 +7470,20 @@
           ],
           "ticksPerFrame": 1,
           "loop": false
+        },
+        "walk": {
+          "frames": [
+            1
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "neutralLight": {
+          "frames": [
+            2
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
         }
       },
       "animatedClips": 0,
@@ -7300,7 +7498,7 @@
         "sourceFile": "exec-9fd5fa8c-1720-42e3-b263-3960605ced80.png"
       },
       "combatView": "side-view-candidate",
-      "combatNotes": "Lying Figure en posture rampante dans Silent Hill 2 (2001), buste bas tourné à gauche. La jambe repliée porte l’appui et l’autre s’étend derrière. Pose fixe candidate, fidélité non certifiée."
+      "combatNotes": "Lying Figure en posture rampante dans Silent Hill 2 (2001), buste bas tourné à gauche. La jambe repliée porte l’appui et l’autre s’étend derrière. Pose fixe candidate, fidélité non certifiée. Vague 33 : deux poses fixes individuelles supplémentaires ; aucun cycle animé ni timing original mesuré. Fidélité 1:1 non certifiée. Calibration vague33 : échelle commune des trois poses rampantes, hauteur de référence debout hors canevas horizontal ; adaptation de versus non certifiée1:1."
     },
     "homecoming_scarlet_spider_form_095": {
       "fighterId": "homecoming_scarlet_spider_form_095",
@@ -9218,11 +9416,63 @@
           "facing": 1,
           "anchor": [
             0.5,
-            1
+            0.8818359375
           ],
           "bodyHeight": 1,
           "sourceFile": "exec-39fc7fb2-8b4a-4506-b73c-d9d253ad31f2.png",
           "sourceSHA256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        },
+        {
+          "sha256": "0eaa4f8c7d95bac684f3a483e71bcf85c49bfe53fa93071b5d2584a06f26dfd8",
+          "bytes": 1656508,
+          "width": 1536,
+          "height": 1024,
+          "visibleBounds": [
+            158,
+            111,
+            1191,
+            918
+          ],
+          "pixelSHA256": "4af5ac1a6d7e788eb0490ff94bf191e626bc0d0eaa85f46db7b00f6cb4014dc5",
+          "transparentFraction": 0.78256,
+          "path": "assets/sprites/sh3_numb_body_medium.0eaa4f8c7d95.png",
+          "facing": 1,
+          "anchor": [
+            0.5,
+            0.89648438
+          ],
+          "bodyHeight": 1.0,
+          "sourceFile": "numb-body-medium-walk.png",
+          "sourceSHA256": "0eaa4f8c7d95bac684f3a483e71bcf85c49bfe53fa93071b5d2584a06f26dfd8",
+          "origin": "conversation-image-generation",
+          "purpose": "combat",
+          "view": "side-view"
+        },
+        {
+          "sha256": "98b9a1267c64dc02f4da5912b07eb57427bf4bd780bc6be2a8a31b0298bc0978",
+          "bytes": 1702791,
+          "width": 1536,
+          "height": 1024,
+          "visibleBounds": [
+            259,
+            125,
+            1423,
+            879
+          ],
+          "pixelSHA256": "cce45504221a254603f73a985fe8a900e2a758de74e625c1655b6b57c3d3455e",
+          "transparentFraction": 0.77208,
+          "path": "assets/sprites/sh3_numb_body_medium.98b9a1267c64.png",
+          "facing": 1,
+          "anchor": [
+            0.5,
+            1.0
+          ],
+          "bodyHeight": 1.0,
+          "sourceFile": "numb-body-medium-neutral-special.png",
+          "sourceSHA256": "98b9a1267c64dc02f4da5912b07eb57427bf4bd780bc6be2a8a31b0298bc0978",
           "origin": "conversation-image-generation",
           "purpose": "combat",
           "view": "side-view"
@@ -9243,6 +9493,20 @@
           ],
           "ticksPerFrame": 1,
           "loop": false
+        },
+        "walk": {
+          "frames": [
+            1
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
+        },
+        "neutralSpecial": {
+          "frames": [
+            2
+          ],
+          "ticksPerFrame": 1,
+          "loop": false
         }
       },
       "animatedClips": 0,
@@ -9257,7 +9521,7 @@
         "sourceFile": "exec-7d058297-c068-433d-85a0-bc8dd74af71e.png"
       },
       "combatView": "side-view-candidate",
-      "combatNotes": "Numb Body de taille moyenne de Silent Hill 3, en appui asymétrique, tête et membres visibles en vue latérale droite."
+      "combatNotes": "Numb Body de taille moyenne de Silent Hill 3, en appui asymétrique, tête et membres visibles en vue latérale droite. Vague 33 : deux poses fixes individuelles supplémentaires ; aucun cycle animé ni timing original mesuré. Fidélité 1:1 non certifiée."
     },
     "sh3_glutton": {
       "fighterId": "sh3_glutton",

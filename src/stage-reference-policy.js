@@ -574,6 +574,9 @@ const ENVIRONMENT = Object.freeze({
   ...LOT10_ENVIRONMENT,
   ...LOT11_ENVIRONMENT,
   ...LOT12_ENVIRONMENT,
+  arcade_historical:{source:'arcade',name:'THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY',weather:'none',fog:0,interior:true,
+    worldState:'fixed-normal',removeProps:['portraits','stairs','doors'],
+    automaticFinishers:false,disableAnimations:true},
   wish_house:{source:'sh4',name:'WISH HOUSE — INTÉRIEUR DU PREMIER PASSAGE',weather:'none',fog:0,interior:true,
     worldState:'fixed-normal',removeProps:['trees','fence','altar','rooms','portraits','stairs'],
     automaticFinishers:false,disableAnimations:true},
@@ -716,6 +719,12 @@ const SCENE_PRESENTATION_BASE = Object.freeze({
 
 const SCENE_PRESENTATION = Object.freeze({
   ...SCENE_PRESENTATION_BASE,...LOT12_SCENE_PRESENTATION,
+  arcade_historical:{source:'arcade',policy:{
+    sceneId:'historical-society-normal-gallery-before-descent',terrainRules:false,
+    normalPhaseLabel:'STAGE 2 AREA 1 · GALERIE NORMALE',
+    alteredPhaseLabel:'STAGE 2 AREA 1 · GALERIE NORMALE',
+    terrainPresentation:{name:'GALERIE AVANT LA DESCENTE',description:'Galerie de la Historical Society de The Arcade avant la descente : papier peint jaune olive, boiseries sombres et quatre cadres repérés dans deux captures de jeu. Sol, détails des tableaux et largeur reconstruits pour le versus ; physique neutre, géométrie et fidélité 1:1 non certifiées.'}
+  }},
   lighthouse_sm:{source:'shattered',policy:{
     sceneId:'shm-clinic-entrance-before-therapy',terrainRules:false,
     normalPhaseLabel:'CLINIQUE · EXTÉRIEUR AVANT ENTRÉE',

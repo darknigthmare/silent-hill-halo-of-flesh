@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "method": "Visual inspection of five unique native Artifact Tool previews; the other three production previews are byte-identical to their inspected corpus counterparts.",
+  "observations": [
+    "Guide summary: 68 sections, 10 modules, 37 documentary-only entries; labels and source line are legible.",
+    "Historical Society row 337: exact ID, updated gallery name and bitmap-candidate fixed-normal status are visible without clipping.",
+    "Extensions: title, table headers, wrapped descriptions and SHCG-30 through SHCG-33 statuses remain legible.",
+    "Historical Corpus opening preserves its explicit 19 November 2026 snapshot scope.",
+    "Historical Synthèse opening preserves its explicit 19 November 2026 inventory and established formatting."
+  ],
+  "previews": [
+    {
+      "path": "render-corpus/guide-summary.png",
+      "sha256": "5bce406715893086aec6d940fb1d517292239abf595b14e663ae64bb629d7594",
+      "review": "visually-inspected",
+      "identicalTo": null
+    },
+    {
+      "path": "render-corpus/extensions-retained.png",
+      "sha256": "04a0370d8c26ec655e5302fc372fc99aa1bcc71e69bcf363e2e6cb4bb7a400bf",
+      "review": "visually-inspected",
+      "identicalTo": null
+    },
+    {
+      "path": "render-corpus/historical-society.png",
+      "sha256": "ecbdcc5d94149299a4beff033bb2afeb43a2391a596648aaf01a6624dd25672a",
+      "review": "visually-inspected",
+      "identicalTo": null
+    },
+    {
+      "path": "render-corpus/historical-opening.png",
+      "sha256": "1626db8be501e12f8bebf697aeaf49e3d7a680ef34c0d168c39a6e004bfb2b3e",
+      "review": "visually-inspected",
+      "identicalTo": null
+    },
+    {
+      "path": "render-production/guide-summary.png",
+      "sha256": "5bce406715893086aec6d940fb1d517292239abf595b14e663ae64bb629d7594",
+      "review": "identical-to-inspected-preview",
+      "identicalTo": "render-corpus/guide-summary.png"
+    },
+    {
+      "path": "render-production/extensions-retained.png",
+      "sha256": "04a0370d8c26ec655e5302fc372fc99aa1bcc71e69bcf363e2e6cb4bb7a400bf",
+      "review": "identical-to-inspected-preview",
+      "identicalTo": "render-corpus/extensions-retained.png"
+    },
+    {
+      "path": "render-production/historical-society.png",
+      "sha256": "ecbdcc5d94149299a4beff033bb2afeb43a2391a596648aaf01a6624dd25672a",
+      "review": "identical-to-inspected-preview",
+      "identicalTo": "render-corpus/historical-society.png"
+    },
+    {
+      "path": "render-production/historical-opening.png",
+      "sha256": "2100bddaf16101efd194bd0e3a3e68e8749eb01aa723d4af8e80929806964544",
+      "review": "visually-inspected",
+      "identicalTo": null
+    }
+  ],
+  "nativeExcelExecuted": false,
+  "sourceFidelityCertification": false
+}

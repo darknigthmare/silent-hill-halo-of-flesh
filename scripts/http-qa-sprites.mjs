@@ -1,5 +1,6 @@
 /** Real HTTP/PWA raster checks; isolated local UI tests are reported separately. */
 import {chromium} from 'playwright-core';
+import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
 import {spawn} from 'node:child_process';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
@@ -13,7 +14,7 @@ const report={version:VERSION,kind:'real HTTP raster and offline checks',checks:
 const artCount=Object.keys(SPRITES).length;
 const combatIds=Object.keys(SPRITES).filter(id=>hasCombatSprite(SPRITES[id])),combatCount=combatIds.length;
 const missingArtFighter=ROSTER.find(f=>!hasCombatSprite(SPRITES[f.id])&&createCombatProfile(f).referencePolicy.combatEnabled);
-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4175';let server,browser;
+const base=process.env.QA_BASE_URL||'http://127.0.0.1:4175';let server,browser,offlineProfile;
 const assert=(name,ok)=>{report.checks.push({name,passed:!!ok});if(!ok)throw Error(name);};
 const shot=async(page,name)=>{await page.screenshot({path:resolve(out,name+'.png'),fullPage:true});report.captures.push(name+'.png');};
 const ready=page=>page.waitForFunction(()=>document.querySelector('#p1Portrait')?.dataset.artStatus==='raster'&&document.querySelector('#p2Portrait')?.dataset.artStatus==='raster');
@@ -25,8 +26,8 @@ try{
  let available=false;for(let i=0;i<80;i++){try{if((await fetch(base)).ok){available=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}assert('static build HTTP server starts',available);
  const files=new Map(Object.values(SPRITES).flatMap(art=>[...art.frames,art.portrait]).filter(Boolean).map(frame=>[frame.path,frame]));
  for(const frame of files.values()){const response=await fetch(base+'/'+frame.path),bytes=Buffer.from(await response.arrayBuffer());assert('HTTP exact raster digest: '+frame.path,response.ok&&response.headers.get('content-type').startsWith('image/')&&createHash('sha256').update(bytes).digest('hex')===frame.sha256);}
- browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});report.browser=await browser.version();
- const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await pageIn(context);
+ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined,viewport:{width:1440,height:1000}});browser=offlineProfile.browser;report.browser=await browser.version();
+ const context=offlineProfile.context,page=await pageIn(context);
  await page.goto(base+'/modules/unified-versus.html?qa=1');await ready(page);assert('both exact-ID candidate portraits decode from HTTP',true);
  assert('catalogue remains 30 per page',await page.locator('#roster > *').count()===30);await shot(page,'01-selection');
  await page.check('#artReadyOnly');
@@ -79,11 +80,14 @@ try{
  await page.goto(base+'/modules/unified-versus.html?qa=1&p1=film_red_pyramid_film_175&p2=sh1_air_screamer_001');await ready(page);
  await page.evaluate(()=>{__HALO_QA__.assetCache.maxBytes=1536*1024*4;});await page.click('#launch');await page.waitForFunction(()=>!document.querySelector('#launch').disabled);
  assert('aggregate combat memory budget blocks launch before a new engine',await page.evaluate(()=>!__HALO_QA__.engine&&__HALO_QA__.assetCache.bytes<=__HALO_QA__.assetCache.maxBytes));
- await context.close();
+ await page.close();
  const faults=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1000}}),bad=await pageIn(faults);await faults.route('**/assets/sprites/**',route=>route.abort());
  await bad.goto(base+'/modules/unified-versus.html?qa=1');await bad.click('#launch');await bad.waitForFunction(()=>!document.querySelector('#launch').disabled);assert('image failure never starts an invisible normal fight',await bad.evaluate(()=>!__HALO_QA__.engine));await faults.unroute('**/assets/sprites/**');await bad.click('#launch');await bad.waitForFunction(()=>!!__HALO_QA__.engine);assert('explicit retry recovers from an image load error',true);await faults.close();
  const delayed=await browser.newContext({serviceWorkers:'block'}),slow=await pageIn(delayed);await delayed.route('**/assets/sprites/**',async route=>{await new Promise(r=>setTimeout(r,600));await route.continue();});
  await slow.goto(base+'/modules/unified-versus.html?qa=1',{waitUntil:'domcontentloaded'});await slow.waitForFunction(()=>!!window.__HALO_QA__);await slow.click('#launch');await slow.fill('#search',missingArtFighter.name);await slow.locator(`#roster [data-id="${missingArtFighter.id}"]`).click();await slow.waitForTimeout(900);assert('stale preflight cannot launch a newly changed selection',await slow.evaluate(()=>!__HALO_QA__.engine));await delayed.close();
  assert('no uncaught JavaScript exceptions',report.errors.length===0);
 }catch(error){report.failure=String(error);process.exitCode=1;}
-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
+finally{
+ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
+ finally{try{await offlineProfile?.close();}finally{server?.kill('SIGTERM');}}
+}

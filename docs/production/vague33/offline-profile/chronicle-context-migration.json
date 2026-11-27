@@ -1,0 +1,12 @@
+{
+  "status": "syntax-and-diff-reviewed",
+  "script": "scripts/http-qa-chronicle-art.mjs",
+  "beforeSHA256": "63e9034694d9c9cb60741bcd83372cbf1c71e0602a16008c7d5207cefa8e3aeb",
+  "afterSHA256": "13c31b9e7afd1986c7cd293696c72071885fc8ff0bb42861f7c22e56e0cba2a1",
+  "change": "Only final offline context uses the shared disposable persistent profile; existing source options and 120000ms wait retained. Profile cleanup runs even if report writing fails.",
+  "assertionsChanged": false,
+  "runtimeGameChanged": false,
+  "syntaxCheckPassed": true,
+  "fullChronicleRouteSuiteExecuted": false,
+  "scope": "Same demonstrated quota issue as v090; this script is not in the current npm qa:browser chain."
+}

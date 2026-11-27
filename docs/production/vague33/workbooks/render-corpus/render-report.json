@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "inputSha256": "83ab4f1667f6ee97460e6bf04b3b2961619d11a766d6e56b6ba53f0e6f4ec09c",
+  "associationSha256": "bc0261ac51c35bc61c258d4f5a7bb8b8fb7cdf7623d069e94c77f59801ccdf63",
+  "scope": "full-corpus-workbook",
+  "checks": [
+    {
+      "name": "guide sections",
+      "actual": 68,
+      "expected": 68,
+      "passed": true
+    },
+    {
+      "name": "association count",
+      "actual": 445,
+      "expected": 445,
+      "passed": true
+    },
+    {
+      "name": "Historical Society ID",
+      "actual": "arcade_historical",
+      "expected": "arcade_historical",
+      "passed": true
+    },
+    {
+      "name": "Historical Society label",
+      "actual": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY",
+      "expected": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY",
+      "passed": true
+    },
+    {
+      "name": "Historical Society status",
+      "actual": "bitmap candidat référencé ; fixed-normal",
+      "expected": "bitmap candidat référencé ; fixed-normal",
+      "passed": true
+    }
+  ],
+  "previews": [
+    {
+      "sheetName": "Guide combat",
+      "range": "A1:H6",
+      "filename": "guide-summary.png",
+      "sha256": "5bce406715893086aec6d940fb1d517292239abf595b14e663ae64bb629d7594"
+    },
+    {
+      "sheetName": "Guide combat",
+      "range": "A58:F64",
+      "filename": "extensions-retained.png",
+      "sha256": "04a0370d8c26ec655e5302fc372fc99aa1bcc71e69bcf363e2e6cb4bb7a400bf"
+    },
+    {
+      "sheetName": "Associations guide",
+      "range": "B337:G337",
+      "filename": "historical-society.png",
+      "sha256": "ecbdcc5d94149299a4beff033bb2afeb43a2391a596648aaf01a6624dd25672a"
+    },
+    {
+      "sheetName": "Corpus",
+      "range": "A1:F8",
+      "filename": "historical-opening.png",
+      "sha256": "1626db8be501e12f8bebf697aeaf49e3d7a680ef34c0d168c39a6e004bfb2b3e"
+    }
+  ],
+  "mutation": false,
+  "limits": "Read-only Artifact Tool re-import and render. Native Excel desktop was not run. The temporary rendering projection never replaces the full delivered workbook; historical payloads are verified separately byte for byte."
+}
