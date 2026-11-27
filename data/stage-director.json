@@ -6326,8 +6326,8 @@
       "name": "CEDAR GROVE — FEMALE TREATMENT",
       "source": "origins",
       "lore": {
-        "premise": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée.",
-        "canonicalBasis": "EXT03 ; EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026",
+        "premise": "Female Treatment 2F du Sanitarium, pièce physique normale avant la traversée du miroir. Vues natives à12s et18s : deux lits métalliques étroits, rideaux écrus, murs brun-gris, carrelage usé, double lavabo et miroir horizontal au reflet verdâtre. Ni couloir entier ni chambre de Momma. La caméra frontale et la largeur de sol sont adaptées au versus ; aucune transition automatique, animation source, géométrie ou fidélité 1:1 certifiée. Plateforme, build et région des vues non établis.",
+        "canonicalBasis": "EXT03 ; EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026 ; V31_ORIGINS_CEDAR_MIRROR_SEQUENCE ; V31_ORIGINS_CEDAR_MIRROR_COPY",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
@@ -6340,7 +6340,7 @@
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        "description": "Vues natives de Female Treatment 2F inspectées avant la traversée du miroir : lits métalliques, rideaux écrus, double lavabo, miroir horizontal et carrelage usé. Pièce physique normale ; reflet verdâtre conservé sans transition automatique. Cadrage frontal et profondeur adaptés au versus ; plateforme/build non établis, caméra, géométrie et mouvement non certifiés 1:1. Physique neutre du versus."
       },
       "shift": {
         "style": "mirror",
@@ -6366,19 +6366,22 @@
         "source": "origins",
         "identityMatched": true,
         "blocked": false,
-        "locationStatus": "lieu-documente-secondaire",
+        "locationStatus": "lieu-documente-vues-natives-phase-avant-miroir",
         "catalogueName": "CEDAR GROVE SANITARIUM",
         "correctedName": "CEDAR GROVE — FEMALE TREATMENT",
-        "locationNote": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée.",
+        "locationNote": "Female Treatment 2F du Sanitarium, pièce physique normale avant la traversée du miroir. Vues natives à12s et18s : deux lits métalliques étroits, rideaux écrus, murs brun-gris, carrelage usé, double lavabo et miroir horizontal au reflet verdâtre. Ni couloir entier ni chambre de Momma. La caméra frontale et la largeur de sol sont adaptées au versus ; aucune transition automatique, animation source, géométrie ou fidélité 1:1 certifiée. Plateforme, build et région des vues non établis.",
         "referenceIds": [
           "EXT03",
           "EXT02",
-          "EXT_ORIGINS_THEATER_GUIDE_20261026"
+          "EXT_ORIGINS_THEATER_GUIDE_20261026",
+          "V31_ORIGINS_CEDAR_MIRROR_SEQUENCE",
+          "V31_ORIGINS_CEDAR_MIRROR_COPY"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
           "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
-          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production.",
+          "La couleur du reflet ne transforme pas la pièce physique en Otherworld ; aucun mirrorTurn ni danger ajouté."
         ],
         "proposals": [
           {
@@ -6437,13 +6440,20 @@
         "terrainRules": false,
         "terrainPresentation": {
           "name": "SEUIL DU MIROIR DE SOINS",
-          "description": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+          "description": "Vues natives de Female Treatment 2F inspectées avant la traversée du miroir : lits métalliques, rideaux écrus, double lavabo, miroir horizontal et carrelage usé. Pièce physique normale ; reflet verdâtre conservé sans transition automatique. Cadrage frontal et profondeur adaptés au versus ; plateforme/build non établis, caméra, géométrie et mouvement non certifiés 1:1. Physique neutre du versus."
         },
         "normalPhaseLabel": "SALLE DE SOINS · AVANT LE MIROIR",
         "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
+          {
+            "kind": "reference-track",
+            "id": "cedar_grove:reference:2",
+            "key": "treatmentMirrorVeil",
+            "status": "historical-masked-by-bitmap",
+            "reason": "La composition bitmap fixe de vague31 masque le prototype procédural historique du miroir ; sa proposition reste conservée et en attente pour le rendu actuel, sans animation livrée."
+          },
           {
             "kind": "event",
             "id": "gurneyRush",
@@ -6491,45 +6501,15 @@
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [
-          "cedar_grove:reference:2"
-        ],
+        "renderedProposalIds": [],
         "pendingProposalIds": [
           "cedar_grove:reference:1",
+          "cedar_grove:reference:2",
           "cedar_grove:reference:3",
           "cedar_grove:reference:4"
         ]
       },
-      "referenceTracks": [
-        {
-          "id": "cedar_grove:reference:2",
-          "key": "treatmentMirrorVeil",
-          "name": "Reflet contenu dans le miroir de soins",
-          "description": "La surface du miroir conserve un voile de reflet fixe avec un glissement lumineux proposé ; aucun changement automatique du monde.",
-          "proposalIndex": 1,
-          "source": "origins",
-          "evidence": [
-            "EXT03",
-            "EXT02",
-            "EXT_ORIGINS_THEATER_GUIDE_20261026"
-          ],
-          "layer": "background",
-          "anchor": {
-            "x": 0.66,
-            "y": 0.4
-          },
-          "trigger": "ambient",
-          "event": null,
-          "eventEnabled": null,
-          "implementation": "canvas-prototype",
-          "coverage": "partial-visual-prototype",
-          "implementedElement": "Reflet contenu dans le miroir de soins",
-          "fidelity": "adaptation-versus-proposee",
-          "captureStatus": "capture-a-relever",
-          "locationScope": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma.",
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée."
-        }
-      ],
+      "referenceTracks": [],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -6542,6 +6522,13 @@
         ],
         "evidenceScope": "exact-production-reference / original-versus-prototypes",
         "suppression": [
+          {
+            "kind": "reference-track",
+            "id": "cedar_grove:reference:2",
+            "key": "treatmentMirrorVeil",
+            "status": "historical-masked-by-bitmap",
+            "reason": "La composition bitmap fixe de vague31 masque le prototype procédural historique du miroir ; sa proposition reste conservée et en attente pour le rendu actuel, sans animation livrée."
+          },
           {
             "kind": "event",
             "id": "gurneyRush",
@@ -20336,24 +20323,24 @@
     },
     {
       "id": "wish_house",
-      "name": "WISH HOUSE",
+      "name": "WISH HOUSE — INTÉRIEUR DU PREMIER PASSAGE",
       "source": "sh4",
       "lore": {
-        "premise": "Wish House existe avant puis après l’incendie ; l’état du stage doit être choisi explicitement.",
-        "canonicalBasis": "CL_SH4_03_FOREST_WORLD ; CL_SH4_09_FOREST_WORLD_2ND_TIME",
-        "fidelity": "reference-bloquee",
+        "premise": "Wish House, intérieur intact lors du premier passage de Forest World, avant incendie. Le guide officiel p46 et deux captures natives documentent le meuble incliné drapé de rouge, les livres et papiers, les boiseries, la lampe et la porte. Le cadrage frontal et la largeur du sol sont des adaptations de versus. La maison brûlée, le rituel de poupée et sa fosse du second passage sont exclus de cette scène ; aucun ennemi ni effet offensif ajouté. Build des captures, caméra et géométrie non certifiés 1:1.",
+        "canonicalBasis": "CL_SH4_03_FOREST_WORLD ; CL_SH4_09_FOREST_WORLD_2ND_TIME ; V31_SH4_WISH_GUIDE_P46 ; V31_SH4_WISH_INTERIOR_SCRIPTURE ; V31_SH4_WISH_DOOR",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "concrete",
-        "name": "BÉTON SEC",
+        "id": "wood",
+        "name": "PLANCHER DE WISH HOUSE",
         "moveScale": 1,
         "jumpScale": 1,
         "dodgeScale": 1,
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Sol stable et neutre."
+        "description": "Intérieur avant incendie, au premier passage de Forest World : meuble incliné drapé de rouge, livres et papiers, boiseries, lampe et porte documentés. Cadrage frontal et étendue du sol adaptés au versus. Aucun brasier, poupée, fosse rituelle, ennemi ou pouvoir ajouté ; physique neutre, géométrie et fidélité 1:1 non certifiées."
       },
       "shift": {
         "style": "haunting",
@@ -20367,7 +20354,7 @@
         "description": "L’espace se contamine par les victimes, les murs et les objets hantés.",
         "startOtherworld": false,
         "enabled": false,
-        "referenceState": "unresolved"
+        "referenceState": "fixed-normal"
       },
       "events": [],
       "hazards": [],
@@ -20378,16 +20365,23 @@
         "id": "wish_house",
         "source": "sh4",
         "identityMatched": true,
-        "blocked": true,
-        "locationStatus": "etat-premier-ou-second-passage-a-fixer",
+        "blocked": false,
+        "locationStatus": "lieu-documente-phase-premier-passage",
         "catalogueName": "WISH HOUSE",
-        "correctedName": null,
-        "locationNote": "Wish House existe avant puis après l’incendie ; l’état du stage doit être choisi explicitement.",
+        "correctedName": "WISH HOUSE — INTÉRIEUR DU PREMIER PASSAGE",
+        "locationNote": "Wish House, intérieur intact lors du premier passage de Forest World, avant incendie. Le guide officiel p46 et deux captures natives documentent le meuble incliné drapé de rouge, les livres et papiers, les boiseries, la lampe et la porte. Le cadrage frontal et la largeur du sol sont des adaptations de versus. La maison brûlée, le rituel de poupée et sa fosse du second passage sont exclus de cette scène ; aucun ennemi ni effet offensif ajouté. Build des captures, caméra et géométrie non certifiés 1:1.",
         "referenceIds": [
           "CL_SH4_03_FOREST_WORLD",
-          "CL_SH4_09_FOREST_WORLD_2ND_TIME"
+          "CL_SH4_09_FOREST_WORLD_2ND_TIME",
+          "V31_SH4_WISH_GUIDE_P46",
+          "V31_SH4_WISH_INTERIOR_SCRIPTURE",
+          "V31_SH4_WISH_DOOR"
         ],
-        "constraints": [],
+        "constraints": [
+          "Premier passage intact uniquement ; état brûlé et propositions du second passage conservés pour historique, désactivés dans cette scène.",
+          "Les éléments du décor peint ne créent ni collision, ni appui de plafond, ni Dénouement ou danger automatique.",
+          "Un PNG fixe ne prouve ni animation source ni fidélité 1:1."
+        ],
         "proposals": [
           {
             "name": "Motif du jeu à capturer",
@@ -20398,7 +20392,10 @@
               "CL_SH4_09_FOREST_WORLD_2ND_TIME"
             ],
             "captureStatus": "capture-a-relever",
-            "timecode": ""
+            "timecode": "",
+            "sceneScope": "second-passage-apres-incendie",
+            "activeInSelectedScene": false,
+            "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
           },
           {
             "name": "Boucle d’ambiance proposée",
@@ -20409,7 +20406,10 @@
               "CL_SH4_09_FOREST_WORLD_2ND_TIME"
             ],
             "captureStatus": "storyboard-a-valider",
-            "timecode": ""
+            "timecode": "",
+            "sceneScope": "second-passage-apres-incendie",
+            "activeInSelectedScene": false,
+            "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
           },
           {
             "name": "Interaction proposée",
@@ -20420,7 +20420,10 @@
               "CL_SH4_09_FOREST_WORLD_2ND_TIME"
             ],
             "captureStatus": "storyboard-a-valider",
-            "timecode": ""
+            "timecode": "",
+            "sceneScope": "second-passage-apres-incendie",
+            "activeInSelectedScene": false,
+            "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
           },
           {
             "name": "Transition de manche proposée",
@@ -20431,18 +20434,29 @@
               "CL_SH4_09_FOREST_WORLD_2ND_TIME"
             ],
             "captureStatus": "storyboard-a-valider",
-            "timecode": ""
+            "timecode": "",
+            "sceneScope": "second-passage-apres-incendie",
+            "activeInSelectedScene": false,
+            "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
           }
         ]
       },
       "referencePolicy": {
-        "worldState": "unresolved",
+        "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": false,
+        "sceneId": "sh4-first-visit-scripture-corner",
+        "terrainRules": false,
+        "normalPhaseLabel": "PREMIER PASSAGE · INTÉRIEUR INTACT",
+        "alteredPhaseLabel": "PREMIER PASSAGE · INTÉRIEUR INTACT",
+        "terrainPresentation": {
+          "name": "PLANCHER DE WISH HOUSE",
+          "description": "Intérieur avant incendie, au premier passage de Forest World : meuble incliné drapé de rouge, livres et papiers, boiseries, lampe et porte documentés. Cadrage frontal et étendue du sol adaptés au versus. Aucun brasier, poupée, fosse rituelle, ennemi ou pouvoir ajouté ; physique neutre, géométrie et fidélité 1:1 non certifiées."
+        },
         "weather": "none",
         "interior": true,
-        "baselineMotion": false,
+        "baselineMotion": true,
         "suppression": [
           {
             "kind": "event",

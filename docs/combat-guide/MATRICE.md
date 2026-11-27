@@ -1,6 +1,6 @@
-# Correspondance des 30 rubriques
+# Correspondance des 68 rubriques
 
-Généré depuis [requirements.json](requirements.json). Les décisions « retenue » portent sur la cible de conception, pas sur une promesse d’implémentation terminée.
+Généré depuis le [guide général](requirements.json) et les [deux extensions](extensions/requirements.json). La [vue résolue](requirements-resolved.json) alimente les classeurs. Les décisions « retenue » portent sur la cible de conception, pas sur une promesse d’implémentation terminée.
 
 | ID | Rubrique | Priorité | État observé | Prochaine action |
 | --- | --- | --- | --- | --- |
@@ -34,6 +34,44 @@ Généré depuis [requirements.json](requirements.json). Les décisions « reten
 | SHCG-27 | Fiches types à remplir | P0 | documented | Utiliser les modèles pour chaque nouveau sujet, liaison, boss et scène sans créer un catalogue concurrent. |
 | SHCG-28 | Instruction prête à transmettre à un projet | P0 | documented | Appliquer cette consigne aux futures passes de production. |
 | SHCG-29 | Références vérifiées et vocabulaire | P0 | documented | Ajouter les nouvelles sources exactes à la fiche concernée et conserver date, édition et limites. |
+| SHCG-30 | Portée et rattachement au guide général | P0 | documented-only | Utiliser la matrice unifiée et les exemples ancrés aux IDs avant chaque nouveau lot. |
+| SHCG-31 | Taunts et réactions de personnalité | P1 | partial | Produire une attitude complète sourcée, puis vérifier entrée, interruption et retour dans les deux orientations. |
+| SHCG-32 | Sélection, confirmation et désélection | P1 | documented-only | Implémenter le cycle pour Air Screamer et Mannequin sans coupler les deux curseurs. |
+| SHCG-33 | Profils d’équipe et partenaires | P2 | documented-only | Valider un prototype d’équipe à deux combattants admis, sans changer les règles des modes existants. |
+| SHCG-34 | Commandes, jauges et disponibilité | P0 | documented-only | Fixer l’ordre de résolution et une horloge de simulation commune avant le premier assist. |
+| SHCG-35 | Assistances ponctuelles | P2 | documented-only | Réaliser une seule assistance avec échec, garde et interruption avant d’étendre aux six fiches. |
+| SHCG-36 | Tag et transfert du contrôle | P2 | documented-only | Spécifier et tester les cinq moments départ/entrée/transfert/contrôle/cleanup avec KO simultané. |
+| SHCG-37 | Techniques combinées et supers d’équipe | P2 | documented-only | Prototyper la combinaison Lying Figure/Mannequin avec capture uniquement sur cible compatible. |
+| SHCG-38 | Dénouements d’équipe et fins conditionnelles | P2 | documented-only | Raccorder une conclusion de versus originale et ses remplacements sans réécrire une fin officielle. |
+| SHCG-39 | Clashes et confrontations QTE | P2 | documented-only | Commencer par un clash sans QTE avec plafond de fréquence ; conserver le QTE comme variante séparée. |
+| SHCG-40 | Entités indépendantes et objets placés | P1 | documented-only | Réaliser d’abord une fiche de rencontre Doll stationnaire ; conserver son admission inchangée. |
+| SHCG-41 | Projectiles persistants et règles communes | P0 | partial | Relier chaque projectile existant à une politique d’état explicite avant le tag. |
+| SHCG-42 | Stages bonus et épreuves narratives | P1 | documented-only | Prototyper l’épreuve de déplacement Air Screamer et un dossier d’observation sans combat. |
+| SHCG-43 | Espace exploratoire de déblocage | P2 | documented-only | Créer une seule zone et une récompense permanente vérifiée avant d’étendre la carte. |
+| SHCG-44 | Relations, narration et compatibilités | P0 | documented-only | Conserver la matrice de trois duos et ouvrir d’autres paires seulement après fiche source. |
+| SHCG-45 | Assets, animations, sons et mise en scène | P0 | documented-only | Démarrer par les poses fixes nommées des exemples, puis produire de vrais cycles vérifiés. |
+| SHCG-46 | Interface, apprentissage, accessibilité et réseau | P0 | partial | Valider les maquettes au clavier/manette puis définir l’état sérialisable avant toute fonction en ligne. |
+| SHCG-47 | Validation, statistiques et ordre d’intégration | P0 | documented-only | Prendre les cas associés à la prochaine tranche jouable et conserver les autres en not-run. |
+| SHCG-48 | Fiches de production complémentaires | P1 | documented-only | Réutiliser les modèles et ne pas créer de nouvel ID de combattant pour une attitude. |
+| SHCG-49 | Instruction d’intégration et références | P0 | documented-only | Publier la matrice et les limites avec le même lot que les documents d’extension. |
+| SHCG-50 | Portée du module de verrouillage | P1 | documented-only | Raccorder les règles documentaires au catalogue sans retirer l’accès aux modes actuels. |
+| SHCG-51 | Découverte, droits, installation et compatibilité | P0 | documented-only | Implémenter un résolveur pur de disponibilité avec priorités et tests de combinaisons. |
+| SHCG-52 | Langage visuel des verrous | P1 | documented-only | Produire un set UI avec secret, indice, acquis, installation et indisponibilité. |
+| SHCG-53 | Slots de personnages et partenaires | P1 | documented-only | Tester un profil secret, un acquis non installé et un rôle non combattant sans modifier l’admission. |
+| SHCG-54 | Costumes, palettes et accessoires | P1 | documented-only | Documenter une palette originale de galerie et ses tests avant toute proposition d’avantage de soutien. |
+| SHCG-55 | Stages, variantes et destinations | P1 | documented-only | Valider une fiche de variante originale de old_silent_hill avec un stage de repli commun. |
+| SHCG-56 | Modes et parcours verrouillés | P1 | documented-only | Limiter les premiers verrous à de nouveaux contenus de collection, sans régression des modes disponibles. |
+| SHCG-57 | Conditions ET/OU et progression | P1 | documented-only | Mapper les seuls événements persistés et prévoir une migration explicite pour les nouveaux compteurs. |
+| SHCG-58 | Exploration, attribution et révélation | P2 | documented-only | Construire un cas de récompense à réclamer puis fermer/recharger à chaque étape. |
+| SHCG-59 | Avantages de soutien et modèles d’acquisition | P2 | documented-only | Garder les avantages en brouillon documentaire tant que leur activation n’est pas un chantier concret autorisé et validé. |
+| SHCG-60 | Liaison externe Patreon ou équivalent | P2 | documented-only | Revérifier la documentation officielle du fournisseur au moment de l’implémentation, sans importer un token dans le dépôt. |
+| SHCG-61 | Expiration, changements et hors ligne | P2 | documented-only | Définir une validité explicite par source et les cas de retrait avant d’activer le catalogue temporaire. |
+| SHCG-62 | Local, multijoueur, entraînement et replays | P0 | documented-only | Tester d’abord deux profils locaux et leurs droits sans élargir à un service réseau. |
+| SHCG-63 | Textes, accessibilité et protection des surprises | P0 | documented-only | Vérifier les messages et le focus sur une grille contenant tous les états documentés. |
+| SHCG-64 | Production, sauvegarde et recette des droits | P0 | documented-only | Faire une migration additive, puis injecter fermeture, doublon, panne et seconde source valide. |
+| SHCG-65 | Six fiches du module d’accès | P1 | documented-only | Réutiliser les fiches pour un premier contenu permanent gratuit et ses états techniques. |
+| SHCG-66 | Instruction d’intégration au projet | P0 | documented-only | Contrôler les liens, empreintes et diff des classeurs avant publication. |
+| SHCG-67 | Références et vocabulaire de l’accès | P0 | documented-only | Conserver les dates et périmètres de source dans la documentation du futur adaptateur. |
 
 ## Décisions sur les modules
 
@@ -42,11 +80,11 @@ Généré depuis [requirements.json](requirements.json). Les décisions « reten
 | Nouvelles animations | deferred | P1 | Phase demandée : sprites de base et images fixes ; états et besoins conçus dès maintenant. |
 | Campagne globale jouable | retained | P1 | Intrigue distincte conçue ; implémentation et recette de bout en bout restent à faire. |
 | Transitions vers une autre arène | retained | P1 | Objectif de conception avec destinations réelles ; prototype dédié requis, distinct de la bascule Otherworld. |
-| Tag et assistances | deferred | P2 | Le duel et ses ressources sont prioritaires ; équipes simultanées et interactions demandent une architecture dédiée. |
+| Tag et assistances | deferred | P2 | La conception des assistances, tags, supers et Dénouements d’équipe est retenue dans l’extension 01. Leur développement reste différé : ressources atomiques, réservation du partenaire, continuités et recette complète sont requis avant activation. |
 | Coopération et plusieurs plans | deferred | P2 | Non requis pour l'intégration de bible ; géométrie, caméra et règles à concevoir avant ajout. |
 | En ligne, rollback et matchmaking | decision-needed | P0 | Aucune livraison réseau constatée. Décider architecture et services avant toute promesse en ligne. |
 | Replay de commandes versionné | deferred | P2 | La reprise de run existe mais ne rejoue pas une simulation ; enregistrement déterministe à concevoir. |
-| Avatar RPG et hub exploratoire | not-applicable | P2 | Hors promesse actuelle centrée sur les manifestations et le combat latéral ; le guide n'impose pas World Tour. |
+| Archives exploratoires ; avatar RPG hors périmètre | deferred | P2 | L’extension 01 retient un espace de collection original compatible et l’extension 02 précise ses récompenses et droits. Les archives sont conçues mais non développées. Cette évolution ne crée ni avatar RPG, ni lieu canonique inventé, ni boutique active. |
 | Véhicules de combat génériques | not-applicable | P2 | Aucun besoin propre établi ; garder uniquement les présences et fonctions documentées. Les machines sous licence sont des supports du corpus. |
 | Spectacle, Duel stable et Confort | retained | P1 | Quatre axes indépendants à compléter au-dessus des réglages et politiques existants. |
 
@@ -471,3 +509,528 @@ Généré depuis [requirements.json](requirements.json). Les décisions « reten
 - Une inspiration de design ne devient pas une preuve de lore
 - Pas de terme inventé présenté comme officiel
 - Les anciennes dates d'audit restent identifiées comme historiques
+
+### SHCG-30 — Portée et rattachement au guide général
+
+**Adaptation :** Raccorder les vingt rubriques de l’extension aux 230 profils existants, aux stages, Chroniques et exigences 00–29. Les rôles de combat et éditions définis par la politique de référence restent prioritaires. La conception décrit les phases et contrats des animations ; leur production demeure dans sa phase dédiée.
+
+**Existant :** Le guide général et ses associations existent. Les deux extensions sont ajoutées comme sources séparées avec empreintes ; elles ne changent pas les règles du moteur.
+
+**Fichiers associés :** [docs/combat-guide/requirements.json](../../docs/combat-guide/requirements.json) · [docs/combat-guide/associations.json](../../docs/combat-guide/associations.json) · [src/combat-reference-policy.js](../../src/combat-reference-policy.js) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- 38 sections nouvelles et 40 cas de recette reliés aux deux sources exactes
+- Aucun rôle non combattant promu par une fiche d’extension
+
+### SHCG-31 — Taunts et réactions de personnalité
+
+**Adaptation :** Retenir les attitudes déjà prévues par profile.reference.proposals.taunt. Aucun dialogue humain, pouvoir sonique, renfort ou bonus de jauge implicite pour une créature. Documenter entrée, tenue, sortie, interruption et variantes par édition ; huit fiches détaillées accompagnent la présente matrice.
+
+**Existant :** player-input expose taunt ; Fight.beginTaunt crée une piste avec minimum 66 ticks, et cancelTaunt intervient sur commande ou interruption. Cette base ne démontre ni clips complets ni fidélité visuelle.
+
+**Fichiers associés :** [src/player-input.js](../../src/player-input.js) · [src/fight.js](../../src/fight.js) · [src/lore-cinematics.js](../../src/lore-cinematics.js) · [data/roster.json](../../data/roster.json) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Action disponible seulement dans ses états autorisés et sans gain de ressource caché
+- Interruption enlève piste et effets sans protéger la cible
+- Cri Air Screamer sans onde ; Lying Figure sans bras libérés
+
+### SHCG-32 — Sélection, confirmation et désélection
+
+**Adaptation :** Définir survol, aperçu, confirmation, attente, costume, désélection complète/abrégée, équipe et départ combat. L’aperçu nettoie ses acteurs et sons à chaque changement. Réutiliser la locomotion attestée : retrait au pas, ailes repliées, retrait dans le support pour Wall Man ; aucun corps caché inventé.
+
+**Existant :** Sélection et portraits existent dans versus/archive ; les pistes de présentation de combat ne constituent pas un cycle complet de sélection-désélection.
+
+**Fichiers associés :** [src/versus.js](../../src/versus.js) · [src/archive.js](../../src/archive.js) · [src/presentation-sequences.js](../../src/presentation-sequences.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Navigation rapide prise en compte avant la fin de la scène
+- Désélection spécifique et courte, sans inversion automatique du film
+- Deux curseurs et choix identiques sans partage d’état
+
+### SHCG-33 — Profils d’équipe et partenaires
+
+**Adaptation :** Spécifier une cible hybride à deux, un actif et une réserve, vies séparées et défaite après les deux KO. Les équipes de monstres sont des compositions de versus alternatives ; une présence dans le même opus ne prouve pas une alliance. Les deux corps Twin Pyramid Heads constituent un profil multi-body, pas deux slots de tag.
+
+**Existant :** Le moteur de duel manipule deux côtés. Aucun profil d’équipe supplémentaire n’est livré par cette passe. Les rôles multi-body, stationary-boss et environmental-obstacle existent dans la politique.
+
+**Fichiers associés :** [src/fight.js](../../src/fight.js) · [src/combat-reference-policy.js](../../src/combat-reference-policy.js) · [data/roster.json](../../data/roster.json) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Admission et édition de chaque membre vérifiées
+- Profil hybride clairement séparé du duel historique
+- Double corps et entité native ne créent pas gratuitement une réserve
+
+### SHCG-34 — Commandes, jauges et disponibilité
+
+**Adaptation :** Réserver des actions remappables ASSISTANCE, RELAIS, SUPER_DUO et DENOUEMENT_EQUIPE. Jauge d’équipe distincte de Nightmare : coût atomique, refus sans dépense, cooldown et disponibilité du partenaire séparés. Les réglages proposés dans examples.json sont hypothèses de prototype, sans valeur canonique.
+
+**Existant :** Les commandes et la jauge Nightmare existent ; l’économie d’équipe additionnelle reste une spécification.
+
+**Fichiers associés :** [src/player-input.js](../../src/player-input.js) · [src/fight.js](../../src/fight.js) · [src/run-progress.js](../../src/run-progress.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Une seule réservation de partenaire et de ressource par tick
+- Pause et cinématique ne rechargent pas gratuitement l’équipe
+- KO entrant gratuit si un survivant doit rejoindre le duel
+
+### SHCG-35 — Assistances ponctuelles
+
+**Adaptation :** Préparer six interventions courtes réutilisant une action activée du moveset exact : griffure planée, bond mordu, jet thoracique, jambes supérieures, poussée du Closer et bond du Double Head. Aucun pouvoir ajouté par le simple statut de soutien. Les supports fixes restent hors du premier prototype d’assistance libre.
+
+**Existant :** Les actions de base et leurs propriétaires existent dans data/movesets.json. Le cycle d’assistance n’est pas livré dans cette passe.
+
+**Fichiers associés :** [data/movesets.json](../../data/movesets.json) · [src/combat-reference-policy.js](../../src/combat-reference-policy.js) · [src/combat-resolution.js](../../src/combat-resolution.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Arrivée/action/sortie/récupération explicites et punissables
+- Toucher actif et réserve ne double pas le gain commun
+- KO ou interruption nettoie la présence sans effacer un coût engagé
+
+### SHCG-36 — Tag et transfert du contrôle
+
+**Adaptation :** Relais volontaire et relais après KO d’abord ; relais de combo/secours différés jusqu’à recette. Le transfert du contrôle, de la cible HUD et des entrées se fait une seule fois à un tick défini. Conserver vie, munitions, statuts, coûts et historique du combo ; ne pas transférer la propriété des projectiles.
+
+**Existant :** Le run conserve un personnage joueur ; changer un portrait ou recommencer un combat ne prouve pas un relais en cours de manche.
+
+**Fichiers associés :** [src/fight.js](../../src/fight.js) · [src/versus.js](../../src/versus.js) · [src/run-progress.js](../../src/run-progress.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Un seul acteur reçoit les commandes après transfert
+- Aucun soin ou cooldown gratuit par alternance
+- Arrivée sûre et réponse claire si aucune réserve utilisable
+
+### SHCG-37 — Techniques combinées et supers d’équipe
+
+**Adaptation :** Trois duos de même œuvre reçoivent une contribution distincte de chaque créature. Chaque combinaison et son nom sont créés pour le versus. La chorégraphie longue attend la confirmation de l’ouverture ; une garde ou un échec donne une résolution courte. Aucune scène exclusive n’est revendiquée pour les autres paires.
+
+**Existant :** Des ultimes individuels existent ; les super duos proposés n’ont ni contrôleur ni animation livrés dans ce lot.
+
+**Fichiers associés :** [data/movesets.json](../../data/movesets.json) · [src/combat-resolution.js](../../src/combat-resolution.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Deux contributeurs disponibles et réservés pendant la scène
+- Cibles et morphologies compatibles vérifiées
+- Retour à un membre actif, positions et ressources déterminés
+
+### SHCG-38 — Dénouements d’équipe et fins conditionnelles
+
+**Adaptation :** Prolonger le nom de projet Dénouements : collectif et conditionnel sont des catégories de conception. Priorité proposée : conditionnel exact, collectif autorisé, individuel compatible, victoire simple. Aucun KO ressuscité, aucune victoire inversée par la présentation. Les conclusions restent alternatives au récit officiel.
+
+**Existant :** Les Dénouements Signature/Cauchemar et du lieu sont documentés ; les séquences collectives nouvelles ne sont pas produites.
+
+**Fichiers associés :** [docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md](../../docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) · [data/fatalities.json](../../data/fatalities.json) · [src/presentation-sequences.js](../../src/presentation-sequences.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Version, lieu, participants et cible évalués avant l’engagement
+- Remplacement si partenaire KO ou morphologie incompatible
+- Même résultat avec présentation abrégée
+
+### SHCG-39 — Clashes et confrontations QTE
+
+**Adaptation :** Limiter le prototype à une collision compatible au contact, puis séparation reproductible. La confrontation de deux tuyaux de Bubble Head Nurse est une adaptation de versus, pas une scène canonique. QTE facultatif uniquement en profil spectacle annoncé ; profil stable sans QTE. Aucun choc universel de projectiles ni rayon donné aux créatures.
+
+**Existant :** La résolution des contacts existe. Les groupes de clash, fenêtres comparées et cinématiques interactives restent à implémenter.
+
+**Fichiers associés :** [src/combat-resolution.js](../../src/combat-resolution.js) · [src/fight.js](../../src/fight.js) · [data/movesets.json](../../data/movesets.json) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Contact actif et simultanéité définis en ticks
+- Projectile tiers, assistance et tie-break indépendants du côté gauche
+- Réussite/échec/égalité/absence/déconnexion bornés
+
+### SHCG-40 — Entités indépendantes et objets placés
+
+**Adaptation :** Prendre Doll et ses Shadows comme fiche de relation propriétaire/entités déjà documentée, sans lever son rôle environmental-obstacle. Le corps demeure fixe et la destruction dissipe ses Shadows. Twin Pyramid Heads reste une rencontre à deux corps ; aucune fusion ni slot d’équipe additionnel. Les autres kits ne reçoivent pas de piège par défaut.
+
+**Existant :** Les profils et restrictions sont présents dans la bible ; la description ne démontre pas un système natif de compagnons commandés utilisable partout.
+
+**Fichiers associés :** [data/roster.json](../../data/roster.json) · [src/combat-reference-policy.js](../../src/combat-reference-policy.js) · [src/lore-cinematics.js](../../src/lore-cinematics.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Propriétaire stable et rôle non combattant préservé
+- Commandes, budget, vulnérabilité et disparition propres à chaque entité
+- Aucun corps ou pouvoir ajouté pour satisfaire un schéma commun
+
+### SHCG-41 — Projectiles persistants et règles communes
+
+**Adaptation :** Le jet thoracique de Lying Figure fournit le cas de projectile attribué à un propriétaire. Ne pas lui ajouter guidage, réflexion, poison de sol persistant ou nuage de mort de remake sans référence. Définir pour chaque entité réserve/KO/transformation/transition/clash/fin de manche et budget partagé.
+
+**Existant :** Projectiles, manifestes bitmap et collisions existent ; les règles supplémentaires d’équipe et de persistance sont seulement conçues ici.
+
+**Fichiers associés :** [src/projectile-bitmaps.js](../../src/projectile-bitmaps.js) · [src/projectile-bitmap-manifest.js](../../src/projectile-bitmap-manifest.js) · [src/fight.js](../../src/fight.js) · [data/movesets.json](../../data/movesets.json) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Propriétaire, source de dégâts et combo restent stables au relais
+- La présentation réduite ne supprime aucune menace réelle
+- Au KO/transition appliquer une politique documentée sans impact doublé
+
+### SHCG-42 — Stages bonus et épreuves narratives
+
+**Adaptation :** Préparer quatre épreuves originales raccordées au Registre des absences et à ses dossiers : déplacement Air Screamer, portée de la grande lame, observation des manifestations de fuite, coordination de versus. Une horde éventuelle utilise des cibles de test explicitement originales ; aucune créature canonique puissante n’est dégradée en ennemi fragile par défaut.
+
+**Existant :** Les modes de parcours et la campagne documentaire existent ; ces bonus n’ont pas d’entrée jouable ou de scène produite dans cette passe.
+
+**Fichiers associés :** [docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md](../../docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) · [src/run-progress.js](../../src/run-progress.js) · [data/chronicles.json](../../data/chronicles.json) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- But mesurable, état initial et sortie définis
+- Échec facultatif ne bloque pas le récit
+- Aucune victoire fictive pour harry_ice ou maya_villa
+
+### SHCG-43 — Espace exploratoire de déblocage
+
+**Adaptation :** Nom de projet : Archives du Registre, prolongement documentaire du Registre des absences. Une carte 2D de dossiers reliés offre une exploration sans inventer un bâtiment canonique reliant toutes les œuvres. Les connexions sont des passages de consultation ; une porte physique demande une source géographique.
+
+**Existant :** Les Archives actuelles consultent des catalogues. Elles ne sont pas encore un hub explorable ni une économie de clés.
+
+**Fichiers associés :** [src/archive.js](../../src/archive.js) · [docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md](../../docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Carte, accès et récompenses distincts par œuvre
+- Aucun cycle de prérequis ; voies gratuites d’apprentissage préservées
+- Ouverture sauvegardée avant scène et jamais débitée deux fois
+
+### SHCG-44 — Relations, narration et compatibilités
+
+**Adaptation :** Les trois paires proposées sont des coopérations alternatives de versus, pas des alliances attestées. Une scène de campagne exige présence, édition et disponibilité précises. Le groupe film ne fusionne pas 2006, Revelation et Return ; une apparence remake ne remplace pas une identité originale. Les créatures silencieuses gardent des gestes et sons.
+
+**Existant :** La bible distingue les groupes source et leurs limites ; des rivalités de versus sont déjà étiquetées comme calculées/non canoniques.
+
+**Fichiers associés :** [docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md](../../docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) · [docs/COMBAT_GAMES_GUIDE_INTEGRATION.md](../../docs/COMBAT_GAMES_GUIDE_INTEGRATION.md) · [src/combat-reference-policy.js](../../src/combat-reference-policy.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Chaque duo porte statut de relation, éditions et modes autorisés
+- Aucune scène exclusive annoncée pour toutes les combinaisons
+- Aucune connaissance ou réplique inventée présentée comme canon
+
+### SHCG-45 — Assets, animations, sons et mise en scène
+
+**Adaptation :** Chaque taunt, sélection, assistance, super, entité, bonus et récompense possède une liste de poses et de dépendances. Un personnage par source bitmap ; les storyboards collectifs peuvent réunir les participants. Lier propriétaire, orientation, ancrage et version sans modifier les compteurs d’animation pour un simple brief.
+
+**Existant :** Registre d’art, manifestes et chaînes d’import existent ; aucun nouvel asset d’extension n’est généré par cette intégration.
+
+**Fichiers associés :** [art/registry.json](../../art/registry.json) · [src/sprite-manifest.js](../../src/sprite-manifest.js) · [src/sprite-poses.js](../../src/sprite-poses.js) · [docs/SPRITE_PIPELINE_v0.9.1.md](../../docs/SPRITE_PIPELINE_v0.9.1.md) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Pose fixe, storyboard, clip animé et intégration comptés séparément
+- Versions réduites et sorties propres prévues
+- Asymétries de mains, armes et morphologies conservées
+
+### SHCG-46 — Interface, apprentissage, accessibilité et réseau
+
+**Adaptation :** Conserver remappage et confort existants. Ajouter aux maquettes actif/réserve, jauge commune/cooldown/ressource personnelle et raison de refus. Entraînement pour assist/tag/clash/entité seulement lorsque ces mécanismes existent. Réseau et replay restent décisions séparées, sans promesse de rollback livré.
+
+**Existant :** Clavier/manette, entraînement, pause et réglages sont présents. L’UI d’équipe et l’état réseau de ces nouveaux systèmes ne sont pas livrés.
+
+**Fichiers associés :** [src/player-input.js](../../src/player-input.js) · [src/playflow-ui.js](../../src/playflow-ui.js) · [src/versus.js](../../src/versus.js) · [src/save-store.js](../../src/save-store.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- L’option de confort conserve l’information de combat
+- Aides QTE solo séparées des règles communes PvP
+- Passage abrégé aboutit au même état logique
+
+### SHCG-47 — Validation, statistiques et ordre d’intégration
+
+**Adaptation :** Conserver 18 cas de recette de l’extension 01, chacun relié à ses sections. Les cas sont préparés, pas exécutés. La couverture de documentation se compte sur 20 sections ; elle n’est pas le pourcentage d’achèvement des fonctionnalités.
+
+**Existant :** Les tests historiques n’établissent pas le bon fonctionnement de systèmes encore documentaires.
+
+**Fichiers associés :** [docs/combat-guide/extensions/requirements.json](../../docs/combat-guide/extensions/requirements.json) · [docs/combat-guide/extensions/README.md](../../docs/combat-guide/extensions/README.md) · [docs/combat-guide/ETAT_DES_LIEUX.md](../../docs/combat-guide/ETAT_DES_LIEUX.md) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- 18 cas E01 uniques, sans résultat réussi inventé
+- Statistiques par section, fiche, pose et clip
+- Chaque futur résultat précise version et preuve
+
+### SHCG-48 — Fiches de production complémentaires
+
+**Adaptation :** Fournir les dix familles A–J au moyen des fiches examples.json : attitude, sélection, équipe, assistance/relais, super/conclusion, clash, entité/projectile, bonus, exploration et récompense. Les fiches nommées restent de la conception, même si elles réemploient un sprite existant.
+
+**Existant :** Le guide général possède déjà dix modèles ; les seize modèles additionnels des deux extensions sont raccordés par ce lot.
+
+**Fichiers associés :** [docs/combat-guide/FICHES_ET_VALIDATION.md](../../docs/combat-guide/FICHES_ET_VALIDATION.md) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/extensions/README.md](../../docs/combat-guide/extensions/README.md) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Dix familles E01 couvertes par une fiche concrète ou un statut motivé
+- ID stable, source, statuts et critères sur chaque fiche
+
+### SHCG-49 — Instruction d’intégration et références
+
+**Adaptation :** Conserver l’extension source sans modification, sa provenance et ses références. Les inspirations d’autres jeux ne sont pas des preuves de lore Silent Hill. Les liens de sources de franchise restent attachés aux observations du dossier précis.
+
+**Existant :** Les sources exactes sont copiées avec SHA256 ; leur contenu reste distinct des propositions spécifiques au fan-game.
+
+**Fichiers associés :** [docs/combat-guide/extensions/README.md](../../docs/combat-guide/extensions/README.md) · [docs/combat-guide/extensions/requirements.json](../../docs/combat-guide/extensions/requirements.json) · [docs/SOURCES.md](../../docs/SOURCES.md) · [docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+
+**Validation attendue :**
+
+- Empreinte source identique à la copie Drive
+- Aucune propriété d’un jeu de référence transférée comme capacité canonique
+
+### SHCG-50 — Portée du module de verrouillage
+
+**Adaptation :** Appliquer la conception aux profils, costumes, stages, modes et collections retenus. Le catalogue reste consultable. Un verrou signifie une règle d’accès ; une production absente est affichée comme technique/inachevée. Les systèmes de soutien sont préparés sans activer une offre commerciale.
+
+**Existant :** Le catalogue et ses restrictions de rôle existent ; le module de droits à quatre axes n’est pas livré par ces documents.
+
+**Fichiers associés :** [src/archive.js](../../src/archive.js) · [src/combat-reference-policy.js](../../src/combat-reference-policy.js) · [docs/COMMERCIAL_READINESS.md](../../docs/COMMERCIAL_READINESS.md) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Accès, rôle et absence de fichier distincts
+- Toutes catégories reçoivent décision et priorité
+
+### SHCG-51 — Découverte, droits, installation et compatibilité
+
+**Adaptation :** Modèle à quatre axes indépendants : secret/indice/identifié ; sources permanentes/temporaires/en attente/expirées ; installation/version ; admission au mode/équipe. Un contenu peut être acquis mais non installé ou un costume acquis avant le personnage. Priorité de message et action utile explicites.
+
+**Existant :** Le champ unlock historique est descriptif et la politique combatEnabled décide un rôle, pas une propriété de compte.
+
+**Fichiers associés :** [data/roster.json](../../data/roster.json) · [src/combat-reference-policy.js](../../src/combat-reference-policy.js) · [src/save-store.js](../../src/save-store.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Aucun booléen unlocked utilisé comme vérité unique
+- Source permanente préservée quand une source temporaire expire
+- Refus de rôle ne se présente pas comme paiement manquant
+
+### SHCG-52 — Langage visuel des verrous
+
+**Adaptation :** Métaphore UI originale : dossiers opaques, fiches scellées et marque de fermeture, brouillard décoratif limité. Silhouette seulement après indice révélé ; une identité secrète utilise un emblème neutre. Ne pas employer un sceau comme événement canonique et ne pas donner un sens magique inventé à un symbole de la série.
+
+**Existant :** La direction visuelle du projet est disponible ; les nouveaux cadres et états n’ont pas d’images livrées dans cette passe.
+
+**Fichiers associés :** [docs/GDD_FR.md](../../docs/GDD_FR.md) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/extensions/README.md](../../docs/combat-guide/extensions/README.md) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Texte/icône/focus contrastés, sans dépendre du rouge ou du son seul
+- Aucune fuite d’identité par silhouette/voix/aria-label
+- Version à mouvements réduits sans flash
+
+### SHCG-53 — Slots de personnages et partenaires
+
+**Adaptation :** Le slot verrouillé reste focusable et explique la voie d’accès. La confirmation ouvre la fiche ; elle ne sélectionne pas un profil interdit. Aléatoire et équipes sauvegardées évaluent les quatre axes. Les profils hors duel, dont Doll, gardent leur dossier sans promesse de déblocage combattant.
+
+**Existant :** Le roster comporte des profils admis et non admis ; aucune règle d’accès ne peut annuler la politique de référence.
+
+**Fichiers associés :** [src/versus.js](../../src/versus.js) · [src/combat-reference-policy.js](../../src/combat-reference-policy.js) · [data/roster.json](../../data/roster.json) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Aléatoire exclut non utilisables, pas les fiches consultables
+- Compagnon indispensable inclus dans le kit et non vendu à part
+- Duo verrouillé distinct des membres acquis
+
+### SHCG-54 — Costumes, palettes et accessoires
+
+**Adaptation :** Présenter provenance, période et statut de chaque apparence. Une palette originale reste originale ; une arme changeant le kit est une variante. Un costume acquis avant son propriétaire reste enregistré. L’aperçu n’accorde pas le droit d’équiper et restitue le costume utilisable à sa fermeture.
+
+**Existant :** Les variantes existent au catalogue ; aucune nouvelle apparence canonique ou de soutien n’est déclarée produite ici.
+
+**Fichiers associés :** [data/roster.json](../../data/roster.json) · [art/registry.json](../../art/registry.json) · [src/sprite-manifest.js](../../src/sprite-manifest.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Même hitboxes/timings/ressources pour cosmétique
+- Pas de transfert d’équipement entre versions
+- Acquisition conservée lors d’un changement d’accès
+
+### SHCG-55 — Stages, variantes et destinations
+
+**Adaptation :** Séparer sélection, participation, variante visuelle, règles et destinations liées. Une ambiance de soutien éventuelle conserve géométrie, collisions et signaux ; les profils vivants/statiques de confort restent inclus. Tous les assets requis doivent être disponibles avant autorisation du match.
+
+**Existant :** Les 123 IDs de stage et leurs références existent ; aucune nouvelle destination ni offre payante n’est créée par ce module.
+
+**Fichiers associés :** [data/stages.json](../../data/stages.json) · [src/stage-reference-policy.js](../../src/stage-reference-policy.js) · [src/stage-director.js](../../src/stage-director.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Non-abonné peut participer selon politique annoncée sans acquérir le stage
+- Transition impossible désactivée avant match avec explication
+- Confort et règles de collision inchangés
+
+### SHCG-56 — Modes et parcours verrouillés
+
+**Adaptation :** Préserver Confrontation, Salle d’Observation, réglages et accès actuels. Préparer seulement des défis additionnels après apprentissage, ou chapitres/archives selon la campagne proposée. Aucun boss rush existant n’est rétroactivement bloqué par cette documentation.
+
+**Existant :** Les modes run listés dans src/run-progress.js sont déjà présents ; les nouvelles tuiles de défis restent documentaires.
+
+**Fichiers associés :** [src/run-progress.js](../../src/run-progress.js) · [src/command.js](../../src/command.js) · [src/save-store.js](../../src/save-store.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Pas de gain exigé dans le mode qui seul le débloquerait
+- Maintenance et absence d’installation ne deviennent pas un défi
+- Accès aux options et apprentissage préservés
+
+### SHCG-57 — Conditions ET/OU et progression
+
+**Adaptation :** Règles explicites all/any, compteurs typés et événements admissibles. Exemples : finir SHC_CAM_01 ET consulter le dossier ; ou réussite d’un défi OU avantage temporaire vérifié. Sources d’accès conservées séparément, coût et attribution idempotents, aucune rétroactivité promise sans trace enregistrée.
+
+**Existant :** Les sauvegardes ont matchs appliqués et Chroniques terminées ; ces traces ne couvrent pas arbitrairement toutes les nouvelles conditions.
+
+**Fichiers associés :** [src/save-store.js](../../src/save-store.js) · [src/run-progress.js](../../src/run-progress.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Branches ET/OU montrées et évaluées correctement
+- Aucun cycle de dépendances
+- Doublon d’événement ne recrédite ni redébite
+
+### SHCG-58 — Exploration, attribution et révélation
+
+**Adaptation :** Les Archives du Registre utilisent le même contentId que les menus. Attribuer et sauvegarder avant la révélation ; le passage abrégé ne saute pas le gain. Une récompense déjà obtenue est signalée avant tout coût. La carte est une création du projet, pas une localisation canonique commune aux épisodes.
+
+**Existant :** Aucune transaction de coffre ni scène d’acquisition nouvelle n’est produite dans cette passe.
+
+**Fichiers associés :** [src/archive.js](../../src/archive.js) · [src/save-store.js](../../src/save-store.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Réouverture sans coût double
+- Arrêt pendant révélation conserve l’acquisition
+- État À réclamer uniquement pour récompense vraiment manuelle
+
+### SHCG-59 — Avantages de soutien et modèles d’acquisition
+
+**Adaptation :** Préparer un contrat de catalogue : permanent, temporaire ou lot de période. Priorité aux éléments cosmétiques originaux ; pas de statistiques payantes. Aucun prix, niveau commercial, avantage vendu ou campagne active n’est créé. L’état commercialAuthorized:false documenté demeure inchangé.
+
+**Existant :** COMMERCIAL_READINESS et release/readiness.json portent les limites commerciales du projet ; les propositions d’abonnement ne les lèvent pas.
+
+**Fichiers associés :** [docs/COMMERCIAL_READINESS.md](../../docs/COMMERCIAL_READINESS.md) · [release/readiness.json](../../release/readiness.json) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Modèle d’acquisition annoncé par contenu
+- Cosmétique distinct d’une variante de gameplay
+- Droits permanents existants conservés au changement d’offre
+
+### SHCG-60 — Liaison externe Patreon ou équivalent
+
+**Adaptation :** Décrire une interface d’adaptateur, pas un fournisseur actif. Liaison volontaire par autorisation officielle, preuve côté service de confiance, aucun secret dans le client Canvas, vérification d’événements, idempotence et réconciliation. Fournisseur/campagne/niveaux restent non configurés.
+
+**Existant :** Le jeu actuel sauvegarde localement ; ce lot n’ajoute ni OAuth, webhook, compte externe ni paiement.
+
+**Fichiers associés :** [src/save-store.js](../../src/save-store.js) · [docs/COMMERCIAL_READINESS.md](../../docs/COMMERCIAL_READINESS.md) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Compte lié distinct d’avantage confirmé
+- Aucune preuve fondée sur adresse identique ou capture d’écran
+- Événements doublés/désordonnés réconciliés
+
+### SHCG-61 — Expiration, changements et hors ligne
+
+**Adaptation :** Préserver acquisitions permanentes, découvertes et préférences. Expiration ne retire que sa source ; erreur réseau = statut inconnu, pas abonnement terminé. Une partie admise garde sa configuration jusqu’au résultat. Durées de justificatif et tolérance sont à décider sans inventer une validité garantie.
+
+**Existant :** Le mode local n’a pas de fournisseur d’abonnement à réconcilier. Les scénarios d’expiration sont une recette future.
+
+**Fichiers associés :** [src/save-store.js](../../src/save-store.js) · [src/run-progress.js](../../src/run-progress.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Permanent OU temporaire reste accessible si une source subsiste
+- Annulation n’implique pas retrait immédiat arbitraire
+- Aucun changement de costume ou décor en plein combo
+
+### SHCG-62 — Local, multijoueur, entraînement et replays
+
+**Adaptation :** Séparer aperçu, sélection, participation et test. Décrire profil principal/invité et futur compte distant. L’accès de collection ne remplace pas les restrictions de rôle. Une scène de replay n’est pas soumise au seul abonnement actuel ; absence d’asset et version incompatible reçoivent un message ou repli prévu.
+
+**Existant :** Le local existe ; le réseau et les replays de combat ne sont pas établis par ce lot.
+
+**Fichiers associés :** [src/versus.js](../../src/versus.js) · [src/save-store.js](../../src/save-store.js) · [src/run-progress.js](../../src/run-progress.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Contenu/versions/composition vérifiés avant départ
+- Invité n’acquiert pas automatiquement ce qu’il voit
+- Partenaire devenu inaccessible remplacé sans effacer l’équipe
+
+### SHCG-63 — Textes, accessibilité et protection des surprises
+
+**Adaptation :** Une fiche affiche identité autorisée, état et prochaine action. Les exemples textuels sont en français, traduisibles ; ils séparent Acquis, Installation nécessaire, Vérification indisponible et Hors de ce mode. Les secrets ne fuient ni en aria-label, ni dans une voix, un costume ou une notification.
+
+**Existant :** Le projet possède une interface et des réglages ; les nouveaux états d’accès demandent une recette propre.
+
+**Fichiers associés :** [src/playflow-ui.js](../../src/playflow-ui.js) · [src/versus.js](../../src/versus.js) · [src/archive.js](../../src/archive.js) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Icône+texte+focus, navigation clavier/manette et mouvement réduit
+- Voies alternatives visibles au même niveau
+- Aucune date d’expiration non établie affichée comme certaine
+
+### SHCG-64 — Production, sauvegarde et recette des droits
+
+**Adaptation :** Catalogue versionné et sources d’accès distinctes ; journal d’attribution, imports et migrations préservent les acquisitions. Vingt-deux scénarios E02 couvrent droits, présentation, sauvegarde et reprise. Les acquisitions du joueur ne sont pas une mesure de production des assets.
+
+**Existant :** save-store fournit une validation et des sauvegardes de repli ; son schéma ne contient pas encore le catalogue d’accès complet proposé.
+
+**Fichiers associés :** [src/save-store.js](../../src/save-store.js) · [docs/combat-guide/extensions/requirements.json](../../docs/combat-guide/extensions/requirements.json) · [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- 22 cas E02 uniques, status not-run jusqu’à preuve
+- Un slot terminé ne valide pas son combattant
+- Migration conserve les identifiants et sources
+
+### SHCG-65 — Six fiches du module d’accès
+
+**Adaptation :** Raccorder les six modèles E02 aux exemples : contenu/slot, règle, avantage, charte des verrous, stage spécial, matrice d’accès. Chaque fiche indique sa portée documentaire et ses dépendances non produites.
+
+**Existant :** Les modèles des fichiers sources sont conservés à l’identique ; les exemples propres au projet sont ajoutés séparément.
+
+**Fichiers associés :** [docs/combat-guide/extensions/examples.json](../../docs/combat-guide/extensions/examples.json) · [docs/combat-guide/extensions/README.md](../../docs/combat-guide/extensions/README.md) · [docs/combat-guide/extensions/requirements.json](../../docs/combat-guide/extensions/requirements.json) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Six familles couvertes sans inventer une offre opérationnelle
+- Chaque contenu a un ID documentaire distinct des IDs runtime
+
+### SHCG-66 — Instruction d’intégration au projet
+
+**Adaptation :** Maintenir le lien entre guide général, extension 01 et extension 02. Enregistrer toute adaptation ou fonction différée et ne pas modifier une restriction de source pour remplir un tableau. Les builds de documentation et classeurs doivent afficher 68 sections avec états distincts.
+
+**Existant :** Cette passe ajoute les deux sources, 38 rubriques et fiches ; les exports et liens sont gérés par le générateur commun.
+
+**Fichiers associés :** [docs/combat-guide/extensions/requirements.json](../../docs/combat-guide/extensions/requirements.json) · [docs/combat-guide/extensions/README.md](../../docs/combat-guide/extensions/README.md) · [scripts/build-combat-guide.mjs](../../scripts/build-combat-guide.mjs) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Matrice complète 00–67 sans écraser les données historiques
+- Aucun contenu généré compté comme animé par l’import documentaire
+
+### SHCG-67 — Références et vocabulaire de l’accès
+
+**Adaptation :** Conserver la définition de slot, acquisition permanente, accès temporaire, admissibilité, attribution et resynchronisation. Les références Patreon de la source sont des lectures historiques ; les endpoints et modalités seront revérifiés lors d’un chantier réel de connexion.
+
+**Existant :** Les sources datées du guide sont conservées ; aucun appel au service Patreon n’a été réalisé pour cette intégration.
+
+**Fichiers associés :** [docs/combat-guide/extensions/README.md](../../docs/combat-guide/extensions/README.md) · [docs/combat-guide/extensions/requirements.json](../../docs/combat-guide/extensions/requirements.json) · [docs/COMMERCIAL_READINESS.md](../../docs/COMMERCIAL_READINESS.md) · [docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt](../../docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt)
+
+**Validation attendue :**
+
+- Origine de chaque assertion technique explicitée
+- Aucune promesse d’accès ou de service reposant sur une documentation non revérifiée

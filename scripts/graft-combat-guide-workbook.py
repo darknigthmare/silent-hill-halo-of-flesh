@@ -3,8 +3,9 @@
 
 This is a package-preservation adapter, not a spreadsheet authoring engine.
 The donor is authored/recalculated/rendered by add-combat-guide-workbook.mjs.
-Only logged source-cell updates, six counter formulas, appended association
+Only logged source-cell updates, guide counter formulas, appended association
 rows, their table range and logged row heights may cross into the target.
+The extensions mode also transfers one reviewed table below existing content.
 Every existing style index and every other ZIP member remain byte-identical.
 No openpyxl/xlsxwriter or other spreadsheet authoring library is used.
 """
@@ -119,12 +120,18 @@ def expected_cells(requirements, associations):
         for number, row in enumerate(values, start):
             for column, value in enumerate(row):
                 expected[sheet][chr(65 + column) + str(number)] = str(value or '')
-    rows('Guide combat', 8, [GUIDE_HEADERS] + [[s['id'], s['section'] + '. ' + s['title'], s['priority'], DECISIONS[s['decision']], STATUSES[s['implementationStatus']], s['adaptation'], s['observed'], s['nextAction'], '\n'.join(s['acceptance']), '\n'.join(s['evidencePaths']), ', '.join(s['entityKinds'])] for s in requirements['sections']])
+    section_rows = [[s['id'], s['section'] + '. ' + s['title'], s['priority'], DECISIONS[s['decision']], STATUSES[s['implementationStatus']], s['adaptation'], s['observed'], s['nextAction'], '\n'.join(s['acceptance']), '\n'.join(s['evidencePaths']), ', '.join(s['entityKinds'])] for s in requirements['sections']]
+    rows('Guide combat', 8, [GUIDE_HEADERS] + section_rows[:30])
+    if len(section_rows) == 68:
+        rows('Guide combat', 58, [['Extensions 01 et 02 — conception et validation attendue', *[''] * 10]])
+        rows('Guide combat', 60, [GUIDE_HEADERS] + section_rows[30:])
     rows('Guide combat', 44, [MODULE_HEADERS] + [[s['id'], s['name'], s['priority'], DECISIONS[s['decision']], ', '.join(s['sections']), s['reason']] for s in requirements['moduleDecisions']])
     def section_lines(values):
         return '\n'.join(', '.join(values[i:i + 8]) for i in range(0, len(values), 8))
     rows('Associations guide', 8, [ASSO_HEADERS] + [[KINDS[s['kind']], s['id'], s['name'], s.get('source') or '', section_lines(s['guideSections']), s['observedStatus'], s['targetFile']] for s in associations['records']])
-    expected['Guide combat']['A6'] = f"Source : {requirements['sourceFile']} — {requirements['asOf']}. État de conception distinct de la livraison jouable."
+    expected['Guide combat']['A6'] = (
+        f"Sources : guide général et extensions 01–02, v1.0 — {requirements['asOf']}. 68 rubriques. Sources et empreintes : docs/combat-guide/requirements-resolved.json."
+        if len(section_rows) == 68 else f"Source : {requirements['sourceFile']} — {requirements['asOf']}. État de conception distinct de la livraison jouable.")
     expected['Associations guide']['A6'] = f"Inventaire au {associations['asOf']}, référence {associations['baselineCommit'][:8]}. Les détails restent dans docs/combat-guide/associations.json."
     return expected
 
@@ -142,6 +149,10 @@ def expected_formulas(requirements, associations):
         'H4': ('COUNTIFS(E9:E38,"Conçu, à intégrer")', sum(s['implementationStatus'] == 'documented-only' for s in requirements['sections'])),
         'H5': (f'COUNTIFS(D45:D{module_end},"Non applicable")', decisions['not-applicable']),
     }
+    if len(requirements['sections']) == 68:
+        guide['B4'] = ('COUNTA(A9:A38)+COUNTA(A61:A98)', 68)
+        guide['H4'] = ('COUNTIFS(E9:E38,"Conçu, à intégrer")+COUNTIFS(E61:E98,"Conçu, à intégrer")',
+                       sum(s['implementationStatus'] == 'documented-only' for s in requirements['sections']))
     asso = {'B4': (f'COUNTA(B9:B{end})', len(associations['records']))}
     for address, kind in [('B5', 'stage'), ('E4', 'profile'), ('E5', 'chronicle'), ('H4', 'corpus'), ('H5', 'projectile')]:
         asso[address] = (f'COUNTIFS(A9:A{end},"{KINDS[kind]}")', counts[kind])
@@ -182,10 +193,19 @@ def transfer(before, donor, log, expected, formulas):
     old_end, end = 8 + log['beforeAssociations'], 8 + log['afterAssociations']
     require(end == 8 + len(expected['Associations guide']) // 7 - 1, 'Association count mismatch')
     require(log['afterAssociations'] >= log['beforeAssociations'], 'Association removal needs a separate review')
-    require(log['newRows'] == [{'sheet': 'Associations guide', 'row': r} for r in range(old_end + 1, end + 1)], 'Unexpected appended rows')
+    expected_rows = [{'sheet': 'Associations guide', 'row': r} for r in range(old_end + 1, end + 1)]
+    extension_mode = log.get('mode') == 'extensions'
+    if extension_mode:
+        require(log.get('beforeSections') == 30 and log.get('afterSections') == 68, 'Unexpected extension section counts')
+        expected_rows += [{'sheet': 'Guide combat', 'row': r} for r in [58, *range(60, 99)]]
+    require(log['newRows'] == expected_rows, 'Unexpected appended rows')
+    expected_tables = [{'sheet': 'Guide combat', 'name': 'CombatGuideExtensions', 'ref': 'A60:K98'}] if extension_mode else []
+    require(log.get('newTables', []) == expected_tables, 'Unexpected added tables')
     replacements = {}
     allowed_cells = {sheet: {address for s, address in logged if s == sheet} for sheet in GUIDES}
     allowed_cells['Associations guide'].update(formulas['Associations guide'])
+    if extension_mode:
+        allowed_cells['Guide combat'].update(formulas['Guide combat'])
     heights = {(r['sheet'], int(r['row'])): r for r in log['changedRowHeights']}
     require(len(heights) == len(log['changedRowHeights']), 'Duplicate row-height authorization')
     for sheet, number in heights:
@@ -227,9 +247,10 @@ def transfer(before, donor, log, expected, formulas):
         donor_rows = {int(r.get('r')): r for r in source.find(tag('sheetData'))}
         donor_cells = donor.cells(sheet)
         old_cells = before.cells(sheet)
+        appended_numbers = [entry['row'] for entry in log['newRows'] if entry['sheet'] == sheet]
         for address in sorted(allowed_cells[sheet]):
             number = int(re.search(r'\d+$', address).group())
-            if number > old_end and sheet == 'Associations guide':
+            if number in appended_numbers:
                 continue
             require(address in old_cells and address in donor_cells, 'Existing changed cell missing')
             row = old_rows[number]
@@ -249,17 +270,52 @@ def transfer(before, donor, log, expected, formulas):
                     row.set(attr, source_row.get(attr))
         if sheet == 'Associations guide':
             require(max(old_rows) == old_end and max(donor_rows) == end, 'Unexpected association tail')
-            for number in range(old_end + 1, end + 1):
-                row = copy.deepcopy(donor_rows[number])
-                require(set(c.get('r') for c in row) == {chr(65 + c) + str(number) for c in range(7)}, 'New row must have exactly seven cells')
-                for index, cell in enumerate(list(row)):
-                    row.remove(cell)
-                    row.insert(index, mapped_cell(cell))
-                data.append(row)
+        for number in appended_numbers:
+            require(number not in old_rows and number in donor_rows, 'Appended row overwrites existing content or is absent from donor')
+            row = copy.deepcopy(donor_rows[number])
+            width = 7 if sheet == 'Associations guide' else 11
+            require(set(c.get('r') for c in row) == {chr(65 + c) + str(number) for c in range(width)}, 'New row has unexpected cells')
+            for index, cell in enumerate(list(row)):
+                row.remove(cell)
+                row.insert(index, mapped_cell(cell))
+            data.append(row)
+        if appended_numbers:
             old_dimension, new_dimension = tree.find(tag('dimension')), source.find(tag('dimension'))
             if old_dimension is not None:
                 require(new_dimension is not None, 'Donor omitted existing dimension')
                 old_dimension.set('ref', new_dimension.get('ref'))
+        if extension_mode and sheet == 'Guide combat':
+            table_name = 'CombatGuideExtensions'
+            require(table_name not in before.tables, 'Extension table already exists')
+            require(table_name in donor.tables, 'Reviewed extension table is missing')
+            new_table = donor.xml(donor.tables[table_name])
+            require(new_table.get('ref') == 'A60:K98', 'Unexpected extension table range')
+            new_id = 1 + max(int(before.xml(part).get('id')) for part in before.tables.values())
+            new_part = f'xl/tables/table{new_id}.xml'
+            require(new_part not in before.parts, 'Extension table part collision')
+            new_table.set('id', str(new_id))
+            replacements[new_part] = ET.tostring(new_table, encoding='utf-8', xml_declaration=True)
+            relpart = posixpath.join(posixpath.dirname(before.sheets[sheet]), '_rels', posixpath.basename(before.sheets[sheet]) + '.rels')
+            relationships = before.xml(relpart)
+            new_rid = 'rIdCombatGuideExtensions'
+            require(all(item.get('Id') != new_rid for item in relationships), 'Extension table relationship collision')
+            ET.SubElement(relationships, '{' + PKG + '}Relationship', {'Id': new_rid,
+                'Type': REL + '/table', 'Target': posixpath.relpath(new_part, posixpath.dirname(before.sheets[sheet]))})
+            ET.register_namespace('', PKG)
+            replacements[relpart] = ET.tostring(relationships, encoding='utf-8', xml_declaration=True)
+            parts = tree.find(tag('tableParts'))
+            require(parts is not None and len(parts) == 2, 'Expected two historical Guide combat tables')
+            ET.SubElement(parts, tag('tablePart'), {'{' + REL + '}id': new_rid})
+            parts.set('count', str(len(parts)))
+            content_types = before.xml('[Content_Types].xml')
+            CT = 'http://schemas.openxmlformats.org/package/2006/content-types'
+            donor_type = next((item for item in donor.xml('[Content_Types].xml') if item.get('PartName', '').lstrip('/') == donor.tables[table_name]), None)
+            require(donor_type is not None, 'Donor extension table content type is absent')
+            entry = copy.deepcopy(donor_type)
+            entry.set('PartName', '/' + new_part)
+            content_types.append(entry)
+            ET.register_namespace('', CT)
+            replacements['[Content_Types].xml'] = ET.tostring(content_types, encoding='utf-8', xml_declaration=True)
         replacements[before.sheets[sheet]] = ET.tostring(tree, encoding='utf-8', xml_declaration=True)
 
     name = 'CombatGuideAssociations'
@@ -276,7 +332,10 @@ def transfer(before, donor, log, expected, formulas):
 
 
 def verify_preservation(before, after, changed_parts, allowed_cells, heights, log):
-    require(list(before.parts) == list(after.parts), 'ZIP member inventory changed')
+    extension_mode = log.get('mode') == 'extensions'
+    added_parts = set(after.parts) - set(before.parts)
+    expected_added = {after.tables['CombatGuideExtensions']} if extension_mode else set()
+    require(added_parts == expected_added and list(after.parts)[:len(before.parts)] == list(before.parts), 'Unexpected ZIP member inventory change')
     require(before.comment == after.comment, 'ZIP archive comment changed')
     for name in before.parts:
         if name not in changed_parts:
@@ -313,7 +372,23 @@ def verify_preservation(before, after, changed_parts, allowed_cells, heights, lo
             dimension = tree.find(tag('dimension'))
             if dimension is not None:
                 tree.remove(dimension)
+        if extension_mode and sheet == 'Guide combat':
+            old_tables, new_tables = old.find(tag('tableParts')), new.find(tag('tableParts'))
+            require(len(new_tables) == len(old_tables) + 1, 'Unexpected guide table count')
+            require([canon(item) for item in old_tables] == [canon(item) for item in new_tables][:-1], 'Historical guide table link changed')
+            require(new_tables[-1].get('{' + REL + '}id') == 'rIdCombatGuideExtensions', 'Unexpected extension table link')
+            old.remove(old_tables)
+            new.remove(new_tables)
         require(canon(old) == canon(new), f'Unapproved sheet feature change: {sheet}')
+    if extension_mode:
+        guide = before.sheets['Guide combat']
+        relpart = posixpath.join(posixpath.dirname(guide), '_rels', posixpath.basename(guide) + '.rels')
+        old_rels, new_rels = before.xml(relpart), after.xml(relpart)
+        require([canon(item) for item in old_rels] == [canon(item) for item in new_rels][:-1], 'Historical guide relationships changed')
+        require(len(new_rels) == len(old_rels) + 1, 'More than one new guide relationship')
+        old_types, new_types = before.xml('[Content_Types].xml'), after.xml('[Content_Types].xml')
+        require([canon(item) for item in old_types] == [canon(item) for item in new_types][:-1], 'Historical content types changed')
+        require(len(new_types) == len(old_types) + 1, 'More than one new content type')
     return historical
 
 
@@ -384,7 +459,8 @@ def main():
     before, donor = Package(args.before), Package(args.donor)
     log = json.loads(args.changes.read_text())
     requirements, associations = json.loads(args.requirements.read_text()), json.loads(args.associations.read_text())
-    require(len(requirements['sections']) == 30 and [s['section'] for s in requirements['sections']] == [f'{i:02d}' for i in range(30)], 'Expected sections 00–29')
+    section_count = 68 if log.get('mode') == 'extensions' else 30
+    require(len(requirements['sections']) == section_count and [s['section'] for s in requirements['sections']] == [f'{i:02d}' for i in range(section_count)], 'Unexpected section sequence')
     require(len({(r['kind'], r['id']) for r in associations['records']}) == len(associations['records']), 'Duplicate association')
     expected, formulas = expected_cells(requirements, associations), expected_formulas(requirements, associations)
     replacements, allowed_cells, heights = transfer(before, donor, log, expected, formulas)
@@ -393,6 +469,9 @@ def main():
         archive.comment = before.comment
         for info in before.infos:
             archive.writestr(info, replacements.get(info.filename, before.parts[info.filename]))
+        for name, payload in replacements.items():
+            if name not in before.parts:
+                archive.writestr(name, payload, compress_type=zipfile.ZIP_DEFLATED)
     after = Package(args.output)
     historical = verify_preservation(before, after, set(replacements), allowed_cells, heights, log)
     verify_sources(after, expected, formulas)
@@ -400,11 +479,12 @@ def main():
         'method': 'Artifact Tool authors, recalculates and renders the donor. This stdlib-only adapter transfers its reviewed cells while preserving every unrelated ZIP payload byte.',
         'beforeSha256': sha(args.before.read_bytes()), 'donorSha256': sha(args.donor.read_bytes()), 'afterSha256': sha(args.output.read_bytes()),
         'inputHashes': {'requirements': sha(args.requirements.read_bytes()), 'associations': sha(args.associations.read_bytes()), 'changeLog': sha(args.changes.read_bytes())},
-        'sheetNames': list(after.sheets), 'sections': 30, 'modules': len(requirements['moduleDecisions']), 'associations': len(associations['records']),
-        'changedParts': sorted(replacements), 'byteIdenticalParts': len(before.parts) - len(replacements),
+        'sheetNames': list(after.sheets), 'sections': section_count, 'modules': len(requirements['moduleDecisions']), 'associations': len(associations['records']),
+        'changedParts': sorted(replacements), 'byteIdenticalParts': sum(name not in replacements for name in before.parts),
         'historicalSheets': historical, 'sourceCellsChangedOrAdded': len(log['changedCells']), 'associationCounterFormulasUpdated': 6,
         'rowHeightsIncreased': log['changedRowHeights'], 'appendedRows': log['newRows'],
-        'preservedByteExactly': ['all historical worksheets', 'all historical tables', 'styles', 'shared strings', 'workbook metadata', 'all relationships', 'Guide combat tables', 'content types', 'theme', 'other ZIP parts'],
+        'preservedByteExactly': ['all historical worksheets', 'all historical tables', 'styles', 'shared strings', 'workbook metadata', 'existing Guide combat table definitions', 'theme', 'other unrelated ZIP parts'],
+        'additiveNativeTable': log.get('newTables', []),
         'preservedGuideFeatures': ['all unchanged cells', 'all existing style indices', 'column widths', 'frozen panes', 'validations', 'conditional formats', 'existing comments and hyperlinks', 'native table identities'],
         'formulaValues': {sheet: {cell: value for cell, (_, value) in entries.items()} for sheet, entries in formulas.items()},
         'status': 'passed',

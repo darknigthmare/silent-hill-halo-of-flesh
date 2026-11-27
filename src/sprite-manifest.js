@@ -6138,6 +6138,44 @@ export const SPRITES = {
           791,
           1294
         ]
+      },
+      {
+        "sha256": "40ad802a6ec2f8065c0188b10fcfb39e68de4660812af4a995b09d87d3563bce",
+        "bytes": 921669,
+        "width": 1176,
+        "height": 1337,
+        "visibleBounds": [
+          102,
+          59,
+          1078,
+          1284
+        ],
+        "pixelSHA256": "f80c96aa44d63e6ec85aba5dc7dcec631cf582e20caa45f27104de11d32cbe4a",
+        "transparentFraction": 0.78215,
+        "path": "assets/sprites/sh3_nurse_revolver_044.40ad802a6ec2.png",
+        "facing": 1,
+        "anchor": [
+          0.3835,
+          0.9603590127150337
+        ],
+        "bodyHeight": 0.91922,
+        "sourceFile": "exec-7042dc30-63f1-41db-b334-13ceac76dd32.png",
+        "sourceSHA256": "40ad802a6ec2f8065c0188b10fcfb39e68de4660812af4a995b09d87d3563bce",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          73,
+          40,
+          1098,
+          1312
+        ],
+        "framingBounds": [
+          99,
+          55,
+          1081,
+          1291
+        ]
       }
     ],
     "portrait": {
@@ -6181,6 +6219,13 @@ export const SPRITES = {
           1
         ],
         "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralLight": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 6,
         "loop": false
       }
     },
@@ -7189,7 +7234,7 @@ export const SPRITES = {
         "facing": 1,
         "anchor": [
           0.4,
-          0.976563
+          0.986328125
         ],
         "bodyHeight": 0.99,
         "sourceFile": "exec-ace746eb-c80f-45f9-9527-774b0533058b.png",
@@ -7208,6 +7253,44 @@ export const SPRITES = {
           24,
           933,
           1522
+        ]
+      },
+      {
+        "sha256": "e691299ab326b510f72029062963aaf3cacbff7fbad2bd78fb97d5e2a4297321",
+        "bytes": 2032192,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          37,
+          69,
+          1001,
+          1524
+        ],
+        "pixelSHA256": "a01ecf5c2b10c38668e67562b7774b38e8b77cbaa6b4470d043144168cb51e9c",
+        "transparentFraction": 0.63942,
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.e691299ab326.png",
+        "facing": 1,
+        "anchor": [
+          0.407,
+          0.9921875
+        ],
+        "bodyHeight": 0.99,
+        "sourceFile": "exec-cc106d92-791a-47a5-9317-a2b590d346ee.png",
+        "sourceSHA256": "e691299ab326b510f72029062963aaf3cacbff7fbad2bd78fb97d5e2a4297321",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          9,
+          1008,
+          1536
+        ],
+        "framingBounds": [
+          33,
+          66,
+          1008,
+          1536
         ]
       }
     ],
@@ -7243,6 +7326,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralSpecial": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -10880,7 +10970,7 @@ export const SPRITES = {
         "facing": 1,
         "anchor": [
           0.5,
-          1
+          0.9309895833333334
         ],
         "bodyHeight": 1,
         "sourceFile": "exec-ca4cbf53-da10-41ac-be2c-168904fc6c2f.png",
@@ -10899,6 +10989,44 @@ export const SPRITES = {
           116,
           921,
           1440
+        ]
+      },
+      {
+        "sha256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+        "bytes": 1866186,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          64,
+          142,
+          991,
+          1433
+        ],
+        "pixelSHA256": "9844a7c0f294ba6c773ae3a4f702014dd9191ca697ba1fa179c4807680a47dde",
+        "transparentFraction": 0.72184,
+        "path": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+        "facing": 1,
+        "anchor": [
+          0.405,
+          0.9329427083333334
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-345f308e-07b3-4592-8cdf-40b74bf0d79b.png",
+        "sourceSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          23,
+          1006,
+          1520
+        ],
+        "framingBounds": [
+          62,
+          136,
+          994,
+          1442
         ]
       }
     ],
@@ -10934,6 +11062,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralSpecial": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false

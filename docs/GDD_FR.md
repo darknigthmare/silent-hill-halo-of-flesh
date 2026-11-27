@@ -4,14 +4,19 @@
 
 [Lot de quatorze images, intégration et limites](production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. La bible et les deux classeurs sont rafraîchis : 445 associations, 93 arènes illustrées et 31 commandes projectile couvertes. Les feuilles historiques et leurs formules sont préservées. [Inventaire restant](production/vague30/inventory.json). Aucun nouveau cycle animé ni certification 1:1.
 
-**Intégration du 25 novembre 2026 :** le [guide commun de combat](COMBAT_GAMES_GUIDE_INTEGRATION.md)
-complète ce document avec la [matrice des 30 rubriques](combat-guide/MATRICE.md),
+**Intégration actualisée le 27 novembre 2026 :** le [guide commun de combat](COMBAT_GAMES_GUIDE_INTEGRATION.md)
+et ses [deux extensions](combat-guide/extensions/README.md) complètent ce document
+avec la [matrice des 68 rubriques](combat-guide/MATRICE.md),
 les [associations aux données réelles](combat-guide/associations.json), les
 [campagnes et Dénouements](combat-guide/CAMPAGNE_ET_DENOUEMENTS.md), les
 [fiches de production](combat-guide/FICHES_ET_VALIDATION.md) et un
 [bilan calculé](combat-guide/ETAT_DES_LIEUX.md). Les sections historiques décrivent
 la conception v0.7 ; les états actuels et écarts sont explicités dans cette
-intégration, sans compter les propositions comme fonctionnalités livrées.
+intégration, sans compter les propositions comme fonctionnalités livrées. Les
+40 cas de recette d’équipes, d’entités et de droits restent distincts des tests
+documentaires. Le modèle de verrouillage sépare découverte, droit acquis,
+installation et compatibilité de mode ; une image absente reste un défaut
+technique, sans faux cadenas de progression.
 
 **Complément de corpus du 19 novembre 2026 :** la [bible des œuvres Silent Hill](BIBLE_CORPUS_SILENT_HILL.md)
 recense les jeux, éditions, récits dérivés et programmes officiels, avec leur

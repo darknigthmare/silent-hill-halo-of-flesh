@@ -1,8 +1,17 @@
 # Vérification de l’intégration aux classeurs
 
-## Actualisation — vague 30
+## Actualisation — extensions 01 et 02, 27 novembre 2026
 
-Le [rapport de la vague 30](../../production/vague30/README.md) et la [validation des classeurs](../../production/vague30/workbooks/validation.json) portent l’état courant : **445 associations**, dont **11 projectiles**, et **700 chemins d’image présents**. Les deux feuilles de guide sont rafraîchies dans chaque XLSX ; les **13 feuilles historiques, 252 822 cellules et 87 formules** sont conservées. Les contrôles de cette mise à jour, ses empreintes et ses rendus sont séparés des preuves initiales ci-dessous.
+Le [rapport des extensions](extensions/README.md) décrit l’ajout des rubriques
+30–67 à la feuille **Guide combat** et le rafraîchissement des associations.
+Les 30 rubriques et les dix décisions de modules gardent leur emplacement.
+La table supplémentaire est ajoutée aux deux classeurs existants ; aucune
+feuille historique n’est remplacée. Les vérifications et empreintes de cette
+actualisation sont séparées des rapports datés qui suivent.
+
+## État historique — vague 30
+
+Le [rapport de la vague 30](../../production/vague30/README.md) et la [validation des classeurs](../../production/vague30/workbooks/validation.json) portent l’état de ce lot : **445 associations**, dont **11 projectiles**, et **700 chemins d’image présents**. Les deux feuilles de guide sont rafraîchies dans chaque XLSX ; les **13 feuilles historiques, 252 822 cellules et 87 formules** sont conservées. Les contrôles de cette mise à jour, ses empreintes et ses rendus sont séparés des preuves initiales ci-dessous.
 
 ## Rapport historique de l’intégration initiale
 

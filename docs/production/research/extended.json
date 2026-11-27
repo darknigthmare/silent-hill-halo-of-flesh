@@ -2229,6 +2229,24 @@
       "consultedAt": "2026-11-25",
       "accessStatus": "page-consultee",
       "caveat": "Plans Konami reproduits avec traduction communautaire ; le versus fixe une scène et ne reproduit pas les conditions d’embranchement."
+    },
+    {
+      "consultedAt": "2026-11-27",
+      "type": "sequence-native-original-identifie",
+      "caveat": "Référence de lieu et de phase ; caméra versus adaptée. Build, région et réglages source non établis ; aucune certification 1:1.",
+      "id": "V31_ORIGINS_CEDAR_MIRROR_SEQUENCE",
+      "url": "https://www.youtube.com/watch?v=bPFHA7qshe0",
+      "title": "Silent Hill Origins — compilation des miroirs, Female Treatment 2F",
+      "scope": "Chapitre0:00 Female Treatment2F ; séquence avant transition, copie publique inspectée aux12s/18s. PlateformePSP/PS2, build et région non établis."
+    },
+    {
+      "consultedAt": "2026-11-27",
+      "type": "sequence-native-copie-inspectee",
+      "caveat": "Référence de lieu et de phase ; caméra versus adaptée. Build, région et réglages source non établis ; aucune certification 1:1.",
+      "id": "V31_ORIGINS_CEDAR_MIRROR_COPY",
+      "url": "https://rutube.ru/video/4302e74998f2355b51e8c4be5f7dbd72/",
+      "title": "Copie publique de la séquence Origins — Female Treatment 2F",
+      "scope": "Vues640×360 effectivement extraites et inspectées à12s/18s avant miroir : deux lits métalliques, rideaux écrus, carrelage, double lavabo et miroir horizontal ; reflet verdâtre de la phase opposée."
     }
   ],
   "fighters": [
@@ -19749,12 +19767,14 @@
       "name": "CEDAR GROVE SANITARIUM",
       "source": "origins",
       "baseId": null,
-      "locationStatus": "lieu-documente-secondaire",
-      "locationNote": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée.",
+      "locationStatus": "lieu-documente-vues-natives-phase-avant-miroir",
+      "locationNote": "Female Treatment 2F du Sanitarium, pièce physique normale avant la traversée du miroir. Vues natives à12s et18s : deux lits métalliques étroits, rideaux écrus, murs brun-gris, carrelage usé, double lavabo et miroir horizontal au reflet verdâtre. Ni couloir entier ni chambre de Momma. La caméra frontale et la largeur de sol sont adaptées au versus ; aucune transition automatique, animation source, géométrie ou fidélité 1:1 certifiée. Plateforme, build et région des vues non établis.",
       "referenceIds": [
         "EXT03",
         "EXT02",
-        "EXT_ORIGINS_THEATER_GUIDE_20261026"
+        "EXT_ORIGINS_THEATER_GUIDE_20261026",
+        "V31_ORIGINS_CEDAR_MIRROR_SEQUENCE",
+        "V31_ORIGINS_CEDAR_MIRROR_COPY"
       ],
       "animations": [
         {
@@ -19806,7 +19826,8 @@
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
         "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
-        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production.",
+        "La couleur du reflet ne transforme pas la pièce physique en Otherworld ; aucun mirrorTurn ni danger ajouté."
       ]
     },
     {

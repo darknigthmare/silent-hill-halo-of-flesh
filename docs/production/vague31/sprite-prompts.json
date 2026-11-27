@@ -1,0 +1,39 @@
+{
+  "wave": 31,
+  "asOf": "2026-11-27",
+  "engine": "built-in imagegen",
+  "fidelity": "candidate-not-certified",
+  "jobs": [
+    {
+      "id": "sh4_man_with_the_coat_067",
+      "source": "sh4",
+      "pose": "neutralSpecial",
+      "prompt": "Use case: identity-preserve. Create ONE separate high-resolution 2D game character sprite, full body, genuine transparent RGBA background, for Silent Hill: Halo of Flesh. Image 1 is the existing combat sprite to preserve in identity, textured rendering style, blue-grey coat, trousers, shoes, hairstyle, face and proportions. Image 2 is the original Silent Hill 4 Man with the Coat model reference, authoritative for his clothing and the TWO pistols. Change ONLY the pose into a right-facing side-on pistol firing stance: front arm extended horizontally toward an off-screen enemy on the RIGHT, holding one compact pistol in a clear side view; other arm lowered holding his second pistol separately beside his thigh. Natural planted staggered feet, coat hangs downward. Show both hands and exactly two pistols. Both shoes fully visible. Reconstruct a restrained playable side-view pose, not a source screenshot. One subject only. No enemy, no scene, no muzzle flash or bullet or magical aura. No pedestal, no text, no border, no grey/black backdrop, no glow or smoke. Keep a generous transparent margin on all sides including the muzzle and shoes. Detailed realistic raster game art matching the existing sprite. No new costume or equipment.",
+      "referenceSources": [
+        "assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+        "review-reference:sh4_man_with_coat.png"
+      ]
+    },
+    {
+      "id": "sh2_eddie_dombrowski_032",
+      "source": "sh2",
+      "pose": "neutralSpecial",
+      "prompt": "Use case: identity-preserve. Create ONE independent full-body side-view 2D combat sprite on a real transparent RGBA background. Subject Eddie Dombrowski from the ORIGINAL Silent Hill 2 (2001). Image 1 is the existing game sprite: preserve its recognizable build, adult face, backwards navy cap, blonde hair, pale blue/off-white striped polo, shorts, socks, worn white sneakers, wristbands, long dark revolver, realistic raster detail. Images 2 and 3 are the original model and gameplay references for identity and clothing, not the 2024 remake. Change ONLY the combat pose: he aims his revolver horizontally to the RIGHT at an off-screen opponent, arms raised to upper-chest height in a tense firing stance, slight forward lean, knees bent, feet separated and grounded. Exactly one revolver. This is a fixed versus action pose based on his source gun use, not an animated sequence. Full body and entire muzzle visible with transparent margin. Preserve his original proportions, clothing and cap direction. No opponent, no blood or impact, no muzzle flash, no colored projectile, no scenery, no text, no border, no halo, no shadowy background. One character, one image.",
+      "referenceSources": [
+        "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+        "review-reference:sh2_eddie_art.jpg",
+        "review-reference:sh2_eddie_boss.jpg"
+      ]
+    },
+    {
+      "id": "sh3_nurse_revolver_044",
+      "source": "sh3",
+      "pose": "neutralLight",
+      "prompt": "Use case: identity-preserve. ONE full-body transparent-background sprite for a 2D fighting game, facing RIGHT. Image 1 is the existing side-view sprite of the adult Nurse with revolver from Silent Hill 3 (2003), preserve its identity and realistic raster art, dark bob haircut covering the eyes, nurse cap with thin green band, aged cream uniform, belt, gloves, shoes, proportions and exact revolver. Image 2 is the original creature render, authoritative for design and equipment. Change only the pose into a short pistol-butt melee strike: the right hand grips the same revolver firmly with elbow bent and forearm extending slightly toward the opponent, the butt/grip area leads the close strike toward screen right while the barrel angles up and away from the target; left arm drawn back for balance. Hunched source posture and a small planted forward step, both legs and shoes fully visible. One character only, no target, no impact, no muzzle flash, no projectile, no blood effects, no new injury. Do not add a pipe, a second weapon, or features from nurses in other games/films. Keep the entire figure and weapon inside a generous transparent margin. Genuine RGBA alpha, no painted backdrop, no glow, no fog, no text, no cropped body, no extra limbs. This is one fixed versus pose, not a spritesheet.",
+      "referenceSources": [
+        "assets/sprites/sh3_nurse_revolver_044.a371cb22efc9.png",
+        "review-reference:sh3_nurse_art.jpg"
+      ]
+    }
+  ]
+}

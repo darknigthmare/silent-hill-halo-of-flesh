@@ -1,12 +1,39 @@
 {
-  "schemaVersion": 1,
-  "asOf": "2026-11-25",
-  "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "schemaVersion": 2,
+  "asOf": "2026-11-27",
+  "baselineCommit": "f01622bf097fb980f354f7f0fb55df3685f4e92a",
   "sourceFile": "docs/combat-guide/source/Combat_Games_Guide_General_v1.0.txt",
   "sourceSHA256": "4844584616072ac0d52d37c2fab4365e1ec489240f17a721ee216e223b0355b7",
-  "note": "Associations de conception et inventaire observé. Ce générateur contrôle les liens ; les audits PNG et revues de la vague30 sont documentés séparément. Aucune fidélité 1:1 déduite de la présence d’un fichier.",
+  "sourceFiles": [
+    {
+      "path": "docs/combat-guide/source/Combat_Games_Guide_General_v1.0.txt",
+      "sha256": "4844584616072ac0d52d37c2fab4365e1ec489240f17a721ee216e223b0355b7",
+      "firstSection": 0,
+      "lastSection": 29
+    },
+    {
+      "path": "docs/combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt",
+      "sha256": "330fb7485a7a52b2a20f855646c940aaac0fcd9510032bc84b2e17c518edd25f",
+      "firstSection": 30,
+      "lastSection": 49
+    },
+    {
+      "path": "docs/combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt",
+      "sha256": "08b57ea542e83c487fef3276997a612d4657f2ee9ed4f8e46b0bf65a2778038b",
+      "firstSection": 50,
+      "lastSection": 67
+    }
+  ],
+  "note": "Associations de conception et inventaire observé. Les trois textes sources sont vérifiés par leur empreinte. Les scénarios des extensions restent une recette à exécuter, distincte des tests de structure documentaire. Les audits PNG et revues jouées sont consignés par lot. Aucune fidélité 1:1 déduite de la présence d’un fichier.",
   "counts": {
-    "guideSections": 30,
+    "guideSections": 68,
+    "baseGuideSections": 30,
+    "extensionGuideSections": 38,
+    "guideSourceFiles": 3,
+    "extensionAcceptanceScenarios": 40,
+    "extensionAcceptanceScenariosExecuted": 0,
+    "extensionExampleRecords": 48,
+    "extensionTemplateFamilies": 16,
     "moduleDecisions": 10,
     "associations": 445,
     "associationsByKind": {
@@ -51,20 +78,20 @@
     "stageFinishersAuthored": 7,
     "profilesWithPortraitCandidate": 204,
     "profilesWithSideViewCandidate": 190,
-    "stagesWithBitmapCandidate": 93,
+    "stagesWithBitmapCandidate": 95,
     "projectileBitmapDefinitions": 11,
     "activeProjectileMoveSlots": 86,
     "activeProjectileMoveSlotsWithBitmap": 31,
     "activeProjectileMoveSlotsWithoutBitmap": 55,
-    "stagesWithReferenceTracks": 82,
-    "referenceTracks": 163,
+    "stagesWithReferenceTracks": 81,
+    "referenceTracks": 162,
     "stagesWithInteractions": 22,
     "interactions": 26,
     "stagesWithAllowedHazards": 8,
     "stagesWithOtherworldShift": 4,
     "crossStageRuntimeLinks": 0,
     "newSpritesProducedThisPass": 3,
-    "newStaticImagesProducedThisPass": 14,
+    "newStaticImagesProducedThisPass": 7,
     "newAnimationsProducedThisPass": 0
   },
   "definitions": {
@@ -74,22 +101,25 @@
     "playableStories": "combatEnabled vrai ET file d’adversaires non vide ; les dossiers n’ajoutent aucun combat.",
     "authoredFinishers": "Chorégraphies définies dans lore-cinematics ; pas un compte de séquences bitmap finalisées.",
     "visualCandidates": "Registres et chemins présents ; les audits et revues artistiques restent attribués à leurs rapports et ne certifient pas 1:1.",
-    "stageTransitions": "Une bascule Otherworld garde le même ID de stage ; elle ne compte pas comme une liaison entre deux arènes."
+    "stageTransitions": "Une bascule Otherworld garde le même ID de stage ; elle ne compte pas comme une liaison entre deux arènes.",
+    "guideSections": "30 rubriques du guide général et 38 rubriques des deux extensions. Leur association est documentaire.",
+    "extensionAcceptanceScenarios": "40 cas de recette conçus pour les extensions. Un contrôle du JSON ne vaut pas exécution de ces cas dans le jeu."
   },
   "currentPass": {
-    "id": "vague30",
-    "lore": "two-scene-phases-corrected",
-    "design": "guide-associated",
-    "assets": "14-static-candidates",
-    "staticImages": 14,
+    "id": "vague31",
+    "lore": "edition-and-role-contracts-preserved",
+    "design": "guide-and-two-extensions-associated",
+    "assets": "static-candidates-produced-with-separate-review",
+    "staticImages": 7,
     "staticCharacterPoses": 3,
-    "staticProjectileImages": 3,
-    "staticStageLayers": 6,
-    "individualStoryIllustrations": 2,
+    "staticProjectileImages": 0,
+    "staticStageLayers": 4,
+    "individualStoryIllustrations": 0,
     "newAnimations": 0,
-    "integration": "runtime-artwork-and-bible",
-    "validation": "see-docs/production/vague30/README.md",
-    "workbooks": "refresh-status-in-wave30-report",
+    "integration": "bible-extensions-and-content-associations",
+    "validation": "documentary-validation-separate-from-runtime-acceptance",
+    "workbooks": "existing-workbooks-updated-with-68-guide-sections",
+    "summary": "Les deux extensions sont associées aux contenus du jeu : 68 rubriques, 48 fiches d’exemple et 40 scénarios de recette conçus. La vague 31 produit sept PNG candidats : trois poses supplémentaires pour des profils existants et quatre plans pour Cedar Grove et Wish House. Aucun nouveau personnage, portrait, projectile, récit illustré ou cycle animé. Les nouveaux modes d’équipe, les droits de contenu et le service d’abonnement restent à développer ; leur description n’active aucun service.",
     "publication": "recorded-separately-after-push"
   }
 }

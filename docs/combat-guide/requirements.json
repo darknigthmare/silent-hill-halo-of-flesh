@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "project": "Silent Hill: Halo of Flesh",
-  "asOf": "2026-11-25",
-  "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "asOf": "2026-11-27",
+  "baselineCommit": "f01622bf097fb980f354f7f0fb55df3685f4e92a",
   "sourceFile": "docs/combat-guide/source/Combat_Games_Guide_General_v1.0.txt",
   "productionPhase": "Sprites de base, décors, projectiles et illustrations fixes ; nouvelles animations différées.",
-  "scope": "Poursuite de la base fixe et raccords aux associations de la bible. Les audits, revues de jeu, états de classeurs et publications sont consignés séparément ; présence et fidélité ne sont pas confondues.",
+  "scope": "Poursuite de la base fixe et intégration des deux extensions dans les associations de la bible. Les 30 rubriques générales restent ici ; les 38 nouvelles rubriques sont dans extensions/requirements.json. La vue résolue et les classeurs combinent les deux sources. Les audits, revues de jeu et publications restent consignés séparément.",
   "decisions": {
     "retained": "Retenue dans la cible du projet ; ne signifie pas réalisée.",
     "deferred": "Différée avec dépendances visibles.",
@@ -840,10 +840,16 @@
       "name": "Tag et assistances",
       "decision": "deferred",
       "priority": "P2",
-      "reason": "Le duel et ses ressources sont prioritaires ; équipes simultanées et interactions demandent une architecture dédiée.",
+      "reason": "La conception des assistances, tags, supers et Dénouements d’équipe est retenue dans l’extension 01. Leur développement reste différé : ressources atomiques, réservation du partenaire, continuités et recette complète sont requis avant activation.",
       "sections": [
         "12",
-        "16"
+        "16",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38"
       ]
     },
     {
@@ -880,13 +886,17 @@
     },
     {
       "id": "SHCG-M08",
-      "name": "Avatar RPG et hub exploratoire",
-      "decision": "not-applicable",
+      "name": "Archives exploratoires ; avatar RPG hors périmètre",
+      "decision": "deferred",
       "priority": "P2",
-      "reason": "Hors promesse actuelle centrée sur les manifestations et le combat latéral ; le guide n'impose pas World Tour.",
+      "reason": "L’extension 01 retient un espace de collection original compatible et l’extension 02 précise ses récompenses et droits. Les archives sont conçues mais non développées. Cette évolution ne crée ni avatar RPG, ni lieu canonique inventé, ni boutique active.",
       "sections": [
         "09",
-        "12"
+        "12",
+        "43",
+        "55",
+        "56",
+        "57"
       ]
     },
     {
@@ -913,18 +923,19 @@
     }
   ],
   "currentPass": {
-    "id": "vague30",
-    "lore": "two-scene-phases-corrected",
-    "design": "guide-associated",
-    "assets": "14-static-candidates",
-    "staticImages": 14,
+    "id": "vague31",
+    "lore": "edition-and-role-contracts-preserved",
+    "design": "guide-and-two-extensions-associated",
+    "assets": "static-candidates-produced-with-separate-review",
+    "staticImages": 7,
     "staticCharacterPoses": 3,
-    "staticProjectileImages": 3,
-    "staticStageLayers": 6,
-    "individualStoryIllustrations": 2,
+    "staticProjectileImages": 0,
+    "staticStageLayers": 4,
+    "individualStoryIllustrations": 0,
     "newAnimations": 0,
-    "integration": "runtime-artwork-and-bible",
-    "validation": "see-docs/production/vague30/README.md",
-    "workbooks": "refresh-status-in-wave30-report"
+    "integration": "bible-extensions-and-content-associations",
+    "validation": "documentary-validation-separate-from-runtime-acceptance",
+    "workbooks": "existing-workbooks-updated-with-68-guide-sections",
+    "summary": "Les deux extensions sont associées aux contenus du jeu : 68 rubriques, 48 fiches d’exemple et 40 scénarios de recette conçus. La vague 31 produit sept PNG candidats : trois poses supplémentaires pour des profils existants et quatre plans pour Cedar Grove et Wish House. Aucun nouveau personnage, portrait, projectile, récit illustré ou cycle animé. Les nouveaux modes d’équipe, les droits de contenu et le service d’abonnement restent à développer ; leur description n’active aucun service."
   }
 }

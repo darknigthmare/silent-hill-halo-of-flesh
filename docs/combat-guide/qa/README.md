@@ -1,8 +1,16 @@
 # Vérification du guide de combat intégré
 
-## Actualisation — vague 30
+## Actualisation — extensions 01 et 02, 27 novembre 2026
 
-Le [rapport de la vague 30](../../production/vague30/README.md) et la [validation des classeurs](../../production/vague30/workbooks/validation.json) portent l’état courant : **445 associations**, dont **11 projectiles**, et **700 chemins d’image présents**. Les deux feuilles de guide sont rafraîchies dans chaque XLSX ; les **13 feuilles historiques, 252 822 cellules et 87 formules** sont conservées. Les contrôles de cette mise à jour, ses empreintes et ses rendus sont séparés des preuves initiales ci-dessous.
+Le [rapport des extensions](extensions/README.md) suit les **68 rubriques** du
+guide général et des deux extensions, les **40 scénarios de recette spécifiés**
+et la mise à jour des deux classeurs. La recette documentaire et les tests de
+maintenance ne sont pas comptés comme l’exécution de ces scénarios dans le jeu.
+Les effectifs de production courants restent dans l’[état calculé](../ETAT_DES_LIEUX.md).
+
+## État historique — vague 30
+
+Le [rapport de la vague 30](../../production/vague30/README.md) et la [validation des classeurs](../../production/vague30/workbooks/validation.json) portent l’état de ce lot : **445 associations**, dont **11 projectiles**, et **700 chemins d’image présents**. Les deux feuilles de guide sont rafraîchies dans chaque XLSX ; les **13 feuilles historiques, 252 822 cellules et 87 formules** sont conservées. Les contrôles de cette mise à jour, ses empreintes et ses rendus sont séparés des preuves initiales ci-dessous.
 
 ## Rapport historique de l’intégration initiale
 

@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-27",
+  "scope": "Deux scènes déterminées, captures réellement inspectées avant génération. Les titres et phases sont identifiés ; les plateformes, régions, builds et réglages des captures ne sont pas établis.",
+  "sources": [
+    {
+      "id": "V31_SH4_WISH_GUIDE_P46",
+      "title": "Silent Hill 4: The Room — Guide officiel Piggyback, extrait français",
+      "url": "https://www.piggyback.com/fr/wp-content/uploads/sites/3/2020/04/SH4_F_SamplePages.pdf",
+      "type": "official-publisher-guide",
+      "game": "Silent Hill 4: The Room",
+      "source": "sh4",
+      "printedPage": 46,
+      "pdfPage": 5,
+      "figure": "08",
+      "inspected": true,
+      "scene": "Wish House, intérieur intact, premier passage du Monde de la forêt",
+      "establishes": [
+        "Localisation de la maison au premier passage",
+        "Coin intérieur où se trouve le fragment de texte sacré",
+        "Mobilier drapé et relation avec la porte suivante"
+      ],
+      "limitation": "Extrait de guide officiel observé ; aucune mesure métrique de la salle ni certification de caméra 1:1.",
+      "downloadedSha256": "0986aa0ef3c49057e176b539e20cfeae880ce3e25d8c7884b0388abf50341fab",
+      "completePdfIncludedInRepository": false
+    },
+    {
+      "id": "V31_SH4_WISH_INTERIOR_SCRIPTURE",
+      "title": "Capture native — Holy Scripture Scrap A, première visite",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/03_memo_05_holy_scripture_scrap_a.jpg",
+      "contextUrl": "https://www.silenthillmemories.net/sh4/walkthrough_03_forest_world_en.htm",
+      "existingContextReferenceId": "CL_SH4_03_FOREST_WORLD",
+      "type": "gameplay-screenshot",
+      "game": "Silent Hill 4: The Room",
+      "source": "sh4",
+      "width": 1920,
+      "height": 1080,
+      "inspected": true,
+      "localEvidence": "references/sh4_wish_house_interior.jpg",
+      "sha256": "ef86294973746260f1891a73dd86e0c17d1bc0de72ff675858ffc6359f486fc6",
+      "observed": [
+        "Meuble bas incliné recouvert d’un tapis rouge bordé",
+        "Livres et feuilles au sol",
+        "Plancher large",
+        "Lambris foncé et murs brun-gris",
+        "Suspension arrondie opaline"
+      ],
+      "platformBuildRegionSettings": "non établis"
+    },
+    {
+      "id": "V31_SH4_WISH_DOOR",
+      "title": "Capture native — Source Placard, première visite",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/03_source_placard.jpg",
+      "contextUrl": "https://www.silenthillmemories.net/sh4/walkthrough_03_forest_world_en.htm",
+      "existingContextReferenceId": "CL_SH4_03_FOREST_WORLD",
+      "type": "gameplay-screenshot",
+      "game": "Silent Hill 4: The Room",
+      "source": "sh4",
+      "width": 1920,
+      "height": 1080,
+      "inspected": true,
+      "localEvidence": "references/sh4_wish_house_placard_door.jpg",
+      "sha256": "bd85560ca34bddfb8ab5d95db3ab437ccfd6971f4e667c312d2b93083196baac",
+      "observed": [
+        "Porte rectangulaire et moulures du même intérieur",
+        "Meuble au tapis visible à gauche",
+        "Relation entre les deux coins de la pièce"
+      ],
+      "platformBuildRegionSettings": "non établis"
+    },
+    {
+      "id": "V31_ORIGINS_CEDAR_GUIDE_P47",
+      "title": "Silent Hill: Origins — Official Strategy Guide, page imprimée 47",
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf",
+      "type": "official-guide-rehosted",
+      "game": "Silent Hill: Origins",
+      "source": "origins",
+      "printedPage": 47,
+      "pdfPage": 48,
+      "inspected": true,
+      "section": "Hydro-Key Therapy",
+      "establishes": [
+        "Accès à Female Treatment et miroir au-dessus du lavabo",
+        "Différence entre Hydrotherapy et Female Treatment",
+        "Passage au monde altéré"
+      ],
+      "limitation": "L’image de Female Treatment de cette page montre déjà le monde altéré. Elle sert à situer la pièce ; elle n’est pas une référence visuelle du fond normal généré. Les images de baignoire sont Hydrotherapy et sont exclues.",
+      "downloadedSha256": "f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80",
+      "completePdfIncludedInRepository": false
+    },
+    {
+      "id": "V31_ORIGINS_CEDAR_MIRROR_SEQUENCE",
+      "title": "Silent Hill: Origins - Otherworld Shifts at Cedar Grove Sanitarium",
+      "url": "https://www.youtube.com/watch?v=bPFHA7qshe0",
+      "type": "original-public-gameplay-video",
+      "uploader": "Midnight Otherworld",
+      "game": "Silent Hill: Origins",
+      "source": "origins",
+      "chapter": {
+        "timecode": "00:00",
+        "label": "Female Treatment 2F"
+      },
+      "inspected": "Titre, description, chapitre et storyboard public inspectés ; captures détaillées extraites de la copie publique identifiée ci-dessous.",
+      "nativeFramesInspectedSeconds": [
+        10,
+        12,
+        15,
+        18,
+        20
+      ],
+      "excludedChapter": {
+        "timecode": "08:04",
+        "label": "Female Treatment 2F (Before Boss)"
+      },
+      "phase": "Pièce normale avant que Travis utilise le miroir ; reflet verdâtre conservé dans la surface du miroir seulement.",
+      "platformBuildRegionSettings": "non établis ; ne pas étiqueter PSP ou PS2 sans preuve supplémentaire"
+    },
+    {
+      "id": "V31_ORIGINS_CEDAR_MIRROR_COPY",
+      "title": "Copie publique de la séquence Otherworld Shifts at Cedar Grove Sanitarium",
+      "url": "https://rutube.ru/video/4302e74998f2355b51e8c4be5f7dbd72/",
+      "originalReferenceId": "V31_ORIGINS_CEDAR_MIRROR_SEQUENCE",
+      "type": "public-gameplay-video-repost",
+      "game": "Silent Hill: Origins",
+      "source": "origins",
+      "inspected": true,
+      "decodedClipSeconds": [
+        0,
+        26.665
+      ],
+      "decodedResolution": [
+        640,
+        360
+      ],
+      "clipSha256": "385e708286b77456fb2c7834ef8973463989baaeb719dde253de21348ff94c21",
+      "extraction": "ffmpeg, extraction d’une seule image à chaque temps indiqué, taille native du flux public 360p, sans recadrage ni retouche. Aucun montage utilisé comme plan de jeu.",
+      "frames": [
+        {
+          "seconds": 10,
+          "timecode": "00:10",
+          "localEvidence": "references/cedar_female_treatment_10s.png",
+          "sha256": "9d8d83b58a0cc5f0f06e24b167738492269110c8268b44b745325b00319c254c",
+          "usedBy": [
+            "cedar_grove.bg-female-treatment.png"
+          ],
+          "observed": "Carrelage, lits, double lavabo."
+        },
+        {
+          "seconds": 12,
+          "timecode": "00:12",
+          "localEvidence": "references/cedar_female_treatment_12s.png",
+          "sha256": "4e744beab27e0e5f893e1ed7dd74615c15a5d622ec2b0b806ed26e2136af731d",
+          "usedBy": [],
+          "observed": "Disposition de deux lits, rideaux et affiches. Inspection complémentaire."
+        },
+        {
+          "seconds": 15,
+          "timecode": "00:15",
+          "localEvidence": "references/cedar_female_treatment_15s.png",
+          "sha256": "b99cd19c31a171988c96c4ff80b8d44cf2b6fc3f3b46b7fc01d60bb567adc177",
+          "usedBy": [
+            "cedar_grove.bg-female-treatment.png",
+            "cedar_grove.near-privacy-curtain.png"
+          ],
+          "observed": "Deux lits métalliques étroits, matelas ternes, rideaux écrus, murs, carrelage."
+        },
+        {
+          "seconds": 18,
+          "timecode": "00:18",
+          "localEvidence": "references/cedar_female_treatment_18s.png",
+          "sha256": "cb57c52c1e111b9498c1c9640a4c2119f3aecd2cee7a571e6fb50a1f4645a479",
+          "usedBy": [
+            "cedar_grove.bg-female-treatment.png"
+          ],
+          "observed": "Miroir horizontal, reflet verdâtre, deux robinets, porte moulurée à droite."
+        },
+        {
+          "seconds": 20,
+          "timecode": "00:20",
+          "localEvidence": "references/cedar_female_treatment_20s.png",
+          "sha256": "b286559968eb01945df4e0370dc846742a19a6bf70b57dcc3e132f1bae3877e9",
+          "usedBy": [],
+          "observed": "Même miroir avant transition ; Travis et reflet humain exclus de la génération."
+        }
+      ],
+      "limitations": [
+        "Réencodage public de 640×360 ; microtextures et inscriptions non résolues.",
+        "Plateforme, région, build, filtre et réglages d’affichage non établis.",
+        "La séquence tardive avec Helen/Momma n’est pas utilisée."
+      ]
+    }
+  ]
+}

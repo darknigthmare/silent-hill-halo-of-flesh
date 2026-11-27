@@ -6047,5 +6047,142 @@ export const STAGE_BITMAPS = {
       "État visuel Otherworld fixe, sans transition, monstres, projectiles, eau montante ou danger neuf. Un fond opaque et un jambage rapproché avec alpha, chacun fixe et indépendant.",
       "geometry.ceiling=false conserve le contrat antérieur, car les motifs procéduraux cells/chains/watchtower/bars/lights ne fournissaient aucun plafond autorisé. Le plafond peint n’accorde aucune prise ni Dénouement supplémentaire."
     ]
+  },
+  "cedar_grove": {
+    "stageId": "cedar_grove",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "female-treatment-mirror",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT03",
+      "V31_ORIGINS_CEDAR_MIRROR_SEQUENCE",
+      "V31_ORIGINS_CEDAR_MIRROR_COPY"
+    ],
+    "layers": [
+      {
+        "id": "bg-female-treatment",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/cedar_grove.vague31.bg-female-treatment.59e0c4138ef4.png",
+            "sha256": "59e0c4138ef4bb886172820d3102aebf85be5b7a2c2a9ac3c8eef7942c2745ab",
+            "bytes": 2841635,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-privacy-curtain",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/cedar_grove.vague31.near-privacy-curtain.f61def0b802a.png",
+            "sha256": "f61def0b802a0c585c91f073204ec7a19511368a683090c05e8fad5d33cb2d91",
+            "bytes": 278390,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Female Treatment 2F, pièce normale avant le miroir, documentée par des vues natives à 12 s et 18 s. La phase verdâtre reste confinée au reflet.",
+      "Le fond et le rideau de premier plan sont deux PNG fixes indépendants, sans personnage ou mouvement ajouté. Caméra frontale et largeur de sol adaptées au versus ; plateforme et build source non établis.",
+      "geometry.ceiling=false préserve le contrat antérieur : les anciennes couches procédurales ne fournissaient aucun appui. Le plafond peint n’autorise ni prise, ni Dénouement ou danger."
+    ]
+  },
+  "wish_house": {
+    "stageId": "wish_house",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "sh4-first-visit-scripture-corner",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH4_03_FOREST_WORLD",
+      "V31_SH4_WISH_GUIDE_P46",
+      "V31_SH4_WISH_INTERIOR_SCRIPTURE",
+      "V31_SH4_WISH_DOOR"
+    ],
+    "layers": [
+      {
+        "id": "bg-first-visit-scripture",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/wish_house.vague31.bg-first-visit-scripture.8f7ee32e602f.png",
+            "sha256": "8f7ee32e602fb37e95c0de23779b9468e356cb1182e5bc1eb850d5391f40c5bd",
+            "bytes": 2549969,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-closed-book",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/wish_house.vague31.near-closed-book.d6120699d81a.png",
+            "sha256": "d6120699d81ae8a19dcc2559a362b36f8f66d49d56a7e73c07ff4ae545008e86",
+            "bytes": 108834,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Intérieur intact du premier passage de Forest World, avant incendie : meuble drapé, livres, boiseries, lampe et porte documentés par le guide officiel et deux captures natives.",
+      "Fond et livre fermé de premier plan indépendants, sans texte lisible, poupée, fosse, flamme, adversaire ou pouvoir inventé. Caméra frontale et largeur de sol adaptées au versus ; build source non établi.",
+      "geometry.ceiling=false : résoudre la phase du stage auparavant bloqué et peindre un plafond ne crée aucun appui de Dénouement. Règles de terrain neutres ; aucun effet ou événement offensif activé."
+    ]
   }
 };

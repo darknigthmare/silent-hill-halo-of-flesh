@@ -1,10 +1,12 @@
 # Guide de combat intégré — Silent Hill: Halo of Flesh
 
-**Révision du 25 novembre 2026.** Référence commune :
-[Combat Games, version 1.0](combat-guide/source/Combat_Games_Guide_General_v1.0.txt).
-Référence de comparaison : `9c426d7e230eaec464203acb9b43b63a420acf30`. Inventaire courant régénéré pour la vague30.
+**Révision du 27 novembre 2026.** Références communes :
+[Combat Games, version 1.0](combat-guide/source/Combat_Games_Guide_General_v1.0.txt),
+[extension 01](combat-guide/source/Combat_Games_Extension_01_Tag_Taunts_Bonus_v1.0.txt)
+et [extension 02](combat-guide/source/Combat_Games_Extension_02_Slots_Verrouilles_Deblocages_Abonnes_v1.0.txt).
+Référence de comparaison : `f01622bf097fb980f354f7f0fb55df3685f4e92a`.
 
-Ce chapitre applique les **30 rubriques** du guide au jeu existant. Il complète
+Ce chapitre relie les **68 rubriques** des trois textes au jeu existant. Il complète
 le [GDD](GDD_FR.md), la [bible du corpus](BIBLE_CORPUS_SILENT_HILL.md) et les deux
 classeurs de production. Les règles de référence, les identifiants et les
 restrictions de rôle du moteur restent la base de chaque association.
@@ -13,9 +15,12 @@ restrictions de rôle du moteur restent la base de chaque association.
 
 | Support | Usage |
 | --- | --- |
-| [Matrice des 30 rubriques](combat-guide/MATRICE.md) | Adaptation Silent Hill, état constaté, fichiers concernés, prochaine action et critères de validation. |
-| [Exigences structurées](combat-guide/requirements.json) | Source des 30 rubriques et de dix décisions sur les modules ; alimente les feuilles « Guide combat ». |
-| [Associations structurées](combat-guide/associations.json) | 445 entrées reliées : profils, lieux, Chroniques, œuvres et projectiles ; actions et Dénouements accessibles sous leur propriétaire exact. |
+| [Matrice des 68 rubriques](combat-guide/MATRICE.md) | Adaptation Silent Hill, état constaté, fichiers concernés, prochaine action et critères de validation. |
+| [Exigences générales](combat-guide/requirements.json) | Les 30 rubriques d’origine et les dix décisions de modules. |
+| [Exigences des extensions](combat-guide/extensions/requirements.json) | 38 rubriques nouvelles et 40 cas de recette conçus ; états de production séparés. |
+| [Vue résolue des exigences](combat-guide/requirements-resolved.json) | Sortie calculée des deux sources JSON, utilisée pour les classeurs. |
+| [Contrats et exemples Silent Hill](combat-guide/extensions/README.md) | Taunts, équipes, fins collectives, bonus, entités, exploration et accès aux contenus. |
+| [Associations structurées](combat-guide/associations.json) | Profils, lieux, Chroniques, œuvres et projectiles ; actions et Dénouements accessibles sous leur propriétaire exact. |
 | [Campagne, récits et Dénouements](combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) | Conception narrative distincte, exemples de récits, scènes fixes, compatibilité des conclusions et écarts de lieux. |
 | [Fiches et validation](combat-guide/FICHES_ET_VALIDATION.md) | Dix modèles A–J raccordés aux schémas existants ; définitions de terminé. |
 | [État des lieux calculé](combat-guide/ETAT_DES_LIEUX.md) | Dénominateurs, couverture observée, limites et prochaines corrections ; données dans [status.json](combat-guide/status.json). |
@@ -23,9 +28,35 @@ restrictions de rôle du moteur restent la base de chaque association.
 | [Classeur de production](production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) | Feuilles historiques conservées, plus Guide combat et Associations guide. |
 | [Classeur Corpus / Stages](production/SILENT_HILL_CORPUS_BIBLE.xlsx) | Même correspondance du guide auprès du corpus éditorial et des lieux. |
 
-Les feuilles **Guide combat** et **Associations guide** des deux classeurs sont rafraîchies pour la vague 30 et concordent avec les JSON courants : 30 rubriques, dix décisions de module et 445 associations. Les 13 feuilles historiques cumulées, 252 822 cellules et 87 formules restent intactes. La [validation des classeurs](production/vague30/workbooks/validation.json) détaille les empreintes, la conservation, les caches recalculés et les rendus ; le grand classeur a été relu au moyen d’une projection temporaire dont les parties retenues sont identiques au fichier final.
+Les feuilles **Guide combat** et **Associations guide** des deux classeurs combinent
+les 30 rubriques générales et les 38 nouvelles rubriques. Les extensions sont
+ajoutées sous les tables existantes, sans déplacer les 30 premières lignes ni
+les dix décisions de modules. Les feuilles historiques restent conservées.
+Les contrôles, empreintes et rendus de cette mise à jour sont consignés dans
+le [rapport des extensions](combat-guide/qa/extensions/README.md).
 
-### Production fixe — vague30
+### Les deux extensions
+
+L’extension 01 précise les cycles complets de taunt, sélection et désélection,
+assistance, tag, super d’équipe et Dénouement collectif. Elle couvre aussi les
+confrontations d’attaques, les entités, les objets placés, les stages bonus et
+un espace exploratoire de collection. Chaque duo conserve ses versions et son
+statut de relation : une équipe de versus ne devient pas une alliance canonique.
+
+L’extension 02 définit quatre axes indépendants : découverte, droits,
+installation et compatibilité. Les secrets peuvent employer un emblème neutre
+avant révélation ; une silhouette reconnaissable n’est pas imposée à un contenu
+secret. Les costumes, arènes et modes ont leurs dépendances propres, et un
+défaut de fichier n’est jamais présenté comme un verrou de progression.
+Les droits permanents et temporaires restent distincts. Les offres et services
+de soutien sont documentés pour une future implémentation, sans activation
+commerciale ou connexion externe par cette passe.
+
+Les **40 cas de recette** sont conçus, avec préconditions et résultats attendus.
+Leur nombre ne représente pas 40 essais joués : les tests du pipeline vérifient
+la cohérence des documents et des associations.
+
+### Production fixe historique — vague30
 
 Quatorze PNG candidats sont ajoutés : trois poses de profils existants, trois effets, six plans pour trois arènes et deux images du récit individuel d’Air Screamer. La couverture calculée de cette passe est de **93 arènes sur 123** et **31 commandes projectile sur 86**, vérifiée par [l’inventaire calculé](production/vague30/inventory.json). Aucun nouveau cycle animé.
 
@@ -33,7 +64,7 @@ Les références de Shimizu sont corrigées vers Residence II pour la salle à m
 
 La régénération se fait avec `npm run bible:guide`, puis le contrôle avec
 `npm run bible:check`. Le générateur vérifie les IDs, les propriétaires, les
-chemins et l'empreinte de la pièce jointe. Les chemins de PNG peuvent être
+chemins et les empreintes des trois textes sources. Les chemins de PNG peuvent être
 contrôlés dans l'index Git sans télécharger le corpus artistique complet ;
 cette vérification ne contrôle ni l'image ni son comportement à l'écran.
 
@@ -58,7 +89,7 @@ duel et cadres de caméra restent des adaptations à documenter.
 | Histoires | Conserver les Récits et les Chroniques ; ajouter une conception de campagne globale autonome. |
 | Conclusions | Employer « Dénouements » dans la bible : Signature, Cauchemar, du lieu. Ces noms sont créés pour le projet. |
 | Stages | Lieu reconnaissable et version précise ; présentation, interactions, dangers et connexions ont des contrats séparés. |
-| Extensions | Tag et coopération différés ; avatar/hub RPG et véhicules génériques hors périmètre actuel ; réseau à décider avant développement. |
+| Extensions | Équipes et archives de collection conçues, développement différé. Avatar RPG et véhicules génériques hors périmètre ; réseau à décider avant développement. |
 
 ## 3. Fidélité, continuités et admission
 

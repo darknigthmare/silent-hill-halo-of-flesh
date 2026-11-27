@@ -1,11 +1,16 @@
 # Bible du corpus — Silent Hill
 
-## Guide de combat associé — 25 novembre 2026
+## Guide et extensions associés — 27 novembre 2026
 
 Le [guide général de combat est intégré au contexte de Halo of Flesh](COMBAT_GAMES_GUIDE_INTEGRATION.md).
-Ses [30 rubriques](combat-guide/MATRICE.md) sont reliées aux profils, aux commandes,
+Ses [68 rubriques](combat-guide/MATRICE.md), issues du guide et des
+[deux extensions](combat-guide/extensions/README.md), sont reliées aux profils, aux commandes,
 aux Dénouements, aux lieux, aux Chroniques et aux registres d'images existants.
-Les deux classeurs contiennent les feuilles **Guide combat** et **Associations guide**, rafraîchies à **445 associations** pour la [vague 30](production/vague30/README.md). La couverture actuelle atteint **93 arènes illustrées sur 123** ; les états datés ci-dessous restent historiques.
+Les deux classeurs conservent les feuilles **Guide combat** et **Associations guide**.
+La table ajoutée sous les sections historiques détaille les 38 rubriques des
+extensions. La [vague 30](production/vague30/README.md) conservait 445 associations
+et 93 arènes illustrées ; les chiffres courants sont calculés dans
+[status.json](combat-guide/status.json). Les états datés ci-dessous restent historiques.
 Le [chapitre narratif](combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) distingue récits
 individuels, Chroniques et campagne globale originale ; les
 [fiches A–J](combat-guide/FICHES_ET_VALIDATION.md) fixent les champs et critères.

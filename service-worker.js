@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave30-story-selection-20261125';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = 'ad2f8817d6fa268bcaaf42f748838529403862643b23cbb0fbc14b9789c04f75';
+const BITMAP_REVISION = '9069da745968091fb10905e4163481e826fd6c23c6acea059eabd80a310eafec';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -271,6 +271,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh2_creeper_025.f562380701ab.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
   "/assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+  "/assets/sprites/sh2_eddie_dombrowski_032.e691299ab326.png",
   "/assets/sprites/sh2_flesh_lip_027.0965d0e5994d.png",
   "/assets/sprites/sh2_flesh_lip_027.15f2f56aa578.png",
   "/assets/sprites/sh2_lying_figure_020.10a8df3e3270.png",
@@ -331,6 +332,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh3_nurse_pipe_043.1ae39140fef8.png",
   "/assets/sprites/sh3_nurse_pipe_043.3f1dfb8fbec6.png",
   "/assets/sprites/sh3_nurse_pipe_043.41849ba63f73.png",
+  "/assets/sprites/sh3_nurse_revolver_044.40ad802a6ec2.png",
   "/assets/sprites/sh3_nurse_revolver_044.9fcda8fd65b8.png",
   "/assets/sprites/sh3_nurse_revolver_044.a371cb22efc9.png",
   "/assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
@@ -373,6 +375,7 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_joseph_schreiber_victim_15.1f89b111bb00.png",
   "/assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
   "/assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
+  "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
   "/assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
   "/assets/sprites/sh4_one_truth_070.4d7d1810724b.png",
   "/assets/sprites/sh4_one_truth_070.fdb890443d18.png",
@@ -511,6 +514,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
   "/assets/stages/building_world.fan-stairwell.15995c474e24.png",
   "/assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png",
+  "/assets/stages/cedar_grove.vague31.bg-female-treatment.59e0c4138ef4.png",
+  "/assets/stages/cedar_grove.vague31.near-privacy-curtain.f61def0b802a.png",
   "/assets/stages/centennial_building.background.c8a81a276b6a.png",
   "/assets/stages/centennial_building.foreground.9ddcc6285a36.png",
   "/assets/stages/central_nightmare.floatstinger-roof.a166c86064f4.png",
@@ -648,6 +653,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
   "/assets/stages/water_prison.surveillance-room.5f3849f04407.png",
   "/assets/stages/water_prison.valve-pedestal.7711109d1342.png",
+  "/assets/stages/wish_house.vague31.bg-first-visit-scripture.8f7ee32e602f.png",
+  "/assets/stages/wish_house.vague31.near-closed-book.d6120699d81a.png",
   "/assets/stages/woodside.clock-room.da94acd4e920.png",
   "/assets/stages/woodside.corridor.c6ac083599d0.png",
   "/assets/stages/woodside.grandfather-clock.bc7fec047ff5.png",

@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "productionWave": "vague31",
+  "producedOn": "2026-11-27",
+  "status": "candidate",
+  "fidelity": "unverified",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "rendering": "Quatre générations indépendantes : un PNG par plan, jamais de planche ou de contact sheet.",
+  "repoBaseCommit": "f01622bf097fb980f354f7f0fb55df3685f4e92a",
+  "sourceManifest": "sources.json",
+  "measurements": "measurements.json",
+  "assetSets": [
+    {
+      "stageId": "wish_house",
+      "source": "sh4",
+      "sceneId": "sh4-first-visit-scripture-corner",
+      "sceneLabel": "Wish House — intérieur intact, premier passage du Monde de la forêt, coin du fragment sacré",
+      "existingReferenceIds": [
+        "CL_SH4_03_FOREST_WORLD"
+      ],
+      "evidenceIds": [
+        "V31_SH4_WISH_GUIDE_P46",
+        "V31_SH4_WISH_INTERIOR_SCRIPTURE",
+        "V31_SH4_WISH_DOOR"
+      ],
+      "phase": "Premier passage avant incendie ; pas de ruines, de fosse ni de rituel de poupée du retour.",
+      "engineIntegrationRecommendation": {
+        "worldState": "fixed-normal",
+        "meaning": "État de rendu stable ; ce libellé technique ne qualifie pas le Monde de la forêt de réalité ordinaire.",
+        "ceiling": false,
+        "allowedHazards": [],
+        "allowedEvents": [],
+        "automaticFinishers": false,
+        "shiftEnabled": false
+      },
+      "layers": [
+        {
+          "id": "bg-first-visit-scripture",
+          "file": "wish_house.bg-first-visit-scripture.png",
+          "role": "background",
+          "transparentBackground": false,
+          "prompt": "wish_house.background.prompt.txt",
+          "inputReferences": [
+            "V31_SH4_WISH_INTERIOR_SCRIPTURE",
+            "V31_SH4_WISH_DOOR"
+          ],
+          "recoveredFromCompleteToolDataUrl": true,
+          "notes": [
+            "La sauvegarde automatique avait été interrompue par le manque d’espace ; mêmes octets du résultat, sans nouvelle génération ni retouche."
+          ]
+        },
+        {
+          "id": "near-closed-book",
+          "file": "wish_house.near-closed-book.png",
+          "role": "foreground",
+          "transparentBackground": true,
+          "prompt": "wish_house.foreground.prompt.txt",
+          "inputReferences": [
+            "V31_SH4_WISH_INTERIOR_SCRIPTURE"
+          ],
+          "additionalLayoutReference": "wish_house.bg-first-visit-scripture.png",
+          "originalToolFile": "exec-80ce0f3c-11d0-4420-911c-f5286764c587.png"
+        }
+      ],
+      "observedInvariants": [
+        "Lambris et murs gris-brun",
+        "Suspension opaline arrondie",
+        "Meuble incliné et tapis rouge bordé",
+        "Plancher, petits livres et papiers",
+        "Porte rectangulaire du même intérieur"
+      ],
+      "adaptations": [
+        "Caméra élevée d’origine abaissée et pièce élargie pour le versus.",
+        "Proportions, profondeur, jonctions et état précis des textures reconstruits.",
+        "Livre du sol isolé et rapproché de la marge inférieure droite pour le plan de parallaxe.",
+        "Le fond comporte également de petits livres ; le livre de premier plan est un motif du décor, sans identité d’objet narratif supplémentaire."
+      ],
+      "unresolved": [
+        "Plateforme/région/build/réglages des captures non établis.",
+        "Petits éléments pâles au pied du meuble peu lisibles ; aucune identité rituelle ou fonction leur est attribuée.",
+        "Caméra, géométrie, microtextures et ombres non certifiées 1:1.",
+        "Parallaxe proposée à contrôler en jeu ; elle n’atteste aucun mouvement de la scène source."
+      ]
+    },
+    {
+      "stageId": "cedar_grove",
+      "source": "origins",
+      "sceneId": "female-treatment-mirror",
+      "sceneLabel": "Cedar Grove — Female Treatment 2F avant traversée du miroir",
+      "evidenceIds": [
+        "V31_ORIGINS_CEDAR_GUIDE_P47",
+        "V31_ORIGINS_CEDAR_MIRROR_SEQUENCE",
+        "V31_ORIGINS_CEDAR_MIRROR_COPY"
+      ],
+      "phase": "Pièce physique normale à 00:10–00:20 du premier chapitre ; reflet verdâtre limité au miroir.",
+      "engineIntegrationRecommendation": {
+        "worldState": "fixed-normal",
+        "ceiling": false,
+        "allowedHazards": [],
+        "allowedEvents": [],
+        "automaticFinishers": false,
+        "shiftEnabled": false
+      },
+      "layers": [
+        {
+          "id": "bg-female-treatment",
+          "file": "cedar_grove.bg-female-treatment.png",
+          "role": "background",
+          "transparentBackground": false,
+          "prompt": "cedar_grove.background.prompt.txt",
+          "inputReferences": [
+            "V31_ORIGINS_CEDAR_MIRROR_COPY@00:10",
+            "V31_ORIGINS_CEDAR_MIRROR_COPY@00:15",
+            "V31_ORIGINS_CEDAR_MIRROR_COPY@00:18"
+          ],
+          "originalToolFile": "exec-bdcf80e9-5d2b-4d27-8753-18b92d96142f.png"
+        },
+        {
+          "id": "near-privacy-curtain",
+          "file": "cedar_grove.near-privacy-curtain.png",
+          "role": "foreground",
+          "transparentBackground": true,
+          "prompt": "cedar_grove.foreground.prompt.txt",
+          "inputReferences": [
+            "V31_ORIGINS_CEDAR_MIRROR_COPY@00:15"
+          ],
+          "additionalLayoutReference": "cedar_grove.bg-female-treatment.png",
+          "originalToolFile": "exec-f8b66cae-7f48-413d-9256-a089a1357265.png"
+        }
+      ],
+      "observedInvariants": [
+        "Deux lits métalliques étroits et matelas ternes",
+        "Rideaux écrus usés",
+        "Carrelage carré gris et murs brun-gris",
+        "Double lavabo, deux robinets, miroir horizontal",
+        "Porte moulurée à droite du miroir et deux notices murales"
+      ],
+      "adaptations": [
+        "Vues natives élevées réunies en cadrage frontal large du même local.",
+        "Placement des lits, miroir et porte ajusté pour dégager la bande de combat.",
+        "Travis et son reflet supprimés ; reflet du miroir reconstruit sans personnage.",
+        "Bord du rideau existant dédoublé en plan de profondeur discret à l’extrême gauche, sans ajouter un troisième lit.",
+        "Nuances et détails au-delà du flux 640×360 interprétés ; inscriptions rendues illisibles."
+      ],
+      "unresolved": [
+        "Plateforme PSP/PS2, région, build et réglages non établis.",
+        "Détail du reflet et usure exacte non mesurables à partir des captures disponibles.",
+        "Le premier plan s’étend jusqu’à 9,2 % de largeur au lieu des 5–7 % visés ; centralement dégagé.",
+        "Caméra, géométrie et microtextures non certifiées 1:1.",
+        "Parallaxe proposée à contrôler en jeu ; pas de transition originale reproduite."
+      ]
+    }
+  ],
+  "sharedConstraints": [
+    "Aucun personnage, boss, monstre ou nouvelle action narrative.",
+    "Aucun texte lisible inventé.",
+    "Aucun appui plafond, dégât, fatalité, changement de collision ou bascule de monde déduit des images.",
+    "La classification candidate/unverified doit persister après intégration technique."
+  ],
+  "verification": {
+    "decodedPng": true,
+    "dimensionsAndSha256": true,
+    "trueAlphaMeasured": true,
+    "visualComparisonToReferences": true,
+    "runtimeReview": "À enregistrer par l’intégrateur dans la QA du jeu ; non comprise dans ce paquet d’images.",
+    "oneToOneCertification": false
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-27",
+  "section": "characters",
+  "method": "Inspection directe des douze captures 1280×720 du véritable FightEngine et de la plaque sombre Nurse rendue avec le PNG inchangé.",
+  "browserTest": false,
+  "automatedReport": "characters-report.json",
+  "automatedChecks": 178,
+  "automatedStatus": "passed",
+  "visualStatus": "static-poses-and-recovery-accepted-with-projectile-alignment-open",
+  "oneToOneCertified": false,
+  "reviewed": [
+    {
+      "fighterId": "sh4_man_with_the_coat_067",
+      "files": [
+        "sh4_man_with_the_coat_067-right-action-active.png",
+        "sh4_man_with_the_coat_067-right-recovered-idle.png",
+        "sh4_man_with_the_coat_067-left-action-active.png",
+        "sh4_man_with_the_coat_067-left-recovered-idle.png"
+      ],
+      "observed": [
+        "Silhouette entière, manteau et arme lisibles dans les deux orientations.",
+        "Pieds au sol sans saut de calibration visible entre action et idle.",
+        "La pose dédiée s’affiche pendant l’action puis laisse revenir l’idle préservé."
+      ],
+      "openIssue": {
+        "id": "V31_WALTER_PROJECTILE_ALIGNMENT",
+        "status": "open",
+        "scope": "visual-emission-alignment",
+        "description": "L’effet lumineux de projectile existant apparaît sous le canon de la nouvelle pose dans les deux orientations.",
+        "approximateVerticalGapPixels": 40,
+        "measurement": "Estimation visuelle sur le canevas 1280×720 ; pas une mesure de source canonique.",
+        "sourceOrEngineModifiedByQa": false
+      }
+    },
+    {
+      "fighterId": "sh2_eddie_dombrowski_032",
+      "files": [
+        "sh2_eddie_dombrowski_032-right-action-active.png",
+        "sh2_eddie_dombrowski_032-right-recovered-idle.png",
+        "sh2_eddie_dombrowski_032-left-action-active.png",
+        "sh2_eddie_dombrowski_032-left-recovered-idle.png"
+      ],
+      "observed": [
+        "Corps entier, tenue, revolver et visée à deux mains lisibles.",
+        "Orientation correcte et pieds ancrés dans les deux positions de joueur.",
+        "Retour naturel à la pose idle initiale après l’action."
+      ],
+      "openIssue": {
+        "id": "V31_EDDIE_PROJECTILE_ALIGNMENT",
+        "status": "open",
+        "scope": "visual-emission-alignment",
+        "description": "L’effet lumineux de projectile existant apparaît sous le canon de la nouvelle pose dans les deux orientations.",
+        "approximateVerticalGapPixels": 60,
+        "measurement": "Estimation visuelle sur le canevas 1280×720 ; pas une mesure de source canonique.",
+        "sourceOrEngineModifiedByQa": false
+      }
+    },
+    {
+      "fighterId": "sh3_nurse_revolver_044",
+      "files": [
+        "sh3_nurse_revolver_044-right-action-active.png",
+        "sh3_nurse_revolver_044-right-recovered-idle.png",
+        "sh3_nurse_revolver_044-left-action-active.png",
+        "sh3_nurse_revolver_044-left-recovered-idle.png",
+        "nurse-alpha-dark-native.png"
+      ],
+      "reviewedSourcePath": "assets/sprites/sh3_nurse_revolver_044.40ad802a6ec2.png",
+      "reviewedSourceSha256": "40ad802a6ec2f8065c0188b10fcfb39e68de4660812af4a995b09d87d3563bce",
+      "observed": [
+        "Corps et revolver entiers dans les deux orientations.",
+        "Appuis lisibles ; la pose inclinée de l’action récupère vers l’idle préservé.",
+        "Aucun voile gris étendu perceptible au-dessus du personnage sur le décor sombre ni sur la plaque native #080808."
+      ],
+      "alpha": {
+        "aboveVisibleBounds": {
+          "maxAlpha": 7,
+          "pixelsAlphaAbove8": 0
+        },
+        "outsideFramingBounds": {
+          "maxAlpha": 1,
+          "pixelsAlphaAbove1": 0
+        },
+        "caveat": "Les mesures concernent les rectangles visibleBounds/framingBounds, pas une segmentation sémantique de tout le contour. De rares pixels translucides faibles subsistent."
+      }
+    }
+  ],
+  "conclusion": "Contrôles techniques, silhouettes, appuis et retour idle acceptés pour les candidats statiques. Raccord visuel arme/projectile encore ouvert pour Walter et Eddie. Aucune certification de mouvement source, de cadence ou de fidélité 1:1."
+}

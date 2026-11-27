@@ -69,7 +69,11 @@ const LOT11_ENVIRONMENT = Object.freeze({
       "monitor"
     ],
     "automaticFinishers": false,
-    "disableAnimations": true
+    "disableAnimations": true,
+    "disableReferenceTracks": {
+      "sceneId": "female-treatment-mirror",
+      "reason": "La composition bitmap fixe de vague31 masque le prototype procédural historique du miroir ; sa proposition reste conservée et en attente pour le rendu actuel, sans animation livrée."
+    }
   },
   "antique_shop": {
     "source": "origins",
@@ -191,7 +195,7 @@ const LOT11_SCENE_PRESENTATION = Object.freeze({
       "terrainRules": false,
       "terrainPresentation": {
         "name": "SEUIL DU MIROIR DE SOINS",
-        "description": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        "description": "Vues natives de Female Treatment 2F inspectées avant la traversée du miroir : lits métalliques, rideaux écrus, double lavabo, miroir horizontal et carrelage usé. Pièce physique normale ; reflet verdâtre conservé sans transition automatique. Cadrage frontal et profondeur adaptés au versus ; plateforme/build non établis, caméra, géométrie et mouvement non certifiés 1:1. Physique neutre du versus."
       },
       "normalPhaseLabel": "SALLE DE SOINS · AVANT LE MIROIR"
     }
@@ -566,6 +570,9 @@ const ENVIRONMENT = Object.freeze({
   ...LOT10_ENVIRONMENT,
   ...LOT11_ENVIRONMENT,
   ...LOT12_ENVIRONMENT,
+  wish_house:{source:'sh4',name:'WISH HOUSE — INTÉRIEUR DU PREMIER PASSAGE',weather:'none',fog:0,interior:true,
+    worldState:'fixed-normal',removeProps:['trees','fence','altar','rooms','portraits','stairs'],
+    automaticFinishers:false,disableAnimations:true},
 });
 
 // Scene wording and neutral versus footing do not assert a material's source physics.
@@ -701,6 +708,12 @@ const SCENE_PRESENTATION_BASE = Object.freeze({
 
 const SCENE_PRESENTATION = Object.freeze({
   ...SCENE_PRESENTATION_BASE,...LOT12_SCENE_PRESENTATION,
+  wish_house:{source:'sh4',policy:{
+    sceneId:'sh4-first-visit-scripture-corner',terrainRules:false,
+    normalPhaseLabel:'PREMIER PASSAGE · INTÉRIEUR INTACT',
+    alteredPhaseLabel:'PREMIER PASSAGE · INTÉRIEUR INTACT',
+    terrainPresentation:{name:'PLANCHER DE WISH HOUSE',description:'Intérieur avant incendie, au premier passage de Forest World : meuble incliné drapé de rouge, livres et papiers, boiseries, lampe et porte documentés. Cadrage frontal et étendue du sol adaptés au versus. Aucun brasier, poupée, fosse rituelle, ennemi ou pouvoir ajouté ; physique neutre, géométrie et fidélité 1:1 non certifiées.'}
+  }},
   arcade_prison: {source:'arcade',policy:{
     sceneId:'toluca-prison-otherworld-cell-corridor',
     normalPhaseLabel:'STAGE 2 AREA 2 · OTHERWORLD',
@@ -1229,7 +1242,7 @@ const LOT11_REFERENCE_TRACKS = Object.freeze({
     "source": "origins",
     "sceneId": "female-treatment-mirror",
     "locationScope": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma.",
-    "limits": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée."
+    "limits": "Le prototype procédural historique a été conçu sans vue native entière de cette pièce inspectée. Les vues avant miroir relevées en vague31 documentent la nouvelle composition bitmap fixe ; elles ne valident ni le mouvement ni le cadrage de ce prototype. Aucune géométrie ou bascule originale certifiée."
   },
   "greenLionPassageDust": {
     "name": "Poussière au bord du passage intérieur",
@@ -1715,6 +1728,11 @@ function referenceBindings(stage) {
   return [...(BINDINGS[stage.id]||[]),...(LOT9_BINDINGS[stage.id]||[]),...(LOT10_BINDINGS[stage.id]||[]),...(LOT11_BINDINGS[stage.id]||[])];
 }
 
+function referenceTrackMask(stage, sceneId = stage?.referencePolicy?.sceneId) {
+  const correction = ENVIRONMENT[stage?.id], mask = correction?.disableReferenceTracks;
+  return correction?.source === stage?.source && mask?.sceneId === sceneId ? mask : null;
+}
+
 /** Public predicates also protect rendering against an old or injected cue. */
 export function stageReferenceEventAllowed(stage, id) {
   return !stage?.reference?.blocked && (!stage?.referencePolicy || stage.referencePolicy.allowedEvents.includes(id));
@@ -1725,7 +1743,7 @@ export function stageReferenceHazardAllowed(stage, id) {
 /** A new exact-location prop cannot be borrowed by a similarly named work. */
 export function stageReferenceTrackAllowed(stage, track) {
   const definition=STAGE_REFERENCE_TRACKS[track?.key];
-  if(!definition||definition.pendingLocation||stage?.reference?.blocked)return false;
+  if(!definition||definition.pendingLocation||stage?.reference?.blocked||referenceTrackMask(stage))return false;
   const lot12Scene=LOT12_SCENE_PRESENTATION[stage?.id];
   if(lot12Scene?.source===stage?.source && !referenceBindings(stage).some(([key,index])=>key===track.key&&index===track.proposalIndex))return false;
   const selectedScene=LOT11_SCENE_PRESENTATION[stage?.id];
@@ -1807,7 +1825,9 @@ export function applyStageReferencePolicy(stage, reference) {
     constraints:identityMatched ? [...(reference.constraints || [])] : [],
     proposals:identityMatched ? copy(reference.animations || []) : [],
   };
-  const referenceTracks = blocked ? [] : referenceBindings(stage).flatMap(([key,index,anchor,event]) => {
+  const scenePolicy = !blocked && SCENE_PRESENTATION[stage.id]?.source === stage.source ? copy(SCENE_PRESENTATION[stage.id].policy) : {};
+  const trackMask = referenceTrackMask(stage, scenePolicy.sceneId);
+  const candidateReferenceTracks = blocked ? [] : referenceBindings(stage).flatMap(([key,index,anchor,event]) => {
     const proposal = reference.animations?.[index],definition = STAGE_REFERENCE_TRACKS[key];
     if (!proposal || !definition || definition.pendingLocation || (definition.stageId&&(stage.id!==definition.stageId||stage.source!==definition.source)) || /bloque|non.confirme|a.verifier/.test(proposal.status || '')) return [];
     return [{id:`${stage.id}:reference:${index+1}`,key,name:definition.name,description:proposal.description,proposalIndex:index,source:stage.source,
@@ -1820,6 +1840,7 @@ export function applyStageReferencePolicy(stage, reference) {
       locationScope:definition.locationScope || null,
       limits:unique(['Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1.',definition.limits,corrections.disabledEvents?.[event]]).join(' ')}];
   });
+  const referenceTracks = trackMask ? [] : candidateReferenceTracks;
   const allowedHazards = blocked ? [] : [...(HAZARDS[stage.id] || [])];
   const candidateEvents = unique([...(stage.director?.events || []),...referenceTracks.map(track=>track.event)]);
   const allowedEvents = blocked ? [] : candidateEvents.filter(id => !corrections.disabledEvents?.[id] && (referenceTracks.some(track=>track.event===id) ||
@@ -1827,6 +1848,7 @@ export function applyStageReferencePolicy(stage, reference) {
   const replaced = new Set(referenceTracks.flatMap(track=>STAGE_REFERENCE_TRACKS[track.key].replaces));
   const animations = blocked || corrections.disableAnimations ? [] : result.animations.filter(id=>!replaced.has(id) && animationAllowed(result,id,worldState));
   const suppression = [
+    ...(trackMask ? candidateReferenceTracks.map(track=>({kind:'reference-track',id:track.id,key:track.key,status:'historical-masked-by-bitmap',reason:trackMask.reason})) : []),
     ...referenceTracks.filter(track=>track.eventEnabled===false).map(track=>({kind:'event',id:track.event,reason:corrections.disabledEvents[track.event]})),
     ...(stage.director?.events || []).filter(id=>!allowedEvents.includes(id)).map(id=>({kind:'event',id,reason:'Occurrence locale ou danger non retenu par la fiche exacte.'})),
     ...(stage.director?.hazardDeck || []).filter(id=>!allowedHazards.includes(id)).map(id=>({kind:'hazard',id,reason:'Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts.'})),
@@ -1835,7 +1857,7 @@ export function applyStageReferencePolicy(stage, reference) {
   if (result.weather !== stage.weather) suppression.push({kind:'weather',id:stage.weather,reason:`Ambiance remplacée par ${result.weather} pour conserver le lieu et l’œuvre.`});
   result.referenceTracks = referenceTracks;
   result.referencePolicy = {worldState,allowedEvents,allowedHazards,automaticFinishers:!blocked&&corrections.automaticFinishers!==false&&!NARRATIVE_ONLY.has(stage.id)&&stage.source!=='shattered',
-    ...(!blocked&&SCENE_PRESENTATION[stage.id]?.source===stage.source?copy(SCENE_PRESENTATION[stage.id].policy):{}),
+    ...scenePolicy,
     weather:result.weather,interior,baselineMotion:!blocked,suppression,
     hazardFidelity:'Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.',
     renderedProposalIds:referenceTracks.filter(track=>track.eventEnabled!==false).map(track=>track.id),pendingProposalIds:(identityMatched?reference.animations || []:[]).map((_,index)=>`${stage.id}:reference:${index+1}`).filter(id=>!referenceTracks.some(track=>track.id===id&&track.eventEnabled!==false)),

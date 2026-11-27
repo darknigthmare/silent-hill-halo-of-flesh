@@ -1,0 +1,88 @@
+{
+  "schema": 1,
+  "wave": 31,
+  "startedAt": "2026-11-27T05:43:26.338Z",
+  "passed": false,
+  "checks": [
+    {
+      "name": "sh4_man_with_the_coat_067: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "sh3_nurse_revolver_044: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh3_nurse_revolver_044: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh3_nurse_revolver_044: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh3_nurse_revolver_044: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh3_nurse_revolver_044: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "Dedicated HTTP test port is unused",
+      "passed": true
+    },
+    {
+      "name": "Dedicated dist HTTP server ready",
+      "passed": true
+    }
+  ],
+  "cases": [],
+  "errors": [],
+  "method": "Built HTTP app, fresh browser contexts, ordinary UI and keyboard. Passive drawImage observer and captures from the actual game canvas. No actor, camera, clock, image or module substitution.",
+  "limits": [
+    "Single static poses; no animation, source timing or 1:1 fidelity certification.",
+    "Both orientations use the existing engine mirror, not independently observed source-side geometry.",
+    "Service workers are blocked; this test does not cover offline updates.",
+    "Automated HTTP and placement checks require separate visual inspection of the retained gameplay captures."
+  ],
+  "failure": "browserType.launch: Target page, context or browser has been closed\nBrowser logs:\n\n<launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-rEdvue --remote-debugging-pipe --no-startup-window\n<launched> pid=28\n[pid=28][err] /usr/bin/chromium: 9: [: 5237899264: unexpected operator\n[pid=28][err] /usr/bin/chromium: 153: exec: /usr/lib/chromium/chromium: not found\nCall log:\n\u001b[2m  - <launching> /usr/bin/chromium --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-rEdvue --remote-debugging-pipe --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=28\u001b[22m\n\u001b[2m  - [pid=28][err] /usr/bin/chromium: 9: [: 5237899264: unexpected operator\u001b[22m\n\u001b[2m  - [pid=28][err] /usr/bin/chromium: 153: exec: /usr/lib/chromium/chromium: not found\u001b[22m\n\u001b[2m  - [pid=28] <gracefully close start>\u001b[22m\n\u001b[2m  - [pid=28] <kill>\u001b[22m\n\u001b[2m  - [pid=28] <will force kill>\u001b[22m\n\u001b[2m  - [pid=28] exception while trying to kill process: Error: kill ESRCH\u001b[22m\n\u001b[2m  - [pid=28] <process did exit: exitCode=127, signal=null>\u001b[22m\n\u001b[2m  - [pid=28] starting temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=28] finished temporary directories cleanup\u001b[22m\n\u001b[2m  - [pid=28] <gracefully close end>\u001b[22m\n\n    at /workspace/scratch/4cb8973fa173/silent-hill-halo-of-flesh/docs/production/vague31/characters/qa-http.mjs:52:26",
+  "completedAt": "2026-11-27T05:43:26.540Z",
+  "scopeNote": "Tentative locale avant remplacement final du détourage Nurse ; aucune page créée, navigateur exécutable absent. Les17contrôles préliminaires ne constituent pas une validation HTTP des images définitives."
+}

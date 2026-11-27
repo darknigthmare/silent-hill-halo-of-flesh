@@ -208,6 +208,11 @@ class WorkbookUpdateTests(unittest.TestCase):
         baseline_names = ['Synthèse', *UPDATE.TABLES]
         self.assertTrue(validator.valid_sheet_scope(baseline_names))
         self.assertTrue(validator.valid_sheet_scope([*baseline_names, 'Guide combat', 'Associations guide']))
+        guide_tables = [('CombatGuideSections', 'A8:K38'), ('CombatGuideModules', 'A44:F54')]
+        self.assertTrue(validator.valid_guide_table_scope('Guide combat', guide_tables))
+        self.assertTrue(validator.valid_guide_table_scope('Guide combat', [*guide_tables, ('CombatGuideExtensions', 'A60:K98')]))
+        for extra in [('Unrelated', 'A60:K98'), ('CombatGuideExtensions', 'A38:K76'), ('CombatGuideSections', 'A60:K98')]:
+            self.assertFalse(validator.valid_guide_table_scope('Guide combat', [*guide_tables, extra]))
         workbook = UPDATE.WorkbookEditor(self.source)
         guide_cell = ET.fromstring(f'<x:root xmlns:x="{MAIN}">' + cell('A1', 'keep cached value', 'HYPERLINK("https://example.invalid","document")') + '</x:root>')[0]
         guide_sheet = {'cells': {'A1': guide_cell}, 'documentary': 'preserve without recalculation'}

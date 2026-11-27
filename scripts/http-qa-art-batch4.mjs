@@ -63,7 +63,10 @@ function subjectClipContract(id){
     origins_faceless_nurse: {guard: [1], walk: [0,2,3,2], neutralSpecial: [4,5,4,0]},
     arcade_scraper_arcade: {walk: [0,1,2,1], guard: [3]},
     homecoming_scarlet_doll_form_094: {walk: [0,1,2,1]},
-    sh3_nurse_revolver_044: {guard: [1]},
+    sh3_nurse_revolver_044: {guard: [1], neutralLight: [2]},
+    // Wave31 adds one fixed gun pose; the source identities and old idles stay exact.
+    sh2_eddie_dombrowski_032: {neutralSpecial: [1]},
+    sh4_man_with_the_coat_067: {neutralSpecial: [1]},
     homecoming_nurse: {hurt: [1]},
     homecoming_scarlet_spider_form_095: {walk: [0,1,2,1]},
     // Wave27/28 append one exact static attack after the three batch10 poses.

@@ -4,24 +4,31 @@
 
 [Lot de quatorze images, intégration et limites](docs/production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. La bible et les deux classeurs sont rafraîchis : 445 associations, 93 arènes illustrées et 31 commandes projectile couvertes. Les feuilles historiques et leurs formules sont préservées. [Inventaire restant](docs/production/vague30/inventory.json). Aucun nouveau cycle animé ni certification 1:1.
 
-## Guide général intégré à la bible — 25 novembre 2026
+## Guide et deux extensions intégrés à la bible — 27 novembre 2026
 
-Les **30 rubriques** du guide Combat Games v1.0 sont maintenant associées au
+Les **68 rubriques** du guide Combat Games v1.0 et de ses deux extensions sont associées au
 contexte du jeu : manifestations, rôles hors duel, movesets, Dénouements,
-campagnes, illustrations, boss, arènes et production fixe. Les exigences sont
-reliées à **445 entrées existantes** par identifiant, sans confondre conception,
+campagnes, illustrations, boss, arènes et production fixe. Elles couvrent aussi les
+taunts, la sélection/désélection, les équipes, les bonus, les entités et l’accès
+aux contenus. Les exigences sont reliées aux entrées existantes par identifiant
+dans l’[inventaire calculé](docs/combat-guide/status.json), sans confondre conception,
 fichier produit, admission runtime et validation.
 
 [Intégration complète](docs/COMBAT_GAMES_GUIDE_INTEGRATION.md) ·
 [Matrice et critères](docs/combat-guide/MATRICE.md) ·
+[Extensions adaptées à Silent Hill](docs/combat-guide/extensions/README.md) ·
 [Campagne et Dénouements](docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) ·
 [État des lieux calculé](docs/combat-guide/ETAT_DES_LIEUX.md).
 
 Les deux classeurs existants possèdent les feuilles **Guide combat** et
-**Associations guide**. Le guide source est conservé à l'identique ; les
+**Associations guide**. Les trois textes sources sont conservés à l’identique et
+contrôlés par SHA-256 ; les
 feuilles historiques et leurs formules sont préservées. La campagne globale
 « Le Registre des absences » et ses nouvelles scènes sont de la conception
-à implémenter. L’intégration initiale du guide n’ajoutait ni PNG ni animation ; la vague 30 ci-dessus fournit maintenant 14 images fixes.
+à implémenter. Les **40 scénarios de recette des extensions** sont rédigés et
+restent à exécuter dans le jeu. Les assistances, tags, supers d’équipe,
+Dénouements collectifs, archives de déblocage et droits de soutien sont conçus ;
+aucun service d’abonnement n’est activé par cette intégration.
 
 Actualiser les liens avec `npm run bible:guide`, puis vérifier avec
 `npm run bible:check`. Les décisions sur les modules distinguent notamment

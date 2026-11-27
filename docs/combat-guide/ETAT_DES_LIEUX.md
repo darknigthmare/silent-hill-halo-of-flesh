@@ -2,11 +2,15 @@
 
 État calculé dans le code et les registres courants, comparé au commit de référence. Le contrôle des chemins est distinct des audits PNG, des recettes jouées et de la certification de fidélité.
 
-Référence : `9c426d7e230eaec464203acb9b43b63a420acf30`, 2026-11-25. Générateur : [build-combat-guide.mjs](../../scripts/build-combat-guide.mjs).
+Référence : `f01622bf097fb980f354f7f0fb55df3685f4e92a`, 2026-11-27. Générateur : [build-combat-guide.mjs](../../scripts/build-combat-guide.mjs).
 
 | Catégorie | Présent / admis | Périmètre | Lecture correcte |
 | --- | --- | --- | --- |
-| Rubriques du guide associées | 30 | 30 | Couverture documentaire |
+| Rubriques du guide et des extensions associées | 68 | 68 | 30 générales + 38 extensions ; couverture documentaire |
+| Textes originaux conservés et vérifiés | 3 | 3 | SHA-256 des trois fichiers originaux |
+| Scénarios de recette des extensions rédigés | 40 | 40 | 18 + 22 cas ; leur rédaction ne valide pas le runtime |
+| Scénarios de recette des extensions exécutés | 0 | 40 | Les tests documentaires ne s’ajoutent pas à ce compteur |
+| Fiches d’exemple reliées aux IDs existants | 48 | 16 familles de fiches | Conception proposée ; pas de nouveaux combattants ou systèmes actifs |
 | Entrées de corpus | 66 | 66 | Œuvres, éditions et supports ; pas autant de jeux |
 | Profils admis au combat | 187 | 230 | 43 hors duel |
 | Commandes activées | 3499 | 4600 | 1101 emplacements désactivés |
@@ -15,7 +19,7 @@ Référence : `9c426d7e230eaec464203acb9b43b63a420acf30`, 2026-11-25. Générate
 | Chroniques avec rencontres | 13 | 15 | 57 rencontres et 11 dossiers |
 | Portraits candidats référencés | 204 | 230 | Présence distincte de la fidélité validée |
 | Vues latérales candidates déclarées | 190 | 230 | Les vues anciennes sans ce statut restent à revoir |
-| Arènes avec bitmap candidat | 93 | 123 | Arène entière ; plusieurs couches peuvent compter pour une arène |
+| Arènes avec bitmap candidat | 95 | 123 | Arène entière ; plusieurs couches peuvent compter pour une arène |
 | Commandes projectile avec bitmap associé | 31 | 86 | 11 définitions d’images partagées selon propriétaire/slots |
 | Montages de Dénouement de sujet écrits | 198 | 460 | Chorégraphies ; pas animations ou images finales |
 | Montages de Dénouement de lieu écrits | 7 | 123 | Même distinction entre timeline et production |
@@ -33,7 +37,7 @@ Référence : `9c426d7e230eaec464203acb9b43b63a420acf30`, 2026-11-25. Générate
 | projectile | 11 |
 | stage | 123 |
 
-**445 entrées** reliées. 700 chemins d’images contrôlés dans l’index Git. Les clés de commande sont associées sous leur profil, sans leur inventer un nouvel identifiant runtime.
+**445 entrées** reliées. 707 chemins d’images contrôlés dans l’index Git ou le checkout. Les clés de commande sont associées sous leur profil, sans leur inventer un nouvel identifiant runtime.
 
 ## Écarts de raccord observés
 
@@ -46,4 +50,6 @@ Référence : `9c426d7e230eaec464203acb9b43b63a420acf30`, 2026-11-25. Générate
 
 ## Livraison de cette passe
 
-14 images fixes candidates : trois poses, trois effets, six plans de décor et deux illustrations individuelles. 0 nouvelle animation. Le récit d’Air Screamer reçoit ses images sans changer sa file de rencontres. Les scènes Shimizu Residence II et prison Otherworld sont corrigées dans les références. Les audits, limites, classeurs et résultats de publication sont consignés dans [la vague30](../production/vague30/README.md). Les preuves anciennes restent datées de leur exécution.
+Les deux extensions sont associées aux contenus du jeu : 68 rubriques, 48 fiches d’exemple et 40 scénarios de recette conçus. La vague 31 produit sept PNG candidats : trois poses supplémentaires pour des profils existants et quatre plans pour Cedar Grove et Wish House. Aucun nouveau personnage, portrait, projectile, récit illustré ou cycle animé. Les nouveaux modes d’équipe, les droits de contenu et le service d’abonnement restent à développer ; leur description n’active aucun service.
+
+7 nouvelles images fixes candidates déclarées pour ce lot, dont 3 poses de personnage. 0 nouvelle animation. Les preuves de production et de validation restent attribuées à leur lot ; les résultats antérieurs sont conservés dans [la vague 30](../production/vague30/README.md). Les [contrats propres à Silent Hill](extensions/README.md) détaillent les taunts, équipes, bonus et accès aux contenus.

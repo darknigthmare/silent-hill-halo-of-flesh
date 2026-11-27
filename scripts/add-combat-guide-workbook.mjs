@@ -142,10 +142,10 @@ if (mode === 'build') {
     ['Associations guide', `A${Math.max(8, end - 3)}:G${end}`, 'associations-end'],
   ];
 
-} else if (mode === 'refresh') {
+} else if (mode === 'refresh' || mode === 'extensions') {
   const baselineRef = process.argv[7] || '9c426d7e230eaec464203acb9b43b63a420acf30';
   const readBaseline = relative => JSON.parse(execFileSync('git', ['show', baselineRef + ':' + relative], { cwd: repo, maxBuffer: 8 * 1024 * 1024 }));
-  const reqPath = path.join(repo, 'docs/combat-guide/requirements.json');
+  const reqPath = path.join(repo, mode === 'extensions' ? 'docs/combat-guide/requirements-resolved.json' : 'docs/combat-guide/requirements.json');
   const assoPath = path.join(repo, 'docs/combat-guide/associations.json');
   const reqBytes = await fs.readFile(reqPath), assoBytes = await fs.readFile(assoPath);
   const requirements = JSON.parse(reqBytes), associations = JSON.parse(assoBytes);
@@ -153,7 +153,9 @@ if (mode === 'build') {
   const oldAssociations = readBaseline('docs/combat-guide/associations.json');
   sourceHashes = Object.fromEntries([['requirements', reqBytes], ['associations', assoBytes]].map(([key, bytes]) => [key, createHash('sha256').update(bytes).digest('hex')]));
   const sections = requirements.sections, modules = requirements.moduleDecisions, records = associations.records;
-  if (sections.length !== 30 || sections.some((entry, index) => entry.section !== String(index).padStart(2, '0'))) throw new Error('Expected ordered sections 00–29');
+  const expectedSections = mode === 'extensions' ? 68 : 30;
+  if (sections.length !== expectedSections || sections.some((entry, index) => entry.section !== String(index).padStart(2, '0'))) throw new Error('Expected ordered sections 00–' + (expectedSections - 1));
+  if (oldRequirements.sections.length !== 30) throw new Error('This reviewed extension layout starts from the historical 30-section workbook');
   if (new Set(records.map(record => record.kind + ':' + record.id)).size !== records.length) throw new Error('Duplicate association identifier');
   if (modules.length !== oldRequirements.moduleDecisions.length) throw new Error('A module-count change needs its own layout review');
   if (records.length < oldAssociations.records.length) throw new Error('Association removals need an explicit review');
@@ -171,7 +173,9 @@ if (mode === 'build') {
   const sectionLines = values => Array.from({ length: Math.ceil(values.length / 8) }, (_, index) => values.slice(index * 8, index * 8 + 8).join(', ')).join('\n');
   const associationRows = input => input.records.map(row => [label(kindLabels, row.kind), row.id, row.name,
     row.source || '', sectionLines(row.guideSections), row.observedStatus, row.targetFile]);
-  const sourceLine = input => 'Source : ' + input.sourceFile + ' — ' + input.asOf + '. État de conception distinct de la livraison jouable.';
+  const sourceLine = input => input.sections.length === 68
+    ? 'Sources : guide général et extensions 01–02, v1.0 — ' + input.asOf + '. 68 rubriques. Sources et empreintes : docs/combat-guide/requirements-resolved.json.'
+    : 'Source : ' + input.sourceFile + ' — ' + input.asOf + '. État de conception distinct de la livraison jouable.';
   const inventoryLine = input => 'Inventaire au ' + input.asOf + ', référence ' + input.baselineCommit.slice(0, 8) + '. Les détails restent dans docs/combat-guide/associations.json.';
   const normalized = value => value === null || value === undefined ? '' : value;
   const equal = (left, right) => JSON.stringify(left.map(row => row.map(normalized))) === JSON.stringify(right.map(row => row.map(normalized)));
@@ -190,7 +194,8 @@ if (mode === 'build') {
       .map(([cell, category]) => [cell, '=COUNTIFS(A9:A' + oldEnd + ',"' + category + '")'])];
   for (const [cell, formula] of oldCounters)
     if (asso.getRange(cell).formulas[0][0] !== formula) throw new Error('Existing summary formula differs from the baseline: Associations guide!' + cell);
-  refreshPlan = { baselineRef, beforeAssociations: oldAssociations.records.length, afterAssociations: records.length, changedCells: [], changedRowHeights: [], newRows: [] };
+  refreshPlan = { baselineRef, mode, beforeSections: oldRequirements.sections.length, afterSections: sections.length,
+    beforeAssociations: oldAssociations.records.length, afterAssociations: records.length, changedCells: [], changedRowHeights: [], newRows: [], newTables: [] };
   for (const [sheetName, range, suffix] of [
     ['Guide combat', 'A1:F11', 'guide-overview'], ['Guide combat', 'G8:K11', 'guide-details'],
     ['Guide combat', 'A19:F22', 'guide-narrative'], ['Guide combat', 'A42:F' + (44 + modules.length), 'guide-modules'],
@@ -244,15 +249,42 @@ if (mode === 'build') {
       }
     }
   };
-  refreshRows(guide, 9, sectionRows(oldRequirements), sectionRows(requirements), 'CombatGuideSections', guideWidths);
+  refreshRows(guide, 9, sectionRows(oldRequirements), sectionRows(requirements).slice(0, 30), 'CombatGuideSections', guideWidths);
   refreshRows(guide, 45, moduleRows(oldRequirements), moduleRows(requirements), 'CombatGuideModules', guideWidths);
   refreshRows(asso, 9, associationRows(oldAssociations), associationRows(associations), 'CombatGuideAssociations', assoWidths);
+  if (mode === 'extensions') {
+    if (guide.tables.items.some(table => table.name === 'CombatGuideExtensions')) throw new Error('Extensions already present; reconcile their baseline before refreshing');
+    const extensionRows = sectionRows(requirements).slice(30);
+    const titleRow = 58, headerRow = 60, firstRow = 61, lastRow = 60 + extensionRows.length;
+    const title = 'Extensions 01 et 02 — conception et validation attendue';
+    const appendRow = (number, values, template, height) => {
+      const target = guide.getRange('A' + number + ':K' + number);
+      if (target.values.some(row => row.some(value => normalized(value) !== ''))) throw new Error('Existing content in extension area: ' + number);
+      target.copyFrom(guide.getRange('A' + template + ':K' + template), 'all');
+      target.values = [values];
+      target.format.rowHeight = height;
+      refreshPlan.newRows.push({sheet: guide.name, row: number});
+      values.forEach((value, column) => {
+        if (normalized(value) !== '') refreshPlan.changedCells.push({sheet: guide.name, address: String.fromCharCode(65 + column) + number, before: '', after: value});
+      });
+    };
+    appendRow(titleRow, [title, ...Array(10).fill('')], 42, 30);
+    appendRow(headerRow, guideHeaders, 8, 36);
+    extensionRows.forEach((row, index) => appendRow(firstRow + index, row, 9 + (index % 2), rowHeight(row, guideWidths)));
+    const reference = 'A' + headerRow + ':K' + lastRow;
+    const table = guide.tables.add(reference, true, 'CombatGuideExtensions');
+    table.style = 'TableStyleLight1';
+    table.showFilterButton = true;
+    refreshPlan.newTables.push({sheet: guide.name, name: table.name, ref: reference});
+    guide.getRange('B4').formulas = [['=COUNTA(A9:A38)+COUNTA(A' + firstRow + ':A' + lastRow + ')']];
+    guide.getRange('H4').formulas = [['=COUNTIFS(E9:E38,"Conçu, à intégrer")+COUNTIFS(E' + firstRow + ':E' + lastRow + ',"Conçu, à intégrer")']];
+  }
   updateCell(guide, 'A6', sourceLine(requirements));
   updateCell(asso, 'A6', inventoryLine(associations));
   asso.getRange('B4').formulas = [['=COUNTA(B9:B' + end + ')']];
   for (const [cell, category] of [['B5', 'Arène'], ['E4', 'Profil'], ['E5', 'Chronique'], ['H4', 'Corpus'], ['H5', 'Projectile']])
     asso.getRange(cell).formulas = [['=COUNTIFS(A9:A' + end + ',"' + category + '")']];
-  expectedCounts = { sections: 30, modules: modules.length, associations: records.length,
+  expectedCounts = { sections: expectedSections, modules: modules.length, associations: records.length,
     moduleDecisions: Object.fromEntries(Object.keys(decisionLabels).map(key => [key, modules.filter(row => row.decision === key).length])) };
   previewSpecs = [
     ['Guide combat', 'A1:F11', 'guide-overview'], ['Guide combat', 'G8:K11', 'guide-details'],
@@ -260,13 +292,20 @@ if (mode === 'build') {
     ['Guide combat', 'G23:K26', 'guide-production-changes'], ['Guide combat', 'A42:F' + (44 + modules.length), 'guide-modules'],
     ['Associations guide', 'A1:G12', 'associations-overview'], ['Associations guide', 'A' + (end - 5) + ':G' + end, 'associations-end']
   ];
+  if (mode === 'extensions') previewSpecs.push(
+    ['Guide combat', 'A58:F64', 'extensions-overview'],
+    ['Guide combat', 'G60:K63', 'extensions-contracts'],
+    ['Guide combat', 'A79:F83', 'extensions-access'],
+    ['Guide combat', 'G81:K83', 'extensions-access-contracts'],
+    ['Guide combat', 'A95:F98', 'extensions-end']
+  );
   await fs.writeFile(path.join(outputDir, 'refresh-change-log.json'), JSON.stringify(refreshPlan, null, 2) + '\n');
-} else if (mode !== 'inspect') throw new Error('Mode must be inspect, build or refresh');
+} else if (mode !== 'inspect') throw new Error('Mode must be inspect, build, refresh or extensions');
 workbook.recalculate();
-if (mode === 'build' || mode === 'refresh') {
+if (mode === 'build' || mode === 'refresh' || mode === 'extensions') {
   const guide = workbook.worksheets.getItem('Guide combat');
   const asso = workbook.worksheets.getItem('Associations guide');
-  if (guide.getRange('B4').values[0][0] !== 30 || asso.getRange('B4').values[0][0] !== expectedCounts.associations) throw new Error('Workbook counts differ from JSON');
+  if (guide.getRange('B4').values[0][0] !== expectedCounts.sections || asso.getRange('B4').values[0][0] !== expectedCounts.associations) throw new Error('Workbook counts differ from JSON');
   const cell = guide.getRange('D45');
   const before = cell.values[0][0];
   const base = guide.getRange('B5').values[0][0];
@@ -276,6 +315,19 @@ if (mode === 'build' || mode === 'refresh') {
   cell.values = [[before]];
   workbook.recalculate();
   if (guide.getRange('B5').values[0][0] !== base) throw new Error('Module decision restore failed');
+  if (mode === 'extensions') {
+    const statuses = guide.getRange('E61:E98').values.flat();
+    const selected = statuses.indexOf('Conçu, à intégrer');
+    if (selected < 0) throw new Error('Expected documentary-only extension rows');
+    const address = 'E' + (61 + selected), previous = guide.getRange(address).values[0][0];
+    const count = guide.getRange('H4').values[0][0];
+    guide.getRange(address).values = [['Documenté']];
+    workbook.recalculate();
+    if (guide.getRange('H4').values[0][0] !== count - 1) throw new Error('Extension summary does not react to its status');
+    guide.getRange(address).values = [[previous]];
+    workbook.recalculate();
+    if (guide.getRange('H4').values[0][0] !== count) throw new Error('Extension status restore failed');
+  }
   const errors = await workbook.inspect({ kind: 'match', searchTerm: '#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!', options: { useRegex: true, maxResults: 50 }, maxChars: 3000 });
   await fs.writeFile(path.join(outputDir, 'formula-scan.ndjson'), errors.ndjson);
   if (/"match"/.test(errors.ndjson) && /#REF!|#DIV\/0!|#VALUE!|#NAME\?|#N\/A|#NUM!|#NULL!|#SPILL!|#CALC!/.test(errors.ndjson)) throw new Error('Unexpected formula error');
