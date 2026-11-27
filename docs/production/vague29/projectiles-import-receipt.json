@@ -1,0 +1,309 @@
+{
+  "schema": 1,
+  "wave": 29,
+  "createdAt": "2026-11-25T08:16:04.644Z",
+  "input": {
+    "path": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/projectiles/integration-delivery.json",
+    "sha256": "ddc6d7d22dcfcf57f266ad210297cb3b4c8c7865793bc868bb84500323fa21f0"
+  },
+  "effects": [
+    {
+      "id": "sh1_floatstinger_acid_cloud",
+      "fighterId": "sh1_floatstinger_016",
+      "source": "sh1",
+      "slots": [
+        "neutralSpecial",
+        "airSpecial",
+        "super",
+        "desperation"
+      ]
+    },
+    {
+      "id": "homecoming_asphyxia_toxic_plume",
+      "fighterId": "homecoming_asphyxia_096",
+      "source": "homecoming",
+      "slots": [
+        "neutralSpecial",
+        "super",
+        "desperation"
+      ]
+    },
+    {
+      "id": "ascension_immolator_fire_jet",
+      "fighterId": "ascension_the_immolator_182",
+      "source": "ascension",
+      "slots": [
+        "neutralSpecial",
+        "super",
+        "desperation"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "sha256": "9d0dee3a72ce64b1e06d39acd8298fd832f81603e934bd9d9887064bf525fd83",
+      "bytes": 1517372,
+      "width": 1536,
+      "height": 1024,
+      "framingBounds": [
+        135,
+        225,
+        1399,
+        798
+      ],
+      "pixelSHA256": "54c655cc32490230d648f2f16f1fd4f97dcfe48fe730e66107bf6d428feb4587",
+      "localSource": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "transfer": "existing-exact-file",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "sha256": "fa3fd7e4a76aa79b7139a6239c9daf2330d40ca9da9d458fd2e0b98d33ed96cf",
+      "bytes": 1237462,
+      "width": 1536,
+      "height": 1024,
+      "framingBounds": [
+        77,
+        293,
+        1466,
+        751
+      ],
+      "pixelSHA256": "5693096043160224726807e5f8a1e69eb7ea60375d89a6f1bef4f9e55dc04bde",
+      "localSource": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "transfer": "existing-exact-file",
+      "pixelsModified": false
+    },
+    {
+      "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "sha256": "a05b1938f04cae8fbe24969e0c69501501febe16b4a25ba78b29993a2f142b88",
+      "bytes": 1168665,
+      "width": 1536,
+      "height": 1024,
+      "framingBounds": [
+        153,
+        349,
+        1387,
+        686
+      ],
+      "pixelSHA256": "9f6cecbf3bd91af630e0cada427b63bacde8a6e71e9ec85559a9bf4509ca9394",
+      "localSource": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "transfer": "existing-exact-file",
+      "pixelsModified": false
+    }
+  ],
+  "audit": {
+    "effects": 8,
+    "fighters": 8,
+    "slots": 24,
+    "files": 8,
+    "animatedClips": 0,
+    "certified": 0,
+    "paths": [
+      "/assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "/assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+      "/assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+      "/assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "/assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "/assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "/assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "/assets/projectiles/sh3_god_ground_flame.8b645595b188.png"
+    ],
+    "entries": [
+      {
+        "id": "sh1_incubator_blue_lightning",
+        "fighterId": "sh1_incubator_018",
+        "source": "sh1",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          89,
+          340,
+          1455,
+          704
+        ],
+        "transparentFraction": 0.92096,
+        "pixelSHA256": "54cbdc52c47510ed0e324b1256df828c4ab35cc49af005676b24892ebe31bc3a",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "sh2_lying_figure_acid",
+        "fighterId": "sh2_lying_figure_020",
+        "source": "sh2",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          140,
+          273,
+          1397,
+          752
+        ],
+        "transparentFraction": 0.82366,
+        "pixelSHA256": "beeae8203ddedf86cdd3669d3794f843f07fb3aa61e8e058ad787e7a06e3739a",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "sh3_god_ground_flame",
+        "fighterId": "sh3_god_050",
+        "source": "sh3",
+        "slots": [
+          "neutralSpecial",
+          "downSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          73,
+          369,
+          1437,
+          790
+        ],
+        "transparentFraction": 0.85545,
+        "pixelSHA256": "36d8de1ac179ae58abc56d13861a6fa2c254a0d3c3a51bc87fa7196bad8f17ec",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "bom_earth_guardian_rock",
+        "fighterId": "bom_earth_guardian_142",
+        "source": "bom",
+        "slots": [
+          "neutralSpecial"
+        ],
+        "frame": "assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+        "width": 1254,
+        "height": 1254,
+        "framingBounds": [
+          105,
+          111,
+          1144,
+          1144
+        ],
+        "transparentFraction": 0.56881,
+        "pixelSHA256": "8b3fb151ac03dae31553aa35e20c79672de41c8bdafdd52437e806791ce0b0e2",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "bom_fire_guardian_hand_flame",
+        "fighterId": "bom_fire_guardian_137",
+        "source": "bom",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+        "width": 2172,
+        "height": 724,
+        "framingBounds": [
+          164,
+          47,
+          2074,
+          662
+        ],
+        "transparentFraction": 0.64084,
+        "pixelSHA256": "be52e7332c020a0b6b74ee654e441f895d9bf0cf15968fe09d3e0a0a6110ab16",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "sh1_floatstinger_acid_cloud",
+        "fighterId": "sh1_floatstinger_016",
+        "source": "sh1",
+        "slots": [
+          "neutralSpecial",
+          "airSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          135,
+          225,
+          1399,
+          798
+        ],
+        "transparentFraction": 0.77329,
+        "pixelSHA256": "54c655cc32490230d648f2f16f1fd4f97dcfe48fe730e66107bf6d428feb4587",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "homecoming_asphyxia_toxic_plume",
+        "fighterId": "homecoming_asphyxia_096",
+        "source": "homecoming",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          77,
+          293,
+          1466,
+          751
+        ],
+        "transparentFraction": 0.79957,
+        "pixelSHA256": "5693096043160224726807e5f8a1e69eb7ea60375d89a6f1bef4f9e55dc04bde",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      },
+      {
+        "id": "ascension_immolator_fire_jet",
+        "fighterId": "ascension_the_immolator_182",
+        "source": "ascension",
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "frame": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+        "width": 1536,
+        "height": 1024,
+        "framingBounds": [
+          153,
+          349,
+          1387,
+          686
+        ],
+        "transparentFraction": 0.89297,
+        "pixelSHA256": "9f6cecbf3bd91af630e0cada427b63bacde8a6e71e9ec85559a9bf4509ca9394",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "animated": false
+      }
+    ]
+  },
+  "existingEffectsPreserved": true,
+  "protectedScopeUnchanged": true
+}

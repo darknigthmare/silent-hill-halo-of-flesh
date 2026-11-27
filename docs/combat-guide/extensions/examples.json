@@ -1,0 +1,4827 @@
+{
+  "schemaVersion": 1,
+  "project": "Silent Hill: Halo of Flesh",
+  "asOf": "2026-11-27",
+  "baselineCommit": "f01622bf097fb980f354f7f0fb55df3685f4e92a",
+  "scope": "Fiches de conception reliées au catalogue existant. Aucun nouveau personnage runtime, aucune animation supplémentaire, aucun commerce activé.",
+  "referencePolicy": "Les observations sont reprises des références du dépôt ; leur niveau secondaire et captures à relever ne sont pas transformés en preuve 1:1. Tous les nouveaux noms, valeurs et coordinations sont explicitement des propositions du projet.",
+  "counts": {
+    "records": 48,
+    "taunts": 8,
+    "selectionCycles": 8,
+    "duos": 3,
+    "bonusStages": 4,
+    "newAssetsProduced": 0,
+    "newAnimatedClipsProduced": 0,
+    "newRuntimeSystemsImplemented": 0,
+    "certifiedFidelity": 0
+  },
+  "templatesCovered": [
+    "E01-A",
+    "E01-B",
+    "E01-C",
+    "E01-D",
+    "E01-E",
+    "E01-F",
+    "E01-G",
+    "E01-H",
+    "E01-I",
+    "E01-J",
+    "E02-A",
+    "E02-B",
+    "E02-C",
+    "E02-D",
+    "E02-E",
+    "E02-F"
+  ],
+  "records": [
+    {
+      "id": "SHCGX_TAUNT_AIR",
+      "kind": "taunt",
+      "title": "Ailes en suspens",
+      "sectionRefs": [
+        "SHCG-31",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh1_air_screamer_001"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_air_screamer_001",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-A"
+      ],
+      "documentaryLinks": [
+        "SHC_CAM_01"
+      ],
+      "inputAction": "taunt (existing remappable action)",
+      "sourceProposal": {
+        "name": "Attitude / provocation proposée — Air Screamer",
+        "description": "Déployer brièvement les ailes et produire un cri, sans dégâts soniques.",
+        "status": "adaptation-versus-proposee",
+        "basis": [
+          "CL_SH1_ENEMIES",
+          "CL_SH1_CREATURES"
+        ]
+      },
+      "phases": {
+        "entry": "Écarter les ailes depuis la pose au sol, relever légèrement la tête.",
+        "hold": "Tenir brièvement le déploiement avec un cri propre au sujet.",
+        "exit": "Replier vers le même appui ; aucun bond imposé au joueur."
+      },
+      "timingProposal": {
+        "simulationHz": 60,
+        "entryTicks": 12,
+        "holdTicks": 30,
+        "exitTicks": 24,
+        "totalTicks": 66,
+        "status": "unmeasured gameplay proposal; compatible with current minimum, not canonical timing"
+      },
+      "gameplay": {
+        "resourceDelta": 0,
+        "hitboxesDuringTaunt": false,
+        "newInvulnerability": false,
+        "canBegin": "sol, vivant, phase fight, aucun coup/impact/projection/esquive/état immobilisant/pause",
+        "cancel": "réception de coup ou entrée autorisée : arrêter la piste, cleanup, appliquer l’état suivant ; aucun avantage de ressource à préserver",
+        "opponent": "aucun gel adverse"
+      },
+      "sound": {
+        "voice": "cri/bruit/respiration à référencer, aucune citation de dialogue inventée",
+        "repetition": "répétition limitée par une enveloppe sonore ; le mute ne change pas le combat"
+      },
+      "constraints": [
+        "Pas de rayon, d’onde sonique, de souffle magique ou de dégâts du cri.",
+        "Distinguer griffure de pattes en vol et morsure au sol."
+      ],
+      "assets": [
+        {
+          "assetId": "SHCGX_ASSET_AIR_TAUNT_ENTRY",
+          "type": "individual-full-body-keypose",
+          "phase": "entry",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_AIR_TAUNT_HOLD",
+          "type": "individual-full-body-keypose",
+          "phase": "hold",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_AIR_TAUNT_EXIT",
+          "type": "individual-full-body-keypose",
+          "phase": "exit",
+          "status": "planned"
+        }
+      ],
+      "acceptance": [
+        "Silhouette et asymétries comparées au dossier exact",
+        "Aucune attaque active pendant le geste",
+        "Interruption testée en gauche/droite et mouvement réduit"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_SELECT_AIR",
+      "kind": "selection-cycle",
+      "title": "Sélection et désélection — Air Screamer",
+      "sectionRefs": [
+        "SHCG-32",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-52",
+        "SHCG-53"
+      ],
+      "fighterIds": [
+        "sh1_air_screamer_001"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_air_screamer_001",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-B"
+      ],
+      "states": {
+        "focus": "cadre actif et identité selon niveau de découverte",
+        "preview": "Une ombre passe puis le sujet se pose dans le cadre.",
+        "confirm": "une réaction courte spécifique au sujet, puis pose tenue ; le choix logique est immédiat",
+        "confirmedIdle": "boucle calme ou pose fixe, pas de répétition permanente du cri",
+        "costumeChange": "valider la variante avant chargement, nettoyer l’ancien aperçu",
+        "deselect": "Recul au sol, ailes repliées puis retrait du cadre ; sortie courte par pose neutre.",
+        "deselectShort": "arrêter effets et sons, stabiliser la pose autorisée puis retirer l’aperçu",
+        "teamConfirm": "montrer actif/réserve seulement dans profil d’équipe disponible",
+        "depart": "versus affiche les choix verrouillés et leurs éditions"
+      },
+      "cleanup": [
+        "particules propres à l’aperçu",
+        "voix en cours",
+        "ombre et éclairage spécifiques",
+        "entités ou supports instanciés pour cet aperçu"
+      ],
+      "twoPlayerState": "Chaque curseur possède son propre previewId/epoch ; la fin d’une ancienne animation ne change jamais le choix récent.",
+      "reducedMotion": "Poses fixes correspondant aux mêmes états, sans flash ni déplacement de caméra.",
+      "assetPlan": {
+        "individualPoses": [
+          "preview",
+          "confirm",
+          "confirmedIdle",
+          "deselectStart",
+          "deselectEnd"
+        ],
+        "separateClipRequired": true,
+        "reverseConfirmationForDeselect": false
+      },
+      "admission": "La fiche suit combatReferencePolicy ; le rendu de sélection n’accorde pas une admission en équipe.",
+      "constraints": [
+        "Pas de rayon, d’onde sonique, de souffle magique ou de dégâts du cri.",
+        "Distinguer griffure de pattes en vol et morsure au sol."
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_TAUNT_GROANER",
+      "kind": "taunt",
+      "title": "Menace basse",
+      "sectionRefs": [
+        "SHCG-31",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh1_groaner_003"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_groaner_003",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-A"
+      ],
+      "documentaryLinks": [],
+      "inputAction": "taunt (existing remappable action)",
+      "sourceProposal": {
+        "name": "Attitude / provocation proposée — Groaner",
+        "description": "Grattement au sol et menace de la gueule, sans hurlement magique.",
+        "status": "adaptation-versus-proposee",
+        "basis": [
+          "CL_SH1_ENEMIES",
+          "CL_SH1_CREATURES"
+        ]
+      },
+      "phases": {
+        "entry": "Baisser la poitrine sur quatre appuis, gratter brièvement le sol.",
+        "hold": "Gueule orientée vers l’adversaire, respiration sans amplification magique.",
+        "exit": "Ramener le poids dans la pose idle sans translation de hitbox."
+      },
+      "timingProposal": {
+        "simulationHz": 60,
+        "entryTicks": 12,
+        "holdTicks": 30,
+        "exitTicks": 24,
+        "totalTicks": 66,
+        "status": "unmeasured gameplay proposal; compatible with current minimum, not canonical timing"
+      },
+      "gameplay": {
+        "resourceDelta": 0,
+        "hitboxesDuringTaunt": false,
+        "newInvulnerability": false,
+        "canBegin": "sol, vivant, phase fight, aucun coup/impact/projection/esquive/état immobilisant/pause",
+        "cancel": "réception de coup ou entrée autorisée : arrêter la piste, cleanup, appliquer l’état suivant ; aucun avantage de ressource à préserver",
+        "opponent": "aucun gel adverse"
+      },
+      "sound": {
+        "voice": "cri/bruit/respiration à référencer, aucune citation de dialogue inventée",
+        "repetition": "répétition limitée par une enveloppe sonore ; le mute ne change pas le combat"
+      },
+      "constraints": [
+        "Quadrupède, aucune pose de boxeur ou arme.",
+        "Un bond mordu ne démontre pas un maintien/plaquage canonique."
+      ],
+      "assets": [
+        {
+          "assetId": "SHCGX_ASSET_GROANER_TAUNT_ENTRY",
+          "type": "individual-full-body-keypose",
+          "phase": "entry",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_GROANER_TAUNT_HOLD",
+          "type": "individual-full-body-keypose",
+          "phase": "hold",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_GROANER_TAUNT_EXIT",
+          "type": "individual-full-body-keypose",
+          "phase": "exit",
+          "status": "planned"
+        }
+      ],
+      "acceptance": [
+        "Silhouette et asymétries comparées au dossier exact",
+        "Aucune attaque active pendant le geste",
+        "Interruption testée en gauche/droite et mouvement réduit"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_SELECT_GROANER",
+      "kind": "selection-cycle",
+      "title": "Sélection et désélection — Groaner",
+      "sectionRefs": [
+        "SHCG-32",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-52",
+        "SHCG-53"
+      ],
+      "fighterIds": [
+        "sh1_groaner_003"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_groaner_003",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-B"
+      ],
+      "states": {
+        "focus": "cadre actif et identité selon niveau de découverte",
+        "preview": "Entrée au ras du sol, arrêt net des quatre pattes.",
+        "confirm": "une réaction courte spécifique au sujet, puis pose tenue ; le choix logique est immédiat",
+        "confirmedIdle": "boucle calme ou pose fixe, pas de répétition permanente du cri",
+        "costumeChange": "valider la variante avant chargement, nettoyer l’ancien aperçu",
+        "deselect": "Reniflement et deux pas de recul ; pas de dissolution surnaturelle.",
+        "deselectShort": "arrêter effets et sons, stabiliser la pose autorisée puis retirer l’aperçu",
+        "teamConfirm": "montrer actif/réserve seulement dans profil d’équipe disponible",
+        "depart": "versus affiche les choix verrouillés et leurs éditions"
+      },
+      "cleanup": [
+        "particules propres à l’aperçu",
+        "voix en cours",
+        "ombre et éclairage spécifiques",
+        "entités ou supports instanciés pour cet aperçu"
+      ],
+      "twoPlayerState": "Chaque curseur possède son propre previewId/epoch ; la fin d’une ancienne animation ne change jamais le choix récent.",
+      "reducedMotion": "Poses fixes correspondant aux mêmes états, sans flash ni déplacement de caméra.",
+      "assetPlan": {
+        "individualPoses": [
+          "preview",
+          "confirm",
+          "confirmedIdle",
+          "deselectStart",
+          "deselectEnd"
+        ],
+        "separateClipRequired": true,
+        "reverseConfirmationForDeselect": false
+      },
+      "admission": "La fiche suit combatReferencePolicy ; le rendu de sélection n’accorde pas une admission en équipe.",
+      "constraints": [
+        "Quadrupède, aucune pose de boxeur ou arme.",
+        "Un bond mordu ne démontre pas un maintien/plaquage canonique."
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_TAUNT_LYING",
+      "kind": "taunt",
+      "title": "Torse contrarié",
+      "sectionRefs": [
+        "SHCG-31",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-A"
+      ],
+      "documentaryLinks": [],
+      "inputAction": "taunt (existing remappable action)",
+      "sourceProposal": {
+        "name": "Attitude / provocation proposée — Lying Figure",
+        "description": "Agitation du haut du torse, sans bras libérés.",
+        "status": "adaptation-versus-proposee",
+        "basis": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_CREATURES"
+        ]
+      },
+      "phases": {
+        "entry": "Le haut du torse se contracte sans libérer les bras.",
+        "hold": "Agitation contenue et souffle ; aucun jet actif pendant le taunt.",
+        "exit": "Le buste revient à la posture actuelle, debout ou version de fiche autorisée."
+      },
+      "timingProposal": {
+        "simulationHz": 60,
+        "entryTicks": 12,
+        "holdTicks": 30,
+        "exitTicks": 24,
+        "totalTicks": 66,
+        "status": "unmeasured gameplay proposal; compatible with current minimum, not canonical timing"
+      },
+      "gameplay": {
+        "resourceDelta": 0,
+        "hitboxesDuringTaunt": false,
+        "newInvulnerability": false,
+        "canBegin": "sol, vivant, phase fight, aucun coup/impact/projection/esquive/état immobilisant/pause",
+        "cancel": "réception de coup ou entrée autorisée : arrêter la piste, cleanup, appliquer l’état suivant ; aucun avantage de ressource à préserver",
+        "opponent": "aucun gel adverse"
+      },
+      "sound": {
+        "voice": "cri/bruit/respiration à référencer, aucune citation de dialogue inventée",
+        "repetition": "répétition limitée par une enveloppe sonore ; le mute ne change pas le combat"
+      },
+      "constraints": [
+        "Bras enfermés pendant tous les états.",
+        "Aucun nuage de mort repris du remake dans ce profil 2001."
+      ],
+      "assets": [
+        {
+          "assetId": "SHCGX_ASSET_LYING_TAUNT_ENTRY",
+          "type": "individual-full-body-keypose",
+          "phase": "entry",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_LYING_TAUNT_HOLD",
+          "type": "individual-full-body-keypose",
+          "phase": "hold",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_LYING_TAUNT_EXIT",
+          "type": "individual-full-body-keypose",
+          "phase": "exit",
+          "status": "planned"
+        }
+      ],
+      "acceptance": [
+        "Silhouette et asymétries comparées au dossier exact",
+        "Aucune attaque active pendant le geste",
+        "Interruption testée en gauche/droite et mouvement réduit"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_SELECT_LYING",
+      "kind": "selection-cycle",
+      "title": "Sélection et désélection — Lying Figure",
+      "sectionRefs": [
+        "SHCG-32",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-52",
+        "SHCG-53"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-B"
+      ],
+      "states": {
+        "focus": "cadre actif et identité selon niveau de découverte",
+        "preview": "Le sujet se redresse par spasmes après une entrée basse.",
+        "confirm": "une réaction courte spécifique au sujet, puis pose tenue ; le choix logique est immédiat",
+        "confirmedIdle": "boucle calme ou pose fixe, pas de répétition permanente du cri",
+        "costumeChange": "valider la variante avant chargement, nettoyer l’ancien aperçu",
+        "deselect": "S’abaisser et se retirer par reptation ; version abrégée sans téléportation.",
+        "deselectShort": "arrêter effets et sons, stabiliser la pose autorisée puis retirer l’aperçu",
+        "teamConfirm": "montrer actif/réserve seulement dans profil d’équipe disponible",
+        "depart": "versus affiche les choix verrouillés et leurs éditions"
+      },
+      "cleanup": [
+        "particules propres à l’aperçu",
+        "voix en cours",
+        "ombre et éclairage spécifiques",
+        "entités ou supports instanciés pour cet aperçu"
+      ],
+      "twoPlayerState": "Chaque curseur possède son propre previewId/epoch ; la fin d’une ancienne animation ne change jamais le choix récent.",
+      "reducedMotion": "Poses fixes correspondant aux mêmes états, sans flash ni déplacement de caméra.",
+      "assetPlan": {
+        "individualPoses": [
+          "preview",
+          "confirm",
+          "confirmedIdle",
+          "deselectStart",
+          "deselectEnd"
+        ],
+        "separateClipRequired": true,
+        "reverseConfirmationForDeselect": false
+      },
+      "admission": "La fiche suit combatReferencePolicy ; le rendu de sélection n’accorde pas une admission en équipe.",
+      "constraints": [
+        "Bras enfermés pendant tous les états.",
+        "Aucun nuage de mort repris du remake dans ce profil 2001."
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_TAUNT_MANNEQUIN",
+      "kind": "taunt",
+      "title": "Immobilité décalée",
+      "sectionRefs": [
+        "SHCG-31",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-A"
+      ],
+      "documentaryLinks": [],
+      "inputAction": "taunt (existing remappable action)",
+      "sourceProposal": {
+        "name": "Attitude / provocation proposée — Mannequin",
+        "description": "Un unique pivot sec du bassin supérieur.",
+        "status": "adaptation-versus-proposee",
+        "basis": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_CREATURES"
+        ]
+      },
+      "phases": {
+        "entry": "Pivoter légèrement une paire de jambes supérieures.",
+        "hold": "Immobilité asymétrique ; aucune tête, main ou mimique ajoutée.",
+        "exit": "Reposer le membre dans son appui de combat."
+      },
+      "timingProposal": {
+        "simulationHz": 60,
+        "entryTicks": 12,
+        "holdTicks": 30,
+        "exitTicks": 24,
+        "totalTicks": 66,
+        "status": "unmeasured gameplay proposal; compatible with current minimum, not canonical timing"
+      },
+      "gameplay": {
+        "resourceDelta": 0,
+        "hitboxesDuringTaunt": false,
+        "newInvulnerability": false,
+        "canBegin": "sol, vivant, phase fight, aucun coup/impact/projection/esquive/état immobilisant/pause",
+        "cancel": "réception de coup ou entrée autorisée : arrêter la piste, cleanup, appliquer l’état suivant ; aucun avantage de ressource à préserver",
+        "opponent": "aucun gel adverse"
+      },
+      "sound": {
+        "voice": "cri/bruit/respiration à référencer, aucune citation de dialogue inventée",
+        "repetition": "répétition limitée par une enveloppe sonore ; le mute ne change pas le combat"
+      },
+      "constraints": [
+        "Deux paires de jambes, pas de bras humains.",
+        "Aucun visage, rire vocalisé humain ou articulation d’une autre variante."
+      ],
+      "assets": [
+        {
+          "assetId": "SHCGX_ASSET_MANNEQUIN_TAUNT_ENTRY",
+          "type": "individual-full-body-keypose",
+          "phase": "entry",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_MANNEQUIN_TAUNT_HOLD",
+          "type": "individual-full-body-keypose",
+          "phase": "hold",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_MANNEQUIN_TAUNT_EXIT",
+          "type": "individual-full-body-keypose",
+          "phase": "exit",
+          "status": "planned"
+        }
+      ],
+      "acceptance": [
+        "Silhouette et asymétries comparées au dossier exact",
+        "Aucune attaque active pendant le geste",
+        "Interruption testée en gauche/droite et mouvement réduit"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_SELECT_MANNEQUIN",
+      "kind": "selection-cycle",
+      "title": "Sélection et désélection — Mannequin",
+      "sectionRefs": [
+        "SHCG-32",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-52",
+        "SHCG-53"
+      ],
+      "fighterIds": [
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-B"
+      ],
+      "states": {
+        "focus": "cadre actif et identité selon niveau de découverte",
+        "preview": "Silhouette rigide puis courte saccade de pivot.",
+        "confirm": "une réaction courte spécifique au sujet, puis pose tenue ; le choix logique est immédiat",
+        "confirmedIdle": "boucle calme ou pose fixe, pas de répétition permanente du cri",
+        "costumeChange": "valider la variante avant chargement, nettoyer l’ancien aperçu",
+        "deselect": "Rigidification suivie d’un recul hors du faisceau ; pas une lecture inversée de confirmation.",
+        "deselectShort": "arrêter effets et sons, stabiliser la pose autorisée puis retirer l’aperçu",
+        "teamConfirm": "montrer actif/réserve seulement dans profil d’équipe disponible",
+        "depart": "versus affiche les choix verrouillés et leurs éditions"
+      },
+      "cleanup": [
+        "particules propres à l’aperçu",
+        "voix en cours",
+        "ombre et éclairage spécifiques",
+        "entités ou supports instanciés pour cet aperçu"
+      ],
+      "twoPlayerState": "Chaque curseur possède son propre previewId/epoch ; la fin d’une ancienne animation ne change jamais le choix récent.",
+      "reducedMotion": "Poses fixes correspondant aux mêmes états, sans flash ni déplacement de caméra.",
+      "assetPlan": {
+        "individualPoses": [
+          "preview",
+          "confirm",
+          "confirmedIdle",
+          "deselectStart",
+          "deselectEnd"
+        ],
+        "separateClipRequired": true,
+        "reverseConfirmationForDeselect": false
+      },
+      "admission": "La fiche suit combatReferencePolicy ; le rendu de sélection n’accorde pas une admission en équipe.",
+      "constraints": [
+        "Deux paires de jambes, pas de bras humains.",
+        "Aucun visage, rire vocalisé humain ou articulation d’une autre variante."
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_TAUNT_NURSE",
+      "kind": "taunt",
+      "title": "Saccade du regard absent",
+      "sectionRefs": [
+        "SHCG-31",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_bubble_head_nurse_024"
+      ],
+      "stageIds": [
+        "brookhaven_sh2"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_bubble_head_nurse_024",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-A"
+      ],
+      "documentaryLinks": [],
+      "inputAction": "taunt (existing remappable action)",
+      "sourceProposal": {
+        "name": "Attitude / provocation proposée — Bubble Head Nurse",
+        "description": "Petite saccade de tête et poids déplacé entre les jambes.",
+        "status": "adaptation-versus-proposee",
+        "basis": [
+          "CL_SH2_ENEMIES",
+          "CL_SH2_CREATURES"
+        ]
+      },
+      "phases": {
+        "entry": "Déplacer le poids et incliner la tête sans changer de tenue.",
+        "hold": "Tuyau de la version 2001 visible, éloigné de toute zone active.",
+        "exit": "Rétablir la garde et l’appui du sujet."
+      },
+      "timingProposal": {
+        "simulationHz": 60,
+        "entryTicks": 12,
+        "holdTicks": 30,
+        "exitTicks": 24,
+        "totalTicks": 66,
+        "status": "unmeasured gameplay proposal; compatible with current minimum, not canonical timing"
+      },
+      "gameplay": {
+        "resourceDelta": 0,
+        "hitboxesDuringTaunt": false,
+        "newInvulnerability": false,
+        "canBegin": "sol, vivant, phase fight, aucun coup/impact/projection/esquive/état immobilisant/pause",
+        "cancel": "réception de coup ou entrée autorisée : arrêter la piste, cleanup, appliquer l’état suivant ; aucun avantage de ressource à préserver",
+        "opponent": "aucun gel adverse"
+      },
+      "sound": {
+        "voice": "cri/bruit/respiration à référencer, aucune citation de dialogue inventée",
+        "repetition": "répétition limitée par une enveloppe sonore ; le mute ne change pas le combat"
+      },
+      "constraints": [
+        "Tête, uniforme et arme de SH2 original.",
+        "Ne pas copier gestuelle, costume ou réaction lumineuse d’une Nurse du film."
+      ],
+      "assets": [
+        {
+          "assetId": "SHCGX_ASSET_NURSE_TAUNT_ENTRY",
+          "type": "individual-full-body-keypose",
+          "phase": "entry",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_NURSE_TAUNT_HOLD",
+          "type": "individual-full-body-keypose",
+          "phase": "hold",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_NURSE_TAUNT_EXIT",
+          "type": "individual-full-body-keypose",
+          "phase": "exit",
+          "status": "planned"
+        }
+      ],
+      "acceptance": [
+        "Silhouette et asymétries comparées au dossier exact",
+        "Aucune attaque active pendant le geste",
+        "Interruption testée en gauche/droite et mouvement réduit"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_SELECT_NURSE",
+      "kind": "selection-cycle",
+      "title": "Sélection et désélection — Bubble Head Nurse",
+      "sectionRefs": [
+        "SHCG-32",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-52",
+        "SHCG-53"
+      ],
+      "fighterIds": [
+        "sh2_bubble_head_nurse_024"
+      ],
+      "stageIds": [
+        "brookhaven_sh2"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_bubble_head_nurse_024",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-B"
+      ],
+      "states": {
+        "focus": "cadre actif et identité selon niveau de découverte",
+        "preview": "Avancée de quelques pas puis arrêt avec le tuyau bas.",
+        "confirm": "une réaction courte spécifique au sujet, puis pose tenue ; le choix logique est immédiat",
+        "confirmedIdle": "boucle calme ou pose fixe, pas de répétition permanente du cri",
+        "costumeChange": "valider la variante avant chargement, nettoyer l’ancien aperçu",
+        "deselect": "Baisser l’arme, tourner le buste et reculer ; ne pas échanger l’arme lors de l’annulation.",
+        "deselectShort": "arrêter effets et sons, stabiliser la pose autorisée puis retirer l’aperçu",
+        "teamConfirm": "montrer actif/réserve seulement dans profil d’équipe disponible",
+        "depart": "versus affiche les choix verrouillés et leurs éditions"
+      },
+      "cleanup": [
+        "particules propres à l’aperçu",
+        "voix en cours",
+        "ombre et éclairage spécifiques",
+        "entités ou supports instanciés pour cet aperçu"
+      ],
+      "twoPlayerState": "Chaque curseur possède son propre previewId/epoch ; la fin d’une ancienne animation ne change jamais le choix récent.",
+      "reducedMotion": "Poses fixes correspondant aux mêmes états, sans flash ni déplacement de caméra.",
+      "assetPlan": {
+        "individualPoses": [
+          "preview",
+          "confirm",
+          "confirmedIdle",
+          "deselectStart",
+          "deselectEnd"
+        ],
+        "separateClipRequired": true,
+        "reverseConfirmationForDeselect": false
+      },
+      "admission": "La fiche suit combatReferencePolicy ; le rendu de sélection n’accorde pas une admission en équipe.",
+      "constraints": [
+        "Tête, uniforme et arme de SH2 original.",
+        "Ne pas copier gestuelle, costume ou réaction lumineuse d’une Nurse du film."
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_TAUNT_CLOSER",
+      "kind": "taunt",
+      "title": "Tête au-dessus des bras",
+      "sectionRefs": [
+        "SHCG-31",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh3_closer_036"
+      ],
+      "stageIds": [
+        "shopping_mall"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH3_ENEMIES",
+        "CL_SH3_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh3_closer_036",
+          "referenceIds": [
+            "CL_SH3_ENEMIES",
+            "CL_SH3_CREATURES"
+          ],
+          "edition": "SH3 original 2003",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-A"
+      ],
+      "documentaryLinks": [],
+      "inputAction": "taunt (existing remappable action)",
+      "sourceProposal": {
+        "name": "Attitude / provocation proposée — Closer",
+        "description": "Tressaillement bref de la tête au-dessus des bras immobiles.",
+        "status": "adaptation-versus-proposee",
+        "basis": [
+          "CL_SH3_ENEMIES",
+          "CL_SH3_CREATURES"
+        ]
+      },
+      "phases": {
+        "entry": "Léger tressaillement de tête, bras massifs au repos.",
+        "hold": "Silhouette et volume conservés sans extension d’arme offensive.",
+        "exit": "Retour à la position des appuis et des bras."
+      },
+      "timingProposal": {
+        "simulationHz": 60,
+        "entryTicks": 12,
+        "holdTicks": 30,
+        "exitTicks": 24,
+        "totalTicks": 66,
+        "status": "unmeasured gameplay proposal; compatible with current minimum, not canonical timing"
+      },
+      "gameplay": {
+        "resourceDelta": 0,
+        "hitboxesDuringTaunt": false,
+        "newInvulnerability": false,
+        "canBegin": "sol, vivant, phase fight, aucun coup/impact/projection/esquive/état immobilisant/pause",
+        "cancel": "réception de coup ou entrée autorisée : arrêter la piste, cleanup, appliquer l’état suivant ; aucun avantage de ressource à préserver",
+        "opponent": "aucun gel adverse"
+      },
+      "sound": {
+        "voice": "cri/bruit/respiration à référencer, aucune citation de dialogue inventée",
+        "repetition": "répétition limitée par une enveloppe sonore ; le mute ne change pas le combat"
+      },
+      "constraints": [
+        "Rotation physique des bras distincte d’une aura.",
+        "Lame rétractable seulement dans les actions qui la prévoient."
+      ],
+      "assets": [
+        {
+          "assetId": "SHCGX_ASSET_CLOSER_TAUNT_ENTRY",
+          "type": "individual-full-body-keypose",
+          "phase": "entry",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_CLOSER_TAUNT_HOLD",
+          "type": "individual-full-body-keypose",
+          "phase": "hold",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_CLOSER_TAUNT_EXIT",
+          "type": "individual-full-body-keypose",
+          "phase": "exit",
+          "status": "planned"
+        }
+      ],
+      "acceptance": [
+        "Silhouette et asymétries comparées au dossier exact",
+        "Aucune attaque active pendant le geste",
+        "Interruption testée en gauche/droite et mouvement réduit"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_SELECT_CLOSER",
+      "kind": "selection-cycle",
+      "title": "Sélection et désélection — Closer",
+      "sectionRefs": [
+        "SHCG-32",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-52",
+        "SHCG-53"
+      ],
+      "fighterIds": [
+        "sh3_closer_036"
+      ],
+      "stageIds": [
+        "shopping_mall"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH3_ENEMIES",
+        "CL_SH3_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh3_closer_036",
+          "referenceIds": [
+            "CL_SH3_ENEMIES",
+            "CL_SH3_CREATURES"
+          ],
+          "edition": "SH3 original 2003",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-B"
+      ],
+      "states": {
+        "focus": "cadre actif et identité selon niveau de découverte",
+        "preview": "La masse entre dans le cadre ; arrêt et léger redressement.",
+        "confirm": "une réaction courte spécifique au sujet, puis pose tenue ; le choix logique est immédiat",
+        "confirmedIdle": "boucle calme ou pose fixe, pas de répétition permanente du cri",
+        "costumeChange": "valider la variante avant chargement, nettoyer l’ancien aperçu",
+        "deselect": "Retrait lent, bras toujours solidaires du corps ; version brève par stabilisation.",
+        "deselectShort": "arrêter effets et sons, stabiliser la pose autorisée puis retirer l’aperçu",
+        "teamConfirm": "montrer actif/réserve seulement dans profil d’équipe disponible",
+        "depart": "versus affiche les choix verrouillés et leurs éditions"
+      },
+      "cleanup": [
+        "particules propres à l’aperçu",
+        "voix en cours",
+        "ombre et éclairage spécifiques",
+        "entités ou supports instanciés pour cet aperçu"
+      ],
+      "twoPlayerState": "Chaque curseur possède son propre previewId/epoch ; la fin d’une ancienne animation ne change jamais le choix récent.",
+      "reducedMotion": "Poses fixes correspondant aux mêmes états, sans flash ni déplacement de caméra.",
+      "assetPlan": {
+        "individualPoses": [
+          "preview",
+          "confirm",
+          "confirmedIdle",
+          "deselectStart",
+          "deselectEnd"
+        ],
+        "separateClipRequired": true,
+        "reverseConfirmationForDeselect": false
+      },
+      "admission": "La fiche suit combatReferencePolicy ; le rendu de sélection n’accorde pas une admission en équipe.",
+      "constraints": [
+        "Rotation physique des bras distincte d’une aura.",
+        "Lame rétractable seulement dans les actions qui la prévoient."
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_TAUNT_DOUBLE",
+      "kind": "taunt",
+      "title": "Appel sans réponse",
+      "sectionRefs": [
+        "SHCG-31",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh3_double_head_040"
+      ],
+      "stageIds": [
+        "shopping_mall"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH3_ENEMIES",
+        "CL_SH3_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh3_double_head_040",
+          "referenceIds": [
+            "CL_SH3_ENEMIES",
+            "CL_SH3_CREATURES"
+          ],
+          "edition": "SH3 original 2003",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-A"
+      ],
+      "documentaryLinks": [],
+      "inputAction": "taunt (existing remappable action)",
+      "sourceProposal": {
+        "name": "Attitude / provocation proposée — Double Head",
+        "description": "Lever la tête pour un appel bref ; aucun renfort matérialisé sans règle séparée.",
+        "status": "adaptation-versus-proposee",
+        "basis": [
+          "CL_SH3_ENEMIES",
+          "CL_SH3_CREATURES"
+        ]
+      },
+      "phases": {
+        "entry": "Relever la tête fendue depuis quatre appuis.",
+        "hold": "Appel bref sans invoquer un autre chien ni donner un buff.",
+        "exit": "Abaisser la tête dans la posture de chasse."
+      },
+      "timingProposal": {
+        "simulationHz": 60,
+        "entryTicks": 12,
+        "holdTicks": 30,
+        "exitTicks": 24,
+        "totalTicks": 66,
+        "status": "unmeasured gameplay proposal; compatible with current minimum, not canonical timing"
+      },
+      "gameplay": {
+        "resourceDelta": 0,
+        "hitboxesDuringTaunt": false,
+        "newInvulnerability": false,
+        "canBegin": "sol, vivant, phase fight, aucun coup/impact/projection/esquive/état immobilisant/pause",
+        "cancel": "réception de coup ou entrée autorisée : arrêter la piste, cleanup, appliquer l’état suivant ; aucun avantage de ressource à préserver",
+        "opponent": "aucun gel adverse"
+      },
+      "sound": {
+        "voice": "cri/bruit/respiration à référencer, aucune citation de dialogue inventée",
+        "repetition": "répétition limitée par une enveloppe sonore ; le mute ne change pas le combat"
+      },
+      "constraints": [
+        "Un seul chien à tête fendue, pas deux corps.",
+        "Bond et prise de jambe restent des actions distinctes."
+      ],
+      "assets": [
+        {
+          "assetId": "SHCGX_ASSET_DOUBLE_TAUNT_ENTRY",
+          "type": "individual-full-body-keypose",
+          "phase": "entry",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_DOUBLE_TAUNT_HOLD",
+          "type": "individual-full-body-keypose",
+          "phase": "hold",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_DOUBLE_TAUNT_EXIT",
+          "type": "individual-full-body-keypose",
+          "phase": "exit",
+          "status": "planned"
+        }
+      ],
+      "acceptance": [
+        "Silhouette et asymétries comparées au dossier exact",
+        "Aucune attaque active pendant le geste",
+        "Interruption testée en gauche/droite et mouvement réduit"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_SELECT_DOUBLE",
+      "kind": "selection-cycle",
+      "title": "Sélection et désélection — Double Head",
+      "sectionRefs": [
+        "SHCG-32",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-52",
+        "SHCG-53"
+      ],
+      "fighterIds": [
+        "sh3_double_head_040"
+      ],
+      "stageIds": [
+        "shopping_mall"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH3_ENEMIES",
+        "CL_SH3_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh3_double_head_040",
+          "referenceIds": [
+            "CL_SH3_ENEMIES",
+            "CL_SH3_CREATURES"
+          ],
+          "edition": "SH3 original 2003",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-B"
+      ],
+      "states": {
+        "focus": "cadre actif et identité selon niveau de découverte",
+        "preview": "Avancée canine, arrêt orienté vers la cible ; un seul corps.",
+        "confirm": "une réaction courte spécifique au sujet, puis pose tenue ; le choix logique est immédiat",
+        "confirmedIdle": "boucle calme ou pose fixe, pas de répétition permanente du cri",
+        "costumeChange": "valider la variante avant chargement, nettoyer l’ancien aperçu",
+        "deselect": "Tour bref puis trot hors cadre ; pas de double silhouette persistante.",
+        "deselectShort": "arrêter effets et sons, stabiliser la pose autorisée puis retirer l’aperçu",
+        "teamConfirm": "montrer actif/réserve seulement dans profil d’équipe disponible",
+        "depart": "versus affiche les choix verrouillés et leurs éditions"
+      },
+      "cleanup": [
+        "particules propres à l’aperçu",
+        "voix en cours",
+        "ombre et éclairage spécifiques",
+        "entités ou supports instanciés pour cet aperçu"
+      ],
+      "twoPlayerState": "Chaque curseur possède son propre previewId/epoch ; la fin d’une ancienne animation ne change jamais le choix récent.",
+      "reducedMotion": "Poses fixes correspondant aux mêmes états, sans flash ni déplacement de caméra.",
+      "assetPlan": {
+        "individualPoses": [
+          "preview",
+          "confirm",
+          "confirmedIdle",
+          "deselectStart",
+          "deselectEnd"
+        ],
+        "separateClipRequired": true,
+        "reverseConfirmationForDeselect": false
+      },
+      "admission": "La fiche suit combatReferencePolicy ; le rendu de sélection n’accorde pas une admission en équipe.",
+      "constraints": [
+        "Un seul chien à tête fendue, pas deux corps.",
+        "Bond et prise de jambe restent des actions distinctes."
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_TAUNT_WALL",
+      "kind": "taunt",
+      "title": "Le bras immobile",
+      "sectionRefs": [
+        "SHCG-31",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh4_wall_man_056"
+      ],
+      "stageIds": [
+        "subway_world"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH4_ENEMIES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh4_wall_man_056",
+          "referenceIds": [
+            "CL_SH4_ENEMIES"
+          ],
+          "edition": "SH4 original 2004",
+          "role": "stationary-boss",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-A"
+      ],
+      "documentaryLinks": [],
+      "inputAction": "taunt (existing remappable action)",
+      "sourceProposal": {
+        "name": "Attitude / provocation proposée — Wall Man",
+        "description": "Un bras émerge et s’immobilise sans toucher.",
+        "status": "adaptation-versus-proposee",
+        "basis": [
+          "CL_SH4_ENEMIES"
+        ]
+      },
+      "phases": {
+        "entry": "Un bras émerge du support mural existant.",
+        "hold": "Main immobile à distance non offensive ; torse toujours ancré.",
+        "exit": "Rétracter le bras vers le même support."
+      },
+      "timingProposal": {
+        "simulationHz": 60,
+        "entryTicks": 12,
+        "holdTicks": 30,
+        "exitTicks": 24,
+        "totalTicks": 66,
+        "status": "unmeasured gameplay proposal; compatible with current minimum, not canonical timing"
+      },
+      "gameplay": {
+        "resourceDelta": 0,
+        "hitboxesDuringTaunt": false,
+        "newInvulnerability": false,
+        "canBegin": "sol, vivant, phase fight, aucun coup/impact/projection/esquive/état immobilisant/pause",
+        "cancel": "réception de coup ou entrée autorisée : arrêter la piste, cleanup, appliquer l’état suivant ; aucun avantage de ressource à préserver",
+        "opponent": "aucun gel adverse"
+      },
+      "sound": {
+        "voice": "cri/bruit/respiration à référencer, aucune citation de dialogue inventée",
+        "repetition": "répétition limitée par une enveloppe sonore ; le mute ne change pas le combat"
+      },
+      "constraints": [
+        "Pas de jambes, marche libre ou anatomie cachée inventée.",
+        "Aucune téléportation de paroi non établie ; hors premier prototype de tag."
+      ],
+      "assets": [
+        {
+          "assetId": "SHCGX_ASSET_WALL_TAUNT_ENTRY",
+          "type": "individual-full-body-keypose",
+          "phase": "entry",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_WALL_TAUNT_HOLD",
+          "type": "individual-full-body-keypose",
+          "phase": "hold",
+          "status": "planned"
+        },
+        {
+          "assetId": "SHCGX_ASSET_WALL_TAUNT_EXIT",
+          "type": "individual-full-body-keypose",
+          "phase": "exit",
+          "status": "planned"
+        }
+      ],
+      "acceptance": [
+        "Silhouette et asymétries comparées au dossier exact",
+        "Aucune attaque active pendant le geste",
+        "Interruption testée en gauche/droite et mouvement réduit"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_SELECT_WALL",
+      "kind": "selection-cycle",
+      "title": "Sélection et désélection — Wall Man",
+      "sectionRefs": [
+        "SHCG-32",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-52",
+        "SHCG-53"
+      ],
+      "fighterIds": [
+        "sh4_wall_man_056"
+      ],
+      "stageIds": [
+        "subway_world"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH4_ENEMIES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh4_wall_man_056",
+          "referenceIds": [
+            "CL_SH4_ENEMIES"
+          ],
+          "edition": "SH4 original 2004",
+          "role": "stationary-boss",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-B"
+      ],
+      "states": {
+        "focus": "cadre actif et identité selon niveau de découverte",
+        "preview": "Déformation limitée du support, torse et mains émergent.",
+        "confirm": "une réaction courte spécifique au sujet, puis pose tenue ; le choix logique est immédiat",
+        "confirmedIdle": "boucle calme ou pose fixe, pas de répétition permanente du cri",
+        "costumeChange": "valider la variante avant chargement, nettoyer l’ancien aperçu",
+        "deselect": "Rétraction dans la même paroi ; ne jamais laisser un corps détaché dans le menu.",
+        "deselectShort": "arrêter effets et sons, stabiliser la pose autorisée puis retirer l’aperçu",
+        "teamConfirm": "montrer actif/réserve seulement dans profil d’équipe disponible",
+        "depart": "versus affiche les choix verrouillés et leurs éditions"
+      },
+      "cleanup": [
+        "particules propres à l’aperçu",
+        "voix en cours",
+        "ombre et éclairage spécifiques",
+        "entités ou supports instanciés pour cet aperçu"
+      ],
+      "twoPlayerState": "Chaque curseur possède son propre previewId/epoch ; la fin d’une ancienne animation ne change jamais le choix récent.",
+      "reducedMotion": "Poses fixes correspondant aux mêmes états, sans flash ni déplacement de caméra.",
+      "assetPlan": {
+        "individualPoses": [
+          "preview",
+          "confirm",
+          "confirmedIdle",
+          "deselectStart",
+          "deselectEnd"
+        ],
+        "separateClipRequired": true,
+        "reverseConfirmationForDeselect": false
+      },
+      "admission": "La fiche suit combatReferencePolicy ; le rendu de sélection n’accorde pas une admission en équipe.",
+      "constraints": [
+        "Pas de jambes, marche libre ou anatomie cachée inventée.",
+        "Aucune téléportation de paroi non établie ; hors premier prototype de tag."
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_TEAM_HYBRID_V0",
+      "kind": "team-profile",
+      "title": "Deux manifestations — prototype hybride",
+      "sectionRefs": [
+        "SHCG-33",
+        "SHCG-34",
+        "SHCG-36",
+        "SHCG-46",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020",
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "alternatif-crossover",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-C"
+      ],
+      "modeScope": {
+        "existingModesChanged": false,
+        "plannedProfile": "hybrid-versus-prototype",
+        "storyAllowed": false,
+        "sameEditionRequiredForInitialPairs": true
+      },
+      "rules": {
+        "teamSize": 2,
+        "activeSlots": 1,
+        "reserveSlots": 1,
+        "health": "séparée",
+        "defeat": "deux membres KO",
+        "duplicates": "interdits dans la première tranche",
+        "defaultSlotAfterSuper": "meneur initial",
+        "nativeEntitiesConsumeTeamSlot": false,
+        "reservePassiveHealing": false,
+        "assistOnScreenBudget": 1
+      },
+      "teamMeter": {
+        "name": "Résonance — nom de jauge créé pour le projet",
+        "capacity": 100,
+        "initial": 50,
+        "passiveGainPerCombatSecond": 4,
+        "costs": {
+          "assist": 25,
+          "voluntaryTag": 30,
+          "duoSuper": 100,
+          "postKOTag": 0
+        },
+        "gainWhilePaused": 0,
+        "gainDuringCinematic": 0,
+        "status": "hypothèses de prototype, non mesurées et non implémentées",
+        "nightmareMeter": "conservée par personnage, jamais renommée ni remplacée par celle-ci"
+      },
+      "cooldown": {
+        "assistTicks": 480,
+        "voluntaryTagTicks": 180,
+        "clock": "ticks effectifs de combat ; pause/cinématique gelées dans ce prototype",
+        "status": "hypothèses à régler"
+      },
+      "partnerStates": [
+        "reserve-ready",
+        "assist-enter",
+        "assist-action",
+        "assist-exit",
+        "reserve-cooldown",
+        "tag-enter",
+        "active",
+        "hurt",
+        "ko"
+      ],
+      "conflictOrder": [
+        "KO et fin de manche",
+        "engagement déjà réservé",
+        "super duo explicitement demandé",
+        "relais volontaire",
+        "assistance"
+      ],
+      "controls": {
+        "TAUNT": "action existante",
+        "ASSISTANCE": "nouvelle action distincte",
+        "RELAIS": "nouvelle action distincte",
+        "SUPER_DUO": "nouvelle action distincte",
+        "DENOUEMENT_EQUIPE": "commande dans fenêtre finale autorisée"
+      },
+      "invariants": [
+        "Coût prélevé une fois à l’engagement validé",
+        "Ressource insuffisante ou membre engagé : refus sans dépense",
+        "Survivant rejoint sans coût après KO",
+        "Pas de quatrième corps implicite via multi-body",
+        "Pièges et projectiles conservent le propriétaire initial"
+      ],
+      "assetsNeeded": [
+        "HUD actif/réserve/jauge/cooldown",
+        "entrées/sorties de relais par morphologie",
+        "portrait d’équipe et états de refus"
+      ],
+      "acceptance": [
+        "Deux requêtes même tick",
+        "Réserve KO pendant entrée",
+        "Changement d’actif pendant dégâts simultanés",
+        "Retour sans soin ni reset de ressource"
+      ],
+      "loreNote": "alternatif/crossover — composition de versus ; aucune alliance canonique"
+    },
+    {
+      "id": "SHCGX_ASSIST_AIR",
+      "kind": "assist",
+      "title": "Assistance — Air Screamer",
+      "sectionRefs": [
+        "SHCG-34",
+        "SHCG-35",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh1_air_screamer_001"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_air_screamer_001",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-D"
+      ],
+      "teamProfileId": "SHCGX_TEAM_HYBRID_V0",
+      "moveRef": {
+        "path": "data/movesets.json",
+        "fighterId": "sh1_air_screamer_001",
+        "moveKey": "forwardSpecial",
+        "observedName": "Griffure planée — traversée",
+        "enabledAtBaseline": true,
+        "fidelity": "behavior-composite"
+      },
+      "action": "Approche en vol plané avec contact des pattes, pas un projectile.",
+      "sourceStatus": "L’action individuelle est référencée ; intervention du partenaire créée pour le versus.",
+      "call": {
+        "allowed": "actif libre et au sol, réserve prête, jauge suffisante",
+        "forbidden": "hitstun, garde bloquée, projection, super, finisher, réserve déjà engagée",
+        "cost": "team-profile assist cost, une fois à acceptation"
+      },
+      "phases": {
+        "entry": "bande de profondeur du partenaire, côté de l’actif, apparition visible avant la première fenêtre active",
+        "action": "une exécution de moveRef, sans étendre dégâts/zone pour toucher deux fois",
+        "exit": "retrait visible ; partenaire indisponible jusqu’à sortie et cooldown",
+        "interruption": "stopper attaque non engagée, appliquer dégâts de réserve et sortie/KO appropriée"
+      },
+      "vulnerability": {
+        "hittableDuringEntry": true,
+        "hittableDuringAction": true,
+        "healthPool": "réserve propre",
+        "guardRescue": false,
+        "postKO": "résoudre impacts simultanés puis arrêter acteur et propriété selon politique"
+      },
+      "presentation": {
+        "entryProposalTicks": 18,
+        "exitProposalTicks": 24,
+        "note": "réglage de prototype, pas mesure source",
+        "flip": "respect de l’anatomie et équipement, pas miroir aveugle"
+      },
+      "acceptance": [
+        "Échec hors portée sans capture",
+        "Garde normale",
+        "Soutien et actif touchés ensemble sans double gain",
+        "Suppression du soutien après sortie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_ASSIST_GROANER",
+      "kind": "assist",
+      "title": "Assistance — Groaner",
+      "sectionRefs": [
+        "SHCG-34",
+        "SHCG-35",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh1_groaner_003"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_groaner_003",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-D"
+      ],
+      "teamProfileId": "SHCGX_TEAM_HYBRID_V0",
+      "moveRef": {
+        "path": "data/movesets.json",
+        "fighterId": "sh1_groaner_003",
+        "moveKey": "forwardSpecial",
+        "observedName": "Groaner — bond mordu en poursuite",
+        "enabledAtBaseline": true,
+        "fidelity": "behavior-composite"
+      },
+      "action": "Un bond mordu puis retombée vulnérable ; ne pas maintenir la cible au sol.",
+      "sourceStatus": "L’action individuelle est référencée ; intervention du partenaire créée pour le versus.",
+      "call": {
+        "allowed": "actif libre et au sol, réserve prête, jauge suffisante",
+        "forbidden": "hitstun, garde bloquée, projection, super, finisher, réserve déjà engagée",
+        "cost": "team-profile assist cost, une fois à acceptation"
+      },
+      "phases": {
+        "entry": "bande de profondeur du partenaire, côté de l’actif, apparition visible avant la première fenêtre active",
+        "action": "une exécution de moveRef, sans étendre dégâts/zone pour toucher deux fois",
+        "exit": "retrait visible ; partenaire indisponible jusqu’à sortie et cooldown",
+        "interruption": "stopper attaque non engagée, appliquer dégâts de réserve et sortie/KO appropriée"
+      },
+      "vulnerability": {
+        "hittableDuringEntry": true,
+        "hittableDuringAction": true,
+        "healthPool": "réserve propre",
+        "guardRescue": false,
+        "postKO": "résoudre impacts simultanés puis arrêter acteur et propriété selon politique"
+      },
+      "presentation": {
+        "entryProposalTicks": 18,
+        "exitProposalTicks": 24,
+        "note": "réglage de prototype, pas mesure source",
+        "flip": "respect de l’anatomie et équipement, pas miroir aveugle"
+      },
+      "acceptance": [
+        "Échec hors portée sans capture",
+        "Garde normale",
+        "Soutien et actif touchés ensemble sans double gain",
+        "Suppression du soutien après sortie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_ASSIST_LYING",
+      "kind": "assist",
+      "title": "Assistance — Lying Figure",
+      "sectionRefs": [
+        "SHCG-34",
+        "SHCG-35",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-D"
+      ],
+      "teamProfileId": "SHCGX_TEAM_HYBRID_V0",
+      "moveRef": {
+        "path": "data/movesets.json",
+        "fighterId": "sh2_lying_figure_020",
+        "moveKey": "neutralSpecial",
+        "observedName": "Jet thoracique",
+        "enabledAtBaseline": true,
+        "fidelity": "behavior-composite"
+      },
+      "action": "Un jet thoracique ; pas de poison de sol ni nuage remake.",
+      "sourceStatus": "L’action individuelle est référencée ; intervention du partenaire créée pour le versus.",
+      "call": {
+        "allowed": "actif libre et au sol, réserve prête, jauge suffisante",
+        "forbidden": "hitstun, garde bloquée, projection, super, finisher, réserve déjà engagée",
+        "cost": "team-profile assist cost, une fois à acceptation"
+      },
+      "phases": {
+        "entry": "bande de profondeur du partenaire, côté de l’actif, apparition visible avant la première fenêtre active",
+        "action": "une exécution de moveRef, sans étendre dégâts/zone pour toucher deux fois",
+        "exit": "retrait visible ; partenaire indisponible jusqu’à sortie et cooldown",
+        "interruption": "stopper attaque non engagée, appliquer dégâts de réserve et sortie/KO appropriée"
+      },
+      "vulnerability": {
+        "hittableDuringEntry": true,
+        "hittableDuringAction": true,
+        "healthPool": "réserve propre",
+        "guardRescue": false,
+        "postKO": "résoudre impacts simultanés puis arrêter acteur et propriété selon politique"
+      },
+      "presentation": {
+        "entryProposalTicks": 18,
+        "exitProposalTicks": 24,
+        "note": "réglage de prototype, pas mesure source",
+        "flip": "respect de l’anatomie et équipement, pas miroir aveugle"
+      },
+      "acceptance": [
+        "Échec hors portée sans capture",
+        "Garde normale",
+        "Soutien et actif touchés ensemble sans double gain",
+        "Suppression du soutien après sortie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_ASSIST_MANNEQUIN",
+      "kind": "assist",
+      "title": "Assistance — Mannequin",
+      "sectionRefs": [
+        "SHCG-34",
+        "SHCG-35",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-D"
+      ],
+      "teamProfileId": "SHCGX_TEAM_HYBRID_V0",
+      "moveRef": {
+        "path": "data/movesets.json",
+        "fighterId": "sh2_mannequin_022",
+        "moveKey": "neutralSpecial",
+        "observedName": "Frappe des jambes supérieures",
+        "enabledAtBaseline": true,
+        "fidelity": "behavior-composite"
+      },
+      "action": "Frappe des jambes supérieures puis retrait sur appuis inférieurs.",
+      "sourceStatus": "L’action individuelle est référencée ; intervention du partenaire créée pour le versus.",
+      "call": {
+        "allowed": "actif libre et au sol, réserve prête, jauge suffisante",
+        "forbidden": "hitstun, garde bloquée, projection, super, finisher, réserve déjà engagée",
+        "cost": "team-profile assist cost, une fois à acceptation"
+      },
+      "phases": {
+        "entry": "bande de profondeur du partenaire, côté de l’actif, apparition visible avant la première fenêtre active",
+        "action": "une exécution de moveRef, sans étendre dégâts/zone pour toucher deux fois",
+        "exit": "retrait visible ; partenaire indisponible jusqu’à sortie et cooldown",
+        "interruption": "stopper attaque non engagée, appliquer dégâts de réserve et sortie/KO appropriée"
+      },
+      "vulnerability": {
+        "hittableDuringEntry": true,
+        "hittableDuringAction": true,
+        "healthPool": "réserve propre",
+        "guardRescue": false,
+        "postKO": "résoudre impacts simultanés puis arrêter acteur et propriété selon politique"
+      },
+      "presentation": {
+        "entryProposalTicks": 18,
+        "exitProposalTicks": 24,
+        "note": "réglage de prototype, pas mesure source",
+        "flip": "respect de l’anatomie et équipement, pas miroir aveugle"
+      },
+      "acceptance": [
+        "Échec hors portée sans capture",
+        "Garde normale",
+        "Soutien et actif touchés ensemble sans double gain",
+        "Suppression du soutien après sortie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_ASSIST_CLOSER",
+      "kind": "assist",
+      "title": "Assistance — Closer",
+      "sectionRefs": [
+        "SHCG-34",
+        "SHCG-35",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh3_closer_036"
+      ],
+      "stageIds": [
+        "shopping_mall"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH3_ENEMIES",
+        "CL_SH3_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh3_closer_036",
+          "referenceIds": [
+            "CL_SH3_ENEMIES",
+            "CL_SH3_CREATURES"
+          ],
+          "edition": "SH3 original 2003",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-D"
+      ],
+      "teamProfileId": "SHCGX_TEAM_HYBRID_V0",
+      "moveRef": {
+        "path": "data/movesets.json",
+        "fighterId": "sh3_closer_036",
+        "moveKey": "forwardSpecial",
+        "observedName": "Poussée du bras matelassé",
+        "enabledAtBaseline": true,
+        "fidelity": "behavior-composite"
+      },
+      "action": "Poussée localisée du bras ; pas d’aura ni écran entier de dégâts.",
+      "sourceStatus": "L’action individuelle est référencée ; intervention du partenaire créée pour le versus.",
+      "call": {
+        "allowed": "actif libre et au sol, réserve prête, jauge suffisante",
+        "forbidden": "hitstun, garde bloquée, projection, super, finisher, réserve déjà engagée",
+        "cost": "team-profile assist cost, une fois à acceptation"
+      },
+      "phases": {
+        "entry": "bande de profondeur du partenaire, côté de l’actif, apparition visible avant la première fenêtre active",
+        "action": "une exécution de moveRef, sans étendre dégâts/zone pour toucher deux fois",
+        "exit": "retrait visible ; partenaire indisponible jusqu’à sortie et cooldown",
+        "interruption": "stopper attaque non engagée, appliquer dégâts de réserve et sortie/KO appropriée"
+      },
+      "vulnerability": {
+        "hittableDuringEntry": true,
+        "hittableDuringAction": true,
+        "healthPool": "réserve propre",
+        "guardRescue": false,
+        "postKO": "résoudre impacts simultanés puis arrêter acteur et propriété selon politique"
+      },
+      "presentation": {
+        "entryProposalTicks": 18,
+        "exitProposalTicks": 24,
+        "note": "réglage de prototype, pas mesure source",
+        "flip": "respect de l’anatomie et équipement, pas miroir aveugle"
+      },
+      "acceptance": [
+        "Échec hors portée sans capture",
+        "Garde normale",
+        "Soutien et actif touchés ensemble sans double gain",
+        "Suppression du soutien après sortie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_ASSIST_DOUBLE",
+      "kind": "assist",
+      "title": "Assistance — Double Head",
+      "sectionRefs": [
+        "SHCG-34",
+        "SHCG-35",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh3_double_head_040"
+      ],
+      "stageIds": [
+        "shopping_mall"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH3_ENEMIES",
+        "CL_SH3_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh3_double_head_040",
+          "referenceIds": [
+            "CL_SH3_ENEMIES",
+            "CL_SH3_CREATURES"
+          ],
+          "edition": "SH3 original 2003",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-D"
+      ],
+      "teamProfileId": "SHCGX_TEAM_HYBRID_V0",
+      "moveRef": {
+        "path": "data/movesets.json",
+        "fighterId": "sh3_double_head_040",
+        "moveKey": "forwardSpecial",
+        "observedName": "Bond puis morsure brève",
+        "enabledAtBaseline": true,
+        "fidelity": "behavior-composite"
+      },
+      "action": "Bond et morsure brève ; distinct de la prise de jambe au sol.",
+      "sourceStatus": "L’action individuelle est référencée ; intervention du partenaire créée pour le versus.",
+      "call": {
+        "allowed": "actif libre et au sol, réserve prête, jauge suffisante",
+        "forbidden": "hitstun, garde bloquée, projection, super, finisher, réserve déjà engagée",
+        "cost": "team-profile assist cost, une fois à acceptation"
+      },
+      "phases": {
+        "entry": "bande de profondeur du partenaire, côté de l’actif, apparition visible avant la première fenêtre active",
+        "action": "une exécution de moveRef, sans étendre dégâts/zone pour toucher deux fois",
+        "exit": "retrait visible ; partenaire indisponible jusqu’à sortie et cooldown",
+        "interruption": "stopper attaque non engagée, appliquer dégâts de réserve et sortie/KO appropriée"
+      },
+      "vulnerability": {
+        "hittableDuringEntry": true,
+        "hittableDuringAction": true,
+        "healthPool": "réserve propre",
+        "guardRescue": false,
+        "postKO": "résoudre impacts simultanés puis arrêter acteur et propriété selon politique"
+      },
+      "presentation": {
+        "entryProposalTicks": 18,
+        "exitProposalTicks": 24,
+        "note": "réglage de prototype, pas mesure source",
+        "flip": "respect de l’anatomie et équipement, pas miroir aveugle"
+      },
+      "acceptance": [
+        "Échec hors portée sans capture",
+        "Garde normale",
+        "Soutien et actif touchés ensemble sans double gain",
+        "Suppression du soutien après sortie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_RELAY_VOLUNTARY",
+      "kind": "relay",
+      "title": "Relais volontaire et arrivée après KO",
+      "sectionRefs": [
+        "SHCG-34",
+        "SHCG-36",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020",
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-D"
+      ],
+      "teamProfileId": "SHCGX_TEAM_HYBRID_V0",
+      "transferContract": {
+        "departTicks": 12,
+        "entryTicks": 18,
+        "controlTransferAt": "fin de la fenêtre d’entrée validée ; valeur proposée à tester",
+        "oldActor": "ne reçoit plus de nouvelles commandes après engagement ; vulnérabilité départ explicitée",
+        "entrant": "visible et vulnérable dans le relais volontaire ; repli post-KO à concevoir séparément",
+        "postKO": "gratuit et obligatoire si réserve survivante"
+      },
+      "preserve": [
+        "vie restante",
+        "Nightmare individuelle",
+        "munitions",
+        "cooldowns",
+        "réductions de dégâts",
+        "rebonds déjà consommés",
+        "propriétaire des objets",
+        "statuts et durée en réserve"
+      ],
+      "rejectedBranches": [
+        "réserve KO",
+        "réserve déjà en assistance",
+        "ressource insuffisante pour volontaire",
+        "mode historique sans profil équipe"
+      ],
+      "deferred": [
+        "relais de combo",
+        "secours pendant réception de coup",
+        "guérison passive en réserve"
+      ],
+      "acceptance": [
+        "un seul actif logique",
+        "pas de nouvelle possession des projectiles",
+        "aucune invulnérabilité implicite au changement de portrait"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_DUO_SH1",
+      "kind": "duo-technique",
+      "title": "Cercle dans la brume",
+      "sectionRefs": [
+        "SHCG-33",
+        "SHCG-37",
+        "SHCG-38",
+        "SHCG-44",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh1_groaner_003",
+        "sh1_air_screamer_001"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_groaner_003",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_air_screamer_001",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "alternatif-crossover",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-E"
+      ],
+      "relation": {
+        "status": "hypothetical-versus",
+        "sourceGroup": "sh1",
+        "edition": "SH1 original 1999",
+        "claim": "Les gestes individuels sont repris des dossiers ; la coordination est créée pour ce jeu.",
+        "storyAvailability": "aucune disponibilité canonique présumée",
+        "spokenDialogue": null
+      },
+      "admission": {
+        "requires": "les deux combatReferencePolicy.combatEnabled et versions compatibles",
+        "freeVersus": true,
+        "canonicalCampaign": false,
+        "firstProfile": "SHCGX_TEAM_HYBRID_V0"
+      },
+      "super": {
+        "name": "Cercle dans la brume",
+        "nameStatus": "nom original du projet",
+        "openingAssistId": "SHCGX_ASSIST_GROANER",
+        "followUpAssistId": "SHCGX_ASSIST_AIR",
+        "confirm": "touche initiale sur cible compatible ; longue séquence uniquement après confirmation",
+        "cost": "team-profile duoSuper cost",
+        "missOrGuard": "résolution courte ; coût engagé et récupération applicables ; cible jamais téléportée",
+        "beats": [
+          "Le bond du Groaner fournit l’ouverture, uniquement en cas de touche compatible.",
+          "Air Screamer passe ensuite en griffure planée, contact limité aux pattes.",
+          "Groaner retombe ; Air Screamer remonte et chacun reprend une place lisible."
+        ],
+        "activeAfter": "meneur initial",
+        "camera": "plan latéral incluant corps et points de contact ; pas de recadrage qui masque la défense"
+      },
+      "teamDenouement": {
+        "name": "Dénouement collectif — Cercle dans la brume",
+        "nameStatus": "création du projet",
+        "availability": "résultat déjà acquis et deux membres non KO",
+        "staging": "Après victoire acquise, le chien s’arrête tandis que l’ombre aérienne traverse la brume ; cadrage sur la rue vide, aucun pouvoir de brouillard créé.",
+        "targetCompatibility": "cible mobile humanoïde ou quadrupède prévue ; immatériel, géant, fixe, essaim : victoire simple sauf variante dédiée",
+        "result": "inchangé par mise en scène"
+      },
+      "conditionalEnding": {
+        "conditions": {
+          "bothAlive": true,
+          "exactStageId": "old_silent_hill",
+          "exactVersionsRequired": true,
+          "lastAction": "duoSuper confirmé ou victoire conforme à la fiche",
+          "storyCanon": false
+        },
+        "priority": [
+          "conditionnel exact",
+          "collectif compatible",
+          "individuel compatible",
+          "victoire simple"
+        ],
+        "fallback": "une scène de victoire du meneur déjà disponible"
+      },
+      "assetsNeeded": [
+        "sprites séparés des deux sujets",
+        "poses d’entrée/action/retour de chaque sujet",
+        "storyboard collectif",
+        "réactions de cible par morphologie",
+        "caméra et sons séparés"
+      ],
+      "acceptance": [
+        "partenaire indisponible refuse le super",
+        "garde/raté sans chorégraphie longue",
+        "mauvais stage utilise repli",
+        "aucun membre KO ressuscité"
+      ],
+      "loreNote": "alternatif/crossover — coopération de versus non attestée"
+    },
+    {
+      "id": "SHCGX_DUO_SH2",
+      "kind": "duo-technique",
+      "title": "Angle mort",
+      "sectionRefs": [
+        "SHCG-33",
+        "SHCG-37",
+        "SHCG-38",
+        "SHCG-44",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020",
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "alternatif-crossover",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-E"
+      ],
+      "relation": {
+        "status": "hypothetical-versus",
+        "sourceGroup": "sh2",
+        "edition": "SH2 original 2001",
+        "claim": "Les gestes individuels sont repris des dossiers ; la coordination est créée pour ce jeu.",
+        "storyAvailability": "aucune disponibilité canonique présumée",
+        "spokenDialogue": null
+      },
+      "admission": {
+        "requires": "les deux combatReferencePolicy.combatEnabled et versions compatibles",
+        "freeVersus": true,
+        "canonicalCampaign": false,
+        "firstProfile": "SHCGX_TEAM_HYBRID_V0"
+      },
+      "super": {
+        "name": "Angle mort",
+        "nameStatus": "nom original du projet",
+        "openingAssistId": "SHCGX_ASSIST_LYING",
+        "followUpAssistId": "SHCGX_ASSIST_MANNEQUIN",
+        "confirm": "touche initiale sur cible compatible ; longue séquence uniquement après confirmation",
+        "cost": "team-profile duoSuper cost",
+        "missOrGuard": "résolution courte ; coût engagé et récupération applicables ; cible jamais téléportée",
+        "beats": [
+          "Le jet thoracique du Lying Figure sert d’ouverture ; la garde arrête la capture cinématique.",
+          "Mannequin frappe avec ses jambes supérieures sans tête ni bras ajoutés.",
+          "La cible retombe et le meneur reprend la posture du combat."
+        ],
+        "activeAfter": "meneur initial",
+        "camera": "plan latéral incluant corps et points de contact ; pas de recadrage qui masque la défense"
+      },
+      "teamDenouement": {
+        "name": "Dénouement collectif — Angle mort",
+        "nameStatus": "création du projet",
+        "availability": "résultat déjà acquis et deux membres non KO",
+        "staging": "Après victoire acquise, les deux silhouettes barrent l’issue du plan ; extinction progressive, aucun dialogue ni affiliation officielle.",
+        "targetCompatibility": "cible mobile humanoïde ou quadrupède prévue ; immatériel, géant, fixe, essaim : victoire simple sauf variante dédiée",
+        "result": "inchangé par mise en scène"
+      },
+      "conditionalEnding": {
+        "conditions": {
+          "bothAlive": true,
+          "exactStageId": "woodside",
+          "exactVersionsRequired": true,
+          "lastAction": "duoSuper confirmé ou victoire conforme à la fiche",
+          "storyCanon": false
+        },
+        "priority": [
+          "conditionnel exact",
+          "collectif compatible",
+          "individuel compatible",
+          "victoire simple"
+        ],
+        "fallback": "une scène de victoire du meneur déjà disponible"
+      },
+      "assetsNeeded": [
+        "sprites séparés des deux sujets",
+        "poses d’entrée/action/retour de chaque sujet",
+        "storyboard collectif",
+        "réactions de cible par morphologie",
+        "caméra et sons séparés"
+      ],
+      "acceptance": [
+        "partenaire indisponible refuse le super",
+        "garde/raté sans chorégraphie longue",
+        "mauvais stage utilise repli",
+        "aucun membre KO ressuscité"
+      ],
+      "loreNote": "alternatif/crossover — coopération de versus non attestée"
+    },
+    {
+      "id": "SHCGX_DUO_SH3",
+      "kind": "duo-technique",
+      "title": "Issue obstruée",
+      "sectionRefs": [
+        "SHCG-33",
+        "SHCG-37",
+        "SHCG-38",
+        "SHCG-44",
+        "SHCG-45",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh3_double_head_040",
+        "sh3_closer_036"
+      ],
+      "stageIds": [
+        "shopping_mall"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH3_ENEMIES",
+        "CL_SH3_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh3_double_head_040",
+          "referenceIds": [
+            "CL_SH3_ENEMIES",
+            "CL_SH3_CREATURES"
+          ],
+          "edition": "SH3 original 2003",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh3_closer_036",
+          "referenceIds": [
+            "CL_SH3_ENEMIES",
+            "CL_SH3_CREATURES"
+          ],
+          "edition": "SH3 original 2003",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "alternatif-crossover",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-E"
+      ],
+      "relation": {
+        "status": "hypothetical-versus",
+        "sourceGroup": "sh3",
+        "edition": "SH3 original 2003",
+        "claim": "Les gestes individuels sont repris des dossiers ; la coordination est créée pour ce jeu.",
+        "storyAvailability": "aucune disponibilité canonique présumée",
+        "spokenDialogue": null
+      },
+      "admission": {
+        "requires": "les deux combatReferencePolicy.combatEnabled et versions compatibles",
+        "freeVersus": true,
+        "canonicalCampaign": false,
+        "firstProfile": "SHCGX_TEAM_HYBRID_V0"
+      },
+      "super": {
+        "name": "Issue obstruée",
+        "nameStatus": "nom original du projet",
+        "openingAssistId": "SHCGX_ASSIST_DOUBLE",
+        "followUpAssistId": "SHCGX_ASSIST_CLOSER",
+        "confirm": "touche initiale sur cible compatible ; longue séquence uniquement après confirmation",
+        "cost": "team-profile duoSuper cost",
+        "missOrGuard": "résolution courte ; coût engagé et récupération applicables ; cible jamais téléportée",
+        "beats": [
+          "Double Head engage son bond puis morsure brève, sans convertir ce bond en prise prolongée.",
+          "Closer avance la masse de son bras pour un contact localisé.",
+          "Le chien se retire et Closer se stabilise ; pas de vague d’énergie."
+        ],
+        "activeAfter": "meneur initial",
+        "camera": "plan latéral incluant corps et points de contact ; pas de recadrage qui masque la défense"
+      },
+      "teamDenouement": {
+        "name": "Dénouement collectif — Issue obstruée",
+        "nameStatus": "création du projet",
+        "availability": "résultat déjà acquis et deux membres non KO",
+        "staging": "Après victoire acquise, Closer occupe le passage pendant que Double Head se retire derrière lui ; la disparition dans le hors-champ ne signifie ni téléportation ni alliance canonique.",
+        "targetCompatibility": "cible mobile humanoïde ou quadrupède prévue ; immatériel, géant, fixe, essaim : victoire simple sauf variante dédiée",
+        "result": "inchangé par mise en scène"
+      },
+      "conditionalEnding": {
+        "conditions": {
+          "bothAlive": true,
+          "exactStageId": "shopping_mall",
+          "exactVersionsRequired": true,
+          "lastAction": "duoSuper confirmé ou victoire conforme à la fiche",
+          "storyCanon": false
+        },
+        "priority": [
+          "conditionnel exact",
+          "collectif compatible",
+          "individuel compatible",
+          "victoire simple"
+        ],
+        "fallback": "une scène de victoire du meneur déjà disponible"
+      },
+      "assetsNeeded": [
+        "sprites séparés des deux sujets",
+        "poses d’entrée/action/retour de chaque sujet",
+        "storyboard collectif",
+        "réactions de cible par morphologie",
+        "caméra et sons séparés"
+      ],
+      "acceptance": [
+        "partenaire indisponible refuse le super",
+        "garde/raté sans chorégraphie longue",
+        "mauvais stage utilise repli",
+        "aucun membre KO ressuscité"
+      ],
+      "loreNote": "alternatif/crossover — coopération de versus non attestée"
+    },
+    {
+      "id": "SHCGX_CLASH_PIPE_MIRROR",
+      "kind": "clash",
+      "title": "Choc de tuyaux — miroir SH2",
+      "sectionRefs": [
+        "SHCG-39",
+        "SHCG-46",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_bubble_head_nurse_024"
+      ],
+      "stageIds": [
+        "brookhaven_sh2"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_bubble_head_nurse_024",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-F"
+      ],
+      "eligibility": {
+        "members": [
+          "sh2_bubble_head_nurse_024:neutralHeavy",
+          "sh2_bubble_head_nurse_024:neutralHeavy"
+        ],
+        "contact": "collision des volumes actifs d’armes, pas simple proximité des personnages",
+        "simultaneityWindowTicks": 2,
+        "cooldownTicks": 600,
+        "maxPerMoveEngagement": 1,
+        "status": "valeurs initiales à tester"
+      },
+      "resolution": {
+        "stableProfile": "recul court symétrique, aucun QTE ni inversion automatique du vainqueur",
+        "spectacleProfile": "un appui remappé dans une fenêtre commune proposée de 30 ticks",
+        "comparison": "saisie valide la plus précoce dans la fenêtre ; égalité au même tick = séparation",
+        "noInput": "séparation neutre",
+        "disconnect": "pause de la partie locale selon règle existante, pas attribution arbitraire de victoire",
+        "maxSceneTicks": 90,
+        "damageAward": "aucun dégât gratuit pour cette tranche ; l’avantage de position est borné"
+      },
+      "thirdPartyRule": "Trier événements par tick et identifiant stable ; un contact tiers valide résolu avant réservation du clash annule celui-ci, les contacts après réservation suivent la politique de gel commune.",
+      "worldState": {
+        "timer": "gel pendant la scène dans ce prototype",
+        "entities": "gel des états dangereux, pas simple invisibilité",
+        "resources": "aucun gain pendant la scène",
+        "skip": "aboutit au même état de séparation"
+      },
+      "accessibility": {
+        "repeatedMashing": false,
+        "reducedMotion": true,
+        "soloAssist": "option séparée de la règle commune PvP"
+      },
+      "acceptance": [
+        "permuter côtés",
+        "troisième projectile même tick",
+        "égalité, double réussite, absence",
+        "limite de fréquence"
+      ],
+      "loreNote": "adaptation jouable — règle de versus originale, non scène canonique"
+    },
+    {
+      "id": "SHCGX_ENTITY_DOLL_SHADOWS",
+      "kind": "native-entity",
+      "title": "Doll et Shadows — rencontre fixe",
+      "sectionRefs": [
+        "SHCG-40",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "downpour_doll_106"
+      ],
+      "stageIds": [
+        "overlook"
+      ],
+      "chronicleIds": [
+        "murphy_rain"
+      ],
+      "sourceRefs": [
+        "EXT10"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "downpour_doll_106",
+          "referenceIds": [
+            "EXT10"
+          ],
+          "edition": "Silent Hill: Downpour (2012, version commerciale)",
+          "role": "environmental-obstacle",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-G"
+      ],
+      "authority": {
+        "ownerId": "downpour_doll_106",
+        "role": "environmental-obstacle",
+        "noCombatAdmissionChange": true,
+        "control": "IA de rencontre bornée ; aucune commande de marionnette libre promise",
+        "nativeEntity": "Shadow, identifiant d’instance lié à ownerId, pas nouveau profil roster"
+      },
+      "states": [
+        "owner-present",
+        "shadow-created",
+        "shadow-active",
+        "shadow-interrupted",
+        "owner-destroyed",
+        "shadow-despawned"
+      ],
+      "constraints": [
+        "Le mannequin reste immobile",
+        "Aucun coup direct du mannequin",
+        "Détruire la Doll dissipe ses Shadows",
+        "La visibilité UV relève de la fiche/rencontre, ne devient pas une disparition totale de toute information utile"
+      ],
+      "proposedBudget": {
+        "maxActiveShadows": 2,
+        "status": "budget de prototype non mesuré et non canonique"
+      },
+      "lifecycle": {
+        "ownerHit": "appliquer état du support et règles de réaction prévues sans déplacement libre",
+        "ownerKO": "résoudre l’événement, dissiper toutes ses Shadows",
+        "ownerReserve": "non applicable : aucun tag de ce dossier",
+        "stageTransition": "retirer les projections ; recréer seulement si la destination définit explicitement cette rencontre",
+        "roundEnd": "retirer les instances",
+        "cinematic": "geler ensemble propriétaire et projections",
+        "replay": "restaurer instanceId/ownerId sans génération supplémentaire"
+      },
+      "assetPlan": [
+        "Doll fixe, source individuelle",
+        "Shadow par image source",
+        "projection UV et impacts séparés",
+        "état de destruction finale si retenu"
+      ],
+      "unresolved": [
+        "captures de jeu exactes pour nombre, trajet et signaux",
+        "géographie exacte de l’épreuve : overlook est groupe de contexte, pas preuve de localisation du mannequin"
+      ],
+      "acceptance": [
+        "owner détruit ne laisse aucune Shadow",
+        "aucune marche du mannequin",
+        "aucune source d’accès ne contourne son rôle"
+      ],
+      "loreNote": "adaptation de rencontre fondée sur dossier secondaire ; captures primaires à relever"
+    },
+    {
+      "id": "SHCGX_ENTITY_TWIN_PYRAMIDS",
+      "kind": "multi-body-encounter",
+      "title": "Deux corps, deux lances, un dossier",
+      "sectionRefs": [
+        "SHCG-33",
+        "SHCG-40",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_twin_pyramid_heads_031"
+      ],
+      "stageIds": [
+        "hotel_otherworld"
+      ],
+      "chronicleIds": [
+        "james_sentence"
+      ],
+      "sourceRefs": [
+        "CL_SH2_BOSSES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_twin_pyramid_heads_031",
+          "referenceIds": [
+            "CL_SH2_BOSSES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "multi-body",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-G"
+      ],
+      "contract": {
+        "profileId": "sh2_twin_pyramid_heads_031",
+        "bodies": 2,
+        "weaponPerBody": "lance",
+        "teamSlots": 1,
+        "sharedAdmission": "rôle multi-body existant, pas une nouvelle admission",
+        "independentPositions": true,
+        "fusion": false
+      },
+      "constraints": [
+        "Ne pas combiner Great Knife et lance par simple homonymie",
+        "Ne pas fusionner les deux corps en géant",
+        "Le stage générique hotel_otherworld ne valide pas à lui seul la salle finale exacte",
+        "La conclusion source citée par le dossier ne devient pas un finisher contre toute cible"
+      ],
+      "lifecycle": {
+        "bodyLost": "règle de rencontre à définir sans résurrection implicite",
+        "ownerReserve": "non retenu pour le premier tag",
+        "transition": "seulement si les deux supports/corps peuvent rejoindre une destination source validée",
+        "end": "résolution narrative propre, distincte d’un super duo"
+      },
+      "assetsNeeded": [
+        "deux sources de corps si nécessaire, mêmes proportions et lances exactes",
+        "poses de convergence séparées",
+        "référence de la salle de rencontre"
+      ],
+      "acceptance": [
+        "deux identifiants de corps distincts sous un même propriétaire",
+        "aucun troisième partenaire gratuit",
+        "géographie et conclusion non déduites du simple nom du stage"
+      ],
+      "loreNote": "rencontre source documentée secondaire ; adaptation jouable à concevoir"
+    },
+    {
+      "id": "SHCGX_PROJECTILE_LYING_OWNERSHIP",
+      "kind": "projectile-policy",
+      "title": "Jet thoracique — attribution et durée",
+      "sectionRefs": [
+        "SHCG-35",
+        "SHCG-41",
+        "SHCG-48"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-G"
+      ],
+      "moveRef": {
+        "path": "data/movesets.json",
+        "fighterId": "sh2_lying_figure_020",
+        "moveKey": "neutralSpecial"
+      },
+      "authority": {
+        "owner": "acteur ayant émis le jet",
+        "damageCredit": "même propriétaire, même équipe au moment du tir",
+        "activeActorChange": "ne transfère pas la propriété"
+      },
+      "restrictions": [
+        "pas de suivi automatique ajouté",
+        "pas de réflexion par défaut",
+        "pas de tache corrosive permanente",
+        "pas de nuage de mort remake"
+      ],
+      "lifecycle": {
+        "ownerHit": "jet déjà émis poursuit sa durée prévue ; tir non émis interrompu",
+        "ownerReserve": "jet existant conserve son ownerId ; aucun nouveau tir depuis la réserve",
+        "ownerKO": "résoudre les impacts au tick du KO puis supprimer à la fin de manche ; politique prototype explicite",
+        "transition": "retirer le jet au changement de zone et terminer ses sons ; pas de recréation à la destination",
+        "roundEnd": "retirer toutes les instances",
+        "clashOrSuper": "gel logique si la scène le prévoit, sans doubler les impacts",
+        "reflection": "non applicable à ce kit sans nouvelle preuve et règle"
+      },
+      "budget": {
+        "perOwner": 1,
+        "status": "hypothèse de prototype d’assistance, ne remplace pas les paramètres existants sans validation"
+      },
+      "acceptance": [
+        "tir puis relais conserve crédit",
+        "KO simultané résolu une fois",
+        "reprise de scène ne réémet pas le jet"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_BONUS_AIR_PATH",
+      "kind": "bonus-stage",
+      "title": "Trace dans la rue",
+      "sectionRefs": [
+        "SHCG-42",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-56",
+        "SHCG-57"
+      ],
+      "fighterIds": [
+        "sh1_air_screamer_001"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [
+        "fog_of_alessa"
+      ],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_air_screamer_001",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-H"
+      ],
+      "documentaryLinks": [
+        "SHC_CAM_01",
+        "SHC_CAM_08"
+      ],
+      "narrativeContext": "Épreuve facultative de déplacement dans une recomposition latérale clairement annoncée du lieu.",
+      "optional": true,
+      "objective": {
+        "kind": "reach-checkpoints",
+        "count": 3,
+        "maxTicks": 1800,
+        "status": "réglages de prototype"
+      },
+      "goal": "Traverser trois repères de trajectoire avec les déplacements déjà admis, puis rejoindre le dernier appui ; aucune boule sonique ni cible humaine.",
+      "constraints": [
+        "Départ au même appui et jauge que la fiche de l’épreuve",
+        "Aucune attaque exigée si elle contredit le mouvement retenu"
+      ],
+      "initialState": {
+        "health": "état de début d’épreuve prédéfini, sans détourner la progression compétitive",
+        "resources": "réinitialisation explicite de l’exercice, restaurer l’état du récit à la sortie",
+        "team": "uniquement si profil hybride réellement disponible"
+      },
+      "result": {
+        "success": "accomplissement journalisé ; évaluer la règle liée, puis attribuer automatiquement ou proposer la récupération selon cette règle",
+        "failure": "résultat expliqué, possibilité de réessayer ou de poursuivre",
+        "duplicate": "pas de deuxième grant pour la même règle",
+        "return": "reprendre la file narrative au chapitre prévu, sans faux match gagné"
+      },
+      "rewardContentId": "SHCGX_CONTENT_AIR_DOSSIER",
+      "checkpoint": "avant épreuve ; fermeture pendant résultat rejoue seulement la présentation, pas le grant",
+      "illustrationBriefs": {
+        "intro": "montrer objectif et repères du lieu, sujet entier et version correcte ; texte séparé",
+        "outroSuccess": "montrer la conséquence sur un dossier d’archive",
+        "outroFailure": "même lieu, indice discret, aucune mort officielle ajoutée"
+      },
+      "assetPlan": [
+        "deux illustrations fixes à produire",
+        "repères d’objectif originaux identifiés",
+        "indicateurs de résultat et recette de reprise"
+      ],
+      "acceptance": [
+        "succès",
+        "échec puis continuation",
+        "quitter/réouvrir",
+        "même récompense obtenue par autre voie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_BONUS_KNIFE_REACH",
+      "kind": "bonus-stage",
+      "title": "Le poids du passage",
+      "sectionRefs": [
+        "SHCG-42",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-56",
+        "SHCG-57"
+      ],
+      "fighterIds": [
+        "sh2_red_pyramid_thing_great_knife_029"
+      ],
+      "stageIds": [
+        "blue_creek"
+      ],
+      "chronicleIds": [
+        "james_sentence"
+      ],
+      "sourceRefs": [
+        "CL_SH2_03_BLUE_CREEK_APTS",
+        "CL_SH2_BOSSES",
+        "CL_SH2_ENEMIES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+          "referenceIds": [
+            "CL_SH2_03_BLUE_CREEK_APTS",
+            "CL_SH2_BOSSES",
+            "CL_SH2_ENEMIES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-H"
+      ],
+      "documentaryLinks": [
+        "SHC_CAM_02",
+        "SHC_ROUTE_GREAT_KNIFE"
+      ],
+      "narrativeContext": "Épreuve originale de portée et récupération, sans rejouer la fin officielle de Blue Creek.",
+      "optional": true,
+      "objective": {
+        "kind": "range-recovery",
+        "validContacts": 3,
+        "maxTicks": 2400,
+        "status": "réglages de prototype"
+      },
+      "goal": "Toucher trois repères d’essai documentaires successifs avec la grande lame puis revenir dans une zone d’appui ; pas de voiture ou de nouveau prisonnier canonique ajouté.",
+      "constraints": [
+        "Grande lame uniquement pour ce profil",
+        "Repères graphiques de test, pas objets officiels du décor",
+        "Pas de nouvelle transition physique inventée"
+      ],
+      "initialState": {
+        "health": "état de début d’épreuve prédéfini, sans détourner la progression compétitive",
+        "resources": "réinitialisation explicite de l’exercice, restaurer l’état du récit à la sortie",
+        "team": "uniquement si profil hybride réellement disponible"
+      },
+      "result": {
+        "success": "accomplissement journalisé ; évaluer la règle liée, puis attribuer automatiquement ou proposer la récupération selon cette règle",
+        "failure": "résultat expliqué, possibilité de réessayer ou de poursuivre",
+        "duplicate": "pas de deuxième grant pour la même règle",
+        "return": "reprendre la file narrative au chapitre prévu, sans faux match gagné"
+      },
+      "rewardContentId": "SHCGX_CONTENT_KNIFE_PLATE",
+      "checkpoint": "avant épreuve ; fermeture pendant résultat rejoue seulement la présentation, pas le grant",
+      "illustrationBriefs": {
+        "intro": "montrer objectif et repères du lieu, sujet entier et version correcte ; texte séparé",
+        "outroSuccess": "montrer la conséquence sur un dossier d’archive",
+        "outroFailure": "même lieu, indice discret, aucune mort officielle ajoutée"
+      },
+      "assetPlan": [
+        "deux illustrations fixes à produire",
+        "repères d’objectif originaux identifiés",
+        "indicateurs de résultat et recette de reprise"
+      ],
+      "acceptance": [
+        "succès",
+        "échec puis continuation",
+        "quitter/réouvrir",
+        "même récompense obtenue par autre voie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_BONUS_OBSERVATION",
+      "kind": "bonus-stage",
+      "title": "Ce qui ne se bat pas",
+      "sectionRefs": [
+        "SHCG-42",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-56",
+        "SHCG-57"
+      ],
+      "fighterIds": [
+        "shattered_raw_shock_base_099",
+        "shortmessage_sakura_head_150"
+      ],
+      "stageIds": [
+        "nightmare_school",
+        "villa"
+      ],
+      "chronicleIds": [
+        "harry_ice",
+        "maya_villa"
+      ],
+      "sourceRefs": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024",
+        "EXT29",
+        "EXT31",
+        "EXT30"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "shattered_raw_shock_base_099",
+          "referenceIds": [
+            "EXT08",
+            "EXT_SHATTERED_INFO_20261024"
+          ],
+          "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+          "role": "scripted-encounter",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "shortmessage_sakura_head_150",
+          "referenceIds": [
+            "EXT29",
+            "EXT31",
+            "EXT30"
+          ],
+          "edition": "Silent Hill: The Short Message (2024, PS5)",
+          "role": "scripted-encounter",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-H"
+      ],
+      "documentaryLinks": [
+        "SHC_CAM_06"
+      ],
+      "narrativeContext": "Dossier interactif de la campagne originale ; aucune promotion des présences de fuite en combattants de duel.",
+      "optional": true,
+      "objective": {
+        "kind": "observation",
+        "observationsRequired": 2,
+        "timer": null,
+        "wrongAnswer": "indice contextuel et nouvel essai",
+        "status": "règle de conception"
+      },
+      "goal": "Consulter deux scènes et distinguer poursuite/observation de victoire par KO ; conserver chaque œuvre dans son propre dossier.",
+      "constraints": [
+        "Aucun point de vie et aucune victoire attribuée à un dossier",
+        "Deux stages représentent des dossiers séparés, pas un raccord de porte",
+        "L’observateur reste hors champ, pas nouveau héros jouable"
+      ],
+      "initialState": {
+        "health": "état de début d’épreuve prédéfini, sans détourner la progression compétitive",
+        "resources": "réinitialisation explicite de l’exercice, restaurer l’état du récit à la sortie",
+        "team": "uniquement si profil hybride réellement disponible"
+      },
+      "result": {
+        "success": "accomplissement journalisé ; évaluer la règle liée, puis attribuer automatiquement ou proposer la récupération selon cette règle",
+        "failure": "résultat expliqué, possibilité de réessayer ou de poursuivre",
+        "duplicate": "pas de deuxième grant pour la même règle",
+        "return": "reprendre la file narrative au chapitre prévu, sans faux match gagné"
+      },
+      "rewardContentId": "SHCGX_CONTENT_OBSERVATION",
+      "checkpoint": "avant épreuve ; fermeture pendant résultat rejoue seulement la présentation, pas le grant",
+      "illustrationBriefs": {
+        "intro": "montrer objectif et repères du lieu, sujet entier et version correcte ; texte séparé",
+        "outroSuccess": "montrer la conséquence sur un dossier d’archive",
+        "outroFailure": "même lieu, indice discret, aucune mort officielle ajoutée"
+      },
+      "assetPlan": [
+        "deux illustrations fixes à produire",
+        "repères d’objectif originaux identifiés",
+        "indicateurs de résultat et recette de reprise"
+      ],
+      "acceptance": [
+        "succès",
+        "échec puis continuation",
+        "quitter/réouvrir",
+        "même récompense obtenue par autre voie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_BONUS_DUO_TIMING",
+      "kind": "bonus-stage",
+      "title": "Deux mouvements, une ouverture",
+      "sectionRefs": [
+        "SHCG-42",
+        "SHCG-45",
+        "SHCG-48",
+        "SHCG-56",
+        "SHCG-57"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020",
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "adaptation-jouable",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-H"
+      ],
+      "documentaryLinks": [],
+      "narrativeContext": "Défi facultatif du prototype versus alternatif ; absent du récit canonique.",
+      "optional": true,
+      "objective": {
+        "kind": "team-timing",
+        "safeTags": 2,
+        "confirmedDuoSupers": 1,
+        "maxTicks": 3600,
+        "status": "réglages de prototype"
+      },
+      "goal": "Effectuer deux relais hors pression puis une ouverture de duo confirmée contre une cible d’entraînement admise ; un jet bloqué n’accomplit pas la condition.",
+      "constraints": [
+        "N’existe qu’après implémentation du profil hybride",
+        "Réinitialisation d’exercice explicite, jamais un reset caché en match",
+        "Pas d’avantage statistique pour la récompense"
+      ],
+      "initialState": {
+        "health": "état de début d’épreuve prédéfini, sans détourner la progression compétitive",
+        "resources": "réinitialisation explicite de l’exercice, restaurer l’état du récit à la sortie",
+        "team": "uniquement si profil hybride réellement disponible"
+      },
+      "result": {
+        "success": "accomplissement journalisé ; évaluer la règle liée, puis attribuer automatiquement ou proposer la récupération selon cette règle",
+        "failure": "résultat expliqué, possibilité de réessayer ou de poursuivre",
+        "duplicate": "pas de deuxième grant pour la même règle",
+        "return": "reprendre la file narrative au chapitre prévu, sans faux match gagné"
+      },
+      "rewardContentId": "SHCGX_CONTENT_DUO_PRESENTATION",
+      "checkpoint": "avant épreuve ; fermeture pendant résultat rejoue seulement la présentation, pas le grant",
+      "illustrationBriefs": {
+        "intro": "montrer objectif et repères du lieu, sujet entier et version correcte ; texte séparé",
+        "outroSuccess": "montrer la conséquence sur un dossier d’archive",
+        "outroFailure": "même lieu, indice discret, aucune mort officielle ajoutée"
+      },
+      "assetPlan": [
+        "deux illustrations fixes à produire",
+        "repères d’objectif originaux identifiés",
+        "indicateurs de résultat et recette de reprise"
+      ],
+      "acceptance": [
+        "succès",
+        "échec puis continuation",
+        "quitter/réouvrir",
+        "même récompense obtenue par autre voie"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_ARCHIVES_REGISTRE",
+      "kind": "unlock-space",
+      "title": "Archives du Registre",
+      "sectionRefs": [
+        "SHCG-43",
+        "SHCG-48",
+        "SHCG-52",
+        "SHCG-58"
+      ],
+      "fighterIds": [],
+      "stageIds": [],
+      "chronicleIds": [
+        "fog_of_alessa",
+        "james_sentence",
+        "heather_birth",
+        "room_21"
+      ],
+      "sourceRefs": [],
+      "referenceEvidence": [],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-I"
+      ],
+      "documentaryLinks": [
+        "SHC_CAM_REGISTRE_ABSENCES"
+      ],
+      "format": "carte 2D de consultation, observateur hors champ ; aucune nouvelle locomotion de héros",
+      "zones": [
+        {
+          "id": "SHCGX_ZONE_VESTIBULE",
+          "name": "Vestibule du registre",
+          "access": "ouvert",
+          "purpose": "orientation, réglages, aide et collection"
+        },
+        {
+          "id": "SHCGX_ZONE_SH1",
+          "name": "Dossiers SH1",
+          "source": "sh1",
+          "access": "après prologue ou accès libre de consultation"
+        },
+        {
+          "id": "SHCGX_ZONE_SH2",
+          "name": "Dossiers SH2 original",
+          "source": "sh2",
+          "access": "après lecture de la séparation des éditions"
+        },
+        {
+          "id": "SHCGX_ZONE_OBSERVATION",
+          "name": "Salle d’observation des dossiers",
+          "access": "après chapitre d’orientation ; toujours une voie de consultation non combattante"
+        }
+      ],
+      "links": [
+        {
+          "from": "SHCGX_ZONE_VESTIBULE",
+          "to": "SHCGX_ZONE_SH1",
+          "kind": "passage de consultation bidirectionnel, pas porte géographique entre villes"
+        },
+        {
+          "from": "SHCGX_ZONE_VESTIBULE",
+          "to": "SHCGX_ZONE_SH2",
+          "kind": "passage de consultation bidirectionnel, pas porte géographique entre villes"
+        },
+        {
+          "from": "SHCGX_ZONE_VESTIBULE",
+          "to": "SHCGX_ZONE_OBSERVATION",
+          "kind": "passage de consultation bidirectionnel, pas porte géographique entre villes"
+        }
+      ],
+      "rewards": {
+        "catalogue": "mêmes contentIds que la sélection et galerie",
+        "preferred": "récompenses ciblées",
+        "randomLoot": false,
+        "duplicate": "annoncer acquis avant tout coût, aucun débit supplémentaire"
+      },
+      "keys": {
+        "name": "repère d’archive — objet original de progression",
+        "source": "événement d’accomplissement identifié",
+        "essentialLearning": "aucune clé requise pour options, aide ou entraînement existants"
+      },
+      "save": {
+        "versionedCatalogue": true,
+        "atomicGrantBeforeReveal": true,
+        "reopenedObject": "état ouvert conservé",
+        "dependencyCycleCheck": true
+      },
+      "accessibility": [
+        "carte navigable sans souris",
+        "liste équivalente à la carte",
+        "pas de flash obligatoire",
+        "même information en mode réduit"
+      ],
+      "assetPlan": [
+        "carte par zone",
+        "cadres de dossier",
+        "badge ouvert/fermé",
+        "scène de révélation sobre"
+      ],
+      "acceptance": [
+        "aucun cycle de clé/coffre",
+        "récompense et menu portent le même contentId",
+        "aucune porte isolée ajoutée dans un stage canonique"
+      ],
+      "loreNote": "original compatible — espace d’interface et de campagne du fan-game, pas lieu canonique"
+    },
+    {
+      "id": "SHCGX_CONTENT_AIR_DOSSIER",
+      "kind": "unlock-content",
+      "title": "Dossier de trajectoire Air Screamer",
+      "sectionRefs": [
+        "SHCG-51",
+        "SHCG-52",
+        "SHCG-53",
+        "SHCG-57",
+        "SHCG-58",
+        "SHCG-63",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "sh1_air_screamer_001"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_air_screamer_001",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-J",
+        "E02-A"
+      ],
+      "contentCategory": "gallery",
+      "ruleId": "SHCGX_RULE_AIR_ROUTE",
+      "description": "Documents de l’épreuve Trace dans la rue ; pas déblocage d’un pouvoir.",
+      "discovery": {
+        "initial": "identified",
+        "secretVisual": "emblème neutre",
+        "hintVisual": "silhouette seulement si identité révélable",
+        "unlockReveal": "nom et miniature après acquisition enregistrée"
+      },
+      "access": {
+        "grantModels": [
+          "permanent"
+        ],
+        "initial": "none",
+        "noNewGameplayAccess": true
+      },
+      "installation": {
+        "initial": "not-produced",
+        "playerMessage": "Contenu en préparation — aucune condition de jeu ne remplace sa production",
+        "readyCondition": "fichiers et dépendances importés et recette passée"
+      },
+      "compatibility": {
+        "preview": true,
+        "select": "selon disponibilité réelle et mode autorisé",
+        "competitionStats": "aucune modification"
+      },
+      "UI": {
+        "locked": "À débloquer — consulter la condition",
+        "claimable": "Récompense disponible — retourner aux Archives du Registre",
+        "owned": "Acquis",
+        "dependency": "Acquis — contenu requis encore indisponible",
+        "notInstalled": "Acquis — installation nécessaire",
+        "focus": "toujours consultable"
+      },
+      "assetPlan": [
+        "miniature exacte du contenu réellement produit",
+        "cadre secret/indice/identifié",
+        "description accessible"
+      ],
+      "acceptance": [
+        "contenu non produit ≠ verrou de progression",
+        "grant permanent ne disparaît pas",
+        "aperçu n’accorde pas un avantage"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_CONTENT_KNIFE_PLATE",
+      "kind": "unlock-content",
+      "title": "Planche de portée de la grande lame",
+      "sectionRefs": [
+        "SHCG-51",
+        "SHCG-52",
+        "SHCG-53",
+        "SHCG-57",
+        "SHCG-58",
+        "SHCG-63",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "sh2_red_pyramid_thing_great_knife_029"
+      ],
+      "stageIds": [
+        "blue_creek"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_03_BLUE_CREEK_APTS",
+        "CL_SH2_BOSSES",
+        "CL_SH2_ENEMIES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+          "referenceIds": [
+            "CL_SH2_03_BLUE_CREEK_APTS",
+            "CL_SH2_BOSSES",
+            "CL_SH2_ENEMIES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-J",
+        "E02-A"
+      ],
+      "contentCategory": "gallery",
+      "ruleId": "SHCGX_RULE_KNIFE_TRIAL",
+      "description": "Une planche d’étude de la version 2001, non un costume ou une arme supplémentaire.",
+      "discovery": {
+        "initial": "identified",
+        "secretVisual": "emblème neutre",
+        "hintVisual": "silhouette seulement si identité révélable",
+        "unlockReveal": "nom et miniature après acquisition enregistrée"
+      },
+      "access": {
+        "grantModels": [
+          "permanent"
+        ],
+        "initial": "none",
+        "noNewGameplayAccess": true
+      },
+      "installation": {
+        "initial": "not-produced",
+        "playerMessage": "Contenu en préparation — aucune condition de jeu ne remplace sa production",
+        "readyCondition": "fichiers et dépendances importés et recette passée"
+      },
+      "compatibility": {
+        "preview": true,
+        "select": "selon disponibilité réelle et mode autorisé",
+        "competitionStats": "aucune modification"
+      },
+      "UI": {
+        "locked": "À débloquer — consulter la condition",
+        "claimable": "Récompense disponible — retourner aux Archives du Registre",
+        "owned": "Acquis",
+        "dependency": "Acquis — contenu requis encore indisponible",
+        "notInstalled": "Acquis — installation nécessaire",
+        "focus": "toujours consultable"
+      },
+      "assetPlan": [
+        "miniature exacte du contenu réellement produit",
+        "cadre secret/indice/identifié",
+        "description accessible"
+      ],
+      "acceptance": [
+        "contenu non produit ≠ verrou de progression",
+        "grant permanent ne disparaît pas",
+        "aperçu n’accorde pas un avantage"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_CONTENT_OBSERVATION",
+      "kind": "unlock-content",
+      "title": "Dossiers de poursuite",
+      "sectionRefs": [
+        "SHCG-51",
+        "SHCG-52",
+        "SHCG-53",
+        "SHCG-57",
+        "SHCG-58",
+        "SHCG-63",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "shattered_raw_shock_base_099",
+        "shortmessage_sakura_head_150"
+      ],
+      "stageIds": [
+        "nightmare_school",
+        "villa"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024",
+        "EXT29",
+        "EXT31",
+        "EXT30"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "shattered_raw_shock_base_099",
+          "referenceIds": [
+            "EXT08",
+            "EXT_SHATTERED_INFO_20261024"
+          ],
+          "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+          "role": "scripted-encounter",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "shortmessage_sakura_head_150",
+          "referenceIds": [
+            "EXT29",
+            "EXT31",
+            "EXT30"
+          ],
+          "edition": "Silent Hill: The Short Message (2024, PS5)",
+          "role": "scripted-encounter",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-J",
+        "E02-A"
+      ],
+      "contentCategory": "gallery",
+      "ruleId": "SHCGX_RULE_OBSERVATION",
+      "description": "Consultation permanente ; les deux présences ne deviennent pas des combattants.",
+      "discovery": {
+        "initial": "identified",
+        "secretVisual": "emblème neutre",
+        "hintVisual": "silhouette seulement si identité révélable",
+        "unlockReveal": "nom et miniature après acquisition enregistrée"
+      },
+      "access": {
+        "grantModels": [
+          "permanent"
+        ],
+        "initial": "none",
+        "noNewGameplayAccess": true
+      },
+      "installation": {
+        "initial": "not-produced",
+        "playerMessage": "Contenu en préparation — aucune condition de jeu ne remplace sa production",
+        "readyCondition": "fichiers et dépendances importés et recette passée"
+      },
+      "compatibility": {
+        "preview": true,
+        "select": "selon disponibilité réelle et mode autorisé",
+        "competitionStats": "aucune modification"
+      },
+      "UI": {
+        "locked": "À débloquer — consulter la condition",
+        "claimable": "Récompense disponible — retourner aux Archives du Registre",
+        "owned": "Acquis",
+        "dependency": "Acquis — contenu requis encore indisponible",
+        "notInstalled": "Acquis — installation nécessaire",
+        "focus": "toujours consultable"
+      },
+      "assetPlan": [
+        "miniature exacte du contenu réellement produit",
+        "cadre secret/indice/identifié",
+        "description accessible"
+      ],
+      "acceptance": [
+        "contenu non produit ≠ verrou de progression",
+        "grant permanent ne disparaît pas",
+        "aperçu n’accorde pas un avantage"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_CONTENT_DUO_PRESENTATION",
+      "kind": "unlock-content",
+      "title": "Présentation du duo Angle mort",
+      "sectionRefs": [
+        "SHCG-51",
+        "SHCG-52",
+        "SHCG-53",
+        "SHCG-57",
+        "SHCG-58",
+        "SHCG-63",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020",
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-J",
+        "E02-A"
+      ],
+      "contentCategory": "presentation",
+      "ruleId": "SHCGX_RULE_DUO_PRESENTATION",
+      "description": "Pose ou séquence de présentation originale, sans bonus de dégâts et sans alliance canonique.",
+      "discovery": {
+        "initial": "hint",
+        "secretVisual": "emblème neutre",
+        "hintVisual": "silhouette seulement si identité révélable",
+        "unlockReveal": "nom et miniature après acquisition enregistrée"
+      },
+      "access": {
+        "grantModels": [
+          "permanent",
+          "temporary"
+        ],
+        "initial": "none",
+        "noNewGameplayAccess": true
+      },
+      "installation": {
+        "initial": "not-produced",
+        "playerMessage": "Contenu en préparation — aucune condition de jeu ne remplace sa production",
+        "readyCondition": "fichiers et dépendances importés et recette passée"
+      },
+      "compatibility": {
+        "preview": true,
+        "select": "selon disponibilité réelle et mode autorisé",
+        "competitionStats": "aucune modification"
+      },
+      "UI": {
+        "locked": "À débloquer — consulter la condition",
+        "claimable": "Récompense disponible — retourner aux Archives du Registre",
+        "owned": "Acquis",
+        "dependency": "Acquis — contenu requis encore indisponible",
+        "notInstalled": "Acquis — installation nécessaire",
+        "focus": "toujours consultable"
+      },
+      "assetPlan": [
+        "miniature exacte du contenu réellement produit",
+        "cadre secret/indice/identifié",
+        "description accessible"
+      ],
+      "acceptance": [
+        "contenu non produit ≠ verrou de progression",
+        "grant permanent ne disparaît pas",
+        "aperçu n’accorde pas un avantage"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_RULE_AIR_ROUTE",
+      "kind": "unlock-rule",
+      "title": "Condition — SHCGX_CONTENT_AIR_DOSSIER",
+      "sectionRefs": [
+        "SHCG-57",
+        "SHCG-58",
+        "SHCG-61",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "sh1_air_screamer_001"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH1_ENEMIES",
+        "CL_SH1_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh1_air_screamer_001",
+          "referenceIds": [
+            "CL_SH1_ENEMIES",
+            "CL_SH1_CREATURES"
+          ],
+          "edition": "SH1 original 1999, région à fixer",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-J",
+        "E02-B"
+      ],
+      "documentaryLinks": [
+        "SHC_CAM_01"
+      ],
+      "contentId": "SHCGX_CONTENT_AIR_DOSSIER",
+      "expression": {
+        "all": [
+          {
+            "any": [
+              {
+                "event": "campaign-chapter-completed",
+                "documentaryChapterId": "SHC_CAM_01"
+              },
+              {
+                "event": "bonus-completed",
+                "bonusId": "SHCGX_BONUS_AIR_PATH"
+              }
+            ]
+          },
+          {
+            "event": "archive-record-viewed",
+            "documentaryRecordId": "SHCGX_CONTENT_AIR_DOSSIER"
+          }
+        ]
+      },
+      "awardMethod": "claim-in-archive",
+      "saveScope": "profil local pour voie de jeu ; compte autoritatif futur pour voie externe",
+      "eventAuthority": {
+        "local": "résultat réellement validé par le moteur du mode",
+        "external": "service de confiance, jamais booléen éditable côté client"
+      },
+      "grants": {
+        "gameplay": "permanent",
+        "supporterIfPresent": "temporary, only while that independent source remains valid"
+      },
+      "sourceUnion": "OU des grants valides ; expiration d’une source n’efface pas la voie permanente",
+      "idempotency": {
+        "key": "profileId + ruleId + eligibleEventId",
+        "replay": "retour du grant existant",
+        "cost": "aucun coût dans ces quatre premières règles",
+        "interruptedSave": "journal et grant restaurés ensemble"
+      },
+      "retroactivity": "aucune promesse pour événement absent des sauvegardes actuelles ; migration seulement depuis preuve conservée",
+      "revealGate": "Voir le dossier est libre une fois identifié ; ne pas exiger sa possession pour satisfaire la consultation.",
+      "acceptance": [
+        "expression affichée avec ses groupes ET/OU",
+        "événement doublé sans double gain",
+        "source temporaire révoquée avec permanent conservé"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_RULE_KNIFE_TRIAL",
+      "kind": "unlock-rule",
+      "title": "Condition — SHCGX_CONTENT_KNIFE_PLATE",
+      "sectionRefs": [
+        "SHCG-57",
+        "SHCG-58",
+        "SHCG-61",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "sh2_red_pyramid_thing_great_knife_029"
+      ],
+      "stageIds": [
+        "blue_creek"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_03_BLUE_CREEK_APTS",
+        "CL_SH2_BOSSES",
+        "CL_SH2_ENEMIES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_red_pyramid_thing_great_knife_029",
+          "referenceIds": [
+            "CL_SH2_03_BLUE_CREEK_APTS",
+            "CL_SH2_BOSSES",
+            "CL_SH2_ENEMIES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-J",
+        "E02-B"
+      ],
+      "documentaryLinks": [],
+      "contentId": "SHCGX_CONTENT_KNIFE_PLATE",
+      "expression": {
+        "event": "bonus-completed",
+        "bonusId": "SHCGX_BONUS_KNIFE_REACH"
+      },
+      "awardMethod": "automatic",
+      "saveScope": "profil local pour voie de jeu ; compte autoritatif futur pour voie externe",
+      "eventAuthority": {
+        "local": "résultat réellement validé par le moteur du mode",
+        "external": "service de confiance, jamais booléen éditable côté client"
+      },
+      "grants": {
+        "gameplay": "permanent",
+        "supporterIfPresent": "temporary, only while that independent source remains valid"
+      },
+      "sourceUnion": "OU des grants valides ; expiration d’une source n’efface pas la voie permanente",
+      "idempotency": {
+        "key": "profileId + ruleId + eligibleEventId",
+        "replay": "retour du grant existant",
+        "cost": "aucun coût dans ces quatre premières règles",
+        "interruptedSave": "journal et grant restaurés ensemble"
+      },
+      "retroactivity": "aucune promesse pour événement absent des sauvegardes actuelles ; migration seulement depuis preuve conservée",
+      "revealGate": "Voir le dossier est libre une fois identifié ; ne pas exiger sa possession pour satisfaire la consultation.",
+      "acceptance": [
+        "expression affichée avec ses groupes ET/OU",
+        "événement doublé sans double gain",
+        "source temporaire révoquée avec permanent conservé"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_RULE_OBSERVATION",
+      "kind": "unlock-rule",
+      "title": "Condition — SHCGX_CONTENT_OBSERVATION",
+      "sectionRefs": [
+        "SHCG-57",
+        "SHCG-58",
+        "SHCG-61",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "shattered_raw_shock_base_099",
+        "shortmessage_sakura_head_150"
+      ],
+      "stageIds": [
+        "nightmare_school",
+        "villa"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "EXT08",
+        "EXT_SHATTERED_INFO_20261024",
+        "EXT29",
+        "EXT31",
+        "EXT30"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "shattered_raw_shock_base_099",
+          "referenceIds": [
+            "EXT08",
+            "EXT_SHATTERED_INFO_20261024"
+          ],
+          "edition": "Silent Hill: Shattered Memories (2009, Wii)",
+          "role": "scripted-encounter",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "shortmessage_sakura_head_150",
+          "referenceIds": [
+            "EXT29",
+            "EXT31",
+            "EXT30"
+          ],
+          "edition": "Silent Hill: The Short Message (2024, PS5)",
+          "role": "scripted-encounter",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-J",
+        "E02-B"
+      ],
+      "documentaryLinks": [],
+      "contentId": "SHCGX_CONTENT_OBSERVATION",
+      "expression": {
+        "event": "bonus-completed",
+        "bonusId": "SHCGX_BONUS_OBSERVATION"
+      },
+      "awardMethod": "automatic",
+      "saveScope": "profil local pour voie de jeu ; compte autoritatif futur pour voie externe",
+      "eventAuthority": {
+        "local": "résultat réellement validé par le moteur du mode",
+        "external": "service de confiance, jamais booléen éditable côté client"
+      },
+      "grants": {
+        "gameplay": "permanent",
+        "supporterIfPresent": "temporary, only while that independent source remains valid"
+      },
+      "sourceUnion": "OU des grants valides ; expiration d’une source n’efface pas la voie permanente",
+      "idempotency": {
+        "key": "profileId + ruleId + eligibleEventId",
+        "replay": "retour du grant existant",
+        "cost": "aucun coût dans ces quatre premières règles",
+        "interruptedSave": "journal et grant restaurés ensemble"
+      },
+      "retroactivity": "aucune promesse pour événement absent des sauvegardes actuelles ; migration seulement depuis preuve conservée",
+      "revealGate": "Voir le dossier est libre une fois identifié ; ne pas exiger sa possession pour satisfaire la consultation.",
+      "acceptance": [
+        "expression affichée avec ses groupes ET/OU",
+        "événement doublé sans double gain",
+        "source temporaire révoquée avec permanent conservé"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_RULE_DUO_PRESENTATION",
+      "kind": "unlock-rule",
+      "title": "Condition — SHCGX_CONTENT_DUO_PRESENTATION",
+      "sectionRefs": [
+        "SHCG-57",
+        "SHCG-58",
+        "SHCG-61",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020",
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E01-J",
+        "E02-B"
+      ],
+      "documentaryLinks": [],
+      "contentId": "SHCGX_CONTENT_DUO_PRESENTATION",
+      "expression": {
+        "any": [
+          {
+            "event": "bonus-completed",
+            "bonusId": "SHCGX_BONUS_DUO_TIMING"
+          },
+          {
+            "event": "trusted-temporary-benefit-active",
+            "benefitId": "SHCGX_SUPPORTER_CATALOGUE_DRAFT"
+          }
+        ]
+      },
+      "awardMethod": "automatic",
+      "saveScope": "profil local pour voie de jeu ; compte autoritatif futur pour voie externe",
+      "eventAuthority": {
+        "local": "résultat réellement validé par le moteur du mode",
+        "external": "service de confiance, jamais booléen éditable côté client"
+      },
+      "grants": {
+        "gameplay": "permanent",
+        "supporterIfPresent": "temporary, only while that independent source remains valid"
+      },
+      "sourceUnion": "OU des grants valides ; expiration d’une source n’efface pas la voie permanente",
+      "idempotency": {
+        "key": "profileId + ruleId + eligibleEventId",
+        "replay": "retour du grant existant",
+        "cost": "aucun coût dans ces quatre premières règles",
+        "interruptedSave": "journal et grant restaurés ensemble"
+      },
+      "retroactivity": "aucune promesse pour événement absent des sauvegardes actuelles ; migration seulement depuis preuve conservée",
+      "revealGate": "Voir le dossier est libre une fois identifié ; ne pas exiger sa possession pour satisfaire la consultation.",
+      "acceptance": [
+        "expression affichée avec ses groupes ET/OU",
+        "événement doublé sans double gain",
+        "source temporaire révoquée avec permanent conservé"
+      ],
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    },
+    {
+      "id": "SHCGX_SUPPORTER_CATALOGUE_DRAFT",
+      "kind": "supporter-benefit",
+      "title": "Catalogue de soutien — contrat documentaire désactivé",
+      "sectionRefs": [
+        "SHCG-59",
+        "SHCG-60",
+        "SHCG-61",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "sh2_lying_figure_020",
+        "sh2_mannequin_022"
+      ],
+      "stageIds": [
+        "woodside"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_lying_figure_020",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E02-C"
+      ],
+      "status": "disabled-draft",
+      "commercialActivation": false,
+      "provider": null,
+      "campaignId": null,
+      "tierIds": [],
+      "price": null,
+      "benefits": [
+        "SHCGX_CONTENT_DUO_PRESENTATION"
+      ],
+      "model": "temporary-catalogue",
+      "alternatives": "La même présentation peut être gagnée définitivement par SHCGX_BONUS_DUO_TIMING.",
+      "grantPolicy": {
+        "linkedAccountAlone": "insuffisant",
+        "freeMembership": "aucun droit présumé",
+        "trialOrGift": "politique à fixer avant activation",
+        "pastPeriods": "aucune acquisition rétroactive présumée",
+        "permanentDelivery": "autre modèle à définir si retenu",
+        "validUntil": "uniquement si établi par une source autoritative",
+        "offlineTTL": null,
+        "gracePeriod": null
+      },
+      "changePolicy": {
+        "cancellation": "suivre fin effective du droit confirmé, pas retirer universellement au clic d’annulation",
+        "downgrade": "réévaluer à date effective",
+        "refund": "retirer seulement la source concernée selon contrat publié et événement confirmé",
+        "unlink": "séparée de l’annulation, préserver grants permanents",
+        "outage": "inconnu, ne pas affirmer expiration"
+      },
+      "integrationContract": {
+        "authorization": "parcours officiel volontaire du fournisseur",
+        "secrets": "service de confiance, hors client et dépôt",
+        "eventVerification": true,
+        "idempotent": true,
+        "reconcileOutOfOrder": true,
+        "manualResync": true,
+        "passwordInGame": false
+      },
+      "constraints": [
+        "release/readiness.json et commercialAuthorized:false demeurent inchangés",
+        "Aucun paiement ni lien de souscription actif",
+        "Les références techniques de l’extension source seront revérifiées lors de l’implémentation",
+        "Pas de stats de combat améliorées"
+      ],
+      "acceptance": [
+        "gain de défi permanent survit à l’expiration",
+        "panne ne devient pas faux non-abonné",
+        "client modifié ne peut accorder un droit externe"
+      ],
+      "loreNote": "offre potentielle originale hors récit ; aucun statut canonique accordé"
+    },
+    {
+      "id": "SHCGX_LOCK_VISUAL_LANGUAGE",
+      "kind": "lock-style",
+      "title": "Archives scellées — grammaire d’interface",
+      "sectionRefs": [
+        "SHCG-52",
+        "SHCG-63",
+        "SHCG-65"
+      ],
+      "fighterIds": [],
+      "stageIds": [],
+      "chronicleIds": [],
+      "sourceRefs": [],
+      "referenceEvidence": [],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E02-D"
+      ],
+      "materials": "papier de dossier usé, plaque opaque, marque de fermeture lisible ; choisir matières et palette d’après la charte existante",
+      "states": {
+        "secret": "emblème neutre, nom Combattant non révélé ou Dossier non révélé",
+        "hint": "silhouette noire après autorisation de révéler le contour",
+        "locked": "marque de fermeture + texte + condition",
+        "claimable": "badge stable Récompense disponible",
+        "permanent": "badge Acquis",
+        "temporary": "badge Accès temporaire actif et conditions consultables",
+        "pending": "Vérification en cours",
+        "outage": "Vérification indisponible — réessayer",
+        "installation": "Installation nécessaire",
+        "modeRestricted": "Indisponible dans ce mode"
+      },
+      "animations": {
+        "focus": "accent de cadre",
+        "rejection": "réponse brève et fiche utile",
+        "unlock": "retirer marque et révéler aperçu après sauvegarde",
+        "deselect": "cleanup du cycle de sélection",
+        "reducedMotion": "substitution de pose sans flash"
+      },
+      "spoilerPolicy": {
+        "mask": [
+          "nom",
+          "portrait",
+          "silhouette distinctive",
+          "voix",
+          "biographie",
+          "condition révélatrice",
+          "texte accessible"
+        ],
+        "scope": "menus de collection ; un adversaire en versus peut révéler un contenu pendant le match"
+      },
+      "accessibility": [
+        "icône + texte, jamais couleur seule",
+        "focus visible sur fond sombre",
+        "description d’état sans identité secrète",
+        "aucune animation infinie de refus"
+      ],
+      "assetPlan": [
+        "un fichier autonome par badge/élément détouré demandé",
+        "vraie transparence pour overlays",
+        "miniatures de stage opaques permises"
+      ],
+      "acceptance": [
+        "lisibilité à petite taille",
+        "contraste des états proches",
+        "aucune symbolique ajoutée comme fait canonique"
+      ],
+      "loreNote": "original compatible — métaphore d’interface uniquement"
+    },
+    {
+      "id": "SHCGX_STAGE_SUPPORTER_POLICY",
+      "kind": "stage-access-policy",
+      "title": "Ambiance de collection — Old Silent Hill",
+      "sectionRefs": [
+        "SHCG-55",
+        "SHCG-61",
+        "SHCG-62",
+        "SHCG-65"
+      ],
+      "fighterIds": [],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [],
+      "referenceEvidence": [],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E02-E"
+      ],
+      "plannedVariantId": "SHCGX_COSMETIC_OLD_STREET_FRAME",
+      "runtimeStageId": "old_silent_hill",
+      "distinction": "Projet d’habillage/présentation de sélection ; aucun plan de combat modifié ni asset affirmé produit.",
+      "authorization": {
+        "select": "profil ayant un grant valide",
+        "participate": "tout adversaire d’un match autorisé et compatible",
+        "train": "géométrie et signaux de base accessibles, variante selon règle de catalogue",
+        "preview": "aperçu permis avec badge non possédé"
+      },
+      "gameplay": {
+        "geometry": "identique au stage de base",
+        "collisions": "identiques",
+        "hazards": "mêmes règles annoncées",
+        "contrast": "pas de camouflage supplémentaire",
+        "competition": "admission après contrôle de lisibilité, aucune autorisation présumée"
+      },
+      "distribution": {
+        "requiredBeforeMatch": [
+          "assets de base",
+          "habillage si affiché",
+          "toutes destinations éventuellement requises"
+        ],
+        "missing": "choix explicite du stage de base avant match",
+        "currentTransitions": "ne crée pas de connexion de duel inexistante"
+      },
+      "comfort": {
+        "staticVariantIncluded": true,
+        "reducedMotionIncluded": true,
+        "requiresSubscription": false
+      },
+      "expiry": {
+        "inMatch": "configuration figée jusqu’au résultat",
+        "nextMatch": "revalider sélection, proposer base",
+        "savedPreference": "conservée séparément du choix effectif"
+      },
+      "replay": {
+        "ownership": "lecture future distincte du droit courant de sélectionner",
+        "missingAssets": "repli documenté ou message de version incompatible, sans promesse non testée"
+      },
+      "acceptance": [
+        "adversaire non abonné",
+        "invité local",
+        "hors ligne",
+        "asset absent",
+        "expiration pendant combat"
+      ],
+      "loreNote": "original compatible — variante visuelle éventuelle, non nouveau lieu canonique"
+    },
+    {
+      "id": "SHCGX_ACCESS_MATRIX",
+      "kind": "access-validation-matrix",
+      "title": "Matrice de disponibilité — cas représentatifs",
+      "sectionRefs": [
+        "SHCG-51",
+        "SHCG-61",
+        "SHCG-62",
+        "SHCG-64",
+        "SHCG-65"
+      ],
+      "fighterIds": [
+        "sh2_mannequin_022",
+        "downpour_doll_106"
+      ],
+      "stageIds": [
+        "old_silent_hill"
+      ],
+      "chronicleIds": [],
+      "sourceRefs": [
+        "CL_SH2_ENEMIES",
+        "CL_SH2_CREATURES",
+        "EXT10"
+      ],
+      "referenceEvidence": [
+        {
+          "path": "data/roster.json",
+          "fighterId": "sh2_mannequin_022",
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "edition": "SH2 original 2001 / édition Born from a Wish selon fiche",
+          "role": "combatant",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        },
+        {
+          "path": "data/roster.json",
+          "fighterId": "downpour_doll_106",
+          "referenceIds": [
+            "EXT10"
+          ],
+          "edition": "Silent Hill: Downpour (2012, version commerciale)",
+          "role": "environmental-obstacle",
+          "sourceStatus": "existing-repository-reference; secondary observations and unresolved captures preserved"
+        }
+      ],
+      "loreStatus": "original-compatible",
+      "productionStatus": {
+        "design": "documented-proposal",
+        "assets": "not-produced-by-this-extension-pass",
+        "animation": "not-produced-by-this-extension-pass",
+        "runtime": "not-added-by-this-extension-pass",
+        "validation": "not-run",
+        "fidelity": "not-certified-1:1"
+      },
+      "templateFamilies": [
+        "E02-F"
+      ],
+      "states": [
+        {
+          "case": "secret-valid-but-hidden",
+          "discovery": "secret",
+          "grant": "permanent",
+          "installed": true,
+          "modeCompatible": true,
+          "expected": "identité neutre jusqu’à révélation selon règle, droit conservé"
+        },
+        {
+          "case": "hint-locked",
+          "discovery": "hint",
+          "grant": "none",
+          "installed": true,
+          "modeCompatible": true,
+          "expected": "silhouette + condition, consultation sans sélection"
+        },
+        {
+          "case": "owned-missing",
+          "discovery": "identified",
+          "grant": "permanent",
+          "installed": false,
+          "modeCompatible": true,
+          "expected": "Acquis — installation nécessaire ; pas verrou paiement"
+        },
+        {
+          "case": "temporary-expired-permanent-valid",
+          "discovery": "identified",
+          "grant": [
+            "permanent-valid",
+            "temporary-expired"
+          ],
+          "installed": true,
+          "modeCompatible": true,
+          "expected": "sélection autorisée via permanent"
+        },
+        {
+          "case": "outage-without-proof",
+          "discovery": "identified",
+          "grant": "unknown",
+          "installed": true,
+          "modeCompatible": true,
+          "expected": "Vérification indisponible ; ne pas créer de droit ni affirmer expiration"
+        },
+        {
+          "case": "environmental-role",
+          "fighterId": "downpour_doll_106",
+          "discovery": "identified",
+          "grant": "permanent",
+          "installed": true,
+          "modeCompatible": false,
+          "expected": "dossier consultable ; rôle environmental-obstacle inchangé"
+        },
+        {
+          "case": "costume-before-owner",
+          "discovery": "identified",
+          "grant": "permanent-costume",
+          "installed": true,
+          "ownerAvailable": false,
+          "expected": "récompense conservée ; dépendance expliquée"
+        },
+        {
+          "case": "guest-participation",
+          "discovery": "identified",
+          "grant": "host-stage-only",
+          "installed": true,
+          "modeCompatible": true,
+          "expected": "participation invitée selon match, aucune acquisition au compte invité"
+        }
+      ],
+      "expectedEvidence": [
+        "texte affiché",
+        "action proposée",
+        "droit effectif",
+        "sauvegarde après reprise",
+        "aucune altération des autres sources"
+      ],
+      "acceptance": "Chaque ligne reste à tester ; cette matrice de conception ne compte pas comme validation runtime.",
+      "loreNote": "original-compatible / adaptation-versus-proposee"
+    }
+  ]
+}

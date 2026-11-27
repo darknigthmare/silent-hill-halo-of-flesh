@@ -1,0 +1,27 @@
+{
+  "fighterId": "sh3_numb_body_medium",
+  "frameIndex": 0,
+  "path": "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+  "sha256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+  "change": {
+    "field": "anchor[1]",
+    "before": 1,
+    "after": 0.8818359375
+  },
+  "visibleFootY": 903,
+  "nativeHeight": 1024,
+  "evidenceBefore": "qa/calibration-before/report.json",
+  "observedBeforeWorldGap": -23.880957,
+  "imageBytesUnchanged": true,
+  "reason": "Lowest supporting foot now coincides with actor origin; original PNG, profile, physics and other frame metadata preserved.",
+  "evidenceAfter": "qa/calibration-after/report.json",
+  "observedAfterWorldGap": [
+    0,
+    0
+  ],
+  "observedAfterScreenPixelGap": [
+    0,
+    0
+  ],
+  "runtimeValidation": "passed both orientations; unchanged native PNG"
+}

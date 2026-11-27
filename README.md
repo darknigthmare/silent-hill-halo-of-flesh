@@ -1,5 +1,87 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Poses, lieux et récits — vague 32, 27 novembre 2026
+
+[Douze nouvelles images et leur validation](docs/production/vague32/README.md) : quatre poses du Groaner SH1 et du Sniffer Dog mâle SH4, deux plans pour l’antichambre de Green Lion et deux pour l’entrée de la clinique de Shattered Memories, puis les introductions et conclusions du Groaner et du Lying Figure debout SH2 original. La couverture atteint **97 arènes sur 123** et **3 récits individuels sur 230**.
+
+Les tirs neutres illustrés de Walter SH4 et d’Eddie SH2 partent du canon avec une origine physique et visuelle commune. Le couloir de tir, les contacts à bout portant et le budget des images natives sont vérifiés séparément. La bible conserve ses **68 rubriques**, ses deux extensions et **445 associations**, avec les nouveaux fichiers rattachés par profil et par scène. [Inventaire restant](docs/production/vague32/inventory.json). Les nouvelles poses sont fixes et les compositions narratives sont originales compatibles ; aucune fidélité 1:1 n’est certifiée.
+
+## Production fixe — vague30, 25 novembre 2026
+
+[Lot de quatorze images, intégration et limites](docs/production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. La bible et les deux classeurs sont rafraîchis : 445 associations, 93 arènes illustrées et 31 commandes projectile couvertes. Les feuilles historiques et leurs formules sont préservées. [Inventaire restant](docs/production/vague30/inventory.json). Aucun nouveau cycle animé ni certification 1:1.
+
+## Guide et deux extensions intégrés à la bible — 27 novembre 2026
+
+Les **68 rubriques** du guide Combat Games v1.0 et de ses deux extensions sont associées au
+contexte du jeu : manifestations, rôles hors duel, movesets, Dénouements,
+campagnes, illustrations, boss, arènes et production fixe. Elles couvrent aussi les
+taunts, la sélection/désélection, les équipes, les bonus, les entités et l’accès
+aux contenus. Les exigences sont reliées aux entrées existantes par identifiant
+dans l’[inventaire calculé](docs/combat-guide/status.json), sans confondre conception,
+fichier produit, admission runtime et validation.
+
+[Intégration complète](docs/COMBAT_GAMES_GUIDE_INTEGRATION.md) ·
+[Matrice et critères](docs/combat-guide/MATRICE.md) ·
+[Extensions adaptées à Silent Hill](docs/combat-guide/extensions/README.md) ·
+[Campagne et Dénouements](docs/combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) ·
+[État des lieux calculé](docs/combat-guide/ETAT_DES_LIEUX.md).
+
+Les deux classeurs existants possèdent les feuilles **Guide combat** et
+**Associations guide**. Les trois textes sources sont conservés à l’identique et
+contrôlés par SHA-256 ; les
+feuilles historiques et leurs formules sont préservées. La campagne globale
+« Le Registre des absences » et ses nouvelles scènes sont de la conception
+à implémenter. Les **40 scénarios de recette des extensions** sont rédigés et
+restent à exécuter dans le jeu. Les assistances, tags, supers d’équipe,
+Dénouements collectifs, archives de déblocage et droits de soutien sont conçus ;
+aucun service d’abonnement n’est activé par cette intégration.
+
+Actualiser les liens avec `npm run bible:guide`, puis vérifier avec
+`npm run bible:check`. Les décisions sur les modules distinguent notamment
+animations différées, local existant et réseau à décider.
+
+## Poses, gardiens et arènes — 24 novembre 2026, vague 28
+
+**12 PNG indépendants ajoutés : quatre poses d’attaque, deux effets de projectile
+et six plans pour trois arènes.** Groaner, Closer, Numb Body Small et le gardien
+de Feu gagnent une pose propre à leur commande. Le rocher du gardien de Terre
+et le jet blanc/magenta/violet du gardien de Feu ont leurs images séparées.
+
+La chambre finale de SH4, la salle de Scarlet et le toit de l’hôpital d’Arcade
+portent la couverture à **85 arènes sur 123**. Le cache des combattants passe
+à **72 Mio** pour permettre les duels avec Faceless Nurse et toutes leurs
+frames natives. Les caches des arènes et projectiles gardent leurs bornes.
+
+**1 301 tests Node et 522 contrôles Canvas natifs passent**, avec dix-sept
+captures finales inspectées. Les 683 anciens assets et les règles/classeurs
+protégés sont préservés. La QA HTTP préparée attend la publication autorisée.
+
+[Livraison et limites](docs/production/vague28/README.md) ·
+[Vérifications finales](docs/production/vague28/verification.json) ·
+[Manquants](docs/production/vague28/remaining-assets.json) ·
+[Clips à compléter](docs/production/vague28/pose-backlog.json).
+Les **204 portraits, 190 vues latérales et six clips animés** restent des
+catégories distinctes. Aucune fidélité 1:1 n’est certifiée.
+
+## Attaques, projectiles et stages — 24 novembre 2026, vague 27
+
+**11 PNG indépendants ajoutés : deux poses d’attaque, trois effets de projectile
+et six plans pour trois arènes.** Lying Figure possède sa pose de jet thoracique
+et Double Head sa pose de bond/morsure. Les effets d’acide, d’électricité bleue
+et de feu au sol remplacent le rendu générique pour leurs trois profils exacts
+et dix commandes existantes, avec repli visuel en cas d’échec de chargement.
+
+La cellule du commissariat de Homecoming, le toit et l’escalier de The Short
+Message portent la couverture à **82 arènes sur 123**. Les **204 portraits,
+190 vues latérales et six clips animés** restent distincts de ces ajouts statiques.
+Les anciens assets, règles de combat et classeurs sont conservés.
+
+[Livraison et vérifications](docs/production/vague27/README.md) ·
+[Inventaire des manquants](docs/production/vague27/remaining-assets.json) ·
+[Audit de conservation](docs/production/vague27/summary.json).
+Les scènes et effets sont des adaptations visuelles documentées ; aucune
+fidélité 1:1 ou animation originale n’est certifiée.
+
 ## Personnages et stages manquants — 19 novembre 2026, vague 22
 
 **16 vues latérales dédiées et 10 stages sont ajoutés : 151 vues candidates et

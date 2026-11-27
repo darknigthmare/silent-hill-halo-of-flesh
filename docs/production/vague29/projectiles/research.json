@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "wave": 29,
+  "reviewDate": "2026-11-25",
+  "scope": "Three independent static projectile PNG candidates for existing move routes. Fidelity stays unverified.",
+  "sources": [
+    {
+      "id": "wave29-floatstinger-gameplay-gif",
+      "fighterId": "sh1_floatstinger_016",
+      "edition": "Silent Hill (1999), original-game appearance; exact hardware, region and capture provenance unconfirmed",
+      "pageUrl": "https://tenor.com/view/wrong-sulfuric-acid-silent-hill-floatstinger-harry-mason-cheryl-gif-13060428206898343756",
+      "mediaUrl": "https://media1.tenor.com/m/tT_2Qc6q70wAAAAd/wrong-sulfuric-acid-silent-hill.gif",
+      "kind": "Public captioned gameplay GIF repost",
+      "nativeSize": [
+        498,
+        370
+      ],
+      "frames": 19,
+      "evidenceFiles": [
+        "references/floatstinger-acid.gif",
+        "references/floatstinger-acid-frame-10.png",
+        "references/floatstinger-acid-frame-15.png"
+      ],
+      "sourceCropProcessing": "GIF frames 10 and 15 decoded at their native size without scaling; no generated-image processing.",
+      "observed": "Diffuse mottled olive/yellow-green and brown cloud below Floatstinger and near Harry; no glowing orb or liquid ball is visible in the selected frames.",
+      "limits": [
+        "The added caption is not evidence for exact chemistry and was excluded from generation.",
+        "Low-resolution GIF with unknown original platform/capture conditions.",
+        "Cloud palette and broad material grounded visually; exact source contour, density and high-resolution texture cannot be certified."
+      ],
+      "supportingGuideUrls": [
+        "https://www.silenthillmemories.net/sh1/bosses_en.htm",
+        "https://www.silenthillmemories.net/lost_memories/guide/026-027_en.htm"
+      ],
+      "output": "sh1_floatstinger_acid_cloud"
+    },
+    {
+      "id": "wave29-asphyxia-gameplay",
+      "fighterId": "homecoming_asphyxia_096",
+      "edition": "Silent Hill Homecoming; exact hardware/region unconfirmed in the sampled preview",
+      "pageUrl": "https://www.youtube.com/watch?v=EgTIE8Aa0ts",
+      "title": "Silent Hill Homecoming Walkthrough (100%) 34: Prison Part 4 \"Boss - Asphyxia\"",
+      "uploader": "virtualcat2010",
+      "published": "2010-04-06",
+      "kind": "Public gameplay video storyboard previews",
+      "nativeFrameSize": [
+        320,
+        180
+      ],
+      "previewLevel": 3,
+      "grid": [
+        3,
+        3
+      ],
+      "samplingIntervalMs": 5000,
+      "frames": [
+        {
+          "approximateTime": "03:15",
+          "sampleIndex": 39,
+          "sheet": "references/asphyxia-storyboard-L3-04.jpg",
+          "crop": [
+            0,
+            180,
+            320,
+            360
+          ],
+          "file": "references/asphyxia-03m15s.png"
+        },
+        {
+          "approximateTime": "03:50",
+          "sampleIndex": 46,
+          "sheet": "references/asphyxia-storyboard-L3-05.jpg",
+          "crop": [
+            320,
+            0,
+            640,
+            180
+          ],
+          "file": "references/asphyxia-03m50s.png"
+        }
+      ],
+      "specFile": "references/asphyxia-storyboard-spec.json",
+      "sourceCropProcessing": "Native 320x180 preview tiles cropped from public 960x540 storyboard sheets; no resizing or enhancement.",
+      "observed": "Irregular charcoal-black/dark-brown ragged emission extends around the head during the toxic attack. It is visually darker than a bright green venom effect.",
+      "limits": [
+        "Coarse five-second preview sampling does not establish attack timing or cycle length.",
+        "The dark jagged original effect is interpreted as a smoky particulate plume for a single side-view sprite.",
+        "Expanded isolated plume volume and detailed wisps are generated interpretation; exact RGB palette, original texture and pixel silhouette remain unverified."
+      ],
+      "supportingGuideUrls": [
+        "https://silenthillheaven.com/shh/shh_bosses/",
+        "https://www.silenthillmemories.net/sh5/walkthrough_en.htm"
+      ],
+      "output": "homecoming_asphyxia_toxic_plume"
+    },
+    {
+      "id": "wave29-immolator-official-unblinking",
+      "fighterId": "ascension_the_immolator_182",
+      "edition": "Silent Hill: Ascension, UNBLINKING, airdate 2024-01-24 Scene 2",
+      "pageUrl": "https://www.youtube.com/watch?v=LyuHnMZpFLE",
+      "title": "UNBLINKING | Airdate 01/24/24 Scene 2 | SILENT HILL: Ascension",
+      "uploader": "Genvid Entertainment",
+      "uploaderHandle": "@genvidentertainment",
+      "kind": "Official series scene public storyboard previews",
+      "nativeFrameSize": [
+        320,
+        180
+      ],
+      "previewLevel": 3,
+      "grid": [
+        3,
+        3
+      ],
+      "samplingIntervalMs": 2000,
+      "frames": [
+        {
+          "approximateTime": "01:46",
+          "sampleIndex": 53,
+          "sheet": "references/immolator-unblinking-L3-05.jpg",
+          "crop": [
+            640,
+            360,
+            960,
+            540
+          ],
+          "file": "references/immolator-unblinking-01m46s.png"
+        },
+        {
+          "approximateTime": "01:48",
+          "sampleIndex": 54,
+          "sheet": "references/immolator-unblinking-L3-06.jpg",
+          "crop": [
+            0,
+            0,
+            320,
+            180
+          ],
+          "file": "references/immolator-unblinking-01m48s.png"
+        }
+      ],
+      "specFile": "references/immolator-unblinking-spec.json",
+      "sourceCropProcessing": "Native 320x180 preview tiles cropped from public 960x540 storyboard sheets; no resizing or enhancement.",
+      "observed": "Irregular yellow-orange fire emission with brighter yellow flame and subdued orange-brown smoke. The scene includes a thin near-horizontal stream and a diagonal fire plume.",
+      "limits": [
+        "Two-second storyboard sampling does not establish phase count, continuous animation or exact timing.",
+        "A horizontal independent stream is a rendering adaptation for existing versus projectile slots; this does not implement a new continuous flamethrower mechanic.",
+        "The generated billowing volume, fine detail and glow are not certified against full-resolution original frames."
+      ],
+      "supportingGuideUrls": [
+        "https://gamefaqs.gamespot.com/webonly/383913-silent-hill-ascension/faqs/80945/monsters"
+      ],
+      "output": "ascension_immolator_fire_jet"
+    }
+  ],
+  "excluded": [
+    {
+      "fighterId": "sh1_twinfeeler_015",
+      "decision": "No asset generated",
+      "reason": "Inspected gameplay storyboard previews show the creature, but no isolated emission could be identified with sufficient visual precision. Textual acid/gas descriptions alone were insufficient.",
+      "inspectedVideos": [
+        "https://www.youtube.com/watch?v=BmrCYx0wigU"
+      ],
+      "secondaryLookup": "https://www.youtube.com/watch?v=V95oAsS2qog"
+    },
+    {
+      "fighterId": "origins_straight_jacket_074",
+      "decision": "No asset generated",
+      "reason": "Textual corrosive-spit support exists, but the inspected first-boss and lore-video previews did not expose a sufficiently clear independent projectile. Avoid inventing its color or silhouette.",
+      "inspectedVideos": [
+        "https://www.youtube.com/watch?v=TimRwLmLppg",
+        "https://www.youtube.com/watch?v=3uSIn_xoofI"
+      ]
+    },
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "decision": "Ground shockwave not attempted in this delivery",
+      "reason": "Parent offered as an optional fallback. The prior wave rock remains separate, and this delivery does not reinterpret it as a ground wave."
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "transparentBackground": true,
+    "images": 3,
+    "nativeDimensions": [
+      1536,
+      1024
+    ],
+    "singleStaticPNGPerEffect": true,
+    "pixelsModified": false,
+    "operationsOnGeneratedFiles": [
+      "Byte-identical copy to content-hashed asset path",
+      "Read-only decode for metadata and alpha audit"
+    ],
+    "operationsOnReferenceFiles": [
+      "Public media download",
+      "Native GIF frame decode",
+      "Native storyboard-tile crop"
+    ]
+  },
+  "validation": {
+    "rasterAudit": "raster-audit.json",
+    "registryMergeValidation": "pass",
+    "runtimeVisualQA": "deferred-to-integrator",
+    "sourceFidelity": "unverified",
+    "animation": "none",
+    "gameplayModified": false
+  },
+  "referenceFiles": "references/files.json",
+  "prompts": [
+    "prompts/floatstinger-acid-cloud.json",
+    "prompts/asphyxia-toxic-plume.json",
+    "prompts/immolator-fire-jet.json"
+  ]
+}

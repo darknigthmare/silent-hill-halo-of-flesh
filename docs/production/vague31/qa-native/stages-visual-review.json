@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-27",
+  "section": "stages",
+  "method": "Inspection directe des deux captures 1280×720 produites par FightEngine et Canvas natif.",
+  "browserTest": false,
+  "reviewed": [
+    {
+      "file": "stage-cedar_grove.png",
+      "stageId": "cedar_grove",
+      "status": "visually-accepted-as-candidate",
+      "observations": [
+        "Deux combattants entiers, pieds au sol et bande centrale lisible.",
+        "Deux lits, double lavabo, miroir verdâtre et porte reconnaissables ; pas de transition de monde.",
+        "Le bord de rideau alpha reste à l’extrême gauche et ne couvre aucun combattant dans la capture initiale.",
+        "HUD et label de phase indiquent Female Treatment avant miroir.",
+        "HUD final observé : SEUIL DU MIROIR DE SOINS."
+      ],
+      "limits": [
+        "La capture initiale ne démontre pas toute occlusion possible au bord gauche.",
+        "Perspective et taille de la pièce adaptées au versus ; fidélité 1:1 non certifiée."
+      ]
+    },
+    {
+      "file": "stage-wish_house.png",
+      "stageId": "wish_house",
+      "status": "visually-accepted-as-candidate",
+      "observations": [
+        "Intérieur intact avec meuble drapé, plancher, suspension et porte.",
+        "Deux combattants entièrement visibles et pieds ancrés au plancher.",
+        "Livre de premier plan présent au coin inférieur droit, sans masquer le duel.",
+        "Le livre paraît sensiblement plus grand que les livres du fond, cohérent avec son placement proche mais non mesuré dans une caméra source.",
+        "HUD et label de phase indiquent premier passage, intérieur intact.",
+        "HUD final observé : PLANCHER DE WISH HOUSE."
+      ],
+      "limits": [
+        "Perspective du livre et chambre élargie sont des adaptations graphiques.",
+        "Fidélité 1:1, source plateforme/build et géométrie non certifiées."
+      ]
+    }
+  ],
+  "automatedReport": "stages-report.json",
+  "automatedChecks": 92,
+  "conclusion": "Intégration visuelle et mécanique des deux plans acceptable comme candidate. Aucun appui plafond nouveau, danger ou transition de phase n’est déduit des images.",
+  "previousAttempt": "stages-neutral-terrain-attempt/stages-report.json",
+  "configurationCorrection": "stageTerrain:true conserve le libellé source du terrain ; policy terrainRules:false garde les coefficients neutres."
+}

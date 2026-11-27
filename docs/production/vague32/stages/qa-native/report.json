@@ -1,0 +1,1199 @@
+{
+  "schema": 1,
+  "wave": 32,
+  "section": "stages",
+  "generatedAt": "2026-11-27T08:11:52.589Z",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "method": {
+    "renderer": "Actual FightEngine.update/render with @napi-rs/canvas; ordinary duel descriptors and natural intros.",
+    "inputs": "Synthetic keydown/keyup events delivered only to the original registered InputState callbacks. Bindings read from engine.bindings.",
+    "scheduling": "Manual logical update ticks; engine.frame and actor clocks are never assigned. Native rendering receives the current tick time.",
+    "decoder": "Exact local PNG bytes verified against manifest; memory-only sharp PNG normalization with full decoded RGBA equality.",
+    "environment": "Minimal window/document/storage/event/gamepad adapters; requestAnimationFrame does not schedule a browser loop."
+  },
+  "limits": [
+    "No Chromium, browser DOM/CSS, HTTP delivery, physical keyboard, service worker or offline behavior is tested.",
+    "One static attack image is not an animated clip; source timing and fidelity 1:1 remain unverified.",
+    "Opposite orientation uses the existing engine mirror, not a separately sourced view.",
+    "This is rendering, input route, natural recovery and stage composition QA; not a complete damage, guard, collision or finisher matrix.",
+    "Only the two wave32 stage compositions and their existing combat-enabled test fighters are exercised."
+  ],
+  "checks": [
+    {
+      "name": "Requested stage plans are exact",
+      "passed": true
+    },
+    {
+      "name": "Exact fighters and combat eligibility",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: exact independent stage planes",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: static phase and no ceiling affordance",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: delivered plane bg-cult-anteroom",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: delivered plane near-grate-edge",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: ordinary stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "antique_shop: intro completes naturally",
+      "passed": true,
+      "detail": {
+        "ticks": 228
+      }
+    },
+    {
+      "name": "antique_shop: ordinary HUD uses exact terrain presentation",
+      "passed": true,
+      "detail": {
+        "actual": "SOL DE L’ANTICHAMBRE DU CULTE",
+        "expected": "SOL DE L’ANTICHAMBRE DU CULTE"
+      }
+    },
+    {
+      "name": "antique_shop: source policy keeps terrain rules neutral",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: no source-phase motion or offensive apparatus enabled",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: both exact planes drawn",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: only selected stage images drawn",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: ordinary fighters drawn",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: original callback registered keydown right",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: ordinary binding accepted keydown right",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: original callback registered keyup right",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: ordinary binding accepted keyup right",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: natural right movement",
+      "passed": true,
+      "detail": {
+        "start": {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        "end": {
+          "id": "bom_pyramid_head_129",
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "walk",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      }
+    },
+    {
+      "name": "antique_shop: live right parallax",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "antique_shop: release returns to idle",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: original callback registered keydown left",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: ordinary binding accepted keydown left",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: original callback registered keyup left",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: ordinary binding accepted keyup left",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: natural left movement",
+      "passed": true,
+      "detail": {
+        "start": {
+          "id": "bom_pyramid_head_129",
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        "end": {
+          "id": "bom_pyramid_head_129",
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "walk",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      }
+    },
+    {
+      "name": "antique_shop: live left parallax",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "antique_shop: release returns to idle",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: no keys remain held",
+      "passed": true
+    },
+    {
+      "name": "antique_shop: teardown removes original listeners",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: exact independent stage planes",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: static phase and no ceiling affordance",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: delivered plane bg-clinic-entrance",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: delivered plane near-snow-edge",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: ordinary stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "lighthouse_sm: intro completes naturally",
+      "passed": true,
+      "detail": {
+        "ticks": 228
+      }
+    },
+    {
+      "name": "lighthouse_sm: ordinary HUD uses exact terrain presentation",
+      "passed": true,
+      "detail": {
+        "actual": "NEIGE DEVANT LA CLINIQUE",
+        "expected": "NEIGE DEVANT LA CLINIQUE"
+      }
+    },
+    {
+      "name": "lighthouse_sm: source policy keeps terrain rules neutral",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: no source-phase motion or offensive apparatus enabled",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: both exact planes drawn",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: only selected stage images drawn",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: ordinary fighters drawn",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: original callback registered keydown right",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: ordinary binding accepted keydown right",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: original callback registered keyup right",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: ordinary binding accepted keyup right",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: natural right movement",
+      "passed": true,
+      "detail": {
+        "start": {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        "end": {
+          "id": "bom_pyramid_head_129",
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "walk",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      }
+    },
+    {
+      "name": "lighthouse_sm: live right parallax",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "lighthouse_sm: release returns to idle",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: original callback registered keydown left",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: ordinary binding accepted keydown left",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: original callback registered keyup left",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: ordinary binding accepted keyup left",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: natural left movement",
+      "passed": true,
+      "detail": {
+        "start": {
+          "id": "bom_pyramid_head_129",
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        "end": {
+          "id": "bom_pyramid_head_129",
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "walk",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      }
+    },
+    {
+      "name": "lighthouse_sm: live left parallax",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "lighthouse_sm: release returns to idle",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: no keys remain held",
+      "passed": true
+    },
+    {
+      "name": "lighthouse_sm: teardown removes original listeners",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/projectile-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite entry unchanged bom_pyramid_head_129",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite entry unchanged bom_butcher_123",
+      "passed": true
+    },
+    {
+      "name": "Tested stage entry unchanged antique_shop",
+      "passed": true
+    },
+    {
+      "name": "Tested stage entry unchanged lighthouse_sm",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+      "bytes": 1182614,
+      "width": 1536,
+      "height": 1024,
+      "rgbaSHA256": "0c4478dcf379d0ee73c21fa9a753a15f96ffec1d36fcb4541e7b1fdb8191dd80"
+    },
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "sha256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
+      "bytes": 775204,
+      "width": 1254,
+      "height": 1254,
+      "rgbaSHA256": "406f2a6a6241b08320cb0fe8d5774d4975ebe0c52bcb8b9db68781d0ab135316"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+      "bytes": 1697023,
+      "width": 1024,
+      "height": 1536,
+      "rgbaSHA256": "3a1362834f7de8adb70fab12dbecda3baf65eba0e58d5f6fdcc012bf0c43f3b2"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "sha256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
+      "bytes": 665309,
+      "width": 1254,
+      "height": 1254,
+      "rgbaSHA256": "d9e038336f3f29df9cbbc3a7bc894e325d38d1b01e399e01cfb2e8c71353491c"
+    },
+    {
+      "path": "assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+      "sha256": "8de0129c58efd742d49b367dab08f2db5b0c62852718a12c11aabf49e084a5c2",
+      "bytes": 2139912,
+      "width": 1672,
+      "height": 941,
+      "rgbaSHA256": "baa173297ce8c79915ecc6991c07735adc5b08cff40d2ce492113712bdba93b5"
+    },
+    {
+      "path": "assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png",
+      "sha256": "c0447d084d35681b243721b68aa5de40283e7956bbc158779eced796558b0401",
+      "bytes": 100915,
+      "width": 1672,
+      "height": 941,
+      "rgbaSHA256": "58e2c3687374e28b980a2538974c6c75ce002c84b5fbae9396c177b393ffe310"
+    },
+    {
+      "path": "assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+      "sha256": "4ce31feecce0f664af45985716bea7073333a2fe410f7693a6b5594d4389ea97",
+      "bytes": 2644208,
+      "width": 1672,
+      "height": 941,
+      "rgbaSHA256": "0a7254e76c4b5d5524cc4218d305afb5d4e190c81a0a3ef7c8968664bfd28304"
+    },
+    {
+      "path": "assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png",
+      "sha256": "457e03b49a441bc65ee28aff5a7c038be4fc8a1f6ff74bded5398bc81e7cdefe",
+      "bytes": 109945,
+      "width": 1672,
+      "height": 941,
+      "rgbaSHA256": "3b446128dd8bd933b102c8c31f5336475a2af317e57dbb9d6968a6dc59218c89"
+    }
+  ],
+  "cases": [],
+  "stageCases": [
+    {
+      "label": "antique_shop",
+      "stageId": "antique_shop",
+      "source": "origins",
+      "scene": "green-lion-inner-passage",
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "player": 0,
+          "action": "right",
+          "engineFrame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "player": 0,
+          "action": "right",
+          "engineFrame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "player": 0,
+          "action": "left",
+          "engineFrame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "player": 0,
+          "action": "left",
+          "engineFrame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "id": "bom_pyramid_head_129",
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "end": {
+            "id": "bom_pyramid_head_129",
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "walk",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "id": "bom_pyramid_head_129",
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "end": {
+            "id": "bom_pyramid_head_129",
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "walk",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ],
+      "introTicks": 228,
+      "terrain": {
+        "id": "steel",
+        "name": "SOL DE L’ANTICHAMBRE DU CULTE",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Antichambre après le tunnel de Green Lion, avant la cinématique finale : autel vide, drapé rouge, cierges et court passage grillagé documentés par le guide officiel p. 121 et trois vues natives. Le Flauros abstrait et les anciens mouvements ne sont plus rendus. Caméra, largeur, placement précis et microtextures adaptés ; aucun corps rituel ou élément de la salle de cinématique. Physique neutre du versus ; géométrie non certifiée 1:1."
+      },
+      "policy": {
+        "sceneId": "green-lion-inner-passage",
+        "worldState": "fixed-altered",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "referenceTracks": [],
+        "weather": "none"
+      },
+      "initial": {
+        "frame": 229,
+        "actors": [
+          {
+            "id": "bom_pyramid_head_129",
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          {
+            "id": "bom_butcher_123",
+            "x": 970,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": -1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          }
+        ],
+        "planes": [
+          {
+            "path": "assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+            "args": [
+              0,
+              0.25,
+              1672,
+              940.5,
+              0,
+              0,
+              1280,
+              720
+            ],
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              13.852813720703125,
+              12.857142448425293
+            ],
+            "frame": 229,
+            "actorX": [
+              310,
+              970
+            ]
+          },
+          {
+            "path": "assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png",
+            "args": [
+              0,
+              0.25,
+              1672,
+              940.5,
+              0,
+              0,
+              1280,
+              720
+            ],
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              13.852813720703125,
+              12.857142448425293
+            ],
+            "frame": 229,
+            "actorX": [
+              310,
+              970
+            ]
+          }
+        ]
+      },
+      "capture": "stage-antique_shop.png"
+    },
+    {
+      "label": "lighthouse_sm",
+      "stageId": "lighthouse_sm",
+      "source": "shattered",
+      "scene": "shm-clinic-entrance-before-therapy",
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "player": 0,
+          "action": "right",
+          "engineFrame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "player": 0,
+          "action": "right",
+          "engineFrame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "player": 0,
+          "action": "left",
+          "engineFrame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "player": 0,
+          "action": "left",
+          "engineFrame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "id": "bom_pyramid_head_129",
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "end": {
+            "id": "bom_pyramid_head_129",
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "walk",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "id": "bom_pyramid_head_129",
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "end": {
+            "id": "bom_pyramid_head_129",
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "walk",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ],
+      "introTicks": 228,
+      "terrain": {
+        "id": "ice",
+        "name": "NEIGE DEVANT LA CLINIQUE",
+        "moveScale": 1,
+        "jumpScale": 1,
+        "dodgeScale": 1,
+        "friction": 0.84,
+        "knockbackScale": 1,
+        "guardRegenScale": 1,
+        "description": "Porche du Lighthouse Counseling Center après l’échange du rivage, avant de franchir la porte : bardage, piliers, porte et neige documentés. Tour, lac, hall et révélation thérapeutique exclus. Neige peinte sans prise de glace ni règles de glissade ; physique neutre du versus, cadrage et géométrie non certifiés 1:1."
+      },
+      "policy": {
+        "sceneId": "shm-clinic-entrance-before-therapy",
+        "worldState": "fixed-normal",
+        "allowedEvents": [],
+        "allowedHazards": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "referenceTracks": [],
+        "weather": "none"
+      },
+      "initial": {
+        "frame": 229,
+        "actors": [
+          {
+            "id": "bom_pyramid_head_129",
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          {
+            "id": "bom_butcher_123",
+            "x": 970,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": -1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          }
+        ],
+        "planes": [
+          {
+            "path": "assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+            "args": [
+              0,
+              0.25,
+              1672,
+              940.5,
+              0,
+              0,
+              1280,
+              720
+            ],
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              13.852813720703125,
+              12.857142448425293
+            ],
+            "frame": 229,
+            "actorX": [
+              310,
+              970
+            ]
+          },
+          {
+            "path": "assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png",
+            "args": [
+              0,
+              0.25,
+              1672,
+              940.5,
+              0,
+              0,
+              1280,
+              720
+            ],
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              13.852813720703125,
+              12.857142448425293
+            ],
+            "frame": 229,
+            "actorX": [
+              310,
+              970
+            ]
+          }
+        ]
+      },
+      "capture": "stage-lighthouse_sm.png"
+    }
+  ],
+  "captures": [
+    {
+      "file": "stage-antique_shop.png",
+      "purpose": "actual-native-FightEngine-stage",
+      "width": 1280,
+      "height": 720,
+      "sha256": "530b4103f220b21d1f7efedb67392e5dea81c3ea9f91918e4338d281c678d04f",
+      "bytes": 1150358,
+      "stageId": "antique_shop",
+      "frame": 229,
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 970,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": -1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      ]
+    },
+    {
+      "file": "stage-lighthouse_sm.png",
+      "purpose": "actual-native-FightEngine-stage",
+      "width": 1280,
+      "height": 720,
+      "sha256": "0cea88a65c5e58846c489747c0454260099e366195a3c54226c67c06c81da893",
+      "bytes": 1399092,
+      "stageId": "lighthouse_sm",
+      "frame": 229,
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 970,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": -1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "src/fight.js": {
+      "before": "0e1cc83391476cf913d0df078d1d618f1162ea3f1f7741fcfcedf7f0d80dfccb",
+      "after": "0e1cc83391476cf913d0df078d1d618f1162ea3f1f7741fcfcedf7f0d80dfccb"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28",
+      "after": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    },
+    "src/projectile-bitmaps.js": {
+      "before": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
+      "after": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410"
+    }
+  },
+  "catalogueHashes": {
+    "art/registry.json": {
+      "before": "839dc3525980b8b37671cd0dbaea4266e620a56332f0e1ea7340a5adec896eb3",
+      "after": "839dc3525980b8b37671cd0dbaea4266e620a56332f0e1ea7340a5adec896eb3",
+      "unchanged": true
+    },
+    "src/sprite-manifest.js": {
+      "before": "310bbb92bd6811dbb0f894a60d481f07554bbf05f5ada8382c22625ccc79683e",
+      "after": "310bbb92bd6811dbb0f894a60d481f07554bbf05f5ada8382c22625ccc79683e",
+      "unchanged": true
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "dbd63fc0775d102eae856f35a83b78092e01f9c4fc54fa0334f9837c479af00b",
+      "after": "dbd63fc0775d102eae856f35a83b78092e01f9c4fc54fa0334f9837c479af00b",
+      "unchanged": true
+    }
+  },
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "0dfa0214f9806d949bec5c5e7dd2af94e2c5cc92c182056dceb0f4f9b9c3b23e",
+  "browserAvailability": {
+    "wrapper": "/usr/bin/chromium",
+    "expectedBinary": "/usr/lib/chromium/chromium",
+    "binaryExists": false,
+    "launchAttempted": false,
+    "note": "Observed wrapper without the underlying Chromium binary in this environment. No browser capture is claimed."
+  },
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "bom_pyramid_head_129": "3ec8112c0efe5bc73ab7638fa37288f731fd4bcb68d58c40c61fa0e0ea7febde",
+    "bom_butcher_123": "0e5bf88a83144ea003cc77b282f4b136c7c6351c03e7da55dbf5b8807220ddd3"
+  },
+  "testedStageEntryHashes": {
+    "antique_shop": "7a894e2d0e43cf1770432fa754e1dcc202afeb673375a2b068e656752e952f18",
+    "lighthouse_sm": "27183a28e18fa5f0a931b47a64d726ea2f3207b34bf3990db22042a6d0f5cb70"
+  },
+  "runtimeCacheBudgets": {
+    "sprites": 75497472,
+    "stages": 67108864
+  },
+  "cataloguePolicy": "Whole catalogue hashes are recorded. Unrelated parallel imports may change them; exact tested entries, original image bytes and renderer/engine source must remain unchanged.",
+  "passed": true,
+  "completedAt": "2026-11-27T08:12:05.780Z"
+}

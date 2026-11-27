@@ -1,0 +1,97 @@
+$ npm run bible:check
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> silent-hill-halo-of-flesh@0.9.6 bible:check
+> node scripts/build-combat-guide.mjs --check
+
+{
+  "ok": true,
+  "check": true,
+  "sections": 30,
+  "associations": 442,
+  "imagePathsChecked": 686,
+  "counts": {
+    "guideSections": 30,
+    "moduleDecisions": 10,
+    "associations": 442,
+    "associationsByKind": {
+      "chronicle": 15,
+      "corpus": 66,
+      "profile": 230,
+      "projectile": 8,
+      "stage": 123
+    },
+    "sourceGroups": 16,
+    "corpusEntries": 66,
+    "profiles": 230,
+    "combatEnabledProfiles": 187,
+    "nonCombatProfiles": 43,
+    "roles": {
+      "combatant": 147,
+      "environmental-obstacle": 15,
+      "multi-body": 10,
+      "noncombatant": 9,
+      "scripted-encounter": 25,
+      "stationary-boss": 14,
+      "unverified": 10
+    },
+    "cataloguedBosses": 75,
+    "combatEnabledBosses": 63,
+    "moveSlots": 4600,
+    "enabledMoveSlots": 3499,
+    "disabledMoveSlots": 1101,
+    "generatedStories": 230,
+    "storiesWithPlayableEncounters": 186,
+    "chronicles": 15,
+    "chroniclesWithPlayableEncounters": 13,
+    "chronicleEncounters": 57,
+    "chronicleDossiers": 11,
+    "chronicleIllustrationFiles": 48,
+    "fighterFinisherDefinitions": 460,
+    "fighterFinishersAuthored": 198,
+    "stages": 123,
+    "stageFinisherDefinitions": 123,
+    "stageFinishersAuthored": 7,
+    "profilesWithPortraitCandidate": 204,
+    "profilesWithSideViewCandidate": 190,
+    "stagesWithBitmapCandidate": 90,
+    "projectileBitmapDefinitions": 8,
+    "activeProjectileMoveSlots": 86,
+    "activeProjectileMoveSlotsWithBitmap": 24,
+    "activeProjectileMoveSlotsWithoutBitmap": 62,
+    "stagesWithReferenceTracks": 82,
+    "referenceTracks": 163,
+    "stagesWithInteractions": 22,
+    "interactions": 26,
+    "stagesWithAllowedHazards": 8,
+    "stagesWithOtherworldShift": 4,
+    "crossStageRuntimeLinks": 0,
+    "newSpritesProducedThisPass": 0,
+    "newAnimationsProducedThisPass": 0
+  }
+}
+
+exit=0
+
+$ node --test tests/combat-guide.test.mjs
+✔ guide links resolve and generated outputs match the reviewed source data (46.351762ms)
+✔ consultable dossiers never become combat encounters through association (21.136853ms)
+✔ Lisa admission remains distinct from her empty individual story and Chronicle encounter (0.21119ms)
+✔ variant labels and film grouping cannot silently establish exact edition identity (0.879592ms)
+✔ guide coverage and attachment integrity reject missing sections or changed source (34.142216ms)
+✔ an unknown rival or projectile command cannot be published as a valid binding (37.112613ms)
+✔ presentation shifts and authored finisher timelines are counted in their own units (0.287325ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 936.265367
+
+exit=0
+
+$ git diff --check
+
+exit=0

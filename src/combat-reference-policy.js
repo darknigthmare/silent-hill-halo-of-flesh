@@ -232,6 +232,9 @@ define('sh2_lying_figure_crawling_021', {
   disabledSlots:{throw:'Les bras sont enfermés ; aucune saisie de cette version n’est documentée.',
     backThrow:'Les bras sont enfermés ; aucune projection arrière n’est documentée.'},
   moves:{...weaponKit('Percussion du corps rampant'),
+    // This exact form remains prone; only its short contact moves to the ground band.
+    // Reach, damage and timing retain their existing versus values.
+    neutralLight:contact('Percussion du corps rampant — coup bref',{level:'low'}),
     neutralSpecial:contact('Percussion rampante',{travel:3.3,level:'low',hits:1,reach:150}),
     forwardSpecial:contact('Rampement percutant',{travel:3.3,level:'low',hits:1}),
     super:contact('Percussion rampante — assaut prolongé',{travel:3.7,level:'low',hits:2,reach:180}),

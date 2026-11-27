@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "wave": 33,
+  "date": "2026-11-27",
+  "generationTool": "built-in image_gen.imagegen",
+  "generationRequests": 4,
+  "successfulOutputs": 4,
+  "correctionRequests": 0,
+  "retainedOutputs": 4,
+  "newAnimatedClips": 0,
+  "certifiedOneToOne": false,
+  "references": [
+    {
+      "path": "docs/production/vague33/characters/references/night-flutter-original-sh1.jpg",
+      "sha256": "c5874b16b766b6a378530575befd1b16c029cbc1775b7b8f21d4a26ac5eac852",
+      "bytes": 161189,
+      "visuallyInspected": true,
+      "role": "source-anatomy-reference",
+      "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_10.jpg",
+      "sourcePage": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+      "sourceKind": "Original-model illustration archived by an unofficial fan site",
+      "edition": "SH1 original 1999 PS1; source image regional/render-processing details unspecified",
+      "limits": "Standing folded-wing view only. Does not establish new flight pose, animation timing or precise side topology."
+    },
+    {
+      "path": "docs/production/vague28/characters/references/numb-body-original-sh3.jpg",
+      "sha256": "83e5033122a0e314c5b8438dab20f1e24a6a51a942b0214795ea195b7d738166",
+      "bytes": 360371,
+      "visuallyInspected": true,
+      "role": "source-anatomy-reference",
+      "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_02_numb_body.jpg",
+      "sourceKind": "Original-model illustration archived by an unofficial fan site",
+      "edition": "SH3 original 2003; size not independently identified",
+      "limits": "Family anatomy only. Medium size is described in the secondary guide, but exact medium model dimensions are not measured."
+    },
+    {
+      "path": "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+      "sha256": "4c283a4ddf4996d5a6d90faf57c175efbeb27be5ba4b0636d71a4c945e9d1492",
+      "bytes": 1015670,
+      "visuallyInspected": true,
+      "role": "edit-target-existing-owner-combat-idle",
+      "fighterId": "sh1_night_flutter_002",
+      "fidelity": "unverified"
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+      "sha256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+      "bytes": 1769688,
+      "visuallyInspected": true,
+      "role": "edit-target-existing-owner-combat-idle",
+      "fighterId": "sh3_numb_body_medium",
+      "fidelity": "unverified"
+    }
+  ],
+  "behaviorSources": [
+    {
+      "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+      "kind": "secondary game guide",
+      "reviewedThisWave": true,
+      "claims": [
+        "Night Flutter has darker skin, a worm-covered head and ground movement/contact as well as aerial attacks."
+      ],
+      "application": "walk and ground-contact still only; no flight pose reconstructed"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+      "kind": "secondary game guide",
+      "reviewedThisWave": true,
+      "claims": [
+        "Numb Body has no arms, occurs in small/medium/large sizes and attacks by a lunging jump/headbutt."
+      ],
+      "application": "exact existing medium ID; no grab, punch or projectile"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/026-027_en.htm",
+      "kind": "fan translation of official Lost Memories creature commentary",
+      "reviewedThisWave": true,
+      "claims": [
+        "Night Flutter head covered in worms; Otherworld counterpart sensitive to light."
+      ],
+      "application": "anatomy and identity constraints only"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/lost_memories/guide/068-069_en.htm",
+      "kind": "fan translation of official Lost Memories creature commentary",
+      "reviewedThisWave": true,
+      "claims": [
+        "Numb Body has long slender legs and varying sizes."
+      ],
+      "application": "anatomy family; no metric size claim"
+    },
+    {
+      "url": "https://github.com/shdecompilations/silent-hill-decomp/blob/8a16aab925373696eaec2935dfe4f4c012b139e8/include/maps/characters/air_screamer.h",
+      "kind": "pinned community decompilation cited in prior project research",
+      "localResearch": "docs/production/RECHERCHE_1TO1_2026-10-23.md",
+      "directRemoteReadThisWave": false,
+      "remoteAttempt": "Web tool DisabledError; current wave relies on existing local research and runtime policy, not a claimed fresh source-code verification.",
+      "claimsRetainedFromLocalResearch": [
+        "StandBiteAttack grounds the Night Flutter neutralLight action."
+      ],
+      "limits": "No exact animation frame, wing articulation or source timing measurement."
+    }
+  ],
+  "runtimeInspection": {
+    "files": [
+      "src/combat-reference-policy.js",
+      "src/sprite-animation.js",
+      "src/sprite-system.js",
+      "src/combat-geometry.js"
+    ],
+    "probe": "getFighter + createCombatProfile; Night Flutter neutralLight and Medium Numb Body neutralSpecial enabled",
+    "changedRuntimeFiles": false
+  },
+  "priorConstraintsReview": {
+    "reviewed": [
+      "art/reference-provenance-batch6.json",
+      "art/provenance-art144-a.json",
+      "art/provenance-art144-c.json",
+      "docs/production/vague28/characters/numb-body-small-forward-special.prompt.json"
+    ],
+    "matchingToolRefusalFound": false,
+    "arcadeNumbBodyBlockerRespected": "Arcade has insufficient exact visual attribution; no Arcade image or slot generated and no SH3 substitution claimed.",
+    "noCrossOwnerAssetReuse": true,
+    "noRefusalRetryOrWorkaround": true
+  },
+  "visualReview": {
+    "individualOutputsInspected": true,
+    "completeSubjects": true,
+    "trueAlphaMeasured": true,
+    "compositeBackgrounds": [
+      "white",
+      "blue-grey"
+    ],
+    "method": "Native Canvas alpha compositions; decoder RGBA equality confirmed; original PNG bytes unchanged",
+    "previews": "alpha-review/*-initial.png",
+    "haloResult": "No perceptible diffuse halo/opaque rectangle under correct composition. Low-alpha fringe measured separately.",
+    "nativeGameplayReviewed": false
+  },
+  "limits": [
+    "Four static stills, not animated clips or complete move sequences.",
+    "Fidelity remains unverified; anatomy and matching owner reviewed qualitatively only.",
+    "Medium scale remains a versus project choice, not a measured original model.",
+    "Mirrored display is presentation-only, not independent opposite-side art.",
+    "Import plan anchors are proposed versus calibration pending native gameplay QA.",
+    "The old Medium idle floor gap is documented; no historical registry edit was made."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "inputSha256": "dbe401c83cfe7dea758370ebdf58243daab448b2a1a99486082d43ffd745b8ad",
+  "associationSha256": "bc0261ac51c35bc61c258d4f5a7bb8b8fb7cdf7623d069e94c77f59801ccdf63",
+  "scope": "exact-guide-payload-projection",
+  "checks": [
+    {
+      "name": "guide sections",
+      "actual": 68,
+      "expected": 68,
+      "passed": true
+    },
+    {
+      "name": "association count",
+      "actual": 445,
+      "expected": 445,
+      "passed": true
+    },
+    {
+      "name": "Historical Society ID",
+      "actual": "arcade_historical",
+      "expected": "arcade_historical",
+      "passed": true
+    },
+    {
+      "name": "Historical Society label",
+      "actual": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY",
+      "expected": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY",
+      "passed": true
+    },
+    {
+      "name": "Historical Society status",
+      "actual": "bitmap candidat référencé ; fixed-normal",
+      "expected": "bitmap candidat référencé ; fixed-normal",
+      "passed": true
+    }
+  ],
+  "previews": [
+    {
+      "sheetName": "Guide combat",
+      "range": "A1:H6",
+      "filename": "guide-summary.png",
+      "sha256": "5bce406715893086aec6d940fb1d517292239abf595b14e663ae64bb629d7594"
+    },
+    {
+      "sheetName": "Guide combat",
+      "range": "A58:F64",
+      "filename": "extensions-retained.png",
+      "sha256": "04a0370d8c26ec655e5302fc372fc99aa1bcc71e69bcf363e2e6cb4bb7a400bf"
+    },
+    {
+      "sheetName": "Associations guide",
+      "range": "B337:G337",
+      "filename": "historical-society.png",
+      "sha256": "ecbdcc5d94149299a4beff033bb2afeb43a2391a596648aaf01a6624dd25672a"
+    },
+    {
+      "sheetName": "Synthèse",
+      "range": "A1:F8",
+      "filename": "historical-opening.png",
+      "sha256": "2100bddaf16101efd194bd0e3a3e68e8749eb01aa723d4af8e80929806964544"
+    }
+  ],
+  "mutation": false,
+  "limits": "Read-only Artifact Tool re-import and render. Native Excel desktop was not run. The temporary rendering projection never replaces the full delivered workbook; historical payloads are verified separately byte for byte."
+}

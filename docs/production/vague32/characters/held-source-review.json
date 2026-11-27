@@ -1,0 +1,82 @@
+{
+  "wave": 32,
+  "reviewedAt": "2026-11-27",
+  "refusalsRespected": [
+    {
+      "fighterId": "sh1_incubus_019",
+      "name": "Incubus",
+      "source": "sh1",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "stationary-boss",
+      "combatEnabled": true,
+      "superEnabled": true,
+      "reason": "Refus antérieur explicite de génération de l’Incubus SH1 ; aucune nouvelle tentative, reformulation ou variante de remplacement.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "sh1_incubus_019",
+        "requestId": null
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/1",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-a.json",
+          "jsonPointer": "/blocked/1",
+          "fileSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false,
+      "newGenerationAttemptedInWave26": false
+    },
+    {
+      "fighterId": "sh3_valtiel_051",
+      "name": "Valtiel",
+      "source": "sh3",
+      "combatView": "missing",
+      "selectionAvailable": false,
+      "activeFrames": 0,
+      "role": "noncombatant",
+      "combatEnabled": false,
+      "superEnabled": false,
+      "reason": "Refus antérieur explicite de génération de Valtiel SH3 ; aucune nouvelle tentative ou substitution.",
+      "reasonCodes": [
+        "historical-refusal"
+      ],
+      "historicalRefusal": {
+        "kind": "direct",
+        "subject": "sh3_valtiel_051",
+        "requestId": null
+      },
+      "requiredEvidenceOrAction": "Conserver le refus ou l’arrêt apparenté documenté ; aucun nouvel appel, variante, relabel ou substitution pour reprendre cette génération.",
+      "evidence": [
+        {
+          "path": "art/provenance-20261117.json",
+          "jsonPointer": "/remainingEntries/10",
+          "fileSHA256": "1bb51f15a699cd8c5ff003b5b4e015f1a75965477038e369ee701921444cad65",
+          "relation": "direct"
+        },
+        {
+          "path": "art/provenance-art144-a.json",
+          "jsonPointer": "/blocked/12",
+          "fileSHA256": "a6aa788973ab0a338b3c64f01c211d4fdb3617ea2cbbb4ef476101b7238b373f",
+          "relation": "direct"
+        }
+      ],
+      "newGenerationAttemptedInWave25": false,
+      "newGenerationAttemptedInWave26": false
+    }
+  ],
+  "newGenerationAttempted": false,
+  "reason": "Historical direct tool refusals read before any generation. No new prompt or substitute produced."
+}

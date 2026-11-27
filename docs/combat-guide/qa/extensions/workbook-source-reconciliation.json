@@ -1,0 +1,38 @@
+{
+  "asOf": "2026-11-27",
+  "method": "Reconcile complete delivered guide cells and all twelve formula caches to final JSON after sprite calibration and policy metadata regeneration. Artifact Tool authoring reports retain the hashes actually read during authoring.",
+  "historical30SectionsUnchanged": true,
+  "inputHashes": {
+    "docs/combat-guide/requirements-resolved.json": "ff1ad6ade6f85a9c3e1042216d7d17f588921dfed1be30dbeb81756bebfc8267",
+    "docs/combat-guide/associations.json": "0653a52e78c7cffc7255e5a12e1e85abb2173ba2db2377388b3cc69a3a95a4ff",
+    "docs/combat-guide/extensions/requirements.json": "5e0c9afe228240c23d93f6da78722901b7b32118c683c30247937c1320ca4894",
+    "docs/combat-guide/extensions/examples.json": "cef5f0f4f4d8fac3b78355a5fe8e3def5996f485700a7d432ff96e01c0f296df"
+  },
+  "workbooks": [
+    {
+      "path": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "sha256": "8a3d636b899934e640902aa29543742041e03fa84377b8543dbaa62a7db43db5",
+      "sourceCellsCompared": 3971,
+      "formulaCachesCompared": 12,
+      "sections": 68,
+      "associations": 445,
+      "status": "passed"
+    },
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "sha256": "951ee08d0139d253c59983df7b2a2e7273ea84fd02917b75baf8dc42a15c44eb",
+      "sourceCellsCompared": 3971,
+      "formulaCachesCompared": 12,
+      "sections": 68,
+      "associations": 445,
+      "status": "passed"
+    }
+  ],
+  "status": "passed",
+  "finalSourceState": {
+    "imagePaths": 707,
+    "referenceTracks": 162,
+    "stagesWithReferenceTracks": 81,
+    "scope": "Final source regeneration after Nurse alpha correction and Cedar masked-track status correction; all delivered guide cells and formula caches remain equal."
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "wave": 32,
+  "metadataOnly": true,
+  "passed": true,
+  "subjects": 80,
+  "negativeProbes": 544,
+  "changedContracts": [
+    {
+      "id": "sh1_groaner_003",
+      "laterClips": {
+        "forwardSpecial": [
+          4
+        ],
+        "neutralLight": [
+          5
+        ],
+        "neutralSpecial": [
+          6
+        ]
+      },
+      "expectedClips": {
+        "idle": [
+          0
+        ],
+        "forwardSpecial": [
+          4
+        ],
+        "neutralLight": [
+          5
+        ],
+        "neutralSpecial": [
+          6
+        ],
+        "walk": [
+          1
+        ],
+        "hurt": [
+          2
+        ],
+        "ko": [
+          3
+        ]
+      },
+      "absentPoses": [
+        "guard",
+        "dodge",
+        "crouch",
+        "finisher@sh1_groaner_003_signature",
+        "neutralHeavy",
+        "intro@sh1_groaner_003:intro",
+        "taunt@sh1_groaner_003:taunt"
+      ],
+      "frames": 7,
+      "animatedClips": 0
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "laterClips": {
+        "forwardSpecial": [
+          1
+        ],
+        "walk": [
+          2
+        ],
+        "neutralLight": [
+          3
+        ]
+      },
+      "expectedClips": {
+        "idle": [
+          0
+        ],
+        "forwardSpecial": [
+          1
+        ],
+        "walk": [
+          2
+        ],
+        "neutralLight": [
+          3
+        ]
+      },
+      "absentPoses": [
+        "jump",
+        "crouch",
+        "finisher@sh4_sniffer_dog_male_053_signature"
+      ],
+      "frames": 4,
+      "animatedClips": 0
+    },
+    {
+      "id": "sh3_nurse_revolver_044",
+      "laterClips": {
+        "guard": [
+          1
+        ],
+        "neutralLight": [
+          2
+        ]
+      },
+      "expectedClips": {
+        "idle": [
+          0
+        ],
+        "guard": [
+          1
+        ],
+        "neutralLight": [
+          2
+        ]
+      },
+      "absentPoses": [
+        "walk",
+        "crouch",
+        "finisher@sh3_nurse_revolver_044_signature",
+        "neutralHeavy",
+        "intro@sh3_nurse_revolver_044:intro",
+        "taunt@sh3_nurse_revolver_044:taunt"
+      ],
+      "frames": 3,
+      "animatedClips": 0
+    }
+  ],
+  "checks": 81
+}

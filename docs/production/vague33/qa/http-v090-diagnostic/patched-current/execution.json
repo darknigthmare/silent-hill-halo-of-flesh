@@ -1,0 +1,18 @@
+{
+  "startedAt": "2026-11-27T10:14:47.681Z",
+  "cwd": "/tmp/halo-active-repo",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "--experimental-loader",
+    "/tmp/halo-v090-loader-2MtPkh/loader.mjs",
+    "scripts/http-qa-v090.mjs"
+  ],
+  "environment": {
+    "QA_BASE_URL": "http://127.0.0.1:4311",
+    "QA_BROWSER_EXECUTABLE": "/tmp/chromium",
+    "QA_OUTPUT_DIR": "/workspace/scratch/4cb8973fa173/silent-hill-halo-of-flesh/docs/production/vague33/qa/http-v090-diagnostic/patched-current"
+  },
+  "dependencyResolution": "Only playwright-core resolves through the provided runtime module; no application interception or mock.",
+  "playwrightVersion": "1.62.1",
+  "ciPlaywrightVersion": "1.57.0"
+}

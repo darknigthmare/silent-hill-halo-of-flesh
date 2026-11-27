@@ -2,6 +2,8 @@ import {actorSpriteState,advanceSpriteClock} from './sprite-animation.js';
 import {combatFraming} from './sprite-framing.js';
 import { AFFLICTIONS, STAGE_HAZARDS, createCombatProfile, getRitualModifier } from './data.js';
 import { drawHitboxOverlay, drawMonster, drawStage } from './renderers.js';
+import {drawProjectileBitmap,prepareProjectileBitmaps} from './projectile-bitmaps.js';
+import {spriteProjectileOrigin} from './projectile-origin.js';
 import { stageEventDefinition, stageHazardDeck, stageTerrainProfile, stageShiftStyle } from './stage-director.js';
 import { bodyBox, bodyProfile, bodyPushRadius, hasGroundContact, moveBox, overlaps, hazardVolumes, hazardTouches, hazardCounterplay } from './combat-geometry.js';
 import { drawHazardObjects } from './stage-hazard-renderer.js';
@@ -449,6 +451,8 @@ export class FightEngine {
     addEventListener('blur', this.onFocusLoss);
     globalThis.document?.addEventListener('visibilitychange', this.onVisibilityChange);
     this.phaseTimer = this.beginPresentations('intro', this.actors.map(() => ({ key: 'intro', role: 'participant' })), this.phaseTimer, true);
+    // Artwork is optional and prewarms during the intro; failures retain the visible fallback.
+    void prepareProjectileBitmaps(this.actors.map(actor=>actor.data));
   }
 
   start() {
@@ -1480,6 +1484,7 @@ export class FightEngine {
     const count = Math.max(1, move.projectileCount || (actor.profile.trait.id === 'suppression' ? 2 : 1));
     const scale = move.projectileScale || 1;
     const ground=actor.profile.moves[move.key]===move&&sourceGroundProjectile(actor.data,move);
+    const muzzle=!isSuper&&!ground&&count===1?spriteProjectileOrigin(actor,move):null;
     for (let index = 0; index < count; index++) {
       const spread = index - (count - 1) / 2;
       const trap = Boolean(move.trap);
@@ -1488,8 +1493,9 @@ export class FightEngine {
         owner: actor,
         attackId,
         move,
-        x: trap ? clamp(actor.x + actor.facing * Math.min(move.reach * .72, 220), this.arenaInset(24), WIDTH - this.arenaInset(24)) : actor.x + actor.facing * (actorBox(actor).w * .45 + Math.abs(spread) * 18),
-        y: ground?groundY:trap ? FLOOR - 24 : actorBox(actor).y + actorBox(actor).h * .45 - Math.abs(spread) * 16,
+        x: muzzle?muzzle.x:trap ? clamp(actor.x + actor.facing * Math.min(move.reach * .72, 220), this.arenaInset(24), WIDTH - this.arenaInset(24)) : actor.x + actor.facing * (actorBox(actor).w * .45 + Math.abs(spread) * 18),
+        y: muzzle?muzzle.y:ground?groundY:trap ? FLOOR - 24 : actorBox(actor).y + actorBox(actor).h * .45 - Math.abs(spread) * 16,
+        ...(muzzle?{emissionSweepFrom:{...muzzle.emissionSweepFrom},launchOrigin:{...muzzle.launchOrigin}}:{}),
         vx: trap ? 0 : actor.facing * (move.projectileSpeed || 13) * (1 - Math.abs(spread) * .045),
         vy: trap||ground ? 0 : spread * (move.projectileArc || .8),
         gravity: ground?0:move.projectileGravity || 0,
@@ -1566,7 +1572,8 @@ export class FightEngine {
         projectile.vx = Math.cos(angle) * speed;
         projectile.vy = Math.sin(angle) * speed;
       }
-      const previous = { x: projectile.x, y: projectile.y };
+      const previous = projectile.emissionSweepFrom || { x: projectile.x, y: projectile.y };
+      delete projectile.emissionSweepFrom;
       projectile.vy += projectile.gravity || 0;
       projectile.x += projectile.vx;
       if(Number.isFinite(projectile.groundY)){projectile.y=projectile.groundY;projectile.vy=0;}
@@ -2873,6 +2880,7 @@ export class FightEngine {
 
   renderProjectiles(context) {
     for (const projectile of this.projectiles) {
+      if(drawProjectileBitmap(context,projectile).kind==='raster')continue;
       context.save();
       context.globalCompositeOperation = 'screen';
       const gradient = context.createRadialGradient(projectile.x, projectile.y, 1, projectile.x, projectile.y, projectile.radius * 2.5);

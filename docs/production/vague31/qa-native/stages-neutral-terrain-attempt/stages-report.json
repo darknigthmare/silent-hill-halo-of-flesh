@@ -1,0 +1,1129 @@
+{
+  "schema": 1,
+  "wave": 31,
+  "section": "stages",
+  "generatedAt": "2026-11-27T05:47:20.835Z",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "method": {
+    "renderer": "Actual FightEngine.update/render with @napi-rs/canvas; ordinary duel descriptors and natural intros.",
+    "inputs": "Synthetic keydown/keyup events delivered only to the original registered InputState callbacks. Bindings read from engine.bindings.",
+    "scheduling": "Manual logical update ticks; engine.frame and actor clocks are never assigned. Native rendering receives the current tick time.",
+    "decoder": "Exact local PNG bytes verified against manifest; memory-only sharp PNG normalization with full decoded RGBA equality.",
+    "environment": "Minimal window/document/storage/event/gamepad adapters; requestAnimationFrame does not schedule a browser loop."
+  },
+  "limits": [
+    "No Chromium, browser DOM/CSS, HTTP delivery, physical keyboard, service worker or offline behavior is tested.",
+    "One static attack image is not an animated clip; source timing and fidelity 1:1 remain unverified.",
+    "Opposite orientation uses the existing engine mirror, not a separately sourced view.",
+    "This is rendering, input route, natural recovery and stage composition QA; not a complete damage, guard, collision or finisher matrix.",
+    "Nurse dark-matte sheets are diagnostic renderings of unchanged source pixels, separate from gameplay captures."
+  ],
+  "checks": [
+    {
+      "name": "Requested character plans are exact",
+      "passed": true
+    },
+    {
+      "name": "Requested stage plans are exact",
+      "passed": true
+    },
+    {
+      "name": "Exact fighters and combat eligibility",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/stages/cedar_grove.vague31.bg-female-treatment.59e0c4138ef4.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/stages/cedar_grove.vague31.bg-female-treatment.59e0c4138ef4.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/stages/cedar_grove.vague31.near-privacy-curtain.f61def0b802a.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/stages/cedar_grove.vague31.near-privacy-curtain.f61def0b802a.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/stages/wish_house.vague31.bg-first-visit-scripture.8f7ee32e602f.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/stages/wish_house.vague31.bg-first-visit-scripture.8f7ee32e602f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original PNG assets/stages/wish_house.vague31.near-closed-book.d6120699d81a.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/stages/wish_house.vague31.near-closed-book.d6120699d81a.png",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: exact independent stage planes",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: static phase and no ceiling affordance",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: delivered plane bg-female-treatment",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: delivered plane near-privacy-curtain",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: ordinary stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "cedar_grove: intro completes naturally",
+      "passed": true,
+      "detail": {
+        "ticks": 228
+      }
+    },
+    {
+      "name": "cedar_grove: both exact planes drawn",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: only selected stage images drawn",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: ordinary fighters drawn",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: original callback registered keydown right",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: ordinary binding accepted keydown right",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: original callback registered keyup right",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: ordinary binding accepted keyup right",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: natural right movement",
+      "passed": true,
+      "detail": {
+        "start": {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        "end": {
+          "id": "bom_pyramid_head_129",
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "walk",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      }
+    },
+    {
+      "name": "cedar_grove: live right parallax",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "cedar_grove: release returns to idle",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: original callback registered keydown left",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: ordinary binding accepted keydown left",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: original callback registered keyup left",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: ordinary binding accepted keyup left",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: natural left movement",
+      "passed": true,
+      "detail": {
+        "start": {
+          "id": "bom_pyramid_head_129",
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        "end": {
+          "id": "bom_pyramid_head_129",
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "walk",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      }
+    },
+    {
+      "name": "cedar_grove: live left parallax",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "cedar_grove: release returns to idle",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: no keys remain held",
+      "passed": true
+    },
+    {
+      "name": "cedar_grove: teardown removes original listeners",
+      "passed": true
+    },
+    {
+      "name": "wish_house: exact independent stage planes",
+      "passed": true
+    },
+    {
+      "name": "wish_house: static phase and no ceiling affordance",
+      "passed": true
+    },
+    {
+      "name": "wish_house: delivered plane bg-first-visit-scripture",
+      "passed": true
+    },
+    {
+      "name": "wish_house: delivered plane near-closed-book",
+      "passed": true
+    },
+    {
+      "name": "wish_house: ordinary stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "wish_house: intro completes naturally",
+      "passed": true,
+      "detail": {
+        "ticks": 228
+      }
+    },
+    {
+      "name": "wish_house: both exact planes drawn",
+      "passed": true
+    },
+    {
+      "name": "wish_house: only selected stage images drawn",
+      "passed": true
+    },
+    {
+      "name": "wish_house: ordinary fighters drawn",
+      "passed": true
+    },
+    {
+      "name": "wish_house: original callback registered keydown right",
+      "passed": true
+    },
+    {
+      "name": "wish_house: ordinary binding accepted keydown right",
+      "passed": true
+    },
+    {
+      "name": "wish_house: original callback registered keyup right",
+      "passed": true
+    },
+    {
+      "name": "wish_house: ordinary binding accepted keyup right",
+      "passed": true
+    },
+    {
+      "name": "wish_house: natural right movement",
+      "passed": true,
+      "detail": {
+        "start": {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        "end": {
+          "id": "bom_pyramid_head_129",
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "walk",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      }
+    },
+    {
+      "name": "wish_house: live right parallax",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "wish_house: release returns to idle",
+      "passed": true
+    },
+    {
+      "name": "wish_house: original callback registered keydown left",
+      "passed": true
+    },
+    {
+      "name": "wish_house: ordinary binding accepted keydown left",
+      "passed": true
+    },
+    {
+      "name": "wish_house: original callback registered keyup left",
+      "passed": true
+    },
+    {
+      "name": "wish_house: ordinary binding accepted keyup left",
+      "passed": true
+    },
+    {
+      "name": "wish_house: natural left movement",
+      "passed": true,
+      "detail": {
+        "start": {
+          "id": "bom_pyramid_head_129",
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        "end": {
+          "id": "bom_pyramid_head_129",
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "walk",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      }
+    },
+    {
+      "name": "wish_house: live left parallax",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "wish_house: release returns to idle",
+      "passed": true
+    },
+    {
+      "name": "wish_house: no keys remain held",
+      "passed": true
+    },
+    {
+      "name": "wish_house: teardown removes original listeners",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Renderer or engine source unchanged src/projectile-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite entry unchanged bom_pyramid_head_129",
+      "passed": true
+    },
+    {
+      "name": "Tested sprite entry unchanged bom_butcher_123",
+      "passed": true
+    },
+    {
+      "name": "Tested stage entry unchanged cedar_grove",
+      "passed": true
+    },
+    {
+      "name": "Tested stage entry unchanged wish_house",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/stages/cedar_grove.vague31.bg-female-treatment.59e0c4138ef4.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/stages/cedar_grove.vague31.near-privacy-curtain.f61def0b802a.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/stages/wish_house.vague31.bg-first-visit-scripture.8f7ee32e602f.png",
+      "passed": true
+    },
+    {
+      "name": "Source PNG unchanged assets/stages/wish_house.vague31.near-closed-book.d6120699d81a.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+      "bytes": 1182614,
+      "width": 1536,
+      "height": 1024,
+      "rgbaSHA256": "0c4478dcf379d0ee73c21fa9a753a15f96ffec1d36fcb4541e7b1fdb8191dd80"
+    },
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "sha256": "c02795c707f2a23047de558d2438557f400229d906baa7f3fae350516500af98",
+      "bytes": 775204,
+      "width": 1254,
+      "height": 1254,
+      "rgbaSHA256": "406f2a6a6241b08320cb0fe8d5774d4975ebe0c52bcb8b9db68781d0ab135316"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+      "bytes": 1697023,
+      "width": 1024,
+      "height": 1536,
+      "rgbaSHA256": "3a1362834f7de8adb70fab12dbecda3baf65eba0e58d5f6fdcc012bf0c43f3b2"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "sha256": "95b439f69ed71c4b91095f39a3c4eba7bba2803fb9529772ee5245e959a5b911",
+      "bytes": 665309,
+      "width": 1254,
+      "height": 1254,
+      "rgbaSHA256": "d9e038336f3f29df9cbbc3a7bc894e325d38d1b01e399e01cfb2e8c71353491c"
+    },
+    {
+      "path": "assets/stages/cedar_grove.vague31.bg-female-treatment.59e0c4138ef4.png",
+      "sha256": "59e0c4138ef4bb886172820d3102aebf85be5b7a2c2a9ac3c8eef7942c2745ab",
+      "bytes": 2841635,
+      "width": 1672,
+      "height": 941,
+      "rgbaSHA256": "0ca42557e7a50e4979715eb492739710005b6ffa8fbed822a02fe43733aebff5"
+    },
+    {
+      "path": "assets/stages/cedar_grove.vague31.near-privacy-curtain.f61def0b802a.png",
+      "sha256": "f61def0b802a0c585c91f073204ec7a19511368a683090c05e8fad5d33cb2d91",
+      "bytes": 278390,
+      "width": 1672,
+      "height": 941,
+      "rgbaSHA256": "c6096920a945ec6d9000fa9475444bba46f3f213eb28ed56705f2e2672fbe9c4"
+    },
+    {
+      "path": "assets/stages/wish_house.vague31.bg-first-visit-scripture.8f7ee32e602f.png",
+      "sha256": "8f7ee32e602fb37e95c0de23779b9468e356cb1182e5bc1eb850d5391f40c5bd",
+      "bytes": 2549969,
+      "width": 1672,
+      "height": 941,
+      "rgbaSHA256": "b7921c020e09797adf99658552d7d45a36b90220c68a91d5db54aa458cb6eb64"
+    },
+    {
+      "path": "assets/stages/wish_house.vague31.near-closed-book.d6120699d81a.png",
+      "sha256": "d6120699d81ae8a19dcc2559a362b36f8f66d49d56a7e73c07ff4ae545008e86",
+      "bytes": 108834,
+      "width": 1672,
+      "height": 941,
+      "rgbaSHA256": "bb7244107c70c49546407a3d5fa1689bf294812dfd365dfca0996e2f528e4111"
+    }
+  ],
+  "cases": [],
+  "stageCases": [
+    {
+      "label": "cedar_grove",
+      "stageId": "cedar_grove",
+      "source": "origins",
+      "scene": "female-treatment-mirror",
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "player": 0,
+          "action": "right",
+          "engineFrame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "player": 0,
+          "action": "right",
+          "engineFrame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "player": 0,
+          "action": "left",
+          "engineFrame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "player": 0,
+          "action": "left",
+          "engineFrame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "id": "bom_pyramid_head_129",
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "end": {
+            "id": "bom_pyramid_head_129",
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "walk",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "id": "bom_pyramid_head_129",
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "end": {
+            "id": "bom_pyramid_head_129",
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "walk",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ],
+      "introTicks": 228,
+      "initial": {
+        "frame": 229,
+        "actors": [
+          {
+            "id": "bom_pyramid_head_129",
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          {
+            "id": "bom_butcher_123",
+            "x": 970,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": -1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          }
+        ],
+        "planes": [
+          {
+            "path": "assets/stages/cedar_grove.vague31.bg-female-treatment.59e0c4138ef4.png",
+            "args": [
+              0,
+              0.25,
+              1672,
+              940.5,
+              0,
+              0,
+              1280,
+              720
+            ],
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              13.852813720703125,
+              12.857142448425293
+            ],
+            "frame": 229,
+            "actorX": [
+              310,
+              970
+            ]
+          },
+          {
+            "path": "assets/stages/cedar_grove.vague31.near-privacy-curtain.f61def0b802a.png",
+            "args": [
+              0,
+              0.25,
+              1672,
+              940.5,
+              0,
+              0,
+              1280,
+              720
+            ],
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              13.852813720703125,
+              12.857142448425293
+            ],
+            "frame": 229,
+            "actorX": [
+              310,
+              970
+            ]
+          }
+        ]
+      },
+      "capture": "stage-cedar_grove.png"
+    },
+    {
+      "label": "wish_house",
+      "stageId": "wish_house",
+      "source": "sh4",
+      "scene": "sh4-first-visit-scripture-corner",
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "player": 0,
+          "action": "right",
+          "engineFrame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "player": 0,
+          "action": "right",
+          "engineFrame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "player": 0,
+          "action": "left",
+          "engineFrame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "player": 0,
+          "action": "left",
+          "engineFrame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "id": "bom_pyramid_head_129",
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "end": {
+            "id": "bom_pyramid_head_129",
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "walk",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "id": "bom_pyramid_head_129",
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "end": {
+            "id": "bom_pyramid_head_129",
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "walk",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ]
+        }
+      ],
+      "introTicks": 228,
+      "initial": {
+        "frame": 229,
+        "actors": [
+          {
+            "id": "bom_pyramid_head_129",
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": 1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          },
+          {
+            "id": "bom_butcher_123",
+            "x": 970,
+            "y": 594,
+            "state": "idle",
+            "grounded": true,
+            "facing": -1,
+            "spritePose": "idle",
+            "lastMoveKey": null,
+            "attack": null
+          }
+        ],
+        "planes": [
+          {
+            "path": "assets/stages/wish_house.vague31.bg-first-visit-scripture.8f7ee32e602f.png",
+            "args": [
+              0,
+              0.25,
+              1672,
+              940.5,
+              0,
+              0,
+              1280,
+              720
+            ],
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              13.852813720703125,
+              12.857142448425293
+            ],
+            "frame": 229,
+            "actorX": [
+              310,
+              970
+            ]
+          },
+          {
+            "path": "assets/stages/wish_house.vague31.near-closed-book.d6120699d81a.png",
+            "args": [
+              0,
+              0.25,
+              1672,
+              940.5,
+              0,
+              0,
+              1280,
+              720
+            ],
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              13.852813720703125,
+              12.857142448425293
+            ],
+            "frame": 229,
+            "actorX": [
+              310,
+              970
+            ]
+          }
+        ]
+      },
+      "capture": "stage-wish_house.png"
+    }
+  ],
+  "captures": [
+    {
+      "file": "stage-cedar_grove.png",
+      "purpose": "actual-native-FightEngine-stage",
+      "width": 1280,
+      "height": 720,
+      "sha256": "db28d1a13768382b13b30ddf91ac24e1be617b1e7a0a3475124751890cc5e5f1",
+      "bytes": 1509657,
+      "stageId": "cedar_grove",
+      "frame": 229,
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 970,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": -1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      ]
+    },
+    {
+      "file": "stage-wish_house.png",
+      "purpose": "actual-native-FightEngine-stage",
+      "width": 1280,
+      "height": 720,
+      "sha256": "a097b06293705cc385c9854ed6c3f82d8820a60d6d813a26b88dc83276ebe185",
+      "bytes": 1334920,
+      "stageId": "wish_house",
+      "frame": 229,
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 970,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": -1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28",
+      "after": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    },
+    "src/projectile-bitmaps.js": {
+      "before": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
+      "after": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410"
+    }
+  },
+  "catalogueHashes": {
+    "art/registry.json": {
+      "before": "a5f8a3673036e103d7f3463dd15edf6179aebcb16b5fa34217709550ce13c759",
+      "after": "a5f8a3673036e103d7f3463dd15edf6179aebcb16b5fa34217709550ce13c759",
+      "unchanged": true
+    },
+    "src/sprite-manifest.js": {
+      "before": "a009e0b880df6969674bd58f1fe6a9e7e47304b2c7a56583e40e264a5691a0c2",
+      "after": "a009e0b880df6969674bd58f1fe6a9e7e47304b2c7a56583e40e264a5691a0c2",
+      "unchanged": true
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "3279ea5b7f65316dec07e530eeaf0bc114c57e15c0dc657e604c9fa87fd57bb5",
+      "after": "3279ea5b7f65316dec07e530eeaf0bc114c57e15c0dc657e604c9fa87fd57bb5",
+      "unchanged": true
+    }
+  },
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "58525978bce0ee6c1929342fe93bca50f373fd02eff338d2364ff65e1451d0e2",
+  "browserAvailability": {
+    "wrapper": "/usr/bin/chromium",
+    "expectedBinary": "/usr/lib/chromium/chromium",
+    "binaryExists": false,
+    "launchAttempted": false,
+    "note": "Observed wrapper without the underlying Chromium binary in this environment. No browser capture is claimed."
+  },
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "bom_pyramid_head_129": "3ec8112c0efe5bc73ab7638fa37288f731fd4bcb68d58c40c61fa0e0ea7febde",
+    "bom_butcher_123": "0e5bf88a83144ea003cc77b282f4b136c7c6351c03e7da55dbf5b8807220ddd3"
+  },
+  "testedStageEntryHashes": {
+    "cedar_grove": "2e1d49e86b973040e19aa8b145240e6c8851ac4a65bb19d78e725ac98c56ff0b",
+    "wish_house": "231e93bf8e315ea3daaa66e03820dbb621e3571900aaf2ae5499348a771dfa3a"
+  },
+  "runtimeCacheBudgets": {
+    "sprites": 75497472,
+    "stages": 67108864
+  },
+  "cataloguePolicy": "Whole catalogue hashes are recorded. Unrelated parallel imports may change them; exact tested entries, original image bytes and renderer/engine source must remain unchanged.",
+  "passed": true,
+  "completedAt": "2026-11-27T05:47:24.213Z"
+}

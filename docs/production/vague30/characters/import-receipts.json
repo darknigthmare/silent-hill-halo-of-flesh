@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "wave": 30,
+  "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "status": "completed-and-verified",
+  "method": "scripts/import-sprite.py; Pillow audit from original PNG bytes",
+  "counts": {
+    "newProfiles": 0,
+    "newPortraits": 0,
+    "newCombatBases": 0,
+    "newStaticPoses": 3,
+    "newAnimatedClips": 0
+  },
+  "poses": [
+    {
+      "fighterId": "sh4_sniffer_dog_male_053",
+      "source": "sh4",
+      "pose": "forwardSpecial",
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+      "sourceFile": "exec-932c9bf4-9bd1-4496-8d83-914b19762f1d.png",
+      "technical": {
+        "pixelSHA256": "59f1891e71a753e57bd78ee65512a9648119111c6e239147d756f5bf5007d2d7",
+        "sha256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9",
+        "bytes": 1830946,
+        "width": 1536,
+        "height": 1024,
+        "extension": "png",
+        "visibleBounds": [
+          52,
+          169,
+          1496,
+          913
+        ],
+        "transparentFraction": 0.75952
+      },
+      "frames": 2,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "animatedClips": 0,
+      "portraitPath": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "calibration": {
+        "anchor": [
+          0.44,
+          0.891602
+        ],
+        "bodyHeight": 0.92,
+        "facing": 1
+      }
+    },
+    {
+      "fighterId": "origins_carrion_076",
+      "source": "origins",
+      "pose": "forwardSpecial",
+      "path": "assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+      "sourceFile": "exec-f62d1e73-34d6-47cb-983e-d35d27675d26.png",
+      "technical": {
+        "pixelSHA256": "d887de8c70c3087ca78ca13b08f6df97bec3f25b4243b766578f2466256e346c",
+        "sha256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61",
+        "bytes": 819038,
+        "width": 1254,
+        "height": 1254,
+        "extension": "png",
+        "visibleBounds": [
+          121,
+          359,
+          1124,
+          972
+        ],
+        "transparentFraction": 0.78754
+      },
+      "frames": 2,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "animatedClips": 0,
+      "portraitPath": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "calibration": {
+        "anchor": [
+          0.46,
+          0.77512
+        ],
+        "bodyHeight": 0.79,
+        "facing": -1
+      }
+    },
+    {
+      "fighterId": "sh1_creeper_009",
+      "source": "sh1",
+      "pose": "walk",
+      "path": "assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+      "sourceFile": "exec-94f88139-245f-42d8-8aa3-b6ae55836283.png",
+      "technical": {
+        "pixelSHA256": "131d4ca5c5ef46c26e3a7ba99c37d1100f82ab7ecbaa46e9f06e4d85483eb4fd",
+        "sha256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9",
+        "bytes": 697798,
+        "width": 2172,
+        "height": 724,
+        "extension": "png",
+        "visibleBounds": [
+          219,
+          130,
+          1891,
+          609
+        ],
+        "transparentFraction": 0.85509
+      },
+      "frames": 2,
+      "ticksPerFrame": 1,
+      "loop": false,
+      "animatedClips": 0,
+      "portraitPath": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "calibration": {
+        "anchor": [
+          0.5,
+          0.84116
+        ],
+        "bodyHeight": 0.88,
+        "facing": 1
+      }
+    }
+  ],
+  "limits": [
+    "Single-frame poses only; no source timing or 1:1 fidelity certification.",
+    "Gameplay screenshots and calibration review are separate from this import audit."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "passed": true,
+  "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "baselineRegistryGitBlob": "610cda6012f30d6c7ff70f7df6e5ba89c0f479e9",
+  "resultRegistryGitBlob": "4bf652dac341f28b2ace5468e6e83f7d94629f90",
+  "baselineSHA256": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd",
+  "beforeRunSHA256": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd",
+  "resultSHA256": "6e8472e40e2b6a5a435fdb987060277f530e012e7be5cb3ef17a5b4022428468",
+  "ownerCountBefore": 204,
+  "ownerCountAfter": 204,
+  "unchangedOtherOwners": 201,
+  "preserved": [
+    "All prior frames and clips",
+    "All portraits and their provenance",
+    "All pre-existing owner metadata",
+    "All other registry entries",
+    "Registry schema and policy"
+  ],
+  "delta": {
+    "newProfiles": 0,
+    "newPortraits": 0,
+    "newCombatBases": 0,
+    "newStaticPoses": 3,
+    "newAnimatedClips": 0
+  },
+  "newClipContract": {
+    "frames": [
+      1
+    ],
+    "ticksPerFrame": 1,
+    "loop": false
+  },
+  "verification": "Full parsed-registry equality with baseline plus the three audited appends."
+}

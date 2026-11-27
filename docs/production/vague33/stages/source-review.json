@@ -1,0 +1,111 @@
+{
+  "scene": "arcade_historical",
+  "phase": "Historical Society — normal gallery before underground / prison transition",
+  "proposedLayer": "bg-normal-gallery",
+  "sourceClass": "inspected third-party gameplay of the original Arcade game; not texture extraction",
+  "references": [
+    {
+      "url": "https://www.youtube.com/watch?v=jovQIyOwE8A&t=1250s",
+      "title": "Silent Hill: The Arcade (2007) - Tutorial & Gameplay (JConfig)",
+      "publisher": "Gaming Onda Couch",
+      "timestampSeconds": 1250,
+      "localFile": "references/museum-doorway-1250.png",
+      "nativePixels": [
+        320,
+        180
+      ],
+      "visible": "Dark wooden doorway, yellow patterned wallpaper, dark wood wainscoting."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=jovQIyOwE8A&t=1260s",
+      "title": "Silent Hill: The Arcade (2007) - Tutorial & Gameplay (JConfig)",
+      "publisher": "Gaming Onda Couch",
+      "timestampSeconds": 1260,
+      "localFile": "references/museum-gallery-wall-1260.png",
+      "nativePixels": [
+        320,
+        180
+      ],
+      "visible": "Four dark framed pictures over yellow-olive patterned wallpaper and dark wood wainscoting across two wall faces."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9MZN4w35ZVc&t=1110s",
+      "title": "Silent Hill : The Arcade (Full Playthrough) (With 2 endings)",
+      "publisher": "Old John’s Gaming World",
+      "timestampSeconds": 1110,
+      "localFile": "references/museum-crosscheck-1110.png",
+      "nativePixels": [
+        160,
+        90
+      ],
+      "visible": "Independently repeats the doorway composition."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9MZN4w35ZVc&t=1120s",
+      "title": "Silent Hill : The Arcade (Full Playthrough) (With 2 endings)",
+      "publisher": "Old John’s Gaming World",
+      "timestampSeconds": 1120,
+      "localFile": "references/museum-crosscheck-1120.png",
+      "nativePixels": [
+        160,
+        90
+      ],
+      "visible": "Independently repeats the gallery-wall arrangement."
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh_arcade/stages_en.htm",
+      "title": "Silent Hill: The Arcade — Stages",
+      "role": "Secondary catalogue identifies Stage 2 Area 1 as Historical Society; no direct visual proof of materials."
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh_arcade/stages/st2_1.gif",
+      "localFile": "references/st2_1.gif",
+      "role": "Secondary stage map; distinguishes normal museum section from underground route."
+    }
+  ],
+  "inspection": {
+    "viewedNativeReferenceFiles": true,
+    "storyboardExtraction": "Lossless pixel crops of public YouTube storyboard JPEG sheets, no upscale, repaint or color change. Storyboard cell time step is 10 seconds; timestamps locate preview samples, not frame-accurate in-game triggers.",
+    "officialPromotionalArchiveInspected": "https://www.silenthillmemories.net/sh_arcade/screens_en.htm (2010.02.21 Konami Europe, eleven images)",
+    "officialArchiveOutcome": "Does not establish this museum gallery; it was not used as visual reference for the generated layers.",
+    "crossEditionCheck": "Silent Hill 2 Historical Society references were excluded."
+  },
+  "observed": [
+    "Yellow/olive vertical floral-pattern wallpaper",
+    "Dark wooden wainscoting",
+    "Dark doorway jamb and open door in entry view",
+    "Four framed works in gallery corner; shapes and order preserved as reconstruction targets"
+  ],
+  "unresolved": [
+    "Fine painting subjects, captions and exact texture pixels",
+    "Exact museum flooring",
+    "Room dimensions and full off-camera geometry",
+    "Native cabinet hardware/region/build: first capture uses JConfig on PC; second playback environment not established",
+    "Continuous video timing, movement and any animation cycles",
+    "Generated painting subjects, floral texture and exact frame coordinates are reconstructions; the low-resolution references do not establish their exact pixels."
+  ],
+  "adaptations": [
+    "Lateral fight camera with a low unoccupied shadowed near-floor band",
+    "Foreground doorway jambs cropped to screen edges; exact original camera position is not preserved"
+  ],
+  "status": "source-anchored reconstruction candidate; 1:1 not certified; no animation or interactive hazard evidence supplied",
+  "generation": {
+    "provider": "Built-in image_gen",
+    "calls": 2,
+    "background": {
+      "promptFile": "background-prompt.txt",
+      "attachedReferences": [
+        "references/museum-gallery-wall-1260.png",
+        "references/museum-doorway-1250.png"
+      ],
+      "transparentBackground": false
+    },
+    "foreground": {
+      "promptFile": "foreground-prompt.txt",
+      "attachedReferences": [],
+      "transparentBackground": true,
+      "reasonNoAttachedReference": "Executor disconnected after background generation. This new sparse asset used a textual description of the already inspected entry frame and observed background palette, without editing any earlier image."
+    },
+    "assetPixelEditing": "None. Original background copied byte for byte; original foreground data URL decoded byte for byte after executor recovery."
+  }
+}

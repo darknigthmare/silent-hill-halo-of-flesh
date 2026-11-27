@@ -4,7 +4,11 @@ Ce dossier suit la réalisation des movesets, supers, finishers, introductions, 
 
 Le classeur [SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx](SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx) rassemble le suivi de production. Les recherches JSON alimentent désormais `src/production-reference.js` et les règles du moteur par un générateur vérifié. Le fichier Excel n’est pas chargé par le jeu et ses annotations ne sont pas appliquées automatiquement. Le [rapport d’intégration](../EXCEL_RUNTIME_INTEGRATION_2026-10-17.md) décrit les réalisations et leurs limites ; le [relevé initial](QA_2026-10-17.md) conserve l’historique de la première phase.
 
-## État actuel — vague 22 du 19 novembre 2026
+## État actuel — vague 30 du 25 novembre 2026
+
+La [vague 30](vague30/README.md) ajoute **14 images fixes** : trois poses, trois effets, six plans pour trois arènes et deux illustrations du récit d’Air Screamer SH1. Le registre compte **93 arènes bitmap sur 123**, **11 effets couvrant 31 commandes sur 86** et **445 associations de bible**. Les deux classeurs ont leurs feuilles de guide rafraîchies, tandis que leurs 13 feuilles historiques et 87 formules sont conservées. L’[inventaire courant par identifiant](vague30/inventory.json) et la [validation des classeurs](vague30/workbooks/validation.json) portent l’état vérifié ; les sections suivantes conservent les états datés précédents.
+
+## État historique — vague 22 du 19 novembre 2026
 
 La [vague 22](vague22/README.md) ajoute **16 vues latérales dédiées et 10 stages**,
 soit 36 nouveaux PNG actifs. Le catalogue atteint **151 vues candidates et

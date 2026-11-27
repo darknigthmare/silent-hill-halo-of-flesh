@@ -596,6 +596,120 @@ export const SPRITES = {
           1114,
           1009
         ]
+      },
+      {
+        "sha256": "10a8df3e32702516e8c8a190e7b4b4b872b6223056ed846fe61b4ff23cef3566",
+        "bytes": 1467004,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          418,
+          5,
+          979,
+          1002
+        ],
+        "pixelSHA256": "d853afefaca5dd9cc39f17ff60c96d0643d5956a7cff3fcdc90604f98ee50c36",
+        "transparentFraction": 0.82232,
+        "path": "assets/sprites/sh2_lying_figure_020.10a8df3e3270.png",
+        "facing": 1,
+        "anchor": [
+          0.455,
+          0.978516
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "lying-figure-neutral-special.png",
+        "sourceSHA256": "10a8df3e32702516e8c8a190e7b4b4b872b6223056ed846fe61b4ff23cef3566",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1516,
+          1009
+        ],
+        "framingBounds": [
+          416,
+          0,
+          982,
+          1009
+        ]
+      },
+      {
+        "sha256": "93aa7fbaf7fb92e655859ad7fc51b7b91cbe5bcb1a4d0852098d8843c1da021f",
+        "bytes": 1652824,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          51,
+          295,
+          973,
+          1295
+        ],
+        "pixelSHA256": "fd18be592d76a80ad298c0eb38768cb935dfa371d21e455f1a39359da0fb172f",
+        "transparentFraction": 0.75491,
+        "path": "assets/sprites/sh2_lying_figure_020.93aa7fbaf7fb.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.8430989583333334
+        ],
+        "bodyHeight": 0.6266666666666666,
+        "sourceFile": "exec-b43afc4e-2a88-4d0d-9a4e-a5498eeae448.png",
+        "sourceSHA256": "93aa7fbaf7fb92e655859ad7fc51b7b91cbe5bcb1a4d0852098d8843c1da021f",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          67,
+          1018,
+          1536
+        ],
+        "framingBounds": [
+          47,
+          289,
+          977,
+          1299
+        ]
+      },
+      {
+        "sha256": "c9679896cf006e1babfcaee776ee4a9c2fd8f5341129778a17a98a4ffb7c47a3",
+        "bytes": 1494720,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          63,
+          360,
+          982,
+          1302
+        ],
+        "pixelSHA256": "95f4482162265760000ec6fd3d37056ed9302bcb267a379584a55a784c90a41c",
+        "transparentFraction": 0.78794,
+        "path": "assets/sprites/sh2_lying_figure_020.c9679896cf00.png",
+        "facing": 1,
+        "anchor": [
+          0.6,
+          0.84765625
+        ],
+        "bodyHeight": 0.6266666666666666,
+        "sourceFile": "exec-efedbe97-2bcd-4646-93f7-b74944ddc4fe.png",
+        "sourceSHA256": "c9679896cf006e1babfcaee776ee4a9c2fd8f5341129778a17a98a4ffb7c47a3",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          31,
+          33,
+          1002,
+          1512
+        ],
+        "framingBounds": [
+          59,
+          357,
+          986,
+          1312
+        ]
       }
     ],
     "portrait": {
@@ -633,6 +747,27 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "neutralSpecial": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralLight": {
+        "frames": [
+          3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0,
@@ -647,7 +782,7 @@ export const SPRITES = {
       "sourceFile": "exec-45dffa0d-d14e-4b95-a7e1-222fc5b16d45.png"
     },
     "combatView": "side-view-candidate",
-    "combatNotes": "Lying Figure debout du jeu de 2001, gainée et penchée vers la droite, deux pieds en appui. Image fixe candidate, fidélité non certifiée."
+    "combatNotes": "Lying Figure debout du jeu de 2001, gainée et penchée vers la droite, deux pieds en appui. Image fixe candidate, fidélité non certifiée. Vague 33 : deux poses fixes individuelles supplémentaires ; aucun cycle animé ni timing original mesuré. Fidélité 1:1 non certifiée."
   },
   "sh2_bubble_head_nurse_024": {
     "fighterId": "sh2_bubble_head_nurse_024",
@@ -1377,6 +1512,44 @@ export const SPRITES = {
           1238,
           1203
         ]
+      },
+      {
+        "sha256": "e3c4ec010cf6ce6dc278250ee897b7d32a0c2303794d2bb6dc5c37b77a306102",
+        "bytes": 1414204,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          254,
+          160,
+          1293,
+          778
+        ],
+        "pixelSHA256": "f49b98efd305b91877129fc7cc9f3b78d3c2cb6017be97bc782a43b56809e1d9",
+        "transparentFraction": 0.8291,
+        "path": "assets/sprites/sh3_numb_body_small_037.e3c4ec010cf6.png",
+        "facing": -1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "numb-body-small-forward-special.png",
+        "sourceSHA256": "e3c4ec010cf6ce6dc278250ee897b7d32a0c2303794d2bb6dc5c37b77a306102",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          75,
+          9,
+          1348,
+          990
+        ],
+        "framingBounds": [
+          252,
+          157,
+          1296,
+          784
+        ]
       }
     ],
     "portrait": {
@@ -1432,6 +1605,13 @@ export const SPRITES = {
       "ko": {
         "frames": [
           3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          4
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -1626,6 +1806,120 @@ export const SPRITES = {
           1233,
           1115
         ]
+      },
+      {
+        "sha256": "f117d3d2628812c52ded0aee68fc8f007546283b9fba067002fe0ebe5aa6c993",
+        "bytes": 1072016,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          58,
+          53,
+          1709,
+          823
+        ],
+        "pixelSHA256": "e0632a51e4f2030d0bb9257e145ea22b2068c31111e8e99c6879cbd90793444e",
+        "transparentFraction": 0.74294,
+        "path": "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "groaner-forward-special.png",
+        "sourceSHA256": "f117d3d2628812c52ded0aee68fc8f007546283b9fba067002fe0ebe5aa6c993",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          55,
+          49,
+          1712,
+          826
+        ],
+        "framingBounds": [
+          55,
+          49,
+          1712,
+          826
+        ]
+      },
+      {
+        "sha256": "7da5f10a9307b758039be1eeb75c2cb106d2fa1dded54c734deea31c3470d7a1",
+        "bytes": 1231636,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          84,
+          148,
+          1678,
+          820
+        ],
+        "pixelSHA256": "974fdc9fffee8ea3af2eed1ae91ee0337420ad541cbedc3e17fcca01e1f2ab3d",
+        "transparentFraction": 0.66814,
+        "path": "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.924465
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-0691a2a5-9a1f-49a6-8081-aae638b6642e.png",
+        "sourceSHA256": "7da5f10a9307b758039be1eeb75c2cb106d2fa1dded54c734deea31c3470d7a1",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          17,
+          0,
+          1752,
+          887
+        ],
+        "framingBounds": [
+          81,
+          144,
+          1680,
+          827
+        ]
+      },
+      {
+        "sha256": "125ee32270cc94f56760cd451d682a1f1055f267274b45b1b8c643ca4a655ab7",
+        "bytes": 959948,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          231,
+          49,
+          1618,
+          856
+        ],
+        "pixelSHA256": "53cb1b018ee16a98583bf0a3355cee5102bdb538080ccb07bfb54286cb25e32e",
+        "transparentFraction": 0.76069,
+        "path": "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.965051
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-ab47445b-3464-4045-b5eb-126b2a6ad1fc.png",
+        "sourceSHA256": "125ee32270cc94f56760cd451d682a1f1055f267274b45b1b8c643ca4a655ab7",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1746,
+          858
+        ],
+        "framingBounds": [
+          227,
+          46,
+          1621,
+          858
+        ]
       }
     ],
     "portrait": {
@@ -1681,6 +1975,27 @@ export const SPRITES = {
       "ko": {
         "frames": [
           3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          4
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralLight": {
+        "frames": [
+          5
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralSpecial": {
+        "frames": [
+          6
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -2479,6 +2794,44 @@ export const SPRITES = {
           1172,
           1187
         ]
+      },
+      {
+        "sha256": "e9ec336a3114b5128213c96825011b96b13d7b7967af64fc6bc8b4e22e3ff44b",
+        "bytes": 1885967,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          53,
+          44,
+          1500,
+          991
+        ],
+        "pixelSHA256": "851f91a945f32ed2ed7ef5169a2357d229230a4177ce795d3dd87ed773dc86e0",
+        "transparentFraction": 0.72324,
+        "path": "assets/sprites/sh3_closer_036.e9ec336a3114.png",
+        "facing": -1,
+        "anchor": [
+          0.62,
+          0.966797
+        ],
+        "bodyHeight": 0.94,
+        "sourceFile": "closer-forward-special.png",
+        "sourceSHA256": "e9ec336a3114b5128213c96825011b96b13d7b7967af64fc6bc8b4e22e3ff44b",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          17,
+          1536,
+          1024
+        ],
+        "framingBounds": [
+          50,
+          40,
+          1503,
+          993
+        ]
       }
     ],
     "portrait": {
@@ -2534,6 +2887,13 @@ export const SPRITES = {
       "ko": {
         "frames": [
           3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          4
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -2620,6 +2980,82 @@ export const SPRITES = {
           1208,
           1046
         ]
+      },
+      {
+        "sha256": "5d491df4df348a91517cb050b4d42de4e33d371e1c0ef62bb5a16a1692f9e8b5",
+        "bytes": 1635589,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          356,
+          44,
+          1282,
+          972
+        ],
+        "pixelSHA256": "d6b5a0a249d8f1aea10c4d0a114fdddfc524f0192bb34ad912153c815a412a77",
+        "transparentFraction": 0.76384,
+        "path": "assets/sprites/sh1_night_flutter_002.5d491df4df34.png",
+        "facing": 1,
+        "anchor": [
+          0.47,
+          0.94921875
+        ],
+        "bodyHeight": 0.93,
+        "sourceFile": "night-flutter-walk.png",
+        "sourceSHA256": "5d491df4df348a91517cb050b4d42de4e33d371e1c0ef62bb5a16a1692f9e8b5",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          27,
+          1506,
+          1005
+        ],
+        "framingBounds": [
+          353,
+          42,
+          1284,
+          978
+        ]
+      },
+      {
+        "sha256": "5a75d9448b276c676259c07257276363a3fc545f21f3ff07bb276be2d19f4de4",
+        "bytes": 1960020,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          147,
+          58,
+          1485,
+          983
+        ],
+        "pixelSHA256": "9e99da2d21073644c387794aa852cd433263cff6d781bcdcd1b2f020036806fb",
+        "transparentFraction": 0.67535,
+        "path": "assets/sprites/sh1_night_flutter_002.5a75d9448b27.png",
+        "facing": 1,
+        "anchor": [
+          0.47,
+          0.95996094
+        ],
+        "bodyHeight": 0.93,
+        "sourceFile": "night-flutter-neutral-light.png",
+        "sourceSHA256": "5a75d9448b276c676259c07257276363a3fc545f21f3ff07bb276be2d19f4de4",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          9,
+          1487,
+          1008
+        ],
+        "framingBounds": [
+          143,
+          55,
+          1487,
+          992
+        ]
       }
     ],
     "portrait": {
@@ -2657,6 +3093,20 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralLight": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0,
@@ -2671,7 +3121,7 @@ export const SPRITES = {
       "sourceFile": "exec-36b6635c-ef2f-45b7-8334-d218a5069d9a.png"
     },
     "combatView": "side-view-candidate",
-    "combatNotes": "Garde sur deux jambes, profil droit ; ailes repliées comme sur le modèle original PS1, aucun vol extrapolé. Portrait conservé ; image fixe candidate, fidélité non certifiée."
+    "combatNotes": "Garde sur deux jambes, profil droit ; ailes repliées comme sur le modèle original PS1, aucun vol extrapolé. Portrait conservé ; image fixe candidate, fidélité non certifiée. Vague 33 : deux poses fixes individuelles supplémentaires ; aucun cycle animé ni timing original mesuré. Fidélité 1:1 non certifiée."
   },
   "sh3_pendulum_039": {
     "fighterId": "sh3_pendulum_039",
@@ -3593,6 +4043,44 @@ export const SPRITES = {
           1202,
           984
         ]
+      },
+      {
+        "sha256": "a971470e7e5b04231d6ebe27511525d1e4165b1577cfb2e1888c523ccd324f11",
+        "bytes": 1294609,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          47,
+          91,
+          1698,
+          834
+        ],
+        "pixelSHA256": "acd5b0e14467df1653b390a35e33558af767a37ebbda237fa4e4f05e489f5704",
+        "transparentFraction": 0.6753,
+        "path": "assets/sprites/sh3_double_head_040.a971470e7e5b.png",
+        "facing": 1,
+        "anchor": [
+          0.44,
+          0.928974
+        ],
+        "bodyHeight": 0.955,
+        "sourceFile": "double-head-forward-special.png",
+        "sourceSHA256": "a971470e7e5b04231d6ebe27511525d1e4165b1577cfb2e1888c523ccd324f11",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          18,
+          1734,
+          871
+        ],
+        "framingBounds": [
+          45,
+          86,
+          1700,
+          837
+        ]
       }
     ],
     "portrait": {
@@ -3648,6 +4136,13 @@ export const SPRITES = {
       "ko": {
         "frames": [
           3
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          4
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -3840,6 +4335,120 @@ export const SPRITES = {
           1426,
           1038
         ]
+      },
+      {
+        "sha256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9",
+        "bytes": 1830946,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          52,
+          169,
+          1496,
+          913
+        ],
+        "pixelSHA256": "59f1891e71a753e57bd78ee65512a9648119111c6e239147d756f5bf5007d2d7",
+        "transparentFraction": 0.75952,
+        "path": "assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+        "facing": 1,
+        "anchor": [
+          0.44,
+          0.891602
+        ],
+        "bodyHeight": 0.92,
+        "sourceFile": "exec-932c9bf4-9bd1-4496-8d83-914b19762f1d.png",
+        "sourceSHA256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          7,
+          1536,
+          1024
+        ],
+        "framingBounds": [
+          49,
+          161,
+          1504,
+          916
+        ]
+      },
+      {
+        "sha256": "257835c807355697f77f0c913661c65e12f99b817788a91844cc070175d0f146",
+        "bytes": 1485554,
+        "width": 1620,
+        "height": 971,
+        "visibleBounds": [
+          93,
+          28,
+          1533,
+          885
+        ],
+        "pixelSHA256": "0cbd6f55cdedcdfd731fbeb2062239539f180120ce482fe294a9f496a9eb1a01",
+        "transparentFraction": 0.64343,
+        "path": "assets/sprites/sh4_sniffer_dog_male_053.257835c80735.png",
+        "facing": 1,
+        "anchor": [
+          0.46,
+          0.911432
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-83ca56d7-9aa6-45a7-977f-057c9ff4fff6.png",
+        "sourceSHA256": "257835c807355697f77f0c913661c65e12f99b817788a91844cc070175d0f146",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          33,
+          22,
+          1606,
+          939
+        ],
+        "framingBounds": [
+          89,
+          22,
+          1538,
+          891
+        ]
+      },
+      {
+        "sha256": "4a693eb7331d2505b813c374bbbb343999a88ae2c0541f632cf8d3c19c2871ef",
+        "bytes": 1521255,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          100,
+          41,
+          1613,
+          848
+        ],
+        "pixelSHA256": "087b26012e229f7e3ec54bbb7fa2bd412b5f112e89a8dc6ce117ee0694cfb80d",
+        "transparentFraction": 0.61116,
+        "path": "assets/sprites/sh4_sniffer_dog_male_053.4a693eb7331d.png",
+        "facing": 1,
+        "anchor": [
+          0.46,
+          0.940248
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-ba6a3adf-9851-41b1-80b0-b484f98978b2.png",
+        "sourceSHA256": "4a693eb7331d2505b813c374bbbb343999a88ae2c0541f632cf8d3c19c2871ef",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          9,
+          1738,
+          887
+        ],
+        "framingBounds": [
+          98,
+          35,
+          1616,
+          853
+        ]
       }
     ],
     "portrait": {
@@ -3874,6 +4483,27 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralLight": {
+        "frames": [
+          3
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -4370,6 +5000,44 @@ export const SPRITES = {
           2110,
           633
         ]
+      },
+      {
+        "sha256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9",
+        "bytes": 697798,
+        "width": 2172,
+        "height": 724,
+        "visibleBounds": [
+          219,
+          130,
+          1891,
+          609
+        ],
+        "pixelSHA256": "131d4ca5c5ef46c26e3a7ba99c37d1100f82ab7ecbaa46e9f06e4d85483eb4fd",
+        "transparentFraction": 0.85509,
+        "path": "assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.84116
+        ],
+        "bodyHeight": 0.88,
+        "sourceFile": "exec-94f88139-245f-42d8-8aa3-b6ae55836283.png",
+        "sourceSHA256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          126,
+          35,
+          2027,
+          699
+        ],
+        "framingBounds": [
+          217,
+          127,
+          1897,
+          611
+        ]
       }
     ],
     "portrait": {
@@ -4404,6 +5072,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -5823,6 +6498,44 @@ export const SPRITES = {
           791,
           1294
         ]
+      },
+      {
+        "sha256": "40ad802a6ec2f8065c0188b10fcfb39e68de4660812af4a995b09d87d3563bce",
+        "bytes": 921669,
+        "width": 1176,
+        "height": 1337,
+        "visibleBounds": [
+          102,
+          59,
+          1078,
+          1284
+        ],
+        "pixelSHA256": "f80c96aa44d63e6ec85aba5dc7dcec631cf582e20caa45f27104de11d32cbe4a",
+        "transparentFraction": 0.78215,
+        "path": "assets/sprites/sh3_nurse_revolver_044.40ad802a6ec2.png",
+        "facing": 1,
+        "anchor": [
+          0.3835,
+          0.9603590127150337
+        ],
+        "bodyHeight": 0.91922,
+        "sourceFile": "exec-7042dc30-63f1-41db-b334-13ceac76dd32.png",
+        "sourceSHA256": "40ad802a6ec2f8065c0188b10fcfb39e68de4660812af4a995b09d87d3563bce",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          73,
+          40,
+          1098,
+          1312
+        ],
+        "framingBounds": [
+          99,
+          55,
+          1081,
+          1291
+        ]
       }
     ],
     "portrait": {
@@ -5866,6 +6579,13 @@ export const SPRITES = {
           1
         ],
         "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralLight": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 6,
         "loop": false
       }
     },
@@ -6874,7 +7594,7 @@ export const SPRITES = {
         "facing": 1,
         "anchor": [
           0.4,
-          0.976563
+          0.986328125
         ],
         "bodyHeight": 0.99,
         "sourceFile": "exec-ace746eb-c80f-45f9-9527-774b0533058b.png",
@@ -6893,6 +7613,44 @@ export const SPRITES = {
           24,
           933,
           1522
+        ]
+      },
+      {
+        "sha256": "e691299ab326b510f72029062963aaf3cacbff7fbad2bd78fb97d5e2a4297321",
+        "bytes": 2032192,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          37,
+          69,
+          1001,
+          1524
+        ],
+        "pixelSHA256": "a01ecf5c2b10c38668e67562b7774b38e8b77cbaa6b4470d043144168cb51e9c",
+        "transparentFraction": 0.63942,
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.e691299ab326.png",
+        "facing": 1,
+        "anchor": [
+          0.407,
+          0.9921875
+        ],
+        "bodyHeight": 0.99,
+        "sourceFile": "exec-cc106d92-791a-47a5-9317-a2b590d346ee.png",
+        "sourceSHA256": "e691299ab326b510f72029062963aaf3cacbff7fbad2bd78fb97d5e2a4297321",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          9,
+          1008,
+          1536
+        ],
+        "framingBounds": [
+          33,
+          66,
+          1008,
+          1536
         ]
       }
     ],
@@ -6928,6 +7686,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralSpecial": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -7106,6 +7871,44 @@ export const SPRITES = {
           1132,
           1096
         ]
+      },
+      {
+        "sha256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61",
+        "bytes": 819038,
+        "width": 1254,
+        "height": 1254,
+        "visibleBounds": [
+          121,
+          359,
+          1124,
+          972
+        ],
+        "pixelSHA256": "d887de8c70c3087ca78ca13b08f6df97bec3f25b4243b766578f2466256e346c",
+        "transparentFraction": 0.78754,
+        "path": "assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+        "facing": -1,
+        "anchor": [
+          0.46,
+          0.77512
+        ],
+        "bodyHeight": 0.79,
+        "sourceFile": "exec-f62d1e73-34d6-47cb-983e-d35d27675d26.png",
+        "sourceSHA256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          55,
+          55,
+          1240,
+          1180
+        ],
+        "framingBounds": [
+          118,
+          353,
+          1127,
+          981
+        ]
       }
     ],
     "portrait": {
@@ -7140,6 +7943,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "forwardSpecial": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -9585,10 +10395,10 @@ export const SPRITES = {
         "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
         "facing": -1,
         "anchor": [
-          0.5,
-          0.843923
+          0.4,
+          0.8439226519337016
         ],
-        "bodyHeight": 0.98,
+        "bodyHeight": 2.94,
         "sourceFile": "exec-bdf7056b-da0c-46a9-8f4c-aa7b96073e4e.png",
         "sourceSHA256": "2a35fe388a6bd2d01b62c188acfc8ab0e0b56e92a3263a25da7e25ad00d5d1df",
         "origin": "conversation-image-generation",
@@ -9605,6 +10415,82 @@ export const SPRITES = {
           106,
           2095,
           614
+        ]
+      },
+      {
+        "sha256": "70eb5478e00089733d5c402ede0d8d399c8d6e8a538565039582faa4cf588f67",
+        "bytes": 1092380,
+        "width": 2172,
+        "height": 724,
+        "visibleBounds": [
+          60,
+          123,
+          2143,
+          563
+        ],
+        "pixelSHA256": "b15208ccca2a9b2b9c031b2b778087e764c7e9c9434c16bb3e162a3d114a5bc7",
+        "transparentFraction": 0.70441,
+        "path": "assets/sprites/sh2_lying_figure_crawling_021.70eb5478e000.png",
+        "facing": -1,
+        "anchor": [
+          0.4,
+          0.7776243093922652
+        ],
+        "bodyHeight": 2.94,
+        "sourceFile": "exec-c05499b6-a009-4ab2-9971-cfa9ad37795b.png",
+        "sourceSHA256": "70eb5478e00089733d5c402ede0d8d399c8d6e8a538565039582faa4cf588f67",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          59,
+          2152,
+          705
+        ],
+        "framingBounds": [
+          58,
+          120,
+          2147,
+          566
+        ]
+      },
+      {
+        "sha256": "fdf3d62f02cb232b40beaa77fafb41e7ffcaf19112e9e73f1fb6667293cfc321",
+        "bytes": 1307158,
+        "width": 2172,
+        "height": 724,
+        "visibleBounds": [
+          60,
+          115,
+          2056,
+          609
+        ],
+        "pixelSHA256": "c7c446a13af336af48b499f8553735e78d41dae158c6b9ee791be6843395728c",
+        "transparentFraction": 0.63149,
+        "path": "assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+        "facing": -1,
+        "anchor": [
+          0.4,
+          0.8411602209944752
+        ],
+        "bodyHeight": 2.94,
+        "sourceFile": "exec-34588643-8f78-42a6-a872-1317635b0cdf.png",
+        "sourceSHA256": "fdf3d62f02cb232b40beaa77fafb41e7ffcaf19112e9e73f1fb6667293cfc321",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          37,
+          38,
+          2058,
+          708
+        ],
+        "framingBounds": [
+          55,
+          112,
+          2058,
+          613
         ]
       }
     ],
@@ -9643,6 +10529,20 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralLight": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0,
@@ -9657,7 +10557,7 @@ export const SPRITES = {
       "sourceFile": "exec-9fd5fa8c-1720-42e3-b263-3960605ced80.png"
     },
     "combatView": "side-view-candidate",
-    "combatNotes": "Lying Figure en posture rampante dans Silent Hill 2 (2001), buste bas tourné à gauche. La jambe repliée porte l’appui et l’autre s’étend derrière. Pose fixe candidate, fidélité non certifiée."
+    "combatNotes": "Lying Figure en posture rampante dans Silent Hill 2 (2001), buste bas tourné à gauche. La jambe repliée porte l’appui et l’autre s’étend derrière. Pose fixe candidate, fidélité non certifiée. Vague 33 : deux poses fixes individuelles supplémentaires ; aucun cycle animé ni timing original mesuré. Fidélité 1:1 non certifiée. Calibration vague33 : échelle commune des trois poses rampantes, hauteur de référence debout hors canevas horizontal ; adaptation de versus non certifiée1:1."
   },
   "homecoming_scarlet_spider_form_095": {
     "fighterId": "homecoming_scarlet_spider_form_095",
@@ -10520,7 +11420,7 @@ export const SPRITES = {
         "facing": 1,
         "anchor": [
           0.5,
-          1
+          0.9309895833333334
         ],
         "bodyHeight": 1,
         "sourceFile": "exec-ca4cbf53-da10-41ac-be2c-168904fc6c2f.png",
@@ -10539,6 +11439,44 @@ export const SPRITES = {
           116,
           921,
           1440
+        ]
+      },
+      {
+        "sha256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+        "bytes": 1866186,
+        "width": 1024,
+        "height": 1536,
+        "visibleBounds": [
+          64,
+          142,
+          991,
+          1433
+        ],
+        "pixelSHA256": "9844a7c0f294ba6c773ae3a4f702014dd9191ca697ba1fa179c4807680a47dde",
+        "transparentFraction": 0.72184,
+        "path": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+        "facing": 1,
+        "anchor": [
+          0.405,
+          0.9329427083333334
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-345f308e-07b3-4592-8cdf-40b74bf0d79b.png",
+        "sourceSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          23,
+          1006,
+          1520
+        ],
+        "framingBounds": [
+          62,
+          136,
+          994,
+          1442
         ]
       }
     ],
@@ -10574,6 +11512,13 @@ export const SPRITES = {
       "idle": {
         "frames": [
           0
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralSpecial": {
+        "frames": [
+          1
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -12326,7 +13271,7 @@ export const SPRITES = {
         "facing": 1,
         "anchor": [
           0.5,
-          1
+          0.8818359375
         ],
         "bodyHeight": 1,
         "sourceFile": "exec-39fc7fb2-8b4a-4506-b73c-d9d253ad31f2.png",
@@ -12345,6 +13290,82 @@ export const SPRITES = {
           146,
           1396,
           912
+        ]
+      },
+      {
+        "sha256": "0eaa4f8c7d95bac684f3a483e71bcf85c49bfe53fa93071b5d2584a06f26dfd8",
+        "bytes": 1656508,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          158,
+          111,
+          1191,
+          918
+        ],
+        "pixelSHA256": "4af5ac1a6d7e788eb0490ff94bf191e626bc0d0eaa85f46db7b00f6cb4014dc5",
+        "transparentFraction": 0.78256,
+        "path": "assets/sprites/sh3_numb_body_medium.0eaa4f8c7d95.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.89648438
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "numb-body-medium-walk.png",
+        "sourceSHA256": "0eaa4f8c7d95bac684f3a483e71bcf85c49bfe53fa93071b5d2584a06f26dfd8",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          33,
+          25,
+          1520,
+          992
+        ],
+        "framingBounds": [
+          157,
+          108,
+          1198,
+          922
+        ]
+      },
+      {
+        "sha256": "98b9a1267c64dc02f4da5912b07eb57427bf4bd780bc6be2a8a31b0298bc0978",
+        "bytes": 1702791,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          259,
+          125,
+          1423,
+          879
+        ],
+        "pixelSHA256": "cce45504221a254603f73a985fe8a900e2a758de74e625c1655b6b57c3d3455e",
+        "transparentFraction": 0.77208,
+        "path": "assets/sprites/sh3_numb_body_medium.98b9a1267c64.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "numb-body-medium-neutral-special.png",
+        "sourceSHA256": "98b9a1267c64dc02f4da5912b07eb57427bf4bd780bc6be2a8a31b0298bc0978",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          9,
+          1512,
+          1024
+        ],
+        "framingBounds": [
+          257,
+          120,
+          1426,
+          884
         ]
       }
     ],
@@ -12383,6 +13404,20 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": false
+      },
+      "walk": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralSpecial": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0,
@@ -12397,7 +13432,7 @@ export const SPRITES = {
       "sourceFile": "exec-7d058297-c068-433d-85a0-bc8dd74af71e.png"
     },
     "combatView": "side-view-candidate",
-    "combatNotes": "Numb Body de taille moyenne de Silent Hill 3, en appui asymétrique, tête et membres visibles en vue latérale droite."
+    "combatNotes": "Numb Body de taille moyenne de Silent Hill 3, en appui asymétrique, tête et membres visibles en vue latérale droite. Vague 33 : deux poses fixes individuelles supplémentaires ; aucun cycle animé ni timing original mesuré. Fidélité 1:1 non certifiée."
   },
   "sh3_glutton": {
     "fighterId": "sh3_glutton",
@@ -19319,6 +20354,44 @@ export const SPRITES = {
           1531,
           909
         ]
+      },
+      {
+        "sha256": "00774213127eda405fc48e3778efc044fce17132471d95abcf498513f5ec7d5e",
+        "bytes": 1365051,
+        "width": 1670,
+        "height": 941,
+        "visibleBounds": [
+          132,
+          20,
+          1423,
+          907
+        ],
+        "pixelSHA256": "2b0d46b99dfbfb9f0cc2cda544fa77f04f276dd0c7cb370000705c2e9a2bda29",
+        "transparentFraction": 0.64397,
+        "path": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+        "facing": 1,
+        "anchor": [
+          0.496411,
+          0.961743
+        ],
+        "bodyHeight": 0.835282,
+        "sourceFile": "fire-guardian-neutral-special.png",
+        "sourceSHA256": "00774213127eda405fc48e3778efc044fce17132471d95abcf498513f5ec7d5e",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          129,
+          17,
+          1490,
+          911
+        ],
+        "framingBounds": [
+          129,
+          17,
+          1427,
+          909
+        ]
       }
     ],
     "portrait": {
@@ -19356,6 +20429,13 @@ export const SPRITES = {
         ],
         "ticksPerFrame": 1,
         "loop": true
+      },
+      "neutralSpecial": {
+        "frames": [
+          1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
       }
     },
     "animatedClips": 0,

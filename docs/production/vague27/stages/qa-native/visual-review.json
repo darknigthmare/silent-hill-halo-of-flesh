@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-24T14:04:04.355107+00:00",
+  "reviewer": "stage-audit-agent",
+  "method": "Human-readable visual inspection of all three actual native FightEngine captures after successful numeric/input/parallax checks.",
+  "passed": true,
+  "nativeCanvas": true,
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "checksPassed": 108,
+  "reportPath": "docs/production/vague27/stages/qa-native/report.json",
+  "reportSHA256": "1e782f57ff32fddf303bc95f63c5e6b50c2ea58549b760de498f2ae9b2dc97c7",
+  "captures": [
+    {
+      "stageId": "police_station_hc",
+      "path": "docs/production/vague27/stages/qa-native/police_station_hc.png",
+      "sha256": "255aa58b8a58b9cd83b3795048ef32e094b746d51cee252ea5a0d59c1b304277",
+      "reviewed": true,
+      "notes": [
+        "The cell bars and closed gate remain behind both fighters; no front bars mask their silhouettes.",
+        "Concrete footing is continuous and readable, including sword clearance. Thin near jamb edges stay outside the central combat space.",
+        "The cell phase label is correctly CELLULE AVANT LIBÉRATION."
+      ]
+    },
+    {
+      "stageId": "villa_rooftop",
+      "path": "docs/production/vague27/stages/qa-native/villa_rooftop.png",
+      "sha256": "eb654d44eb7a79c8c5976c705bfa4105f5278540906b941cf8f04098d9ae9f66",
+      "reviewed": true,
+      "notes": [
+        "The mural and memorial remain against the rear wall, with a clear roof surface in front of the fighters.",
+        "The painted girl reads as static mural artwork; no extra living figure appears.",
+        "Sparse parapet corner overlays remain outside the fighter lane. Fog and blue-green phase match the selected first visit."
+      ]
+    },
+    {
+      "stageId": "villa_stairwell",
+      "path": "docs/production/vague27/stages/qa-native/villa_stairwell.png",
+      "sha256": "d7c6e2857cc445cc419db1b1a3a93afda2aae97d288072cbdb6d7cb1e82f0b72",
+      "reviewed": true,
+      "notes": [
+        "Stairs, rail and upper door read as rear architecture; both fighters stand on the horizontal lower landing.",
+        "Foreground wall slivers remain at the edges without clipping heads, weapons or feet.",
+        "The low enclosed ceiling and subdued two-tone wall treatment remain readable. The side-view geometry is an adaptation, not verified source scale."
+      ]
+    }
+  ],
+  "limitations": [
+    "This is native Canvas FightEngine QA; Chromium, DOM, HTTP, service worker and actual browser event delivery are not covered.",
+    "Three static backgrounds and three transparent edge planes are checked; no source motion cadence, new fighter animation, hazard or 1:1 artistic certification is claimed.",
+    "Reference mural, room geometry, camera and source detail remain unverified adaptations."
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "wave": 32,
+  "reviewedAt": "2026-11-27",
+  "status": "passed-for-static-candidate-composition",
+  "baselineCommit": "d4269ad8239a99cad53d44bc77b569ed7a0d41a3",
+  "method": "Human-readable visual inspection of all eight 1280×720 native FightEngine captures, individually opened after the final QA run. Source anatomy review remains in source-review.json.",
+  "technicalReport": {
+    "path": "docs/production/vague32/qa-native-characters/characters-report.json",
+    "sha256": "5995b9b51ea965e8c4f8f114de6682f98312cba913a073da431ad3229cff43f5",
+    "checksPassed": 229,
+    "checksFailed": 0,
+    "browserTest": false,
+    "httpTest": false
+  },
+  "captures": [
+    {
+      "capture": "docs/production/vague32/qa-native-characters/sh1_groaner_003-neutralLight-right-action-active.png",
+      "sha256": "93da03ae906c61509f0e5efd61388cfa20c4d485ddabe5850b7a8739108be6c4",
+      "facing": "right",
+      "visuallyInspected": true,
+      "status": "accepted-as-static-candidate",
+      "observation": "The whole lean Groaner remains legible against the dark floor. The open short-bite muzzle, four legs and thin tail remain within the viewport; the mirrored version faces the opponent."
+    },
+    {
+      "capture": "docs/production/vague32/qa-native-characters/sh1_groaner_003-neutralLight-left-action-active.png",
+      "sha256": "b3c23adff7e83dc39ff54eb2db4c3cb9d82a37547dc70f825856de71690ee736",
+      "facing": "left",
+      "visuallyInspected": true,
+      "status": "accepted-as-static-candidate",
+      "observation": "The whole lean Groaner remains legible against the dark floor. The open short-bite muzzle, four legs and thin tail remain within the viewport; the mirrored version faces the opponent."
+    },
+    {
+      "capture": "docs/production/vague32/qa-native-characters/sh1_groaner_003-neutralSpecial-right-action-active.png",
+      "sha256": "2170bffcadf3f78c630939698f4e5d0e150f2d84a080d9708a3bd6b60c84fdd9",
+      "facing": "right",
+      "visuallyInspected": true,
+      "status": "accepted-as-static-candidate",
+      "observation": "The compact raised-foreleg lunge stays fully framed in both orientations. The existing launch dust does not obscure the head or body; the pose reads separately from the grounded bite."
+    },
+    {
+      "capture": "docs/production/vague32/qa-native-characters/sh1_groaner_003-neutralSpecial-left-action-active.png",
+      "sha256": "a3ff3fcf04d8f216637b476e67ab7e0d15a2851ed3683a569225ec545584f468",
+      "facing": "left",
+      "visuallyInspected": true,
+      "status": "accepted-as-static-candidate",
+      "observation": "The compact raised-foreleg lunge stays fully framed in both orientations. The existing launch dust does not obscure the head or body; the pose reads separately from the grounded bite."
+    },
+    {
+      "capture": "docs/production/vague32/qa-native-characters/sh4_sniffer_dog_male_053-walk-right-action-active.png",
+      "sha256": "31102815cb31c7aff0380c64a90b26bae8babead4ed469d6ec3f44b73342bd48",
+      "facing": "right",
+      "visuallyInspected": true,
+      "status": "accepted-as-static-candidate",
+      "observation": "The male shoulder hump, ears, patchy yellow-green coat and hanging red tongue remain readable. The advanced forepaw is visible and the whole silhouette stays within the viewport in both orientations."
+    },
+    {
+      "capture": "docs/production/vague32/qa-native-characters/sh4_sniffer_dog_male_053-walk-left-action-active.png",
+      "sha256": "581cd83b40cc2c55f7133b82f6671967a441206d2ce0f42c2e9b2a2b5a48a528",
+      "facing": "left",
+      "visuallyInspected": true,
+      "status": "accepted-as-static-candidate",
+      "observation": "The male shoulder hump, ears, patchy yellow-green coat and hanging red tongue remain readable. The advanced forepaw is visible and the whole silhouette stays within the viewport in both orientations."
+    },
+    {
+      "capture": "docs/production/vague32/qa-native-characters/sh4_sniffer_dog_male_053-neutralLight-right-action-active.png",
+      "sha256": "098457636f2a0bb8e94688aa0b795eab9482582f53ee148633fc2ee2143fe061",
+      "facing": "right",
+      "visuallyInspected": true,
+      "status": "accepted-as-static-candidate",
+      "observation": "The braced male bite pose is distinct from the walking pose. The paws meet the floor visually, the complete tongue extends slightly lower, and neither orientation clips the muzzle, tongue or rear legs."
+    },
+    {
+      "capture": "docs/production/vague32/qa-native-characters/sh4_sniffer_dog_male_053-neutralLight-left-action-active.png",
+      "sha256": "5e9bf5455067251c303acfe80fe09ac23f760cdebd7f70fa73ad2b5c95bbcef9",
+      "facing": "left",
+      "visuallyInspected": true,
+      "status": "accepted-as-static-candidate",
+      "observation": "The braced male bite pose is distinct from the walking pose. The paws meet the floor visually, the complete tongue extends slightly lower, and neither orientation clips the muzzle, tongue or rear legs."
+    }
+  ],
+  "groundContact": {
+    "contract": "docs/production/vague32/characters/qa-ground-contact.mjs",
+    "snifferNeutralLight": "Foreclaw (1098, 838) at alpha ≥32 is the generated candidate support point; the tongue reaches visible bottom 848. The existing anchor is retained; the technical contract separately limits paw error to 1 world pixel and tongue extension to 2 world pixels.",
+    "sourceMeaning": "This contact measurement concerns the generated candidate, not an original game frame."
+  },
+  "limits": [
+    "Four one-frame static poses; no new animation or exact original timing is certified.",
+    "Native canvas captures do not establish Chromium, browser UI, HTTP, service worker or offline behavior.",
+    "The engine mirrors the same candidate for the opposite facing; no independent source view was newly inspected.",
+    "No generated base, portrait or asset is newly certified fidelity 1:1.",
+    "The eight selected states do not certify all collisions, guards, damage outcomes or finishers."
+  ]
+}

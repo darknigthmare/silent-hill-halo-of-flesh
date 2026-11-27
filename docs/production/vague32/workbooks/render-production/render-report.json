@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "inputSha256": "2ed5c9bf2c3d66a60cc5cde53ec5c48b0996d1d83e232627a870bb96aa8d49ec",
+  "scope": "exact-guide-payload-projection",
+  "checks": [
+    {
+      "name": "guide sections",
+      "actual": 68,
+      "expected": 68,
+      "passed": true
+    },
+    {
+      "name": "association count",
+      "actual": 445,
+      "expected": 445,
+      "passed": true
+    },
+    {
+      "name": "antique shop label",
+      "actual": "GREEN LION — ANTICHAMBRE DU CULTE",
+      "expected": "GREEN LION — ANTICHAMBRE DU CULTE",
+      "passed": true
+    },
+    {
+      "name": "antique shop status",
+      "actual": "bitmap candidat référencé ; fixed-altered",
+      "expected": "bitmap candidat référencé ; fixed-altered",
+      "passed": true
+    },
+    {
+      "name": "clinic label",
+      "actual": "LIGHTHOUSE — ENTRÉE DE LA CLINIQUE",
+      "expected": "LIGHTHOUSE — ENTRÉE DE LA CLINIQUE",
+      "passed": true
+    },
+    {
+      "name": "clinic status",
+      "actual": "bitmap candidat référencé ; fixed-normal",
+      "expected": "bitmap candidat référencé ; fixed-normal",
+      "passed": true
+    }
+  ],
+  "previews": [
+    {
+      "sheetName": "Guide combat",
+      "range": "A1:H6",
+      "filename": "guide-summary.png",
+      "sha256": "5bce406715893086aec6d940fb1d517292239abf595b14e663ae64bb629d7594"
+    },
+    {
+      "sheetName": "Guide combat",
+      "range": "A58:F64",
+      "filename": "extensions-retained.png",
+      "sha256": "04a0370d8c26ec655e5302fc372fc99aa1bcc71e69bcf363e2e6cb4bb7a400bf"
+    },
+    {
+      "sheetName": "Associations guide",
+      "range": "B282:G282",
+      "filename": "antique-shop.png",
+      "sha256": "f12b24e580b7ae4cd466049932f1497e02333b7ed793004e84a8b1370570df33"
+    },
+    {
+      "sheetName": "Associations guide",
+      "range": "B327:G327",
+      "filename": "clinic-entrance.png",
+      "sha256": "552ab58f224befaaa2515b1aaea331dbbec86f106ab8d869a3f0bebd4f8cef2b"
+    }
+  ],
+  "mutation": false,
+  "limits": "Read-only Artifact Tool re-import and render. Native Excel desktop was not executed. A projection is temporary and never replaces the full delivered workbook; the preservation report separately establishes every retained worksheet payload."
+}

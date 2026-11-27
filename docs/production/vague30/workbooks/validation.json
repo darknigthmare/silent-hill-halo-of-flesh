@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "wave": 30,
+  "asOf": "2026-11-25T17:21:07+00:00",
+  "passed": true,
+  "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "sourceHashes": {
+    "docs/combat-guide/requirements.json": "4abbe9eb132c49a5db728001d29847a8e2fe552bff3d6a3ebfc04430b0dcbdb3",
+    "docs/combat-guide/associations.json": "f0c0744d908c207bbd1b45c2405e741303982c7f1705ef6c7b99f3ddb88e35b5",
+    "docs/combat-guide/status.json": "c2c2efcba695cc49033c994eb60bc98d9450578633b173c6d621566244926351"
+  },
+  "counts": {
+    "guideSections": 30,
+    "moduleDecisions": 10,
+    "associations": 445,
+    "associationsByKind": {
+      "profile": 230,
+      "stage": 123,
+      "chronicle": 15,
+      "corpus": 66,
+      "projectile": 11
+    }
+  },
+  "workbooks": [
+    {
+      "path": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "sha256": "0920c3234e747fb5c63ec0b2f97650b5dccbe51f476584e153ad961aad379ba4",
+      "gitBlobSha": "fda79557db4cc32eed6a42dfd3c8cd2c8f5d23cf",
+      "bytes": 90927,
+      "baselineSha256": "2beb816b68a85a9893f5daf16b92e111e91ef658018327ac739be9564afbef46",
+      "historicalSheetsPreserved": 2,
+      "historicalFormulasPreserved": 7,
+      "historicalCellsPreserved": 2272,
+      "historicalConditionalFormatsPreserved": 4,
+      "historicalValidationsPreserved": 2,
+      "allHistoricalPayloadsByteIdentical": true,
+      "allExistingStylesByteIdentical": true,
+      "guideFormulasVerified": 12,
+      "guideSheetsUpdated": [
+        "Guide combat",
+        "Associations guide"
+      ],
+      "sourceCellsChangedOrAdded": 35,
+      "changedParts": [
+        "xl/tables/table5.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml"
+      ],
+      "byteIdenticalParts": 17,
+      "preservationReport": "docs/production/vague30/workbooks/corpus-preservation.json",
+      "renderMode": "full-final-workbook",
+      "githubBlobSavedAndHashVerified": true
+    },
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "sha256": "8fae4315087e47cc2fe35eadf20384da3f6645a3b6036b8e3a749117732e8775",
+      "gitBlobSha": "5376e614a9209059bfa03dd092696a4aa9a7e471",
+      "bytes": 1852652,
+      "baselineSha256": "aa40477f46217989ef3504fec2dc12384cbb58253c049ff6bf07f0f9b23608e8",
+      "historicalSheetsPreserved": 11,
+      "historicalFormulasPreserved": 80,
+      "historicalCellsPreserved": 250550,
+      "historicalConditionalFormatsPreserved": 9,
+      "historicalValidationsPreserved": 9,
+      "allHistoricalPayloadsByteIdentical": true,
+      "allExistingStylesByteIdentical": true,
+      "guideFormulasVerified": 12,
+      "guideSheetsUpdated": [
+        "Guide combat",
+        "Associations guide"
+      ],
+      "sourceCellsChangedOrAdded": 35,
+      "changedParts": [
+        "xl/tables/table13.xml",
+        "xl/worksheets/sheet12.xml",
+        "xl/worksheets/sheet13.xml"
+      ],
+      "byteIdenticalParts": 42,
+      "preservationReport": "docs/production/vague30/workbooks/production-preservation.json",
+      "renderMode": "exact-payload-read-only-projection",
+      "githubBlobSavedAndHashVerified": true
+    }
+  ],
+  "detailedChecks": {
+    "artifactToolAuthoring": true,
+    "sourceBaselineValidatedBeforeEdit": true,
+    "jsonSourceReconciliation": true,
+    "nativeTableRangeUpdated": true,
+    "allHistoricalPayloadsByteIdentical": true,
+    "allExistingGuideStyleIndicesPreserved": true,
+    "unchangedGuideCellsPreserved": true,
+    "validationsAndConditionalFormattingPreserved": true,
+    "counterFormulasAndCachedValuesCorrect": true,
+    "moduleFormulaMutationAndRestoreCheck": true,
+    "noFormulaErrorsInAuthoredGuide": true,
+    "historicalPreviewsByteIdentical": true,
+    "guidePreviewsByteIdenticalBetweenWorkbooks": true,
+    "independentReviewPassed": true,
+    "gitBlobHashesVerified": true
+  },
+  "authoring": {
+    "runtime": "@oai/artifact-tool, primary runtime",
+    "donor": "Corpus workbook imported and refreshed through Artifact Tool; both final workbooks receive only the reviewed donor cells.",
+    "packagePreservation": "stdlib ZIP/XML transfer, no independent spreadsheet authoring; only two guide sheet parts and one association table part differ in each delivered archive.",
+    "sourceCellsChangedOrAddedPerWorkbook": 35,
+    "existingSourceCellsChangedPerWorkbook": 14,
+    "newSourceCellsPerWorkbook": 21,
+    "associationCounterFormulasUpdatedPerWorkbook": 6,
+    "rowHeightsIncreasedPerWorkbook": 4,
+    "newRows": [
+      451,
+      452,
+      453
+    ]
+  },
+  "formulaValues": "docs/production/vague30/workbooks/formula-values.json",
+  "visualReview": "docs/production/vague30/workbooks/visual-review.json",
+  "authoringReport": "docs/production/vague30/workbooks/authoring-report.json",
+  "changeLog": "docs/production/vague30/workbooks/refresh-change-log.json",
+  "independentReview": {
+    "reviewer": "runtime_audit agent",
+    "scope": "Script guardrails, actual before/after ZIP members, styles, allowed cell changes, final SHA-256 receipts and exact-payload rendering projection.",
+    "passed": true
+  },
+  "limits": [
+    "The entire principal workbook could not be imported/exported within the available memory; attempts exited 137. The final delivered workbook retains all 13 sheets.",
+    "The temporary rendering projection contains Synthèse and both full guide sheets with 12 payloads identical to the final principal; it is not delivered as a workbook.",
+    "Native Microsoft Excel desktop was not executed."
+  ]
+}

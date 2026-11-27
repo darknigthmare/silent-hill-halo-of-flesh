@@ -1,0 +1,246 @@
+{
+  "wave": 33,
+  "phase": "before",
+  "startedAt": "2026-11-27T09:16:41.852Z",
+  "passed": true,
+  "build": "source",
+  "checks": [
+    {
+      "name": "Dedicated port unused",
+      "passed": true
+    },
+    {
+      "name": "HTTP app ready",
+      "passed": true
+    },
+    {
+      "name": "Exact original idle bytes and frame geometry at side 0",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+        "sha256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c"
+      }
+    },
+    {
+      "name": "Expected measured anchor at side 0",
+      "passed": true,
+      "detail": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "name": "Actual owner is grounded and uses the requested orientation at side 0",
+      "passed": true
+    },
+    {
+      "name": "Measured before ground-contact offset at side 0",
+      "passed": true,
+      "detail": {
+        "offsetWorld": -23.880957031250006,
+        "offsetPixels": -23.36405348901754
+      }
+    },
+    {
+      "name": "Published original PNG bytes at side 0",
+      "passed": true
+    },
+    {
+      "name": "Exact original idle bytes and frame geometry at side 1",
+      "passed": true,
+      "detail": {
+        "path": "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+        "sha256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c"
+      }
+    },
+    {
+      "name": "Expected measured anchor at side 1",
+      "passed": true,
+      "detail": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "name": "Actual owner is grounded and uses the requested orientation at side 1",
+      "passed": true
+    },
+    {
+      "name": "Measured before ground-contact offset at side 1",
+      "passed": true,
+      "detail": {
+        "offsetWorld": -23.880957031250006,
+        "offsetPixels": -23.36405348901754
+      }
+    },
+    {
+      "name": "Published original PNG bytes at side 1",
+      "passed": true
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "captures": [
+    {
+      "file": "numb-medium-idle-before-right.png",
+      "bytes": 1158139,
+      "sha256": "cc23bf089e1e9d4b5e2757b8db8e19417f1e67c2b8b8bbbee293f4964a687231"
+    },
+    {
+      "file": "numb-medium-idle-before-left.png",
+      "bytes": 1158117,
+      "sha256": "1a25ea0244eedb2ec6fff7f4a0c346b835565e73c9b39463068b6b5b8b8022da"
+    }
+  ],
+  "cases": [
+    {
+      "player": 0,
+      "frame": {
+        "sha256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+        "bytes": 1769688,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          121,
+          155,
+          1392,
+          903
+        ],
+        "pixelSHA256": "79be06f5953e6d0cb85ff1ad53c4d21289e3a2828f3ceadacf4d64524b524746",
+        "transparentFraction": 0.76072,
+        "path": "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-39fc7fb2-8b4a-4506-b73c-d9d253ad31f2.png",
+        "sourceSHA256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          9,
+          1522,
+          1024
+        ],
+        "framingBounds": [
+          119,
+          146,
+          1396,
+          912
+        ]
+      },
+      "draw": {
+        "path": "/assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+        "args": [
+          -151.575,
+          -202.1,
+          303.15,
+          202.1
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428607702255,
+          594.0000067949295
+        ],
+        "actor": {
+          "id": "sh3_numb_body_medium",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "idle"
+        },
+        "engineFrame": 151
+      },
+      "offsetWorld": -23.880957031250006,
+      "offsetPixels": -23.36405348901754
+    },
+    {
+      "player": 1,
+      "frame": {
+        "sha256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+        "bytes": 1769688,
+        "width": 1536,
+        "height": 1024,
+        "visibleBounds": [
+          121,
+          155,
+          1392,
+          903
+        ],
+        "pixelSHA256": "79be06f5953e6d0cb85ff1ad53c4d21289e3a2828f3ceadacf4d64524b524746",
+        "transparentFraction": 0.76072,
+        "path": "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          1
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-39fc7fb2-8b4a-4506-b73c-d9d253ad31f2.png",
+        "sourceSHA256": "6f74ca93410cc34c2a81744ec3512a298f2cd4748b5845f44b948377e41c836c",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          9,
+          1522,
+          1024
+        ],
+        "framingBounds": [
+          119,
+          146,
+          1396,
+          912
+        ]
+      },
+      "draw": {
+        "path": "/assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+        "args": [
+          -151.575,
+          -202.1,
+          303.15,
+          202.1
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.8571544885635,
+          594.0000067949295
+        ],
+        "actor": {
+          "id": "sh3_numb_body_medium",
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "idle"
+        },
+        "engineFrame": 152
+      },
+      "offsetWorld": -23.880957031250006,
+      "offsetPixels": -23.36405348901754
+    }
+  ],
+  "errors": [],
+  "method": "Ordinary HTTP UI launch, unchanged actor state and passive drawImage observation. The original idle PNG stays byte-identical; only the candidate frame anchor is assessed.",
+  "limits": [
+    "This is a ground-contact calibration, not original-game scale or 1:1 certification.",
+    "Service workers blocked; no offline update or full battle tested."
+  ],
+  "browser": "158.0.8127.0",
+  "completedAt": "2026-11-27T09:16:57.756Z"
+}

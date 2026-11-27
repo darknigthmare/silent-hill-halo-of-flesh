@@ -10,6 +10,7 @@ import hashlib
 from io import BytesIO
 import stat
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -189,8 +190,9 @@ def import_sprite(args: argparse.Namespace) -> dict:
     base_pose = validate_pose_key(args.pose, args.fighter, root, args.source)
     if base_pose in MOVE_KEYS + PRESENTATION_KEYS and args.loop:
         raise ValueError('Attacks and presentations must play once; looping is refused.')
-    if not 0 <= args.anchor_x <= 1 or not 0 <= args.anchor_y <= 1 or not .05 <= args.body_height <= 1:
-        raise ValueError('Anchor and standing-equivalent body calibration must be finite and in range.')
+    if (not all(type(n) in (int, float) and math.isfinite(n) for n in (args.anchor_x, args.anchor_y, args.body_height))
+            or not 0 <= args.anchor_x <= 1 or not 0 <= args.anchor_y <= 1 or not .05 <= args.body_height <= 4):
+        raise ValueError('Calibration must be finite: anchors 0..1; standing-equivalent body height 0.05..4.')
     if not 1 <= args.ticks <= 600:
         raise ValueError('Simulation ticks per frame must be 1..600.')
     source = args.image.absolute()
@@ -395,7 +397,7 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument('--single-subject-reviewed', action='store_true')
     p.add_argument('--anchor-x', type=float, required=True)
     p.add_argument('--anchor-y', type=float, required=True)
-    p.add_argument('--body-height', type=float, required=True, help='Standing-equivalent reference height / full image height, not crouched visible bounds')
+    p.add_argument('--body-height', type=float, required=True, help='Finite ratio 0.05..4: standing-equivalent reference height / full image height; may exceed 1 for horizontal poses, not crouched visible bounds or source-scale certification')
     p.add_argument('--facing', type=int, choices=(-1, 1), default=1)
     p.add_argument('--pose', default='idle', help='Exact engine key, presentation@production-ID, or Alessa idle@exact-ID:weapon:knife|handgun|pipe|smg; presentations: '+', '.join(PRESENTATION_KEYS))
     p.add_argument('--ticks', type=int, default=1)

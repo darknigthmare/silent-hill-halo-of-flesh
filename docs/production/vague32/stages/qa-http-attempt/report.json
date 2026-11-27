@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "wave": 32,
+  "startedAt": "2026-11-27T08:11:55.475Z",
+  "passed": false,
+  "browserTest": true,
+  "httpTest": true,
+  "actorStateInjected": false,
+  "assetSubstitution": false,
+  "build": "dist",
+  "scope": "Actual dist HTTP app; real native PNG requests, browser decode, workshop right/left UI, static playback and role restrictions, and ordinary launch of each added arena.",
+  "checks": [
+    {
+      "name": "Dedicated HTTP test port is unused",
+      "passed": true
+    },
+    {
+      "name": "Original dist HTTP server responds",
+      "passed": true
+    },
+    {
+      "name": "Our dedicated server remains alive",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "captures": [],
+  "characters": [],
+  "stages": [],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "839dc3525980b8b37671cd0dbaea4266e620a56332f0e1ea7340a5adec896eb3"
+    },
+    "src/sprite-manifest.js": {
+      "before": "310bbb92bd6811dbb0f894a60d481f07554bbf05f5ada8382c22625ccc79683e"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "dbd63fc0775d102eae856f35a83b78092e01f9c4fc54fa0334f9837c479af00b"
+    },
+    "src/fight.js": {
+      "before": "0e1cc83391476cf913d0df078d1d618f1162ea3f1f7741fcfcedf7f0d80dfccb"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/sprite-workshop.js": {
+      "before": "8a37492ed01b17e6cdf8cb18fb4419d26d41223dd0900e3f8bd8e1610d694c4d"
+    },
+    "src/sprite-inspector.js": {
+      "before": "c8a2317d575e73571bffa1390df2ee9bcf583240d1287f406f7fd00b66d3efe1"
+    },
+    "src/versus.js": {
+      "before": "58f1e80d6bd83a0b8d6d880738c19f6bf73c7851ca9a74f77e989f69f7073ac5"
+    }
+  },
+  "limits": [
+    "Headless Chromium with fresh contexts and service workers blocked. No offline/update service-worker assertion.",
+    "Stage launches use two existing combat-enabled fighters; reference-only profiles remain in their workshop.",
+    "No attack timing, source animation or 1:1 fidelity is certified."
+  ],
+  "harnessSHA256": "8b5eb48c0ebc1fd14b1457c5731ecc47f5d8a37b4782d6ae396b24f5f6de42ce",
+  "failure": "browserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-linux64/chrome-headless-shell\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝\n    at /workspace/scratch/4cb8973fa173/silent-hill-halo-of-flesh/docs/production/vague32/stages/qa-http.mjs:87:26",
+  "completedAt": "2026-11-27T08:11:56.099Z"
+}

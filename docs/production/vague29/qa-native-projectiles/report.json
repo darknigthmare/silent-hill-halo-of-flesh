@@ -1,0 +1,2442 @@
+{
+  "schema": 1,
+  "wave": 29,
+  "label": "wave29-native-projectiles",
+  "startedAt": "2026-11-25T08:17:01.073Z",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "projectileStateInjected": false,
+  "assetSubstitution": false,
+  "requested": {
+    "ids": [
+      "sh1_floatstinger_016",
+      "homecoming_asphyxia_096",
+      "ascension_the_immolator_182"
+    ],
+    "effectIds": [],
+    "slot": null,
+    "stageId": "midwich",
+    "opponentId": "sh2_creeper_025",
+    "flightTicks": 12
+  },
+  "method": "Actual FightEngine.update/render, local training/freeMeter settings, and the registered keydown/keyup callbacks using each actor’s live input bindings. No gameplay state or camera injection.",
+  "decoder": "PNG file hashes/dimensions verified. An in-memory re-encoding is checked for decoded RGBA equality before native Canvas decoding; source files stay untouched.",
+  "limits": [
+    "Native Canvas is not Chromium; there is no HTTP, DOM, browser-event or service-worker claim.",
+    "One ordinary reachable projectile command is exercised for each selected effect in each player slot. Other mapped slots are not claimed as played.",
+    "Both orientations use the existing runtime mirror, not independently drawn or source-certified opposite views.",
+    "Static candidates; no original timing, complete animation, full hit/guard matrix or 1:1 fidelity certification."
+  ],
+  "checks": [
+    {
+      "name": "sh1_floatstinger_016: at least one selected registered effect",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_096: at least one selected registered effect",
+      "passed": true
+    },
+    {
+      "name": "ascension_the_immolator_182: at least one selected registered effect",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud: exact fighter/source identity",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud: source role permits combat",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud: dedicated combat art exists",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud: ordinary reachable command available",
+      "passed": true,
+      "detail": {
+        "registeredSlots": [
+          "neutralSpecial",
+          "airSpecial",
+          "super",
+          "desperation"
+        ],
+        "requested": "automatic"
+      }
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume: exact fighter/source identity",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume: source role permits combat",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume: dedicated combat art exists",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume: ordinary reachable command available",
+      "passed": true,
+      "detail": {
+        "registeredSlots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "requested": "automatic"
+      }
+    },
+    {
+      "name": "ascension_immolator_fire_jet: exact fighter/source identity",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet: source role permits combat",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet: dedicated combat art exists",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet: ordinary reachable command available",
+      "passed": true,
+      "detail": {
+        "registeredSlots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "requested": "automatic"
+      }
+    },
+    {
+      "name": "Opponent has a permitted combat role and imported art",
+      "passed": true
+    },
+    {
+      "name": "Stage exists and is not blocked",
+      "passed": true
+    },
+    {
+      "name": "Native bytes assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "passed": true
+    },
+    {
+      "name": "Native dimensions assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "passed": true
+    },
+    {
+      "name": "Native bytes assets/sprites/homecoming_asphyxia_096.e4070a8aa132.png",
+      "passed": true
+    },
+    {
+      "name": "Native dimensions assets/sprites/homecoming_asphyxia_096.e4070a8aa132.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/homecoming_asphyxia_096.e4070a8aa132.png",
+      "passed": true
+    },
+    {
+      "name": "Native bytes assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
+      "passed": true
+    },
+    {
+      "name": "Native dimensions assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
+      "passed": true
+    },
+    {
+      "name": "Native bytes assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Native dimensions assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Native bytes assets/stages/midwich.courtyard.c9728428d63d.png",
+      "passed": true
+    },
+    {
+      "name": "Native dimensions assets/stages/midwich.courtyard.c9728428d63d.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/stages/midwich.courtyard.c9728428d63d.png",
+      "passed": true
+    },
+    {
+      "name": "Native bytes assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "passed": true
+    },
+    {
+      "name": "Native dimensions assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "passed": true
+    },
+    {
+      "name": "Native bytes assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "passed": true
+    },
+    {
+      "name": "Native dimensions assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "passed": true
+    },
+    {
+      "name": "Native bytes assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "passed": true
+    },
+    {
+      "name": "Native dimensions assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless native decoder adapter assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: projectile prewarm",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "failed": []
+      }
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: intro ends normally",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: intended fighter and natural player-facing",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: normal keydown special",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: normal keyup special",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: exact command accepted from bindings",
+      "passed": true,
+      "detail": {
+        "attack": "neutralSpecial",
+        "lastMove": "neutralSpecial"
+      }
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: original engine emits the selected projectile",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: emitted direction matches player orientation",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: rendering preserves flight and health at 244",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: exact registered image painted at 244",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: raster direction matches emitted motion at 244",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: finite raster placement at 244",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: live projectile survives requested short flight",
+      "passed": true,
+      "detail": {
+        "elapsed": 12,
+        "requested": 12
+      }
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: engine flight advances position and life",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: rendering preserves flight and health at 256",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: exact registered image painted at 256",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: raster direction matches emitted motion at 256",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: finite raster placement at 256",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-right: decoded cache stays within its configured budget",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: projectile prewarm",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "failed": []
+      }
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: intro ends normally",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: intended fighter and natural player-facing",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: normal keydown special",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: normal keyup special",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: exact command accepted from bindings",
+      "passed": true,
+      "detail": {
+        "attack": "neutralSpecial",
+        "lastMove": "neutralSpecial"
+      }
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: original engine emits the selected projectile",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: emitted direction matches player orientation",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: rendering preserves flight and health at 244",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: exact registered image painted at 244",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: raster direction matches emitted motion at 244",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: finite raster placement at 244",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: live projectile survives requested short flight",
+      "passed": true,
+      "detail": {
+        "elapsed": 12,
+        "requested": 12
+      }
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: engine flight advances position and life",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: rendering preserves flight and health at 256",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: exact registered image painted at 256",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: raster direction matches emitted motion at 256",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: finite raster placement at 256",
+      "passed": true
+    },
+    {
+      "name": "sh1_floatstinger_acid_cloud-left: decoded cache stays within its configured budget",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: projectile prewarm",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "failed": []
+      }
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: intro ends normally",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: intended fighter and natural player-facing",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: normal keydown special",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: normal keyup special",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: exact command accepted from bindings",
+      "passed": true,
+      "detail": {
+        "attack": "neutralSpecial",
+        "lastMove": "neutralSpecial"
+      }
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: original engine emits the selected projectile",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: emitted direction matches player orientation",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: rendering preserves flight and health at 244",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: exact registered image painted at 244",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: raster direction matches emitted motion at 244",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: finite raster placement at 244",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: live projectile survives requested short flight",
+      "passed": true,
+      "detail": {
+        "elapsed": 12,
+        "requested": 12
+      }
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: engine flight advances position and life",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: rendering preserves flight and health at 256",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: exact registered image painted at 256",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: raster direction matches emitted motion at 256",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: finite raster placement at 256",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-right: decoded cache stays within its configured budget",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: projectile prewarm",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "failed": []
+      }
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: intro ends normally",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: intended fighter and natural player-facing",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: normal keydown special",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: normal keyup special",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: exact command accepted from bindings",
+      "passed": true,
+      "detail": {
+        "attack": "neutralSpecial",
+        "lastMove": "neutralSpecial"
+      }
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: original engine emits the selected projectile",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: emitted direction matches player orientation",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: rendering preserves flight and health at 244",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: exact registered image painted at 244",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: raster direction matches emitted motion at 244",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: finite raster placement at 244",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: live projectile survives requested short flight",
+      "passed": true,
+      "detail": {
+        "elapsed": 12,
+        "requested": 12
+      }
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: engine flight advances position and life",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: rendering preserves flight and health at 256",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: exact registered image painted at 256",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: raster direction matches emitted motion at 256",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: finite raster placement at 256",
+      "passed": true
+    },
+    {
+      "name": "homecoming_asphyxia_toxic_plume-left: decoded cache stays within its configured budget",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: projectile prewarm",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "failed": []
+      }
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: intro ends normally",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: intended fighter and natural player-facing",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: normal keydown special",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: normal keyup special",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: exact command accepted from bindings",
+      "passed": true,
+      "detail": {
+        "attack": "neutralSpecial",
+        "lastMove": "neutralSpecial"
+      }
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: original engine emits the selected projectile",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: emitted direction matches player orientation",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: rendering preserves flight and health at 244",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: exact registered image painted at 244",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: raster direction matches emitted motion at 244",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: finite raster placement at 244",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: live projectile survives requested short flight",
+      "passed": true,
+      "detail": {
+        "elapsed": 12,
+        "requested": 12
+      }
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: engine flight advances position and life",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: rendering preserves flight and health at 256",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: exact registered image painted at 256",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: raster direction matches emitted motion at 256",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: finite raster placement at 256",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-right: decoded cache stays within its configured budget",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: actor/stage preflight",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: projectile prewarm",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "failed": []
+      }
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: intro ends normally",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: intended fighter and natural player-facing",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: normal keydown special",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: normal keyup special",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: exact command accepted from bindings",
+      "passed": true,
+      "detail": {
+        "attack": "neutralSpecial",
+        "lastMove": "neutralSpecial"
+      }
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: original engine emits the selected projectile",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: emitted direction matches player orientation",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: rendering preserves flight and health at 244",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: exact registered image painted at 244",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: raster direction matches emitted motion at 244",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: finite raster placement at 244",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: live projectile survives requested short flight",
+      "passed": true,
+      "detail": {
+        "elapsed": 12,
+        "requested": 12
+      }
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: engine flight advances position and life",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: rendering preserves flight and health at 256",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: exact registered image painted at 256",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: raster direction matches emitted motion at 256",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: finite raster placement at 256",
+      "passed": true
+    },
+    {
+      "name": "ascension_immolator_fire_jet-left: decoded cache stays within its configured budget",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/data.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/movesets.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/combat-reference-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/production-reference.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/weapon-phases.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-director.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-lore-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-cinematics.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-lot12-renderer.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-lot12-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-reference-policy.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-animation.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-poses.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/combat-geometry.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-usage.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/projectile-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/projectile-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-framing.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/shared.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/save-store.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-architecture.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-hazard-renderer.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/combat-resolution.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/player-input.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/presentation-sequences.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-clips.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/lore-cinematics.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged docs/production/vague29/qa-native-projectiles.mjs",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Asset bytes preserved assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "passed": true
+    },
+    {
+      "name": "Asset bytes preserved assets/sprites/homecoming_asphyxia_096.e4070a8aa132.png",
+      "passed": true
+    },
+    {
+      "name": "Asset bytes preserved assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
+      "passed": true
+    },
+    {
+      "name": "Asset bytes preserved assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "Asset bytes preserved assets/stages/midwich.courtyard.c9728428d63d.png",
+      "passed": true
+    },
+    {
+      "name": "Asset bytes preserved assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "passed": true
+    },
+    {
+      "name": "Asset bytes preserved assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "passed": true
+    },
+    {
+      "name": "Asset bytes preserved assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "passed": true
+    }
+  ],
+  "scenes": [
+    {
+      "label": "sh1_floatstinger_acid_cloud-right",
+      "fighterId": "sh1_floatstinger_016",
+      "effectId": "sh1_floatstinger_acid_cloud",
+      "source": "sh1",
+      "slot": "neutralSpecial",
+      "playerIndex": 0,
+      "bindings": {
+        "left": "ArrowLeft",
+        "right": "ArrowRight",
+        "jump": "ArrowUp",
+        "down": "ArrowDown",
+        "guard": "Space",
+        "light": "KeyJ",
+        "heavy": "KeyK",
+        "special": "KeyI",
+        "throw": "KeyU",
+        "super": "KeyO",
+        "dodge": "KeyL",
+        "taunt": "KeyP"
+      },
+      "inputEvents": [
+        {
+          "type": "keydown",
+          "action": "special",
+          "code": "KeyI",
+          "engineFrame": 228
+        },
+        {
+          "type": "keyup",
+          "action": "special",
+          "code": "KeyI",
+          "engineFrame": 229
+        }
+      ],
+      "stageId": "midwich",
+      "opponentId": "sh2_creeper_025",
+      "introTicks": 228,
+      "emissionTicks": 15,
+      "flightTicks": 12,
+      "registryEntrySHA256": "ab475237a9af45dddaca42893a708498fd92f381225911c5c4bfda9d74684779",
+      "initialShot": {
+        "x": 381.04,
+        "y": 480.43000000000006,
+        "life": 59,
+        "vx": 12,
+        "vy": 0,
+        "groundY": null,
+        "radius": 12,
+        "health": [
+          1566,
+          760
+        ]
+      },
+      "emission": {
+        "frame": 244,
+        "shot": {
+          "x": 381.04,
+          "y": 480.43000000000006,
+          "life": 59,
+          "vx": 12,
+          "vy": 0,
+          "groundY": null,
+          "radius": 12,
+          "health": [
+            1566,
+            760
+          ]
+        },
+        "placement": {
+          "x": 381.04,
+          "y": 480.43000000000006,
+          "width": 79.41361256544502,
+          "height": 36,
+          "flip": 1,
+          "source": [
+            135,
+            225,
+            1264,
+            573
+          ],
+          "localX": -39.70680628272251,
+          "localY": -18
+        },
+        "draw": {
+          "path": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+          "args": [
+            135,
+            225,
+            1264,
+            573,
+            -39.70680628272251,
+            -18,
+            79.41361256544502,
+            36
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            386.64520263671875,
+            482.8882141113281
+          ],
+          "frame": 244
+        }
+      },
+      "flight": {
+        "frame": 256,
+        "shot": {
+          "x": 525.04,
+          "y": 480.43000000000006,
+          "life": 47,
+          "vx": 12,
+          "vy": 0,
+          "groundY": null,
+          "radius": 12,
+          "health": [
+            1566,
+            760
+          ]
+        },
+        "placement": {
+          "x": 525.04,
+          "y": 480.43000000000006,
+          "width": 79.41361256544502,
+          "height": 36,
+          "flip": 1,
+          "source": [
+            135,
+            225,
+            1264,
+            573
+          ],
+          "localX": -39.70680628272251,
+          "localY": -18
+        },
+        "draw": {
+          "path": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+          "args": [
+            135,
+            225,
+            1264,
+            573,
+            -39.70680628272251,
+            -18,
+            79.41361256544502,
+            36
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            527.5283203125,
+            482.8882141113281
+          ],
+          "frame": 256
+        }
+      },
+      "captures": [
+        "sh1_floatstinger_acid_cloud-right-emission.png",
+        "sh1_floatstinger_acid_cloud-right-flight.png"
+      ],
+      "cacheBytes": 6291456,
+      "cacheReservedBytes": 0
+    },
+    {
+      "label": "sh1_floatstinger_acid_cloud-left",
+      "fighterId": "sh1_floatstinger_016",
+      "effectId": "sh1_floatstinger_acid_cloud",
+      "source": "sh1",
+      "slot": "neutralSpecial",
+      "playerIndex": 1,
+      "bindings": {
+        "left": "KeyQ",
+        "right": "KeyD",
+        "jump": "KeyZ",
+        "down": "KeyS",
+        "guard": "KeyA",
+        "light": "KeyF",
+        "heavy": "KeyG",
+        "special": "KeyH",
+        "throw": "KeyR",
+        "super": "KeyT",
+        "dodge": "KeyV",
+        "taunt": "KeyN"
+      },
+      "inputEvents": [
+        {
+          "type": "keydown",
+          "action": "special",
+          "code": "KeyH",
+          "engineFrame": 228
+        },
+        {
+          "type": "keyup",
+          "action": "special",
+          "code": "KeyH",
+          "engineFrame": 229
+        }
+      ],
+      "stageId": "midwich",
+      "opponentId": "sh2_creeper_025",
+      "introTicks": 228,
+      "emissionTicks": 15,
+      "flightTicks": 12,
+      "registryEntrySHA256": "ab475237a9af45dddaca42893a708498fd92f381225911c5c4bfda9d74684779",
+      "initialShot": {
+        "x": 898.96,
+        "y": 480.43000000000006,
+        "life": 59,
+        "vx": -12,
+        "vy": 0,
+        "groundY": null,
+        "radius": 12,
+        "health": [
+          760,
+          1566
+        ]
+      },
+      "emission": {
+        "frame": 244,
+        "shot": {
+          "x": 898.96,
+          "y": 480.43000000000006,
+          "life": 59,
+          "vx": -12,
+          "vy": 0,
+          "groundY": null,
+          "radius": 12,
+          "health": [
+            760,
+            1566
+          ]
+        },
+        "placement": {
+          "x": 898.96,
+          "y": 480.43000000000006,
+          "width": 79.41361256544502,
+          "height": 36,
+          "flip": -1,
+          "source": [
+            135,
+            225,
+            1264,
+            573
+          ],
+          "localX": -39.70680628272251,
+          "localY": -18
+        },
+        "draw": {
+          "path": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+          "args": [
+            135,
+            225,
+            1264,
+            573,
+            -39.70680628272251,
+            -18,
+            79.41361256544502,
+            36
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            893.3548583984375,
+            482.8882141113281
+          ],
+          "frame": 244
+        }
+      },
+      "flight": {
+        "frame": 256,
+        "shot": {
+          "x": 754.96,
+          "y": 480.43000000000006,
+          "life": 47,
+          "vx": -12,
+          "vy": 0,
+          "groundY": null,
+          "radius": 12,
+          "health": [
+            760,
+            1566
+          ]
+        },
+        "placement": {
+          "x": 754.96,
+          "y": 480.43000000000006,
+          "width": 79.41361256544502,
+          "height": 36,
+          "flip": -1,
+          "source": [
+            135,
+            225,
+            1264,
+            573
+          ],
+          "localX": -39.70680628272251,
+          "localY": -18
+        },
+        "draw": {
+          "path": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+          "args": [
+            135,
+            225,
+            1264,
+            573,
+            -39.70680628272251,
+            -18,
+            79.41361256544502,
+            36
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            752.4716796875,
+            482.8882141113281
+          ],
+          "frame": 256
+        }
+      },
+      "captures": [
+        "sh1_floatstinger_acid_cloud-left-emission.png",
+        "sh1_floatstinger_acid_cloud-left-flight.png"
+      ],
+      "cacheBytes": 6291456,
+      "cacheReservedBytes": 0
+    },
+    {
+      "label": "homecoming_asphyxia_toxic_plume-right",
+      "fighterId": "homecoming_asphyxia_096",
+      "effectId": "homecoming_asphyxia_toxic_plume",
+      "source": "homecoming",
+      "slot": "neutralSpecial",
+      "playerIndex": 0,
+      "bindings": {
+        "left": "ArrowLeft",
+        "right": "ArrowRight",
+        "jump": "ArrowUp",
+        "down": "ArrowDown",
+        "guard": "Space",
+        "light": "KeyJ",
+        "heavy": "KeyK",
+        "special": "KeyI",
+        "throw": "KeyU",
+        "super": "KeyO",
+        "dodge": "KeyL",
+        "taunt": "KeyP"
+      },
+      "inputEvents": [
+        {
+          "type": "keydown",
+          "action": "special",
+          "code": "KeyI",
+          "engineFrame": 228
+        },
+        {
+          "type": "keyup",
+          "action": "special",
+          "code": "KeyI",
+          "engineFrame": 229
+        }
+      ],
+      "stageId": "midwich",
+      "opponentId": "sh2_creeper_025",
+      "introTicks": 228,
+      "emissionTicks": 15,
+      "flightTicks": 12,
+      "registryEntrySHA256": "b0d262a18364f2dc82ecca2d674e2617886a73b737c25cd4ff72397448462da2",
+      "initialShot": {
+        "x": 468.88,
+        "y": 497.64,
+        "life": 59,
+        "vx": 12,
+        "vy": 0,
+        "groundY": null,
+        "radius": 12,
+        "health": [
+          1566,
+          760
+        ]
+      },
+      "emission": {
+        "frame": 244,
+        "shot": {
+          "x": 468.88,
+          "y": 497.64,
+          "life": 59,
+          "vx": 12,
+          "vy": 0,
+          "groundY": null,
+          "radius": 12,
+          "health": [
+            1566,
+            760
+          ]
+        },
+        "placement": {
+          "x": 468.88,
+          "y": 497.64,
+          "width": 109.17903930131004,
+          "height": 36,
+          "flip": 1,
+          "source": [
+            77,
+            293,
+            1389,
+            458
+          ],
+          "localX": -54.58951965065502,
+          "localY": -18
+        },
+        "draw": {
+          "path": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+          "args": [
+            77,
+            293,
+            1389,
+            458,
+            -54.58951965065502,
+            -18,
+            109.17903930131004,
+            36
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            472.5838928222656,
+            499.7257385253906
+          ],
+          "frame": 244
+        }
+      },
+      "flight": {
+        "frame": 256,
+        "shot": {
+          "x": 612.88,
+          "y": 497.64,
+          "life": 47,
+          "vx": 12,
+          "vy": 0,
+          "groundY": null,
+          "radius": 12,
+          "health": [
+            1566,
+            760
+          ]
+        },
+        "placement": {
+          "x": 612.88,
+          "y": 497.64,
+          "width": 109.17903930131004,
+          "height": 36,
+          "flip": 1,
+          "source": [
+            77,
+            293,
+            1389,
+            458
+          ],
+          "localX": -54.58951965065502,
+          "localY": -18
+        },
+        "draw": {
+          "path": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+          "args": [
+            77,
+            293,
+            1389,
+            458,
+            -54.58951965065502,
+            -18,
+            109.17903930131004,
+            36
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            613.467041015625,
+            499.7257385253906
+          ],
+          "frame": 256
+        }
+      },
+      "captures": [
+        "homecoming_asphyxia_toxic_plume-right-emission.png",
+        "homecoming_asphyxia_toxic_plume-right-flight.png"
+      ],
+      "cacheBytes": 12582912,
+      "cacheReservedBytes": 0
+    },
+    {
+      "label": "homecoming_asphyxia_toxic_plume-left",
+      "fighterId": "homecoming_asphyxia_096",
+      "effectId": "homecoming_asphyxia_toxic_plume",
+      "source": "homecoming",
+      "slot": "neutralSpecial",
+      "playerIndex": 1,
+      "bindings": {
+        "left": "KeyQ",
+        "right": "KeyD",
+        "jump": "KeyZ",
+        "down": "KeyS",
+        "guard": "KeyA",
+        "light": "KeyF",
+        "heavy": "KeyG",
+        "special": "KeyH",
+        "throw": "KeyR",
+        "super": "KeyT",
+        "dodge": "KeyV",
+        "taunt": "KeyN"
+      },
+      "inputEvents": [
+        {
+          "type": "keydown",
+          "action": "special",
+          "code": "KeyH",
+          "engineFrame": 228
+        },
+        {
+          "type": "keyup",
+          "action": "special",
+          "code": "KeyH",
+          "engineFrame": 229
+        }
+      ],
+      "stageId": "midwich",
+      "opponentId": "sh2_creeper_025",
+      "introTicks": 228,
+      "emissionTicks": 15,
+      "flightTicks": 12,
+      "registryEntrySHA256": "b0d262a18364f2dc82ecca2d674e2617886a73b737c25cd4ff72397448462da2",
+      "initialShot": {
+        "x": 811.12,
+        "y": 497.64,
+        "life": 59,
+        "vx": -12,
+        "vy": 0,
+        "groundY": null,
+        "radius": 12,
+        "health": [
+          760,
+          1566
+        ]
+      },
+      "emission": {
+        "frame": 244,
+        "shot": {
+          "x": 811.12,
+          "y": 497.64,
+          "life": 59,
+          "vx": -12,
+          "vy": 0,
+          "groundY": null,
+          "radius": 12,
+          "health": [
+            760,
+            1566
+          ]
+        },
+        "placement": {
+          "x": 811.12,
+          "y": 497.64,
+          "width": 109.17903930131004,
+          "height": 36,
+          "flip": -1,
+          "source": [
+            77,
+            293,
+            1389,
+            458
+          ],
+          "localX": -54.58951965065502,
+          "localY": -18
+        },
+        "draw": {
+          "path": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+          "args": [
+            77,
+            293,
+            1389,
+            458,
+            -54.58951965065502,
+            -18,
+            109.17903930131004,
+            36
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            807.4161376953125,
+            499.7257385253906
+          ],
+          "frame": 244
+        }
+      },
+      "flight": {
+        "frame": 256,
+        "shot": {
+          "x": 667.12,
+          "y": 497.64,
+          "life": 47,
+          "vx": -12,
+          "vy": 0,
+          "groundY": null,
+          "radius": 12,
+          "health": [
+            760,
+            1566
+          ]
+        },
+        "placement": {
+          "x": 667.12,
+          "y": 497.64,
+          "width": 109.17903930131004,
+          "height": 36,
+          "flip": -1,
+          "source": [
+            77,
+            293,
+            1389,
+            458
+          ],
+          "localX": -54.58951965065502,
+          "localY": -18
+        },
+        "draw": {
+          "path": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+          "args": [
+            77,
+            293,
+            1389,
+            458,
+            -54.58951965065502,
+            -18,
+            109.17903930131004,
+            36
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            666.532958984375,
+            499.7257385253906
+          ],
+          "frame": 256
+        }
+      },
+      "captures": [
+        "homecoming_asphyxia_toxic_plume-left-emission.png",
+        "homecoming_asphyxia_toxic_plume-left-flight.png"
+      ],
+      "cacheBytes": 12582912,
+      "cacheReservedBytes": 0
+    },
+    {
+      "label": "ascension_immolator_fire_jet-right",
+      "fighterId": "ascension_the_immolator_182",
+      "effectId": "ascension_immolator_fire_jet",
+      "source": "ascension",
+      "slot": "neutralSpecial",
+      "playerIndex": 0,
+      "bindings": {
+        "left": "ArrowLeft",
+        "right": "ArrowRight",
+        "jump": "ArrowUp",
+        "down": "ArrowDown",
+        "guard": "Space",
+        "light": "KeyJ",
+        "heavy": "KeyK",
+        "special": "KeyI",
+        "throw": "KeyU",
+        "super": "KeyO",
+        "dodge": "KeyL",
+        "taunt": "KeyP"
+      },
+      "inputEvents": [
+        {
+          "type": "keydown",
+          "action": "special",
+          "code": "KeyI",
+          "engineFrame": 228
+        },
+        {
+          "type": "keyup",
+          "action": "special",
+          "code": "KeyI",
+          "engineFrame": 229
+        }
+      ],
+      "stageId": "midwich",
+      "opponentId": "sh2_creeper_025",
+      "introTicks": 228,
+      "emissionTicks": 15,
+      "flightTicks": 12,
+      "registryEntrySHA256": "9d3bd6a86cf0d2c8c00079dc1b59d4dd1db373e4a52dd87d2beeca1350a3bf28",
+      "initialShot": {
+        "x": 374.23199999999997,
+        "y": 426.08500000000004,
+        "life": 41,
+        "vx": 8,
+        "vy": 0,
+        "groundY": null,
+        "radius": 15.600000000000001,
+        "health": [
+          1102,
+          760
+        ]
+      },
+      "emission": {
+        "frame": 244,
+        "shot": {
+          "x": 374.23199999999997,
+          "y": 426.08500000000004,
+          "life": 41,
+          "vx": 8,
+          "vy": 0,
+          "groundY": null,
+          "radius": 15.600000000000001,
+          "health": [
+            1102,
+            760
+          ]
+        },
+        "placement": {
+          "x": 374.23199999999997,
+          "y": 426.08500000000004,
+          "width": 171.36854599406527,
+          "height": 46.8,
+          "flip": 1,
+          "source": [
+            153,
+            349,
+            1234,
+            337
+          ],
+          "localX": -85.68427299703264,
+          "localY": -23.4
+        },
+        "draw": {
+          "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+          "args": [
+            153,
+            349,
+            1234,
+            337,
+            -85.68427299703264,
+            -23.4,
+            171.36854599406527,
+            46.8
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            379.98455810546875,
+            429.7195129394531
+          ],
+          "frame": 244
+        }
+      },
+      "flight": {
+        "frame": 256,
+        "shot": {
+          "x": 470.23199999999997,
+          "y": 426.08500000000004,
+          "life": 29,
+          "vx": 8,
+          "vy": 0,
+          "groundY": null,
+          "radius": 15.600000000000001,
+          "health": [
+            1102,
+            760
+          ]
+        },
+        "placement": {
+          "x": 470.23199999999997,
+          "y": 426.08500000000004,
+          "width": 171.36854599406527,
+          "height": 46.8,
+          "flip": 1,
+          "source": [
+            153,
+            349,
+            1234,
+            337
+          ],
+          "localX": -85.68427299703264,
+          "localY": -23.4
+        },
+        "draw": {
+          "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+          "args": [
+            153,
+            349,
+            1234,
+            337,
+            -85.68427299703264,
+            -23.4,
+            171.36854599406527,
+            46.8
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            473.9066467285156,
+            429.7195129394531
+          ],
+          "frame": 256
+        }
+      },
+      "captures": [
+        "ascension_immolator_fire_jet-right-emission.png",
+        "ascension_immolator_fire_jet-right-flight.png"
+      ],
+      "cacheBytes": 18874368,
+      "cacheReservedBytes": 0
+    },
+    {
+      "label": "ascension_immolator_fire_jet-left",
+      "fighterId": "ascension_the_immolator_182",
+      "effectId": "ascension_immolator_fire_jet",
+      "source": "ascension",
+      "slot": "neutralSpecial",
+      "playerIndex": 1,
+      "bindings": {
+        "left": "KeyQ",
+        "right": "KeyD",
+        "jump": "KeyZ",
+        "down": "KeyS",
+        "guard": "KeyA",
+        "light": "KeyF",
+        "heavy": "KeyG",
+        "special": "KeyH",
+        "throw": "KeyR",
+        "super": "KeyT",
+        "dodge": "KeyV",
+        "taunt": "KeyN"
+      },
+      "inputEvents": [
+        {
+          "type": "keydown",
+          "action": "special",
+          "code": "KeyH",
+          "engineFrame": 228
+        },
+        {
+          "type": "keyup",
+          "action": "special",
+          "code": "KeyH",
+          "engineFrame": 229
+        }
+      ],
+      "stageId": "midwich",
+      "opponentId": "sh2_creeper_025",
+      "introTicks": 228,
+      "emissionTicks": 15,
+      "flightTicks": 12,
+      "registryEntrySHA256": "9d3bd6a86cf0d2c8c00079dc1b59d4dd1db373e4a52dd87d2beeca1350a3bf28",
+      "initialShot": {
+        "x": 905.768,
+        "y": 426.08500000000004,
+        "life": 41,
+        "vx": -8,
+        "vy": 0,
+        "groundY": null,
+        "radius": 15.600000000000001,
+        "health": [
+          760,
+          1102
+        ]
+      },
+      "emission": {
+        "frame": 244,
+        "shot": {
+          "x": 905.768,
+          "y": 426.08500000000004,
+          "life": 41,
+          "vx": -8,
+          "vy": 0,
+          "groundY": null,
+          "radius": 15.600000000000001,
+          "health": [
+            760,
+            1102
+          ]
+        },
+        "placement": {
+          "x": 905.768,
+          "y": 426.08500000000004,
+          "width": 171.36854599406527,
+          "height": 46.8,
+          "flip": -1,
+          "source": [
+            153,
+            349,
+            1234,
+            337
+          ],
+          "localX": -85.68427299703264,
+          "localY": -23.4
+        },
+        "draw": {
+          "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+          "args": [
+            153,
+            349,
+            1234,
+            337,
+            -85.68427299703264,
+            -23.4,
+            171.36854599406527,
+            46.8
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            900.0155029296875,
+            429.7195129394531
+          ],
+          "frame": 244
+        }
+      },
+      "flight": {
+        "frame": 256,
+        "shot": {
+          "x": 809.768,
+          "y": 426.08500000000004,
+          "life": 29,
+          "vx": -8,
+          "vy": 0,
+          "groundY": null,
+          "radius": 15.600000000000001,
+          "health": [
+            760,
+            1102
+          ]
+        },
+        "placement": {
+          "x": 809.768,
+          "y": 426.08500000000004,
+          "width": 171.36854599406527,
+          "height": 46.8,
+          "flip": -1,
+          "source": [
+            153,
+            349,
+            1234,
+            337
+          ],
+          "localX": -85.68427299703264,
+          "localY": -23.4
+        },
+        "draw": {
+          "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+          "args": [
+            153,
+            349,
+            1234,
+            337,
+            -85.68427299703264,
+            -23.4,
+            171.36854599406527,
+            46.8
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            806.0933837890625,
+            429.7195129394531
+          ],
+          "frame": 256
+        }
+      },
+      "captures": [
+        "ascension_immolator_fire_jet-left-emission.png",
+        "ascension_immolator_fire_jet-left-flight.png"
+      ],
+      "cacheBytes": 18874368,
+      "cacheReservedBytes": 0
+    }
+  ],
+  "captures": [
+    {
+      "file": "sh1_floatstinger_acid_cloud-right-emission.png",
+      "sha256": "a3806c5c47b69a2a237508caf2a86f38355771e57b42285563dd04d4ec64e89e",
+      "bytes": 895385,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "sh1_floatstinger_016",
+      "effectId": "sh1_floatstinger_acid_cloud",
+      "playerIndex": 0,
+      "slot": "neutralSpecial",
+      "engineFrame": 244,
+      "phase": "emission"
+    },
+    {
+      "file": "sh1_floatstinger_acid_cloud-right-flight.png",
+      "sha256": "1da5ec3de3b28ace9735cc5fc2986b6b915f3e0e35aeba1b40e4d0932a757551",
+      "bytes": 895681,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "sh1_floatstinger_016",
+      "effectId": "sh1_floatstinger_acid_cloud",
+      "playerIndex": 0,
+      "slot": "neutralSpecial",
+      "engineFrame": 256,
+      "phase": "flight"
+    },
+    {
+      "file": "sh1_floatstinger_acid_cloud-left-emission.png",
+      "sha256": "cf0b107e070325c1f737874059fd7af62ed2f8926c48fc2e0abf3da5b1323fe1",
+      "bytes": 887225,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "sh1_floatstinger_016",
+      "effectId": "sh1_floatstinger_acid_cloud",
+      "playerIndex": 1,
+      "slot": "neutralSpecial",
+      "engineFrame": 244,
+      "phase": "emission"
+    },
+    {
+      "file": "sh1_floatstinger_acid_cloud-left-flight.png",
+      "sha256": "f578bf668337400b87c41d7689df1c6c1f54e1fda58e6ad9ba6c36b3b36a591a",
+      "bytes": 887246,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "sh1_floatstinger_016",
+      "effectId": "sh1_floatstinger_acid_cloud",
+      "playerIndex": 1,
+      "slot": "neutralSpecial",
+      "engineFrame": 256,
+      "phase": "flight"
+    },
+    {
+      "file": "homecoming_asphyxia_toxic_plume-right-emission.png",
+      "sha256": "1cc7a849cbaa5a3ed85815a0821f77824fb4ee7ce1c06fee67614f0466eec18a",
+      "bytes": 893299,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "homecoming_asphyxia_096",
+      "effectId": "homecoming_asphyxia_toxic_plume",
+      "playerIndex": 0,
+      "slot": "neutralSpecial",
+      "engineFrame": 244,
+      "phase": "emission"
+    },
+    {
+      "file": "homecoming_asphyxia_toxic_plume-right-flight.png",
+      "sha256": "3523bf17cc4c458541d9e6e854479204d3300b6bb8700a470b4356f620d42076",
+      "bytes": 892866,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "homecoming_asphyxia_096",
+      "effectId": "homecoming_asphyxia_toxic_plume",
+      "playerIndex": 0,
+      "slot": "neutralSpecial",
+      "engineFrame": 256,
+      "phase": "flight"
+    },
+    {
+      "file": "homecoming_asphyxia_toxic_plume-left-emission.png",
+      "sha256": "fcc2474dec2cf9038ba25505a5ffd7a52832f719ae94e81f12c16ef619ede7f7",
+      "bytes": 885995,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "homecoming_asphyxia_096",
+      "effectId": "homecoming_asphyxia_toxic_plume",
+      "playerIndex": 1,
+      "slot": "neutralSpecial",
+      "engineFrame": 244,
+      "phase": "emission"
+    },
+    {
+      "file": "homecoming_asphyxia_toxic_plume-left-flight.png",
+      "sha256": "3d3f1245556df7f1b9d4698be7cc741116192ba2c87134716aed5260aa8b04e4",
+      "bytes": 886036,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "homecoming_asphyxia_096",
+      "effectId": "homecoming_asphyxia_toxic_plume",
+      "playerIndex": 1,
+      "slot": "neutralSpecial",
+      "engineFrame": 256,
+      "phase": "flight"
+    },
+    {
+      "file": "ascension_immolator_fire_jet-right-emission.png",
+      "sha256": "eb1ac6a671ef124209a7a116e3f8b6f0c3f6605e013fd61b355d42553905be75",
+      "bytes": 983172,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "ascension_the_immolator_182",
+      "effectId": "ascension_immolator_fire_jet",
+      "playerIndex": 0,
+      "slot": "neutralSpecial",
+      "engineFrame": 244,
+      "phase": "emission"
+    },
+    {
+      "file": "ascension_immolator_fire_jet-right-flight.png",
+      "sha256": "3c47c414930f242b201f58877269f9eddd7aee3326ec8a24b587749169eae79e",
+      "bytes": 986650,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "ascension_the_immolator_182",
+      "effectId": "ascension_immolator_fire_jet",
+      "playerIndex": 0,
+      "slot": "neutralSpecial",
+      "engineFrame": 256,
+      "phase": "flight"
+    },
+    {
+      "file": "ascension_immolator_fire_jet-left-emission.png",
+      "sha256": "97a84b154d8d4cc2146f6c759f9fb6c6b34cfe2e23757b1d9f7c7c88c1981fde",
+      "bytes": 976411,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "ascension_the_immolator_182",
+      "effectId": "ascension_immolator_fire_jet",
+      "playerIndex": 1,
+      "slot": "neutralSpecial",
+      "engineFrame": 244,
+      "phase": "emission"
+    },
+    {
+      "file": "ascension_immolator_fire_jet-left-flight.png",
+      "sha256": "ce8c3fc3e2a6f86bd3c758473b0d15e68a5e45b8bfdccc8fd90c562570671a27",
+      "bytes": 979544,
+      "width": 1280,
+      "height": 720,
+      "fighterId": "ascension_the_immolator_182",
+      "effectId": "ascension_immolator_fire_jet",
+      "playerIndex": 1,
+      "slot": "neutralSpecial",
+      "engineFrame": 256,
+      "phase": "flight"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "sha256": "80344808d0d5dad359a4fba8057cb43c4447f5212e2778ec158e3c43d4ab0024",
+      "bytes": 1149291,
+      "width": 1312,
+      "height": 1199,
+      "rawRGBAHash": "a479a295f03c77a4bb38f1cceec4d5dc988aff6c0f429cd3408c61fdea815634",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/homecoming_asphyxia_096.e4070a8aa132.png",
+      "sha256": "e4070a8aa13239d5ad97ddf5c60af99e74540bc7519243bcfd344b145fd9e5e7",
+      "bytes": 1406816,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "a6a7c3ad849839174cb11b228e6a39d56649bd5b19c29e816e4427a8642fa3e5",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
+      "sha256": "3e9055f1a6f0cdf908ad25d164aa5a53ce94f223fbea4c7749f441b51c1f18c4",
+      "bytes": 1281605,
+      "width": 1254,
+      "height": 1254,
+      "rawRGBAHash": "7fa3572c0390f1c20becbfc21c21d426018b3c9a806328f3a3dea5efeb04418a",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "bytes": 1181785,
+      "width": 2172,
+      "height": 724,
+      "rawRGBAHash": "28b59b2a1bb4f2e01c42a53ce514d38088004343a42db9d7658d97fbe9a05d81",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/stages/midwich.courtyard.c9728428d63d.png",
+      "sha256": "c9728428d63d6950b27b5ec791cfcce4854c3aaf0ba781cf735b51c7725844c2",
+      "bytes": 1628967,
+      "width": 1672,
+      "height": 941,
+      "rawRGBAHash": "4930104c9a55a4287968078c50c65d181afc0c8610a6632756fd2c51975a1978",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+      "sha256": "9d0dee3a72ce64b1e06d39acd8298fd832f81603e934bd9d9887064bf525fd83",
+      "bytes": 1517372,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "752cd825825af0f6bf24b6c5e4aef6fd5c1de990802a478dd2b3aefb654646ec",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+      "sha256": "fa3fd7e4a76aa79b7139a6239c9daf2330d40ca9da9d458fd2e0b98d33ed96cf",
+      "bytes": 1237462,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "50b33b26dceeb000bb06346c387bc0cdd4c3b48ea4f7643663b1f7bc80187a23",
+      "adapterLossless": true
+    },
+    {
+      "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+      "sha256": "a05b1938f04cae8fbe24969e0c69501501febe16b4a25ba78b29993a2f142b88",
+      "bytes": 1168665,
+      "width": 1536,
+      "height": 1024,
+      "rawRGBAHash": "f2c1cc8ec87076d593ca4f4254e0277cebb662f3080abd8ecfd3fa5dc3caf067",
+      "adapterLossless": true
+    }
+  ],
+  "sourceHashes": {
+    "src/data.js": {
+      "before": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
+      "after": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35"
+    },
+    "src/movesets.js": {
+      "before": "03b5fcba2939438c8f1ca2f064fd31578c6255656006c6e7c4424e3eafd327f9",
+      "after": "03b5fcba2939438c8f1ca2f064fd31578c6255656006c6e7c4424e3eafd327f9"
+    },
+    "src/combat-reference-policy.js": {
+      "before": "a784ca09be46e54b188e71c003ad8fd12970c8c4821bc8c5515e6a8e79751028",
+      "after": "a784ca09be46e54b188e71c003ad8fd12970c8c4821bc8c5515e6a8e79751028"
+    },
+    "src/production-reference.js": {
+      "before": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889",
+      "after": "bc9626b507e9c64c9b2c466119fd2d04905255d7ae88b946c0b3a6f4a4c98889"
+    },
+    "src/weapon-phases.js": {
+      "before": "d488e9847e6c7bfb6496b1e68672383e68b27ff026e6ca78235934fc53890c90",
+      "after": "d488e9847e6c7bfb6496b1e68672383e68b27ff026e6ca78235934fc53890c90"
+    },
+    "src/stage-director.js": {
+      "before": "4158a522fa4f2133ed2bebb4a42852e0244054ab9dcf33c0d877a5d591e01884",
+      "after": "4158a522fa4f2133ed2bebb4a42852e0244054ab9dcf33c0d877a5d591e01884"
+    },
+    "src/stage-lore-policy.js": {
+      "before": "b20de47911e2577c3814217121bd1511ecefb40f555e629bcbe7b730d39624e8",
+      "after": "b20de47911e2577c3814217121bd1511ecefb40f555e629bcbe7b730d39624e8"
+    },
+    "src/stage-cinematics.js": {
+      "before": "b05d8255b494d0c2ce8788e0f364636e5dc31a3b16e931a42b23180532877371",
+      "after": "b05d8255b494d0c2ce8788e0f364636e5dc31a3b16e931a42b23180532877371"
+    },
+    "src/stage-lot12-renderer.js": {
+      "before": "a9bb0f9397360edd1b9c70e2003aaa8e1a4b8e6b0eb30a995f1c80cbff1308d2",
+      "after": "a9bb0f9397360edd1b9c70e2003aaa8e1a4b8e6b0eb30a995f1c80cbff1308d2"
+    },
+    "src/stage-lot12-policy.js": {
+      "before": "45be12c0627ac11a46d95aa9fbba4d506b936f71e3018b22fe91297fc6f54935",
+      "after": "45be12c0627ac11a46d95aa9fbba4d506b936f71e3018b22fe91297fc6f54935"
+    },
+    "src/stage-reference-policy.js": {
+      "before": "635b4c3a08ecc7256f13194c3734f1f013fea2f36440421510a83c8af5c56ec6",
+      "after": "635b4c3a08ecc7256f13194c3734f1f013fea2f36440421510a83c8af5c56ec6"
+    },
+    "src/sprite-manifest.js": {
+      "before": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92",
+      "after": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28",
+      "after": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/sprite-animation.js": {
+      "before": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af",
+      "after": "9d7e5787652f9db52caf6fb1a74ec506ed3c24e1b7d0d668665593a02f6c25af"
+    },
+    "src/sprite-poses.js": {
+      "before": "f1489d560ca5fa88d9199bea352cf908fb7ae8126fc8b04478b491d31fc87d5c",
+      "after": "f1489d560ca5fa88d9199bea352cf908fb7ae8126fc8b04478b491d31fc87d5c"
+    },
+    "src/combat-geometry.js": {
+      "before": "b08f368df5617a4aebb17bb19256a1f895490efc4ef7d08df3d50c4f5878edab",
+      "after": "b08f368df5617a4aebb17bb19256a1f895490efc4ef7d08df3d50c4f5878edab"
+    },
+    "src/sprite-usage.js": {
+      "before": "cce9eeb60700a40c0974709abb53a582838d27187d583bb4e800bf5922788541",
+      "after": "cce9eeb60700a40c0974709abb53a582838d27187d583bb4e800bf5922788541"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "6074859699efa3f52d8f0373005047f5cb8270bae8ab49a2cd0020b77a73ae95",
+      "after": "6074859699efa3f52d8f0373005047f5cb8270bae8ab49a2cd0020b77a73ae95"
+    },
+    "src/projectile-bitmap-manifest.js": {
+      "before": "a6d7347c09fdb77c8d54f1e1ff380dd350c719cb74760540ad9480f96183e9b4",
+      "after": "a6d7347c09fdb77c8d54f1e1ff380dd350c719cb74760540ad9480f96183e9b4"
+    },
+    "src/projectile-bitmaps.js": {
+      "before": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
+      "after": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410"
+    },
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/sprite-framing.js": {
+      "before": "563aebcd9987de1841b4f71a58a06710bfd0dae1861dffaf6560487d4441baaf",
+      "after": "563aebcd9987de1841b4f71a58a06710bfd0dae1861dffaf6560487d4441baaf"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/shared.js": {
+      "before": "6f2b1244748c36b10595ff2661926a454f3dbf64b415e434dce7885a7d55cd3e",
+      "after": "6f2b1244748c36b10595ff2661926a454f3dbf64b415e434dce7885a7d55cd3e"
+    },
+    "src/save-store.js": {
+      "before": "4ee606be5c7f64e87ae5096c80afaea8820cf13e0f3c3ba12e07737abb5b1f05",
+      "after": "4ee606be5c7f64e87ae5096c80afaea8820cf13e0f3c3ba12e07737abb5b1f05"
+    },
+    "src/stage-architecture.js": {
+      "before": "c9480281740aa1b31b82e483ae3cd34519090dbb10cd3cdf6e2a571d77d19039",
+      "after": "c9480281740aa1b31b82e483ae3cd34519090dbb10cd3cdf6e2a571d77d19039"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    },
+    "src/stage-hazard-renderer.js": {
+      "before": "b5d21d9c623e342bc3b6ba02eaa2ac68475bb6ff834f38d8c3358816ac2707cb",
+      "after": "b5d21d9c623e342bc3b6ba02eaa2ac68475bb6ff834f38d8c3358816ac2707cb"
+    },
+    "src/combat-resolution.js": {
+      "before": "a2756cc770871881050a28149822f0e20f1b8ff0b825f7ab5f99099d84206334",
+      "after": "a2756cc770871881050a28149822f0e20f1b8ff0b825f7ab5f99099d84206334"
+    },
+    "src/player-input.js": {
+      "before": "0899714b23759478a1bf495ab965702b46f6d656c776346940028628e50f59d1",
+      "after": "0899714b23759478a1bf495ab965702b46f6d656c776346940028628e50f59d1"
+    },
+    "src/presentation-sequences.js": {
+      "before": "9432ad52191d57050a3e2d7dde98c709d8b6885be82dfcc7db80b5e8f8c11ed7",
+      "after": "9432ad52191d57050a3e2d7dde98c709d8b6885be82dfcc7db80b5e8f8c11ed7"
+    },
+    "src/sprite-clips.js": {
+      "before": "4adea577ab0f45016456999fafe381eecdb6e7d14123b30120e70f2dea6953f3",
+      "after": "4adea577ab0f45016456999fafe381eecdb6e7d14123b30120e70f2dea6953f3"
+    },
+    "src/lore-cinematics.js": {
+      "before": "211596a8d9054ca8481e4668b9e9e91db4e46d48cb85c90a4c7c4e9ef4e96845",
+      "after": "211596a8d9054ca8481e4668b9e9e91db4e46d48cb85c90a4c7c4e9ef4e96845"
+    },
+    "docs/production/vague29/qa-native-projectiles.mjs": {
+      "before": "8aee7d6a1acfcd24890a3fdb88316c26fda7f8aa5acd7aaf646541c3940572d7",
+      "after": "8aee7d6a1acfcd24890a3fdb88316c26fda7f8aa5acd7aaf646541c3940572d7"
+    },
+    "art/registry.json": {
+      "before": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd",
+      "after": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd"
+    }
+  },
+  "errors": [],
+  "runtime": {
+    "node": "v24.22.3",
+    "platform": "linux",
+    "arch": "x64",
+    "sharpVersions": {
+      "aom": "3.15.1",
+      "archive": "3.8.9",
+      "cairo": "1.18.6",
+      "cgif": "0.5.4",
+      "exif": "0.6.26",
+      "expat": "2.8.5",
+      "ffi": "3.8.0",
+      "fontconfig": "2.18.3",
+      "freetype": "2.14.3",
+      "fribidi": "1.0.17",
+      "glib": "2.90.0",
+      "harfbuzz": "14.5.0",
+      "heif": "1.23.5",
+      "highway": "1.4.0",
+      "imagequant": "2.4.1",
+      "lcms": "2.19.1",
+      "mozjpeg": "0826579",
+      "pango": "1.58.2",
+      "pixman": "0.46.4",
+      "png": "1.6.58",
+      "proxy-libintl": "0.5",
+      "rsvg": "2.63.2",
+      "tiff": "4.7.2",
+      "uhdr": "2.0.2",
+      "vips": "8.18.7",
+      "webp": "1.6.0",
+      "xml2": "2.15.4",
+      "zlib-ng": "2.3.3",
+      "sharp": "0.35.5"
+    }
+  },
+  "cacheBudgets": {
+    "combat": 75497472,
+    "stages": 67108864,
+    "projectiles": 33554432
+  },
+  "plannedCases": [
+    {
+      "fighterId": "sh1_floatstinger_016",
+      "effectId": "sh1_floatstinger_acid_cloud",
+      "source": "sh1",
+      "slot": "neutralSpecial"
+    },
+    {
+      "fighterId": "homecoming_asphyxia_096",
+      "effectId": "homecoming_asphyxia_toxic_plume",
+      "source": "homecoming",
+      "slot": "neutralSpecial"
+    },
+    {
+      "fighterId": "ascension_the_immolator_182",
+      "effectId": "ascension_immolator_fire_jet",
+      "source": "ascension",
+      "slot": "neutralSpecial"
+    }
+  ],
+  "renderedImagePaths": [
+    "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+    "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+    "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+    "assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
+    "assets/sprites/homecoming_asphyxia_096.e4070a8aa132.png",
+    "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+    "assets/sprites/sh2_creeper_025.f562380701ab.png",
+    "assets/stages/midwich.courtyard.c9728428d63d.png"
+  ],
+  "success": true,
+  "completedAt": "2026-11-25T08:17:09.620Z"
+}

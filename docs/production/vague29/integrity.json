@@ -1,0 +1,4290 @@
+{
+  "schema": 1,
+  "baseCommit": "2af87b6a1a8740a0759ce7c8c2746be19c48f4af",
+  "checkedAt": "2026-11-25T08:21:46.200876+00:00",
+  "method": "Every protected file and original asset is read from the working tree and hashed as an actual Git blob (SHA-1 over blob size plus unchanged bytes), then compared with the exact baseline commit. No source or asset is written.",
+  "protectedFiles": [
+    {
+      "path": "src/data.js",
+      "expectedGitBlob": "880e9440d9a9c6de1245056f27295add849ac7f7",
+      "actualGitBlob": "880e9440d9a9c6de1245056f27295add849ac7f7",
+      "unchanged": true
+    },
+    {
+      "path": "src/movesets.js",
+      "expectedGitBlob": "96cf0b0dbb4aff7172f8cbe81bfd3d66da7da282",
+      "actualGitBlob": "96cf0b0dbb4aff7172f8cbe81bfd3d66da7da282",
+      "unchanged": true
+    },
+    {
+      "path": "src/combat-reference-policy.js",
+      "expectedGitBlob": "a9163f601601c48c26034a1a9a0f7a8aed40861c",
+      "actualGitBlob": "a9163f601601c48c26034a1a9a0f7a8aed40861c",
+      "unchanged": true
+    },
+    {
+      "path": "src/combat-geometry.js",
+      "expectedGitBlob": "7c1f5323e9347d48dc0a760fbbfea69a1409b57d",
+      "actualGitBlob": "7c1f5323e9347d48dc0a760fbbfea69a1409b57d",
+      "unchanged": true
+    },
+    {
+      "path": "src/player-input.js",
+      "expectedGitBlob": "d27de5b767166cc50a2382133d38175a0ce32962",
+      "actualGitBlob": "d27de5b767166cc50a2382133d38175a0ce32962",
+      "unchanged": true
+    },
+    {
+      "path": "src/renderers.js",
+      "expectedGitBlob": "fc1cbecdd93dd0606db4f2c83875745696a4fbb2",
+      "actualGitBlob": "fc1cbecdd93dd0606db4f2c83875745696a4fbb2",
+      "unchanged": true
+    },
+    {
+      "path": "src/sprite-animation.js",
+      "expectedGitBlob": "1650b9ddbf03e6b0d834b480740c39390c680ae6",
+      "actualGitBlob": "1650b9ddbf03e6b0d834b480740c39390c680ae6",
+      "unchanged": true
+    },
+    {
+      "path": "src/production-reference.js",
+      "expectedGitBlob": "8cadf98b09507f1c459c8a0bdb4bc4a14df469a3",
+      "actualGitBlob": "8cadf98b09507f1c459c8a0bdb4bc4a14df469a3",
+      "unchanged": true
+    },
+    {
+      "path": "src/stage-reference-policy.js",
+      "expectedGitBlob": "45760456f07bb5b08ee21191d6fe9f9f0cb7e19a",
+      "actualGitBlob": "45760456f07bb5b08ee21191d6fe9f9f0cb7e19a",
+      "unchanged": true
+    },
+    {
+      "path": "src/stage-lore-policy.js",
+      "expectedGitBlob": "79faa0a5cff430ab66e23422cf72501a787d77b8",
+      "actualGitBlob": "79faa0a5cff430ab66e23422cf72501a787d77b8",
+      "unchanged": true
+    },
+    {
+      "path": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "expectedGitBlob": "397e90973463a31e39aa60a11153ec2b02cccd37",
+      "actualGitBlob": "397e90973463a31e39aa60a11153ec2b02cccd37",
+      "unchanged": true
+    },
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "expectedGitBlob": "1d863fa2a57d5a99ea1b4f1516583ac1dce46719",
+      "actualGitBlob": "1d863fa2a57d5a99ea1b4f1516583ac1dce46719",
+      "unchanged": true
+    },
+    {
+      "path": "docs/production/vague22/baseline/SILENT_HILL_CORPUS_BIBLE_wave21.xlsx",
+      "expectedGitBlob": "b366b6ac5ef2a610d4ba90f40c59fa51f0d751d0",
+      "actualGitBlob": "b366b6ac5ef2a610d4ba90f40c59fa51f0d751d0",
+      "unchanged": true
+    },
+    {
+      "path": "docs/production/vague22/workbook/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "expectedGitBlob": "3a4135d9f0512d05eb0e74660649ebf3cebcb1fb",
+      "actualGitBlob": "3a4135d9f0512d05eb0e74660649ebf3cebcb1fb",
+      "unchanged": true
+    },
+    {
+      "path": "docs/production/vague23/baseline/SILENT_HILL_CORPUS_BIBLE_before_wave23.xlsx",
+      "expectedGitBlob": "3a4135d9f0512d05eb0e74660649ebf3cebcb1fb",
+      "actualGitBlob": "3a4135d9f0512d05eb0e74660649ebf3cebcb1fb",
+      "unchanged": true
+    },
+    {
+      "path": "docs/production/vague23/workbook/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "expectedGitBlob": "397e90973463a31e39aa60a11153ec2b02cccd37",
+      "actualGitBlob": "397e90973463a31e39aa60a11153ec2b02cccd37",
+      "unchanged": true
+    },
+    {
+      "path": "docs/production/vague24-recovery/session-6101-original-state/docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "expectedGitBlob": "63564414645ef4b1321578a444a31c8f691055fc",
+      "actualGitBlob": "63564414645ef4b1321578a444a31c8f691055fc",
+      "unchanged": true
+    }
+  ],
+  "originalAssets": [
+    {
+      "path": "assets/chronicles/alex_home.ending.142737135fe0.webp",
+      "expectedGitBlob": "9086ae57c24983fe4e8a8d2c5a986468029421cc",
+      "actualGitBlob": "9086ae57c24983fe4e8a8d2c5a986468029421cc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/alex_home.intro.2183e839d619.webp",
+      "expectedGitBlob": "2da8877a9169ed60e426eab16dc488458a4980e4",
+      "actualGitBlob": "2da8877a9169ed60e426eab16dc488458a4980e4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/alex_home.rival.3833ff314d37.webp",
+      "expectedGitBlob": "314ac9b59193f60f6b7039910f44a6182bf903d7",
+      "actualGitBlob": "314ac9b59193f60f6b7039910f44a6182bf903d7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/ashes_of_alessa.ending.dfeb9c9495f9.webp",
+      "expectedGitBlob": "b8c6de70952d1a0ea70892be289f672f227a6545",
+      "actualGitBlob": "b8c6de70952d1a0ea70892be289f672f227a6545",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/ashes_of_alessa.intro.b00931169b8f.webp",
+      "expectedGitBlob": "4ac9f215eaa9b620756315e5e5aeae8493553028",
+      "actualGitBlob": "4ac9f215eaa9b620756315e5e5aeae8493553028",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/ashes_of_alessa.rival.494a38581318.webp",
+      "expectedGitBlob": "fbfe14efa92cff4c1fd6e96a72e72135677111f9",
+      "actualGitBlob": "fbfe14efa92cff4c1fd6e96a72e72135677111f9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/book_elements.ending.4958baecadb0.webp",
+      "expectedGitBlob": "72181b8a41e313a7466080b8336859436c61665e",
+      "actualGitBlob": "72181b8a41e313a7466080b8336859436c61665e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/book_elements.intro.c7cc398f8185.webp",
+      "expectedGitBlob": "2dd4e036da555aca69fa7e9542844a86e8b2d17d",
+      "actualGitBlob": "2dd4e036da555aca69fa7e9542844a86e8b2d17d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/book_elements.rival.1063fb0ebc19.webp",
+      "expectedGitBlob": "80cde9092d296dcd3e8923141f57c6d20c2e8ccf",
+      "actualGitBlob": "80cde9092d296dcd3e8923141f57c6d20c2e8ccf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/fog_of_alessa.ending.967dc0f0b2b6.webp",
+      "expectedGitBlob": "4e6e2011e2016c4c646e0c9dd04106b9bdd1153b",
+      "actualGitBlob": "4e6e2011e2016c4c646e0c9dd04106b9bdd1153b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/fog_of_alessa.intro.4ff0100b7713.webp",
+      "expectedGitBlob": "277cc24ee89ddab6b7cd0c60ed8fcbd6ecd6cdd5",
+      "actualGitBlob": "277cc24ee89ddab6b7cd0c60ed8fcbd6ecd6cdd5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/fog_of_alessa.rival.01b4d120d813.webp",
+      "expectedGitBlob": "ea6929f8b35f893d4cfadf7425e92e7a1f1e3665",
+      "actualGitBlob": "ea6929f8b35f893d4cfadf7425e92e7a1f1e3665",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/harry_ice.ending.60e707ba2ec2.webp",
+      "expectedGitBlob": "880793992afca69cc90f087725b24e0508845060",
+      "actualGitBlob": "880793992afca69cc90f087725b24e0508845060",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/harry_ice.intro.f5e2f6506b50.webp",
+      "expectedGitBlob": "e24c661da622222224af1ac5a9f7584928a6bf1e",
+      "actualGitBlob": "e24c661da622222224af1ac5a9f7584928a6bf1e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/harry_ice.observation.47f032022e32.webp",
+      "expectedGitBlob": "4e56cb90fb967777134ef869bac110f9afe7561b",
+      "actualGitBlob": "4e56cb90fb967777134ef869bac110f9afe7561b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/heather_birth.ending.f3d3fe97049d.webp",
+      "expectedGitBlob": "34c9b6f1108405e81bbf98a2bcd525391342a100",
+      "actualGitBlob": "34c9b6f1108405e81bbf98a2bcd525391342a100",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/heather_birth.intro.2ef91708c75e.webp",
+      "expectedGitBlob": "889303330af9fb38c0da848acafac3faf343f1c6",
+      "actualGitBlob": "889303330af9fb38c0da848acafac3faf343f1c6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/heather_birth.rival.8cce731a8ae4.webp",
+      "expectedGitBlob": "d727153d24011cf432fb1ccf62d75588090359cb",
+      "actualGitBlob": "d727153d24011cf432fb1ccf62d75588090359cb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/heather_birth.sighting.d720743e3ddf.jpg",
+      "expectedGitBlob": "bbf559f03f17ade16a92db6f97582f23b5137a59",
+      "actualGitBlob": "bbf559f03f17ade16a92db6f97582f23b5137a59",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/hinako_f.ending.e7efdcdddbc1.webp",
+      "expectedGitBlob": "86129c26c2f12f27b34fe86c17541a948bbbb1ca",
+      "actualGitBlob": "86129c26c2f12f27b34fe86c17541a948bbbb1ca",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/hinako_f.intro.d3358693909a.webp",
+      "expectedGitBlob": "0905a5416a6227fb172ddd7c11759ca944217792",
+      "actualGitBlob": "0905a5416a6227fb172ddd7c11759ca944217792",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/hinako_f.rival.706c6f3b0b0e.webp",
+      "expectedGitBlob": "bd06714572a3f699e722381b1bfdad52cf7aa492",
+      "actualGitBlob": "bd06714572a3f699e722381b1bfdad52cf7aa492",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/james_sentence.ending.b8c9176fa2d2.webp",
+      "expectedGitBlob": "4d9dd5d0b9193620fbd7b0c703c17c4d7f3038c7",
+      "actualGitBlob": "4d9dd5d0b9193620fbd7b0c703c17c4d7f3038c7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/james_sentence.intro.2475b8ca70a5.webp",
+      "expectedGitBlob": "9e9dcd3934db31cc12e9290a2569041ccaebcf5c",
+      "actualGitBlob": "9e9dcd3934db31cc12e9290a2569041ccaebcf5c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/james_sentence.rival.891ccb039b52.webp",
+      "expectedGitBlob": "f84afe888ca2bd31e5bbb5b70e82b6658baa03ff",
+      "actualGitBlob": "f84afe888ca2bd31e5bbb5b70e82b6658baa03ff",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/james_sentence.sighting.52ea5680fe31.webp",
+      "expectedGitBlob": "f70096ec4d5338d16f3f7b1e15e74c6b31bc893a",
+      "actualGitBlob": "f70096ec4d5338d16f3f7b1e15e74c6b31bc893a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/loop_204863.ending.414d839e6067.webp",
+      "expectedGitBlob": "a53671041b2a3668b2c330217b6098bb0ed3d850",
+      "actualGitBlob": "a53671041b2a3668b2c330217b6098bb0ed3d850",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/loop_204863.intro.d11a1e1dfecc.webp",
+      "expectedGitBlob": "44af90e305c91b0bb2139d2f4a3123a1d6b577e0",
+      "actualGitBlob": "44af90e305c91b0bb2139d2f4a3123a1d6b577e0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/loop_204863.observation.7892ac1b6bb1.webp",
+      "expectedGitBlob": "31e7af5c1487547d7d6992d61b8de367bc8eb295",
+      "actualGitBlob": "31e7af5c1487547d7d6992d61b8de367bc8eb295",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/maya_villa.ending.1703f9f04378.webp",
+      "expectedGitBlob": "36d6f1484e6e99961d8e6b5babb173f7622ebd25",
+      "actualGitBlob": "36d6f1484e6e99961d8e6b5babb173f7622ebd25",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/maya_villa.intro.2a8d87331e10.webp",
+      "expectedGitBlob": "4835aa97d11f5d1bc344e0a3692ab2fbccdc8969",
+      "actualGitBlob": "4835aa97d11f5d1bc344e0a3692ab2fbccdc8969",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/maya_villa.observation.5acf09d4e8f2.webp",
+      "expectedGitBlob": "e40a2bd36a5351bf73b0097aa2f5f1f72a2eca49",
+      "actualGitBlob": "e40a2bd36a5351bf73b0097aa2f5f1f72a2eca49",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/maya_villa.sighting.64d66e28683a.jpg",
+      "expectedGitBlob": "b6d14ea586bc4d4164a0d81a34d465138aeaa2bf",
+      "actualGitBlob": "b6d14ea586bc4d4164a0d81a34d465138aeaa2bf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/murphy_rain.ending.9ef51285a649.webp",
+      "expectedGitBlob": "c8932efc8e7fd079fa5cb50451a56accfbbc819b",
+      "actualGitBlob": "c8932efc8e7fd079fa5cb50451a56accfbbc819b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/murphy_rain.intro.f5cc6b7b961b.webp",
+      "expectedGitBlob": "f6f9bde2522501f6bc5f29ce29e0670d6435e9da",
+      "actualGitBlob": "f6f9bde2522501f6bc5f29ce29e0670d6435e9da",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/murphy_rain.rival.ef82a4c07ea9.webp",
+      "expectedGitBlob": "0cd60b66331c8aeec76d62fdde2cc6c35901b4cd",
+      "actualGitBlob": "0cd60b66331c8aeec76d62fdde2cc6c35901b4cd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/room_21.ending.936178291280.webp",
+      "expectedGitBlob": "caf559fda3e61b3592c62996810ca005980c1c8d",
+      "actualGitBlob": "caf559fda3e61b3592c62996810ca005980c1c8d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/room_21.intro.9edcdf651684.webp",
+      "expectedGitBlob": "63a2d391599eb664b1df3f3f9c23ff1f3f7c14bd",
+      "actualGitBlob": "63a2d391599eb664b1df3f3f9c23ff1f3f7c14bd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/room_21.rival.55558b472462.webp",
+      "expectedGitBlob": "d2d03dacc81a32c81d0f6bc014dba1c763a918bd",
+      "actualGitBlob": "d2d03dacc81a32c81d0f6bc014dba1c763a918bd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/static_beneath_st_amelia.ending.345fe853f2ea.webp",
+      "expectedGitBlob": "173e3745fc9250681af63677d1d09639ad879c68",
+      "actualGitBlob": "173e3745fc9250681af63677d1d09639ad879c68",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/static_beneath_st_amelia.intro.b2c5e2281739.webp",
+      "expectedGitBlob": "3205f9795b27a65d36f49f4b1c575e7d4a0d7031",
+      "actualGitBlob": "3205f9795b27a65d36f49f4b1c575e7d4a0d7031",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/static_beneath_st_amelia.rival.2bc85a5cfdd5.webp",
+      "expectedGitBlob": "faef077cd3f935c5e6a5e9c0a71b1430f6dff20a",
+      "actualGitBlob": "faef077cd3f935c5e6a5e9c0a71b1430f6dff20a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/trauma_together.ending.5209aa4cc455.webp",
+      "expectedGitBlob": "a9ebe8724c202b2bbb7695ea72321070f40333e9",
+      "actualGitBlob": "a9ebe8724c202b2bbb7695ea72321070f40333e9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/trauma_together.intro.db1929b7a0b4.webp",
+      "expectedGitBlob": "300c0ca3b63c9420b93e36892b30079c788a3198",
+      "actualGitBlob": "300c0ca3b63c9420b93e36892b30079c788a3198",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/trauma_together.rival.6264d55b2a7e.webp",
+      "expectedGitBlob": "c78f50f42cd231a670e0836af39331b3f8e88cb9",
+      "actualGitBlob": "c78f50f42cd231a670e0836af39331b3f8e88cb9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/travis_mirrors.ending.e9afa58dc5c1.webp",
+      "expectedGitBlob": "fe88c15324662df7a95b8034927e9e80b38c0a95",
+      "actualGitBlob": "fe88c15324662df7a95b8034927e9e80b38c0a95",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/travis_mirrors.intro.a8432e807635.webp",
+      "expectedGitBlob": "2e6e1d6d828c06cdde831b2dce86e2402e360ca8",
+      "actualGitBlob": "2e6e1d6d828c06cdde831b2dce86e2402e360ca8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/chronicles/travis_mirrors.rival.779163d914f5.webp",
+      "expectedGitBlob": "104b932cc486bdb2326196e5b367d69f79dfdd12",
+      "actualGitBlob": "104b932cc486bdb2326196e5b367d69f79dfdd12",
+      "unchanged": true
+    },
+    {
+      "path": "assets/icons/icon-192.svg",
+      "expectedGitBlob": "5be704e7a99f4912096cab24779c48795d38bd9d",
+      "actualGitBlob": "5be704e7a99f4912096cab24779c48795d38bd9d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/icons/icon-512.svg",
+      "expectedGitBlob": "5be704e7a99f4912096cab24779c48795d38bd9d",
+      "actualGitBlob": "5be704e7a99f4912096cab24779c48795d38bd9d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+      "expectedGitBlob": "e82be2df5135b8f609f5a51f75e43a75fc846292",
+      "actualGitBlob": "e82be2df5135b8f609f5a51f75e43a75fc846292",
+      "unchanged": true
+    },
+    {
+      "path": "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+      "expectedGitBlob": "d07d02f7a6bc07fa3c2f0ade36f5e831a480afa5",
+      "actualGitBlob": "d07d02f7a6bc07fa3c2f0ade36f5e831a480afa5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "expectedGitBlob": "1646fa111a1b9c15c2a6536e362c9c70999b5a84",
+      "actualGitBlob": "1646fa111a1b9c15c2a6536e362c9c70999b5a84",
+      "unchanged": true
+    },
+    {
+      "path": "assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "expectedGitBlob": "3f90ed05fd986b47e47d6cab19d387ea55cf0f74",
+      "actualGitBlob": "3f90ed05fd986b47e47d6cab19d387ea55cf0f74",
+      "unchanged": true
+    },
+    {
+      "path": "assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+      "expectedGitBlob": "29b940bb543c229986633c31b24c00dadb079739",
+      "actualGitBlob": "29b940bb543c229986633c31b24c00dadb079739",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_creeper_arcade.306efcaf78b8.png",
+      "expectedGitBlob": "5e9cab6df9f8b4c205be60402927fc9ba7bee1c3",
+      "actualGitBlob": "5e9cab6df9f8b4c205be60402927fc9ba7bee1c3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_creeper_arcade.e4c2182692b5.png",
+      "expectedGitBlob": "3425043cd6a513c9ca8b575425ee26c46ef3b226",
+      "actualGitBlob": "3425043cd6a513c9ca8b575425ee26c46ef3b226",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_double_head_arcade.43246b06e708.png",
+      "expectedGitBlob": "b0e7f71ba51c1cc2481a61e5bca9db9210a6b281",
+      "actualGitBlob": "b0e7f71ba51c1cc2481a61e5bca9db9210a6b281",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_double_head_arcade.ec8280e04d4f.png",
+      "expectedGitBlob": "dd8582e0f292c5c1237a6a0f45469af0c021b687",
+      "actualGitBlob": "dd8582e0f292c5c1237a6a0f45469af0c021b687",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_greedy_worm_arcade_119.9ce02fc3c41e.png",
+      "expectedGitBlob": "c9410cde1311769e900251c3207f351a81e8fd97",
+      "actualGitBlob": "c9410cde1311769e900251c3207f351a81e8fd97",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_gum_head_arcade.98c6e097cb8a.png",
+      "expectedGitBlob": "b33fffeb7a0aaae79ee4152ebc5a9c84f314e27b",
+      "actualGitBlob": "b33fffeb7a0aaae79ee4152ebc5a9c84f314e27b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_gum_head_arcade.99f8227fc72a.png",
+      "expectedGitBlob": "ee1431890ec81c70de40e66e17ac9fd2e06d01db",
+      "actualGitBlob": "ee1431890ec81c70de40e66e17ac9fd2e06d01db",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_hummer_arcade.488927e4b09b.png",
+      "expectedGitBlob": "7f19e97cd7c60833131249022a322b0d52f35095",
+      "actualGitBlob": "7f19e97cd7c60833131249022a322b0d52f35095",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_hummer_arcade.f9d82ebc84a0.png",
+      "expectedGitBlob": "2f15d7f8556f295ff5ef1f646e8485b402090d74",
+      "actualGitBlob": "2f15d7f8556f295ff5ef1f646e8485b402090d74",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_insane_cancer_arcade.05cd8a4b7672.png",
+      "expectedGitBlob": "525df574b9470e98c5b198d49f97c4e9be64b28f",
+      "actualGitBlob": "525df574b9470e98c5b198d49f97c4e9be64b28f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_insane_cancer_arcade.af065e6db36b.png",
+      "expectedGitBlob": "90fd01f14c5c5656e34afadf801ef3a7df097b2d",
+      "actualGitBlob": "90fd01f14c5c5656e34afadf801ef3a7df097b2d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_mama_117.10d203f5fa42.png",
+      "expectedGitBlob": "0d4bf66de867588ab59b34aac1cd7f5d67f13cae",
+      "actualGitBlob": "0d4bf66de867588ab59b34aac1cd7f5d67f13cae",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_mama_117.fcc669873d67.png",
+      "expectedGitBlob": "07269e2f4b65a1b6a636c43833172b5dee0db8aa",
+      "actualGitBlob": "07269e2f4b65a1b6a636c43833172b5dee0db8aa",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_phantom_118.0b602ed82175.png",
+      "expectedGitBlob": "c118c43b34497ffef0553f6be542f6842d0506d7",
+      "actualGitBlob": "c118c43b34497ffef0553f6be542f6842d0506d7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_phantom_118.a63d532d68f2.png",
+      "expectedGitBlob": "b7e17d50388d017eb3b18ecd805d3bafaf02890a",
+      "actualGitBlob": "b7e17d50388d017eb3b18ecd805d3bafaf02890a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_red_pyramid_thing_arcade.0afa295f8be5.png",
+      "expectedGitBlob": "54737e652e3fe5895d731189ef4ecb79973a50f1",
+      "actualGitBlob": "54737e652e3fe5895d731189ef4ecb79973a50f1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_robbie_the_rabbit_axe.0a7dfbbed021.png",
+      "expectedGitBlob": "3e0355a60b3b0b730fdc33282cc9a148dcf98ab1",
+      "actualGitBlob": "3e0355a60b3b0b730fdc33282cc9a148dcf98ab1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_robbie_the_rabbit_axe.3bd102f8efdf.png",
+      "expectedGitBlob": "65469700d97384c49c92f8a8bab80ab1cd79ebae",
+      "actualGitBlob": "65469700d97384c49c92f8a8bab80ab1cd79ebae",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_robbie_the_rabbit_chainsaw.204f63a13338.png",
+      "expectedGitBlob": "eb419b34435e9153f9aa9eba5b8d32933d6931f3",
+      "actualGitBlob": "eb419b34435e9153f9aa9eba5b8d32933d6931f3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_robbie_the_rabbit_chainsaw.74eb4c08943e.png",
+      "expectedGitBlob": "68ac8f3ce21f568bc620302dd7f4b140e58f294d",
+      "actualGitBlob": "68ac8f3ce21f568bc620302dd7f4b140e58f294d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_scraper_arcade.17a9e16b785b.png",
+      "expectedGitBlob": "422aef17ef36d8cb33c89b5205d03914d0291f0f",
+      "actualGitBlob": "422aef17ef36d8cb33c89b5205d03914d0291f0f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_scraper_arcade.6d399af81f98.png",
+      "expectedGitBlob": "dee600526efcc6074034e1b6c848613d60060400",
+      "actualGitBlob": "dee600526efcc6074034e1b6c848613d60060400",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_scraper_arcade.75bcf0ea854a.png",
+      "expectedGitBlob": "7ac2ca5e693cba122cfbae9a13e124eef5bf0b42",
+      "actualGitBlob": "7ac2ca5e693cba122cfbae9a13e124eef5bf0b42",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_scraper_arcade.a269b2831292.png",
+      "expectedGitBlob": "296180f6354f52077335e8a8eb03623ae5372e40",
+      "actualGitBlob": "296180f6354f52077335e8a8eb03623ae5372e40",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_scraper_arcade.cf2e735654ec.png",
+      "expectedGitBlob": "7f439472833b8144da0e288e7bd2ddb731a1f144",
+      "actualGitBlob": "7f439472833b8144da0e288e7bd2ddb731a1f144",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_split_worm_arcade.2f1eea0ab83a.png",
+      "expectedGitBlob": "e501e690e6e4fde3a05aca1f25c14b889c0a6253",
+      "actualGitBlob": "e501e690e6e4fde3a05aca1f25c14b889c0a6253",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_split_worm_arcade.64f373c1ec8a.png",
+      "expectedGitBlob": "2b4d46856c765fae143d7043dd8c8411e6b1410d",
+      "actualGitBlob": "2b4d46856c765fae143d7043dd8c8411e6b1410d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_toadstool_arcade.6e616bb88c7c.png",
+      "expectedGitBlob": "8e003922cc67b61988de2255088a5cbed5cad472",
+      "actualGitBlob": "8e003922cc67b61988de2255088a5cbed5cad472",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_tremer_arcade.b02634efb95b.png",
+      "expectedGitBlob": "ace2092aa1e9c54b88922bf0afad367b4d9ac2b3",
+      "actualGitBlob": "ace2092aa1e9c54b88922bf0afad367b4d9ac2b3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_tremer_arcade.f20804673e14.png",
+      "expectedGitBlob": "c22987cb1a963575db75292e1a525b075d3bf243",
+      "actualGitBlob": "c22987cb1a963575db75292e1a525b075d3bf243",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_tuberculosis.05377508d32c.png",
+      "expectedGitBlob": "d752c05509963c2ed88741d3f5cff8f9a8f9695f",
+      "actualGitBlob": "d752c05509963c2ed88741d3f5cff8f9a8f9695f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/arcade_tuberculosis.f0f6525955eb.png",
+      "expectedGitBlob": "48c1e935a27e6fce2f713ee65925833ae82f45fd",
+      "actualGitBlob": "48c1e935a27e6fce2f713ee65925833ae82f45fd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_fighter_179.429d47545e50.png",
+      "expectedGitBlob": "f1f8bed38ea4a8199e69b47757a988f70bc3a9a1",
+      "actualGitBlob": "f1f8bed38ea4a8199e69b47757a988f70bc3a9a1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_fighter_179.f4cf31409885.png",
+      "expectedGitBlob": "52618e1e5c76e40c8a6f7abc65c77293197e8286",
+      "actualGitBlob": "52618e1e5c76e40c8a6f7abc65c77293197e8286",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_snarler_180.216c2e6ba960.png",
+      "expectedGitBlob": "191ecf375a13b69cdea055eec884d5a67a2cdb52",
+      "actualGitBlob": "191ecf375a13b69cdea055eec884d5a67a2cdb52",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_snarler_180.88e712963625.png",
+      "expectedGitBlob": "7ad4c459189a5d5ee52e6cd859dbe1003ef8ddd2",
+      "actualGitBlob": "7ad4c459189a5d5ee52e6cd859dbe1003ef8ddd2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_stilledalen_stinger_184.214630045589.png",
+      "expectedGitBlob": "f0079400397743e93e491c550f8f1a03c5a3ff6c",
+      "actualGitBlob": "f0079400397743e93e491c550f8f1a03c5a3ff6c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_stinger_181.a031246ea341.png",
+      "expectedGitBlob": "f2376fe4d4cbb08171b5c7b70625a85a20b8ec07",
+      "actualGitBlob": "f2376fe4d4cbb08171b5c7b70625a85a20b8ec07",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_stinger_181.e179ecaa63b2.png",
+      "expectedGitBlob": "354ba4e015a41b8e09d6f9354387e983db8c83ee",
+      "actualGitBlob": "354ba4e015a41b8e09d6f9354387e983db8c83ee",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_the_collector_183.55a90d583450.png",
+      "expectedGitBlob": "d8b68492839b8d017ceda3fe58dfa605e99b04f2",
+      "actualGitBlob": "d8b68492839b8d017ceda3fe58dfa605e99b04f2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_the_collector_183.d157ac2cd4c2.png",
+      "expectedGitBlob": "221123d38c454db3ee22ae679ea5b8671509fb13",
+      "actualGitBlob": "221123d38c454db3ee22ae679ea5b8671509fb13",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_the_immolator_182.3e9055f1a6f0.png",
+      "expectedGitBlob": "f01b245e5fd9cf86947c32d3dcd56a04ea4addcb",
+      "actualGitBlob": "f01b245e5fd9cf86947c32d3dcd56a04ea4addcb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_the_immolator_182.627713ebf694.png",
+      "expectedGitBlob": "acf5e1cf5c22e40e1bbca420ad7b61f17b4d35b4",
+      "actualGitBlob": "acf5e1cf5c22e40e1bbca420ad7b61f17b4d35b4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_wanderer_178.3da19262874e.png",
+      "expectedGitBlob": "084d33640f0879b59f36a21f5024dbb657f56ac0",
+      "actualGitBlob": "084d33640f0879b59f36a21f5024dbb657f56ac0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/ascension_wanderer_178.488439c222a8.png",
+      "expectedGitBlob": "628297a9c7c42b5fed052ad36b6153556a15fcf8",
+      "actualGitBlob": "628297a9c7c42b5fed052ad36b6153556a15fcf8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_air_screamer_121.4bca97ffaaac.png",
+      "expectedGitBlob": "a16f5b57fa84071c81ec7727a63a1841b2a5290c",
+      "actualGitBlob": "a16f5b57fa84071c81ec7727a63a1841b2a5290c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_air_screamer_121.98ef307e67f8.png",
+      "expectedGitBlob": "53cbc3f17a7380866ca61bb6232de38ec86a8564",
+      "actualGitBlob": "53cbc3f17a7380866ca61bb6232de38ec86a8564",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_blood_baby_144.19b2d9dc8731.png",
+      "expectedGitBlob": "57c9abb20b5f1d7e00b23519c76d073cec4fa287",
+      "actualGitBlob": "57c9abb20b5f1d7e00b23519c76d073cec4fa287",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_blood_baby_144.4673bf2f00b4.png",
+      "expectedGitBlob": "e702c9e9d77d5c439117ba47f74baf5b9a0a4835",
+      "actualGitBlob": "e702c9e9d77d5c439117ba47f74baf5b9a0a4835",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_bogeyman_122.1d2a5e309e09.png",
+      "expectedGitBlob": "e3eb9b9bd2ad1956ec33eb7e477b26117fdcac90",
+      "actualGitBlob": "e3eb9b9bd2ad1956ec33eb7e477b26117fdcac90",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_bogeyman_122.47ff81e2ecb8.png",
+      "expectedGitBlob": "218de143318ad44536d4f2efe9ff852ce0402651",
+      "actualGitBlob": "218de143318ad44536d4f2efe9ff852ce0402651",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "expectedGitBlob": "44254b34d8e698dad5921de1db9f1a1a23f6f69e",
+      "actualGitBlob": "44254b34d8e698dad5921de1db9f1a1a23f6f69e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.95b439f69ed7.png",
+      "expectedGitBlob": "9323a1c1160aec9d7f7f7ef1635799c34e53a274",
+      "actualGitBlob": "9323a1c1160aec9d7f7f7ef1635799c34e53a274",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_double_head_124.536da40f7758.png",
+      "expectedGitBlob": "3bf2814f91fa237e3db9a2c0041d086020b6fe16",
+      "actualGitBlob": "3bf2814f91fa237e3db9a2c0041d086020b6fe16",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_double_head_124.7b4030beb9da.png",
+      "expectedGitBlob": "088f8854db2cf1adaf9a457c6fbcda8f965bdb1f",
+      "actualGitBlob": "088f8854db2cf1adaf9a457c6fbcda8f965bdb1f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+      "expectedGitBlob": "e1696208c7848fa9b3412192463bca01ff19ee56",
+      "actualGitBlob": "e1696208c7848fa9b3412192463bca01ff19ee56",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_earth_guardian_142.99401861091a.png",
+      "expectedGitBlob": "4e2561865c1d8f19e0c99d1b85d11aad850120bb",
+      "actualGitBlob": "4e2561865c1d8f19e0c99d1b85d11aad850120bb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+      "expectedGitBlob": "bf68ea8280329125c5cf6302928fe26da5bf3fd2",
+      "actualGitBlob": "bf68ea8280329125c5cf6302928fe26da5bf3fd2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_fire_guardian_137.711e8bf0b8c7.png",
+      "expectedGitBlob": "1c1b36419c20c0e2f055b1f90f3b5fd1a9aa44e3",
+      "actualGitBlob": "1c1b36419c20c0e2f055b1f90f3b5fd1a9aa44e3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_fire_guardian_137.b974f7db88ad.png",
+      "expectedGitBlob": "fbce62c358ac50fa49042f684efa48f8c192a17d",
+      "actualGitBlob": "fbce62c358ac50fa49042f684efa48f8c192a17d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_flesh_lips_134.050b9881b5ca.png",
+      "expectedGitBlob": "2bfc851e981b3e77dcb4d22b40099b54a3cc3904",
+      "actualGitBlob": "2bfc851e981b3e77dcb4d22b40099b54a3cc3904",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_flesh_lips_134.ff398c8adaeb.png",
+      "expectedGitBlob": "4cdd1e12b670adf31637c5de4403e1103e7543fa",
+      "actualGitBlob": "4cdd1e12b670adf31637c5de4403e1103e7543fa",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_ghost_125.6fa510a96dba.png",
+      "expectedGitBlob": "d0fa3c19b7f7e721dff4a99e59102dce29602175",
+      "actualGitBlob": "d0fa3c19b7f7e721dff4a99e59102dce29602175",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_ghost_125.ed274487b37b.png",
+      "expectedGitBlob": "d79e595338ac9a725a3f942c885d214d844b3347",
+      "actualGitBlob": "d79e595338ac9a725a3f942c885d214d844b3347",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_gray_child_147.947d757ecfea.png",
+      "expectedGitBlob": "6e6a011a193fc22b1c6bc049d2c8a0b0f9b1c933",
+      "actualGitBlob": "6e6a011a193fc22b1c6bc049d2c8a0b0f9b1c933",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_gray_child_147.b8eaa81de9d2.png",
+      "expectedGitBlob": "7f99566f634c457c367c67b6ded405964dee683e",
+      "actualGitBlob": "7f99566f634c457c367c67b6ded405964dee683e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_insane_cancer_126.01b8c9868ff7.png",
+      "expectedGitBlob": "58fe4d4a8c307a3cddaf57c888f1dd2b9637b21f",
+      "actualGitBlob": "58fe4d4a8c307a3cddaf57c888f1dd2b9637b21f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_insane_cancer_126.c2e9933d0d6f.png",
+      "expectedGitBlob": "aba3a4edf552b1e983eb4dd008e8ea45e5fa9cd3",
+      "actualGitBlob": "aba3a4edf552b1e983eb4dd008e8ea45e5fa9cd3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_light_guardian_140.cc4f62ec752e.png",
+      "expectedGitBlob": "302929768504e51c5b1746b3918f88edc74c5151",
+      "actualGitBlob": "302929768504e51c5b1746b3918f88edc74c5151",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_light_guardian_140.eccb0bb176ea.png",
+      "expectedGitBlob": "d6566fd44be1c8f4b0b5765b6051ee0637f1eb82",
+      "actualGitBlob": "d6566fd44be1c8f4b0b5765b6051ee0637f1eb82",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_needler_127.579a17e5bccf.png",
+      "expectedGitBlob": "64f9b42d92fa5a32b5e12d872880d5a9d23ed53a",
+      "actualGitBlob": "64f9b42d92fa5a32b5e12d872880d5a9d23ed53a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_needler_127.9f41a2f38998.png",
+      "expectedGitBlob": "081e8cbafd373c6d825bb87dd5c92f2197fef48a",
+      "actualGitBlob": "081e8cbafd373c6d825bb87dd5c92f2197fef48a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_nurse_128.902db2be4c5b.png",
+      "expectedGitBlob": "608226e89e4fd2f7e60cdcfd499c0513c29a7cdd",
+      "actualGitBlob": "608226e89e4fd2f7e60cdcfd499c0513c29a7cdd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_nurse_128.af4b765e1618.png",
+      "expectedGitBlob": "a3aaa72824c01cf397c5a2ac64e81008410df71d",
+      "actualGitBlob": "a3aaa72824c01cf397c5a2ac64e81008410df71d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "expectedGitBlob": "c936f16dcd4142a3ff63270bc686eb09d345feae",
+      "actualGitBlob": "c936f16dcd4142a3ff63270bc686eb09d345feae",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.c02795c707f2.png",
+      "expectedGitBlob": "b5a61da2be03dc900dc4b47b40bab72ce0b02c22",
+      "actualGitBlob": "b5a61da2be03dc900dc4b47b40bab72ce0b02c22",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_raw_shock_148.a881f09b463e.png",
+      "expectedGitBlob": "9f588adc21b369c0ad953a9a80fad2c763633d52",
+      "actualGitBlob": "9f588adc21b369c0ad953a9a80fad2c763633d52",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_raw_shock_148.d6ca2baa89ed.png",
+      "expectedGitBlob": "562bf392beb3d34a21a28c9161681423519a80b5",
+      "actualGitBlob": "562bf392beb3d34a21a28c9161681423519a80b5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_schism_130.89c7127c0006.png",
+      "expectedGitBlob": "340dadb1c5fc56c77c33ed936881967dbaa421d9",
+      "actualGitBlob": "340dadb1c5fc56c77c33ed936881967dbaa421d9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_schism_130.e9fce1fd7658.png",
+      "expectedGitBlob": "7d4f271f1d6fbf167ddb0a12b941472aa3f2adcf",
+      "actualGitBlob": "7d4f271f1d6fbf167ddb0a12b941472aa3f2adcf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_steel_guardian_146.221d68a36f7a.png",
+      "expectedGitBlob": "50edac17e738834f75e5482c2126c41562dbad2a",
+      "actualGitBlob": "50edac17e738834f75e5482c2126c41562dbad2a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_steel_guardian_146.34f6a40e4729.png",
+      "expectedGitBlob": "df8359ccd76ec3215719b7cd7e90fcfdf3cf3a36",
+      "actualGitBlob": "df8359ccd76ec3215719b7cd7e90fcfdf3cf3a36",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_straight_jacket_131.9d8fdb7602b9.png",
+      "expectedGitBlob": "f5218ff2ad64d2f29ac3daf57f18ae6ca3704231",
+      "actualGitBlob": "f5218ff2ad64d2f29ac3daf57f18ae6ca3704231",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_straight_jacket_131.ac32c6f8e574.png",
+      "expectedGitBlob": "f71c2a5aaebdd744dde7e8c8b302ea66ec4a3f5a",
+      "actualGitBlob": "f71c2a5aaebdd744dde7e8c8b302ea66ec4a3f5a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_swarm_132.96315f628aaf.png",
+      "expectedGitBlob": "51650349fd99ce8d5310c7943c0a47bb2d4b35e9",
+      "actualGitBlob": "51650349fd99ce8d5310c7943c0a47bb2d4b35e9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_tremer_133.637b09a88365.png",
+      "expectedGitBlob": "f43205ed6ba263114dc32d7d9012beb0383f3f11",
+      "actualGitBlob": "f43205ed6ba263114dc32d7d9012beb0383f3f11",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_tremer_133.a9b464909542.png",
+      "expectedGitBlob": "6c16ea48eabb3b581b9fc789ec7ce94f26fa11a4",
+      "actualGitBlob": "6c16ea48eabb3b581b9fc789ec7ce94f26fa11a4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_tremer_133.d6f54ebac80d.png",
+      "expectedGitBlob": "20cdf4baea4e1f73219aa3f8c173252cb2afe77b",
+      "actualGitBlob": "20cdf4baea4e1f73219aa3f8c173252cb2afe77b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_water_guardian_141.3f0998b9283e.png",
+      "expectedGitBlob": "e0b094ae315709e0bfc8b91a43f00fee004102bd",
+      "actualGitBlob": "e0b094ae315709e0bfc8b91a43f00fee004102bd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_water_guardian_141.bbcd702cc4f9.png",
+      "expectedGitBlob": "bf654e328fa9fe4b6b7d2c127c8b6e25827d6aae",
+      "actualGitBlob": "bf654e328fa9fe4b6b7d2c127c8b6e25827d6aae",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_wood_guardian_138.22940f0abe70.png",
+      "expectedGitBlob": "18703d6b81527beca1462e711f1cb8ee617d7661",
+      "actualGitBlob": "18703d6b81527beca1462e711f1cb8ee617d7661",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_wood_guardian_138.dce588da250b.png",
+      "expectedGitBlob": "8db29420ff6b58acaf76e0a63255dc60b5238654",
+      "actualGitBlob": "8db29420ff6b58acaf76e0a63255dc60b5238654",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_wood_sapling_139.5d67aa29cc35.png",
+      "expectedGitBlob": "ddbc067d7c174b1ab2ff6c6737f007dac1e5cc96",
+      "actualGitBlob": "ddbc067d7c174b1ab2ff6c6737f007dac1e5cc96",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_wood_sapling_139.c26ab2d65518.png",
+      "expectedGitBlob": "332bedd13e96b79530ae0daf4d169b1b5e0d48da",
+      "actualGitBlob": "332bedd13e96b79530ae0daf4d169b1b5e0d48da",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/bom_wood_sapling_139.fb78edc7ace1.png",
+      "expectedGitBlob": "7c2d4c34187d874be231b7773407d9f0f726606d",
+      "actualGitBlob": "7c2d4c34187d874be231b7773407d9f0f726606d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_anne_cunningham.23e6f56e2c49.png",
+      "expectedGitBlob": "adda715f11070edfe617d2a09c1521a5097ab6df",
+      "actualGitBlob": "adda715f11070edfe617d2a09c1521a5097ab6df",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_anne_cunningham.3e3d10e33146.png",
+      "expectedGitBlob": "1e83506850b4eddbe82025d1699681af13e8aa05",
+      "actualGitBlob": "1e83506850b4eddbe82025d1699681af13e8aa05",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_bogeyman_115.dd7b5abc8be8.png",
+      "expectedGitBlob": "8a197c4e7dd53ca2104b6eee779813d9f01b6f4a",
+      "actualGitBlob": "8a197c4e7dd53ca2104b6eee779813d9f01b6f4a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_bogeyman_115.f6de13b5497f.png",
+      "expectedGitBlob": "534627c05a771e3198fde92cc5c7a8340098d67e",
+      "actualGitBlob": "534627c05a771e3198fde92cc5c7a8340098d67e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_doll_106.50727eee886c.png",
+      "expectedGitBlob": "ed02c1770078ebe3ff09581887f8bc0e4f2fbcfc",
+      "actualGitBlob": "ed02c1770078ebe3ff09581887f8bc0e4f2fbcfc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_doll_106.5a84e5d8f278.png",
+      "expectedGitBlob": "1b64981b39f8f573ee1cf34d538dbf5d2abbc3c4",
+      "actualGitBlob": "1b64981b39f8f573ee1cf34d538dbf5d2abbc3c4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_monocle_man_114.1b0c72d6f6ab.png",
+      "expectedGitBlob": "2543f5023af3789b1fb88632514d7a25f5cc8cac",
+      "actualGitBlob": "2543f5023af3789b1fb88632514d7a25f5cc8cac",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.036e48ab91fa.png",
+      "expectedGitBlob": "bc80621c98f06cfff48cbba924e64080c172fa32",
+      "actualGitBlob": "bc80621c98f06cfff48cbba924e64080c172fa32",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_juggernaut_110.08ce5a51a4d6.png",
+      "expectedGitBlob": "a4cfa28209209d8b721317abc6b35e9dbfd4de00",
+      "actualGitBlob": "a4cfa28209209d8b721317abc6b35e9dbfd4de00",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_minion_agile_109.0dedf3f6e2e4.png",
+      "expectedGitBlob": "3b68cb0a2f25d4a2a5c770351ab646340a4cb26b",
+      "actualGitBlob": "3b68cb0a2f25d4a2a5c770351ab646340a4cb26b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_minion_agile_109.713f81af60dc.png",
+      "expectedGitBlob": "5fa0c0bdf4eb2a871770abe2d40ebf5fd35cf106",
+      "actualGitBlob": "5fa0c0bdf4eb2a871770abe2d40ebf5fd35cf106",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_minion_brawler_108.5fcf5cd7e9c9.png",
+      "expectedGitBlob": "06967061e7db983c0db596077d961947dc6d4f99",
+      "actualGitBlob": "06967061e7db983c0db596077d961947dc6d4f99",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_prisoner_minion_brawler_108.a393e8d32549.png",
+      "expectedGitBlob": "198a5af601ffe691de1f14917e8b59c6c5a73247",
+      "actualGitBlob": "198a5af601ffe691de1f14917e8b59c6c5a73247",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_screamer_104.6d78871316ed.png",
+      "expectedGitBlob": "89e0b5f5d16d4e4f1ddf2e97665c4cf985d1337f",
+      "actualGitBlob": "89e0b5f5d16d4e4f1ddf2e97665c4cf985d1337f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_screamer_104.73dcfd40f467.png",
+      "expectedGitBlob": "06379f8f2ff392e00d2ff5a4012429635b5d15a5",
+      "actualGitBlob": "06379f8f2ff392e00d2ff5a4012429635b5d15a5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_shadow_107.4a43797eb735.png",
+      "expectedGitBlob": "8bc14f26548458015e56ee8fbed0e8e385186a73",
+      "actualGitBlob": "8bc14f26548458015e56ee8fbed0e8e385186a73",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_shadow_107.d39788178ac5.png",
+      "expectedGitBlob": "687ef800e7bc043d20f0da00be563e1aa83e2b0c",
+      "actualGitBlob": "687ef800e7bc043d20f0da00be563e1aa83e2b0c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_tormented_soul_111.b55119719e9d.png",
+      "expectedGitBlob": "1a30ef62d7c99801c8b8c34ace6e8b8e0597b5a2",
+      "actualGitBlob": "1a30ef62d7c99801c8b8c34ace6e8b8e0597b5a2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_tormented_soul_111.d44d778f8573.png",
+      "expectedGitBlob": "82a797208c4d96d780751b1aca1d1ffc0b51f172",
+      "actualGitBlob": "82a797208c4d96d780751b1aca1d1ffc0b51f172",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_void_113.aaad63ad6961.png",
+      "expectedGitBlob": "5163c53094da5b1c2ef92ef99bdd073246e61a27",
+      "actualGitBlob": "5163c53094da5b1c2ef92ef99bdd073246e61a27",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_wall_corpse_112.7e0f9e050ef6.png",
+      "expectedGitBlob": "50663ed9f7cd7a40f10a9716b2061f93221b6f54",
+      "actualGitBlob": "50663ed9f7cd7a40f10a9716b2061f93221b6f54",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_wall_corpse_112.e72426541b83.png",
+      "expectedGitBlob": "d02442c09cc366441c73bd2ea9083819fcadfaab",
+      "actualGitBlob": "d02442c09cc366441c73bd2ea9083819fcadfaab",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_weeping_bat_105.796af2e2894d.png",
+      "expectedGitBlob": "84057059e7388bc3658a55516aa4d2e9fa663fc1",
+      "actualGitBlob": "84057059e7388bc3658a55516aa4d2e9fa663fc1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_weeping_bat_105.b30525a06086.png",
+      "expectedGitBlob": "3831e25e9ea96df6e94c6274dab95940b7e4cb72",
+      "actualGitBlob": "3831e25e9ea96df6e94c6274dab95940b7e4cb72",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_wheelman_116.192d46a2e105.png",
+      "expectedGitBlob": "3b33172540f4f12d4b3fe1e757c41b43ac453c68",
+      "actualGitBlob": "3b33172540f4f12d4b3fe1e757c41b43ac453c68",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/downpour_wheelman_116.3ee16c0ba3dc.png",
+      "expectedGitBlob": "79ddfb58c457130b25ca5063a7b5529a2ebb87db",
+      "actualGitBlob": "79ddfb58c457130b25ca5063a7b5529a2ebb87db",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_armless_man_170.25e542fa86c4.png",
+      "expectedGitBlob": "98fa74b84a9c093308f90fba41cb761964118bd1",
+      "actualGitBlob": "98fa74b84a9c093308f90fba41cb761964118bd1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_armless_man_170.a103ebba3cce.png",
+      "expectedGitBlob": "311ba5658a24b2a35c1376b05bd68fced5e0eea6",
+      "actualGitBlob": "311ba5658a24b2a35c1376b05bd68fced5e0eea6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_bubble_head_nurse_return_to_silent_hill.4dfe1e93350e.png",
+      "expectedGitBlob": "ac9db54a38f18ce3d1e0e329e1a71f453c062d42",
+      "actualGitBlob": "ac9db54a38f18ce3d1e0e329e1a71f453c062d42",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_colin_the_janitor_174.e51afcfc4fe2.png",
+      "expectedGitBlob": "ccfbb9e53280e8fb4ee9c69eb1a151b27649defc",
+      "actualGitBlob": "ccfbb9e53280e8fb4ee9c69eb1a151b27649defc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_creeper_return_to_silent_hill.fc7cb9789eef.png",
+      "expectedGitBlob": "a10c75c34908e5d659ea730d43ce2e31f8a64e6c",
+      "actualGitBlob": "a10c75c34908e5d659ea730d43ce2e31f8a64e6c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_creeper_swarm_film_173.1eb188e475c8.png",
+      "expectedGitBlob": "63a0a0ed880258c86ff098eebf99c43c07e33f4a",
+      "actualGitBlob": "63a0a0ed880258c86ff098eebf99c43c07e33f4a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_creeper_swarm_film_173.8171253b7eed.png",
+      "expectedGitBlob": "ebf2fb57f0b6740e66e1f18798a9ccf3f526dfd9",
+      "actualGitBlob": "ebf2fb57f0b6740e66e1f18798a9ccf3f526dfd9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_lying_figure_return_to_silent_hill.03b36f638422.png",
+      "expectedGitBlob": "cef6a3b09564ff9d1e6fe75850734d8d82c992c3",
+      "actualGitBlob": "cef6a3b09564ff9d1e6fe75850734d8d82c992c3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_lying_figure_return_to_silent_hill.5d110b145c90.png",
+      "expectedGitBlob": "bf21bac3f0a8596448a0061d809c194de68b02e7",
+      "actualGitBlob": "bf21bac3f0a8596448a0061d809c194de68b02e7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_mannequin_monster_176.d5bc6baa191d.png",
+      "expectedGitBlob": "08cab50fb60bc478b8ea6275863e350f8effee07",
+      "actualGitBlob": "08cab50fb60bc478b8ea6275863e350f8effee07",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_mannequin_monster_176.dc9b92150b37.png",
+      "expectedGitBlob": "d654002be420bb4009ae28fbb9d053b36f41f998",
+      "actualGitBlob": "d654002be420bb4009ae28fbb9d053b36f41f998",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_red_pyramid_film_175.36b284a5f726.png",
+      "expectedGitBlob": "464a810e649dc3e5fed82346ee93b55ffc597a02",
+      "actualGitBlob": "464a810e649dc3e5fed82346ee93b55ffc597a02",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.04809e40872a.png",
+      "expectedGitBlob": "edeb6b691e7d8f85f3afccf5eba4c43e7b42affb",
+      "actualGitBlob": "edeb6b691e7d8f85f3afccf5eba4c43e7b42affb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/film_red_pyramid_thing_return_to_silent_hill.9da7fb02b1a3.png",
+      "expectedGitBlob": "7ae28e159ed2037c645b855945c2dd5ae27703c5",
+      "actualGitBlob": "7ae28e159ed2037c645b855945c2dd5ae27703c5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_asphyxia_096.75b6c185db1d.png",
+      "expectedGitBlob": "357bb80b3e7946800dc4dd7e1a3a577dd737a0b6",
+      "actualGitBlob": "357bb80b3e7946800dc4dd7e1a3a577dd737a0b6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_asphyxia_096.e4070a8aa132.png",
+      "expectedGitBlob": "f967c910443ca0a6c7efb1c0fe936bff05d5a5fc",
+      "actualGitBlob": "f967c910443ca0a6c7efb1c0fe936bff05d5a5fc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_bogeyman_092.0799468c197e.png",
+      "expectedGitBlob": "e4697e96578d13810529c3ced9efae93d16856ad",
+      "actualGitBlob": "e4697e96578d13810529c3ced9efae93d16856ad",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_bogeyman_092.fe3495981694.png",
+      "expectedGitBlob": "ad104a4d1aece2faa117610b048bc040617ede6a",
+      "actualGitBlob": "ad104a4d1aece2faa117610b048bc040617ede6a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_curtis_ackers.8cd8e6e3a68a.png",
+      "expectedGitBlob": "7fec90ab1a50405d06453fda58d4865b661daaae",
+      "actualGitBlob": "7fec90ab1a50405d06453fda58d4865b661daaae",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_curtis_ackers.c613b19dad1e.png",
+      "expectedGitBlob": "f5c99d75d2d664d077569d64c300a9ad0aed487b",
+      "actualGitBlob": "f5c99d75d2d664d077569d64c300a9ad0aed487b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_feral_086.d944b0e329cf.png",
+      "expectedGitBlob": "42e7a025f30ff10dec8e6e7b10f937d1b36f5b7f",
+      "actualGitBlob": "42e7a025f30ff10dec8e6e7b10f937d1b36f5b7f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_feral_086.dfeeb64862d0.png",
+      "expectedGitBlob": "a51b595df0a3e024594a75e6b57d14f2a697fde7",
+      "actualGitBlob": "a51b595df0a3e024594a75e6b57d14f2a697fde7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_lurker_085.8cd7fc032a40.png",
+      "expectedGitBlob": "d68faa0bba1deca305d88b557fa7eb75cf71ad5b",
+      "actualGitBlob": "d68faa0bba1deca305d88b557fa7eb75cf71ad5b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_lurker_085.f75a3e452a0b.png",
+      "expectedGitBlob": "596971973d8f4de0048eb45cbfc99f92e5d0fbab",
+      "actualGitBlob": "596971973d8f4de0048eb45cbfc99f92e5d0fbab",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_needler_088.04a662ecb2cb.png",
+      "expectedGitBlob": "5751f9c0657a9008d21b16628c2c11016586d744",
+      "actualGitBlob": "5751f9c0657a9008d21b16628c2c11016586d744",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_needler_088.39331afee89d.png",
+      "expectedGitBlob": "fc5a4627e7dd14c20a2af7a1f9f74656c5fc6e8c",
+      "actualGitBlob": "fc5a4627e7dd14c20a2af7a1f9f74656c5fc6e8c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_nurse.0f5480b382dc.png",
+      "expectedGitBlob": "dbb1d809076cb3bb7b2a8c02f2bebf856122d57d",
+      "actualGitBlob": "dbb1d809076cb3bb7b2a8c02f2bebf856122d57d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_nurse.bdc9670f12ab.png",
+      "expectedGitBlob": "a28fa6c74323a74ba7d9ea278599125a38e506b9",
+      "actualGitBlob": "a28fa6c74323a74ba7d9ea278599125a38e506b9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_nurse.d0dc5079a32a.png",
+      "expectedGitBlob": "c7e415eb8bc25bf2e2bc8481bbab1f6b52e39bd7",
+      "actualGitBlob": "c7e415eb8bc25bf2e2bc8481bbab1f6b52e39bd7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_order_soldier_091.2230de7fb2f9.png",
+      "expectedGitBlob": "de180eeb40caa3e148699b255d2e883741e5d29c",
+      "actualGitBlob": "de180eeb40caa3e148699b255d2e883741e5d29c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_order_soldier_091.769a4578e91b.png",
+      "expectedGitBlob": "fa293d3ce05a51497da0dff23a882350518b93c5",
+      "actualGitBlob": "fa293d3ce05a51497da0dff23a882350518b93c5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_doll_form_094.35a3afb32f14.png",
+      "expectedGitBlob": "779ba80a9d675589e1ada25c73a0c7367b538f8c",
+      "actualGitBlob": "779ba80a9d675589e1ada25c73a0c7367b538f8c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_doll_form_094.4885e2373476.png",
+      "expectedGitBlob": "fe68c2ca34544c1362817304038aa1f5026cdb9b",
+      "actualGitBlob": "fe68c2ca34544c1362817304038aa1f5026cdb9b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_doll_form_094.4dff90f33b7a.png",
+      "expectedGitBlob": "df9cb6d9ab1bad2d12379fb0ccb064c22c0fca83",
+      "actualGitBlob": "df9cb6d9ab1bad2d12379fb0ccb064c22c0fca83",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_doll_form_094.a60a4f6fb41b.png",
+      "expectedGitBlob": "345674ef032a6594d2b0b4612ac9f98afa9c3302",
+      "actualGitBlob": "345674ef032a6594d2b0b4612ac9f98afa9c3302",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_spider_form_095.11cdb8a63cd5.png",
+      "expectedGitBlob": "ea350f5173d5685d4eb3755fc0ee328d14d6db2a",
+      "actualGitBlob": "ea350f5173d5685d4eb3755fc0ee328d14d6db2a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_spider_form_095.3679e9e24bab.png",
+      "expectedGitBlob": "62062182bbbe37a346cbc6388e64c05569255e26",
+      "actualGitBlob": "62062182bbbe37a346cbc6388e64c05569255e26",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_spider_form_095.b79dfe63c212.png",
+      "expectedGitBlob": "471a1610c37ce8607d216cd035844b7a7d481a08",
+      "actualGitBlob": "471a1610c37ce8607d216cd035844b7a7d481a08",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_scarlet_spider_form_095.fadeb11172db.png",
+      "expectedGitBlob": "fd4e86fda7465998fccec431876d4e8c733f8985",
+      "actualGitBlob": "fd4e86fda7465998fccec431876d4e8c733f8985",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_schism_089.40895822f98f.png",
+      "expectedGitBlob": "3f8329f70dffb382f8ac292987cc21464cc345fe",
+      "actualGitBlob": "3f8329f70dffb382f8ac292987cc21464cc345fe",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_schism_089.b94be9905392.png",
+      "expectedGitBlob": "96d61d43c7f00f0228969c3b61ae81adef340e67",
+      "actualGitBlob": "96d61d43c7f00f0228969c3b61ae81adef340e67",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_sepulcher_093.0c93c08d540b.png",
+      "expectedGitBlob": "84f6b4fe3dee7d81d63a7e1717f72d2aa3086d70",
+      "actualGitBlob": "84f6b4fe3dee7d81d63a7e1717f72d2aa3086d70",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_sepulcher_093.216a45203a5c.png",
+      "expectedGitBlob": "a357898c406668c25e12cffd9d2094e8dc4b5235",
+      "actualGitBlob": "a357898c406668c25e12cffd9d2094e8dc4b5235",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_siam_090.88b378486212.png",
+      "expectedGitBlob": "b70c3e139bf30f167e931591b8054aa7201f9185",
+      "actualGitBlob": "b70c3e139bf30f167e931591b8054aa7201f9185",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_siam_090.9a93d5c60f3c.png",
+      "expectedGitBlob": "2ebadc88fe77c91d26157844df0f16d51e1bcbf3",
+      "actualGitBlob": "2ebadc88fe77c91d26157844df0f16d51e1bcbf3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_smog_087.24134515bb83.png",
+      "expectedGitBlob": "8b44a252d7fe1fa1c87b14593c2806bb493bbd9b",
+      "actualGitBlob": "8b44a252d7fe1fa1c87b14593c2806bb493bbd9b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_smog_087.63ce313a3705.png",
+      "expectedGitBlob": "e2e583b803caecf80e09242a65c459aee8654411",
+      "actualGitBlob": "e2e583b803caecf80e09242a65c459aee8654411",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_swarm.47f037d1249a.png",
+      "expectedGitBlob": "4132b752e80e5dd62dd5c5c3f97ec501fc1f9e4b",
+      "actualGitBlob": "4132b752e80e5dd62dd5c5c3f97ec501fc1f9e4b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/homecoming_swarm.d2dfbea5f058.png",
+      "expectedGitBlob": "5ca63408f5905361d1983af2786b2ec242b89318",
+      "actualGitBlob": "5ca63408f5905361d1983af2786b2ec242b89318",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_ariel_078.5c894ecbb354.png",
+      "expectedGitBlob": "74486f0212512ebb8017af031547bdb9256880bc",
+      "actualGitBlob": "74486f0212512ebb8017af031547bdb9256880bc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_ariel_078.e3ffa353215f.png",
+      "expectedGitBlob": "e8b0c1d45c3d13f9a9c15db7b86949b89c004f56",
+      "actualGitBlob": "e8b0c1d45c3d13f9a9c15db7b86949b89c004f56",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_caliban_079.1cbb09623aa2.png",
+      "expectedGitBlob": "c50a1426832701c4f11a92c10c5cda8078beea77",
+      "actualGitBlob": "c50a1426832701c4f11a92c10c5cda8078beea77",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_caliban_079.f7c29928e5e8.png",
+      "expectedGitBlob": "2cbe932590c4e5a09a11f71d0654a51352ac740d",
+      "actualGitBlob": "2cbe932590c4e5a09a11f71d0654a51352ac740d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "expectedGitBlob": "31c57a7c0448f78ae062f95f46618c1a4ca1983b",
+      "actualGitBlob": "31c57a7c0448f78ae062f95f46618c1a4ca1983b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "expectedGitBlob": "be82c3cf868434db828d0d54a88eba7ae48eca66",
+      "actualGitBlob": "be82c3cf868434db828d0d54a88eba7ae48eca66",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_demon_084.abac0695168a.png",
+      "expectedGitBlob": "13bf89b107ebc3549777848b6acc6a1b3a2bd9c3",
+      "actualGitBlob": "13bf89b107ebc3549777848b6acc6a1b3a2bd9c3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_demon_084.c23b0115c82b.png",
+      "expectedGitBlob": "d210e8a15a931f29e6abdd0ee8176b0584db1bd7",
+      "actualGitBlob": "d210e8a15a931f29e6abdd0ee8176b0584db1bd7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+      "expectedGitBlob": "d3186f381c0da7d378bb0e1e14001de279ea5f51",
+      "actualGitBlob": "d3186f381c0da7d378bb0e1e14001de279ea5f51",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_faceless_nurse.533898f3a5ea.png",
+      "expectedGitBlob": "2f13c4a0aa0fa04ce7e791003d2620e8fb31722d",
+      "actualGitBlob": "2f13c4a0aa0fa04ce7e791003d2620e8fb31722d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_faceless_nurse.761018b17f26.png",
+      "expectedGitBlob": "cf68b36bfe18b17e49b26a2d5aec29ee8f2de802",
+      "actualGitBlob": "cf68b36bfe18b17e49b26a2d5aec29ee8f2de802",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+      "expectedGitBlob": "c560d81d3e5d0b4aae42e30cb92db36ca9f08609",
+      "actualGitBlob": "c560d81d3e5d0b4aae42e30cb92db36ca9f08609",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_faceless_nurse.79e6ad63330f.png",
+      "expectedGitBlob": "8de6501909289028910fac5c521691440075b04c",
+      "actualGitBlob": "8de6501909289028910fac5c521691440075b04c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+      "expectedGitBlob": "79f9b9d8a0fbf2e30b1079adf5cf36f6eb548c3d",
+      "actualGitBlob": "79f9b9d8a0fbf2e30b1079adf5cf36f6eb548c3d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+      "expectedGitBlob": "ee5c16e7f459a580b15a4a062748ff34f97a65ed",
+      "actualGitBlob": "ee5c16e7f459a580b15a4a062748ff34f97a65ed",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_memory_of_helen_grady_082.0be64df8f39b.png",
+      "expectedGitBlob": "b72f1c2b268359e4e6181e08babf37a3be447828",
+      "actualGitBlob": "b72f1c2b268359e4e6181e08babf37a3be447828",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_memory_of_helen_grady_082.d6d90c5b456d.png",
+      "expectedGitBlob": "a2685adf3f11bd2a5089cca0b6ce636db2c3d5e8",
+      "actualGitBlob": "a2685adf3f11bd2a5089cca0b6ce636db2c3d5e8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_memory_of_richard_grady_083.4066ed266611.png",
+      "expectedGitBlob": "6a5e717edd01d410f63243ac2dea6501c2f7e3ea",
+      "actualGitBlob": "6a5e717edd01d410f63243ac2dea6501c2f7e3ea",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_memory_of_richard_grady_083.f72ba07f41b8.png",
+      "expectedGitBlob": "edd60beffad29b548bd328808686ce73d62e59e6",
+      "actualGitBlob": "edd60beffad29b548bd328808686ce73d62e59e6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_remnant_077.066fb3aaa887.png",
+      "expectedGitBlob": "b7d1d0b6f74187748120a16c6b277c071df0dc52",
+      "actualGitBlob": "b7d1d0b6f74187748120a16c6b277c071df0dc52",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_remnant_077.912fa1130daa.png",
+      "expectedGitBlob": "efcea79bab44844d6336eb44f93fe66402f5a363",
+      "actualGitBlob": "efcea79bab44844d6336eb44f93fe66402f5a363",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_straight_jacket_074.44bc2de11b55.png",
+      "expectedGitBlob": "f32ef071659b12d2120a05efdcf4ddaba2d270ea",
+      "actualGitBlob": "f32ef071659b12d2120a05efdcf4ddaba2d270ea",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_straight_jacket_074.5b5eb9aba8ef.png",
+      "expectedGitBlob": "0583091917e1e041520b72cca9e4b49376dfcecc",
+      "actualGitBlob": "0583091917e1e041520b72cca9e4b49376dfcecc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_the_butcher_081.94159a7a4db3.png",
+      "expectedGitBlob": "ce1a6feca18287ea678147f454d2e0390ad69ca6",
+      "actualGitBlob": "ce1a6feca18287ea678147f454d2e0390ad69ca6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_the_butcher_081.b2b741cbb31c.png",
+      "expectedGitBlob": "f24879fa686f6d1ee2934214c1a1943f00897f11",
+      "actualGitBlob": "f24879fa686f6d1ee2934214c1a1943f00897f11",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_two_back_080.53a0f2a0fefb.png",
+      "expectedGitBlob": "61a771a1b11c0637eabb110054a400ecbfe197f9",
+      "actualGitBlob": "61a771a1b11c0637eabb110054a400ecbfe197f9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/origins_two_back_080.9e0fbbab1404.png",
+      "expectedGitBlob": "c39ae4c7e0606d50a078cd0c0944e5eb077afe39",
+      "actualGitBlob": "c39ae4c7e0606d50a078cd0c0944e5eb077afe39",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/pt_lisa_149.6bbde9f732ca.png",
+      "expectedGitBlob": "105078b442befa81ae3c8b3699fed4b8b213cca3",
+      "actualGitBlob": "105078b442befa81ae3c8b3699fed4b8b213cca3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/pt_lisa_149.979a6105fdd2.png",
+      "expectedGitBlob": "2daf80dfb58736783266aba12d0cb19e209298cd",
+      "actualGitBlob": "2daf80dfb58736783266aba12d0cb19e209298cd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.3af1bfe6260c.png",
+      "expectedGitBlob": "3e953f778750868fa77049771d769637b1b0f1b7",
+      "actualGitBlob": "3e953f778750868fa77049771d769637b1b0f1b7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.3b30a8c6cdae.png",
+      "expectedGitBlob": "c3dd47b1194bc2d02c8e3958b39ab8029f1f6e7b",
+      "actualGitBlob": "c3dd47b1194bc2d02c8e3958b39ab8029f1f6e7b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.49a50bf77b97.png",
+      "expectedGitBlob": "c43f1a0c2fed58e15e82d97151cb041eea4efe2e",
+      "actualGitBlob": "c43f1a0c2fed58e15e82d97151cb041eea4efe2e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.4ea98b63b6fc.png",
+      "expectedGitBlob": "f6e4897b0765a2a66d8fcc65da629f4658ac95ae",
+      "actualGitBlob": "f6e4897b0765a2a66d8fcc65da629f4658ac95ae",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.54bc7ba84975.png",
+      "expectedGitBlob": "6a909bf2f2df228ec3c25d59941695177546f766",
+      "actualGitBlob": "6a909bf2f2df228ec3c25d59941695177546f766",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.5adcb14c1e7f.png",
+      "expectedGitBlob": "6d0abb84ec39666e13d130b1d8d3b9fe9741fdb3",
+      "actualGitBlob": "6d0abb84ec39666e13d130b1d8d3b9fe9741fdb3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.88d752b48e9f.png",
+      "expectedGitBlob": "bbe90d5303c40c4af712e4815ee7ea7b9f2c2ad5",
+      "actualGitBlob": "bbe90d5303c40c4af712e4815ee7ea7b9f2c2ad5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.9b5e20f622b4.png",
+      "expectedGitBlob": "c2cc300d2e74c0fa7cfa9aad0287bb8dd345fd99",
+      "actualGitBlob": "c2cc300d2e74c0fa7cfa9aad0287bb8dd345fd99",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.d8f940210f1c.png",
+      "expectedGitBlob": "37560f5e28f431f1e831dc215aa59a6a578df275",
+      "actualGitBlob": "37560f5e28f431f1e831dc215aa59a6a578df275",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_air_screamer_001.f208137d6414.png",
+      "expectedGitBlob": "3a9b83e76b3331b94374a9daebd8b2c0c98754c2",
+      "actualGitBlob": "3a9b83e76b3331b94374a9daebd8b2c0c98754c2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+      "expectedGitBlob": "0f34e3da06a038f41cbfb797bffb0cc5493359a1",
+      "actualGitBlob": "0f34e3da06a038f41cbfb797bffb0cc5493359a1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_bloodsucker.c1a8f6c3471e.png",
+      "expectedGitBlob": "cd0a394b4b48956db3f2030afe073fe38bb34972",
+      "actualGitBlob": "cd0a394b4b48956db3f2030afe073fe38bb34972",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "expectedGitBlob": "cb5bb81622bfbb4e76a0ad3c300496aa2ec2d756",
+      "actualGitBlob": "cb5bb81622bfbb4e76a0ad3c300496aa2ec2d756",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+      "expectedGitBlob": "a24f5c2608564f83e0924e248d9f84e81339c62b",
+      "actualGitBlob": "a24f5c2608564f83e0924e248d9f84e81339c62b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_floatstinger_016.09f3672541e8.png",
+      "expectedGitBlob": "5b6287ce69271857171a1e86e6dddfa05bcb8b9e",
+      "actualGitBlob": "5b6287ce69271857171a1e86e6dddfa05bcb8b9e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
+      "expectedGitBlob": "4478d88cf63a6e6abe07ac605351c66e99390ce9",
+      "actualGitBlob": "4478d88cf63a6e6abe07ac605351c66e99390ce9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_grey_child_005.04637d660714.png",
+      "expectedGitBlob": "c48836f26ac2d36461ad3a6860ccb2e92a89b2b8",
+      "actualGitBlob": "c48836f26ac2d36461ad3a6860ccb2e92a89b2b8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_grey_child_005.29acacc0dd42.png",
+      "expectedGitBlob": "f89262c4070d2ec1df515babc921175914c8cf78",
+      "actualGitBlob": "f89262c4070d2ec1df515babc921175914c8cf78",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.82984139e47a.png",
+      "expectedGitBlob": "1b29d4f39d7c9231629ba3eb42085fc41e4dbdc4",
+      "actualGitBlob": "1b29d4f39d7c9231629ba3eb42085fc41e4dbdc4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+      "expectedGitBlob": "645bfcf855394380a643a5b0adda44a7ac90e52a",
+      "actualGitBlob": "645bfcf855394380a643a5b0adda44a7ac90e52a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.b1df281db9ab.png",
+      "expectedGitBlob": "13a378688d517f8547dee30c8207aa21de5e519f",
+      "actualGitBlob": "13a378688d517f8547dee30c8207aa21de5e519f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+      "expectedGitBlob": "5158752e2ee88ec3586db221fb04e4fc658b5563",
+      "actualGitBlob": "5158752e2ee88ec3586db221fb04e4fc658b5563",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+      "expectedGitBlob": "f91a8c8348d9d5b7adf5a02f0fd99da5c420c386",
+      "actualGitBlob": "f91a8c8348d9d5b7adf5a02f0fd99da5c420c386",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+      "expectedGitBlob": "6cede3d75f7008d0222afa43df7805c745b8b1c6",
+      "actualGitBlob": "6cede3d75f7008d0222afa43df7805c745b8b1c6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_hanged_scratcher_011.499200e206d4.png",
+      "expectedGitBlob": "1daf0c8aeb962fd682032723ed41a0fd39b8fbc2",
+      "actualGitBlob": "1daf0c8aeb962fd682032723ed41a0fd39b8fbc2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_hanged_scratcher_011.ab639ab99e1c.png",
+      "expectedGitBlob": "457d26c250cfedc14edf24118d348b3a9533425a",
+      "actualGitBlob": "457d26c250cfedc14edf24118d348b3a9533425a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_incubator_018.45c7c84b1960.png",
+      "expectedGitBlob": "45d8e78899cd89658f0cec554d49ce4ea231ee98",
+      "actualGitBlob": "45d8e78899cd89658f0cec554d49ce4ea231ee98",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_incubator_018.82460c82402f.png",
+      "expectedGitBlob": "1ffcb9f5515347ecab1adddc8084ac1ac155939f",
+      "actualGitBlob": "1ffcb9f5515347ecab1adddc8084ac1ac155939f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_larval_stalker_007.38b87a127acd.png",
+      "expectedGitBlob": "079333f02b92f78db09128ffd9e5ecdd9d9a56b0",
+      "actualGitBlob": "079333f02b92f78db09128ffd9e5ecdd9d9a56b0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_larval_stalker_007.f686cf003576.png",
+      "expectedGitBlob": "fb18e7c40310821b661d83f0f9d468e12c9789d3",
+      "actualGitBlob": "fb18e7c40310821b661d83f0f9d468e12c9789d3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_monster_cybil_017.1038cbaaadbf.png",
+      "expectedGitBlob": "6cbb20fa90595921b73bf7e16ad413bb36861af2",
+      "actualGitBlob": "6cbb20fa90595921b73bf7e16ad413bb36861af2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_monster_cybil_017.17d8d2acf9c9.png",
+      "expectedGitBlob": "6750f00ed14564ab89efcc922ca8ab92ff1fc08d",
+      "actualGitBlob": "6750f00ed14564ab89efcc922ca8ab92ff1fc08d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_mumbler_006.38861850b609.png",
+      "expectedGitBlob": "a9ee5afc6e597e373b65245edd13538433716979",
+      "actualGitBlob": "a9ee5afc6e597e373b65245edd13538433716979",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_mumbler_006.5f63afd9befb.png",
+      "expectedGitBlob": "8d88b5b7f5699682c88d7a68b914ebc37731edb5",
+      "actualGitBlob": "8d88b5b7f5699682c88d7a68b914ebc37731edb5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_night_flutter_002.4c283a4ddf49.png",
+      "expectedGitBlob": "e3212325b25c4548c3d00a63856b8bc2fc06148d",
+      "actualGitBlob": "e3212325b25c4548c3d00a63856b8bc2fc06148d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_night_flutter_002.ad502d70da3d.png",
+      "expectedGitBlob": "bdd6d39221b11c24416c77760ba5998610cbadfd",
+      "actualGitBlob": "bdd6d39221b11c24416c77760ba5998610cbadfd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_puppet_doctor_013.16b6777faa95.png",
+      "expectedGitBlob": "2560289b821d32207538ad9cf6c5cb323bc70041",
+      "actualGitBlob": "2560289b821d32207538ad9cf6c5cb323bc70041",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_puppet_doctor_013.7ac753d023c5.png",
+      "expectedGitBlob": "90be3adf14ad1e0fb75f637cd870b62d2cd17e66",
+      "actualGitBlob": "90be3adf14ad1e0fb75f637cd870b62d2cd17e66",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_puppet_nurse_012.14857368f9d9.png",
+      "expectedGitBlob": "81e7de92e349eb86b87de1fd80fdb4bc126a2378",
+      "actualGitBlob": "81e7de92e349eb86b87de1fd80fdb4bc126a2378",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_puppet_nurse_012.8c57f3cc5427.png",
+      "expectedGitBlob": "4c92866784d9a28455506a2b60d2ce4549e6ad18",
+      "actualGitBlob": "4c92866784d9a28455506a2b60d2ce4549e6ad18",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_romper_010.09a1f60ce398.png",
+      "expectedGitBlob": "da4cbf61e20e29e0a514ce3766d247a93b817780",
+      "actualGitBlob": "da4cbf61e20e29e0a514ce3766d247a93b817780",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_romper_010.6ceba51e9d28.png",
+      "expectedGitBlob": "6a93d77d2112deec6f0c28507634702f12ab131d",
+      "actualGitBlob": "6a93d77d2112deec6f0c28507634702f12ab131d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_romper_010.b71ffb03f441.png",
+      "expectedGitBlob": "2803e21ca48242a66a91d21fae6bf02271317e4a",
+      "actualGitBlob": "2803e21ca48242a66a91d21fae6bf02271317e4a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_romper_010.f5be63471b21.png",
+      "expectedGitBlob": "021262fa90678c63b5d01e2b6b0c2e658695fb29",
+      "actualGitBlob": "021262fa90678c63b5d01e2b6b0c2e658695fb29",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_romper_010.fa62c070efdd.png",
+      "expectedGitBlob": "ab0e64f72032e0e732cebc3f4cf2c1c67c1d4233",
+      "actualGitBlob": "ab0e64f72032e0e732cebc3f4cf2c1c67c1d4233",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_split_head_014.0422e5926e4d.png",
+      "expectedGitBlob": "cc1c2450a7bca6ba49bba5b5cd4b928a4777f1bc",
+      "actualGitBlob": "cc1c2450a7bca6ba49bba5b5cd4b928a4777f1bc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_split_head_014.13a4fcfcf0d6.png",
+      "expectedGitBlob": "176adc6ffaca7aad5a4a75a6d162f089bf31e54e",
+      "actualGitBlob": "176adc6ffaca7aad5a4a75a6d162f089bf31e54e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_split_head_014.2b9d7a5ec550.png",
+      "expectedGitBlob": "4967b39b77db8c6ddbae789c1f1670530496f26b",
+      "actualGitBlob": "4967b39b77db8c6ddbae789c1f1670530496f26b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_split_head_014.483ae08e94aa.png",
+      "expectedGitBlob": "065e26943f0f53de155cfb4d4ec4f3f0d43efe1a",
+      "actualGitBlob": "065e26943f0f53de155cfb4d4ec4f3f0d43efe1a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_split_head_014.e48107f497d7.png",
+      "expectedGitBlob": "2a2beb659edbd8fa13a0dc398d0318a020723286",
+      "actualGitBlob": "2a2beb659edbd8fa13a0dc398d0318a020723286",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_stalker_008.4cf565113e5e.png",
+      "expectedGitBlob": "cd20b992abaf977c9b380f189232a98cc9fe2846",
+      "actualGitBlob": "cd20b992abaf977c9b380f189232a98cc9fe2846",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_stalker_008.7ae11fd6c58f.png",
+      "expectedGitBlob": "ead7f6c128445d0e64778d4063141970fd44c5cf",
+      "actualGitBlob": "ead7f6c128445d0e64778d4063141970fd44c5cf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_twinfeeler_015.510c783296c3.png",
+      "expectedGitBlob": "390dc4cafb25bfe186bd7d0a59a8eed62816bdd8",
+      "actualGitBlob": "390dc4cafb25bfe186bd7d0a59a8eed62816bdd8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_twinfeeler_015.7097962c69fe.png",
+      "expectedGitBlob": "7588c3ee901059212dc1a310140ee23c2b2041a8",
+      "actualGitBlob": "7588c3ee901059212dc1a310140ee23c2b2041a8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_wormhead_004.08501d7f2bd5.png",
+      "expectedGitBlob": "b513ec060bbbca94345364c1df9d12a0e97b6837",
+      "actualGitBlob": "b513ec060bbbca94345364c1df9d12a0e97b6837",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_wormhead_004.16f970ba8d80.png",
+      "expectedGitBlob": "6c242ba2f9d7b50ff79e6a206b23887e96fd7545",
+      "actualGitBlob": "6c242ba2f9d7b50ff79e6a206b23887e96fd7545",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_wormhead_004.339fd5045d59.png",
+      "expectedGitBlob": "3b48ee36d5cf28fb7d1cf0ea15b6eaf36d69b577",
+      "actualGitBlob": "3b48ee36d5cf28fb7d1cf0ea15b6eaf36d69b577",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_wormhead_004.60b854394522.png",
+      "expectedGitBlob": "55a131ce52331b650986a4d536878147e83e34e5",
+      "actualGitBlob": "55a131ce52331b650986a4d536878147e83e34e5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh1_wormhead_004.aebf12dd2f70.png",
+      "expectedGitBlob": "2e83616ac4a7123d338f6cd83a3b04a0ef286b85",
+      "actualGitBlob": "2e83616ac4a7123d338f6cd83a3b04a0ef286b85",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
+      "expectedGitBlob": "b42df874a97fdf3d82cd442c1b1564d6a1729e84",
+      "actualGitBlob": "b42df874a97fdf3d82cd442c1b1564d6a1729e84",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_abstract_daddy_028.30a667af4b6d.png",
+      "expectedGitBlob": "059fb859603a3d7f5014990a722ded3a73e843a3",
+      "actualGitBlob": "059fb859603a3d7f5014990a722ded3a73e843a3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_bubble_head_nurse_024.3812705a8421.png",
+      "expectedGitBlob": "55c9c423534bf8a40c805ef3ba7398119eec07c6",
+      "actualGitBlob": "55c9c423534bf8a40c805ef3ba7398119eec07c6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
+      "expectedGitBlob": "b124a3ec11e5d527703899c730d330ae96601a46",
+      "actualGitBlob": "b124a3ec11e5d527703899c730d330ae96601a46",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+      "expectedGitBlob": "d5ae9457a0b49e67401ea798371f53ca3535a385",
+      "actualGitBlob": "d5ae9457a0b49e67401ea798371f53ca3535a385",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "expectedGitBlob": "a065a385f0cc1ec2efe01d75a932b989d4c1f6f3",
+      "actualGitBlob": "a065a385f0cc1ec2efe01d75a932b989d4c1f6f3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+      "expectedGitBlob": "18876fad60ca5e8c4e897f7f1dd71d8e226b2701",
+      "actualGitBlob": "18876fad60ca5e8c4e897f7f1dd71d8e226b2701",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_eddie_dombrowski_032.a6b898f61d40.png",
+      "expectedGitBlob": "15a5a91e6d46be3e2224926f7e0c7c62cc3a80fe",
+      "actualGitBlob": "15a5a91e6d46be3e2224926f7e0c7c62cc3a80fe",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_flesh_lip_027.0965d0e5994d.png",
+      "expectedGitBlob": "ae972ffa61312af7c0264d5050d26ba95c5a14e0",
+      "actualGitBlob": "ae972ffa61312af7c0264d5050d26ba95c5a14e0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_flesh_lip_027.15f2f56aa578.png",
+      "expectedGitBlob": "e0e3b07704b3764a840f2e43d7806b71001ae703",
+      "actualGitBlob": "e0e3b07704b3764a840f2e43d7806b71001ae703",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_020.10a8df3e3270.png",
+      "expectedGitBlob": "fa75ba855e3fc7bc589f13de70ba566ceac52f36",
+      "actualGitBlob": "fa75ba855e3fc7bc589f13de70ba566ceac52f36",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+      "expectedGitBlob": "ae0cb2c56005485a919329621629c61f5089557a",
+      "actualGitBlob": "ae0cb2c56005485a919329621629c61f5089557a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "expectedGitBlob": "14fc1db9c01dc593eaf0f1e6e1f1894f30f445a0",
+      "actualGitBlob": "14fc1db9c01dc593eaf0f1e6e1f1894f30f445a0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+      "expectedGitBlob": "0e40dcd3667bdeaf7e76c83e2769e324bb421409",
+      "actualGitBlob": "0e40dcd3667bdeaf7e76c83e2769e324bb421409",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+      "expectedGitBlob": "cffd2309c378b2acc51418f5b24eb04630438ad9",
+      "actualGitBlob": "cffd2309c378b2acc51418f5b24eb04630438ad9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_mandarin_026.04d4be93badc.png",
+      "expectedGitBlob": "180b8b7f1932c4802fca18ea8b7f90c20e979a7e",
+      "actualGitBlob": "180b8b7f1932c4802fca18ea8b7f90c20e979a7e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_mandarin_026.75cacc76973e.png",
+      "expectedGitBlob": "45c947214fb1315db0a19f4980a98f3b0b1e1e3e",
+      "actualGitBlob": "45c947214fb1315db0a19f4980a98f3b0b1e1e3e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_mannequin_022.8c4e65209cd8.png",
+      "expectedGitBlob": "d86ac96e26575b9b84f17581efe0200ca66b88c9",
+      "actualGitBlob": "d86ac96e26575b9b84f17581efe0200ca66b88c9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_mannequin_022.8d1659f7f4e5.png",
+      "expectedGitBlob": "f61046b8352db55f64b7930ec5e9e6d8c2acc5c6",
+      "actualGitBlob": "f61046b8352db55f64b7930ec5e9e6d8c2acc5c6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_maria_final_manifestation_033.64ae6430cae7.png",
+      "expectedGitBlob": "58da3976c53655a00cd437f31effe57b0f20d826",
+      "actualGitBlob": "58da3976c53655a00cd437f31effe57b0f20d826",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+      "expectedGitBlob": "d01e588855929a791f5bc6fa1aa240c7dc387db6",
+      "actualGitBlob": "d01e588855929a791f5bc6fa1aa240c7dc387db6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.d21437cdebf4.png",
+      "expectedGitBlob": "21bf4ea419f41c56f6f67fb9d21ce228202ff784",
+      "actualGitBlob": "21bf4ea419f41c56f6f67fb9d21ce228202ff784",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.797d28258adf.png",
+      "expectedGitBlob": "a2153907e29e447f9612a0ed2b275925998c5c13",
+      "actualGitBlob": "a2153907e29e447f9612a0ed2b275925998c5c13",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_red_pyramid_thing_spear_030.9ba1d2d57009.png",
+      "expectedGitBlob": "f5e23e1ddd0cca41046a04cfdca7a681bd765c4d",
+      "actualGitBlob": "f5e23e1ddd0cca41046a04cfdca7a681bd765c4d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_twin_pyramid_heads_031.849712862c16.png",
+      "expectedGitBlob": "cbbf4a35610fd6ef96835ed2f39ba12ca4441669",
+      "actualGitBlob": "cbbf4a35610fd6ef96835ed2f39ba12ca4441669",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh2_twin_pyramid_heads_031.cc8a401854b1.png",
+      "expectedGitBlob": "b2be030c752c55e7319eb685c3f1bca7b93994d1",
+      "actualGitBlob": "b2be030c752c55e7319eb685c3f1bca7b93994d1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+      "expectedGitBlob": "147874e8139c119d689f450d90fe30084fe96dc2",
+      "actualGitBlob": "147874e8139c119d689f450d90fe30084fe96dc2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.83102a051acb.png",
+      "expectedGitBlob": "f24208c94acfe084f85e562e427f25b0f78fee97",
+      "actualGitBlob": "f24208c94acfe084f85e562e427f25b0f78fee97",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.a571dd362666.png",
+      "expectedGitBlob": "f7dc721ec5e560c660dba4dec71f24499095bdf1",
+      "actualGitBlob": "f7dc721ec5e560c660dba4dec71f24499095bdf1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.e00beefd711f.png",
+      "expectedGitBlob": "ba068ae50532493a02f58d2ace5615fbdaf1f5f6",
+      "actualGitBlob": "ba068ae50532493a02f58d2ace5615fbdaf1f5f6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.e9ec336a3114.png",
+      "expectedGitBlob": "ee3a0e76923fc6b2d57bb3b66b600dd94900e0a6",
+      "actualGitBlob": "ee3a0e76923fc6b2d57bb3b66b600dd94900e0a6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_closer_036.f18918ff7e87.png",
+      "expectedGitBlob": "a34ae2f663dc3c319a626cfef69e1c27162e2f6d",
+      "actualGitBlob": "a34ae2f663dc3c319a626cfef69e1c27162e2f6d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_closer_church_variant.15f7c0d43d4d.png",
+      "expectedGitBlob": "96a552b5f5598808bd3e7145d339e1228f71a06f",
+      "actualGitBlob": "96a552b5f5598808bd3e7145d339e1228f71a06f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_closer_church_variant.3d7aee839083.png",
+      "expectedGitBlob": "b5aa9eb69a4db9f49ed98dc8e29f1e18fa261eea",
+      "actualGitBlob": "b5aa9eb69a4db9f49ed98dc8e29f1e18fa261eea",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.0ef012666f82.png",
+      "expectedGitBlob": "1e24df0a2bd6442b603d3293b41b58be4053cb05",
+      "actualGitBlob": "1e24df0a2bd6442b603d3293b41b58be4053cb05",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.6d8c0b112533.png",
+      "expectedGitBlob": "1142a8462d950e2748248acd34e2fbdec9e9528d",
+      "actualGitBlob": "1142a8462d950e2748248acd34e2fbdec9e9528d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.8c3f9985c31e.png",
+      "expectedGitBlob": "989f32aa8b03915050625cf6c9ec1b17960a0076",
+      "actualGitBlob": "989f32aa8b03915050625cf6c9ec1b17960a0076",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.a0885231d6ff.png",
+      "expectedGitBlob": "d7ad78ace24d8d287dd1e6b01c74dffe07a791d3",
+      "actualGitBlob": "d7ad78ace24d8d287dd1e6b01c74dffe07a791d3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.a971470e7e5b.png",
+      "expectedGitBlob": "3bc95d72e3f3c4ddcda610bff631fb91caa61327",
+      "actualGitBlob": "3bc95d72e3f3c4ddcda610bff631fb91caa61327",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_double_head_040.fd9ce712ec8f.png",
+      "expectedGitBlob": "9981b506bdba5ab5571b742c504b235eada12b51",
+      "actualGitBlob": "9981b506bdba5ab5571b742c504b235eada12b51",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_glutton.13d4153c810d.png",
+      "expectedGitBlob": "195567197844c21312495c21ac7a03ad9fae0afc",
+      "actualGitBlob": "195567197844c21312495c21ac7a03ad9fae0afc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_glutton.90c14e5d4c7d.png",
+      "expectedGitBlob": "53aaed4aae9de8f1b9a4e6b783d21b37a235441f",
+      "actualGitBlob": "53aaed4aae9de8f1b9a4e6b783d21b37a235441f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_god_050.ef8d8f24df0b.png",
+      "expectedGitBlob": "355343a7a5fecfa1ba678593bad1483ec8233fcb",
+      "actualGitBlob": "355343a7a5fecfa1ba678593bad1483ec8233fcb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+      "expectedGitBlob": "48d96fbabfe7b1907b01fa882640747438417645",
+      "actualGitBlob": "48d96fbabfe7b1907b01fa882640747438417645",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_insane_cancer_041.00201a3d31ac.png",
+      "expectedGitBlob": "db58cca384f3ae18be8120ee7ffdb178598848e9",
+      "actualGitBlob": "db58cca384f3ae18be8120ee7ffdb178598848e9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_insane_cancer_041.c977f8bce191.png",
+      "expectedGitBlob": "245e39f3e5bf5dcfbfc939a1f045e872d185b997",
+      "actualGitBlob": "245e39f3e5bf5dcfbfc939a1f045e872d185b997",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_leonard_wolf_048.70857b7708e8.png",
+      "expectedGitBlob": "72f4a3bcfd68c42ade2d3f7049b79747ea6a8002",
+      "actualGitBlob": "72f4a3bcfd68c42ade2d3f7049b79747ea6a8002",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png",
+      "expectedGitBlob": "f2218183505df98fc285f675a446c38216d1eede",
+      "actualGitBlob": "f2218183505df98fc285f675a446c38216d1eede",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.06e554d4f1a9.png",
+      "expectedGitBlob": "9540c030b3b2b0e74b2193d3772c5bab4690b6ea",
+      "actualGitBlob": "9540c030b3b2b0e74b2193d3772c5bab4690b6ea",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.121bf71aca10.png",
+      "expectedGitBlob": "8984eebf0b53480b53131b57b8815ad707c5fd70",
+      "actualGitBlob": "8984eebf0b53480b53131b57b8815ad707c5fd70",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.28ba8746f382.png",
+      "expectedGitBlob": "a8508c3397c9d4bf89a256385a41a52041c7f081",
+      "actualGitBlob": "a8508c3397c9d4bf89a256385a41a52041c7f081",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.6e965c6ce5f6.png",
+      "expectedGitBlob": "273edb49137bf0ae932ff26f352b93fc0f0bc302",
+      "actualGitBlob": "273edb49137bf0ae932ff26f352b93fc0f0bc302",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.cac3caa79ef9.png",
+      "expectedGitBlob": "ff94bae73b53fb29b6849f7ae978fba04afedcc7",
+      "actualGitBlob": "ff94bae73b53fb29b6849f7ae978fba04afedcc7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.db4f61a3a239.png",
+      "expectedGitBlob": "77ee513bcdd417a4c6b8e560b21a4caedadc440e",
+      "actualGitBlob": "77ee513bcdd417a4c6b8e560b21a4caedadc440e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_memory_of_alessa_049.e44abe7d8249.png",
+      "expectedGitBlob": "4a2430f7c4e78bfe73bd0ced68385fc203a3b3e4",
+      "actualGitBlob": "4a2430f7c4e78bfe73bd0ced68385fc203a3b3e4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_missionary_047.820d3acca65f.png",
+      "expectedGitBlob": "6262aefb24e5b95c49068a305f902aa5ebfc98b6",
+      "actualGitBlob": "6262aefb24e5b95c49068a305f902aa5ebfc98b6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_missionary_047.83ad51e81ec4.png",
+      "expectedGitBlob": "1a2547610665b2a29e0c117cafec81ff2f658514",
+      "actualGitBlob": "1a2547610665b2a29e0c117cafec81ff2f658514",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_large_038.764b1384ab07.png",
+      "expectedGitBlob": "96b99c52ebd5006ca6e3e4009cb05484a98d1a56",
+      "actualGitBlob": "96b99c52ebd5006ca6e3e4009cb05484a98d1a56",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_large_038.ac97bc943228.png",
+      "expectedGitBlob": "95a07b3600b5bf85501b8c6d48839db0fdac8248",
+      "actualGitBlob": "95a07b3600b5bf85501b8c6d48839db0fdac8248",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_medium.4018b22369f3.png",
+      "expectedGitBlob": "67c47a64bf416d538cd355a94150f1af05b4b4fd",
+      "actualGitBlob": "67c47a64bf416d538cd355a94150f1af05b4b4fd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_medium.6f74ca93410c.png",
+      "expectedGitBlob": "e15c0149f1fd28598183a30f09b9897506180984",
+      "actualGitBlob": "e15c0149f1fd28598183a30f09b9897506180984",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+      "expectedGitBlob": "3e718d1bd04b8385e1e28c07c236b0a3c7be2374",
+      "actualGitBlob": "3e718d1bd04b8385e1e28c07c236b0a3c7be2374",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.3904c1567965.png",
+      "expectedGitBlob": "60cf4895d795910d77228f5eab9acdebe884bb3f",
+      "actualGitBlob": "60cf4895d795910d77228f5eab9acdebe884bb3f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.974da23966d7.png",
+      "expectedGitBlob": "cd562d4d7ba888ad98d74f91c4ca45463d6f1c89",
+      "actualGitBlob": "cd562d4d7ba888ad98d74f91c4ca45463d6f1c89",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.9ddda808b57c.png",
+      "expectedGitBlob": "3cb12ec5d2b576c4aef0106b69dc4c1fd8cff770",
+      "actualGitBlob": "3cb12ec5d2b576c4aef0106b69dc4c1fd8cff770",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.a69b62b7c58a.png",
+      "expectedGitBlob": "76649d366b96135a442d4914fca7d8ca8570d38a",
+      "actualGitBlob": "76649d366b96135a442d4914fca7d8ca8570d38a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_numb_body_small_037.e3c4ec010cf6.png",
+      "expectedGitBlob": "15cfc5e2dcc23859c2f9653b05da5ba0c946ae88",
+      "actualGitBlob": "15cfc5e2dcc23859c2f9653b05da5ba0c946ae88",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_nurse_pipe_043.0d75f277d7e2.png",
+      "expectedGitBlob": "71109db12f08cbc4461bff0e42d228eae6d63721",
+      "actualGitBlob": "71109db12f08cbc4461bff0e42d228eae6d63721",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_nurse_pipe_043.1ae39140fef8.png",
+      "expectedGitBlob": "a6ba2e373756570b5e1d43e03f33957ea6e8e19b",
+      "actualGitBlob": "a6ba2e373756570b5e1d43e03f33957ea6e8e19b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_nurse_pipe_043.3f1dfb8fbec6.png",
+      "expectedGitBlob": "fab9bb4704876c64df8d6da49125c839a12a81b7",
+      "actualGitBlob": "fab9bb4704876c64df8d6da49125c839a12a81b7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_nurse_pipe_043.41849ba63f73.png",
+      "expectedGitBlob": "5ad84349fe0495d0e168dfa0ad994a4c067a897f",
+      "actualGitBlob": "5ad84349fe0495d0e168dfa0ad994a4c067a897f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_nurse_revolver_044.9fcda8fd65b8.png",
+      "expectedGitBlob": "27e3c1e15c6779a5ff4057ff50c9a72246c83da5",
+      "actualGitBlob": "27e3c1e15c6779a5ff4057ff50c9a72246c83da5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_nurse_revolver_044.a371cb22efc9.png",
+      "expectedGitBlob": "bb1bb9c165db82738a76bdf61688dd959469f154",
+      "actualGitBlob": "bb1bb9c165db82738a76bdf61688dd959469f154",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_nurse_revolver_044.f4651e9f2b8e.png",
+      "expectedGitBlob": "fce1807ff2313e7d3178feb047dae6629285e289",
+      "actualGitBlob": "fce1807ff2313e7d3178feb047dae6629285e289",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_pendulum_039.6bfe8afc9ed6.png",
+      "expectedGitBlob": "ed16d31b317e29132a06f5766e4f3b1cda5c5d22",
+      "actualGitBlob": "ed16d31b317e29132a06f5766e4f3b1cda5c5d22",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_pendulum_039.97153b22d0bc.png",
+      "expectedGitBlob": "c311fcd9157bf7086ef06e93061b4cbc6b74817b",
+      "actualGitBlob": "c311fcd9157bf7086ef06e93061b4cbc6b74817b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_scraper_045.2bfdc425582b.png",
+      "expectedGitBlob": "dcec6269c58ffec73e23e7469d4b71d83d742759",
+      "actualGitBlob": "dcec6269c58ffec73e23e7469d4b71d83d742759",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_scraper_045.827b9a459105.png",
+      "expectedGitBlob": "6d80b0f713d78d7bd779a923c936cbaf91f2d8b5",
+      "actualGitBlob": "6d80b0f713d78d7bd779a923c936cbaf91f2d8b5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_sewer_creature_052.f1e1545f70aa.png",
+      "expectedGitBlob": "34488e4b8a5013b63b97d2c2354c5b9247329310",
+      "actualGitBlob": "34488e4b8a5013b63b97d2c2354c5b9247329310",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_slurper_042.269a6ac1ed42.png",
+      "expectedGitBlob": "ea6c4f56ec16addd24aedc597fe64197b903a080",
+      "actualGitBlob": "ea6c4f56ec16addd24aedc597fe64197b903a080",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_slurper_042.3f0598df95a4.png",
+      "expectedGitBlob": "999d990e6cda43a8064006a5c3e5037b32062db4",
+      "actualGitBlob": "999d990e6cda43a8064006a5c3e5037b32062db4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_slurper_042.5cda350161d4.png",
+      "expectedGitBlob": "2da380931d4ac827315e275d6fbb2c4b3f79fb59",
+      "actualGitBlob": "2da380931d4ac827315e275d6fbb2c4b3f79fb59",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_slurper_042.770cd55b09c9.png",
+      "expectedGitBlob": "baa644eb3523c372f10b22eb55474c46970eaba5",
+      "actualGitBlob": "baa644eb3523c372f10b22eb55474c46970eaba5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_slurper_042.ccdea6132d6f.png",
+      "expectedGitBlob": "812712f9c8304175afd80f399b18df86366910bf",
+      "actualGitBlob": "812712f9c8304175afd80f399b18df86366910bf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_split_worm_046.5bbdfc4868e0.png",
+      "expectedGitBlob": "c0c8941d4fd465c7b49016808153f0e91ceb5ac9",
+      "actualGitBlob": "c0c8941d4fd465c7b49016808153f0e91ceb5ac9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh3_split_worm_046.5e27e5f4f9bf.png",
+      "expectedGitBlob": "a99b8db21bed01ddd310d7510ae1315599245f9d",
+      "actualGitBlob": "a99b8db21bed01ddd310d7510ae1315599245f9d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_andrew_desalvo_victim_18.34e3a9498467.png",
+      "expectedGitBlob": "d2143f363bad78398265408749d4533a18f76e35",
+      "actualGitBlob": "d2143f363bad78398265408749d4533a18f76e35",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_andrew_desalvo_victim_18.6e5d7107f9f9.png",
+      "expectedGitBlob": "9a0974bbb3a985ec4912fde39e7f9f8121828f63",
+      "actualGitBlob": "9a0974bbb3a985ec4912fde39e7f9f8121828f63",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_bottom_065.accb56843104.png",
+      "expectedGitBlob": "a66ed8a27a03a66206d0fc8eb3204ec1251873af",
+      "actualGitBlob": "a66ed8a27a03a66206d0fc8eb3204ec1251873af",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_bottom_065.b0daf4900078.png",
+      "expectedGitBlob": "3c570fee2d039d2e7eeb7faf21f5a267b4bd6cc4",
+      "actualGitBlob": "3c570fee2d039d2e7eeb7faf21f5a267b4bd6cc4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.0cf7eb3b5514.png",
+      "expectedGitBlob": "5dd72e889ee53a8a1ed47a807d7bec34da5df4ec",
+      "actualGitBlob": "5dd72e889ee53a8a1ed47a807d7bec34da5df4ec",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_cynthia_velasquez_victim_16.aaa9a22e2beb.png",
+      "expectedGitBlob": "4af0a051b44d41c2a6b4fe78d81f6515eba459a7",
+      "actualGitBlob": "4af0a051b44d41c2a6b4fe78d81f6515eba459a7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_eileen_head_073.66bb06b246a6.png",
+      "expectedGitBlob": "6f12252db50fffcb30512e85c55d25de81e4c941",
+      "actualGitBlob": "6f12252db50fffcb30512e85c55d25de81e4c941",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_eric_walsh_victim_10.4b1270451920.png",
+      "expectedGitBlob": "0e49bfb3ef57fa9031d868b83c92df6d8c2e4ff7",
+      "actualGitBlob": "0e49bfb3ef57fa9031d868b83c92df6d8c2e4ff7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_eric_walsh_victim_10.b61ddf804db1.png",
+      "expectedGitBlob": "8fa1d7d7ce3720f7ed4747f084e5634dc2821f1f",
+      "actualGitBlob": "8fa1d7d7ce3720f7ed4747f084e5634dc2821f1f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_greedy_worm_069.4bcd7d35af77.png",
+      "expectedGitBlob": "6ef118f3f095f9b4c509823cb349af3ef274c2e1",
+      "actualGitBlob": "6ef118f3f095f9b4c509823cb349af3ef274c2e1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_greedy_worm_069.a40c72b3344f.png",
+      "expectedGitBlob": "c941e4ade421dcb4167fe1e523943224a974b401",
+      "actualGitBlob": "c941e4ade421dcb4167fe1e523943224a974b401",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_gum_head_new_type_058.5bd345e719cc.png",
+      "expectedGitBlob": "74cf1eb6d6940152543f4d0abc75d22d7202b86c",
+      "actualGitBlob": "74cf1eb6d6940152543f4d0abc75d22d7202b86c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_gum_head_new_type_058.a0cf8e0bcf4e.png",
+      "expectedGitBlob": "4dd5b3dd3cd5ed7bb09c16c7249ab8e7208ac990",
+      "actualGitBlob": "4dd5b3dd3cd5ed7bb09c16c7249ab8e7208ac990",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_gum_head_old_type_057.53de39c93d92.png",
+      "expectedGitBlob": "73a98eb4b82576e0840edc5b98817b9785a2e038",
+      "actualGitBlob": "73a98eb4b82576e0840edc5b98817b9785a2e038",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_gum_head_old_type_057.e75cbbab2b25.png",
+      "expectedGitBlob": "11c7042f706a7d721cdedd9f080cab74d74b42a7",
+      "actualGitBlob": "11c7042f706a7d721cdedd9f080cab74d74b42a7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_hummer_055.8561079c64dc.png",
+      "expectedGitBlob": "31885a98f7072b273ffa5e7229f4eef4d19e60a0",
+      "actualGitBlob": "31885a98f7072b273ffa5e7229f4eef4d19e60a0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_hummer_055.9d51cedd24be.png",
+      "expectedGitBlob": "168a82ec7a82bd2851209301ccd3a43e66d8e79c",
+      "actualGitBlob": "168a82ec7a82bd2851209301ccd3a43e66d8e79c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_hummer_055.b6ec9f61d826.png",
+      "expectedGitBlob": "414f98b04462d84992cc96219e43bdea7c535843",
+      "actualGitBlob": "414f98b04462d84992cc96219e43bdea7c535843",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_hummer_055.ce4b2fdfbc00.png",
+      "expectedGitBlob": "50c90ac4aab5021247a3208376f432b449f9e114",
+      "actualGitBlob": "50c90ac4aab5021247a3208376f432b449f9e114",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_hummer_055.fdb0379cf4b5.png",
+      "expectedGitBlob": "80c5a07b19587daabe981e4c30c8f17bf585699b",
+      "actualGitBlob": "80c5a07b19587daabe981e4c30c8f17bf585699b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_jasper_gein_victim_17.b78662e0dc8c.png",
+      "expectedGitBlob": "3e8a583d0819c897a0704b9db9ff7f9e74f81108",
+      "actualGitBlob": "3e8a583d0819c897a0704b9db9ff7f9e74f81108",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_jasper_gein_victim_17.efd5b90f7168.png",
+      "expectedGitBlob": "5ee537868dab814005d0d90da961b1ca83b78c78",
+      "actualGitBlob": "5ee537868dab814005d0d90da961b1ca83b78c78",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.2e0fb62d4d50.png",
+      "expectedGitBlob": "24294d1bb4c4c8314d16924e0ff44ef448a98dd5",
+      "actualGitBlob": "24294d1bb4c4c8314d16924e0ff44ef448a98dd5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_jimmy_stone_victim_1.bf7771716749.png",
+      "expectedGitBlob": "6906a686e2302c85762261b9bfc47840db7ef6e0",
+      "actualGitBlob": "6906a686e2302c85762261b9bfc47840db7ef6e0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_joseph_schreiber_victim_15.1f89b111bb00.png",
+      "expectedGitBlob": "87a88f4244f8ad71039aae6716e72c46e41fe589",
+      "actualGitBlob": "87a88f4244f8ad71039aae6716e72c46e41fe589",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_joseph_schreiber_victim_15.41c23490fcf2.png",
+      "expectedGitBlob": "9a562df08b37032a4014ce5694609b43d92c678b",
+      "actualGitBlob": "9a562df08b37032a4014ce5694609b43d92c678b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_man_with_the_coat_067.76f1458da7c7.png",
+      "expectedGitBlob": "450eb402fa5b39f0b7abc9d6a6b823ecbb8cf8a2",
+      "actualGitBlob": "450eb402fa5b39f0b7abc9d6a6b823ecbb8cf8a2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+      "expectedGitBlob": "56843d0aa29c50c338d0e756f4d9421eadb7b23c",
+      "actualGitBlob": "56843d0aa29c50c338d0e756f4d9421eadb7b23c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_one_truth_070.4d7d1810724b.png",
+      "expectedGitBlob": "d0fc19e5b67c3bf836fdb19838835946e1dc86af",
+      "actualGitBlob": "d0fc19e5b67c3bf836fdb19838835946e1dc86af",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_one_truth_070.fdb890443d18.png",
+      "expectedGitBlob": "72e2a05977285a0a0b745a405f101ffb50acb24f",
+      "actualGitBlob": "72e2a05977285a0a0b745a405f101ffb50acb24f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_patient_060.2ef3e24bfa30.png",
+      "expectedGitBlob": "c710c8f1d84d2374063e12a6f3403dadc727afb7",
+      "actualGitBlob": "c710c8f1d84d2374063e12a6f3403dadc727afb7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_patient_060.735bcaec2736.png",
+      "expectedGitBlob": "0b3ca4707401866cdbdb53d0e0f6bc67448de7b8",
+      "actualGitBlob": "0b3ca4707401866cdbdb53d0e0f6bc67448de7b8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_peter_walls_victim_12.216d7213feb9.png",
+      "expectedGitBlob": "e7993ef03874ecbec26fe4ff8f211daf3d0e2f68",
+      "actualGitBlob": "e7993ef03874ecbec26fe4ff8f211daf3d0e2f68",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_peter_walls_victim_12.977b306a917b.png",
+      "expectedGitBlob": "2190628e624153807a12daf94beb5db3ba5f22e9",
+      "actualGitBlob": "2190628e624153807a12daf94beb5db3ba5f22e9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_richard_braintree_victim_19.0355a497acf2.png",
+      "expectedGitBlob": "9c967bf920716083007f17c68e2649688daa77ad",
+      "actualGitBlob": "9c967bf920716083007f17c68e2649688daa77ad",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_richard_braintree_victim_19.845daa5b3742.png",
+      "expectedGitBlob": "82ea72ad260afe16c98e758cab7a17bcf9fff242",
+      "actualGitBlob": "82ea72ad260afe16c98e758cab7a17bcf9fff242",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_sharon_blake_victim_13.b2fb16716892.png",
+      "expectedGitBlob": "3059cadf6b7d2625f62a760b32ec1762edebd843",
+      "actualGitBlob": "3059cadf6b7d2625f62a760b32ec1762edebd843",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_sharon_blake_victim_13.fdf29cba0b0d.png",
+      "expectedGitBlob": "5ec9d7e9a4d49933675f7a8364968bb5d963635c",
+      "actualGitBlob": "5ec9d7e9a4d49933675f7a8364968bb5d963635c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.013381fb3f35.png",
+      "expectedGitBlob": "e7e2a5c2626f22a94a08a38ebe106cb865d807f4",
+      "actualGitBlob": "e7e2a5c2626f22a94a08a38ebe106cb865d807f4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.167e0e26ebd6.png",
+      "expectedGitBlob": "c288f9d8bfbd4aaf01e8a941a39285f2003e0da5",
+      "actualGitBlob": "c288f9d8bfbd4aaf01e8a941a39285f2003e0da5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.3180b9553b30.png",
+      "expectedGitBlob": "a7676d13b4b1888495db9138a29a9231c501b22d",
+      "actualGitBlob": "a7676d13b4b1888495db9138a29a9231c501b22d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
+      "expectedGitBlob": "18b905d51bddfd873bd6ee7f4c8613da2cb34f08",
+      "actualGitBlob": "18b905d51bddfd873bd6ee7f4c8613da2cb34f08",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
+      "expectedGitBlob": "355cb512953e7f6f80239932448481763e6b0d4c",
+      "actualGitBlob": "355cb512953e7f6f80239932448481763e6b0d4c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "expectedGitBlob": "244b5981a3dfe214133231d0533baba65c2b99e8",
+      "actualGitBlob": "244b5981a3dfe214133231d0533baba65c2b99e8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+      "expectedGitBlob": "c11d174184ea79cd762986349655dd1cb6bdb8c5",
+      "actualGitBlob": "c11d174184ea79cd762986349655dd1cb6bdb8c5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
+      "expectedGitBlob": "a749d8471479834c647d08415d651333c0d21c86",
+      "actualGitBlob": "a749d8471479834c647d08415d651333c0d21c86",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_steve_garland_victim_4.fbc3269a88c0.png",
+      "expectedGitBlob": "786b7ae980f09daad45d75c824a436a8de3c3332",
+      "actualGitBlob": "786b7ae980f09daad45d75c824a436a8de3c3332",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_toadstool_061.a638ed6ea7d7.png",
+      "expectedGitBlob": "b59518ea789703ac0b3f865e938a705e8dda9773",
+      "actualGitBlob": "b59518ea789703ac0b3f865e938a705e8dda9773",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_toadstool_061.b2de331812ca.png",
+      "expectedGitBlob": "2b9fae571b9e7006f43271ada0b75446013e98d6",
+      "actualGitBlob": "2b9fae571b9e7006f43271ada0b75446013e98d6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_toadstool_061.c420453d2412.png",
+      "expectedGitBlob": "ac12e6a9d300b57acc47a0dcdbf79d3a75e47416",
+      "actualGitBlob": "ac12e6a9d300b57acc47a0dcdbf79d3a75e47416",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_toby_archbolt_victim_14.9044cf2c87f5.png",
+      "expectedGitBlob": "32d7df3aeba270e9df83fe2596f7db760879c91b",
+      "actualGitBlob": "32d7df3aeba270e9df83fe2596f7db760879c91b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_toby_archbolt_victim_14.d8007b080d54.png",
+      "expectedGitBlob": "42be6e2ca54c126b9e4c2642fd2aaa02b05dc99d",
+      "actualGitBlob": "42be6e2ca54c126b9e4c2642fd2aaa02b05dc99d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_tremer_blue_063.0a6c15a7fc9a.png",
+      "expectedGitBlob": "ed89489e229559ce19a20618baa5bff978ab7fdb",
+      "actualGitBlob": "ed89489e229559ce19a20618baa5bff978ab7fdb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_tremer_blue_063.5bcfad8047d2.png",
+      "expectedGitBlob": "c71180f2b5cf03b26e12674cb4e6052f597c485d",
+      "actualGitBlob": "c71180f2b5cf03b26e12674cb4e6052f597c485d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_tremer_red_064.19432685fd21.png",
+      "expectedGitBlob": "d1c13e8f2c39f8051967004d226d7841ef36e58a",
+      "actualGitBlob": "d1c13e8f2c39f8051967004d226d7841ef36e58a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_tremer_red_064.50aee55d75d4.png",
+      "expectedGitBlob": "ce8d59596ca476dfaed0911fbdd1ce47ad1903cf",
+      "actualGitBlob": "ce8d59596ca476dfaed0911fbdd1ce47ad1903cf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_twin_victim_059.6db9971d6f09.png",
+      "expectedGitBlob": "9b9591d26611d057f6389fdc2756c88394f3f927",
+      "actualGitBlob": "9b9591d26611d057f6389fdc2756c88394f3f927",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_twin_victim_059.79dac078f077.png",
+      "expectedGitBlob": "e7844efd04340ab18aebf0191cbc34da6fa34485",
+      "actualGitBlob": "e7844efd04340ab18aebf0191cbc34da6fa34485",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_twin_victim_059.80b4e2ee7ffa.png",
+      "expectedGitBlob": "67a0fe93a48344b678d65adb77042dbb034433a7",
+      "actualGitBlob": "67a0fe93a48344b678d65adb77042dbb034433a7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_wall_man_056.397d02f8b567.png",
+      "expectedGitBlob": "fccc46f48424797101f931a6dde4443238dba3f5",
+      "actualGitBlob": "fccc46f48424797101f931a6dde4443238dba3f5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_wall_man_056.492d01451dc8.png",
+      "expectedGitBlob": "149c431a85edea43a6d789f769af0c08d5cae246",
+      "actualGitBlob": "149c431a85edea43a6d789f769af0c08d5cae246",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_walter_sullivan_072.7c27f4ac64aa.png",
+      "expectedGitBlob": "536b132c73063c0ed4207d499fccee47a630742b",
+      "actualGitBlob": "536b132c73063c0ed4207d499fccee47a630742b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_walter_sullivan_072.f7a3056ad30d.png",
+      "expectedGitBlob": "511b9d83db11b4186612bda444d88a76bebf4366",
+      "actualGitBlob": "511b9d83db11b4186612bda444d88a76bebf4366",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_wheelchair_068.2976f1648fec.png",
+      "expectedGitBlob": "02862efe14f4ea3e668dbbdb7617f9b6c4b1d0bb",
+      "actualGitBlob": "02862efe14f4ea3e668dbbdb7617f9b6c4b1d0bb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_wheelchair_068.d81a108b0a69.png",
+      "expectedGitBlob": "0285a7eea621ead5225b07d559c91ffa2f1220f6",
+      "actualGitBlob": "0285a7eea621ead5225b07d559c91ffa2f1220f6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_whitestool_062.0b358ca3be80.png",
+      "expectedGitBlob": "c8a9c38c42493bbebc6876641cc22bd2afd321d4",
+      "actualGitBlob": "c8a9c38c42493bbebc6876641cc22bd2afd321d4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_whitestool_062.5f6ad30d02b8.png",
+      "expectedGitBlob": "00289d5807982f98023624949f67233124e37415",
+      "actualGitBlob": "00289d5807982f98023624949f67233124e37415",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/sh4_whitestool_062.bcbd83497241.png",
+      "expectedGitBlob": "942f5aa858c30ea127080a54a4384f7ba822efe4",
+      "actualGitBlob": "942f5aa858c30ea127080a54a4384f7ba822efe4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_abstract_102.1ff0846e3fc4.png",
+      "expectedGitBlob": "dbd3ad80e5edc0faea0ea7ed6f0b2b21d5e70b8b",
+      "actualGitBlob": "dbd3ad80e5edc0faea0ea7ed6f0b2b21d5e70b8b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_abstract_102.5d6dde89f1b5.png",
+      "expectedGitBlob": "57fca1009d827ca130e7a85887942bcdcb58701b",
+      "actualGitBlob": "57fca1009d827ca130e7a85887942bcdcb58701b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_atrophied_103.a9a6071c0992.png",
+      "expectedGitBlob": "1aabe621e6d039e15dcd417a6ba12efd1c223f9b",
+      "actualGitBlob": "1aabe621e6d039e15dcd417a6ba12efd1c223f9b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_atrophied_103.d37aa45dec34.png",
+      "expectedGitBlob": "734a06a30b774d2da24e897857faa83150d9f7db",
+      "actualGitBlob": "734a06a30b774d2da24e897857faa83150d9f7db",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_base_099.46fc4116fef9.png",
+      "expectedGitBlob": "0791f29562a479ed43cfe196074d5fc96763d062",
+      "actualGitBlob": "0791f29562a479ed43cfe196074d5fc96763d062",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_base_099.e5f649da7bf0.png",
+      "expectedGitBlob": "8a1093a2a44b813360af6e51fb5587a9cd15bd41",
+      "actualGitBlob": "8a1093a2a44b813360af6e51fb5587a9cd15bd41",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_diseased_101.59f6c89e93d6.png",
+      "expectedGitBlob": "c15ad115944029aa61b3e85ee6ed2fc6b356e2a2",
+      "actualGitBlob": "c15ad115944029aa61b3e85ee6ed2fc6b356e2a2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_diseased_101.c33f48ae8d27.png",
+      "expectedGitBlob": "f6da98fed7735c560dbf67c0dd1a80e542ad746a",
+      "actualGitBlob": "f6da98fed7735c560dbf67c0dd1a80e542ad746a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_feminine_100.1226cc9a3419.png",
+      "expectedGitBlob": "ad2004066ba5633e5f216a0cd52be887d73fba51",
+      "actualGitBlob": "ad2004066ba5633e5f216a0cd52be887d73fba51",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shattered_raw_shock_feminine_100.1eb3ca286521.png",
+      "expectedGitBlob": "3e63aae6f24af4957f12d56e5b6759224febd850",
+      "actualGitBlob": "3e63aae6f24af4957f12d56e5b6759224febd850",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_ara_abare_153.a11358a86425.png",
+      "expectedGitBlob": "0de4d549c362c72071f28bcc5949a5c36915c355",
+      "actualGitBlob": "0de4d549c362c72071f28bcc5949a5c36915c355",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_ara_abare_153.a60d35cd3f99.png",
+      "expectedGitBlob": "737e6a8615e3a75ac6aa132646ceeee1a91e0820",
+      "actualGitBlob": "737e6a8615e3a75ac6aa132646ceeee1a91e0820",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_ayakakashi_152.250241616ae2.png",
+      "expectedGitBlob": "4d59f532bee67f4a186f16630cae3232b6dcf110",
+      "actualGitBlob": "4d59f532bee67f4a186f16630cae3232b6dcf110",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_ayakakashi_152.f63b174d67b2.png",
+      "expectedGitBlob": "7414941a526eaa6a72ef6848eea838509383d33d",
+      "actualGitBlob": "7414941a526eaa6a72ef6848eea838509383d33d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_drum_monster_161.0d55bc93f1b5.png",
+      "expectedGitBlob": "023ebcc9816ea8ed43299da66fba83d17da5037d",
+      "actualGitBlob": "023ebcc9816ea8ed43299da66fba83d17da5037d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_drum_monster_161.e7aefe55a14b.png",
+      "expectedGitBlob": "c568446f0c56279dbab66b5f280a208299512f85",
+      "actualGitBlob": "c568446f0c56279dbab66b5f280a208299512f85",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_harai_katashiro_158.78f3f9a74cfb.png",
+      "expectedGitBlob": "19676077004f6c723e593ae084aadbe2c5611c40",
+      "actualGitBlob": "19676077004f6c723e593ae084aadbe2c5611c40",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_harai_katashiro_158.9cd0b864b7bd.png",
+      "expectedGitBlob": "cfdffb9a7504d60f826220d9072cde53d4f44d72",
+      "actualGitBlob": "cfdffb9a7504d60f826220d9072cde53d4f44d72",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_hinako_s_father_164.b4c4498e2d50.png",
+      "expectedGitBlob": "2da3e080280447036c8ef7dc6acc397222991f96",
+      "actualGitBlob": "2da3e080280447036c8ef7dc6acc397222991f96",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_hinako_s_father_164.ba8ac5bd4d54.png",
+      "expectedGitBlob": "1fc13816f110c2c8b8d7849387c31008dcca3587",
+      "actualGitBlob": "1fc13816f110c2c8b8d7849387c31008dcca3587",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_irohihi_154.19d51bfaaa12.png",
+      "expectedGitBlob": "10cb2a7c4066a58583b8d6eba54eadcc42e36fff",
+      "actualGitBlob": "10cb2a7c4066a58583b8d6eba54eadcc42e36fff",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_irohihi_154.28e17594542d.png",
+      "expectedGitBlob": "51f0a6dc62c31e8e44c55c09a2d160e53049a368",
+      "actualGitBlob": "51f0a6dc62c31e8e44c55c09a2d160e53049a368",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_kamugara_157.6236f540f7f3.png",
+      "expectedGitBlob": "9befcdafbb35472314261d5af4551a0360fad2b6",
+      "actualGitBlob": "9befcdafbb35472314261d5af4551a0360fad2b6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_kamugara_157.c71b154fd6db.png",
+      "expectedGitBlob": "47421ce15e65079e8c318c67287ea23a253a5ddf",
+      "actualGitBlob": "47421ce15e65079e8c318c67287ea23a253a5ddf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_kashimashi_151.3f2710657644.png",
+      "expectedGitBlob": "7419dc8113fc93b0fa368f5185bef0c7e1bca856",
+      "actualGitBlob": "7419dc8113fc93b0fa368f5185bef0c7e1bca856",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_kashimashi_151.5de22a7d23d1.png",
+      "expectedGitBlob": "f081d173bc9c6aa9fff4eef1b24c29a07183b515",
+      "actualGitBlob": "f081d173bc9c6aa9fff4eef1b24c29a07183b515",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_kyubi_169.9e78e93583b4.png",
+      "expectedGitBlob": "76a1edc11569f2bf0b0dc7c528ec3741643e2a32",
+      "actualGitBlob": "76a1edc11569f2bf0b0dc7c528ec3741643e2a32",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_kyubi_169.abb1af2fa71c.png",
+      "expectedGitBlob": "ec53a07da17923c3148709821c842ce843b3811f",
+      "actualGitBlob": "ec53a07da17923c3148709821c842ce843b3811f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_oi_omoi_159.4c0a30dbe658.png",
+      "expectedGitBlob": "12e8c50a83965ae9fb470947349db4d9ccbae411",
+      "actualGitBlob": "12e8c50a83965ae9fb470947349db4d9ccbae411",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_oi_omoi_159.5b5945b00b18.png",
+      "expectedGitBlob": "95cf4733522ef6ae025f1d62a33d82623d4d6f18",
+      "actualGitBlob": "95cf4733522ef6ae025f1d62a33d82623d4d6f18",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_rinko_like_entity_163.152fcdc05393.png",
+      "expectedGitBlob": "86df38f058756832e5e7e363579c612bdf86548d",
+      "actualGitBlob": "86df38f058756832e5e7e363579c612bdf86548d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_rinko_like_entity_163.28d00975acf2.png",
+      "expectedGitBlob": "488342d57c1b1e0cb3f0290f3f77e5122aec75e1",
+      "actualGitBlob": "488342d57c1b1e0cb3f0290f3f77e5122aec75e1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_sakuko_like_entity_162.f15d4f66c8da.png",
+      "expectedGitBlob": "716da4feb1734d47c60741db3d04c285ef8e24a7",
+      "actualGitBlob": "716da4feb1734d47c60741db3d04c285ef8e24a7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_sakuko_like_entity_162.f4949f7cbcc6.png",
+      "expectedGitBlob": "eb84e232ba1247292820d27f6dc0009e029efed4",
+      "actualGitBlob": "eb84e232ba1247292820d27f6dc0009e029efed4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_shichibi_168.332222c595ae.png",
+      "expectedGitBlob": "b2385e9eb9d69f0b349c982ab6048491c0903e75",
+      "actualGitBlob": "b2385e9eb9d69f0b349c982ab6048491c0903e75",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_shichibi_168.490006f1c119.png",
+      "expectedGitBlob": "3e99adc68735c82ca0ed299fb8dd0dee307121b5",
+      "actualGitBlob": "3e99adc68735c82ca0ed299fb8dd0dee307121b5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_shiromuku_166.23edbb28573f.png",
+      "expectedGitBlob": "ece86214baef1e2bfd41fa7d7276b80357e12790",
+      "actualGitBlob": "ece86214baef1e2bfd41fa7d7276b80357e12790",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_shiromuku_166.25d31075e81d.png",
+      "expectedGitBlob": "e06b3db3d6212ee98feb67d6060403e23eb7bed5",
+      "actualGitBlob": "e06b3db3d6212ee98feb67d6060403e23eb7bed5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_tsukumogami_167.14916362c716.png",
+      "expectedGitBlob": "6bca773b3aed074486a3ee3d7d418e91719ff14d",
+      "actualGitBlob": "6bca773b3aed074486a3ee3d7d418e91719ff14d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shf_tsukumogami_167.e8130e444254.png",
+      "expectedGitBlob": "e718058bb64fbd17bb53435a06ed626deaa52fb3",
+      "actualGitBlob": "e718058bb64fbd17bb53435a06ed626deaa52fb3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shortmessage_sakura_head_150.19576d20cace.png",
+      "expectedGitBlob": "9a355c2ead2c9fe645dfd7dd3956948b07767544",
+      "actualGitBlob": "9a355c2ead2c9fe645dfd7dd3956948b07767544",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/shortmessage_sakura_head_150.ab2505f26e95.png",
+      "expectedGitBlob": "95b4f0042a62b261806e86ee0f481f835bbcb015",
+      "actualGitBlob": "95b4f0042a62b261806e86ee0f481f835bbcb015",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_fallen.50be585d8b6e.png",
+      "expectedGitBlob": "fc16a66c62cecf79f2d6e95758ae43cfe4c7a564",
+      "actualGitBlob": "fc16a66c62cecf79f2d6e95758ae43cfe4c7a564",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_fallen.e793ad83817d.png",
+      "expectedGitBlob": "08d8e67eefc0ad12b247f521556c86f938611043",
+      "actualGitBlob": "08d8e67eefc0ad12b247f521556c86f938611043",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_lunger.37603e93fe90.png",
+      "expectedGitBlob": "b984fe494dc7c6293cd30bd4a646540f6d4c8f32",
+      "actualGitBlob": "b984fe494dc7c6293cd30bd4a646540f6d4c8f32",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_lunger.c53d378bc7df.png",
+      "expectedGitBlob": "41f52a8e6084edcb99be84647a33799cd79062a0",
+      "actualGitBlob": "41f52a8e6084edcb99be84647a33799cd79062a0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_sorrowful.c27ab7f2cf5c.png",
+      "expectedGitBlob": "d9bfd23a7c501794d8d6e27313a92076d700416c",
+      "actualGitBlob": "d9bfd23a7c501794d8d6e27313a92076d700416c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_sorrowful.da9c9af13265.png",
+      "expectedGitBlob": "0def90179fff1afd43f1ebeed9e6aa4f9215b0fb",
+      "actualGitBlob": "0def90179fff1afd43f1ebeed9e6aa4f9215b0fb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_the_weight.7b899f339ae7.png",
+      "expectedGitBlob": "2c0cc56cfad089d064357c82fb46d01ac16d3086",
+      "actualGitBlob": "2c0cc56cfad089d064357c82fb46d01ac16d3086",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_the_weight.d6c2834ffe6d.png",
+      "expectedGitBlob": "0261386ea618227ac6ce42aadddf5bfc4ed99afc",
+      "actualGitBlob": "0261386ea618227ac6ce42aadddf5bfc4ed99afc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_widow.10672c611252.png",
+      "expectedGitBlob": "606efc71d9784c517febe4c197a43ffeb51af824",
+      "actualGitBlob": "606efc71d9784c517febe4c197a43ffeb51af824",
+      "unchanged": true
+    },
+    {
+      "path": "assets/sprites/townfall_widow.853146bb99d2.png",
+      "expectedGitBlob": "5e0964b39dac7682b68d91155c8b1717ec8a57a7",
+      "actualGitBlob": "5e0964b39dac7682b68d91155c8b1717ec8a57a7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
+      "expectedGitBlob": "60f6e21ea83c7bbf39ae123e46841f68b70f01e1",
+      "actualGitBlob": "60f6e21ea83c7bbf39ae123e46841f68b70f01e1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/alchemilla_origins.elevator-landing.d7a48880728c.png",
+      "expectedGitBlob": "1dc8431d46ef1943d4567452e42a949e21a6a28f",
+      "actualGitBlob": "1dc8431d46ef1943d4567452e42a949e21a6a28f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/alchemilla_origins.near-wall-edges.88e0d0800459.png",
+      "expectedGitBlob": "baa9824935e050194a29707289b1f759c6feaf23",
+      "actualGitBlob": "baa9824935e050194a29707289b1f759c6feaf23",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/apartment_roof.bg-daisy-rooftop.748257c48512.png",
+      "expectedGitBlob": "7ce58ad98e646cd0b97989cee41ce9497bb5e32c",
+      "actualGitBlob": "7ce58ad98e646cd0b97989cee41ce9497bb5e32c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/apartment_roof.near-edges.d12d3658f0a2.png",
+      "expectedGitBlob": "2ce0e65dd2f71dc5074c07f67477cb1bc77ce255",
+      "actualGitBlob": "2ce0e65dd2f71dc5074c07f67477cb1bc77ce255",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/apartment_world.office.6001d447c296.png",
+      "expectedGitBlob": "705df816cc877dd32731fd741f409ac588557929",
+      "actualGitBlob": "705df816cc877dd32731fd741f409ac588557929",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/apartment_world.tubular-chair.0558fe1037f5.png",
+      "expectedGitBlob": "00efab91dad0a4fb9ec4e750808f94057c3aa289",
+      "actualGitBlob": "00efab91dad0a4fb9ec4e750808f94057c3aa289",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/arcade_city.jacks-inn-fog-forecourt.0df4f76b6673.png",
+      "expectedGitBlob": "9e37e3e541a84a64a5fc0ee466b6876c630bbeb9",
+      "actualGitBlob": "9e37e3e541a84a64a5fc0ee466b6876c630bbeb9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/arcade_city.near-concrete-pillar-edges.dc85c4de41ae.png",
+      "expectedGitBlob": "ad01d8eecdaba1094506189bddffafab2d12f959",
+      "actualGitBlob": "ad01d8eecdaba1094506189bddffafab2d12f959",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+      "expectedGitBlob": "6c32908c9939b07c8d0fbc018790ba8cab77a7df",
+      "actualGitBlob": "6c32908c9939b07c8d0fbc018790ba8cab77a7df",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+      "expectedGitBlob": "8ea57eb443aabb68e924fd6378de2734630941ea",
+      "actualGitBlob": "8ea57eb443aabb68e924fd6378de2734630941ea",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/artaud_theater.near-open-curtains.133f10a3b777.png",
+      "expectedGitBlob": "4548b2d3a297344e4d3fb566805c895784caeba0",
+      "actualGitBlob": "4548b2d3a297344e4d3fb566805c895784caeba0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/artaud_theater.normal-forest-stage.73ab43a7563e.png",
+      "expectedGitBlob": "605794a59de57744e88e2c6e0dda1848a919b6b2",
+      "actualGitBlob": "605794a59de57744e88e2c6e0dda1848a919b6b2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/baldwin_mansion.closed-lounge-landing.5fa7f85bcd25.png",
+      "expectedGitBlob": "c40ea701d7cb89a59805dfd6f5119422280ae88d",
+      "actualGitBlob": "c40ea701d7cb89a59805dfd6f5119422280ae88d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/baldwin_mansion.near-timber-jambs.de3ae2125a5e.png",
+      "expectedGitBlob": "db01f1f149132830b2c5439363d87bdc0144680f",
+      "actualGitBlob": "db01f1f149132830b2c5439363d87bdc0144680f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/blue_creek.flooded-landing.26ee99b29813.png",
+      "expectedGitBlob": "29c0f528553402daf618f529ef8ca116db6730e9",
+      "actualGitBlob": "29c0f528553402daf618f529ef8ca116db6730e9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/blue_creek.landing-rail.bae35a70bc4e.png",
+      "expectedGitBlob": "347501ef1126b30ba2f853c88f440d63f3a9e903",
+      "actualGitBlob": "347501ef1126b30ba2f853c88f440d63f3a9e903",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_blood.blood-arena.a2f0bf8241d3.png",
+      "expectedGitBlob": "2277b03cfad01744f8a4633b0263a958f0c73c4e",
+      "actualGitBlob": "2277b03cfad01744f8a4633b0263a958f0c73c4e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_blood.blood-platform-ribbed-door.f3b31605cd4e.png",
+      "expectedGitBlob": "e74040bf7084a7d9a5b1cd46ac8033e3e2c58fa9",
+      "actualGitBlob": "e74040bf7084a7d9a5b1cd46ac8033e3e2c58fa9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_blood.near-dry-structural-ribs.476ef774e063.png",
+      "expectedGitBlob": "96b9f549d93a17f13324a572f823e4b7118ef6ee",
+      "actualGitBlob": "96b9f549d93a17f13324a572f823e4b7118ef6ee",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_blood.near-perimeter-edges.472f222bec21.png",
+      "expectedGitBlob": "0f9be67cedf5c13bf2544981381c6410a7d431a4",
+      "actualGitBlob": "0f9be67cedf5c13bf2544981381c6410a7d431a4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_earth.earth-gallery-timber-wall.9388cd040cd5.png",
+      "expectedGitBlob": "e46b28e018009ac657be9767a3da39af3cfcab27",
+      "actualGitBlob": "e46b28e018009ac657be9767a3da39af3cfcab27",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_earth.earth-gallery.d68ff2b3d5a6.png",
+      "expectedGitBlob": "31c5be832e2ad64f8b0065ebca20bb8398342f95",
+      "actualGitBlob": "31c5be832e2ad64f8b0065ebca20bb8398342f95",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_earth.near-earth-timber-edges.e57d980721fc.png",
+      "expectedGitBlob": "9691434d50e3b70394aad88ffa6e916e3f43d4e6",
+      "actualGitBlob": "9691434d50e3b70394aad88ffa6e916e3f43d4e6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_earth.near-rock-edges.e2f163225507.png",
+      "expectedGitBlob": "61dd988f8a1fdc9e7cf697094aa22ac2ca29a016",
+      "actualGitBlob": "61dd988f8a1fdc9e7cf697094aa22ac2ca29a016",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_fire.fire-room.7f1236bf6694.png",
+      "expectedGitBlob": "cbda7b923426ea80a5fbdb8e243febf11f76eed5",
+      "actualGitBlob": "cbda7b923426ea80a5fbdb8e243febf11f76eed5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_fire.launch-fire-room.41ce3e9666c5.png",
+      "expectedGitBlob": "7542d18b7c5009e2c58244d470a4c0e191fd0387",
+      "actualGitBlob": "7542d18b7c5009e2c58244d470a4c0e191fd0387",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_fire.near-iron-edges.9f531b56161d.png",
+      "expectedGitBlob": "9e604fa1023bbac07bf5e3e4336452c177cf3aed",
+      "actualGitBlob": "9e604fa1023bbac07bf5e3e4336452c177cf3aed",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_fire.near-steel-edges.e238137c6bfd.png",
+      "expectedGitBlob": "8578959166204a0657a253c7ee962f0ead04cf1d",
+      "actualGitBlob": "8578959166204a0657a253c7ee962f0ead04cf1d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_water.near-rooftop-steel-edges.d593738b8364.png",
+      "expectedGitBlob": "fbd51f632bb9bf2920dfe79a147daef6712339ef",
+      "actualGitBlob": "fbd51f632bb9bf2920dfe79a147daef6712339ef",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_water.near-tile-edges.9db746e9832f.png",
+      "expectedGitBlob": "fb3034f119c3da9c5aa46a2720ad0bfedbddf26d",
+      "actualGitBlob": "fb3034f119c3da9c5aa46a2720ad0bfedbddf26d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_water.water-basin.12604eb0cf73.png",
+      "expectedGitBlob": "636cfbef7a834f994210bda46f084e61158e2eda",
+      "actualGitBlob": "636cfbef7a834f994210bda46f084e61158e2eda",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_water.water-rooftop-lattice.3e1e5c015f1f.png",
+      "expectedGitBlob": "5106286b65c20cdb13c5b844f339b1ab12b9e22d",
+      "actualGitBlob": "5106286b65c20cdb13c5b844f339b1ab12b9e22d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_wood.bare-bough.58fbcd47b401.png",
+      "expectedGitBlob": "b36e29235680d95ef53f812c31c0f2b1335d1805",
+      "actualGitBlob": "b36e29235680d95ef53f812c31c0f2b1335d1805",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/book_wood.wood-clearing.badc47213490.png",
+      "expectedGitBlob": "eb56dd2a07d6d5567abdf7efc92dabfd43670343",
+      "actualGitBlob": "eb56dd2a07d6d5567abdf7efc92dabfd43670343",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/brookhaven_roof.before-fall.52cd844d609c.png",
+      "expectedGitBlob": "a699b3ae6191652706b9dcfd21f016ce4e9b2f72",
+      "actualGitBlob": "a699b3ae6191652706b9dcfd21f016ce4e9b2f72",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/brookhaven_sh2.elevator-terminus.5ae0d389b5c5.png",
+      "expectedGitBlob": "9a2c6b9437b2463cc7ef596a65987b1439911e0d",
+      "actualGitBlob": "9a2c6b9437b2463cc7ef596a65987b1439911e0d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/brookhaven_sh2.near-door-jamb.2f663e35be1c.png",
+      "expectedGitBlob": "a3ddc08748705e24195e669737a006d0ac4093a3",
+      "actualGitBlob": "a3ddc08748705e24195e669737a006d0ac4093a3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png",
+      "expectedGitBlob": "107d481ab6051680ba1291b95c392583f8798048",
+      "actualGitBlob": "107d481ab6051680ba1291b95c392583f8798048",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
+      "expectedGitBlob": "35d4e5235ced4e2e69e48089c9499af6801172d5",
+      "actualGitBlob": "35d4e5235ced4e2e69e48089c9499af6801172d5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/building_world.fan-stairwell.15995c474e24.png",
+      "expectedGitBlob": "6e34b54acf5ad0759a355533d199ade8a7343b08",
+      "actualGitBlob": "6e34b54acf5ad0759a355533d199ade8a7343b08",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/building_world.near-masonry-returns.9e753eeb66e2.png",
+      "expectedGitBlob": "7d8e0588b6195dd0bcc8de73f011fd8f3d4352eb",
+      "actualGitBlob": "7d8e0588b6195dd0bcc8de73f011fd8f3d4352eb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/centennial_building.background.c8a81a276b6a.png",
+      "expectedGitBlob": "642ffd88f5437f5589a9e7f5c0c11837bf441a8f",
+      "actualGitBlob": "642ffd88f5437f5589a9e7f5c0c11837bf441a8f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/centennial_building.foreground.9ddcc6285a36.png",
+      "expectedGitBlob": "82497596c25e2f5cab4aea22f12cc3517770e407",
+      "actualGitBlob": "82497596c25e2f5cab4aea22f12cc3517770e407",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/central_nightmare.floatstinger-roof.a166c86064f4.png",
+      "expectedGitBlob": "919850a6fbbe2040cb6398f66047108562154eb3",
+      "actualGitBlob": "919850a6fbbe2040cb6398f66047108562154eb3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/central_nightmare.near-roof-edges.d6d18810f03e.png",
+      "expectedGitBlob": "76ed3d33165e019965774843a579b309828caaa5",
+      "actualGitBlob": "76ed3d33165e019965774843a579b309828caaa5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/church.candle-stand.53fb59eeefa2.png",
+      "expectedGitBlob": "21375e7068d6a63fc3dc14a16d36f11d98e0911f",
+      "actualGitBlob": "21375e7068d6a63fc3dc14a16d36f11d98e0911f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/church.initial-chapel.1b637d5146cd.png",
+      "expectedGitBlob": "cb4df08d72c4df7f432fbed59038ecd0436cbfa2",
+      "actualGitBlob": "cb4df08d72c4df7f432fbed59038ecd0436cbfa2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/church_hc.candle-stand.31cb771411d7.png",
+      "expectedGitBlob": "8588313241d42d87c4970026803703300071668d",
+      "actualGitBlob": "8588313241d42d87c4970026803703300071668d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/church_hc.holy-way-nave.03a8aefbef40.png",
+      "expectedGitBlob": "4e1e358277708f7a6bdc4271c8422d9180434719",
+      "actualGitBlob": "4e1e358277708f7a6bdc4271c8422d9180434719",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/corrupted_ebisugaoka.background.3e90f59a15a2.png",
+      "expectedGitBlob": "3846d6d5d94e64506246ffaccbba45ff798b3574",
+      "actualGitBlob": "3846d6d5d94e64506246ffaccbba45ff798b3574",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/corrupted_ebisugaoka.foreground.097c19a0598a.png",
+      "expectedGitBlob": "49839df78e8b374ee9d5eb4bd72485ed0e4064a5",
+      "actualGitBlob": "49839df78e8b374ee9d5eb4bd72485ed0e4064a5",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/curtis_shop.sales-counter.003f99674bac.png",
+      "expectedGitBlob": "f2789eebdd0cb8aa7eccc1ec078c96236b212aa9",
+      "actualGitBlob": "f2789eebdd0cb8aa7eccc1ec078c96236b212aa9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/curtis_shop.workshop.910767824f6e.png",
+      "expectedGitBlob": "7ae3c92c7940e4d86e698d76fdf14533515f2741",
+      "actualGitBlob": "7ae3c92c7940e4d86e698d76fdf14533515f2741",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/dark_shrine.background.2664d35ea297.png",
+      "expectedGitBlob": "13d036e6bc3e2dafa226545e3ae737e02a869fe4",
+      "actualGitBlob": "13d036e6bc3e2dafa226545e3ae737e02a869fe4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/dark_shrine.foreground.2abdd42961b5.png",
+      "expectedGitBlob": "48be6c4bc8118984c90c345e0db29840ffb8651d",
+      "actualGitBlob": "48be6c4bc8118984c90c345e0db29840ffb8651d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/dark_shrine_corridors.inari-altar.c91ff918e575.png",
+      "expectedGitBlob": "b47706026e7d43147bb8c5c334adef4abe39b0a6",
+      "actualGitBlob": "b47706026e7d43147bb8c5c334adef4abe39b0a6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/dark_shrine_corridors.lacquer-shelf.fb67e770ed74.png",
+      "expectedGitBlob": "e67c5510e30f37fe4c1d302549aa8d463624cc91",
+      "actualGitBlob": "e67c5510e30f37fe4c1d302549aa8d463624cc91",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/dark_shrine_main.ritual-threshold.f8316c264028.png",
+      "expectedGitBlob": "a4a9578f136d5f7fd1e941ac585bab295769945a",
+      "actualGitBlob": "a4a9578f136d5f7fd1e941ac585bab295769945a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/dark_shrine_main.tripod-brazier.31d49a758d02.png",
+      "expectedGitBlob": "6228f74febdb1f760663feb45e71ac0c890e2a9b",
+      "actualGitBlob": "6228f74febdb1f760663feb45e71ac0c890e2a9b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/devils_pit.near-timber-brace.1858e96a1fd2.png",
+      "expectedGitBlob": "7cfee2234d4ae5e616b06a8b807edee2bc297547",
+      "actualGitBlob": "7cfee2234d4ae5e616b06a8b807edee2bc297547",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/devils_pit.upper-cavern-wheels.406d6f6df55f.png",
+      "expectedGitBlob": "6c7964347be536262d773a9125c0e9383c578dc1",
+      "actualGitBlob": "6c7964347be536262d773a9125c0e9383c578dc1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/downpour_streets.bg-pearl-creek.e6ac81c132f4.png",
+      "expectedGitBlob": "b2dbb8de90d2b8b518c4a0850e9acabd766e3271",
+      "actualGitBlob": "b2dbb8de90d2b8b518c4a0850e9acabd766e3271",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/downpour_streets.near-edges.1152c97b0f12.png",
+      "expectedGitBlob": "215d6139c53b73c7d0acc370e8f710563a96834f",
+      "actualGitBlob": "215d6139c53b73c7d0acc370e8f710563a96834f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/ebisugaoka.fogworld-corner-shop.4a4cf5e4c7d9.png",
+      "expectedGitBlob": "a16162daef0fee46aaf5e66d962ff57abf622b65",
+      "actualGitBlob": "a16162daef0fee46aaf5e66d962ff57abf622b65",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/ebisugaoka.near-timber-edges.a2ee94a9cf3e.png",
+      "expectedGitBlob": "bab21d36974714ca6304fa56950508106b36b1da",
+      "actualGitBlob": "bab21d36974714ca6304fa56950508106b36b1da",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/film_hospital.alessa-isolation-room.d6410e6a7d3b.png",
+      "expectedGitBlob": "34e7bbe973a8d1e3550c5959b93b295b4bbde6f1",
+      "actualGitBlob": "34e7bbe973a8d1e3550c5959b93b295b4bbde6f1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/film_hospital.near-privacy-curtain.6ea5905574b3.png",
+      "expectedGitBlob": "fc3568ebb4c5f18df11a32c2fbfeb68ce5da864e",
+      "actualGitBlob": "fc3568ebb4c5f18df11a32c2fbfeb68ce5da864e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+      "expectedGitBlob": "e1136ca3925b5b7f356b7017799b59e7b744c7c1",
+      "actualGitBlob": "e1136ca3925b5b7f356b7017799b59e7b744c7c1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+      "expectedGitBlob": "c7efe223992e672b37eee0d86b943c1c345be249",
+      "actualGitBlob": "c7efe223992e672b37eee0d86b943c1c345be249",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/forest_world.first-visit-clearing.76588be774de.png",
+      "expectedGitBlob": "3915099129244d22f73a3508482590fba9c5aade",
+      "actualGitBlob": "3915099129244d22f73a3508482590fba9c5aade",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/forest_world.near-bark-and-grass.5df8c21ae5bc.png",
+      "expectedGitBlob": "36fe31007ff0191f426a1d5a6a865b6f7223e0e1",
+      "actualGitBlob": "36fe31007ff0191f426a1d5a6a865b6f7223e0e1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/frozen_streets.bg-frozen-exterior.01d899430889.png",
+      "expectedGitBlob": "e799fd723913d3ba205e5fecf9c5c85793898ec3",
+      "actualGitBlob": "e799fd723913d3ba205e5fecf9c5c85793898ec3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/frozen_streets.near-edges.977b819041c2.png",
+      "expectedGitBlob": "a0b085faa60bd1a0d1e79aaf519c60bde23b1914",
+      "actualGitBlob": "a0b085faa60bd1a0d1e79aaf519c60bde23b1914",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/grand_hotel.background.8250537eb741.png",
+      "expectedGitBlob": "605948eac401d2880f19c51bbd656f2172f058b9",
+      "actualGitBlob": "605948eac401d2880f19c51bbd656f2172f058b9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/grand_hotel.foreground.bc6963bb530b.png",
+      "expectedGitBlob": "784cbcde5f26b94a4455361c525ea1c81a3c521e",
+      "actualGitBlob": "784cbcde5f26b94a4455361c525ea1c81a3c521e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hazel_subway.near-wall-edges.98e4c72a8308.png",
+      "expectedGitBlob": "7100ce2fabd0bfc585e8da2d205b6f0b04ae0235",
+      "actualGitBlob": "7100ce2fabd0bfc585e8da2d205b6f0b04ae0235",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hazel_subway.ticket-alcove.4d537af9a148.png",
+      "expectedGitBlob": "99b1606febcc524c32420faf322b1fdae2a0b189",
+      "actualGitBlob": "99b1606febcc524c32420faf322b1fdae2a0b189",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hilltop_center.monica-reception.8153762e19e6.png",
+      "expectedGitBlob": "cf7da40a6ac19685a726f95f55e155aa04ba4fd6",
+      "actualGitBlob": "cf7da40a6ac19685a726f95f55e155aa04ba4fd6",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hilltop_center.near-cabinet-edges.e64c163eeca2.png",
+      "expectedGitBlob": "a30dd9b4cb8d6b37270d9a106925933dcb683b39",
+      "actualGitBlob": "a30dd9b4cb8d6b37270d9a106925933dcb683b39",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hinako_home.background.90570edd1d72.png",
+      "expectedGitBlob": "4e85821d7041d799046299551955edf3010e620d",
+      "actualGitBlob": "4e85821d7041d799046299551955edf3010e620d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hinako_home.foreground.e1ab86dcc94a.png",
+      "expectedGitBlob": "61e69bc8aca954c697b00b3fbc455df171e80357",
+      "actualGitBlob": "61e69bc8aca954c697b00b3fbc455df171e80357",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
+      "expectedGitBlob": "463281c9ace34a3e515b1fd3be3459805ab742a4",
+      "actualGitBlob": "463281c9ace34a3e515b1fd3be3459805ab742a4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
+      "expectedGitBlob": "e4078f4fe1b22891f030095b329a41a9427977af",
+      "actualGitBlob": "e4078f4fe1b22891f030095b329a41a9427977af",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hospital_nightmare.near-doorjambs.18e549796dbd.png",
+      "expectedGitBlob": "fd14419f15b090ec33272a11dd2fccba1f2707b1",
+      "actualGitBlob": "fd14419f15b090ec33272a11dd2fccba1f2707b1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hospital_nightmare.room204.ce097401c830.png",
+      "expectedGitBlob": "dcd188844543d6deb8ef16cdad82a6b534a08a18",
+      "actualGitBlob": "dcd188844543d6deb8ef16cdad82a6b534a08a18",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hospital_world.near-door-jamb.d94873aa3fe8.png",
+      "expectedGitBlob": "66301397a80f53cec2bb5ac8c0a144fd7e3689bb",
+      "actualGitBlob": "66301397a80f53cec2bb5ac8c0a144fd7e3689bb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hospital_world.second-floor-hall.0bb80f060644.png",
+      "expectedGitBlob": "a3be1fa81ec16a042c86e216fe3235ce35529f76",
+      "actualGitBlob": "a3be1fa81ec16a042c86e216fe3235ce35529f76",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hotel_otherworld.last-hall-after-egg-doors.23ccf794f57b.png",
+      "expectedGitBlob": "ea79549813e1653154b945f87d09b41a23d3cdd8",
+      "actualGitBlob": "ea79549813e1653154b945f87d09b41a23d3cdd8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/hotel_otherworld.near-panel-jambs.061fca74f434.png",
+      "expectedGitBlob": "b68c57e77caf57e02c5c7394e5ca3065ba505a1d",
+      "actualGitBlob": "b68c57e77caf57e02c5c7394e5ca3065ba505a1d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/labyrinth.box-of-faces.ae7971ba7a0f.png",
+      "expectedGitBlob": "a1c70c343bb724e482c20c2bc6a7d56f391840dd",
+      "actualGitBlob": "a1c70c343bb724e482c20c2bc6a7d56f391840dd",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/labyrinth.control-chamber.60453a15467d.png",
+      "expectedGitBlob": "62e6e6c9a60693ac9a5983acaaade2c84ad21f7b",
+      "actualGitBlob": "62e6e6c9a60693ac9a5983acaaade2c84ad21f7b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/lakeside_amusement.mounted-horse.d72b181aab33.png",
+      "expectedGitBlob": "ad2846e340c4f656c0068a6859860a5ff0b0a50c",
+      "actualGitBlob": "ad2846e340c4f656c0068a6859860a5ff0b0a50c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/lakeside_amusement.platform.e002db685c30.png",
+      "expectedGitBlob": "c26be6cde750fa5f10ecbed063ced836d3fa6d50",
+      "actualGitBlob": "c26be6cde750fa5f10ecbed063ced836d3fa6d50",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
+      "expectedGitBlob": "419f7fa4de527ff5ee967a1dfd644393798781be",
+      "actualGitBlob": "419f7fa4de527ff5ee967a1dfd644393798781be",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
+      "expectedGitBlob": "d794ab752af841d81d1c8159faa695f4fdd13dcf",
+      "actualGitBlob": "d794ab752af841d81d1c8159faa695f4fdd13dcf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/lakeview.lobby.7bc2120c786c.png",
+      "expectedGitBlob": "f7eac854d9b113367ff5bce37be61bb0d8aa9084",
+      "actualGitBlob": "f7eac854d9b113367ff5bce37be61bb0d8aa9084",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/looping_hall.hallway.b48a0819aed4.png",
+      "expectedGitBlob": "583768309211ff7143c8195102b16daddae881fc",
+      "actualGitBlob": "583768309211ff7143c8195102b16daddae881fc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/looping_hall.radio-cabinet.b16069870543.png",
+      "expectedGitBlob": "7833df6873652e912b15b45ddd75beb932186836",
+      "actualGitBlob": "7833df6873652e912b15b45ddd75beb932186836",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/midwich.courtyard.c9728428d63d.png",
+      "expectedGitBlob": "3f26f139c87864d9f3cb315f5e886adb6efc69df",
+      "actualGitBlob": "3f26f139c87864d9f3cb315f5e886adb6efc69df",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/midwich_nightmare.hearth.862c9df53e36.png",
+      "expectedGitBlob": "9b643a2dd1e089f160ca6c0fde7624ec333cd192",
+      "actualGitBlob": "9b643a2dd1e089f160ca6c0fde7624ec333cd192",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/midwich_nightmare.near-grid-uprights.9a4ed6517140.png",
+      "expectedGitBlob": "419e2ff8cab13a4d6203e17525cef99f74abaf94",
+      "actualGitBlob": "419e2ff8cab13a4d6203e17525cef99f74abaf94",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_hilltop.gallery-painting.2a9fc04c0043.png",
+      "expectedGitBlob": "c36f3f2337d8c9ff34b929bd9aaf5853ce7fb917",
+      "actualGitBlob": "c36f3f2337d8c9ff34b929bd9aaf5853ce7fb917",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_hilltop.near-wall-edges.cfcaac8fc270.png",
+      "expectedGitBlob": "39c50a2e03ea028cf930172b1f2e22b74de921e4",
+      "actualGitBlob": "39c50a2e03ea028cf930172b1f2e22b74de921e4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_hc.gate2a.faf8d083f23c.png",
+      "expectedGitBlob": "970381161cb378a3b9e764c1250651f983800e3d",
+      "actualGitBlob": "970381161cb378a3b9e764c1250651f983800e3d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_hc.near-wall-edges.e7c5e101d745.png",
+      "expectedGitBlob": "78b251b5266b261a97ea3a452dee9cab96426dc9",
+      "actualGitBlob": "78b251b5266b261a97ea3a452dee9cab96426dc9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_sh3.mirror-storeroom.a60fa6d89fbf.png",
+      "expectedGitBlob": "7d2c011dceab62ef516df62d7388e8d1ff280441",
+      "actualGitBlob": "7d2c011dceab62ef516df62d7388e8d1ff280441",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_sh3.near-doorjambs.1d8e55fb19ab.png",
+      "expectedGitBlob": "0b9ade0cc7193779849d1df1a218f597d00a9c6a",
+      "actualGitBlob": "0b9ade0cc7193779849d1df1a218f597d00a9c6a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_sm.near-wall-edges.e3eb42c05e84.png",
+      "expectedGitBlob": "e509de3a8801e28a61b628549fbae85c6f1286d4",
+      "actualGitBlob": "e509de3a8801e28a61b628549fbae85c6f1286d4",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_hospital_sm.psp-er-iced-exit.52b62d0305f9.png",
+      "expectedGitBlob": "721296de340cd0e3d9f4621944df3769fb44298d",
+      "actualGitBlob": "721296de340cd0e3d9f4621944df3769fb44298d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_mall.bg-split-worm-arena.b4bb0b1e6077.png",
+      "expectedGitBlob": "653e04c9269bb573fa20f4d463888a35400c3115",
+      "actualGitBlob": "653e04c9269bb573fa20f4d463888a35400c3115",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_mall.near-edges.f5de5965e21f.png",
+      "expectedGitBlob": "01b2eaeb3bb27ccdb97d5631a1ecf891621677de",
+      "actualGitBlob": "01b2eaeb3bb27ccdb97d5631a1ecf891621677de",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_mall_sm.bg-gumball-hall.d8c394cba667.png",
+      "expectedGitBlob": "7810a8cffabd35dfa6a4a8c55ecfcdc00bad44c8",
+      "actualGitBlob": "7810a8cffabd35dfa6a4a8c55ecfcdc00bad44c8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_mall_sm.near-edges.26763553fee9.png",
+      "expectedGitBlob": "0d98a8b172949d19d8e988646ee13dbff2fe4e91",
+      "actualGitBlob": "0d98a8b172949d19d8e988646ee13dbff2fe4e91",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_school.bg-paparazzi-courtyard.7c088206ee69.png",
+      "expectedGitBlob": "89dad2a7e4077375f8eed73dbdbe1e684f5bc919",
+      "actualGitBlob": "89dad2a7e4077375f8eed73dbdbe1e684f5bc919",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_school.near-edges.ee6b79600353.png",
+      "expectedGitBlob": "0127139bf835a9affe07224476986bfc2a1e6ccf",
+      "actualGitBlob": "0127139bf835a9affe07224476986bfc2a1e6ccf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_theater.bg-caliban-cave.8f0e3e6b78df.png",
+      "expectedGitBlob": "f5ac8c87d69c8d3b6cf748d96ffef43db01af377",
+      "actualGitBlob": "f5ac8c87d69c8d3b6cf748d96ffef43db01af377",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nightmare_theater.near-edges.b6a4c8f79dfe.png",
+      "expectedGitBlob": "382bb0b415e816865eb06e4f9c0f72e00ee2d2d8",
+      "actualGitBlob": "382bb0b415e816865eb06e4f9c0f72e00ee2d2d8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nowhere.bethor-generator-room.6c753fcbaa0a.png",
+      "expectedGitBlob": "7497f29ae19d90f8cc1911c835e86f90ce9a6d1c",
+      "actualGitBlob": "7497f29ae19d90f8cc1911c835e86f90ce9a6d1c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/nowhere.near-wall-edges.70fd5fb39aff.png",
+      "expectedGitBlob": "c2e12ace54177417518b42cef22d98488fe5ab17",
+      "actualGitBlob": "c2e12ace54177417518b42cef22d98488fe5ab17",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/old_silent_hill.levin-street-house.b24f46cfebac.png",
+      "expectedGitBlob": "13ae24afcdd300e786ea3a5c973effee5c538896",
+      "actualGitBlob": "13ae24afcdd300e786ea3a5c973effee5c538896",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/old_silent_hill.near-frontage-edges.680e79d56e03.png",
+      "expectedGitBlob": "670210c24c6b26a2e98535ca3ad021c35fb214f2",
+      "actualGitBlob": "670210c24c6b26a2e98535ca3ad021c35fb214f2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/outside_room_302.door105.1a96e575d9fd.png",
+      "expectedGitBlob": "e9b3becd8d1f784e58f165ccfb85cdd4d94273a0",
+      "actualGitBlob": "e9b3becd8d1f784e58f165ccfb85cdd4d94273a0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/outside_room_302.near-wall-edges.0fafe322dcde.png",
+      "expectedGitBlob": "4fd5bebca5c66408dc71cdd169f2711030310c07",
+      "actualGitBlob": "4fd5bebca5c66408dc71cdd169f2711030310c07",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/overlook.block-a-a2-gallery.da91aaa922c0.png",
+      "expectedGitBlob": "46602cf39390061232d4f1233b1f4459aa7a73ce",
+      "actualGitBlob": "46602cf39390061232d4f1233b1f4459aa7a73ce",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/overlook.near-rusted-jambs.29b757fe46c2.png",
+      "expectedGitBlob": "62e0f53fe848dc0272a64d93ce61b12f54023e0e",
+      "actualGitBlob": "62e0f53fe848dc0272a64d93ce61b12f54023e0e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+      "expectedGitBlob": "8b0d158cf39466ff2566df18ea8b9067e1022431",
+      "actualGitBlob": "8b0d158cf39466ff2566df18ea8b9067e1022431",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+      "expectedGitBlob": "efa2547cd654dcce2ade5eaa028187989ca57170",
+      "actualGitBlob": "efa2547cd654dcce2ade5eaa028187989ca57170",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/prison_hc.bg-cell-block-b.2ccef75f92fd.png",
+      "expectedGitBlob": "88f3b0320c85f28948aff1b0a1518b2b198b30ef",
+      "actualGitBlob": "88f3b0320c85f28948aff1b0a1518b2b198b30ef",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/prison_hc.near-edges.c0fefbc898af.png",
+      "expectedGitBlob": "e924ed8d13b8a00556bc07db334a29bc95a05a86",
+      "actualGitBlob": "e924ed8d13b8a00556bc07db334a29bc95a05a86",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/prison_meat_locker.near-freezer-jambs.4337c644a171.png",
+      "expectedGitBlob": "b1026e0e12c70e5dfa51a616ceee6a53ff52f67f",
+      "actualGitBlob": "b1026e0e12c70e5dfa51a616ceee6a53ff52f67f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/prison_meat_locker.second-freezer.5437e088da66.png",
+      "expectedGitBlob": "5a0062a1df4794f1c82c709d7e02a1d6c9cafa25",
+      "actualGitBlob": "5a0062a1df4794f1c82c709d7e02a1d6c9cafa25",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/riverside_motel.courtyard.20bf06773d8a.png",
+      "expectedGitBlob": "405e35b5b76304fdadd14852a3159f6ad905178f",
+      "actualGitBlob": "405e35b5b76304fdadd14852a3159f6ad905178f",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/riverside_motel.gate.270f1cbab7c5.png",
+      "expectedGitBlob": "75ce0d6a52a624b504b3988d425d91f053f0acf7",
+      "actualGitBlob": "75ce0d6a52a624b504b3988d425d91f053f0acf7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/room_302.chair.739650b60353.png",
+      "expectedGitBlob": "28f96d0c5754bd407813f4287c67d85a6cfd054a",
+      "actualGitBlob": "28f96d0c5754bd407813f4287c67d85a6cfd054a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/room_302.entrance.6535cc934c6c.png",
+      "expectedGitBlob": "df729cb2d89de05783bd2814d090186615e1932a",
+      "actualGitBlob": "df729cb2d89de05783bd2814d090186615e1932a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+      "expectedGitBlob": "b8576528dbda9a0c394dec2e3333c0a1e35aef14",
+      "actualGitBlob": "b8576528dbda9a0c394dec2e3333c0a1e35aef14",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+      "expectedGitBlob": "0713aa53b1a4db48d981ebb4c2c0c9587be7e362",
+      "actualGitBlob": "0713aa53b1a4db48d981ebb4c2c0c9587be7e362",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/school_shf.background.360ffba8283b.png",
+      "expectedGitBlob": "5e236fd635d8df2400fbe968b7f6de63078a6069",
+      "actualGitBlob": "5e236fd635d8df2400fbe968b7f6de63078a6069",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/school_shf.foreground.a50d69a51274.png",
+      "expectedGitBlob": "3716ee242dd3222a8749c55f4f3a60e43b97fd65",
+      "actualGitBlob": "3716ee242dd3222a8749c55f4f3a60e43b97fd65",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/sewer_resort.near-service-struts.f302d8e9f669.png",
+      "expectedGitBlob": "315f9a915524c8fcafec19ddafd9dc089371629d",
+      "actualGitBlob": "315f9a915524c8fcafec19ddafd9dc089371629d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/sewer_resort.south-tunnel-pipe-bay.d8ad023bdfb3.png",
+      "expectedGitBlob": "38348eb3cc81a02a3518c4f4a480184399b0a4ea",
+      "actualGitBlob": "38348eb3cc81a02a3518c4f4a480184399b0a4ea",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/sewers.channel-after-dryer.9572d9592225.png",
+      "expectedGitBlob": "f1b517cef9d632137b4eafccdd28ccc518ab98f1",
+      "actualGitBlob": "f1b517cef9d632137b4eafccdd28ccc518ab98f1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/sewers.near-basin-edges.5698b0266f8c.png",
+      "expectedGitBlob": "1e5134dcfa3c917711b94567c308becc3a83484c",
+      "actualGitBlob": "1e5134dcfa3c917711b94567c308becc3a83484c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/shepherd_house_hc.background.7f735ed7e9fe.png",
+      "expectedGitBlob": "46fc4b5cd6a5d38763bcd28731293f005b4d4a9d",
+      "actualGitBlob": "46fc4b5cd6a5d38763bcd28731293f005b4d4a9d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/shepherd_house_hc.foreground.a7cc1f1e9d27.png",
+      "expectedGitBlob": "b4a582fd110098e588a1cf2bb33cf840df0bf467",
+      "actualGitBlob": "b4a582fd110098e588a1cf2bb33cf840df0bf467",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/shepherds_glen.background.12de6f58dc06.png",
+      "expectedGitBlob": "2aa1d37b74a95535716b5ae047fae14c6977dc82",
+      "actualGitBlob": "2aa1d37b74a95535716b5ae047fae14c6977dc82",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/shepherds_glen.foreground.c83fab7b1fd2.png",
+      "expectedGitBlob": "29b6c30da78b4d181aa5796a5bf35a8caeb9f11c",
+      "actualGitBlob": "29b6c30da78b4d181aa5796a5bf35a8caeb9f11c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/shopping_mall.happy-burger-table.459203f86106.png",
+      "expectedGitBlob": "a0d93f3ea588ac586abe4cc20b7e4fa91fb3f1f9",
+      "actualGitBlob": "a0d93f3ea588ac586abe4cc20b7e4fa91fb3f1f9",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/shopping_mall.happy-burger.2f61daa0c6a6.png",
+      "expectedGitBlob": "9298944ebb837af801ff39e4ac8dd38ded98157c",
+      "actualGitBlob": "9298944ebb837af801ff39e4ac8dd38ded98157c",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/shopping_mall.helens-bakery.0e2670100789.png",
+      "expectedGitBlob": "f9c113439d7686445570e42da8d9d1ecd6c77229",
+      "actualGitBlob": "f9c113439d7686445570e42da8d9d1ecd6c77229",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/south_vale.near-street-poles.7e6716e17a5e.png",
+      "expectedGitBlob": "82f20801c088aa9b434ee2e542485fa98a0a1189",
+      "actualGitBlob": "82f20801c088aa9b434ee2e542485fa98a0a1189",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/south_vale.neely-sanders-frontage.f97d2c2df42a.png",
+      "expectedGitBlob": "18ef576266f73134ea026eac22ac355f2db704a1",
+      "actualGitBlob": "18ef576266f73134ea026eac22ac355f2db704a1",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/st_marias.background.e8b396a71baf.png",
+      "expectedGitBlob": "a0c471b5a26796080b6071ec8dff656cba7b3584",
+      "actualGitBlob": "a0c471b5a26796080b6071ec8dff656cba7b3584",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/st_marias.foreground.5ea59966acd3.png",
+      "expectedGitBlob": "f0fd93f486c3be7dd362290b9c5ff4b000abdebe",
+      "actualGitBlob": "f0fd93f486c3be7dd362290b9c5ff4b000abdebe",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/subway_world.lynch-platform.db4c6baf4c38.png",
+      "expectedGitBlob": "e30e0f1efbce898581023de1daae5791bbb5f51a",
+      "actualGitBlob": "e30e0f1efbce898581023de1daae5791bbb5f51a",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/subway_world.near-platform-uprights.6fac368c5db5.png",
+      "expectedGitBlob": "a6bb13743f9eec3e0e927dedb6cff3a5591d2967",
+      "actualGitBlob": "a6bb13743f9eec3e0e927dedb6cff3a5591d2967",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/toluca_prison.courtyard.4d0ef11168ae.png",
+      "expectedGitBlob": "fa3fca68ad3b6100ab16f8cae61abb8e21e7b2eb",
+      "actualGitBlob": "fa3fca68ad3b6100ab16f8cae61abb8e21e7b2eb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/toluca_prison.scaffold-panel.3b120ad61785.png",
+      "expectedGitBlob": "d5c848857a8d2ee04d00a50263f02d361c2b7c2d",
+      "actualGitBlob": "d5c848857a8d2ee04d00a50263f02d361c2b7c2d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/town_hall_hc.background.ccb41f2ca340.png",
+      "expectedGitBlob": "16c15a608921136dc516fd2ca62d8cab303bf2f3",
+      "actualGitBlob": "16c15a608921136dc516fd2ca62d8cab303bf2f3",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/town_hall_hc.foreground.a42274c88402.png",
+      "expectedGitBlob": "c5f483403f215893324eace56d0cda3d81ccc09d",
+      "actualGitBlob": "c5f483403f215893324eace56d0cda3d81ccc09d",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/underground_hc.founding-families-closed-door.aefad84f59ee.png",
+      "expectedGitBlob": "d226977ae8626882a8ba9618e2c02a97828b1c0b",
+      "actualGitBlob": "d226977ae8626882a8ba9618e2c02a97828b1c0b",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/underground_hc.near-jambs.a49721844afa.png",
+      "expectedGitBlob": "bfb4ab36fe43e60eea93e3f459a755fbac0d2885",
+      "actualGitBlob": "bfb4ab36fe43e60eea93e3f459a755fbac0d2885",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/underpass_sh3.map-room.da4cf2791272.png",
+      "expectedGitBlob": "094d7bf1248812170d2e6b9ec52e2a8ae201b3be",
+      "actualGitBlob": "094d7bf1248812170d2e6b9ec52e2a8ae201b3be",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/underpass_sh3.near-wall-edges.a65261780188.png",
+      "expectedGitBlob": "15e3ec53661c87d905f05098b56e563e3e8c1ea7",
+      "actualGitBlob": "15e3ec53661c87d905f05098b56e563e3e8c1ea7",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/villa.apartment214-door.263d6a61f2f4.png",
+      "expectedGitBlob": "1b0c604d6d0c5caf174b216a3cf79b609af0fd6e",
+      "actualGitBlob": "1b0c604d6d0c5caf174b216a3cf79b609af0fd6e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/villa.near-wall-edges.4d500efc075f.png",
+      "expectedGitBlob": "e88d4d6ec00c0b4a3b7b88b6bb8a8ce3f1aa785e",
+      "actualGitBlob": "e88d4d6ec00c0b4a3b7b88b6bb8a8ce3f1aa785e",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+      "expectedGitBlob": "57d98d78b4ea69e03e15b394844d4914cf00e3cf",
+      "actualGitBlob": "57d98d78b4ea69e03e15b394844d4914cf00e3cf",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+      "expectedGitBlob": "026cf863fbe75d91dd19d95380a2c48dda1bc9cc",
+      "actualGitBlob": "026cf863fbe75d91dd19d95380a2c48dda1bc9cc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+      "expectedGitBlob": "fa60b1e1faba34b3d16ec1a309625c8175414571",
+      "actualGitBlob": "fa60b1e1faba34b3d16ec1a309625c8175414571",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+      "expectedGitBlob": "770086e02e732e12f44c01afb5a28d5c0ac45cfc",
+      "actualGitBlob": "770086e02e732e12f44c01afb5a28d5c0ac45cfc",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/water_prison.surveillance-room.5f3849f04407.png",
+      "expectedGitBlob": "c46451c487d8e3730c3e36354ef1ef4806b24446",
+      "actualGitBlob": "c46451c487d8e3730c3e36354ef1ef4806b24446",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/water_prison.valve-pedestal.7711109d1342.png",
+      "expectedGitBlob": "ecfa3da87a8e9cbe815002d0292b0a3ec2daca92",
+      "actualGitBlob": "ecfa3da87a8e9cbe815002d0292b0a3ec2daca92",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/woodside.clock-room.da94acd4e920.png",
+      "expectedGitBlob": "8cdf9002d0c76df632fd59211f46ddf9c72f70e8",
+      "actualGitBlob": "8cdf9002d0c76df632fd59211f46ddf9c72f70e8",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/woodside.corridor.c6ac083599d0.png",
+      "expectedGitBlob": "cc53f7a9b5d36be9da70530c65c676d7f1f843f0",
+      "actualGitBlob": "cc53f7a9b5d36be9da70530c65c676d7f1f843f0",
+      "unchanged": true
+    },
+    {
+      "path": "assets/stages/woodside.grandfather-clock.bc7fec047ff5.png",
+      "expectedGitBlob": "2788e2786304605bf05b9391ddf15fec891b7cf3",
+      "actualGitBlob": "2788e2786304605bf05b9391ddf15fec891b7cf3",
+      "unchanged": true
+    }
+  ],
+  "summary": {
+    "protectedFiles": 17,
+    "protectedUnchanged": 17,
+    "originalAssets": 695,
+    "assetsUnchanged": 695
+  },
+  "mismatches": [],
+  "passed": true
+}

@@ -4,12 +4,13 @@ import {mountClipEditor} from './sprite-clip-editor.js';
 import {clipSummary,moveTiming} from './sprite-clips.js';
 import {BASE_POSE_KEYS,PRESENTATION_KEYS,isPresentationPose,poseLabel,splitSpriteClipKey,contextualPresentationKeys,weaponIdleClipKeys} from './sprite-poses.js';
 import {FIGHTER_REFERENCES,STAGE_REFERENCES} from './production-reference.js';
-import {spriteCache,drawRasterMonster} from './sprite-system.js';
+import {spriteCache,drawRasterMonster,validSpriteCalibration} from './sprite-system.js';
 import {sampleSpriteClip} from './sprite-animation.js';
 import {visibleSpriteBox} from './sprite-framing.js';
 import {bodyBox} from './combat-geometry.js';
 
 export function calibrationPacket(fighter,original,draft){
+ if(!draft.frames.every(validSpriteCalibration))throw new RangeError('Calibration invalide : ancre 0–1, hauteur de référence 0,05–4, orientation -1 ou 1.');
  return {schema:2,kind:'halo-sprite-calibration',fighterId:fighter.id,source:fighter.source,
   previousFrames:original.frames.map(f=>({path:f.path,sha256:f.sha256,anchor:[...f.anchor],bodyHeight:f.bodyHeight,facing:f.facing})),
   frames:draft.frames.map((f,i)=>({path:original.frames[i].path,sha256:original.frames[i].sha256,
@@ -35,8 +36,8 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
  <div class="inspector-row"><label>Pose ou séquence<select data-inspect="pose"></select></label><button type="button" class="ui-button" data-inspect="play">LIRE</button><button type="button" class="ui-button" data-inspect="flip">VOIR VERS LA GAUCHE</button></div>
  <label class="inspector-timeline">Temps de simulation<input data-inspect="tick" type="range" min="0" max="0" step="1" value="0"></label>
  <p data-inspect="status" role="status"></p><button type="button" class="ui-button" data-inspect="retry" hidden>RÉESSAYER CETTE IMAGE</button><div class="inspector-row"><label>Zoom<select data-inspect="zoom"><option value="0.5">50 %</option><option value="1" selected>100 %</option><option value="1.5">150 %</option><option value="2">200 %</option></select></label><label><input data-inspect="boxes" type="checkbox" checked> Repères et collision</label></div>
- <details><summary>CALIBRER CETTE IMAGE</summary><p>Le point d’appui et la hauteur de référence ne modifient pas les collisions du moteur. Exporter ne modifie ni le dépôt ni la sauvegarde.</p><div class="inspector-fields">
- <label>Ancre X<input data-inspect="anchorX" type="number" min="0" max="1" step="0.001"></label><label>Ancre Y<input data-inspect="anchorY" type="number" min="0" max="1" step="0.001"></label><label>Hauteur de référence<input data-inspect="bodyHeight" type="number" min="0.05" max="1" step="0.001"></label><label>Orientation native<select data-inspect="facing"><option value="1">Droite</option><option value="-1">Gauche</option></select></label></div>
+ <details><summary>CALIBRER CETTE IMAGE</summary><p>La hauteur de référence est le rapport entre la hauteur debout équivalente et la hauteur du fichier, de 0,05 à 4. Une pose horizontale peut dépasser 1. Ce réglage ne certifie pas l’échelle du jeu source. Le point d’appui et la hauteur de référence ne modifient pas les collisions du moteur. Exporter ne modifie ni le dépôt ni la sauvegarde.</p><div class="inspector-fields">
+ <label>Ancre X<input data-inspect="anchorX" type="number" min="0" max="1" step="any"></label><label>Ancre Y<input data-inspect="anchorY" type="number" min="0" max="1" step="any"></label><label>Hauteur de référence<input data-inspect="bodyHeight" type="number" min="0.05" max="4" step="any"></label><label>Orientation native<select data-inspect="facing"><option value="1">Droite</option><option value="-1">Gauche</option></select></label></div>
  <div class="inspector-row"><button type="button" class="ui-button" data-inspect="reset">RÉINITIALISER</button><button type="button" class="ui-button" data-inspect="export">EXPORTER LA CALIBRATION</button></div><p data-inspect="error" role="alert"></p></details>`;
  host.append(panel);const $=key=>panel.querySelector(`[data-inspect="${key}"]`),ctx=canvas.getContext('2d');
  const label=key=>moveTiming(fighter,key)?.name||poseLabel(key);
@@ -121,8 +122,9 @@ export function mountSpriteInspector({host,canvas,fighter,art}){
  function applyFields(){
   if(!selected()){$('error').textContent='Importer une image de cette arme avant de la calibrer.';return false;}
   const inputs=['anchorX','anchorY','bodyHeight'].map(k=>$(k));
-  if(inputs.some(i=>!i.value.trim()||!i.checkValidity()||!Number.isFinite(Number(i.value)))){$('error').textContent='Valeurs invalides : ancre 0–1, hauteur 0,05–1.';return false;}
-  const frame=selected().frame;frame.anchor=inputs.slice(0,2).map(i=>Number(i.value));frame.bodyHeight=Number(inputs[2].value);frame.facing=Number($('facing').value);
+  const calibration={anchor:inputs.slice(0,2).map(i=>Number(i.value)),bodyHeight:Number(inputs[2].value),facing:Number($('facing').value)};
+  if(inputs.some(i=>!i.value.trim()||!i.checkValidity())||!validSpriteCalibration(calibration)){$('error').textContent='Valeurs invalides : ancre 0–1, hauteur 0,05–4, orientation -1 ou 1.';return false;}
+  const frame=selected().frame;Object.assign(frame,calibration);
   const base=original.frames[currentIndex];
   if(JSON.stringify([frame.anchor,frame.bodyHeight,frame.facing])===JSON.stringify([base.anchor,base.bodyHeight,base.facing]))dirty.delete(currentIndex);else dirty.add(currentIndex);
   $('error').textContent='';draw();return true;

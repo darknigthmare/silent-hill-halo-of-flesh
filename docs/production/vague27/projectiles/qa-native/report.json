@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-24T13:54:28.654Z",
+  "label": "wave27-native-projectiles",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "projectileStateInjected": false,
+  "method": "Actual FightEngine.update/render with ordinary local training/freeMeter options and original key callbacks. Native Canvas is not Chromium.",
+  "limits": [
+    "Static PNG candidates only; no native animation or 1:1 visual fidelity is certified.",
+    "Source observations establish attack kind; original texture, timing and trajectory are not reproduced by these images.",
+    "The six scenes exercise normal emission and artwork in both player slots; they are not a complete hit/guard gameplay matrix."
+  ],
+  "checks": [
+    {
+      "name": "native bytes assets/sprites/sh1_incubator_018.45c7c84b1960.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/sprites/sh3_god_050.f6f8f72ed323.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/stages/midwich.courtyard.c9728428d63d.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "passed": true
+    },
+    {
+      "name": "native bytes assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+      "passed": true
+    },
+    {
+      "name": "sh1_incubator_018-right actor/stage preflight",
+      "passed": false
+    }
+  ],
+  "captures": [],
+  "assets": [
+    {
+      "path": "assets/sprites/sh1_incubator_018.45c7c84b1960.png",
+      "sha256": "45c7c84b1960c38f87f1d8819ec0aaca731e02cafa1f000adebcfd2c2c028331",
+      "bytes": 518856,
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "path": "assets/sprites/sh2_lying_figure_020.af82da95d655.png",
+      "sha256": "af82da95d655904b849a170323269e33bd3336142a49cc182430af84a2f59b32",
+      "bytes": 1468686,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "path": "assets/sprites/sh3_god_050.f6f8f72ed323.png",
+      "sha256": "f6f8f72ed323c58100ebbca55198f2ec4cc2d3e07b2072c9e1ebaa2bbe2e4132",
+      "bytes": 1411208,
+      "width": 941,
+      "height": 1672
+    },
+    {
+      "path": "assets/sprites/sh2_creeper_025.f562380701ab.png",
+      "sha256": "f562380701ab43e7a1585783a00d8dc505575093372645ad12985d9c4b298f23",
+      "bytes": 1181785,
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "path": "assets/stages/midwich.courtyard.c9728428d63d.png",
+      "sha256": "c9728428d63d6950b27b5ec791cfcce4854c3aaf0ba781cf735b51c7725844c2",
+      "bytes": 1628967,
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/projectiles/sh1_incubator_blue_lightning.bc62471eecc3.png",
+      "sha256": "bc62471eecc380da70aaa1bf78e59c342094d9ea7597eaaff5090ba4812f7ffd",
+      "bytes": 1025146,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "path": "assets/projectiles/sh2_lying_figure_acid.947604e7ff5a.png",
+      "sha256": "947604e7ff5ab1dad111a9b0000585de8ed007e8ad07fd632fbfee515039cf51",
+      "bytes": 1389718,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "path": "assets/projectiles/sh3_god_ground_flame.8b645595b188.png",
+      "sha256": "8b645595b188a85e2286d44ad7b51ae46a4201a3ebab01342dad7485b65a96b8",
+      "bytes": 1258820,
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "scenes": [],
+  "sourceHashes": {
+    "src/fight.js": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+    "src/projectile-bitmaps.js": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
+    "src/projectile-bitmap-manifest.js": "3b88631dbca967ff63d92a77e97dd17f5609f7ebc973b45d085aad94dc61cf2e",
+    "src/sprite-manifest.js": "dde9d8e9c222c40bfedfb949cdf37a13248941b20791813bf564d837b1937818",
+    "src/stage-bitmap-manifest.js": "fd68efc5606ab12d7783413a9622bb3f98d3c74e281df4961c8999625f59fc55"
+  },
+  "success": false,
+  "error": "Error: sh1_incubator_018-right actor/stage preflight\n    at check (file:///workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/projectiles/qa-native.mjs:31:132)\n    at file:///workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/projectiles/qa-native.mjs:67:35"
+}

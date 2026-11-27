@@ -1,3 +1,22 @@
+## 0.9.6 — Vague 28, 24 novembre 2026
+
+- Quatre poses d’attaque statiques : Groaner SH1, Closer et Numb Body Small SH3, Fire Guardian de Book of Memories ; portraits et frames antérieurs conservés.
+- Deux effets séparés pour le rocher d’Earth Guardian et le jet blanc/magenta/violet de Fire Guardian ; quatre commandes supplémentaires couvertes, aucune nouvelle règle de combat.
+- Trois arènes à deux plans : chambre finale SH4, salle de Scarlet et toit d’hôpital Arcade. Couverture : 85/123 arènes.
+- Correction des duels refusés contre Faceless Nurse : cache combat borné à 72 Mio, conservation de toutes les frames natives ; caches des décors et projectiles inchangés.
+- 1 301 tests Node et 522 contrôles natifs réussis, dix-sept captures finales inspectées. Les 683 anciens assets et dix-sept fichiers de règles/classeurs protégés sont inchangés.
+- Harnais HTTP préparés pour treize scènes ; contrôles de serveur, fraîcheur des dessins et IDs d’acteurs corrigés. Aucun résultat HTTP non exécuté n’est revendiqué.
+- Douze PNG actifs, une variante Fire archivée hors jeu, aucun nouveau personnage ou clip animé. Fidélité 1:1 non certifiée ; voir [la livraison et les limites](docs/production/vague28/README.md).
+
+## 0.9.6 — Vague 27, 24 novembre 2026
+
+- Deux poses d’attaque indépendantes pour Lying Figure SH2 et Double Head SH3, avec portraits, idles et clips antérieurs conservés.
+- Trois effets PNG dédiés aux projectiles de Lying Figure, Incubator et God ; liaison exacte profil/édition/commande, cache séparé de 32 Mio et repli visuel sur chargement manquant ou défaillant.
+- Trois arènes à deux plans : première cellule du commissariat de Homecoming, toit et escalier normal de The Short Message. Couverture : 82/123 arènes.
+- Correction documentée d’une ancienne référence de commissariat qui montrait en réalité l’ouverture d’Alchemilla.
+- Aucun changement de dégâts, trajectoires, permissions, roster ou classeurs. Les onze images sont des candidats statiques ; aucun nouveau clip animé ou certificat 1:1.
+- Voir [le dossier de la vague 27](docs/production/vague27/README.md) pour les preuves, les tests et les manquants.
+
 ## 0.9.5 — Transitions, pause multi-manettes et récupération des sauvegardes
 
 - Appuis tactiles brefs conservés entre deux ticks : impulsion distincte du maintien, sans garde réactivée.

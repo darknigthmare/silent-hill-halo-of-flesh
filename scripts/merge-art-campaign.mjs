@@ -64,7 +64,7 @@ export function validateArtCampaign(inventory,ledgers,fragments,baseline){
     const frame=asset?.frames?.[0];
     if(frame&&(!origins.has(asset.origin)||!origins.has(frame.origin??asset.origin)||
      ![-1,1].includes(frame.facing)||!Array.isArray(frame.anchor)||frame.anchor.length!==2||
-     !frame.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1)||!Number.isFinite(frame.bodyHeight)||frame.bodyHeight<.05||frame.bodyHeight>1))
+     !frame.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1)||!Number.isFinite(frame.bodyHeight)||frame.bodyHeight<.05||frame.bodyHeight>4))
      errors.push(label+': explicit frame provenance, facing and scale required');
     if(frame&&(!/^[a-f0-9]{64}$/.test(frame.sha256||'')||
      frame.path!==`assets/sprites/${id}.${frame.sha256.slice(0,12)}.png`))errors.push(label+': exact hashed identity filename required');

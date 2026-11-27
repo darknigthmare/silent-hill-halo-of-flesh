@@ -17,6 +17,23 @@ TABLES = {'Combattants': 'fighters', 'Mouvements': 'moves', 'Finishers': 'finish
           'Présentations': 'presentations', 'Clips': 'poses', 'Arènes': 'stages',
           'Animations arènes': 'stageAnimations', 'Actions': 'tasks',
           'Gestes référencés': 'observations', 'Sources': 'sources'}
+GUIDE_SHEETS = ('Guide combat', 'Associations guide')
+
+
+def valid_sheet_scope(names):
+    """Allow the historical workbook, or its exact additive guide extension."""
+    baseline = ['Synthèse', *TABLES]
+    return names == baseline or names == [*baseline, *GUIDE_SHEETS]
+
+
+def valid_guide_table_scope(name, tables):
+    """Accept the historical guide layout and its exact 38-section addition."""
+    baseline = [('CombatGuideSections', 'A8:K38'), ('CombatGuideModules', 'A44:F54')]
+    if name == 'Guide combat':
+        return tables == baseline or tables == [*baseline, ('CombatGuideExtensions', 'A60:K98')]
+    return (name == 'Associations guide' and len(tables) == 1
+            and tables[0][0] == 'CombatGuideAssociations'
+            and re.fullmatch(r'A8:G[1-9][0-9]*', tables[0][1] or '') is not None)
 
 
 def read_json(path):
@@ -78,7 +95,7 @@ def verify(plan_path, workbook_path):
         book = ET.fromstring(z.read('xl/workbook.xml'))
         relations = {r.get('Id'): r.get('Target') for r in ET.fromstring(z.read('xl/_rels/workbook.xml.rels'))}
         sheets = book.findall('s:sheets/s:sheet', NS)
-        assert [s.get('name') for s in sheets] == ['Synthèse', *TABLES], 'Worksheet order/scope mismatch'
+        assert valid_sheet_scope([s.get('name') for s in sheets]), 'Worksheet order/scope mismatch'
 
         def value(cell):
             if cell is None:
@@ -106,6 +123,34 @@ def verify(plan_path, workbook_path):
             errors = [(name, address, value(c)) for address, c in cells.items() if c.get('t') == 'e']
             report['errors'].extend(errors)
             assert not errors, f'Cached Excel errors: {errors[:3]}'
+            if name in GUIDE_SHEETS:
+                pane = xml.find('s:sheetViews/s:sheetView/s:pane', NS)
+                assert pane is not None and pane.get('xSplit') == '2' and pane.get('ySplit') == '8', f'Guide frozen panes: {name}'
+                table_parts = xml.findall('s:tableParts/s:tablePart', NS)
+                rel_path = posixpath.join(posixpath.dirname(location), '_rels', posixpath.basename(location)+'.rels')
+                table_rels = {r.get('Id'): r.get('Target') for r in ET.fromstring(z.read(rel_path))}
+                guide_tables = []
+                for part in table_parts:
+                    target = table_rels[part.get('{'+NS['r']+'}id')]
+                    table_path = target.lstrip('/') if target.startswith('/') else posixpath.normpath(posixpath.join(posixpath.dirname(location), target))
+                    table = ET.fromstring(z.read(table_path))
+                    filter_node = table.find('s:autoFilter', NS)
+                    assert filter_node is not None and filter_node.get('ref') == table.get('ref'), f'Guide table/filter mismatch: {name}'
+                    guide_tables.append((table.get('name'), table.get('ref')))
+                assert valid_guide_table_scope(name, guide_tables), f'Guide tables: {name}'
+                if name == 'Guide combat':
+                    assert [value(cells.get(f'A{i}')) for i in range(9,39)] == [f'SHCG-{i:02d}' for i in range(30)], 'Guide section coverage/order mismatch'
+                    section_count = 68 if len(guide_tables) == 3 else 30
+                    if section_count == 68:
+                        assert [value(cells.get(f'A{i}')) for i in range(61,99)] == [f'SHCG-{i:02d}' for i in range(30,68)], 'Guide extension coverage/order mismatch'
+                    assert value(cells.get('B4')) == section_count, 'Guide section total mismatch'
+                else:
+                    ids = [value(c) for address,c in cells.items() if re.fullmatch(r'B[0-9]+', address) and int(address[1:]) >= 9]
+                    assert ids and all(isinstance(identifier, str) and identifier for identifier in ids), 'Guide associations missing IDs'
+                    assert value(cells.get('B4')) == len(ids), 'Guide association total mismatch'
+                    assert guide_tables[0][1] == f'A8:G{8 + len(ids)}', 'Guide association table range mismatch'
+                report.setdefault('guideSheets', {})[name] = {'documentary': True, 'nativeTables': len(guide_tables)}
+                continue
             if name == 'Synthèse':
                 formulas = [c for c in cells.values() if c.find('s:f', NS) is not None]
                 report['summaryFormulas'] = len(formulas)

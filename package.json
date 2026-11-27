@@ -24,7 +24,9 @@
     "audit:references": "node scripts/audit-sprite-references.mjs",
     "qa:art92": "node scripts/http-qa-art92.mjs",
     "qa:wave16": "node scripts/http-qa-wave16.mjs",
-    "qa:wave17": "node scripts/http-qa-wave17.mjs"
+    "qa:wave17": "node scripts/http-qa-wave17.mjs",
+    "bible:guide": "node scripts/build-combat-guide.mjs",
+    "bible:check": "node scripts/build-combat-guide.mjs --check"
   },
   "engines": {
     "node": ">=20"

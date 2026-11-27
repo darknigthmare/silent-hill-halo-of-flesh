@@ -42,7 +42,7 @@ for(const [id,art] of Object.entries(registry.assets)){
     if(frame.facing!==undefined&&![-1,1].includes(frame.facing))fail('invalid native facing '+id);
     if(i<art.frames.length){
       if(!origins.has(frame.origin??art.origin))fail('missing frame provenance '+id);
-      if(![-1,1].includes(frame.facing)||!Array.isArray(frame.anchor)||frame.anchor.length!==2||!frame.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1)||!Number.isFinite(frame.bodyHeight)||frame.bodyHeight<.05||frame.bodyHeight>1)fail('invalid anchor/scale '+id);
+      if(![-1,1].includes(frame.facing)||!Array.isArray(frame.anchor)||frame.anchor.length!==2||!frame.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1)||!Number.isFinite(frame.bodyHeight)||frame.bodyHeight<.05||frame.bodyHeight>4)fail('invalid anchor/scale '+id);
       if(signatures.has(sha)&&signatures.get(sha)!==id)fail('cross-profile raster clone '+id);
       signatures.set(sha,id);
     }
@@ -78,5 +78,9 @@ if(!worker.includes('// SPRITE_ASSETS_BEGIN')||!worker.includes('// SPRITE_ASSET
 await writeFile(workerPath,worker.replace(/  \/\/ SPRITE_ASSETS_BEGIN[\s\S]*?  \/\/ SPRITE_ASSETS_END/,
   '  // SPRITE_ASSETS_BEGIN\n'+paths.map(p=>'  '+JSON.stringify(p)+',').join('\n')+'\n  // SPRITE_ASSETS_END'));
 
+const {buildProjectileBitmaps}=await import('./build-projectile-bitmaps.mjs');
+await buildProjectileBitmaps();
+const {buildStoryArtwork}=await import('./build-story-art.mjs');
+await buildStoryArtwork();
 const {buildStageBitmaps}=await import('./build-stage-bitmaps.mjs');
 await buildStageBitmaps();

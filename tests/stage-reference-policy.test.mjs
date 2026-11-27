@@ -126,7 +126,20 @@ test('events and hazards come from their exact allowlists, never from a similar 
 
 test('a small explicit catalogue implements precise visual parts instead of labelling every proposal complete',()=>{
   const tracks=STAGES.flatMap(s=>s.referenceTracks),keys=new Set(tracks.map(t=>t.key));
-  assert.equal(tracks.length,163);assert.equal(keys.size,136);assert.ok(keys.size<=Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
+  assert.equal(tracks.length,159);assert.equal(keys.size,132);assert.ok(keys.size<=Object.values(STAGE_REFERENCE_TRACKS).filter(track=>!track.pendingLocation).length);
+  // Wave32 replaces the three Green Lion prototypes with fixed scene bitmaps.
+  // Their definitions and four research proposals remain historical evidence.
+  const antique=stage('antique_shop'),maskedKeys=['greenLionPassageDust','flaurosCoreShade','greenLionWallGlint'];
+  assert.deepEqual(antique.referenceTracks,[]);assert.equal(antique.reference.proposals.length,4);
+  assert.deepEqual(antique.referencePolicy.renderedProposalIds,[]);
+  assert.deepEqual(antique.referencePolicy.pendingProposalIds,[1,2,3,4].map(i=>`antique_shop:reference:${i}`));
+  const masked=antique.referencePolicy.suppression.filter(row=>row.kind==='reference-track');
+  assert.deepEqual(masked.map(row=>row.key),maskedKeys);
+  for(const [index,key] of maskedKeys.entries()){
+    assert.equal(STAGE_REFERENCE_TRACKS[key].stageId,'antique_shop');assert.equal(keys.has(key),false);
+    assert.equal(masked[index].id,`antique_shop:reference:${index+1}`);
+    assert.equal(masked[index].status,'historical-masked-by-bitmap');
+  }
   assert.ok(tracks.length<raw.reduce((n,s)=>n+s.animations.length,0));
   for(const t of tracks){
     const s=stage(t.id.split(':')[0]),proposal=STAGE_REFERENCES[s.id].animations[t.proposalIndex];

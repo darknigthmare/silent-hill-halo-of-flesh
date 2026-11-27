@@ -1,0 +1,703 @@
+{
+  "schema": 1,
+  "label": "stage-pass28-native-final",
+  "generatedAt": "2026-11-25T08:11:14.930Z",
+  "root": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh",
+  "stageIds": [
+    "arcade_hospital"
+  ],
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "All selected stage IDs resolve exactly",
+      "passed": true
+    },
+    {
+      "name": "Existing test fighters retain combat eligibility",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "arcade_hospital: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "arcade_hospital: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "arcade_hospital: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "arcade_hospital: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "arcade_hospital: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "arcade_hospital: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-system.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+      "bytes": 1182614,
+      "width": 1536,
+      "height": 1024,
+      "rgbaSha256": "0c4478dcf379d0ee73c21fa9a753a15f96ffec1d36fcb4541e7b1fdb8191dd80"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+      "bytes": 1697023,
+      "width": 1024,
+      "height": 1536,
+      "rgbaSha256": "3a1362834f7de8adb70fab12dbecda3baf65eba0e58d5f6fdcc012bf0c43f3b2"
+    },
+    {
+      "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+      "sha256": "2409645c1f049ec526510e8e509b6a72d1537c02707ea9804fb9f7ebddac2c8c",
+      "bytes": 2503138,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "25af340be9077659e5aba2d37819ac3dab669b6121d4e7adb12aefb88c12c7fc"
+    },
+    {
+      "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+      "sha256": "c002d07614874ddf839a232d4c73d7100b8caf142c5041092f3f9db814b7c1ad",
+      "bytes": 409647,
+      "width": 1671,
+      "height": 941,
+      "rgbaSha256": "fbde6477a2e16a4cd39dc66285c58bc5459fa2dce35f89eaa54d6f147810687f"
+    }
+  ],
+  "cases": [
+    {
+      "stageId": "arcade_hospital",
+      "source": "arcade",
+      "scene": "arcade-brookhaven-normal-corridor",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+              "args": [
+                0,
+                0.53125,
+                1671,
+                939.9375,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+              "args": [
+                0,
+                0.53125,
+                1671,
+                939.9375,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+              "args": [
+                0,
+                0.53125,
+                1671,
+                939.9375,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+              "args": [
+                0,
+                0.53125,
+                1671,
+                939.9375,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    }
+  ],
+  "captures": [
+    {
+      "file": "arcade_hospital.png",
+      "stageId": "arcade_hospital",
+      "sha256": "ecdb062a549486ddd39348157464f0fc49f53d09a22b7f1c287b7b042c66c6c3",
+      "bytes": 1363680,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd",
+      "after": "42372543618c733dc7038ef6b86b89ec13bb73ffd51120b06b909a9d4aaaf2fd"
+    },
+    "src/sprite-manifest.js": {
+      "before": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92",
+      "after": "5709f1f353992457bd39ce678b94d00b82be8967657495117f5c9629b0db4b92"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "a5e1bc111c976c565000e5f5b1d2881659259135d3313520e21b6875e4b10d55",
+      "after": "a5e1bc111c976c565000e5f5b1d2881659259135d3313520e21b6875e4b10d55"
+    },
+    "src/sprite-system.js": {
+      "before": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28",
+      "after": "9576f522cd63113dbb33b2bfdcae24728783d08ed2194f384732467e88589a28"
+    },
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "method": {
+    "renderer": "Actual FightEngine.update/render and the original native Canvas drawImage. Each stage is selected through its normal stage descriptor.",
+    "inputs": "Only registered InputState keydown/keyup callbacks receive synthetic native events. No actor position, facing, health, phase, presentation or clock is assigned.",
+    "decoder": "PNG encoding normalized in memory for native decoding; every decoded RGBA byte is compared before/after.",
+    "scope": "Existing fighters exercise initial stage composition, movement in both directions, release to idle, exact planes, live parallax and cache admission."
+  },
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, actual browser keyboard delivery or service workers.",
+    "No new fighter pose, attack, contact, guard, finisher, stage hazard, original timing or 1:1 artistic fidelity is certified.",
+    "Two static stage planes and their runtime parallax do not constitute a new source animation."
+  ],
+  "memoryPolicy": {
+    "nodeExecArgv": [
+      "--expose-gc"
+    ],
+    "explicitGcAfterSharpDecodeBeforeNativePreflight": true,
+    "engineLogicChanged": false
+  },
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "f5e0e321f9d5211ae5f5c3b23ef4bcb1edf9a7d78fb5ab5c868619526781c03e",
+  "version": "0.9.6",
+  "runtimeCacheBudgets": {
+    "combatSpriteBytes": 75497472,
+    "stageBitmapBytes": 67108864
+  },
+  "predecessorEvidence": "docs/production/vague28/stages/qa-native/report.json",
+  "testedSpriteEntryHashes": {
+    "bom_pyramid_head_129": "3ec8112c0efe5bc73ab7638fa37288f731fd4bcb68d58c40c61fa0e0ea7febde",
+    "bom_butcher_123": "0e5bf88a83144ea003cc77b282f4b136c7c6351c03e7da55dbf5b8807220ddd3"
+  },
+  "testedStageEntryHashes": {
+    "arcade_hospital": "0de787fa0c300e7a18ea0af9b109097486bfb48ebad57a024598f60972055ca9"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "passed": true,
+  "completedAt": "2026-11-25T08:11:17.273Z"
+}

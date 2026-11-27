@@ -1,0 +1,181 @@
+{
+  "schema": "halo-wave28-character-alpha-review-v1",
+  "method": "Read-only RGBA sampling and alpha bounds; original PNG bytes preserved",
+  "entries": [
+    {
+      "path": "docs/production/vague28/characters/closer-forward-special.png",
+      "sha256": "e9ec336a3114b5128213c96825011b96b13d7b7967af64fc6bc8b4e22e3ff44b",
+      "samples": [
+        {
+          "xy": [
+            500,
+            180
+          ],
+          "rgba": [
+            56,
+            38,
+            27,
+            0
+          ]
+        },
+        {
+          "xy": [
+            800,
+            10
+          ],
+          "rgba": [
+            84,
+            54,
+            38,
+            0
+          ]
+        },
+        {
+          "xy": [
+            1000,
+            100
+          ],
+          "rgba": [
+            64,
+            43,
+            30,
+            0
+          ]
+        },
+        {
+          "xy": [
+            400,
+            500
+          ],
+          "rgba": [
+            16,
+            9,
+            4,
+            0
+          ]
+        },
+        {
+          "xy": [
+            700,
+            1000
+          ],
+          "rgba": [
+            30,
+            23,
+            19,
+            0
+          ]
+        },
+        {
+          "xy": [
+            1480,
+            1000
+          ],
+          "rgba": [
+            6,
+            2,
+            0,
+            0
+          ]
+        }
+      ],
+      "observation": "Les points du halo apparent dans l’aperçu possèdent alpha=0 et ne doivent pas contribuer au rendu Canvas. Les RGB non nuls sous alpha zéro sont conservés; aucune retouche externe.",
+      "finalCompositionCaptures": [
+        {
+          "path": "docs/production/vague28/characters/qa-native-final/sh3_closer_036-right-attack-active.png",
+          "sha256": "1b346d2146f2ad5a68ed958a9aa61c8f68ca91507106045a929185cf39b170ef",
+          "inspected": true
+        },
+        {
+          "path": "docs/production/vague28/characters/qa-native-final/sh3_closer_036-left-attack-active.png",
+          "sha256": "c2c4dd7effc08b0e84004771cfe7dc086f85496b12e5feb32cb0b516581892bb",
+          "inspected": true
+        }
+      ]
+    },
+    {
+      "path": "docs/production/vague28/characters/numb-body-small-forward-special.png",
+      "sha256": "e3c4ec010cf6ce6dc278250ee897b7d32a0c2303794d2bb6dc5c37b77a306102",
+      "samples": [
+        {
+          "xy": [
+            768,
+            100
+          ],
+          "rgba": [
+            54,
+            46,
+            45,
+            0
+          ]
+        },
+        {
+          "xy": [
+            200,
+            400
+          ],
+          "rgba": [
+            45,
+            30,
+            29,
+            0
+          ]
+        },
+        {
+          "xy": [
+            400,
+            900
+          ],
+          "rgba": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "xy": [
+            1000,
+            900
+          ],
+          "rgba": [
+            8,
+            4,
+            2,
+            0
+          ]
+        },
+        {
+          "xy": [
+            1200,
+            400
+          ],
+          "rgba": [
+            11,
+            7,
+            7,
+            0
+          ]
+        }
+      ],
+      "observation": "Les points du halo apparent dans l’aperçu possèdent alpha=0 et ne doivent pas contribuer au rendu Canvas. Les RGB non nuls sous alpha zéro sont conservés; aucune retouche externe.",
+      "finalCompositionCaptures": [
+        {
+          "path": "docs/production/vague28/characters/qa-native-final/sh3_numb_body_small_037-right-attack-active.png",
+          "sha256": "e626f04076dfe8328970aa013282aa32860f725fd5ee01da4ee801874944d8d6",
+          "inspected": true
+        },
+        {
+          "path": "docs/production/vague28/characters/qa-native-final/sh3_numb_body_small_037-left-attack-active.png",
+          "sha256": "a2a2e8dbcba2374fcae4a6ced48ce8feefca48efaa8b9bc7b0c6cc173e57bbae",
+          "inspected": true
+        }
+      ]
+    }
+  ],
+  "nativeCompositionStatus": "Final native composition visually inspected for Closer and Numb Body in both orientations against Faceless Nurse. No broad colored halo or opaque rectangle observed. No imagegen correction or external pixel edit needed.",
+  "nativeCompositionReview": "docs/production/vague28/characters/visual-review.json",
+  "nativeCompositionReport": "docs/production/vague28/characters/qa-native-final/report.json",
+  "sourceImagePixelsModifiedLocally": false,
+  "initialCompositionReport": "docs/production/vague28/characters/qa-native/report.json"
+}

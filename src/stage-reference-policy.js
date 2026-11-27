@@ -69,11 +69,15 @@ const LOT11_ENVIRONMENT = Object.freeze({
       "monitor"
     ],
     "automaticFinishers": false,
-    "disableAnimations": true
+    "disableAnimations": true,
+    "disableReferenceTracks": {
+      "sceneId": "female-treatment-mirror",
+      "reason": "La composition bitmap fixe de vague31 masque le prototype procédural historique du miroir ; sa proposition reste conservée et en attente pour le rendu actuel, sans animation livrée."
+    }
   },
   "antique_shop": {
     "source": "origins",
-    "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+    "name": "GREEN LION — ANTICHAMBRE DU CULTE",
     "weather": "none",
     "fog": 0,
     "interior": true,
@@ -87,7 +91,11 @@ const LOT11_ENVIRONMENT = Object.freeze({
       "industrial-depth"
     ],
     "automaticFinishers": false,
-    "disableAnimations": true
+    "disableAnimations": true,
+    "disableReferenceTracks": {
+      "sceneId": "green-lion-inner-passage",
+      "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+    }
   },
   "church_hc": {
     "source": "homecoming",
@@ -191,7 +199,7 @@ const LOT11_SCENE_PRESENTATION = Object.freeze({
       "terrainRules": false,
       "terrainPresentation": {
         "name": "SEUIL DU MIROIR DE SOINS",
-        "description": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        "description": "Vues natives de Female Treatment 2F inspectées avant la traversée du miroir : lits métalliques, rideaux écrus, double lavabo, miroir horizontal et carrelage usé. Pièce physique normale ; reflet verdâtre conservé sans transition automatique. Cadrage frontal et profondeur adaptés au versus ; plateforme/build non établis, caméra, géométrie et mouvement non certifiés 1:1. Physique neutre du versus."
       },
       "normalPhaseLabel": "SALLE DE SOINS · AVANT LE MIROIR"
     }
@@ -202,10 +210,10 @@ const LOT11_SCENE_PRESENTATION = Object.freeze({
       "sceneId": "green-lion-inner-passage",
       "terrainRules": false,
       "terrainPresentation": {
-        "name": "PLATEAU DU PASSAGE INTÉRIEUR",
-        "description": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        "name": "SOL DE L’ANTICHAMBRE DU CULTE",
+        "description": "Antichambre après le tunnel de Green Lion, avant la cinématique finale : autel vide, drapé rouge, cierges et court passage grillagé documentés par le guide officiel p. 121 et trois vues natives. Le Flauros abstrait et les anciens mouvements ne sont plus rendus. Caméra, largeur, placement précis et microtextures adaptés ; aucun corps rituel ou élément de la salle de cinématique. Physique neutre du versus ; géométrie non certifiée 1:1."
       },
-      "alteredPhaseLabel": "PASSAGE INTÉRIEUR · AVANT CONFRONTATION"
+      "alteredPhaseLabel": "ANTICHAMBRE · AVANT LA CINÉMATIQUE"
     }
   },
   "church_hc": {
@@ -296,7 +304,7 @@ const LOT10_ENVIRONMENT = Object.freeze({
       "lanterns",
       "portraits"
     ],
-    "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+    "name": "SHIMIZU RESIDENCE II — SALLE À MANGER",
     "source": "shf",
     "automaticFinishers": false,
     "disableAnimations": true
@@ -380,6 +388,7 @@ const LOT10_ENVIRONMENT = Object.freeze({
 // Corrections refer to the exact ID/media. Similar names never transfer a rule.
 const ENVIRONMENT = Object.freeze({
   old_silent_hill: {weather:'snow'},
+  arcade_prison: {source:'arcade',name:'THE ARCADE — TOLUCA PRISON · OTHERWORLD',worldState:'fixed-altered'},
   church_hc: {name:'CHURCH OF THE HOLY WAY',weather:'dust'},
   prison_hc: {name:'OVERLOOK PENITENTIARY'},
   prison_meat_locker: {name:'LABYRINTH — MEAT LOCKER',weather:'none',fog:0,automaticFinishers:false,disableAnimations:true,removeProps:['cells','watchtower','chains']},
@@ -565,6 +574,16 @@ const ENVIRONMENT = Object.freeze({
   ...LOT10_ENVIRONMENT,
   ...LOT11_ENVIRONMENT,
   ...LOT12_ENVIRONMENT,
+  arcade_historical:{source:'arcade',name:'THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY',weather:'none',fog:0,interior:true,
+    worldState:'fixed-normal',removeProps:['portraits','stairs','doors'],
+    automaticFinishers:false,disableAnimations:true},
+  wish_house:{source:'sh4',name:'WISH HOUSE — INTÉRIEUR DU PREMIER PASSAGE',weather:'none',fog:0,interior:true,
+    worldState:'fixed-normal',removeProps:['trees','fence','altar','rooms','portraits','stairs'],
+    automaticFinishers:false,disableAnimations:true},
+  lighthouse_sm:{source:'shattered',name:'LIGHTHOUSE — ENTRÉE DE LA CLINIQUE',weather:'none',fog:0,interior:false,
+    worldState:'fixed-normal',removeProps:['tower','beam','shore','water','ice'],
+    automaticFinishers:false,disableAnimations:true,
+    disableReferenceTracks:{sceneId:'shm-clinic-entrance-before-therapy',reason:'Le plan fixe de l’entrée de clinique exclut les anciennes propositions composites de faisceau, eau et raccord thérapeutique ; elles restent conservées en attente.'}},
 });
 
 // Scene wording and neutral versus footing do not assert a material's source physics.
@@ -591,19 +610,20 @@ const SCENE_PRESENTATION_BASE = Object.freeze({
       "alteredPhaseLabel": "RESIDENCE I · ENTRÉE",
       "terrainPresentation": {
         "name": "PLANCHER DU CORRIDOR",
-        "description": "Corridor d’entrée à plancher bois, distinct de la salle à manger tatami de ResidenceI et des étatsResidenceII/III. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        "description": "Corridor d’entrée à plancher bois de Residence I, distinct de la salle à manger tatami retenue dans Residence II et des états ultérieurs de la maison. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
       }
     }
   },
   "shimizu_residence": {
     "source": "shf",
     "policy": {
+      "sceneId": "shf-residence-ii-dining-yellowed-calendar",
       "terrainRules": false,
-      "normalPhaseLabel": "RESIDENCE I · SALLE À MANGER",
-      "alteredPhaseLabel": "RESIDENCE I · SALLE À MANGER",
+      "normalPhaseLabel": "RESIDENCE II · SALLE À MANGER",
+      "alteredPhaseLabel": "RESIDENCE II · SALLE À MANGER",
       "terrainPresentation": {
         "name": "TATAMI DE LA SALLE À MANGER",
-        "description": "Salle à manger à table ronde du calendrier jauni, voie initiale ; pas cuisine ni corridor à plancher bois. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        "description": "Salle à manger à table ronde du calendrier jauni, Residence II, parcours Ending 1 après le souvenir ; pas cuisine ni corridor d’entrée de Residence I. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
       }
     }
   },
@@ -697,7 +717,37 @@ const SCENE_PRESENTATION_BASE = Object.freeze({
   lakeside_sh3:{source:'sh3',policy:{normalPhaseLabel:'AVANT LA TRANSITION DU CARROUSEL',terrainRules:false,terrainPresentation:{name:'PLATEAU DU HAPPY CAROUSEL',description:'Happy Carousel avant sa transition ; chevaux de fond fixés à leurs mâts. Aucun poison ou obstacle ajouté ; humidité, physique et caméra non certifiées 1:1.'}}},
 });
 
-const SCENE_PRESENTATION = Object.freeze({...SCENE_PRESENTATION_BASE,...LOT12_SCENE_PRESENTATION});
+const SCENE_PRESENTATION = Object.freeze({
+  ...SCENE_PRESENTATION_BASE,...LOT12_SCENE_PRESENTATION,
+  arcade_historical:{source:'arcade',policy:{
+    sceneId:'historical-society-normal-gallery-before-descent',terrainRules:false,
+    normalPhaseLabel:'STAGE 2 AREA 1 · GALERIE NORMALE',
+    alteredPhaseLabel:'STAGE 2 AREA 1 · GALERIE NORMALE',
+    terrainPresentation:{name:'GALERIE AVANT LA DESCENTE',description:'Galerie de la Historical Society de The Arcade avant la descente : papier peint jaune olive, boiseries sombres et quatre cadres repérés dans deux captures de jeu. Sol, détails des tableaux et largeur reconstruits pour le versus ; physique neutre, géométrie et fidélité 1:1 non certifiées.'}
+  }},
+  lighthouse_sm:{source:'shattered',policy:{
+    sceneId:'shm-clinic-entrance-before-therapy',terrainRules:false,
+    normalPhaseLabel:'CLINIQUE · EXTÉRIEUR AVANT ENTRÉE',
+    alteredPhaseLabel:'CLINIQUE · EXTÉRIEUR AVANT ENTRÉE',
+    terrainPresentation:{name:'NEIGE DEVANT LA CLINIQUE',description:'Porche du Lighthouse Counseling Center après l’échange du rivage, avant de franchir la porte : bardage, piliers, porte et neige documentés. Tour, lac, hall et révélation thérapeutique exclus. Neige peinte sans prise de glace ni règles de glissade ; physique neutre du versus, cadrage et géométrie non certifiés 1:1.'}
+  }},
+  wish_house:{source:'sh4',policy:{
+    sceneId:'sh4-first-visit-scripture-corner',terrainRules:false,
+    normalPhaseLabel:'PREMIER PASSAGE · INTÉRIEUR INTACT',
+    alteredPhaseLabel:'PREMIER PASSAGE · INTÉRIEUR INTACT',
+    terrainPresentation:{name:'PLANCHER DE WISH HOUSE',description:'Intérieur avant incendie, au premier passage de Forest World : meuble incliné drapé de rouge, livres et papiers, boiseries, lampe et porte documentés. Cadrage frontal et étendue du sol adaptés au versus. Aucun brasier, poupée, fosse rituelle, ennemi ou pouvoir ajouté ; physique neutre, géométrie et fidélité 1:1 non certifiées.'}
+  }},
+  arcade_prison: {source:'arcade',policy:{
+    sceneId:'toluca-prison-otherworld-cell-corridor',
+    normalPhaseLabel:'STAGE 2 AREA 2 · OTHERWORLD',
+    alteredPhaseLabel:'STAGE 2 AREA 2 · OTHERWORLD'
+  }},
+  arcade_toluca_lake: {source:'arcade',policy:{
+    sceneId:'arcade-stage3-area1-lakeside-quay',
+    normalPhaseLabel:'STAGE 3 AREA 1 · QUAI DU LAC',
+    alteredPhaseLabel:'STAGE 3 AREA 1 · QUAI DU LAC'
+  }}
+});
 
 const LOT9_REFERENCE_TRACKS = Object.freeze({
   blueStairRailReply:{"name":"Rampe fixée au-dessus de l’escalier noyé","layer":"background","replaces":[],"stageId":"blue_creek","source":"sh2","locationScope":"Palier nord Blue Creek, duel SH2 original avant drainage","limits":"Rampe et eau de la vue originale ; vibration et goutte proposées pour le versus. Aucun drainage, départ de Pyramid Head, chute ou niveau mesuré."},
@@ -771,7 +821,7 @@ const LOT10_REFERENCE_TRACKS = Object.freeze({
     "replaces": [],
     "stageId": "shimizu_residence",
     "source": "shf",
-    "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+    "locationScope": "Shimizu Residence II, salle à manger du calendrier jauni, parcours Ending 1 après le souvenir, SHf2025",
     "limits": "Table ronde basse et vaisselle observées ; léger frémissement versus. Aucun objet de cuisine, calendrier lisible, boss ou confrontation importé."
   },
   "schoolStaffChalkDust": {
@@ -880,7 +930,7 @@ const LOT10_REFERENCE_TRACKS = Object.freeze({
     "replaces": [],
     "stageId": "shimizu_residence",
     "source": "shf",
-    "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+    "locationScope": "Shimizu Residence II, salle à manger du calendrier jauni, parcours Ending 1 après le souvenir, SHf2025",
     "limits": "Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les deux reflets de vaisselle se rapprochent des rebords immobiles. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus.",
     "trigger": "match-phase",
     "matchRecipe": {
@@ -1215,7 +1265,7 @@ const LOT11_REFERENCE_TRACKS = Object.freeze({
     "source": "origins",
     "sceneId": "female-treatment-mirror",
     "locationScope": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma.",
-    "limits": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée."
+    "limits": "Le prototype procédural historique a été conçu sans vue native entière de cette pièce inspectée. Les vues avant miroir relevées en vague31 documentent la nouvelle composition bitmap fixe ; elles ne valident ni le mouvement ni le cadrage de ce prototype. Aucune géométrie ou bascule originale certifiée."
   },
   "greenLionPassageDust": {
     "name": "Poussière au bord du passage intérieur",
@@ -1701,6 +1751,11 @@ function referenceBindings(stage) {
   return [...(BINDINGS[stage.id]||[]),...(LOT9_BINDINGS[stage.id]||[]),...(LOT10_BINDINGS[stage.id]||[]),...(LOT11_BINDINGS[stage.id]||[])];
 }
 
+function referenceTrackMask(stage, sceneId = stage?.referencePolicy?.sceneId) {
+  const correction = ENVIRONMENT[stage?.id], mask = correction?.disableReferenceTracks;
+  return correction?.source === stage?.source && mask?.sceneId === sceneId ? mask : null;
+}
+
 /** Public predicates also protect rendering against an old or injected cue. */
 export function stageReferenceEventAllowed(stage, id) {
   return !stage?.reference?.blocked && (!stage?.referencePolicy || stage.referencePolicy.allowedEvents.includes(id));
@@ -1711,7 +1766,7 @@ export function stageReferenceHazardAllowed(stage, id) {
 /** A new exact-location prop cannot be borrowed by a similarly named work. */
 export function stageReferenceTrackAllowed(stage, track) {
   const definition=STAGE_REFERENCE_TRACKS[track?.key];
-  if(!definition||definition.pendingLocation||stage?.reference?.blocked)return false;
+  if(!definition||definition.pendingLocation||stage?.reference?.blocked||referenceTrackMask(stage))return false;
   const lot12Scene=LOT12_SCENE_PRESENTATION[stage?.id];
   if(lot12Scene?.source===stage?.source && !referenceBindings(stage).some(([key,index])=>key===track.key&&index===track.proposalIndex))return false;
   const selectedScene=LOT11_SCENE_PRESENTATION[stage?.id];
@@ -1793,7 +1848,9 @@ export function applyStageReferencePolicy(stage, reference) {
     constraints:identityMatched ? [...(reference.constraints || [])] : [],
     proposals:identityMatched ? copy(reference.animations || []) : [],
   };
-  const referenceTracks = blocked ? [] : referenceBindings(stage).flatMap(([key,index,anchor,event]) => {
+  const scenePolicy = !blocked && SCENE_PRESENTATION[stage.id]?.source === stage.source ? copy(SCENE_PRESENTATION[stage.id].policy) : {};
+  const trackMask = referenceTrackMask(stage, scenePolicy.sceneId);
+  const candidateReferenceTracks = blocked ? [] : referenceBindings(stage).flatMap(([key,index,anchor,event]) => {
     const proposal = reference.animations?.[index],definition = STAGE_REFERENCE_TRACKS[key];
     if (!proposal || !definition || definition.pendingLocation || (definition.stageId&&(stage.id!==definition.stageId||stage.source!==definition.source)) || /bloque|non.confirme|a.verifier/.test(proposal.status || '')) return [];
     return [{id:`${stage.id}:reference:${index+1}`,key,name:definition.name,description:proposal.description,proposalIndex:index,source:stage.source,
@@ -1806,6 +1863,7 @@ export function applyStageReferencePolicy(stage, reference) {
       locationScope:definition.locationScope || null,
       limits:unique(['Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1.',definition.limits,corrections.disabledEvents?.[event]]).join(' ')}];
   });
+  const referenceTracks = trackMask ? [] : candidateReferenceTracks;
   const allowedHazards = blocked ? [] : [...(HAZARDS[stage.id] || [])];
   const candidateEvents = unique([...(stage.director?.events || []),...referenceTracks.map(track=>track.event)]);
   const allowedEvents = blocked ? [] : candidateEvents.filter(id => !corrections.disabledEvents?.[id] && (referenceTracks.some(track=>track.event===id) ||
@@ -1813,6 +1871,7 @@ export function applyStageReferencePolicy(stage, reference) {
   const replaced = new Set(referenceTracks.flatMap(track=>STAGE_REFERENCE_TRACKS[track.key].replaces));
   const animations = blocked || corrections.disableAnimations ? [] : result.animations.filter(id=>!replaced.has(id) && animationAllowed(result,id,worldState));
   const suppression = [
+    ...(trackMask ? candidateReferenceTracks.map(track=>({kind:'reference-track',id:track.id,key:track.key,status:'historical-masked-by-bitmap',reason:trackMask.reason})) : []),
     ...referenceTracks.filter(track=>track.eventEnabled===false).map(track=>({kind:'event',id:track.event,reason:corrections.disabledEvents[track.event]})),
     ...(stage.director?.events || []).filter(id=>!allowedEvents.includes(id)).map(id=>({kind:'event',id,reason:'Occurrence locale ou danger non retenu par la fiche exacte.'})),
     ...(stage.director?.hazardDeck || []).filter(id=>!allowedHazards.includes(id)).map(id=>({kind:'hazard',id,reason:'Un motif ou une boucle décorative ne suffit pas à autoriser des dégâts.'})),
@@ -1821,7 +1880,7 @@ export function applyStageReferencePolicy(stage, reference) {
   if (result.weather !== stage.weather) suppression.push({kind:'weather',id:stage.weather,reason:`Ambiance remplacée par ${result.weather} pour conserver le lieu et l’œuvre.`});
   result.referenceTracks = referenceTracks;
   result.referencePolicy = {worldState,allowedEvents,allowedHazards,automaticFinishers:!blocked&&corrections.automaticFinishers!==false&&!NARRATIVE_ONLY.has(stage.id)&&stage.source!=='shattered',
-    ...(!blocked&&SCENE_PRESENTATION[stage.id]?.source===stage.source?copy(SCENE_PRESENTATION[stage.id].policy):{}),
+    ...scenePolicy,
     weather:result.weather,interior,baselineMotion:!blocked,suppression,
     hazardFidelity:'Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.',
     renderedProposalIds:referenceTracks.filter(track=>track.eventEnabled!==false).map(track=>track.id),pendingProposalIds:(identityMatched?reference.animations || []:[]).map((_,index)=>`${stage.id}:reference:${index+1}`).filter(id=>!referenceTracks.some(track=>track.id===id&&track.eventEnabled!==false)),

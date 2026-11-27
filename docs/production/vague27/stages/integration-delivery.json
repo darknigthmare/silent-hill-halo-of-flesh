@@ -1,0 +1,828 @@
+{
+  "schemaVersion": 1,
+  "group": "vague27-stages",
+  "scope": "Three missing static stage candidates; six independent native planes only",
+  "createdAt": "2026-11-24T14:00:57.821548+00:00",
+  "baseCommit": "fbd109d39ac843620e6c0fde1284480bc51a66d3",
+  "deliveryState": "ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "police_station_hc",
+      "source": "homecoming",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "homecoming-police-first-cell-closed",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT06"
+      ],
+      "worldState": "fixed-normal",
+      "edition": "Silent Hill: Homecoming (2008), actual public HD gameplay capture, 1:47:30 and 1:48:30–1:48:40",
+      "locationScope": "Shepherd’s Glen Police Station, Alex’s first closed cell before release by Wheeler",
+      "selectedSubLocation": "Shepherd’s Glen Police Station, Alex’s first closed cell before release by Wheeler",
+      "layers": [
+        {
+          "id": "bg-closed-police-cell",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+              "sha256": "c2252eb70f95c5446ed23bc321341bb402e98fb649527869e226de481b3ef404",
+              "bytes": 2292574,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+              "sha256": "3f61e32a58fe968ace34fc2fee74691c72783dae687eb67726cba4a0cefe9f26",
+              "bytes": 162026,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Exact sub-location checked in actual Homecoming gameplay: the first closed police cell, before Wheeler releases Alex. No hospital or Overlook prison is substituted.",
+        "The historical lot9 URL sh5_screen_060.jpg was inspected and rejected: it shows Joshua behind bars and Alex in a hospital gown in the opening hospital, not the police cell. See source-review.json.",
+        "The gray steel barred enclosure, worn gray-green walls, closed gate and damaged concrete follow the captured cell. The lateral camera, complete wall span, regularized gate proportions and expanded clear floor are authored adaptations from 320×180 source frames.",
+        "No Alex, Wheeler, weapon, flashlight beam, Schism, released/open cell door, blood or new hazard is baked into the art.",
+        "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Visible overlay absent from the central 86 percent; native alpha-1 traces are measured and retained. Artwork audit only, no collision change."
+      }
+    },
+    {
+      "stageId": "villa_rooftop",
+      "source": "shortmessage",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "tsm-villa-rooftop-first-visit-fog",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT30"
+      ],
+      "worldState": "fixed-normal",
+      "edition": "Silent Hill: The Short Message (2024 PS5), actual public gameplay/cutscene capture, 21:40, 21:50 and 22:40",
+      "locationScope": "Kettenstadt Villa rooftop, first visit in blue-green fog, Maya’s mural and memorial",
+      "selectedSubLocation": "Kettenstadt Villa rooftop, first visit in blue-green fog, Maya’s mural and memorial",
+      "layers": [
+        {
+          "id": "bg-first-visit-mural",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+              "sha256": "66bead27729a3836b129c88c90b8e97248d43e86ef14f31ff8181a2e36847461",
+              "bytes": 2117664,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+              "sha256": "360e02276096be24f755261ec670adbb6490aae1f989eb7b4ef3bb2d98424ff0",
+              "bytes": 93530,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "The first rooftop visit in fog supplies the mural, memorial flowers, concrete wall, parapet and restrained metal railing. The later clear-sky ending is not used as the selected phase.",
+        "The painted human motif belongs to Maya’s wall mural. It is static artwork, not a living actor or an additional combatant. Anita, the phone and subtitles are absent.",
+        "The wall painting, roof proportions, flower arrangement, lighting and newly widened side-on camera remain authored interpretations of 320×180 source frames; mural brushwork and full roof geometry are not certified 1:1.",
+        "The foreground has no open drop, jump sequence, body, automatic lethal finisher, lightning or petal storm. Existing narrative-only safety policy and fixed-normal fog phase remain unchanged.",
+        "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Visible overlay absent from the central 86 percent; native alpha-1 traces are measured and retained. Artwork audit only, no collision change."
+      }
+    },
+    {
+      "stageId": "villa_stairwell",
+      "source": "shortmessage",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "tsm-villa-rooftop-access-stairwell",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT30"
+      ],
+      "worldState": "fixed-normal",
+      "edition": "Silent Hill: The Short Message (2024 PS5), actual public chase clips, Chase 2 at 50–51 s and Chase 4 at 100 s",
+      "locationScope": "Kettenstadt Villa normal concrete stairwell to the rooftop immediately after the chase exit",
+      "selectedSubLocation": "Kettenstadt Villa normal concrete stairwell to the rooftop immediately after the chase exit",
+      "layers": [
+        {
+          "id": "bg-rooftop-access-stairs",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+              "sha256": "363247f2f6cdc060f2a41411bdc1383ded0dd542d2bfeab47419720b3752dd8c",
+              "bytes": 2318515,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+              "sha256": "6f87a6aba1001187e7e0adbf60e99d2fb5d1d63f5aa3f3a584c53f9347ff18b3",
+              "bytes": 236240,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Source frames isolate the ordinary gray-green concrete stair chamber beyond the Otherworld maze doorway: straight worn steps, two-tone teal walls, thin wall rail, low ceiling and paneled roof-access door.",
+        "Paper-covered maze walls, chain-link gates and the phone seen before the doorway are excluded. No monster or pursuit animation is baked into the normal stairwell.",
+        "The source camera looks up the stairs. This plate deliberately adapts it to a lateral elevation with an expanded horizontal lower landing; step count, full side-wall profile, door size and hidden surfaces remain unverified.",
+        "All steps and the rail remain behind the clear fighter floor. No new collision, falling hazard, door slam, moving shadow or automatic finisher is introduced.",
+        "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Visible overlay absent from the central 86 percent; native alpha-1 traces are measured and retained. Artwork audit only, no collision change."
+      }
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "police_station_hc",
+      "promptKey": "police_station_hc-bg-wave27",
+      "role": "opaque-background",
+      "filename": "police_station_hc.bg.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-073f1f00-59a8-4912-a2e0-3768d57f44e8.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/png/police_station_hc.bg.png",
+      "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2292574,
+      "sha256": "c2252eb70f95c5446ed23bc321341bb402e98fb649527869e226de481b3ef404",
+      "pixelSHA256": "ba002c8122656f5d56d72d0daa4dd2ee79727d26884ffad9884d75846a307125",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "police_station_hc",
+      "promptKey": "police_station_hc-fg-wave27",
+      "role": "transparent-foreground",
+      "filename": "police_station_hc.near-edges.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-dce99bd4-4d25-451e-9056-1badd793d9c4.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/png/police_station_hc.near-edges.png",
+      "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 162026,
+      "sha256": "3f61e32a58fe968ace34fc2fee74691c72783dae687eb67726cba4a0cefe9f26",
+      "pixelSHA256": "e497f56e7a7125ad50ea0225b5052b8268090951aef0690f8f5da6e547fe304c",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9673270825600374,
+        "semiTransparentPixels": 51144,
+        "opaqueFraction": 0.00016652344802688782,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 135,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "villa_rooftop",
+      "promptKey": "villa_rooftop-bg-wave27",
+      "role": "opaque-background",
+      "filename": "villa_rooftop.bg.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-2cd94ea9-158c-46d6-a50b-5609f1035543.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/png/villa_rooftop.bg.png",
+      "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2117664,
+      "sha256": "66bead27729a3836b129c88c90b8e97248d43e86ef14f31ff8181a2e36847461",
+      "pixelSHA256": "f564de5b4091584c2c8c1094faea18380d8002a148239910d66d93740eb0a553",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "villa_rooftop",
+      "promptKey": "villa_rooftop-fg-wave27",
+      "role": "transparent-foreground",
+      "filename": "villa_rooftop.near-edges.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-10d543f6-1100-4858-9f83-224c6059b25e.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/png/villa_rooftop.near-edges.png",
+      "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 93530,
+      "sha256": "360e02276096be24f755261ec670adbb6490aae1f989eb7b4ef3bb2d98424ff0",
+      "pixelSHA256": "47c1b8a2f175f4c159eec9a3a5039874535b45b5705d88c4580cf24ce25e1fa2",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9883535280089897,
+        "semiTransparentPixels": 18103,
+        "opaqueFraction": 0.00014046443516771835,
+        "centerAlphaMax": 0,
+        "footBandAlphaMax": 0,
+        "nonzeroAlphaInCenter": 0,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "villa_stairwell",
+      "promptKey": "villa_stairwell-bg-wave27",
+      "role": "opaque-background",
+      "filename": "villa_stairwell.bg.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-7af3939f-6d5c-4837-9326-aa124fba2982.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/png/villa_stairwell.bg.png",
+      "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2318515,
+      "sha256": "363247f2f6cdc060f2a41411bdc1383ded0dd542d2bfeab47419720b3752dd8c",
+      "pixelSHA256": "75d6e086cc083c1d6d5271375bb3b8e7f0d2284d33c693ecd65525d92313487d",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "villa_stairwell",
+      "promptKey": "villa_stairwell-fg-wave27",
+      "role": "transparent-foreground",
+      "filename": "villa_stairwell.near-edges.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-b0d26cee-97d5-48f4-8e8b-0c1ac41ea0b2.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/png/villa_stairwell.near-edges.png",
+      "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 236240,
+      "sha256": "6f87a6aba1001187e7e0adbf60e99d2fb5d1d63f5aa3f3a584c53f9347ff18b3",
+      "pixelSHA256": "b9894ca5cf17a08574adaf79c60e27e0a3e5cc1fa10a25f0412b884021cfa4b9",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9420943310842075,
+        "semiTransparentPixels": 90442,
+        "opaqueFraction": 0.000422028891182647,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 87,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "stageId": "villa_rooftop",
+      "file": "villa-rooftop-first-visit-mural.png",
+      "path": "docs/production/vague27/stages/references/villa-rooftop-first-visit-mural.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/references/villa-rooftop-first-visit-mural.png",
+      "url": "https://www.youtube.com/watch?v=5F33MhsMbkQ&t=1310s",
+      "title": "Silent Hill: The Short Message - Complete Walkthrough (Full Game, No Commentary)",
+      "videoId": "5F33MhsMbkQ",
+      "timestampSeconds": 1310.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/5F33MhsMbkQ/storyboard3_L3/M14.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJOfgK4G&sigh=rs$AOn4CLDbNaWylppteKLosVyGGyAxYci7gQ",
+      "sourceSheet": "tsm-storyboard-M14.jpg",
+      "sourceSheetSha256": "f4b4bbbc8e6f8819e014e1cd7d8995a7500a9ef19217947378a5ffb539669c44",
+      "cropBox": [
+        640,
+        180,
+        960,
+        360
+      ],
+      "sourceClaim": "Actual gameplay pixels captured in a public walkthrough; unofficial capture of canonical game, not an official Konami publication. Native storyboard cell cropped losslessly; no enlargement, sharpening, cleanup or invented detail.",
+      "bytes": 45574,
+      "sha256": "b6c7aa615663615c97cf9736b3e19c9d0001a003c6de056400d01e0c473aa837",
+      "width": 320,
+      "height": 180,
+      "inspected": true
+    },
+    {
+      "stageId": "villa_rooftop",
+      "file": "villa-rooftop-first-visit-wall.png",
+      "path": "docs/production/vague27/stages/references/villa-rooftop-first-visit-wall.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/references/villa-rooftop-first-visit-wall.png",
+      "url": "https://www.youtube.com/watch?v=5F33MhsMbkQ&t=1300s",
+      "title": "Silent Hill: The Short Message - Complete Walkthrough (Full Game, No Commentary)",
+      "videoId": "5F33MhsMbkQ",
+      "timestampSeconds": 1300.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/5F33MhsMbkQ/storyboard3_L3/M14.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJOfgK4G&sigh=rs$AOn4CLDbNaWylppteKLosVyGGyAxYci7gQ",
+      "sourceSheet": "tsm-storyboard-M14.jpg",
+      "sourceSheetSha256": "f4b4bbbc8e6f8819e014e1cd7d8995a7500a9ef19217947378a5ffb539669c44",
+      "cropBox": [
+        320,
+        180,
+        640,
+        360
+      ],
+      "sourceClaim": "Actual gameplay pixels captured in a public walkthrough; unofficial capture of canonical game, not an official Konami publication. Native storyboard cell cropped losslessly; no enlargement, sharpening, cleanup or invented detail.",
+      "bytes": 56130,
+      "sha256": "f05d3890c7c94e720f3da2fc1746cf8afaa6ba5b17f2479d68ae21650d5a5002",
+      "width": 320,
+      "height": 180,
+      "inspected": true
+    },
+    {
+      "stageId": "villa_rooftop",
+      "file": "villa-rooftop-first-visit-parapet.png",
+      "path": "docs/production/vague27/stages/references/villa-rooftop-first-visit-parapet.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/references/villa-rooftop-first-visit-parapet.png",
+      "url": "https://www.youtube.com/watch?v=5F33MhsMbkQ&t=1360s",
+      "title": "Silent Hill: The Short Message - Complete Walkthrough (Full Game, No Commentary)",
+      "videoId": "5F33MhsMbkQ",
+      "timestampSeconds": 1360.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/5F33MhsMbkQ/storyboard3_L3/M15.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCJOfgK4G&sigh=rs$AOn4CLDbNaWylppteKLosVyGGyAxYci7gQ",
+      "sourceSheet": "tsm-storyboard-M15.jpg",
+      "sourceSheetSha256": "4840840d557ea2b8c26dfea278f595bf56b73afc7c1c95b9fba5c502e5d2164a",
+      "cropBox": [
+        320,
+        0,
+        640,
+        180
+      ],
+      "sourceClaim": "Actual gameplay pixels captured in a public walkthrough; unofficial capture of canonical game, not an official Konami publication. Native storyboard cell cropped losslessly; no enlargement, sharpening, cleanup or invented detail.",
+      "bytes": 22368,
+      "sha256": "7948e392b7a2477b8e45ae96570ab03c873d5a5b20bb8d43c3a2423a6887a769",
+      "width": 320,
+      "height": 180,
+      "inspected": true
+    },
+    {
+      "stageId": "villa_stairwell",
+      "file": "villa-stairwell-approach.png",
+      "path": "docs/production/vague27/stages/references/villa-stairwell-approach.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/references/villa-stairwell-approach.png",
+      "url": "https://www.youtube.com/watch?v=rr9YYc8ZpsM&t=50s",
+      "title": "Silent Hill: The Short Message - Chase #2 Walkthrough (Chapter 1)",
+      "videoId": "rr9YYc8ZpsM",
+      "timestampSeconds": 50.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/rr9YYc8ZpsM/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIeXta4G&sigh=rs$AOn4CLC7HyuiQLv6aB4yV97fpL1M7PhR0Q",
+      "sourceSheet": "chase2-storyboard-M5.jpg",
+      "sourceSheetSha256": "9ed5ba5a5cf66cac26888b5573ff5dd8ccb6ac1cf38336894f0aeb802041bf43",
+      "cropBox": [
+        640,
+        180,
+        960,
+        360
+      ],
+      "sourceClaim": "Actual gameplay pixels captured in a public walkthrough; unofficial capture of canonical game, not an official Konami publication. Native storyboard cell cropped losslessly; no enlargement, sharpening, cleanup or invented detail.",
+      "bytes": 35565,
+      "sha256": "69ddd304693c9861bd33691e6f04bbfbe6f47ca2e0d5dc455923ecea9c0fc4a3",
+      "width": 320,
+      "height": 180,
+      "inspected": true
+    },
+    {
+      "stageId": "villa_stairwell",
+      "file": "villa-stairwell-inside.png",
+      "path": "docs/production/vague27/stages/references/villa-stairwell-inside.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/references/villa-stairwell-inside.png",
+      "url": "https://www.youtube.com/watch?v=rr9YYc8ZpsM&t=51s",
+      "title": "Silent Hill: The Short Message - Chase #2 Walkthrough (Chapter 1)",
+      "videoId": "rr9YYc8ZpsM",
+      "timestampSeconds": 51.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/rr9YYc8ZpsM/storyboard3_L3/M5.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIeXta4G&sigh=rs$AOn4CLC7HyuiQLv6aB4yV97fpL1M7PhR0Q",
+      "sourceSheet": "chase2-storyboard-M5.jpg",
+      "sourceSheetSha256": "9ed5ba5a5cf66cac26888b5573ff5dd8ccb6ac1cf38336894f0aeb802041bf43",
+      "cropBox": [
+        0,
+        360,
+        320,
+        540
+      ],
+      "sourceClaim": "Actual gameplay pixels captured in a public walkthrough; unofficial capture of canonical game, not an official Konami publication. Native storyboard cell cropped losslessly; no enlargement, sharpening, cleanup or invented detail.",
+      "bytes": 34357,
+      "sha256": "7e68d5bcd171cc338bb120e614421d44dce37253038929f54757c2cceaa1bd1d",
+      "width": 320,
+      "height": 180,
+      "inspected": true
+    },
+    {
+      "stageId": "villa_stairwell",
+      "file": "villa-stairwell-upper-door.png",
+      "path": "docs/production/vague27/stages/references/villa-stairwell-upper-door.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/references/villa-stairwell-upper-door.png",
+      "url": "https://www.youtube.com/watch?v=NgNuc0xyHJY&t=100s",
+      "title": "Silent Hill: The Short Message - Chase #4 Walkthrough (Chapter 2)",
+      "videoId": "NgNuc0xyHJY",
+      "timestampSeconds": 100.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/NgNuc0xyHJY/storyboard3_L3/M11.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCLmXta4G&sigh=rs$AOn4CLDX-lopLIAlxsQMoq3T7EGlRXGHrw",
+      "sourceSheet": "chase4-storyboard-M11.jpg",
+      "sourceSheetSha256": "91119fc4c4c90f486e23b5775b3785ca0daa08c781b79de5fb7cf9759f1f2eae",
+      "cropBox": [
+        320,
+        0,
+        640,
+        180
+      ],
+      "sourceClaim": "Actual gameplay pixels captured in a public walkthrough; unofficial capture of canonical game, not an official Konami publication. Native storyboard cell cropped losslessly; no enlargement, sharpening, cleanup or invented detail.",
+      "bytes": 27020,
+      "sha256": "955caca636aae9fe2945ac0b2d5428a34631d1618906f3967d0400529c516ba7",
+      "width": 320,
+      "height": 180,
+      "inspected": true
+    },
+    {
+      "stageId": "police_station_hc",
+      "file": "homecoming-cell-exterior.png",
+      "path": "docs/production/vague27/stages/references/homecoming-cell-exterior.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/references/homecoming-cell-exterior.png",
+      "url": "https://www.youtube.com/watch?v=7ozGzBI6oT4&t=6510s",
+      "title": "Silent Hill: Homecoming — Full Game",
+      "videoId": "7ozGzBI6oT4",
+      "timestampSeconds": 6510.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/7ozGzBI6oT4/storyboard3_L3/M72.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIi7gqoG&sigh=rs$AOn4CLCOPUYPWScysSbziyB2rPo4hxidqQ",
+      "sourceSheet": "hchd-storyboard-M72.jpg",
+      "sourceSheetSha256": "a2bd616076594bdb4cf6c5e71c12bf2d7c888973896e2f1ea9773574752f3214",
+      "cropBox": [
+        0,
+        180,
+        320,
+        360
+      ],
+      "sourceClaim": "Actual gameplay pixels captured in a public walkthrough; unofficial capture of canonical game, not an official Konami publication. Native storyboard cell cropped losslessly; no enlargement, sharpening, cleanup or invented detail.",
+      "bytes": 40031,
+      "sha256": "5e2e624520de3a20eca0be143254b5b59713309173037fda92e6571fe78098a8",
+      "width": 320,
+      "height": 180,
+      "inspected": true
+    },
+    {
+      "stageId": "police_station_hc",
+      "file": "homecoming-cell-closed-door.png",
+      "path": "docs/production/vague27/stages/references/homecoming-cell-closed-door.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/references/homecoming-cell-closed-door.png",
+      "url": "https://www.youtube.com/watch?v=7ozGzBI6oT4&t=6520s",
+      "title": "Silent Hill: Homecoming — Full Game",
+      "videoId": "7ozGzBI6oT4",
+      "timestampSeconds": 6520.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/7ozGzBI6oT4/storyboard3_L3/M72.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIi7gqoG&sigh=rs$AOn4CLCOPUYPWScysSbziyB2rPo4hxidqQ",
+      "sourceSheet": "hchd-storyboard-M72.jpg",
+      "sourceSheetSha256": "a2bd616076594bdb4cf6c5e71c12bf2d7c888973896e2f1ea9773574752f3214",
+      "cropBox": [
+        320,
+        180,
+        640,
+        360
+      ],
+      "sourceClaim": "Actual gameplay pixels captured in a public walkthrough; unofficial capture of canonical game, not an official Konami publication. Native storyboard cell cropped losslessly; no enlargement, sharpening, cleanup or invented detail.",
+      "bytes": 68268,
+      "sha256": "0a81fa0c0fcb419ff2b7b10348bd9437ec9712910d262d5cc01ed390ef56653f",
+      "width": 320,
+      "height": 180,
+      "inspected": true
+    },
+    {
+      "stageId": "police_station_hc",
+      "file": "homecoming-cell-interior-wall.png",
+      "path": "docs/production/vague27/stages/references/homecoming-cell-interior-wall.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/references/homecoming-cell-interior-wall.png",
+      "url": "https://www.youtube.com/watch?v=7ozGzBI6oT4&t=6450s",
+      "title": "Silent Hill: Homecoming — Full Game",
+      "videoId": "7ozGzBI6oT4",
+      "timestampSeconds": 6450.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/7ozGzBI6oT4/storyboard3_L3/M71.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIi7gqoG&sigh=rs$AOn4CLCOPUYPWScysSbziyB2rPo4hxidqQ",
+      "sourceSheet": "hchd-storyboard-M71.jpg",
+      "sourceSheetSha256": "39ed1e5e75db45b2fa5e6f93bbcf5e23dece22b97c6711a183ea6fdbb6da05a4",
+      "cropBox": [
+        0,
+        360,
+        320,
+        540
+      ],
+      "sourceClaim": "Actual gameplay pixels captured in a public walkthrough; unofficial capture of canonical game, not an official Konami publication. Native storyboard cell cropped losslessly; no enlargement, sharpening, cleanup or invented detail.",
+      "bytes": 21959,
+      "sha256": "cdda0132be48096e71ac4ebc3701d00898d7d90acd1526453f5f68f8aa37dcdb",
+      "width": 320,
+      "height": 180,
+      "inspected": true
+    }
+  ],
+  "prompts": [
+    {
+      "stageId": "police_station_hc",
+      "source": "homecoming",
+      "key": "police_station_hc-bg-wave27",
+      "locationScope": "Shepherd’s Glen Police Station, Alex’s closed cell before release by Wheeler",
+      "references": [
+        "homecoming-cell-exterior.png",
+        "homecoming-cell-closed-door.png",
+        "homecoming-cell-interior-wall.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE opaque static background plate for a 2D SIDE-VIEW fighting game, wide landscape 16:9, native 1672 by 941 pixels if possible.\nInput images 1–3 are actual Silent Hill: Homecoming gameplay references of Alex's first cell in Shepherd's Glen Police Station, BEFORE Wheeler releases him. Reconstruct only this room's observed architecture, with a deliberate side-on camera adaptation. Remove Alex, Wheeler, every person, creature, weapon, flashlight hotspot, subtitle and HUD. Do not copy the unrelated hospital or penitentiary.\nScene: a small low-ceiling gray-green police holding cell. The main identifiable structure is a closed wall of thin straight gray steel vertical jail bars with two or three narrow horizontal rails and a closed barred door with a modest rectangular metal lock plate, continuing into a dark holding corridor behind it. Preserve the simple closely spaced bars, square metal frames, worn pale concrete/masonry walls, subdued dark lower wall band, rough cracked gray concrete floor and cold restrained illumination visible in the references. The barred structure belongs entirely BEHIND the gameplay plane, never in front of the fighters. No large gate pushed diagonally across the arena; all bars upright. The gate is closed and the lock intact. Any small broken flat slab fragments stay at the far rear edge or extreme outer corners; no rubble across the fighting lane.\nComposition: perfectly level side-elevation camera, standing eye height, looking squarely at the rear barred wall, long horizontal room frontage with very shallow perspective, no centered vanishing corridor. Background wall and cage occupy the upper 70 percent. Broad continuous level concrete floor spans the lower 30 percent with an uninterrupted fighter footing line at normalized y=0.87. Keep the central 86 percent empty of props and obstacles. Room is modest and enclosed, with upper wall/ceiling shadow preserving its small scale. Do not invent elaborate unseen rooms; let them fall into darkness.\nMaterials and palette: realistic worn game-environment bitmap, muted cool charcoal, gray-green concrete, dull silver-blue bars, weak diffuse light. Enough midtone separation to see fighters. No smoke, flame, blood, flesh, ritual symbols, desk, modern office, posters, characters, toilet or bed added without source evidence. No text, UI, logos, watermark or border. Deliver one continuous empty environment, not a collage. Side-on camera and floor extension are authored adaptations; never claim exact 1:1."
+    },
+    {
+      "stageId": "villa_rooftop",
+      "source": "shortmessage",
+      "key": "villa_rooftop-bg-wave27",
+      "locationScope": "Kettenstadt Villa rooftop, first visit in fog, Maya’s mural and memorial",
+      "references": [
+        "villa-rooftop-first-visit-mural.png",
+        "villa-rooftop-first-visit-wall.png",
+        "villa-rooftop-first-visit-parapet.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE opaque static background plate for a 2D SIDE-VIEW fighting game, wide landscape 16:9, native 1672 by 941 pixels if possible.\nInput images 1–3 are actual Silent Hill: The Short Message gameplay/cutscene references of the Kettenstadt Villa rooftop on the FIRST visit, in dense cool blue-green fog. Preserve the observed rooftop and the mural memorial scene. Image 1 and 2 define the aged rooftop stair-exit concrete wall and Maya's large mural; image 3 defines the ordinary low parapet/metal railing and faint neighboring roof details. Remove Anita and every living figure, phone, hand and subtitle completely. The girl depicted WITHIN the painted wall mural is wall artwork, not a character standing in the scene.\nScene: a weathered rectangular concrete rooftop with the broad painted wall facing us. Reproduce the reference mural's pale white/pink loose floral cloud over dark curved lower shapes, with the small centered pink-clad painted human motif embedded in the artwork, using its visible rough paint and muted colors; retain only the small adjacent dull green graffiti patch seen to one side. Many small pale bouquets and a few muted pink/red flowers sit in a low memorial strip directly against the wall below the mural, firmly behind the gameplay lane. The concrete wall is gray, stained, rough and rectilinear; never turn this into a Gothic facade or an industrial machine room. At the far sides, restrained low roof parapet/metal railing disappears into blue-green fog with barely visible adjoining roof shapes, following image 3. No open drop or cliff across the foreground and no rooftop edge through the fighting floor.\nComposition: level SIDE-ON elevation camera, standing eye height, looking squarely at the mural wall; long horizontal shallow-depth stage. The mural occupies the central upper wall, flowers are kept at the wall's base BEHIND the playfield, no flower mound in the fighter lane. A broad continuous level damp dark concrete roof spans the bottom 30 percent, clear fighter footing at normalized y=0.87, unobstructed across the central 86 percent. One continuous empty roof surface with quiet diffused cold light and subdued wet sheen. No sunset, clear-sky ending, snow, pouring rain, lightning, pink petal storm or supernatural overgrowth.\nPreserve the somber blue-gray/teal fog and desaturated source mural colors. No characters, creatures, bodies, jump reenactment, weapons, hazard, new readable message, UI, logo, watermark, border or montage. Render one finished realistic textured game background. Side-on camera, expanded blank roof area and hidden details remain authored adaptations, not a certified 1:1 reproduction."
+    },
+    {
+      "stageId": "villa_stairwell",
+      "source": "shortmessage",
+      "key": "villa_stairwell-bg-wave27",
+      "locationScope": "Kettenstadt Villa, normal concrete stairwell to the rooftop immediately after the chase exit",
+      "references": [
+        "villa-stairwell-approach.png",
+        "villa-stairwell-inside.png",
+        "villa-stairwell-upper-door.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE opaque static background plate for a 2D SIDE-VIEW fighting game, wide landscape 16:9, native 1672 by 941 pixels if possible.\nInput images 1–3 are actual Silent Hill: The Short Message gameplay of the small NORMAL concrete stairwell leading to the Villa rooftop, reached after the maze chase. Image1 shows its entrance; images2–3 show the straight staircase, worn two-tone walls, slender wall handrail, low ceiling and weathered paneled door at the top. Use the ordinary stairs inside that doorway, NOT the paper-covered Otherworld corridor outside. Remove the hand, phone, subtitles, HUD and every person or monster.\nScene: an enclosed utilitarian apartment-block stair chamber. Preserve the simple straight flight of dark worn concrete steps, gray-green stained upper plaster over dull desaturated teal lower wall paint, thin dark handrail anchored to the wall along the slope, a low flat ceiling with a plain exposed beam/edge, and the rectangular aged roof-access door at the upper landing with its two pale horizontal inset/paneled sections and dark trim as in the reference. Paint is peeling in scattered irregular patches; restrained grime and a few plaster chips only at rear wall edges. No ornate balustrade, grand double staircase, spiral stair, huge atrium, chain-link fence, pipes, lockers, proliferating notices, religious icon, flowers or new graffiti.\nCamera/composition: change to a perfectly level SIDE-ON elevation camera parallel to the long side of the stairs, showing one flight rising across the BACK of the room with its rail, and the small upper landing and closed door beyond. Keep the entire staircase, rail, landing and door BEHIND the gameplay plane. The bottom 30 percent is a clear continuous horizontal concrete lower landing extended across the image for a fighting lane, with fighter footing at normalized y=0.87. The central 86 percent of this foreground floor has no step, barrier, debris, gap or oblique railing. Avoid a first-person view looking UP the staircase and avoid a deep central vanishing corridor; we need a horizontal side-stage view with shallow depth and a readable stair silhouette in the back.\nLighting: cold weak gray-green light from above the upper landing, muted teal, slate and dirty cream materials, realistic textured abandoned game interior. Keep enough local contrast to distinguish fighters from the wall, without bright theatrical spotlights. No creatures, characters, nightmare skin, blood, flames, floating notes, lettering, UI, watermark, logo, frame or collage. Deliver one empty continuous room. Expanded lower landing and side camera are authored adaptations; geometry fidelity remains unverified."
+    },
+    {
+      "stageId": "police_station_hc",
+      "source": "homecoming",
+      "key": "police_station_hc-fg-wave27",
+      "locationScope": "Shepherd’s Glen Police Station, Alex’s closed cell before release by Wheeler",
+      "references": [
+        "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/png/police_station_hc.bg.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone transparent RGBA foreground overlay for a 2D side-view fighting game, matching a native 1672 by 941 wide 16:9 canvas.\nInput image 1 is the finished background plate supplied ONLY as a camera, material, color and lighting reference. DO NOT copy that background; DO NOT include its floor, back wall or scene. Create an independent sparse near-parallax layer. Genuine transparency, no painted checkerboard, no solid backdrop, no full-canvas semi-transparent wash or vignette.\nKeep ALL visible artwork restricted to the outermost 3.5 percent of the left and right canvas edges. Every pixel of the central 90 percent (x=0.05 to x=0.95), over the full canvas height, must be perfectly transparent alpha 0. At least 93 percent of the overall canvas must be fully transparent. No object, dust, shadow, texture, reflection, glow or translucent pixel across the center. The bottom fighting-floor lane must remain clear everywhere except tiny far outer corners. No continuous floor strip. Match exact horizontal side-view camera and subdued light.\nOnly two extremely narrow dark gray concrete jamb edge slivers cropped by the left and right canvas boundaries, with tiny chipped dull steel fastener edge at the far upper left. A minute flat gray concrete chip may touch the extreme bottom right corner. Use realistic restrained worn materials matching the police cell. Do not include jail bars crossing the scene, a gate, a wall plane, any lock, corridor, floor, weapon, person, monster, blood, flesh, writing or new object. Keep the actual strips irregular and almost entirely off-canvas; nothing extends beyond x=0.035 at left or before x=0.965 at right.\nNo text, UI, logo, watermark, frame or collage. Deliver only this sparse transparent overlay."
+    },
+    {
+      "stageId": "villa_rooftop",
+      "source": "shortmessage",
+      "key": "villa_rooftop-fg-wave27",
+      "locationScope": "Kettenstadt Villa rooftop, first visit in fog, Maya’s mural and memorial",
+      "references": [
+        "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/png/villa_rooftop.bg.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone transparent RGBA foreground overlay for a 2D side-view fighting game, matching a native 1672 by 941 wide 16:9 canvas.\nInput image 1 is the finished background plate supplied ONLY as a camera, material, color and lighting reference. DO NOT copy that background; DO NOT include its floor, back wall or scene. Create an independent sparse near-parallax layer. Genuine transparency, no painted checkerboard, no solid backdrop, no full-canvas semi-transparent wash or vignette.\nKeep ALL visible artwork restricted to the outermost 3.5 percent of the left and right canvas edges. Every pixel of the central 90 percent (x=0.05 to x=0.95), over the full canvas height, must be perfectly transparent alpha 0. At least 93 percent of the overall canvas must be fully transparent. No object, dust, shadow, texture, reflection, glow or translucent pixel across the center. The bottom fighting-floor lane must remain clear everywhere except tiny far outer corners. No continuous floor strip. Match exact horizontal side-view camera and subdued light.\nOnly two tiny weathered dark teal-gray concrete parapet-corner slivers tightly cropped at the far bottom-left and far bottom-right corners, max 3.5 percent canvas width and max 16 percent canvas height each. They are plain rough damp rooftop concrete with a few small worn chips and quiet teal reflected light, matching the provided roof. NO flowers, mural, railing crossing the canvas, horizon, sky, roof surface, fog sheet, shadow wash, petals, border frame, character or figure. The entire upper 80 percent and central 90 percent of the canvas remain transparent. Sparse realistic near corner fragments only.\nNo text, UI, logo, watermark, frame or collage. Deliver only this sparse transparent overlay."
+    },
+    {
+      "stageId": "villa_stairwell",
+      "source": "shortmessage",
+      "key": "villa_stairwell-fg-wave27",
+      "locationScope": "Kettenstadt Villa, normal concrete stairwell to the rooftop immediately after the chase exit",
+      "references": [
+        "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague27/stages/png/villa_stairwell.bg.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone transparent RGBA foreground overlay for a 2D side-view fighting game, matching a native 1672 by 941 wide 16:9 canvas.\nInput image 1 is the finished background plate supplied ONLY as a camera, material, color and lighting reference. DO NOT copy that background; DO NOT include its floor, back wall or scene. Create an independent sparse near-parallax layer. Genuine transparency, no painted checkerboard, no solid backdrop, no full-canvas semi-transparent wash or vignette.\nKeep ALL visible artwork restricted to the outermost 3.5 percent of the left and right canvas edges. Every pixel of the central 90 percent (x=0.05 to x=0.95), over the full canvas height, must be perfectly transparent alpha 0. At least 93 percent of the overall canvas must be fully transparent. No object, dust, shadow, texture, reflection, glow or translucent pixel across the center. The bottom fighting-floor lane must remain clear everywhere except tiny far outer corners. No continuous floor strip. Match exact horizontal side-view camera and subdued light.\nOnly two exceptionally thin cropped edges of peeling gray-green concrete wall jambs hugging the far left and right canvas boundary, with a small torn teal paint edge and tiny plaster chip in the far lower outside corners. Use the muted dirty gray, slate green and teal wall texture of the provided stairwell. NO stairs, rail across the frame, door, room, floor, wall plane, dangling cable, light cone, papers, text, character, monster or figure. The edge slivers never extend beyond the outermost 3.5 percent of canvas width; the center is entirely alpha 0.\nNo text, UI, logo, watermark, frame or collage. Deliver only this sparse transparent overlay."
+    }
+  ],
+  "visualQA": {
+    "kind": "native-plate-inspection-only",
+    "allSixGeneratedPlatesInspected": true,
+    "notAnInEngineTest": true,
+    "noPixelPostprocessing": true,
+    "oneToOneCertified": false
+  },
+  "sourceReviewPath": "docs/production/vague27/stages/source-review.json"
+}

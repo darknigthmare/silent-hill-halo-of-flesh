@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "wave": 30,
+  "status": "refresh-completed-preservation-verified",
+  "resolvedAt": "2026-11-25T17:21:07+00:00",
+  "validation": "../workbooks/validation.json",
+  "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "authoringConstraint": "Use @oai/artifact-tool in the primary runtime; do not substitute openpyxl/xlsxwriter authoring without an applicable instruction.",
+  "workbooks": [
+    {
+      "path": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "sha256": "0920c3234e747fb5c63ec0b2f97650b5dccbe51f476584e153ad961aad379ba4",
+      "gitBlobSha": "fda79557db4cc32eed6a42dfd3c8cd2c8f5d23cf",
+      "bytes": 90927,
+      "baselineSha256": "2beb816b68a85a9893f5daf16b92e111e91ef658018327ac739be9564afbef46",
+      "historicalSheetsPreserved": 2,
+      "historicalFormulasPreserved": 7,
+      "historicalCellsPreserved": 2272,
+      "historicalConditionalFormatsPreserved": 4,
+      "historicalValidationsPreserved": 2,
+      "allHistoricalPayloadsByteIdentical": true,
+      "allExistingStylesByteIdentical": true,
+      "guideFormulasVerified": 12,
+      "guideSheetsUpdated": [
+        "Guide combat",
+        "Associations guide"
+      ],
+      "sourceCellsChangedOrAdded": 35,
+      "changedParts": [
+        "xl/tables/table5.xml",
+        "xl/worksheets/sheet3.xml",
+        "xl/worksheets/sheet4.xml"
+      ],
+      "byteIdenticalParts": 17,
+      "preservationReport": "docs/production/vague30/workbooks/corpus-preservation.json",
+      "renderMode": "full-final-workbook",
+      "githubBlobSavedAndHashVerified": true
+    },
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "sha256": "8fae4315087e47cc2fe35eadf20384da3f6645a3b6036b8e3a749117732e8775",
+      "gitBlobSha": "5376e614a9209059bfa03dd092696a4aa9a7e471",
+      "bytes": 1852652,
+      "baselineSha256": "aa40477f46217989ef3504fec2dc12384cbb58253c049ff6bf07f0f9b23608e8",
+      "historicalSheetsPreserved": 11,
+      "historicalFormulasPreserved": 80,
+      "historicalCellsPreserved": 250550,
+      "historicalConditionalFormatsPreserved": 9,
+      "historicalValidationsPreserved": 9,
+      "allHistoricalPayloadsByteIdentical": true,
+      "allExistingStylesByteIdentical": true,
+      "guideFormulasVerified": 12,
+      "guideSheetsUpdated": [
+        "Guide combat",
+        "Associations guide"
+      ],
+      "sourceCellsChangedOrAdded": 35,
+      "changedParts": [
+        "xl/tables/table13.xml",
+        "xl/worksheets/sheet12.xml",
+        "xl/worksheets/sheet13.xml"
+      ],
+      "byteIdenticalParts": 42,
+      "preservationReport": "docs/production/vague30/workbooks/production-preservation.json",
+      "renderMode": "exact-payload-read-only-projection",
+      "githubBlobSavedAndHashVerified": true
+    }
+  ],
+  "pendingInputs": [],
+  "pendingSteps": [],
+  "interruptionHistory": [
+    {
+      "schemaVersion": 1,
+      "wave": 30,
+      "status": "refresh-blocked-runtime-unavailable",
+      "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
+      "workbooks": [
+        {
+          "path": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+          "gitBlob": "80e9c969a9ac7de35e166da09bac086385076068",
+          "bytes": 90079,
+          "policy": "preserve-identical-bytes"
+        },
+        {
+          "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+          "gitBlob": "edd9f757a9c4471f5be33ee9e59bb01f3fc72993",
+          "bytes": 1818841,
+          "policy": "preserve-identical-bytes"
+        }
+      ],
+      "reason": "The executor, primary Artifact Tool runtime and executor-owned Spreadsheets skill are unavailable. Both alias and full skill URI, plus installation lookup, returned skill package is not available. No permitted alternative authoring exception could be verified.",
+      "authoringConstraint": "Use @oai/artifact-tool in the primary runtime; do not substitute openpyxl/xlsxwriter authoring without an applicable instruction.",
+      "pendingInputs": [
+        "Final docs/combat-guide/requirements.json",
+        "Final docs/combat-guide/associations.json",
+        "Final docs/combat-guide/status.json"
+      ],
+      "pendingSteps": [
+        "Compare current guide cells with their baseline JSON to detect manual edits.",
+        "Update only approved Guide combat and Associations guide values, ranges and associated counters through Artifact Tool.",
+        "Preserve all historical sheets, formulas, validations, links, annotations and styles.",
+        "Run semantic OOXML preservation checks and source reconciliation.",
+        "Render and inspect changed guide views plus unchanged historical views before publishing."
+      ],
+      "notClaimed": [
+        "No workbook refresh executed for wave30.",
+        "No change to historical workbook sheets.",
+        "No fresh workbook visual QA."
+      ]
+    }
+  ],
+  "limits": [
+    "The entire principal workbook could not be imported/exported within the available memory; attempts exited 137. The final delivered workbook retains all 13 sheets.",
+    "The temporary rendering projection contains Synthèse and both full guide sheets with 12 payloads identical to the final principal; it is not delivered as a workbook.",
+    "Native Microsoft Excel desktop was not executed."
+  ]
+}

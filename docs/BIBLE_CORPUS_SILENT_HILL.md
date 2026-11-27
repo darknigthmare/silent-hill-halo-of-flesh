@@ -1,5 +1,28 @@
 # Bible du corpus — Silent Hill
 
+## Guide et extensions associés — 27 novembre 2026
+
+Le [guide général de combat est intégré au contexte de Halo of Flesh](COMBAT_GAMES_GUIDE_INTEGRATION.md).
+Ses [68 rubriques](combat-guide/MATRICE.md), issues du guide et des
+[deux extensions](combat-guide/extensions/README.md), sont reliées aux profils, aux commandes,
+aux Dénouements, aux lieux, aux Chroniques et aux registres d'images existants.
+Les deux classeurs conservent les feuilles **Guide combat** et **Associations guide**.
+La table ajoutée sous les sections historiques détaille les 38 rubriques des
+extensions. La [vague 30](production/vague30/README.md) conservait 445 associations
+et 93 arènes illustrées ; les chiffres courants sont calculés dans
+[status.json](combat-guide/status.json). Les états datés ci-dessous restent historiques.
+Le [chapitre narratif](combat-guide/CAMPAGNE_ET_DENOUEMENTS.md) distingue récits
+individuels, Chroniques et campagne globale originale ; les
+[fiches A–J](combat-guide/FICHES_ET_VALIDATION.md) fixent les champs et critères.
+
+L'[état des lieux calculé](combat-guide/ETAT_DES_LIEUX.md) sépare ce qui est
+catalogué, admis au combat, raccordé aux fichiers ou encore à concevoir.
+Cette association ne change pas les dates et observations de l'audit de corpus
+ci-dessous. Les sources éditoriales restent distinctes des preuves visuelles
+et des adaptations de gameplay.
+
+## Audit historique du corpus
+
 **Audit documentaire au 19 novembre 2026 — version `2026-11-19-final-66`.**
 
 Cette bible indexe **66 œuvres, éditions, programmes et supports** dans le périmètre convenu. Elle complète les **16 groupes de sources du moteur** du projet. Elle ne signifie ni 66 jeux supplémentaires, ni 66 nouveaux bestiaires à produire. Le [registre structuré](production/franchise-corpus.json), le [classeur Corpus / Stages](production/SILENT_HILL_CORPUS_BIBLE.xlsx) et le [dossier de recherche](production/vague21/corpus-audit/research.json) donnent les alias, références, liens avec le moteur et prochaines études.
@@ -173,11 +196,11 @@ Les apparitions dans Dead by Daylight, Bomberman, Dark Deception et le mini-jeu 
 
 ## Raccord au projet et travail restant
 
-La [passe de stages 21](production/vague21/README.md) intègre **12 nouveaux lieux et 24 PNG**, portant le registre à **55 arènes bitmap sur 123**. Les **68 absences** restantes, dont **15 références bloquées**, figurent dans l’onglet Stages et dans [l’inventaire courant](production/vague21/final-audit.json). Ces chiffres concernent les décors du jeu, indépendamment des 66 entrées du corpus documentaire.
+Dans l’état historique du 19 novembre 2026, la [passe de stages 21](production/vague21/README.md) intègre **12 nouveaux lieux et 24 PNG**, portant le registre à **55 arènes bitmap sur 123**. Les **68 absences** restantes, dont **15 références bloquées**, figurent dans l’onglet Stages et dans [l’inventaire de cette passe](production/vague21/final-audit.json). Ces chiffres concernent les décors du jeu, indépendamment des 66 entrées du corpus documentaire.
 
 Le registre de franchise complète `docs/GDD_FR.md` et `docs/SOURCES.md`. Il doit rester séparé de `data/sources.json`, qui configure les packs exécutables et leurs stages par défaut. L’indexation d’un programme, d’un roman ou d’un coffret ne doit pas créer un faux pack jouable.
 
-Le complément de classeur **Corpus / Stages** reprend les IDs stables, la nature, le statut de publication, les liens runtime, la qualité de preuve et la prochaine étude. La colonne « Couverture avant ajout » préserve la réalité de l’audit. Le classeur de production historique conserve ses onze onglets et son contenu ; son empreinte observée est :
+Le complément de classeur **Corpus / Stages** reprend les IDs stables, la nature, le statut de publication, les liens runtime, la qualité de preuve et la prochaine étude. La colonne « Couverture avant ajout » préserve la réalité de l’audit. Le classeur de production historique conserve ses onze onglets et son contenu ; son empreinte observée lors de cet audit historique est :
 
 ```text
 4016c8e34463b43931618f7fe01ffc0c16e519515ef8a299437ce70d41725871

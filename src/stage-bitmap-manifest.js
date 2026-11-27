@@ -5097,5 +5097,1296 @@ export const STAGE_BITMAPS = {
       "Player, Raw Shock, reticle, snowstorm, source chase and gameplay obstacles are omitted. No new collision, weather, hazard, source timing or animation is introduced.",
       "One opaque static background plus one sparse transparent near-edge plate. Native trace alpha is preserved; in-engine QA deferred to root integration."
     ]
+  },
+  "police_station_hc": {
+    "stageId": "police_station_hc",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "homecoming-police-first-cell-closed",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT06"
+    ],
+    "layers": [
+      {
+        "id": "bg-closed-police-cell",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/police_station_hc.bg-closed-police-cell.c2252eb70f95.png",
+            "sha256": "c2252eb70f95c5446ed23bc321341bb402e98fb649527869e226de481b3ef404",
+            "bytes": 2292574,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/police_station_hc.near-edges.3f61e32a58fe.png",
+            "sha256": "3f61e32a58fe968ace34fc2fee74691c72783dae687eb67726cba4a0cefe9f26",
+            "bytes": 162026,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Exact sub-location checked in actual Homecoming gameplay: the first closed police cell, before Wheeler releases Alex. No hospital or Overlook prison is substituted.",
+      "The historical lot9 URL sh5_screen_060.jpg was inspected and rejected: it shows Joshua behind bars and Alex in a hospital gown in the opening hospital, not the police cell. See source-review.json.",
+      "The gray steel barred enclosure, worn gray-green walls, closed gate and damaged concrete follow the captured cell. The lateral camera, complete wall span, regularized gate proportions and expanded clear floor are authored adaptations from 320×180 source frames.",
+      "No Alex, Wheeler, weapon, flashlight beam, Schism, released/open cell door, blood or new hazard is baked into the art.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "villa_rooftop": {
+    "stageId": "villa_rooftop",
+    "source": "shortmessage",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "tsm-villa-rooftop-first-visit-fog",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT30"
+    ],
+    "layers": [
+      {
+        "id": "bg-first-visit-mural",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/villa_rooftop.bg-first-visit-mural.66bead27729a.png",
+            "sha256": "66bead27729a3836b129c88c90b8e97248d43e86ef14f31ff8181a2e36847461",
+            "bytes": 2117664,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/villa_rooftop.near-edges.360e02276096.png",
+            "sha256": "360e02276096be24f755261ec670adbb6490aae1f989eb7b4ef3bb2d98424ff0",
+            "bytes": 93530,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The first rooftop visit in fog supplies the mural, memorial flowers, concrete wall, parapet and restrained metal railing. The later clear-sky ending is not used as the selected phase.",
+      "The painted human motif belongs to Maya’s wall mural. It is static artwork, not a living actor or an additional combatant. Anita, the phone and subtitles are absent.",
+      "The wall painting, roof proportions, flower arrangement, lighting and newly widened side-on camera remain authored interpretations of 320×180 source frames; mural brushwork and full roof geometry are not certified 1:1.",
+      "The foreground has no open drop, jump sequence, body, automatic lethal finisher, lightning or petal storm. Existing narrative-only safety policy and fixed-normal fog phase remain unchanged.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "villa_stairwell": {
+    "stageId": "villa_stairwell",
+    "source": "shortmessage",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "tsm-villa-rooftop-access-stairwell",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT30"
+    ],
+    "layers": [
+      {
+        "id": "bg-rooftop-access-stairs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/villa_stairwell.bg-rooftop-access-stairs.363247f2f6cd.png",
+            "sha256": "363247f2f6cdc060f2a41411bdc1383ded0dd542d2bfeab47419720b3752dd8c",
+            "bytes": 2318515,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/villa_stairwell.near-edges.6f87a6aba100.png",
+            "sha256": "6f87a6aba1001187e7e0adbf60e99d2fb5d1d63f5aa3f3a584c53f9347ff18b3",
+            "bytes": 236240,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Source frames isolate the ordinary gray-green concrete stair chamber beyond the Otherworld maze doorway: straight worn steps, two-tone teal walls, thin wall rail, low ceiling and paneled roof-access door.",
+      "Paper-covered maze walls, chain-link gates and the phone seen before the doorway are excluded. No monster or pursuit animation is baked into the normal stairwell.",
+      "The source camera looks up the stairs. This plate deliberately adapts it to a lateral elevation with an expanded horizontal lower landing; step count, full side-wall profile, door size and hidden surfaces remain unverified.",
+      "All steps and the rail remain behind the clear fighter floor. No new collision, falling hazard, door slam, moving shadow or automatic finisher is introduced.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "final_sacrament": {
+    "stageId": "final_sacrament",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "sh4-final-sacraments-stone-perimeter",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "CL_SH4_13_OUTSIDE_ROOM_302"
+    ],
+    "layers": [
+      {
+        "id": "bg-final-chamber",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+            "sha256": "2969dd7f3a9b7975805512bc1d1cda0b3ac32b2877e604dd7cda7e652cb789f8",
+            "bytes": 1900848,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+            "sha256": "8be13402fce8c77a68ba15cdb1fd911ca907b69f927340c45800616073a681ac",
+            "bytes": 167783,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The source screenshot and exact final-chamber gameplay establish cracked gray stone, a circular red basin, rounded-top ritual stelae, gray supports, a shallow ribbed dome and a circular oculus.",
+      "The red human images on the rear stelae are static painted motifs from the observed monuments. Henry, Walter, Eileen and the Conjurer are all excluded from this environment plate.",
+      "The tangent camera and broadened foreground stone walkway are authored fighting-view adaptations. Stela count and repeated painted motif, dome curvature, oculus size, full room diameter and reduced/cropped ring mechanism remain unverified; this does not certify the original mesh or original ritual layout.",
+      "The basin and inert ring mechanism stay behind the clear footing. No narrative progression, actor, moving ritual, new collision or hazard is implemented.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "scarlet_chamber": {
+    "stageId": "scarlet_chamber",
+    "source": "homecoming",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "homecoming-hell-descent-scarlet-arena",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT05",
+      "EXT06"
+    ],
+    "layers": [
+      {
+        "id": "bg-hell-descent-arena",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+            "sha256": "6c36d0eabd2b8cf8f50980dede104ea3b440612f27793377d99f67f2c7bd49cc",
+            "bytes": 2007545,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+            "sha256": "75ae6b391b5fb32a5ad1ac8e35bba7fbca4fe1f3409c0a7d76e2f9c4a48de37d",
+            "bytes": 150931,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The selected frames show the actual Scarlet arena: rust-dark metal floor/grating, low amber light, rectangular grid shadows and rear metal rail sections with angular braces.",
+      "The historical lot9 images sh5_screen_137.jpg and sh5_screen_138.jpg depict Sepulcher, not Scarlet; the earlier dossier already records that limitation. They are excluded. No hanging ceiling cables are inferred from that misattribution.",
+      "The side-on full wall span, regularized rail spacing, widened floor, exact grate dimensions and lighting arrangement are authored adaptations from 320×180 gameplay frames and remain unverified.",
+      "No Alex, Fitch, Scarlet, doll fragment, hanging organic sack, mirror, cable effect or invented machine is baked into the background. Existing gameplay and reference policy remain untouched.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "arcade_hospital_roof": {
+    "stageId": "arcade_hospital_roof",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "arcade-brookhaven-roof-normal-fog",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT15",
+      "EXT18"
+    ],
+    "layers": [
+      {
+        "id": "bg-normal-fog-roof",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+            "sha256": "071cecc9c301e939558348823f5a3ff878cc7b7b167d636ea35ad44b1e2a5b6d",
+            "bytes": 2745020,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+            "sha256": "167557416ab0b321f017bfbe076044c05082b037510641a970a01469e88f4d5d",
+            "bytes": 176304,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The gray phase gameplay frames establish the actual square rooftop slabs, low concrete boundary and chain-link fence. The 2007 roof screenshot supplies the rectangular fence bays and inward-angled top panels only.",
+      "The orange boss-presentation color is intentionally excluded from the selected fixed-normal gray-fog phase. The 2010.02.21 gallery image 08 was rejected because its on-screen label identifies Stage 3 Area 1 Toluca Lake, not this roof.",
+      "The lateral camera, regularized fence spacing, continuous intact walking strip and clipped access-room facade are authored adaptations. Whole-roof geometry, tile sizes and exact fence bay count remain unverified.",
+      "No Eric, Tina, Emilie, Tuberculosis, dead creature, cone, rooftop hole, collapse, orange transition or new weather/hazard event is embedded in the art.",
+      "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+    ]
+  },
+  "arcade_hospital": {
+    "stageId": "arcade_hospital",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "arcade-brookhaven-normal-corridor",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT15"
+    ],
+    "layers": [
+      {
+        "id": "bg-normal-corridor",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+            "sha256": "2409645c1f049ec526510e8e509b6a72d1537c02707ea9804fb9f7ebddac2c8c",
+            "bytes": 2503138,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-door-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+            "sha256": "c002d07614874ddf839a232d4c73d7100b8caf142c5041092f3f9db814b7c1ad",
+            "bytes": 409647,
+            "width": 1671,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Original 2007 Arcade hospital screenshots sh_arcade_04.jpg and sh_arcade_19.jpg establish the normal corridor: worn gray-cream plaster, dark lower wall panels, wooden door trim, green-gray doorways and mottled square floor tiles.",
+      "The lateral wall span, two door openings, closed door, wall vent, ceiling light and continuous widened fighting lane are authored extensions. Room dimensions, exact doorway count, lighting placement and tile geometry are not measured from the original game.",
+      "The normal corridor remains separate from the orange Otherworld fan room. No nurses, actors, weapons, UI, hazards or automatic transformations are baked into either plane.",
+      "Native background is 1672 by 941 and native foreground is 1671 by 941; each uses its actual dimensions with cover fit. No resizing, recoloring, crop or alpha cleanup was applied. Trace alpha 1 pixels in the clear foreground center are preserved.",
+      "One opaque background and one independent transparent foreground; static candidates, not an animation or a 1:1 certification."
+    ]
+  },
+  "book_light": {
+    "stageId": "book_light",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "bom-light-zone8-window-room",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT21"
+    ],
+    "layers": [
+      {
+        "id": "bg-light-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+            "sha256": "87045d14aba8b9d1ba01eb983cfb85ad4ece2aab6e282fb3af4ce0c87a4cbfe7",
+            "bytes": 2775424,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+            "sha256": "857bd9e0632c5246653b699c0b4c1f94c6aa0bccc70646f8bfa4c2ef144fad9d",
+            "bytes": 224290,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Gameplay sheets establish dark ochre/pale aged stone, rectangular paneling, narrow white windows and rose-brown square floor slabs. The screenshot grids are source evidence only, not delivered artwork.",
+      "The lateral camera, widened continuous floor, regularized window count, wall spacing and tiny foreground stone trims are authored versus adaptations. No exact procedural room seed, dimensions or hidden geometry is certified.",
+      "No other elemental zone, new rune, character, enemy, attack, interface or collectible is painted into this room. The small rear stone slab remains behind the fighting line.",
+      "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes.",
+      "Ceiling support for contextual finishers is not established by these references; preserve the previous ineligibility rather than infer a usable support from the painted interior."
+    ]
+  },
+  "book_steel": {
+    "stageId": "book_steel",
+    "source": "bom",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "bom-steel-zone19-gear-room",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT21"
+    ],
+    "layers": [
+      {
+        "id": "bg-steel-room",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+            "sha256": "2b13c6afe6538ebeeefbfb4bb26cf7cf5ce4721f2a6247a9de3dfbd0948863b9",
+            "bytes": 2890608,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+            "sha256": "10d39edce2a8460d4d41c42d09ca83369c7517b9fc19bab292e3f7e942112c84",
+            "bytes": 219189,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Gameplay sheets establish green-gray industrial rooms, bright rectangular wall lights and large floor-disc motifs. Miguel Rico source renders corroborate the tread-plate double door and toothed three-spoke disc.",
+      "The camera, wall-panel arrangement, door placement, gear diameter, lamp spacing and continuous clear floor are authored adaptations of observed materials and motifs; source topology and procedural room layout remain unverified.",
+      "The floor motif is inert art, not a moving trap or new machine. No extra rune, pipe network, character, weapon or UI is introduced.",
+      "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes.",
+      "Ceiling support for contextual finishers is not established by these references; preserve the previous ineligibility rather than infer a usable support from the painted interior."
+    ]
+  },
+  "film_midwich": {
+    "stageId": "film_midwich",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "film2006-midwich-otherworld-upper-gallery",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT49"
+    ],
+    "layers": [
+      {
+        "id": "bg-otherworld-gallery",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+            "sha256": "7ca015c73e2d2e9dfc9669cbc450aa2fac279d4f25724ac5b42f3a3f77871d5b",
+            "bytes": 2185175,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+            "sha256": "2a676412e457f67268b2965fdd8b6d406994e433e41e513df34717db657cbe59",
+            "bytes": 219196,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The actual film frame shows Rose in the transformed upper gallery, the circular amber glazed geometric window, dark rectangular bays, overhead beams and rusty gallery metal. The bathroom, courtyard and game versions of Midwich are excluded.",
+      "The foreground walkway is widened and its near railing omitted to leave a clear versus plane; the source corridor depth and exact width are not reconstructed 1:1.",
+      "The window motif, wall symmetry and beam repetition are interpreted at the new camera. No person, creature, gore, new chain or collapsing floor is baked into the image.",
+      "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes."
+    ]
+  },
+  "film_church": {
+    "stageId": "film_church",
+    "source": "film",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "film2006-church-rear-nave-before-intrusion",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT49"
+    ],
+    "layers": [
+      {
+        "id": "bg-protected-rear-nave",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+            "sha256": "04be564b44c6dd1a6da6cd32531c946b5e695b97f4895a11f138101218e86c77",
+            "bytes": 1944865,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-edges",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+            "sha256": "5a7bfb3b61114f27b0e6bffa357b76d94bc8e16567a94b140e01b75ac7ed56ec",
+            "bytes": 84961,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "The source film frame shows the congregation facing the rear entrance. Square pale columns, brown timber paneling, raised rear doors, conical ring lamps and small candles are retained while all people are removed.",
+      "The camera is lowered/regularized for versus, the clear floor broadened and pews moved to the rear outer margins. Exact pew count, pillar spacing, door proportions and illumination remain unverified.",
+      "Fixed-normal pre-intrusion phase is preserved: no pit, barbed wire, Alessa bed, bodies, blood, 2012 sanctuary or game-chapel imagery. No new hazard or transformation is implemented.",
+      "One independent opaque background and one transparent parallax foreground. Both static; no animation, collision or rules changes."
+    ]
+  },
+  "shimizu_residence": {
+    "stageId": "shimizu_residence",
+    "source": "shf",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "shf-residence-ii-dining-yellowed-calendar",
+    "geometry": {
+      "ceiling": true
+    },
+    "referenceIds": [
+      "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+      "EXT10_SHF_RESIDENCE_DINING_20261026"
+    ],
+    "layers": [
+      {
+        "id": "bg-residence-ii-dining",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/shimizu_residence.vague30.bg-residence-ii-dining.20363814e139.png",
+            "sha256": "20363814e1395109e6bbb7a172fec8e414389d8aeba926da547f7daade15e44c",
+            "bytes": 2492364,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-floor-cushion",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/shimizu_residence.vague30.near-floor-cushion.5472ecd1cb2f.png",
+            "sha256": "5472ecd1cb2f006046fd082b8f7d7ee734671d6ba6550ff4124fab0b01b1f666",
+            "bytes": 107930,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Vue de la table du Yellowed Calendar dans Shimizu Residence II, voie menant à Ending 1, après le souvenir. Les anciennes mentions Residence I du projet sont corrigées séparément ; ID de stage conservé.",
+      "La capture native montre tatami à bordures vertes, table basse ronde, pot, bols, bouteille, coussins, siège bas à dossier quadrillé et meuble audiovisuel sombre. La caméra frontale, les panneaux, l’étendue du sol, le nombre/placement des meubles et les appareils radio/TV sont reconstruits ou interprétés pour le versus, sans mesure 1:1.",
+      "Ni personnage, souvenir rejoué, combat des parents, calendrier lisible, autre pièce, transition de résidence, nouvelle animation ou nouveau danger. Un fond opaque et un coussin rapproché avec alpha, chacun fixe et indépendant.",
+      "geometry.ceiling=true conserve le support précédemment déduit de la couche rooms. Collisions, sol de combat, paramètres physiques et identifiant inchangés."
+    ]
+  },
+  "arcade_toluca_lake": {
+    "stageId": "arcade_toluca_lake",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "arcade-stage3-area1-lakeside-quay",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT15"
+    ],
+    "layers": [
+      {
+        "id": "bg-stage3-quay",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_toluca_lake.vague30.bg-stage3-quay.f7eaebf61af4.png",
+            "sha256": "f7eaebf61af49d6d59be23d756852ae50b8a0f3c4c24da67b9272ecf0f50a319",
+            "bytes": 2063352,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-stone-pier",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_toluca_lake.vague30.near-stone-pier.d8482b142865.png",
+            "sha256": "d8482b1428658d29d3f003d3c57a27074ce3e68397f36bafecbb2d95dff23d12",
+            "bytes": 181651,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La capture native distribuée dans la galerie Konami Europe 2010 porte explicitement STAGE 3 AREA 1 / Toluca Lake. Piliers carrés en pierre, couvre-murs, garde-corps sombre, réverbère à globe et brouillard pâle déterminent cette vue.",
+      "Les acteurs/UI sont retirés ; la caméra latérale, la répétition des piliers, le nombre des lampes, le dessin du dallage et la largeur du quai sont une adaptation versus. Le fond brumeux ne certifie pas une vue complète du lac ni une géométrie 1:1.",
+      "Aucun pont du Little Baroness, état 1918/1993, décor de Silent Hill 2, animation de mer, chute ou nouveau danger. Un fond opaque et un fragment de pilier rapproché avec alpha, chacun fixe et indépendant.",
+      "geometry.ceiling=false conserve l’absence de support de plafond. Les règles, collisions et ID sont inchangés."
+    ]
+  },
+  "arcade_prison": {
+    "stageId": "arcade_prison",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "toluca-prison-otherworld-cell-corridor",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT15"
+    ],
+    "layers": [
+      {
+        "id": "bg-otherworld-cell-corridor",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_prison.vague30.bg-otherworld-cell-corridor.0d6c58e35508.png",
+            "sha256": "0d6c58e355084cbe05de70b836cc7466ac7a3445f15443c831eafbd159d7c5b8",
+            "bytes": 2611057,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-cell-jamb",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_prison.vague30.near-cell-jamb.42f7a995d42d.png",
+            "sha256": "42f7a995d42d31c533f991d34434ddc653dbf92eba52ef96defcd453822d418d",
+            "bytes": 194035,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "La capture native Konami Europe 2010 n°05 montre des cellules à barreaux, murs rouge sombre et surfaces turquoise/cyan. Son rattachement au corridor Otherworld de Toluca Prison recoupe le catalogue Stage 2 Area 2 et la branche Otherworld documentée par la carte ; le point exact du parcours n’est pas mesuré.",
+      "Vue frontale élargie pour le versus : trois portes, entraxes, plafond, éclairage et étendue du sol reconstruits depuis la vue oblique partiellement masquée. Ni cour de prison SH2, ni salle du Split Worm, ni numéro de cellule inventé comme fait canonique.",
+      "État visuel Otherworld fixe, sans transition, monstres, projectiles, eau montante ou danger neuf. Un fond opaque et un jambage rapproché avec alpha, chacun fixe et indépendant.",
+      "geometry.ceiling=false conserve le contrat antérieur, car les motifs procéduraux cells/chains/watchtower/bars/lights ne fournissaient aucun plafond autorisé. Le plafond peint n’accorde aucune prise ni Dénouement supplémentaire."
+    ]
+  },
+  "cedar_grove": {
+    "stageId": "cedar_grove",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "female-treatment-mirror",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT03",
+      "V31_ORIGINS_CEDAR_MIRROR_SEQUENCE",
+      "V31_ORIGINS_CEDAR_MIRROR_COPY"
+    ],
+    "layers": [
+      {
+        "id": "bg-female-treatment",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/cedar_grove.vague31.bg-female-treatment.59e0c4138ef4.png",
+            "sha256": "59e0c4138ef4bb886172820d3102aebf85be5b7a2c2a9ac3c8eef7942c2745ab",
+            "bytes": 2841635,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-privacy-curtain",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/cedar_grove.vague31.near-privacy-curtain.f61def0b802a.png",
+            "sha256": "f61def0b802a0c585c91f073204ec7a19511368a683090c05e8fad5d33cb2d91",
+            "bytes": 278390,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Female Treatment 2F, pièce normale avant le miroir, documentée par des vues natives à 12 s et 18 s. La phase verdâtre reste confinée au reflet.",
+      "Le fond et le rideau de premier plan sont deux PNG fixes indépendants, sans personnage ou mouvement ajouté. Caméra frontale et largeur de sol adaptées au versus ; plateforme et build source non établis.",
+      "geometry.ceiling=false préserve le contrat antérieur : les anciennes couches procédurales ne fournissaient aucun appui. Le plafond peint n’autorise ni prise, ni Dénouement ou danger."
+    ]
+  },
+  "wish_house": {
+    "stageId": "wish_house",
+    "source": "sh4",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "sh4-first-visit-scripture-corner",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "CL_SH4_03_FOREST_WORLD",
+      "V31_SH4_WISH_GUIDE_P46",
+      "V31_SH4_WISH_INTERIOR_SCRIPTURE",
+      "V31_SH4_WISH_DOOR"
+    ],
+    "layers": [
+      {
+        "id": "bg-first-visit-scripture",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/wish_house.vague31.bg-first-visit-scripture.8f7ee32e602f.png",
+            "sha256": "8f7ee32e602fb37e95c0de23779b9468e356cb1182e5bc1eb850d5391f40c5bd",
+            "bytes": 2549969,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-closed-book",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/wish_house.vague31.near-closed-book.d6120699d81a.png",
+            "sha256": "d6120699d81ae8a19dcc2559a362b36f8f66d49d56a7e73c07ff4ae545008e86",
+            "bytes": 108834,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Intérieur intact du premier passage de Forest World, avant incendie : meuble drapé, livres, boiseries, lampe et porte documentés par le guide officiel et deux captures natives.",
+      "Fond et livre fermé de premier plan indépendants, sans texte lisible, poupée, fosse, flamme, adversaire ou pouvoir inventé. Caméra frontale et largeur de sol adaptées au versus ; build source non établi.",
+      "geometry.ceiling=false : résoudre la phase du stage auparavant bloqué et peindre un plafond ne crée aucun appui de Dénouement. Règles de terrain neutres ; aucun effet ou événement offensif activé."
+    ]
+  },
+  "antique_shop": {
+    "stageId": "antique_shop",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "green-lion-inner-passage",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT02",
+      "V32_ORIGINS_CULT_GUIDE_P121",
+      "V32_ORIGINS_CULT_ANTEROOM_PLAYTHROUGH"
+    ],
+    "layers": [
+      {
+        "id": "bg-cult-anteroom",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+            "sha256": "8de0129c58efd742d49b367dab08f2db5b0c62852718a12c11aabf49e084a5c2",
+            "bytes": 2139912,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-grate-edge",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png",
+            "sha256": "c0447d084d35681b243721b68aa5de40283e7956bbc158779eced796558b0401",
+            "bytes": 100915,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Antichambre du culte après le tunnel de Green Lion, avant la cinématique finale. Guide officiel p. 121 et vues de jeu à 3:13:40, 3:14:20 et 3:14:30 ; autel vide, drapé rouge et passage grillagé.",
+      "Fond et bord de grille de premier plan sont deux PNG fixes. Placement et largeur de la salle, éclairage précis et détail des matériaux reconstruits pour le versus ; aucune certification 1:1.",
+      "Les trois anciens prototypes de poussière, Flauros et lueur restent documentés mais sont masqués par le fond fixe ; aucun Flauros flottant, corps rituel, transition, danger ou plafond utilisable."
+    ]
+  },
+  "lighthouse_sm": {
+    "stageId": "lighthouse_sm",
+    "source": "shattered",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "shm-clinic-entrance-before-therapy",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT09",
+      "V32_SHM_CLINIC_CHAPTER",
+      "V32_SHM_CLINIC_ENTRANCE_PLAYTHROUGH"
+    ],
+    "layers": [
+      {
+        "id": "bg-clinic-entrance",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+            "sha256": "4ce31feecce0f664af45985716bea7073333a2fe410f7693a6b5594d4389ea97",
+            "bytes": 2644208,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-snow-edge",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png",
+            "sha256": "457e03b49a441bc65ee28aff5a7c038be4fc8a1f6ff74bded5398bc81e7cdefe",
+            "bytes": 109945,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Entrée extérieure du Lighthouse Counseling Center après la conversation du rivage et avant de franchir la porte : vues natives à 2:37:40 et 2:37:50. Le plan choisi exclut la tour, le lac et la salle de thérapie.",
+      "Fond opaque et bord de neige au premier plan sont deux PNG fixes. Dimensions, frontalité, usure et végétation de bord reconstruits ; plaque limitée au mot LIGHTHOUSE, détails inférieurs illisibles.",
+      "Neige statique et parallaxe de caméra discrète ; aucune animation météo ou prise de glace, faisceau, eau, scène de révélation, danger ou appui de plafond. Anciennes propositions composites conservées en attente."
+    ]
+  },
+  "arcade_historical": {
+    "stageId": "arcade_historical",
+    "source": "arcade",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "historical-society-normal-gallery-before-descent",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT15",
+      "V33_ARCADE_HISTORICAL_GALLERY_2050_2100",
+      "V33_ARCADE_HISTORICAL_CROSSCHECK_1830_1840"
+    ],
+    "layers": [
+      {
+        "id": "bg-normal-gallery",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_historical.vague33.bg-normal-gallery.e670dbd8ffba.png",
+            "sha256": "e670dbd8ffbac0aa3b3443b6100f16748c456f95f4b4cb37992d5d7ba74382c2",
+            "bytes": 2246551,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-door-jambs",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/arcade_historical.vague33.near-door-jambs.eb9c53adb937.png",
+            "sha256": "eb9c53adb93795aac66395022a420d04d1221e22be5266454a08f415119e11df",
+            "bytes": 210099,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Galerie normale de la Historical Society dans The Arcade (Stage 2 Area 1), avant la descente vers la prison. Deux parcours filmés documentent papier peint jaune olive, boiseries et ordre des quatre cadres ; sources et horodatages dans docs/production/vague33/stages/source-review.json.",
+      "Fond opaque et montants de porte transparents sont deux PNG fixes distincts. Détails des œuvres, textures, sol et projection latérale reconstruits : références de faible résolution, aucune certification 1:1.",
+      "Pas de transition, clignotement des portraits, personnage, chute de gravats, fatalité automatique ni plafond jouable. Les propositions anciennes restent en attente ; physique de sol neutre."
+    ]
   }
 };

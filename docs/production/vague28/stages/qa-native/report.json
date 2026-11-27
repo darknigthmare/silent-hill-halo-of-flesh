@@ -1,0 +1,1751 @@
+{
+  "schema": 1,
+  "label": "stage-pass28-native",
+  "generatedAt": "2026-11-24T14:34:52.916Z",
+  "root": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh",
+  "stageIds": [
+    "final_sacrament",
+    "scarlet_chamber",
+    "arcade_hospital_roof"
+  ],
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "checks": [
+    {
+      "name": "All selected stage IDs resolve exactly",
+      "passed": true
+    },
+    {
+      "name": "Existing test fighters retain combat eligibility",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+      "passed": true
+    },
+    {
+      "name": "Exact original file assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+      "passed": true
+    },
+    {
+      "name": "Lossless in-memory decoder adapter assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "final_sacrament: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "final_sacrament: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "final_sacrament: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "final_sacrament: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "final_sacrament: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "final_sacrament: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "final_sacrament: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "scarlet_chamber: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "scarlet_chamber: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "scarlet_chamber: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "scarlet_chamber: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "scarlet_chamber: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "scarlet_chamber: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "scarlet_chamber: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: active composition has two independent planes",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: static background and parallax foreground are declared",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: ordinary asset preflight succeeds",
+      "passed": true,
+      "detail": {
+        "ok": true,
+        "missing": [],
+        "failed": [],
+        "stageFailed": false
+      }
+    },
+    {
+      "name": "arcade_hospital_roof: original input callbacks are registered",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: normal intro reaches live fight",
+      "passed": true,
+      "detail": {
+        "introTicks": 228
+      }
+    },
+    {
+      "name": "arcade_hospital_roof: exact scenery planes are actually drawn",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: no unrelated stage art is substituted",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: both existing combat idles are painted",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: ordinary right movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 373.9000000000002,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "arcade_hospital_roof: right parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          -0.3834000000000009
+        ],
+        "expected": [
+          0,
+          -0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "arcade_hospital_roof: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: original callback available keydown",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: physical binding accepted keydown",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: original callback available keyup",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: physical binding accepted keyup",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: ordinary left movement advances actor",
+      "passed": true,
+      "detail": {
+        "start": {
+          "x": 378.6114337910813,
+          "y": 594,
+          "state": "idle",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "idle"
+        },
+        "end": {
+          "x": 314.7114337910811,
+          "y": 594,
+          "state": "walk",
+          "facing": 1,
+          "grounded": true,
+          "spritePose": "walk"
+        }
+      }
+    },
+    {
+      "name": "arcade_hospital_roof: left parallax matches actual movement",
+      "passed": true,
+      "detail": {
+        "delta": [
+          0,
+          0.3833999999999992
+        ],
+        "expected": [
+          0,
+          0.3834000000000006
+        ]
+      }
+    },
+    {
+      "name": "arcade_hospital_roof: release returns to grounded idle",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: no selection portrait was drawn as a combat sprite",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: no input remains held",
+      "passed": true
+    },
+    {
+      "name": "arcade_hospital_roof: teardown removes callbacks",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged art/registry.json",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/sprite-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-manifest.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/fight.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/renderers.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmaps.js",
+      "passed": true
+    },
+    {
+      "name": "Source unchanged src/stage-bitmap-compositions.js",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+      "passed": true
+    },
+    {
+      "name": "PNG unchanged assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "assets": [
+    {
+      "path": "assets/sprites/bom_pyramid_head_129.5d16d193b5e6.png",
+      "sha256": "5d16d193b5e61da3b2a500cde676e128e2ed7c1ac55bd20f8a6d01dc461bfacc",
+      "bytes": 1182614,
+      "width": 1536,
+      "height": 1024,
+      "rgbaSha256": "0c4478dcf379d0ee73c21fa9a753a15f96ffec1d36fcb4541e7b1fdb8191dd80"
+    },
+    {
+      "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+      "sha256": "67cd2f023ce2e8e1060eafa3fb3ffed9c4c10a00bc0cb36d7d0c400c0e579946",
+      "bytes": 1697023,
+      "width": 1024,
+      "height": 1536,
+      "rgbaSha256": "3a1362834f7de8adb70fab12dbecda3baf65eba0e58d5f6fdcc012bf0c43f3b2"
+    },
+    {
+      "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+      "sha256": "2969dd7f3a9b7975805512bc1d1cda0b3ac32b2877e604dd7cda7e652cb789f8",
+      "bytes": 1900848,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "500d1b91f063b8354b55309e83657c08d4b3ac0d6b5e7c02b2cae19c43881f0b"
+    },
+    {
+      "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+      "sha256": "8be13402fce8c77a68ba15cdb1fd911ca907b69f927340c45800616073a681ac",
+      "bytes": 167783,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "488d15cb032733aca99e821ce6810b8fe50a8f33aaf7368c4fdad0c8ddabf29f"
+    },
+    {
+      "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+      "sha256": "6c36d0eabd2b8cf8f50980dede104ea3b440612f27793377d99f67f2c7bd49cc",
+      "bytes": 2007545,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "a1f33f59f8079a463f27f61cfc2ba79f231c7add147e18dc6d5d66e20d1bc5c0"
+    },
+    {
+      "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+      "sha256": "75ae6b391b5fb32a5ad1ac8e35bba7fbca4fe1f3409c0a7d76e2f9c4a48de37d",
+      "bytes": 150931,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "e0a8fe1bf92797dd7656d00ee443ef9b3f56f7816c5cc6409919cb41390f63c3"
+    },
+    {
+      "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+      "sha256": "071cecc9c301e939558348823f5a3ff878cc7b7b167d636ea35ad44b1e2a5b6d",
+      "bytes": 2745020,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "5a20de0651d29632fe03258950253aa7eae79f03a616e73905e583767ac5a9ab"
+    },
+    {
+      "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+      "sha256": "167557416ab0b321f017bfbe076044c05082b037510641a970a01469e88f4d5d",
+      "bytes": 176304,
+      "width": 1672,
+      "height": 941,
+      "rgbaSha256": "e4fd8b94173ea260634ab506fd4906cb5541e1d7cccc9ef4a95d4f0361bc818d"
+    }
+  ],
+  "cases": [
+    {
+      "stageId": "final_sacrament",
+      "source": "sh4",
+      "scene": "sh4-final-sacraments-stone-perimeter",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "source": "homecoming",
+      "scene": "homecoming-hell-descent-scarlet-arena",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "source": "arcade",
+      "scene": "arcade-brookhaven-roof-normal-fog",
+      "runtimeSceneId": null,
+      "commands": [
+        {
+          "type": "keydown",
+          "code": "ArrowRight",
+          "frame": 229,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowRight",
+          "frame": 247,
+          "accepted": true
+        },
+        {
+          "type": "keydown",
+          "code": "ArrowLeft",
+          "frame": 257,
+          "accepted": true
+        },
+        {
+          "type": "keyup",
+          "code": "ArrowLeft",
+          "frame": 275,
+          "accepted": true
+        }
+      ],
+      "parallax": [
+        {
+          "direction": "right",
+          "start": {
+            "x": 310,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 373.9000000000002,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            -0.3834000000000009
+          ],
+          "expected": [
+            0,
+            -0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 229,
+              "actorX": [
+                310,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.3834000000000009,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 247,
+              "actorX": [
+                373.9000000000002,
+                970
+              ]
+            }
+          ]
+        },
+        {
+          "direction": "left",
+          "start": {
+            "x": 378.6114337910813,
+            "y": 594,
+            "state": "idle",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "idle"
+          },
+          "end": {
+            "x": 314.7114337910811,
+            "y": 594,
+            "state": "walk",
+            "facing": 1,
+            "grounded": true,
+            "spritePose": "walk"
+          },
+          "delta": [
+            0,
+            0.3833999999999992
+          ],
+          "expected": [
+            0,
+            0.3834000000000006
+          ],
+          "before": [
+            {
+              "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.41166860274648687,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 257,
+              "actorX": [
+                378.6114337910813,
+                970
+              ]
+            }
+          ],
+          "after": [
+            {
+              "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                0,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            },
+            {
+              "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+              "args": [
+                0,
+                0.25,
+                1672,
+                940.5,
+                -0.02826860274648766,
+                0,
+                1280,
+                720
+              ],
+              "matrix": [
+                0.9783549904823303,
+                0,
+                0,
+                0.9783549904823303,
+                13.852813720703125,
+                12.857142448425293
+              ],
+              "frame": 275,
+              "actorX": [
+                314.7114337910811,
+                970
+              ]
+            }
+          ]
+        }
+      ],
+      "finalActor": {
+        "x": 309.99999999999994,
+        "y": 594,
+        "state": "idle",
+        "facing": 1,
+        "grounded": true,
+        "spritePose": "idle"
+      },
+      "finalFrame": 285
+    }
+  ],
+  "captures": [
+    {
+      "file": "final_sacrament.png",
+      "stageId": "final_sacrament",
+      "sha256": "940afba03caad4a79dcaeaf591e06eb6fe80868ff4c7036d1ab0bc6ea1c8bbd9",
+      "bytes": 1062205,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "scarlet_chamber.png",
+      "stageId": "scarlet_chamber",
+      "sha256": "56ebc897793414aeec98065f7ad888c6a1dea7ab8dc4d99791eb27db3992c05b",
+      "bytes": 1104329,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    },
+    {
+      "file": "arcade_hospital_roof.png",
+      "stageId": "arcade_hospital_roof",
+      "sha256": "5ae52a7e3e9459db24b85c5d284644e2981e6600ea1eda648c676b5e6972c9d0",
+      "bytes": 1416253,
+      "width": 1280,
+      "height": 720,
+      "purpose": "actual-native-FightEngine",
+      "frame": 229
+    }
+  ],
+  "sourceHashes": {
+    "art/registry.json": {
+      "before": "7244b12325e07819e52d95a617ef866c98e7519bb7cf011ccf3923cd7889bd5d",
+      "after": "7244b12325e07819e52d95a617ef866c98e7519bb7cf011ccf3923cd7889bd5d"
+    },
+    "src/sprite-manifest.js": {
+      "before": "44df0d033087a81e2160bb0cd02add3eb43bf27343205911fd53614fd8a9bdaa",
+      "after": "44df0d033087a81e2160bb0cd02add3eb43bf27343205911fd53614fd8a9bdaa"
+    },
+    "src/stage-bitmap-manifest.js": {
+      "before": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065",
+      "after": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065"
+    },
+    "src/fight.js": {
+      "before": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c",
+      "after": "e86642cc6c0e6b54f5d2f14cec2d84092811f05dce5ee441ec9a951c62e0418c"
+    },
+    "src/renderers.js": {
+      "before": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b",
+      "after": "4b739d7a202f556456d8b10183c5ec270ed35bbf7055a8a23cf32a3e6aeb441b"
+    },
+    "src/stage-bitmaps.js": {
+      "before": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816",
+      "after": "b9195280a3283e473f37a1a728d0cd72f0482c2fade382f7420bf4927d366816"
+    },
+    "src/stage-bitmap-compositions.js": {
+      "before": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e",
+      "after": "7bfde08c8fa27c02219c5a97a0b5ba1af16495e77d186a811f767172cdab474e"
+    }
+  },
+  "method": {
+    "renderer": "Actual FightEngine.update/render and the original native Canvas drawImage. Each stage is selected through its normal stage descriptor.",
+    "inputs": "Only registered InputState keydown/keyup callbacks receive synthetic native events. No actor position, facing, health, phase, presentation or clock is assigned.",
+    "decoder": "PNG encoding normalized in memory for native decoding; every decoded RGBA byte is compared before/after.",
+    "scope": "Existing fighters exercise initial stage composition, movement in both directions, release to idle, exact planes, live parallax and cache admission."
+  },
+  "limits": [
+    "Native Canvas does not exercise Chromium, DOM/CSS, HTTP, actual browser keyboard delivery or service workers.",
+    "No new fighter pose, attack, contact, guard, finisher, stage hazard, original timing or 1:1 artistic fidelity is certified.",
+    "Two static stage planes and their runtime parallax do not constitute a new source animation."
+  ],
+  "memoryPolicy": {
+    "nodeExecArgv": [
+      "--expose-gc",
+      "--max-old-space-size=256"
+    ],
+    "explicitGcAfterSharpDecodeBeforeNativePreflight": true,
+    "engineLogicChanged": false
+  },
+  "dependencies": {
+    "node": "v24.22.3",
+    "canvas": "0.1.100",
+    "sharp": "0.35.5"
+  },
+  "harnessSHA256": "b8eacf3abfed48c3fa9a5e4b44db9f3e5b59baafcfb4e3d4c6d5ba5373dc89b0",
+  "version": "0.9.6",
+  "testedSpriteEntryHashes": {
+    "bom_pyramid_head_129": "3ec8112c0efe5bc73ab7638fa37288f731fd4bcb68d58c40c61fa0e0ea7febde",
+    "bom_butcher_123": "0e5bf88a83144ea003cc77b282f4b136c7c6351c03e7da55dbf5b8807220ddd3"
+  },
+  "testedStageEntryHashes": {
+    "final_sacrament": "baebe2a95b2a0d011bd5bc81b9246f981527e458c41969a408c62ad9a5ddd1c3",
+    "scarlet_chamber": "c7d64a5de0f7a641f28b866fb8ee68c6eecdb040243aae6469ed528a5077cbe8",
+    "arcade_hospital_roof": "7856fe191ddf4f40f1fb3c0f71b7ee01365d218c75324adc4506d30af6bb40b7"
+  },
+  "cataloguePolicy": "The whole catalogue is hashed before/after this process. Later unrelated imports may change its global hash; aggregation must still require exact tested-entry hashes and unchanged renderer/gameplay modules.",
+  "passed": true,
+  "completedAt": "2026-11-24T14:34:55.693Z"
+}

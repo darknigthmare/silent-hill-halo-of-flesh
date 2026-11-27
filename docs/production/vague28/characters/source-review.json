@@ -1,0 +1,229 @@
+{
+  "schema": "halo-wave28-character-source-review-v1",
+  "reviewedAt": "2026-11-24T14:25:53.816573+00:00",
+  "baselineRemaining": "docs/production/vague26/remaining-evidence.json",
+  "baselineRemainingSHA256": "1c132c507bb99438c9752433e9b4282bf7a3f832ff2c2d07b9d021f5118cdfdf",
+  "scope": "Recherche ciblée des profils sans référence suffisante, puis quatre poses manquantes sur identités déjà intégrées. Aucun nouveau profil débloqué.",
+  "remainingProfilesCount": 40,
+  "untouchedRefusalOrRelatedHoldIds": [
+    "sh1_incubus_019",
+    "sh2_mannequin_ambusher_023",
+    "sh2_maria_final_manifestation_033",
+    "sh2_mary_final_manifestation_034",
+    "sh2_spider_mannequin",
+    "sh3_valtiel_051",
+    "homecoming_amnion_hanging_form_097",
+    "homecoming_amnion_exposed_form_098",
+    "arcade_nurse_arcade",
+    "arcade_red_pyramid_thing_arcade",
+    "bom_mother_135",
+    "bom_valtiel_136",
+    "bom_blood_guardian_143",
+    "bom_blood_mama_145",
+    "shf_corruptor_155",
+    "shf_hatcher_156",
+    "shf_dark_hatcher_160",
+    "shf_hinako_s_mother_165",
+    "film_dark_nurse_171",
+    "film_red_pyramid_film_175",
+    "film_bubble_head_nurse_return_to_silent_hill"
+  ],
+  "newMissingCharacterResolved": 0,
+  "anatomyImages": [
+    {
+      "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_04.jpg",
+      "path": "docs/production/vague28/characters/references/groaner-original-sh1.jpg",
+      "status": 200,
+      "bytes": 223209,
+      "sha256": "25b3d0d9ae88fcee8001f208397ad3617ba2cc2f9157caded96d74b47285f8ef",
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_01_closer.jpg",
+      "path": "docs/production/vague28/characters/references/closer-original-sh3.jpg",
+      "status": 200,
+      "bytes": 533936,
+      "sha256": "570f9cbc93f5c2dbe96783a85fa3600be21ae64297284126d961215e2267af73",
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/screens/pics/sh3_screen_09.jpg",
+      "path": "docs/production/vague28/characters/references/closer-game-front-sh3.jpg",
+      "status": 200,
+      "bytes": 198762,
+      "sha256": "7101056bf624214ecc74c4fbb38ece85fd6d5764c13f62ab9d83033aa92daf2c",
+      "contentType": "image/jpeg"
+    },
+    {
+      "url": "https://www.silenthillmemories.net/sh3/arts/pics/sh3_art_creature_02_numb_body.jpg",
+      "path": "docs/production/vague28/characters/references/numb-body-original-sh3.jpg",
+      "status": 200,
+      "bytes": 360371,
+      "sha256": "83e5033122a0e314c5b8438dab20f1e24a6a51a942b0214795ea195b7d738166",
+      "contentType": "image/jpeg"
+    }
+  ],
+  "sourceImageInspection": {
+    "groaner-original-sh1.jpg": "Modèle SH1 exact : corps canin maigre à quatre pattes, queue fine, deux oreilles courtes, long museau, œil laiteux et peau beige tachetée; extrémités inférieures proches du bord. Une pose anatomique, pas une image du bond.",
+    "closer-original-sh3.jpg": "Modèle SH3 exact très raccourci par la perspective : deux énormes masses latérales sont les bras. Tête tubulaire, bandes et matière; jambes centrales partiellement masquées.",
+    "closer-game-front-sh3.jpg": "Capture du jeu SH3 original : deux bras-colonnes latéraux séparés de deux jambes fines et sombres sous le tablier. Heather occulte partiellement les appuis. Capture de topologie, pas relevé du timing de poussée.",
+    "numb-body-original-sh3.jpg": "Modèle SH3 exact : deux jambes, corps fusionné pâle et veiné, extrémité frontale émoussée et deux projections arrière. Ne prouve pas une taille Small/Medium/Large particulière."
+  },
+  "actionEvidence": [
+    {
+      "fighterId": "sh1_groaner_003",
+      "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+      "section": "Groaner, Attacks",
+      "kind": "independent-gameplay-guide-text",
+      "observedAction": "Saut vers la cible accompagné d’une morsure.",
+      "sourcePoseFramesInspected": false,
+      "policyPath": "src/combat-reference-policy.js",
+      "policyDefinition": "sh1DogPounces / forwardSpecial"
+    },
+    {
+      "fighterId": "sh3_closer_036",
+      "url": "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+      "section": "Closer, Attacks",
+      "kind": "independent-gameplay-guide-text",
+      "observedAction": "Poussée d’un grand bras matelassé; la sortie de lame est une attaque distincte.",
+      "sourcePoseFramesInspected": false,
+      "policyPath": "src/combat-reference-policy.js",
+      "policyDefinition": "closerRecipe / forwardSpecial"
+    },
+    {
+      "fighterId": "sh3_numb_body_small_037",
+      "url": "https://www.silenthillmemories.net/sh3/enemies_en.htm",
+      "section": "Numb Body, Attacks and Strategy",
+      "kind": "independent-gameplay-guide-text",
+      "observedAction": "Heurt frontal avec petit bond vers l’avant; pas de coup de bras.",
+      "sourcePoseFramesInspected": false,
+      "policyPath": "src/combat-reference-policy.js",
+      "policyDefinition": "numbLunges / forwardSpecial"
+    },
+    {
+      "fighterId": "bom_fire_guardian_137",
+      "kind": "original-game-video-storyboard-native-crops",
+      "sourceRecord": "docs/production/vague28/projectiles/references/video-frame-records.json",
+      "frames": [
+        {
+          "id": "fire-01h27m30s",
+          "path": "docs/production/vague28/projectiles/references/fire-01h27m30s-native.png",
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=5250",
+          "seconds": 5250,
+          "nativeWidth": 160,
+          "nativeHeight": 90,
+          "sourceSheet": "bom-L2-M21.jpg",
+          "sourceSheetSHA256": "7715434d67a4d756bbafd1f5d084402b591022d7b207108b8436bc3d10e5f0ad",
+          "nativeCrop": [
+            0,
+            0,
+            160,
+            90
+          ],
+          "sha256": "1626098ec3eee3c35be1fcc8c1c1ea36f5301a16a29e7a024ca2967398522842",
+          "bytes": 28565
+        },
+        {
+          "id": "fire-01h27m50s",
+          "path": "docs/production/vague28/projectiles/references/fire-01h27m50s-native.png",
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=5270",
+          "seconds": 5270,
+          "nativeWidth": 160,
+          "nativeHeight": 90,
+          "sourceSheet": "bom-L2-M21.jpg",
+          "sourceSheetSHA256": "7715434d67a4d756bbafd1f5d084402b591022d7b207108b8436bc3d10e5f0ad",
+          "nativeCrop": [
+            320,
+            0,
+            160,
+            90
+          ],
+          "sha256": "9849e3d433da9f951cf9d0bc5ad19b94cba36ab059ff7165f0d255f3f40c105d",
+          "bytes": 28093
+        },
+        {
+          "id": "fire-01h29m10s",
+          "path": "docs/production/vague28/projectiles/references/fire-01h29m10s-native.png",
+          "url": "https://www.youtube.com/watch?v=ruh4O2ZO7aA&t=5350",
+          "seconds": 5350,
+          "nativeWidth": 160,
+          "nativeHeight": 90,
+          "sourceSheet": "bom-L2-M21.jpg",
+          "sourceSheetSHA256": "7715434d67a4d756bbafd1f5d084402b591022d7b207108b8436bc3d10e5f0ad",
+          "nativeCrop": [
+            0,
+            180,
+            160,
+            90
+          ],
+          "sha256": "2c55d0f08f210e3a792fa13ebc032b6d7dd4400d65372681dee6016753ef4f4f",
+          "bytes": 28461
+        }
+      ],
+      "sourcePoseFramesInspected": true,
+      "nativeResolution": [
+        160,
+        90
+      ],
+      "observation": "Les vignettes montrent le Fire Guardian dans son arène, avec un jet clair/magenta dirigé depuis le côté de ses bras vers le joueur. Elles étayent la projection depuis la main, mais ne résolvent ni les doigts ni les angles fins.",
+      "bodySourceRechecked": "Current integrated idle visually inspected; historical retail screenshot/bestiary source ledger read, original body source images not newly viewed in this addition.",
+      "policyPath": "src/combat-reference-policy.js",
+      "policyDefinition": "bom_fire_guardian_137 / neutralSpecial, Lance-flammes de la main",
+      "projectileKeptSeparate": true,
+      "sourceTimingMeasured": false
+    }
+  ],
+  "rejectedMissingCandidate": {
+    "fighterId": "arcade_numb_body_arcade",
+    "url": "https://silenthillheaven.com/main/images/arcade/numbbody.gif",
+    "sourcePage": "https://silenthillheaven.com/sharcade/sha_enemies/",
+    "path": "docs/production/vague28/characters/references/arcade-numbbody-bestiarist.gif",
+    "sha256": "2f4df728804a17edb7f1e6347f95fe38c9211aee3f4ed441210ea8eb3234e43f",
+    "bytes": 19526,
+    "dimensions": [
+      216,
+      253
+    ],
+    "inspectedThisWave": true,
+    "disposition": "No generation or import",
+    "reason": "Vignette inclinée et recadrée d’un modèle : bas du corps/pied coupé. Le placement sous une page Arcade ne suffit pas à prouver un modèle de cette édition distinct du SH3 original; aucune silhouette Arcade complète établie.",
+    "additionalLead": {
+      "url": "https://www.youtube.com/watch?v=IlbdUgTlD_g",
+      "title": "SILENT HILL : THE ARCADE all creature and character animation",
+      "reviewed": "Search description only; tool could not open video. No video frame inspected and no animation evidence claimed."
+    }
+  },
+  "otherTargetedSearches": [
+    {
+      "subject": "Missionary Revelation",
+      "result": "Les résultats réitèrent les concepts et une reconstruction fan dont l’auteur signale ses improvisations. Aucun nouveau costume final entier inspecté; pas de génération."
+    },
+    {
+      "subject": "Eileen giant head SH4",
+      "result": "Résultats surtout fanart et clips sans contour complet nouvellement inspecté. Aucun modèle original entier exploitable obtenu; pas de génération."
+    }
+  ],
+  "limits": [
+    "Les trois premières actions sont relues dans les guides; Fire Guardian a trois vignettes vidéo de 160×90 inspectées. Aucun cycle complet ou timing original n’est mesuré.",
+    "Les quatre poses latérales, leurs angles et calibrations sont des adaptations versus statiques.",
+    "Les modèles source n’établissent pas de nouveaux clips animés ni une certification 1:1.",
+    "Les 40 profils ouverts n’ont pas tous fait l’objet de nouvelles recherches web; seules des pistes ciblées non refusées ont été vérifiées.",
+    "Aucun refus direct ou apparenté n’a été relancé, sous un autre nom, une autre édition ou un autre outil."
+  ],
+  "nativeIntegrationReview": {
+    "report": "docs/production/vague28/characters/qa-native-final/report.json",
+    "reportSHA256": "83a99493fdd5b8d14e300e6f0281798e29fce3ef821dc61e43322908ba9b1ea5",
+    "visualReview": "docs/production/vague28/characters/visual-review.json",
+    "checksPassed": 334,
+    "cases": 8,
+    "capturesVisuallyInspected": 8,
+    "opponentId": "origins_faceless_nurse",
+    "status": "final-native-pass-complete",
+    "browserTest": false,
+    "httpTest": false,
+    "actorStateInjected": false,
+    "sourceTimingMeasured": false,
+    "certifiedOneToOne": false,
+    "initialEvidenceRetained": "docs/production/vague28/characters/qa-native/report.json"
+  }
+}

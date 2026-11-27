@@ -1,0 +1,390 @@
+{
+  "schema": 2,
+  "createdAt": "2026-11-25T08:27:30.810591+00:00",
+  "scope": "Post-import finalization: timestamp refresh and two contextual finisher-support corrections",
+  "reason": "The initial rerun refreshed only createdAt. A subsequent root review found that geometry.ceiling participates in hasCeiling contextual-finisher eligibility. The two BoM entries now set that gameplay support flag to false and explain why: existing ineligibility is preserved because the references do not establish a usable overhead support. Painted interior ceilings are not removed or denied.",
+  "historicalImportReceipt": {
+    "path": "docs/production/vague29/stages-import-receipt.json",
+    "sha256": "bbcfb18c1aa728c7f2bcaf66111e13a64e0571cc71660280890b84c15ff7498a",
+    "createdAt": "2026-11-25T08:15:18.240Z",
+    "recordedInputSHA256": "e53110989e36a6960b34f8d1fddceaabe47a43991efb561ba9f20e82fb57262a",
+    "preservedUnchanged": true
+  },
+  "importedDelivery": {
+    "path": "docs/production/vague29/stages/integration-delivery.imported.json",
+    "sha256": "e53110989e36a6960b34f8d1fddceaabe47a43991efb561ba9f20e82fb57262a",
+    "bytes": 46119,
+    "createdAt": "2026-11-25T08:15:03.969118+00:00",
+    "matchesHistoricalReceiptInputHash": true,
+    "snapshotRecovery": {
+      "kind": "hash-verified-reconstruction",
+      "retainedRawBackupWasAvailable": false,
+      "method": "The first-generation raw file was overwritten by the first timestamp-only refresh. At that point its filesystem birth timestamp narrowed the original createdAt interval. Only that timestamp was substituted in the then-current byte stream, and the resulting SHA-256 exactly matched the input hash already recorded by the import receipt. The resulting recovered snapshot has since been preserved unchanged, including through the later contextual-support correction.",
+      "replacedField": "/createdAt",
+      "originalCreatedAtRecovered": "2026-11-25T08:15:03.969118+00:00"
+    }
+  },
+  "intermediateTimestampOnlyRefresh": {
+    "sha256": "0b13b1262da5c6d896054bcb284dc435869fe586e2316e7d5ceae6f336aea2ce",
+    "createdAt": "2026-11-25T08:15:59.837504+00:00",
+    "onlyChangedFieldAtThatStep": "/createdAt",
+    "notTheFinalDelivery": true
+  },
+  "finalDelivery": {
+    "path": "docs/production/vague29/stages/integration-delivery.json",
+    "sha256": "925fa5980919acfb1bcbc0867e658dceaaf59496767937862e388c8cff91dfb8",
+    "bytes": 46501,
+    "createdAt": "2026-11-25T08:26:51.295997+00:00"
+  },
+  "exactChanges": [
+    {
+      "op": "replace",
+      "path": "/createdAt",
+      "before": "2026-11-25T08:15:03.969118+00:00",
+      "after": "2026-11-25T08:26:51.295997+00:00"
+    },
+    {
+      "op": "replace",
+      "path": "/stages/0/geometry/ceiling",
+      "before": true,
+      "after": false
+    },
+    {
+      "op": "add",
+      "path": "/stages/0/notes/4",
+      "after": "Ceiling support for contextual finishers is not established by these references; preserve the previous ineligibility rather than infer a usable support from the painted interior."
+    },
+    {
+      "op": "replace",
+      "path": "/stages/1/geometry/ceiling",
+      "before": true,
+      "after": false
+    },
+    {
+      "op": "add",
+      "path": "/stages/1/notes/4",
+      "after": "Ceiling support for contextual finishers is not established by these references; preserve the previous ineligibility rather than infer a usable support from the painted interior."
+    }
+  ],
+  "metadataOnly": false,
+  "imageBytesModified": false,
+  "allOtherJsonValuesIdentical": true,
+  "contextualSupportCorrection": {
+    "stageIds": [
+      "book_light",
+      "book_steel"
+    ],
+    "field": "geometry.ceiling",
+    "before": true,
+    "after": false,
+    "semanticMeaning": "Eligibility for contextual finisher ceiling support, not a statement that the illustrated room has no physical ceiling.",
+    "runtimeManifestCorrectedBy": "root",
+    "deliveryAndBuilderCorrectedBy": "stage_wave29",
+    "note": "Ceiling support for contextual finishers is not established by these references; preserve the previous ineligibility rather than infer a usable support from the painted interior.",
+    "previousIneligibilityPreserved": true,
+    "imagesUnchanged": true
+  },
+  "comparison": {
+    "assets": [
+      {
+        "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+        "stageId": "book_light",
+        "sha256": "87045d14aba8b9d1ba01eb983cfb85ad4ece2aab6e282fb3af4ce0c87a4cbfe7",
+        "pixelSHA256": "ab8a84532d7903053c15d40a0fa1704935b91b63373ede7c3945eb9ca3554fc9",
+        "bytes": 2775424,
+        "width": 1672,
+        "height": 941,
+        "checks": {
+          "path": true,
+          "sha256": true,
+          "bytes": true,
+          "width": true,
+          "height": true,
+          "stageId": true,
+          "localPathMatchesReceiptLocalSource": true,
+          "fileSHA256MatchesDelivery": true,
+          "fileBytesMatchDelivery": true,
+          "fileDimensionsMatchDelivery": true,
+          "pixelSHA256MatchesDeliveryAndReceipt": true,
+          "notModifiedByImport": true
+        },
+        "passed": true
+      },
+      {
+        "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+        "stageId": "book_light",
+        "sha256": "857bd9e0632c5246653b699c0b4c1f94c6aa0bccc70646f8bfa4c2ef144fad9d",
+        "pixelSHA256": "c17445f6e16741d352b3612d032778ca8ac8c19e9d1c6cf824ccb9f81426a686",
+        "bytes": 224290,
+        "width": 1672,
+        "height": 941,
+        "checks": {
+          "path": true,
+          "sha256": true,
+          "bytes": true,
+          "width": true,
+          "height": true,
+          "stageId": true,
+          "localPathMatchesReceiptLocalSource": true,
+          "fileSHA256MatchesDelivery": true,
+          "fileBytesMatchDelivery": true,
+          "fileDimensionsMatchDelivery": true,
+          "pixelSHA256MatchesDeliveryAndReceipt": true,
+          "notModifiedByImport": true
+        },
+        "passed": true
+      },
+      {
+        "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+        "stageId": "book_steel",
+        "sha256": "2b13c6afe6538ebeeefbfb4bb26cf7cf5ce4721f2a6247a9de3dfbd0948863b9",
+        "pixelSHA256": "c79a94c1848f5ed2a4240cca63e9d34182655ee1a08187b163829bdd6c871f42",
+        "bytes": 2890608,
+        "width": 1672,
+        "height": 941,
+        "checks": {
+          "path": true,
+          "sha256": true,
+          "bytes": true,
+          "width": true,
+          "height": true,
+          "stageId": true,
+          "localPathMatchesReceiptLocalSource": true,
+          "fileSHA256MatchesDelivery": true,
+          "fileBytesMatchDelivery": true,
+          "fileDimensionsMatchDelivery": true,
+          "pixelSHA256MatchesDeliveryAndReceipt": true,
+          "notModifiedByImport": true
+        },
+        "passed": true
+      },
+      {
+        "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+        "stageId": "book_steel",
+        "sha256": "10d39edce2a8460d4d41c42d09ca83369c7517b9fc19bab292e3f7e942112c84",
+        "pixelSHA256": "626fc347bc5672ab3524453991c0b52fa8dcc6c3817211d8b0f99f5ee96149da",
+        "bytes": 219189,
+        "width": 1672,
+        "height": 941,
+        "checks": {
+          "path": true,
+          "sha256": true,
+          "bytes": true,
+          "width": true,
+          "height": true,
+          "stageId": true,
+          "localPathMatchesReceiptLocalSource": true,
+          "fileSHA256MatchesDelivery": true,
+          "fileBytesMatchDelivery": true,
+          "fileDimensionsMatchDelivery": true,
+          "pixelSHA256MatchesDeliveryAndReceipt": true,
+          "notModifiedByImport": true
+        },
+        "passed": true
+      },
+      {
+        "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+        "stageId": "film_midwich",
+        "sha256": "7ca015c73e2d2e9dfc9669cbc450aa2fac279d4f25724ac5b42f3a3f77871d5b",
+        "pixelSHA256": "17b8a396189b49c7e13e5b204f6a31e9c4f3dd0c19baf5b151d9090b5710a6e7",
+        "bytes": 2185175,
+        "width": 1672,
+        "height": 941,
+        "checks": {
+          "path": true,
+          "sha256": true,
+          "bytes": true,
+          "width": true,
+          "height": true,
+          "stageId": true,
+          "localPathMatchesReceiptLocalSource": true,
+          "fileSHA256MatchesDelivery": true,
+          "fileBytesMatchDelivery": true,
+          "fileDimensionsMatchDelivery": true,
+          "pixelSHA256MatchesDeliveryAndReceipt": true,
+          "notModifiedByImport": true
+        },
+        "passed": true
+      },
+      {
+        "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+        "stageId": "film_midwich",
+        "sha256": "2a676412e457f67268b2965fdd8b6d406994e433e41e513df34717db657cbe59",
+        "pixelSHA256": "fe791cb0c164e8bc9031704a6144ff3078f27dc9845f005dc255ecdee5efcda2",
+        "bytes": 219196,
+        "width": 1672,
+        "height": 941,
+        "checks": {
+          "path": true,
+          "sha256": true,
+          "bytes": true,
+          "width": true,
+          "height": true,
+          "stageId": true,
+          "localPathMatchesReceiptLocalSource": true,
+          "fileSHA256MatchesDelivery": true,
+          "fileBytesMatchDelivery": true,
+          "fileDimensionsMatchDelivery": true,
+          "pixelSHA256MatchesDeliveryAndReceipt": true,
+          "notModifiedByImport": true
+        },
+        "passed": true
+      },
+      {
+        "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+        "stageId": "film_church",
+        "sha256": "04be564b44c6dd1a6da6cd32531c946b5e695b97f4895a11f138101218e86c77",
+        "pixelSHA256": "1bb2336225a49588ba4410d21a10e23c254c68f306d611807c88f6f125481e54",
+        "bytes": 1944865,
+        "width": 1672,
+        "height": 941,
+        "checks": {
+          "path": true,
+          "sha256": true,
+          "bytes": true,
+          "width": true,
+          "height": true,
+          "stageId": true,
+          "localPathMatchesReceiptLocalSource": true,
+          "fileSHA256MatchesDelivery": true,
+          "fileBytesMatchDelivery": true,
+          "fileDimensionsMatchDelivery": true,
+          "pixelSHA256MatchesDeliveryAndReceipt": true,
+          "notModifiedByImport": true
+        },
+        "passed": true
+      },
+      {
+        "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+        "stageId": "film_church",
+        "sha256": "5a7bfb3b61114f27b0e6bffa357b76d94bc8e16567a94b140e01b75ac7ed56ec",
+        "pixelSHA256": "9c9b36394362dc48c519b7c49a9af4836f394d6347c989739858af84ad82c022",
+        "bytes": 84961,
+        "width": 1672,
+        "height": 941,
+        "checks": {
+          "path": true,
+          "sha256": true,
+          "bytes": true,
+          "width": true,
+          "height": true,
+          "stageId": true,
+          "localPathMatchesReceiptLocalSource": true,
+          "fileSHA256MatchesDelivery": true,
+          "fileBytesMatchDelivery": true,
+          "fileDimensionsMatchDelivery": true,
+          "pixelSHA256MatchesDeliveryAndReceipt": true,
+          "notModifiedByImport": true
+        },
+        "passed": true
+      }
+    ],
+    "stages": [
+      {
+        "stageId": "book_light",
+        "checks": {
+          "stageId": true,
+          "source": true,
+          "scene": true,
+          "runtimeSceneId": true,
+          "referenceIds": true,
+          "framePathsMatchReceipt": true,
+          "runtime:stageId": true,
+          "runtime:source": true,
+          "runtime:status": true,
+          "runtime:fidelity": true,
+          "runtime:origin": true,
+          "runtime:mode": true,
+          "runtime:scene": true,
+          "runtime:geometry": true,
+          "runtime:referenceIds": true,
+          "runtime:layers": true,
+          "runtime:notes": true
+        },
+        "passed": true
+      },
+      {
+        "stageId": "book_steel",
+        "checks": {
+          "stageId": true,
+          "source": true,
+          "scene": true,
+          "runtimeSceneId": true,
+          "referenceIds": true,
+          "framePathsMatchReceipt": true,
+          "runtime:stageId": true,
+          "runtime:source": true,
+          "runtime:status": true,
+          "runtime:fidelity": true,
+          "runtime:origin": true,
+          "runtime:mode": true,
+          "runtime:scene": true,
+          "runtime:geometry": true,
+          "runtime:referenceIds": true,
+          "runtime:layers": true,
+          "runtime:notes": true
+        },
+        "passed": true
+      },
+      {
+        "stageId": "film_midwich",
+        "checks": {
+          "stageId": true,
+          "source": true,
+          "scene": true,
+          "runtimeSceneId": true,
+          "referenceIds": true,
+          "framePathsMatchReceipt": true,
+          "runtime:stageId": true,
+          "runtime:source": true,
+          "runtime:status": true,
+          "runtime:fidelity": true,
+          "runtime:origin": true,
+          "runtime:mode": true,
+          "runtime:scene": true,
+          "runtime:geometry": true,
+          "runtime:referenceIds": true,
+          "runtime:layers": true,
+          "runtime:notes": true
+        },
+        "passed": true
+      },
+      {
+        "stageId": "film_church",
+        "checks": {
+          "stageId": true,
+          "source": true,
+          "scene": true,
+          "runtimeSceneId": true,
+          "referenceIds": true,
+          "framePathsMatchReceipt": true,
+          "runtime:stageId": true,
+          "runtime:source": true,
+          "runtime:status": true,
+          "runtime:fidelity": true,
+          "runtime:origin": true,
+          "runtime:mode": true,
+          "runtime:scene": true,
+          "runtime:geometry": true,
+          "runtime:referenceIds": true,
+          "runtime:layers": true,
+          "runtime:notes": true
+        },
+        "passed": true
+      }
+    ],
+    "assetMismatches": [],
+    "stageMismatches": [],
+    "assetCount": 8,
+    "stageCount": 4,
+    "allAssetDescriptorsIdenticalToImportedDelivery": true,
+    "passed": true
+  },
+  "limitations": [
+    "This report compares descriptors, file bytes and decoded pixels. Root is rerunning final gameplay QA and consolidated reports after the support correction; this report does not claim their outcome.",
+    "The historical import receipt and recovered original snapshot are preserved unchanged. The original receipt records an earlier geometry descriptor input, so current delivery corrections are explicitly enumerated here.",
+    "No source-fidelity certification is inferred from these comparisons."
+  ],
+  "manifestModifiedByThisReport": false,
+  "importRerun": false
+}

@@ -645,6 +645,33 @@
       "consultedAt": "2026-10-17",
       "caveat": "Contenu de recherche consulté ; page directe parfois refusée par le fournisseur. Distinguer description du jeu et interprétation éditoriale.",
       "webRef": "turn43search1"
+    },
+    {
+      "consultedAt": "2026-11-27",
+      "type": "guide-officiel-primaire",
+      "caveat": "Référence de lieu et de phase ; caméra versus adaptée. Build, région et réglages source non établis ; aucune certification 1:1.",
+      "id": "V31_SH4_WISH_GUIDE_P46",
+      "url": "https://www.piggyback.com/fr/wp-content/uploads/sites/3/2020/04/SH4_F_SamplePages.pdf",
+      "title": "Silent Hill 4 — guide officiel Piggyback, extrait français p46",
+      "scope": "PDF page5, imprimée46, figure08 : Wish House au premier passage de Forest World."
+    },
+    {
+      "consultedAt": "2026-11-27",
+      "type": "source-visuelle-native-inspectee",
+      "caveat": "Référence de lieu et de phase ; caméra versus adaptée. Build, région et réglages source non établis ; aucune certification 1:1.",
+      "id": "V31_SH4_WISH_INTERIOR_SCRIPTURE",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/03_memo_05_holy_scripture_scrap_a.jpg",
+      "title": "Silent Hill 4 — intérieur Wish House, Holy Scripture Scrap A",
+      "scope": "Capture native : meuble incliné drapé, livres et papiers, boiseries et éclairage au premier passage."
+    },
+    {
+      "consultedAt": "2026-11-27",
+      "type": "source-visuelle-native-inspectee",
+      "caveat": "Référence de lieu et de phase ; caméra versus adaptée. Build, région et réglages source non établis ; aucune certification 1:1.",
+      "id": "V31_SH4_WISH_DOOR",
+      "url": "https://www.silenthillmemories.net/sh4/walkthrough/pics/03_source_placard.jpg",
+      "title": "Silent Hill 4 — porte et inscription Wish House",
+      "scope": "Capture native complémentaire de porte, murs et lampe au premier passage."
     }
   ],
   "fighters": [
@@ -14204,12 +14231,15 @@
       "id": "wish_house",
       "name": "WISH HOUSE",
       "source": "sh4",
-      "locationStatus": "etat-premier-ou-second-passage-a-fixer",
+      "locationStatus": "lieu-documente-phase-premier-passage",
       "referenceIds": [
         "CL_SH4_03_FOREST_WORLD",
-        "CL_SH4_09_FOREST_WORLD_2ND_TIME"
+        "CL_SH4_09_FOREST_WORLD_2ND_TIME",
+        "V31_SH4_WISH_GUIDE_P46",
+        "V31_SH4_WISH_INTERIOR_SCRIPTURE",
+        "V31_SH4_WISH_DOOR"
       ],
-      "locationNote": "Wish House existe avant puis après l’incendie ; l’état du stage doit être choisi explicitement.",
+      "locationNote": "Wish House, intérieur intact lors du premier passage de Forest World, avant incendie. Le guide officiel p46 et deux captures natives documentent le meuble incliné drapé de rouge, les livres et papiers, les boiseries, la lampe et la porte. Le cadrage frontal et la largeur du sol sont des adaptations de versus. La maison brûlée, le rituel de poupée et sa fosse du second passage sont exclus de cette scène ; aucun ennemi ni effet offensif ajouté. Build des captures, caméra et géométrie non certifiés 1:1.",
       "animations": [
         {
           "name": "Motif du jeu à capturer",
@@ -14220,7 +14250,10 @@
             "CL_SH4_09_FOREST_WORLD_2ND_TIME"
           ],
           "captureStatus": "capture-a-relever",
-          "timecode": ""
+          "timecode": "",
+          "sceneScope": "second-passage-apres-incendie",
+          "activeInSelectedScene": false,
+          "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
         },
         {
           "name": "Boucle d’ambiance proposée",
@@ -14231,7 +14264,10 @@
             "CL_SH4_09_FOREST_WORLD_2ND_TIME"
           ],
           "captureStatus": "storyboard-a-valider",
-          "timecode": ""
+          "timecode": "",
+          "sceneScope": "second-passage-apres-incendie",
+          "activeInSelectedScene": false,
+          "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
         },
         {
           "name": "Interaction proposée",
@@ -14242,7 +14278,10 @@
             "CL_SH4_09_FOREST_WORLD_2ND_TIME"
           ],
           "captureStatus": "storyboard-a-valider",
-          "timecode": ""
+          "timecode": "",
+          "sceneScope": "second-passage-apres-incendie",
+          "activeInSelectedScene": false,
+          "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
         },
         {
           "name": "Transition de manche proposée",
@@ -14253,8 +14292,17 @@
             "CL_SH4_09_FOREST_WORLD_2ND_TIME"
           ],
           "captureStatus": "storyboard-a-valider",
-          "timecode": ""
+          "timecode": "",
+          "sceneScope": "second-passage-apres-incendie",
+          "activeInSelectedScene": false,
+          "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
         }
+      ],
+      "selectedScene": "sh4-first-visit-scripture-corner",
+      "constraints": [
+        "Premier passage intact uniquement ; état brûlé et propositions du second passage conservés pour historique, désactivés dans cette scène.",
+        "Les éléments du décor peint ne créent ni collision, ni appui de plafond, ni Dénouement ou danger automatique.",
+        "Un PNG fixe ne prouve ni animation source ni fidélité 1:1."
       ]
     },
     {

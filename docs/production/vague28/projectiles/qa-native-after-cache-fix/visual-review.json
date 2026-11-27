@@ -1,0 +1,283 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-11-24T15:00:09.304014+00:00",
+  "status": "native-rendering-verified-with-anatomical-ambiguity",
+  "fidelity": "unverified",
+  "reportPath": "docs/production/vague28/projectiles/qa-native-after-cache-fix/report.json",
+  "reportSHA256": "8c6e3d798456d6f7aeac562424b1108762e5b78f5020fd4ebfaaa7735dd13144",
+  "checksPassed": 79,
+  "sceneCount": 4,
+  "capturesIndividuallyInspected": 6,
+  "browserTest": false,
+  "httpTest": false,
+  "reviewMethod": "Six full-size1280x720 native Canvas captures inspected individually; passive drawImage transforms checked against the run report. No captured image was edited or rescaled.",
+  "cacheBudgets": {
+    "combat": 75497472,
+    "stages": 67108864,
+    "projectiles": 33554432
+  },
+  "hashedProjectFiles": 35,
+  "hashedImageInputs": 10,
+  "renderedImageFiles": [
+    "assets/projectiles/bom_earth_guardian_rock.f8fb0ce119d0.png",
+    "assets/projectiles/bom_fire_guardian_hand_flame.650230316e42.png",
+    "assets/sprites/bom_earth_guardian_142.8ab48e12d569.png",
+    "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+    "assets/sprites/sh2_creeper_025.f562380701ab.png",
+    "assets/stages/midwich.courtyard.c9728428d63d.png"
+  ],
+  "scenes": [
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "playerIndex": 0,
+      "sourceId": "bom_earth_guardian_rock",
+      "observedVelocityLogicalPixelsPerTick": 12.0,
+      "recordedVelocity": 12,
+      "flightTicks": 20,
+      "logicalBitmapSize": [
+        36.20909970958374,
+        36
+      ],
+      "capture": "bom_earth_guardian_142-right.png"
+    },
+    {
+      "fighterId": "bom_earth_guardian_142",
+      "playerIndex": 1,
+      "sourceId": "bom_earth_guardian_rock",
+      "observedVelocityLogicalPixelsPerTick": -12.0,
+      "recordedVelocity": -12,
+      "flightTicks": 20,
+      "logicalBitmapSize": [
+        36.20909970958374,
+        36
+      ],
+      "capture": "bom_earth_guardian_142-left.png"
+    },
+    {
+      "fighterId": "bom_fire_guardian_137",
+      "playerIndex": 0,
+      "sourceId": "bom_fire_guardian_hand_flame",
+      "observedVelocityLogicalPixelsPerTick": 8.0,
+      "recordedVelocity": 8,
+      "flightTicks": 20,
+      "logicalBitmapSize": [
+        111.8048780487805,
+        36
+      ],
+      "capture": "bom_fire_guardian_137-right.png",
+      "firstEmission": {
+        "reference": {
+          "fighterId": "bom_fire_guardian_137",
+          "posePath": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+          "poseWidth": 1670,
+          "poseHeight": 941,
+          "handNativePoint": [
+            985,
+            490
+          ],
+          "handNativeBounds": [
+            875,
+            470,
+            1100,
+            575
+          ],
+          "plumeNativePoint": [
+            174,
+            467
+          ],
+          "method": "Approximate points visually identified on the unchanged native PNGs. World positions use the actual drawImage arguments and Canvas matrices. No distance threshold or source-fidelity assertion."
+        },
+        "frame": 244,
+        "handWorld": {
+          "x": 373.60340416960827,
+          "y": 443.79426385277407
+        },
+        "plumeOriginWorld": {
+          "x": 371.14116017992905,
+          "y": 443.97550987325064
+        },
+        "delta": {
+          "x": -2.462243989679223,
+          "y": 0.18124602047657845,
+          "distance": 2.468905746408731
+        },
+        "capture": "bom_fire_guardian_137-right-emission.png"
+      }
+    },
+    {
+      "fighterId": "bom_fire_guardian_137",
+      "playerIndex": 1,
+      "sourceId": "bom_fire_guardian_hand_flame",
+      "observedVelocityLogicalPixelsPerTick": -8.0,
+      "recordedVelocity": -8,
+      "flightTicks": 20,
+      "logicalBitmapSize": [
+        111.8048780487805,
+        36
+      ],
+      "capture": "bom_fire_guardian_137-left.png",
+      "firstEmission": {
+        "reference": {
+          "fighterId": "bom_fire_guardian_137",
+          "posePath": "assets/sprites/bom_fire_guardian_137.00774213127e.png",
+          "poseWidth": 1670,
+          "poseHeight": 941,
+          "handNativePoint": [
+            985,
+            490
+          ],
+          "handNativeBounds": [
+            875,
+            470,
+            1100,
+            575
+          ],
+          "plumeNativePoint": [
+            174,
+            467
+          ],
+          "method": "Approximate points visually identified on the unchanged native PNGs. World positions use the actual drawImage arguments and Canvas matrices. No distance threshold or source-fidelity assertion."
+        },
+        "frame": 244,
+        "handWorld": {
+          "x": 906.3966263479698,
+          "y": 443.79426385277407
+        },
+        "plumeOriginWorld": {
+          "x": 908.8588703376491,
+          "y": 443.97550987325064
+        },
+        "delta": {
+          "x": 2.4622439896793367,
+          "y": 0.18124602047657845,
+          "distance": 2.468905746408845
+        },
+        "capture": "bom_fire_guardian_137-left-emission.png"
+      }
+    }
+  ],
+  "captures": [
+    {
+      "file": "bom_earth_guardian_142-right.png",
+      "sha256": "d5888cbd8d6d4b217c9857250fcc7a3a69c469b6f22e5fded4fdb81cd1b76427",
+      "bytes": 1010349,
+      "width": 1280,
+      "height": 720,
+      "individuallyInspected": true,
+      "observation": "Un seul rocher brun-olive, contour irrégulier, visible séparément au-dessus et au-delà de la main avancée. Aucune silhouette de main, de tête ou de cristal incorporée au projectile."
+    },
+    {
+      "file": "bom_earth_guardian_142-left.png",
+      "sha256": "f6d62d4053929dee2c71090239468b98624457c55c3f11adbd8b3324c00b57be",
+      "bytes": 1005125,
+      "width": 1280,
+      "height": 720,
+      "individuallyInspected": true,
+      "observation": "Même rocher indépendant en déplacement vers la gauche ; silhouette et matière restent lisibles, sans étirement ni duplication."
+    },
+    {
+      "file": "bom_fire_guardian_137-right-emission.png",
+      "sha256": "c19828286b6bc699ef627fee5c39388a1e9d1b2474e261dfbca23f76d5bdf04b",
+      "bytes": 1019987,
+      "width": 1280,
+      "height": 720,
+      "phase": "first-rendered-projectile",
+      "individuallyInspected": true,
+      "observation": "Origine étroite près du repère supérieur de la griffe ; jet blanc/magenta/violet. La main reste proche du visage et le jet chevauche partiellement ce profil à cette première vue. Le repère[985,490] se situe sur la courbe supérieure de la griffe repliée, pas à son extrémité ; une lecture visuelle de souffle reste possible."
+    },
+    {
+      "file": "bom_fire_guardian_137-right.png",
+      "sha256": "7b8d8ee9aa958d2c66c1cec9f5c48a651d060cf2f3b510d130de462d6468076c",
+      "bytes": 1021529,
+      "width": 1280,
+      "height": 720,
+      "individuallyInspected": true,
+      "observation": "À20 ticks, plume indépendante dégagée du corps. Extrémité étroite orientée vers le lanceur, masse brillante dans le sens du déplacement ; palette blanche/magenta/violette lisible."
+    },
+    {
+      "file": "bom_fire_guardian_137-left-emission.png",
+      "sha256": "a296fd1145df5ff75abd4c486820154cacb78e1ab7071ad629c5732400f10c0a",
+      "bytes": 1013689,
+      "width": 1280,
+      "height": 720,
+      "phase": "first-rendered-projectile",
+      "individuallyInspected": true,
+      "observation": "Raccord symétrique observé vers la gauche ; aucun décalage vertical supplémentaire du miroir. Même proximité du visage que dans la vue droite. Le repère[985,490] se situe sur la courbe supérieure de la griffe repliée, pas à son extrémité ; une lecture visuelle de souffle reste possible."
+    },
+    {
+      "file": "bom_fire_guardian_137-left.png",
+      "sha256": "903878ae98000320cea95c96a4daabfcfcec575925bbc08910e6ecd3753c2216",
+      "bytes": 1014974,
+      "width": 1280,
+      "height": 720,
+      "individuallyInspected": true,
+      "observation": "À20 ticks, plume entièrement lisible à gauche, extrémité étroite tournée vers le lanceur et masse brillante vers la gauche. Aucun fond opaque autour du PNG."
+    }
+  ],
+  "sourceLimits": [
+    "Earth geometry references are promotional E3 2012 screenshots960x544; final retail pixels and original flight/rotation cadence are not certified.",
+    "Fire color and stream evidence comes from public gameplay storyboard frames160x90, sampled every10 seconds; exact RGB values, high-resolution contour and continuous source animation are not measured.",
+    "The observed2.47px hand/plume distance concerns approximate landmarks on the generated versus PNGs. It is not a metric of accuracy against the source game.",
+    "The2.47px landmark gap is not a fingertip connection. The approximate actual claw-tip landmark[1090,530] is about42.92 screen pixels from the plume origin in either orientation. No anatomy correction or source-fidelity certification is implied.",
+    "The Fire plume is a separate traveling sprite in the existing versus engine. It is not a newly implemented continuous attached flamethrower.",
+    "The measured speeds12 and8 are existing versus-engine logical pixels per tick; no source-game speed equivalence is claimed.",
+    "These four scenes cover neutralSpecial emission and drawing in both player positions, not a full hit/guard/super/desperation matrix or HTTP browser validation.",
+    "Steel Guardian remains blocked for insufficient projectile silhouette evidence; no generic blade has been generated or assigned."
+  ],
+  "intermediateRunsPreserved": [
+    {
+      "path": "docs/production/vague28/projectiles/qa-native-final/report.json",
+      "sha256": "fef54a2935eca72fab73f1be1afa401929e6d766b2251a9e0412af3674b97d11",
+      "status": "successful-before-cache-fix-five-tick-flight-views"
+    },
+    {
+      "path": "docs/production/vague28/projectiles/qa-native-visible/report.json",
+      "sha256": "354bd21b3c43cfd232779b79c8b1efaa9ef70b00c9ac5d9ddc33a7cfc5d3942d",
+      "status": "successful-before-cache-fix-twenty-tick-flight-views"
+    }
+  ],
+  "finalCaptureHashesMatchPreviousTwentyTickRun": true,
+  "anatomicalOriginStatus": "The original[985,490] landmark is on the upper curve of a folded claw, not its fingertip. The narrow plume origin is not aligned to the approximate tip[1090,530]; the nearby snout makes the first emission visually ambiguous as hand fire versus breath.",
+  "clawTipComparison": [
+    {
+      "playerIndex": 0,
+      "approximateClawTipNative": [
+        1090,
+        530
+      ],
+      "approximateClawTipWorld": {
+        "x": 411.607250195709,
+        "y": 458.2719194817648
+      },
+      "plumeOriginWorld": {
+        "x": 371.14116017992905,
+        "y": 443.97550987325064
+      },
+      "deltaPlumeToClawTip": {
+        "x": -40.46609001577997,
+        "y": -14.296409608514182,
+        "distance": 42.91726655857318
+      }
+    },
+    {
+      "playerIndex": 1,
+      "approximateClawTipNative": [
+        1090,
+        530
+      ],
+      "approximateClawTipWorld": {
+        "x": 868.392780321869,
+        "y": 458.2719194817648
+      },
+      "plumeOriginWorld": {
+        "x": 908.8588703376491,
+        "y": 443.97550987325064
+      },
+      "deltaPlumeToClawTip": {
+        "x": 40.46609001578008,
+        "y": -14.296409608514182,
+        "distance": 42.91726655857329
+      }
+    }
+  ]
+}

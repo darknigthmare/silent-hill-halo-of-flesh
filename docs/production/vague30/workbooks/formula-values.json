@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "source": "Read from both final guide models with Artifact Tool; principal uses exact-payload projection.",
+  "equalBetweenWorkbooks": true,
+  "formulas": [
+    {
+      "sheet": "Guide combat",
+      "address": "B4",
+      "formula": "=COUNTA(A9:A38)",
+      "value": 30
+    },
+    {
+      "sheet": "Guide combat",
+      "address": "B5",
+      "formula": "=COUNTIFS(D45:D54,\"Différé\")",
+      "value": 4
+    },
+    {
+      "sheet": "Guide combat",
+      "address": "E4",
+      "formula": "=COUNTA(A45:A54)",
+      "value": 10
+    },
+    {
+      "sheet": "Guide combat",
+      "address": "E5",
+      "formula": "=COUNTIFS(D45:D54,\"À décider\")",
+      "value": 1
+    },
+    {
+      "sheet": "Guide combat",
+      "address": "H4",
+      "formula": "=COUNTIFS(E9:E38,\"Conçu, à intégrer\")",
+      "value": 2
+    },
+    {
+      "sheet": "Guide combat",
+      "address": "H5",
+      "formula": "=COUNTIFS(D45:D54,\"Non applicable\")",
+      "value": 2
+    },
+    {
+      "sheet": "Associations guide",
+      "address": "B4",
+      "formula": "=COUNTA(B9:B453)",
+      "value": 445
+    },
+    {
+      "sheet": "Associations guide",
+      "address": "B5",
+      "formula": "=COUNTIFS(A9:A453,\"Arène\")",
+      "value": 123
+    },
+    {
+      "sheet": "Associations guide",
+      "address": "E4",
+      "formula": "=COUNTIFS(A9:A453,\"Profil\")",
+      "value": 230
+    },
+    {
+      "sheet": "Associations guide",
+      "address": "E5",
+      "formula": "=COUNTIFS(A9:A453,\"Chronique\")",
+      "value": 15
+    },
+    {
+      "sheet": "Associations guide",
+      "address": "H4",
+      "formula": "=COUNTIFS(A9:A453,\"Corpus\")",
+      "value": 66
+    },
+    {
+      "sheet": "Associations guide",
+      "address": "H5",
+      "formula": "=COUNTIFS(A9:A453,\"Projectile\")",
+      "value": 11
+    }
+  ]
+}

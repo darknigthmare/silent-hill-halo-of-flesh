@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
+      - name: Check historical artwork contracts before browser setup
+        run: node scripts/http-qa-art-batch4.mjs --metadata-only
       - name: Install the pinned test-only dependency
         run: npm install --ignore-scripts --no-audit --no-fund
       - name: Install the corresponding Chromium on this CI runner
@@ -30,8 +32,6 @@ jobs:
         env:
           HALO_PYTHON: ${{ runner.temp }}/halo-browser-venv/bin/python
         run: npm run build && npm run qa:browser
-      - name: Inspect wave26 native artwork in the built HTTP app
-        run: node docs/production/vague26/run-ci-browser-check.mjs
       - name: Retain test report and captures only
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -52,5 +52,81 @@ jobs:
             tests/http-source-expansion/
             tests/http-cinematic-expansion/
             tests/http-art-batch4/
+          retention-days: 14
+  new-artwork:
+    name: New artwork over HTTP
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: Install the pinned test-only dependency
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Install the corresponding Chromium on this CI runner
+        run: npx --no-install playwright-core install --with-deps chromium
+      - name: Set up PNG validation
+        run: |
+          python3 -m venv "$RUNNER_TEMP/halo-browser-venv"
+          "$RUNNER_TEMP/halo-browser-venv/bin/python" -m pip install 'Pillow==11.3.0'
+      - name: Build the actual HTTP interface
+        id: build
+        env:
+          HALO_PYTHON: ${{ runner.temp }}/halo-browser-venv/bin/python
+        run: npm run build
+      - name: Inspect wave33 static poses, scene, support and crawling contact
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          node docs/production/vague33/qa/http-poses.mjs --out=tests/http-wave33-characters
+          node docs/production/vague33/qa/http-stage.mjs --out=tests/http-wave33-stage
+          node docs/production/vague33/qa/http-calibration.mjs --phase=after --out=tests/http-wave33-calibration
+          node docs/production/vague33/qa/http-crawling-contact.mjs --expect-aligned --out=tests/http-wave33-contact
+          node docs/production/vague33/qa/http-crawling-combat.mjs --out=tests/http-wave33-combat
+      - name: Inspect wave32 static poses, exact stage scenes and individual stories
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          node docs/production/vague32/characters/qa-http.mjs
+          node docs/production/vague32/characters/qa-http-origins.mjs
+          node docs/production/vague32/stages/qa-http.mjs --stages=antique_shop,lighthouse_sm --build=dist --out=tests/http-wave32-stages --port=4296
+          node docs/production/vague32/story/qa-http.mjs sh1_groaner_003
+          node docs/production/vague32/story/qa-http.mjs sh2_lying_figure_020 --expect-blocked=sh2_mannequin_ambusher_023
+      - name: Inspect wave31 static poses and exact stage scenes in the built HTTP app
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          node docs/production/vague31/characters/qa-http.mjs
+          node docs/production/vague31/stages/qa-http.mjs --stages=cedar_grove,wish_house --build=dist --out=tests/http-wave31-stages --port=4294
+      - name: Inspect wave26 native artwork in the built HTTP app
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node docs/production/vague26/run-ci-browser-check.mjs
+      - name: Inspect wave27 attacks, projectiles and stages in the built HTTP app
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node docs/production/vague27/run-ci-browser-check.mjs
+      - name: Inspect wave28 attacks, projectiles and stages in the built HTTP app
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node docs/production/vague28/run-ci-browser-check.mjs
+      - name: Retain new artwork reports and captures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: http-wave26-28-and31-33
+          path: |
             tests/http-wave26-native/
+            tests/http-wave27-actions/
+            tests/http-wave27-stages/
+            tests/http-wave28-actions/
+            tests/http-wave28-stages/
+            tests/http-wave31-characters/
+            tests/http-wave31-stages/
+            tests/http-wave32-characters/
+            tests/http-wave32-stages/
+            tests/http-wave32-story/
+            tests/http-wave32-origins/
+            tests/http-wave33-characters/
+            tests/http-wave33-stage/
+            tests/http-wave33-calibration/
+            tests/http-wave33-contact/
+            tests/http-wave33-combat/
           retention-days: 14

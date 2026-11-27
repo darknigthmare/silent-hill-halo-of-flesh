@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "wave": 32,
+  "report": "characters-report.json",
+  "method": "Four retained unmodified 1280x720 native FightEngine screenshots visually inspected alongside recorded drawImage matrices and real projectile spawn positions.",
+  "reviewedCaptures": [
+    "sh4_man_with_the_coat_067-right-action-active.png",
+    "sh4_man_with_the_coat_067-left-action-active.png",
+    "sh2_eddie_dombrowski_032-right-action-active.png",
+    "sh2_eddie_dombrowski_032-left-action-active.png"
+  ],
+  "observations": [
+    "Walter and Eddie remain complete and legible in both orientations.",
+    "The existing white projectile effect aligns with the barrel axis and is one normal 12-world-pixel movement step beyond the muzzle in the active screenshot.",
+    "The former 40/60-world-pixel downward offset is absent in the inspected scenes.",
+    "The opposite side uses the existing engine mirror; it is not a second source view."
+  ],
+  "sourceFidelityCertified": false,
+  "httpBrowserRun": false,
+  "maxMuzzleProjectionErrorPixels": 3.3961978613919286e-05,
+  "passed": true
+}

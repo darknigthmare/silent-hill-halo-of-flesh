@@ -61,7 +61,16 @@ export function spriteCoverage(fighters,registry=SPRITES){
 }
 export const poseKey=poseFromState;
 export function frameFor(art,state={}){return sampleSpriteClip(art,state)?.frame||null;}
+/** bodyHeight is standing-equivalent reference height / full canvas height.
+ * Horizontal poses may exceed 1; this calibrates artwork, not collision or source scale.
+ */
+export function validSpriteCalibration(frame){
+  return !!frame&&[-1,1].includes(frame.facing)&&Array.isArray(frame.anchor)&&frame.anchor.length===2&&
+    frame.anchor.every(n=>Number.isFinite(n)&&n>=0&&n<=1)&&
+    Number.isFinite(frame.bodyHeight)&&frame.bodyHeight>=.05&&frame.bodyHeight<=4;
+}
 export function rasterPlacement(fighter,frame,x,y,facing=1,state){
+  if(!validSpriteCalibration(frame))throw new RangeError('Invalid sprite calibration: anchors 0..1, bodyHeight 0.05..4, facing -1 or 1.');
   const body=bodyProfile(fighter,state),scale=body.height*body.scale/(frame.height*frame.bodyHeight);
   const width=frame.width*scale,height=frame.height*scale,flip=(facing<0?-1:1)*frame.facing;
   const localX=-frame.anchor[0]*width,localY=-frame.anchor[1]*height-(body.bottom||0)*body.scale;
@@ -142,7 +151,11 @@ export class SpriteCache{
     return {ok:!failed.length&&(diagnostic||!missing.length),missing:missing.map(f=>f.id),failed};
   }
 }
-export const spriteCache=new SpriteCache();
+// Wave32's largest native pair is Groaner + Faceless Nurse: 81,802,000 decoded
+// bytes across 13 frames, just above 78 MiB. A fixed 79 MiB combat lease admits
+// every current pair; other caches and the generic 64 MiB default stay bounded.
+export const COMBAT_SPRITE_BUDGET=79*1024*1024;
+export const spriteCache=new SpriteCache({maxBytes:COMBAT_SPRITE_BUDGET});
 export function pinCombatSprites(fighters){spriteCache.pin(fighters.flatMap(f=>combatSpriteFor(f)?.frames||[]));}
 function drawMissing(ctx,x,y,width,height,text){
   ctx.save();ctx.fillStyle='rgba(12,15,13,.88)';ctx.fillRect(x,y,width,height);

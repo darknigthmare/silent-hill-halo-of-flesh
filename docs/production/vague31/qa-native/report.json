@@ -1,0 +1,842 @@
+{
+  "schema": 1,
+  "wave": 31,
+  "mode": "native-FightEngine-only",
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "automatedPassed": true,
+  "automatedChecks": 270,
+  "characterCases": 6,
+  "stageCases": 2,
+  "gameplayCaptures": 14,
+  "diagnosticCaptures": 1,
+  "sectionReports": [
+    {
+      "file": "stages-report.json",
+      "sha256": "5afe1bd69ddc1f65ac49e1e6b6d531e82e6f6646d41158ba79d00c168b6f2c8d",
+      "passed": true,
+      "checks": 92,
+      "captures": 2,
+      "harnessSHA256": "c06deac5007c3e69006b1823f79c96eb16103e3edbf31a841076511dbd42feed"
+    },
+    {
+      "file": "characters-report.json",
+      "sha256": "d850a30f9a7589f0e6db0f6ad84280354949b55368c813b55211bfc92aa5d5b9",
+      "passed": true,
+      "checks": 178,
+      "captures": 13,
+      "harnessSHA256": "c06deac5007c3e69006b1823f79c96eb16103e3edbf31a841076511dbd42feed"
+    }
+  ],
+  "visualReviews": [
+    "stages-visual-review.json",
+    "characters-visual-review.json"
+  ],
+  "visualStatus": "candidate-poses-accepted-with-two-open-projectile-alignment-issues",
+  "oneToOneCertified": false,
+  "openVisualIssues": [
+    "V31_WALTER_PROJECTILE_ALIGNMENT",
+    "V31_EDDIE_PROJECTILE_ALIGNMENT"
+  ],
+  "supersededAttempt": "stages-neutral-terrain-attempt/stages-report.json",
+  "captures": [
+    {
+      "file": "stage-cedar_grove.png",
+      "purpose": "actual-native-FightEngine-stage",
+      "width": 1280,
+      "height": 720,
+      "sha256": "3877c10c7a9424eb49f3d47ca39a92e88f92b867378435c8e4f245202b4b9d23",
+      "bytes": 1510444,
+      "stageId": "cedar_grove",
+      "frame": 229,
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 970,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": -1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      ]
+    },
+    {
+      "file": "stage-wish_house.png",
+      "purpose": "actual-native-FightEngine-stage",
+      "width": 1280,
+      "height": 720,
+      "sha256": "ccfcee91026e7090b44aa2fbcbaa9c4f1e52045dfa2a1a88af41a8fa1eb5c673",
+      "bytes": 1335951,
+      "stageId": "wish_house",
+      "frame": 229,
+      "actors": [
+        {
+          "id": "bom_pyramid_head_129",
+          "x": 310,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": 1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        },
+        {
+          "id": "bom_butcher_123",
+          "x": 970,
+          "y": 594,
+          "state": "idle",
+          "grounded": true,
+          "facing": -1,
+          "spritePose": "idle",
+          "lastMoveKey": null,
+          "attack": null
+        }
+      ]
+    },
+    {
+      "file": "sh4_man_with_the_coat_067-right-action-active.png",
+      "purpose": "actual-native-FightEngine-active-attack",
+      "width": 1280,
+      "height": 720,
+      "sha256": "1add6649be392a6708685f40f6e32e759262b0ffdeab3566862a378d6406feac",
+      "bytes": 1145508,
+      "fighterId": "sh4_man_with_the_coat_067",
+      "player": 0,
+      "pose": "neutralSpecial",
+      "frame": 245,
+      "state": {
+        "id": "sh4_man_with_the_coat_067",
+        "x": 310,
+        "y": 594,
+        "state": "attack",
+        "grounded": true,
+        "facing": 1,
+        "spritePose": "neutralSpecial",
+        "lastMoveKey": "neutralSpecial",
+        "attack": {
+          "key": "neutralSpecial",
+          "frame": 15,
+          "startup": 15,
+          "active": 1,
+          "recovery": 26
+        }
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+        "args": [
+          -58.050000000000004,
+          -200.58268229166669,
+          143.33333333333334,
+          215
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428527832031,
+          594
+        ],
+        "frame": 245
+      },
+      "geometry": {
+        "exterior": [
+          268.83988726742876,
+          416.38334578714176,
+          396.4719009346484,
+          595.2324979860568
+        ],
+        "visible": [
+          269.1137757087747,
+          417.20501111117966,
+          396.0610682726294,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh4_man_with_the_coat_067-right-recovered-idle.png",
+      "purpose": "actual-native-FightEngine-natural-recovery",
+      "width": 1280,
+      "height": 720,
+      "sha256": "7b394946f0a6bcedb90c6e828ef830d7e7d397fbd0cc4c000d679e9294c2942e",
+      "bytes": 1140851,
+      "fighterId": "sh4_man_with_the_coat_067",
+      "player": 0,
+      "frame": 272,
+      "state": {
+        "id": "sh4_man_with_the_coat_067",
+        "x": 310,
+        "y": 594,
+        "state": "idle",
+        "grounded": true,
+        "facing": 1,
+        "spritePose": "idle",
+        "lastMoveKey": "neutralSpecial",
+        "attack": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+        "args": [
+          -71.66666666666667,
+          -200.16276041666669,
+          143.33333333333334,
+          215
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428527832031,
+          594
+        ],
+        "frame": 272
+      },
+      "geometry": {
+        "exterior": [
+          259.7632243212235,
+          414.0552940357011,
+          373.15303903845296,
+          595.3694422067298
+        ],
+        "visible": [
+          260.17405698324245,
+          415.56168046310387,
+          372.468317935088,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh4_man_with_the_coat_067-left-action-active.png",
+      "purpose": "actual-native-FightEngine-active-attack",
+      "width": 1280,
+      "height": 720,
+      "sha256": "a4af60831a78299ab1cc8f9231594c1a7bdd536bf3d0b141f39bf264b5e32acd",
+      "bytes": 1146023,
+      "fighterId": "sh4_man_with_the_coat_067",
+      "player": 1,
+      "pose": "neutralSpecial",
+      "frame": 245,
+      "state": {
+        "id": "sh4_man_with_the_coat_067",
+        "x": 970,
+        "y": 594,
+        "state": "attack",
+        "grounded": true,
+        "facing": -1,
+        "spritePose": "neutralSpecial",
+        "lastMoveKey": "neutralSpecial",
+        "attack": {
+          "key": "neutralSpecial",
+          "frame": 15,
+          "startup": 15,
+          "active": 1,
+          "recovery": 26
+        }
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+        "args": [
+          -58.050000000000004,
+          -200.58268229166669,
+          143.33333333333334,
+          215
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.857177734375,
+          594
+        ],
+        "frame": 245
+      },
+      "geometry": {
+        "exterior": [
+          883.5281295829298,
+          416.38334578714176,
+          1011.1601432501494,
+          595.2324979860568
+        ],
+        "visible": [
+          883.9389622449487,
+          417.20501111117966,
+          1010.8862548088034,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh4_man_with_the_coat_067-left-recovered-idle.png",
+      "purpose": "actual-native-FightEngine-natural-recovery",
+      "width": 1280,
+      "height": 720,
+      "sha256": "f2d54cc66479a4c617aeaf2418a621545c0c7229e191588a01dda41d503bccdd",
+      "bytes": 1140407,
+      "fighterId": "sh4_man_with_the_coat_067",
+      "player": 1,
+      "frame": 272,
+      "state": {
+        "id": "sh4_man_with_the_coat_067",
+        "x": 970,
+        "y": 594,
+        "state": "idle",
+        "grounded": true,
+        "facing": -1,
+        "spritePose": "idle",
+        "lastMoveKey": "neutralSpecial",
+        "attack": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+        "args": [
+          -71.66666666666667,
+          -200.16276041666669,
+          143.33333333333334,
+          215
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.857177734375,
+          594
+        ],
+        "frame": 272
+      },
+      "geometry": {
+        "exterior": [
+          906.8469914791252,
+          414.0552940357011,
+          1020.2368061963547,
+          595.3694422067298
+        ],
+        "visible": [
+          907.5317125824901,
+          415.56168046310387,
+          1019.8259735343357,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh2_eddie_dombrowski_032-right-action-active.png",
+      "purpose": "actual-native-FightEngine-active-attack",
+      "width": 1280,
+      "height": 720,
+      "sha256": "15934a0fd6536d7905017fe7d2e6f55437c4914ec781278cc09cf011ccc672c6",
+      "bytes": 1149970,
+      "fighterId": "sh2_eddie_dombrowski_032",
+      "player": 0,
+      "pose": "neutralSpecial",
+      "frame": 245,
+      "state": {
+        "id": "sh2_eddie_dombrowski_032",
+        "x": 310,
+        "y": 594,
+        "state": "attack",
+        "grounded": true,
+        "facing": 1,
+        "spritePose": "neutralSpecial",
+        "lastMoveKey": "neutralSpecial",
+        "attack": {
+          "key": "neutralSpecial",
+          "frame": 15,
+          "startup": 15,
+          "active": 1,
+          "recovery": 26
+        }
+      },
+      "draw": {
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.e691299ab326.png",
+        "args": [
+          -58.92592592592593,
+          -215.47506313131316,
+          144.7811447811448,
+          217.1717171717172
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428527832031,
+          594
+        ],
+        "frame": 245
+      },
+      "geometry": {
+        "exterior": [
+          264.0571864405474,
+          392.31851137251675,
+          398.92649467909075,
+          595.6599299475513
+        ],
+        "visible": [
+          264.61049642306455,
+          392.7334938594046,
+          397.95820220968585,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh2_eddie_dombrowski_032-right-recovered-idle.png",
+      "purpose": "actual-native-FightEngine-natural-recovery",
+      "width": 1280,
+      "height": 720,
+      "sha256": "b54e412c679f558c526c59a8d663e2d6cca7a8372611310bcd32a7cec659424c",
+      "bytes": 1144545,
+      "fighterId": "sh2_eddie_dombrowski_032",
+      "player": 0,
+      "frame": 272,
+      "state": {
+        "id": "sh2_eddie_dombrowski_032",
+        "x": 310,
+        "y": 594,
+        "state": "idle",
+        "grounded": true,
+        "facing": 1,
+        "spritePose": "idle",
+        "lastMoveKey": "neutralSpecial",
+        "attack": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+        "args": [
+          -57.912457912457924,
+          -214.20257260101013,
+          144.7811447811448,
+          217.1717171717172
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428527832031,
+          594
+        ],
+        "frame": 272
+      },
+      "geometry": {
+        "exterior": [
+          268.09192283306214,
+          387.7537040167507,
+          389.5434639955658,
+          594.9682924694049
+        ],
+        "visible": [
+          268.78356031120853,
+          388.16868650363847,
+          389.12848150867796,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh2_eddie_dombrowski_032-left-action-active.png",
+      "purpose": "actual-native-FightEngine-active-attack",
+      "width": 1280,
+      "height": 720,
+      "sha256": "c5c09cff19cfe5bfc0cdfc8e94a550b0112af87fbe8b19f0c127572eafcf3f5b",
+      "bytes": 1149632,
+      "fighterId": "sh2_eddie_dombrowski_032",
+      "player": 1,
+      "pose": "neutralSpecial",
+      "frame": 245,
+      "state": {
+        "id": "sh2_eddie_dombrowski_032",
+        "x": 970,
+        "y": 594,
+        "state": "attack",
+        "grounded": true,
+        "facing": -1,
+        "spritePose": "neutralSpecial",
+        "lastMoveKey": "neutralSpecial",
+        "attack": {
+          "key": "neutralSpecial",
+          "frame": 15,
+          "startup": 15,
+          "active": 1,
+          "recovery": 26
+        }
+      },
+      "draw": {
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.e691299ab326.png",
+        "args": [
+          -58.92592592592593,
+          -215.47506313131316,
+          144.7811447811448,
+          217.1717171717172
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.857177734375,
+          594
+        ],
+        "frame": 245
+      },
+      "geometry": {
+        "exterior": [
+          881.0735358384874,
+          392.31851137251675,
+          1015.9428440770307,
+          595.6599299475513
+        ],
+        "visible": [
+          882.0418283078923,
+          392.7334938594046,
+          1015.3895340945136,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh2_eddie_dombrowski_032-left-recovered-idle.png",
+      "purpose": "actual-native-FightEngine-natural-recovery",
+      "width": 1280,
+      "height": 720,
+      "sha256": "1bd4893810d7c568c0d3a94fcaf40a895e618007f3ec3010be28008739095a66",
+      "bytes": 1143011,
+      "fighterId": "sh2_eddie_dombrowski_032",
+      "player": 1,
+      "frame": 272,
+      "state": {
+        "id": "sh2_eddie_dombrowski_032",
+        "x": 970,
+        "y": 594,
+        "state": "idle",
+        "grounded": true,
+        "facing": -1,
+        "spritePose": "idle",
+        "lastMoveKey": "neutralSpecial",
+        "attack": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+        "args": [
+          -57.912457912457924,
+          -214.20257260101013,
+          144.7811447811448,
+          217.1717171717172
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.857177734375,
+          594
+        ],
+        "frame": 272
+      },
+      "geometry": {
+        "exterior": [
+          890.4565665220124,
+          387.7537040167507,
+          1011.908107684516,
+          594.9682924694049
+        ],
+        "visible": [
+          890.8715490089002,
+          388.16868650363847,
+          1011.2164702063696,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh3_nurse_revolver_044-right-action-active.png",
+      "purpose": "actual-native-FightEngine-active-attack",
+      "width": 1280,
+      "height": 720,
+      "sha256": "0b97f7c3822ad0af7725b651c01b2ce7c30396055d220fca53dbbe658be81318",
+      "bytes": 1152223,
+      "fighterId": "sh3_nurse_revolver_044",
+      "player": 0,
+      "pose": "neutralLight",
+      "frame": 235,
+      "state": {
+        "id": "sh3_nurse_revolver_044",
+        "x": 310,
+        "y": 594,
+        "state": "attack",
+        "grounded": true,
+        "facing": 1,
+        "spritePose": "neutralLight",
+        "lastMoveKey": "neutralLight",
+        "attack": {
+          "key": "neutralLight",
+          "frame": 5,
+          "startup": 5,
+          "active": 3,
+          "recovery": 9
+        }
+      },
+      "draw": {
+        "path": "assets/sprites/sh3_nurse_revolver_044.40ad802a6ec2.png",
+        "args": [
+          -79.83638575432325,
+          -227.2967372405765,
+          208.17832008949998,
+          236.6789234350863
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428527832031,
+          594
+        ],
+        "frame": 235
+      },
+      "geometry": {
+        "exterior": [
+          256.18040861911066,
+          381.1485929451767,
+          426.2537053870818,
+          595.2123351093439
+        ],
+        "visible": [
+          256.69998080882954,
+          381.8413558648018,
+          425.73413319736295,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh3_nurse_revolver_044-right-recovered-idle.png",
+      "purpose": "actual-native-FightEngine-natural-recovery",
+      "width": 1280,
+      "height": 720,
+      "sha256": "15ea66779431283b2c53e2a63b0f3d98bfb02f358db639c331875982b5d7094b",
+      "bytes": 1145496,
+      "fighterId": "sh3_nurse_revolver_044",
+      "player": 0,
+      "frame": 247,
+      "state": {
+        "id": "sh3_nurse_revolver_044",
+        "x": 310,
+        "y": 594,
+        "state": "idle",
+        "grounded": true,
+        "facing": 1,
+        "spritePose": "idle",
+        "lastMoveKey": "neutralLight",
+        "attack": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh3_nurse_revolver_044.a371cb22efc9.png",
+        "args": [
+          -91.16753171679473,
+          -226.58930092904856,
+          208.17832008949998,
+          236.6789234350863
+        ],
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428527832031,
+          594
+        ],
+        "frame": 247
+      },
+      "geometry": {
+        "exterior": [
+          261.20126330012744,
+          373.00798956578797,
+          385.0326351831207,
+          595.7312682252694
+        ],
+        "visible": [
+          262.06721694965887,
+          381.14795387138327,
+          384.68625372330814,
+          593.9993609262067
+        ],
+        "complete": true,
+        "footOffsetPixels": -0.0006390737933608544
+      }
+    },
+    {
+      "file": "sh3_nurse_revolver_044-left-action-active.png",
+      "purpose": "actual-native-FightEngine-active-attack",
+      "width": 1280,
+      "height": 720,
+      "sha256": "1b0345485606678d53603d3466a9332430232084ae4a6b8b64ffaa347d4789b2",
+      "bytes": 1152080,
+      "fighterId": "sh3_nurse_revolver_044",
+      "player": 1,
+      "pose": "neutralLight",
+      "frame": 235,
+      "state": {
+        "id": "sh3_nurse_revolver_044",
+        "x": 970,
+        "y": 594,
+        "state": "attack",
+        "grounded": true,
+        "facing": -1,
+        "spritePose": "neutralLight",
+        "lastMoveKey": "neutralLight",
+        "attack": {
+          "key": "neutralLight",
+          "frame": 5,
+          "startup": 5,
+          "active": 3,
+          "recovery": 9
+        }
+      },
+      "draw": {
+        "path": "assets/sprites/sh3_nurse_revolver_044.40ad802a6ec2.png",
+        "args": [
+          -79.83638575432325,
+          -227.2967372405765,
+          208.17832008949998,
+          236.6789234350863
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.857177734375,
+          594
+        ],
+        "frame": 235
+      },
+      "geometry": {
+        "exterior": [
+          853.7463251304963,
+          381.1485929451767,
+          1023.8196218984674,
+          595.2123351093439
+        ],
+        "visible": [
+          854.2658973202151,
+          381.8413558648018,
+          1023.3000497087486,
+          594
+        ],
+        "complete": true,
+        "footOffsetPixels": 0
+      }
+    },
+    {
+      "file": "sh3_nurse_revolver_044-left-recovered-idle.png",
+      "purpose": "actual-native-FightEngine-natural-recovery",
+      "width": 1280,
+      "height": 720,
+      "sha256": "c55fbf3708da8e487e2803084fe8b8f6f33f2bd3e05988fdccad26f6c39dae85",
+      "bytes": 1145744,
+      "fighterId": "sh3_nurse_revolver_044",
+      "player": 1,
+      "frame": 247,
+      "state": {
+        "id": "sh3_nurse_revolver_044",
+        "x": 970,
+        "y": 594,
+        "state": "idle",
+        "grounded": true,
+        "facing": -1,
+        "spritePose": "idle",
+        "lastMoveKey": "neutralLight",
+        "attack": null
+      },
+      "draw": {
+        "path": "assets/sprites/sh3_nurse_revolver_044.a371cb22efc9.png",
+        "args": [
+          -91.16753171679473,
+          -226.58930092904856,
+          208.17832008949998,
+          236.6789234350863
+        ],
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.857177734375,
+          594
+        ],
+        "frame": 247
+      },
+      "geometry": {
+        "exterior": [
+          894.9673953344575,
+          373.00798956578797,
+          1018.7987672174506,
+          595.7312682252694
+        ],
+        "visible": [
+          895.31377679427,
+          381.14795387138327,
+          1017.9328135679193,
+          593.9993609262067
+        ],
+        "complete": true,
+        "footOffsetPixels": -0.0006390737933608544
+      }
+    },
+    {
+      "file": "nurse-alpha-dark-native.png",
+      "purpose": "diagnostic-original-RGBA-on-dark-matte",
+      "width": 1176,
+      "height": 1337,
+      "sha256": "cdf64ad71206bc48fcb21957c411c18717b0b63a5ce15a93322fb957c4de819a",
+      "bytes": 793291,
+      "sourcePath": "assets/sprites/sh3_nurse_revolver_044.40ad802a6ec2.png",
+      "sourceSHA256": "40ad802a6ec2f8065c0188b10fcfb39e68de4660812af4a995b09d87d3563bce",
+      "sourcePixelScale": 1,
+      "matte": "#080808",
+      "gameplayCapture": false
+    }
+  ],
+  "passed": true,
+  "passedMeaning": "Automated native checks only; see visualStatus and openVisualIssues before any fidelity claim."
+}

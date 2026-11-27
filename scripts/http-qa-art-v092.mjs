@@ -1,12 +1,13 @@
 /** HTTP inspection and staged camera cases, not campaigns played by a human. */
 import {chromium} from 'playwright-core';
+import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
 import {spawn} from 'node:child_process';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {VERSION} from '../src/data.js';
 const root=fileURLToPath(new URL('../',import.meta.url)),out=resolve(root,'tests/http-art-v092');await mkdir(out,{recursive:true});
-const base=process.env.QA_BASE_URL||'http://127.0.0.1:4177';let server,browser;
+const base=process.env.QA_BASE_URL||'http://127.0.0.1:4177';let server,browser,offlineProfile;
 const STATIC_SUBJECT='film_red_pyramid_film_175',ANIMATED_SUBJECT='sh1_air_screamer_001';
 const report={version:VERSION,checks:[],errors:[],captures:[],fixtures:['Direct actor placement at both stage edges and synthetic world amounts exercise only the render envelope; they do not certify or enable a fixed-stage transition. The genuine stage and complete world state are restored for the capture.']};
 const check=(name,passed)=>{report.checks.push({name,passed:!!passed});if(!passed)throw Error(name);};
@@ -19,8 +20,8 @@ async function selectSubject(page,id,source){
 try{
  if(!process.env.QA_BASE_URL)server=spawn(process.execPath,['scripts/server.mjs','4177','--dist'],{cwd:root,stdio:'ignore'});
  let ready=false;for(let n=0;n<60;n++){try{if((await fetch(base)).ok){ready=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}check('static server ready',ready);
- browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});report.browser=browser.version();
- const context=await browser.newContext({viewport:{width:1440,height:1000}}),page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
+ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined,viewport:{width:1440,height:1000}});browser=offlineProfile.browser;report.browser=browser.version();
+ const context=offlineProfile.context,page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
  await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');
  check('live inspector mounts using actual loaded bitmap',await page.locator('.sprite-inspector').count()===1);
  check('single-frame image does not claim an animated clip',await page.locator('[data-inspect=play]').isDisabled());
@@ -80,6 +81,9 @@ try{
  // No wall-clock dependency in presentation: pausing cannot consume clip ticks.
  const frozen=await page.evaluate(()=>JSON.stringify(__HALO_QA__.engine.actors.map(a=>a.spriteClock)));await page.waitForTimeout(100);check('stopped simulation does not advance pose clocks through rendering',await page.evaluate(()=>JSON.stringify(__HALO_QA__.engine.actors.map(a=>a.spriteClock)))===frozen);
  await page.goto(base);await page.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});await context.setOffline(true);await page.goto(base+'/modules/sprite-workshop.html');await selectSubject(page,STATIC_SUBJECT,'film');check('inspector and supporting modules work offline',await page.locator('.sprite-inspector').count()===1&&await page.locator('[data-inspect=play]').isDisabled());await shot(page,'04-offline-inspector');
- await context.close();check('no unhandled page exception',report.errors.length===0);
+ await page.close();check('no unhandled page exception',report.errors.length===0);
 }catch(error){report.failure=String(error);process.exitCode=1;}
-finally{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));await browser?.close();server?.kill('SIGTERM');}
+finally{
+ try{report.passed=!report.failure&&!report.errors.length;await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));}
+ finally{try{await offlineProfile?.close();}finally{server?.kill('SIGTERM');}}
+}

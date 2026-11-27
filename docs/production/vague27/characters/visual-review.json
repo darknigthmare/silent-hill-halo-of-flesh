@@ -1,0 +1,92 @@
+{
+  "schema": "halo-wave27-character-visual-review-v1",
+  "reviewedAt": "2026-11-24T14:01:37.028308+00:00",
+  "scope": "Two static attack poses in actual FightEngine native Canvas renders",
+  "runtimeReport": "docs/production/vague27/characters/qa-native/report.json",
+  "runtimeReportSHA256": "56e8b65af1d19944bcfebc31e59a69497ffb6656672fe7e5fd35e2c60d940fa7",
+  "automatedChecks": 134,
+  "automatedChecksPassed": 134,
+  "cases": 4,
+  "totalCaptures": 12,
+  "visuallyInspectedCaptures": 6,
+  "captures": [
+    {
+      "path": "docs/production/vague27/characters/qa-native/sh2_lying_figure_020-right-attack-active.png",
+      "sha256": "0e6e5356524dee115d9c6c70f5d033c604eb14399cb5d31baaa5f00c20679c31",
+      "inspected": true,
+      "method": "Direct visual inspection of native 1280x720 FightEngine capture",
+      "observations": [
+        "Corps entier et deux pieds visibles; silhouette orientée vers le Creeper à droite.",
+        "Le jet acide bitmap apparaît devant le torse et suit la direction de l’attaque, sans rectangle opaque.",
+        "La nouvelle pose reste lisible sur le décor et ne touche ni le HUD ni les bords du viewport."
+      ]
+    },
+    {
+      "path": "docs/production/vague27/characters/qa-native/sh2_lying_figure_020-left-attack-active.png",
+      "sha256": "cde675a552a119c817adc36a60cfd2928ef67b4960939d894b239bb9f4fee50b",
+      "inspected": true,
+      "method": "Direct visual inspection of native 1280x720 FightEngine capture",
+      "observations": [
+        "Le miroir du moteur oriente correctement le corps et le jet vers le Creeper à gauche.",
+        "Les deux pieds et le sommet de l’enveloppe restent visibles, sans découpe du corps ni fond opaque."
+      ]
+    },
+    {
+      "path": "docs/production/vague27/characters/qa-native/sh3_double_head_040-right-attack-active.png",
+      "sha256": "bc19a0ae1a4cc449b920e592f4e6d077572af9465e086b50e551374499378eb2",
+      "inspected": true,
+      "method": "Direct visual inspection of native 1280x720 FightEngine capture",
+      "observations": [
+        "Chien entier de profil vers la droite; gueule, quatre pattes et bandages visibles.",
+        "La pose de bond se distingue de l’idle; aucun adversaire ni effet parasite n’est inclus dans le sprite.",
+        "Le corps et les membres restent dans le viewport; l’ombre du moteur apparaît sous le corps."
+      ]
+    },
+    {
+      "path": "docs/production/vague27/characters/qa-native/sh3_double_head_040-left-attack-active.png",
+      "sha256": "fcf9a97da55ab32f399e7847183d28573fbd42f8ad2c4c51908bfcc545c4ccae",
+      "inspected": true,
+      "method": "Direct visual inspection of native 1280x720 FightEngine capture",
+      "observations": [
+        "Le miroir du moteur dirige la gueule et les pattes antérieures vers le Creeper à gauche.",
+        "Silhouette complète et texture des bandages conservée; pas de découpe ni de fond opaque."
+      ]
+    },
+    {
+      "path": "docs/production/vague27/characters/qa-native/sh2_lying_figure_020-right-recovered-idle.png",
+      "sha256": "0ae231778d2af1af29e3e528715e7587959f1205a4f0cf0092ac5cbdc0c56cde",
+      "inspected": true,
+      "method": "Direct visual inspection of native 1280x720 FightEngine capture",
+      "observations": [
+        "L’ancienne pose idle est de nouveau affichée après récupération normale.",
+        "La ligne des pieds et la hauteur générale sont cohérentes avec la nouvelle pose d’attaque; aucun jet ne subsiste sur cette capture."
+      ]
+    },
+    {
+      "path": "docs/production/vague27/characters/qa-native/sh3_double_head_040-right-recovered-idle.png",
+      "sha256": "f4527e2293779733393cc1914507d3c21ff5a86eb272f601842684d47285bf78",
+      "inspected": true,
+      "method": "Direct visual inspection of native 1280x720 FightEngine capture",
+      "observations": [
+        "L’ancienne pose idle est de nouveau affichée, avec appuis au sol et dimensions d’apparence cohérentes.",
+        "Le déplacement horizontal résulte du moteur; le profil reste dirigé vers l’adversaire."
+      ]
+    }
+  ],
+  "blockingVisualDefectsObserved": [],
+  "staticCandidateAccepted": true,
+  "browserTest": false,
+  "httpTest": false,
+  "actorStateInjected": false,
+  "sourceTimingMeasured": false,
+  "certifiedOneToOne": false,
+  "limits": [
+    "Six captures ont été inspectées visuellement : les quatre phases actives, puis le retour idle droit de chaque personnage. Les six autres captures ont des contrôles géométriques automatisés; leur inspection visuelle n’est pas revendiquée.",
+    "Les deux entrées ajoutent chacune une seule image d’attaque statique. Elles ne constituent pas de nouveaux clips animés.",
+    "La vue gauche provient du miroir moteur. Elle n’est pas une nouvelle vue d’anatomie source.",
+    "Le modèle original SH3 et les idles existants ont été examinés. Pour Lying Figure, les images originales du registre historique n’ont pas pu être récupérées cette vague; aucune nouvelle observation source originale n’est revendiquée.",
+    "Le bond court de Double Head est produit par le moteur et termine sa phase aérienne avant la capture active. Ce test ne mesure pas la cadence du jeu original.",
+    "La marge supérieure du PNG natif Lying Figure est serrée (5 pixels au seuil alpha32); le viewport rendu contient néanmoins toute sa silhouette.",
+    "Ce contrôle concerne le rendu, l’orientation et la récupération par commandes synthétiques normales. Le test navigateur HTTP et la matrice complète collision/dégâts restent hors de ce harnais."
+  ]
+}

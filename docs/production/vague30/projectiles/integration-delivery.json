@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 2,
+  "wave": 30,
+  "date": "2026-11-25",
+  "base": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "recoveryMethod": "Exact imagegen data URLs retained in functions.store. Text manifest reconstructed from verified baseline plus the three previously tested entries. No regenerated image.",
+  "generationTool": "image_gen__imagegen",
+  "transparentBackground": true,
+  "pixelTransformations": [],
+  "effects": 3,
+  "activeSlots": 7,
+  "animatedClipsAdded": 0,
+  "certifiedFidelity": 0,
+  "existingEntriesPreserved": 8,
+  "registryTotals": {
+    "effects": 11,
+    "fighters": 11,
+    "slots": 31
+  },
+  "nativeAudits": [
+    {
+      "id": "downpour_bogeyman_ground_shockwave",
+      "width": 2172,
+      "height": 724,
+      "alpha": true,
+      "animated": false,
+      "format": "PNG",
+      "visibleBounds": [
+        258,
+        210,
+        1916,
+        553
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        2158,
+        724
+      ],
+      "framingBounds": [
+        192,
+        163,
+        1947,
+        567
+      ],
+      "transparentFraction": 0.83162,
+      "pixelSHA256": "d6e6a7b8c13df996d3b314a73587fd4823e20b8f84a5edc4d875c2c5d5ccd558"
+    },
+    {
+      "id": "origins_straight_jacket_acid_ball",
+      "width": 1774,
+      "height": 887,
+      "alpha": true,
+      "animated": false,
+      "format": "PNG",
+      "visibleBounds": [
+        369,
+        194,
+        1374,
+        653
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        1758,
+        887
+      ],
+      "framingBounds": [
+        340,
+        110,
+        1472,
+        706
+      ],
+      "transparentFraction": 0.84585,
+      "pixelSHA256": "62bf0036fefb4556b772e5ddf00a61c040c51f678f8ba66f47cafdc31e0b05aa"
+    },
+    {
+      "id": "sh1_incubus_red_lightning",
+      "width": 2172,
+      "height": 724,
+      "alpha": true,
+      "animated": false,
+      "format": "PNG",
+      "visibleBounds": [
+        98,
+        166,
+        2087,
+        588
+      ],
+      "alphaBounds": [
+        0,
+        0,
+        2171,
+        724
+      ],
+      "framingBounds": [
+        39,
+        120,
+        2136,
+        634
+      ],
+      "transparentFraction": 0.85073,
+      "pixelSHA256": "226b3e51eccad4d12ad7da25ef9f0c5856ccc3a46eb5699614f633da0ebd5da3"
+    }
+  ],
+  "artworks": [
+    {
+      "id": "downpour_bogeyman_ground_shockwave",
+      "fighterId": "downpour_bogeyman_115",
+      "source": "downpour",
+      "slots": [
+        "neutralSpecial"
+      ],
+      "referenceIds": [
+        "EXT65"
+      ],
+      "presentation": {
+        "heightInRadii": 4,
+        "anchor": "ground",
+        "groundBaseline": 0.735,
+        "facing": 1,
+        "composite": "source-over"
+      },
+      "notes": [
+        "La capture Prima 02i-084 montre une traînée de poussière gris-brun et des fissures au sol pendant les ondes du Bogeyman ; seul neutralSpecial est associé.",
+        "La vague basse vue de côté et la ligne de contact native à y = 0,735 × 724 px sont des choix de présentation du versus ; aucune modification du déplacement, des collisions ou des dégâts.",
+        "Un PNG fixe autonome ; aucun marteau, personnage, halo magique, cycle animé ou continuité originale mesurée.",
+        "Sources, prompt exact et limites : docs/production/vague30/projectiles/."
+      ],
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "frame": {
+        "path": "assets/projectiles/downpour_bogeyman_ground_shockwave.bda8c72700c2.png",
+        "sha256": "bda8c72700c2169dbc19d59434c02b46af15a7bd08e71873dba7733d628fa2b2",
+        "bytes": 835104,
+        "width": 2172,
+        "height": 724,
+        "framingBounds": [
+          192,
+          163,
+          1947,
+          567
+        ]
+      }
+    },
+    {
+      "id": "origins_straight_jacket_acid_ball",
+      "fighterId": "origins_straight_jacket_074",
+      "source": "origins",
+      "slots": [
+        "neutralSpecial",
+        "super",
+        "desperation"
+      ],
+      "referenceIds": [
+        "EXT01"
+      ],
+      "presentation": {
+        "heightInRadii": 3,
+        "anchor": "center",
+        "facing": 1,
+        "composite": "source-over"
+      },
+      "notes": [
+        "Le guide officiel Origins documente le crachat corrosif à distance ; le guide de jeu secondaire décrit des boules jaunes. La miniature native consultée reste trop petite pour certifier un contour ou une palette RGB.",
+        "Boule jaune-ocre compacte reconstruite en un PNG fixe, avec une courte traîne ; microtexture, contour, taille et orientation latérale restent une adaptation visuelle du versus.",
+        "Association aux seuls neutralSpecial, super et desperation déjà actifs de ce profil Origins. Aucun transfert vers la Lying Figure SH2 ou le Straight-Jacket de Book of Memories.",
+        "Sources, prompt exact et limites : docs/production/vague30/projectiles/."
+      ],
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "frame": {
+        "path": "assets/projectiles/origins_straight_jacket_acid_ball.095acfc1796e.png",
+        "sha256": "095acfc1796ec28de7b132fac8736880c28584f87aca2d8a8438365f60467779",
+        "bytes": 768278,
+        "width": 1774,
+        "height": 887,
+        "framingBounds": [
+          340,
+          110,
+          1472,
+          706
+        ]
+      }
+    },
+    {
+      "id": "sh1_incubus_red_lightning",
+      "fighterId": "sh1_incubus_019",
+      "source": "sh1",
+      "slots": [
+        "neutralSpecial",
+        "super",
+        "desperation"
+      ],
+      "referenceIds": [
+        "CL_SH1_BOSSES",
+        "CL_SH1_CREATURES"
+      ],
+      "presentation": {
+        "heightInRadii": 4,
+        "anchor": "center",
+        "facing": 1,
+        "composite": "screen"
+      },
+      "notes": [
+        "La vidéo du combat SH1 à 3:04 montre des branches de foudre rouge-orangée à cœur clair ; le guide distingue ces décharges de la foudre bleue d’Incubator.",
+        "Effet électrique autonome généré séparément, sans corps, ailes ou élément anatomique. Le blocage antérieur du personnage n’est pas levé par cet effet.",
+        "Orientation horizontale, contour détaillé, amplitude lumineuse et échelle sont des choix du versus ; aucun tracé exact, cycle animé ou timing original certifié.",
+        "Sources, prompt exact et limites : docs/production/vague30/projectiles/."
+      ],
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "frame": {
+        "path": "assets/projectiles/sh1_incubus_red_lightning.8bec1740b774.png",
+        "sha256": "8bec1740b774c557bd13c75dd31ee08c4aa46615d7aa2d3a42c5c798eadf8ec3",
+        "bytes": 887253,
+        "width": 2172,
+        "height": 724,
+        "framingBounds": [
+          39,
+          120,
+          2136,
+          634
+        ]
+      }
+    }
+  ],
+  "movementContractObserved": [
+    {
+      "fighterId": "downpour_bogeyman_115",
+      "source": "downpour",
+      "slot": "neutralSpecial",
+      "name": "Onde à distance du Bogeyman",
+      "ground": true,
+      "damage": 153,
+      "projectileSpeed": 10,
+      "projectileLife": 60,
+      "enabled": true
+    },
+    {
+      "fighterId": "origins_straight_jacket_074",
+      "source": "origins",
+      "slot": "neutralSpecial",
+      "name": "Projection acide à portée bornée",
+      "ground": false,
+      "damage": 105,
+      "projectileSpeed": 8,
+      "projectileLife": 24,
+      "enabled": true
+    },
+    {
+      "fighterId": "origins_straight_jacket_074",
+      "source": "origins",
+      "slot": "super",
+      "name": "Pression acide à portée bornée",
+      "ground": false,
+      "damage": 224,
+      "projectileSpeed": 8,
+      "projectileLife": 28,
+      "enabled": true
+    },
+    {
+      "fighterId": "origins_straight_jacket_074",
+      "source": "origins",
+      "slot": "desperation",
+      "name": "Dernière projection acide bornée — dernier recours",
+      "ground": false,
+      "damage": 265,
+      "projectileSpeed": 8.4,
+      "projectileLife": 30,
+      "enabled": true
+    },
+    {
+      "fighterId": "sh1_incubus_019",
+      "source": "sh1",
+      "slot": "neutralSpecial",
+      "name": "Décharge rouge",
+      "ground": false,
+      "damage": 158,
+      "projectileSpeed": 12,
+      "projectileLife": 60,
+      "enabled": true
+    },
+    {
+      "fighterId": "sh1_incubus_019",
+      "source": "sh1",
+      "slot": "super",
+      "name": "Orage du rituel",
+      "ground": false,
+      "damage": 335,
+      "projectileSpeed": 12,
+      "projectileLife": 60,
+      "enabled": true
+    },
+    {
+      "fighterId": "sh1_incubus_019",
+      "source": "sh1",
+      "slot": "desperation",
+      "name": "Foudre rouge du dénouement — dernier recours",
+      "ground": false,
+      "damage": 397,
+      "projectileSpeed": 12,
+      "projectileLife": 60,
+      "enabled": true
+    }
+  ],
+  "movementContractNote": "Values observed from createCombatProfile before the outage, not modified or presented as canonical source-game statistics. This recovery does not reconstruct unavailable full move objects or missing source-code SHA-256 values.",
+  "incubusCharacterAdmission": "still-blocked-missing-combat-art",
+  "steelProjectile": "still-blocked-insufficient-contour",
+  "earthGuardian": "partial-rock-only",
+  "evidenceAvailability": {
+    "nativeReportRecovered": false,
+    "nativeCapturesRecovered": 0,
+    "nativeResultsSource": "Résultats de commande effectivement reçus avant la panne : 152 checks, 4 scenes, 8 captures, success true.",
+    "visualReviewSource": "Historique natif : cinq captures effectivement affichées avant panne, binaires non récupérés. Preuve indépendante HTTP : neuf captures récupérées, empreintes/dimensions vérifiées et images relues individuellement.",
+    "httpQa": "passed-138-checks-nine-captures-visually-reviewed",
+    "referenceCopiesRecovered": 5,
+    "referenceRecoverySource": "references/source-files.json : cinq images vérifiées à l’octet après le retour de l’executor, sans redimensionnement ni régénération.",
+    "httpReportRecovered": true,
+    "httpCapturesRecovered": 9,
+    "httpReport": "../qa-http/http-wave30-projectiles/report.json",
+    "executedScript": "qa-http-projectiles.mjs"
+  },
+  "httpValidation": "validation.json",
+  "httpVisualReview": "qa-http-review.md",
+  "httpValidationSection": "httpQa"
+}

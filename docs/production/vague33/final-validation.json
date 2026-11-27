@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "wave": 33,
+  "asOf": "2026-11-27T10:28:06.067836+00:00",
+  "baselineCommit": "4f7d2e89c106ad4a00752bcb4c9b046ee3043b18",
+  "status": "local-validation-passed-with-explicit-coverage-limits",
+  "runtimeSourceFilesEqualToReviewedBuild": 79,
+  "offlineEvidenceFilesVerified": 60,
+  "modifiedOfflineQAScriptsVerified": 9,
+  "historicalAssetFilesIdentical": 741,
+  "newStaticImages": 10,
+  "nodeTestsPassed": 1364,
+  "pythonTargetedTestsPassed": 65,
+  "newArtworkHTTPChecksPassed": 486,
+  "newArtworkFinalCapturesReviewed": 43,
+  "separateMediumBeforeCapturesReviewed": 2,
+  "historicalV090AssertionsPassed": 39,
+  "fullNpmBrowserSuiteRerunLocally": false,
+  "offlineMigrationFullRecipesRerunLocally": 1,
+  "remoteCIForFinalCommit": "pending-publication",
+  "workbooks": [
+    {
+      "path": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "sha256": "83ab4f1667f6ee97460e6bf04b3b2961619d11a766d6e56b6ba53f0e6f4ec09c",
+      "sourceCellsCompared": 3971,
+      "formulaCachesCompared": 12,
+      "historicalSheetsPreserved": 2,
+      "sections": 68,
+      "associations": 445,
+      "status": "passed"
+    },
+    {
+      "path": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "sha256": "b10a1b1fb5ac44e24e9f4d88d4979b25d2e44266989c546e07a7471d34fd4a40",
+      "sourceCellsCompared": 3971,
+      "formulaCachesCompared": 12,
+      "historicalSheetsPreserved": 11,
+      "sections": 68,
+      "associations": 445,
+      "status": "passed"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/production/vague33/inventory.json",
+      "bytes": 416138,
+      "sha256": "8584377a38ee98d8a8acf7dc7cbd1fc322c04c27dfa3c3044d46ae9b255bb385"
+    },
+    {
+      "path": "docs/production/vague33/qa/validation.json",
+      "bytes": 38287,
+      "sha256": "bfcf363a12ecf358585290075c64fc2abe8917a3ddc7a5f4cdbf1d796c0800ee"
+    },
+    {
+      "path": "docs/production/vague33/source-review-final.json",
+      "bytes": 15064,
+      "sha256": "84ed4e9566f58ca722c3c96efe21663b1148ff83cae535e23a69eaabb76fbda3"
+    },
+    {
+      "path": "docs/production/vague33/workbooks/validation.json",
+      "bytes": 2521,
+      "sha256": "d8ee59e0fd8199d67a63b6236f88263042e075eba28ab2194c5e50d686736dc8"
+    },
+    {
+      "path": "docs/production/vague33/qa/http-v090-diagnostic/diagnosis.json",
+      "bytes": 9456,
+      "sha256": "5b82d3ab51ffce2f966c84c80a3449630ace0a39e4212fdac2e4a1a349a4ff47"
+    },
+    {
+      "path": "docs/production/vague33/qa/http-v090-diagnostic/evidence-manifest.json",
+      "bytes": 15005,
+      "sha256": "58c8b4bef5a5e7ca637cda511ccca0a49bc0a501db9efeaf6978acb9f0115ccc"
+    },
+    {
+      "path": "docs/production/vague33/qa/http-v090-diagnostic/verified-final/http-report.json",
+      "bytes": 13681,
+      "sha256": "aa5086aaba423ef0be0ccf10ada7cabe0eee06fecc4fbb06ad3b78ea158e714a"
+    },
+    {
+      "path": "docs/production/vague33/offline-profile/six-context-migration.json",
+      "bytes": 6012,
+      "sha256": "bf7bade9b2d9e7d309e3cc0055a335b33917595e0c7f1b0b6b92118e16be30ac"
+    },
+    {
+      "path": "docs/production/vague33/offline-profile/chronicle-context-migration.json",
+      "bytes": 698,
+      "sha256": "859e7b5436e698c81428c27d274be28fdd9c661d309bc1a0e4d2d7d5c9771a24"
+    }
+  ],
+  "limits": [
+    "No 1:1 visual, source geometry or timing certification. No new animation.",
+    "Native art/dojo recipes and v090 checkpoint fixtures do not prove a completed played campaign.",
+    "Seven other offline recipe migrations were syntax/diff reviewed; their complete browser paths await CI.",
+    "Original private/incognito storage quota limitation remains an application limitation; this change corrects the normal-profile QA scenario.",
+    "Global console and network error absence was not instrumented by the five native art recipes."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "asOf": "2026-11-27",
+  "status": "passed-with-declared-visual-limitations",
+  "baselineCommit": "f01622bf097fb980f354f7f0fb55df3685f4e92a",
+  "nodeTests": {
+    "command": "node --test tests/*.test.mjs",
+    "passed": 1325,
+    "failed": 0,
+    "log": "node-tests.txt"
+  },
+  "nativeCanvasQA": {
+    "passed": 270,
+    "gameCaptures": 14,
+    "diagnosticCaptures": 1,
+    "report": "../qa-native/report.json",
+    "browserTest": false,
+    "httpTest": false
+  },
+  "workbookMaintenanceTests": {
+    "passed": 11,
+    "report": "../../../combat-guide/qa/extensions/validation.json"
+  },
+  "build": {
+    "passed": true,
+    "version": "0.9.6",
+    "files": 808,
+    "verification": "48 JS,10 HTML,230 profiles,123 stages,15 Chronicles"
+  },
+  "guideCheck": {
+    "passed": true,
+    "sourceTexts": 3,
+    "sections": 68,
+    "associations": 445,
+    "imagePaths": 707
+  },
+  "browserHTTP": {
+    "status": "not-run-browser-binary-absent",
+    "attempt": "../qa-http/launch-attempt.json",
+    "ciHarnesses": [
+      "../characters/qa-http.mjs",
+      "../stages/qa-http.mjs"
+    ]
+  },
+  "openVisualIssues": [
+    "V31_WALTER_PROJECTILE_ALIGNMENT",
+    "V31_EDDIE_PROJECTILE_ALIGNMENT"
+  ],
+  "fidelity1to1Certified": false,
+  "sourceHashes": {
+    "art/registry.json": "a5f8a3673036e103d7f3463dd15edf6179aebcb16b5fa34217709550ce13c759",
+    "src/sprite-manifest.js": "2886b907c30d6971137dd57350c77ebc42a27f58e7f66e393e29491196c8632b",
+    "src/stage-bitmap-manifest.js": "3279ea5b7f65316dec07e530eeaf0bc114c57e15c0dc657e604c9fa87fd57bb5",
+    "src/stage-reference-policy.js": "df9c0bc18db0ddfb38a156c59bdc6d4124c1a0cf1d7563af32cfb52aaede7424",
+    "src/production-reference.js": "70ee0db71881be378049a6500d1d9fc4b7f795308d31a4e55c6950868550cdc4",
+    "docs/combat-guide/requirements.json": "2de2f899f31713ccd86253da20cdb4d0bcb8aac459936268e93fda6b60e41a3e",
+    "docs/combat-guide/requirements-resolved.json": "ff1ad6ade6f85a9c3e1042216d7d17f588921dfed1be30dbeb81756bebfc8267",
+    "docs/combat-guide/associations.json": "0653a52e78c7cffc7255e5a12e1e85abb2173ba2db2377388b3cc69a3a95a4ff",
+    "docs/combat-guide/status.json": "1fb320ba75d7d530483334af71264ac3604ce1296887f634a00b31815a15d2c3"
+  },
+  "historicalHTTPMetadataContract": {
+    "passed": true,
+    "report": "http-metadata.json",
+    "scope": "Metadata-only check of80exact subjects, including the3newlydeclared static clips; not a browser run."
+  }
+}

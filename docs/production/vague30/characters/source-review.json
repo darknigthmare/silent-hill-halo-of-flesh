@@ -1,0 +1,266 @@
+{
+  "schemaVersion": 1,
+  "wave": 30,
+  "asOf": "2026-11-25",
+  "baselineCommit": "9c426d7e230eaec464203acb9b43b63a420acf30",
+  "status": "images-reviewed; imported; HTTP-QA-passed-and-visually-reviewed",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "calls": 3,
+    "edits": 0,
+    "refusals": 0,
+    "transparentBackground": true,
+    "outputHandling": "Original PNG bytes; no crop, scale, recolor, alpha cleanup or recompression.",
+    "recovery": "Exact data URL bytes recovered after executor loss; Git blobs preserve those bytes."
+  },
+  "counts": {
+    "newProfiles": 0,
+    "newPortraits": 0,
+    "newCombatBases": 0,
+    "newStaticPoses": 3,
+    "newAnimatedClips": 0
+  },
+  "deliveries": [
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "source": "sh4",
+      "pose": "forwardSpecial",
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+      "sha256": "a0410887b7d303f83f7c42edb67cb1bb9030d13acf4b5b1d2c97fd0e6d611ce9",
+      "bytes": 1830946,
+      "width": 1536,
+      "height": 1024,
+      "facing": 1,
+      "anchor": [
+        0.44,
+        0.891602
+      ],
+      "bodyHeight": 0.92,
+      "originalSourceFile": "exec-932c9bf4-9bd1-4496-8d83-914b19762f1d.png",
+      "origin": "conversation-image-generation",
+      "ticksPerFrame": 1,
+      "loop": false,
+      "singleSubjectReviewed": true,
+      "visibleBounds": [
+        52,
+        169,
+        1496,
+        913
+      ],
+      "transparentFraction": 0.75952,
+      "baselineIdlePath": "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+      "baselinePortraitPath": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+      "command": "Bond puis morsure",
+      "gitBlob": "719d39b14d7eef502351f7682d944cc48d48a89e",
+      "sourceReferences": [
+        {
+          "role": "source-model",
+          "url": "https://www.silenthillmemories.net/sh4/arts/pics/sh4_art_cre_05_sniffer_dog.jpg",
+          "page": "https://www.silenthillmemories.net/sh4/arts_monsters_en.htm",
+          "sha256": "69e1ab675009a7c8c9f1a3b2b3396e264fdcd795125ea3f8bf96aab702d51e66",
+          "bytes": 473864,
+          "width": 2720,
+          "height": 2212,
+          "downloadHTTP": 200,
+          "inspected": true,
+          "localPath": "docs/production/vague30/characters/references/sniffer-male-model.jpg"
+        },
+        {
+          "role": "behavior",
+          "url": "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+          "observation": "Lunging and biting; male ears, yellow fur and red tongue distinguish the male."
+        }
+      ],
+      "existingProjectInput": {
+        "path": "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
+        "sha256": "4af1facfd8a4a8aa1ff8f80a2676a2259a2636884e50a3e58d971cb938019891",
+        "width": 1475,
+        "height": 1066
+      },
+      "visualReview": {
+        "observed": "One male dog, complete rightward lunge, four limbs, ears, yellow fur and a red tongue retained.",
+        "limits": [
+          "The far side is partly occluded; mirror is an engine presentation only.",
+          "The full source male model and project idle were used; female and unconfirmed grapple views were excluded."
+        ],
+        "alphaReview": "An apparent glow in one file preview was RGB beneath transparent pixels. Native Canvas composition over light/dark checkerboards was clean; no cleanup or second generation was performed.",
+        "alphaExtrema": [
+          0,
+          254
+        ],
+        "alpha200Bounds": [
+          53,
+          177,
+          1495,
+          911
+        ]
+      },
+      "technicalStatus": "Exact importer RGBA audit and baseline preservation passed; see import-receipts.json and registry-preservation.json.",
+      "runtimeStatus": "Ordinary HTTP gameplay in both orientations and return to baseline idle passed; retained captures individually reviewed; see qa-http-review.md."
+    },
+    {
+      "id": "origins_carrion_076",
+      "source": "origins",
+      "pose": "forwardSpecial",
+      "path": "assets/sprites/origins_carrion_076.cf48a4b03cea.png",
+      "sha256": "cf48a4b03ceaa87f29cc72b373b3ace2aa89b56ecaf6ad36d7c153ca4d9c8d61",
+      "bytes": 819038,
+      "width": 1254,
+      "height": 1254,
+      "facing": -1,
+      "anchor": [
+        0.46,
+        0.77512
+      ],
+      "bodyHeight": 0.79,
+      "originalSourceFile": "exec-f62d1e73-34d6-47cb-983e-d35d27675d26.png",
+      "origin": "conversation-image-generation",
+      "ticksPerFrame": 1,
+      "loop": false,
+      "singleSubjectReviewed": true,
+      "visibleBounds": [
+        121,
+        359,
+        1124,
+        972
+      ],
+      "transparentFraction": 0.78754,
+      "baselineIdlePath": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+      "baselinePortraitPath": "assets/sprites/origins_carrion_076.fc6703575ef3.png",
+      "command": "Carrion — poursuite puis percussion",
+      "gitBlob": "a2687aeabed3e671644fc6f2ccda206e51241584",
+      "sourceReferences": [
+        {
+          "role": "source-render",
+          "url": "https://www.silenthillmemories.net/sh0/creatures/carrion.jpg",
+          "page": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+          "sha256": "023829fe3b2e062cc98770071392fc52fe50912cb23d65c21fec5f9f59874a25",
+          "bytes": 5404,
+          "downloadHTTP": 200,
+          "inspected": true,
+          "localPath": "docs/production/vague30/characters/references/carrion-render.jpg"
+        },
+        {
+          "role": "source-model-duplicate-pose",
+          "url": "https://www.silenthillmemories.net/sh0/arts/pics/sh0_art_creature_16_carrion.png",
+          "sha256": "faeaa9bdad3dada219cc020a9002e97bab746407d85b9175c910760e968d51cc",
+          "bytes": 180981,
+          "downloadHTTP": 200,
+          "inspected": true,
+          "localPath": "docs/production/vague30/characters/references/carrion-source-model.png"
+        },
+        {
+          "role": "behavior",
+          "url": "https://www.silenthillmemories.net/sh0/creatures_en.htm",
+          "observation": "Bodily lunging; does not authorize a canine head, ears, tail or added claws."
+        }
+      ],
+      "existingProjectInput": {
+        "path": "assets/sprites/origins_carrion_076.cc08ebd145bb.png",
+        "sha256": "cc08ebd145bb6b24be79b95cf9745116349e167fb617e0115737017a427628a5",
+        "width": 1254,
+        "height": 1254
+      },
+      "visualReview": {
+        "observed": "One low folded body thrust left, bent support and compressed existing silhouette; farther supports remain naturally occluded.",
+        "limits": [
+          "The two source images show the same pose, not independent angles.",
+          "Unseen anatomy is not certified. No dog head, ears, tail or claws were introduced."
+        ],
+        "alpha200Bounds": [
+          122,
+          361,
+          1123,
+          971
+        ]
+      },
+      "technicalStatus": "Exact importer RGBA audit and baseline preservation passed; see import-receipts.json and registry-preservation.json.",
+      "runtimeStatus": "Ordinary HTTP gameplay in both orientations and return to baseline idle passed; retained captures individually reviewed; see qa-http-review.md."
+    },
+    {
+      "id": "sh1_creeper_009",
+      "source": "sh1",
+      "pose": "walk",
+      "path": "assets/sprites/sh1_creeper_009.ad0fea884c6d.png",
+      "sha256": "ad0fea884c6d60aeb2d5033a701672eed68c896176efaf45a64f6902fa0408a9",
+      "bytes": 697798,
+      "width": 2172,
+      "height": 724,
+      "facing": 1,
+      "anchor": [
+        0.5,
+        0.84116
+      ],
+      "bodyHeight": 0.88,
+      "originalSourceFile": "exec-94f88139-245f-42d8-8aa3-b6ae55836283.png",
+      "origin": "conversation-image-generation",
+      "ticksPerFrame": 1,
+      "loop": false,
+      "singleSubjectReviewed": true,
+      "visibleBounds": [
+        219,
+        130,
+        1891,
+        609
+      ],
+      "transparentFraction": 0.85509,
+      "baselineIdlePath": "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+      "baselinePortraitPath": "assets/sprites/sh1_creeper_009.0ed910ef61d0.png",
+      "command": "Locomotion rampante",
+      "gitBlob": "df0b7d865e934a20d3b7d4ce7801aa2c59e2d008",
+      "sourceReferences": [
+        {
+          "role": "source-model",
+          "url": "https://www.silenthillmemories.net/sh1/arts/pics/sh1_art_cre_05.jpg",
+          "page": "https://www.silenthillmemories.net/sh1/arts_en.htm",
+          "sha256": "b630035e827e5bd203677b2ae35ae9ada3dc4748956ed5b894c1e2e97b59cf11",
+          "bytes": 105335,
+          "width": 1600,
+          "height": 1200,
+          "downloadHTTP": 200,
+          "inspected": true,
+          "localPath": "docs/production/vague30/characters/references/creeper-sh1-model.jpg"
+        },
+        {
+          "role": "behavior",
+          "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+          "observation": "Crawling/running toward legs and biting; this delivery selects a locomotion step."
+        }
+      ],
+      "existingProjectInput": {
+        "path": "assets/sprites/sh1_creeper_009.57fcc90186ee.png",
+        "sha256": "57fcc90186ee7b8cacc9d74744764126677b28ff8c880e11acce0d1326693574",
+        "width": 2172,
+        "height": 724
+      },
+      "visualReview": {
+        "observed": "One closed-shell SH1 insect in a rightward crawling step, six legs including two large front legs, antennae and rear filaments retained.",
+        "limits": [
+          "The source is a dorsal model; the low side view follows the existing project adaptation.",
+          "No swarm, opened wings, or SH2/film anatomy was substituted."
+        ],
+        "alpha200Bounds": [
+          228,
+          135,
+          1890,
+          607
+        ]
+      },
+      "technicalStatus": "Exact importer RGBA audit and baseline preservation passed; see import-receipts.json and registry-preservation.json.",
+      "runtimeStatus": "Ordinary HTTP gameplay in both orientations and return to baseline idle passed; retained captures individually reviewed; see qa-http-review.md."
+    }
+  ],
+  "limits": [
+    "Single static poses, not animated clips or new character bases.",
+    "No visual fidelity 1:1 or original timing certification.",
+    "No explicit prior refusal was retried and no refused parent or variant was substituted.",
+    "The local import session was interrupted by loss of the execution service; its completion cannot be used as evidence.",
+    "The existing importer will regenerate exact pixel hashes rather than relying on missing caches."
+  ],
+  "files": {
+    "prompts": "docs/production/vague30/characters/prompts.json",
+    "plan": "docs/production/vague30/characters/import-plan.json",
+    "importer": "docs/production/vague30/characters/import-reviewed.py"
+  },
+  "httpEvidence": "qa-http-review.md"
+}

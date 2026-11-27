@@ -1,0 +1,22 @@
+{
+  "schema": "halo-wave28-character-prompt-v1",
+  "key": "groaner-forward-special",
+  "fighterId": "sh1_groaner_003",
+  "source": "sh1",
+  "edition": "Silent Hill original 1999",
+  "pose": "forwardSpecial",
+  "facing": 1,
+  "generationTool": "built-in image_gen.imagegen",
+  "transparentBackground": true,
+  "referenceImages": [
+    {
+      "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+      "role": "edit-target-existing-combat-idle"
+    },
+    {
+      "path": "docs/production/vague28/characters/references/groaner-original-sh1.jpg",
+      "role": "source-anatomy-reference"
+    }
+  ],
+  "prompt": "Use case: identity-preserve. Asset type: ONE transparent full-body side-view combat sprite for an existing game character. Edit image 1, the existing Groaner from the original Silent Hill (1999), into ONE distinct jumping-bite attack pose facing screen RIGHT. Image 2 is the original 1999 model anatomy reference, not a second character and not an animation frame. Preserve image 1's lean hairless canine identity, long narrow muzzle, pale milky eye, two short ears, folded mottled tan-brown hide, exactly four canine legs and one thin complete tail. Change only the pose: torso stretches forward in a short horizontal pounce, head lifted from the idle's low sniffing position, jaw naturally open toward the right, front paws lifted and reaching ahead of the chest, hind legs extended behind after push-off. Keep all four legs individually accounted for. Match the existing material, proportions, restrained lighting and readable side camera; no redesign or extra facial features. This is an authored static versus adaptation of the documented jumping bite, not an extracted source animation or timing claim. Wide 2:1 composition, ENTIRE creature including muzzle, all paws and tail tip well inside the canvas with clear transparent padding on every side. True transparent alpha background, no floor or cast shadow, no glow, particles, motion blur, attack trail, blood splashes, opponent, text, label, frame, checkerboard or sheet. Exactly one full-body sprite."
+}

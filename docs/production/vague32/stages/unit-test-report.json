@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "scope": "Targeted stage regression and wave32 scene guards",
+  "command": "node --test tests/stage-wave32.test.mjs tests/stage-lot11.test.mjs tests/stage-lot10.test.mjs tests/stage-later-games.test.mjs tests/stage-wave31.test.mjs",
+  "completedAt": "2026-11-27T08:10:36.848127+00:00",
+  "exitCode": 0,
+  "tests": 36,
+  "passed": 36,
+  "failed": 0,
+  "skipped": 0,
+  "limits": [
+    "Node unit/integration guards only; native Chromium/HTTP and visual review recorded separately.",
+    "No source motion or 1:1 fidelity certification."
+  ]
+}

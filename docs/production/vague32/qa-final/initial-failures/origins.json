@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "wave": 32,
+  "startedAt": "2026-11-27T08:47:44.005Z",
+  "passed": false,
+  "checks": [
+    {
+      "name": "Exactly the two bound firearm owners",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "Dedicated HTTP test port is unused",
+      "passed": true
+    },
+    {
+      "name": "Dedicated dist HTTP server ready",
+      "passed": true
+    }
+  ],
+  "cases": [],
+  "errors": [],
+  "method": "Built HTTP app, fresh browser contexts, ordinary UI and keyboard. Passive drawImage observer and captures from the actual game canvas. No actor, camera, clock, image or module substitution.",
+  "limits": [
+    "Single static poses; no animation, source timing or 1:1 fidelity certification.",
+    "Both orientations use the existing engine mirror, not independently observed source-side geometry.",
+    "Service workers are blocked; this test does not cover offline updates.",
+    "Automated HTTP and placement checks require separate visual inspection of the retained gameplay captures.",
+    "Muzzle points are measured on the exact published candidate PNGs; collision/guard changes are separately covered by engine tests."
+  ],
+  "browser": "158.0.8127.0",
+  "failure": "page.waitForFunction: Timeout 15000ms exceeded.\n    at /workspace/scratch/4cb8973fa173/silent-hill-halo-of-flesh/docs/production/vague32/characters/qa-http-origins.mjs:123:20",
+  "completedAt": "2026-11-27T08:48:04.337Z"
+}

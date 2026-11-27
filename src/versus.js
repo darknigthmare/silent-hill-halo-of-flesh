@@ -14,6 +14,7 @@ import { installPlayflowUI } from './playflow-ui.js';
 import { FightEngine, CONTROL_LABELS, chronicleGrade } from './fight.js';
 import { drawStage, renderPortrait } from './renderers.js';
 import { chronicleArtwork, setChronicleImage } from './chronicle-art.js';
+import { storyArtwork, storyOpeningArtwork, storyEndingArtwork } from './story-art.js';
 import {
   attachGlobalAudioUnlock, audio, clamp, escapeHTML, loadJSON, loadSettings,
   returnToCommand, saveLastFront, writeJSON, RECORDS_KEY, CHRONICLES_KEY
@@ -101,10 +102,15 @@ function tournamentSeed() {
   const raw = Number(params.get('seed'));
   return Number.isFinite(raw) && raw >= 0 ? raw >>> 0 : 0;
 }
+function selectedModeRun() {
+  const run = state.run;
+  return run?.mode === preset && run.playerId === state.p1.id ? run : null;
+}
 function currentModePlan() {
+  const run = selectedModeRun();
   try {
-    if (preset === 'tournament') return tournamentPlan(state.run?.mode === 'tournament' ? state.run.playerId : state.p1.id, state.run?.mode === 'tournament' ? state.run.seed : tournamentSeed());
-    if (preset === 'story') return storyPlan(state.run?.mode === 'story' ? state.run.playerId : state.p1.id);
+    if (preset === 'tournament') return tournamentPlan(run ? run.playerId : state.p1.id, run ? run.seed : tournamentSeed());
+    if (preset === 'story') return storyPlan(run ? run.playerId : state.p1.id);
   } catch { return null; }
   return null;
 }
@@ -125,14 +131,20 @@ function renderModePanel() {
     panel.innerHTML = `<h3>${escapeHTML(plan.label)}</h3><p>Huit sujets, trois manches à élimination directe. Le rival documenté <strong>${escapeHTML(getFighter(plan.rivalId).name)}</strong> attend en finale ; chaque adversaire combat sur son arène associée.</p><div class="mode-bracket">${plan.quarters.map((pair, index) => `<div class="bracket-match"><small>QUART ${index + 1}</small>${pair.map((id) => `<span class="${highlighted.has(id) ? 'highlight' : ''}">${escapeHTML(getFighter(id).name)}</span>`).join('<i>VS</i>')}</div>`).join('')}</div><ol class="mode-path">${plan.opponents.map((opponent) => `<li><strong>${escapeHTML(opponent.round)}</strong> — ${escapeHTML(getFighter(opponent.fighterId).name)} · ${escapeHTML(getStage(opponent.stageId).name)}${opponent.rival ? ' · RIVAL' : ''}</li>`).join('')}</ol>`;
     return;
   }
-  const completed = state.run?.mode === 'story' && state.run.status === 'complete';
-  panel.innerHTML = `<h3>${escapeHTML(plan.title)}</h3><p>${escapeHTML(plan.intro)}</p>${plan.combatEnabled ? `<p><strong>${plan.chapterCount} adversaire(s)</strong> à vaincre, dans l’ordre de l’œuvre.</p>` : '<p>Récit consultable : le rôle documenté de ce sujet ne permet pas un parcours de combat.</p>'}<ol class="mode-path">${plan.chapters.map((chapter) => `<li><strong>${escapeHTML(chapter.label)}</strong> — ${escapeHTML(getFighter(chapter.fighterId).name)} · ${escapeHTML(getStage(chapter.stageId).name)}${chapter.rival ? ' · RIVAL' : ''}</li>`).join('') || '<li>Aucune rencontre combattante dans cette œuvre.</li>'}</ol>${completed ? `<div class="mode-ending"><strong>${escapeHTML(plan.ending.title)}</strong><p>${escapeHTML(plan.ending.text)}</p><small>${escapeHTML(plan.ending.note)}</small></div>` : ''}`;
+  const completed = selectedModeRun()?.status === 'complete';
+  const art = storyArtwork(plan.playerId);
+  const scene = completed ? art?.ending : art?.intro;
+  panel.innerHTML = `<h3>${escapeHTML(plan.title)}</h3><p>${escapeHTML(plan.intro)}</p>${scene ? '<figure class="story-preview"><img id="storyPreview" hidden alt=""><figcaption></figcaption></figure>' : ''}${plan.combatEnabled && plan.chapterCount ? `<p><strong>${plan.chapterCount} adversaire(s)</strong> à vaincre dans le groupe source de ce récit.</p>` : '<p>Récit consultable : aucune rencontre combattante disponible dans ce groupe source.</p>'}<ol class="mode-path">${plan.chapters.map((chapter) => `<li><strong>${escapeHTML(chapter.label)}</strong> — ${escapeHTML(getFighter(chapter.fighterId).name)} · ${escapeHTML(getStage(chapter.stageId).name)}${chapter.rival ? ' · RIVAL' : ''}</li>`).join('') || '<li>Aucune rencontre combattante dans ce groupe source.</li>'}</ol>${completed ? `<div class="mode-ending"><strong>${escapeHTML(plan.ending.title)}</strong><p>${escapeHTML(plan.ending.text)}</p><small>${escapeHTML(plan.ending.note)}</small></div>` : ''}`;
+  if (scene) {
+    setChronicleImage(panel.querySelector('#storyPreview'), scene);
+    panel.querySelector('.story-preview figcaption').textContent = scene.caption;
+  }
 }
 function renderSelected() {
   if (['tournament','story'].includes(preset)) {
     const plan = currentModePlan();
     if (plan?.queue?.length) {
-      const index = state.run?.mode === preset ? state.run.index : 0;
+      const index = selectedModeRun()?.index ?? 0;
       state.p2 = getFighter(plan.queue[index]);
       state.stage = getStage(plan.stages[index]);
     }
@@ -456,13 +468,14 @@ function showChronicleOpening(enteringChapter) {
   const rival = run?.index > 0 && scenes?.rival?.fighterId === run.queue[run.index]
     ? scenes.rival
     : null;
-  const artwork = run?.index === 0 ? scenes?.intro : rival;
+  const storyScene = storyOpeningArtwork(run, enteringChapter);
+  const artwork = storyScene || (run?.index === 0 ? scenes?.intro : rival);
   const panel = els.chronicleOpening;
   panel.hidden = !artwork;
   setChronicleImage(panel.querySelector('img'), artwork);
   if (artwork) {
-    panel.querySelector('strong').textContent = rival?.title || route.title;
-    panel.querySelector('p').textContent = rival?.caption || route.intro;
+    panel.querySelector('strong').textContent = storyScene?.title || rival?.title || route?.title || '';
+    panel.querySelector('p').textContent = storyScene?.caption || rival?.caption || route?.intro || '';
   }
 }
 
@@ -707,12 +720,13 @@ function handleMatchEnd(result) {
     els.resultTitle.textContent=completedRun?(storyRun?'RÉCIT ACHEVÉ':tournamentRun?'MAÎTRE DU RITE':dossiers.length?'PARCOURS DE COMBAT TERMINÉ':'PARCOURS TERMINÉ'):result.winner.name;
     els.resultText.textContent=completedRun?(storyRun?`${storyRun.ending.text} ${storyRun.ending.note}`:tournamentRun?`${state.run.wins}/${state.run.queue.length} manches remportées. Le Rite des Huit est clos ; le rival documenté est tombé en finale.`:dossiers.length?`${state.run.wins}/${state.run.queue.length} rencontres combattantes remportées. ${dossiers.length} chapitre(s) conservé(s) comme dossiers hors combat : ${dossiers.map(d=>getFighter(d.fighterId).name).join(' · ')}.`:route?.outro||`${state.run.wins}/${state.run.queue.length} rencontres remportées.`):
       (won?`${result.winner.name} domine ${result.loser.name}.`:'Le parcours reste disponible. Rejouez cette rencontre ou revenez à la sélection.');
-    const artwork=completedRun&&state.run.mode==='chronicle'?chronicleArtwork(route?.id)?.ending:null;
+    const storyScene=storyEndingArtwork(state.run);
+    const artwork=completedRun&&state.run.mode==='chronicle'?chronicleArtwork(route?.id)?.ending:storyScene;
     els.chronicleEnding.hidden=!artwork;
     setChronicleImage(els.chronicleEnding.querySelector('img'),artwork);
     const caption=els.chronicleEnding.querySelector('figcaption');
-    caption.hidden=!artwork||!dossiers.length;
-    caption.textContent=artwork&&dossiers.length?route.outro:'';
+    caption.hidden=!artwork||(!storyScene&&!dossiers.length);
+    caption.textContent=storyScene?.caption||(artwork&&dossiers.length?route.outro:'');
     const rows=[['RANG DU SUJET I',grade],['COMBO MAX',playerStats.maxCombo||0],['GARDES PARFAITES',playerStats.perfectGuards||0],
       ['CONTRES',playerStats.counters||0],['DANGERS SUBIS',playerStats.hazardsTaken||0],['FATALITÉS',playerStats.fatalities||0]];
     if(routeGrade)rows.unshift(['RANG DU PARCOURS COMPLET',routeGrade]);

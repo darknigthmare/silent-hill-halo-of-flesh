@@ -1,0 +1,73 @@
+{
+  "reviewer": "root assistant, direct image inspection",
+  "scope": "All twelve native Canvas captures, three effects, both player slots, emission and flight",
+  "captures": [
+    {
+      "file": "ascension_immolator_fire_jet-left-emission.png",
+      "sha256": "97a84b154d8d4cc2146f6c759f9fb6c6b34cfe2e23757b1d9f7c7c88c1981fde"
+    },
+    {
+      "file": "ascension_immolator_fire_jet-left-flight.png",
+      "sha256": "ce8c3fc3e2a6f86bd3c758473b0d15e68a5e45b8bfdccc8fd90c562570671a27"
+    },
+    {
+      "file": "ascension_immolator_fire_jet-right-emission.png",
+      "sha256": "eb1ac6a671ef124209a7a116e3f8b6f0c3f6605e013fd61b355d42553905be75"
+    },
+    {
+      "file": "ascension_immolator_fire_jet-right-flight.png",
+      "sha256": "3c47c414930f242b201f58877269f9eddd7aee3326ec8a24b587749169eae79e"
+    },
+    {
+      "file": "homecoming_asphyxia_toxic_plume-left-emission.png",
+      "sha256": "fcc2474dec2cf9038ba25505a5ffd7a52832f719ae94e81f12c16ef619ede7f7"
+    },
+    {
+      "file": "homecoming_asphyxia_toxic_plume-left-flight.png",
+      "sha256": "3d3f1245556df7f1b9d4698be7cc741116192ba2c87134716aed5260aa8b04e4"
+    },
+    {
+      "file": "homecoming_asphyxia_toxic_plume-right-emission.png",
+      "sha256": "1cc7a849cbaa5a3ed85815a0821f77824fb4ee7ce1c06fee67614f0466eec18a"
+    },
+    {
+      "file": "homecoming_asphyxia_toxic_plume-right-flight.png",
+      "sha256": "3523bf17cc4c458541d9e6e854479204d3300b6bb8700a470b4356f620d42076"
+    },
+    {
+      "file": "sh1_floatstinger_acid_cloud-left-emission.png",
+      "sha256": "cf0b107e070325c1f737874059fd7af62ed2f8926c48fc2e0abf3da5b1323fe1"
+    },
+    {
+      "file": "sh1_floatstinger_acid_cloud-left-flight.png",
+      "sha256": "f578bf668337400b87c41d7689df1c6c1f54e1fda58e6ad9ba6c36b3b36a591a"
+    },
+    {
+      "file": "sh1_floatstinger_acid_cloud-right-emission.png",
+      "sha256": "a3806c5c47b69a2a237508caf2a86f38355771e57b42285563dd04d4ec64e89e"
+    },
+    {
+      "file": "sh1_floatstinger_acid_cloud-right-flight.png",
+      "sha256": "1da5ec3de3b28ace9735cc5fc2986b6b915f3e0e35aeba1b40e4d0932a757551"
+    }
+  ],
+  "observations": [
+    "Floatstinger: diffuse olive/yellow-brown cloud visible at emission and after twelve ticks in both orientations; transparent edges without an opaque rectangular background.",
+    "Asphyxia: dark gray/brown plume with lighter trailing wisps visible in both orientations. Existing emitter is around torso/waist height; this review does not certify a mouth attachment or exact original anatomy.",
+    "Immolator: yellow-orange flame visible in both orientations. At the first emission the existing body partly occludes the effect; after twelve ticks the flame is clearly visible in front of it. Exact nozzle/head attachment and original stream length are not established.",
+    "Existing actor art, pose, HUD, projectile radius, lifetime, speed and vertical offset are unchanged. The stationary attack body pose is not a new animation."
+  ],
+  "result": "rendered-with-documented-attachment-limits",
+  "limits": [
+    "Native Canvas is not browser, HTTP, DOM or service-worker verification.",
+    "One neutralSpecial per effect and player slot was played. The other seven newly mapped slots were verified by contracts, not all played visually.",
+    "Runtime mirroring is used, not a separately authored opposing view.",
+    "No exact source timing, full hit/guard matrix or 1:1 certification."
+  ],
+  "finalRerunEvidence": {
+    "priorDirectory": "docs/production/vague29/qa-native-projectiles",
+    "currentDirectory": "docs/production/vague29/qa-final-projectiles",
+    "allCaptureBytesIdentical": true,
+    "reason": "Final manifest retest after preserving contextual ceiling eligibility; pixels and renderer inputs are unchanged."
+  }
+}

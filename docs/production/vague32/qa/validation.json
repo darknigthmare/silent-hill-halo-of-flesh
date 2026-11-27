@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "wave": 32,
+  "status": "passed",
+  "scope": "Wave32 local integration validation with the exact expected Lying Figure admission blocker preserved",
+  "collectedAt": "2026-11-27T08:58:43.174457+00:00",
+  "baselineCommit": "d4269ad8239a99cad53d44bc77b569ed7a0d41a3",
+  "build": {
+    "status": "passed",
+    "files": 821,
+    "command": "node scripts/build.mjs",
+    "criticalSourceReceipts": [
+      {
+        "path": "src/fight.js",
+        "sha256": "0e1cc83391476cf913d0df078d1d618f1162ea3f1f7741fcfcedf7f0d80dfccb",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/projectile-origin.js",
+        "sha256": "bef33dc775eacfa359f24c111a18b49dc2aed0061a4d767dac895ec884ccc323",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/sprite-system.js",
+        "sha256": "39524394c36b84a12353c8a29938fd36badffae48fa91fa17e0a712a52d52df4",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/sprite-manifest.js",
+        "sha256": "310bbb92bd6811dbb0f894a60d481f07554bbf05f5ada8382c22625ccc79683e",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/stage-bitmap-manifest.js",
+        "sha256": "dbd63fc0775d102eae856f35a83b78092e01f9c4fc54fa0334f9837c479af00b",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/story-art.js",
+        "sha256": "a41bfee50b89fde14674cb516ae0c1ff2778520ba9b973d01bf6d69a6a9e996d",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/tournament.js",
+        "sha256": "12403baa162d626cd4befb7dfa3bfdeecdc2b79d46dd8bbb646786076f172de7",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/versus.js",
+        "sha256": "58f1e80d6bd83a0b8d6d880738c19f6bf73c7851ca9a74f77e989f69f7073ac5",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/sprite-workshop.js",
+        "sha256": "8a37492ed01b17e6cdf8cb18fb4419d26d41223dd0900e3f8bd8e1610d694c4d",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/sprite-inspector.js",
+        "sha256": "c8a2317d575e73571bffa1390df2ee9bcf583240d1287f406f7fd00b66d3efe1",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "src/stage-reference-policy.js",
+        "sha256": "462eebaea80b740ac6da5d1eb3e57176c564441efb5deb086e81a90494f5ad8e",
+        "testedDistIdentical": true
+      },
+      {
+        "path": "service-worker.js",
+        "sha256": "4a6b091fd1f66259afe94df5e3047f2376f8897d3bed131579e309cc92d32d59",
+        "testedDistIdentical": true
+      }
+    ]
+  },
+  "targetedNode": {
+    "status": "passed",
+    "tests": 39,
+    "failed": 0,
+    "command": "node --test tests/projectile-origin.test.mjs tests/projectile-bitmaps.test.mjs tests/native-attack-budget.test.mjs tests/art-batch4-contracts.test.mjs tests/stage-wave32.test.mjs tests/story-art.test.mjs",
+    "note": "These tests overlap the retained full suite and are not additive to its count."
+  },
+  "retainedFullRunLogs": [
+    {
+      "path": "docs/production/vague32/qa/node-tests.txt",
+      "sha256": "d2acbbdae40990fae98f3f8fce69574f365dcf732a130288d6779d226d0314d6",
+      "status": "retained-earlier-success-log",
+      "scope": "Existing wave32 full-run evidence preserved; not rerun by the final HTTP validation."
+    },
+    {
+      "path": "docs/production/vague32/qa/python-tests.txt",
+      "sha256": "3868bade1f038453a207005e321f6d0f361b265d34395565d6b5de307fe5c86f",
+      "status": "retained-earlier-success-log",
+      "scope": "Existing wave32 full-run evidence preserved; not rerun by the final HTTP validation."
+    }
+  ],
+  "browser": {
+    "status": "passed",
+    "engine": "Chromium 158.0.8127.0",
+    "checks": 575,
+    "captures": 37,
+    "reports": [
+      {
+        "path": "docs/production/vague32/qa-final/characters/report.json",
+        "sha256": "5cd08b38182a76d67570a0e165e0c2f24c21347e6476bc0e6bd3b4a4cb916fe8",
+        "status": "passed",
+        "checks": 408,
+        "captures": 16,
+        "browser": "158.0.8127.0",
+        "limits": [
+          "Single static poses; no animation, source timing or 1:1 fidelity certification.",
+          "Both orientations use the existing engine mirror, not independently observed source-side geometry.",
+          "Service workers are blocked; this test does not cover offline updates.",
+          "Automated HTTP and placement checks require separate visual inspection of the retained gameplay captures."
+        ]
+      },
+      {
+        "path": "docs/production/vague32/qa-final/origins/report.json",
+        "sha256": "fc06e54b9ccbd781b5e4fbfa5f1d615f4b91b459bd5e20894b777597a018e3cc",
+        "status": "passed",
+        "checks": 94,
+        "captures": 8,
+        "browser": "158.0.8127.0",
+        "limits": [
+          "Single static poses; no animation, source timing or 1:1 fidelity certification.",
+          "Both orientations use the existing engine mirror, not independently observed source-side geometry.",
+          "Service workers are blocked; this test does not cover offline updates.",
+          "Automated HTTP and placement checks require separate visual inspection of the retained gameplay captures.",
+          "Muzzle points are measured on the exact published candidate PNGs; collision/guard changes are separately covered by engine tests.",
+          "A one-tick active window can fall between rendered frames. HTTP captures need not coincide with the emission tick; exact first-tick physics is separately covered by engine tests."
+        ]
+      },
+      {
+        "path": "docs/production/vague32/qa-final/stages/report.json",
+        "sha256": "15e6ee129ea2a1eddb8bb8552710d1d9b70dd68577b85b7399e7ba9262405a98",
+        "status": "passed",
+        "checks": 37,
+        "captures": 2,
+        "browser": "158.0.8127.0",
+        "limits": [
+          "Headless Chromium with fresh contexts and service workers blocked. No offline/update service-worker assertion.",
+          "Stage launches use two existing combat-enabled fighters; reference-only profiles remain in their workshop.",
+          "No attack timing, source animation or 1:1 fidelity is certified."
+        ]
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh1_groaner_003/report.json",
+        "sha256": "734d97885ef51b7215cd032114bfcd0d7ededb6b93d3c0b1b856cf0865463d91",
+        "status": "passed",
+        "checks": 15,
+        "captures": 4,
+        "browser": "158.0.8127.0",
+        "limits": [
+          "The entire four-fight story is not played to completion.",
+          "Ending component checks do not establish a played campaign result.",
+          "Headless Chromium; service workers blocked, offline update not exercised.",
+          "Static original-compatible compositions, no 1:1 certification."
+        ]
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh2_lying_figure_020/report.json",
+        "sha256": "d0d5d5c3e241bdd73f3443587eab4b33d6ca7598762b223eaf6c79795d85621b",
+        "status": "passed",
+        "checks": 12,
+        "captures": 4,
+        "browser": "158.0.8127.0",
+        "limits": [
+          "The entire four-fight story is not played to completion.",
+          "Ending component checks do not establish a played campaign result.",
+          "Headless Chromium; service workers blocked, offline update not exercised.",
+          "Static original-compatible compositions, no 1:1 certification.",
+          "Lying Figure story cannot launch while its exact SH2 Mannequin — Ambusher opponent has no combat image. Illustrated story is not a playable route."
+        ]
+      },
+      {
+        "path": "docs/production/vague32/qa-final/workshop-cache/report.json",
+        "sha256": "8f0a46ea524d70d7560f395ad6f39c27005d940de2486e3fc3e2d64874059524",
+        "status": "passed",
+        "checks": 9,
+        "captures": 3,
+        "browser": "158.0.8127.0",
+        "limits": [
+          "Two static Nurse preview states and one ordinary maximum-cache duel launch only.",
+          "No full battle, original source motion, offline update or 1:1 fidelity claim."
+        ]
+      }
+    ],
+    "serviceWorkers": "blocked",
+    "fullCampaignPlayed": false
+  },
+  "storyAdmission": [
+    {
+      "fighterId": "sh1_groaner_003",
+      "status": "first-chapter-owner-switch-and-checkpoint-resume-tested",
+      "fullCampaignPlayed": false
+    },
+    {
+      "fighterId": "sh2_lying_figure_020",
+      "status": "blocked-missing-combat-art",
+      "missingCombatProfiles": [
+        "sh2_mannequin_ambusher_023"
+      ],
+      "ordinaryLaunchRefusalVerified": true,
+      "introAndEnding": "isolated-production-components-tested",
+      "routeChanged": false,
+      "diagnosticBypassUsed": false
+    }
+  ],
+  "visualReview": {
+    "status": "all-final-captures-inspected-individually",
+    "captures": [
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh1_groaner_003-neutralLight-right-action.png",
+        "bytes": 1474780,
+        "sha256": "89866de3f0cf29a6616026dbea7afd939ba5991ce03635abf78482e84bd75690",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh1_groaner_003-neutralLight-right-recovered.png",
+        "bytes": 1475490,
+        "sha256": "aad6f4e1c0604952c16c3de203bee21a84b4e8f58496483be529a909ebd15199",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh1_groaner_003-neutralLight-left-action.png",
+        "bytes": 1474635,
+        "sha256": "8632927d443ba9bcd41dda68610ac602af7e21ffd242f2ec6161ff8007489d55",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh1_groaner_003-neutralLight-left-recovered.png",
+        "bytes": 1475224,
+        "sha256": "3859cf4783b88332f15074afef62d231d723dabe0e56b4a6d5e70544e9d8d4bc",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh1_groaner_003-neutralSpecial-right-action.png",
+        "bytes": 1475291,
+        "sha256": "b2aa7a44a91e0dd921ce0b647cbbc65c9f777ad867a7e6728321a2dc0e77bb9a",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh1_groaner_003-neutralSpecial-right-recovered.png",
+        "bytes": 1476030,
+        "sha256": "3dfb0558788a379edf97fecbe9aa68bd63c8a314cfa4b251f5448e5cbb03e0a8",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh1_groaner_003-neutralSpecial-left-action.png",
+        "bytes": 1475292,
+        "sha256": "b7a3ae0a00bda1711bdd7103e3c60f993c686ae088678d8ba2a5aaeafa756efb",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh1_groaner_003-neutralSpecial-left-recovered.png",
+        "bytes": 1475752,
+        "sha256": "3d28e317bfa4cbfd95effc7b9c4d28a5e7a01e6347adcecdef294537c7573887",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh4_sniffer_dog_male_053-walk-right-action.png",
+        "bytes": 1477719,
+        "sha256": "e4ce462db53b961276e13250b45e66cb883845ed9c5f7bda9fce3b2189a6a0ad",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh4_sniffer_dog_male_053-walk-right-recovered.png",
+        "bytes": 1478816,
+        "sha256": "7153ef57db6da854081eb39cbc161a628e9c52e6822f963ff12fb2a612759928",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh4_sniffer_dog_male_053-walk-left-action.png",
+        "bytes": 1477304,
+        "sha256": "9cb9ce4cc1eb55548f86460e30ac9ed4c6a62dca5666119f15b4319babb21557",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh4_sniffer_dog_male_053-walk-left-recovered.png",
+        "bytes": 1478055,
+        "sha256": "16a7d007ca1557d5a03758f936946b7ac54cd399ef0138a7963fcc12a156d79d",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh4_sniffer_dog_male_053-neutralLight-right-action.png",
+        "bytes": 1478330,
+        "sha256": "290a9745d42f81156e3e89b7e2279c4d82bd68d678a95e251182d88c4dae6209",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh4_sniffer_dog_male_053-neutralLight-right-recovered.png",
+        "bytes": 1478474,
+        "sha256": "bc9b5bdccd3665cca936f090dfbc4a37753671a389978036d308f8d6aaf23514",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh4_sniffer_dog_male_053-neutralLight-left-action.png",
+        "bytes": 1478378,
+        "sha256": "a188bf6f1a748e14174a04735e1d9251419416b1043697088c6cdbe609955a17",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/characters/sh4_sniffer_dog_male_053-neutralLight-left-recovered.png",
+        "bytes": 1478423,
+        "sha256": "7812a7cc1b95d026559f07e0d1b713b02daa850e8c9611ac8a0bd066b28e1b3a",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/origins/sh4_man_with_the_coat_067-right-action.png",
+        "bytes": 1481194,
+        "sha256": "173be49bcb51fe29d794233cb23f72da1b0a190c1f113fa778fac22dfe52d9fc",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/origins/sh4_man_with_the_coat_067-right-recovered.png",
+        "bytes": 1476476,
+        "sha256": "852d120867f61c4f1b4c790cb51e91473ed9ac7146a120a76f16b569b12f2c39",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/origins/sh4_man_with_the_coat_067-left-action.png",
+        "bytes": 1481149,
+        "sha256": "d7176053abfb4a98033697ba420c345bffe0567f7a6e66a6674bfac2de3b59ce",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/origins/sh4_man_with_the_coat_067-left-recovered.png",
+        "bytes": 1475964,
+        "sha256": "43b3b45698537cdfd0942b963976dc517042a7f698d9dfb42ae8865be44b1333",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/origins/sh2_eddie_dombrowski_032-right-action.png",
+        "bytes": 1485316,
+        "sha256": "3c384f39d7423643573eb5da9f9f1d6f31bb006b9588a5119fc93f80cd31c227",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/origins/sh2_eddie_dombrowski_032-right-recovered.png",
+        "bytes": 1479907,
+        "sha256": "dfe2293638a07db6c86b57623a8bbb9e97f8f95902d1bfc428f5fadec9e90988",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/origins/sh2_eddie_dombrowski_032-left-action.png",
+        "bytes": 1485848,
+        "sha256": "e3518d67fa6ba5a6945dfbfb7171235e515348812dff68f919f72d541b987ce7",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/origins/sh2_eddie_dombrowski_032-left-recovered.png",
+        "bytes": 1480104,
+        "sha256": "f3aa77f468f9585b527dc7ecb262d9bf3386d0d5aa42ecfb145ae844ef2a8131",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/stages/antique_shop-http-fight.png",
+        "bytes": 1184432,
+        "sha256": "87bd9072d95e4a5e067180ea4d08be22f49a7ce64e88b9baa2f4a81cdd9decd2",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/stages/lighthouse_sm-http-fight.png",
+        "bytes": 1412006,
+        "sha256": "0fdfa13e8b1131072315e53ea146aa77e0b30e9b8a4cd56a616a38a7e180e182",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh1_groaner_003/selection-intro.png",
+        "bytes": 327212,
+        "sha256": "5784bef6c06eff533b864fceb68778709298b6169ae8a43ac75928a38569f047",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh1_groaner_003/first-chapter-intro.png",
+        "bytes": 82670,
+        "sha256": "1aeafddcac867b8da02fb28d1160597f6e85d9334563643cde4c4f87086ceabb",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh1_groaner_003/owner-switch-layout.png",
+        "bytes": 710681,
+        "sha256": "e4123871103302c59ab348995201f4aa43dbc673136c43375af477d244103b70",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh1_groaner_003/ending-component.png",
+        "bytes": 298334,
+        "sha256": "be474c3cf1d65325d24605c3c9c81e0e6d768d9ee1c449fc0fa9de66c2ffa98c",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh2_lying_figure_020/selection-intro.png",
+        "bytes": 370450,
+        "sha256": "27f9d5498b9df9326b2c785fa074cdd9b3021d85db82622df6c3a2d6ed006b29",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh2_lying_figure_020/story-admission-blocked.png",
+        "bytes": 815489,
+        "sha256": "11bcb48e817d19d642608cbb4d798457ba9d7e19f9e47afd4775c8c489c6c4fb",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh2_lying_figure_020/intro-component.png",
+        "bytes": 350292,
+        "sha256": "1801ffafcad56f7a1f4b10886dddc21d4ce495c3b8c1a74abd2349d0c8eee0a9",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/story/sh2_lying_figure_020/ending-component.png",
+        "bytes": 326424,
+        "sha256": "e75b2c2f66534b9ec275931f2d771125c96eb5faf144ed5376bdc8f7b0025f31",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/workshop-cache/nurse-light-present.png",
+        "bytes": 138642,
+        "sha256": "865f09e3bd172bda37e15b64f017a1dca74f6db81b30a3dbc8a3912b1cfd7760",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/workshop-cache/nurse-heavy-missing.png",
+        "bytes": 140142,
+        "sha256": "f2dc6f25b2ca13e8f9352f1b520d3cf491040a19bac010d41006a5f8a7807a80",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      },
+      {
+        "path": "docs/production/vague32/qa-final/workshop-cache/largest-native-pair.png",
+        "bytes": 1147416,
+        "sha256": "41fdda311fb662abb9dd720391d591b3ae87e576586054aac1aaf688b5e14934",
+        "visualReview": "inspected-individually",
+        "reviewScope": "Visible framing, pose, ground contact where applicable, UI readability, origin alignment; not canon certification."
+      }
+    ],
+    "fidelityCertified": false
+  },
+  "initialAttempts": {
+    "directory": "docs/production/vague32/qa-final/initial-failures",
+    "notes": [
+      "An initial parallel browser run had one crashed target; final sequential pose run passed. No root cause is asserted for that process crash.",
+      "The original muzzle observer required the exact one-tick active frame. Real input was accepted, but the renderer could skip that tick; the corrected passive observer records the actual outgoing projectile and checks displacement against elapsed simulation ticks. Final captures happened one tick after emission for all four cases.",
+      "The initial Lying Figure story harness incorrectly expected a launch despite an absent exact opponent. The final explicit blocker contract verifies refusal and leaves the route and combat admission unchanged."
+    ]
+  },
+  "limits": [
+    "Static pose and narrative candidates remain unverified for 1:1 fidelity.",
+    "No new animated cycle or original source timing is certified.",
+    "Bullet rendering remains the existing procedural effect; this validates origin placement, not a source-exact projectile bitmap.",
+    "No offline update, remote deployment, CI run or full story completion is covered by these local HTTP tests."
+  ]
+}

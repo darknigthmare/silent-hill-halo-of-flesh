@@ -65,7 +65,7 @@ for (const [id, asset] of assets) {
     if (!Array.isArray(frame.anchor) || frame.anchor.length !== 2 || frame.anchor.some((value) => !Number.isFinite(value) || value < 0 || value > 1)) {
       add(id, 'pose', 'bloquant', `ancre invalide (frame ${index})`);
     }
-    if (!Number.isFinite(frame.bodyHeight) || frame.bodyHeight <= 0 || frame.bodyHeight > 1) add(id, 'pose', 'bloquant', `\`bodyHeight\` invalide (frame ${index})`);
+    if (!Number.isFinite(frame.bodyHeight) || frame.bodyHeight < .05 || frame.bodyHeight > 4) add(id, 'pose', 'bloquant', `\`bodyHeight\` invalide : attendu 0.05..4 (frame ${index})`);
     if (!Array.isArray(frame.visibleBounds)) {
       if (Array.isArray(runtimeFrame?.visibleBounds)) add(id, 'pose', 'registre', `\`visibleBounds\` absent du registre source (frame ${index}), recalculé au build : aucune conséquence runtime`);
       else add(id, 'pose', 'calibrage', `\`visibleBounds\` absent (frame ${index}) : le cadrage retombe sur l’image entière`);

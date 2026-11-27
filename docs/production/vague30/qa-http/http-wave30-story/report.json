@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "wave": 30,
+  "passed": true,
+  "checks": [
+    {
+      "name": "Dedicated HTTP port unused",
+      "passed": true
+    },
+    {
+      "name": "Built HTTP app ready",
+      "passed": true
+    },
+    {
+      "name": "Exact original Air Screamer introduction displayed",
+      "passed": true,
+      "detail": {
+        "src": "/assets/stories/sh1_air_screamer_001.intro.7ed088410461.png",
+        "width": 1672,
+        "height": 941,
+        "alt": "Un Air Screamer de Silent Hill 1999, ailes entières déployées, passe devant la maison de Levin Street dans la neige et le brouillard."
+      }
+    },
+    {
+      "name": "Accessible story image description present",
+      "passed": true
+    },
+    {
+      "name": "Four original encounters remain listed",
+      "passed": true
+    },
+    {
+      "name": "First story chapter displays the bound introduction",
+      "passed": true,
+      "detail": {
+        "src": "/assets/stories/sh1_air_screamer_001.intro.7ed088410461.png",
+        "title": "DERNIER PASSAGE",
+        "caption": "Au-dessus de Levin Street, un battement traverse la neige. La rue reste vide sous les ailes."
+      }
+    },
+    {
+      "name": "Opening yields to ordinary fighting phase",
+      "passed": true
+    },
+    {
+      "name": "Ending requires completed exact-owner story",
+      "passed": true,
+      "detail": {
+        "path": "assets/stories/sh1_air_screamer_001.ending.2aa5dbd07554.png",
+        "won": null,
+        "lost": null,
+        "other": null
+      }
+    },
+    {
+      "name": "Ending fetched byte-for-byte over HTTP",
+      "passed": true
+    },
+    {
+      "name": "Book of Memories Air Screamer does not borrow SH1 story artwork",
+      "passed": true
+    },
+    {
+      "name": "Introduction fetched byte-for-byte over HTTP",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stories/sh1_air_screamer_001.intro.7ed088410461.png",
+          "status": 200,
+          "bytes": 1800262,
+          "sha256": "7ed08841046109a2c1e570f7b22b9d857e8c7a526807420f8046be1998c84a82"
+        }
+      ]
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "captures": [
+    {
+      "file": "selection-intro.png",
+      "scope": "normal-story-selection",
+      "bytes": 330738,
+      "sha256": "640ef8d95fe3a1c9cf2dc7ad5128ab92fec842b64b32068d9687da06d070a41c"
+    },
+    {
+      "file": "first-chapter-intro.png",
+      "scope": "normal-first-chapter",
+      "bytes": 84558,
+      "sha256": "89db0db4a0be6d28ed11b45e8f4145fa9b17de6b4094a2c37f7ba013b6bd555d"
+    },
+    {
+      "file": "ending-component.png",
+      "scope": "isolated-production-component-not-played-ending",
+      "bytes": 313459,
+      "sha256": "684c97f1331ccf21141e7463921d2c8a889bb3ccf65dae8cc8ce5abf5fd4bd24"
+    }
+  ],
+  "errors": [],
+  "method": "Actual built HTTP app: ordinary story selection and first-chapter launch. Ending rendered separately through the production story helper and setChronicleImage; no completed run injected into the game.",
+  "limits": [
+    "The entire four-fight story is not played to completion.",
+    "Ending component checks do not establish a played campaign result.",
+    "Headless Chromium; service workers blocked, offline update not exercised.",
+    "Static original-compatible compositions, no1:1 certification."
+  ],
+  "browser": "143.0.7499.4"
+}

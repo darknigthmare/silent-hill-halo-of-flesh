@@ -1,0 +1,121 @@
+{
+  "schema": 1,
+  "wave": 30,
+  "engine": "built-in image_gen",
+  "oneImagePerPlane": true,
+  "pixelsModified": false,
+  "stages": [
+    {
+      "stageId": "shimizu_residence",
+      "source": "shf",
+      "name": "SHIMIZU RESIDENCE II — SALLE À MANGER",
+      "scene": "shf-residence-ii-dining-yellowed-calendar",
+      "ceiling": true,
+      "referenceIds": [
+        "EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026",
+        "EXT10_SHF_RESIDENCE_DINING_20261026"
+      ],
+      "localEvidenceIds": [
+        "V30_SHF_DINING_CALENDAR",
+        "V30_SHF_RESIDENCE_GUIDE"
+      ],
+      "background": {
+        "key": "v30_shimizu_bg",
+        "file": "exec-e8ac62e2-ed1f-4576-bf22-2e3c52559950.png",
+        "layer": "bg-residence-ii-dining",
+        "prompt": "Edit the provided gameplay screenshot into ONE standalone static 2D fighting-game stage background, an empty, carefully sourced reconstruction of Silent Hill f's Shimizu Residence dining room in RESIDENCE II, the Yellowed Calendar view. Landscape 16:9, full bleed opaque image, no borders or writing. Treat the screenshot as the binding architectural/material source, not as a texture to paste. Remove the girl completely, all UI, the interaction dot and any weapon. Show the same identifiable modest Japanese dining room from a low, nearly frontal side-view camera suitable for a 2D fighting game. Preserve the distinctive olive-brown woven tatami floor with green patterned borders, the dark wooden wall and sliding panel frames, the low dark wooden cabinet at the back with an old rectangular radio on it, and the low ROUND wooden dining table with a steel cooking pot and ladle, white bowls, small cup, bottle and folded cloth. A simple low backed floor-chair with dull beige check pattern belongs at the far side of that table. Dark brown square sitting cushions. Keep the small paper/calendar on the tabletop face-down with NO readable date or symbols. Arrange the table and seating in the back third, with broad continuous tatami across the lower 43% as the visual fighter lane. This wider side-on layout is an explicit versus adaptation, not an invented new kitchen. Low ceiling only just visible at the top, short room depth, aged subdued green-brown lighting as in the input. Retain believable modest lived-in age without adding blood, rust sheets, supernatural growth, statues, lanterns, shoji forests, windows to outdoors, new ornate furniture or a kitchen. Absolutely no people, creatures, ghosts, shadows of people, trophies, text, HUD, logos, vignette border or motion blur. Crisp high quality hand-painted realistic game backplate with textured materials, well controlled muted lighting, readable silhouette contrast, not photorealistic marketing art. One image only. No near foreground occluder: separate foreground will be a second asset.",
+        "transparentBackground": false,
+        "originalOutputHint": "Generated images are saved to /workspace/scratch/3dcec7dd0da0/generated_images as /workspace/scratch/3dcec7dd0da0/generated_images/exec-e8ac62e2-ed1f-4576-bf22-2e3c52559950.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "foreground": {
+        "key": "v30_shimizu_fg",
+        "file": "exec-79021239-5f12-4049-80b8-5092a73a6f6b.png",
+        "layer": "near-floor-cushion",
+        "prompt": "Create ONE transparent PNG foreground parallax plane derived from the supplied Silent Hill f Shimizu Residence II dining-room background. Match its exact muted olive-brown lighting, realistic hand-painted texture, near-frontal low camera and 16:9 wide canvas proportions. Preserve the full wide canvas. Render ONLY one dark brown low square tatami floor cushion, patterned with the subtle worn geometric fabric seen around the round table, partly cropped by the bottom-left edge. Cushion should occupy roughly x=0–17% and y=85–100% of the entire canvas, the right and upper majority completely empty transparent. A very small soft contact shadow directly under the cushion may be partially translucent; no solid floor, no full background, no room, no wall, no table, no furniture beyond that cushion. No figures, lettering, HUD, frame or visible checkerboard. Actual alpha transparency for every empty pixel. The cushion stays very low so it will never cover a fighter's body. This is a separate static decorative parallax plane, not an animation or collision object. One full-canvas image only.",
+        "transparentBackground": true,
+        "originalOutputHint": "Generated images are saved to /workspace/scratch/3dcec7dd0da0/generated_images as /workspace/scratch/3dcec7dd0da0/generated_images/exec-79021239-5f12-4049-80b8-5092a73a6f6b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "notes": [
+        "Vue de la table du Yellowed Calendar dans Shimizu Residence II, voie menant à Ending 1, après le souvenir. Les anciennes mentions Residence I du projet sont corrigées séparément ; ID de stage conservé.",
+        "La capture native montre tatami à bordures vertes, table basse ronde, pot, bols, bouteille, coussins, siège bas à dossier quadrillé et meuble audiovisuel sombre. La caméra frontale, les panneaux, l’étendue du sol, le nombre/placement des meubles et les appareils radio/TV sont reconstruits ou interprétés pour le versus, sans mesure 1:1.",
+        "Ni personnage, souvenir rejoué, combat des parents, calendrier lisible, autre pièce, transition de résidence, nouvelle animation ou nouveau danger. Un fond opaque et un coussin rapproché avec alpha, chacun fixe et indépendant.",
+        "geometry.ceiling=true conserve le support précédemment déduit de la couche rooms. Collisions, sol de combat, paramètres physiques et identifiant inchangés."
+      ]
+    },
+    {
+      "stageId": "arcade_toluca_lake",
+      "source": "arcade",
+      "name": "THE ARCADE — TOLUCA LAKE",
+      "scene": "arcade-stage3-area1-lakeside-quay",
+      "ceiling": false,
+      "referenceIds": [
+        "EXT15"
+      ],
+      "localEvidenceIds": [
+        "V30_ARCADE_KONAMI_2010_08",
+        "V30_ARCADE_SCREEN_GALLERY",
+        "V30_ARCADE_STAGES"
+      ],
+      "background": {
+        "key": "v30_lake_bg",
+        "file": "exec-c180e300-9a30-4345-bfce-06c52eaf21df.png",
+        "layer": "bg-stage3-quay",
+        "prompt": "Edit the supplied official Silent Hill: The Arcade gameplay screenshot into ONE standalone empty landscape 16:9 stage background for a 2D fighting game. This precise place is the START OF STAGE 3 AREA 1, TOLUCA LAKE PROMENADE / QUAY, as shown in the input. Remove Eric, Tina, Emilie, all other people, all UI/captions/numbers/weapon/status text. Reconstruct the waterfront architecture actually visible: substantial plain grey stone square piers with slightly projecting flat capstones, dark iron horizontal railing between them, a black upright lamp with a milky spherical globe rising from a stone pier, and the lake disappearing into extremely pale grey-white dense fog behind. Keep the same quiet washed-out daylight, muted cool grey stone, soft wet dull surfaces and milky distance. Use a mostly frontal side-on view of a short broad section of this promenade as a versus-camera adaptation: stone piers and railing run across the rear at about 54% image height, one globe lamp near the left third and another faintly behind at the far right edge. Lower 42% is continuous flat grey stone-paved walkway for fighters. This is a raised stone waterfront walkway, NOT a wooden dock, NOT on board a ship, NOT the 1918 sequence, NOT a cemetery, not Rosewater Park from Silent Hill 2. No Little Baroness, no boats, no mountains, no buildings invented in the fog, no chains, ropes, cargo, trees, broken pier, supernatural forms or orange sunset. Static scene, no motion blur or animated water. Preserve restrained atmospheric plainness and source-specific pier/railing/globe shapes. Crisp realistic hand-painted game backplate, fine aged textures and clear neutral fighting lane, no photo border or vignette. Full bleed opaque canvas, single image only. Do not add a close foreground object; that is a separate parallax asset.",
+        "transparentBackground": false,
+        "originalOutputHint": "Generated images are saved to /workspace/scratch/3dcec7dd0da0/generated_images as /workspace/scratch/3dcec7dd0da0/generated_images/exec-c180e300-9a30-4345-bfce-06c52eaf21df.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "foreground": {
+        "key": "v30_lake_fg",
+        "file": "exec-cbc1d3c6-3c0c-4662-96bb-625f94bc3906.png",
+        "layer": "near-stone-pier",
+        "prompt": "Create ONE transparent PNG foreground parallax plane for the supplied Silent Hill: The Arcade Stage 3 Area 1 Toluca Lake stone-quay stage. Match the source backplate's cool grey diffuse foggy daylight, stone block texture, flat slab caps and realistic hand-painted rendering. Landscape 16:9 FULL WIDE CANVAS. Render ONLY the near cropped corner of a plain grey stone pier at the extreme RIGHT edge. The fragment occupies x=94–100% and y=72–100%; its horizontal projecting cap at y=72% may extend left to x=92%. A very short dark iron rail segment may exit the right edge, nothing extends into the middle. All other pixels across the wide canvas must be genuine transparent alpha. No lake, no fog layer filling the canvas, no ground rectangle, no sky, no lamps, no duplicated full background, no people, creatures, symbols, HUD or text. This is one static decorative near-edge object, no collision or animation implied. Keep the principal fighter area fully unobstructed. No checkerboard pattern: transparency only. One image only.",
+        "transparentBackground": true,
+        "originalOutputHint": "Generated images are saved to /workspace/scratch/3dcec7dd0da0/generated_images as /workspace/scratch/3dcec7dd0da0/generated_images/exec-cbc1d3c6-3c0c-4662-96bb-625f94bc3906.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "notes": [
+        "La capture native distribuée dans la galerie Konami Europe 2010 porte explicitement STAGE 3 AREA 1 / Toluca Lake. Piliers carrés en pierre, couvre-murs, garde-corps sombre, réverbère à globe et brouillard pâle déterminent cette vue.",
+        "Les acteurs/UI sont retirés ; la caméra latérale, la répétition des piliers, le nombre des lampes, le dessin du dallage et la largeur du quai sont une adaptation versus. Le fond brumeux ne certifie pas une vue complète du lac ni une géométrie 1:1.",
+        "Aucun pont du Little Baroness, état 1918/1993, décor de Silent Hill 2, animation de mer, chute ou nouveau danger. Un fond opaque et un fragment de pilier rapproché avec alpha, chacun fixe et indépendant.",
+        "geometry.ceiling=false conserve l’absence de support de plafond. Les règles, collisions et ID sont inchangés."
+      ]
+    },
+    {
+      "stageId": "arcade_prison",
+      "source": "arcade",
+      "name": "THE ARCADE — TOLUCA PRISON / OTHERWORLD",
+      "scene": "toluca-prison-otherworld-cell-corridor",
+      "ceiling": false,
+      "referenceIds": [
+        "EXT15"
+      ],
+      "localEvidenceIds": [
+        "V30_ARCADE_KONAMI_2010_05",
+        "V30_ARCADE_SCREEN_GALLERY",
+        "V30_ARCADE_STAGES",
+        "V30_ARCADE_ROUTE_MAP_GUIDE"
+      ],
+      "background": {
+        "key": "v30_prison_bg",
+        "file": "exec-84046c21-1bde-48d2-bd97-e9600ffe0473.png",
+        "layer": "bg-otherworld-cell-corridor",
+        "prompt": "Transform the supplied official Silent Hill: The Arcade screenshot into ONE empty static 16:9 fighting-game environment backplate of the same specific Toluca Prison OTHERWORLD CELL CORRIDOR. Use the input as the binding architectural and color reference: narrow rectangular rusted cell doors with closely spaced vertical black metal bars on one side, thick rough distressed dark-red corroded dividing piers, dark solid wall surfaces, a mottled red and turquoise/cyan corroded floor and cold reflected patches, very deep black cell interiors. Remove the upside-down creature and ALL other creatures, people, human silhouettes, effects, HUD, health bars, bullets, captions, lettering and symbols. Recompose the corridor as a mostly side-on versus view looking across its widened clear fighting lane at a row of three barred cell doors and thick red rough square piers. Keep the distinctive battered bars and mottled dark crimson/turquoise materials of this exact Arcade screenshot; do NOT redesign it as a Silent Hill 2 prison courtyard, execution room, circular arena, mine, hospital or ornate dungeon. Dark low ceiling with plain rectangular beams just visible. Lower 40% should be continuous flat solid corroded mottled floor, no pits or rails across the lane. Keep the dense dim red light with restrained turquoise reflected patches, never neon rainbow. All geometry stays static, no moving bars, no liquid flood, no pipes or chains invented, no skulls, no candles, no gore tableaux, no corpses or faces inside cells. The front-facing camera and broadened lane are an explicit 2D versus adaptation; preserve material identity and plain cell architecture. High quality realistic hand-painted game background, crisp readable silhouettes, detailed weathered texture, full bleed opaque image, no border/vignette, no near foreground occluder (separate asset follows). Single image only.",
+        "transparentBackground": false,
+        "originalOutputHint": "Generated images are saved to /workspace/scratch/3dcec7dd0da0/generated_images as /workspace/scratch/3dcec7dd0da0/generated_images/exec-84046c21-1bde-48d2-bd97-e9600ffe0473.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "foreground": {
+        "key": "v30_prison_fg",
+        "file": "exec-ca8715d5-fceb-4296-ab63-1165b20fad84.png",
+        "layer": "near-cell-jamb",
+        "prompt": "Create ONE transparent PNG near foreground plane for the supplied Silent Hill: The Arcade Toluca Prison OTHERWORLD cell-corridor backplate. Match its dark crimson rust with subtle turquoise wear and the exact plain square-section iron bars of the cells, realistic hand-painted rendering. Preserve a 16:9 FULL WIDE CANVAS. Render ONLY a close cropped edge of the left-hand barred cell doorway: one narrow solid vertical corroded iron jamb attached to and partly cut off by the extreme LEFT canvas edge (x=0–3% for the full canvas height), and two very short horizontal square bars projecting into the image no farther than x=8%, at y=21% and y=57%. Keep these bars physical and blunt, not spikes, and avoid any chain. All pixels to the right of x=8% must be completely transparent; all empty pixels elsewhere true alpha too. No ceiling, no wall, no cell interior, no floor, no fog, no glow filling canvas, no background, no figures, text, HUD, symbols or checkerboard. The far majority is empty transparent area for fighter readability. This is one static decorative parallax plane, not an animation or a trap. One image only.",
+        "transparentBackground": true,
+        "originalOutputHint": "Generated images are saved to /workspace/scratch/3dcec7dd0da0/generated_images as /workspace/scratch/3dcec7dd0da0/generated_images/exec-ca8715d5-fceb-4296-ab63-1165b20fad84.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+      },
+      "notes": [
+        "La capture native Konami Europe 2010 n°05 montre des cellules à barreaux, murs rouge sombre et surfaces turquoise/cyan. Son rattachement au corridor Otherworld de Toluca Prison recoupe le catalogue Stage 2 Area 2 et la branche Otherworld documentée par la carte ; le point exact du parcours n’est pas mesuré.",
+        "Vue frontale élargie pour le versus : trois portes, entraxes, plafond, éclairage et étendue du sol reconstruits depuis la vue oblique partiellement masquée. Ni cour de prison SH2, ni salle du Split Worm, ni numéro de cellule inventé comme fait canonique.",
+        "État visuel Otherworld fixe, sans transition, monstres, projectiles, eau montante ou danger neuf. Un fond opaque et un jambage rapproché avec alpha, chacun fixe et indépendant.",
+        "geometry.ceiling=false conserve le contrat antérieur, car les motifs procéduraux cells/chains/watchtower/bars/lights ne fournissaient aucun plafond autorisé. Le plafond peint n’accorde aucune prise ni Dénouement supplémentaire."
+      ]
+    }
+  ]
+}

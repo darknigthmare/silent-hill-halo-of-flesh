@@ -1,0 +1,90 @@
+{
+  "method": "Artifact Tool authors, recalculates and renders the donor. This stdlib-only adapter transfers its reviewed cells while preserving every unrelated ZIP payload byte.",
+  "beforeSha256": "8a3d636b899934e640902aa29543742041e03fa84377b8543dbaa62a7db43db5",
+  "donorSha256": "fa2865a021670489d8ef11be0b7b3b21f42fcc5964047887caf9d1629b6a797d",
+  "afterSha256": "02fb703d83ed111775d6ca9c8344cc64fc3ce7be75a75c96949503c5633f4db3",
+  "inputHashes": {
+    "requirements": "9169134b0e8512cf48335aa0cb93a52a0ac4730249f8496a5988d7634e35b57b",
+    "associations": "ddaf178dcf240697c3af53e2e34acdffb24f46370d6d966ad8039755554eaffd",
+    "changeLog": "3f18d04083603b78fb2a79a0fff9f7ae379b67266f7a5b82a2a1343e1a35e113"
+  },
+  "sheetNames": [
+    "Corpus",
+    "Stages",
+    "Guide combat",
+    "Associations guide"
+  ],
+  "sections": 68,
+  "modules": 10,
+  "associations": 445,
+  "changedParts": [
+    "xl/tables/table5.xml",
+    "xl/worksheets/sheet3.xml",
+    "xl/worksheets/sheet4.xml"
+  ],
+  "byteIdenticalParts": 18,
+  "historicalSheets": [
+    {
+      "sheet": "Corpus",
+      "part": "xl/worksheets/sheet1.xml",
+      "sha256": "70ecb8223de0384ac2e0d616ce49235d06ff0dd3c5f77162e1e37c1f0274bce3",
+      "cells": 962,
+      "formulas": 3,
+      "conditionalFormats": 2,
+      "validations": 0
+    },
+    {
+      "sheet": "Stages",
+      "part": "xl/worksheets/sheet2.xml",
+      "sha256": "1b7eeed76ea1b663bbc4a5426a73473e798b1290b6ee01696af7e91a5f0884c0",
+      "cells": 1310,
+      "formulas": 4,
+      "conditionalFormats": 2,
+      "validations": 2
+    }
+  ],
+  "sourceCellsChangedOrAdded": 4,
+  "associationCounterFormulasUpdated": 6,
+  "rowHeightsIncreased": [],
+  "appendedRows": [],
+  "preservedByteExactly": [
+    "all historical worksheets",
+    "all historical tables",
+    "styles",
+    "shared strings",
+    "workbook metadata",
+    "existing Guide combat table definitions",
+    "theme",
+    "other unrelated ZIP parts"
+  ],
+  "additiveNativeTable": [],
+  "preservedGuideFeatures": [
+    "all unchanged cells",
+    "all existing style indices",
+    "column widths",
+    "frozen panes",
+    "validations",
+    "conditional formats",
+    "existing comments and hyperlinks",
+    "native table identities"
+  ],
+  "formulaValues": {
+    "Guide combat": {
+      "B4": 68,
+      "B5": 5,
+      "E4": 10,
+      "E5": 1,
+      "H4": 37,
+      "H5": 1
+    },
+    "Associations guide": {
+      "B4": 445,
+      "B5": 123,
+      "E4": 230,
+      "E5": 15,
+      "H4": 66,
+      "H5": 11
+    }
+  },
+  "status": "passed"
+}

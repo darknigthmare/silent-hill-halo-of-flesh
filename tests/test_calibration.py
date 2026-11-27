@@ -48,9 +48,22 @@ class CalibrationTests(unittest.TestCase):
         self.packet['frames'][0]['origin']='fake'
         with self.assertRaises(ValueError):self.apply()
     def test_invalid_values_fail(self):
-        for key,value in [('anchor',[float('nan'),.5]),('bodyHeight',True),('facing',True),('bodyHeight',0),('facing',0)]:
+        for key,value in [('anchor',[float('nan'),.5]),('anchor',[.5,float('inf')]),('anchor',[-.01,.5]),('anchor',[.5,1.01]),('bodyHeight',True),('bodyHeight',.049),('bodyHeight',4.001),('bodyHeight',float('nan')),('bodyHeight',float('inf')),('bodyHeight',-float('inf')),('facing',True),('bodyHeight',0),('facing',0)]:
             packet=copy.deepcopy(self.packet);packet['frames'][0][key]=value
             with self.subTest(key=key,value=value),self.assertRaises(ValueError):self.apply(packet)
+    def test_finite_body_height_bounds_round_trip_through_json_and_registry(self):
+        raw=(self.root/self.image).read_bytes()
+        for value in (.05,2.5,4):
+            with self.subTest(value=value):
+                current=json.loads(self.path.read_text())['assets']['test']['frames']
+                packet=copy.deepcopy(self.packet);packet['previousFrames']=copy.deepcopy(current)
+                packet['frames'][0].update(bodyHeight=value,anchor=[0,1])
+                self.apply(json.loads(json.dumps(packet)))
+                stored=json.loads(self.path.read_text())['assets']['test']
+                self.assertEqual(stored['frames'][0]['bodyHeight'],value)
+                self.assertEqual(stored['frames'][0]['anchor'],[0,1])
+                self.assertEqual(stored['fidelity'],'unverified')
+                self.assertEqual((self.root/self.image).read_bytes(),raw)
     def test_modified_image_fails_without_writing(self):
         (self.root/self.image).write_bytes(b'not a PNG');before=self.path.read_bytes()
         with self.assertRaises((ValueError,OSError)):self.apply()

@@ -1,0 +1,2303 @@
+{
+  "schema": 1,
+  "wave": 29,
+  "generatedAt": "2026-11-25T08:26:51.000Z",
+  "api": "loreFinisher from src/lore-cinematics.js",
+  "definitionDiscovery": "cinematicSummary(definition.id).requirements.needsCeiling over actual ROSTER fatalities",
+  "method": "Three isolated in-memory registry states in one Node process: HEAD baseline entries, uncorrected wave29 descriptors with ceiling=true, and corrected descriptors with false only for book_light/book_steel. The real loreFinisher API compiles or blocks every actual ceiling-dependent signature/nightmare definition against the same valid standing target on all five actual stage descriptors. The original registry object is restored in finally; no production file is written.",
+  "baselineCommit": "2af87b6a1a8740a0759ce7c8c2746be19c48f4af",
+  "sourceHashes": {
+    "loreCinematics": "211596a8d9054ca8481e4668b9e9e91db4e46d48cb85c90a4c7c4e9ef4e96845",
+    "baselineStageManifest": "431ce490071a468632146e4ee0f5a9a05c3a2f86557c9590c3b7fc834750d065"
+  },
+  "targetId": "sh2_bubble_head_nurse_024",
+  "attackerCount": 6,
+  "definitionCount": 12,
+  "stages": 5,
+  "apiCalls": 180,
+  "uncorrectedChangedPlans": 24,
+  "correctedPlanComparisons": 60,
+  "allCorrectedPlansMatchBaseline": true,
+  "summary": [
+    {
+      "stageId": "arcade_hospital",
+      "definitionCases": 12,
+      "baselineAllowed": 12,
+      "uncorrectedAllowed": 12,
+      "correctedAllowed": 12,
+      "correctedFullPlansMatchBaseline": true,
+      "changedByUncorrectedCandidate": 0,
+      "proposedCeiling": true
+    },
+    {
+      "stageId": "book_light",
+      "definitionCases": 12,
+      "baselineAllowed": 0,
+      "uncorrectedAllowed": 12,
+      "correctedAllowed": 0,
+      "correctedFullPlansMatchBaseline": true,
+      "changedByUncorrectedCandidate": 12,
+      "proposedCeiling": false
+    },
+    {
+      "stageId": "book_steel",
+      "definitionCases": 12,
+      "baselineAllowed": 0,
+      "uncorrectedAllowed": 12,
+      "correctedAllowed": 0,
+      "correctedFullPlansMatchBaseline": true,
+      "changedByUncorrectedCandidate": 12,
+      "proposedCeiling": false
+    },
+    {
+      "stageId": "film_midwich",
+      "definitionCases": 12,
+      "baselineAllowed": 12,
+      "uncorrectedAllowed": 12,
+      "correctedAllowed": 12,
+      "correctedFullPlansMatchBaseline": true,
+      "changedByUncorrectedCandidate": 0,
+      "proposedCeiling": true
+    },
+    {
+      "stageId": "film_church",
+      "definitionCases": 12,
+      "baselineAllowed": 12,
+      "uncorrectedAllowed": 12,
+      "correctedAllowed": 12,
+      "correctedFullPlansMatchBaseline": true,
+      "changedByUncorrectedCandidate": 0,
+      "proposedCeiling": true
+    }
+  ],
+  "results": [
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_signature",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_nightmare",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_signature",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_nightmare",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_signature",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_nightmare",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_signature",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "arcade_hospital",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "arcade_hospital",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "uncorrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "arcade_hospital",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_signature",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "a78fd59d35299d4347627fd86efefa379f71478c755b535155727489a5c2e156",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "a78fd59d35299d4347627fd86efefa379f71478c755b535155727489a5c2e156",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_nightmare",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "f0f63bac74578ab6540de16821d0c480c73afdbb9a2c9ede47c8a2c0919cb164",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "f0f63bac74578ab6540de16821d0c480c73afdbb9a2c9ede47c8a2c0919cb164",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_signature",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "acf598cffbdf0188ff894a1d47f2cbd5ec29feb14359b6c7411d52a5e201007d",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "acf598cffbdf0188ff894a1d47f2cbd5ec29feb14359b6c7411d52a5e201007d",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_nightmare",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "1abbf144ff30f96ee7feea3a1636ed70ea0902e2a9696aa0379b876db05861c4",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "1abbf144ff30f96ee7feea3a1636ed70ea0902e2a9696aa0379b876db05861c4",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "3a7dd48426547e7e42675934a24a752e0ac372a02a5e28522c563a71ce139081",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "3a7dd48426547e7e42675934a24a752e0ac372a02a5e28522c563a71ce139081",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "855e6721b731d87397eeba5269c6ac4c59e6e5a6f5506ed1905ea74675d17a94",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "855e6721b731d87397eeba5269c6ac4c59e6e5a6f5506ed1905ea74675d17a94",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_signature",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "8aaab7b694dcce6a0daa73b635c14cc1d875cc34d20268773ef1021c0d31994a",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "8aaab7b694dcce6a0daa73b635c14cc1d875cc34d20268773ef1021c0d31994a",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_nightmare",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "b2bd69c4f05e4f15a58116b2ae2b9073c04e140f38b2b5fa2dbf4862cc274e7a",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "b2bd69c4f05e4f15a58116b2ae2b9073c04e140f38b2b5fa2dbf4862cc274e7a",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_signature",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "a72e9f51b2dbecc52e59e5dea8e331837f267019525defcf61673b7915db2d8b",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "a72e9f51b2dbecc52e59e5dea8e331837f267019525defcf61673b7915db2d8b",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "df03ab759e264591845ff981a1e2853ec2b51cf72791becdaa339df64f29befe",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "df03ab759e264591845ff981a1e2853ec2b51cf72791becdaa339df64f29befe",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "e77cffd84b20c5cc812567888675164900d471f2292908189b3e12e07f13d9c4",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "e77cffd84b20c5cc812567888675164900d471f2292908189b3e12e07f13d9c4",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_light",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "book_light",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "c57ac95110ca68bab3e52abb11e3470935f4f68b4dba358efd2d8768d1b0d292",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_light",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "book_light",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "c57ac95110ca68bab3e52abb11e3470935f4f68b4dba358efd2d8768d1b0d292",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_signature",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "a78fd59d35299d4347627fd86efefa379f71478c755b535155727489a5c2e156",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "a78fd59d35299d4347627fd86efefa379f71478c755b535155727489a5c2e156",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_nightmare",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "f0f63bac74578ab6540de16821d0c480c73afdbb9a2c9ede47c8a2c0919cb164",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "f0f63bac74578ab6540de16821d0c480c73afdbb9a2c9ede47c8a2c0919cb164",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_signature",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "acf598cffbdf0188ff894a1d47f2cbd5ec29feb14359b6c7411d52a5e201007d",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "acf598cffbdf0188ff894a1d47f2cbd5ec29feb14359b6c7411d52a5e201007d",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_nightmare",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "1abbf144ff30f96ee7feea3a1636ed70ea0902e2a9696aa0379b876db05861c4",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "1abbf144ff30f96ee7feea3a1636ed70ea0902e2a9696aa0379b876db05861c4",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "3a7dd48426547e7e42675934a24a752e0ac372a02a5e28522c563a71ce139081",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "3a7dd48426547e7e42675934a24a752e0ac372a02a5e28522c563a71ce139081",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "855e6721b731d87397eeba5269c6ac4c59e6e5a6f5506ed1905ea74675d17a94",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "855e6721b731d87397eeba5269c6ac4c59e6e5a6f5506ed1905ea74675d17a94",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_signature",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "8aaab7b694dcce6a0daa73b635c14cc1d875cc34d20268773ef1021c0d31994a",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "8aaab7b694dcce6a0daa73b635c14cc1d875cc34d20268773ef1021c0d31994a",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_nightmare",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "b2bd69c4f05e4f15a58116b2ae2b9073c04e140f38b2b5fa2dbf4862cc274e7a",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "b2bd69c4f05e4f15a58116b2ae2b9073c04e140f38b2b5fa2dbf4862cc274e7a",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_signature",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "a72e9f51b2dbecc52e59e5dea8e331837f267019525defcf61673b7915db2d8b",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "a72e9f51b2dbecc52e59e5dea8e331837f267019525defcf61673b7915db2d8b",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "df03ab759e264591845ff981a1e2853ec2b51cf72791becdaa339df64f29befe",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "df03ab759e264591845ff981a1e2853ec2b51cf72791becdaa339df64f29befe",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "e77cffd84b20c5cc812567888675164900d471f2292908189b3e12e07f13d9c4",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "e77cffd84b20c5cc812567888675164900d471f2292908189b3e12e07f13d9c4",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "book_steel",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "book_steel",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "c57ac95110ca68bab3e52abb11e3470935f4f68b4dba358efd2d8768d1b0d292",
+        "duration": null
+      },
+      "uncorrected": {
+        "stageId": "book_steel",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "book_steel",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": false,
+        "reason": "Appui de plafond absent du lieu.",
+        "planSHA256": "c57ac95110ca68bab3e52abb11e3470935f4f68b4dba358efd2d8768d1b0d292",
+        "duration": null
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_signature",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_nightmare",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_signature",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_nightmare",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_signature",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_nightmare",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_signature",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_midwich",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "film_midwich",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "uncorrected": {
+        "stageId": "film_midwich",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "film_midwich",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_signature",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_signature",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "cd9230e3c52d0b241e7dd6c1f8265dae1785008e96dbeae0fa4fa4f1cd53a4a0",
+        "duration": 182
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "sh1_hanged_scratcher_011",
+      "definitionId": "sh1_hanged_scratcher_011_nightmare",
+      "recipe": "ceilingHook",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "sh1_hanged_scratcher_011",
+        "definitionId": "sh1_hanged_scratcher_011_nightmare",
+        "recipe": "ceilingHook",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f2d674fe040b73ca4b7bdcd78595c581f1cfdb7d9d10fb19f723432ee4b5318c",
+        "duration": 231
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_signature",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_signature",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "f91c543fcbcc90ad5323dd8dce69123528d212d4caa7eee032c8ea2e47d0387d",
+        "duration": 185
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "sh2_flesh_lip_027",
+      "definitionId": "sh2_flesh_lip_027_nightmare",
+      "recipe": "cageFootLift",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "sh2_flesh_lip_027",
+        "definitionId": "sh2_flesh_lip_027_nightmare",
+        "recipe": "cageFootLift",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "80303996788eda08b9793a8a23bbdb64f295f3a57abab443adca625eb0613f08",
+        "duration": 234
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "009c6873d3fee0d94fc308d4a9a7791bb90c142bd109cd4c5813c5161ea82f3f",
+        "duration": 178
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "sh2_spider_mannequin",
+      "definitionId": "sh2_spider_mannequin_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "sh2_spider_mannequin",
+        "definitionId": "sh2_spider_mannequin_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "87c70675a20e1be16187c20eddb7328e61636c708965764ef62685c2bb340ce0",
+        "duration": 227
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_signature",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_signature",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3b1dec7bc481d65da41cbfe783d40da7ef388c06c9e44f831b6778f73f99f986",
+        "duration": 185
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "origins_ariel_078",
+      "definitionId": "origins_ariel_078_nightmare",
+      "recipe": "tetheredDollKicks",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "origins_ariel_078",
+        "definitionId": "origins_ariel_078_nightmare",
+        "recipe": "tetheredDollKicks",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "3ed42c266c51ec6f03b13c2717cd1a62888ffe2794df79c7db014035c1c81902",
+        "duration": 234
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_signature",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_signature",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "aa29a213523450a67efcf9e37702a70b8430e09af8a70dd2f4f4aea9aad8cc32",
+        "duration": 190
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "origins_memory_of_helen_grady_082",
+      "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+      "recipe": "helenSuspendedWheel",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "origins_memory_of_helen_grady_082",
+        "definitionId": "origins_memory_of_helen_grady_082_nightmare",
+        "recipe": "helenSuspendedWheel",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "eedf16570c0751497ef89b623c95cee5768e0d6573bcbc9d4de2cf0501a4ff4d",
+        "duration": 239
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_signature",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_signature",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "09533e445548087906222643a08299cb41b6181340172972e622642ea19e8ee0",
+        "duration": 178
+      },
+      "correctedPlanMatchesBaseline": true
+    },
+    {
+      "stageId": "film_church",
+      "fighterId": "homecoming_scarlet_spider_form_095",
+      "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+      "recipe": "ceilingAmbush",
+      "baseline": {
+        "stageId": "film_church",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "uncorrected": {
+        "stageId": "film_church",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "corrected": {
+        "stageId": "film_church",
+        "fighterId": "homecoming_scarlet_spider_form_095",
+        "definitionId": "homecoming_scarlet_spider_form_095_nightmare",
+        "recipe": "ceilingAmbush",
+        "allowed": true,
+        "reason": null,
+        "planSHA256": "e377d376c46837d4dcc6556e81c946077ebbd7cdc6305e22fba271daa60b8cf1",
+        "duration": 227
+      },
+      "correctedPlanMatchesBaseline": true
+    }
+  ],
+  "success": true,
+  "productionFilesWritten": [],
+  "limits": [
+    "This is a targeted real-plan API test, not a native render or browser test.",
+    "The same compatible standing target isolates the ceiling gate; it does not exhaust all target anatomy pairings.",
+    "Full serialized plan equality covers allowed state, block reason, duration and steps for these ceiling-dependent definitions.",
+    "No image, physics, damage, input or finisher implementation code is changed."
+  ]
+}

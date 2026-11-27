@@ -1,0 +1,57 @@
+{
+  "mode": "refresh-resolved",
+  "basename": "SILENT_HILL_CORPUS_BIBLE.xlsx",
+  "sourceHashes": {
+    "requirements": "af5943c1c8aca14a044330e8fbc7b788bed01f642e4d8ad3ed04598f7fd8794a",
+    "associations": "bc0261ac51c35bc61c258d4f5a7bb8b8fb7cdf7623d069e94c77f59801ccdf63"
+  },
+  "expectedCounts": {
+    "sections": 68,
+    "modules": 10,
+    "associations": 445,
+    "moduleDecisions": {
+      "retained": 3,
+      "deferred": 5,
+      "decision-needed": 1,
+      "not-applicable": 1
+    }
+  },
+  "refreshPlan": {
+    "baselineRef": "453e9a5f8b74e4e5c4dd0e306294b4c79e8867eb",
+    "mode": "refresh-resolved",
+    "beforeSections": 68,
+    "afterSections": 68,
+    "beforeAssociations": 445,
+    "afterAssociations": 445,
+    "changedCells": [
+      {
+        "sheet": "Associations guide",
+        "address": "C337",
+        "before": "THE ARCADE — HISTORICAL SOCIETY",
+        "after": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY"
+      },
+      {
+        "sheet": "Associations guide",
+        "address": "F337",
+        "before": "sans bitmap de stage ; fixed-normal",
+        "after": "bitmap candidat référencé ; fixed-normal"
+      }
+    ],
+    "changedRowHeights": [],
+    "newRows": [],
+    "newTables": []
+  },
+  "previews": [
+    "guide-overview.png",
+    "guide-details.png",
+    "guide-narrative.png",
+    "guide-story-changes.png",
+    "guide-production-changes.png",
+    "guide-modules.png",
+    "associations-overview.png",
+    "associations-end.png",
+    "associations-changes-337.png"
+  ],
+  "sourceWorkbookSha256": "02fb703d83ed111775d6ca9c8344cc64fc3ce7be75a75c96949503c5633f4db3",
+  "limits": "Artifact Tool authoring, recalculation and rendering. Native Excel desktop not executed."
+}

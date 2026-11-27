@@ -1,0 +1,75 @@
+name: Wave30 artwork review
+
+on:
+  pull_request:
+    paths:
+      - 'assets/**'
+      - 'art/registry.json'
+      - 'src/**'
+      - 'scripts/**'
+      - 'modules/**'
+      - 'data/**'
+      - 'service-worker.js'
+      - 'tests/**'
+      - 'docs/production/vague30/**'
+      - 'docs/production/research/**'
+      - 'docs/combat-guide/**'
+      - '.github/workflows/wave30-review.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wave30-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  artwork:
+    name: Play wave30 artwork over HTTP
+    if: github.head_ref == 'art/missing-assets-wave27-20261124'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 22
+      - name: Install the existing pinned browser dependency
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Install its Chromium
+        run: npx --no-install playwright-core install --with-deps chromium
+      - name: Set up native PNG validation
+        run: |
+          python3 -m venv "$RUNNER_TEMP/halo-wave30-venv"
+          "$RUNNER_TEMP/halo-wave30-venv/bin/python" -m pip install 'Pillow==11.3.0'
+          echo "HALO_PYTHON=$RUNNER_TEMP/halo-wave30-venv/bin/python" >> "$GITHUB_ENV"
+      - name: Build the committed artwork
+        id: build
+        run: npm run build
+      - name: Inspect three poses in both orientations
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node docs/production/vague30/characters/qa-http.mjs
+      - name: Inspect projectiles and isolated Incubus effect
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node docs/production/vague30/projectiles/qa-http-projectiles.mjs --port=4291 --out=tests/http-wave30-projectiles
+      - name: Inspect the three exact stage scenes
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node docs/production/vague30/stages/qa-http-stages.mjs
+      - name: Inspect individual story artwork and boundaries
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: node docs/production/vague30/story/qa-http.mjs
+      - name: Retain reports and captures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: wave30-http-artwork
+          path: |
+            tests/http-wave30-characters/
+            tests/http-wave30-projectiles/
+            tests/http-wave30-stages/
+            tests/http-wave30-story/
+          retention-days: 30

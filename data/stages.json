@@ -6717,8 +6717,8 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée.",
-      "canonicalBasis": "EXT03 ; EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026",
+      "premise": "Female Treatment 2F du Sanitarium, pièce physique normale avant la traversée du miroir. Vues natives à12s et18s : deux lits métalliques étroits, rideaux écrus, murs brun-gris, carrelage usé, double lavabo et miroir horizontal au reflet verdâtre. Ni couloir entier ni chambre de Momma. La caméra frontale et la largeur de sol sont adaptées au versus ; aucune transition automatique, animation source, géométrie ou fidélité 1:1 certifiée. Plateforme, build et région des vues non établis.",
+      "canonicalBasis": "EXT03 ; EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026 ; V31_ORIGINS_CEDAR_MIRROR_SEQUENCE ; V31_ORIGINS_CEDAR_MIRROR_COPY",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
@@ -6731,7 +6731,7 @@
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      "description": "Vues natives de Female Treatment 2F inspectées avant la traversée du miroir : lits métalliques, rideaux écrus, double lavabo, miroir horizontal et carrelage usé. Pièce physique normale ; reflet verdâtre conservé sans transition automatique. Cadrage frontal et profondeur adaptés au versus ; plateforme/build non établis, caméra, géométrie et mouvement non certifiés 1:1. Physique neutre du versus."
     },
     "visibility": {
       "fog": 0,
@@ -6773,6 +6773,13 @@
         ],
         "evidenceScope": "exact-production-reference / original-versus-prototypes",
         "suppression": [
+          {
+            "kind": "reference-track",
+            "id": "cedar_grove:reference:2",
+            "key": "treatmentMirrorVeil",
+            "status": "historical-masked-by-bitmap",
+            "reason": "La composition bitmap fixe de vague31 masque le prototype procédural historique du miroir ; sa proposition reste conservée et en attente pour le rendu actuel, sans animation livrée."
+          },
           {
             "kind": "event",
             "id": "gurneyRush",
@@ -6839,19 +6846,22 @@
       "source": "origins",
       "identityMatched": true,
       "blocked": false,
-      "locationStatus": "lieu-documente-secondaire",
+      "locationStatus": "lieu-documente-vues-natives-phase-avant-miroir",
       "catalogueName": "CEDAR GROVE SANITARIUM",
       "correctedName": "CEDAR GROVE — FEMALE TREATMENT",
-      "locationNote": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée.",
+      "locationNote": "Female Treatment 2F du Sanitarium, pièce physique normale avant la traversée du miroir. Vues natives à12s et18s : deux lits métalliques étroits, rideaux écrus, murs brun-gris, carrelage usé, double lavabo et miroir horizontal au reflet verdâtre. Ni couloir entier ni chambre de Momma. La caméra frontale et la largeur de sol sont adaptées au versus ; aucune transition automatique, animation source, géométrie ou fidélité 1:1 certifiée. Plateforme, build et région des vues non établis.",
       "referenceIds": [
         "EXT03",
         "EXT02",
-        "EXT_ORIGINS_THEATER_GUIDE_20261026"
+        "EXT_ORIGINS_THEATER_GUIDE_20261026",
+        "V31_ORIGINS_CEDAR_MIRROR_SEQUENCE",
+        "V31_ORIGINS_CEDAR_MIRROR_COPY"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
         "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
-        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production.",
+        "La couleur du reflet ne transforme pas la pièce physique en Otherworld ; aucun mirrorTurn ni danger ajouté."
       ],
       "proposals": [
         {
@@ -6901,36 +6911,7 @@
         }
       ]
     },
-    "referenceTracks": [
-      {
-        "id": "cedar_grove:reference:2",
-        "key": "treatmentMirrorVeil",
-        "name": "Reflet contenu dans le miroir de soins",
-        "description": "La surface du miroir conserve un voile de reflet fixe avec un glissement lumineux proposé ; aucun changement automatique du monde.",
-        "proposalIndex": 1,
-        "source": "origins",
-        "evidence": [
-          "EXT03",
-          "EXT02",
-          "EXT_ORIGINS_THEATER_GUIDE_20261026"
-        ],
-        "layer": "background",
-        "anchor": {
-          "x": 0.66,
-          "y": 0.4
-        },
-        "trigger": "ambient",
-        "event": null,
-        "eventEnabled": null,
-        "implementation": "canvas-prototype",
-        "coverage": "partial-visual-prototype",
-        "implementedElement": "Reflet contenu dans le miroir de soins",
-        "fidelity": "adaptation-versus-proposee",
-        "captureStatus": "capture-a-relever",
-        "locationScope": "Salle Female Treatment du Sanitarium, avant la traversée du miroir ; ni couloir entier ni chambre Momma.",
-        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée."
-      }
-    ],
+    "referenceTracks": [],
     "referencePolicy": {
       "worldState": "fixed-normal",
       "allowedEvents": [],
@@ -6940,13 +6921,20 @@
       "terrainRules": false,
       "terrainPresentation": {
         "name": "SEUIL DU MIROIR DE SOINS",
-        "description": "Le guide et les plans situent le miroir, sans vue native entière de cette pièce inspectée. Cadre, carreaux, profondeur, reflet et faible mouvement sont une reconstruction versus ; aucune géométrie ou bascule originale certifiée. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        "description": "Vues natives de Female Treatment 2F inspectées avant la traversée du miroir : lits métalliques, rideaux écrus, double lavabo, miroir horizontal et carrelage usé. Pièce physique normale ; reflet verdâtre conservé sans transition automatique. Cadrage frontal et profondeur adaptés au versus ; plateforme/build non établis, caméra, géométrie et mouvement non certifiés 1:1. Physique neutre du versus."
       },
       "normalPhaseLabel": "SALLE DE SOINS · AVANT LE MIROIR",
       "weather": "none",
       "interior": true,
       "baselineMotion": true,
       "suppression": [
+        {
+          "kind": "reference-track",
+          "id": "cedar_grove:reference:2",
+          "key": "treatmentMirrorVeil",
+          "status": "historical-masked-by-bitmap",
+          "reason": "La composition bitmap fixe de vague31 masque le prototype procédural historique du miroir ; sa proposition reste conservée et en attente pour le rendu actuel, sans animation livrée."
+        },
         {
           "kind": "event",
           "id": "gurneyRush",
@@ -6994,11 +6982,10 @@
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [
-        "cedar_grove:reference:2"
-      ],
+      "renderedProposalIds": [],
       "pendingProposalIds": [
         "cedar_grove:reference:1",
+        "cedar_grove:reference:2",
         "cedar_grove:reference:3",
         "cedar_grove:reference:4"
       ]
@@ -11044,7 +11031,7 @@
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Corridor d’entrée à plancher bois, distinct de la salle à manger tatami de ResidenceI et des étatsResidenceII/III. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      "description": "Corridor d’entrée à plancher bois de Residence I, distinct de la salle à manger tatami retenue dans Residence II et des états ultérieurs de la maison. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
     },
     "visibility": {
       "fog": 0,
@@ -11304,7 +11291,7 @@
       "alteredPhaseLabel": "RESIDENCE I · ENTRÉE",
       "terrainPresentation": {
         "name": "PLANCHER DU CORRIDOR",
-        "description": "Corridor d’entrée à plancher bois, distinct de la salle à manger tatami de ResidenceI et des étatsResidenceII/III. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        "description": "Corridor d’entrée à plancher bois de Residence I, distinct de la salle à manger tatami retenue dans Residence II et des états ultérieurs de la maison. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
       },
       "weather": "none",
       "interior": true,
@@ -13845,7 +13832,7 @@
   },
   {
     "id": "antique_shop",
-    "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+    "name": "GREEN LION — ANTICHAMBRE DU CULTE",
     "source": "origins",
     "family": "otherworld",
     "sky": [
@@ -13872,21 +13859,21 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire.",
-      "canonicalBasis": "EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026 ; EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028",
+      "premise": "Antichambre du culte après le long tunnel de Green Lion Antiques, avant la cinématique finale Origins. Le guide officiel imprimé p. 121 et les vues natives à 3:13:40, 3:14:20 et 3:14:30 montrent une salle sombre, un autel vide drapé de rouge et un court passage grillagé. Aucun stock de boutique SH1, Flauros flottant, corps rituel, cinématique ou arène du rêve de boss. Largeur, placement précis, éclairage et microtextures adaptés au versus ; géométrie non certifiée 1:1.",
+      "canonicalBasis": "EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026 ; EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028 ; V32_ORIGINS_CULT_GUIDE_P121 ; V32_ORIGINS_CULT_ANTEROOM_PLAYTHROUGH",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
     "terrain": {
       "id": "steel",
-      "name": "PLATEAU DU PASSAGE INTÉRIEUR",
+      "name": "SOL DE L’ANTICHAMBRE DU CULTE",
       "moveScale": 1,
       "jumpScale": 1,
       "dodgeScale": 1,
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+      "description": "Antichambre après le tunnel de Green Lion, avant la cinématique finale : autel vide, drapé rouge, cierges et court passage grillagé documentés par le guide officiel p. 121 et trois vues natives. Le Flauros abstrait et les anciens mouvements ne sont plus rendus. Caméra, largeur, placement précis et microtextures adaptés ; aucun corps rituel ou élément de la salle de cinématique. Physique neutre du versus ; géométrie non certifiée 1:1."
     },
     "visibility": {
       "fog": 0,
@@ -13928,6 +13915,27 @@
         ],
         "evidenceScope": "exact-production-reference / original-versus-prototypes",
         "suppression": [
+          {
+            "kind": "reference-track",
+            "id": "antique_shop:reference:1",
+            "key": "greenLionPassageDust",
+            "status": "historical-masked-by-bitmap",
+            "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+          },
+          {
+            "kind": "reference-track",
+            "id": "antique_shop:reference:2",
+            "key": "flaurosCoreShade",
+            "status": "historical-masked-by-bitmap",
+            "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+          },
+          {
+            "kind": "reference-track",
+            "id": "antique_shop:reference:3",
+            "key": "greenLionWallGlint",
+            "status": "historical-masked-by-bitmap",
+            "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+          },
           {
             "kind": "event",
             "id": "sirenCall",
@@ -13994,19 +14002,23 @@
       "source": "origins",
       "identityMatched": true,
       "blocked": false,
-      "locationStatus": "lieu-documente-secondaire",
+      "locationStatus": "lieu-et-phase-documentes-guide-et-vues-natives",
       "catalogueName": "GREEN LION ANTIQUES",
-      "correctedName": "GREEN LION — PASSAGE VERS LE RITUEL",
-      "locationNote": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire.",
+      "correctedName": "GREEN LION — ANTICHAMBRE DU CULTE",
+      "locationNote": "Antichambre du culte après le long tunnel de Green Lion Antiques, avant la cinématique finale Origins. Le guide officiel imprimé p. 121 et les vues natives à 3:13:40, 3:14:20 et 3:14:30 montrent une salle sombre, un autel vide drapé de rouge et un court passage grillagé. Aucun stock de boutique SH1, Flauros flottant, corps rituel, cinématique ou arène du rêve de boss. Largeur, placement précis, éclairage et microtextures adaptés au versus ; géométrie non certifiée 1:1.",
       "referenceIds": [
         "EXT02",
         "EXT_ORIGINS_THEATER_GUIDE_20261026",
-        "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
+        "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028",
+        "V32_ORIGINS_CULT_GUIDE_P121",
+        "V32_ORIGINS_CULT_ANTEROOM_PLAYTHROUGH"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
         "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
-        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production.",
+        "Le bitmap fixe ne joue aucune des trois pistes historiques, conservées en attente et refusées si réinjectées.",
+        "Le plafond peint, le drapé et les cierges ne créent aucun danger, appui ou Dénouement."
       ],
       "proposals": [
         {
@@ -14019,7 +14031,10 @@
             "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
           ],
           "category": "ambient",
-          "timecode": null
+          "timecode": null,
+          "activeInSelectedScene": false,
+          "sceneScope": "historical-guide-only-passage-prototype",
+          "integrationNote": "Proposition conservée ; le remplacement bitmap fixe de vague32 masque les anciens prototypes de poussière, Flauros et lueur. Aucun mouvement source attesté."
         },
         {
           "name": "antique_shop_ambient_02",
@@ -14031,7 +14046,10 @@
             "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
           ],
           "category": "ambient",
-          "timecode": null
+          "timecode": null,
+          "activeInSelectedScene": false,
+          "sceneScope": "historical-guide-only-passage-prototype",
+          "integrationNote": "Proposition conservée ; le remplacement bitmap fixe de vague32 masque les anciens prototypes de poussière, Flauros et lueur. Aucun mouvement source attesté."
         },
         {
           "name": "antique_shop_ambient_03",
@@ -14043,7 +14061,10 @@
             "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
           ],
           "category": "ambient",
-          "timecode": null
+          "timecode": null,
+          "activeInSelectedScene": false,
+          "sceneScope": "historical-guide-only-passage-prototype",
+          "integrationNote": "Proposition conservée ; le remplacement bitmap fixe de vague32 masque les anciens prototypes de poussière, Flauros et lueur. Aucun mouvement source attesté."
         },
         {
           "name": "antique_shop_round_transition",
@@ -14053,96 +14074,14 @@
             "EXT02"
           ],
           "category": "round_transition",
-          "timecode": null
+          "timecode": null,
+          "activeInSelectedScene": false,
+          "sceneScope": "historical-guide-only-passage-prototype",
+          "integrationNote": "Proposition conservée ; le remplacement bitmap fixe de vague32 masque les anciens prototypes de poussière, Flauros et lueur. Aucun mouvement source attesté."
         }
       ]
     },
-    "referenceTracks": [
-      {
-        "id": "antique_shop:reference:1",
-        "key": "greenLionPassageDust",
-        "name": "Poussière au bord du passage intérieur",
-        "description": "Quelques particules restent au bord du trou menant au passage intérieur ; aucun meuble de la boutique SH1 ajouté.",
-        "proposalIndex": 0,
-        "source": "origins",
-        "evidence": [
-          "EXT02",
-          "EXT_ORIGINS_THEATER_GUIDE_20261026",
-          "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
-        ],
-        "layer": "background",
-        "anchor": {
-          "x": 0.25,
-          "y": 0.45
-        },
-        "trigger": "ambient",
-        "event": null,
-        "eventEnabled": null,
-        "implementation": "canvas-prototype",
-        "coverage": "partial-visual-prototype",
-        "implementedElement": "Poussière au bord du passage intérieur",
-        "fidelity": "adaptation-versus-proposee",
-        "captureStatus": "capture-a-relever",
-        "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
-        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
-      },
-      {
-        "id": "antique_shop:reference:2",
-        "key": "flaurosCoreShade",
-        "name": "Ombre du volume géométrique assemblé",
-        "description": "Une ombre douce accompagne une représentation abstraite du Flauros assemblé ; son emplacement est une composition versus à partir du motif du puzzle.",
-        "proposalIndex": 1,
-        "source": "origins",
-        "evidence": [
-          "EXT02",
-          "EXT_ORIGINS_THEATER_GUIDE_20261026",
-          "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
-        ],
-        "layer": "background",
-        "anchor": {
-          "x": 0.68,
-          "y": 0.48
-        },
-        "trigger": "ambient",
-        "event": null,
-        "eventEnabled": null,
-        "implementation": "canvas-prototype",
-        "coverage": "partial-visual-prototype",
-        "implementedElement": "Ombre du volume géométrique assemblé",
-        "fidelity": "adaptation-versus-proposee",
-        "captureStatus": "capture-a-relever",
-        "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
-        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
-      },
-      {
-        "id": "antique_shop:reference:3",
-        "key": "greenLionWallGlint",
-        "name": "Lueur contenue du passage final",
-        "description": "Une faible lueur de fond gagne le mur du passage, sans jouer un rituel ou révéler un corps ; éclairage original de versus.",
-        "proposalIndex": 2,
-        "source": "origins",
-        "evidence": [
-          "EXT02",
-          "EXT_ORIGINS_THEATER_GUIDE_20261026",
-          "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
-        ],
-        "layer": "background",
-        "anchor": {
-          "x": 0.68,
-          "y": 0.35
-        },
-        "trigger": "ambient",
-        "event": null,
-        "eventEnabled": null,
-        "implementation": "canvas-prototype",
-        "coverage": "partial-visual-prototype",
-        "implementedElement": "Lueur contenue du passage final",
-        "fidelity": "adaptation-versus-proposee",
-        "captureStatus": "capture-a-relever",
-        "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
-        "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
-      }
-    ],
+    "referenceTracks": [],
     "referencePolicy": {
       "worldState": "fixed-altered",
       "allowedEvents": [],
@@ -14151,14 +14090,35 @@
       "sceneId": "green-lion-inner-passage",
       "terrainRules": false,
       "terrainPresentation": {
-        "name": "PLATEAU DU PASSAGE INTÉRIEUR",
-        "description": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        "name": "SOL DE L’ANTICHAMBRE DU CULTE",
+        "description": "Antichambre après le tunnel de Green Lion, avant la cinématique finale : autel vide, drapé rouge, cierges et court passage grillagé documentés par le guide officiel p. 121 et trois vues natives. Le Flauros abstrait et les anciens mouvements ne sont plus rendus. Caméra, largeur, placement précis et microtextures adaptés ; aucun corps rituel ou élément de la salle de cinématique. Physique neutre du versus ; géométrie non certifiée 1:1."
       },
-      "alteredPhaseLabel": "PASSAGE INTÉRIEUR · AVANT CONFRONTATION",
+      "alteredPhaseLabel": "ANTICHAMBRE · AVANT LA CINÉMATIQUE",
       "weather": "none",
       "interior": true,
       "baselineMotion": true,
       "suppression": [
+        {
+          "kind": "reference-track",
+          "id": "antique_shop:reference:1",
+          "key": "greenLionPassageDust",
+          "status": "historical-masked-by-bitmap",
+          "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+        },
+        {
+          "kind": "reference-track",
+          "id": "antique_shop:reference:2",
+          "key": "flaurosCoreShade",
+          "status": "historical-masked-by-bitmap",
+          "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+        },
+        {
+          "kind": "reference-track",
+          "id": "antique_shop:reference:3",
+          "key": "greenLionWallGlint",
+          "status": "historical-masked-by-bitmap",
+          "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+        },
         {
           "kind": "event",
           "id": "sirenCall",
@@ -14206,12 +14166,11 @@
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-      "renderedProposalIds": [
+      "renderedProposalIds": [],
+      "pendingProposalIds": [
         "antique_shop:reference:1",
         "antique_shop:reference:2",
-        "antique_shop:reference:3"
-      ],
-      "pendingProposalIds": [
+        "antique_shop:reference:3",
         "antique_shop:reference:4"
       ]
     }
@@ -23156,7 +23115,7 @@
   },
   {
     "id": "wish_house",
-    "name": "WISH HOUSE",
+    "name": "WISH HOUSE — INTÉRIEUR DU PREMIER PASSAGE",
     "source": "sh4",
     "family": "house",
     "sky": [
@@ -23165,11 +23124,7 @@
       "#030303"
     ],
     "weather": "none",
-    "props": [
-      "trees",
-      "fence",
-      "altar"
-    ],
+    "props": [],
     "animations": [],
     "hazard": "fallingDebris",
     "fatality": {
@@ -23185,23 +23140,23 @@
       "fidelity": "environmental-adaptation",
       "canonicalBasis": "Décor et dangers documentés de WISH HOUSE."
     },
-    "catalogueStatus": "reference-blocked",
+    "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Wish House existe avant puis après l’incendie ; l’état du stage doit être choisi explicitement.",
-      "canonicalBasis": "CL_SH4_03_FOREST_WORLD ; CL_SH4_09_FOREST_WORLD_2ND_TIME",
-      "fidelity": "reference-bloquee",
+      "premise": "Wish House, intérieur intact lors du premier passage de Forest World, avant incendie. Le guide officiel p46 et deux captures natives documentent le meuble incliné drapé de rouge, les livres et papiers, les boiseries, la lampe et la porte. Le cadrage frontal et la largeur du sol sont des adaptations de versus. La maison brûlée, le rituel de poupée et sa fosse du second passage sont exclus de cette scène ; aucun ennemi ni effet offensif ajouté. Build des captures, caméra et géométrie non certifiés 1:1.",
+      "canonicalBasis": "CL_SH4_03_FOREST_WORLD ; CL_SH4_09_FOREST_WORLD_2ND_TIME ; V31_SH4_WISH_GUIDE_P46 ; V31_SH4_WISH_INTERIOR_SCRIPTURE ; V31_SH4_WISH_DOOR",
+      "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
     "terrain": {
-      "id": "concrete",
-      "name": "BÉTON SEC",
+      "id": "wood",
+      "name": "PLANCHER DE WISH HOUSE",
       "moveScale": 1,
       "jumpScale": 1,
       "dodgeScale": 1,
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Sol stable et neutre."
+      "description": "Intérieur avant incendie, au premier passage de Forest World : meuble incliné drapé de rouge, livres et papiers, boiseries, lampe et porte documentés. Cadrage frontal et étendue du sol adaptés au versus. Aucun brasier, poupée, fosse rituelle, ennemi ou pouvoir ajouté ; physique neutre, géométrie et fidélité 1:1 non certifiées."
     },
     "visibility": {
       "fog": 0,
@@ -23222,7 +23177,7 @@
       "description": "L’espace se contamine par les victimes, les murs et les objets hantés.",
       "startOtherworld": false,
       "enabled": false,
-      "referenceState": "unresolved"
+      "referenceState": "fixed-normal"
     },
     "director": {
       "cadence": 283,
@@ -23288,40 +23243,40 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "wish_house:haunting:concrete:unresolved::"
+      "signature": "wish_house:haunting:wood:fixed-normal::"
     },
     "gameplay": {
       "arenaInset": 118,
       "terrainRules": false,
-      "environmentalDirector": false,
+      "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
       "closeQuarters": false
     },
-    "layers": [
-      "rooms",
-      "portraits",
-      "stairs",
-      "trees",
-      "fence",
-      "altar"
-    ],
+    "layers": [],
     "animationTracks": [],
     "interactions": [],
     "reference": {
       "id": "wish_house",
       "source": "sh4",
       "identityMatched": true,
-      "blocked": true,
-      "locationStatus": "etat-premier-ou-second-passage-a-fixer",
+      "blocked": false,
+      "locationStatus": "lieu-documente-phase-premier-passage",
       "catalogueName": "WISH HOUSE",
-      "correctedName": null,
-      "locationNote": "Wish House existe avant puis après l’incendie ; l’état du stage doit être choisi explicitement.",
+      "correctedName": "WISH HOUSE — INTÉRIEUR DU PREMIER PASSAGE",
+      "locationNote": "Wish House, intérieur intact lors du premier passage de Forest World, avant incendie. Le guide officiel p46 et deux captures natives documentent le meuble incliné drapé de rouge, les livres et papiers, les boiseries, la lampe et la porte. Le cadrage frontal et la largeur du sol sont des adaptations de versus. La maison brûlée, le rituel de poupée et sa fosse du second passage sont exclus de cette scène ; aucun ennemi ni effet offensif ajouté. Build des captures, caméra et géométrie non certifiés 1:1.",
       "referenceIds": [
         "CL_SH4_03_FOREST_WORLD",
-        "CL_SH4_09_FOREST_WORLD_2ND_TIME"
+        "CL_SH4_09_FOREST_WORLD_2ND_TIME",
+        "V31_SH4_WISH_GUIDE_P46",
+        "V31_SH4_WISH_INTERIOR_SCRIPTURE",
+        "V31_SH4_WISH_DOOR"
       ],
-      "constraints": [],
+      "constraints": [
+        "Premier passage intact uniquement ; état brûlé et propositions du second passage conservés pour historique, désactivés dans cette scène.",
+        "Les éléments du décor peint ne créent ni collision, ni appui de plafond, ni Dénouement ou danger automatique.",
+        "Un PNG fixe ne prouve ni animation source ni fidélité 1:1."
+      ],
       "proposals": [
         {
           "name": "Motif du jeu à capturer",
@@ -23332,7 +23287,10 @@
             "CL_SH4_09_FOREST_WORLD_2ND_TIME"
           ],
           "captureStatus": "capture-a-relever",
-          "timecode": ""
+          "timecode": "",
+          "sceneScope": "second-passage-apres-incendie",
+          "activeInSelectedScene": false,
+          "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
         },
         {
           "name": "Boucle d’ambiance proposée",
@@ -23343,7 +23301,10 @@
             "CL_SH4_09_FOREST_WORLD_2ND_TIME"
           ],
           "captureStatus": "storyboard-a-valider",
-          "timecode": ""
+          "timecode": "",
+          "sceneScope": "second-passage-apres-incendie",
+          "activeInSelectedScene": false,
+          "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
         },
         {
           "name": "Interaction proposée",
@@ -23354,7 +23315,10 @@
             "CL_SH4_09_FOREST_WORLD_2ND_TIME"
           ],
           "captureStatus": "storyboard-a-valider",
-          "timecode": ""
+          "timecode": "",
+          "sceneScope": "second-passage-apres-incendie",
+          "activeInSelectedScene": false,
+          "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
         },
         {
           "name": "Transition de manche proposée",
@@ -23365,19 +23329,30 @@
             "CL_SH4_09_FOREST_WORLD_2ND_TIME"
           ],
           "captureStatus": "storyboard-a-valider",
-          "timecode": ""
+          "timecode": "",
+          "sceneScope": "second-passage-apres-incendie",
+          "activeInSelectedScene": false,
+          "deferredReason": "Proposition historique du second passage ; la scène retenue en vague31 est le premier passage intact."
         }
       ]
     },
     "referenceTracks": [],
     "referencePolicy": {
-      "worldState": "unresolved",
+      "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": false,
+      "sceneId": "sh4-first-visit-scripture-corner",
+      "terrainRules": false,
+      "normalPhaseLabel": "PREMIER PASSAGE · INTÉRIEUR INTACT",
+      "alteredPhaseLabel": "PREMIER PASSAGE · INTÉRIEUR INTACT",
+      "terrainPresentation": {
+        "name": "PLANCHER DE WISH HOUSE",
+        "description": "Intérieur avant incendie, au premier passage de Forest World : meuble incliné drapé de rouge, livres et papiers, boiseries, lampe et porte documentés. Cadrage frontal et étendue du sol adaptés au versus. Aucun brasier, poupée, fosse rituelle, ennemi ou pouvoir ajouté ; physique neutre, géométrie et fidélité 1:1 non certifiées."
+      },
       "weather": "none",
       "interior": true,
-      "baselineMotion": false,
+      "baselineMotion": true,
       "suppression": [
         {
           "kind": "event",
@@ -28002,7 +27977,7 @@
   },
   {
     "id": "lighthouse_sm",
-    "name": "LIGHTHOUSE / THERAPY REVELATION",
+    "name": "LIGHTHOUSE — ENTRÉE DE LA CLINIQUE",
     "source": "shattered",
     "family": "lighthouse",
     "sky": [
@@ -28011,11 +27986,7 @@
       "#05090b"
     ],
     "weather": "none",
-    "props": [
-      "water",
-      "beam",
-      "ice"
-    ],
+    "props": [],
     "animations": [],
     "hazard": "frostWave",
     "fatality": {
@@ -28031,23 +28002,23 @@
       "fidelity": "environmental-adaptation",
       "canonicalBasis": "Décor et dangers documentés de LIGHTHOUSE / THERAPY REVELATION."
     },
-    "catalogueStatus": "reference-blocked",
+    "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Phare et révélation thérapeutique sont des lieux/plans différents; l’intitulé actuel les fusionne.",
-      "canonicalBasis": "EXT09",
-      "fidelity": "reference-bloquee",
+      "premise": "Entrée extérieure du Lighthouse Counseling Center après la conversation du rivage avec Cybil, avant de franchir la porte. Les vues natives à 2:37:40 et 2:37:50 montrent le bâtiment bas, le porche à piliers, le bardage, la porte et la neige au sol. Le hall, le lac, la tour d’un phare et la révélation thérapeutique ne sont pas réunis dans ce plan. Version US PSP déclarée par le vidéaste ; build et réglages non établis. Cadrage et largeur adaptés au versus, sans certification 1:1.",
+      "canonicalBasis": "EXT09 ; V32_SHM_CLINIC_CHAPTER ; V32_SHM_CLINIC_ENTRANCE_PLAYTHROUGH",
+      "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
     "terrain": {
-      "id": "concrete",
-      "name": "BÉTON SEC",
+      "id": "ice",
+      "name": "NEIGE DEVANT LA CLINIQUE",
       "moveScale": 1,
       "jumpScale": 1,
       "dodgeScale": 1,
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Sol stable et neutre."
+      "description": "Porche du Lighthouse Counseling Center après l’échange du rivage, avant de franchir la porte : bardage, piliers, porte et neige documentés. Tour, lac, hall et révélation thérapeutique exclus. Neige peinte sans prise de glace ni règles de glissade ; physique neutre du versus, cadrage et géométrie non certifiés 1:1."
     },
     "visibility": {
       "fog": 0,
@@ -28068,7 +28039,7 @@
       "description": "Le cauchemar se fige, bleuit et transforme la poursuite en glissade froide.",
       "startOtherworld": false,
       "enabled": false,
-      "referenceState": "unresolved"
+      "referenceState": "fixed-normal"
     },
     "director": {
       "cadence": 472,
@@ -28127,41 +28098,39 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "lighthouse_sm:ice:concrete:unresolved::"
+      "signature": "lighthouse_sm:ice:ice:fixed-normal::"
     },
     "gameplay": {
       "arenaInset": 76,
       "terrainRules": false,
-      "environmentalDirector": false,
+      "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": true,
       "closeQuarters": false
     },
-    "layers": [
-      "tower",
-      "beam",
-      "shore",
-      "water",
-      "ice"
-    ],
+    "layers": [],
     "animationTracks": [],
     "interactions": [],
     "reference": {
       "id": "lighthouse_sm",
       "source": "shattered",
       "identityMatched": true,
-      "blocked": true,
-      "locationStatus": "composite-a-separer",
+      "blocked": false,
+      "locationStatus": "lieu-et-phase-documentes-vues-natives",
       "catalogueName": "LIGHTHOUSE / THERAPY REVELATION",
-      "correctedName": null,
-      "locationNote": "Phare et révélation thérapeutique sont des lieux/plans différents; l’intitulé actuel les fusionne.",
+      "correctedName": "LIGHTHOUSE — ENTRÉE DE LA CLINIQUE",
+      "locationNote": "Entrée extérieure du Lighthouse Counseling Center après la conversation du rivage avec Cybil, avant de franchir la porte. Les vues natives à 2:37:40 et 2:37:50 montrent le bâtiment bas, le porche à piliers, le bardage, la porte et la neige au sol. Le hall, le lac, la tour d’un phare et la révélation thérapeutique ne sont pas réunis dans ce plan. Version US PSP déclarée par le vidéaste ; build et réglages non établis. Cadrage et largeur adaptés au versus, sans certification 1:1.",
       "referenceIds": [
-        "EXT09"
+        "EXT09",
+        "V32_SHM_CLINIC_CHAPTER",
+        "V32_SHM_CLINIC_ENTRANCE_PLAYTHROUGH"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
         "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
-        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+        "Comparer une capture du bon titre, de la bonne phase et du bon média avant production.",
+        "Plan extérieur unique : ne pas importer le faisceau d’une tour, l’eau du lac, le hall ou le raccord de révélation.",
+        "La neige peinte ne déclenche ni météo animée, ni prise de glace, ni glissade physique. Aucun danger ou appui de plafond."
       ],
       "proposals": [
         {
@@ -28172,7 +28141,10 @@
             "EXT09"
           ],
           "category": "ambient",
-          "timecode": null
+          "timecode": null,
+          "activeInSelectedScene": false,
+          "sceneScope": "historical-lighthouse-water-therapy-composite",
+          "integrationNote": "Ancienne proposition composite conservée en attente ; elle ne s’applique pas au plan fixe de l’entrée de clinique."
         },
         {
           "name": "lighthouse_sm_ambient_02",
@@ -28182,7 +28154,10 @@
             "EXT09"
           ],
           "category": "ambient",
-          "timecode": null
+          "timecode": null,
+          "activeInSelectedScene": false,
+          "sceneScope": "historical-lighthouse-water-therapy-composite",
+          "integrationNote": "Ancienne proposition composite conservée en attente ; elle ne s’applique pas au plan fixe de l’entrée de clinique."
         },
         {
           "name": "lighthouse_sm_ambient_03",
@@ -28192,7 +28167,10 @@
             "EXT09"
           ],
           "category": "ambient",
-          "timecode": null
+          "timecode": null,
+          "activeInSelectedScene": false,
+          "sceneScope": "historical-lighthouse-water-therapy-composite",
+          "integrationNote": "Ancienne proposition composite conservée en attente ; elle ne s’applique pas au plan fixe de l’entrée de clinique."
         },
         {
           "name": "lighthouse_sm_round_transition",
@@ -28202,19 +28180,30 @@
             "EXT09"
           ],
           "category": "round_transition",
-          "timecode": null
+          "timecode": null,
+          "activeInSelectedScene": false,
+          "sceneScope": "historical-lighthouse-water-therapy-composite",
+          "integrationNote": "Ancienne proposition composite conservée en attente ; elle ne s’applique pas au plan fixe de l’entrée de clinique."
         }
       ]
     },
     "referenceTracks": [],
     "referencePolicy": {
-      "worldState": "unresolved",
+      "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": false,
+      "sceneId": "shm-clinic-entrance-before-therapy",
+      "terrainRules": false,
+      "normalPhaseLabel": "CLINIQUE · EXTÉRIEUR AVANT ENTRÉE",
+      "alteredPhaseLabel": "CLINIQUE · EXTÉRIEUR AVANT ENTRÉE",
+      "terrainPresentation": {
+        "name": "NEIGE DEVANT LA CLINIQUE",
+        "description": "Porche du Lighthouse Counseling Center après l’échange du rivage, avant de franchir la porte : bardage, piliers, porte et neige documentés. Tour, lac, hall et révélation thérapeutique exclus. Neige peinte sans prise de glace ni règles de glissade ; physique neutre du versus, cadrage et géométrie non certifiés 1:1."
+      },
       "weather": "none",
       "interior": false,
-      "baselineMotion": false,
+      "baselineMotion": true,
       "suppression": [
         {
           "kind": "event",
@@ -31079,7 +31068,7 @@
   },
   {
     "id": "arcade_historical",
-    "name": "THE ARCADE — HISTORICAL SOCIETY",
+    "name": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY",
     "source": "arcade",
     "family": "museum",
     "sky": [
@@ -31087,15 +31076,9 @@
       "#110f0c",
       "#030302"
     ],
-    "weather": "dust",
-    "props": [
-      "portraits",
-      "stairs",
-      "doors"
-    ],
-    "animations": [
-      "lightFlicker"
-    ],
+    "weather": "none",
+    "props": [],
+    "animations": [],
     "hazard": "fallingDebris",
     "fatality": {
       "id": "arcade_historical_fatality",
@@ -31119,17 +31102,17 @@
     },
     "terrain": {
       "id": "wetConcrete",
-      "name": "BÉTON TREMPÉ",
-      "moveScale": 0.96,
-      "jumpScale": 0.96,
-      "dodgeScale": 1.06,
-      "friction": 0.9,
-      "knockbackScale": 1.08,
-      "guardRegenScale": 0.96,
-      "description": "L’élan se conserve plus longtemps et les impacts repoussent davantage."
+      "name": "GALERIE AVANT LA DESCENTE",
+      "moveScale": 1,
+      "jumpScale": 1,
+      "dodgeScale": 1,
+      "friction": 0.84,
+      "knockbackScale": 1,
+      "guardRegenScale": 1,
+      "description": "Galerie de la Historical Society de The Arcade avant la descente : papier peint jaune olive, boiseries sombres et quatre cadres repérés dans deux captures de jeu. Sol, détails des tableaux et largeur reconstruits pour le versus ; physique neutre, géométrie et fidélité 1:1 non certifiées."
     },
     "visibility": {
-      "fog": 0.2,
+      "fog": 0,
       "darkness": 0.36,
       "radioScale": 1.2096000000000002,
       "silhouetteRange": 491,
@@ -31202,6 +31185,16 @@
             "kind": "animation",
             "id": "shadowPass",
             "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "animation",
+            "id": "lightFlicker",
+            "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+          },
+          {
+            "kind": "weather",
+            "id": "dust",
+            "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
           }
         ]
       },
@@ -31210,7 +31203,7 @@
     },
     "gameplay": {
       "arenaInset": 74,
-      "terrainRules": true,
+      "terrainRules": false,
       "environmentalDirector": true,
       "edgePressure": false,
       "verticalPressure": false,
@@ -31219,20 +31212,9 @@
     "layers": [
       "facades",
       "road",
-      "fog-bank",
-      "portraits",
-      "stairs",
-      "doors"
+      "fog-bank"
     ],
-    "animationTracks": [
-      {
-        "id": "lightFlicker",
-        "phase": "both",
-        "layer": "midground",
-        "intensity": 1,
-        "cadence": "irregular"
-      }
-    ],
+    "animationTracks": [],
     "interactions": [],
     "reference": {
       "id": "arcade_historical",
@@ -31241,7 +31223,7 @@
       "blocked": false,
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "THE ARCADE — HISTORICAL SOCIETY",
-      "correctedName": null,
+      "correctedName": "THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY",
       "locationNote": "Stage2-1 Historical Society.",
       "referenceIds": [
         "EXT15"
@@ -31299,8 +31281,16 @@
       "worldState": "fixed-normal",
       "allowedEvents": [],
       "allowedHazards": [],
-      "automaticFinishers": true,
-      "weather": "dust",
+      "automaticFinishers": false,
+      "sceneId": "historical-society-normal-gallery-before-descent",
+      "terrainRules": false,
+      "normalPhaseLabel": "STAGE 2 AREA 1 · GALERIE NORMALE",
+      "alteredPhaseLabel": "STAGE 2 AREA 1 · GALERIE NORMALE",
+      "terrainPresentation": {
+        "name": "GALERIE AVANT LA DESCENTE",
+        "description": "Galerie de la Historical Society de The Arcade avant la descente : papier peint jaune olive, boiseries sombres et quatre cadres repérés dans deux captures de jeu. Sol, détails des tableaux et largeur reconstruits pour le versus ; physique neutre, géométrie et fidélité 1:1 non certifiées."
+      },
+      "weather": "none",
       "interior": true,
       "baselineMotion": true,
       "suppression": [
@@ -31338,6 +31328,16 @@
           "kind": "animation",
           "id": "shadowPass",
           "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "animation",
+          "id": "lightFlicker",
+          "reason": "Motif/phase/accessoire incompatible, non confirmé ou silhouette à produire."
+        },
+        {
+          "kind": "weather",
+          "id": "dust",
+          "reason": "Ambiance remplacée par none pour conserver le lieu et l’œuvre."
         }
       ],
       "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
@@ -31352,7 +31352,7 @@
   },
   {
     "id": "arcade_prison",
-    "name": "THE ARCADE — TOLUCA PRISON",
+    "name": "THE ARCADE — TOLUCA PRISON · OTHERWORLD",
     "source": "arcade",
     "family": "prison",
     "sky": [
@@ -31386,8 +31386,8 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Stage2-2 Toluca Prison; rencontre Split Worm.",
-      "canonicalBasis": "EXT15",
+      "premise": "The Arcade, Stage 2 Area 2 : corridor à cellules de la branche Otherworld, documenté par la capture Konami Europe du 21 février 2010 (05). Barreaux, rouille rouge/brun et éclairage cyan sont repris pour une scène fixe. La salle de Split Worm et le parcours normal ne sont pas confondus avec ce cadrage. L’état altéré est fixe ; aucun seuil de précision, embranchement, plafond de combat ou nouveau danger n’en est déduit.",
+      "canonicalBasis": "EXT15 ; V30_ARCADE_KONAMI_2010_05 ; V30_ARCADE_ROUTE_MAPS",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
@@ -31419,9 +31419,9 @@
       "radioScale": 1.12,
       "overlay": "rust",
       "description": "La matière se dénude en grille, métal, sang séché et pulsations rouges.",
-      "startOtherworld": false,
+      "startOtherworld": true,
       "enabled": false,
-      "referenceState": "fixed-normal"
+      "referenceState": "fixed-altered"
     },
     "director": {
       "cadence": 309,
@@ -31468,7 +31468,7 @@
         ]
       },
       "safeMargin": 118,
-      "signature": "arcade_prison:rust:steel:fixed-normal::"
+      "signature": "arcade_prison:rust:steel:fixed-altered::"
     },
     "gameplay": {
       "arenaInset": 92,
@@ -31509,10 +31509,12 @@
       "blocked": false,
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "THE ARCADE — TOLUCA PRISON",
-      "correctedName": null,
-      "locationNote": "Stage2-2 Toluca Prison; rencontre Split Worm.",
+      "correctedName": "THE ARCADE — TOLUCA PRISON · OTHERWORLD",
+      "locationNote": "The Arcade, Stage 2 Area 2 : corridor à cellules de la branche Otherworld, documenté par la capture Konami Europe du 21 février 2010 (05). Barreaux, rouille rouge/brun et éclairage cyan sont repris pour une scène fixe. La salle de Split Worm et le parcours normal ne sont pas confondus avec ce cadrage. L’état altéré est fixe ; aucun seuil de précision, embranchement, plafond de combat ou nouveau danger n’en est déduit.",
       "referenceIds": [
-        "EXT15"
+        "EXT15",
+        "V30_ARCADE_KONAMI_2010_05",
+        "V30_ARCADE_ROUTE_MAPS"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -31564,10 +31566,13 @@
     },
     "referenceTracks": [],
     "referencePolicy": {
-      "worldState": "fixed-normal",
+      "worldState": "fixed-altered",
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": true,
+      "sceneId": "toluca-prison-otherworld-cell-corridor",
+      "normalPhaseLabel": "STAGE 2 AREA 2 · OTHERWORLD",
+      "alteredPhaseLabel": "STAGE 2 AREA 2 · OTHERWORLD",
       "weather": "flicker",
       "interior": true,
       "baselineMotion": true,
@@ -31908,8 +31913,8 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Stage3-1 Toluca Lake.",
-      "canonicalBasis": "EXT15",
+      "premise": "The Arcade, Stage 3 Area 1 : quai de Toluca Lake légendé dans la capture Konami Europe du 21 février 2010 (08), avec piliers de pierre, garde-corps, lampadaires globes et brume. La caméra frontale et l’extension latérale servent au duel. Cette scène ne prétend pas être le pont du Little Baroness ni une restitution métrique du parcours.",
+      "canonicalBasis": "EXT15 ; V30_ARCADE_KONAMI_2010_08",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
     },
@@ -32042,9 +32047,10 @@
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "THE ARCADE — TOLUCA LAKE",
       "correctedName": null,
-      "locationNote": "Stage3-1 Toluca Lake.",
+      "locationNote": "The Arcade, Stage 3 Area 1 : quai de Toluca Lake légendé dans la capture Konami Europe du 21 février 2010 (08), avec piliers de pierre, garde-corps, lampadaires globes et brume. La caméra frontale et l’extension latérale servent au duel. Cette scène ne prétend pas être le pont du Little Baroness ni une restitution métrique du parcours.",
       "referenceIds": [
-        "EXT15"
+        "EXT15",
+        "V30_ARCADE_KONAMI_2010_08"
       ],
       "constraints": [
         "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
@@ -32153,6 +32159,9 @@
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": true,
+      "sceneId": "arcade-stage3-area1-lakeside-quay",
+      "normalPhaseLabel": "STAGE 3 AREA 1 · QUAI DU LAC",
+      "alteredPhaseLabel": "STAGE 3 AREA 1 · QUAI DU LAC",
       "weather": "water",
       "interior": false,
       "baselineMotion": true,
@@ -34254,7 +34263,7 @@
   },
   {
     "id": "shimizu_residence",
-    "name": "SHIMIZU RESIDENCE I — SALLE À MANGER",
+    "name": "SHIMIZU RESIDENCE II — SALLE À MANGER",
     "source": "shf",
     "family": "house",
     "sky": [
@@ -34281,7 +34290,7 @@
     },
     "catalogueStatus": "verified-location",
     "lore": {
-      "premise": "Shimizu ResidenceI : salle à manger du Yellowed Calendar, avec tatamis, table basse ronde, coussins et vaisselle. Cette pièce se distingue du corridor retenu pour hinako_home, sans créer une autre adresse. Elle n’est pas fusionnée avec la rencontre des parents, une variante ultérieure ou une scène de repas animée ; caméra et géométrie ne sont pas mesurées.",
+      "premise": "Shimizu Residence II : salle à manger du Yellowed Calendar sur le parcours Ending 1, après le souvenir familial, avec tatamis, table basse ronde, coussins et vaisselle. Le New Game+ peut placer le calendrier dans d’autres pièces. Cette scène se distingue du corridor de Residence I retenu pour hinako_home, sans créer une autre adresse. Aucun repas, protagoniste, parent ou calendrier lisible n’est rejoué ; caméra latérale et largeur de duel sont des adaptations, non une géométrie mesurée.",
       "canonicalBasis": "EXT34 ; EXT41 ; EXT10_SHF_SHIMIZU_RESIDENCE_GUIDE_20261026 ; EXT10_SHF_RESIDENCE_DINING_20261026",
       "fidelity": "lieu-reference / mise-en-scene-versus",
       "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
@@ -34295,7 +34304,7 @@
       "friction": 0.84,
       "knockbackScale": 1,
       "guardRegenScale": 1,
-      "description": "Salle à manger à table ronde du calendrier jauni, voie initiale ; pas cuisine ni corridor à plancher bois. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+      "description": "Salle à manger à table ronde du calendrier jauni, Residence II, parcours Ending 1 après le souvenir ; pas cuisine ni corridor d’entrée de Residence I. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
     },
     "visibility": {
       "fog": 0,
@@ -34415,8 +34424,8 @@
       "blocked": false,
       "locationStatus": "lieu-documente-secondaire",
       "catalogueName": "SHIMIZU RESIDENCE",
-      "correctedName": "SHIMIZU RESIDENCE I — SALLE À MANGER",
-      "locationNote": "Shimizu ResidenceI : salle à manger du Yellowed Calendar, avec tatamis, table basse ronde, coussins et vaisselle. Cette pièce se distingue du corridor retenu pour hinako_home, sans créer une autre adresse. Elle n’est pas fusionnée avec la rencontre des parents, une variante ultérieure ou une scène de repas animée ; caméra et géométrie ne sont pas mesurées.",
+      "correctedName": "SHIMIZU RESIDENCE II — SALLE À MANGER",
+      "locationNote": "Shimizu Residence II : salle à manger du Yellowed Calendar sur le parcours Ending 1, après le souvenir familial, avec tatamis, table basse ronde, coussins et vaisselle. Le New Game+ peut placer le calendrier dans d’autres pièces. Cette scène se distingue du corridor de Residence I retenu pour hinako_home, sans créer une autre adresse. Aucun repas, protagoniste, parent ou calendrier lisible n’est rejoué ; caméra latérale et largeur de duel sont des adaptations, non une géométrie mesurée.",
       "referenceIds": [
         "EXT34",
         "EXT41",
@@ -34500,7 +34509,7 @@
         "implementedElement": "Vaisselle sur la table ronde de la salle à manger",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
-        "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+        "locationScope": "Shimizu Residence II, salle à manger du calendrier jauni, parcours Ending 1 après le souvenir, SHf2025",
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Table ronde basse et vaisselle observées ; léger frémissement versus. Aucun objet de cuisine, calendrier lisible, boss ou confrontation importé."
       },
       {
@@ -34535,7 +34544,7 @@
         "implementedElement": "Les deux reflets de vaisselle se rapprochent des rebords immobiles",
         "fidelity": "adaptation-versus-proposee",
         "captureStatus": "capture-a-relever",
-        "locationScope": "Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025",
+        "locationScope": "Shimizu Residence II, salle à manger du calendrier jauni, parcours Ending 1 après le souvenir, SHf2025",
         "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Composition de résultat et reprise propre au versus : les jeux et films sources n’ont pas ces manches. Les deux reflets de vaisselle se rapprochent des rebords immobiles. Même pièce et phase narrative, sans événement source, changement de collision, acteur, son capturé ou certification1:1. Réinitialisation de la boucle au décompte de manche suivante assumée comme raccord versus."
       }
     ],
@@ -34544,12 +34553,13 @@
       "allowedEvents": [],
       "allowedHazards": [],
       "automaticFinishers": false,
+      "sceneId": "shf-residence-ii-dining-yellowed-calendar",
       "terrainRules": false,
-      "normalPhaseLabel": "RESIDENCE I · SALLE À MANGER",
-      "alteredPhaseLabel": "RESIDENCE I · SALLE À MANGER",
+      "normalPhaseLabel": "RESIDENCE II · SALLE À MANGER",
+      "alteredPhaseLabel": "RESIDENCE II · SALLE À MANGER",
       "terrainPresentation": {
         "name": "TATAMI DE LA SALLE À MANGER",
-        "description": "Salle à manger à table ronde du calendrier jauni, voie initiale ; pas cuisine ni corridor à plancher bois. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
+        "description": "Salle à manger à table ronde du calendrier jauni, Residence II, parcours Ending 1 après le souvenir ; pas cuisine ni corridor d’entrée de Residence I. Physique neutre du versus, matériau et cadence source non mesurés ; caméra et géométrie non certifiées1:1."
       },
       "weather": "none",
       "interior": true,

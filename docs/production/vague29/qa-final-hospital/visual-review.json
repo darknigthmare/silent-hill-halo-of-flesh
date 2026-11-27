@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "date": "2026-11-25",
+  "stageId": "arcade_hospital",
+  "capture": {
+    "file": "arcade_hospital.png",
+    "sha256": "ecdb062a549486ddd39348157464f0fc49f53d09a22b7f1c287b7b042c66c6c3"
+  },
+  "reviewed": true,
+  "checks": [
+    "Both source-specific background and foreground are visible in the actual FightEngine capture.",
+    "The two existing fighters are wholly visible with feet on a continuous tile plane.",
+    "Door-jamb foreground stays at the sides, leaving center and foot band unobstructed.",
+    "The neutral-gray corridor is not replaced by an orange Otherworld room."
+  ],
+  "limits": [
+    "One native Canvas screenshot, not a Chromium/browser capture.",
+    "Artwork is an authored lateral adaptation; added door spacing and vent not validated 1:1.",
+    "Foreground has native alpha 1 traces; bytes remain unmodified."
+  ],
+  "finalRerunEvidence": {
+    "priorDirectory": "docs/production/vague29/qa-native-hospital",
+    "currentDirectory": "docs/production/vague29/qa-final-hospital",
+    "allCaptureBytesIdentical": true,
+    "reason": "Final manifest retest after preserving contextual ceiling eligibility; pixels and renderer inputs are unchanged."
+  }
+}

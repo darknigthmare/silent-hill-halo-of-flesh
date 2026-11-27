@@ -2,9 +2,13 @@ import http from 'node:http';
 import { createReadStream, existsSync, statSync } from 'node:fs';
 import { extname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {outputArgument,resolveBuildOutput} from './build-output.mjs';
 
 const projectRoot = resolve(fileURLToPath(new URL('../', import.meta.url)));
-const root = resolve(projectRoot, process.argv.includes('--dist') ? 'dist' : '.');
+const customOutput=outputArgument(process.argv.slice(2));
+if(customOutput!==null&&!process.argv.includes('--dist'))throw Error('--out-dir requires --dist');
+const root = customOutput===null?resolve(projectRoot, process.argv.includes('--dist') ? 'dist' : '.'):
+  (await resolveBuildOutput(process.argv.slice(2),projectRoot,{requireExistingBuild:true})).path;
 const port = Number(process.env.PORT || process.argv.find((value) => /^\d+$/.test(value)) || 4173);
 const mime = {
   '.html':'text/html; charset=utf-8', '.css':'text/css; charset=utf-8', '.js':'text/javascript; charset=utf-8',

@@ -1,0 +1,38 @@
+{
+  "reviewer": "root assistant, direct image inspection",
+  "scope": "Four native Canvas screenshots; source fidelity assessed separately in stages/source-review.json",
+  "captures": [
+    {
+      "file": "book_light.png",
+      "sha256": "7d3bda9b4b35378d8e6e90d60f25bd791944d8de3471cc1200cb3dd47dc6c72c",
+      "observation": "Sol de dalles dégagé ; deux silhouettes lisibles ; bords proches limités aux extrémités. Fenêtres claires et matériaux de la zone adaptés à une caméra latérale."
+    },
+    {
+      "file": "book_steel.png",
+      "sha256": "f27ff027bc7add43c68e6da6cfd4476b09dc4e0db84e73b48c9a5ad6eb61c4ab",
+      "observation": "Sol et disque métallique dégagés ; porte latérale et panneaux lisibles ; aucune barre de premier plan ne coupe les combattants."
+    },
+    {
+      "file": "film_midwich.png",
+      "sha256": "7e962ab7cf572b002df6888de898cfebeac7e36fcf01de6332425c3585cf0967",
+      "observation": "Coursive grillagée et fenêtre circulaire Otherworld lisibles ; bande de marche continue ; aucune obstruction par les bords proches."
+    },
+    {
+      "file": "film_church.png",
+      "sha256": "7919b1e8798bafa9e6977cda0bc5e1a1a0d9d00b0586d0e8a4f009372e9ef11e",
+      "observation": "Nef avant intrusion, entrée arrière et suspensions visibles ; parquet de combat libre ; bancs et piliers maintenus sur les côtés."
+    }
+  ],
+  "result": "readable-with-documented-source-limits",
+  "limits": [
+    "No Chromium or HTTP execution is claimed.",
+    "A static capture does not demonstrate every movement frame, collision, camera transition or stage phase.",
+    "The width, camera and element spacing remain adaptations, not certified source geometry."
+  ],
+  "finalRerunEvidence": {
+    "priorDirectory": "docs/production/vague29/qa-native-stages",
+    "currentDirectory": "docs/production/vague29/qa-final-stages",
+    "allCaptureBytesIdentical": true,
+    "reason": "Final manifest retest after preserving contextual ceiling eligibility; pixels and renderer inputs are unchanged."
+  }
+}

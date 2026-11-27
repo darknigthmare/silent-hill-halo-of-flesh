@@ -59,8 +59,30 @@ test('new SHf and Wii rooms retain exact distinct phases, no unsupported fixture
  assert.equal(stageSpace(stage('dark_shrine')),'exterior');assert.equal(stageSpace(stage('nightmare_school')),'exterior');assert.match(stage('hinako_home').referencePolicy.terrainPresentation.name,/PLANCHER/);assert.match(stage('shimizu_residence').referencePolicy.terrainPresentation.name,/TATAMI/);assert.ok(!stage('hinako_home').props.includes('tatami'));assert.ok(!stage('hinako_home').props.includes('roots'));assert.ok(!stage('corrupted_ebisugaoka').props.includes('roots'));assert.ok(stage('corrupted_ebisugaoka').referenceTracks.some(t=>t.key==='rootBorder'));assert.match(stage('school_shf').reference.locationNote,/personnel/);assert.ok(!stage('nightmare_hospital_sm').props.includes('beds'));assert.ok(!stage('nightmare_mall_sm').props.includes('escalator'));assert.equal(Object.keys(materials).length,14);assert.deepEqual(STAGE_TERRAINS,materials);
 });
 
+test('lot10 keeps its historical Residence I wording while the current dining scene selects Residence II',()=>{
+ const archived=ledger.items.filter(i=>i.entityId==='shimizu_residence');
+ assert.deepEqual(archived.map(i=>i.rowId).sort(),['shimizu_residence:reference:1','shimizu_residence:reference:4']);
+ for(const item of archived){
+  assert.equal(item.sourceScope,'Shimizu ResidenceI, salle à manger du calendrier jauni, voie initiale SHf2025','the delivery ledger remains historical');
+  const current=trackFor(item);
+  assert.equal(current.id,item.rowId);
+  assert.equal(current.key,item.runtimeKey);
+  assert.equal(current.locationScope,'Shimizu Residence II, salle à manger du calendrier jauni, parcours Ending 1 après le souvenir, SHf2025');
+ }
+ const dining=stage('shimizu_residence');
+ assert.equal(dining.source,'shf');
+ assert.equal(dining.referencePolicy.worldState,'fixed-normal');
+ assert.equal(dining.referencePolicy.sceneId,'shf-residence-ii-dining-yellowed-calendar');
+ assert.equal(dining.referencePolicy.normalPhaseLabel,'RESIDENCE II · SALLE À MANGER');
+ assert.equal(dining.referencePolicy.alteredPhaseLabel,'RESIDENCE II · SALLE À MANGER');
+ assert.equal(stageBitmapFor(dining).scene,dining.referencePolicy.sceneId);
+ const entry=stage('hinako_home');
+ assert.equal(entry.referencePolicy.normalPhaseLabel,'RESIDENCE I · ENTRÉE');
+ assert.equal(entry.referencePolicy.alteredPhaseLabel,'RESIDENCE I · ENTRÉE');
+});
+
 test('renderer keeps gallery motion ambient and preserves the result composition over matching raster rooms',t=>{
- const s=stage('book_fire'),phase=result(1020,25),a=trace(),b=trace();drawStage(a.context,s,1,{matchState:phase});drawStage(b.context,s,987654,{matchState:phase});assert.deepEqual(a.calls,b.calls);const native=draw(s,1000),resultFrame=draw(s,1000,{matchState:phase});assert.ok(!native.ids.includes('book_fire:reference:4'));assert.ok(resultFrame.ids.includes('book_fire:reference:4'));assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);assert.equal(STAGES.flatMap(s=>s.referenceTracks).length,163);
+ const s=stage('book_fire'),phase=result(1020,25),a=trace(),b=trace();drawStage(a.context,s,1,{matchState:phase});drawStage(b.context,s,987654,{matchState:phase});assert.deepEqual(a.calls,b.calls);const native=draw(s,1000),resultFrame=draw(s,1000,{matchState:phase});assert.ok(!native.ids.includes('book_fire:reference:4'));assert.ok(resultFrame.ids.includes('book_fire:reference:4'));assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);assert.equal(STAGES.flatMap(s=>s.referenceTracks).length,159);
  const replaced=STAGES.filter(s=>stageBitmapFor(s)?.mode==='replace');
  const original=['midwich','alchemilla','brookhaven_roof','lakeview'].map(stage);
  assert.ok(original.every(s=>replaced.includes(s)));

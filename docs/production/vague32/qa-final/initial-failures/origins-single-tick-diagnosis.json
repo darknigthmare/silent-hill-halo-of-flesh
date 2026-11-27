@@ -1,0 +1,1336 @@
+{
+  "schema": 1,
+  "wave": 32,
+  "startedAt": "2026-11-27T08:51:22.297Z",
+  "passed": false,
+  "checks": [
+    {
+      "name": "Exactly the two bound firearm owners",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "Dedicated HTTP test port is unused",
+      "passed": true
+    },
+    {
+      "name": "Dedicated dist HTTP server ready",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: intended owner painted",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+        "args": [
+          -58.050000000000004,
+          -200.58268229166669,
+          143.33333333333334,
+          215
+        ],
+        "width": 1024,
+        "height": 1536,
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428607702255,
+          594.0000067949295
+        ],
+        "engineFrame": 168,
+        "fighterId": "sh4_man_with_the_coat_067",
+        "state": "attack",
+        "grounded": true,
+        "x": 310,
+        "y": 594,
+        "facing": 1,
+        "moveKey": "neutralSpecial",
+        "lastMoveKey": "neutralSpecial",
+        "attackFrame": 15,
+        "startup": 15,
+        "active": 1,
+        "projectile": {
+          "x": 401.9643229166667,
+          "y": 435.4095052083333,
+          "vx": 12,
+          "vy": 0,
+          "radius": 14.16,
+          "life": 59,
+          "maxLife": 60,
+          "attackId": 1,
+          "launchOrigin": {
+            "kind": "reviewed-sprite-muzzle",
+            "fighterId": "sh4_man_with_the_coat_067",
+            "source": "sh4",
+            "moveKey": "neutralSpecial",
+            "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+            "muzzlePixels": [
+              986,
+              300
+            ],
+            "x": 389.9643229166667,
+            "y": 435.4095052083333
+          },
+          "emissionSweepConsumed": true
+        },
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 613.3997395833334
+          }
+        }
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: intended attack accepted through ordinary keyboard",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: captured attack is active",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+        "args": [
+          -58.050000000000004,
+          -200.58268229166669,
+          143.33333333333334,
+          215
+        ],
+        "width": 1024,
+        "height": 1536,
+        "matrix": [
+          0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          317.1428607702255,
+          594.0000067949295
+        ],
+        "engineFrame": 168,
+        "fighterId": "sh4_man_with_the_coat_067",
+        "state": "attack",
+        "grounded": true,
+        "x": 310,
+        "y": 594,
+        "facing": 1,
+        "moveKey": "neutralSpecial",
+        "lastMoveKey": "neutralSpecial",
+        "attackFrame": 15,
+        "startup": 15,
+        "active": 1,
+        "projectile": {
+          "x": 401.9643229166667,
+          "y": 435.4095052083333,
+          "vx": 12,
+          "vy": 0,
+          "radius": 14.16,
+          "life": 59,
+          "maxLife": 60,
+          "attackId": 1,
+          "launchOrigin": {
+            "kind": "reviewed-sprite-muzzle",
+            "fighterId": "sh4_man_with_the_coat_067",
+            "source": "sh4",
+            "moveKey": "neutralSpecial",
+            "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+            "muzzlePixels": [
+              986,
+              300
+            ],
+            "x": 389.9643229166667,
+            "y": 435.4095052083333
+          },
+          "emissionSweepConsumed": true
+        },
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 613.3997395833334
+          }
+        }
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: actual active shot keeps exact owner/source/frame binding",
+      "passed": true,
+      "detail": {
+        "x": 401.9643229166667,
+        "y": 435.4095052083333,
+        "vx": 12,
+        "vy": 0,
+        "radius": 14.16,
+        "life": 59,
+        "maxLife": 60,
+        "attackId": 1,
+        "launchOrigin": {
+          "kind": "reviewed-sprite-muzzle",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "source": "sh4",
+          "moveKey": "neutralSpecial",
+          "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+          "muzzlePixels": [
+            986,
+            300
+          ],
+          "x": 389.9643229166667,
+          "y": 435.4095052083333
+        },
+        "emissionSweepConsumed": true
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: real physical muzzle equals transformed source gun pixel",
+      "passed": true,
+      "detail": {
+        "renderedMuzzle": {
+          "x": 395.37635515628693,
+          "y": 438.84220477244037
+        },
+        "physicalMuzzle": {
+          "x": 395.37635055916303,
+          "y": 438.8421999007937
+        },
+        "errorPixels": 0.000006698245271344095,
+        "projectile": {
+          "x": 401.9643229166667,
+          "y": 435.4095052083333,
+          "vx": 12,
+          "vy": 0,
+          "radius": 14.16,
+          "life": 59,
+          "maxLife": 60,
+          "attackId": 1,
+          "launchOrigin": {
+            "kind": "reviewed-sprite-muzzle",
+            "fighterId": "sh4_man_with_the_coat_067",
+            "source": "sh4",
+            "moveKey": "neutralSpecial",
+            "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+            "muzzlePixels": [
+              986,
+              300
+            ],
+            "x": 389.9643229166667,
+            "y": 435.4095052083333
+          },
+          "emissionSweepConsumed": true
+        }
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: first visible projectile advances exactly one ordinary tick from the muzzle",
+      "passed": true,
+      "detail": {
+        "x": 401.9643229166667,
+        "y": 435.4095052083333,
+        "vx": 12,
+        "vy": 0,
+        "radius": 14.16,
+        "life": 59,
+        "maxLife": 60,
+        "attackId": 1,
+        "launchOrigin": {
+          "kind": "reviewed-sprite-muzzle",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "source": "sh4",
+          "moveKey": "neutralSpecial",
+          "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+          "muzzlePixels": [
+            986,
+            300
+          ],
+          "x": 389.9643229166667,
+          "y": 435.4095052083333
+        },
+        "emissionSweepConsumed": true
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: original speed/radius/lifetime and one-time initial sweep retained",
+      "passed": true,
+      "detail": {
+        "x": 401.9643229166667,
+        "y": 435.4095052083333,
+        "vx": 12,
+        "vy": 0,
+        "radius": 14.16,
+        "life": 59,
+        "maxLife": 60,
+        "attackId": 1,
+        "launchOrigin": {
+          "kind": "reviewed-sprite-muzzle",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "source": "sh4",
+          "moveKey": "neutralSpecial",
+          "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+          "muzzlePixels": [
+            986,
+            300
+          ],
+          "x": 389.9643229166667,
+          "y": 435.4095052083333
+        },
+        "emissionSweepConsumed": true
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: exact HTTP bytes /assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "status": 200,
+          "bytes": 1866186,
+          "sha256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089"
+        }
+      ]
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: exact HTTP bytes /assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+          "status": 200,
+          "bytes": 1639886,
+          "sha256": "e11ab6fff183ed553cf1ee3875f72c81ede52c5d2241d698baaa78e169fe652a"
+        }
+      ]
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: action expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: action painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 168,
+        "capturedFrame": 168
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: action expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: action ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": 0,
+        "nativePixels": 0
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: action actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: recovered expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: recovered painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 195,
+        "capturedFrame": 195
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: recovered expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: recovered ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": 0,
+        "nativePixels": 0
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: recovered actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-right: release returns to the original idle",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: intended owner painted",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+        "args": [
+          -58.050000000000004,
+          -200.58268229166669,
+          143.33333333333334,
+          215
+        ],
+        "width": 1024,
+        "height": 1536,
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.8571544885635,
+          594.0000067949295
+        ],
+        "engineFrame": 168,
+        "fighterId": "sh4_man_with_the_coat_067",
+        "state": "attack",
+        "grounded": true,
+        "x": 970,
+        "y": 594,
+        "facing": -1,
+        "moveKey": "neutralSpecial",
+        "lastMoveKey": "neutralSpecial",
+        "attackFrame": 15,
+        "startup": 15,
+        "active": 1,
+        "projectile": {
+          "x": 878.0356770833333,
+          "y": 435.4095052083333,
+          "vx": -12,
+          "vy": 0,
+          "radius": 14.16,
+          "life": 59,
+          "maxLife": 60,
+          "attackId": 1,
+          "launchOrigin": {
+            "kind": "reviewed-sprite-muzzle",
+            "fighterId": "sh4_man_with_the_coat_067",
+            "source": "sh4",
+            "moveKey": "neutralSpecial",
+            "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+            "muzzlePixels": [
+              986,
+              300
+            ],
+            "x": 890.0356770833333,
+            "y": 435.4095052083333
+          },
+          "emissionSweepConsumed": true
+        },
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 613.3997395833334
+          }
+        }
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: intended attack accepted through ordinary keyboard",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: captured attack is active",
+      "passed": true,
+      "detail": {
+        "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+        "args": [
+          -58.050000000000004,
+          -200.58268229166669,
+          143.33333333333334,
+          215
+        ],
+        "width": 1024,
+        "height": 1536,
+        "matrix": [
+          -0.9783549904823303,
+          0,
+          0,
+          0.9783549904823303,
+          962.8571544885635,
+          594.0000067949295
+        ],
+        "engineFrame": 168,
+        "fighterId": "sh4_man_with_the_coat_067",
+        "state": "attack",
+        "grounded": true,
+        "x": 970,
+        "y": 594,
+        "facing": -1,
+        "moveKey": "neutralSpecial",
+        "lastMoveKey": "neutralSpecial",
+        "attackFrame": 15,
+        "startup": 15,
+        "active": 1,
+        "projectile": {
+          "x": 878.0356770833333,
+          "y": 435.4095052083333,
+          "vx": -12,
+          "vy": 0,
+          "radius": 14.16,
+          "life": 59,
+          "maxLife": 60,
+          "attackId": 1,
+          "launchOrigin": {
+            "kind": "reviewed-sprite-muzzle",
+            "fighterId": "sh4_man_with_the_coat_067",
+            "source": "sh4",
+            "moveKey": "neutralSpecial",
+            "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+            "muzzlePixels": [
+              986,
+              300
+            ],
+            "x": 890.0356770833333,
+            "y": 435.4095052083333
+          },
+          "emissionSweepConsumed": true
+        },
+        "camera": {
+          "scale": 0.9783549783549783,
+          "x": 13.852813852813824,
+          "y": 12.857142857142883,
+          "bounds": {
+            "left": 0,
+            "right": 1280,
+            "upper": 132,
+            "lower": 613.3997395833334
+          }
+        }
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: actual active shot keeps exact owner/source/frame binding",
+      "passed": true,
+      "detail": {
+        "x": 878.0356770833333,
+        "y": 435.4095052083333,
+        "vx": -12,
+        "vy": 0,
+        "radius": 14.16,
+        "life": 59,
+        "maxLife": 60,
+        "attackId": 1,
+        "launchOrigin": {
+          "kind": "reviewed-sprite-muzzle",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "source": "sh4",
+          "moveKey": "neutralSpecial",
+          "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+          "muzzlePixels": [
+            986,
+            300
+          ],
+          "x": 890.0356770833333,
+          "y": 435.4095052083333
+        },
+        "emissionSweepConsumed": true
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: real physical muzzle equals transformed source gun pixel",
+      "passed": true,
+      "detail": {
+        "renderedMuzzle": {
+          "x": 884.6236601025021,
+          "y": 438.84220477244037
+        },
+        "physicalMuzzle": {
+          "x": 884.6236494408369,
+          "y": 438.8421999007937
+        },
+        "errorPixels": 0.000011721947221784287,
+        "projectile": {
+          "x": 878.0356770833333,
+          "y": 435.4095052083333,
+          "vx": -12,
+          "vy": 0,
+          "radius": 14.16,
+          "life": 59,
+          "maxLife": 60,
+          "attackId": 1,
+          "launchOrigin": {
+            "kind": "reviewed-sprite-muzzle",
+            "fighterId": "sh4_man_with_the_coat_067",
+            "source": "sh4",
+            "moveKey": "neutralSpecial",
+            "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+            "muzzlePixels": [
+              986,
+              300
+            ],
+            "x": 890.0356770833333,
+            "y": 435.4095052083333
+          },
+          "emissionSweepConsumed": true
+        }
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: first visible projectile advances exactly one ordinary tick from the muzzle",
+      "passed": true,
+      "detail": {
+        "x": 878.0356770833333,
+        "y": 435.4095052083333,
+        "vx": -12,
+        "vy": 0,
+        "radius": 14.16,
+        "life": 59,
+        "maxLife": 60,
+        "attackId": 1,
+        "launchOrigin": {
+          "kind": "reviewed-sprite-muzzle",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "source": "sh4",
+          "moveKey": "neutralSpecial",
+          "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+          "muzzlePixels": [
+            986,
+            300
+          ],
+          "x": 890.0356770833333,
+          "y": 435.4095052083333
+        },
+        "emissionSweepConsumed": true
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: original speed/radius/lifetime and one-time initial sweep retained",
+      "passed": true,
+      "detail": {
+        "x": 878.0356770833333,
+        "y": 435.4095052083333,
+        "vx": -12,
+        "vy": 0,
+        "radius": 14.16,
+        "life": 59,
+        "maxLife": 60,
+        "attackId": 1,
+        "launchOrigin": {
+          "kind": "reviewed-sprite-muzzle",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "source": "sh4",
+          "moveKey": "neutralSpecial",
+          "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+          "muzzlePixels": [
+            986,
+            300
+          ],
+          "x": 890.0356770833333,
+          "y": 435.4095052083333
+        },
+        "emissionSweepConsumed": true
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: exact HTTP bytes /assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "status": 200,
+          "bytes": 1866186,
+          "sha256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089"
+        }
+      ]
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: exact HTTP bytes /assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+          "status": 200,
+          "bytes": 1639886,
+          "sha256": "e11ab6fff183ed553cf1ee3875f72c81ede52c5d2241d698baaa78e169fe652a"
+        }
+      ]
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: action expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: action painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 168,
+        "capturedFrame": 168
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: action expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: action ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": 0,
+        "nativePixels": 0
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: action actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: recovered expected raster dimensions",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: recovered painted in the captured engine frame",
+      "passed": true,
+      "detail": {
+        "drawFrame": 195,
+        "capturedFrame": 195
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: recovered expected orientation",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: recovered ground contact within one native pixel",
+      "passed": true,
+      "detail": {
+        "groundOffset": 0,
+        "nativePixels": 0
+      }
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: recovered actual 1280x720 game canvas",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067-left: release returns to the original idle",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "label": "sh4_man_with_the_coat_067-right",
+      "player": 0,
+      "fighterId": "sh4_man_with_the_coat_067",
+      "source": "sh4",
+      "pose": "neutralSpecial",
+      "startX": 310,
+      "muzzle": {
+        "renderedMuzzle": {
+          "x": 395.37635515628693,
+          "y": 438.84220477244037
+        },
+        "physicalMuzzle": {
+          "x": 395.37635055916303,
+          "y": 438.8421999007937
+        },
+        "errorPixels": 0.000006698245271344095,
+        "projectile": {
+          "x": 401.9643229166667,
+          "y": 435.4095052083333,
+          "vx": 12,
+          "vy": 0,
+          "radius": 14.16,
+          "life": 59,
+          "maxLife": 60,
+          "attackId": 1,
+          "launchOrigin": {
+            "kind": "reviewed-sprite-muzzle",
+            "fighterId": "sh4_man_with_the_coat_067",
+            "source": "sh4",
+            "moveKey": "neutralSpecial",
+            "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+            "muzzlePixels": [
+              986,
+              300
+            ],
+            "x": 389.9643229166667,
+            "y": 435.4095052083333
+          },
+          "emissionSweepConsumed": true
+        }
+      },
+      "captures": [
+        {
+          "kind": "action",
+          "file": "sh4_man_with_the_coat_067-right-action.png",
+          "bytes": 1481194,
+          "sha256": "173be49bcb51fe29d794233cb23f72da1b0a190c1f113fa778fac22dfe52d9fc"
+        },
+        {
+          "kind": "recovered",
+          "file": "sh4_man_with_the_coat_067-right-recovered.png",
+          "bytes": 1476329,
+          "sha256": "26e34cf241f0550e830283f1a7df51eae00d3d7ef7ab52612b9efae5cf718893"
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "status": 200,
+          "bytes": 1866186,
+          "sha256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089"
+        },
+        {
+          "path": "/assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+          "status": 200,
+          "bytes": 1639886,
+          "sha256": "e11ab6fff183ed553cf1ee3875f72c81ede52c5d2241d698baaa78e169fe652a"
+        }
+      ],
+      "evidence": {
+        "action": {
+          "draw": {
+            "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "args": [
+              -58.050000000000004,
+              -200.58268229166669,
+              143.33333333333334,
+              215
+            ],
+            "width": 1024,
+            "height": 1536,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428607702255,
+              594.0000067949295
+            ],
+            "engineFrame": 168,
+            "fighterId": "sh4_man_with_the_coat_067",
+            "state": "attack",
+            "grounded": true,
+            "x": 310,
+            "y": 594,
+            "facing": 1,
+            "moveKey": "neutralSpecial",
+            "lastMoveKey": "neutralSpecial",
+            "attackFrame": 15,
+            "startup": 15,
+            "active": 1,
+            "projectile": {
+              "x": 401.9643229166667,
+              "y": 435.4095052083333,
+              "vx": 12,
+              "vy": 0,
+              "radius": 14.16,
+              "life": 59,
+              "maxLife": 60,
+              "attackId": 1,
+              "launchOrigin": {
+                "kind": "reviewed-sprite-muzzle",
+                "fighterId": "sh4_man_with_the_coat_067",
+                "source": "sh4",
+                "moveKey": "neutralSpecial",
+                "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+                "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+                "muzzlePixels": [
+                  986,
+                  300
+                ],
+                "x": 389.9643229166667,
+                "y": 435.4095052083333
+              },
+              "emissionSweepConsumed": true
+            },
+            "camera": {
+              "scale": 0.9783549783549783,
+              "x": 13.852813852813824,
+              "y": 12.857142857142883,
+              "bounds": {
+                "left": 0,
+                "right": 1280,
+                "upper": 132,
+                "lower": 613.3997395833334
+              }
+            }
+          },
+          "frame": 168,
+          "phase": "fight",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "state": "attack",
+          "grounded": true,
+          "lastMoveKey": "neutralSpecial",
+          "x": 310,
+          "y": 594,
+          "facing": 1
+        },
+        "recovered": {
+          "draw": {
+            "path": "/assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+            "args": [
+              -71.66666666666667,
+              -200.16276041666669,
+              143.33333333333334,
+              215
+            ],
+            "width": 1024,
+            "height": 1536,
+            "matrix": [
+              0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              317.1428607702255,
+              594.0000067949295
+            ],
+            "engineFrame": 195,
+            "fighterId": "sh4_man_with_the_coat_067",
+            "state": "idle",
+            "grounded": true,
+            "x": 310,
+            "y": 594,
+            "facing": 1,
+            "moveKey": null,
+            "lastMoveKey": "neutralSpecial",
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 195,
+          "phase": "fight",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "state": "idle",
+          "grounded": true,
+          "lastMoveKey": "neutralSpecial",
+          "x": 310,
+          "y": 594,
+          "facing": 1
+        }
+      }
+    },
+    {
+      "label": "sh4_man_with_the_coat_067-left",
+      "player": 1,
+      "fighterId": "sh4_man_with_the_coat_067",
+      "source": "sh4",
+      "pose": "neutralSpecial",
+      "startX": 970,
+      "muzzle": {
+        "renderedMuzzle": {
+          "x": 884.6236601025021,
+          "y": 438.84220477244037
+        },
+        "physicalMuzzle": {
+          "x": 884.6236494408369,
+          "y": 438.8421999007937
+        },
+        "errorPixels": 0.000011721947221784287,
+        "projectile": {
+          "x": 878.0356770833333,
+          "y": 435.4095052083333,
+          "vx": -12,
+          "vy": 0,
+          "radius": 14.16,
+          "life": 59,
+          "maxLife": 60,
+          "attackId": 1,
+          "launchOrigin": {
+            "kind": "reviewed-sprite-muzzle",
+            "fighterId": "sh4_man_with_the_coat_067",
+            "source": "sh4",
+            "moveKey": "neutralSpecial",
+            "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+            "muzzlePixels": [
+              986,
+              300
+            ],
+            "x": 890.0356770833333,
+            "y": 435.4095052083333
+          },
+          "emissionSweepConsumed": true
+        }
+      },
+      "captures": [
+        {
+          "kind": "action",
+          "file": "sh4_man_with_the_coat_067-left-action.png",
+          "bytes": 1481253,
+          "sha256": "ad2054c7a0611451cd02bf97c3156b729fc1e6832240936fd8e76f02819e1883"
+        },
+        {
+          "kind": "recovered",
+          "file": "sh4_man_with_the_coat_067-left-recovered.png",
+          "bytes": 1476062,
+          "sha256": "e82947f01f7d673f79a6dbbd74343883caa629d8a5cf810c0ee210ca816f01d9"
+        }
+      ],
+      "responses": [
+        {
+          "path": "/assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+          "status": 200,
+          "bytes": 1639886,
+          "sha256": "e11ab6fff183ed553cf1ee3875f72c81ede52c5d2241d698baaa78e169fe652a"
+        },
+        {
+          "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+          "status": 200,
+          "bytes": 1866186,
+          "sha256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089"
+        }
+      ],
+      "evidence": {
+        "action": {
+          "draw": {
+            "path": "/assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+            "args": [
+              -58.050000000000004,
+              -200.58268229166669,
+              143.33333333333334,
+              215
+            ],
+            "width": 1024,
+            "height": 1536,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.8571544885635,
+              594.0000067949295
+            ],
+            "engineFrame": 168,
+            "fighterId": "sh4_man_with_the_coat_067",
+            "state": "attack",
+            "grounded": true,
+            "x": 970,
+            "y": 594,
+            "facing": -1,
+            "moveKey": "neutralSpecial",
+            "lastMoveKey": "neutralSpecial",
+            "attackFrame": 15,
+            "startup": 15,
+            "active": 1,
+            "projectile": {
+              "x": 878.0356770833333,
+              "y": 435.4095052083333,
+              "vx": -12,
+              "vy": 0,
+              "radius": 14.16,
+              "life": 59,
+              "maxLife": 60,
+              "attackId": 1,
+              "launchOrigin": {
+                "kind": "reviewed-sprite-muzzle",
+                "fighterId": "sh4_man_with_the_coat_067",
+                "source": "sh4",
+                "moveKey": "neutralSpecial",
+                "framePath": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+                "frameSHA256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+                "muzzlePixels": [
+                  986,
+                  300
+                ],
+                "x": 890.0356770833333,
+                "y": 435.4095052083333
+              },
+              "emissionSweepConsumed": true
+            },
+            "camera": {
+              "scale": 0.9783549783549783,
+              "x": 13.852813852813824,
+              "y": 12.857142857142883,
+              "bounds": {
+                "left": 0,
+                "right": 1280,
+                "upper": 132,
+                "lower": 613.3997395833334
+              }
+            }
+          },
+          "frame": 168,
+          "phase": "fight",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "state": "attack",
+          "grounded": true,
+          "lastMoveKey": "neutralSpecial",
+          "x": 970,
+          "y": 594,
+          "facing": -1
+        },
+        "recovered": {
+          "draw": {
+            "path": "/assets/sprites/sh4_man_with_the_coat_067.e11ab6fff183.png",
+            "args": [
+              -71.66666666666667,
+              -200.16276041666669,
+              143.33333333333334,
+              215
+            ],
+            "width": 1024,
+            "height": 1536,
+            "matrix": [
+              -0.9783549904823303,
+              0,
+              0,
+              0.9783549904823303,
+              962.8571544885635,
+              594.0000067949295
+            ],
+            "engineFrame": 195,
+            "fighterId": "sh4_man_with_the_coat_067",
+            "state": "idle",
+            "grounded": true,
+            "x": 970,
+            "y": 594,
+            "facing": -1,
+            "moveKey": null,
+            "lastMoveKey": "neutralSpecial",
+            "attackFrame": null,
+            "startup": null,
+            "active": null
+          },
+          "frame": 195,
+          "phase": "fight",
+          "fighterId": "sh4_man_with_the_coat_067",
+          "state": "idle",
+          "grounded": true,
+          "lastMoveKey": "neutralSpecial",
+          "x": 970,
+          "y": 594,
+          "facing": -1
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "method": "Built HTTP app, fresh browser contexts, ordinary UI and keyboard. Passive drawImage observer and captures from the actual game canvas. No actor, camera, clock, image or module substitution.",
+  "limits": [
+    "Single static poses; no animation, source timing or 1:1 fidelity certification.",
+    "Both orientations use the existing engine mirror, not independently observed source-side geometry.",
+    "Service workers are blocked; this test does not cover offline updates.",
+    "Automated HTTP and placement checks require separate visual inspection of the retained gameplay captures.",
+    "Muzzle points are measured on the exact published candidate PNGs; collision/guard changes are separately covered by engine tests."
+  ],
+  "browser": "158.0.8127.0",
+  "inputFailure": {
+    "label": "sh2_eddie_dombrowski_032-right",
+    "actionKey": "KeyI",
+    "phase": "fight",
+    "frame": 1023,
+    "paused": false,
+    "actors": [
+      {
+        "id": "sh2_eddie_dombrowski_032",
+        "state": "idle",
+        "attack": null,
+        "lastMoveKey": "neutralSpecial",
+        "presentation": null,
+        "phaseLock": 0
+      },
+      {
+        "id": "bom_butcher_123",
+        "state": "idle",
+        "attack": null,
+        "lastMoveKey": null,
+        "presentation": null,
+        "phaseLock": 0
+      }
+    ],
+    "observed": {
+      "draws": {
+        "/assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png": {
+          "path": "/assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+          "args": [
+            -57.912457912457924,
+            -214.20257260101013,
+            144.7811447811448,
+            217.1717171717172
+          ],
+          "width": 1024,
+          "height": 1536,
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            317.1428607702255,
+            594.0000067949295
+          ],
+          "engineFrame": 1023,
+          "fighterId": "sh2_eddie_dombrowski_032",
+          "state": "idle",
+          "grounded": true,
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "moveKey": null,
+          "lastMoveKey": "neutralSpecial",
+          "attackFrame": null,
+          "startup": null,
+          "active": null
+        },
+        "/assets/sprites/sh2_eddie_dombrowski_032.e691299ab326.png": {
+          "path": "/assets/sprites/sh2_eddie_dombrowski_032.e691299ab326.png",
+          "args": [
+            -58.92592592592593,
+            -215.47506313131316,
+            144.7811447811448,
+            217.1717171717172
+          ],
+          "width": 1024,
+          "height": 1536,
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            317.1428607702255,
+            594.0000067949295
+          ],
+          "engineFrame": 191,
+          "fighterId": "sh2_eddie_dombrowski_032",
+          "state": "attack",
+          "grounded": true,
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "moveKey": "neutralSpecial",
+          "lastMoveKey": "neutralSpecial",
+          "attackFrame": 40,
+          "startup": 15,
+          "active": 1
+        }
+      },
+      "captures": {},
+      "evidence": {}
+    },
+    "cache": [
+      {
+        "path": "assets/sprites/sh1_bloodsucker.04acbc6820b3.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_lying_figure_020.86ac95da85c7.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_lying_figure_crawling_021.a2ce60380f5d.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_mannequin_022.8c4e65209cd8.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_bubble_head_nurse_024.fc01d3735b74.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_creeper_025.84618d11d580.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_mandarin_026.04d4be93badc.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_flesh_lip_027.15f2f56aa578.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_abstract_daddy_028.21dad4720ede.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_red_pyramid_thing_great_knife_029.b681982c38d8.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.31e07d7ed871.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.e691299ab326.png",
+        "status": "ready",
+        "error": null
+      },
+      {
+        "path": "assets/sprites/bom_butcher_123.67cd2f023ce2.png",
+        "status": "ready",
+        "error": null
+      }
+    ]
+  },
+  "failure": "page.waitForFunction: Timeout 15000ms exceeded.\n    at /workspace/scratch/4cb8973fa173/silent-hill-halo-of-flesh/docs/production/vague32/characters/qa-http-origins.mjs:123:20",
+  "completedAt": "2026-11-27T08:51:54.386Z"
+}

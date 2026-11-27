@@ -1,0 +1,352 @@
+{
+  "version": "0.9.6",
+  "kind": "http-browser-smoke",
+  "assertions": [
+    {
+      "name": "HTTP server starts",
+      "passed": true
+    },
+    {
+      "name": "WOOD ZONE has both authored layers and both idle sprites are separate from selection",
+      "passed": true
+    },
+    {
+      "name": "Versus selected WOOD ZONE",
+      "passed": true
+    },
+    {
+      "name": "Match canvas painted both stances and both WOOD ZONE layers in one frame",
+      "passed": true
+    },
+    {
+      "name": "BROOKHAVEN — FLOODED ROOM has both authored layers and both idle sprites are separate from selection",
+      "passed": true
+    },
+    {
+      "name": "Versus selected BROOKHAVEN — FLOODED ROOM",
+      "passed": true
+    },
+    {
+      "name": "Match canvas painted both stances and both BROOKHAVEN — FLOODED ROOM layers in one frame",
+      "passed": true
+    },
+    {
+      "name": "Scarlet has the new spider-form side view",
+      "passed": true
+    },
+    {
+      "name": "SILENT HILL HISTORICAL SOCIETY has both authored layers and both idle sprites are separate from selection",
+      "passed": true
+    },
+    {
+      "name": "Versus selected SILENT HILL HISTORICAL SOCIETY",
+      "passed": true
+    },
+    {
+      "name": "Match canvas painted both stances and both SILENT HILL HISTORICAL SOCIETY layers in one frame",
+      "passed": true
+    },
+    {
+      "name": "Colin has the recovered film portrait",
+      "passed": true
+    },
+    {
+      "name": "The player-one selection card painted Colin at its native source dimensions",
+      "passed": true
+    },
+    {
+      "name": "SILENT HILL HISTORICAL SOCIETY has both authored layers and both idle sprites are separate from selection",
+      "passed": true
+    },
+    {
+      "name": "Versus selected SILENT HILL HISTORICAL SOCIETY",
+      "passed": true
+    },
+    {
+      "name": "Match canvas painted both stances and both SILENT HILL HISTORICAL SOCIETY layers in one frame",
+      "passed": true
+    },
+    {
+      "name": "SILENT HILL HISTORICAL SOCIETY has both authored layers and both idle sprites are separate from selection",
+      "passed": true
+    },
+    {
+      "name": "Versus selected SILENT HILL HISTORICAL SOCIETY",
+      "passed": true
+    },
+    {
+      "name": "Match canvas painted both stances and both SILENT HILL HISTORICAL SOCIETY layers in one frame",
+      "passed": true
+    },
+    {
+      "name": "Raw Shock paints its separate side view in the workshop, with its documented role",
+      "passed": true
+    },
+    {
+      "name": "Air Screamer selects its new portrait, independently of both idle and flight",
+      "passed": true
+    },
+    {
+      "name": "LES PÉTALES DE MAYA shows the expected manifestation and caption",
+      "passed": true
+    },
+    {
+      "name": "LA SENTENCE DE JAMES shows the expected manifestation and caption",
+      "passed": true
+    },
+    {
+      "name": "NAÎTRE DEUX FOIS shows the expected manifestation and caption",
+      "passed": true
+    },
+    {
+      "name": "shell menu renders",
+      "passed": true
+    },
+    {
+      "name": "real same-origin iframe loads the selection",
+      "passed": true
+    },
+    {
+      "name": "binding persists through HTTP reload",
+      "passed": true
+    },
+    {
+      "name": "real keyboard input jumps after normal intro",
+      "passed": true
+    },
+    {
+      "name": "native pause dialog stops the fight",
+      "passed": true
+    },
+    {
+      "name": "paused clock remains stopped",
+      "passed": true
+    },
+    {
+      "name": "Escape restores canvas focus",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "fixtures": [
+    "Prepared deciding KO, prior-round score and actor stats, with finishers disabled, advance through real intro/round-result/outro ticks and the engine match callback for checkpoint QA only; no played victory is claimed.",
+    "explicit art diagnostic for legacy chronicle/checkpoint regressions; not a completed-art campaign"
+  ],
+  "captures": [
+    "04-mandarin-siam-wood-zone.png",
+    "06-leonard-brookhaven.png",
+    "09-scarlet-siam-historical-society.png",
+    "10-colin-selection.png",
+    "11-nurses-historical-society.png",
+    "12-jasper-ayakakashi.png",
+    "13-raw-shock-workshop.png",
+    "14-air-screamer-selection.png",
+    "05-maya-manifestation.png",
+    "07-james-manifestation.png",
+    "08-heather-manifestation.png",
+    "01-http-pause.png",
+    "99-http-failure.png"
+  ],
+  "serviceWorker": {
+    "profile": "temporary-persistent",
+    "errors": [],
+    "versions": [
+      {
+        "versionId": "0",
+        "status": "new",
+        "runningStatus": "stopped",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "new",
+        "runningStatus": "stopped",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "new",
+        "runningStatus": "starting",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "new",
+        "runningStatus": "starting",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "installing",
+        "runningStatus": "starting",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "installing",
+        "runningStatus": "running",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "installed",
+        "runningStatus": "running",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "activating",
+        "runningStatus": "running",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "activating",
+        "runningStatus": "running",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "activated",
+        "runningStatus": "running",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "activated",
+        "runningStatus": "running",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "activated",
+        "runningStatus": "running",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "activated",
+        "runningStatus": "running",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      },
+      {
+        "versionId": "0",
+        "status": "activated",
+        "runningStatus": "running",
+        "scriptURL": "http://127.0.0.1:4311/service-worker.js"
+      }
+    ],
+    "quotaAtStart": {
+      "usage": 0,
+      "quota": 3142739558,
+      "overrideActive": false,
+      "usageBreakdown": [
+        {
+          "storageType": "file_systems",
+          "usage": 0
+        },
+        {
+          "storageType": "indexeddb",
+          "usage": 0
+        },
+        {
+          "storageType": "cache_storage",
+          "usage": 0
+        },
+        {
+          "storageType": "service_workers",
+          "usage": 0
+        }
+      ]
+    },
+    "finalState": {
+      "controlled": true,
+      "registrations": [
+        {
+          "scope": "http://127.0.0.1:4311/",
+          "installing": null,
+          "waiting": null,
+          "active": "activated"
+        }
+      ]
+    }
+  },
+  "browser": "158.0.8127.0",
+  "woodZoneDraws": [
+    "assets/stages/book_wood.wood-clearing.badc47213490.png",
+    "assets/stages/book_wood.bare-bough.58fbcd47b401.png",
+    "assets/sprites/sh2_mandarin_026.75cacc76973e.png",
+    "assets/sprites/homecoming_siam_090.9a93d5c60f3c.png"
+  ],
+  "brookhavenDraws": [
+    "assets/stages/brookhaven_sh3.leonard-basin.1b105f5aef29.png",
+    "assets/stages/brookhaven_sh3.access-ladder.43a8e52282cc.png",
+    "assets/sprites/sh3_numb_body_small_037.1f3b94d9b298.png",
+    "assets/sprites/sh3_leonard_wolf_048.cdbe5f879519.png"
+  ],
+  "scarletHistoricalDraws": [
+    "assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
+    "assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
+    "assets/sprites/homecoming_scarlet_spider_form_095.fadeb11172db.png",
+    "assets/sprites/homecoming_siam_090.9a93d5c60f3c.png"
+  ],
+  "colinSelection": {
+    "path": "assets/sprites/film_colin_the_janitor_174.e51afcfc4fe2.png",
+    "width": 1312,
+    "height": 1199
+  },
+  "recoveredNurseDuel": [
+    "assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
+    "assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
+    "assets/sprites/sh3_nurse_revolver_044.a371cb22efc9.png",
+    "assets/sprites/homecoming_nurse.d0dc5079a32a.png"
+  ],
+  "recoveredJasperDuel": [
+    "assets/stages/historical_society.exhibition-room.d8f2ddc8b889.png",
+    "assets/stages/historical_society.damaged-display-case.f5ef90a939da.png",
+    "assets/sprites/sh4_jasper_gein_victim_17.b78662e0dc8c.png",
+    "assets/sprites/shf_ayakakashi_152.250241616ae2.png"
+  ],
+  "rawShockWorkshop": "assets/sprites/shattered_raw_shock_base_099.e5f649da7bf0.png",
+  "airScreamerSelection": {
+    "path": "assets/sprites/sh1_air_screamer_001.4ea98b63b6fc.png",
+    "width": 1536,
+    "height": 1024
+  },
+  "mayaSighting": {
+    "path": "assets/chronicles/maya_villa.sighting.64d66e28683a.jpg",
+    "width": 1672,
+    "height": 941,
+    "alt": "Au seuil d’un appartement de la Villa, des fleurs roses masquent le visage de Sakura Head. Des pétales jonchent l’escalier."
+  },
+  "jamesSighting": {
+    "path": "assets/chronicles/james_sentence.sighting.52ea5680fe31.webp",
+    "width": 1672,
+    "height": 941,
+    "alt": "Depuis une porte entrouverte, le faisceau éclaire de profil le torse replié et les jambes d’un Lying Figure."
+  },
+  "heatherSighting": {
+    "path": "assets/chronicles/heather_birth.sighting.d720743e3ddf.jpg",
+    "width": 1672,
+    "height": 941,
+    "alt": "Sur la mezzanine du centre commercial, le Closer penche la tête. Ses deux longs bras touchent presque le carrelage."
+  },
+  "failure": "TimeoutError: page.waitForSelector: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#fightScreen:not(.hidden)') to be visible\u001b[22m\n",
+  "failureState": [
+    {
+      "url": "http://127.0.0.1:4311/modules/unified-versus.html?preset=chronicle&p1=sh1_air_screamer_001&p2=sh1_grey_child_005&queue=sh1_grey_child_005%2Csh1_split_head_014%2Csh1_incubus_019&stages=midwich%2Clakeside_amusement%2Cnowhere&route=fog_of_alessa&autostart=1",
+      "roster": 30,
+      "artDiagnostic": false,
+      "launchDisabled": false,
+      "spriteStatus": "Sprites à produire : 1. Incubus. Aucun parcours ni tentative modifié.",
+      "announcements": [
+        "Sprites à produire : 1. Incubus. Aucun parcours ni tentative modifié.",
+        "Sprites à produire : 1. Incubus. Aucun parcours ni tentative modifié.",
+        "Sprites à produire : 1. Incubus. Aucun parcours ni tentative modifié.",
+        ""
+      ],
+      "fightVisible": false
+    }
+  ],
+  "passed": false
+}

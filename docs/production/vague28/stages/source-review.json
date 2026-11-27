@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-24T14:33:04.308403+00:00",
+  "scope": "Source selection for three missing static stage candidates; historical dossiers and global policies remain unchanged",
+  "selectedStages": [
+    "final_sacrament",
+    "scarlet_chamber",
+    "arcade_hospital_roof"
+  ],
+  "exactPixelsAreOfficialPublication": false,
+  "sourceClass": "Actual canonical-game pixels in public unofficial gameplay recordings plus archived game screenshots; provenance is recorded separately from game identity",
+  "oneToOneCertified": false,
+  "sourceLimitations": [
+    "Seven source cells are 320×180 native storyboard crops; their complete 960×540 source sheets are archived. Two additional screenshots are preserved at their native 1920×1080 and 425×319 dimensions.",
+    "The sources establish exact location, phase and broad visible motifs. They do not establish unseen geometry, exact full meshes, every texture, lighting values or asset scale.",
+    "All three horizontal fighting cameras and clear foreground floor widths are authored adaptations. The six assets are static planes, not source animation or a faithful moving boss encounter.",
+    "None of the gameplay captures is claimed to be an official Konami publication. The 2007 Arcade gallery screenshot is not relabeled as an official promotional screenshot."
+  ],
+  "stageReviews": [
+    {
+      "stageId": "final_sacrament",
+      "locationScope": "Final sacrament chamber beneath Room 302, empty stone perimeter and central ritual basin",
+      "edition": "Silent Hill 4: The Room (2004), puzzle screenshot and actual public gameplay recording at 30:20 and 34:00",
+      "observationsAndLimits": [
+        "The source screenshot and exact final-chamber gameplay establish cracked gray stone, a circular red basin, rounded-top ritual stelae, gray supports, a shallow ribbed dome and a circular oculus.",
+        "The red human images on the rear stelae are static painted motifs from the observed monuments. Henry, Walter, Eileen and the Conjurer are all excluded from this environment plate.",
+        "The tangent camera and broadened foreground stone walkway are authored fighting-view adaptations. Stela count and repeated painted motif, dome curvature, oculus size, full room diameter and reduced/cropped ring mechanism remain unverified; this does not certify the original mesh or original ritual layout.",
+        "The basin and inert ring mechanism stay behind the clear footing. No narrative progression, actor, moving ritual, new collision or hazard is implemented."
+      ]
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "locationScope": "Actual Scarlet arena at the bottom of Hell Descent, empty industrial room",
+      "edition": "Silent Hill: Homecoming (2008), actual public gameplay recording at 2:41:40, 2:45:40 and 2:46:10",
+      "observationsAndLimits": [
+        "The selected frames show the actual Scarlet arena: rust-dark metal floor/grating, low amber light, rectangular grid shadows and rear metal rail sections with angular braces.",
+        "The historical lot9 images sh5_screen_137.jpg and sh5_screen_138.jpg depict Sepulcher, not Scarlet; the earlier dossier already records that limitation. They are excluded. No hanging ceiling cables are inferred from that misattribution.",
+        "The side-on full wall span, regularized rail spacing, widened floor, exact grate dimensions and lighting arrangement are authored adaptations from 320×180 gameplay frames and remain unverified.",
+        "No Alex, Fitch, Scarlet, doll fragment, hanging organic sack, mirror, cable effect or invented machine is baked into the background. Existing gameplay and reference policy remain untouched."
+      ]
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "locationScope": "Brookhaven Hospital roof, Arcade Stage 1 Area 3, normal gray-fog phase around Tuberculosis",
+      "edition": "Silent Hill: The Arcade (2007), actual public boss recording at 3:30 and 5:50; 2007 screenshot gallery for fence structure only",
+      "observationsAndLimits": [
+        "The gray phase gameplay frames establish the actual square rooftop slabs, low concrete boundary and chain-link fence. The 2007 roof screenshot supplies the rectangular fence bays and inward-angled top panels only.",
+        "The orange boss-presentation color is intentionally excluded from the selected fixed-normal gray-fog phase. The 2010.02.21 gallery image 08 was rejected because its on-screen label identifies Stage 3 Area 1 Toluca Lake, not this roof.",
+        "The lateral camera, regularized fence spacing, continuous intact walking strip and clipped access-room facade are authored adaptations. Whole-roof geometry, tile sizes and exact fence bay count remain unverified.",
+        "No Eric, Tina, Emilie, Tuberculosis, dead creature, cone, rooftop hole, collapse, orange transition or new weather/hazard event is embedded in the art."
+      ]
+    }
+  ],
+  "rejectedOrRestrictedSources": [
+    {
+      "stageId": "scarlet_chamber",
+      "legacyDossier": "docs/production/batches/lot9-stages.json",
+      "urls": [
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_137.jpg",
+        "https://www.silenthillmemories.net/sh5/screens/pics/sh5_screen_138.jpg"
+      ],
+      "disposition": "Excluded. Historical source audit identifies Sepulcher rather than the Scarlet arena. New selected exact-arena footage replaces this as evidence without editing the historical dossier."
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "url": "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_13.jpg",
+      "inspected": true,
+      "disposition": "Used only for fence frame and inclined upper mesh geometry. Orange palette, actors and cone excluded from this normal-phase candidate."
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "url": "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_20100221_08.jpg",
+      "inspected": true,
+      "disposition": "Excluded: the visible STAGE 3 AREA 1 Toluca Lake label identifies another scene. The 2010 gallery date cannot make it rooftop evidence."
+    },
+    {
+      "stageId": "final_sacrament",
+      "url": "https://www.silenthillmemories.net/sh4/puzzles/pics/sh4_the_final_sacraments_01.jpg",
+      "inspected": true,
+      "disposition": "Not passed to generation: Conjurer dominates this image. Screenshot 02 and precise gameplay cells provide environment geometry without requiring a baked actor."
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "url": "https://portforward.com/games/walkthroughs/Silent-Hill-Homecoming/Boss-Scarlet.htm",
+      "disposition": "Not used as a visual generation reference; direct image retrieval was unavailable. Actual accessible gameplay frames supply the visual evidence."
+    }
+  ],
+  "contextUrls": [
+    "https://www.silenthillmemories.net/sh4/walkthrough_13_outside_room_302_en.htm",
+    "https://www.silenthillmemories.net/sh5/walkthrough_en.htm",
+    "https://www.silenthillmemories.net/sh_arcade/stages_en.htm",
+    "https://www.silenthillmemories.net/sh_arcade/screens_en.htm",
+    "https://www.konami.com/arcadegames/products/site/am_silent_hill/"
+  ],
+  "validation": {
+    "nativeOutputsPreserved": true,
+    "independentBackgroundForeground": true,
+    "globalManifestsEditedByThisDelivery": false,
+    "existingArtworkReplaced": false,
+    "inEngineQA": "passed-native-FightEngine-108-checks",
+    "inEngineQAReport": "docs/production/vague28/stages/qa-native/report.json",
+    "visualReview": "docs/production/vague28/stages/qa-native/visual-review.json"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "sourceHashes": {
+    "requirements": "a68b20d8418e71416aa663b0fffdc818efec6e06ee1d56f67aaf02aa4f7d51fd",
+    "associations": "f2b4c2cabe30dc89d197117ac0bfa4a1e74cc2a0434326a397743455643a03f5"
+  },
+  "workbooks": [
+    {
+      "file": "docs/production/SILENT_HILL_CORPUS_BIBLE.xlsx",
+      "sectionRows": 30,
+      "moduleRows": 10,
+      "associationRows": 442,
+      "comparedContentCells": 3484,
+      "validatedFormulaCaches": 12,
+      "sha256": "2beb816b68a85a9893f5daf16b92e111e91ef658018327ac739be9564afbef46"
+    },
+    {
+      "file": "docs/production/SILENT_HILL_HALO_OF_FLESH_PHASE1_MOVESETS_ANIMATIONS.xlsx",
+      "sectionRows": 30,
+      "moduleRows": 10,
+      "associationRows": 442,
+      "comparedContentCells": 3484,
+      "validatedFormulaCaches": 12,
+      "sha256": "aa40477f46217989ef3504fec2dc12384cbb58253c049ff6bf07f0f9b23608e8"
+    }
+  ],
+  "preservedRenders": {
+    "Corpus": {
+      "identicalPng": true,
+      "sha256": "eb87199fead741a6d636a60df74505e9a49cdd76ffeede59d54fd2e5dad5eb93"
+    },
+    "Stages": {
+      "identicalPng": true,
+      "sha256": "3cf6df6cd3f16335bed02f19ea018d2763231d9dd6de735f4f98ba076a5ec9ce"
+    },
+    "Synthese": {
+      "identicalPng": true,
+      "sha256": "9bbbc4f4f326e5cddad8d5f23ea566ca759d5554f91d005a25aee46fbfcdaf73"
+    }
+  },
+  "note": "The authoring reports retain the input hashes actually used for generation. The final associations JSON has additional provenance metadata; every exported cell still matches the final JSON. Empty JSON strings correspond to empty Excel cells."
+}

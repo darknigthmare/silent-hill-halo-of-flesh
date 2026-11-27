@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "wave": 29,
+  "stages": [
+    {
+      "stageId": "arcade_hospital",
+      "source": "arcade",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "arcade-brookhaven-normal-corridor",
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT15"
+      ],
+      "layers": [
+        {
+          "id": "bg-normal-corridor",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+              "sha256": "2409645c1f049ec526510e8e509b6a72d1537c02707ea9804fb9f7ebddac2c8c",
+              "bytes": 2503138,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-door-jambs",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+              "sha256": "c002d07614874ddf839a232d4c73d7100b8caf142c5041092f3f9db814b7c1ad",
+              "bytes": 409647,
+              "width": 1671,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Original 2007 Arcade hospital screenshots sh_arcade_04.jpg and sh_arcade_19.jpg establish the normal corridor: worn gray-cream plaster, dark lower wall panels, wooden door trim, green-gray doorways and mottled square floor tiles.",
+        "The lateral wall span, two door openings, closed door, wall vent, ceiling light and continuous widened fighting lane are authored extensions. Room dimensions, exact doorway count, lighting placement and tile geometry are not measured from the original game.",
+        "The normal corridor remains separate from the orange Otherworld fan room. No nurses, actors, weapons, UI, hazards or automatic transformations are baked into either plane.",
+        "Native background is 1672 by 941 and native foreground is 1671 by 941; each uses its actual dimensions with cover fit. No resizing, recoloring, crop or alpha cleanup was applied. Trace alpha 1 pixels in the clear foreground center are preserved.",
+        "One opaque background and one independent transparent foreground; static candidates, not an animation or a 1:1 certification."
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+      "sha256": "2409645c1f049ec526510e8e509b6a72d1537c02707ea9804fb9f7ebddac2c8c",
+      "bytes": 2503138,
+      "width": 1672,
+      "height": 941,
+      "stageId": "arcade_hospital",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/extra-stages/png/arcade_hospital.bg.png",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-fe8a094e-fd6d-4924-99b9-13127eab8da8.png",
+      "pixelsModified": false,
+      "transparentFraction": 0.0,
+      "centerAlphaMax": 255
+    },
+    {
+      "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+      "sha256": "c002d07614874ddf839a232d4c73d7100b8caf142c5041092f3f9db814b7c1ad",
+      "bytes": 409647,
+      "width": 1671,
+      "height": 941,
+      "stageId": "arcade_hospital",
+      "localPath": "/workspace/scratch/f1e7a4940467/silent-hill-halo-of-flesh/docs/production/vague29/extra-stages/png/arcade_hospital.fg.png",
+      "originalOutput": "/workspace/scratch/f1e7a4940467/generated_images/exec-01b1373a-961d-46f4-9aac-0b5b10e5c453.png",
+      "pixelsModified": false,
+      "transparentFraction": 0.8856730206033918,
+      "centerAlphaMax": 1
+    }
+  ]
+}

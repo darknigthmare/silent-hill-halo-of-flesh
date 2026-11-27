@@ -1,5 +1,6 @@
 /** Real HTTP integration of prepared presentation scenes; this is not a played campaign or an art review. */
 import {chromium} from 'playwright-core';
+import {launchOfflineQaProfile} from './qa-offline-profile.mjs';
 import {spawn} from 'node:child_process';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
@@ -11,7 +12,7 @@ const base=process.env.QA_BASE_URL||'http://127.0.0.1:4181';
 const keys=['intro','winRound','loseRound','winMatch','loseMatch','outro','finisher','finished','taunt'];
 const versus=base+'/modules/unified-versus.html?qa=1&p1=sh1_air_screamer_001&p2=film_red_pyramid_film_175';
 await mkdir(out,{recursive:true});
-let server,browser;
+let server,browser,offlineProfile;
 const pages=[];
 const report={version:VERSION,base,checks:[],errors:[],captures:[],scenes:{},fixtures:[
  'Local round knockouts, decisive score states and simulation advancement are prepared through the explicit ?qa=1 bridge. No fight or campaign is claimed as played.',
@@ -211,19 +212,21 @@ try{
  check('presentation authoring controls fit the mobile viewport',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await shot(page,'05-workshop-mobile');
  await context.close();
 
- const offline=await browser.newContext({viewport:{width:1280,height:900}}),off=await newPage(offline);
+ offlineProfile=await launchOfflineQaProfile(chromium,{headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined,viewport:{width:1280,height:900}});
+ const offline=offlineProfile.context,off=await newPage(offline);
  await off.goto(base);await off.waitForFunction(()=>!!navigator.serviceWorker.controller,{},{timeout:30000});
  await offline.setOffline(true);await off.goto(base+'/modules/sprite-workshop.html');await selectStaticWorkshopSubject(off);
  const modules=await off.evaluate(async()=>{const [poses,sequences]=await Promise.all([import('/src/sprite-poses.js'),import('/src/presentation-sequences.js')]);return {keys:poses.PRESENTATION_KEYS,durationFunction:typeof sequences.presentationDuration,actorFunction:typeof sequences.createActorPresentation};});
  check('both new presentation modules import entirely offline',JSON.stringify(modules.keys)===JSON.stringify(keys)&&modules.durationFunction==='function'&&modules.actorFunction==='function',modules);
  await off.goto(versus);await off.waitForFunction(()=>!!window.__HALO_QA__);await off.selectOption('#mode','local');await quietRules(off);await off.click('#launch');await off.waitForFunction(()=>__HALO_QA__.engine?.phase==='intro');await off.click('#pauseBtn');
  check('offline combat preserves synchronized intro and real pause',await off.evaluate(()=>{const e=__HALO_QA__.engine;return e.paused&&e.actors.every(a=>a.presentation?.key==='intro')&&e.actors[0].presentation.frame===e.actors[1].presentation.frame;}));
- await shot(off,'06-offline-presentations');await offline.close();
+ await shot(off,'06-offline-presentations');await off.close();
  check('no unhandled JavaScript browser exceptions',report.errors.length===0,report.errors);
 }catch(error){report.failure=String(error);process.exitCode=1;}
 finally{
  for(const page of pages)if(!page.isClosed()){try{await restore(page);}catch{/* A navigated or closed isolated realm owns no persistent fixture. */}}
- report.passed=!report.failure&&!report.errors.length;
- await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
- await browser?.close();server?.kill('SIGTERM');
+ try{
+  report.passed=!report.failure&&!report.errors.length;
+  await writeFile(resolve(out,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
+ }finally{try{await offlineProfile?.close();}finally{try{await browser?.close();}finally{server?.kill('SIGTERM');}}}
 }

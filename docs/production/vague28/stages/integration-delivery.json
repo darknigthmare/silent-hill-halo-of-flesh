@@ -1,0 +1,803 @@
+{
+  "schemaVersion": 1,
+  "group": "vague28-stages",
+  "scope": "Three missing static stage candidates; six independent native planes only",
+  "createdAt": "2026-11-24T14:33:04.629121+00:00",
+  "baseCommit": "0e05c91fae9f761f6ce87c0a7915fed0763dea21",
+  "deliveryState": "ready-for-root-integration",
+  "stages": [
+    {
+      "stageId": "final_sacrament",
+      "source": "sh4",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "sh4-final-sacraments-stone-perimeter",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "CL_SH4_13_OUTSIDE_ROOM_302"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "Silent Hill 4: The Room (2004), puzzle screenshot and actual public gameplay recording at 30:20 and 34:00",
+      "locationScope": "Final sacrament chamber beneath Room 302, empty stone perimeter and central ritual basin",
+      "selectedSubLocation": "Final sacrament chamber beneath Room 302, empty stone perimeter and central ritual basin",
+      "layers": [
+        {
+          "id": "bg-final-chamber",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+              "sha256": "2969dd7f3a9b7975805512bc1d1cda0b3ac32b2877e604dd7cda7e652cb789f8",
+              "bytes": 1900848,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+              "sha256": "8be13402fce8c77a68ba15cdb1fd911ca907b69f927340c45800616073a681ac",
+              "bytes": 167783,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "The source screenshot and exact final-chamber gameplay establish cracked gray stone, a circular red basin, rounded-top ritual stelae, gray supports, a shallow ribbed dome and a circular oculus.",
+        "The red human images on the rear stelae are static painted motifs from the observed monuments. Henry, Walter, Eileen and the Conjurer are all excluded from this environment plate.",
+        "The tangent camera and broadened foreground stone walkway are authored fighting-view adaptations. Stela count and repeated painted motif, dome curvature, oculus size, full room diameter and reduced/cropped ring mechanism remain unverified; this does not certify the original mesh or original ritual layout.",
+        "The basin and inert ring mechanism stay behind the clear footing. No narrative progression, actor, moving ritual, new collision or hazard is implemented.",
+        "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Visible overlay absent from the central 86 percent; native alpha-1 traces are measured and retained. Artwork audit only, no collision change."
+      }
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "source": "homecoming",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "homecoming-hell-descent-scarlet-arena",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": true
+      },
+      "referenceIds": [
+        "EXT05",
+        "EXT06"
+      ],
+      "worldState": "fixed-altered",
+      "edition": "Silent Hill: Homecoming (2008), actual public gameplay recording at 2:41:40, 2:45:40 and 2:46:10",
+      "locationScope": "Actual Scarlet arena at the bottom of Hell Descent, empty industrial room",
+      "selectedSubLocation": "Actual Scarlet arena at the bottom of Hell Descent, empty industrial room",
+      "layers": [
+        {
+          "id": "bg-hell-descent-arena",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+              "sha256": "6c36d0eabd2b8cf8f50980dede104ea3b440612f27793377d99f67f2c7bd49cc",
+              "bytes": 2007545,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+              "sha256": "75ae6b391b5fb32a5ad1ac8e35bba7fbca4fe1f3409c0a7d76e2f9c4a48de37d",
+              "bytes": 150931,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "The selected frames show the actual Scarlet arena: rust-dark metal floor/grating, low amber light, rectangular grid shadows and rear metal rail sections with angular braces.",
+        "The historical lot9 images sh5_screen_137.jpg and sh5_screen_138.jpg depict Sepulcher, not Scarlet; the earlier dossier already records that limitation. They are excluded. No hanging ceiling cables are inferred from that misattribution.",
+        "The side-on full wall span, regularized rail spacing, widened floor, exact grate dimensions and lighting arrangement are authored adaptations from 320×180 gameplay frames and remain unverified.",
+        "No Alex, Fitch, Scarlet, doll fragment, hanging organic sack, mirror, cable effect or invented machine is baked into the background. Existing gameplay and reference policy remain untouched.",
+        "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Visible overlay absent from the central 86 percent; native alpha-1 traces are measured and retained. Artwork audit only, no collision change."
+      }
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "source": "arcade",
+      "status": "integrated-candidate",
+      "fidelity": "unverified",
+      "origin": "conversation-image-generation",
+      "mode": "replace",
+      "scene": "arcade-brookhaven-roof-normal-fog",
+      "runtimeSceneId": null,
+      "geometry": {
+        "ceiling": false
+      },
+      "referenceIds": [
+        "EXT15",
+        "EXT18"
+      ],
+      "worldState": "fixed-normal",
+      "edition": "Silent Hill: The Arcade (2007), actual public boss recording at 3:30 and 5:50; 2007 screenshot gallery for fence structure only",
+      "locationScope": "Brookhaven Hospital roof, Arcade Stage 1 Area 3, normal gray-fog phase around Tuberculosis",
+      "selectedSubLocation": "Brookhaven Hospital roof, Arcade Stage 1 Area 3, normal gray-fog phase around Tuberculosis",
+      "layers": [
+        {
+          "id": "bg-normal-fog-roof",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0,
+          "frames": [
+            {
+              "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+              "sha256": "071cecc9c301e939558348823f5a3ff878cc7b7b167d636ea35ad44b1e2a5b6d",
+              "bytes": 2745020,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        },
+        {
+          "id": "near-edges",
+          "rect": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "fit": "cover",
+          "ticksPerFrame": 1,
+          "loop": false,
+          "parallaxX": 0.006,
+          "frames": [
+            {
+              "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+              "sha256": "167557416ab0b321f017bfbe076044c05082b037510641a970a01469e88f4d5d",
+              "bytes": 176304,
+              "width": 1672,
+              "height": 941
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "The gray phase gameplay frames establish the actual square rooftop slabs, low concrete boundary and chain-link fence. The 2007 roof screenshot supplies the rectangular fence bays and inward-angled top panels only.",
+        "The orange boss-presentation color is intentionally excluded from the selected fixed-normal gray-fog phase. The 2010.02.21 gallery image 08 was rejected because its on-screen label identifies Stage 3 Area 1 Toluca Lake, not this roof.",
+        "The lateral camera, regularized fence spacing, continuous intact walking strip and clipped access-room facade are authored adaptations. Whole-roof geometry, tile sizes and exact fence bay count remain unverified.",
+        "No Eric, Tina, Emilie, Tuberculosis, dead creature, cone, rooftop hole, collapse, orange transition or new weather/hazard event is embedded in the art.",
+        "One opaque static background and one independent transparent edge foreground. No animated clip, source cadence, collision or gameplay change. In-engine QA is deferred to root integration."
+      ],
+      "supports": {
+        "groundLineY": 0.87,
+        "runtimeChange": false
+      },
+      "safeAreas": {
+        "normalizedCoordinates": true,
+        "combatFooting": [
+          0.07,
+          0.72,
+          0.86,
+          0.23
+        ],
+        "centerClear": [
+          0.07,
+          0,
+          0.86,
+          1
+        ],
+        "note": "Visible overlay absent from the central 86 percent; native alpha-1 traces are measured and retained. Artwork audit only, no collision change."
+      }
+    }
+  ],
+  "assets": [
+    {
+      "stageId": "final_sacrament",
+      "promptKey": "final_sacrament-bg-wave28",
+      "role": "opaque-background",
+      "filename": "final_sacrament.bg.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-e3d2407f-fa86-404b-9551-d45fdbe67e82.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/png/final_sacrament.bg.png",
+      "path": "assets/stages/final_sacrament.bg-final-chamber.2969dd7f3a9b.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 1900848,
+      "sha256": "2969dd7f3a9b7975805512bc1d1cda0b3ac32b2877e604dd7cda7e652cb789f8",
+      "pixelSHA256": "500d1b91f063b8354b55309e83657c08d4b3ac0d6b5e7c02b2cae19c43881f0b",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "final_sacrament",
+      "promptKey": "final_sacrament-fg-wave28",
+      "role": "transparent-foreground",
+      "filename": "final_sacrament.near-edges.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-a1c1f897-ab3c-4f5e-a1ee-ad39582a4634.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/png/final_sacrament.near-edges.png",
+      "path": "assets/stages/final_sacrament.near-edges.8be13402fce8.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 167783,
+      "sha256": "8be13402fce8c77a68ba15cdb1fd911ca907b69f927340c45800616073a681ac",
+      "pixelSHA256": "488d15cb032733aca99e821ce6810b8fe50a8f33aaf7368c4fdad0c8ddabf29f",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9631519202314549,
+        "semiTransparentPixels": 57662,
+        "opaqueFraction": 0.00019893831768097667,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 0,
+        "nonzeroAlphaInCenter": 5,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "promptKey": "scarlet_chamber-bg-wave28",
+      "role": "opaque-background",
+      "filename": "scarlet_chamber.bg.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-661bce6c-5e2f-449f-8d5d-03f4afc36818.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/png/scarlet_chamber.bg.png",
+      "path": "assets/stages/scarlet_chamber.bg-hell-descent-arena.6c36d0eabd2b.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2007545,
+      "sha256": "6c36d0eabd2b8cf8f50980dede104ea3b440612f27793377d99f67f2c7bd49cc",
+      "pixelSHA256": "a1f33f59f8079a463f27f61cfc2ba79f231c7add147e18dc6d5d66e20d1bc5c0",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "promptKey": "scarlet_chamber-fg-wave28",
+      "role": "transparent-foreground",
+      "filename": "scarlet_chamber.near-edges.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-b87d6b44-bdad-40d1-8690-c874fccdc9c1.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/png/scarlet_chamber.near-edges.png",
+      "path": "assets/stages/scarlet_chamber.near-edges.75ae6b391b5f.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 150931,
+      "sha256": "75ae6b391b5fb32a5ad1ac8e35bba7fbca4fe1f3409c0a7d76e2f9c4a48de37d",
+      "pixelSHA256": "e0a8fe1bf92797dd7656d00ee443ef9b3f56f7816c5cc6409919cb41390f63c3",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9628646355043246,
+        "semiTransparentPixels": 58408,
+        "opaqueFraction": 1.2076127910346827e-05,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 85,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "promptKey": "arcade_hospital_roof-bg-wave28",
+      "role": "opaque-background",
+      "filename": "arcade_hospital_roof.bg.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-d1231528-7ae7-4011-ab20-cdc5c71c5afb.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/png/arcade_hospital_roof.bg.png",
+      "path": "assets/stages/arcade_hospital_roof.bg-normal-fog-roof.071cecc9c301.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "bytes": 2745020,
+      "sha256": "071cecc9c301e939558348823f5a3ff878cc7b7b167d636ea35ad44b1e2a5b6d",
+      "pixelSHA256": "5a20de0651d29632fe03258950253aa7eae79f03a616e73905e583767ac5a9ab",
+      "alphaRange": [
+        255,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.0,
+        "semiTransparentPixels": 0,
+        "opaqueFraction": 1.0,
+        "centerAlphaMax": 255,
+        "footBandAlphaMax": 255,
+        "nonzeroAlphaInCenter": 1353158,
+        "centerPixelsAboveAlpha2": 1353158,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "promptKey": "arcade_hospital_roof-fg-wave28",
+      "role": "transparent-foreground",
+      "filename": "arcade_hospital_roof.near-edges.png",
+      "originalOutput": "/workspace/scratch/0f50864dcd65/generated_images/exec-05288436-c8ef-44ef-9489-48ff9c9dcf6f.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/png/arcade_hospital_roof.near-edges.png",
+      "path": "assets/stages/arcade_hospital_roof.near-edges.167557416ab0.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "bytes": 176304,
+      "sha256": "167557416ab0b321f017bfbe076044c05082b037510641a970a01469e88f4d5d",
+      "pixelSHA256": "e4fd8b94173ea260634ab506fd4906cb5541e1d7cccc9ef4a95d4f0361bc818d",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "qa": {
+        "fullyTransparentFraction": 0.9616690988412002,
+        "semiTransparentPixels": 59487,
+        "opaqueFraction": 0.0005218158428628813,
+        "centerAlphaMax": 1,
+        "footBandAlphaMax": 1,
+        "nonzeroAlphaInCenter": 38,
+        "centerPixelsAboveAlpha2": 0,
+        "nativeTraceAlphaPreserved": true
+      },
+      "visualInspection": "completed-native-plate-only",
+      "visualNotes": "Single empty side-on plate or sparse matching edge overlay inspected. Any central alpha-1 traces are retained exactly as generated. Runtime QA belongs to root integration.",
+      "preservation": "Native imagegen PNG copied byte-for-byte; no crop, resize, recolor, alpha edit or recompression",
+      "pixels": {
+        "nativeGeneratedBytesPreserved": true,
+        "postprocessing": false,
+        "certified1to1": false,
+        "certifiedUHD": false
+      }
+    }
+  ],
+  "references": [
+    {
+      "stageId": "final_sacrament",
+      "file": "final-chamber-stone-rim.jpg",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/references/final-chamber-stone-rim.jpg",
+      "path": "docs/production/vague28/stages/references/final-chamber-stone-rim.jpg",
+      "url": "https://www.silenthillmemories.net/sh4/puzzles/pics/sh4_the_final_sacraments_02.jpg",
+      "sourceClaim": "Actual SH4 gameplay screenshot from the Final Sacraments puzzle guide; stone walkway, rear stela and lower-right ring mechanism. Actor excluded.",
+      "bytes": 256845,
+      "sha256": "03728691059df2698aa6988c7eb72ff87e6ed9defa8e7848a3d7966d20d160c8",
+      "width": 1920,
+      "height": 1080,
+      "inspected": true,
+      "imageAltered": false
+    },
+    {
+      "stageId": "final_sacrament",
+      "file": "final-chamber-overview.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/references/final-chamber-overview.png",
+      "path": "docs/production/vague28/stages/references/final-chamber-overview.png",
+      "url": "https://www.youtube.com/watch?v=GybBq64-wwc&t=1820s",
+      "title": "Silent Hill 4: The Room Walkthrough - 13. Outside Room 302 (No Commentary)",
+      "videoId": "GybBq64-wwc",
+      "timestampSeconds": 1820.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/GybBq64-wwc/storyboard3_L3/M20.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKO6ttUG&sigh=rs$AOn4CLACgRzzPTpxB6_S2hIzP6k8tCioYA",
+      "sourceSheet": "references/source-sheets/sh4-M20.jpg",
+      "sourceSheetSha256": "482eb1dafa5a0ecc5500a4f78aaa08dbe8943a386b72aa968a0003e3af9cbaa7",
+      "cropBox": [
+        640,
+        0,
+        960,
+        180
+      ],
+      "sourceClaim": "Actual SH4 final-chamber overview, with peripheral stone ring and red central basin; actors excluded. Native storyboard cell losslessly cropped, without enlargement or cleanup.",
+      "bytes": 33227,
+      "sha256": "1e7796b83811e80814e1f7b7751d2525ed1f839348428f08816d0106082850b1",
+      "width": 320,
+      "height": 180,
+      "inspected": true,
+      "sourceImageResampled": false
+    },
+    {
+      "stageId": "final_sacrament",
+      "file": "final-chamber-dome.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/references/final-chamber-dome.png",
+      "path": "docs/production/vague28/stages/references/final-chamber-dome.png",
+      "url": "https://www.youtube.com/watch?v=GybBq64-wwc&t=2040s",
+      "title": "Silent Hill 4: The Room Walkthrough - 13. Outside Room 302 (No Commentary)",
+      "videoId": "GybBq64-wwc",
+      "timestampSeconds": 2040.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/GybBq64-wwc/storyboard3_L3/M22.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKO6ttUG&sigh=rs$AOn4CLACgRzzPTpxB6_S2hIzP6k8tCioYA",
+      "sourceSheet": "references/source-sheets/sh4-M22.jpg",
+      "sourceSheetSha256": "20cb94abf772fcea14e67a1d7817675477ae14cd0630064d3efd8837c85d2534",
+      "cropBox": [
+        0,
+        360,
+        320,
+        540
+      ],
+      "sourceClaim": "Actual SH4 chamber ceiling with ribbed dome and bright circular oculus; actors excluded. Ceiling evidence only. Native storyboard cell losslessly cropped, without enlargement or cleanup.",
+      "bytes": 32817,
+      "sha256": "86134aa2e9c257117d6a3d52e4cccc972f4bb8b893146acb9e99bc7f6fee5996",
+      "width": 320,
+      "height": 180,
+      "inspected": true,
+      "sourceImageResampled": false
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "file": "scarlet-room-entry.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/references/scarlet-room-entry.png",
+      "path": "docs/production/vague28/stages/references/scarlet-room-entry.png",
+      "url": "https://www.youtube.com/watch?v=7ozGzBI6oT4&t=9700s",
+      "title": "Silent Hill: Homecoming — Full Game",
+      "videoId": "7ozGzBI6oT4",
+      "timestampSeconds": 9700.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/7ozGzBI6oT4/storyboard3_L3/M107.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIi7gqoG&sigh=rs$AOn4CLCOPUYPWScysSbziyB2rPo4hxidqQ",
+      "sourceSheet": "references/source-sheets/homecoming-M107.jpg",
+      "sourceSheetSha256": "a56f9cb07c0f172756fe537842dfcfdc2f89b7806f99e7bab66d8afadc898585",
+      "cropBox": [
+        320,
+        360,
+        640,
+        540
+      ],
+      "sourceClaim": "Actual Homecoming Hell Descent room entered immediately before the Dr Fitch conversation; floor, grating shadows and dim wall extent. Native storyboard cell losslessly cropped, without enlargement or cleanup.",
+      "bytes": 39082,
+      "sha256": "f369cd04a02daf41cc14f8da0591fd68e5a937f386a358aa968ad92f2d1e389d",
+      "width": 320,
+      "height": 180,
+      "inspected": true,
+      "sourceImageResampled": false
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "file": "scarlet-room-rear-wall.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/references/scarlet-room-rear-wall.png",
+      "path": "docs/production/vague28/stages/references/scarlet-room-rear-wall.png",
+      "url": "https://www.youtube.com/watch?v=7ozGzBI6oT4&t=9940s",
+      "title": "Silent Hill: Homecoming — Full Game",
+      "videoId": "7ozGzBI6oT4",
+      "timestampSeconds": 9940.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/7ozGzBI6oT4/storyboard3_L3/M110.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIi7gqoG&sigh=rs$AOn4CLCOPUYPWScysSbziyB2rPo4hxidqQ",
+      "sourceSheet": "references/source-sheets/homecoming-M110.jpg",
+      "sourceSheetSha256": "95061726f7f3f074330c8c8329ea5a45de90f4876e56a28dff7f69e5b94317be",
+      "cropBox": [
+        320,
+        180,
+        640,
+        360
+      ],
+      "sourceClaim": "Actual Scarlet encounter, view toward rectangular rear metal rail and wall supports. Scarlet and Alex are excluded. Native storyboard cell losslessly cropped, without enlargement or cleanup.",
+      "bytes": 38824,
+      "sha256": "435c9bdf070b300bcf253086bd58b0a0f5c815172d0557447c22d1404a8f2570",
+      "width": 320,
+      "height": 180,
+      "inspected": true,
+      "sourceImageResampled": false
+    },
+    {
+      "stageId": "scarlet_chamber",
+      "file": "scarlet-room-floor.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/references/scarlet-room-floor.png",
+      "path": "docs/production/vague28/stages/references/scarlet-room-floor.png",
+      "url": "https://www.youtube.com/watch?v=7ozGzBI6oT4&t=9970s",
+      "title": "Silent Hill: Homecoming — Full Game",
+      "videoId": "7ozGzBI6oT4",
+      "timestampSeconds": 9970.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/7ozGzBI6oT4/storyboard3_L3/M110.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCIi7gqoG&sigh=rs$AOn4CLCOPUYPWScysSbziyB2rPo4hxidqQ",
+      "sourceSheet": "references/source-sheets/homecoming-M110.jpg",
+      "sourceSheetSha256": "95061726f7f3f074330c8c8329ea5a45de90f4876e56a28dff7f69e5b94317be",
+      "cropBox": [
+        320,
+        360,
+        640,
+        540
+      ],
+      "sourceClaim": "Actual Scarlet encounter, patterned flat metal floor and warm low rear illumination. Actors and porcelain fragments not baked into scenery. Native storyboard cell losslessly cropped, without enlargement or cleanup.",
+      "bytes": 42125,
+      "sha256": "a20559ef36dfc87fd9405476f10dcf7b991a8a828289bc40151c16c51ca95218",
+      "width": 320,
+      "height": 180,
+      "inspected": true,
+      "sourceImageResampled": false
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "file": "arcade-roof-normal-before.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/references/arcade-roof-normal-before.png",
+      "path": "docs/production/vague28/stages/references/arcade-roof-normal-before.png",
+      "url": "https://www.youtube.com/watch?v=_qA1h7xETYM&t=210s",
+      "title": "Silent Hill: The Arcade - All Bosses (No Damage)",
+      "videoId": "_qA1h7xETYM",
+      "timestampSeconds": 210.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/_qA1h7xETYM/storyboard3_L3/M2.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCO22vMAG&sigh=rs$AOn4CLDpVgQE9qgjyXy85okYWxJd-7muHw",
+      "sourceSheet": "references/source-sheets/arcade-M2.jpg",
+      "sourceSheetSha256": "67314b52630a926764dcdddffcd17f01b6b23678ab6c1df1d9074bf8f14dfece",
+      "cropBox": [
+        0,
+        180,
+        320,
+        360
+      ],
+      "sourceClaim": "Actual Arcade Brookhaven rooftop before orange boss presentation. Normal gray phase establishes tiled roof floor and cool fog; creature excluded. Native storyboard cell losslessly cropped, without enlargement or cleanup.",
+      "bytes": 62342,
+      "sha256": "5beafc7b423579f31e558c8c5e79dd33ed361b75e6bbfe2545ed0c4f355eb795",
+      "width": 320,
+      "height": 180,
+      "inspected": true,
+      "sourceImageResampled": false
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "file": "arcade-roof-normal-after.png",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/references/arcade-roof-normal-after.png",
+      "path": "docs/production/vague28/stages/references/arcade-roof-normal-after.png",
+      "url": "https://www.youtube.com/watch?v=_qA1h7xETYM&t=350s",
+      "title": "Silent Hill: The Arcade - All Bosses (No Damage)",
+      "videoId": "_qA1h7xETYM",
+      "timestampSeconds": 350.0,
+      "storyboardUrl": "https://i.ytimg.com/sb/_qA1h7xETYM/storyboard3_L3/M3.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCO22vMAG&sigh=rs$AOn4CLDpVgQE9qgjyXy85okYWxJd-7muHw",
+      "sourceSheet": "references/source-sheets/arcade-M3.jpg",
+      "sourceSheetSha256": "56dde13a9c001843fbdbafe59be9a3d1638c14f1c5397b37fb0f3bd770072bc9",
+      "cropBox": [
+        640,
+        360,
+        960,
+        540
+      ],
+      "sourceClaim": "Actual Arcade rooftop after Tuberculosis, normal gray phase and chain-link mesh behind Emilie. All actors excluded. Native storyboard cell losslessly cropped, without enlargement or cleanup.",
+      "bytes": 78393,
+      "sha256": "8f227e74248ae6dabde118d2f0b06edd831362b5bc662b3822b99470f39142d1",
+      "width": 320,
+      "height": 180,
+      "inspected": true,
+      "sourceImageResampled": false
+    },
+    {
+      "stageId": "arcade_hospital_roof",
+      "file": "arcade-roof-mesh-structure.jpg",
+      "localPath": "/workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/stages/references/arcade-roof-mesh-structure.jpg",
+      "path": "docs/production/vague28/stages/references/arcade-roof-mesh-structure.jpg",
+      "url": "https://www.silenthillmemories.net/sh_arcade/screens/pics/sh_arcade_13.jpg",
+      "sourceClaim": "2007 Arcade screenshot gallery. The same roof perimeter mesh, frame and inward angled upper panels; structural evidence only. Orange boss lighting and actors excluded from the selected normal fog phase.",
+      "bytes": 41032,
+      "sha256": "3f8177c527d62389ee85dba55bab5a60eed1c58a9ee74d1b83d080a2e0ee46be",
+      "width": 425,
+      "height": 319,
+      "inspected": true,
+      "imageAltered": false
+    }
+  ],
+  "prompts": [
+    {
+      "key": "final_sacrament-bg-wave28",
+      "stageId": "final_sacrament",
+      "role": "opaque-background",
+      "references": [
+        "final-chamber-stone-rim.jpg",
+        "final-chamber-overview.png",
+        "final-chamber-dome.png"
+      ],
+      "prompt": "Create ONE continuous opaque landscape stage BACKGROUND image, native 16:9 1672x941, for a side-view 2.5D fighting game. This is a source-driven adaptation of the exact existing game location shown in the reference frames, not a new environment. Treat the reference frames as visual ground truth; match their architectural motifs, materials and restrained palette. The reference people, monsters, subtitles, score, HUD, crosshairs and logos are reference contaminants and must all be absent. Camera is a horizontal lateral elevation with only shallow depth, eye level approximately 1.5 metres, no fisheye, no dramatic vanishing-point corridor. Lower 30 percent is a broad physically continuous clear floor, a horizontal combat footing at y=0.87, traversable across the central 86 percent. Keep the full fighter-height silhouette area readable. Empty environmental plate, no characters or character silhouettes, no weapons carried by actors, no text, no panels, no border, no watermark. Preserve the measured game-scene character rather than adding cinematic decorations. Natural detailed textures and subtle grounded light; do not invent machinery or dramatic debris. EXACT SCENE: Silent Hill 4: The Room, final sacrament chamber beneath Room 302, static empty environment. Read the first reference for the cracked gray stone annular walkway, simple gray vertical masonry posts and horizontal top beam, deep burgundy-red wall fields, rounded-top gray standing stelae on small stepped stone bases, and the static faded red human motifs painted flat on those stelae. Those motifs are in-world painted images, not living people. Read the second frame for the circular chamber arrangement and dark crimson central basin. Read the third solely for the shallow ribbed gray dome with a small bright white circular oculus; remove Henry and Walter entirely. Compose a tangent side view from the near stone perimeter: an unbroken cracked gray stone walkway occupies the whole bottom 30 percent. The dark red central basin starts BEHIND that clear walking plane at roughly y=0.65 and remains safely in the middle distance; no foreground hole or drop. Far wall shows three visible rounded-top stelae spaced between simple masonry posts, their faint red painted human motifs small and weathered, with only the reference spear-like ritual pieces held against those rear monuments. A modest, partially cropped interlocking dark iron ring mechanism sits far back toward the right behind the combat plane, matching the low heavy spiked rings in reference 1; keep it visibly mechanical and not enormous. The top quarter shows the shallow radially ribbed dome and pale oculus, restrained gray light falling across the stone. Deep gray and burgundy palette, muted rather than neon. No Walter, Henry, Eileen, Conjurer, corpses, bodies, supernatural energy, moving ritual, blood splashes, extra creature sculpture, altar, Gothic arch, fire, candles, chains, flowing curtains or fleshy invented wall. Maintain a modest enclosed circular room, not a gigantic cathedral."
+    },
+    {
+      "key": "scarlet_chamber-bg-wave28",
+      "stageId": "scarlet_chamber",
+      "role": "opaque-background",
+      "references": [
+        "scarlet-room-entry.png",
+        "scarlet-room-rear-wall.png",
+        "scarlet-room-floor.png"
+      ],
+      "prompt": "Create ONE continuous opaque landscape stage BACKGROUND image, native 16:9 1672x941, for a side-view 2.5D fighting game. This is a source-driven adaptation of the exact existing game location shown in the reference frames, not a new environment. Treat the reference frames as visual ground truth; match their architectural motifs, materials and restrained palette. The reference people, monsters, subtitles, score, HUD, crosshairs and logos are reference contaminants and must all be absent. Camera is a horizontal lateral elevation with only shallow depth, eye level approximately 1.5 metres, no fisheye, no dramatic vanishing-point corridor. Lower 30 percent is a broad physically continuous clear floor, a horizontal combat footing at y=0.87, traversable across the central 86 percent. Keep the full fighter-height silhouette area readable. Empty environmental plate, no characters or character silhouettes, no weapons carried by actors, no text, no panels, no border, no watermark. Preserve the measured game-scene character rather than adding cinematic decorations. Natural detailed textures and subtle grounded light; do not invent machinery or dramatic debris. EXACT SCENE: Silent Hill Homecoming, the actual Scarlet boss arena at the bottom of Hell Descent. These three reference frames show the entry floor, rear industrial wall and combat floor of that exact room. Build this dark low industrial chamber, not Sepulcher's greenhouse and not a doll room. A wide flat floor of worn dark rust-brown metal plating and metal grating spans the full bottom 35 percent. Match the restrained amber-orange light and sharply patterned long rectangular grid shadows crossing the empty floor. Behind the fighter lane are nearly black steel wall panels with vertical posts and the observed simple horizontal rectangular metal rail sections; under one rear wall rail are the few observed angular downward diagonal braces. Keep all rails and braces behind the playing plane, without a fence crossing the foreground. The middle-distance wall remains dim but legible; the ceiling disappears into near-black shadow. Use broad rusty grid floor patterns, a few dull amber illuminated rear gaps, and the simple flat rectangular industrial geometry actually seen in the images. Camera faces the wall laterally. Do not enlarge the room into a cavern or cathedral. No Alex, Fitch, Scarlet, dolls, doll fragments, people, shadows shaped like people, hanging organic sacks, roots, plants, mirrors, hanging ceiling cables, rotating gears, meat, gore, fire, lava, smoke columns or flashing machinery. No invented central throne or doorway. Subtle dirty warm-brown rust and charcoal, not saturated orange; light the central footing enough to judge feet and collision."
+    },
+    {
+      "key": "arcade_hospital_roof-bg-wave28",
+      "stageId": "arcade_hospital_roof",
+      "role": "opaque-background",
+      "references": [
+        "arcade-roof-normal-before.png",
+        "arcade-roof-normal-after.png",
+        "arcade-roof-mesh-structure.jpg"
+      ],
+      "prompt": "Create ONE continuous opaque landscape stage BACKGROUND image, native 16:9 1672x941, for a side-view 2.5D fighting game. This is a source-driven adaptation of the exact existing game location shown in the reference frames, not a new environment. Treat the reference frames as visual ground truth; match their architectural motifs, materials and restrained palette. The reference people, monsters, subtitles, score, HUD, crosshairs and logos are reference contaminants and must all be absent. Camera is a horizontal lateral elevation with only shallow depth, eye level approximately 1.5 metres, no fisheye, no dramatic vanishing-point corridor. Lower 30 percent is a broad physically continuous clear floor, a horizontal combat footing at y=0.87, traversable across the central 86 percent. Keep the full fighter-height silhouette area readable. Empty environmental plate, no characters or character silhouettes, no weapons carried by actors, no text, no panels, no border, no watermark. Preserve the measured game-scene character rather than adding cinematic decorations. Natural detailed textures and subtle grounded light; do not invent machinery or dramatic debris. EXACT SCENE: Silent Hill: The Arcade, Stage 1 Area 3, Brookhaven Hospital roof, the normal gray-fog phase around the Tuberculosis encounter. Reference 1 and 2 determine COLOR AND MATERIAL: flat square gray concrete rooftop slabs, pale desaturated fog, low stained concrete boundary, chain-link perimeter fence. Reference 3 is ONLY geometry evidence for the tall dark metal fence with large rectangular frame bays and inward-sloping upper mesh panels. DO NOT copy reference 3 orange boss-presentation palette. Remove every actor, monster, body, HUD, subtitles and cone. Create an empty broad gray tiled rooftop with a continuous straight horizontal fighting lane across the whole foreground lower 30 percent; large square paving slabs have subtle wet discoloration and seams. A low stained concrete curb and tall dark square-frame chain-link fence run straight across the rear, with the clearly seen inward-angled wire-mesh extension along its top. Pale gray fog obscures distant buildings beyond the fence. At the extreme rear-left edge only, a modest clipped portion of the existing gray rooftop access structure is allowed as visible in reference 1, leaving the central composition entirely fence and gray fog. Keep all fence posts in the background, none in the fighter lane. Flat clouded daylight, sparse atmosphere, recognizable low-key early-2000s game architecture with more detailed materials. No red sky, orange Otherworld transition, flames, rooftop hole, broken stair drop, open edge, decorative water tank, spotlight, helicopter, lightning, birds, people or new giant machinery. Entire phase is gray normal-world fog, not orange boss phase."
+    },
+    {
+      "key": "final_sacrament-fg-wave28",
+      "stageId": "final_sacrament",
+      "role": "transparent-foreground",
+      "references": [
+        "png/final_sacrament.bg.png"
+      ],
+      "prompt": "Create ONE independent transparent PNG FOREGROUND OVERLAY, native 16:9 1672x941, aligned exactly with the provided background image. Do not reproduce the background. Preserve a real transparent alpha channel, not a checkerboard or colored canvas. This is a sparse near-edge overlay for a side-view fighting game: draw only thin, partially cropped environment material slivers inside the OUTERMOST 2.8 percent at the left and OUTERMOST 2.8 percent at the right. Every pixel from x=0.05 to x=0.95 must be fully transparent at every y, including the entire central lower floor and combat band. At least 94 percent of the complete canvas is fully transparent. No bottom strip, no floor, no horizon, no vignette, no atmospheric veil, no shadow across the center, no frame across the top, no background wall or mesh across the center, no text or watermark. Let all slivers be cut off naturally by the left or right image edge, leaving most of the image entirely blank alpha. Match the lighting, subdued material color and detail of the provided background. Empty environment details only, no people, creatures, weapons, bodies or hazard. From the supplied final sacrament chamber plate, make only two very narrow cropped fragments of the same weathered gray masonry as the room's supports: a slim vertical slab at x=0.00–0.022 from y=0.16 to 1.00, and a smaller fragment at x=0.98–1.00 from y=0.38 to 1.00. Uneven chipped stone edges, shallow cracks and the same neutral dim light. Each fragment stays entirely in its tiny edge strip. No stelae, painted motifs, ritual spears, rings or red liquid. No center pixels and no visible bottom connecting border. All other canvas transparent."
+    },
+    {
+      "key": "scarlet_chamber-fg-wave28",
+      "stageId": "scarlet_chamber",
+      "role": "transparent-foreground",
+      "references": [
+        "png/scarlet_chamber.bg.png"
+      ],
+      "prompt": "Create ONE independent transparent PNG FOREGROUND OVERLAY, native 16:9 1672x941, aligned exactly with the provided background image. Do not reproduce the background. Preserve a real transparent alpha channel, not a checkerboard or colored canvas. This is a sparse near-edge overlay for a side-view fighting game: draw only thin, partially cropped environment material slivers inside the OUTERMOST 2.8 percent at the left and OUTERMOST 2.8 percent at the right. Every pixel from x=0.05 to x=0.95 must be fully transparent at every y, including the entire central lower floor and combat band. At least 94 percent of the complete canvas is fully transparent. No bottom strip, no floor, no horizon, no vignette, no atmospheric veil, no shadow across the center, no frame across the top, no background wall or mesh across the center, no text or watermark. Let all slivers be cut off naturally by the left or right image edge, leaving most of the image entirely blank alpha. Match the lighting, subdued material color and detail of the provided background. Empty environment details only, no people, creatures, weapons, bodies or hazard. From the supplied Hell Descent Scarlet arena plate, make only two extremely thin cropped rust-dark rectangular steel post lips: left x=0.00–0.023 at y=0.18–1.00, right x=0.98–1.00 at y=0.36–1.00. The thin metal lips share the brown-black rust and faint amber highlights of the background wall. A tiny bolt head contained wholly inside each edge strip is allowed. No cable, hanging object, floor grating, diagonal beam into the center, doll, blood or machinery. All other canvas transparent."
+    },
+    {
+      "key": "arcade_hospital_roof-fg-wave28",
+      "stageId": "arcade_hospital_roof",
+      "role": "transparent-foreground",
+      "references": [
+        "png/arcade_hospital_roof.bg.png"
+      ],
+      "prompt": "Create ONE independent transparent PNG FOREGROUND OVERLAY, native 16:9 1672x941, aligned exactly with the provided background image. Do not reproduce the background. Preserve a real transparent alpha channel, not a checkerboard or colored canvas. This is a sparse near-edge overlay for a side-view fighting game: draw only thin, partially cropped environment material slivers inside the OUTERMOST 2.8 percent at the left and OUTERMOST 2.8 percent at the right. Every pixel from x=0.05 to x=0.95 must be fully transparent at every y, including the entire central lower floor and combat band. At least 94 percent of the complete canvas is fully transparent. No bottom strip, no floor, no horizon, no vignette, no atmospheric veil, no shadow across the center, no frame across the top, no background wall or mesh across the center, no text or watermark. Let all slivers be cut off naturally by the left or right image edge, leaving most of the image entirely blank alpha. Match the lighting, subdued material color and detail of the provided background. Empty environment details only, no people, creatures, weapons, bodies or hazard. From the supplied gray fog Brookhaven rooftop plate, make only thin extreme-edge fragments of dull galvanized fence posts, left x=0.00–0.022 at y=0.14–1.00 and right x=0.98–1.00 at y=0.31–1.00. Restrained gray daylight, slight dark corrosion, one small rectangular hinge or bolt wholly within an edge strip. The center has no chain-link mesh and no opacity. Do not add the rooftop floor, curb, access building, fence crossbar, fog wash, wire across the center, orange light or a full enclosing frame. All other canvas transparent."
+    }
+  ],
+  "visualQA": {
+    "kind": "native-plate-inspection-only",
+    "allSixGeneratedPlatesInspected": true,
+    "notAnInEngineTest": true,
+    "noPixelPostprocessing": true,
+    "oneToOneCertified": false
+  },
+  "sourceReviewPath": "docs/production/vague28/stages/source-review.json"
+}

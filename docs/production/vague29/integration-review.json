@@ -1,0 +1,504 @@
+{
+  "schema": 1,
+  "wave": 29,
+  "reviewedAt": "2026-11-25T08:29:44.417Z",
+  "reviewer": "projectile_wave29",
+  "method": "Final read-only central git diff and data review, SHA-256/size/cache-list comparison, plus the separately authorized targeted loreFinisher API test of the identified ceiling regression. Only review reports were written by reviewer; all central metadata correction was performed by integrator.",
+  "baseCommit": "2af87b6a1a8740a0759ce7c8c2746be19c48f4af",
+  "reviewedFiles": [
+    {
+      "path": "src/stage-bitmap-manifest.js",
+      "sha256": "cdd9a0722d57d93a0842508d544348c076385d0efba4a7d6a1edb78103388686"
+    },
+    {
+      "path": "src/projectile-bitmap-manifest.js",
+      "sha256": "a6d7347c09fdb77c8d54f1e1ff380dd350c719cb74760540ad9480f96183e9b4"
+    },
+    {
+      "path": "service-worker.js",
+      "sha256": "885661f70feefb99122579df83478e92c599abf5765ee48671a747b94a636671"
+    }
+  ],
+  "outcome": "reviewed-correction-verified-no-blocking-finding",
+  "blockingFindings": [],
+  "trackedChangedFilesAtReview": [
+    "service-worker.js",
+    "src/projectile-bitmap-manifest.js",
+    "src/stage-bitmap-manifest.js"
+  ],
+  "verifiedObservations": {
+    "additions": {
+      "stageEntries": 5,
+      "stagePNGs": 10,
+      "projectileEntries": 3,
+      "projectilePNGs": 3,
+      "projectileSlotRoutes": 10,
+      "totalPNGs": 13
+    },
+    "previousStageEntriesUnchanged": true,
+    "previousProjectileEntriesUnchanged": true,
+    "stageIdentity": [
+      {
+        "id": "arcade_hospital",
+        "source": "arcade",
+        "catalogueSource": "arcade",
+        "identityMatches": true,
+        "previouslyAbsent": true,
+        "scene": "arcade-brookhaven-normal-corridor",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "planes": 2,
+        "eachPlaneSingleStaticFrame": true,
+        "geometryCeiling": true
+      },
+      {
+        "id": "book_light",
+        "source": "bom",
+        "catalogueSource": "bom",
+        "identityMatches": true,
+        "previouslyAbsent": true,
+        "scene": "bom-light-zone8-window-room",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "planes": 2,
+        "eachPlaneSingleStaticFrame": true,
+        "geometryCeiling": false
+      },
+      {
+        "id": "book_steel",
+        "source": "bom",
+        "catalogueSource": "bom",
+        "identityMatches": true,
+        "previouslyAbsent": true,
+        "scene": "bom-steel-zone19-gear-room",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "planes": 2,
+        "eachPlaneSingleStaticFrame": true,
+        "geometryCeiling": false
+      },
+      {
+        "id": "film_midwich",
+        "source": "film",
+        "catalogueSource": "film",
+        "identityMatches": true,
+        "previouslyAbsent": true,
+        "scene": "film2006-midwich-otherworld-upper-gallery",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "planes": 2,
+        "eachPlaneSingleStaticFrame": true,
+        "geometryCeiling": true
+      },
+      {
+        "id": "film_church",
+        "source": "film",
+        "catalogueSource": "film",
+        "identityMatches": true,
+        "previouslyAbsent": true,
+        "scene": "film2006-church-rear-nave-before-intrusion",
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "planes": 2,
+        "eachPlaneSingleStaticFrame": true,
+        "geometryCeiling": true
+      }
+    ],
+    "projectileIdentity": [
+      {
+        "id": "sh1_floatstinger_acid_cloud",
+        "fighterId": "sh1_floatstinger_016",
+        "source": "sh1",
+        "catalogueSource": "sh1",
+        "identityMatches": true,
+        "previouslyAbsent": true,
+        "slots": [
+          "neutralSpecial",
+          "airSpecial",
+          "super",
+          "desperation"
+        ],
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "presentation": {
+          "heightInRadii": 3,
+          "anchor": "center",
+          "composite": "source-over",
+          "facing": 1
+        }
+      },
+      {
+        "id": "homecoming_asphyxia_toxic_plume",
+        "fighterId": "homecoming_asphyxia_096",
+        "source": "homecoming",
+        "catalogueSource": "homecoming",
+        "identityMatches": true,
+        "previouslyAbsent": true,
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "presentation": {
+          "heightInRadii": 3,
+          "anchor": "center",
+          "composite": "source-over",
+          "facing": 1
+        }
+      },
+      {
+        "id": "ascension_immolator_fire_jet",
+        "fighterId": "ascension_the_immolator_182",
+        "source": "ascension",
+        "catalogueSource": "ascension",
+        "identityMatches": true,
+        "previouslyAbsent": true,
+        "slots": [
+          "neutralSpecial",
+          "super",
+          "desperation"
+        ],
+        "status": "integrated-candidate",
+        "fidelity": "unverified",
+        "presentation": {
+          "heightInRadii": 3,
+          "anchor": "center",
+          "composite": "screen",
+          "facing": 1
+        }
+      }
+    ],
+    "editionScope": [
+      "arcade_hospital identifies the original 2007 Arcade normal corridor, not its orange Otherworld variant.",
+      "book_light and book_steel remain Book of Memories elemental locations.",
+      "film_midwich identifies the 2006 transformed upper gallery.",
+      "film_church identifies the 2006 rear nave before intrusion; no 2012 sanctuary substitution.",
+      "Floatstinger stays sh1, Asphyxia stays homecoming, and Immolator stays ascension."
+    ],
+    "assets": [
+      {
+        "owner": "arcade_hospital",
+        "path": "assets/stages/arcade_hospital.bg-normal-corridor.2409645c1f04.png",
+        "sha256": "2409645c1f049ec526510e8e509b6a72d1537c02707ea9804fb9f7ebddac2c8c",
+        "bytes": 2503138,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "arcade_hospital",
+        "path": "assets/stages/arcade_hospital.near-door-jambs.c002d0761487.png",
+        "sha256": "c002d07614874ddf839a232d4c73d7100b8caf142c5041092f3f9db814b7c1ad",
+        "bytes": 409647,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "book_light",
+        "path": "assets/stages/book_light.bg-light-room.87045d14aba8.png",
+        "sha256": "87045d14aba8b9d1ba01eb983cfb85ad4ece2aab6e282fb3af4ce0c87a4cbfe7",
+        "bytes": 2775424,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "book_light",
+        "path": "assets/stages/book_light.near-edges.857bd9e0632c.png",
+        "sha256": "857bd9e0632c5246653b699c0b4c1f94c6aa0bccc70646f8bfa4c2ef144fad9d",
+        "bytes": 224290,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "book_steel",
+        "path": "assets/stages/book_steel.bg-steel-room.2b13c6afe653.png",
+        "sha256": "2b13c6afe6538ebeeefbfb4bb26cf7cf5ce4721f2a6247a9de3dfbd0948863b9",
+        "bytes": 2890608,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "book_steel",
+        "path": "assets/stages/book_steel.near-edges.10d39edce2a8.png",
+        "sha256": "10d39edce2a8460d4d41c42d09ca83369c7517b9fc19bab292e3f7e942112c84",
+        "bytes": 219189,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "film_midwich",
+        "path": "assets/stages/film_midwich.bg-otherworld-gallery.7ca015c73e2d.png",
+        "sha256": "7ca015c73e2d2e9dfc9669cbc450aa2fac279d4f25724ac5b42f3a3f77871d5b",
+        "bytes": 2185175,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "film_midwich",
+        "path": "assets/stages/film_midwich.near-edges.2a676412e457.png",
+        "sha256": "2a676412e457f67268b2965fdd8b6d406994e433e41e513df34717db657cbe59",
+        "bytes": 219196,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "film_church",
+        "path": "assets/stages/film_church.bg-protected-rear-nave.04be564b44c6.png",
+        "sha256": "04be564b44c6dd1a6da6cd32531c946b5e695b97f4895a11f138101218e86c77",
+        "bytes": 1944865,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "film_church",
+        "path": "assets/stages/film_church.near-edges.5a7bfb3b6111.png",
+        "sha256": "5a7bfb3b61114f27b0e6bffa357b76d94bc8e16567a94b140e01b75ac7ed56ec",
+        "bytes": 84961,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "sh1_floatstinger_acid_cloud",
+        "path": "assets/projectiles/sh1_floatstinger_acid_cloud.9d0dee3a72ce.png",
+        "sha256": "9d0dee3a72ce64b1e06d39acd8298fd832f81603e934bd9d9887064bf525fd83",
+        "bytes": 1517372,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "homecoming_asphyxia_toxic_plume",
+        "path": "assets/projectiles/homecoming_asphyxia_toxic_plume.fa3fd7e4a76a.png",
+        "sha256": "fa3fd7e4a76aa79b7139a6239c9daf2330d40ca9da9d458fd2e0b98d33ed96cf",
+        "bytes": 1237462,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      },
+      {
+        "owner": "ascension_immolator_fire_jet",
+        "path": "assets/projectiles/ascension_immolator_fire_jet.a05b1938f04c.png",
+        "sha256": "a05b1938f04cae8fbe24969e0c69501501febe16b4a25ba78b29993a2f142b88",
+        "bytes": 1168665,
+        "declaredHashMatches": true,
+        "declaredBytesMatch": true,
+        "hashSuffixMatches": true,
+        "cacheEntryOccurrences": 1
+      }
+    ],
+    "cache": {
+      "bitmapRevision": "ff9c788b1b0616ae914c268834935f70acbc02bc5fa6b7662bc1aca2fa52b772",
+      "recomputedRevisionMatches": true,
+      "allNewAssetsListedExactlyOnce": true,
+      "changeScope": "Only bitmap revision and 13 asset-list additions. Service-worker installation/fetch/activation code unchanged.",
+      "browserInstallationVerifiedByThisReview": false
+    },
+    "gameplayCode": "The tracked implementation diff contains only two art manifests and service-worker asset metadata. No engine, movement, collision, damage, timing, input, move-set or stage-rule implementation file changed.",
+    "provenance": "All eight new descriptors preserve integrated-candidate and fidelity unverified. No animation or 1:1 certification is promoted by integration.",
+    "contextualEligibility": "All 60 complete ceiling-dependent plans across the five stages match the HEAD baseline under the final metadata: 12 definitions from six attackers, one compatible standing target. Initial 24 unintended additions are resolved. Other three arenas retain their prior 12/12 allowed plans."
+  },
+  "contextualGeometryObservation": {
+    "severity": "resolved",
+    "observation": "The initial integration declared geometry.ceiling=true for all five rooms. The actual loreFinisher API proves this added 24 allowed ceiling-dependent plans in book_light/book_steel.",
+    "beforeAndAfter": [
+      {
+        "stageId": "arcade_hospital",
+        "previousProceduralCeilingFallback": true,
+        "uncorrectedDeclaredCeiling": true,
+        "finalDeclaredCeiling": true
+      },
+      {
+        "stageId": "book_light",
+        "previousProceduralCeilingFallback": false,
+        "uncorrectedDeclaredCeiling": true,
+        "finalDeclaredCeiling": false
+      },
+      {
+        "stageId": "book_steel",
+        "previousProceduralCeilingFallback": false,
+        "uncorrectedDeclaredCeiling": true,
+        "finalDeclaredCeiling": false
+      },
+      {
+        "stageId": "film_midwich",
+        "previousProceduralCeilingFallback": true,
+        "uncorrectedDeclaredCeiling": true,
+        "finalDeclaredCeiling": true
+      },
+      {
+        "stageId": "film_church",
+        "previousProceduralCeilingFallback": true,
+        "uncorrectedDeclaredCeiling": true,
+        "finalDeclaredCeiling": true
+      }
+    ],
+    "consequence": "Setting geometry.ceiling=false only for book_light/book_steel restores all 60 tested complete plans to the HEAD baseline; the other three rooms keep their prior eligibility.",
+    "action": "Integrator corrected only geometry.ceiling to false for book_light/book_steel and documented that usable ceiling support is not established. Actual final central metadata matches the correction demonstrated by the real API test. No new runtime implementation or PNG was needed.",
+    "targetedEvidence": {
+      "path": "docs/production/vague29/ceiling-eligibility-review.json",
+      "api": "loreFinisher",
+      "attackers": 6,
+      "definitions": 12,
+      "stageCount": 5,
+      "statesCompared": 3,
+      "apiCalls": 180,
+      "uncorrectedChangedPlans": 24,
+      "correctedPlanComparisons": 60,
+      "allCorrectedPlansMatchBaseline": true,
+      "sha256": "1a2d9b539e32ca5bb1e28ea871809da13bf142f51aa6291415cda363bb846e13",
+      "finalCentralMetadataMatchesTestedCorrection": true,
+      "fullPlanComparisons": 60,
+      "remainingEligibilityDeltaInTestedScope": 0
+    }
+  },
+  "existingQAEvidence": [
+    {
+      "path": "docs/production/vague29/qa-native-projectiles/report.json",
+      "sha256": "60e60ac51dfaa84cb8ad9485a2f9b95ec6cdc42104f6442cf0f471d84d3440b6",
+      "checks": 205,
+      "passedChecks": 205,
+      "failedChecks": 0,
+      "scenes": 6,
+      "captures": 12,
+      "errors": [],
+      "browserTest": false,
+      "httpTest": false,
+      "readOnlyReviewOfExistingReport": true,
+      "rerunByReviewer": false,
+      "scopeNote": "Existing pre-correction native QA report read during initial review. PNGs are unchanged by ceiling metadata correction; final fresh native QA is managed separately by integrator."
+    },
+    {
+      "path": "docs/production/vague29/qa-native-stages/report.json",
+      "sha256": "b3d7ddb1f40ba8b2a1aaefd6cbb5e2f65eca75ffcf9b042c930c7a7c582d9d6b",
+      "checks": 140,
+      "passedChecks": 140,
+      "failedChecks": 0,
+      "scenes": 4,
+      "captures": 4,
+      "errors": [],
+      "browserTest": false,
+      "httpTest": false,
+      "readOnlyReviewOfExistingReport": true,
+      "rerunByReviewer": false,
+      "scopeNote": "Existing pre-correction native QA report read during initial review. PNGs are unchanged by ceiling metadata correction; final fresh native QA is managed separately by integrator."
+    },
+    {
+      "path": "docs/production/vague29/qa-native-hospital/report.json",
+      "sha256": "a3fd9d9e8d57fbcb2e8a85eec00efa2a60604929dbe505fdb2e20d3b6e496647",
+      "checks": 47,
+      "passedChecks": 47,
+      "failedChecks": 0,
+      "scenes": 1,
+      "captures": 1,
+      "errors": [],
+      "browserTest": false,
+      "httpTest": false,
+      "readOnlyReviewOfExistingReport": true,
+      "rerunByReviewer": false,
+      "scopeNote": "Existing pre-correction native QA report read during initial review. PNGs are unchanged by ceiling metadata correction; final fresh native QA is managed separately by integrator."
+    }
+  ],
+  "integratorVisualReview": {
+    "observedBy": "root integrator; reported to reviewer, not independently re-viewed in this review",
+    "scope": "All 12 projectile screenshots from six native-engine scenes, emission and flight in both directions.",
+    "findings": [
+      "Transparent alpha and all three effects visibly render in both directions.",
+      "Asphyxia emission is at waist level in the existing projectile placement; it does not prove anatomical mouth attachment.",
+      "Immolator first emission is partly behind the existing body sprite, then visible in flight."
+    ],
+    "disposition": "Known runtime presentation limits recorded; no geometry, move or gameplay fix applied."
+  },
+  "remainingLimits": [
+    "Existing native Canvas reports are not browser, HTTP, DOM, actual browser keyboard or service-worker execution tests.",
+    "Projectile QA exercises one ordinary reachable projectile command per effect in each player slot. It does not claim every one of the ten mapped slots was played.",
+    "Opposite-facing images use the existing runtime mirror; no independently sourced opposite view was generated.",
+    "Static artwork does not establish original animation, timings, hit/guard matrices, anatomy attachment or exact source fidelity.",
+    "Source references and authored composition/placement limits remain those in the stage and projectile research deliveries.",
+    "Contextual eligibility equality is demonstrated for all 12 actual ceiling-dependent signature/nightmare definitions with the same compatible standing target on the five arenas; target-anatomy combinations beyond this targeted regression were not exhausted.",
+    "Review covers final central snapshot recorded here. No commit, deployment or service-worker activation is implied."
+  ],
+  "testsRunByReviewer": [
+    {
+      "scope": "Targeted ceiling eligibility regression using actual loreFinisher API, requested after initial review finding",
+      "report": "docs/production/vague29/ceiling-eligibility-review.json",
+      "success": true
+    }
+  ],
+  "sourceEditsByReviewer": [],
+  "reportPath": "docs/production/vague29/integration-review.json",
+  "reviewSnapshotNote": "Final central manifest and cache snapshot after the integrator corrected book_light/book_steel ceiling metadata and reported npm run verify passing.",
+  "initialReviewSnapshot": {
+    "reviewedAt": "2026-11-25T08:25:19.087Z",
+    "reviewedFiles": [
+      {
+        "path": "src/stage-bitmap-manifest.js",
+        "sha256": "6074859699efa3f52d8f0373005047f5cb8270bae8ab49a2cd0020b77a73ae95"
+      },
+      {
+        "path": "src/projectile-bitmap-manifest.js",
+        "sha256": "a6d7347c09fdb77c8d54f1e1ff380dd350c719cb74760540ad9480f96183e9b4"
+      },
+      {
+        "path": "service-worker.js",
+        "sha256": "871121d5e55fe8b54223151c4e60658db150298aa15a256d67b09d76c9fe1c87"
+      }
+    ],
+    "bitmapRevision": "f269cbc262bebd76c5c20776ee3a866166a539b9eef7c7beced9c1cbdef7f543",
+    "ceilingMetadata": [
+      {
+        "id": "arcade_hospital",
+        "ceiling": true
+      },
+      {
+        "id": "book_light",
+        "ceiling": true
+      },
+      {
+        "id": "book_steel",
+        "ceiling": true
+      },
+      {
+        "id": "film_midwich",
+        "ceiling": true
+      },
+      {
+        "id": "film_church",
+        "ceiling": true
+      }
+    ],
+    "note": "This snapshot detected the contextual ceiling eligibility regression before correction."
+  },
+  "finalNativeQARerun": {
+    "owner": "root integrator",
+    "statusAtReview": "Integrator reports fresh qa-final-* runs in progress; not awaited for this central diff review",
+    "notClaimedPassedByThisReview": true
+  },
+  "integratorVerification": {
+    "command": "npm run verify",
+    "reportedOutcome": "passed after ceiling metadata correction",
+    "observedBy": "root integrator report; not rerun by reviewer"
+  }
+}

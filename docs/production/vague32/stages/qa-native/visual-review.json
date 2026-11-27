@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-27T08:14:16.182999+00:00",
+  "method": "Deux captures 1280×720 du moteur FightEngine natif ouvertes et inspectées après exécution.",
+  "technicalStatus": "passed",
+  "fidelity": "unverified",
+  "nativeChecks": 93,
+  "browserTest": false,
+  "httpBrowserStatus": "blocked-missing-chromium-executable",
+  "httpAttemptReport": "../qa-http-attempt/report.json",
+  "captures": [
+    {
+      "stageId": "antique_shop",
+      "file": "stage-antique_shop.png",
+      "sha256": "530b4103f220b21d1f7efedb67392e5dea81c3ea9f91918e4338d281c678d04f",
+      "inspected": true,
+      "compositionStatus": "acceptable-as-unverified-candidate",
+      "observations": "Antichambre sombre ; autel vide et drapé derrière les combattants, ouverture et grille de fond à droite. Bord de grille proche limité au coin inférieur gauche. Deux combattants entièrement cadrés, pieds sur la bande basse ; aucune projection du Flauros historique visible.",
+      "limits": "La reconstruction frontale, les colonnes, moulures, proportions et microtextures dépassent les informations lisibles dans les sources 320×180. Les détails peints et la géométrie ne sont pas certifiés 1:1.",
+      "foregroundOccludesFighters": false
+    },
+    {
+      "stageId": "lighthouse_sm",
+      "file": "stage-lighthouse_sm.png",
+      "sha256": "0cea88a65c5e58846c489747c0454260099e366195a3c54226c67c06c81da893",
+      "inspected": true,
+      "compositionStatus": "acceptable-as-unverified-candidate",
+      "observations": "Façade, piliers, porte et neige ; LIGHTHOUSE lisible sur la plaque à droite. Neige proche limitée au coin inférieur droit ; pieds et centre de combat dégagés. Ni tour, lac, hall ou scène de thérapie dans le plan.",
+      "limits": "La signalétique native complète est simplifiée : seuls les grands caractères LIGHTHOUSE sont reproduits. Fronton, végétation de bord, architecture et microtextures reconstruits. Les flocons sont fixes dans le PNG ; aucune animation source certifiée.",
+      "foregroundOccludesFighters": false
+    }
+  ],
+  "inputAndParallax": "Le rapport technique enregistre des pressions et relâchements via les callbacks InputState du moteur, 18 ticks de déplacement par sens, retour naturel à idle et déplacements des plans conformes à la parallaxe 0,006. Aucun acteur, position ou horloge forcé."
+}

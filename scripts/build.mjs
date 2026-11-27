@@ -3,13 +3,16 @@ import { createHash } from 'node:crypto';
 import { dirname, extname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
+import {resolveBuildOutput} from './build-output.mjs';
 import {
   VERSION, ROSTER, STAGES, CHRONICLES, SOURCE_META, CONTENT_STATS,
   MANIFESTATION_TRAITS, AFFLICTIONS, STAGE_HAZARDS, AI_PERSONALITIES, RITUAL_MODIFIERS, SOURCE_COVERAGE_TARGETS, coverageAudit, createBossPhases, createCombatProfile, MOVESET_KEYS, MOVE_FIDELITY, STAGE_TERRAINS, STAGE_SHIFT_STYLES, STAGE_EVENTS, STAGE_INTERACTION_TRIGGERS, stageDirectorSummary
 } from '../src/data.js';
 
 const project = resolve(fileURLToPath(new URL('../', import.meta.url)));
-const dist = join(project, 'dist');
+// Resolve and guard the complete output path before syncData or recursive rm.
+const output = await resolveBuildOutput(process.argv.slice(2),project);
+const dist = output.path;
 const dataDir = join(project, 'data');
 const verifyOnly = process.argv.includes('--verify-only');
 const verify = process.argv.includes('--verify') || verifyOnly;
@@ -174,6 +177,7 @@ async function runVerification() {
     'index.html','offline.html','404.html','styles.css','modules/unified-versus.html','modules/chronicles.html','modules/archive.html',
     'modules/versus.css','modules/chronicles.css','modules/archive.css','src/command.js','src/versus.js',
     'src/chronicles.js','src/archive.js','src/fight.js','src/renderers.js','src/data.js','src/shared.js',
+    'src/projectile-bitmaps.js','src/projectile-bitmap-manifest.js',
     'data/roster.json','data/stages.json','data/chronicles.json','data/sources.json','data/content-stats.json','data/combat-rules.json','data/coverage-audit.json','data/fatalities.json','data/movesets.json','data/stage-director.json','src/movesets.js','src/stage-director.js'
   ];
   for(const path of required)assert(await exists(join(project,path)),`Fichier requis absent: ${path}`);
@@ -220,7 +224,7 @@ const result=verify?await runVerification():{js:0,html:0,traits:0,afflictions:0,
 if(!verifyOnly){
   const files=await filesUnder(dist);const manifest=[];
   for(const file of files){const bytes=await readFile(file);manifest.push({path:relative(dist,file).replaceAll('\\','/'),bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});}
-  const report={project:'SILENT HILL: HALO OF FLESH',version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length,rituals:Object.keys(RITUAL_MODIFIERS).length,aiPersonalities:Object.keys(AI_PERSONALITIES).length,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,stageDirectorEvents:CONTENT_STATS.stageDirectorEvents,stageInteractions:CONTENT_STATS.stageInteractions,stageHazardLinks:CONTENT_STATS.stageHazardLinks,terrains:CONTENT_STATS.terrainProfiles,shiftStyles:CONTENT_STATS.shiftStyles,moves:CONTENT_STATS.moves,directCanonicalMoves:CONTENT_STATS.directCanonicalMoves,behaviorCompositeMoves:CONTENT_STATS.behaviorCompositeMoves,versusAdaptationMoves:CONTENT_STATS.versusAdaptationMoves,coverageComplete:CONTENT_STATS.coverageComplete},verified:verify,checks:result,files:manifest};
+  const report={project:'SILENT HILL: HALO OF FLESH',...(output.external?{outputOwner:output.owner}:{}),version:VERSION,builtAt:new Date().toISOString(),content:CONTENT_STATS,combatRules:{traits:Object.keys(MANIFESTATION_TRAITS).length,afflictions:Object.keys(AFFLICTIONS).length,hazards:Object.keys(STAGE_HAZARDS).length,rituals:Object.keys(RITUAL_MODIFIERS).length,aiPersonalities:Object.keys(AI_PERSONALITIES).length,bossPhases:CONTENT_STATS.bossPhases,fatalities:CONTENT_STATS.fatalities,stageFatalities:CONTENT_STATS.stageFatalities,stageAnimations:CONTENT_STATS.stageAnimations,stageDirectorEvents:CONTENT_STATS.stageDirectorEvents,stageInteractions:CONTENT_STATS.stageInteractions,stageHazardLinks:CONTENT_STATS.stageHazardLinks,terrains:CONTENT_STATS.terrainProfiles,shiftStyles:CONTENT_STATS.shiftStyles,moves:CONTENT_STATS.moves,directCanonicalMoves:CONTENT_STATS.directCanonicalMoves,behaviorCompositeMoves:CONTENT_STATS.behaviorCompositeMoves,versusAdaptationMoves:CONTENT_STATS.versusAdaptationMoves,coverageComplete:CONTENT_STATS.coverageComplete},verified:verify,checks:result,files:manifest};
   await writeJson(join(dist,'build-manifest.json'),report);
   console.log(`Build v${VERSION}: ${files.length+1} fichiers → ${dist}`);
 }

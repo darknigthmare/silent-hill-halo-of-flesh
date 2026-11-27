@@ -1,0 +1,2505 @@
+{
+  "wave": 33,
+  "startedAt": "2026-11-27T10:08:29.110Z",
+  "passed": true,
+  "build": "/tmp/halo-wave33-build",
+  "baselinePath": "docs/production/vague33/combat-profiles-before-crawling.json",
+  "checks": [
+    {
+      "name": "Dedicated port unused",
+      "passed": true
+    },
+    {
+      "name": "Built HTTP app ready",
+      "passed": true
+    },
+    {
+      "name": "right-hit: ordinary Dojo without auto heal or free meter",
+      "passed": true
+    },
+    {
+      "name": "right-hit: only exact move level changes from mid to low",
+      "passed": true,
+      "detail": {
+        "changedKeys": [
+          "level"
+        ],
+        "damage": 31,
+        "reach": 55,
+        "startup": 5,
+        "active": 3,
+        "recovery": 9
+      }
+    },
+    {
+      "name": "right-hit: keyboard approach reaches contact range",
+      "passed": true,
+      "detail": {
+        "frame": 334,
+        "attacker": {
+          "x": 883.632716800001,
+          "y": 594,
+          "facing": 1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": false,
+          "blocking": false,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 86.36728319999895
+      }
+    },
+    {
+      "name": "right-hit: exact native pose and resolved contact share captured frame",
+      "passed": true
+    },
+    {
+      "name": "right-hit: engine resolves a real damaging contact",
+      "passed": true,
+      "detail": {
+        "damage": 29,
+        "lastHit": {
+          "attackerIndex": 0,
+          "moveKey": "neutralLight",
+          "moveName": "Percussion du corps rampant — coup bref",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 340
+        }
+      }
+    },
+    {
+      "name": "right-hit: low hit connects through intended guard state",
+      "passed": true,
+      "detail": {
+        "guardBefore": false,
+        "crouchBefore": false,
+        "lastHit": {
+          "attackerIndex": 0,
+          "moveKey": "neutralLight",
+          "moveName": "Percussion du corps rampant — coup bref",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 340
+        }
+      }
+    },
+    {
+      "name": "right-hit: original idle returns without scale jump",
+      "passed": true,
+      "detail": {
+        "attackSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "bodyHeight": {
+          "pose": 2.94,
+          "idle": 2.94
+        }
+      }
+    },
+    {
+      "name": "right-low-guard: ordinary Dojo without auto heal or free meter",
+      "passed": true
+    },
+    {
+      "name": "right-low-guard: only exact move level changes from mid to low",
+      "passed": true,
+      "detail": {
+        "changedKeys": [
+          "level"
+        ],
+        "damage": 31,
+        "reach": 55,
+        "startup": 5,
+        "active": 3,
+        "recovery": 9
+      }
+    },
+    {
+      "name": "right-low-guard: keyboard approach reaches contact range",
+      "passed": true,
+      "detail": {
+        "frame": 355,
+        "attacker": {
+          "x": 895.7194219062067,
+          "y": 594,
+          "facing": 1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": true,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 74.28057809379334
+      }
+    },
+    {
+      "name": "right-low-guard: exact native pose and resolved contact share captured frame",
+      "passed": true
+    },
+    {
+      "name": "right-low-guard: engine resolves a real damaging contact",
+      "passed": true,
+      "detail": {
+        "damage": 4,
+        "lastHit": {
+          "attackerIndex": 0,
+          "moveKey": "neutralLight-guard-chip",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 363
+        }
+      }
+    },
+    {
+      "name": "right-low-guard: actual crouching guard blocks low hit",
+      "passed": true,
+      "detail": {
+        "before": {
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": true,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "after": {
+          "id": "bom_butcher_123",
+          "x": 971.26,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "crouchBlock",
+          "health": 1286,
+          "guard": 111,
+          "blocking": true,
+          "crouching": true,
+          "parryWindow": 0,
+          "lastHit": {
+            "attackerIndex": 0,
+            "moveKey": "neutralLight-guard-chip",
+            "isSuper": false,
+            "environmental": false,
+            "frame": 363
+          },
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 4,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "right-low-guard: original idle returns without scale jump",
+      "passed": true,
+      "detail": {
+        "attackSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "bodyHeight": {
+          "pose": 2.94,
+          "idle": 2.94
+        }
+      }
+    },
+    {
+      "name": "right-standing-guard: ordinary Dojo without auto heal or free meter",
+      "passed": true
+    },
+    {
+      "name": "right-standing-guard: only exact move level changes from mid to low",
+      "passed": true,
+      "detail": {
+        "changedKeys": [
+          "level"
+        ],
+        "damage": 31,
+        "reach": 55,
+        "startup": 5,
+        "active": 3,
+        "recovery": 9
+      }
+    },
+    {
+      "name": "right-standing-guard: keyboard approach reaches contact range",
+      "passed": true,
+      "detail": {
+        "frame": 354,
+        "attacker": {
+          "x": 888.8553912923779,
+          "y": 594,
+          "facing": 1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": false,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 81.14460870762207
+      }
+    },
+    {
+      "name": "right-standing-guard: exact native pose and resolved contact share captured frame",
+      "passed": true
+    },
+    {
+      "name": "right-standing-guard: engine resolves a real damaging contact",
+      "passed": true,
+      "detail": {
+        "damage": 29,
+        "lastHit": {
+          "attackerIndex": 0,
+          "moveKey": "neutralLight",
+          "moveName": "Percussion du corps rampant — coup bref",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 360
+        }
+      }
+    },
+    {
+      "name": "right-standing-guard: low hit connects through intended guard state",
+      "passed": true,
+      "detail": {
+        "guardBefore": true,
+        "crouchBefore": false,
+        "lastHit": {
+          "attackerIndex": 0,
+          "moveKey": "neutralLight",
+          "moveName": "Percussion du corps rampant — coup bref",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 360
+        }
+      }
+    },
+    {
+      "name": "right-standing-guard: original idle returns without scale jump",
+      "passed": true,
+      "detail": {
+        "attackSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "bodyHeight": {
+          "pose": 2.94,
+          "idle": 2.94
+        }
+      }
+    },
+    {
+      "name": "left-hit: ordinary Dojo without auto heal or free meter",
+      "passed": true
+    },
+    {
+      "name": "left-hit: only exact move level changes from mid to low",
+      "passed": true,
+      "detail": {
+        "changedKeys": [
+          "level"
+        ],
+        "damage": 31,
+        "reach": 55,
+        "startup": 5,
+        "active": 3,
+        "recovery": 9
+      }
+    },
+    {
+      "name": "left-hit: keyboard approach reaches contact range",
+      "passed": true,
+      "detail": {
+        "frame": 333,
+        "attacker": {
+          "x": 389.5032831999983,
+          "y": 594,
+          "facing": -1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": false,
+          "blocking": false,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 79.5032831999983
+      }
+    },
+    {
+      "name": "left-hit: exact native pose and resolved contact share captured frame",
+      "passed": true
+    },
+    {
+      "name": "left-hit: engine resolves a real damaging contact",
+      "passed": true,
+      "detail": {
+        "damage": 29,
+        "lastHit": {
+          "attackerIndex": 1,
+          "moveKey": "neutralLight",
+          "moveName": "Percussion du corps rampant — coup bref",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 339
+        }
+      }
+    },
+    {
+      "name": "left-hit: low hit connects through intended guard state",
+      "passed": true,
+      "detail": {
+        "guardBefore": false,
+        "crouchBefore": false,
+        "lastHit": {
+          "attackerIndex": 1,
+          "moveKey": "neutralLight",
+          "moveName": "Percussion du corps rampant — coup bref",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 339
+        }
+      }
+    },
+    {
+      "name": "left-hit: original idle returns without scale jump",
+      "passed": true,
+      "detail": {
+        "attackSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "bodyHeight": {
+          "pose": 2.94,
+          "idle": 2.94
+        }
+      }
+    },
+    {
+      "name": "left-low-guard: ordinary Dojo without auto heal or free meter",
+      "passed": true
+    },
+    {
+      "name": "left-low-guard: only exact move level changes from mid to low",
+      "passed": true,
+      "detail": {
+        "changedKeys": [
+          "level"
+        ],
+        "damage": 31,
+        "reach": 55,
+        "startup": 5,
+        "active": 3,
+        "recovery": 9
+      }
+    },
+    {
+      "name": "left-low-guard: keyboard approach reaches contact range",
+      "passed": true,
+      "detail": {
+        "frame": 354,
+        "attacker": {
+          "x": 384.2806087076211,
+          "y": 594,
+          "facing": -1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": true,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 74.28060870762113
+      }
+    },
+    {
+      "name": "left-low-guard: exact native pose and resolved contact share captured frame",
+      "passed": true
+    },
+    {
+      "name": "left-low-guard: engine resolves a real damaging contact",
+      "passed": true,
+      "detail": {
+        "damage": 4,
+        "lastHit": {
+          "attackerIndex": 1,
+          "moveKey": "neutralLight-guard-chip",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 360
+        }
+      }
+    },
+    {
+      "name": "left-low-guard: actual crouching guard blocks low hit",
+      "passed": true,
+      "detail": {
+        "before": {
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": true,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "after": {
+          "id": "bom_butcher_123",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "crouchBlock",
+          "health": 1286,
+          "guard": 111,
+          "blocking": true,
+          "crouching": true,
+          "parryWindow": 0,
+          "lastHit": {
+            "attackerIndex": 1,
+            "moveKey": "neutralLight-guard-chip",
+            "isSuper": false,
+            "environmental": false,
+            "frame": 360
+          },
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 4,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "left-low-guard: original idle returns without scale jump",
+      "passed": true,
+      "detail": {
+        "attackSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "bodyHeight": {
+          "pose": 2.94,
+          "idle": 2.94
+        }
+      }
+    },
+    {
+      "name": "left-standing-guard: ordinary Dojo without auto heal or free meter",
+      "passed": true
+    },
+    {
+      "name": "left-standing-guard: only exact move level changes from mid to low",
+      "passed": true,
+      "detail": {
+        "changedKeys": [
+          "level"
+        ],
+        "damage": 31,
+        "reach": 55,
+        "startup": 5,
+        "active": 3,
+        "recovery": 9
+      }
+    },
+    {
+      "name": "left-standing-guard: keyboard approach reaches contact range",
+      "passed": true,
+      "detail": {
+        "frame": 354,
+        "attacker": {
+          "x": 384.2806087076211,
+          "y": 594,
+          "facing": -1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": false,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 74.28060870762113
+      }
+    },
+    {
+      "name": "left-standing-guard: exact native pose and resolved contact share captured frame",
+      "passed": true
+    },
+    {
+      "name": "left-standing-guard: engine resolves a real damaging contact",
+      "passed": true,
+      "detail": {
+        "damage": 29,
+        "lastHit": {
+          "attackerIndex": 1,
+          "moveKey": "neutralLight",
+          "moveName": "Percussion du corps rampant — coup bref",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 360
+        }
+      }
+    },
+    {
+      "name": "left-standing-guard: low hit connects through intended guard state",
+      "passed": true,
+      "detail": {
+        "guardBefore": true,
+        "crouchBefore": false,
+        "lastHit": {
+          "attackerIndex": 1,
+          "moveKey": "neutralLight",
+          "moveName": "Percussion du corps rampant — coup bref",
+          "isSuper": false,
+          "environmental": false,
+          "frame": 360
+        }
+      }
+    },
+    {
+      "name": "left-standing-guard: original idle returns without scale jump",
+      "passed": true,
+      "detail": {
+        "attackSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "idleSize": [
+          179.89795918367346,
+          59.96598639455782
+        ],
+        "bodyHeight": {
+          "pose": 2.94,
+          "idle": 2.94
+        }
+      }
+    },
+    {
+      "name": "Crouching guard reduces damage; standing guard does not on side 0",
+      "passed": true,
+      "detail": {
+        "hit": 29,
+        "lowGuard": 4,
+        "standingGuard": 29
+      }
+    },
+    {
+      "name": "Crouching guard reduces damage; standing guard does not on side 1",
+      "passed": true,
+      "detail": {
+        "hit": 29,
+        "lowGuard": 4,
+        "standingGuard": 29
+      }
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "cases": [
+    {
+      "label": "right-hit",
+      "player": 0,
+      "kind": "hit",
+      "before": {
+        "frame": 334,
+        "attacker": {
+          "x": 883.632716800001,
+          "y": 594,
+          "facing": 1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": false,
+          "blocking": false,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 86.36728319999895
+      },
+      "action": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+          "args": [
+            -71.95918367346938,
+            -50.44100236779794,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            893.1752159684038,
+            595.0372763872147
+          ],
+          "engineFrame": 340
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 896.9854445045911,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "attack",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 29,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 1,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "target": {
+          "id": "bom_butcher_123",
+          "x": 971.836,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "idle",
+          "health": 1261,
+          "guard": 122,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": {
+            "attackerIndex": 0,
+            "moveKey": "neutralLight",
+            "moveName": "Percussion du corps rampant — coup bref",
+            "isSuper": false,
+            "environmental": false,
+            "frame": 340
+          },
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 29,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "move": {
+          "key": "neutralLight",
+          "input": "L",
+          "name": "Percussion du corps rampant — coup bref",
+          "button": "light",
+          "category": "normal",
+          "stance": "standing",
+          "startup": 5,
+          "active": 3,
+          "recovery": 9,
+          "damage": 31,
+          "reach": 55,
+          "level": "low",
+          "meter": 6,
+          "knockback": 0,
+          "travel": 0,
+          "verticalTravel": 0,
+          "requiresAir": false,
+          "requiresGround": true,
+          "airControl": 0,
+          "hits": 1,
+          "hitInterval": 4,
+          "projectile": false,
+          "projectileCount": 1,
+          "projectileSpeed": 14.48112,
+          "projectileScale": 1,
+          "projectileArc": 0,
+          "projectileGravity": 0,
+          "projectileLife": 82,
+          "homing": 0,
+          "armorFrames": 0,
+          "invulnFrames": 0,
+          "guardDamage": 1,
+          "unblockable": false,
+          "knockdown": false,
+          "launch": 0,
+          "teleport": null,
+          "trap": false,
+          "aura": false,
+          "counterStance": false,
+          "trigger": null,
+          "sideSwitch": false,
+          "hardKnockdown": false,
+          "groundBounce": false,
+          "armorBreak": false,
+          "meterGain": 0,
+          "effect": null,
+          "cancelInto": [
+            "forwardLight",
+            "neutralHeavy",
+            "neutralSpecial"
+          ],
+          "canonicalBasis": "Percussion rampante : Se déplace rapidement couché au sol, bras enfermés dans la chair, et percute James depuis ce rampement.",
+          "fidelity": "behavior-composite",
+          "tags": [
+            "humanoid",
+            "rushdown",
+            "normal",
+            "reference-policy",
+            "versus-timing"
+          ],
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "referenceStatus": "observed-behavior-versus-transposition",
+          "sourceTimingMeasured": false,
+          "enabled": true,
+          "disabledReason": null
+        },
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "engineFrame": 340
+      },
+      "recovered": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "args": [
+            -71.95918367346938,
+            -50.6066542639155,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            897.7510636781299,
+            594.0786553621292
+          ],
+          "engineFrame": 356
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 903.2306078093077,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "idle",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 29,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 1,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        }
+      },
+      "damage": 29,
+      "capturedFrame": 340
+    },
+    {
+      "label": "right-low-guard",
+      "player": 0,
+      "kind": "low-guard",
+      "before": {
+        "frame": 355,
+        "attacker": {
+          "x": 895.7194219062067,
+          "y": 594,
+          "facing": 1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": true,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 74.28057809379334
+      },
+      "action": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+          "args": [
+            -71.95918367346938,
+            -50.44100236779794,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            890.1844394203945,
+            594.0000067949295
+          ],
+          "engineFrame": 363
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 895.7194833983823,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "attack",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 4,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "target": {
+          "id": "bom_butcher_123",
+          "x": 971.26,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "crouchBlock",
+          "health": 1286,
+          "guard": 111,
+          "blocking": true,
+          "crouching": true,
+          "parryWindow": 0,
+          "lastHit": {
+            "attackerIndex": 0,
+            "moveKey": "neutralLight-guard-chip",
+            "isSuper": false,
+            "environmental": false,
+            "frame": 363
+          },
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 4,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "move": {
+          "key": "neutralLight",
+          "input": "L",
+          "name": "Percussion du corps rampant — coup bref",
+          "button": "light",
+          "category": "normal",
+          "stance": "standing",
+          "startup": 5,
+          "active": 3,
+          "recovery": 9,
+          "damage": 31,
+          "reach": 55,
+          "level": "low",
+          "meter": 6,
+          "knockback": 0,
+          "travel": 0,
+          "verticalTravel": 0,
+          "requiresAir": false,
+          "requiresGround": true,
+          "airControl": 0,
+          "hits": 1,
+          "hitInterval": 4,
+          "projectile": false,
+          "projectileCount": 1,
+          "projectileSpeed": 14.48112,
+          "projectileScale": 1,
+          "projectileArc": 0,
+          "projectileGravity": 0,
+          "projectileLife": 82,
+          "homing": 0,
+          "armorFrames": 0,
+          "invulnFrames": 0,
+          "guardDamage": 1,
+          "unblockable": false,
+          "knockdown": false,
+          "launch": 0,
+          "teleport": null,
+          "trap": false,
+          "aura": false,
+          "counterStance": false,
+          "trigger": null,
+          "sideSwitch": false,
+          "hardKnockdown": false,
+          "groundBounce": false,
+          "armorBreak": false,
+          "meterGain": 0,
+          "effect": null,
+          "cancelInto": [
+            "forwardLight",
+            "neutralHeavy",
+            "neutralSpecial"
+          ],
+          "canonicalBasis": "Percussion rampante : Se déplace rapidement couché au sol, bras enfermés dans la chair, et percute James depuis ce rampement.",
+          "fidelity": "behavior-composite",
+          "tags": [
+            "humanoid",
+            "rushdown",
+            "normal",
+            "reference-policy",
+            "versus-timing"
+          ],
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "referenceStatus": "observed-behavior-versus-transposition",
+          "sourceTimingMeasured": false,
+          "enabled": true,
+          "disabledReason": null
+        },
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "engineFrame": 363
+      },
+      "recovered": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "args": [
+            -71.95918367346938,
+            -50.6066542639155,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            890.1844394203945,
+            594.0000067949295
+          ],
+          "engineFrame": 378
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 895.7194993084624,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "idle",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 4,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        }
+      },
+      "damage": 4,
+      "capturedFrame": 363
+    },
+    {
+      "label": "right-standing-guard",
+      "player": 0,
+      "kind": "standing-guard",
+      "before": {
+        "frame": 354,
+        "attacker": {
+          "x": 888.8553912923779,
+          "y": 594,
+          "facing": 1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 970,
+          "y": 594,
+          "facing": -1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": false,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 81.14460870762207
+      },
+      "action": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+          "args": [
+            -71.95918367346938,
+            -50.44100236779794,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            883.8694435466969,
+            595.122841000557
+          ],
+          "engineFrame": 360
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 888.8555738222577,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "attack",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 29,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 1,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "target": {
+          "id": "bom_butcher_123",
+          "x": 972.025,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "block",
+          "health": 1261,
+          "guard": 122,
+          "blocking": true,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": {
+            "attackerIndex": 0,
+            "moveKey": "neutralLight",
+            "moveName": "Percussion du corps rampant — coup bref",
+            "isSuper": false,
+            "environmental": false,
+            "frame": 360
+          },
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 29,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "move": {
+          "key": "neutralLight",
+          "input": "L",
+          "name": "Percussion du corps rampant — coup bref",
+          "button": "light",
+          "category": "normal",
+          "stance": "standing",
+          "startup": 5,
+          "active": 3,
+          "recovery": 9,
+          "damage": 31,
+          "reach": 55,
+          "level": "low",
+          "meter": 6,
+          "knockback": 0,
+          "travel": 0,
+          "verticalTravel": 0,
+          "requiresAir": false,
+          "requiresGround": true,
+          "airControl": 0,
+          "hits": 1,
+          "hitInterval": 4,
+          "projectile": false,
+          "projectileCount": 1,
+          "projectileSpeed": 14.48112,
+          "projectileScale": 1,
+          "projectileArc": 0,
+          "projectileGravity": 0,
+          "projectileLife": 82,
+          "homing": 0,
+          "armorFrames": 0,
+          "invulnFrames": 0,
+          "guardDamage": 1,
+          "unblockable": false,
+          "knockdown": false,
+          "launch": 0,
+          "teleport": null,
+          "trap": false,
+          "aura": false,
+          "counterStance": false,
+          "trigger": null,
+          "sideSwitch": false,
+          "hardKnockdown": false,
+          "groundBounce": false,
+          "armorBreak": false,
+          "meterGain": 0,
+          "effect": null,
+          "cancelInto": [
+            "forwardLight",
+            "neutralHeavy",
+            "neutralSpecial"
+          ],
+          "canonicalBasis": "Percussion rampante : Se déplace rapidement couché au sol, bras enfermés dans la chair, et percute James depuis ce rampement.",
+          "fidelity": "behavior-composite",
+          "tags": [
+            "humanoid",
+            "rushdown",
+            "normal",
+            "reference-policy",
+            "versus-timing"
+          ],
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "referenceStatus": "observed-behavior-versus-transposition",
+          "sourceTimingMeasured": false,
+          "enabled": true,
+          "disabledReason": null
+        },
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "engineFrame": 360
+      },
+      "recovered": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "args": [
+            -71.95918367346938,
+            -50.6066542639155,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            -0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            883.3418734084516,
+            593.9256192445755
+          ],
+          "engineFrame": 377
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 888.8556597899994,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "idle",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 29,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 1,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        }
+      },
+      "damage": 29,
+      "capturedFrame": 360
+    },
+    {
+      "label": "left-hit",
+      "player": 1,
+      "kind": "hit",
+      "before": {
+        "frame": 333,
+        "attacker": {
+          "x": 389.5032831999983,
+          "y": 594,
+          "facing": -1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": false,
+          "blocking": false,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 79.5032831999983
+      },
+      "action": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+          "args": [
+            -71.95918367346938,
+            -50.44100236779794,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            382.7495429090286,
+            592.8115283250809
+          ],
+          "engineFrame": 339
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 376.1505554954081,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "attack",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 29,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 1,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "target": {
+          "id": "bom_butcher_123",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "idle",
+          "health": 1261,
+          "guard": 122,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": {
+            "attackerIndex": 1,
+            "moveKey": "neutralLight",
+            "moveName": "Percussion du corps rampant — coup bref",
+            "isSuper": false,
+            "environmental": false,
+            "frame": 339
+          },
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 29,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "move": {
+          "key": "neutralLight",
+          "input": "L",
+          "name": "Percussion du corps rampant — coup bref",
+          "button": "light",
+          "category": "normal",
+          "stance": "standing",
+          "startup": 5,
+          "active": 3,
+          "recovery": 9,
+          "damage": 31,
+          "reach": 55,
+          "level": "low",
+          "meter": 6,
+          "knockback": 0,
+          "travel": 0,
+          "verticalTravel": 0,
+          "requiresAir": false,
+          "requiresGround": true,
+          "airControl": 0,
+          "hits": 1,
+          "hitInterval": 4,
+          "projectile": false,
+          "projectileCount": 1,
+          "projectileSpeed": 14.48112,
+          "projectileScale": 1,
+          "projectileArc": 0,
+          "projectileGravity": 0,
+          "projectileLife": 82,
+          "homing": 0,
+          "armorFrames": 0,
+          "invulnFrames": 0,
+          "guardDamage": 1,
+          "unblockable": false,
+          "knockdown": false,
+          "launch": 0,
+          "teleport": null,
+          "trap": false,
+          "aura": false,
+          "counterStance": false,
+          "trigger": null,
+          "sideSwitch": false,
+          "hardKnockdown": false,
+          "groundBounce": false,
+          "armorBreak": false,
+          "meterGain": 0,
+          "effect": null,
+          "cancelInto": [
+            "forwardLight",
+            "neutralHeavy",
+            "neutralSpecial"
+          ],
+          "canonicalBasis": "Percussion rampante : Se déplace rapidement couché au sol, bras enfermés dans la chair, et percute James depuis ce rampement.",
+          "fidelity": "behavior-composite",
+          "tags": [
+            "humanoid",
+            "rushdown",
+            "normal",
+            "reference-policy",
+            "versus-timing"
+          ],
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "referenceStatus": "observed-behavior-versus-transposition",
+          "sourceTimingMeasured": false,
+          "enabled": true,
+          "disabledReason": null
+        },
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "engineFrame": 339
+      },
+      "recovered": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "args": [
+            -71.95918367346938,
+            -50.6066542639155,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            375.92404776567855,
+            593.9498215913773
+          ],
+          "engineFrame": 355
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 369.9053921906916,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "idle",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 29,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 1,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        }
+      },
+      "damage": 29,
+      "capturedFrame": 339
+    },
+    {
+      "label": "left-low-guard",
+      "player": 1,
+      "kind": "low-guard",
+      "before": {
+        "frame": 354,
+        "attacker": {
+          "x": 384.2806087076211,
+          "y": 594,
+          "facing": -1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": true,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 74.28060870762113
+      },
+      "action": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+          "args": [
+            -71.95918367346938,
+            -50.44100236779794,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            389.81548626732,
+            594.0000067949295
+          ],
+          "engineFrame": 360
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 384.2804261777412,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "attack",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 4,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "target": {
+          "id": "bom_butcher_123",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "crouchBlock",
+          "health": 1286,
+          "guard": 111,
+          "blocking": true,
+          "crouching": true,
+          "parryWindow": 0,
+          "lastHit": {
+            "attackerIndex": 1,
+            "moveKey": "neutralLight-guard-chip",
+            "isSuper": false,
+            "environmental": false,
+            "frame": 360
+          },
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 4,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "move": {
+          "key": "neutralLight",
+          "input": "L",
+          "name": "Percussion du corps rampant — coup bref",
+          "button": "light",
+          "category": "normal",
+          "stance": "standing",
+          "startup": 5,
+          "active": 3,
+          "recovery": 9,
+          "damage": 31,
+          "reach": 55,
+          "level": "low",
+          "meter": 6,
+          "knockback": 0,
+          "travel": 0,
+          "verticalTravel": 0,
+          "requiresAir": false,
+          "requiresGround": true,
+          "airControl": 0,
+          "hits": 1,
+          "hitInterval": 4,
+          "projectile": false,
+          "projectileCount": 1,
+          "projectileSpeed": 14.48112,
+          "projectileScale": 1,
+          "projectileArc": 0,
+          "projectileGravity": 0,
+          "projectileLife": 82,
+          "homing": 0,
+          "armorFrames": 0,
+          "invulnFrames": 0,
+          "guardDamage": 1,
+          "unblockable": false,
+          "knockdown": false,
+          "launch": 0,
+          "teleport": null,
+          "trap": false,
+          "aura": false,
+          "counterStance": false,
+          "trigger": null,
+          "sideSwitch": false,
+          "hardKnockdown": false,
+          "groundBounce": false,
+          "armorBreak": false,
+          "meterGain": 0,
+          "effect": null,
+          "cancelInto": [
+            "forwardLight",
+            "neutralHeavy",
+            "neutralSpecial"
+          ],
+          "canonicalBasis": "Percussion rampante : Se déplace rapidement couché au sol, bras enfermés dans la chair, et percute James depuis ce rampement.",
+          "fidelity": "behavior-composite",
+          "tags": [
+            "humanoid",
+            "rushdown",
+            "normal",
+            "reference-policy",
+            "versus-timing"
+          ],
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "referenceStatus": "observed-behavior-versus-transposition",
+          "sourceTimingMeasured": false,
+          "enabled": true,
+          "disabledReason": null
+        },
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "engineFrame": 360
+      },
+      "recovered": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "args": [
+            -71.95918367346938,
+            -50.6066542639155,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            389.81539669624544,
+            594.0000067949295
+          ],
+          "engineFrame": 375
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 384.2803408072511,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "idle",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 4,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        }
+      },
+      "damage": 4,
+      "capturedFrame": 360
+    },
+    {
+      "label": "left-standing-guard",
+      "player": 1,
+      "kind": "standing-guard",
+      "before": {
+        "frame": 354,
+        "attacker": {
+          "x": 384.2806087076211,
+          "y": 594,
+          "facing": -1,
+          "state": "idle"
+        },
+        "target": {
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "health": 1290,
+          "guard": 122,
+          "crouching": false,
+          "blocking": true,
+          "parryWindow": 0,
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "distance": 74.28060870762113
+      },
+      "action": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.fdf3d62f02cb.png",
+          "args": [
+            -71.95918367346938,
+            -50.44100236779794,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            390.2158129961408,
+            595.122841000557
+          ],
+          "engineFrame": 360
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 384.2804261777412,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "attack",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 29,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 1,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "target": {
+          "id": "bom_butcher_123",
+          "x": 310,
+          "y": 594,
+          "facing": 1,
+          "grounded": true,
+          "state": "block",
+          "health": 1261,
+          "guard": 122,
+          "blocking": true,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": {
+            "attackerIndex": 1,
+            "moveKey": "neutralLight",
+            "moveName": "Percussion du corps rampant — coup bref",
+            "isSuper": false,
+            "environmental": false,
+            "frame": 360
+          },
+          "stats": {
+            "damageDealt": 0,
+            "damageTaken": 29,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 0,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        },
+        "move": {
+          "key": "neutralLight",
+          "input": "L",
+          "name": "Percussion du corps rampant — coup bref",
+          "button": "light",
+          "category": "normal",
+          "stance": "standing",
+          "startup": 5,
+          "active": 3,
+          "recovery": 9,
+          "damage": 31,
+          "reach": 55,
+          "level": "low",
+          "meter": 6,
+          "knockback": 0,
+          "travel": 0,
+          "verticalTravel": 0,
+          "requiresAir": false,
+          "requiresGround": true,
+          "airControl": 0,
+          "hits": 1,
+          "hitInterval": 4,
+          "projectile": false,
+          "projectileCount": 1,
+          "projectileSpeed": 14.48112,
+          "projectileScale": 1,
+          "projectileArc": 0,
+          "projectileGravity": 0,
+          "projectileLife": 82,
+          "homing": 0,
+          "armorFrames": 0,
+          "invulnFrames": 0,
+          "guardDamage": 1,
+          "unblockable": false,
+          "knockdown": false,
+          "launch": 0,
+          "teleport": null,
+          "trap": false,
+          "aura": false,
+          "counterStance": false,
+          "trigger": null,
+          "sideSwitch": false,
+          "hardKnockdown": false,
+          "groundBounce": false,
+          "armorBreak": false,
+          "meterGain": 0,
+          "effect": null,
+          "cancelInto": [
+            "forwardLight",
+            "neutralHeavy",
+            "neutralSpecial"
+          ],
+          "canonicalBasis": "Percussion rampante : Se déplace rapidement couché au sol, bras enfermés dans la chair, et percute James depuis ce rampement.",
+          "fidelity": "behavior-composite",
+          "tags": [
+            "humanoid",
+            "rushdown",
+            "normal",
+            "reference-policy",
+            "versus-timing"
+          ],
+          "referenceIds": [
+            "CL_SH2_ENEMIES",
+            "CL_SH2_CREATURES"
+          ],
+          "referenceStatus": "observed-behavior-versus-transposition",
+          "sourceTimingMeasured": false,
+          "enabled": true,
+          "disabledReason": null
+        },
+        "attackFrame": 5,
+        "attackHitCount": 1,
+        "engineFrame": 360
+      },
+      "recovered": {
+        "draw": {
+          "path": "/assets/sprites/sh2_lying_figure_crawling_021.2a35fe388a6b.png",
+          "args": [
+            -71.95918367346938,
+            -50.6066542639155,
+            179.89795918367346,
+            59.96598639455782
+          ],
+          "matrix": [
+            0.9783549904823303,
+            0,
+            0,
+            0.9783549904823303,
+            389.6880935727713,
+            593.9256192445755
+          ],
+          "engineFrame": 377
+        },
+        "attacker": {
+          "id": "sh2_lying_figure_crawling_021",
+          "x": 384.2803402099995,
+          "y": 594,
+          "facing": -1,
+          "grounded": true,
+          "state": "idle",
+          "health": 890,
+          "guard": 86,
+          "blocking": false,
+          "crouching": false,
+          "parryWindow": 0,
+          "lastHit": null,
+          "stats": {
+            "damageDealt": 29,
+            "damageTaken": 0,
+            "perfectGuards": 0,
+            "counters": 0,
+            "throws": 0,
+            "backThrows": 0,
+            "dodgeAttacks": 0,
+            "guardCounters": 0,
+            "wakeupAttacks": 0,
+            "armorBreaks": 0,
+            "groundBounces": 0,
+            "statusesApplied": 0,
+            "maxCombo": 1,
+            "hazardsTaken": 0,
+            "bossPhasesTriggered": 0,
+            "ritualDamage": 0,
+            "fatalities": 0,
+            "stageFatalities": 0
+          }
+        }
+      },
+      "damage": 29,
+      "capturedFrame": 360
+    }
+  ],
+  "captures": [
+    {
+      "file": "crawling-right-hit.png",
+      "bytes": 1429075,
+      "sha256": "f0c6e00f80ab50f231090d4ef07d763ac29d6e7f58afd80a49d18bf135f28579"
+    },
+    {
+      "file": "crawling-right-low-guard.png",
+      "bytes": 1438304,
+      "sha256": "c135550a99fc7a37989a0dc28e179943c13c59182383575971aa65253bedf026"
+    },
+    {
+      "file": "crawling-right-standing-guard.png",
+      "bytes": 1428940,
+      "sha256": "b58b37c093ab7546a812004f0f3a0d4d6f0af1a27e5744cda592e5fdab5bdd7a"
+    },
+    {
+      "file": "crawling-left-hit.png",
+      "bytes": 1420864,
+      "sha256": "79d9e2958ab04d157cfd83c84a57cd6753958a0a9b83ead0be08a109c277a695"
+    },
+    {
+      "file": "crawling-left-low-guard.png",
+      "bytes": 1432914,
+      "sha256": "45302d992be9b31651e852b16bd6d920ee79c6de5bb8074c35ea268822c9485a"
+    },
+    {
+      "file": "crawling-left-standing-guard.png",
+      "bytes": 1420469,
+      "sha256": "c1fa4202c6a9ff7d1534cbddeee3372e1d8e8247603e508a7c47ccc4b31400ce"
+    }
+  ],
+  "errors": [],
+  "method": "Normal training UI with native HITBOXES; ordinary keyboard movement closes the gap, followed by ordinary light input. No actor, position, health, guard, camera or clock injection. Auto-heal and free meter disabled.",
+  "limits": [
+    "Historical humanoid hurtbox stays versus adaptation; source collision and original-game scale are not certified.",
+    "Static candidate and grounded versus contact do not establish 1:1 timing or animation.",
+    "Standing guard is tested separately from crouching guard."
+  ],
+  "harnessSHA256": "148ea2c6aa0d509cdec571a48de4f97b020a8c870f361ca40b11fcae6da2d109",
+  "baselineSHA256": "b294fb9eedbdf36fb46273c877ad020ae6590a9d2ad7f663dd299ecb53e4bc99",
+  "browser": "158.0.8127.0",
+  "completedAt": "2026-11-27T10:09:18.470Z"
+}

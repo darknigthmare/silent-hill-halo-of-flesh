@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "wave": 28,
+  "createdAt": "2026-11-24T14:46:13.728Z",
+  "passed": false,
+  "scope": "Admission through real cache validators only. These counts do not represent rendered or played matches.",
+  "fighterIds": [
+    "sh1_groaner_003",
+    "sh3_closer_036",
+    "sh3_numb_body_small_037",
+    "bom_fire_guardian_137"
+  ],
+  "stageIds": [
+    "final_sacrament",
+    "scarlet_chamber",
+    "arcade_hospital_roof"
+  ],
+  "effectIds": [
+    "bom_earth_guardian_rock",
+    "bom_fire_guardian_hand_flame"
+  ],
+  "failure": "RangeError: Combat sprite set exceeds the decoded-memory budget.\n    at SpriteCache.validatePins (file:///workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/src/sprite-system.js:83:13)\n    at file:///workspace/scratch/0f50864dcd65/silent-hill-halo-of-flesh/docs/production/vague28/check-cache-admission.mjs:28:61"
+}

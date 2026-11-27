@@ -1,0 +1,26 @@
+{
+  "schema": "halo-wave28-character-prompt-v1",
+  "key": "closer-forward-special",
+  "fighterId": "sh3_closer_036",
+  "source": "sh3",
+  "edition": "Silent Hill 3 original 2003, regular Closer",
+  "pose": "forwardSpecial",
+  "facing": -1,
+  "generationTool": "built-in image_gen.imagegen",
+  "transparentBackground": true,
+  "referenceImages": [
+    {
+      "path": "assets/sprites/sh3_closer_036.19e033cd6a51.png",
+      "role": "edit-target-existing-combat-idle"
+    },
+    {
+      "path": "docs/production/vague28/characters/references/closer-original-sh3.jpg",
+      "role": "source-anatomy-reference"
+    },
+    {
+      "path": "docs/production/vague28/characters/references/closer-game-front-sh3.jpg",
+      "role": "source-anatomy-reference"
+    }
+  ],
+  "prompt": "Use case: identity-preserve. Asset type: ONE transparent full-body side-view combat sprite. Repose the existing regular Silent Hill 3 (2003) Closer in image 1 into ONE forward padded-arm thrust facing screen LEFT. Preserve image 1's identity, folded long neck and small blunt downturned head, worn tan and brown organic apron-like torso, exactly TWO enormous long padded column arms with their same straps and rounded ends, and exactly TWO separate thin dark legs with both feet. Image 2 is original SH3 model material reference; its foreshortened large masses are ARMS, not legs. Image 3 is an original front gameplay reference confirming two column arms outside two thin central legs; do not include Heather, the second creature, muzzle flash, blood or environment from that image. Change pose only: brace the feet apart, bend the front knee slightly, lean forward subtly, and thrust the nearer huge padded arm almost horizontally toward screen LEFT at torso height. The farther padded arm hangs back beside the torso. The striking arm stays attached normally at shoulder and elbow, with the entire rounded padded end visible. No blade is extended for this particular move; no human hands, third arm, extra leg or separate weapon. Keep a readable side view, the same body proportions, material detail and subdued lighting as image 1. This is a static versus interpretation of the documented arm thrust, not a recovered source frame or canonical timing claim. Landscape 3:2 canvas, whole head, both complete arms, both legs and both feet inside canvas with generous transparent padding. True transparent alpha background, no floor/cast shadow, glow, motion trail, particles, opponent, lettering, border, checkerboard, duplicates or sprite sheet. Exactly ONE complete character."
+}

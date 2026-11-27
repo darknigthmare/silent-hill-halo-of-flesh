@@ -1,5 +1,23 @@
 # Game Design Document — SILENT HILL: HALO OF FLESH v0.7.0
 
+## Production fixe — vague30, 25 novembre 2026
+
+[Lot de quatorze images, intégration et limites](production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. La bible et les deux classeurs sont rafraîchis : 445 associations, 93 arènes illustrées et 31 commandes projectile couvertes. Les feuilles historiques et leurs formules sont préservées. [Inventaire restant](production/vague30/inventory.json). Aucun nouveau cycle animé ni certification 1:1.
+
+**Intégration actualisée le 27 novembre 2026 :** le [guide commun de combat](COMBAT_GAMES_GUIDE_INTEGRATION.md)
+et ses [deux extensions](combat-guide/extensions/README.md) complètent ce document
+avec la [matrice des 68 rubriques](combat-guide/MATRICE.md),
+les [associations aux données réelles](combat-guide/associations.json), les
+[campagnes et Dénouements](combat-guide/CAMPAGNE_ET_DENOUEMENTS.md), les
+[fiches de production](combat-guide/FICHES_ET_VALIDATION.md) et un
+[bilan calculé](combat-guide/ETAT_DES_LIEUX.md). Les sections historiques décrivent
+la conception v0.7 ; les états actuels et écarts sont explicités dans cette
+intégration, sans compter les propositions comme fonctionnalités livrées. Les
+40 cas de recette d’équipes, d’entités et de droits restent distincts des tests
+documentaires. Le modèle de verrouillage sépare découverte, droit acquis,
+installation et compatibilité de mode ; une image absente reste un défaut
+technique, sans faux cadenas de progression.
+
 **Complément de corpus du 19 novembre 2026 :** la [bible des œuvres Silent Hill](BIBLE_CORPUS_SILENT_HILL.md)
 recense les jeux, éditions, récits dérivés et programmes officiels, avec leur
 statut, leurs sources et leur place dans la production. Le catalogue documentaire
@@ -76,7 +94,11 @@ Chaque entrée peut déclarer : startup, active, recovery, dégâts, portée, ha
 - `behavior-composite` : recomposition de comportements attestés pour produire une commande jouable.
 - `versus-adaptation` : action nécessaire au versus, signalée comme telle.
 
-Les 230 profils totalisent **4 600 actions** : **447 directement attestées**, **3 694 composites** et **459 adaptations versus**.
+Les 230 profils conservent **4 600 emplacements d'action**. Au relevé du
+25 novembre 2026, **3 499 commandes sont activées** et **1 101 sont désactivées**
+par les politiques de référence. Ces emplacements ne sont pas autant de
+techniques officielles ni d'animations produites. Les niveaux de preuve et
+l'admission au combat sont suivis séparément dans le [bilan calculé](combat-guide/ETAT_DES_LIEUX.md).
 
 ## 5. Système de combat
 
@@ -143,7 +165,18 @@ Les 75 boss possèdent deux transitions ordonnées, soit 150 passages de phase. 
 - **Grands Tourments** : six boss à endurance.
 - **Salle d’Observation** : timer infini, hitboxes, jauge libre, reset, Otherworld et phase forcés, données de mouvement et fenêtres contextuelles.
 - **Chroniques de la Brume** : quinze routes avec score et rang persistant.
+- **Récits de manifestation** : structures individuelles avec intro, épreuves,
+  rival et clôture ; 186 profils ont actuellement une file de rencontres
+  admissible. Les autres restent consultables.
+- **Le Rite des Huit** : tournoi de huit participants, trois duels du joueur.
 - **Archives** : bestiaire, 4 600 mouvements, arènes, fatalités, couverture, règles, IA, phases et relevés.
+
+Les Chroniques comprennent désormais des dossiers hors combat conservés dans
+leur ordre narratif : 13 ont des rencontres, deux sont entièrement consultables.
+La [campagne globale Le Registre des absences](combat-guide/CAMPAGNE_ET_DENOUEMENTS.md)
+est une conception distincte, à implémenter. « Dénouements » est le vocabulaire
+de bible retenu pour les conclusions Signature, Cauchemar et de lieu ; les clés
+historiques du moteur restent inchangées.
 
 ## 10. Direction artistique et UI
 
@@ -166,6 +199,12 @@ Tout l’audio est synthétisé en temps réel : radio, interface, impacts, gard
 `localStorage` conserve réglages, dernière confrontation, favoris, relevés, meilleurs rangs, progression des Chroniques et runs. Les alias historiques évitent la perte de progression après renommage d’une entrée. Les nouveaux relevés incluent projections arrière, ripostes d’esquive, contres de garde, relevées, ruptures d’armure et rebonds.
 
 ## 13. Production artistique suivante
+
+**Phase courante — 25 novembre 2026 :** compléter les sprites de base, décors,
+projectiles et illustrations fixes. La production de nouvelles animations
+des étapes ci-dessous est différée ; leurs besoins restent documentés. Une
+vue de sélection n'est pas un sprite de combat latéral et un candidat ne
+constitue pas une validation 1:1. Voir les [fiches et critères](combat-guide/FICHES_ET_VALIDATION.md).
 
 1. Référence autorisée par variante.
 2. Proportions multi-vues.

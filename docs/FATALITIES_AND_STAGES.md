@@ -1,6 +1,6 @@
 # Fatalités, arènes dédiées et animations — v0.9.6
 
-Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 64 boucles et jouent 163 éléments visuels partiels issus des fiches, 26 événements et 26 interactions.
+Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 63 boucles et jouent 159 éléments visuels partiels issus des fiches, 26 événements et 26 interactions.
 
 Les montages déplacent les acteurs et synchronisent les effets, la caméra et le son du prototype. Les images propres à chaque action restent à produire ; un montage écrit ne constitue pas un clip bitmap ni une certification 1:1.
 
@@ -264,7 +264,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | WATER PRISON — SURVEILLANCE2F | SH4 | PLATEAU SEC · SURVEILLANCE2F | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | CELLULE DU JUGEMENT — à produire |
 | APARTMENT WORLD — BUREAU105 | SH4 | PLATEAU SEC · BUREAU105 | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | PORTE SANS RETOUR — à produire |
 | HOSPITAL WORLD | SH4 | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | PROTOCOLE TERMINAL — à produire |
-| CEDAR GROVE — FEMALE TREATMENT | 0RIGINS | SEUIL DU MIROIR DE SOINS | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
+| CEDAR GROVE — FEMALE TREATMENT | 0RIGINS | SEUIL DU MIROIR DE SOINS | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | PROTOCOLE TERMINAL — à produire |
 | RIVERSIDE MOTEL | 0RIGINS | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | SHEPHERD’S GLEN | HC | TROTTOIR DU PANNEAU | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | CHUTE DANS LA BRUME — à produire |
 | GRAND HOTEL | HC | SOL DE L’ATRIUM | fixed-normal — aucune bascule | 1 | 0 | 3 éléments de fiche / 1 boucles | CHAMBRE DU SOUVENIR — à produire |
@@ -286,7 +286,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | EARTH ZONE | BOM | PASSAGE DE LA GALERIE EARTH | fixed-altered — aucune bascule | 1 | 1 | 4 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | BLOOD ZONE | BOM | BORD DES PLATEFORMES BLOOD | fixed-altered — aucune bascule | 0 | 1 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | STEEL ZONE | BOM | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 0 | 1 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| GREEN LION — PASSAGE VERS LE RITUEL | 0RIGINS | PLATEAU DU PASSAGE INTÉRIEUR | fixed-altered — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | GRILLE DE ROUILLE — à produire |
+| GREEN LION — ANTICHAMBRE DU CULTE | 0RIGINS | SOL DE L’ANTICHAMBRE DU CULTE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | GRILLE DE ROUILLE — à produire |
 | CHURCH OF THE HOLY WAY — NEF | HC | ALLÉE DE LA NEF | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | AUTEL DU SACRIFICE — à produire |
 | UNDERGROUND — ANTICHAMBRE DES FAMILLES | HC | DEVANT LA PORTE À ANNEAUX | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | MIDWICH — FILM OTHERWORLD | FILMS | CENDRES ET GRILLE | fixed-altered — aucune bascule | 1 | 0 | 1 éléments de fiche / 2 boucles | SONNERIE DE MINUIT — à produire |
@@ -316,7 +316,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | FOREST WORLD | SH4 | BOUE ET RACINES | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | RACINES DU BOIS — à produire |
 | BUILDING WORLD | SH4 | PALIER DU GRAND VENTILATEUR | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | OUTSIDE ROOM 302 | SH4 | MOQUETTE HUMIDE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | PORTE SANS RETOUR — à produire |
-| WISH HOUSE | SH4 | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| WISH HOUSE — INTÉRIEUR DU PREMIER PASSAGE | SH4 | PLANCHER DE WISH HOUSE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | 21 SACRAMENTS — FINAL CHAMBER | SH4 | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | GRILLE DE ROUILLE — à produire |
 | ALCHEMILLA HOSPITAL — ORIGINS | 0RIGINS | BÉTON SEC | PASSAGE PAR LE MIROIR — transition versus autorisée | 0 | 0 | 1 éléments de fiche / 2 boucles | PROTOCOLE TERMINAL — à produire |
 | ARTAUD THEATER | 0RIGINS | PLATEAU DE LA SCÈNE ARTAUD | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
@@ -331,7 +331,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | SILENT HILL — FROZEN STREETS | SM | GLACE DU CAUCHEMAR | fixed-altered — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | SOUS LA GLACE — à produire |
 | ALCHEMILLA GELÉ — CHAMBRE ER | SM | SOL DE LA CHAMBRE ER | fixed-altered — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | SOUS LA GLACE — à produire |
 | TOLUCA MALL GELÉ — HALL GUMBALL | SM | SOL DU HALL GUMBALL | fixed-altered — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | SOUS LA GLACE — à produire |
-| LIGHTHOUSE / THERAPY REVELATION | SM | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| LIGHTHOUSE — ENTRÉE DE LA CLINIQUE | SM | NEIGE DEVANT LA CLINIQUE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | DEVIL’S PIT | DP | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | CENTENNIAL BUILDING | DP | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 2 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | ST. MARIA’S MONASTERY | DP | PIERRE RITUELLE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | AUTEL DU SACRIFICE — à produire |
@@ -341,8 +341,8 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | THE ARCADE — CITY / JACK’S INN | ARCADE | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | CHUTE DANS LA BRUME — à produire |
 | THE ARCADE — BROOKHAVEN HOSPITAL | ARCADE | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 2 boucles | PROTOCOLE TERMINAL — à produire |
 | THE ARCADE — HOSPITAL ROOF | ARCADE | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 4 boucles | PROTOCOLE TERMINAL — à produire |
-| THE ARCADE — HISTORICAL SOCIETY | ARCADE | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| THE ARCADE — TOLUCA PRISON | ARCADE | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 2 boucles | CELLULE DU JUGEMENT — à produire |
+| THE ARCADE — GALERIE DE LA HISTORICAL SOCIETY | ARCADE | GALERIE AVANT LA DESCENTE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| THE ARCADE — TOLUCA PRISON · OTHERWORLD | ARCADE | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 2 boucles | CELLULE DU JUGEMENT — à produire |
 | THE ARCADE — UNDERGROUND GRAVEYARD | ARCADE | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | THE ARCADE — TOLUCA LAKE | ARCADE | EAU STAGNANTE | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | THE ARCADE — 1918 | ARCADE | CAILLEBOTIS MÉTALLIQUE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | GRILLE DE ROUILLE — à produire |
@@ -352,7 +352,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | KETTENSTADT VILLA — ROOFTOP | TSM | PÉTALES ET VRILLES | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | KETTENSTADT VILLA — STAIRWELL | TSM | BÉTON SEC | fixed-normal — aucune bascule | 1 | 0 | 0 éléments de fiche / 1 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | DARK SHRINE — AUTEL INARI | SH f | PLANCHER DEVANT L’AUTEL | fixed-altered — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | SCELLEMENT DU SANCTUAIRE — à produire |
-| SHIMIZU RESIDENCE I — SALLE À MANGER | SH f | TATAMI DE LA SALLE À MANGER | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| SHIMIZU RESIDENCE II — SALLE À MANGER | SH f | TATAMI DE LA SALLE À MANGER | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | DARK SHRINE — PREMIÈRE CHAMBRE RITUELLE | SH f | PLANCHER DU SEUIL RITUEL | fixed-altered — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | SCELLEMENT DU SANCTUAIRE — à produire |
 | EBISUGAOKA — PARVIS SHIMIZU | SH f | PARVIS DEVANT SHIMIZU | fixed-altered — aucune bascule | 0 | 0 | 4 éléments de fiche / 0 boucles | PROCESSION FINALE — à produire |
 | RETURN TO SILENT HILL — STREETS | FILMS | BÉTON TREMPÉ | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | CHUTE DANS LA BRUME — à produire |

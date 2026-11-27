@@ -1,0 +1,191 @@
+{
+  "schema": 1,
+  "writtenAt": "2026-11-27T10:26:44.040947+00:00",
+  "status": "local-fix-verified-ci-rerun-pending",
+  "scope": "Historical HTTP recipe diagnosis, normal-profile helper, and migration of offline-capable QA contexts only. No game, collision, reach, asset or service-worker quota modification by this fix.",
+  "historicalCI": {
+    "source": {
+      "repository": "darknigthmare/silent-hill-halo-of-flesh",
+      "commit": "4f7d2e89c106ad4a00752bcb4c9b046ee3043b18",
+      "run": 45973725284,
+      "job": 140420167279,
+      "jobUrl": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/45973725284/job/140420167279",
+      "extraction": "Exact JSON report parsed from the retrieved timestamped job log; not a new execution."
+    },
+    "browser": "143.0.7499.4",
+    "playwright": "1.57.0",
+    "assertionsPassed": 34,
+    "pageErrors": [],
+    "failure": "TimeoutError: page.waitForFunction: Timeout 30000ms exceeded.",
+    "lastPassedAssertion": "shell Continue resumes exact checkpoint at encounter two",
+    "nextOperation": "page.goto(base); waitForFunction(() => !!navigator.serviceWorker.controller, {}, {timeout:30000})",
+    "workerErrorsWereNotRecorded": true,
+    "sourceRecipeSHA256": "f9ae3156ea3e70b6c53a79962e14cdd72c7bbf008dbfd42afacabd61ff029899"
+  },
+  "cacheInstallFinding": {
+    "directLocalEvidence": "Chromium reported ServiceWorker installation waitUntil rejection and QuotaExceededError, then removed the registration; waiting longer cannot activate that failed installation.",
+    "reproduction": "install-current-incognito.json",
+    "localBrowser": "158.0.8127.0",
+    "localPlaywright": "1.62.1",
+    "quotaBytes": 535133991,
+    "quotaOverrideActive": false,
+    "usageAtFailureBytes": 537832874,
+    "workerErrors": [
+      {
+        "errorMessage": {
+          "errorMessage": "Failed to register a ServiceWorker for scope ('http://127.0.0.1:4310/') with script ('http://127.0.0.1:4310/service-worker.js'): ServiceWorker failed to install: ServiceWorker failed to handle event (event.waitUntil Promise rejected)",
+          "registrationId": "0",
+          "versionId": "0",
+          "sourceURL": "",
+          "lineNumber": -1,
+          "columnNumber": -1
+        },
+        "elapsedMs": 6371
+      },
+      {
+        "errorMessage": {
+          "errorMessage": "Uncaught (in promise) QuotaExceededError: Quota exceeded.",
+          "registrationId": "0",
+          "versionId": "0",
+          "sourceURL": "http://127.0.0.1:4310/service-worker.js",
+          "lineNumber": 0,
+          "columnNumber": -1
+        },
+        "elapsedMs": 6381
+      }
+    ],
+    "legacyEssentialEntries": 774,
+    "legacyAssetEntries": 719,
+    "legacyAssetBytesAtSameImmutablePaths": 837904885,
+    "legacyByteMeasurement": "Sizes of the exact content-addressed asset paths present in the published32 worker, read from the restored runtime cache. This diagnostic did not rehash those 719 assets. Additional code/HTML bytes are not included in this minimum.",
+    "installationAndFetchLogicUnchangedFrom32": true,
+    "historicalAttribution": "The incognito quota failure is directly reproduced locally. Its attribution to the historical Chromium143 CI timeout is an inference from the identical recipe/install logic and large required catalogue; the original CI did not collect worker state/errors or quota."
+  },
+  "chronicleInitializationFinding": {
+    "evidence": "patched-final/http-report.json and patched-final/99-http-failure.png",
+    "observed": "page.check completed, but the later failure snapshot showed artDiagnostic=false, roster=30, fightVisible=false and the Incubus missing-sprite message.",
+    "sourceCause": "src/versus.js init assigns artDiagnostic.checked from debugArt before populating the roster. The old recipe waited for the raw HTML input plus250ms, so it could select the checkbox before init reset it.",
+    "recipeCorrection": "Wait for the roster button produced by init before the existing250ms/autostart wait and diagnostic check, both in the chronicle launch and shell Continue iframe. No engine startup or art gate changed."
+  },
+  "helper": {
+    "path": "scripts/qa-offline-profile.mjs",
+    "contract": "launchOfflineQaProfile(chromium, flat launchPersistentContext options) returns {browser,context,close}.",
+    "profile": "mkdtemp-owned normal profile; no persistent user profile reused",
+    "cleanup": "Idempotent close awaits persistent context closure before removing only its own temporary directory. Launch failure removes that directory and preserves the launch error.",
+    "realCheck": "helper-real-check.json",
+    "realCheckPassed": true,
+    "realCheckAssertions": 4,
+    "actualCacheUsageBytes": 858291249,
+    "normalProfileQuotaBytes": 3142739558,
+    "quotaOverrideActive": false,
+    "idempotentCleanup": "helper-cleanup.json",
+    "launchFailureCleanup": "helper-launch-failure-check.json"
+  },
+  "verification": {
+    "finalRecipe": "verified-final/http-report.json",
+    "finalRun": "verified-final/exit.json",
+    "finalPassed": true,
+    "finalExitCode": 0,
+    "finalAssertionsPassed": 39,
+    "browser": "158.0.8127.0",
+    "playwright": "1.62.1",
+    "pageErrors": [],
+    "workerErrors": [],
+    "finalInstalledUsageBytes": 874764593,
+    "finalQuotaOverrideActive": false,
+    "capturesVisuallyInspected": [
+      "patched-final/99-http-failure.png",
+      "verified-final/02-offline-shell.png",
+      "verified-final/03-http-mobile-controls.png"
+    ],
+    "visualScope": "The failure screenshot shows the unchecked diagnostic and missing-Incubus gate. The final offline menu renders and the controls dialog fits the narrow viewport. Other roster portraits in the mobile capture may still be loading; no all-assets-decoded assertion is made.",
+    "preFixLocalAttempts": [
+      {
+        "path": "patched-current/http-report.json",
+        "passed": false,
+        "stage": "Chronicle fight screen; worker installed successfully."
+      },
+      {
+        "path": "patched-final/http-report.json",
+        "passed": false,
+        "stage": "Same failure, now with UI state and screenshot proving diagnostic initialization race."
+      }
+    ],
+    "setupAttempts": [
+      "setup-first-attempt.json",
+      "setup-second-attempt.json"
+    ],
+    "setupAttemptScope": "Initial server-owner mismatch and unavailable default browser binary; these are retained as setup failures, not application or CI failures.",
+    "fullNpmBrowserSuiteExecuted": false,
+    "completePlayedCampaignClaimed": false,
+    "checkpointFixture": "Prepared deciding KO and prior-round state are explicitly declared in the recipe; no played campaign victory is claimed.",
+    "otherRecipeVerification": [
+      {
+        "receipt": "docs/production/vague33/offline-profile/six-context-migration.json",
+        "scope": "Six migrations: diff and syntax review, no complete browser recipes rerun."
+      },
+      {
+        "receipt": "docs/production/vague33/offline-profile/chronicle-context-migration.json",
+        "scope": "Separate chronicle-art migration, syntax/diff only, outside current npm chain."
+      }
+    ]
+  },
+  "changedQAScripts": [
+    {
+      "path": "scripts/qa-offline-profile.mjs",
+      "sha256": "6ad1393721eebc22bb69737ec5d79fffb6c170bd0c6a075191feb6f4dd6c8026"
+    },
+    {
+      "path": "scripts/http-qa-v090.mjs",
+      "sha256": "203d2537c2085b7b1a51916d5c7817ac9b2742d3126f15b4ce4add68bccf733a"
+    },
+    {
+      "path": "scripts/http-qa-sprites.mjs",
+      "sha256": "a361890435972fc93a49fd5ac973ed969e709d2f02f5c874d239b76fd0b2f8a0"
+    },
+    {
+      "path": "scripts/http-qa-art-v092.mjs",
+      "sha256": "35c2c863ec829914669722933710ac88c5d22371d6bb24800c03d0376f7f9a02"
+    },
+    {
+      "path": "scripts/http-qa-clips-v093.mjs",
+      "sha256": "27ed3c7e6b2e31a62462e642dba4dde3ca012d8368ae3b8058cf5804eb3a2a4d"
+    },
+    {
+      "path": "scripts/http-qa-recovery-v094.mjs",
+      "sha256": "01e4fffdbdb5152c55845fe16860c22fa359d9a3df457aef71a0d4bf78c466fb"
+    },
+    {
+      "path": "scripts/http-qa-boundaries-v095.mjs",
+      "sha256": "70356cbe17ed6cfc5e028107e5fc102357cd6e68c6ee9a4f92484426f6772b46"
+    },
+    {
+      "path": "scripts/http-qa-presentations.mjs",
+      "sha256": "8f2a642c5a534648372931ffc4604ec7ccbe9e27d02beee692c9d22641883331"
+    },
+    {
+      "path": "scripts/http-qa-chronicle-art.mjs",
+      "sha256": "13c31b9e7afd1986c7cd293696c72071885fc8ff0bb42861f7c22e56e0cba2a1"
+    }
+  ],
+  "unchangedControls": {
+    "allExistingV090AssertionsPreserved": true,
+    "v090ExtraAssertion": "no service worker installation errors",
+    "serviceWorkerWaitMilliseconds": 30000,
+    "workerBlockingContextsPreserved": true,
+    "browserQuotasModified": false,
+    "gameplayModifiedByThisFix": false,
+    "sourceAssetsModifiedByThisFix": false,
+    "newAnimationOrOneToOneCertificationClaimed": false
+  },
+  "limits": [
+    "The full offline catalogue can still exceed a private/incognito user profile quota; application behavior for that storage limit was not changed.",
+    "The successful normal-profile execution is local Chromium158 / Playwright1.62.1, not a replay of historical CI Chromium143 / Playwright1.57.0.",
+    "Only v090 and the focused helper were exercised in a browser here. The seven other recipe migrations need their normal CI execution."
+  ],
+  "cleanup": {
+    "browserAndServersClosed": true,
+    "temporaryProfilesRemaining": [],
+    "profileCacheCommitted": false
+  }
+}
