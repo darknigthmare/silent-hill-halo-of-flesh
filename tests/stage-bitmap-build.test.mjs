@@ -42,6 +42,7 @@ async function fixture(context){
   const root=await mkdtemp(join(tmpdir(),'halo-stage-build-'));
   context.after(()=>rm(root,{recursive:true,force:true}));
   await mkdir(join(root,'assets/stages'),{recursive:true});await mkdir(join(root,'src'));
+  await writeFile(join(root,'src/projectile-origin.js'),await readFile(new URL('../src/projectile-origin.js',import.meta.url)));
   const stage=STAGES.find(item=>!item.reference?.blocked),bytes=png(),sha=createHash('sha256').update(bytes).digest('hex');
   const path=`assets/stages/${stage.id}.${sha.slice(0,12)}.png`;
   await writeFile(join(root,path),bytes);await writeFile(join(root,'service-worker.js'),worker);
@@ -104,6 +105,17 @@ test('actor clips and calibration invalidate bitmap revision without changing ra
     change();await f.manifests();
     const report=await buildStageBitmaps(f);assert.notEqual(report.revision,previous);previous=report.revision;
   }
+});
+
+test('reviewed projectile muzzle changes invalidate caches while raster bytes stay identical',async context=>{
+  const f=await fixture(context),before=await buildStageBitmaps(f),path=join(f.root,'src/projectile-origin.js');
+  const original=await readFile(path,'utf8');
+  assert.ok(original.includes('[986,300]'),'fixture uses the actual bound Walter muzzle');
+  await writeFile(path,original.replace('[986,300]','[985,300]'));
+  const after=await buildStageBitmaps(f);
+  assert.notEqual(after.revision,before.revision);
+  assert.deepEqual(after.paths,before.paths);
+  assert.deepEqual(await readFile(join(f.root,f.path)),f.bytes);
 });
 
 test('stage bitmap metadata and exact identity/source fail closed before service-worker writes',async context=>{

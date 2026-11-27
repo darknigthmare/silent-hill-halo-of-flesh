@@ -1,5 +1,11 @@
 # SILENT HILL: HALO OF FLESH — v0.9.6
 
+## Poses, lieux et récits — vague 32, 27 novembre 2026
+
+[Douze nouvelles images et leur validation](docs/production/vague32/README.md) : quatre poses du Groaner SH1 et du Sniffer Dog mâle SH4, deux plans pour l’antichambre de Green Lion et deux pour l’entrée de la clinique de Shattered Memories, puis les introductions et conclusions du Groaner et du Lying Figure debout SH2 original. La couverture atteint **97 arènes sur 123** et **3 récits individuels sur 230**.
+
+Les tirs neutres illustrés de Walter SH4 et d’Eddie SH2 partent du canon avec une origine physique et visuelle commune. Le couloir de tir, les contacts à bout portant et le budget des images natives sont vérifiés séparément. La bible conserve ses **68 rubriques**, ses deux extensions et **445 associations**, avec les nouveaux fichiers rattachés par profil et par scène. [Inventaire restant](docs/production/vague32/inventory.json). Les nouvelles poses sont fixes et les compositions narratives sont originales compatibles ; aucune fidélité 1:1 n’est certifiée.
+
 ## Production fixe — vague30, 25 novembre 2026
 
 [Lot de quatorze images, intégration et limites](docs/production/vague30/README.md) : trois poses, trois effets, six plans de décor et l’introduction/conclusion du récit individuel d’Air Screamer. La bible et les deux classeurs sont rafraîchis : 445 associations, 93 arènes illustrées et 31 commandes projectile couvertes. Les feuilles historiques et leurs formules sont préservées. [Inventaire restant](docs/production/vague30/inventory.json). Aucun nouveau cycle animé ni certification 1:1.

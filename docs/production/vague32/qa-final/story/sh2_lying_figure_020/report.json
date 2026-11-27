@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "wave": 32,
+  "passed": true,
+  "checks": [
+    {
+      "name": "Dedicated HTTP port unused",
+      "passed": true
+    },
+    {
+      "name": "Built HTTP app ready",
+      "passed": true
+    },
+    {
+      "name": "sh2_lying_figure_020: exact original-source introduction displayed",
+      "passed": true,
+      "detail": {
+        "src": "/assets/stories/sh2_lying_figure_020.intro.b80a3fd0a6d3.png",
+        "width": 1672,
+        "height": 941,
+        "alt": "Un Lying Figure debout de Silent Hill 2 original, torse fermé et deux jambes entières, apparaît devant la façade de Neely’s Bar."
+      }
+    },
+    {
+      "name": "Accessible story image description present",
+      "passed": true
+    },
+    {
+      "name": "Four original encounters remain listed",
+      "passed": true
+    },
+    {
+      "name": "Explicit source-bound missing opponent blocks the unchanged story route",
+      "passed": true,
+      "detail": {
+        "message": "Sprites à produire : 1. Mannequin — Ambusher. Aucun parcours ni tentative modifié.",
+        "playerId": "sh2_lying_figure_020",
+        "queue": [
+          "sh2_red_pyramid_thing_great_knife_029",
+          "sh2_red_pyramid_thing_spear_030",
+          "sh2_mannequin_ambusher_023",
+          "sh2_flesh_lip_027"
+        ],
+        "stages": [
+          "blue_creek",
+          "hotel_otherworld",
+          "woodside",
+          "brookhaven_sh2"
+        ],
+        "missing": [
+          "sh2_mannequin_ambusher_023"
+        ],
+        "engineCreated": false,
+        "run": null
+      }
+    },
+    {
+      "name": "Ordinary refusal names the absent sprite and creates no run or engine",
+      "passed": true,
+      "detail": {
+        "message": "Sprites à produire : 1. Mannequin — Ambusher. Aucun parcours ni tentative modifié.",
+        "playerId": "sh2_lying_figure_020",
+        "queue": [
+          "sh2_red_pyramid_thing_great_knife_029",
+          "sh2_red_pyramid_thing_spear_030",
+          "sh2_mannequin_ambusher_023",
+          "sh2_flesh_lip_027"
+        ],
+        "stages": [
+          "blue_creek",
+          "hotel_otherworld",
+          "woodside",
+          "brookhaven_sh2"
+        ],
+        "missing": [
+          "sh2_mannequin_ambusher_023"
+        ],
+        "engineCreated": false,
+        "run": null
+      }
+    },
+    {
+      "name": "Isolated intro uses exact owner artwork without creating a story run",
+      "passed": true,
+      "detail": {
+        "path": "assets/stories/sh2_lying_figure_020.intro.b80a3fd0a6d3.png",
+        "title": "DEVANT LES VITRES MASQUÉES",
+        "caption": "Une silhouette entravée se tient devant Neely’s Bar. La brume atténue les fenêtres couvertes de papier.",
+        "alt": "Un Lying Figure debout de Silent Hill 2 original, torse fermé et deux jambes entières, apparaît devant la façade de Neely’s Bar."
+      }
+    },
+    {
+      "name": "Ending requires completed exact-owner story",
+      "passed": true,
+      "detail": {
+        "path": "assets/stories/sh2_lying_figure_020.ending.e00f51f74769.png",
+        "won": null,
+        "lost": null,
+        "other": null
+      }
+    },
+    {
+      "name": "Ending fetched byte-for-byte over HTTP",
+      "passed": true
+    },
+    {
+      "name": "Introduction fetched byte-for-byte over HTTP",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stories/sh2_lying_figure_020.intro.b80a3fd0a6d3.png",
+          "status": 200,
+          "bytes": 2211673,
+          "sha256": "b80a3fd0a6d3436ff4edf970349876ed485eeebfef6819963dcb14e94baf4888"
+        }
+      ]
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "captures": [
+    {
+      "file": "selection-intro.png",
+      "scope": "normal-story-selection",
+      "bytes": 370450,
+      "sha256": "27f9d5498b9df9326b2c785fa074cdd9b3021d85db82622df6c3a2d6ed006b29"
+    },
+    {
+      "file": "story-admission-blocked.png",
+      "scope": "ordinary-launch-refusal-no-diagnostic-bypass",
+      "bytes": 815489,
+      "sha256": "11bcb48e817d19d642608cbb4d798457ba9d7e19f9e47afd4775c8c489c6c4fb"
+    },
+    {
+      "file": "intro-component.png",
+      "scope": "isolated-production-component-not-played-chapter",
+      "bytes": 350292,
+      "sha256": "1801ffafcad56f7a1f4b10886dddc21d4ce495c3b8c1a74abd2349d0c8eee0a9"
+    },
+    {
+      "file": "ending-component.png",
+      "scope": "isolated-production-component-not-played-ending",
+      "bytes": 326424,
+      "sha256": "e75b2c2f66534b9ec275931f2d771125c96eb5faf144ed5376bdc8f7b0025f31"
+    }
+  ],
+  "errors": [],
+  "layoutSnapshots": [],
+  "method": "Actual built HTTP app: ordinary story selection and refused launch for the explicitly declared absent opponent. Exact refusal and unchanged route are checked. Intro and ending are rendered separately through the production story helpers and setChronicleImage; no run injected into the game.",
+  "limits": [
+    "The entire four-fight story is not played to completion.",
+    "Ending component checks do not establish a played campaign result.",
+    "Headless Chromium; service workers blocked, offline update not exercised.",
+    "Static original-compatible compositions, no 1:1 certification.",
+    "Lying Figure story cannot launch while its exact SH2 Mannequin — Ambusher opponent has no combat image. Illustrated story is not a playable route."
+  ],
+  "browser": "158.0.8127.0",
+  "storyPlayback": {
+    "status": "blocked-missing-combat-art",
+    "missing": [
+      "sh2_mannequin_ambusher_023"
+    ],
+    "firstChapterPlayed": false
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "baselineCommit": "d4269ad8239a99cad53d44bc77b569ed7a0d41a3",
+  "workflowRun": 45949411296,
+  "jobId": 140341524960,
+  "jobUrl": "https://github.com/darknigthmare/silent-hill-halo-of-flesh/actions/runs/45949411296/job/140341524960",
+  "suite": "scripts/http-qa-art-batch4.mjs",
+  "observedConclusion": "failure",
+  "reportedFailure": "Error: sh3_nurse_revolver_044: absent neutralLight stays an explicit static idle preview",
+  "logExcerpt": [
+    "2026-11-27T06:21:20.9668279Z       \"name\": \"sh3_nurse_revolver_044: absent neutralLight stays an explicit static idle preview\",",
+    "2026-11-27T06:21:20.9668347Z       \"passed\": false",
+    "2026-11-27T06:21:20.9880310Z   \"failure\": \"Error: sh3_nurse_revolver_044: absent neutralLight stays an explicit static idle preview\",",
+    "2026-11-27T06:21:21.0149357Z ##[error]Process completed with exit code 1."
+  ],
+  "diagnosis": "The explicit clip contract already requires neutralLight frame 2 delivered in wave31, but a separate historical negative-probe list still requires neutralLight to be missing. The inspector correctly renders the delivered attack, causing that stale assertion to fail.",
+  "correction": "Construct negative probes from the explicit authored contract used for positive frame validation. Do not filter against the live manifest. Preserve all other absent probes, including the Nurse neutralHeavy. Require every declared static later clip to display its dedicated frame without a missing-pose warning and with playback disabled.",
+  "validation": {
+    "metadataChecks": 81,
+    "subjects": 80,
+    "negativeProbesResolvedWithRealSampler": 545,
+    "newRegressionTests": 2,
+    "localBrowserExecution": "not-run",
+    "browserReason": "Local Chromium executable was absent at the baseline; corrected HTTP assertions must be exercised by the next CI run."
+  },
+  "scope": "Only the historical QA script and its tests changed for this correction; no production runtime, asset file, collision rule or gameplay input was changed."
+}

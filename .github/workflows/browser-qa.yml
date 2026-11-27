@@ -77,6 +77,14 @@ jobs:
         env:
           HALO_PYTHON: ${{ runner.temp }}/halo-browser-venv/bin/python
         run: npm run build
+      - name: Inspect wave32 static poses, exact stage scenes and individual stories
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          node docs/production/vague32/characters/qa-http.mjs
+          node docs/production/vague32/characters/qa-http-origins.mjs
+          node docs/production/vague32/stages/qa-http.mjs --stages=antique_shop,lighthouse_sm --build=dist --out=tests/http-wave32-stages --port=4296
+          node docs/production/vague32/story/qa-http.mjs sh1_groaner_003
+          node docs/production/vague32/story/qa-http.mjs sh2_lying_figure_020 --expect-blocked=sh2_mannequin_ambusher_023
       - name: Inspect wave31 static poses and exact stage scenes in the built HTTP app
         if: ${{ !cancelled() && steps.build.outcome == 'success' }}
         run: |
@@ -95,7 +103,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: http-wave26-28-and31
+          name: http-wave26-28-and31-32
           path: |
             tests/http-wave26-native/
             tests/http-wave27-actions/
@@ -104,4 +112,8 @@ jobs:
             tests/http-wave28-stages/
             tests/http-wave31-characters/
             tests/http-wave31-stages/
+            tests/http-wave32-characters/
+            tests/http-wave32-stages/
+            tests/http-wave32-story/
+            tests/http-wave32-origins/
           retention-days: 14

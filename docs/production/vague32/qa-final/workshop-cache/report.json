@@ -1,0 +1,405 @@
+{
+  "schema": 1,
+  "wave": 32,
+  "startedAt": "2026-11-27T08:50:38.149Z",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Dedicated port is unused",
+      "passed": true
+    },
+    {
+      "name": "Built HTTP app ready",
+      "passed": true
+    },
+    {
+      "name": "Nurse light preview paints exact frame 2 with no missing warning and no animation playback",
+      "passed": true,
+      "detail": {
+        "pose": "neutralLight",
+        "frame": "2",
+        "status": "Image 1/1 · tick 0/5 · 1176 × 1337",
+        "disabled": true,
+        "path": "assets/sprites/sh3_nurse_revolver_044.40ad802a6ec2.png",
+        "sha256": "40ad802a6ec2f8065c0188b10fcfb39e68de4660812af4a995b09d87d3563bce",
+        "bytes": 921669,
+        "painted": true
+      }
+    },
+    {
+      "name": "Nurse light PNG served byte-for-byte",
+      "passed": true
+    },
+    {
+      "name": "Nurse missing heavy preview retains explicit idle fallback and missing warning",
+      "passed": true,
+      "detail": {
+        "pose": "idle",
+        "requested": "neutralHeavy",
+        "frame": "0",
+        "status": "POSE À PRODUIRE — aperçu idle. Image 1/1 · tick 0/0 · 1176 × 1337",
+        "disabled": true
+      }
+    },
+    {
+      "name": "Ordinary launch admits exact maximal native pair",
+      "passed": true,
+      "detail": {
+        "phase": "fight",
+        "ids": [
+          "sh1_groaner_003",
+          "origins_faceless_nurse"
+        ],
+        "pins": [
+          "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+          "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+          "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+          "assets/sprites/sh1_groaner_003.82984139e47a.png",
+          "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+          "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+          "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+          "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+          "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+          "assets/sprites/origins_faceless_nurse.761018b17f26.png",
+          "assets/sprites/origins_faceless_nurse.79e6ad63330f.png"
+        ],
+        "required": [
+          {
+            "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+            "status": "ready",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+            "status": "ready",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.82984139e47a.png",
+            "status": "ready",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+            "status": "ready",
+            "width": 1108,
+            "height": 1420
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.761018b17f26.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.79e6ad63330f.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          }
+        ],
+        "requiredBytes": 81802000,
+        "maxBytes": 82837504,
+        "bytes": 81802000,
+        "reservedBytes": 0
+      }
+    },
+    {
+      "name": "All thirteen native frames stay ready and pinned",
+      "passed": true,
+      "detail": {
+        "phase": "fight",
+        "ids": [
+          "sh1_groaner_003",
+          "origins_faceless_nurse"
+        ],
+        "pins": [
+          "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+          "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+          "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+          "assets/sprites/sh1_groaner_003.82984139e47a.png",
+          "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+          "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+          "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+          "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+          "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+          "assets/sprites/origins_faceless_nurse.761018b17f26.png",
+          "assets/sprites/origins_faceless_nurse.79e6ad63330f.png"
+        ],
+        "required": [
+          {
+            "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+            "status": "ready",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+            "status": "ready",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.82984139e47a.png",
+            "status": "ready",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+            "status": "ready",
+            "width": 1108,
+            "height": 1420
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.761018b17f26.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.79e6ad63330f.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          }
+        ],
+        "requiredBytes": 81802000,
+        "maxBytes": 82837504,
+        "bytes": 81802000,
+        "reservedBytes": 0
+      }
+    },
+    {
+      "name": "Largest decoded pair fits fixed 79 MiB budget without downscaling",
+      "passed": true,
+      "detail": {
+        "phase": "fight",
+        "ids": [
+          "sh1_groaner_003",
+          "origins_faceless_nurse"
+        ],
+        "pins": [
+          "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+          "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+          "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+          "assets/sprites/sh1_groaner_003.82984139e47a.png",
+          "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+          "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+          "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+          "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+          "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+          "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+          "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+          "assets/sprites/origins_faceless_nurse.761018b17f26.png",
+          "assets/sprites/origins_faceless_nurse.79e6ad63330f.png"
+        ],
+        "required": [
+          {
+            "path": "assets/sprites/sh1_groaner_003.9ab82a90231f.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
+            "status": "ready",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
+            "status": "ready",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.82984139e47a.png",
+            "status": "ready",
+            "width": 1254,
+            "height": 1254
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+            "status": "ready",
+            "width": 1774,
+            "height": 887
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.7875b7b8cc53.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.4f0ad91d37c5.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.a8c37a63c5fc.png",
+            "status": "ready",
+            "width": 1108,
+            "height": 1420
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.b93c719c3104.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.761018b17f26.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          },
+          {
+            "path": "assets/sprites/origins_faceless_nurse.79e6ad63330f.png",
+            "status": "ready",
+            "width": 1199,
+            "height": 1312
+          }
+        ],
+        "requiredBytes": 81802000,
+        "maxBytes": 82837504,
+        "bytes": 81802000,
+        "reservedBytes": 0
+      }
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "captures": [
+    {
+      "file": "nurse-light-present.png",
+      "bytes": 138642,
+      "sha256": "865f09e3bd172bda37e15b64f017a1dca74f6db81b30a3dbc8a3912b1cfd7760"
+    },
+    {
+      "file": "nurse-heavy-missing.png",
+      "bytes": 140142,
+      "sha256": "f2dc6f25b2ca13e8f9352f1b520d3cf491040a19bac010d41006a5f8a7807a80"
+    },
+    {
+      "file": "largest-native-pair.png",
+      "bytes": 1147416,
+      "sha256": "41fdda311fb662abb9dd720391d591b3ae87e576586054aac1aaf688b5e14934"
+    }
+  ],
+  "errors": [],
+  "method": "Built HTTP app, fresh browser contexts, ordinary workshop controls and duel launch. Read-only production state and passive drawImage observation; no game-state, asset, clock or input substitution.",
+  "limits": [
+    "Two static Nurse preview states and one ordinary maximum-cache duel launch only.",
+    "No full battle, original source motion, offline update or 1:1 fidelity claim."
+  ],
+  "browser": "158.0.8127.0",
+  "completedAt": "2026-11-27T08:50:47.617Z"
+}

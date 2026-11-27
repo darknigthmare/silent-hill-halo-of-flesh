@@ -82,12 +82,14 @@ test('presentation shifts and authored finisher timelines are counted in their o
 });
 
 test('individual narrative art belongs to its exact profile and extends the image inventory', () => {
-  const art=byId.get('sh1_air_screamer_001').details.story.artwork;
-  assert.equal(art.source,'sh1');assert.equal(art.stageId,'old_silent_hill');
-  assert.deepEqual(art.illustrations.map(i=>i.moment),['intro','ending']);
-  assert.equal(byId.get('bom_air_screamer_121').details.story.artwork,null);
-  assert.equal(result.status.counts.individualStoriesWithArtwork,1);
-  assert.equal(result.status.counts.individualStoryIllustrationFiles,2);
+  for(const [id,source,stage] of [['sh1_air_screamer_001','sh1','old_silent_hill'],['sh1_groaner_003','sh1','old_silent_hill'],['sh2_lying_figure_020','sh2','south_vale']]){
+    const art=byId.get(id).details.story.artwork;
+    assert.equal(art.source,source);assert.equal(art.stageId,stage);
+    assert.deepEqual(art.illustrations.map(i=>i.moment),['intro','ending']);
+  }
+  for(const id of ['bom_air_screamer_121','sh1_wormhead_004','sh2_lying_figure_crawling_021'])assert.equal(byId.get(id).details.story.artwork,null);
+  assert.equal(result.status.counts.individualStoriesWithArtwork,3);
+  assert.equal(result.status.counts.individualStoryIllustrationFiles,6);
   assert.equal(result.status.counts.associations,
     ROSTER.length + STAGES.length + CHRONICLES.length + result.status.counts.corpusEntries + result.status.counts.projectileBitmapDefinitions);
   const corrupt=structuredClone(result);

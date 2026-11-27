@@ -159,6 +159,7 @@ test('build validates source slots and PNG bytes before updating offline entries
   const worker="const kept = 'untouched';\nconst ASSETS = [\n  // PROJECTILE_BITMAP_ASSETS_BEGIN\n  // PROJECTILE_BITMAP_ASSETS_END\n];\n";
   await writeFile(join(root,'service-worker.js'),worker);
   await writeFile(join(root,'src/sprite-manifest.js'),'actors');await writeFile(join(root,'src/stage-bitmap-manifest.js'),'stages');
+  await writeFile(join(root,'src/projectile-origin.js'),await readFile(new URL('../src/projectile-origin.js',import.meta.url)));
   const oldRevision=await bitmapRevision(root);
   await writeFile(join(root,'src/projectile-bitmap-manifest.js'),JSON.stringify(registry));
   assert.notEqual(await bitmapRevision(root),oldRevision);

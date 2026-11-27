@@ -1754,6 +1754,82 @@ export const SPRITES = {
           1712,
           826
         ]
+      },
+      {
+        "sha256": "7da5f10a9307b758039be1eeb75c2cb106d2fa1dded54c734deea31c3470d7a1",
+        "bytes": 1231636,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          84,
+          148,
+          1678,
+          820
+        ],
+        "pixelSHA256": "974fdc9fffee8ea3af2eed1ae91ee0337420ad541cbedc3e17fcca01e1f2ab3d",
+        "transparentFraction": 0.66814,
+        "path": "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.924465
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-0691a2a5-9a1f-49a6-8081-aae638b6642e.png",
+        "sourceSHA256": "7da5f10a9307b758039be1eeb75c2cb106d2fa1dded54c734deea31c3470d7a1",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          17,
+          0,
+          1752,
+          887
+        ],
+        "framingBounds": [
+          81,
+          144,
+          1680,
+          827
+        ]
+      },
+      {
+        "sha256": "125ee32270cc94f56760cd451d682a1f1055f267274b45b1b8c643ca4a655ab7",
+        "bytes": 959948,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          231,
+          49,
+          1618,
+          856
+        ],
+        "pixelSHA256": "53cb1b018ee16a98583bf0a3355cee5102bdb538080ccb07bfb54286cb25e32e",
+        "transparentFraction": 0.76069,
+        "path": "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+        "facing": 1,
+        "anchor": [
+          0.5,
+          0.965051
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-ab47445b-3464-4045-b5eb-126b2a6ad1fc.png",
+        "sourceSHA256": "125ee32270cc94f56760cd451d682a1f1055f267274b45b1b8c643ca4a655ab7",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          0,
+          1746,
+          858
+        ],
+        "framingBounds": [
+          227,
+          46,
+          1621,
+          858
+        ]
       }
     ],
     "portrait": {
@@ -1816,6 +1892,20 @@ export const SPRITES = {
       "forwardSpecial": {
         "frames": [
           4
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralLight": {
+        "frames": [
+          5
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralSpecial": {
+        "frames": [
+          6
         ],
         "ticksPerFrame": 1,
         "loop": false
@@ -4103,6 +4193,82 @@ export const SPRITES = {
           1504,
           916
         ]
+      },
+      {
+        "sha256": "257835c807355697f77f0c913661c65e12f99b817788a91844cc070175d0f146",
+        "bytes": 1485554,
+        "width": 1620,
+        "height": 971,
+        "visibleBounds": [
+          93,
+          28,
+          1533,
+          885
+        ],
+        "pixelSHA256": "0cbd6f55cdedcdfd731fbeb2062239539f180120ce482fe294a9f496a9eb1a01",
+        "transparentFraction": 0.64343,
+        "path": "assets/sprites/sh4_sniffer_dog_male_053.257835c80735.png",
+        "facing": 1,
+        "anchor": [
+          0.46,
+          0.911432
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-83ca56d7-9aa6-45a7-977f-057c9ff4fff6.png",
+        "sourceSHA256": "257835c807355697f77f0c913661c65e12f99b817788a91844cc070175d0f146",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          33,
+          22,
+          1606,
+          939
+        ],
+        "framingBounds": [
+          89,
+          22,
+          1538,
+          891
+        ]
+      },
+      {
+        "sha256": "4a693eb7331d2505b813c374bbbb343999a88ae2c0541f632cf8d3c19c2871ef",
+        "bytes": 1521255,
+        "width": 1774,
+        "height": 887,
+        "visibleBounds": [
+          100,
+          41,
+          1613,
+          848
+        ],
+        "pixelSHA256": "087b26012e229f7e3ec54bbb7fa2bd412b5f112e89a8dc6ce117ee0694cfb80d",
+        "transparentFraction": 0.61116,
+        "path": "assets/sprites/sh4_sniffer_dog_male_053.4a693eb7331d.png",
+        "facing": 1,
+        "anchor": [
+          0.46,
+          0.940248
+        ],
+        "bodyHeight": 1,
+        "sourceFile": "exec-ba6a3adf-9851-41b1-80b0-b484f98978b2.png",
+        "sourceSHA256": "4a693eb7331d2505b813c374bbbb343999a88ae2c0541f632cf8d3c19c2871ef",
+        "origin": "conversation-image-generation",
+        "purpose": "combat",
+        "view": "side-view",
+        "alphaBounds": [
+          0,
+          9,
+          1738,
+          887
+        ],
+        "framingBounds": [
+          98,
+          35,
+          1616,
+          853
+        ]
       }
     ],
     "portrait": {
@@ -4144,6 +4310,20 @@ export const SPRITES = {
       "forwardSpecial": {
         "frames": [
           1
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "walk": {
+        "frames": [
+          2
+        ],
+        "ticksPerFrame": 1,
+        "loop": false
+      },
+      "neutralLight": {
+        "frames": [
+          3
         ],
         "ticksPerFrame": 1,
         "loop": false

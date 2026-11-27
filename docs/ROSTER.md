@@ -140,7 +140,7 @@ Les rôles non combattants et les identités non confirmées restent consultable
 | The Butcher | combatant | `juggernaut` | ARMURE DE ROUILLE | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | RIVERSIDE MOTEL |
 | Memory of Helen Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | CEDAR GROVE — FEMALE TREATMENT |
 | Memory of Richard Grady | stationary-boss | `boss` | ARMURE DU CAUCHEMAR | AUCUNE AFFLICTION | 2 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | RIVERSIDE MOTEL |
-| Demon | combatant | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GREEN LION — PASSAGE VERS LE RITUEL |
+| Demon | combatant | `boss` | ARMURE DU CAUCHEMAR | BRÛLURE | 0 montages / 2 propositions | versus-transposition · canon-combatant / official-or-established | GREEN LION — ANTICHAMBRE DU CULTE |
 
 ## SILENT HILL: HOMECOMING (2008)
 

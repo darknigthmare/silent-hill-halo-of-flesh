@@ -1,0 +1,169 @@
+/** Normal story selection/first chapter plus a separately labelled ending component check. */
+import {createRequire} from 'node:module';
+const loadDependency=createRequire(import.meta.url);
+let chromium;
+try { ({chromium}=loadDependency('playwright-core')); }
+catch { ({chromium}=createRequire(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/__halo_qa_loader.cjs')('playwright-core')); }
+import {getFighter} from '../../../../src/data.js';
+import {spawn} from 'node:child_process';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {storyArtwork} from '../../../../src/story-art.js';
+import {storyPlan} from '../../../../src/tournament.js';
+const id=process.argv[2]||'sh1_groaner_003';
+if(!['sh1_groaner_003','sh2_lying_figure_020'].includes(id))throw Error('Unexpected wave32 story owner');
+const expectedBlocker=process.argv.find(arg=>arg.startsWith('--expect-blocked='))?.slice('--expect-blocked='.length)||null;
+if(expectedBlocker&&(id!=='sh2_lying_figure_020'||expectedBlocker!=='sh2_mannequin_ambusher_023'))throw Error('Unexpected wave32 story blocker contract');
+const otherId=id==='sh1_groaner_003'?'sh1_wormhead_004':'sh2_lying_figure_crawling_021';
+const port=4295,base='http://127.0.0.1:'+port,out='tests/http-wave32-story/'+id;
+const art=storyArtwork(id),digest=bytes=>createHash('sha256').update(bytes).digest('hex');
+const report={schemaVersion:1,wave:32,passed:false,checks:[],captures:[],errors:[],layoutSnapshots:[],
+ method:expectedBlocker?'Actual built HTTP app: ordinary story selection and refused launch for the explicitly declared absent opponent. Exact refusal and unchanged route are checked. Intro and ending are rendered separately through the production story helpers and setChronicleImage; no run injected into the game.':'Actual built HTTP app: ordinary story selection, first-chapter launch, return to selection, owner switch through roster controls and explicit checkpoint resume. Ending rendered separately through the production story helper and setChronicleImage; no completed run injected into the game.',
+ limits:['The entire four-fight story is not played to completion.','Ending component checks do not establish a played campaign result.','Headless Chromium; service workers blocked, offline update not exercised.','Static original-compatible compositions, no 1:1 certification.']};
+const check=(name,passed,detail)=>{report.checks.push({name,passed:!!passed,...(detail===undefined?{}:{detail})});if(!passed)throw Error(name);};
+let server,browser,page;
+await mkdir(out,{recursive:true});
+async function capture(page,selector,file,scope){const bytes=await page.locator(selector).screenshot();await writeFile(out+'/'+file,bytes);report.captures.push({file,scope,bytes:bytes.length,sha256:digest(bytes)});}
+async function captureViewport(page,file,scope){const bytes=await page.screenshot({fullPage:false,timeout:10000});await writeFile(out+'/'+file,bytes);report.captures.push({file,scope,bytes:bytes.length,sha256:digest(bytes)});}
+async function observeSelectionLayout(page,label){
+ const selectors=['#selectScreen','#modePanel','.story-preview','#runCheckpoint','.select-body','.center','.filters','.roster-wrap','#roster','.fighter-card[data-id="'+otherId+'"]','.pager','.setup'];
+ const snapshot=await page.evaluate(({selectors,label})=>{
+   const describe=element=>element?{tag:element.tagName,id:element.id,className:typeof element.className==='string'?element.className:'',fighterId:element.closest('.fighter-card')?.dataset.id||null}:null;
+   const elements=selectors.map(selector=>{
+     const element=document.querySelector(selector);if(!element)return {selector,missing:true};
+     const rect=element.getBoundingClientRect(),style=getComputedStyle(element);
+     let left=Math.max(0,rect.left),top=Math.max(0,rect.top),right=Math.min(innerWidth,rect.right),bottom=Math.min(innerHeight,rect.bottom);
+     for(let ancestor=element.parentElement;ancestor;ancestor=ancestor.parentElement){
+       const bounds=ancestor.getBoundingClientRect(),ancestorStyle=getComputedStyle(ancestor);
+       if(/^(auto|scroll|hidden|clip)$/.test(ancestorStyle.overflowX)){left=Math.max(left,bounds.left+ancestor.clientLeft);right=Math.min(right,bounds.left+ancestor.clientLeft+ancestor.clientWidth);}
+       if(/^(auto|scroll|hidden|clip)$/.test(ancestorStyle.overflowY)){top=Math.max(top,bounds.top+ancestor.clientTop);bottom=Math.min(bottom,bounds.top+ancestor.clientTop+ancestor.clientHeight);}
+     }
+     const visible=right>left&&bottom>top?{left,top,right,bottom,width:right-left,height:bottom-top}:null;
+     return {selector,rect:{x:rect.x,y:rect.y,width:rect.width,height:rect.height},clientHeight:element.clientHeight,scrollHeight:element.scrollHeight,clientWidth:element.clientWidth,scrollWidth:element.scrollWidth,scrollTop:element.scrollTop,scrollLeft:element.scrollLeft,
+       style:{display:style.display,overflowX:style.overflowX,overflowY:style.overflowY,minHeight:style.minHeight,flex:style.flex,flexShrink:style.flexShrink},
+       hitAtCenter:describe(document.elementFromPoint(rect.x+rect.width/2,rect.y+rect.height/2)),visibleIntersection:visible,
+       hitAtVisibleCenter:visible?describe(document.elementFromPoint((left+right)/2,(top+bottom)/2)):null};
+   });
+   return {label,viewport:{width:innerWidth,height:innerHeight,devicePixelRatio},pageScroll:{x:scrollX,y:scrollY},selectedPlayerId:window.__HALO_QA__?.selection?.p1?.id||null,elements};
+ },{selectors,label});
+ report.layoutSnapshots.push(snapshot);
+}
+try{
+ let occupied=false;try{await fetch(base,{signal:AbortSignal.timeout(500)});occupied=true;}catch{}
+ check('Dedicated HTTP port unused',!occupied);
+ server=spawn(process.execPath,['scripts/server.mjs',String(port),'--dist'],{stdio:'ignore'});
+ let ready=false;for(let n=0;n<100;n++){try{if((await fetch(base)).ok){ready=true;break;}}catch{}await new Promise(done=>setTimeout(done,100));}
+ check('Built HTTP app ready',ready);
+ browser=await chromium.launch({headless:true,executablePath:process.env.QA_BROWSER_EXECUTABLE||undefined});
+ report.browser=browser.version();
+ const context=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:1100}});
+ page=await context.newPage();page.on('pageerror',error=>report.errors.push(String(error)));
+ const responses=[],pending=[];
+ page.on('response',response=>{const path=new URL(response.url()).pathname;const frame=[art.intro,art.ending].find(f=>'/'+f.path===path);if(frame)pending.push(response.body().then(bytes=>responses.push({path,status:response.status(),bytes:bytes.length,sha256:digest(bytes)})));});
+ await page.goto(base+'/modules/unified-versus.html?qa=1&mode=story&p1='+id,{waitUntil:'domcontentloaded'});
+ await page.waitForFunction(()=>{const image=document.querySelector('#storyPreview');return image&&!image.hidden&&image.complete&&image.naturalWidth>0;});
+ const selected=await page.locator('#storyPreview').evaluate(img=>({src:new URL(img.src).pathname,width:img.naturalWidth,height:img.naturalHeight,alt:img.alt}));
+ check(id+': exact original-source introduction displayed',selected.src==='/'+art.intro.path&&selected.width===1672&&selected.height===941,selected);
+ check('Accessible story image description present',selected.alt===art.intro.alt);
+ check('Four original encounters remain listed',await page.locator('#modePanel .mode-path li').count()===4);
+ await capture(page,'.story-preview','selection-intro.png','normal-story-selection');
+ const beforeLaunch=await page.evaluate(()=>({run:window.__HALO_QA__.run,playerId:window.__HALO_QA__.selection.p1.id}));
+ await page.locator('#launch').click();
+ if(expectedBlocker){
+   await page.waitForFunction(()=>document.querySelector('#spriteLaunchStatus')?.textContent.includes('Sprites à produire :'),null,{timeout:30000});
+   const admission=await page.evaluate(async playerId=>{
+     const {storyPlan}=await import('/src/tournament.js'),{getFighter}=await import('/src/data.js'),{combatSpriteFor}=await import('/src/sprite-system.js');
+     const q=window.__HALO_QA__,plan=storyPlan(playerId);
+     return {message:document.querySelector('#spriteLaunchStatus').textContent,playerId:q.selection.p1.id,
+       queue:plan.queue,stages:plan.stages,missing:[playerId,...plan.queue].filter(id=>!combatSpriteFor(getFighter(id))),
+       engineCreated:!!q.engine,run:q.run};
+   },id);
+   const expectedPlan=storyPlan(id);
+   check('Explicit source-bound missing opponent blocks the unchanged story route',JSON.stringify(admission.missing)===JSON.stringify([expectedBlocker])&&JSON.stringify(admission.queue)===JSON.stringify(expectedPlan.queue)&&JSON.stringify(admission.stages)===JSON.stringify(expectedPlan.stages),admission);
+   check('Ordinary refusal names the absent sprite and creates no run or engine',admission.message==='Sprites à produire : 1. Mannequin — Ambusher. Aucun parcours ni tentative modifié.'&&admission.engineCreated===false&&JSON.stringify(admission.run)===JSON.stringify(beforeLaunch.run)&&admission.playerId===beforeLaunch.playerId,admission);
+   report.storyPlayback={status:'blocked-missing-combat-art',missing:[expectedBlocker],firstChapterPlayed:false};
+   report.limits.push('Lying Figure story cannot launch while its exact SH2 Mannequin — Ambusher opponent has no combat image. Illustrated story is not a playable route.');
+   await captureViewport(page,'story-admission-blocked.png','ordinary-launch-refusal-no-diagnostic-bypass');
+ }else{
+ await page.waitForFunction(()=>{const panel=document.querySelector('#chronicleOpening'),image=panel?.querySelector('img');return panel&&!panel.hidden&&image&&!image.hidden&&image.complete&&image.naturalWidth>0;},null,{timeout:30000});
+ const opening=await page.locator('#chronicleOpening').evaluate(panel=>({src:new URL(panel.querySelector('img').src).pathname,title:panel.querySelector('strong').textContent,caption:panel.querySelector('p').textContent}));
+ check('First story chapter displays the bound introduction',opening.src==='/'+art.intro.path&&opening.title===art.intro.title&&opening.caption===art.intro.caption,opening);
+ await capture(page,'#chronicleOpening','first-chapter-intro.png','normal-first-chapter');
+ await page.waitForFunction(()=>window.__HALO_QA__?.engine?.phase==='fight'&&document.querySelector('#chronicleOpening')?.hidden===true,null,{timeout:30000});
+ check('Opening yields to ordinary fighting phase',await page.locator('#chronicleOpening').evaluate(el=>el.hidden));
+
+ // Return through the real UI before switching owners: a fresh navigation would
+ // miss a stale in-memory run leaking its plan or artwork into the new selection.
+ await page.locator('#leaveFight').click();
+ const retainedRun=await page.evaluate(()=>window.__HALO_QA__.run);
+ const otherPlan=storyPlan(otherId);
+ await page.locator('#slotP1').click();
+ await page.locator('#sourceFilter').selectOption(getFighter(otherId).source);
+ await page.locator('#search').fill(getFighter(otherId).name);
+ const otherCard=page.locator('.fighter-card[data-id="'+otherId+'"]');
+ await observeSelectionLayout(page,'before-owner-switch-scroll');
+ await otherCard.scrollIntoViewIfNeeded();
+ await observeSelectionLayout(page,'before-owner-switch-click');
+ await captureViewport(page,'owner-switch-layout.png','actual-viewport-before-normal-owner-switch');
+ await otherCard.click();
+ await observeSelectionLayout(page,'after-owner-switch-click');
+ const switched=await page.evaluate(()=>({
+   playerId:window.__HALO_QA__.selection.p1.id,
+   opponentId:window.__HALO_QA__.selection.p2.id,
+   stageId:window.__HALO_QA__.selection.stage.id,
+   title:document.querySelector('#modePanel h3')?.textContent,
+   chapters:document.querySelectorAll('#modePanel .mode-path li').length,
+   imageCount:document.querySelectorAll('#storyPreview').length,
+   retainedRun:window.__HALO_QA__.run
+ }));
+ check('Changing P1 after return to selection displays the new owner route',switched.playerId===otherId&&switched.opponentId===otherPlan.queue[0]&&switched.stageId===otherPlan.stages[0]&&switched.title===otherPlan.title&&switched.chapters===otherPlan.chapterCount,switched);
+ check('Related profile without artwork does not borrow this story image',switched.imageCount===0);
+ check('Changing selection preserves the original run for explicit resume',retainedRun?.playerId===id&&JSON.stringify(switched.retainedRun)===JSON.stringify(retainedRun));
+ await page.locator('#resumeCheckpoint').click();
+ await page.waitForFunction(playerId=>window.__HALO_QA__?.selection?.p1?.id===playerId&&window.__HALO_QA__?.run?.playerId===playerId&&window.__HALO_QA__?.engine?.phase==='fight',id,{timeout:30000});
+ const resumed=await page.evaluate(()=>({playerId:window.__HALO_QA__.run.playerId,queue:window.__HALO_QA__.run.queue,stages:window.__HALO_QA__.run.stages,index:window.__HALO_QA__.run.index}));
+ check('Explicit resume restores the exact original owner and unchanged route',resumed.playerId===id&&resumed.index===retainedRun.index&&JSON.stringify(resumed.queue)===JSON.stringify(retainedRun.queue)&&JSON.stringify(resumed.stages)===JSON.stringify(retainedRun.stages),resumed);
+ report.storyPlayback={status:'first-chapter-and-resume-tested',firstChapterPlayed:true,completeRunPlayed:false};
+ }
+
+ // Isolated production component; this page does not create or inject a game run.
+ const endingPage=await context.newPage();endingPage.on('pageerror',error=>report.errors.push(String(error)));
+ await endingPage.goto(base+'/offline.html',{waitUntil:'domcontentloaded'});
+ if(expectedBlocker){
+   const introContract=await endingPage.evaluate(async playerId=>{
+     const {storyArtwork}=await import('/src/story-art.js'),{setChronicleImage}=await import('/src/chronicle-art.js');
+     const scene=storyArtwork(playerId).intro,figure=document.createElement('figure');figure.id='storyIntroComponent';figure.style.cssText='width:720px;max-width:90vw;background:#151612;color:#deded5;padding:16px;margin:20px';
+     const image=document.createElement('img');image.style.cssText='display:block;width:100%;height:auto';figure.append(image);
+     const caption=document.createElement('figcaption');caption.textContent=scene.caption;figure.append(caption);document.body.replaceChildren(figure);setChronicleImage(image,scene);
+     return {path:scene.path,title:scene.title,caption:scene.caption,alt:scene.alt};
+   },id);
+   check('Isolated intro uses exact owner artwork without creating a story run',introContract.path===art.intro.path&&introContract.title===art.intro.title&&introContract.caption===art.intro.caption&&introContract.alt===art.intro.alt,introContract);
+   await endingPage.waitForFunction(()=>{const image=document.querySelector('#storyIntroComponent img');return image&&!image.hidden&&image.complete&&image.naturalWidth===1672;});
+   await capture(endingPage,'#storyIntroComponent','intro-component.png','isolated-production-component-not-played-chapter');
+ }
+ const endingContract=await endingPage.evaluate(async(playerId)=>{
+   const {storyArtwork,storyEndingArtwork}=await import('/src/story-art.js');
+   const {setChronicleImage}=await import('/src/chronicle-art.js');
+   const scene=storyEndingArtwork({mode:'story',playerId,status:'complete'});
+   const figure=document.createElement('figure');figure.id='storyEndingComponent';figure.style.cssText='width:720px;max-width:90vw;background:#151612;color:#deded5;padding:16px;margin:20px';
+   const image=document.createElement('img');image.style.cssText='display:block;width:100%;height:auto';figure.append(image);
+   const caption=document.createElement('figcaption');caption.textContent=scene.caption;figure.append(caption);document.body.replaceChildren(figure);setChronicleImage(image,scene);
+   return {path:scene.path,won:storyEndingArtwork({mode:'story',playerId,status:'won'}),lost:storyEndingArtwork({mode:'story',playerId,status:'lost'}),other:storyArtwork('bom_air_screamer_121')};
+ },id);
+ check('Ending requires completed exact-owner story',endingContract.path===art.ending.path&&endingContract.won===null&&endingContract.lost===null&&endingContract.other===null,endingContract);
+ await endingPage.waitForFunction(()=>{const image=document.querySelector('#storyEndingComponent img');return image&&!image.hidden&&image.complete&&image.naturalWidth===1672;});
+ await capture(endingPage,'#storyEndingComponent','ending-component.png','isolated-production-component-not-played-ending');
+ const endingResponse=await endingPage.request.get(base+'/'+art.ending.path),endingBytes=await endingResponse.body();
+ check('Ending fetched byte-for-byte over HTTP',endingResponse.status()===200&&endingBytes.length===art.ending.bytes&&digest(endingBytes)===art.ending.sha256);
+ await Promise.all(pending);
+ check('Introduction fetched byte-for-byte over HTTP',responses.some(r=>r.path==='/'+art.intro.path&&r.status===200&&r.bytes===art.intro.bytes&&r.sha256===art.intro.sha256),responses);
+ check('No unhandled browser errors',report.errors.length===0,report.errors);
+ report.passed=true;
+}catch(error){
+ report.failure=String(error.stack||error);process.exitCode=1;
+ if(page&&!page.isClosed()){
+   try{await observeSelectionLayout(page,'failure');}catch(diagnosticError){(report.diagnosticErrors||=[]).push('layout: '+String(diagnosticError));}
+   try{await captureViewport(page,'failure-viewport.png','actual-viewport-after-failure');}catch(diagnosticError){(report.diagnosticErrors||=[]).push('capture: '+String(diagnosticError));}
+ }
+}
+finally{await browser?.close();server?.kill('SIGTERM');await writeFile(out+'/report.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({scope:'wave32-story',passed:report.passed,checks:report.checks.length,captures:report.captures.length,failure:report.failure}));}

@@ -142,20 +142,21 @@ if (mode === 'build') {
     ['Associations guide', `A${Math.max(8, end - 3)}:G${end}`, 'associations-end'],
   ];
 
-} else if (mode === 'refresh' || mode === 'extensions') {
+} else if (mode === 'refresh' || mode === 'extensions' || mode === 'refresh-resolved') {
+  const refreshResolved = mode === 'refresh-resolved';
   const baselineRef = process.argv[7] || '9c426d7e230eaec464203acb9b43b63a420acf30';
   const readBaseline = relative => JSON.parse(execFileSync('git', ['show', baselineRef + ':' + relative], { cwd: repo, maxBuffer: 8 * 1024 * 1024 }));
-  const reqPath = path.join(repo, mode === 'extensions' ? 'docs/combat-guide/requirements-resolved.json' : 'docs/combat-guide/requirements.json');
+  const reqPath = path.join(repo, mode === 'extensions' || refreshResolved ? 'docs/combat-guide/requirements-resolved.json' : 'docs/combat-guide/requirements.json');
   const assoPath = path.join(repo, 'docs/combat-guide/associations.json');
   const reqBytes = await fs.readFile(reqPath), assoBytes = await fs.readFile(assoPath);
   const requirements = JSON.parse(reqBytes), associations = JSON.parse(assoBytes);
-  const oldRequirements = readBaseline('docs/combat-guide/requirements.json');
+  const oldRequirements = readBaseline(refreshResolved ? 'docs/combat-guide/requirements-resolved.json' : 'docs/combat-guide/requirements.json');
   const oldAssociations = readBaseline('docs/combat-guide/associations.json');
   sourceHashes = Object.fromEntries([['requirements', reqBytes], ['associations', assoBytes]].map(([key, bytes]) => [key, createHash('sha256').update(bytes).digest('hex')]));
   const sections = requirements.sections, modules = requirements.moduleDecisions, records = associations.records;
-  const expectedSections = mode === 'extensions' ? 68 : 30;
+  const expectedSections = mode === 'extensions' || refreshResolved ? 68 : 30;
   if (sections.length !== expectedSections || sections.some((entry, index) => entry.section !== String(index).padStart(2, '0'))) throw new Error('Expected ordered sections 00–' + (expectedSections - 1));
-  if (oldRequirements.sections.length !== 30) throw new Error('This reviewed extension layout starts from the historical 30-section workbook');
+  if (oldRequirements.sections.length !== (refreshResolved ? 68 : 30)) throw new Error('Unexpected baseline section layout for ' + mode);
   if (new Set(records.map(record => record.kind + ':' + record.id)).size !== records.length) throw new Error('Duplicate association identifier');
   if (modules.length !== oldRequirements.moduleDecisions.length) throw new Error('A module-count change needs its own layout review');
   if (records.length < oldAssociations.records.length) throw new Error('Association removals need an explicit review');
@@ -183,7 +184,14 @@ if (mode === 'build') {
     const actual = sheet.getRange(address).values;
     if (!equal(actual, expected)) throw new Error('Existing workbook data differs from the recorded JSON baseline: ' + sheet.name + '!' + address + '. Review the edit before refresh.');
   };
-  assertRange(guide, 'A8:K38', [guideHeaders, ...sectionRows(oldRequirements)]);
+  assertRange(guide, 'A8:K38', [guideHeaders, ...sectionRows(oldRequirements).slice(0, 30)]);
+  if (refreshResolved) {
+    assertRange(guide, 'A58', [['Extensions 01 et 02 — conception et validation attendue']]);
+    assertRange(guide, 'A60:K98', [guideHeaders, ...sectionRows(oldRequirements).slice(30)]);
+    if (guide.tables.items.filter(table => table.name === 'CombatGuideExtensions').length !== 1) throw new Error('The resolved baseline must retain its existing extension table');
+    if (guide.getRange('B4').formulas[0][0] !== '=COUNTA(A9:A38)+COUNTA(A61:A98)' ||
+        guide.getRange('H4').formulas[0][0] !== '=COUNTIFS(E9:E38,"Conçu, à intégrer")+COUNTIFS(E61:E98,"Conçu, à intégrer")') throw new Error('Resolved guide counters differ from the recorded layout');
+  }
   assertRange(guide, 'A44:F' + (44 + oldRequirements.moduleDecisions.length), [moduleHeaders, ...moduleRows(oldRequirements)]);
   assertRange(asso, 'A8:G' + (8 + oldAssociations.records.length), [assoHeaders, ...associationRows(oldAssociations)]);
   assertRange(guide, 'A6', [[sourceLine(oldRequirements)]]);
@@ -249,9 +257,10 @@ if (mode === 'build') {
       }
     }
   };
-  refreshRows(guide, 9, sectionRows(oldRequirements), sectionRows(requirements).slice(0, 30), 'CombatGuideSections', guideWidths);
+  refreshRows(guide, 9, sectionRows(oldRequirements).slice(0, 30), sectionRows(requirements).slice(0, 30), 'CombatGuideSections', guideWidths);
   refreshRows(guide, 45, moduleRows(oldRequirements), moduleRows(requirements), 'CombatGuideModules', guideWidths);
   refreshRows(asso, 9, associationRows(oldAssociations), associationRows(associations), 'CombatGuideAssociations', assoWidths);
+  if (refreshResolved) refreshRows(guide, 61, sectionRows(oldRequirements).slice(30), sectionRows(requirements).slice(30), 'CombatGuideExtensions', guideWidths);
   if (mode === 'extensions') {
     if (guide.tables.items.some(table => table.name === 'CombatGuideExtensions')) throw new Error('Extensions already present; reconcile their baseline before refreshing');
     const extensionRows = sectionRows(requirements).slice(30);
@@ -299,10 +308,23 @@ if (mode === 'build') {
     ['Guide combat', 'G81:K83', 'extensions-access-contracts'],
     ['Guide combat', 'A95:F98', 'extensions-end']
   );
+  if (refreshResolved) {
+    // Review every changed association row; summary/tail previews alone can
+    // miss stage or chronicle updates in the middle of the existing table.
+    const rows = [...new Set(refreshPlan.changedCells.filter(cell => cell.sheet === 'Associations guide' && /\d+$/.test(cell.address))
+      .map(cell => Number(cell.address.match(/\d+$/)[0])).filter(row => row >= 9))].sort((a, b) => a - b);
+    const groups = [];
+    for (const row of rows) {
+      const last = groups.at(-1);
+      if (last && row <= last[1] + 1 && row - last[0] < 4) last[1] = row;
+      else groups.push([row, row]);
+    }
+    for (const [start, endRow] of groups) previewSpecs.push(['Associations guide', 'B' + start + ':G' + endRow, 'associations-changes-' + start]);
+  }
   await fs.writeFile(path.join(outputDir, 'refresh-change-log.json'), JSON.stringify(refreshPlan, null, 2) + '\n');
-} else if (mode !== 'inspect') throw new Error('Mode must be inspect, build, refresh or extensions');
+} else if (mode !== 'inspect') throw new Error('Mode must be inspect, build, refresh, extensions or refresh-resolved');
 workbook.recalculate();
-if (mode === 'build' || mode === 'refresh' || mode === 'extensions') {
+if (mode === 'build' || mode === 'refresh' || mode === 'extensions' || mode === 'refresh-resolved') {
   const guide = workbook.worksheets.getItem('Guide combat');
   const asso = workbook.worksheets.getItem('Associations guide');
   if (guide.getRange('B4').values[0][0] !== expectedCounts.sections || asso.getRange('B4').values[0][0] !== expectedCounts.associations) throw new Error('Workbook counts differ from JSON');
@@ -315,7 +337,7 @@ if (mode === 'build' || mode === 'refresh' || mode === 'extensions') {
   cell.values = [[before]];
   workbook.recalculate();
   if (guide.getRange('B5').values[0][0] !== base) throw new Error('Module decision restore failed');
-  if (mode === 'extensions') {
+  if (mode === 'extensions' || mode === 'refresh-resolved') {
     const statuses = guide.getRange('E61:E98').values.flat();
     const selected = statuses.indexOf('Conçu, à intégrer');
     if (selected < 0) throw new Error('Expected documentary-only extension rows');

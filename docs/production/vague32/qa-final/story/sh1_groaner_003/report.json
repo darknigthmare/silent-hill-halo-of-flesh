@@ -1,0 +1,1724 @@
+{
+  "schemaVersion": 1,
+  "wave": 32,
+  "passed": true,
+  "checks": [
+    {
+      "name": "Dedicated HTTP port unused",
+      "passed": true
+    },
+    {
+      "name": "Built HTTP app ready",
+      "passed": true
+    },
+    {
+      "name": "sh1_groaner_003: exact original-source introduction displayed",
+      "passed": true,
+      "detail": {
+        "src": "/assets/stories/sh1_groaner_003.intro.3cf2e2a42b4d.png",
+        "width": 1672,
+        "height": 941,
+        "alt": "Un Groaner de Silent Hill 1999, entier et à quatre pattes, avance devant la maison, la niche et la boîte aux lettres de Levin Street."
+      }
+    },
+    {
+      "name": "Accessible story image description present",
+      "passed": true
+    },
+    {
+      "name": "Four original encounters remain listed",
+      "passed": true
+    },
+    {
+      "name": "First story chapter displays the bound introduction",
+      "passed": true,
+      "detail": {
+        "src": "/assets/stories/sh1_groaner_003.intro.3cf2e2a42b4d.png",
+        "title": "AU RAS DE LA BRUME",
+        "caption": "Un Groaner longe la maison de Levin Street. Ses pas traversent la neige qui tombe sur la chaussée."
+      }
+    },
+    {
+      "name": "Opening yields to ordinary fighting phase",
+      "passed": true
+    },
+    {
+      "name": "Changing P1 after return to selection displays the new owner route",
+      "passed": true,
+      "detail": {
+        "playerId": "sh1_wormhead_004",
+        "opponentId": "sh1_puppet_nurse_012",
+        "stageId": "midwich",
+        "title": "LE CAUCHEMAR — WORMHEAD",
+        "chapters": 4,
+        "imageCount": 0,
+        "retainedRun": {
+          "schema": 1,
+          "version": "0.9.6",
+          "type": "RÉCIT DE MANIFESTATION",
+          "id": "story-1795769294801-472965067",
+          "mode": "story",
+          "playerId": "sh1_groaner_003",
+          "routeId": null,
+          "seed": 472965067,
+          "queue": [
+            "sh1_floatstinger_016",
+            "sh1_grey_child_005",
+            "sh1_twinfeeler_015",
+            "sh1_split_head_014"
+          ],
+          "stages": [
+            "old_silent_hill",
+            "midwich",
+            "midwich",
+            "nowhere"
+          ],
+          "rituals": [],
+          "index": 0,
+          "wins": 0,
+          "status": "ready",
+          "carry": false,
+          "carryHealth": 1,
+          "carryMeter": 0,
+          "storyFormat": "monster-story-v1",
+          "storyFighterId": "sh1_groaner_003",
+          "recovery": 0.12,
+          "rules": {
+            "mode": "cpu",
+            "roundsToWin": 2,
+            "timeLimit": 99,
+            "difficulty": "normal",
+            "ritualId": "none",
+            "otherworldShift": true,
+            "stageHazards": true,
+            "radioWarning": true,
+            "adaptiveAI": true,
+            "fatalities": true,
+            "stageFatalities": true,
+            "stageAnimations": true,
+            "stageTerrain": true,
+            "stageDirector": true
+          },
+          "results": [],
+          "updatedAt": 1795769294801
+        }
+      }
+    },
+    {
+      "name": "Related profile without artwork does not borrow this story image",
+      "passed": true
+    },
+    {
+      "name": "Changing selection preserves the original run for explicit resume",
+      "passed": true
+    },
+    {
+      "name": "Explicit resume restores the exact original owner and unchanged route",
+      "passed": true,
+      "detail": {
+        "playerId": "sh1_groaner_003",
+        "queue": [
+          "sh1_floatstinger_016",
+          "sh1_grey_child_005",
+          "sh1_twinfeeler_015",
+          "sh1_split_head_014"
+        ],
+        "stages": [
+          "old_silent_hill",
+          "midwich",
+          "midwich",
+          "nowhere"
+        ],
+        "index": 0
+      }
+    },
+    {
+      "name": "Ending requires completed exact-owner story",
+      "passed": true,
+      "detail": {
+        "path": "assets/stories/sh1_groaner_003.ending.f76866b461ac.png",
+        "won": null,
+        "lost": null,
+        "other": null
+      }
+    },
+    {
+      "name": "Ending fetched byte-for-byte over HTTP",
+      "passed": true
+    },
+    {
+      "name": "Introduction fetched byte-for-byte over HTTP",
+      "passed": true,
+      "detail": [
+        {
+          "path": "/assets/stories/sh1_groaner_003.intro.3cf2e2a42b4d.png",
+          "status": 200,
+          "bytes": 1764170,
+          "sha256": "3cf2e2a42b4dd0a9559ca5c62050591dea7ba3e43b201102707b86f757c4b097"
+        }
+      ]
+    },
+    {
+      "name": "No unhandled browser errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "captures": [
+    {
+      "file": "selection-intro.png",
+      "scope": "normal-story-selection",
+      "bytes": 327212,
+      "sha256": "5784bef6c06eff533b864fceb68778709298b6169ae8a43ac75928a38569f047"
+    },
+    {
+      "file": "first-chapter-intro.png",
+      "scope": "normal-first-chapter",
+      "bytes": 82670,
+      "sha256": "1aeafddcac867b8da02fb28d1160597f6e85d9334563643cde4c4f87086ceabb"
+    },
+    {
+      "file": "owner-switch-layout.png",
+      "scope": "actual-viewport-before-normal-owner-switch",
+      "bytes": 710681,
+      "sha256": "e4123871103302c59ab348995201f4aa43dbc673136c43375af477d244103b70"
+    },
+    {
+      "file": "ending-component.png",
+      "scope": "isolated-production-component-not-played-ending",
+      "bytes": 298334,
+      "sha256": "be474c3cf1d65325d24605c3c9c81e0e6d768d9ee1c449fc0fa9de66c2ffa98c"
+    }
+  ],
+  "errors": [],
+  "layoutSnapshots": [
+    {
+      "label": "before-owner-switch-scroll",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "devicePixelRatio": 1
+      },
+      "pageScroll": {
+        "x": 0,
+        "y": 0
+      },
+      "selectedPlayerId": "sh1_groaner_003",
+      "elements": [
+        {
+          "selector": "#selectScreen",
+          "rect": {
+            "x": 0,
+            "y": 72,
+            "width": 1440,
+            "height": 1032
+          },
+          "clientHeight": 1032,
+          "scrollHeight": 1447,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollTop": 415,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "minHeight": "0px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 0,
+            "top": 72,
+            "right": 1440,
+            "bottom": 1100,
+            "width": 1440,
+            "height": 1028
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": "#modePanel",
+          "rect": {
+            "x": 12,
+            "y": -211,
+            "width": 1416,
+            "height": 682.765625
+          },
+          "clientHeight": 681,
+          "scrollHeight": 681,
+          "clientWidth": 1411,
+          "scrollWidth": 1411,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "block",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 0 auto",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "IMG",
+            "id": "storyPreview",
+            "className": "",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 12,
+            "top": 72,
+            "right": 1428,
+            "bottom": 471.765625,
+            "width": 1416,
+            "height": 399.765625
+          },
+          "hitAtVisibleCenter": {
+            "tag": "IMG",
+            "id": "storyPreview",
+            "className": "",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".story-preview",
+          "rect": {
+            "x": 36,
+            "y": -120,
+            "width": 720,
+            "height": 430.390625
+          },
+          "clientHeight": 430,
+          "scrollHeight": 430,
+          "clientWidth": 720,
+          "scrollWidth": 720,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "block",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "0px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "IMG",
+            "id": "storyPreview",
+            "className": "",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 36,
+            "top": 72,
+            "right": 756,
+            "bottom": 310.390625,
+            "width": 720,
+            "height": 238.390625
+          },
+          "hitAtVisibleCenter": {
+            "tag": "IMG",
+            "id": "storyPreview",
+            "className": "",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": "#runCheckpoint",
+          "rect": {
+            "x": 12,
+            "y": -293,
+            "width": 1416,
+            "height": 58
+          },
+          "clientHeight": 58,
+          "scrollHeight": 58,
+          "clientWidth": 1412,
+          "scrollWidth": 1412,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 0 auto",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": null,
+          "visibleIntersection": null,
+          "hitAtVisibleCenter": null
+        },
+        {
+          "selector": ".select-body",
+          "rect": {
+            "x": 0,
+            "y": 483.765625,
+            "width": 1440,
+            "height": 620
+          },
+          "clientHeight": 620,
+          "scrollHeight": 620,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "620px",
+            "flex": "1 0 620px",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "MAIN",
+            "id": "",
+            "className": "center",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 0,
+            "top": 483.765625,
+            "right": 1440,
+            "bottom": 1100,
+            "width": 1440,
+            "height": 616.234375
+          },
+          "hitAtVisibleCenter": {
+            "tag": "MAIN",
+            "id": "",
+            "className": "center",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".center",
+          "rect": {
+            "x": 328,
+            "y": 497.765625,
+            "width": 784,
+            "height": 592
+          },
+          "clientHeight": 592,
+          "scrollHeight": 638,
+          "clientWidth": 784,
+          "scrollWidth": 784,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "minHeight": "0px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "MAIN",
+            "id": "",
+            "className": "center",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 497.765625,
+            "right": 1112,
+            "bottom": 1089.765625,
+            "width": 784,
+            "height": 592
+          },
+          "hitAtVisibleCenter": {
+            "tag": "MAIN",
+            "id": "",
+            "className": "center",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".filters",
+          "rect": {
+            "x": 328,
+            "y": 497.765625,
+            "width": 784,
+            "height": 32
+          },
+          "clientHeight": 32,
+          "scrollHeight": 32,
+          "clientWidth": 784,
+          "scrollWidth": 784,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "SELECT",
+            "id": "sourceFilter",
+            "className": "ui-select",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 497.765625,
+            "right": 1112,
+            "bottom": 529.765625,
+            "width": 784,
+            "height": 32
+          },
+          "hitAtVisibleCenter": {
+            "tag": "SELECT",
+            "id": "sourceFilter",
+            "className": "ui-select",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".roster-wrap",
+          "rect": {
+            "x": 328,
+            "y": 539.765625,
+            "width": 784,
+            "height": 190
+          },
+          "clientHeight": 188,
+          "scrollHeight": 188,
+          "clientWidth": 782,
+          "scrollWidth": 782,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "minHeight": "190px",
+            "flex": "1 0 190px",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 539.765625,
+            "right": 1112,
+            "bottom": 729.765625,
+            "width": 784,
+            "height": 190
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": "#roster",
+          "rect": {
+            "x": 329,
+            "y": 574.765625,
+            "width": 782,
+            "height": 154
+          },
+          "clientHeight": 154,
+          "scrollHeight": 154,
+          "clientWidth": 782,
+          "scrollWidth": 782,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "minHeight": "0px",
+            "flex": "1 1 0%",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 329,
+            "top": 574.765625,
+            "right": 1111,
+            "bottom": 728.765625,
+            "width": 782,
+            "height": 154
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".fighter-card[data-id=\"sh1_wormhead_004\"]",
+          "rect": {
+            "x": 339,
+            "y": 584.765625,
+            "width": 146,
+            "height": 134
+          },
+          "clientHeight": 132,
+          "scrollHeight": 132,
+          "clientWidth": 144,
+          "scrollWidth": 144,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "block",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "minHeight": "132px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "CANVAS",
+            "id": "",
+            "className": "",
+            "fighterId": "sh1_wormhead_004"
+          },
+          "visibleIntersection": {
+            "left": 339,
+            "top": 584.765625,
+            "right": 485,
+            "bottom": 718.765625,
+            "width": 146,
+            "height": 134
+          },
+          "hitAtVisibleCenter": {
+            "tag": "CANVAS",
+            "id": "",
+            "className": "",
+            "fighterId": "sh1_wormhead_004"
+          }
+        },
+        {
+          "selector": ".pager",
+          "rect": {
+            "x": 328,
+            "y": 739.765625,
+            "width": 784,
+            "height": 46
+          },
+          "clientHeight": 44,
+          "scrollHeight": 44,
+          "clientWidth": 782,
+          "scrollWidth": 782,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "SPAN",
+            "id": "pageLabel",
+            "className": "",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 739.765625,
+            "right": 1112,
+            "bottom": 785.765625,
+            "width": 784,
+            "height": 46
+          },
+          "hitAtVisibleCenter": {
+            "tag": "SPAN",
+            "id": "pageLabel",
+            "className": "",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".setup",
+          "rect": {
+            "x": 328,
+            "y": 795.765625,
+            "width": 784,
+            "height": 340
+          },
+          "clientHeight": 340,
+          "scrollHeight": 340,
+          "clientWidth": 784,
+          "scrollWidth": 784,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 795.765625,
+            "right": 1112,
+            "bottom": 1089.765625,
+            "width": 784,
+            "height": 294
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          }
+        }
+      ]
+    },
+    {
+      "label": "before-owner-switch-click",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "devicePixelRatio": 1
+      },
+      "pageScroll": {
+        "x": 0,
+        "y": 0
+      },
+      "selectedPlayerId": "sh1_groaner_003",
+      "elements": [
+        {
+          "selector": "#selectScreen",
+          "rect": {
+            "x": 0,
+            "y": 72,
+            "width": 1440,
+            "height": 1032
+          },
+          "clientHeight": 1032,
+          "scrollHeight": 1447,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollTop": 415,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "minHeight": "0px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 0,
+            "top": 72,
+            "right": 1440,
+            "bottom": 1100,
+            "width": 1440,
+            "height": 1028
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": "#modePanel",
+          "rect": {
+            "x": 12,
+            "y": -211,
+            "width": 1416,
+            "height": 682.765625
+          },
+          "clientHeight": 681,
+          "scrollHeight": 681,
+          "clientWidth": 1411,
+          "scrollWidth": 1411,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "block",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 0 auto",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "IMG",
+            "id": "storyPreview",
+            "className": "",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 12,
+            "top": 72,
+            "right": 1428,
+            "bottom": 471.765625,
+            "width": 1416,
+            "height": 399.765625
+          },
+          "hitAtVisibleCenter": {
+            "tag": "IMG",
+            "id": "storyPreview",
+            "className": "",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".story-preview",
+          "rect": {
+            "x": 36,
+            "y": -120,
+            "width": 720,
+            "height": 430.390625
+          },
+          "clientHeight": 430,
+          "scrollHeight": 430,
+          "clientWidth": 720,
+          "scrollWidth": 720,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "block",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "0px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "IMG",
+            "id": "storyPreview",
+            "className": "",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 36,
+            "top": 72,
+            "right": 756,
+            "bottom": 310.390625,
+            "width": 720,
+            "height": 238.390625
+          },
+          "hitAtVisibleCenter": {
+            "tag": "IMG",
+            "id": "storyPreview",
+            "className": "",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": "#runCheckpoint",
+          "rect": {
+            "x": 12,
+            "y": -293,
+            "width": 1416,
+            "height": 58
+          },
+          "clientHeight": 58,
+          "scrollHeight": 58,
+          "clientWidth": 1412,
+          "scrollWidth": 1412,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 0 auto",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": null,
+          "visibleIntersection": null,
+          "hitAtVisibleCenter": null
+        },
+        {
+          "selector": ".select-body",
+          "rect": {
+            "x": 0,
+            "y": 483.765625,
+            "width": 1440,
+            "height": 620
+          },
+          "clientHeight": 620,
+          "scrollHeight": 620,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "620px",
+            "flex": "1 0 620px",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "MAIN",
+            "id": "",
+            "className": "center",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 0,
+            "top": 483.765625,
+            "right": 1440,
+            "bottom": 1100,
+            "width": 1440,
+            "height": 616.234375
+          },
+          "hitAtVisibleCenter": {
+            "tag": "MAIN",
+            "id": "",
+            "className": "center",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".center",
+          "rect": {
+            "x": 328,
+            "y": 497.765625,
+            "width": 784,
+            "height": 592
+          },
+          "clientHeight": 592,
+          "scrollHeight": 638,
+          "clientWidth": 784,
+          "scrollWidth": 784,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "minHeight": "0px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "MAIN",
+            "id": "",
+            "className": "center",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 497.765625,
+            "right": 1112,
+            "bottom": 1089.765625,
+            "width": 784,
+            "height": 592
+          },
+          "hitAtVisibleCenter": {
+            "tag": "MAIN",
+            "id": "",
+            "className": "center",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".filters",
+          "rect": {
+            "x": 328,
+            "y": 497.765625,
+            "width": 784,
+            "height": 32
+          },
+          "clientHeight": 32,
+          "scrollHeight": 32,
+          "clientWidth": 784,
+          "scrollWidth": 784,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "SELECT",
+            "id": "sourceFilter",
+            "className": "ui-select",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 497.765625,
+            "right": 1112,
+            "bottom": 529.765625,
+            "width": 784,
+            "height": 32
+          },
+          "hitAtVisibleCenter": {
+            "tag": "SELECT",
+            "id": "sourceFilter",
+            "className": "ui-select",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".roster-wrap",
+          "rect": {
+            "x": 328,
+            "y": 539.765625,
+            "width": 784,
+            "height": 190
+          },
+          "clientHeight": 188,
+          "scrollHeight": 188,
+          "clientWidth": 782,
+          "scrollWidth": 782,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "minHeight": "190px",
+            "flex": "1 0 190px",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 539.765625,
+            "right": 1112,
+            "bottom": 729.765625,
+            "width": 784,
+            "height": 190
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": "#roster",
+          "rect": {
+            "x": 329,
+            "y": 574.765625,
+            "width": 782,
+            "height": 154
+          },
+          "clientHeight": 154,
+          "scrollHeight": 154,
+          "clientWidth": 782,
+          "scrollWidth": 782,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "minHeight": "0px",
+            "flex": "1 1 0%",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 329,
+            "top": 574.765625,
+            "right": 1111,
+            "bottom": 728.765625,
+            "width": 782,
+            "height": 154
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".fighter-card[data-id=\"sh1_wormhead_004\"]",
+          "rect": {
+            "x": 339,
+            "y": 584.765625,
+            "width": 146,
+            "height": 134
+          },
+          "clientHeight": 132,
+          "scrollHeight": 132,
+          "clientWidth": 144,
+          "scrollWidth": 144,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "block",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "minHeight": "132px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "CANVAS",
+            "id": "",
+            "className": "",
+            "fighterId": "sh1_wormhead_004"
+          },
+          "visibleIntersection": {
+            "left": 339,
+            "top": 584.765625,
+            "right": 485,
+            "bottom": 718.765625,
+            "width": 146,
+            "height": 134
+          },
+          "hitAtVisibleCenter": {
+            "tag": "CANVAS",
+            "id": "",
+            "className": "",
+            "fighterId": "sh1_wormhead_004"
+          }
+        },
+        {
+          "selector": ".pager",
+          "rect": {
+            "x": 328,
+            "y": 739.765625,
+            "width": 784,
+            "height": 46
+          },
+          "clientHeight": 44,
+          "scrollHeight": 44,
+          "clientWidth": 782,
+          "scrollWidth": 782,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "SPAN",
+            "id": "pageLabel",
+            "className": "",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 739.765625,
+            "right": 1112,
+            "bottom": 785.765625,
+            "width": 784,
+            "height": 46
+          },
+          "hitAtVisibleCenter": {
+            "tag": "SPAN",
+            "id": "pageLabel",
+            "className": "",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".setup",
+          "rect": {
+            "x": 328,
+            "y": 795.765625,
+            "width": 784,
+            "height": 340
+          },
+          "clientHeight": 340,
+          "scrollHeight": 340,
+          "clientWidth": 784,
+          "scrollWidth": 784,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 795.765625,
+            "right": 1112,
+            "bottom": 1089.765625,
+            "width": 784,
+            "height": 294
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          }
+        }
+      ]
+    },
+    {
+      "label": "after-owner-switch-click",
+      "viewport": {
+        "width": 1440,
+        "height": 1100,
+        "devicePixelRatio": 1
+      },
+      "pageScroll": {
+        "x": 0,
+        "y": 0
+      },
+      "selectedPlayerId": "sh1_wormhead_004",
+      "elements": [
+        {
+          "selector": "#selectScreen",
+          "rect": {
+            "x": 0,
+            "y": 72,
+            "width": 1440,
+            "height": 1032
+          },
+          "clientHeight": 1032,
+          "scrollHeight": 1032,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "minHeight": "0px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 0,
+            "top": 72,
+            "right": 1440,
+            "bottom": 1100,
+            "width": 1440,
+            "height": 1028
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": "#modePanel",
+          "rect": {
+            "x": 12,
+            "y": 204,
+            "width": 1416,
+            "height": 240.375
+          },
+          "clientHeight": 238,
+          "scrollHeight": 238,
+          "clientWidth": 1411,
+          "scrollWidth": 1411,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "block",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 0 auto",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "ASIDE",
+            "id": "modePanel",
+            "className": "mode-panel",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 12,
+            "top": 204,
+            "right": 1428,
+            "bottom": 444.375,
+            "width": 1416,
+            "height": 240.375
+          },
+          "hitAtVisibleCenter": {
+            "tag": "ASIDE",
+            "id": "modePanel",
+            "className": "mode-panel",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".story-preview",
+          "missing": true
+        },
+        {
+          "selector": "#runCheckpoint",
+          "rect": {
+            "x": 12,
+            "y": 122,
+            "width": 1416,
+            "height": 58
+          },
+          "clientHeight": 58,
+          "scrollHeight": 58,
+          "clientWidth": 1412,
+          "scrollWidth": 1412,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 0 auto",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "P",
+            "id": "runCheckpointText",
+            "className": "",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 12,
+            "top": 122,
+            "right": 1428,
+            "bottom": 180,
+            "width": 1416,
+            "height": 58
+          },
+          "hitAtVisibleCenter": {
+            "tag": "P",
+            "id": "runCheckpointText",
+            "className": "",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".select-body",
+          "rect": {
+            "x": 0,
+            "y": 456.375,
+            "width": 1440,
+            "height": 647.625
+          },
+          "clientHeight": 648,
+          "scrollHeight": 648,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "620px",
+            "flex": "1 0 620px",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 0,
+            "top": 456.375,
+            "right": 1440,
+            "bottom": 1100,
+            "width": 1440,
+            "height": 643.625
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".center",
+          "rect": {
+            "x": 328,
+            "y": 470.375,
+            "width": 784,
+            "height": 619.625
+          },
+          "clientHeight": 620,
+          "scrollHeight": 638,
+          "clientWidth": 784,
+          "scrollWidth": 784,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "minHeight": "0px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 470.375,
+            "right": 1112,
+            "bottom": 1090,
+            "width": 784,
+            "height": 619.625
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".filters",
+          "rect": {
+            "x": 328,
+            "y": 470.375,
+            "width": 784,
+            "height": 32
+          },
+          "clientHeight": 32,
+          "scrollHeight": 32,
+          "clientWidth": 784,
+          "scrollWidth": 784,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "SELECT",
+            "id": "sourceFilter",
+            "className": "ui-select",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 470.375,
+            "right": 1112,
+            "bottom": 502.375,
+            "width": 784,
+            "height": 32
+          },
+          "hitAtVisibleCenter": {
+            "tag": "SELECT",
+            "id": "sourceFilter",
+            "className": "ui-select",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".roster-wrap",
+          "rect": {
+            "x": 328,
+            "y": 512.375,
+            "width": 784,
+            "height": 190
+          },
+          "clientHeight": 188,
+          "scrollHeight": 188,
+          "clientWidth": 782,
+          "scrollWidth": 782,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "minHeight": "190px",
+            "flex": "1 0 190px",
+            "flexShrink": "0"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 512.375,
+            "right": 1112,
+            "bottom": 702.375,
+            "width": 784,
+            "height": 190
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": "#roster",
+          "rect": {
+            "x": 329,
+            "y": 547.375,
+            "width": 782,
+            "height": 154
+          },
+          "clientHeight": 154,
+          "scrollHeight": 154,
+          "clientWidth": 782,
+          "scrollWidth": 782,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "auto",
+            "overflowY": "auto",
+            "minHeight": "0px",
+            "flex": "1 1 0%",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 329,
+            "top": 547.375,
+            "right": 1111,
+            "bottom": 701.375,
+            "width": 782,
+            "height": 154
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "roster",
+            "className": "roster scrollbar",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".fighter-card[data-id=\"sh1_wormhead_004\"]",
+          "rect": {
+            "x": 339,
+            "y": 555.375,
+            "width": 146,
+            "height": 134
+          },
+          "clientHeight": 132,
+          "scrollHeight": 132,
+          "clientWidth": 144,
+          "scrollWidth": 144,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "block",
+            "overflowX": "hidden",
+            "overflowY": "hidden",
+            "minHeight": "132px",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "CANVAS",
+            "id": "",
+            "className": "",
+            "fighterId": "sh1_wormhead_004"
+          },
+          "visibleIntersection": {
+            "left": 339,
+            "top": 555.375,
+            "right": 485,
+            "bottom": 689.375,
+            "width": 146,
+            "height": 134
+          },
+          "hitAtVisibleCenter": {
+            "tag": "CANVAS",
+            "id": "",
+            "className": "",
+            "fighterId": "sh1_wormhead_004"
+          }
+        },
+        {
+          "selector": ".pager",
+          "rect": {
+            "x": 328,
+            "y": 712.375,
+            "width": 784,
+            "height": 46
+          },
+          "clientHeight": 44,
+          "scrollHeight": 44,
+          "clientWidth": 782,
+          "scrollWidth": 782,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "flex",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "SPAN",
+            "id": "pageLabel",
+            "className": "",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 712.375,
+            "right": 1112,
+            "bottom": 758.375,
+            "width": 784,
+            "height": 46
+          },
+          "hitAtVisibleCenter": {
+            "tag": "SPAN",
+            "id": "pageLabel",
+            "className": "",
+            "fighterId": null
+          }
+        },
+        {
+          "selector": ".setup",
+          "rect": {
+            "x": 328,
+            "y": 768.375,
+            "width": 784,
+            "height": 340
+          },
+          "clientHeight": 340,
+          "scrollHeight": 340,
+          "clientWidth": 784,
+          "scrollWidth": 784,
+          "scrollTop": 0,
+          "scrollLeft": 0,
+          "style": {
+            "display": "grid",
+            "overflowX": "visible",
+            "overflowY": "visible",
+            "minHeight": "auto",
+            "flex": "0 1 auto",
+            "flexShrink": "1"
+          },
+          "hitAtCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          },
+          "visibleIntersection": {
+            "left": 328,
+            "top": 768.375,
+            "right": 1112,
+            "bottom": 1090.375,
+            "width": 784,
+            "height": 322
+          },
+          "hitAtVisibleCenter": {
+            "tag": "DIV",
+            "id": "",
+            "className": "setup",
+            "fighterId": null
+          }
+        }
+      ]
+    }
+  ],
+  "method": "Actual built HTTP app: ordinary story selection, first-chapter launch, return to selection, owner switch through roster controls and explicit checkpoint resume. Ending rendered separately through the production story helper and setChronicleImage; no completed run injected into the game.",
+  "limits": [
+    "The entire four-fight story is not played to completion.",
+    "Ending component checks do not establish a played campaign result.",
+    "Headless Chromium; service workers blocked, offline update not exercised.",
+    "Static original-compatible compositions, no 1:1 certification."
+  ],
+  "browser": "158.0.8127.0"
+}

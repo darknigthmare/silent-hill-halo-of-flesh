@@ -1,0 +1,37 @@
+✔ offline with no cached fallback returns an actual 503 Response (11.389117ms)
+✔ cache quota failure cannot discard a successful network navigation (6.298023ms)
+✔ cache quota failure cannot discard a successful data response (2.599344ms)
+✔ cache quota failure cannot discard a fetched sprite (4.691503ms)
+✔ blocked CacheStorage does not prevent otherwise available online resources (6.536979ms)
+✔ background revalidation is attached to the fetch event lifetime (2.67727ms)
+✔ new runtime entries take precedence over an older shell entry (1.893146ms)
+✔ offline fallback is used only for navigation, never as JavaScript bytes (2.014903ms)
+✔ runtime cache remains bounded across repeated query URLs (71.476488ms)
+✔ navigation preload survives a storage quota failure (3.355375ms)
+✔ cache-disabled offline navigation still returns a controlled 503 (1.597382ms)
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+✔ stage builder decodes opaque PNG and preserves service-worker content outside its two blocks (372.280041ms)
+Stage bitmap audit: 1/123 exact-stage candidates; 2 PNG files; no visual certification inferred.
+✔ stage builder precaches and validates both active and historical room artwork (252.262852ms)
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+✔ stage descriptor changes invalidate caches even when image paths and bytes stay identical (401.024687ms)
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+✔ actor clips and calibration invalidate bitmap revision without changing raster paths (161.913417ms)
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+Stage bitmap audit: 1/123 exact-stage candidates; 1 PNG files; no visual certification inferred.
+✔ reviewed projectile muzzle changes invalidate caches while raster bytes stay identical (173.710588ms)
+✔ stage bitmap metadata and exact identity/source fail closed before service-worker writes (94.274911ms)
+✔ stage assets reject symlinks, truncated pixels and unversioned filenames (139.825812ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2455.162987

@@ -1,0 +1,13 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> silent-hill-halo-of-flesh@0.9.6 build
+> node scripts/build-production-reference.mjs && node scripts/build-sprites.mjs && node scripts/generate-docs.mjs && node scripts/build.mjs
+
+Production references: 230 fighters, 123 stages, 289 sources (1822af9f4879).
+Raster audit: 204/230 integrated candidates; 26 missing; 0 certified; 6 animated clips.
+Artwork uses: 204 selection portraits; 190 side-view combat candidates; 4 legacy combat views unreviewed; 36 missing combat sprites.
+Projectile bitmap audit: 11 static candidates; 11 exact profiles; 31 slots; no visual certification inferred.
+Story artwork audit: 3 individual stories; 6 static candidate illustrations; no fidelity certification.
+Stage bitmap audit: 97/123 exact-stage candidates; 192 PNG files; no visual certification inferred.
+Documentation v0.9.6 générée : roster, movesets, couverture, fatalités, arènes, terrains et directeur environnemental.
+Build v0.9.6: 821 fichiers → /workspace/scratch/4cb8973fa173/silent-hill-halo-of-flesh/dist

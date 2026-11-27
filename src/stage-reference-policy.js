@@ -77,7 +77,7 @@ const LOT11_ENVIRONMENT = Object.freeze({
   },
   "antique_shop": {
     "source": "origins",
-    "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+    "name": "GREEN LION — ANTICHAMBRE DU CULTE",
     "weather": "none",
     "fog": 0,
     "interior": true,
@@ -91,7 +91,11 @@ const LOT11_ENVIRONMENT = Object.freeze({
       "industrial-depth"
     ],
     "automaticFinishers": false,
-    "disableAnimations": true
+    "disableAnimations": true,
+    "disableReferenceTracks": {
+      "sceneId": "green-lion-inner-passage",
+      "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+    }
   },
   "church_hc": {
     "source": "homecoming",
@@ -206,10 +210,10 @@ const LOT11_SCENE_PRESENTATION = Object.freeze({
       "sceneId": "green-lion-inner-passage",
       "terrainRules": false,
       "terrainPresentation": {
-        "name": "PLATEAU DU PASSAGE INTÉRIEUR",
-        "description": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        "name": "SOL DE L’ANTICHAMBRE DU CULTE",
+        "description": "Antichambre après le tunnel de Green Lion, avant la cinématique finale : autel vide, drapé rouge, cierges et court passage grillagé documentés par le guide officiel p. 121 et trois vues natives. Le Flauros abstrait et les anciens mouvements ne sont plus rendus. Caméra, largeur, placement précis et microtextures adaptés ; aucun corps rituel ou élément de la salle de cinématique. Physique neutre du versus ; géométrie non certifiée 1:1."
       },
-      "alteredPhaseLabel": "PASSAGE INTÉRIEUR · AVANT CONFRONTATION"
+      "alteredPhaseLabel": "ANTICHAMBRE · AVANT LA CINÉMATIQUE"
     }
   },
   "church_hc": {
@@ -573,6 +577,10 @@ const ENVIRONMENT = Object.freeze({
   wish_house:{source:'sh4',name:'WISH HOUSE — INTÉRIEUR DU PREMIER PASSAGE',weather:'none',fog:0,interior:true,
     worldState:'fixed-normal',removeProps:['trees','fence','altar','rooms','portraits','stairs'],
     automaticFinishers:false,disableAnimations:true},
+  lighthouse_sm:{source:'shattered',name:'LIGHTHOUSE — ENTRÉE DE LA CLINIQUE',weather:'none',fog:0,interior:false,
+    worldState:'fixed-normal',removeProps:['tower','beam','shore','water','ice'],
+    automaticFinishers:false,disableAnimations:true,
+    disableReferenceTracks:{sceneId:'shm-clinic-entrance-before-therapy',reason:'Le plan fixe de l’entrée de clinique exclut les anciennes propositions composites de faisceau, eau et raccord thérapeutique ; elles restent conservées en attente.'}},
 });
 
 // Scene wording and neutral versus footing do not assert a material's source physics.
@@ -708,6 +716,12 @@ const SCENE_PRESENTATION_BASE = Object.freeze({
 
 const SCENE_PRESENTATION = Object.freeze({
   ...SCENE_PRESENTATION_BASE,...LOT12_SCENE_PRESENTATION,
+  lighthouse_sm:{source:'shattered',policy:{
+    sceneId:'shm-clinic-entrance-before-therapy',terrainRules:false,
+    normalPhaseLabel:'CLINIQUE · EXTÉRIEUR AVANT ENTRÉE',
+    alteredPhaseLabel:'CLINIQUE · EXTÉRIEUR AVANT ENTRÉE',
+    terrainPresentation:{name:'NEIGE DEVANT LA CLINIQUE',description:'Porche du Lighthouse Counseling Center après l’échange du rivage, avant de franchir la porte : bardage, piliers, porte et neige documentés. Tour, lac, hall et révélation thérapeutique exclus. Neige peinte sans prise de glace ni règles de glissade ; physique neutre du versus, cadrage et géométrie non certifiés 1:1.'}
+  }},
   wish_house:{source:'sh4',policy:{
     sceneId:'sh4-first-visit-scripture-corner',terrainRules:false,
     normalPhaseLabel:'PREMIER PASSAGE · INTÉRIEUR INTACT',

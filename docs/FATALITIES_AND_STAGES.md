@@ -1,6 +1,6 @@
 # Fatalités, arènes dédiées et animations — v0.9.6
 
-Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 64 boucles et jouent 162 éléments visuels partiels issus des fiches, 26 événements et 26 interactions.
+Le catalogue contient **460 propositions de fatalité de combattant** et **123 propositions d’arène**. **198 montages de combattant et 7 montages de lieu** sont écrits, avec des conditions d’éligibilité. Les arènes conservent 64 boucles et jouent 159 éléments visuels partiels issus des fiches, 26 événements et 26 interactions.
 
 Les montages déplacent les acteurs et synchronisent les effets, la caméra et le son du prototype. Les images propres à chaque action restent à produire ; un montage écrit ne constitue pas un clip bitmap ni une certification 1:1.
 
@@ -286,7 +286,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | EARTH ZONE | BOM | PASSAGE DE LA GALERIE EARTH | fixed-altered — aucune bascule | 1 | 1 | 4 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | BLOOD ZONE | BOM | BORD DES PLATEFORMES BLOOD | fixed-altered — aucune bascule | 0 | 1 | 2 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | STEEL ZONE | BOM | CAILLEBOTIS MÉTALLIQUE | fixed-altered — aucune bascule | 0 | 1 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
-| GREEN LION — PASSAGE VERS LE RITUEL | 0RIGINS | PLATEAU DU PASSAGE INTÉRIEUR | fixed-altered — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | GRILLE DE ROUILLE — à produire |
+| GREEN LION — ANTICHAMBRE DU CULTE | 0RIGINS | SOL DE L’ANTICHAMBRE DU CULTE | fixed-altered — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | GRILLE DE ROUILLE — à produire |
 | CHURCH OF THE HOLY WAY — NEF | HC | ALLÉE DE LA NEF | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | AUTEL DU SACRIFICE — à produire |
 | UNDERGROUND — ANTICHAMBRE DES FAMILLES | HC | DEVANT LA PORTE À ANNEAUX | fixed-normal — aucune bascule | 0 | 0 | 3 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | MIDWICH — FILM OTHERWORLD | FILMS | CENDRES ET GRILLE | fixed-altered — aucune bascule | 1 | 0 | 1 éléments de fiche / 2 boucles | SONNERIE DE MINUIT — à produire |
@@ -331,7 +331,7 @@ Les montages déplacent les acteurs et synchronisent les effets, la caméra et l
 | SILENT HILL — FROZEN STREETS | SM | GLACE DU CAUCHEMAR | fixed-altered — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | SOUS LA GLACE — à produire |
 | ALCHEMILLA GELÉ — CHAMBRE ER | SM | SOL DE LA CHAMBRE ER | fixed-altered — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | SOUS LA GLACE — à produire |
 | TOLUCA MALL GELÉ — HALL GUMBALL | SM | SOL DU HALL GUMBALL | fixed-altered — aucune bascule | 0 | 0 | 2 éléments de fiche / 0 boucles | SOUS LA GLACE — à produire |
-| LIGHTHOUSE / THERAPY REVELATION | SM | BÉTON SEC | unresolved — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
+| LIGHTHOUSE — ENTRÉE DE LA CLINIQUE | SM | NEIGE DEVANT LA CLINIQUE | fixed-normal — aucune bascule | 0 | 0 | 0 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | DEVIL’S PIT | DP | BÉTON SEC | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 0 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | CENTENNIAL BUILDING | DP | MOQUETTE HUMIDE | fixed-normal — aucune bascule | 0 | 0 | 2 éléments de fiche / 2 boucles | OTHERWORLD STAGE FATALITY — à produire |
 | ST. MARIA’S MONASTERY | DP | PIERRE RITUELLE | fixed-normal — aucune bascule | 0 | 0 | 1 éléments de fiche / 1 boucles | AUTEL DU SACRIFICE — à produire |

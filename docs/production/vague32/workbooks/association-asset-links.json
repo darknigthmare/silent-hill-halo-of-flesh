@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "baselineCommit": "d4269ad8239a99cad53d44bc77b569ed7a0d41a3",
+  "associationFile": "docs/combat-guide/associations.json",
+  "associationSha256": "ddaf178dcf240697c3af53e2e34acdffb24f46370d6d966ad8039755554eaffd",
+  "baselineUniqueImagePaths": 707,
+  "currentUniqueImagePaths": 719,
+  "imageFormats": {
+    ".jpg": 2,
+    ".png": 671,
+    ".webp": 46
+  },
+  "missingPaths": [],
+  "removedPaths": [],
+  "newImages": [
+    {
+      "path": "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+      "sha256": "125ee32270cc94f56760cd451d682a1f1055f267274b45b1b8c643ca4a655ab7"
+    },
+    {
+      "path": "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+      "sha256": "7da5f10a9307b758039be1eeb75c2cb106d2fa1dded54c734deea31c3470d7a1"
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.257835c80735.png",
+      "sha256": "257835c807355697f77f0c913661c65e12f99b817788a91844cc070175d0f146"
+    },
+    {
+      "path": "assets/sprites/sh4_sniffer_dog_male_053.4a693eb7331d.png",
+      "sha256": "4a693eb7331d2505b813c374bbbb343999a88ae2c0541f632cf8d3c19c2871ef"
+    },
+    {
+      "path": "assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+      "sha256": "8de0129c58efd742d49b367dab08f2db5b0c62852718a12c11aabf49e084a5c2"
+    },
+    {
+      "path": "assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png",
+      "sha256": "c0447d084d35681b243721b68aa5de40283e7956bbc158779eced796558b0401"
+    },
+    {
+      "path": "assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+      "sha256": "4ce31feecce0f664af45985716bea7073333a2fe410f7693a6b5594d4389ea97"
+    },
+    {
+      "path": "assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png",
+      "sha256": "457e03b49a441bc65ee28aff5a7c038be4fc8a1f6ff74bded5398bc81e7cdefe"
+    },
+    {
+      "path": "assets/stories/sh1_groaner_003.ending.f76866b461ac.png",
+      "sha256": "f76866b461ac91c71f978eaf5467eeb3690270a0f944f334a784042c1b96f6fe"
+    },
+    {
+      "path": "assets/stories/sh1_groaner_003.intro.3cf2e2a42b4d.png",
+      "sha256": "3cf2e2a42b4dd0a9559ca5c62050591dea7ba3e43b201102707b86f757c4b097"
+    },
+    {
+      "path": "assets/stories/sh2_lying_figure_020.ending.e00f51f74769.png",
+      "sha256": "e00f51f747697fc5f377fa0d6a2e7422a449529c54d813f2a8d678e46eea3540"
+    },
+    {
+      "path": "assets/stories/sh2_lying_figure_020.intro.b80a3fd0a6d3.png",
+      "sha256": "b80a3fd0a6d3436ff4edf970349876ed485eeebfef6819963dcb14e94baf4888"
+    }
+  ],
+  "profileAttachmentChecks": [
+    {
+      "kind": "profile",
+      "id": "sh1_groaner_003",
+      "newPaths": [
+        "assets/sprites/sh1_groaner_003.125ee32270cc.png",
+        "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+        "assets/stories/sh1_groaner_003.ending.f76866b461ac.png",
+        "assets/stories/sh1_groaner_003.intro.3cf2e2a42b4d.png"
+      ],
+      "status": "passed"
+    },
+    {
+      "kind": "profile",
+      "id": "sh4_sniffer_dog_male_053",
+      "newPaths": [
+        "assets/sprites/sh4_sniffer_dog_male_053.257835c80735.png",
+        "assets/sprites/sh4_sniffer_dog_male_053.4a693eb7331d.png"
+      ],
+      "status": "passed"
+    },
+    {
+      "kind": "profile",
+      "id": "sh2_lying_figure_020",
+      "newPaths": [
+        "assets/stories/sh2_lying_figure_020.ending.e00f51f74769.png",
+        "assets/stories/sh2_lying_figure_020.intro.b80a3fd0a6d3.png"
+      ],
+      "status": "passed"
+    }
+  ],
+  "workbookProjection": "The existing workbook association table records identity, source, sections, status and target file. Detailed frame/story paths remain linked in associations.json; unchanged profile summary cells are retained."
+}

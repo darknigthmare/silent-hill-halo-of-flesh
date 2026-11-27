@@ -29,27 +29,27 @@
     "src/data.js": "20a81e5983b4b567d0aa9d34985c695690a1e20425298e1f68daa6b86fa27c35",
     "src/movesets.js": "03b5fcba2939438c8f1ca2f064fd31578c6255656006c6e7c4424e3eafd327f9",
     "src/combat-reference-policy.js": "a784ca09be46e54b188e71c003ad8fd12970c8c4821bc8c5515e6a8e79751028",
-    "src/production-reference.js": "70ee0db71881be378049a6500d1d9fc4b7f795308d31a4e55c6950868550cdc4",
+    "src/production-reference.js": "c4f51568b4e77ccf4d89b9abcb8a6a426615f837c7548b99e6cafbda915268e9",
     "src/tournament.js": "12403baa162d626cd4befb7dfa3bfdeecdc2b79d46dd8bbb646786076f172de7",
     "src/run-progress.js": "f7f61204681a60d2e2de0116af08d30007a7af26fb6ebc6af7d8685d414470d1",
     "src/lore-cinematics.js": "211596a8d9054ca8481e4668b9e9e91db4e46d48cb85c90a4c7c4e9ef4e96845",
     "src/chronicle-art.js": "4153c0d85753c3f6bcd8adb41a3c78fe2d88ccb47bd580d8f5e94abc40af944f",
-    "src/story-art.js": "55259818fcf22f8a40b6c4813c67b8d1269f035d9da1627d938655d231246f2d",
-    "src/sprite-manifest.js": "2886b907c30d6971137dd57350c77ebc42a27f58e7f66e393e29491196c8632b",
+    "src/story-art.js": "a41bfee50b89fde14674cb516ae0c1ff2778520ba9b973d01bf6d69a6a9e996d",
+    "src/sprite-manifest.js": "310bbb92bd6811dbb0f894a60d481f07554bbf05f5ada8382c22625ccc79683e",
     "src/stage-director.js": "4158a522fa4f2133ed2bebb4a42852e0244054ab9dcf33c0d877a5d591e01884",
     "src/stage-lore-policy.js": "b20de47911e2577c3814217121bd1511ecefb40f555e629bcbe7b730d39624e8",
-    "src/stage-reference-policy.js": "df9c0bc18db0ddfb38a156c59bdc6d4124c1a0cf1d7563af32cfb52aaede7424",
-    "src/stage-bitmap-manifest.js": "3279ea5b7f65316dec07e530eeaf0bc114c57e15c0dc657e604c9fa87fd57bb5",
+    "src/stage-reference-policy.js": "462eebaea80b740ac6da5d1eb3e57176c564441efb5deb086e81a90494f5ad8e",
+    "src/stage-bitmap-manifest.js": "dbd63fc0775d102eae856f35a83b78092e01f9c4fc54fa0334f9837c479af00b",
     "src/projectile-bitmap-manifest.js": "dbae4eca2bdc03b4e0da0542f70a20a67963a6ed3a3e3742fdf56a6db11c05d7",
     "src/projectile-bitmaps.js": "64bb32d524e6c97df894d3dc64eb83770a996c267fd281882e9485d12d4d5410",
-    "art/registry.json": "a5f8a3673036e103d7f3463dd15edf6179aebcb16b5fa34217709550ce13c759",
+    "art/registry.json": "839dc3525980b8b37671cd0dbaea4266e620a56332f0e1ea7340a5adec896eb3",
     "data/roster.json": "9b606883030d1f2408b4ac15d9d4f01d8122106f7b99dfa502e1105aeed212f3",
     "data/movesets.json": "bf9266c69684ecd9f361c2c628c40b1ce54ec40e10ae90bdef32b1a916bcc0ec",
-    "data/fatalities.json": "ed917b654e0ffa30f2aeb5b1b3795c5ef692afc9a5406716a7b54579aa50a810",
-    "data/stages.json": "4a7470015d12bbe34da9c41aea191d379fdb58ee91579a210a2c50d92fb1f931",
+    "data/fatalities.json": "012e106b18e0442f13606a52158e87b4bdcce9f5d78b2b8f39874ffeff1d6859",
+    "data/stages.json": "4b65e91537e7fb9c90a5340f492778c66743dd95d85c24a9ace8a0d677768520",
     "data/chronicles.json": "7387b9345654d189121324c3c29068bb612c660a988fb6fd40fc86302d7f1c4d",
     "docs/production/franchise-corpus.json": "9df5b1b7d228b82559a2295b33b2ed47dabe812bc1b29f11a9ec841eaaa1ee86",
-    "docs/combat-guide/requirements.json": "2de2f899f31713ccd86253da20cdb4d0bcb8aac459936268e93fda6b60e41a3e",
+    "docs/combat-guide/requirements.json": "2ad55b76bc9c34d2852d4e0e49592bf83183d380c76a0518e62afdbf5cea2431",
     "docs/combat-guide/extensions/requirements.json": "5e0c9afe228240c23d93f6da78722901b7b32118c683c30247937c1320ca4894",
     "docs/combat-guide/extensions/examples.json": "cef5f0f4f4d8fac3b78355a5fe8e3def5996f485700a7d432ff96e01c0f296df"
   },
@@ -573,7 +573,23 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
-          "artwork": null,
+          "artwork": {
+            "source": "sh1",
+            "stageId": "old_silent_hill",
+            "status": "integrated-candidate",
+            "fidelity": "unverified",
+            "composition": "original-compatible",
+            "illustrations": [
+              {
+                "moment": "intro",
+                "path": "assets/stories/sh1_groaner_003.intro.3cf2e2a42b4d.png"
+              },
+              {
+                "moment": "ending",
+                "path": "assets/stories/sh1_groaner_003.ending.f76866b461ac.png"
+              }
+            ]
+          },
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -615,7 +631,9 @@
             "assets/sprites/sh1_groaner_003.cfa48c2c5630.png",
             "assets/sprites/sh1_groaner_003.ff3410acb3a0.png",
             "assets/sprites/sh1_groaner_003.82984139e47a.png",
-            "assets/sprites/sh1_groaner_003.f117d3d26288.png"
+            "assets/sprites/sh1_groaner_003.f117d3d26288.png",
+            "assets/sprites/sh1_groaner_003.7da5f10a9307.png",
+            "assets/sprites/sh1_groaner_003.125ee32270cc.png"
           ],
           "animatedClipsDeclared": 0,
           "validationThisPass": "links-only; no visual review"
@@ -3813,7 +3831,23 @@
         "story": {
           "format": "monster-story-v1",
           "generated": true,
-          "artwork": null,
+          "artwork": {
+            "source": "sh2",
+            "stageId": "south_vale",
+            "status": "integrated-candidate",
+            "fidelity": "unverified",
+            "composition": "original-compatible",
+            "illustrations": [
+              {
+                "moment": "intro",
+                "path": "assets/stories/sh2_lying_figure_020.intro.b80a3fd0a6d3.png"
+              },
+              {
+                "moment": "ending",
+                "path": "assets/stories/sh2_lying_figure_020.ending.e00f51f74769.png"
+              }
+            ]
+          },
           "hasPlayableEncounters": true,
           "rawCandidateChapterCount": 4,
           "encounters": [
@@ -10653,7 +10687,9 @@
           "portraitPath": "assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
           "framePaths": [
             "assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
-            "assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png"
+            "assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
+            "assets/sprites/sh4_sniffer_dog_male_053.257835c80735.png",
+            "assets/sprites/sh4_sniffer_dog_male_053.4a693eb7331d.png"
           ],
           "animatedClipsDeclared": 0,
           "validationThisPass": "links-only; no visual review"
@@ -44017,7 +44053,7 @@
     {
       "kind": "stage",
       "id": "antique_shop",
-      "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+      "name": "GREEN LION — ANTICHAMBRE DU CULTE",
       "source": "origins",
       "guideSections": [
         "02",
@@ -44052,14 +44088,16 @@
         "65"
       ],
       "targetFile": "data/stages.json",
-      "observedStatus": "sans bitmap de stage ; fixed-altered",
+      "observedStatus": "bitmap candidat référencé ; fixed-altered",
       "details": {
         "referenceIds": [
           "EXT02",
           "EXT_ORIGINS_THEATER_GUIDE_20261026",
-          "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
+          "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028",
+          "V32_ORIGINS_CULT_GUIDE_P121",
+          "V32_ORIGINS_CULT_ANTEROOM_PLAYTHROUGH"
         ],
-        "locationStatus": "lieu-documente-secondaire",
+        "locationStatus": "lieu-et-phase-documentes-guide-et-vues-natives",
         "assignedFighterIds": [
           "origins_demon_084"
         ],
@@ -44072,13 +44110,12 @@
         "finisherId": "antique_shop_fatality",
         "finisherAuthored": false,
         "presentation": {
-          "referenceTrackIds": [
-            "antique_shop:reference:1",
-            "antique_shop:reference:2",
-            "antique_shop:reference:3"
+          "referenceTrackIds": [],
+          "framePaths": [
+            "assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+            "assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png"
           ],
-          "framePaths": [],
-          "status": "missing",
+          "status": "integrated-candidate",
           "fidelity": "unverified"
         },
         "interactions": [],
@@ -47405,7 +47442,7 @@
     {
       "kind": "stage",
       "id": "lighthouse_sm",
-      "name": "LIGHTHOUSE / THERAPY REVELATION",
+      "name": "LIGHTHOUSE — ENTRÉE DE LA CLINIQUE",
       "source": "shattered",
       "guideSections": [
         "02",
@@ -47440,12 +47477,14 @@
         "65"
       ],
       "targetFile": "data/stages.json",
-      "observedStatus": "sans bitmap de stage ; unresolved",
+      "observedStatus": "bitmap candidat référencé ; fixed-normal",
       "details": {
         "referenceIds": [
-          "EXT09"
+          "EXT09",
+          "V32_SHM_CLINIC_CHAPTER",
+          "V32_SHM_CLINIC_ENTRANCE_PLAYTHROUGH"
         ],
-        "locationStatus": "composite-a-separer",
+        "locationStatus": "lieu-et-phase-documentes-vues-natives",
         "assignedFighterIds": [],
         "effectiveFighterIds": [],
         "chronicleIds": [],
@@ -47453,8 +47492,11 @@
         "finisherAuthored": false,
         "presentation": {
           "referenceTrackIds": [],
-          "framePaths": [],
-          "status": "missing",
+          "framePaths": [
+            "assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+            "assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png"
+          ],
+          "status": "integrated-candidate",
           "fidelity": "unverified"
         },
         "interactions": [],
@@ -53785,7 +53827,7 @@
     }
   ],
   "verification": {
-    "assetPathCount": 707,
+    "assetPathCount": 719,
     "missingAssetPaths": [],
     "method": "Git tracked path or local file; no PNG decoding"
   }

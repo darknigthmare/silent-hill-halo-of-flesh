@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "productionWave": "vague32",
+  "producedOn": "2026-11-27",
+  "repoBaseCommit": "d4269ad8239a99cad53d44bc77b569ed7a0d41a3",
+  "status": "integrated-candidate",
+  "fidelity": "unverified",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "rendering": "Quatre générations indépendantes, un plan par PNG. Aucun atlas, recadrage ou retouche des images générées. Copie byte-for-byte vers assets/stages.",
+  "sourceManifest": "sources.json",
+  "measurements": "measurements.json",
+  "importPlan": "import-plan.json",
+  "assetSets": [
+    {
+      "stageId": "antique_shop",
+      "source": "origins",
+      "sceneId": "green-lion-inner-passage",
+      "sceneLabel": "Green Lion — antichambre du culte après le tunnel, avant la cinématique finale",
+      "evidenceIds": [
+        "V32_ORIGINS_CULT_GUIDE_P121",
+        "V32_ORIGINS_CULT_ANTEROOM_PLAYTHROUGH"
+      ],
+      "phase": "Vue d’antichambre post-tunnel à 3:13:40, 3:14:20 et 3:14:30 ; pas la boutique avant le tunnel, la salle de cinématique ni le rêve de boss.",
+      "engineIntegration": {
+        "worldState": "fixed-altered",
+        "shiftEnabled": false,
+        "ceiling": false,
+        "allowedHazards": [],
+        "allowedEvents": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "referenceTracks": []
+      },
+      "layers": [
+        {
+          "id": "bg-cult-anteroom",
+          "file": "antique_shop.bg-cult-anteroom.png",
+          "role": "background",
+          "transparentBackground": false,
+          "prompt": "antique_shop.background.prompt.txt",
+          "inputReferences": [
+            "references/origins-anteroom-11620.png",
+            "references/origins-altar-11660.png",
+            "references/origins-red-path-11670.png"
+          ],
+          "originalToolFile": "exec-f8e49864-4f91-4ff7-a227-faeab1d7a7e8.png"
+        },
+        {
+          "id": "near-grate-edge",
+          "file": "antique_shop.near-grate-edge.png",
+          "role": "foreground",
+          "transparentBackground": true,
+          "prompt": "antique_shop.foreground.prompt.txt",
+          "inputReferences": [
+            "references/origins-red-path-11670.png"
+          ],
+          "additionalLayoutReference": "antique_shop.bg-cult-anteroom.png",
+          "originalToolFile": "exec-01b7036e-a563-4f0f-8871-f40e6d7f0eda.png"
+        }
+      ],
+      "observedInvariants": [
+        "Maçonnerie et recesses sombres de l’antichambre",
+        "Autel bas et drapé rouge",
+        "Cierges pâles",
+        "Court passage avec grille métallique au sol"
+      ],
+      "adaptations": [
+        "Vues obliques réunies en cadrage frontal large ; autel repositionné derrière le plateau.",
+        "Disposition exacte des colonnes, moulures, ouverture et jonctions reconstruite.",
+        "Détails de maçonnerie et éclairage plus précis que les vignettes natives.",
+        "Bord de la grille rapproché de l’angle inférieur gauche pour la parallaxe ; il n’est pas un objet narratif supplémentaire.",
+        "Travis, HUD et filigrane supprimés ; save icons non reproduites."
+      ],
+      "unresolved": [
+        "Plateforme, région, build et réglages source non établis.",
+        "Vignettes 320×180 très sombres ; aucune promesse de silhouette géométrique exacte.",
+        "Drapé, chandeliers, flammes fixes et proportions restent des interprétations visuelles.",
+        "Le plan alpha dépasse légèrement la cible 23 % × 7 % : domaine alpha > 8 de 406 × 68 px, soit 24,3 % × 7,2 %.",
+        "Pixels d’alpha 1 épars en dehors du motif ; aucun aplat opaque, centre à alpha maximum 1/255."
+      ],
+      "historicalProposalDisposition": "Les 4 lignes de recherche sont conservées. Les 3 prototypes procéduraux de lot11 sont maintenant masqués et restent en attente ; l’ancien Flauros abstrait ne réapparaît pas par injection de piste."
+    },
+    {
+      "stageId": "lighthouse_sm",
+      "source": "shattered",
+      "sceneId": "shm-clinic-entrance-before-therapy",
+      "sceneLabel": "Lighthouse Counseling Center — entrée extérieure avant la thérapie",
+      "evidenceIds": [
+        "V32_SHM_CLINIC_CHAPTER",
+        "V32_SHM_CLINIC_ENTRANCE_PLAYTHROUGH"
+      ],
+      "phase": "Après l’échange avec Cybil au rivage et avant la porte de la clinique, vues à 2:37:40 et 2:37:50.",
+      "engineIntegration": {
+        "worldState": "fixed-normal",
+        "meaning": "État technique stable sans transition ; aucune affirmation sur la réalité narrative de la scène.",
+        "shiftEnabled": false,
+        "ceiling": false,
+        "allowedHazards": [],
+        "allowedEvents": [],
+        "automaticFinishers": false,
+        "terrainRules": false,
+        "referenceTracks": []
+      },
+      "layers": [
+        {
+          "id": "bg-clinic-entrance",
+          "file": "lighthouse_sm.bg-clinic-entrance.png",
+          "role": "background",
+          "transparentBackground": false,
+          "prompt": "lighthouse_sm.background.prompt.txt",
+          "inputReferences": [
+            "references/shm-clinic-entrance-9460.png",
+            "references/shm-clinic-door-9470.png"
+          ],
+          "originalToolFile": "exec-d63593b3-5cfb-4313-8bd5-9110e20c2589.png"
+        },
+        {
+          "id": "near-snow-edge",
+          "file": "lighthouse_sm.near-snow-edge.png",
+          "role": "foreground",
+          "transparentBackground": true,
+          "prompt": "lighthouse_sm.foreground.prompt.txt",
+          "inputReferences": [
+            "references/shm-clinic-entrance-9460.png"
+          ],
+          "additionalLayoutReference": "lighthouse_sm.bg-clinic-entrance.png",
+          "originalToolFile": "exec-51519558-558e-4a7e-bc6b-b83f06aae87d.png"
+        }
+      ],
+      "observedInvariants": [
+        "Bâtiment bas à bardage horizontal foncé",
+        "Piliers maçonnés clairs et auvent de porche",
+        "Porte de bois à petits carreaux supérieurs",
+        "Plaque Lighthouse Counseling Center à droite de la porte",
+        "Neige au sol et faible lumière chaude du porche"
+      ],
+      "adaptations": [
+        "Harry et son cône de lampe supprimés ; façade élargie et rendue frontale.",
+        "Détail du fronton, de la maçonnerie, des arbres latéraux et des microtextures reconstruit.",
+        "Seul LIGHTHOUSE est lisible sur la plaque générée ; les petites mentions ne sont pas transcrites.",
+        "Bord de neige isolé en bas à droite pour une profondeur de caméra discrète ; pas un nouvel objet canonique.",
+        "Flocons présents dans le fond restent fixes ; aucune météo animée ajoutée."
+      ],
+      "unresolved": [
+        "PSP US déclaré par le vidéaste ; build, matériel/émulation, profil et réglages non établis indépendamment.",
+        "Vignettes 318×180 ; géométrie, arbres de bord, finitions et inscriptions inférieures non certifiés 1:1.",
+        "Le plan alpha dépasse la cible 22 % × 7 % : domaine alpha > 8 de 519 × 90 px, soit 31,0 % × 9,6 %. Il reste en marge inférieure droite.",
+        "Pixels d’alpha 1 épars en dehors du motif ; aucun aplat opaque, centre à alpha maximum 1/255."
+      ],
+      "historicalProposalDisposition": "Les 4 propositions composites de faisceau, eau, raccord thérapeutique et transition restent conservées en attente. Elles sont explicitement hors du plan choisi ; aucun mouvement ajouté."
+    }
+  ]
+}

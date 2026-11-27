@@ -6184,5 +6184,141 @@ export const STAGE_BITMAPS = {
       "Fond et livre fermé de premier plan indépendants, sans texte lisible, poupée, fosse, flamme, adversaire ou pouvoir inventé. Caméra frontale et largeur de sol adaptées au versus ; build source non établi.",
       "geometry.ceiling=false : résoudre la phase du stage auparavant bloqué et peindre un plafond ne crée aucun appui de Dénouement. Règles de terrain neutres ; aucun effet ou événement offensif activé."
     ]
+  },
+  "antique_shop": {
+    "stageId": "antique_shop",
+    "source": "origins",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "green-lion-inner-passage",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT02",
+      "V32_ORIGINS_CULT_GUIDE_P121",
+      "V32_ORIGINS_CULT_ANTEROOM_PLAYTHROUGH"
+    ],
+    "layers": [
+      {
+        "id": "bg-cult-anteroom",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+            "sha256": "8de0129c58efd742d49b367dab08f2db5b0c62852718a12c11aabf49e084a5c2",
+            "bytes": 2139912,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-grate-edge",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png",
+            "sha256": "c0447d084d35681b243721b68aa5de40283e7956bbc158779eced796558b0401",
+            "bytes": 100915,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Antichambre du culte après le tunnel de Green Lion, avant la cinématique finale. Guide officiel p. 121 et vues de jeu à 3:13:40, 3:14:20 et 3:14:30 ; autel vide, drapé rouge et passage grillagé.",
+      "Fond et bord de grille de premier plan sont deux PNG fixes. Placement et largeur de la salle, éclairage précis et détail des matériaux reconstruits pour le versus ; aucune certification 1:1.",
+      "Les trois anciens prototypes de poussière, Flauros et lueur restent documentés mais sont masqués par le fond fixe ; aucun Flauros flottant, corps rituel, transition, danger ou plafond utilisable."
+    ]
+  },
+  "lighthouse_sm": {
+    "stageId": "lighthouse_sm",
+    "source": "shattered",
+    "status": "integrated-candidate",
+    "fidelity": "unverified",
+    "origin": "conversation-image-generation",
+    "mode": "replace",
+    "scene": "shm-clinic-entrance-before-therapy",
+    "geometry": {
+      "ceiling": false
+    },
+    "referenceIds": [
+      "EXT09",
+      "V32_SHM_CLINIC_CHAPTER",
+      "V32_SHM_CLINIC_ENTRANCE_PLAYTHROUGH"
+    ],
+    "layers": [
+      {
+        "id": "bg-clinic-entrance",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0,
+        "frames": [
+          {
+            "path": "assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+            "sha256": "4ce31feecce0f664af45985716bea7073333a2fe410f7693a6b5594d4389ea97",
+            "bytes": 2644208,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      },
+      {
+        "id": "near-snow-edge",
+        "rect": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "fit": "cover",
+        "ticksPerFrame": 1,
+        "loop": false,
+        "parallaxX": 0.006,
+        "frames": [
+          {
+            "path": "assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png",
+            "sha256": "457e03b49a441bc65ee28aff5a7c038be4fc8a1f6ff74bded5398bc81e7cdefe",
+            "bytes": 109945,
+            "width": 1672,
+            "height": 941
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Entrée extérieure du Lighthouse Counseling Center après la conversation du rivage et avant de franchir la porte : vues natives à 2:37:40 et 2:37:50. Le plan choisi exclut la tour, le lac et la salle de thérapie.",
+      "Fond opaque et bord de neige au premier plan sont deux PNG fixes. Dimensions, frontalité, usure et végétation de bord reconstruits ; plaque limitée au mot LIGHTHOUSE, détails inférieurs illisibles.",
+      "Neige statique et parallaxe de caméra discrète ; aucune animation météo ou prise de glace, faisceau, eau, scène de révélation, danger ou appui de plafond. Anciennes propositions composites conservées en attente."
+    ]
   }
 };

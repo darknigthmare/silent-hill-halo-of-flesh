@@ -1,7 +1,7 @@
 const VERSION = '0.9.6';
 const CACHE_REVISION = 'wave30-story-selection-20261125';
 // BITMAP_REVISION_BEGIN
-const BITMAP_REVISION = '9069da745968091fb10905e4163481e826fd6c23c6acea059eabd80a310eafec';
+const BITMAP_REVISION = 'd3d90b695927db56f4338a7dfee91a3d39b3e39554ee77964565b79158ec98e4';
 // BITMAP_REVISION_END
 const CACHE_PREFIX = 'halo-of-flesh';
 const STATIC_CACHE = `${CACHE_PREFIX}-static-v${VERSION}-${CACHE_REVISION}-${BITMAP_REVISION}`;
@@ -222,6 +222,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh1_floatstinger_016.80344808d0d5.png",
   "/assets/sprites/sh1_grey_child_005.04637d660714.png",
   "/assets/sprites/sh1_grey_child_005.29acacc0dd42.png",
+  "/assets/sprites/sh1_groaner_003.125ee32270cc.png",
+  "/assets/sprites/sh1_groaner_003.7da5f10a9307.png",
   "/assets/sprites/sh1_groaner_003.82984139e47a.png",
   "/assets/sprites/sh1_groaner_003.9ab82a90231f.png",
   "/assets/sprites/sh1_groaner_003.b1df281db9ab.png",
@@ -393,6 +395,8 @@ const ESSENTIAL_SHELL = [
   "/assets/sprites/sh4_sniffer_dog_female_054.56414946ecc4.png",
   "/assets/sprites/sh4_sniffer_dog_female_054.efa3851269cf.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.121baef62376.png",
+  "/assets/sprites/sh4_sniffer_dog_male_053.257835c80735.png",
+  "/assets/sprites/sh4_sniffer_dog_male_053.4a693eb7331d.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.4af1facfd8a4.png",
   "/assets/sprites/sh4_sniffer_dog_male_053.a0410887b7d3.png",
   "/assets/sprites/sh4_steve_garland_victim_4.1baeea09fe90.png",
@@ -473,6 +477,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/alchemilla.waiting-room.2ef1639ee034.png",
   "/assets/stages/alchemilla_origins.elevator-landing.d7a48880728c.png",
   "/assets/stages/alchemilla_origins.near-wall-edges.88e0d0800459.png",
+  "/assets/stages/antique_shop.vague32.bg-cult-anteroom.8de0129c58ef.png",
+  "/assets/stages/antique_shop.vague32.near-grate-edge.c0447d084d35.png",
   "/assets/stages/apartment_roof.bg-daisy-rooftop.748257c48512.png",
   "/assets/stages/apartment_roof.near-edges.d12d3658f0a2.png",
   "/assets/stages/apartment_world.office.6001d447c296.png",
@@ -575,6 +581,8 @@ const ESSENTIAL_SHELL = [
   "/assets/stages/lakeside_sh3.happy-carousel-before-transition.bdd844f50ec7.png",
   "/assets/stages/lakeside_sh3.near-canopy-poles.4249d9b87185.png",
   "/assets/stages/lakeview.lobby.7bc2120c786c.png",
+  "/assets/stages/lighthouse_sm.vague32.bg-clinic-entrance.4ce31feecce0.png",
+  "/assets/stages/lighthouse_sm.vague32.near-snow-edge.457e03b49a44.png",
   "/assets/stages/looping_hall.hallway.b48a0819aed4.png",
   "/assets/stages/looping_hall.radio-cabinet.b16069870543.png",
   "/assets/stages/midwich.courtyard.c9728428d63d.png",
@@ -710,6 +718,7 @@ const ESSENTIAL_SHELL = [
   '/src/stage-bitmap-manifest.js',
   '/src/projectile-bitmaps.js',
   '/src/projectile-bitmap-manifest.js',
+  '/src/projectile-origin.js',
   '/src/stage-bitmap-compositions.js',
   '/src/sprite-animation.js',
   '/src/sprite-poses.js',
@@ -729,6 +738,10 @@ const ESSENTIAL_SHELL = [
   // STORY_ART_ASSETS_BEGIN
   "/assets/stories/sh1_air_screamer_001.ending.2aa5dbd07554.png",
   "/assets/stories/sh1_air_screamer_001.intro.7ed088410461.png",
+  "/assets/stories/sh1_groaner_003.ending.f76866b461ac.png",
+  "/assets/stories/sh1_groaner_003.intro.3cf2e2a42b4d.png",
+  "/assets/stories/sh2_lying_figure_020.ending.e00f51f74769.png",
+  "/assets/stories/sh2_lying_figure_020.intro.b80a3fd0a6d3.png",
   // STORY_ART_ASSETS_END
   '/assets/chronicles/room_21.rival.55558b472462.webp',
   '/assets/chronicles/loop_204863.intro.d11a1e1dfecc.webp',

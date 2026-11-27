@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-27",
+  "scope": "Deux scènes déterminées et quatre PNG distincts ; images sources inspectées avant génération.",
+  "sources": [
+    {
+      "id": "V32_ORIGINS_CULT_GUIDE_P121",
+      "title": "Silent Hill: Origins — Official Strategy Guide, page imprimée 121",
+      "url": "https://www.silenthillmemories.net/publications/guides/silent_hill_origins_official_strategy_guide.pdf",
+      "type": "official-guide-rehosted",
+      "game": "Silent Hill: Origins",
+      "source": "origins",
+      "printedPage": 121,
+      "pdfPage": 122,
+      "section": "Cult Anteroom",
+      "inspected": true,
+      "establishes": [
+        "Le long tunnel mène à l’antichambre du culte.",
+        "L’autel et le chemin rouge appartiennent à cette antichambre avant la salle de cinématique.",
+        "La confrontation et le rêve de boss se situent ensuite ; ils ne sont pas le plan retenu."
+      ],
+      "downloadedSha256": "f38b8418256264266e8c4ba78b22bc4aaa76084bc9a5eecc9f89325e679dbd80",
+      "completePdfIncludedInRepository": false,
+      "limitation": "Guide utilisé pour le lieu et l’ordre narratif ; aucune mesure géométrique ni homologation 1:1."
+    },
+    {
+      "id": "V32_ORIGINS_CULT_ANTEROOM_PLAYTHROUGH",
+      "title": "Silent Hill: Origins | FULL GAME | Complete Playthrough No Commentary [4K/60fps]",
+      "url": "https://www.youtube.com/watch?v=pB2hL5hwNvQ",
+      "type": "native-gameplay-public-storyboard",
+      "uploader": "Silent Hillside",
+      "game": "Silent Hill: Origins",
+      "source": "origins",
+      "platformBuildRegionSettings": "Plateforme, région et build non établis. La mention 4K/60fps vient du titre et ne désigne pas une édition officielle ni la définition des vignettes inspectées.",
+      "storyboard": {
+        "localFile": "references/origins-M129.jpg",
+        "sha256": "30201bf7ee102561b3bb5ee6cd54b957e7867efafad313c60ab86f78efe8dbec",
+        "url": "https://i.ytimg.com/sb/pB2hL5hwNvQ/storyboard3_L3/M129.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKSekNUG&sigh=rs$AOn4CLC4aEku3rLty30ocFPJoPiQ4hHpMw",
+        "grid": [
+          3,
+          3
+        ],
+        "cellSize": [
+          320,
+          180
+        ],
+        "intervalSeconds": 10,
+        "extraction": "Recadrage exact des cellules sans redimensionnement, exposition ou retouche."
+      },
+      "frames": [
+        {
+          "file": "references/origins-anteroom-11620.png",
+          "sha256": "b99744274d6927494bd0b8e973ff24b5561095e83f1434beb0cab5894595e9bb",
+          "seconds": 11620,
+          "timecode": "03:13:40",
+          "cropBox": [
+            320,
+            0,
+            640,
+            180
+          ],
+          "observed": "Volume sombre, maçonnerie, colonnes et renfoncements.",
+          "usedForGeneration": true,
+          "inspected": true
+        },
+        {
+          "file": "references/origins-altar-11660.png",
+          "sha256": "953667fbe160f7cf16830e4be08e7d846197dac45b1113779353b6857b27901a",
+          "seconds": 11660,
+          "timecode": "03:14:20",
+          "cropBox": [
+            640,
+            180,
+            960,
+            360
+          ],
+          "observed": "Autel bas, drapé rouge, cierges pâles, grille métallique et sol adjacent.",
+          "usedForGeneration": true,
+          "inspected": true
+        },
+        {
+          "file": "references/origins-red-path-11670.png",
+          "sha256": "64b0e2987a671351ada0c70c8b44613a0c2959ecb8655be54140864cc90d28d5",
+          "seconds": 11670,
+          "timecode": "03:14:30",
+          "cropBox": [
+            0,
+            360,
+            320,
+            540
+          ],
+          "observed": "Passage étroit grillagé, parois sombres et éléments rouges, avant la cinématique.",
+          "usedForGeneration": true,
+          "inspected": true
+        }
+      ],
+      "excluded": "La cellule suivante à 3:14:50 et la planche M130 montrent la cinématique : elles n’alimentent pas les images.",
+      "limitation": "Vignettes sombres 320×180 ; microtextures et géométrie non résolues. La nouvelle frontalité reste une adaptation."
+    },
+    {
+      "id": "V32_SHM_CLINIC_CHAPTER",
+      "title": "Shattered Memories — The Orpheus Boat and Lighthouse walkthrough",
+      "url": "https://www.silenthillmemories.net/sh_shattered_memories/walkthrough_14_the_orpheus_boat_and_lighthouse_en.htm",
+      "type": "secondary-walkthrough",
+      "game": "Silent Hill: Shattered Memories",
+      "source": "shattered",
+      "inspected": true,
+      "establishes": [
+        "Après la traversée et l’échange avec Cybil au rivage, Harry entre dans le bâtiment Lighthouse.",
+        "Le bâtiment est une clinique de consultation ; le hall puis la scène thérapeutique sont des plans suivants."
+      ],
+      "limitation": "Texte de parcours complémentaire aux vues natives ; il ne suffit pas à établir une géométrie 1:1."
+    },
+    {
+      "id": "V32_SHM_CLINIC_ENTRANCE_PLAYTHROUGH",
+      "title": "Longplay of Silent Hill: Shattered Memories",
+      "url": "https://www.youtube.com/watch?v=2Ekz2eUCIbU",
+      "type": "native-gameplay-public-storyboard",
+      "uploader": "LongplayArchive",
+      "playerCredit": "Spazbo4",
+      "game": "Silent Hill: Shattered Memories",
+      "source": "shattered",
+      "declaredPlatform": "PlayStation Portable, version US, selon la description du vidéaste",
+      "platformBuildRegionSettings": "Plateforme/région déclarées par le vidéaste ; build, matériel/émulation, profil psychologique et réglages non établis indépendamment.",
+      "storyboard": {
+        "localFile": "references/shm-M105.jpg",
+        "sha256": "558b7f6608fa7810019477b9a242f84787800f6d89a3c37bc0c8b130b25610ff",
+        "url": "https://i.ytimg.com/sb/2Ekz2eUCIbU/storyboard3_L3/M105.jpg?sqp=-oaymwGhAUg48quKqQOYAYgBAZUBAAAEQpgBMqABPKgBBLIBQBANDBAVHyYtDg4PEhcrLCkPDhAVHyoyKQ8RFBgmPTgtERQeKjFLRzYVHCkuOUdNPyUuNz1HUlFFM0BCQ0xERkO6AUARERUjRENDQxETFi9DQ0NDFRYpQ0NDQ0MjL0NDQ0NDQ0RDQ0NDQ0JCQ0NDQ0NCQkJDQ0NDQkJCQkNDQ0JCQkJCovOX_wMGCKiTi80G&sigh=rs$AOn4CLArq4c__JdO3EbZrBgrSqmGrBZ1Uw",
+        "grid": [
+          3,
+          3
+        ],
+        "cellSize": [
+          318,
+          180
+        ],
+        "intervalSeconds": 10,
+        "extraction": "Recadrage exact des cellules sans redimensionnement, exposition ou retouche."
+      },
+      "frames": [
+        {
+          "file": "references/shm-clinic-entrance-9460.png",
+          "sha256": "3c16180011806c55e43d463d50774f7344ba23b90f358f36e2915c574e689ee7",
+          "seconds": 9460,
+          "timecode": "02:37:40",
+          "cropBox": [
+            318,
+            0,
+            636,
+            180
+          ],
+          "observed": "Bâtiment bas, auvent à fronton, piliers maçonnés, mur à bardage horizontal, sol enneigé.",
+          "usedForGeneration": true,
+          "inspected": true
+        },
+        {
+          "file": "references/shm-clinic-door-9470.png",
+          "sha256": "5a8ab2f5aae3b15c3b8de8e12eb9ada25f39654aa304cc1d8badf92ba0fbc43b",
+          "seconds": 9470,
+          "timecode": "02:37:50",
+          "cropBox": [
+            636,
+            0,
+            954,
+            180
+          ],
+          "observed": "Porte de bois à petits carreaux supérieurs, éclairage de porche et plaque Lighthouse Counseling Center à droite.",
+          "usedForGeneration": true,
+          "inspected": true
+        },
+        {
+          "file": "references/shm-clinic-lobby-9490.png",
+          "sha256": "13c50f1f8a2f0a21ca9284ce9569075488e344ecb99c4b76afa674cac308ba56",
+          "seconds": 9490,
+          "timecode": "02:38:10",
+          "cropBox": [
+            318,
+            180,
+            636,
+            360
+          ],
+          "observed": "Hall intérieur distinct, inspecté uniquement pour exclure ce plan de l’extérieur.",
+          "usedForGeneration": false,
+          "inspected": true
+        }
+      ],
+      "excluded": "Rivage et lac des planches M103/M104 ; hall à 2:38:10 ; séance finale après la porte. Aucun phare-tour fusionné avec la clinique.",
+      "limitation": "Vignettes 318×180 ; petites inscriptions et détails non résolus. Cadrage frontal et largeur versus adaptés."
+    }
+  ]
+}

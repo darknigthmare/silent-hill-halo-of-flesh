@@ -2,6 +2,7 @@ import test,{afterEach} from 'node:test';
 import assert from 'node:assert/strict';
 import {ROSTER,STAGES,createCombatProfile} from '../src/data.js';
 import {FightEngine} from '../src/fight.js';
+import {bodyBox} from '../src/combat-geometry.js';
 import {isFirearmProjectile,isVisibleFirearmProjectile,firearmExposure} from '../src/combat-reference-policy.js';
 
 const fighter=id=>ROSTER.find(f=>f.id===id),engines=new Set();
@@ -67,10 +68,12 @@ test('Eddie firearm classification covers every authored revolver slot and retai
   assert.equal(profile.moveset.ammoProfile,null,'no unverified six-shot reload is added to original SH2');
 });
 
-test('an actual Eddie bullet is deflected by Needler without chip, damage credit or free retaliation',()=>{
+test('an actual Eddie shot from cover is deflected by Needler without chip, damage credit or free retaliation',()=>{
   const engine=engineFor(),[attacker,target]=engine.actors;
   const before={health:target.health,guard:target.guard,meter:target.meter,stats:{...target.stats}};
-  assert.equal(engine.beginAttack(attacker,'neutralSpecial'),true);ticks(engine,70);
+  // The wave32 standing muzzle is above this low body. Exercise the existing
+  // cover shot that physically intersects it, without enlarging either hitbox.
+  assert.equal(engine.beginAttack(attacker,'downSpecial'),true);ticks(engine,70);
   assert.equal(engine.projectiles.length,0);assert.ok(engine.texts.some(text=>text.text==='TIR DÉVIÉ'));
   assert.equal(target.health,before.health);assert.equal(target.guard,before.guard);assert.equal(target.meter,before.meter);
   assert.deepEqual(target.stats,before.stats);assert.equal(attacker.stats.damageDealt,0);assert.equal(target.attack,null);
@@ -86,10 +89,20 @@ test('Needler also parries a real frontal pipe swing with no perfect guard or me
 
 test('the existing bullet reaches Needler from behind after its shooter crosses the target',()=>{
   const engine=engineFor(),[attacker,target]=engine.actors,before=target.health;
-  assert.equal(engine.beginAttack(attacker,'neutralSpecial'),true);
+  assert.equal(engine.beginAttack(attacker,'downSpecial'),true);
   ticks(engine,attacker.attack.move.startup);assert.equal(engine.projectiles.length,1);
   attacker.x=1100;ticks(engine,70);
   assert.equal(target.facing,1);assert.ok(target.health<before);assert.ok(attacker.stats.damageDealt>0);
+});
+
+test('the reviewed standing Eddie muzzle passes above Needler without inventing a deflection or hit',()=>{
+  const engine=engineFor(),[attacker,target]=engine.actors,before={health:target.health,guard:target.guard};
+  assert.equal(engine.beginAttack(attacker,'neutralSpecial'),true);ticks(engine,attacker.attack.move.startup);
+  assert.equal(engine.projectiles.length,1);const shot=engine.projectiles[0];
+  assert.equal(shot.launchOrigin?.fighterId,EDDIE);assert.ok(shot.y+shot.radius<bodyBox(target).y);
+  ticks(engine,80);assert.equal(shot.hit,false);assert.equal(engine.projectiles.length,0);
+  assert.equal(target.health,before.health);assert.equal(target.guard,before.guard);
+  assert.equal(attacker.stats.damageDealt,0);assert.equal(engine.texts.some(text=>text.text==='TIR DÉVIÉ'),false);
 });
 
 test('silenced bullets still meet Needler physical blades while Missionary retains its visual exception',()=>{

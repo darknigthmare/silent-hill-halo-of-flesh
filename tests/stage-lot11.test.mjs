@@ -31,12 +31,12 @@ function engineFor(s){
 
 test('lot11 accounts for thirty existing rows: twenty-one supported revisions and nine visible blockers, without reusing a prior delivery',()=>{
  assert.equal(ledger.batch,'lot11');assert.equal(ledger.baseCommit,'7b9980d102dc2db385445bc20e4172c1113dda2b');assert.equal(ledger.requestedItems,30);assert.equal(ledger.items.length,30);assert.equal(candidates.length,21);assert.equal(blocked.length,9);assert.equal(new Set(ledger.items.map(i=>i.rowId)).size,30);
- assert.equal(activeCandidates.length,20);assert.deepEqual(maskedCandidates.map(i=>i.rowId),['cedar_grove:reference:2'],'one historical prototype is now masked by the fixed wave31 bitmap');
+ assert.equal(activeCandidates.length,17);assert.deepEqual(maskedCandidates.map(i=>i.rowId).sort(),['antique_shop:reference:1','antique_shop:reference:2','antique_shop:reference:3','cedar_grove:reference:2'],'four historical prototypes are masked by the fixed wave31/wave32 bitmaps');
  const previous=new Set(['lot9-stages','lot10-stages'].flatMap(name=>read(name).items.map(i=>i.rowId)));
  for(const i of ledger.items){assert.equal(i.collection,'stageAnimations');assert.equal(i.rowId.split(':')[0],i.entityId);assert.ok(!previous.has(i.rowId));assert.ok(i.originalName&&i.originalProposal&&i.sourceScope&&i.limits&&i.evidence.length);assert.ok(STAGE_REFERENCES[i.entityId].animations[Number(i.rowId.split(':').at(-1))-1]);}
 });
 
-test('all historical revisions remain documented while the fixed Cedar bitmap leaves its old prototype pending',()=>{
+test('all historical revisions remain documented while fixed Cedar and Green Lion bitmaps leave their old prototypes pending',()=>{
  for(const i of candidates){
   const s=stage(i.entityId),t=track(i),proposal=STAGE_REFERENCES[s.id].animations[Number(i.rowId.split(':').at(-1))-1];
   assert.equal(proposal.description,i.revisedProposal);assert.ok(i.revisedProposal!==i.originalProposal);assert.ok(i.revisionReason&&i.artifacts.length);
@@ -50,7 +50,7 @@ test('all historical revisions remain documented while the fixed Cedar bitmap le
  for(const i of blocked){assert.ok(i.reason);assert.ok(!stage(i.entityId).referenceTracks.some(t=>t.id===i.rowId),i.rowId);assert.deepEqual(i.artifacts,[]);}
 });
 
-test('the twenty current props reject another source, owner, proposal or selected sub-room',()=>{
+test('the seventeen current props reject another source, owner, proposal or selected sub-room',()=>{
  for(const i of activeCandidates){const s=stage(i.entityId),t=track(i);assert.equal(stageReferenceTrackAllowed(s,t),true);
   for(const forged of[{...s,id:s.id+'_other_room'},{...s,source:'borrowed-edition'},{...s,reference:{...s.reference,blocked:true}},{...s,referencePolicy:{...s.referencePolicy,sceneId:'different-sub-room'}}]){
    assert.equal(stageReferenceTrackAllowed(forged,t),false,i.rowId);assert.deepEqual(draw({...forged,referenceTracks:[t]},1100).ids,[]);
@@ -60,7 +60,7 @@ test('the twenty current props reject another source, owner, proposal or selecte
 });
 
 test('each current Canvas element changes its own visual trace and freezes with both motion controls',()=>{
- const distinct=new Set();for(const i of activeCandidates){const s={...stage(i.entityId),referenceTracks:[track(i)]},a=draw(s,1100),b=draw(s,5700);assert.deepEqual(a.ids,[i.rowId]);assert.notDeepEqual(a.calls,b.calls,i.rowId);assert.deepEqual(draw(s,1100,{reducedMotion:true}).calls,draw(s,5700,{reducedMotion:true}).calls,i.rowId);assert.deepEqual(draw(s,1100,{animationsEnabled:false}).calls,draw(s,5700,{animationsEnabled:false}).calls,i.rowId);distinct.add(JSON.stringify(a.calls));}assert.equal(distinct.size,20);
+ const distinct=new Set();for(const i of activeCandidates){const s={...stage(i.entityId),referenceTracks:[track(i)]},a=draw(s,1100),b=draw(s,5700);assert.deepEqual(a.ids,[i.rowId]);assert.notDeepEqual(a.calls,b.calls,i.rowId);assert.deepEqual(draw(s,1100,{reducedMotion:true}).calls,draw(s,5700,{reducedMotion:true}).calls,i.rowId);assert.deepEqual(draw(s,1100,{animationsEnabled:false}).calls,draw(s,5700,{animationsEnabled:false}).calls,i.rowId);distinct.add(JSON.stringify(a.calls));}assert.equal(distinct.size,17);
 });
 
 test('eight sparse room sets use separate geometry and keep their paint state balanced',()=>{
@@ -104,6 +104,6 @@ test('lot11 preserves historical artifacts separately from the currently enabled
   assert.equal(bitmap.source,room.source);
   assert.equal(bitmap.scene,room.referencePolicy.sceneId);
  }
- assert.equal(STAGES.reduce((n,s)=>n+s.referenceTracks.length,0),162);assert.equal(STAGES.reduce((n,s)=>n+s.animations.length,0),64);assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
+ assert.equal(STAGES.reduce((n,s)=>n+s.referenceTracks.length,0),159);assert.equal(STAGES.reduce((n,s)=>n+s.animations.length,0),64);assert.equal(STAGES.reduce((n,s)=>n+s.director.events.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.interactions.length,0),26);assert.equal(STAGES.reduce((n,s)=>n+s.director.hazardDeck.length,0),8);
  const waiting=stage('alchemilla');for(const key of['ward','curtains','monitor','beds'])assert.ok(![...waiting.props,...waiting.layers].includes(key));assert.match(stage('artaud_theater').referencePolicy.normalPhaseLabel,/SCÈNE NORMALE/);assert.equal(stage('hinako_home').referencePolicy.sceneId,undefined);
 });

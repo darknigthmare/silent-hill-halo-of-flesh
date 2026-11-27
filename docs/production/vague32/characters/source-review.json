@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "wave": 32,
+  "asOf": "2026-11-27",
+  "baselineCommit": "d4269ad8239a99cad53d44bc77b569ed7a0d41a3",
+  "status": "four-original-PNGs-imported; eight-native-captures-visually-reviewed",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "calls": 4,
+    "refusals": 0,
+    "edits": 0,
+    "transparentBackground": true,
+    "outputHandling": "Original PNG bytes, with no crop, scaling, alpha cleanup, recolor or recompression."
+  },
+  "counts": {
+    "newProfiles": 0,
+    "newCombatBases": 0,
+    "newPortraits": 0,
+    "newStaticPoses": 4,
+    "newAnimatedClips": 0,
+    "newCertifiedOneToOne": 0
+  },
+  "preservation": {
+    "report": "docs/production/vague32/characters/registry-preservation.json",
+    "historicalOwnersUntouched": 202,
+    "allHistoricalFramesClipsAndPortraitsPreserved": true
+  },
+  "references": "docs/production/vague32/characters/references/source-images.json",
+  "sourceImageInspection": {
+    "groaner-original-sh1.jpg": "Original SH1 model inspected; lean four-legged hairless dog with long muzzle, two short ears, pale eye, mottled hide and thin tail. Original model used in both generated poses.",
+    "sniffer-male-model.jpg": "Original SH4 male inspected; four canine legs, shoulder hump, yellow-green patchy fur, two ear structures and long red tongue. Female earless/red-purple variant not borrowed.",
+    "sh4-official-guide-page19.png": "Piggyback official guide page inspected for identity and movement context. It shows a Sniffer model and differentiates later female variants; no animation sequence or attack angles are measured."
+  },
+  "actionEvidence": [
+    {
+      "id": "sh1_groaner_003",
+      "poses": [
+        "neutralLight",
+        "neutralSpecial"
+      ],
+      "url": "https://www.silenthillmemories.net/sh1/enemies_en.htm",
+      "section": "Groaner / Attacks",
+      "kind": "independent-gameplay-guide-text",
+      "observedAction": "Repeated jumping/lunging bites.",
+      "sourcePoseFramesInspected": false,
+      "existingRuntimeMoves": [
+        {
+          "key": "neutralLight",
+          "name": "Morsure courte",
+          "fidelity": "behavior-composite"
+        },
+        {
+          "key": "neutralSpecial",
+          "name": "Groaner — bond mordu court",
+          "fidelity": "behavior-composite"
+        }
+      ],
+      "adaptation": "The short grounded snap and compact jump are authored static presentations for existing versus slots. The guide does not prove those exact poses or distinguish the project’s neutral/forward commands."
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "poses": [
+        "walk",
+        "neutralLight"
+      ],
+      "url": "https://www.silenthillmemories.net/sh4/enemies_en.htm",
+      "section": "Sniffer Dog / Attacks and Strategy",
+      "kind": "independent-gameplay-guide-text",
+      "observedAction": "Lunging approach and bite; repositioning and stepping back.",
+      "sourcePoseFramesInspected": false,
+      "existingRuntimeMoves": [
+        {
+          "key": "neutralLight",
+          "name": "Morsure du Sniffer — coup bref",
+          "fidelity": "behavior-composite"
+        }
+      ],
+      "adaptation": "One walking step and a compact preparation of the bite translate the existing locomotion and short-bite slot. No male grapple, tongue attack, complete gait cycle or source timing is claimed."
+    }
+  ],
+  "visualReview": [
+    {
+      "id": "sh1_groaner_003",
+      "pose": "neutralLight",
+      "frameIndex": 5,
+      "observed": "One full right-facing body, four paws on staggered supports, jaws open and neck extended. Thin tail, two ears and pale eye retained. The long pursuit pose remains separate.",
+      "acceptedAs": "static-versus-candidate",
+      "limits": [
+        "The head angle and bite compression are authored, not extracted from a source frame."
+      ]
+    },
+    {
+      "id": "sh1_groaner_003",
+      "pose": "neutralSpecial",
+      "frameIndex": 6,
+      "observed": "One compact right-facing jumping-bite pose. Both forelegs bent and lifted; two hind legs accounted for. Complete tail, muzzle and claws within the alpha envelope.",
+      "acceptedAs": "static-versus-candidate",
+      "limits": [
+        "A single anticipation/early-leap view. It does not prove a complete jump or its duration."
+      ]
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "pose": "walk",
+      "frameIndex": 2,
+      "observed": "One male with hunched shoulders, yellow-green coat, ears and complete red tongue. Four limbs, one forepaw advanced and lifted, the others staggered. No female features or extra paw.",
+      "acceptedAs": "static-versus-candidate",
+      "limits": [
+        "One walking key pose, not an animated walk cycle."
+      ]
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "pose": "neutralLight",
+      "frameIndex": 3,
+      "observed": "One low male body, jaw open toward the right, hind legs braced and forepaws advanced. Tongue hangs below the jaw and stays complete, without a tongue-projectile effect.",
+      "acceptedAs": "static-versus-candidate",
+      "limits": [
+        "Short-bite presentation is authored from documented biting behavior; no victim or hold shown."
+      ]
+    }
+  ],
+  "alphaReview": {
+    "method": "Unmodified generated alpha inspected with Pillow and the project’s existing importer.",
+    "significantAlphaThreshold": 32,
+    "allPassImporter": true,
+    "allHaveTransparentMargins": true,
+    "lowAlphaOutsideEnvelope": "Some near-transparent pixels below alpha 32 extend farther than the significant silhouette. No cleanup was applied. Native/background composition and gameplay review remain separate checks."
+  },
+  "runtimeReview": {
+    "owner": "qa32",
+    "status": "native-QA-passed-and-eight-captures-visually-reviewed",
+    "technicalReport": "docs/production/vague32/qa-native-characters/characters-report.json",
+    "checksPassed": 229,
+    "checksFailed": 0,
+    "capturesReviewed": 8,
+    "visualReview": "docs/production/vague32/characters/visual-review.json",
+    "browserTest": false,
+    "httpTest": false,
+    "note": "Input routing, natural recovery, exact static-image selection and native composition passed. This does not certify browser behavior or original animation fidelity."
+  },
+  "heldCandidates": {
+    "report": "docs/production/vague32/characters/held-source-review.json",
+    "incubusAndValtielRetried": false,
+    "robbieShotgun": "No generation/import: source model filenames identify Robbie_Rifle.obj while the catalog ID says Shotgun. Exact weapon identity remains unresolved."
+  },
+  "limits": [
+    "Zero newly completed bases or portraits: the remaining source/hold gates are preserved.",
+    "Zero animated clips or certified 1:1 assets.",
+    "Official/model images establish anatomy; walkthrough text establishes action families. No native action frame sequence or original timing was newly inspected.",
+    "Opposite-facing output uses the game’s existing mirror presentation, not an independently sourced opposite anatomy view."
+  ],
+  "calibrationReview": {
+    "id": "sh4_sniffer_dog_male_053",
+    "pose": "neutralLight",
+    "imageSize": [
+      1774,
+      887
+    ],
+    "nativeAnchorImageY": 834.0,
+    "measuredForepawClawAlpha32": [
+      1098,
+      838
+    ],
+    "measuredForepawClawAlpha200": [
+      1098,
+      837
+    ],
+    "measuredHindpawClawAlpha32": [
+      166,
+      829
+    ],
+    "visibleBottomAlpha32": 848,
+    "observation": "The lowest whole-image pixel belongs to the long tongue. Paw support, not tongue bottom, is the relevant ground reference. Existing new-frame anchor is approximately 4 source-image pixels above the furthest visible foreclaw, about 0.45 pixels at the inspected game scale.",
+    "sourceMeaning": "Coordinates are measured on the generated candidate, not an original-game animation frame.",
+    "nativeCaptureInspected": "docs/production/vague32/qa-native-characters/sh4_sniffer_dog_male_053-neutralLight-right-action-active.png",
+    "changeToPNGOrRegistry": false
+  }
+}

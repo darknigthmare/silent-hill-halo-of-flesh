@@ -1,0 +1,320 @@
+{
+  "schema": 1,
+  "wave": 32,
+  "method": "Every unordered roster pair, including mirror matches; exact combatSpriteFor(...).frames admission list deduplicated by path; decoded RGBA bytes = width * height * 4.",
+  "reproduce": "node docs/production/vague32/qa/measure-combat-sprite-budget.mjs",
+  "rosterProfiles": 230,
+  "combatArtProfiles": 194,
+  "unorderedPairsIncludingMirrors": 26565,
+  "previousBudgetBytes": 75497472,
+  "newBudgetBytes": 82837504,
+  "overPreviousBudget": [
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "origins_faceless_nurse"
+      ],
+      "decodedBytes": 81802000,
+      "uniqueFrames": 13
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh3_double_head_040"
+      ],
+      "decodedBytes": 75505296,
+      "uniqueFrames": 12
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh3_numb_body_small_037"
+      ],
+      "decodedBytes": 75499904,
+      "uniqueFrames": 12
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh3_closer_036"
+      ],
+      "decodedBytes": 75499520,
+      "uniqueFrames": 12
+    }
+  ],
+  "maximum": {
+    "owners": [
+      "sh1_groaner_003",
+      "origins_faceless_nurse"
+    ],
+    "decodedBytes": 81802000,
+    "uniqueFrames": 13
+  },
+  "minimumWholeMiBBudget": 79,
+  "headroomBytes": 1035504,
+  "allPairsAdmitted": true,
+  "topProfiles": [
+    {
+      "id": "sh1_groaner_003",
+      "source": "sh1",
+      "decodedBytes": 44046800,
+      "uniqueFrames": 7
+    },
+    {
+      "id": "origins_faceless_nurse",
+      "source": "origins",
+      "decodedBytes": 37755200,
+      "uniqueFrames": 6
+    },
+    {
+      "id": "sh3_double_head_040",
+      "source": "sh3",
+      "decodedBytes": 31458496,
+      "uniqueFrames": 5
+    },
+    {
+      "id": "sh3_numb_body_small_037",
+      "source": "sh3",
+      "decodedBytes": 31453104,
+      "uniqueFrames": 5
+    },
+    {
+      "id": "sh3_closer_036",
+      "source": "sh3",
+      "decodedBytes": 31452720,
+      "uniqueFrames": 5
+    },
+    {
+      "id": "arcade_scraper_arcade",
+      "source": "arcade",
+      "decodedBytes": 25168664,
+      "uniqueFrames": 4
+    },
+    {
+      "id": "sh4_sniffer_dog_male_053",
+      "source": "sh4",
+      "decodedBytes": 25167088,
+      "uniqueFrames": 4
+    },
+    {
+      "id": "sh1_air_screamer_001",
+      "source": "sh1",
+      "decodedBytes": 25164480,
+      "uniqueFrames": 4
+    },
+    {
+      "id": "sh1_wormhead_004",
+      "source": "sh1",
+      "decodedBytes": 25164344,
+      "uniqueFrames": 4
+    },
+    {
+      "id": "sh3_slurper_042",
+      "source": "sh3",
+      "decodedBytes": 25164344,
+      "uniqueFrames": 4
+    },
+    {
+      "id": "sh4_sniffer_dog_female_054",
+      "source": "sh4",
+      "decodedBytes": 25164344,
+      "uniqueFrames": 4
+    },
+    {
+      "id": "sh4_hummer_055",
+      "source": "sh4",
+      "decodedBytes": 25162072,
+      "uniqueFrames": 4
+    },
+    {
+      "id": "sh1_romper_010",
+      "source": "sh1",
+      "decodedBytes": 25161648,
+      "uniqueFrames": 4
+    },
+    {
+      "id": "sh1_split_head_014",
+      "source": "sh1",
+      "decodedBytes": 25160304,
+      "uniqueFrames": 4
+    },
+    {
+      "id": "homecoming_scarlet_spider_form_095",
+      "source": "homecoming",
+      "decodedBytes": 18882456,
+      "uniqueFrames": 3
+    }
+  ],
+  "topPairs": [
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "origins_faceless_nurse"
+      ],
+      "decodedBytes": 81802000,
+      "uniqueFrames": 13
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh3_double_head_040"
+      ],
+      "decodedBytes": 75505296,
+      "uniqueFrames": 12
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh3_numb_body_small_037"
+      ],
+      "decodedBytes": 75499904,
+      "uniqueFrames": 12
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh3_closer_036"
+      ],
+      "decodedBytes": 75499520,
+      "uniqueFrames": 12
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "arcade_scraper_arcade"
+      ],
+      "decodedBytes": 69215464,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh4_sniffer_dog_male_053"
+      ],
+      "decodedBytes": 69213888,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh3_double_head_040",
+        "origins_faceless_nurse"
+      ],
+      "decodedBytes": 69213696,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh1_air_screamer_001",
+        "sh1_groaner_003"
+      ],
+      "decodedBytes": 69211280,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh1_wormhead_004"
+      ],
+      "decodedBytes": 69211144,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh3_slurper_042"
+      ],
+      "decodedBytes": 69211144,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh4_sniffer_dog_female_054"
+      ],
+      "decodedBytes": 69211144,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh4_hummer_055"
+      ],
+      "decodedBytes": 69208872,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh1_romper_010"
+      ],
+      "decodedBytes": 69208448,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh3_numb_body_small_037",
+        "origins_faceless_nurse"
+      ],
+      "decodedBytes": 69208304,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh3_closer_036",
+        "origins_faceless_nurse"
+      ],
+      "decodedBytes": 69207920,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh1_split_head_014"
+      ],
+      "decodedBytes": 69207104,
+      "uniqueFrames": 11
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "homecoming_scarlet_spider_form_095"
+      ],
+      "decodedBytes": 62929256,
+      "uniqueFrames": 10
+    },
+    {
+      "owners": [
+        "origins_faceless_nurse",
+        "arcade_scraper_arcade"
+      ],
+      "decodedBytes": 62923864,
+      "uniqueFrames": 10
+    },
+    {
+      "owners": [
+        "sh4_sniffer_dog_male_053",
+        "origins_faceless_nurse"
+      ],
+      "decodedBytes": 62922288,
+      "uniqueFrames": 10
+    },
+    {
+      "owners": [
+        "sh1_groaner_003",
+        "sh3_memory_of_alessa_049"
+      ],
+      "decodedBytes": 62921168,
+      "uniqueFrames": 10
+    }
+  ],
+  "unchangedBudgets": {
+    "genericSpriteBytes": 67108864,
+    "stageBytes": 67108864,
+    "projectileBytes": 33554432
+  },
+  "limits": [
+    "Decoded RGBA cache accounting is not total process/browser/GPU memory.",
+    "This bound admits one duel; an in-progress retired scene may still require the existing retirement/transition logic.",
+    "No PNG bytes, frame dimensions or clip membership are removed or resized."
+  ]
+}

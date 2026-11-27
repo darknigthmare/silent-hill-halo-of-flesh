@@ -12419,24 +12419,24 @@
     },
     {
       "id": "antique_shop",
-      "name": "GREEN LION — PASSAGE VERS LE RITUEL",
+      "name": "GREEN LION — ANTICHAMBRE DU CULTE",
       "source": "origins",
       "lore": {
-        "premise": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire.",
-        "canonicalBasis": "EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026 ; EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028",
+        "premise": "Antichambre du culte après le long tunnel de Green Lion Antiques, avant la cinématique finale Origins. Le guide officiel imprimé p. 121 et les vues natives à 3:13:40, 3:14:20 et 3:14:30 montrent une salle sombre, un autel vide drapé de rouge et un court passage grillagé. Aucun stock de boutique SH1, Flauros flottant, corps rituel, cinématique ou arène du rêve de boss. Largeur, placement précis, éclairage et microtextures adaptés au versus ; géométrie non certifiée 1:1.",
+        "canonicalBasis": "EXT02 ; EXT_ORIGINS_THEATER_GUIDE_20261026 ; EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028 ; V32_ORIGINS_CULT_GUIDE_P121 ; V32_ORIGINS_CULT_ANTEROOM_PLAYTHROUGH",
         "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
         "id": "steel",
-        "name": "PLATEAU DU PASSAGE INTÉRIEUR",
+        "name": "SOL DE L’ANTICHAMBRE DU CULTE",
         "moveScale": 1,
         "jumpScale": 1,
         "dodgeScale": 1,
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+        "description": "Antichambre après le tunnel de Green Lion, avant la cinématique finale : autel vide, drapé rouge, cierges et court passage grillagé documentés par le guide officiel p. 121 et trois vues natives. Le Flauros abstrait et les anciens mouvements ne sont plus rendus. Caméra, largeur, placement précis et microtextures adaptés ; aucun corps rituel ou élément de la salle de cinématique. Physique neutre du versus ; géométrie non certifiée 1:1."
       },
       "shift": {
         "style": "mirror",
@@ -12462,19 +12462,23 @@
         "source": "origins",
         "identityMatched": true,
         "blocked": false,
-        "locationStatus": "lieu-documente-secondaire",
+        "locationStatus": "lieu-et-phase-documentes-guide-et-vues-natives",
         "catalogueName": "GREEN LION ANTIQUES",
-        "correctedName": "GREEN LION — PASSAGE VERS LE RITUEL",
-        "locationNote": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire.",
+        "correctedName": "GREEN LION — ANTICHAMBRE DU CULTE",
+        "locationNote": "Antichambre du culte après le long tunnel de Green Lion Antiques, avant la cinématique finale Origins. Le guide officiel imprimé p. 121 et les vues natives à 3:13:40, 3:14:20 et 3:14:30 montrent une salle sombre, un autel vide drapé de rouge et un court passage grillagé. Aucun stock de boutique SH1, Flauros flottant, corps rituel, cinématique ou arène du rêve de boss. Largeur, placement précis, éclairage et microtextures adaptés au versus ; géométrie non certifiée 1:1.",
         "referenceIds": [
           "EXT02",
           "EXT_ORIGINS_THEATER_GUIDE_20261026",
-          "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
+          "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028",
+          "V32_ORIGINS_CULT_GUIDE_P121",
+          "V32_ORIGINS_CULT_ANTEROOM_PLAYTHROUGH"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
           "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
-          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production.",
+          "Le bitmap fixe ne joue aucune des trois pistes historiques, conservées en attente et refusées si réinjectées.",
+          "Le plafond peint, le drapé et les cierges ne créent aucun danger, appui ou Dénouement."
         ],
         "proposals": [
           {
@@ -12487,7 +12491,10 @@
               "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
             ],
             "category": "ambient",
-            "timecode": null
+            "timecode": null,
+            "activeInSelectedScene": false,
+            "sceneScope": "historical-guide-only-passage-prototype",
+            "integrationNote": "Proposition conservée ; le remplacement bitmap fixe de vague32 masque les anciens prototypes de poussière, Flauros et lueur. Aucun mouvement source attesté."
           },
           {
             "name": "antique_shop_ambient_02",
@@ -12499,7 +12506,10 @@
               "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
             ],
             "category": "ambient",
-            "timecode": null
+            "timecode": null,
+            "activeInSelectedScene": false,
+            "sceneScope": "historical-guide-only-passage-prototype",
+            "integrationNote": "Proposition conservée ; le remplacement bitmap fixe de vague32 masque les anciens prototypes de poussière, Flauros et lueur. Aucun mouvement source attesté."
           },
           {
             "name": "antique_shop_ambient_03",
@@ -12511,7 +12521,10 @@
               "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
             ],
             "category": "ambient",
-            "timecode": null
+            "timecode": null,
+            "activeInSelectedScene": false,
+            "sceneScope": "historical-guide-only-passage-prototype",
+            "integrationNote": "Proposition conservée ; le remplacement bitmap fixe de vague32 masque les anciens prototypes de poussière, Flauros et lueur. Aucun mouvement source attesté."
           },
           {
             "name": "antique_shop_round_transition",
@@ -12521,7 +12534,10 @@
               "EXT02"
             ],
             "category": "round_transition",
-            "timecode": null
+            "timecode": null,
+            "activeInSelectedScene": false,
+            "sceneScope": "historical-guide-only-passage-prototype",
+            "integrationNote": "Proposition conservée ; le remplacement bitmap fixe de vague32 masque les anciens prototypes de poussière, Flauros et lueur. Aucun mouvement source attesté."
           }
         ]
       },
@@ -12533,14 +12549,35 @@
         "sceneId": "green-lion-inner-passage",
         "terrainRules": false,
         "terrainPresentation": {
-          "name": "PLATEAU DU PASSAGE INTÉRIEUR",
-          "description": "Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire. Physique neutre du versus ; caméra et géométrie non certifiées 1:1."
+          "name": "SOL DE L’ANTICHAMBRE DU CULTE",
+          "description": "Antichambre après le tunnel de Green Lion, avant la cinématique finale : autel vide, drapé rouge, cierges et court passage grillagé documentés par le guide officiel p. 121 et trois vues natives. Le Flauros abstrait et les anciens mouvements ne sont plus rendus. Caméra, largeur, placement précis et microtextures adaptés ; aucun corps rituel ou élément de la salle de cinématique. Physique neutre du versus ; géométrie non certifiée 1:1."
         },
-        "alteredPhaseLabel": "PASSAGE INTÉRIEUR · AVANT CONFRONTATION",
+        "alteredPhaseLabel": "ANTICHAMBRE · AVANT LA CINÉMATIQUE",
         "weather": "none",
         "interior": true,
         "baselineMotion": true,
         "suppression": [
+          {
+            "kind": "reference-track",
+            "id": "antique_shop:reference:1",
+            "key": "greenLionPassageDust",
+            "status": "historical-masked-by-bitmap",
+            "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+          },
+          {
+            "kind": "reference-track",
+            "id": "antique_shop:reference:2",
+            "key": "flaurosCoreShade",
+            "status": "historical-masked-by-bitmap",
+            "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+          },
+          {
+            "kind": "reference-track",
+            "id": "antique_shop:reference:3",
+            "key": "greenLionWallGlint",
+            "status": "historical-masked-by-bitmap",
+            "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+          },
           {
             "kind": "event",
             "id": "sirenCall",
@@ -12588,101 +12625,15 @@
           }
         ],
         "hazardFidelity": "Associations matérielles de versus ; dégâts, trajectoires et timings non attestés 1:1.",
-        "renderedProposalIds": [
+        "renderedProposalIds": [],
+        "pendingProposalIds": [
           "antique_shop:reference:1",
           "antique_shop:reference:2",
-          "antique_shop:reference:3"
-        ],
-        "pendingProposalIds": [
+          "antique_shop:reference:3",
           "antique_shop:reference:4"
         ]
       },
-      "referenceTracks": [
-        {
-          "id": "antique_shop:reference:1",
-          "key": "greenLionPassageDust",
-          "name": "Poussière au bord du passage intérieur",
-          "description": "Quelques particules restent au bord du trou menant au passage intérieur ; aucun meuble de la boutique SH1 ajouté.",
-          "proposalIndex": 0,
-          "source": "origins",
-          "evidence": [
-            "EXT02",
-            "EXT_ORIGINS_THEATER_GUIDE_20261026",
-            "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
-          ],
-          "layer": "background",
-          "anchor": {
-            "x": 0.25,
-            "y": 0.45
-          },
-          "trigger": "ambient",
-          "event": null,
-          "eventEnabled": null,
-          "implementation": "canvas-prototype",
-          "coverage": "partial-visual-prototype",
-          "implementedElement": "Poussière au bord du passage intérieur",
-          "fidelity": "adaptation-versus-proposee",
-          "captureStatus": "capture-a-relever",
-          "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
-        },
-        {
-          "id": "antique_shop:reference:2",
-          "key": "flaurosCoreShade",
-          "name": "Ombre du volume géométrique assemblé",
-          "description": "Une ombre douce accompagne une représentation abstraite du Flauros assemblé ; son emplacement est une composition versus à partir du motif du puzzle.",
-          "proposalIndex": 1,
-          "source": "origins",
-          "evidence": [
-            "EXT02",
-            "EXT_ORIGINS_THEATER_GUIDE_20261026",
-            "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
-          ],
-          "layer": "background",
-          "anchor": {
-            "x": 0.68,
-            "y": 0.48
-          },
-          "trigger": "ambient",
-          "event": null,
-          "eventEnabled": null,
-          "implementation": "canvas-prototype",
-          "coverage": "partial-visual-prototype",
-          "implementedElement": "Ombre du volume géométrique assemblé",
-          "fidelity": "adaptation-versus-proposee",
-          "captureStatus": "capture-a-relever",
-          "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
-        },
-        {
-          "id": "antique_shop:reference:3",
-          "key": "greenLionWallGlint",
-          "name": "Lueur contenue du passage final",
-          "description": "Une faible lueur de fond gagne le mur du passage, sans jouer un rituel ou révéler un corps ; éclairage original de versus.",
-          "proposalIndex": 2,
-          "source": "origins",
-          "evidence": [
-            "EXT02",
-            "EXT_ORIGINS_THEATER_GUIDE_20261026",
-            "EXT11_REF_ANTIQUE_SHOP_ROOM_2_20261028"
-          ],
-          "layer": "background",
-          "anchor": {
-            "x": 0.68,
-            "y": 0.35
-          },
-          "trigger": "ambient",
-          "event": null,
-          "eventEnabled": null,
-          "implementation": "canvas-prototype",
-          "coverage": "partial-visual-prototype",
-          "implementedElement": "Lueur contenue du passage final",
-          "fidelity": "adaptation-versus-proposee",
-          "captureStatus": "capture-a-relever",
-          "locationScope": "Passage après le trou de Green Lion Antiques, avant la confrontation finale Origins ; aucun stock de la boutique SH1 transporté ici.",
-          "limits": "Mouvement original de décor uniquement ; pas de collision, de son capturé, de personnage ou de certification 1:1. Le guide confirme le trou puis la confrontation, et illustre séparément le Flauros assemblé. Le passage, l’éclairage et la position scénique du volume géométrique restent des adaptations, pas une photographie du Flauros dans cette salle. Aucun personnage, corps rituel, symbole lisible ou grille d’inventaire."
-        }
-      ],
+      "referenceTracks": [],
       "motifPolicy": {
         "events": [],
         "hazards": [],
@@ -12695,6 +12646,27 @@
         ],
         "evidenceScope": "exact-production-reference / original-versus-prototypes",
         "suppression": [
+          {
+            "kind": "reference-track",
+            "id": "antique_shop:reference:1",
+            "key": "greenLionPassageDust",
+            "status": "historical-masked-by-bitmap",
+            "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+          },
+          {
+            "kind": "reference-track",
+            "id": "antique_shop:reference:2",
+            "key": "flaurosCoreShade",
+            "status": "historical-masked-by-bitmap",
+            "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+          },
+          {
+            "kind": "reference-track",
+            "id": "antique_shop:reference:3",
+            "key": "greenLionWallGlint",
+            "status": "historical-masked-by-bitmap",
+            "reason": "Le bitmap fixe de vague32 montre l’antichambre après le tunnel ; les anciens prototypes de poussière, Flauros abstrait et lueur restent conservés en attente, sans mouvement livré derrière ce fond."
+          },
           {
             "kind": "event",
             "id": "sirenCall",
@@ -24498,24 +24470,24 @@
     },
     {
       "id": "lighthouse_sm",
-      "name": "LIGHTHOUSE / THERAPY REVELATION",
+      "name": "LIGHTHOUSE — ENTRÉE DE LA CLINIQUE",
       "source": "shattered",
       "lore": {
-        "premise": "Phare et révélation thérapeutique sont des lieux/plans différents; l’intitulé actuel les fusionne.",
-        "canonicalBasis": "EXT09",
-        "fidelity": "reference-bloquee",
+        "premise": "Entrée extérieure du Lighthouse Counseling Center après la conversation du rivage avec Cybil, avant de franchir la porte. Les vues natives à 2:37:40 et 2:37:50 montrent le bâtiment bas, le porche à piliers, le bardage, la porte et la neige au sol. Le hall, le lac, la tour d’un phare et la révélation thérapeutique ne sont pas réunis dans ce plan. Version US PSP déclarée par le vidéaste ; build et réglages non établis. Cadrage et largeur adaptés au versus, sans certification 1:1.",
+        "canonicalBasis": "EXT09 ; V32_SHM_CLINIC_CHAPTER ; V32_SHM_CLINIC_ENTRANCE_PLAYTHROUGH",
+        "fidelity": "lieu-reference / mise-en-scene-versus",
         "adaptationNotice": "Les mouvements joués sont des prototypes originaux de propositions. Aucune nouvelle capture ni fidélité 1:1 validée ; collisions et sons ne sont pas déduits de ces boucles."
       },
       "terrain": {
-        "id": "concrete",
-        "name": "BÉTON SEC",
+        "id": "ice",
+        "name": "NEIGE DEVANT LA CLINIQUE",
         "moveScale": 1,
         "jumpScale": 1,
         "dodgeScale": 1,
         "friction": 0.84,
         "knockbackScale": 1,
         "guardRegenScale": 1,
-        "description": "Sol stable et neutre."
+        "description": "Porche du Lighthouse Counseling Center après l’échange du rivage, avant de franchir la porte : bardage, piliers, porte et neige documentés. Tour, lac, hall et révélation thérapeutique exclus. Neige peinte sans prise de glace ni règles de glissade ; physique neutre du versus, cadrage et géométrie non certifiés 1:1."
       },
       "shift": {
         "style": "ice",
@@ -24529,7 +24501,7 @@
         "description": "Le cauchemar se fige, bleuit et transforme la poursuite en glissade froide.",
         "startOtherworld": false,
         "enabled": false,
-        "referenceState": "unresolved"
+        "referenceState": "fixed-normal"
       },
       "events": [],
       "hazards": [],
@@ -24540,18 +24512,22 @@
         "id": "lighthouse_sm",
         "source": "shattered",
         "identityMatched": true,
-        "blocked": true,
-        "locationStatus": "composite-a-separer",
+        "blocked": false,
+        "locationStatus": "lieu-et-phase-documentes-vues-natives",
         "catalogueName": "LIGHTHOUSE / THERAPY REVELATION",
-        "correctedName": null,
-        "locationNote": "Phare et révélation thérapeutique sont des lieux/plans différents; l’intitulé actuel les fusionne.",
+        "correctedName": "LIGHTHOUSE — ENTRÉE DE LA CLINIQUE",
+        "locationNote": "Entrée extérieure du Lighthouse Counseling Center après la conversation du rivage avec Cybil, avant de franchir la porte. Les vues natives à 2:37:40 et 2:37:50 montrent le bâtiment bas, le porche à piliers, le bardage, la porte et la neige au sol. Le hall, le lac, la tour d’un phare et la révélation thérapeutique ne sont pas réunis dans ce plan. Version US PSP déclarée par le vidéaste ; build et réglages non établis. Cadrage et largeur adaptés au versus, sans certification 1:1.",
         "referenceIds": [
-          "EXT09"
+          "EXT09",
+          "V32_SHM_CLINIC_CHAPTER",
+          "V32_SHM_CLINIC_ENTRANCE_PLAYTHROUGH"
         ],
         "constraints": [
           "Chaque animation est une proposition à fabriquer; le nom du lieu ne prouve pas son mouvement ni sa géométrie exacte.",
           "Pas de dégâts ni fatalité automatique déduits d’une simple animation d’ambiance.",
-          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production."
+          "Comparer une capture du bon titre, de la bonne phase et du bon média avant production.",
+          "Plan extérieur unique : ne pas importer le faisceau d’une tour, l’eau du lac, le hall ou le raccord de révélation.",
+          "La neige peinte ne déclenche ni météo animée, ni prise de glace, ni glissade physique. Aucun danger ou appui de plafond."
         ],
         "proposals": [
           {
@@ -24562,7 +24538,10 @@
               "EXT09"
             ],
             "category": "ambient",
-            "timecode": null
+            "timecode": null,
+            "activeInSelectedScene": false,
+            "sceneScope": "historical-lighthouse-water-therapy-composite",
+            "integrationNote": "Ancienne proposition composite conservée en attente ; elle ne s’applique pas au plan fixe de l’entrée de clinique."
           },
           {
             "name": "lighthouse_sm_ambient_02",
@@ -24572,7 +24551,10 @@
               "EXT09"
             ],
             "category": "ambient",
-            "timecode": null
+            "timecode": null,
+            "activeInSelectedScene": false,
+            "sceneScope": "historical-lighthouse-water-therapy-composite",
+            "integrationNote": "Ancienne proposition composite conservée en attente ; elle ne s’applique pas au plan fixe de l’entrée de clinique."
           },
           {
             "name": "lighthouse_sm_ambient_03",
@@ -24582,7 +24564,10 @@
               "EXT09"
             ],
             "category": "ambient",
-            "timecode": null
+            "timecode": null,
+            "activeInSelectedScene": false,
+            "sceneScope": "historical-lighthouse-water-therapy-composite",
+            "integrationNote": "Ancienne proposition composite conservée en attente ; elle ne s’applique pas au plan fixe de l’entrée de clinique."
           },
           {
             "name": "lighthouse_sm_round_transition",
@@ -24592,18 +24577,29 @@
               "EXT09"
             ],
             "category": "round_transition",
-            "timecode": null
+            "timecode": null,
+            "activeInSelectedScene": false,
+            "sceneScope": "historical-lighthouse-water-therapy-composite",
+            "integrationNote": "Ancienne proposition composite conservée en attente ; elle ne s’applique pas au plan fixe de l’entrée de clinique."
           }
         ]
       },
       "referencePolicy": {
-        "worldState": "unresolved",
+        "worldState": "fixed-normal",
         "allowedEvents": [],
         "allowedHazards": [],
         "automaticFinishers": false,
+        "sceneId": "shm-clinic-entrance-before-therapy",
+        "terrainRules": false,
+        "normalPhaseLabel": "CLINIQUE · EXTÉRIEUR AVANT ENTRÉE",
+        "alteredPhaseLabel": "CLINIQUE · EXTÉRIEUR AVANT ENTRÉE",
+        "terrainPresentation": {
+          "name": "NEIGE DEVANT LA CLINIQUE",
+          "description": "Porche du Lighthouse Counseling Center après l’échange du rivage, avant de franchir la porte : bardage, piliers, porte et neige documentés. Tour, lac, hall et révélation thérapeutique exclus. Neige peinte sans prise de glace ni règles de glissade ; physique neutre du versus, cadrage et géométrie non certifiés 1:1."
+        },
         "weather": "none",
         "interior": false,
-        "baselineMotion": false,
+        "baselineMotion": true,
         "suppression": [
           {
             "kind": "event",

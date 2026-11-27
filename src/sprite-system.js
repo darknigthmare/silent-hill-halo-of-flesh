@@ -142,10 +142,10 @@ export class SpriteCache{
     return {ok:!failed.length&&(diagnostic||!missing.length),missing:missing.map(f=>f.id),failed};
   }
 }
-// Native attack frames bring Faceless Nurse pairings to about 66 MiB. Keep every
-// required frame resident within a bounded 72 MiB combat lease; other caches
-// retain their independent limits and the generic cache still defaults to 64 MiB.
-export const COMBAT_SPRITE_BUDGET=72*1024*1024;
+// Wave32's largest native pair is Groaner + Faceless Nurse: 81,802,000 decoded
+// bytes across 13 frames, just above 78 MiB. A fixed 79 MiB combat lease admits
+// every current pair; other caches and the generic 64 MiB default stay bounded.
+export const COMBAT_SPRITE_BUDGET=79*1024*1024;
 export const spriteCache=new SpriteCache({maxBytes:COMBAT_SPRITE_BUDGET});
 export function pinCombatSprites(fighters){spriteCache.pin(fighters.flatMap(f=>combatSpriteFor(f)?.frames||[]));}
 function drawMissing(ctx,x,y,width,height,text){

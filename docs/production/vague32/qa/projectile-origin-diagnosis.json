@@ -1,0 +1,157 @@
+{
+  "schema": 1,
+  "baselineCommit": "d4269ad8239a99cad53d44bc77b569ed7a0d41a3",
+  "kind": "analytical-placement-comparison",
+  "canonicalOriginMeasured": false,
+  "method": "Use the existing bodyBox and rasterPlacement on the exact published wave31 frames. Analytic actor coordinates are a geometry calculation, not a captured match or executed attack.",
+  "cause": "spawnProjectile uses the generic body envelope at y + 0.45*h. The frame-specific gun muzzle is higher and farther forward. Camera placement scales both together and is not the cause.",
+  "samples": [
+    {
+      "fighterId": "sh4_man_with_the_coat_067",
+      "source": "sh4",
+      "moveKey": "neutralSpecial",
+      "frame": {
+        "path": "assets/sprites/sh4_man_with_the_coat_067.d0c7d825135e.png",
+        "sha256": "d0c7d825135ea5f9d6f05f5e23a94d21fd933abfe7621d74a7eb6d438a64c089",
+        "width": 1024,
+        "height": 1536,
+        "anchor": [
+          0.405,
+          0.9329427083333334
+        ],
+        "bodyHeight": 1,
+        "facing": 1
+      },
+      "candidateMuzzlePixels": [
+        986,
+        300
+      ],
+      "pointStatus": "Manually reviewed point on the published candidate PNG; subsequently implemented for wave32, not original-game geometry.",
+      "cases": [
+        {
+          "actor": {
+            "x": 320,
+            "y": 594,
+            "facing": 1
+          },
+          "candidateMuzzleWorldPoint": {
+            "x": 399.9643229166667,
+            "y": 435.4095052083333
+          },
+          "delta": {
+            "x": 43.964322916666674,
+            "y": -40.340494791666686
+          },
+          "baselinePhysicalOrigin": {
+            "x": 356,
+            "y": 475.75
+          }
+        },
+        {
+          "actor": {
+            "x": 320,
+            "y": 594,
+            "facing": -1
+          },
+          "candidateMuzzleWorldPoint": {
+            "x": 240.03567708333333,
+            "y": 435.4095052083333
+          },
+          "delta": {
+            "x": -43.964322916666674,
+            "y": -40.340494791666686
+          },
+          "baselinePhysicalOrigin": {
+            "x": 284,
+            "y": 475.75
+          }
+        }
+      ]
+    },
+    {
+      "fighterId": "sh2_eddie_dombrowski_032",
+      "source": "sh2",
+      "moveKey": "neutralSpecial",
+      "frame": {
+        "path": "assets/sprites/sh2_eddie_dombrowski_032.e691299ab326.png",
+        "sha256": "e691299ab326b510f72029062963aaf3cacbff7fbad2bd78fb97d5e2a4297321",
+        "width": 1024,
+        "height": 1536,
+        "anchor": [
+          0.407,
+          0.9921875
+        ],
+        "bodyHeight": 0.99,
+        "facing": 1
+      },
+      "candidateMuzzlePixels": [
+        997,
+        261
+      ],
+      "pointStatus": "Manually reviewed point on the published candidate PNG; subsequently implemented for wave32, not original-game geometry.",
+      "cases": [
+        {
+          "actor": {
+            "x": 320,
+            "y": 594,
+            "facing": 1
+          },
+          "candidateMuzzleWorldPoint": {
+            "x": 402.0377472643098,
+            "y": 415.4271622474747
+          },
+          "delta": {
+            "x": 46.037747264309814,
+            "y": -60.32283775252529
+          },
+          "baselinePhysicalOrigin": {
+            "x": 356,
+            "y": 475.75
+          }
+        },
+        {
+          "actor": {
+            "x": 320,
+            "y": 594,
+            "facing": -1
+          },
+          "candidateMuzzleWorldPoint": {
+            "x": 237.9622527356902,
+            "y": 415.4271622474747
+          },
+          "delta": {
+            "x": -46.037747264309786,
+            "y": -60.32283775252529
+          },
+          "baselinePhysicalOrigin": {
+            "x": 284,
+            "y": 475.75
+          }
+        }
+      ]
+    }
+  ],
+  "proposal": {
+    "module": "src/projectile-origin.js",
+    "scope": "Only exact owner, source, neutralSpecial, active pose frame, dimensions and SHA matching the reviewed record. No copied profiles, other Walter form, super, desperation, traps or ground effects.",
+    "calculation": "worldX = actor.x + placement.flip * (placement.localX + muzzleX * placement.scale); worldY = actor.y + placement.localY + muzzleY * placement.scale",
+    "integration": "Use the same derived x/y for the physical projectile object and its renderer. Preserve the existing generic origin for all unmatched cases.",
+    "gameplayImpact": "This intentionally changes the initial projectile collision position for the two exact attacks. It is not a cosmetic-only fix; projectile speed, radius, lifetime, damage, spread and source move behavior must stay explicit and tested.",
+    "renderingOnlyOffsetRejected": "Offsetting only draw coordinates would leave hits below the visible shot and conceal the defect."
+  },
+  "requiredVerification": [
+    "Exact frame SHA, source and move-key ownership with negative copied/wrong-edition/stale-frame cases.",
+    "Both facing directions, native frame-facing sign, translated actor positions and camera-consistent projection.",
+    "Actual keyboard-triggered shot, spawn snapshot and projectile position from the same game frame; screenshots in both orientations.",
+    "Actual projectile hit, guard and miss behavior; velocity, radius, life, damage and spread preserved; unrelated projectile origins unchanged."
+  ],
+  "limits": [
+    "The sampled pixel locations refer to generated candidate art, not measured original-game weapon geometry.",
+    "Original bullet VFX shape, muzzle-flash timing and animation remain unverified.",
+    "The initial geometry diagnosis did not change production code. The subsequently authorized physics/rendering correction is recorded in projectile-origin-implementation.md."
+  ],
+  "implementedAtDiagnosis": false,
+  "implementationInWave32": true,
+  "implementationReport": "projectile-origin-implementation.md",
+  "status": "Historical pre-implementation geometry diagnosis; final authorized implementation and validation are described separately."
+}

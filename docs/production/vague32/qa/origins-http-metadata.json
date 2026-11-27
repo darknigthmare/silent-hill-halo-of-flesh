@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "wave": 32,
+  "startedAt": "2026-11-27T08:13:00.592Z",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Exactly the two bound firearm owners",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh4_man_with_the_coat_067: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: exact static clip contract",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: new audited frame published",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: baseline idle and portrait preserved",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: single-frame pose holds without claiming animation",
+      "passed": true
+    },
+    {
+      "name": "sh2_eddie_dombrowski_032: missing hurt pose remains an explicit idle fallback",
+      "passed": true
+    }
+  ],
+  "cases": [],
+  "errors": [],
+  "method": "Built HTTP app, fresh browser contexts, ordinary UI and keyboard. Passive drawImage observer and captures from the actual game canvas. No actor, camera, clock, image or module substitution.",
+  "limits": [
+    "Single static poses; no animation, source timing or 1:1 fidelity certification.",
+    "Both orientations use the existing engine mirror, not independently observed source-side geometry.",
+    "Service workers are blocked; this test does not cover offline updates.",
+    "Automated HTTP and placement checks require separate visual inspection of the retained gameplay captures.",
+    "Muzzle points are measured on the exact published candidate PNGs; collision/guard changes are separately covered by engine tests."
+  ],
+  "metadataOnly": true,
+  "completedAt": "2026-11-27T08:13:00.595Z"
+}

@@ -195,16 +195,21 @@ def transfer(before, donor, log, expected, formulas):
     require(log['afterAssociations'] >= log['beforeAssociations'], 'Association removal needs a separate review')
     expected_rows = [{'sheet': 'Associations guide', 'row': r} for r in range(old_end + 1, end + 1)]
     extension_mode = log.get('mode') == 'extensions'
+    resolved_refresh = log.get('mode') == 'refresh-resolved'
     if extension_mode:
         require(log.get('beforeSections') == 30 and log.get('afterSections') == 68, 'Unexpected extension section counts')
         expected_rows += [{'sheet': 'Guide combat', 'row': r} for r in [58, *range(60, 99)]]
+    if resolved_refresh:
+        require(log.get('beforeSections') == 68 and log.get('afterSections') == 68, 'Resolved refresh must retain all 68 sections')
+        for package in (before, donor):
+            require('CombatGuideExtensions' in package.tables and package.xml(package.tables['CombatGuideExtensions']).get('ref') == 'A60:K98', 'Resolved refresh must preserve the existing extension table')
     require(log['newRows'] == expected_rows, 'Unexpected appended rows')
     expected_tables = [{'sheet': 'Guide combat', 'name': 'CombatGuideExtensions', 'ref': 'A60:K98'}] if extension_mode else []
     require(log.get('newTables', []) == expected_tables, 'Unexpected added tables')
     replacements = {}
     allowed_cells = {sheet: {address for s, address in logged if s == sheet} for sheet in GUIDES}
     allowed_cells['Associations guide'].update(formulas['Associations guide'])
-    if extension_mode:
+    if extension_mode or resolved_refresh:
         allowed_cells['Guide combat'].update(formulas['Guide combat'])
     heights = {(r['sheet'], int(r['row'])): r for r in log['changedRowHeights']}
     require(len(heights) == len(log['changedRowHeights']), 'Duplicate row-height authorization')
@@ -459,7 +464,7 @@ def main():
     before, donor = Package(args.before), Package(args.donor)
     log = json.loads(args.changes.read_text())
     requirements, associations = json.loads(args.requirements.read_text()), json.loads(args.associations.read_text())
-    section_count = 68 if log.get('mode') == 'extensions' else 30
+    section_count = 68 if log.get('mode') in ('extensions', 'refresh-resolved') else 30
     require(len(requirements['sections']) == section_count and [s['section'] for s in requirements['sections']] == [f'{i:02d}' for i in range(section_count)], 'Unexpected section sequence')
     require(len({(r['kind'], r['id']) for r in associations['records']}) == len(associations['records']), 'Duplicate association')
     expected, formulas = expected_cells(requirements, associations), expected_formulas(requirements, associations)

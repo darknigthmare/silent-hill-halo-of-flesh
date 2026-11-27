@@ -70,22 +70,33 @@ function subjectClipContract(id){
     homecoming_nurse: {hurt: [1]},
     homecoming_scarlet_spider_form_095: {walk: [0,1,2,1]},
     // Wave27/28 append one exact static attack after the three batch10 poses.
+    // Wave32 adds Groaner neutralLight/neutralSpecial without replacing those poses.
     sh3_double_head_040: {forwardSpecial: [4]},
-    sh1_groaner_003: {forwardSpecial: [4]},
+    sh1_groaner_003: {forwardSpecial: [4], neutralLight: [5], neutralSpecial: [6]},
     sh3_closer_036: {forwardSpecial: [4]},
     sh3_numb_body_small_037: {forwardSpecial: [4]},
-    // Wave30 appends one exact static pose after the preserved idle.
-    sh4_sniffer_dog_male_053: {forwardSpecial: [1]},
+    // Wave30 appends one exact static pose after the preserved idle; wave32
+    // adds the Sniffer male walk/light without changing its forwardSpecial.
+    sh4_sniffer_dog_male_053: {forwardSpecial: [1], walk: [2], neutralLight: [3]},
     origins_carrion_076: {forwardSpecial: [1]},
     sh1_creeper_009: {walk: [1]}
   }[id] || {};
   const expectedClips = {idle: [0], ...laterClips};
   if(id===twinId)expectedClips[twinTaunt]=[1];
   if(batch10.includes(id))batch10Poses.forEach((pose,index)=>{expectedClips[pose]=[index+1];});
-  return {laterClips,expectedClips};
+  const advanced=[batch8,batch9,batch10,batch11,batch12].some(batch=>batch.includes(id));
+  // A later source-reviewed delivery moves a pose from negative to positive
+  // coverage. Filter against the explicit contract, never the live manifest:
+  // an undeclared extra clip must still fail checkSubjectClipContract below.
+  const absentPoses=[...(batch10.includes(id)?['guard','dodge']:[laterClips.walk?'jump':'walk']),
+    'crouch',`finisher@${id}_signature`,
+    ...(id===twinId?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),
+    ...(advanced?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]
+    .filter(pose=>!Object.hasOwn(expectedClips,pose));
+  return {laterClips,expectedClips,absentPoses};
 }
 function checkSubjectClipContract({id,art,fighter}){
-  const {laterClips,expectedClips}=subjectClipContract(id),exactSource=id.split('_')[0];
+  const {laterClips,expectedClips,absentPoses}=subjectClipContract(id),exactSource=id.split('_')[0];
   const exactYear={sh1:1999,sh2:2001,sh3:2003,sh4:2004,origins:2007,homecoming:2008,downpour:2012,arcade:2007,bom:2012}[exactSource];
   const expectedIndices=new Set(Object.values(expectedClips).flat());
   const animatedCount=Object.values(expectedClips).filter(indices=>new Set(indices).size>1).length;
@@ -97,7 +108,7 @@ function checkSubjectClipContract({id,art,fighter}){
     &&Object.entries(expectedClips).every(([pose,indices])=>
       JSON.stringify(art.clips[pose]?.frames)===JSON.stringify(indices)
       &&(pose==='idle'||art.clips[pose].loop===(pose==='walk'&&new Set(indices).size>1))),art);
-  return {laterClips,expectedClips};
+  return {laterClips,expectedClips,absentPoses};
 }
 const sceneContracts={woodside:{source:'sh2',scene:'original-pc-corridor'},alchemilla:{source:'sh1',scene:'normal-waiting-room'},lakeview:{source:'sh2',scene:'normal-lobby-before-video'},shopping_mall:{source:'sh3',scene:'normal-helens-bakery'},brookhaven_roof:{source:'sh2',scene:'original-roof-before-fall',ceiling:false}};
 const report={version:VERSION,build:process.env.QA_BASE_URL?'external HTTP':source?'source':'dist',checks:[],errors:[],captures:[],assets:[],fixtures:[
@@ -199,9 +210,9 @@ try{
   check('real gallery pages contain every registered exact ID once and finish at a disabled next button',paged.length===registry.registeredIds.length&&new Set(paged).size===paged.length&&JSON.stringify([...paged].sort())===JSON.stringify([...registry.registeredIds].sort())&&await page.locator('#spriteNext').isDisabled());
   for(const subject of registry.subjects){
     const {id,art,fighter}=subject;
-    const isBatch8=batch8.includes(id),isBatch9=batch9.includes(id),isBatch10=batch10.includes(id),isBatch11=batch11.includes(id),isBatch12=batch12.includes(id);
+    const isBatch10=batch10.includes(id),isBatch11=batch11.includes(id),isBatch12=batch12.includes(id);
     const isTwin=id===twinId;
-    const {laterClips}=checkSubjectClipContract(subject);
+    const {laterClips,absentPoses}=checkSubjectClipContract(subject);
     await selectSubject(page,id,fighter.source);
     check(id+': real inspector paints its loaded bitmap and disables animation playback',await page.locator('.sprite-inspector').count()===1&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-frame-index')==='0');
     for(const [frameIndex,frame] of art.frames.entries()){
@@ -220,6 +231,8 @@ try{
         return canvas?.dataset.spriteId===id&&canvas.dataset.artStatus==='raster'&&canvas.dataset.pose===pose
           &&canvas.dataset.frameIndex===String(index)&&__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path);
       },{id,pose,index:frameIndex,path:frame.path});
+      if(new Set(indices).size===1)check(id+': declared '+pose+' uses its dedicated static image without a missing-pose warning',
+        await page.locator('[data-inspect=play]').isDisabled()&&!/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent()));
     }
     if(isTwin&&frameIndex===1){
       await page.selectOption('[data-inspect=pose]',twinTaunt);
@@ -251,7 +264,7 @@ try{
     report.assets.push({id,frameIndex,source:art.source,path:frame.path,sha256:frame.sha256,bytes:frame.bytes,alpha:decoded});
     check(id+': inspector drawImage used that registered image',await page.evaluate(path=>__ART_BATCH4_DRAWS__.some(draw=>draw.canvas==='workshop-canvas'&&draw.path==='/'+path&&draw.width>0),frame.path));
     }
-    for(const pose of [...(isBatch10?['guard','dodge']:[laterClips.walk?'jump':'walk']),'crouch',`finisher@${id}_signature`,...(isTwin?['taunt',`intro@${id}:intro`,`winMatch@${id}:winMatch`,`outro@${id}:outro`]:[]),...((isBatch8||isBatch9||isBatch10||isBatch11||isBatch12)?['neutralLight','neutralHeavy',`intro@${id}:intro`,`taunt@${id}:taunt`]:[])]){
+    for(const pose of absentPoses){
       await page.selectOption('[data-inspect=pose]',pose);
       check(id+': absent '+pose+' stays an explicit static idle preview',/À PRODUIRE/.test(await page.locator('[data-inspect=status]').textContent())&&await page.locator('[data-inspect=play]').isDisabled()&&await page.locator('#spriteDetail canvas').getAttribute('data-pose')==='idle'&&await page.locator('#spriteDetail canvas').getAttribute('data-requested-pose')===pose);
     }
